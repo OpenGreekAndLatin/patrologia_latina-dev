@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><TEI xmlns="http://www.tei-c.org/ns/1.0"><teiHeader>
+    
 		<fileDesc>
 			<titleStmt>
 				<title>Patrologiae Cursus Completus. Series Latina (PL)</title>
@@ -126,14 +127,19 @@
 		<encodingDesc>
 			<p>The following text is encoded in accordance with EpiDoc standards and with the CTS/CITE
 				Architecture.</p>
-		</encodingDesc>
+		<refsDecl>
+        <cRefPattern n="" matchPattern="(.+).(.+).(.+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@type='edition']/tei:div[@n='$1']/tei:div[@n='$2']/tei:div[@n='$3'])"/>
+        <cRefPattern n="" matchPattern="(.+).(.+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@type='edition']/tei:div[@n='$1']/tei:div[@n='$2'])"/>
+        <cRefPattern n="" matchPattern="(.+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@type='edition']/tei:div[@n='$1'])"/>
+      </refsDecl>
+    </encodingDesc>
 		<profileDesc>
 			<langUsage>
 				<language ident="la">Latin</language>
 			</langUsage>
 		</profileDesc>
 	</teiHeader>
-	<div type="edition" n="">
+	<text><body><div type="edition" n="">
 					<p>Sequentes Sermones de Quarta Feria, de Cataclysmo, et de Tempore Barbarico, dubii <lb/>
 						nobis sunt, et videntur subdititii (a).</p>
 					<ab>
@@ -500,4 +506,4 @@
 						potens est custodire in vobis quod ipse <lb/> donavit <hi rend="italic">(Act.</hi> XX,
 						52). Ipsi gloria cum Spiritu sancto <lb/> in sæcula sacculorum. Amen.</p>
 				</div>
-				</TEI>
+				</body></text></TEI>

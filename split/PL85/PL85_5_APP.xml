@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><TEI xmlns="http://www.tei-c.org/ns/1.0"><teiHeader>
+    
     <fileDesc>
       <titleStmt>
         <title>Patrologiae Cursus Completus. Series Latina (PL)</title> 
@@ -73,6 +74,11 @@
     <encodingDesc>
       <p>The following text is encoded in accordance with EpiDoc standards and with the
         CTS/CITE Architecture.</p>
+    <refsDecl>
+        <cRefPattern n="" matchPattern="(.+).(.+).(.+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@type='edition']/tei:div[@n='$1']/tei:div[@n='$2']/tei:div[@n='$3'])"/>
+        <cRefPattern n="" matchPattern="(.+).(.+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@type='edition']/tei:div[@n='$1']/tei:div[@n='$2'])"/>
+        <cRefPattern n="" matchPattern="(.+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@type='edition']/tei:div[@n='$1'])"/>
+      </refsDecl>
     </encodingDesc>
     
     <profileDesc>
@@ -81,8 +87,9 @@
       </langUsage>
     </profileDesc>
     
-  </teiHeader>
-  <div type="edition" n="">
+</teiHeader>
+
+  <text><body><div type="edition" n="">
           <head>
             <title type="main">APPENDIX PRIMA.</title>
           </head>
@@ -722,4 +729,4 @@
             quæ omnis offert Tudensis Ecclesia. </note><note type="footnote"> e Forte legendum : et voce psallimus vera. </note><note type="footnote"> { Sunt hæ preces diaconica?, posiUe extra locum </note> 
             <milestone unit="PLSection" n="C"/><note type="footnote"> suum. </note> </p>
         </div>
-        </TEI>
+        </body></text></TEI>

@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><TEI xmlns="http://www.tei-c.org/ns/1.0"><teiHeader>
+    
 		<fileDesc>
 			<titleStmt>
 				<title/>
@@ -54,7 +55,12 @@
 		</fileDesc>
 		<encodingDesc>
 			<p>Text encoded in accordance with the latest EpiDoc standards (January 2014)</p>
-		</encodingDesc>
+		<refsDecl>
+        <cRefPattern n="" matchPattern="(.+).(.+).(.+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@type='edition']/tei:div[@n='$1']/tei:div[@n='$2']/tei:div[@n='$3'])"/>
+        <cRefPattern n="" matchPattern="(.+).(.+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@type='edition']/tei:div[@n='$1']/tei:div[@n='$2'])"/>
+        <cRefPattern n="" matchPattern="(.+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@type='edition']/tei:div[@n='$1'])"/>
+      </refsDecl>
+    </encodingDesc>
 		<profileDesc>
 			<langUsage>
 				<language ident="grc">Greek</language>
@@ -65,7 +71,7 @@
 			<change when="2015-11-06" who="dwp"/>
 		</revisionDesc>
 	</teiHeader>
-	<div type="edition" n="">
+	<text><body><div type="edition" n="">
 						<p>ADMONITIO IN SUBSEQUENTEM EPISTOLAM.
 Luciani ad omnem Ecclesiam totiusque orbis Christianos Epistolam indicare videtur Augustinus Tra-
 ctatu 120 in Joannem, cum dicit n. 4: <hi rend="italic">Intelligendum est ad Jesum, non tunc solum, sed tunc primum
@@ -101,4 +107,4 @@ in Martyrologio id omnino sequuntur, atque ex ipso exscribunt multa, quæ in Uli
 desiderantur. Additur apud Photium, <hi rend="italic">Gamalielem præcepisse Luciano, ne posthac reliquias illas sole et
 pluma corrumpi per negligentiam sineret</hi>; quod nullo jam in exemplari legitur.</p>
 					</div>
-					</TEI>
+					</body></text></TEI>
