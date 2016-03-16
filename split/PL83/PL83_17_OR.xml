@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><TEI xmlns="http://www.tei-c.org/ns/1.0"><teiHeader>
+    
     <fileDesc>
       <titleStmt>
         <title>Patrologiae Cursus Completus. Series Latina (PL)</title> 
@@ -111,6 +112,11 @@
     <encodingDesc>
       <p>The following text is encoded in accordance with EpiDoc standards and with the
         CTS/CITE Architecture.</p>
+    <refsDecl>
+        <cRefPattern n="" matchPattern="(.+).(.+).(.+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@type='edition']/tei:div[@n='$1']/tei:div[@n='$2']/tei:div[@n='$3'])"/>
+        <cRefPattern n="" matchPattern="(.+).(.+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@type='edition']/tei:div[@n='$1']/tei:div[@n='$2'])"/>
+        <cRefPattern n="" matchPattern="(.+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@type='edition']/tei:div[@n='$1'])"/>
+      </refsDecl>
     </encodingDesc>
     
     <profileDesc>
@@ -119,8 +125,9 @@
       </langUsage>
     </profileDesc>
     
-  </teiHeader>
-  <div type="edition" n="">
+</teiHeader>
+
+  <text><body><div type="edition" n="">
         <ab>
             <title type="sub">ORDO RERUM QUÆ IN SEXTO TOMO CONTINENTUR.</title>
           </ab>
@@ -252,4 +259,4 @@
             dæmoniorum, 931. — IX. De natura aquarum et cursu Oceani, 933. — X. De paradiso, 938. — XI. De situ orbis terra­ <lb/>
             rum, quem inhabitat genus humanum I 942. — XII. De natura hominum post peccatum, 943. — XIII. De diversitate <lb/>
             peccantium, et loco poenarum, 944. — XIV. De igne purgatorio, 947. — XV. De futura vita, 950.</p>
-        </div></TEI>
+        </div></body></text></TEI>

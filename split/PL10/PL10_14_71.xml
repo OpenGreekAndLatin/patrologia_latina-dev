@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><TEI xmlns="http://www.tei-c.org/ns/1.0"><teiHeader>
+    
 		<fileDesc>
 			<titleStmt>
 				<title/>
@@ -62,7 +63,12 @@
 		</fileDesc>
 		<encodingDesc>
 			<p>Text encoded in accordance with the latest EpiDoc standards (January 2014)</p>
-		</encodingDesc>
+		<refsDecl>
+        <cRefPattern n="" matchPattern="(.+).(.+).(.+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@type='edition']/tei:div[@n='$1']/tei:div[@n='$2']/tei:div[@n='$3'])"/>
+        <cRefPattern n="" matchPattern="(.+).(.+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@type='edition']/tei:div[@n='$1']/tei:div[@n='$2'])"/>
+        <cRefPattern n="" matchPattern="(.+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@type='edition']/tei:div[@n='$1'])"/>
+      </refsDecl>
+    </encodingDesc>
 		<profileDesc>
 			<langUsage>
 				<language ident="grc">Greek</language>
@@ -73,7 +79,7 @@
 			<change when="2015-12-04" who="dwp"/>
 		</revisionDesc>
 	</teiHeader>
-	<div type="edition" n="">
+	<text><body><div type="edition" n="">
 					<head>
 						<title>711-712 FRAGMENTA
 EX ALIIS SANCTI HILARII
@@ -310,4 +316,4 @@ tom. III, p. 353 : nunc ecce ex eo deperdito opere
 frustum splendidum a Graecis servatum. (Ex <hi rend="italic">Spici-
 leg. Rom.</hi> tom. <hi rend="smallcap">vi</hi>, p. 73.)</p>
 				</div>
-				</TEI>
+				</body></text></TEI>

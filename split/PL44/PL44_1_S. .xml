@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><TEI xmlns="http://www.tei-c.org/ns/1.0"><teiHeader>
+    
 		<fileDesc>
 			<titleStmt>
 				<title>Patrologiae Cursus Completus. Series Latina (PL)</title>
@@ -99,7 +100,12 @@
 		<encodingDesc>
 			<p>The following text is encoded in accordance with EpiDoc standards and with the CTS/CITE
 				Architecture.</p>
-		</encodingDesc>
+		<refsDecl>
+        <cRefPattern n="" matchPattern="(.+).(.+).(.+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@type='edition']/tei:div[@n='$1']/tei:div[@n='$2']/tei:div[@n='$3'])"/>
+        <cRefPattern n="" matchPattern="(.+).(.+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@type='edition']/tei:div[@n='$1']/tei:div[@n='$2'])"/>
+        <cRefPattern n="" matchPattern="(.+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@type='edition']/tei:div[@n='$1'])"/>
+      </refsDecl>
+    </encodingDesc>
 
 		<profileDesc>
 			<langUsage>
@@ -108,7 +114,7 @@
 		</profileDesc>
 
 	</teiHeader>
-	<div type="edition" n="">
+	<text><body><div type="edition" n="">
 					<head>
 						<title type="main">S. AURELII AUGUSTINI HIPPOSENSIS EPISCOPI DE GESTIS PELAGII Ad
 							Aurelium episcopum. <hi rend="italic">LIBER UNUS1(a).</hi>
@@ -1840,4 +1846,4 @@
 					<p><hi rend="italic">In libras</hi> de Gratia Christi et de Peccato originali, <hi rend="italic">vide</hi> lib.2, <hi rend="italic">cap.</hi> 50, Retractationum, <lb/>
 						<hi rend="italic">tom. i, col.</hi> 650, <hi rend="italic">averbis,</hi> Posteaquam <hi rend="italic">Pelagiana hæresis, usque ad verba,</hi> Salute gaudeamus. M.</p>
 				</div>
-				</TEI>
+				</body></text></TEI>

@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><TEI xmlns="http://www.tei-c.org/ns/1.0"><teiHeader>
+    
 		<fileDesc>
 			<titleStmt>
 				<title>Patrologiae Cursus Completus. Series Latina (PL)</title>
@@ -75,7 +76,12 @@
 		<encodingDesc>
 			<p>The following text is encoded in accordance with EpiDoc standards and with the CTS/CITE
 				Architecture.</p>
-		</encodingDesc>
+		<refsDecl>
+        <cRefPattern n="" matchPattern="(.+).(.+).(.+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@type='edition']/tei:div[@n='$1']/tei:div[@n='$2']/tei:div[@n='$3'])"/>
+        <cRefPattern n="" matchPattern="(.+).(.+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@type='edition']/tei:div[@n='$1']/tei:div[@n='$2'])"/>
+        <cRefPattern n="" matchPattern="(.+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@type='edition']/tei:div[@n='$1'])"/>
+      </refsDecl>
+    </encodingDesc>
 
 		<profileDesc>
 			<langUsage>
@@ -84,7 +90,7 @@
 		</profileDesc>
 
 	</teiHeader>
-	<div type="edition" n="">
+	<text><body><div type="edition" n="">
 					<head>
 						<title type="main">S. AURELII AUGUSTINI HIPPONENSIS EPISCOPI EXPOSITIO QUARUMDAM
 							PROPOSITIONUM EX EPISTOLA AD ROMANOS.</title>
@@ -1249,4 +1255,4 @@
 						25, Retractationum, a <hi rend="italic">col.</hi> 623, <hi rend="italic">verbis,</hi>
 						Epistolæ quo­ <lb/> que ad Romanos, <hi rend="italic">usque ad col.</hi> 624, <hi rend="italic">verbis,</hi> scripsit ad Romanos. M.</p>
 				</div>
-				</TEI>
+				</body></text></TEI>

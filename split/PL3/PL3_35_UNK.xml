@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><TEI xmlns="http://www.tei-c.org/ns/1.0"><teiHeader>
+    
 		<fileDesc>
 			<titleStmt>
 				<title/>
@@ -62,7 +63,12 @@
 		</fileDesc>
 		<encodingDesc>
 			<p>Text encoded in accordance with the latest EpiDoc standards (January 2014)</p>
-		</encodingDesc>
+		<refsDecl>
+        <cRefPattern n="" matchPattern="(.+).(.+).(.+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@type='edition']/tei:div[@n='$1']/tei:div[@n='$2']/tei:div[@n='$3'])"/>
+        <cRefPattern n="" matchPattern="(.+).(.+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@type='edition']/tei:div[@n='$1']/tei:div[@n='$2'])"/>
+        <cRefPattern n="" matchPattern="(.+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@type='edition']/tei:div[@n='$1'])"/>
+      </refsDecl>
+    </encodingDesc>
 		<profileDesc>
 			<langUsage>
 				<language ident="grc">Greek</language>
@@ -73,7 +79,7 @@
 			<change when="2015-12-08" who="dwp"/>
 		</revisionDesc>
 	</teiHeader>
-	<div type="edition" n="">
+	<text><body><div type="edition" n="">
 					<pb n="1253"/>
 					<head>
 						<title>DE ANONYMO AUCTORE TRACTATUS
@@ -238,4 +244,4 @@ inter Cypr. opp. edit. Brem. pag. 19; et Venet. pag.
 <note type="footnote">(16) Vid. <hi rend="italic">Hist. Théolog. Crit</hi>. part. <hi rend="smallcap">XI</hi>, sect. <hi rend="smallcap">II</hi>,
 cap. 2, art. 3, pag. 42-44.</note></p>
 				</div>
-				</TEI>
+				</body></text></TEI>

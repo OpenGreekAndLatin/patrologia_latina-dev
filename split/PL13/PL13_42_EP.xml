@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><TEI xmlns="http://www.tei-c.org/ns/1.0"><teiHeader>
+    
 		<fileDesc>
 			<titleStmt>
 				<title/>
@@ -55,7 +56,12 @@
 		</fileDesc>
 		<encodingDesc>
 			<p>Text encoded in accordance with the latest EpiDoc standards (January 2014)</p>
-		</encodingDesc>
+		<refsDecl>
+        <cRefPattern n="" matchPattern="(.+).(.+).(.+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@type='edition']/tei:div[@n='$1']/tei:div[@n='$2']/tei:div[@n='$3'])"/>
+        <cRefPattern n="" matchPattern="(.+).(.+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@type='edition']/tei:div[@n='$1']/tei:div[@n='$2'])"/>
+        <cRefPattern n="" matchPattern="(.+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@type='edition']/tei:div[@n='$1'])"/>
+      </refsDecl>
+    </encodingDesc>
 		<profileDesc>
 			<langUsage>
 				<language ident="grc">Greek</language>
@@ -66,7 +72,7 @@
 			<change when="2015-12-16" who="DWP"/>
 		</revisionDesc>
 	</teiHeader>
-	<div type="edition" n="">
+	<text><body><div type="edition" n="">
 						<head>
 							<title>EPISTOLA V.</title>
 						</head>
@@ -741,4 +747,4 @@ S. Gaudentius Brix. in Sermone de ordinatione sua
 eos, a quibus fuerat electus, <hi rend="italic">summos sacerdotes</hi> ap-
 pellat.</note></p>
 					</div>
-					</TEI>
+					</body></text></TEI>
