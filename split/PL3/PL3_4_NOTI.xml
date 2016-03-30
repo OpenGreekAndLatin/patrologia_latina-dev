@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><TEI xmlns="http://www.tei-c.org/ns/1.0"><teiHeader>
-    
+<?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+	<teiHeader>
 		<fileDesc>
 			<titleStmt>
-				<title/>
+				<title>Notitia (epistolarum non exstantium quae ad S. Cornelium attinent)</title>
 				<editor/>
 				<sponsor>University of Leipzig</sponsor>
 				<funder>European Social Fund Saxony</funder>
@@ -32,7 +33,7 @@
 			</titleStmt>
 			<publicationStmt>
 				<authority>University of Leipzig</authority>
-				<idno type="filename">TO BE ADDED BY LEIPZIG</idno>
+				<idno type="filename">PL3_4_NOTI.xml</idno>
 				<availability>
 					<p>Available under a Creative Commons Attribution-ShareAlike 4.0 International License</p>
 				</availability>
@@ -44,17 +45,17 @@
 				<listBibl xml:lang="la">
 					<biblStruct>
 						<monogr>
-							<title/>
+							<title>Notitia</title>
 							<editor>
 								<persName>
 									<name xml:lang="la"/>
 								</persName>
 							</editor>
-							<author ref="urn:tmp"/>
+							<author ref="urn:cts:latinLit:stoa0100a">Cornelius</author>
 							<imprint>
-								<publisher/>
-								<pubPlace/>
-								<date/>
+								<publisher>Jacques Paul Migne</publisher>
+								<pubPlace>Paris</pubPlace>
+								<date>1865</date>
 							</imprint>
 						</monogr>
 					</biblStruct>
@@ -64,14 +65,11 @@
 		<encodingDesc>
 			<p>Text encoded in accordance with the latest EpiDoc standards (January 2014)</p>
 		<refsDecl>
-        <cRefPattern n="" matchPattern="(.+).(.+).(.+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@type='edition']/tei:div[@n='$1']/tei:div[@n='$2']/tei:div[@n='$3'])"/>
-        <cRefPattern n="" matchPattern="(.+).(.+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@type='edition']/tei:div[@n='$1']/tei:div[@n='$2'])"/>
-        <cRefPattern n="" matchPattern="(.+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@type='edition']/tei:div[@n='$1'])"/>
+        <cRefPattern n="section" matchPattern="(.+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@type='edition']/tei:div[@n='$1'])"/>
       </refsDecl>
     </encodingDesc>
 		<profileDesc>
 			<langUsage>
-				<language ident="grc">Greek</language>
 				<language ident="la">Latin</language>
 			</langUsage>
 		</profileDesc>
@@ -79,13 +77,14 @@
 			<change when="2015-12-08" who="dwp"/>
 		</revisionDesc>
 	</teiHeader>
-	<text><body><div type="edition" n="">
+	<text><body>
+		<div type="edition" n="urn:cts:latinLit:stoa0100a.stoa003">
 					<head>
 						<title>NOTITIA
 EPISTOLARUM NON EXSTANTIUM QUAE AD S. CORNELIUM ATTINENT,
 AUCTORE D. COUSTANTIO O. S. B.</title>
 					</head>
-					<div type="textpart" subtype="section" n="1">
+					<div n="1" type="textpart" subtype="section">
 						<head>
 							<title>I</title>
 						</head>
@@ -109,7 +108,7 @@ fratres cum litteris ad episcopum recens creatum
 destinandos esse mandaret. Cui officio non defuisse
 se Cyprianus testificatur.</p>
 </div>
-					<div type="textpart" subtype="section" n="2">
+					<div n="2" type="textpart" subtype="section">
 						<head>
 							<title>II</title>
 						</head>
@@ -124,7 +123,7 @@ geret. Quocirca earumdem litterarum exempla tunc
 per praedictos episcopos mittebat, quae et postea
 denuo per Mettium et Nicepborum misit.</p>
 </div>
-					<div type="textpart" subtype="section" n="3">
+					<div n="3" type="textpart" subtype="section">
 						<head>
 							<title>III</title>
 						</head>
@@ -144,7 +143,7 @@ n. 2, recolit, in quo « Novatianus hostis Ecclesiae
 judicatus est, » ac nemini cum eo communicare
 licere pronuntiatum fuit.</p>
 </div>
-					<div type="textpart" subtype="section" n="4">
+					<div n="4" type="textpart" subtype="section">
 						<head>
 							<title>IV</title>
 						</head>
@@ -522,7 +521,7 @@ clericis, praeter sententiam summorum pontificum
 atque Patrum, qui saeculis <hi rend="smallcap">IV</hi>, et <hi rend="smallcap">V</hi> vixerunt, aliter
 intelligamus?</p>
 </div>
-					<div type="textpart" subtype="section" n="5">
+					<div n="5" type="textpart" subtype="section">
 						<head>
 							<title>V.</title>
 						</head>
@@ -544,7 +543,7 @@ do Romana, sive per litteras condemnaverant, ad
 calcem epistolae suae attexuerat, ut Eusebius,
 lib. <hi rend="smallcap">VI</hi> Hist, e. 43, tradit.</p>
 </div>
-					<div type="textpart" subtype="section" n="6">
+					<div n="6" type="textpart" subtype="section">
 						<head>
 							<title>VI.</title>
 						</head>
@@ -560,7 +559,7 @@ quasi anceps esset ipsius ordinatio. Cur autem
 id a se atque a Liberali factum sit, Cyprianus, supra
 epistola <hi rend="smallcap">iv</hi>, explicat.</p>
 </div>
-					<div type="textpart" subtype="section" n="7">
+					<div n="7" type="textpart" subtype="section">
 						<head>
 							<title>VII.</title>
 						</head>
@@ -570,7 +569,7 @@ tum, Evaristum, Primum et Dionysium Novatia-
 ni sectatores in Atricam navigasse Cyprianus ad-
 monebatur.</p>
 </div>
-					<div type="textpart" subtype="section" n="8">
+					<div n="8" type="textpart" subtype="section">
 						<head>
 							<title><hi rend="bold">696</hi> VIII.</title>
 						</head>
@@ -578,7 +577,7 @@ monebatur.</p>
 <p n="16">16. Cornelii ad Dionysium Alexandrinum episco-
 pum litterae adversus Novatianum.</p>
 </div>
-					<div type="textpart" subtype="section" n="9">
+					<div n="9" type="textpart" subtype="section">
 						<head>
 							<title>IX.</title>
 						</head>
@@ -635,7 +634,7 @@ tistiti litteris datis significasse, huncque non ita
 multo post ea quae Eusebius memoriae mandavit,
 ad Cornelium rescripsisse.</p>
 </div>
-<div type="textpart" subtype="section" n="10">
+<div n="10" type="textpart" subtype="section">
 						<head>
 							<title>X.</title>
 						</head>
@@ -679,7 +678,7 @@ sibi pseudo-episcopum cooptarunt. » Has Fortunati
 litteras accipere Cornelius aliquandiu recusavit,
 nec nisi post terrores ac minas accepit.</p>
 </div>
-		<div type="textpart" subtype="section" n="11">
+		<div n="11" type="textpart" subtype="section">
 						<head>
 							<title>XI.</title>
 						</head>
@@ -692,7 +691,7 @@ aliis litteris detinetur, Felicissimo properante prae-
 ventus est; ita ut Cornelio prius, quam Romam ille
 adveniret, Fortunati litterae redderentur.</p>
 </div>
-		<div type="textpart" subtype="section" n="12">
+		<div n="12" type="textpart" subtype="section">
 						<head>
 							<title>XII.</title>
 						</head>
@@ -713,7 +712,7 @@ ordinationem una cum ejusdem legatis in urbem ve-
 nisset, ac necdum eo pervenisset Felicianus Cartha-
 gine cum proxime dictis Cypriani litteris rediens·</p>
 </div>
-					<div type="textpart" subtype="section" n="13">
+					<div n="13" type="textpart" subtype="section">
 						<head>
 							<title>XIII.</title>
 						</head>
@@ -764,7 +763,7 @@ Apiarii recruduit. Sed et tunc Africani praesules ad
 Coelestinum papam rescribentes mox laudati conci-
 lii decreto steterunt.</p>
 </div>
-					<div type="textpart" subtype="section" n="14">
+					<div n="14" type="textpart" subtype="section">
 						<head>
 							<title>XIV.</title>
 						</head>
@@ -776,7 +775,7 @@ Isidorus Mercator, a reliquis ejus mercibus non se-
 <milestone unit="PLSection" n="C"/>
 paramus.</p>
 </div>
-					<div type="textpart" subtype="section" n="15">
+					<div n="15" type="textpart" subtype="section">
 						<head>
 							<title>XV.</title>
 						</head>
