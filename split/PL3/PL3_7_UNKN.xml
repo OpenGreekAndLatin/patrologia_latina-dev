@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><TEI xmlns="http://www.tei-c.org/ns/1.0"><teiHeader>
-    
+<?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+	<teiHeader>
 		<fileDesc>
 			<titleStmt>
-				<title/>
+				<title>Tempore Cornelii Papae / S. CYPRIANI EPIST. SYNOD. DE LAPSIS</title>
 				<editor/>
 				<sponsor>University of Leipzig</sponsor>
 				<funder>European Social Fund Saxony</funder>
@@ -32,7 +33,7 @@
 			</titleStmt>
 			<publicationStmt>
 				<authority>University of Leipzig</authority>
-				<idno type="filename">TO BE ADDED BY LEIPZIG</idno>
+				<idno type="filename">PL3_7_UNKN.xml</idno>
 				<availability>
 					<p>Available under a Creative Commons Attribution-ShareAlike 4.0 International License</p>
 				</availability>
@@ -44,17 +45,17 @@
 				<listBibl xml:lang="la">
 					<biblStruct>
 						<monogr>
-							<title/>
+							<title>Tempore Cornelii Papae / S. CYPRIANI EPIST. SYNOD. DE LAPSIS</title>
 							<editor>
 								<persName>
 									<name xml:lang="la"/>
 								</persName>
 							</editor>
-							<author ref="urn:tmp"/>
+							<author ref="urn:tmp">Concilia Carthaginiensia</author>
 							<imprint>
-								<publisher/>
-								<pubPlace/>
-								<date/>
+								<publisher>Migne</publisher>
+								<pubPlace>Paris</pubPlace>
+								<date>1865</date>
 							</imprint>
 						</monogr>
 					</biblStruct>
@@ -64,9 +65,8 @@
 		<encodingDesc>
 			<p>Text encoded in accordance with the latest EpiDoc standards (January 2014)</p>
 		<refsDecl>
-        <cRefPattern n="" matchPattern="(.+).(.+).(.+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@type='edition']/tei:div[@n='$1']/tei:div[@n='$2']/tei:div[@n='$3'])"/>
-        <cRefPattern n="" matchPattern="(.+).(.+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@type='edition']/tei:div[@n='$1']/tei:div[@n='$2'])"/>
-        <cRefPattern n="" matchPattern="(.+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@type='edition']/tei:div[@n='$1'])"/>
+        <cRefPattern n="p" matchPattern="(.+).(.+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@type='edition']/tei:div[@n='$1']/tei:p[@n='$2'])"/>
+        <cRefPattern n="section" matchPattern="(.+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@type='edition']/tei:div[@n='$1'])"/>
       </refsDecl>
     </encodingDesc>
 		<profileDesc>
@@ -86,7 +86,7 @@
 TEMPORE S. CORNELII I ΡΑΡAE
 IN CAUSA LAPSORUM SUB S. CYPRIANO CELEBRATA.</title>
 					</head>
-					<div type="textpart" subtype="section" n="1">
+		<div n="1" type="textpart" subtype="section">
 						<head>
 							<title>ANNO DOMINI CCLI (1).
 CONCILIUM CARTHAGINIENSE SUB CYPRIANO PRIMUM.</title>
@@ -193,7 +193,7 @@ cilium incoeptum autumai mense Ma(??)o ejusdem
 ann. 251, ante Cornelii P. ordinati nem et ad men-
 sem Augustum usque prorogatum. C<hi rend="smallcap">OLETI</hi>.</note></p>
 					</div>
-					<div type="textpart" subtype="section" n="2">
+		<div n="2" type="textpart" subtype="section">
 						<pb n="877"/>
 						<pb n="878"/>
 						<head>
@@ -232,7 +232,7 @@ collecta</hi></p>
 aliisque octoginta quatuor episcopis :
 quae Novatum, utpote poenitentiam lapsis negantem, abdicavit</hi>.</p>
 					</div>
-					<div type="textpart" subtype="section" n="3">
+		<div n="3" type="textpart" subtype="section">
 						<head>
 							<title>EPISTOLA SYNODICA S. CYPRIANI (4).
 CARTHAGINIENSIS EPISCOPI,
