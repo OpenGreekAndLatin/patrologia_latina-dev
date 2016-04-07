@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><TEI xmlns="http://www.tei-c.org/ns/1.0"><teiHeader>
-    
+<?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+	<teiHeader>
 		<fileDesc>
 			<titleStmt>
 				<title>Patrologiae Cursus Completus. Series Latina (PL)</title>
@@ -23,11 +24,15 @@
 					<persName>Bruce Robertson</persName>
 					<resp>Technical Advisor (Mount Allison University)</resp>
 				</respStmt>
+				<respStmt>
+					<persName>Peter Sprenger</persName>
+					<resp>Student Assistant (University of Halle)</resp>
+				</respStmt>
 			</titleStmt>
 
 			<publicationStmt>
 				<authority>University of Leipzig</authority>
-				<idno type="filename">PL4.xml</idno>
+				<idno type="filename">PL4_0_DE D.xml</idno>
 				<availability>
 					<licence target="https://creativecommons.org/licenses/by-sa/4.0/">Available under a
 						Creative Commons Attribution-ShareAlike 4.0 International License</licence>
@@ -48,11 +53,6 @@
 							</editor>
 							<author>Cyprianus Carthaginensis</author>
 							<title>De Duodecim Abusionibus Saeculi Tractatus [Adscriptus]</title>
-							<title>Oratio Antiocheni Quam Sub Die Passionis Suae Dixit [Incerta]</title>
-							<title>De Montibus Sina et Sion Tractatus [Adscriptus]</title>
-							<title>Coena [Falso Inscripta]</title>
-							<title>De Revelatione Capitis Beati Joannis Baptistae Tractatus [Incertus]</title>
-							<title>Carmen de resurrectione mortuorum</title>
 							<imprint>
 								<publisher>Garnier</publisher>
 								<pubPlace>Paris</pubPlace>
@@ -71,9 +71,7 @@
 			<p>The following text is encoded in accordance with EpiDoc standards and with the CTS/CITE
 				Architecture.</p>
 		<refsDecl>
-        <cRefPattern n="" matchPattern="(.+).(.+).(.+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@type='edition']/tei:div[@n='$1']/tei:div[@n='$2']/tei:div[@n='$3'])"/>
-        <cRefPattern n="" matchPattern="(.+).(.+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@type='edition']/tei:div[@n='$1']/tei:div[@n='$2'])"/>
-        <cRefPattern n="" matchPattern="(.+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@type='edition']/tei:div[@n='$1'])"/>
+        <cRefPattern n="section" matchPattern="(.+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@type='edition']/tei:div[@n='$1'])"/>
       </refsDecl>
     </encodingDesc>
 
@@ -86,13 +84,16 @@
 	</teiHeader>
 	<text><body><div type="edition" n="">
 					<head>
-						<title type="main">DE DUODECIM ABUSIONIBUS SÆCULI TRACTATUS Perperam Cypriano et
-							Augustino ascriptus.</title>
+						<title type="main">DE DUODECIM ABUSIONIBUS SÆCULI TRACTATUS</title>
+						<title type="sub">Perperam Cypriano et Augustino ascriptus.</title>
 					</head>
+		<div n="1" type="textpart" subtype="section">
 					<p>
 						<milestone unit="PLSection" n="C"/>
 					</p>
-					<ab>
+
+
+<ab>
 						<title type="sub">870 CAPUT PRIMUM.</title>
 					</ab>
 					<p>Primus ahusionis gradus est, si sine bonis ope­ <lb/> ribus sapiens et prædicator
@@ -120,7 +121,9 @@
 					<p>
 						<milestone unit="PLSection" n="D"/>
 					</p>
-					<ab>
+					</div>
+<div n="2" type="textpart" subtype="section">
+<ab>
 						<title type="sub">CAPUT II.</title>
 					</ab>
 					<p>Secundus abusionis gradus est, si sine religione <lb/> senex esse inveniatur. Cui cum
@@ -160,7 +163,9 @@
 						gravita­ <lb/> tem illudant. Unicuique 871 enim considerandum <lb/> est, quid ætate
 						eminenti dignum sit; ut hoc agat, <lb/> quod nec vitam, nec aetatem, nec ministerium
 						vile <lb/> reddat (8).</p>
-					<ab>
+					</div>
+<div n="3" type="textpart" subtype="section">
+<ab>
 						<title type="sub">CAPUT III.</title>
 					</ab>
 					<p>Tertius abusionis gradus est, adolescens sine <lb/> odedientia ; quo mundus a recto
@@ -196,7 +201,9 @@
 						quae omnium <lb/> disciplinarum mater est, magna exercitatione in­ <lb/> diget; quae sui
 						normam studii in Christo Domino <lb/> sumpsit, qui obediens Patri usque ad mortem, cru­
 						<lb/> cis ignominiam libenter sustinuit.</p>
-					<ab>
+					</div>
+<div n="4" type="textpart" subtype="section">
+<ab>
 						<title type="sub">CAPUT IV.</title>
 					</ab>
 					<p>
@@ -259,7 +266,9 @@
 						in æternam damnationem dilabu tur ; et e <lb/> contrario, Beati, sunt misericordes, quia
 						misericor­ <lb/> diam consequentur (Matth. v, 7). Felix est ergo <lb/> misericors, dum
 						in bac virtute non substantiam, <lb/> sed affectum Deus requirit.</p>
-					<ab>
+					</div>
+<div n="5" type="textpart" subtype="section">
+<ab>
 						<title type="sub">CAPUT V.</title>
 					</ab>
 					<p>Quintus abusionis gradus est, femina sine pudi­ <lb/> ciLia. Sicut enim omnes bonos
@@ -314,7 +323,9 @@
 						mœrentium, augmentum omnis pulchritudinis. <milestone unit="PLSection" n="B"/><lb/>
 						decus religionis, defensio criminum, multiplicatio <lb/> meritorum, creatoris omnium Dei
 						amicitia (22).</p>
-					<ab>
+					</div>
+<div n="6" type="textpart" subtype="section">
+<ab>
 						<title type="sub">CAPUT VI.</title>
 					</ab>
 					<p>Sextus abusionis gradus est dominus sine vir­ <lb/> tute, quia nihil proficit dominandi
@@ -362,7 +373,9 @@
 					<p>
 						<milestone unit="PLSection" n="C"/>
 					</p>
-					<ab>
+					</div>
+<div n="7" type="textpart" subtype="section">
+<ab>
 						<title type="sub">CAPUT VII.</title>
 					</ab>
 					<p>Septimus abusionis gradus est Christianus con­ <lb/> tentiosus. qui, cum
@@ -419,7 +432,9 @@
 						9). Frustra ergo <lb/> contendit patrem se habere in terra, qui patrem et <lb/> patriam
 						profitetur se habere in coelo. Cujus patriae <lb/> nemo possessor efficitur, nisi qui de
 						terrenæ patriæ <milestone unit="PLSection" n="D"/><lb/> contentione securus habetur.</p>
-					<ab>
+					</div>
+<div n="8" type="textpart" subtype="section">
+<ab>
 						<title type="sub">CAPUT VIII.</title>
 					</ab>
 					<p>Octavus abusionis gradus est, pauper superbus, <lb/> qui, nihil habens, in superbiam
@@ -453,7 +468,9 @@
 						Providendum est ergo pauperibns, <lb/> ut semetipsos, quales sint, intelligant; et quia
 						re­ <lb/> bus consequi quod cupiunt non valent, mentis tu­ <lb/> more superbirc
 						desinant.</p>
-					<ab>
+					</div>
+<div n="9" type="textpart" subtype="section">
+<ab>
 						<title type="sub">CAPUT IX.</title>
 					</ab>
 					<p>Nonus abusionis gradus est, rex iniquus. Etenim <lb/> regem non iniquum, sed
@@ -505,7 +522,9 @@
 							<milestone unit="PLSection" n="D"/><lb/> poenis, si justitiam non fecerit, primatum
 						habitu­ <lb/> rus est. Omnes namque quoscunque peccatores <lb/> sub se in præsenti
 						habuit, supra se modo implaca­ <lb/> bili, in illa poena futura habebit.</p>
-					<ab>
+					</div>
+<div n="10" type="textpart" subtype="section">
+<ab>
 						<title type="sub">879 CAPUT X.</title>
 					</ab>
 					<p>Decimus gradus abusionis est episcopus negli­ <lb/> gens; qui gradus sui honorem inter
@@ -559,7 +578,9 @@
 						doctrinam, quatenus ve­ <lb/> niente Domino mereantur audire : Euge, serve <lb/> bone et
 						fidelis, quia supra pauca fuisti fidelis, supra <lb/> multa le constituam : intra in
 						gaudium domini tui <lb/> (Matth. xxv, 23).</p>
-					<ab>
+					</div>
+<div n="11" type="textpart" subtype="section">
+<ab>
 						<title type="sub">CAPUT XI.</title>
 					</ab>
 					<p>Undecimus abusionis gradus est plebs sine dis­ <lb/> ciplina, quae, cum disciplinæ
@@ -591,7 +612,9 @@
 						disciplinam est, alienus est <lb/> a corpore Christi. Non scindamus igitur illam, sed
 						<lb/> sortiamur de illa cujus sit (Joan. xix, 24) ; id est, <milestone unit="PLSection" n="A"/><lb/> non solvamus quidquam de mandatis Demini, sed <lb/> unusquisque in quo
 						vocatus est, in eo permaneat <lb/> apud Dominum.</p>
-					<ab>
+					</div>
+<div n="12" type="textpart" subtype="section">
+<ab>
 						<title type="sub">. CAPUT XII.</title>
 					</ab>
 					<p>Duodecimus ahusionis gradus est populus sine <lb/> lege, qui, dum Dei dicta et legum
@@ -626,4 +649,5 @@
 						futuro. <note type="footnote"> Steph. Baluzii nolaR. </note>
 						<note type="footnote"> (36) Ipsa vero. Sic duo mss. ipsa enim edit. </note><note type="footnote"> (37) Sin, lege. Cod. Colbert. sine Christo. </note></p>
 				</div>
+	</div>
 				</body></text></TEI>
