@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><TEI xmlns="http://www.tei-c.org/ns/1.0"><teiHeader>
+<?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+	<teiHeader>
     
 		<fileDesc>
 			<titleStmt>
-				<title/>
+				<title>Documenta / Galliae Concilia</title>
 				<editor/>
 				<sponsor>University of Leipzig</sponsor>
 				<funder>European Social Fund Saxony</funder>
@@ -44,17 +46,17 @@
 				<listBibl xml:lang="la">
 					<biblStruct>
 						<monogr>
-							<title/>
+							<title>Documenta / Galliae Concilia</title>
 							<editor>
 								<persName>
-									<name xml:lang="el"/>
+									<name xml:lang="el">Migne</name>
 								</persName>
 							</editor>
-							<author ref="urn:tmp"/>
+							<author ref="urn:tmp">Isidorus Hispaliensis</author>
 							<imprint>
-								<publisher/>
-								<pubPlace/>
-								<date/>
+								<publisher>J. P. Migne</publisher>
+								<pubPlace>Paris</pubPlace>
+								<date>1850</date>
 							</imprint>
 						</monogr>
 					</biblStruct>
@@ -64,9 +66,8 @@
 		<encodingDesc>
 			<p>Text encoded in accordance with the latest EpiDoc standards (January 2014)</p>
 		<refsDecl>
-        <cRefPattern n="" matchPattern="(.+).(.+).(.+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@type='edition']/tei:div[@n='$1']/tei:div[@n='$2']/tei:div[@n='$3'])"/>
-        <cRefPattern n="" matchPattern="(.+).(.+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@type='edition']/tei:div[@n='$1']/tei:div[@n='$2'])"/>
-        <cRefPattern n="" matchPattern="(.+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@type='edition']/tei:div[@n='$1'])"/>
+		<cRefPattern n="p" matchPattern="(.+).(.+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@type='edition']/tei:div[@n='$1']/tei:p[@n='$2'])"/>
+        <cRefPattern n="section" matchPattern="(.+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@type='edition']/tei:div[@n='$1'])"/>
       </refsDecl>
     </encodingDesc>
 		<profileDesc>
@@ -83,7 +84,7 @@
 					<head>
 						<title>GALLIAE CONCILIA.</title>
 					</head>
-					<div type="textpart" subtype="section" n="1">
+					<div n="1" subtype="section" type="textpart">
 						<head>
 							<title>XXI
 CONCILIUM ARELATENSE PRIMUM</title>
@@ -285,7 +286,7 @@ rensium Vitalis episcopus : ex porto urbis Romae Gre-
 gorius episcopus : ex Centumcellis Epictetus episcopus :
 ex civitate Ostiensi Leontius et Macarius presbyteres.</p>
 					</div>
-					<div type="textpart" subtype="section" n="2">
+					<div n="2" subtype="section" type="textpart">
 						<head>
 							<title>XXII
 CONCILIUM ARELATENSE SECUNDUM.</title>
@@ -443,7 +444,7 @@ ad officium clericatus non admitti, et quicunque ille
 post poenitentiam habitum saecularem non praesumat;
 quod si praesumpserit, ab Ecclesia alienus habeatur.</p>
 					</div>
-					<div type="textpart" subtype="section" n="3">
+					<div n="3" subtype="section" type="textpart">
 						<head>
 							<title>XXIII
 CONCILIUM ARELATENSE TERTIUM</title>
@@ -550,7 +551,7 @@ stantino [<hi rend="italic">Ae. T</hi>, 1, Constantio] episcopo subscripsi.</p>
 						<p>Ego Hemeterius directus a domino meo Galliciano
 episcopo consensi et subscripsi.</p>
 					</div>
-					<div type="textpart" subtype="section" n="4">
+					<div n="4" subtype="section" type="textpart">
 						<head>
 							<title>XXIV
 CONCILIUM VALENTINUM</title>
@@ -652,7 +653,7 @@ retur, submovendus protinus ab eo gradu quem ab
 omni scandalo liberum esse licet. Divina vos pietas in
 aeternum protegat.</p>
 					</div>
-					<div type="textpart" subtype="section" n="5">
+					<div n="5" subtype="section" type="textpart">
 						<head>
 							<title>XXV
 CONCILIUM ΤΑURITANUM.</title>
@@ -796,7 +797,7 @@ ritas.</p>
 						<p>Incolumes vos Dominus noster sevo longissimo
 conservare dignetur, domini dilectissimi fratres.</p>
 					</div>
-					<div type="textpart" subtype="section" n="6">
+					<div n="6" subtype="section" type="textpart">
 						<head>
 							<title>XXVI
 CONCILIUM REGIENSE</title>
@@ -1089,7 +1090,7 @@ in omnibus subscriptionibus. T. 2, <hi rend="italic">die concilii supra
 scripti</hi>.</note>
 <note type="footnote">j Ae., B. R., E. 3, U., <hi rend="italic">interfui vita ipsius</hi>.</note>
 					</div>
-					<div type="textpart" subtype="section" n="7">
+					<div n="7" subtype="section" type="textpart">
 						<head>
 							<title>XXVII
 CONCILIUM ARAUSICANUM</title>
@@ -1361,7 +1362,7 @@ Ego Nectarius episcopus subscripsi.</p>
 						<p>Pro patre meo episcopo Claudio subscripsi et re-
 cognovi.</p>
 					</div>
-					<div type="textpart" subtype="section" n="8">
+					<div n="8" subtype="section" type="textpart">
 						<head>
 							<title>XXVIII
 CONCILIUM VASENSE PRIMUM</title>
@@ -1508,7 +1509,7 @@ nem expositorum hoc ordine collectorum repetitor
 vel calumniator exstiterit, ut homicida habendus
 est.</p>
 					</div>
-					<div type="textpart" subtype="section" n="9">
+					<div n="9" subtype="section" type="textpart">
 						<head>
 							<title>XXIX
 CONCILIUM VASENSE SECUNDUM.</title>
@@ -1589,7 +1590,7 @@ et rationabile visum est, ut illa suprascriptis titulis
 canonum jungeremus, ex constituto synodali aposto-
 licae sedis inter caetera.</p>
 					</div>
-					<div type="textpart" subtype="section" n="10">
+					<div n="10" subtype="section" type="textpart">
 						<head>
 							<title>XXX
 CONCILIUM AGATHENSE.</title>
@@ -2304,7 +2305,7 @@ subscripsi.</p>
 						<p>Optimus diaconus missus a domino meo Leonio
 episcopo subscripsi.</p>
 					</div>
-					<div type="textpart" subtype="section" n="11">
+					<div n="11" subtype="section" type="textpart">
 						<head>
 							<title>XXXI
 CONCILIUM AURELIANENSE PRIMUM</title>
@@ -2564,7 +2565,7 @@ scripsi.</p>
 						<p>Maurus episcopus subscripsi.</p>
 <note type="footnote">b In reliquis, praeter A., <hi rend="italic">Licinius</hi>.</note>
 					</div>
-					<div type="textpart" subtype="section" n="12">
+					<div n="12" subtype="section" type="textpart">
 						<head>
 							<title>XXXII
 CONCILIUM AURELIANENSE SECUNDUM.</title>
@@ -3093,7 +3094,7 @@ trasio episcopo subscripsi.</p>
 <note type="footnote">g Baudastis et Vincentii subscriptiones desumptae
 sunt ex Ae., cum desint in B. R. et reliquis Codicibus.</note>
 					</div>
-					<div type="textpart" subtype="section" n="13">
+					<div n="13" subtype="section" type="textpart">
 						<head>
 							<title>XXXIII
 CONCILIUM EPAUNENSE</title>
@@ -3327,7 +3328,7 @@ subscripserunt episcopi viginli tres <hi rend="superscript">c</hi>.</p>
 <note type="footnote">b In A., <hi rend="italic">in sancta</hi>.</note>
 <note type="footnote">c B. R., T. 1,2, <hi rend="italic">viginti quatuor</hi>.</note>
 					</div>
-					<div type="textpart" subtype="section" n="14">
+					<div n="14" subtype="section" type="textpart">
 						<head>
 							<title>XXXIV
 CONCILIUM CARPENTORATENSE.</title>
@@ -3362,7 +3363,7 @@ In hac constitutione subscripserunt episcopi quin-
 decim.</p>
 <note type="footnote">b B. R., T. 1, 2, U., G., <hi rend="italic">ipsa</hi>.</note>
 					</div>
-					<div type="textpart" subtype="section" n="15">
+					<div n="15" subtype="section" type="textpart">
 						<head>
 							<title>XXXV
 CONCILIUM ARVERNENSE PRIMUM.</title>
@@ -3513,7 +3514,7 @@ quod si quis praeceptorum Dei immemor crediderit
 contemnendum, sciat se auctoritate canonica com-
 munionis sine dubio subire jacturam.</p>
 					</div>
-					<div type="textpart" subtype="section" n="16">
+					<div n="16" subtype="section" type="textpart">
 						<head>
 							<title>XXXVI
 EPISTOLA VEL CONCILIUM DE CIVITATE ARVERNENSI</title>
@@ -3577,7 +3578,7 @@ ipsa in Codicibus concilio Arvernensi secundo prae-
 ponatur, eam tamen ad Arvernense primum revo-
 candam, et contextus et epocha demonstrant.</note>
 					</div>
-					<div type="textpart" subtype="section" n="17">
+					<div n="17" subtype="section" type="textpart">
 						<head>
 							<title>XXXVII
 CONCILIUM ARVERNENSE SECUNDUM.</title>
