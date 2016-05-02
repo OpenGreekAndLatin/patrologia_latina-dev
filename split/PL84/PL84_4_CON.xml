@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><TEI xmlns="http://www.tei-c.org/ns/1.0"><teiHeader>
+<?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+	<teiHeader>
     
 		<fileDesc>
 			<titleStmt>
@@ -64,9 +66,8 @@
 		<encodingDesc>
 			<p>Text encoded in accordance with the latest EpiDoc standards (January 2014)</p>
 		<refsDecl>
-        <cRefPattern n="" matchPattern="(.+).(.+).(.+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@type='edition']/tei:div[@n='$1']/tei:div[@n='$2']/tei:div[@n='$3'])"/>
-        <cRefPattern n="" matchPattern="(.+).(.+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@type='edition']/tei:div[@n='$1']/tei:div[@n='$2'])"/>
-        <cRefPattern n="" matchPattern="(.+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@type='edition']/tei:div[@n='$1'])"/>
+        <cRefPattern n="p" matchPattern="(.+).(.+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@type='edition']/tei:div[@n='$1']/tei:p[@n='$2'])"/>
+        <cRefPattern n="section" matchPattern="(.+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@type='edition']/tei:div[@n='$1'])"/>
       </refsDecl>
     </encodingDesc>
 		<profileDesc>
@@ -83,7 +84,7 @@
 					<head>
 						<title>CONCILIA HISPANIAE.</title>
 					</head>
-					<div type="textpart" subtype="section" n="1">
+					<div n="1" subtype="section" type="textpart">
 						<head>
 							<title>XXXVIII
 CONCILIUM ELIBERITANUM</title>
@@ -657,7 +658,7 @@ bus laicis scrihere audeant; quae fideles sunt vel lit-
 teras alicujus pacificas ad suum solum nomen scri-
 ptas accipiant.</p>
 					</div>
-					<div type="textpart" subtype="section" n="2">
+					<div n="2" subtype="section" type="textpart">
 						<head>
 							<title>XXXIX
 CONCILIUM TARRACONENSE</title>
@@ -855,7 +856,7 @@ clesia Egarensis minister</p>
 T. 1, <hi rend="italic">Canidius</hi>.</note>
 <note type="footnote">d U., <hi rend="italic">episcopus Ausonae subscripsi</hi>.</note>
 					</div>
-					<div type="textpart" subtype="section" n="3">
+					<div n="3" subtype="section" type="textpart">
 						<head>
 							<title>XL
 CONCILIUM GERUNDENSE</title>
@@ -970,7 +971,7 @@ scripsi.</p>
 						<p>Orontius in Christi nomine episcopus subscripsi.</p>
 <note type="footnote">c B. R., T. 1, U., G., <hi rend="italic">Agricius</hi>.</note>
 					</div>
-					<div type="textpart" subtype="section" n="4">
+					<div n="4" subtype="section" type="textpart">
 						<head>
 							<title>XLI
 CONCILIUM CAESARAUGUSTANUM I
@@ -1053,7 +1054,7 @@ niales virgines non velentur</hi>.</p>
 rum probata aetate, quam sacerdos comprobaverit.
 Ab universis episcopis dictum est : Placet.</p>
 					</div>
-					<div type="textpart" subtype="section" n="5">
+					<div n="5" subtype="section" type="textpart">
 						<head>
 							<title>XLII
 CONCILIUM CAESARAUGUSTANUM II
@@ -1109,7 +1110,7 @@ domini mei Gavini episcopi subscripsi.</p>
 						<p>Stephanus in Christi nomine diaconus agens vicem
 domini mei Aquilini episcopi subscripsi.</p>
 					</div>
-					<div type="textpart" subtype="section" n="6">
+					<div n="6" subtype="section" type="textpart">
 						<head>
 							<title>XLIII
 CONCILIUM CAESARAUGUSTANUM III</title>
@@ -1361,7 +1362,7 @@ sus, praestante Domino nostro Jesu Christo, cui est
 honor, summa virtus et potestas in saecula saeculo-
 rum. Amen.</p>
 					</div>
-					<div type="textpart" subtype="section" n="7">
+					<div n="7" subtype="section" type="textpart">
 						<head>
 							<title>CONCILIUM ILERDENSE</title>
 						</head>
@@ -1591,7 +1592,7 @@ his constitutionibus interfui et subscripsi.</p>
 mino meo Staphylio [<hi rend="italic">T</hi>. 2, <hi rend="italic">U.</hi>, Stabilio] episcopo his
 constitutionibus interfui et subscripsi.</p>
 					</div>
-					<div type="textpart" subtype="section" n="8">
+					<div n="8" subtype="section" type="textpart">
 						<head>
 							<title>XLV
 CONCILIUM VALLETANUM</title>
@@ -1743,7 +1744,7 @@ scopus subscripsi.</p>
 						<p>Sallustius in Christi nomine archidiaconus vica-
 rius domini mei Marcelli episcopi subscripsi.</p>
 					</div>
-					<div type="textpart" subtype="section" n="9">
+					<div n="9" subtype="section" type="textpart">
 						<head>
 							<title>XLVI
 CONCILIUM TOLETANUM</title>
@@ -2132,7 +2133,7 @@ contra sedem sancti Petri faciat, anathema sit.</p>
 <note type="footnote">b Deficit periodus haec in BR.</note>
 <note type="footnote">c Ex Τ. 1. In A. et reliquis : <hi rend="italic">in salutare baptismi</hi>.</note>
 					</div>
-					<div type="textpart" subtype="section" n="10">
+					<div n="10" subtype="section" type="textpart">
 						<head>
 							<title>XLVII
 CONCILIUM TOLETANUM SECUNDUM.</title>
@@ -2528,7 +2529,7 @@ Domino, ejus est pietas, ut nihil de hoc quod jus
 antiquum custodisse probatur, immutari permittat.
 Divina vos custodiat Trinitas. Amen.</p>
 					</div>
-					<div type="textpart" subtype="section" n="11">
+					<div n="11" subtype="section" type="textpart">
 						<head>
 							<title>XLVIII
 CONCILIUM TOLETANUM TERTIUM.</title>
@@ -3980,7 +3981,7 @@ Deum precibus adeamus, ut regnum et gens, quae
 Christum glorificavit in terris, glorificetur ab ilio
 non solum In terris sed etiam in coelis. Amen.</p>
 					</div>
-					<div type="textpart" subtype="section" n="12">
+					<div n="12" subtype="section" type="textpart">
 						<head>
 							<title>XLIX 
 CONCILIUM TOLETANUM QUARTUM.</title>
@@ -5570,7 +5571,7 @@ scripsi.</p>
 agens vicem domini mei Sollemnii episcopi, sub-
 scripsi.</p>
 					</div>
-					<div type="textpart" subtype="section" n="13">
+					<div n="13" subtype="section" type="textpart">
 						<head>
 							<title>L
 CONCILIUM TOLETANUM QUINTUM.</title>
@@ -5849,7 +5850,7 @@ dotum industriae delegamus. Datum sub die pridie
 calendas Julias anno feliciter primo regni nostri
 Toleto.</p>
 					</div>
-					<div type="textpart" subtype="section" n="14">
+					<div n="14" subtype="section" type="textpart">
 						<head>
 							<title>LI.
 CONCILIUM TOLETANUM SEXTUM</title>
@@ -6486,7 +6487,7 @@ Severinus diaconus, agens vicem Musitacii episco-
 pi Valentinae Ecclesiae, subscripsi.</p>
 <milestone unit="PLSection" n="C"/>
 					</div>
-					<div type="textpart" subtype="section" n="15">
+					<div n="15" subtype="section" type="textpart">
 						<head>
 							<title>LII
 CONCILIUM TOLETANUM SEPTIMUM</title>
@@ -6916,7 +6917,7 @@ definiens subscripsi.</p>
 <note type="footnote">c B. R., <hi rend="italic">Nebridii</hi>. E. 4, T. 1, 2, <hi rend="italic">Ne(??)dii</hi>.</note>
 <note type="footnote">d B. R., E. 4, T. 1, 2, <hi rend="italic">Dunilani</hi>.</note>
 					</div>
-					<div type="textpart" subtype="section" n="16">
+					<div n="16" subtype="section" type="textpart">
 						<head>
 							<title>LIII
 CONCILIUM TOLETANUM OCTAVUM</title>
@@ -8364,7 +8365,7 @@ totius palatii maneat societate seclusus : religiosus
 etiam qui se in eadem culpa devolverit, simili re-
 rum proprietatis suae dispendio subjacebit.</p>
 					</div>
-					<div type="textpart" subtype="section" n="17">
+					<div n="17" subtype="section" type="textpart">
 						<head>
 							<title>LIV
 CONCILIUM TOLETANUM NONUM</title>
@@ -8748,7 +8749,7 @@ dcxciii.</p>
 <note type="footnote">d T. 1, <hi rend="italic">Primicerius</hi>. T. 2, U., G., <hi rend="italic">Primiclerius</hi>.</note>
 <note type="footnote">e E. 4, T. 1, 2, <hi rend="italic">Hemeterius</hi>.</note>
 					</div>
-					<div type="textpart" subtype="section" n="18">
+					<div n="18" subtype="section" type="textpart">
 						<head>
 							<title>LV
 CONCILIUM TOLETANUM DECIMUM</title>
@@ -9392,7 +9393,7 @@ nostri Reccesvinthi regis.</p>
 tropolitanus episcopus et caeteri sacerdotes memo-
 rati hoc judicii nostri decreium scribimus.</p>
 					</div>
-					<div type="textpart" subtype="section" n="19">
+					<div n="19" subtype="section" type="textpart">
 						<head>
 							<title>LVI
 CONCILIUM TOLETANUM UNDECIMUM</title>
@@ -10371,7 +10372,7 @@ abbas haec gesta synodica a nobis definita subscripsi.</p>
 <milestone unit="PLSection" n="A"/>Gudila Ecclesiae Toletanae archidiaconus haec gesta
 synodica a nobis definita subscripsi.</p>
 					</div>
-					<div type="textpart" subtype="section" n="20">
+					<div n="20" subtype="section" type="textpart">
 						<head>
 							<title>LVII
 CONCILIUM TOLETANUM DUODECIMUM.</title>
@@ -11585,7 +11586,7 @@ suggerimus ut cui vult sanctitas vestra domino vostro
 notescat, quia persona vestra electionem vestrorum
 impleat, sic vitae aeternae praemium accipiatis.</p>
 					</div>
-					<div type="textpart" subtype="section" n="21">
+					<div n="21" subtype="section" type="textpart">
 						<head>
 							<title>LVIII
 CONCILIUM TOLETANUM DECIMUM TERTIUM.</title>
@@ -12723,7 +12724,7 @@ Edita lex in confirmatione concilii Toleto sub die Idus
 Novembris aera <hi rend="smallcap">dccxxi</hi> anno quoque feliciter quarto
 regni gloriae nostrae in Dei nomine.</p>
 					</div>
-					<div type="textpart" subtype="section" n="22">
+					<div n="22" subtype="section" type="textpart">
 						<head>
 							<title>LIX
 CONCILIUM TOLETANUM XIV a</title>
@@ -13014,7 +13015,7 @@ cordii episcopi Palentinae Ecclesiae, similiter.</p>
 vicem domini mei Sarmatani episcopi Valentinae Ec-
 clesiae, similiter.</p>
 					</div>
-					<div type="textpart" subtype="section" n="23">
+					<div n="23" subtype="section" type="textpart">
 						<head>
 							<title>LX
 CONCILIUM TOLETANUM XV</title>
@@ -13993,7 +13994,7 @@ Nandarbi Astigitanae sedis episcopi, ita subscripsi.</p>
 					</div>
 <pb n="527"/>
 <pb n="528"/>
-					<div type="textpart" subtype="section" n="24">
+					<div n="24" subtype="section" type="textpart">
 						<head>
 							<title>LXI
 CONCILIUM TOLETANUM DECIMUM-SEXTUM.</title>
@@ -15468,7 +15469,7 @@ decreta synodalia subscripsi.</p>
 						<p>Audemundus comes procer subscripsi.</p>
 						<p>Teudemundus comes procer subscripsi.</p>
 					</div>
-					<div type="textpart" subtype="section" n="25">
+					<div n="25" subtype="section" type="textpart">
 						<head>
 							<title>LXII
 CONCILIUM <hi rend="superscript">a</hi> TOLETANUM DECIMUM-SEPTIMUM</title>
@@ -16059,7 +16060,7 @@ quae in confirmationem eorum sunt promulgatae, sive
 excommunicatione seu etiam damno maneant usque-
 quaque damnati.</p>
 					</div>
-					<div type="textpart" subtype="section" n="26">
+					<div n="26" subtype="section" type="textpart">
 						<head>
 							<title>LXIII
 Π CONCILIUM BRACARENSE PRIMUM</title>
@@ -16470,7 +16471,7 @@ episcopus subscripsi.</p>
 					</div>
 <pb n="569"/>
 <pb n="570"/>
-					<div type="textpart" subtype="section" n="27">
+					<div n="27" subtype="section" type="textpart">
 						<head>
 							<title>LXIV
 CONCILIUM BRACARENSE SECUNDUM</title>
@@ -17493,7 +17494,7 @@ cato communicaverit, quasi perturbans omnem disci-
 plinam ecclesiasticam excommunicetur.</p>
 <note type="footnote">b B. R., T. 1, 2, G., <hi rend="italic">suae, deprecans, ut possit</hi>.</note>
 					</div>
-					<div type="textpart" subtype="section" n="28">
+					<div n="28" subtype="section" type="textpart">
 						<head>
 							<title>LXV
 CONCILIUM BRACARENSE TERTIUM</title>
@@ -17825,7 +17826,7 @@ stitutionibus interfui et subscripsi.</p>
 episcopus, his constitutionibus interfui et subscripsi.</p>
 <note type="footnote">b AE., B. R., E. 3, 4, T. 1, 2, <hi rend="italic">Alarius</hi>. U., <hi rend="italic">Alaricus</hi>.</note>
 					</div>
-					<div type="textpart" subtype="section" n="29">
+					<div n="29" subtype="section" type="textpart">
 						<head>
 							<title>LXVI
 CONCILIUM HISPALENSE PRIMUM.</title>
@@ -17929,7 +17930,7 @@ stitutionem firmavi et subscripsi.</p>
 tionem firmavi et subscripsi.</p>
 <note type="footnote">b B. R., E. 4, T. 1, <hi rend="italic">aera dcxxvii</hi>.</note>
 					</div>
-					<div type="textpart" subtype="section" n="30">
+					<div n="30" subtype="section" type="textpart">
 						<head>
 							<title>LXVII
 CONCILIUM HISPALENSE SECUNDUM</title>
@@ -18764,7 +18765,7 @@ tanae episcopus subscripsi.</p>
 						<p>Honorius in Christi nomine Ecclesiae Cordubensis
 episcopus subscripsi.</p>
 					</div>
-					<div type="textpart" subtype="section" n="31">
+					<div n="31" subtype="section" type="textpart">
 						<head>
 							<title>LXVIII
 CONCILIUM BARCINONENSE PRIMUM <hi rend="superscript">a</hi>.</title>
@@ -18843,7 +18844,7 @@ nostrum subscripsi.</p>
 						<p>Joannes in Christi nomine episcopus consensum
 nostrum subscripsi.</p>
 					</div>
-					<div type="textpart" subtype="section" n="32">
+					<div n="32" subtype="section" type="textpart">
 						<head>
 							<title>LXIX
 CONCILIUM BARCINONENSE SECUNDUM.</title>
@@ -18924,7 +18925,7 @@ scopus bis constitutionibus annuens subscripsi.</p>
 scopus in his constitutionibus subscripsi.</p>
 <note type="footnote">a Deest hoc concilium in caeteris Codicibus praeter AE.</note>
 					</div>
-					<div type="textpart" subtype="section" n="33">
+					<div n="33" subtype="section" type="textpart">
 						<head>
 							<title>LXX
 CONCILIUM NARBONENSE <hi rend="superscript">a</hi>.</title>
@@ -19101,7 +19102,7 @@ episcopus bis constitutionibus inter ni et subscripsi.</p>
 						<p>Agripinus de civitate Loteba in Christi nomine
 episcopus hid constitutionibus interfui et subscripsi.</p>
 					</div>
-					<div type="textpart" subtype="section" n="34">
+					<div n="34" subtype="section" type="textpart">
 						<head>
 							<title>LXXI
 CONCILIUM OSCENSE <hi rend="superscript">a</hi></title>
@@ -19135,7 +19136,7 @@ honestorum clericorum testimonio clarere demon-
 strent.</p>
 <note type="footnote">a Deest hoc concilium in caeteris Codicibus praeter AE.</note>
 					</div>
-					<div type="textpart" subtype="section" n="35">
+					<div n="35" subtype="section" type="textpart">
 						<head>
 							<title>LXXII
 CONCILIUM EGARENSE <hi rend="superscript">a</hi>.</title>
@@ -19173,7 +19174,7 @@ phani episcopi, subscripsi.</p>
 cem domini mei Gomarelli episcopi, subscripsi</p>
 <note type="footnote">a Deest hoc concilium reliquis Codicibus praeter AE.</note>
 					</div>
-					<div type="textpart" subtype="section" n="36">
+					<div n="36" subtype="section" type="textpart">
 						<head>
 							<title>LXXIII
 CONCILIUM <hi rend="superscript">a</hi> EMERITENSE</title>
