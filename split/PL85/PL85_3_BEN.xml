@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><TEI xmlns="http://www.tei-c.org/ns/1.0"><teiHeader>
-    
+<?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
     <fileDesc>
       <titleStmt>
         <title>Patrologiae Cursus Completus. Series Latina (PL)</title> 
@@ -65,7 +66,6 @@
               <biblScope unit="volume">85</biblScope>
             </monogr>
             <ref target="http://hdl.handle.net/2027/pst.000020931902">HathiTrust</ref>
-            
           </biblStruct>
         </listBibl>
       </sourceDesc>
@@ -75,9 +75,7 @@
       <p>The following text is encoded in accordance with EpiDoc standards and with the
         CTS/CITE Architecture.</p>
     <refsDecl>
-        <cRefPattern n="" matchPattern="(.+).(.+).(.+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@type='edition']/tei:div[@n='$1']/tei:div[@n='$2']/tei:div[@n='$3'])"/>
-        <cRefPattern n="" matchPattern="(.+).(.+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@type='edition']/tei:div[@n='$1']/tei:div[@n='$2'])"/>
-        <cRefPattern n="" matchPattern="(.+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@type='edition']/tei:div[@n='$1'])"/>
+        <cRefPattern n="section" matchPattern="(.+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@type='edition']/tei:div[@n='$1'])"/>
       </refsDecl>
     </encodingDesc>
     
@@ -89,10 +87,13 @@
     
 </teiHeader>
 
-  <text><body><div type="edition" n="">
-        <ab>
-            <title type="sub">BENEDICTIO PANIS.</title>
-          </ab>
+  <text>
+    <body>
+      <div type="edition" n="">
+        <div n="1" subtype="section" type="textpart">
+          <ab>
+          <title type="sub">BENEDICTIO PANIS.</title>
+        </ab>
           <p>
             <milestone unit="PLSection" n="D"/>f. Adjutorium nostrum in nomine Domini. ℟. <lb/>
             Qui fecit colum et terram. f. Sit nomen Domini <lb/>
@@ -102,16 +103,17 @@
           <p>Dicat Presbyter. Dominus sit semper vobiscum. <lb/>
             ℟ Et cum spiritu tuo.</p>
           <p>Oremus. Oratio :</p>
-          <p>Benedic Domine creaturam istam panis : sicut be­ <lb/>
+          <p>Benedic Domine creaturam istam panis : sicut be- <lb/>
             nedixisti quinque panes in deserto : ut omnes qui ex <lb/>
             et gustaverint : tam corporis quam anime recipiant
             <milestone unit="PLSection" n="D"/><lb/>
             sanitatem. Per Dominum nostrum Jesum Christum <lb/>
             Filium tuum. Qui tecum vivit et regnat in unitate <lb/>
-            Spiritus Sancti Deus. Per onmia semper secula seculo­ <lb/>
+            Spiritus Sancti Deus. Per onmia semper secula seculo- <lb/>
             rum. ℟ • Amen.</p>
           <p>Dicat Presbyter. Dominus sit sempor vobiscum. <lb/>
-            Respondeat Chorus. Et cum spiritu tuo.</p>
+            Respondeat Chorus. Et cum spiritu tuo.</p></div>
+        <div n="2" subtype="section" type="textpart">
           <ab>
             <title type="sub">Benedictio.</title>
           </ab>
@@ -119,6 +121,8 @@
             et Spiritus Sancti t descendat et maneat super hanc <lb/>
             creaturam panis. ℟. Amen.</p><figure type="illegible">
             <graphic url="PL85_fig85.jpg"/></figure><pb n="-"/>
+        </div>
             </div>
-        
-        </body></text></TEI>
+        </body>
+  </text>
+</TEI>
