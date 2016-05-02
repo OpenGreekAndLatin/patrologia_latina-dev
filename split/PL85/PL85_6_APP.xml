@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><TEI xmlns="http://www.tei-c.org/ns/1.0"><teiHeader>
-    
+<?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
     <fileDesc>
       <titleStmt>
         <title>Patrologiae Cursus Completus. Series Latina (PL)</title> 
@@ -75,9 +76,7 @@
       <p>The following text is encoded in accordance with EpiDoc standards and with the
         CTS/CITE Architecture.</p>
     <refsDecl>
-        <cRefPattern n="" matchPattern="(.+).(.+).(.+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@type='edition']/tei:div[@n='$1']/tei:div[@n='$2']/tei:div[@n='$3'])"/>
-        <cRefPattern n="" matchPattern="(.+).(.+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@type='edition']/tei:div[@n='$1']/tei:div[@n='$2'])"/>
-        <cRefPattern n="" matchPattern="(.+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@type='edition']/tei:div[@n='$1'])"/>
+        <cRefPattern n="section" matchPattern="(.+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@type='edition']/tei:div[@n='$1'])"/>
       </refsDecl>
     </encodingDesc>
     
@@ -89,7 +88,9 @@
     
 </teiHeader>
 
-  <text><body><div type="edition" n="">
+  <text>
+    <body>
+    <div type="edition" n="">
           <head>
             <title type="main">APPENDIX SECUNDA.</title>
           </head>
@@ -99,7 +100,8 @@
             cuit, eique subjicere Kalendarium integrum, e Missali et Breviario Mozarabum, ex laudato fragmento, atque <lb/>
             ex Orationali Gothicu collectum, quod, donec Kalendarium Gotho-Hispanum e Bibliothecarum latebris pro­ <lb/>
             deat, ejus vices utcunque supplere possit.</p>
-          <ab>
+          <div type="textpart" subtype="section" n="1">
+            <ab>
             <title type="sub">FRAGMENTUM VETUSTI KALENDARII A FRANCISCO DE PISA EDITI.</title>
           </ab>
           <ab>
@@ -183,8 +185,9 @@
           <p>V.</p>
           <p>IIII.</p>
           <p>III.</p>
-          <p>II.</p>
-          <ab>
+          <p>II.</p></div>
+          <div type="textpart" subtype="section" n="2">
+            <ab>
             <title type="sub">KALENDARIUM GOTHO-HISPANUM</title>
           </ab>
           <ab>
@@ -589,6 +592,6 @@
             nem ;'poslolunl, et Innocentes mariyres metise h- <lb/>
             nuarii, ,"cerL.. die, signat. </note><note type="footnote"> h Jacobi. Vide notas p:lIJ. 491, </note><note type="footnote"> i Columbæ. Fragmentum Pisannm hanc iv Non. Ja-</note> 
             <milestone unit="PLSection" n="D"/><note type="footnote"> nuarit signat, quae in Or...tionali GOlhico et in Mis­ <lb/>
-            sali nostro prid. Kal. Janual'ii colitur. </note> </p>
+            sali nostro prid. Kal. Janual'ii colitur. </note> </p></div>
         </div>
       </body></text></TEI>
