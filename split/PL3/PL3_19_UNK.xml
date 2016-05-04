@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><TEI xmlns="http://www.tei-c.org/ns/1.0"><teiHeader>
-    
+<?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+	<teiHeader>
+
 		<fileDesc>
 			<titleStmt>
 				<title/>
@@ -29,46 +31,56 @@
 					<persName>Bruce Robertson</persName>
 					<resp>Technical Advisor</resp>
 				</respStmt>
+				<respStmt>
+					<persName>Tabea Selle</persName>
+					<resp>Student Assistant</resp>
+				</respStmt>
 			</titleStmt>
 			<publicationStmt>
 				<authority>University of Leipzig</authority>
 				<idno type="filename">TO BE ADDED BY LEIPZIG</idno>
 				<availability>
-					<p>Available under a Creative Commons Attribution-ShareAlike 4.0 International License</p>
+					<p>Available under a Creative Commons Attribution-ShareAlike 4.0 International
+						License</p>
 				</availability>
 				<date>2015</date>
 				<publisher>University of Leipzig</publisher>
 				<pubPlace>Germany</pubPlace>
 			</publicationStmt>
+
 			<sourceDesc>
 				<listBibl xml:lang="la">
 					<biblStruct>
 						<monogr>
-							<title/>
+							<title>Concilium Romanum Sub SS Stephano I Celebratum</title>
 							<editor>
 								<persName>
 									<name xml:lang="la"/>
+									<name xml:lang="fr">Jaques Paul Migne</name>
 								</persName>
 							</editor>
-							<author ref="urn:tmp"/>
+							<author ref="urn:tmp">Stephanus I</author>
 							<imprint>
-								<publisher/>
-								<pubPlace/>
-								<date/>
+								<publisher>Migne</publisher>
+								<pubPlace>Paris</pubPlace>
+								<date>1865</date>
 							</imprint>
+							<biblScope unit="volume">3</biblScope>
 						</monogr>
+						<ref target="http://hdl.handle.net/2027/pst.000014792380">Hathi</ref>
 					</biblStruct>
 				</listBibl>
 			</sourceDesc>
+
 		</fileDesc>
 		<encodingDesc>
 			<p>Text encoded in accordance with the latest EpiDoc standards (January 2014)</p>
-		<refsDecl>
-        <cRefPattern n="" matchPattern="(.+).(.+).(.+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@type='edition']/tei:div[@n='$1']/tei:div[@n='$2']/tei:div[@n='$3'])"/>
-        <cRefPattern n="" matchPattern="(.+).(.+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@type='edition']/tei:div[@n='$1']/tei:div[@n='$2'])"/>
-        <cRefPattern n="" matchPattern="(.+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@type='edition']/tei:div[@n='$1'])"/>
-      </refsDecl>
-    </encodingDesc>
+			<refsDecl>
+				<cRefPattern n="work" matchPattern="(.+)"
+					replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@type='edition']/tei:div[@n='$1'])"
+				/>
+			</refsDecl>
+		</encodingDesc>
 		<profileDesc>
 			<langUsage>
 				<language ident="grc">Greek</language>
@@ -79,46 +91,45 @@
 			<change when="2015-12-08" who="dwp"/>
 		</revisionDesc>
 	</teiHeader>
-	<text><body><div type="edition" n="">
-					<head>
-						<title><hi rend="bold">1011-1012</hi> CONCILIUM ROMANUM SUB S. STEPHANO CELEBRATUM.
-EX LIBELLO SYNODICO (1).</title>
-					</head>
-					<p><foreign xml:lang="grc">Σύνοδος θεία κα\ Ιερά τοπική, έν'Ρώμη συναϋροι-
-σΟειοα ύπδ Στεφάνου του Ιερομάρτυρας πάππα*
-άποκηρύξασα τους έν τη Αφρική συνόδψ παραλό-
-γως έπικεχειρηκότας άναβαπτίζειν τους έκ πάσης
-αίρέσεως προσερχομένους τή καθολική Έκκλησίφ</foreign>.</p>
-					<p>Synodus divina et sacra provincialis, Romae col-
-lecta a Stephano sancto martyre et papa; quae eos
-qui in Africana synodo sine ratione concesserant eos
-rebaptizari qui ex quacunque haeresi ad catholicam
-accederent Ecclesiam, abdicavit.</p>
-<note type="footnote">Variorum notae.</note>
-<note type="footnote">(1) <hi rend="italic">Duo erant</hi>, inquit Augustinus in libro <hi rend="italic">de uni-
-co Baptismo</hi>, cap. 14, <hi rend="italic">eminentissimarum ecclesia-
-rum, Romanae scilicet et Carthaginensis, episcopi, Ste-
-phanus et Cyprianus, ambo in unitate catholica cons-
-tituti</hi>. Erat ea tempestate magnum schisma in Ec-
-clesia propter doctrinam de rebaptizatione, quam
-olim Afri acceperant ab Agrippino, Carthaginensi
-episcopo, et quam S. Cyprianus admodum pervica-
-citer defendebat. Tunc papa Stephanus Romae syno-
-dum provincialem collegit, ut ait auctor <hi rend="italic">Synodici</hi>,
-ubi <hi rend="italic">cum coeteris quidem collegis suis</hi>, ut loquitur
-Vincentius, <hi rend="italic">sed tamen pro coeteris</hi> in eam doctrinam
-invectus est. Denique, ex ea synodo, ut apparet,
-celebrem epistolam ad Africam misit; quae sane
-nunc non exstat integra, sed tantum definitio, quam
-in Epistola <hi rend="smallcap">LXXIV</hi> <hi rend="italic">ad Pompeium</hi> nobis conservavit S.
-Cyprianus :</note>
-<note type="footnote">« Si quis ergo a quacunque haeresi venerit ad
-nos, nihil innovetur nisi quod traditum est, ut ma-
-nus illi imponatur in poenitentiam; cum ipsi haere-
-tici proprie alterutrum ad se venientes non bapti
-zent, sed communicant tantum. »</note>
-<note type="footnote">Istius Stephani epistolae meminerunt Eusebius,
-lib. <hi rend="smallcap">VII</hi>, cap. 3, et Vincentius Lirinensis in suo
-Commonitorio.</note>
+	<text>
+		<body>
+			<div type="edition" n="">
+				<div type="textpart" subtype="work" n="1">
+				<head>
+					<title><hi rend="bold">1011-1012</hi> CONCILIUM ROMANUM SUB S. STEPHANO
+						CELEBRATUM. EX LIBELLO SYNODICO (1).</title>
+				</head>
+				<p><foreign xml:lang="grc">Σύνοδος θεία καὶ ἱερὰ τοπικὴ, ἐν Ῥώμῃ συναθροισθεῖσα
+						πὸ Στεφάνου τοῦ ἱερομάρτυρος πάππα ἀποκηρύξασα τοὺς ἑν τη Αφρική συνόδψ
+						παραλόγως έπικεχειρηκότας άναβαπτίζειν τους έκ πάσης αίρέσεως
+						προσερχομένους τή καθολική Έκκλησίᾳ</foreign>.</p>
+				<p>Synodus divina et sacra provincialis, Romae col- lecta a Stephano sancto martyre
+					et papa; quae eos qui in Africana synodo sine ratione concesserant eos
+					rebaptizari qui ex quacunque haeresi ad catholicam accederent Ecclesiam,
+					abdicavit.</p>
+				<note type="footnote">Variorum notae.</note>
+				<note type="footnote">(1) <hi rend="italic">Duo erant</hi>, inquit Augustinus in
+					libro <hi rend="italic">de uni- co Baptismo</hi>, cap. 14, <hi rend="italic"
+						>eminentissimarum ecclesia- rum, Romanae scilicet et Carthaginensis,
+						episcopi, Ste- phanus et Cyprianus, ambo in unitate catholica cons-
+						tituti</hi>. Erat ea tempestate magnum schisma in Ec- clesia propter
+					doctrinam de rebaptizatione, quam olim Afri acceperant ab Agrippino,
+					Carthaginensi episcopo, et quam S. Cyprianus admodum pervica- citer defendebat.
+					Tunc papa Stephanus Romae syno- dum provincialem collegit, ut ait auctor <hi
+						rend="italic">Synodici</hi>, ubi <hi rend="italic">cum coeteris quidem
+						collegis suis</hi>, ut loquitur Vincentius, <hi rend="italic">sed tamen pro
+						coeteris</hi> in eam doctrinam invectus est. Denique, ex ea synodo, ut
+					apparet, celebrem epistolam ad Africam misit; quae sane nunc non exstat integra,
+					sed tantum definitio, quam in Epistola LXXIV
+					<hi rend="italic">ad Pompeium</hi> nobis conservavit S. Cyprianus :</note>
+				<note type="footnote">« Si quis ergo a quacunque haeresi venerit ad nos, nihil
+					innovetur nisi quod traditum est, ut ma- nus illi imponatur in poenitentiam; cum
+					ipsi haere- tici proprie alterutrum ad se venientes non bapti zent, sed
+					communicant tantum. »</note>
+				<note type="footnote">Istius Stephani epistolae meminerunt Eusebius, lib. VII, cap. 3, et Vincentius Lirinensis in suo
+					Commonitorio.</note>
 				</div>
-				</body></text></TEI>
+			</div>
+		</body>
+	</text>
+</TEI>

@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><TEI xmlns="http://www.tei-c.org/ns/1.0"><teiHeader>
-    
+<?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
     <fileDesc>
       <titleStmt>
         <title>Patrologiae Cursus Completus. Series Latina (PL)</title> 
@@ -65,7 +66,6 @@
               <biblScope unit="volume">85</biblScope>
             </monogr>
             <ref target="http://hdl.handle.net/2027/pst.000020931902">HathiTrust</ref>
-            
           </biblStruct>
         </listBibl>
       </sourceDesc>
@@ -75,9 +75,7 @@
       <p>The following text is encoded in accordance with EpiDoc standards and with the
         CTS/CITE Architecture.</p>
     <refsDecl>
-        <cRefPattern n="" matchPattern="(.+).(.+).(.+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@type='edition']/tei:div[@n='$1']/tei:div[@n='$2']/tei:div[@n='$3'])"/>
-        <cRefPattern n="" matchPattern="(.+).(.+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@type='edition']/tei:div[@n='$1']/tei:div[@n='$2'])"/>
-        <cRefPattern n="" matchPattern="(.+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@type='edition']/tei:div[@n='$1'])"/>
+        <cRefPattern n="section" matchPattern="(.+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@type='edition']/tei:div[@n='$1'])"/>
       </refsDecl>
     </encodingDesc>
     
@@ -86,18 +84,19 @@
         <language ident="la">Latin</language>
       </langUsage>
     </profileDesc>
-    
 </teiHeader>
 
-  <text><body><div type="edition" n="">
+  <text>
+    <body>
+      <div type="edition" n="">
           <head>
             <title type="main">TABULA AD INVENIENDUM QUE CONTINENTUR IN ISTO MISSALI : ET PRIMO TABELLA DOMINICARUM CUM 81NGULIS FERIIS SEQUENTIBUS.</title>
           </head>
-          <ab>
+<ab>
             <title type="sub">Numeri respicient hos qui crassiori typo repræsentati in textu inseruntur.</title>
-          </ab>
-          <p>
-            <milestone unit="PLSection" n="A"/>Kalendarium.</p>
+</ab>
+        <div n="1" subtype="section" type="textpart">
+          <p><milestone unit="PLSection" n="A"/>Kalendarium.</p>
           <p>Bendictio aque.</p>
           <p>Dominica prima Adventus Domini, 1.</p>
           <p>Dominica II. Alienius Domini, 7.</p>
@@ -191,30 +190,36 @@
             <milestone unit="PLSection" n="B"/>Dominica VII. post Pentecosten, 276.</p>
           <p>Dominica ante jejunium Kalendar. Novemb., 279.</p>
           <p>In jejunio Kalendarum Novembrium, 281.</p>
-          <ab>
+          
+</div>
+<div n="2" subtype="section" type="textpart">
+<ab>
             <title type="sub">FESTA MENSIS JANUARII.</title>
           </ab>
           <p>Juliani et Basilisse, 284.</p>
-          <p>Luciani Presbyteri. Pauli primi Heremite. Qua­ <lb/>
-            draginta Martyrum. Octava Epiphanie. Hilarii Epi­ <lb/>
+          <p>Luciani Presbyteri. Pauli primi Heremite. Qua- <lb/>
+            draginta Martyrum. Octava Epiphanie. Hilarii Epi- <lb/>
             scopi. Felicis in Pincis Martyris. Mauri Abbatis. <lb/>
             Marcelli Pape et Martyris. Antonii Abbatis, 287.</p>
-          <p>Prisce Virginis et Martyris. Juliani EpiscopietCon­ <lb/>
+          <p>Prisce Virginis et Martyris. Juliani EpiscopietCon- <lb/>
             fessoris. Fabiani : et Sebastiani et ejus comitum, 288.</p>
           <p>Luciani Presbyteri et Martyris. 289.</p>
           <p>Agnetis Virginis et Martyris, 290.</p>
           <p>Vincentii Martyris, 291.</p>
           <p>Ildefunsi Archiepiscupi Toletani. Sancte Marie de <lb/>
-            Pace. Babile Episcopi et Martyris : et trium puero­ <lb/>
+            Pace. Babile Episcopi et Martyris : et trium puero- <lb/>
             rum, 296.</p>
           <p>Timothei Episcopi Discipuli Pauli. Conversio <lb/>
             S. Pauli. Projecti Martyris. Tirsi Martyris. fol. 298</p>
           <p>
-            <milestone unit="PLSection" n="c"/>Policarpi Episcopi et Martyris. Johannis Chrysos­ <lb/>
+            <milestone unit="PLSection" n="c"/>Policarpi Episcopi et Martyris. Johannis Chrysos- <lb/>
             tomi Episcopi. Agnelis secludo. Valerii Episcopi <lb/>
             et Martyris. Octava Sancti Ildefonsi. Batildis Regine. <lb/>
             Ciri et Johannis Martyrum, 300.</p>
-          <ab>
+          
+</div>
+<div n="3" subtype="section" type="textpart">
+<ab>
             <title type="sub">FESTA MENSIS FEBRUARII.</title>
           </ab>
           <p>Ignatii Episcopi et Martyris. Brigide Virginis.</p>
@@ -223,23 +228,26 @@
             Agate Virginis et Martyris, 305.</p>
           <p>Vedasti et Amandi Episcoporum. Dorothee Virgi. <lb/>
             ms, 306.</p>
-          <p>Apolonie Virginis et Martyris. Scholastice Virgi­ <lb/>
+          <p>Apolonie Virginis et Martyris. Scholastice Virgi- <lb/>
             nis. Eulalie Virginis et Martyris Barchinenensis, 308.</p>
           <p>Fructuosi ; Augurii : et Eulogii Martyrum : et ejus <lb/>
             comitum, 310.</p>
           <p>Valentini Martyris. Juliane Virginis. Pantaleonis <lb/>
-            Martyris. Columbani Abbatis. Cathedra sancti Pe­ <lb/>
+            Martyris. Columbani Abbatis. Cathedra sancti Pe- <lb/>
             tri, 312.</p>
           <p>
             <milestone unit="PLSection" n="D"/>Mathie Apostoli, 315.</p>
-          <ab>
+          
+</div>
+<div n="4" subtype="section" type="textpart">
+<ab>
             <title type="sub">FESTA MENSIS MARTII.</title>
           </ab>
           <p>Adriani Martyris. Donati Martyris. Emeterli: et <lb/>
             Celidonii, 317.</p>
-          <p>Thome de Aquino. Perpetue et Felicitatis Marty­ <lb/>
+          <p>Thome de Aquino. Perpetue et Felicitatis Marty- <lb/>
             rum. Apolonie Virginis et Martyris. Facundi : et <lb/>
-            Primitivi Martyrum. Gregorii Pape. Leandri Episco­ <lb/>
+            Primitivi Martyrum. Gregorii Pape. Leandri Episco- <lb/>
             pi et Confessoris. Leonis Pape et Martyris. Patricii <lb/>
             Episcopi. Gabrielis Archangeli. Eduardi Regis et <pb n="1039"/>
             
@@ -248,21 +256,27 @@
             Confessoris. Benedicti Abbatis. Pauli Episcopi et <lb/>
             Confessoris. Annu ociatio Beate Marie. Marcelli Pape <lb/>
             et Confessoris, 319.</p>
-          <ab>
+          
+</div>
+<div n="5" subtype="section" type="textpart">
+<ab>
             <title type="sub">FESTA MENSIS APRILIS.</title>
           </ab>
-          <p>Theodosie Virginis. Ambrosii Episcopi et Confes­ <lb/>
-            soris. Isidori Episcopi'ei Confessosis. Fructuosi Epi­ <lb/>
+          <p>Theodosie Virginis. Ambrosii Episcopi et Confes- <lb/>
+            soris. Isidori Episcopi'ei Confessosis. Fructuosi Epi- <lb/>
             scopi Bracharensis, 519.</p>
-          <p>Toribii Confessoris. Eleutherii Episcopi et Marty­ <lb/>
-            rise Victoris Bracharensis Martyris. Eufemie Virgi­ <lb/>
+          <p>Toribii Confessoris. Eleutherii Episcopi et Marty- <lb/>
+            rise Victoris Bracharensis Martyris. Eufemie Virgi- <lb/>
             nis et Martyris. Tinurcii ei Valeriani Martyrum. <lb/>
-            Vitalis Martyris. Georgii Martyris. Felicis et Fortu­ <lb/>
+            Vitalis Martyris. Georgii Martyris. Felicis et Fortu- <lb/>
             nati M artyrum. Proficit Martyris. Marci Evangeliste. <lb/>
             Eleti Marlyris. Marcellini el Petri Martyrum. Geor- <lb/>
-            Iii Martyris. Vitalis Martyris. Petri Martyris de Or­ <lb/>
+            Iii Martyris. Vitalis Martyris. Petri Martyris de Or- <lb/>
             dine Predicatorum, 320.</p>
-          <ab>
+          
+</div>
+<div n="6" subtype="section" type="textpart">
+<ab>
             <title type="sub">FESTA MENSIS MADII.</title>
           </ab>
           <p>Philippi et Jacobi Apostolorum. Torcati et comitum
@@ -272,38 +286,44 @@
             Crucis, 322.</p>
           <p>Alexandri Eventii Martyrum. Quiriaci Episcopi et <lb/>
             Martyris. Johannis ante Portam Latinam. Tripete <lb/>
-            Virginis. Domitille Virginis. Revelatio Sancti Mi­ <lb/>
-            ebaelis. Isidori Militis. Gregorii Nazianzeni. Transla­ <lb/>
+            Virginis. Domitille Virginis. Revelatio Sancti Mi- <lb/>
+            ebaelis. Isidori Militis. Gregorii Nazianzeni. Transla- <lb/>
             lio Sancti Nic olai. Gordiani et Epimachi Martyrum. <lb/>
             Poncii Martyris. Nerei et Achilei atque Pancratii <lb/>
             Martyrum. Victoris et Corone Martyrum. Bnnifacii <lb/>
             Confessoris. Potentine Virginis et Martyris, 324.</p>
-          <p>Translatio Sancti Dominici. Urbani Pape et M or­ <lb/>
-            tyris. Translatio Sancti Francisci. Augustini Epi­ <lb/>
+          <p>Translatio Sancti Dominici. Urbani Pape et M or- <lb/>
+            tyris. Translatio Sancti Francisci. Augustini Epi- <lb/>
             scopi Anglorum. Germani Episcopi et Confessoris. <lb/>
             Petrouille Virginis, 325.</p>
-          <ab>
+          
+</div>
+<div n="7" subtype="section" type="textpart">
+<ab>
             <title type="sub">FESTA MENSIS JUNII.</title>
           </ab>
           <p>Marcellini et Petri Martyrum. Medardi : et Geraldi <lb/>
             Episcoporum. Primi et Feliciani Martyrum. Barnabe <lb/>
-            Apostoli. Enofri Confessoris. B asildis : Cirini : Na­
+            Apostoli. Enofri Confessoris. B asildis : Cirini : Na-
             <milestone unit="PLSection" n="c"/><lb/>
             boris Martyrum. Antonii de Padua Confessoris. Ba-,lilii <lb/>
-            silii Episcopi et Confessoris. Viti et Modesti Marty­ <lb/>
-            rum. Cirici et Julie M rtyrum. Adriani atque Nata­ <lb/>
+            silii Episcopi et Confessoris. Viti et Modesti Marty- <lb/>
+            rum. Cirici et Julie M rtyrum. Adriani atque Nata- <lb/>
             lie Martyrum, 325.</p>
-          <p>Marci et Marcelliani Martyrum. Gervasii et Pro­ <lb/>
+          <p>Marci et Marcelliani Martyrum. Gervasii et Pro- <lb/>
             thasii Martyrum. Florentie Virginis. Silvestri Pape <lb/>
-            et Martyris. Consortie Virginis : cun undecim mil­ <lb/>
-            lium. Martyrum. Dominica pro adventu Sancti Jo­ <lb/>
+            et Martyris. Consortie Virginis : cun undecim mil- <lb/>
+            lium. Martyrum. Dominica pro adventu Sancti Jo- <lb/>
             hannis, 327.</p>
           <p>Nativitas Juhannis Baptiste, 330.</p>
           <p>Translatio Sancti Eligii Episcopi et Confessoris. <lb/>
             Johannis et Pauli. Leonis Papa et confessoris. Petri <lb/>
             et Pauli Apostolorum, 334.</p>
           <p>Commemoratio Sancti Pauli, 337.</p>
-          <ab>
+          
+</div>
+<div n="8" subtype="section" type="textpart">
+<ab>
             <title type="sub">FESTA MENSIS JULII.</title>
           </ab>
           <p>Octava Sancti Johannis Baptiste. Visitatio Sancte <lb/>
@@ -321,44 +341,50 @@
             Praxedis Virginis. Mane Magdalene, 346.</p>
           <p>Apolinaris Episcopi et Martyris. Cristine Virginis <lb/>
             et Martyris. 348.</p>
-          <p>Jacobi Apostoli. Anne Matris Sancte Marie. Chri­ <lb/>
+          <p>Jacobi Apostoli. Anne Matris Sancte Marie. Chri- <lb/>
             stofori et Comitum, 349.</p>
-          <p>Septem Dormientium. Nazarii: Celsi : et Panta­ <lb/>
+          <p>Septem Dormientium. Nazarii: Celsi : et Panta- <lb/>
             leonis. Felicis Martyris, 332.</p>
           <p>Simplicii Faustine et Beatricis. Marthe hospite <lb/>
-            Christi. Abdon et Sennen Martyrum Germani Epi­ <lb/>
+            Christi. Abdon et Sennen Martyrum Germani Epi- <lb/>
             scopi et Confessoris, 354.</p>
-          <ab>
+          
+</div>
+<div n="9" subtype="section" type="textpart">
+<ab>
             <title type="sub">FESTA MENSIS AUGUSTI.</title>
           </ab>
           <p>Vincula Sancti Petri, Machabeorum Martyrum,</p>
           <p>
             <milestone unit="PLSection" n="A"/>Stephani Pape et Martyris. Inventio Sancti Stephani <lb/>
             Martyris, 554.</p>
-          <p>Petri Exomensis. Dominici de Ordine Predicato­ <lb/>
+          <p>Petri Exomensis. Dominici de Ordine Predicato- <lb/>
             rum. Marie de Nivibus. Transfiguratio Domini. Justi <lb/>
             et Pastoris, 3 5.</p>
           <p>Sixii Pape. Felicissimi et Agapiti Martyrum, 356.</p>
           <p>Donati Episcopi et Martyris. Mammetis Martyris. <lb/>
             Cirici et Largi cum sociis. Laurentii Martyris, 357.</p>
-          <p>Tihurcii Martyris. Clare Virginis, Hipoliti Socio­ <lb/>
-            rumque ejus. Eusebii Presbyteri. Assumptionis Bea­ <lb/>
+          <p>Tihurcii Martyris. Clare Virginis, Hipoliti Socio- <lb/>
+            rumque ejus. Eusebii Presbyteri. Assumptionis Bea- <lb/>
             te Marte, 361.</p>
-          <p>Octava Sancti Laurentii. Agapiti Mirtyris Der­ <lb/>
+          <p>Octava Sancti Laurentii. Agapiti Mirtyris Der- <lb/>
             nardi Abbatis. Octava Assumptionis Timothei, et <lb/>
             Simpheriani. Batrholomei Apostoli, 565.</p>
           <p>Genesii Martyris, 567.</p>
           <p>Gerontii Episcopi et Confessoris, 369.</p>
-          <p>Rufi Martyris. Victoris Episcopi. Augustini Epi­ <lb/>
+          <p>Rufi Martyris. Victoris Episcopi. Augustini Epi- <lb/>
             scopi. Decollationis Johannis Baptiste, 570.</p>
           <p>Sabine Martyris. Felicis ei Audacti Martyrum, 373.</p>
           <p>
             <milestone unit="PLSection" n="B"/></p>
-          <ab>
+          
+</div>
+<div n="10" subtype="section" type="textpart">
+<ab>
             <title type="sub">FESTA MENSIS SEPTEMBRIS.</title>
           </ab>
-          <p>Egidii Abbatis. Vincentii et Leti. Antonii Marty­ <lb/>
-            rise Marcelli Mrtyris. Obdulie Virginis. In Nativi­ <lb/>
+          <p>Egidii Abbatis. Vincentii et Leti. Antonii Marty- <lb/>
+            rise Marcelli Mrtyris. Obdulie Virginis. In Nativi- <lb/>
             late Gloriose Virginis Marie, 373.</p>
           <p>!n Exaltatione Sancte Crucis, 375.</p>
           <p>Oc ava Beate Marie Virginis, 576.</p>
@@ -367,49 +393,58 @@
           <p>Nicomedis Martyris. Vincentii. Eufemie Virginis. <lb/>
             Lambereti Episcopi. Matthei Apostoli, 382.</p>
           <p>Mauricii et Sociorum. Clare Virginis, 384.</p>
-          <p>Foruinati Ep scopi et Confessoris. Cosme et Da­ <lb/>
+          <p>Foruinati Ep scopi et Confessoris. Cosme et Da- <lb/>
             miani M artyrum, 385.</p>
           <p>Fausti Januarii et Marcialis, 387.</p>
           <p>Micharlis Archangeli, 589.</p>
           <p>Hieronymi Presbyteri et Confessoris, 394.</p>
-          <ab>
+          
+</div>
+<div n="11" subtype="section" type="textpart">
+<ab>
             <title type="sub">FESt A MENSIS OCTOBRIS.</title>
           </ab>
-          <p>Verissimi Maximi ei Sociorum ipsorum. Leode­
+          <p>Verissimi Maximi ei Sociorum ipsorum. Leode-
             <milestone unit="PLSection" n="c"/><lb/>
             garii Episcopi et Martyris. Francisci Confessoris. <lb/>
             Marci Episcopi et Confessoris, Sergii et Bachi ct <lb/>
-            Marcellini Martyrum. Don sii Socior unque ejus Mar­ <lb/>
-            tyrum. Geraldi Confessoris. Ca ixti Pape et Marty­ <lb/>
-            rise Unfrani Episcopi. Victoris Martyris. Lupi Ep­ <lb/>
+            Marcellini Martyrum. Don sii Socior unque ejus Mar- <lb/>
+            tyrum. Geraldi Confessoris. Ca ixti Pape et Marty- <lb/>
+            rise Unfrani Episcopi. Victoris Martyris. Lupi Ep- <lb/>
             scopi et Confessoris. Luce Evangeliste. Herene <lb/>
             Virginis et Martyrs. Caprasii Martyris. Ursule et <lb/>
             undecim millium Virginum. Servandi et Germani, <lb/>
             394.</p>
-          <p>Fructi Confessoris. Crispini et Crispiniani Marty­ <lb/>
-            rum. Vedasti et Amandi Episcoporum. Vincentii Sa­ <lb/>
+          <p>Fructi Confessoris. Crispini et Crispiniani Marty- <lb/>
+            rum. Vedasti et Amandi Episcoporum. Vincentii Sa- <lb/>
             bine et Crisle e. Simonis et Jude Apostolorum, 39J.</p>
           <p>Eustachii Sociorumque ejus Martyrum. Bellum de <lb/>
             Benamarin. Claullii sociorumque eius Martyrum. <lb/>
             Quintini Martyris, 399.</p>
-          <ab>
+          
+</div>
+<div n="12" subtype="section" type="textpart">
+<ab>
             <title type="sub">FESTA MENSIS NOVEMBRIS.</title>
           </ab>
           <p>Festum Omnium Sanctorum, 599.</p>
           <p>Octava Omnium Sanctorum. Quatuor Coronatorum
             <milestone unit="PLSection" n="D"/><lb/>
-            Martyrum. Theodori Martyris. Menne Martyris. Mar­ <lb/>
+            Martyrum. Theodori Martyris. Menne Martyris. Mar- <lb/>
             tini Episcopi, 402.</p>
           <p>Emiliani Abbatis. Bricii Episcopi et Confessoris. <lb/>
-            Clementis et Theodori Martyrum. Eugenii Archi­ <lb/>
+            Clementis et Theodori Martyrum. Eugenii Archi- <lb/>
             episcopi Toletani. Sperati et ejus comitum, 404.</p>
           <p>Aciscli et Victorie Martyrum, 406.</p>
           <p>Octava Sancti Martini. Romani Martyris, 408.</p>
           <p>Crispini Confessoris. Cecilie Virginis, 410.</p>
-          <p>Chrisogoni Martyris. Catharine Virginis et Marty­ <lb/>
+          <p>Chrisogoni Martyris. Catharine Virginis et Marty- <lb/>
             ris. Vitalis et Agricole : et Facundi et Primitive <lb/>
             Martyrum, 413.</p>
-          <ab>
+          
+</div>
+<div n="13" subtype="section" type="textpart">
+<ab>
             <title type="sub">FESTA MENSIS DECEMBRIS.</title>
           </ab>
           <p>Eligii Episcopi et Confessoris. Barbare Virgini; <lb/>
@@ -422,7 +457,10 @@
             
           <p>
             <milestone unit="PLSection" n="A"/></p>
-          <ab>
+          
+</div>
+<div n="14" subtype="section" type="textpart">
+<ab>
             <title type="sub">COMMUNE OMNIUM SANCTORUM.</title>
           </ab>
           <p>Missa inius Martyris, 421.</p>
@@ -432,14 +470,17 @@
           <p>Missa plurimorum Martyrum IV. capparum, 428.</p>
           <p>Missa plurimorum Martyrum duarum capparum, <lb/>
             430.</p>
-          <p>Missa unius Confessoris Pontificis : et non Ponti­ <lb/>
+          <p>Missa unius Confessoris Pontificis : et non Ponti- <lb/>
             ficis 432.</p>
           <p>Missa plurimorum Confessorum, 434.</p>
           <p>Missa unius Virginis, 436.</p>
           <p>Missa plurimacum Virginum, 438.</p>
           <p>
             <milestone unit="PLSection" n="B"/></p>
-          <ab>
+          
+</div>
+<div n="15" subtype="section" type="textpart">
+<ab>
             <title type="sub">INCIPIUNT MISSE VOTIVE.</title>
           </ab>
           <p>Missa votiva omnimoda, 441.</p>
@@ -465,5 +506,5 @@
             impressum in regali civitate Toleti, jussu reverendissimi in Christo Patris domini I. Francisci X imene.. ejusdem <lb/>
             civitatis archiepiscopi, impensis nobilis Melchioris Gorricii Novariensis, per magistrum Petrum Bagembach <lb/>
             Alemanum, anno salutis nostræ millesimo quingentesimo, die vero nona mensis Januarii.</p>
-        </div>
+</div></div>
         </body></text></TEI>
