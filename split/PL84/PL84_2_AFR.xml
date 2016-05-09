@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><TEI xmlns="http://www.tei-c.org/ns/1.0"><teiHeader>
-    
+<?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+	<teiHeader>
 		<fileDesc>
 			<titleStmt>
-				<title/>
-				<editor/>
+				<title>AFRICAE CONCILIA</title>
+				<editor>Jacques Paul Migne</editor>
 				<sponsor>University of Leipzig</sponsor>
 				<funder>European Social Fund Saxony</funder>
 				<principal>Gregory Crane</principal>
@@ -44,17 +45,17 @@
 				<listBibl xml:lang="la">
 					<biblStruct>
 						<monogr>
-							<title/>
+							<title>AFRICAE CONCILIA</title>
 							<editor>
 								<persName>
-									<name xml:lang="el"/>
+									<name xml:lang="la">Jacques Paul Migne</name>
 								</persName>
 							</editor>
-							<author ref="urn:tmp"/>
+							<author ref="stoa0159">Isidorus Hispaliensis</author>
 							<imprint>
-								<publisher/>
-								<pubPlace/>
-								<date/>
+								<publisher>Jacques Paul Migne</publisher>
+								<pubPlace>Paris</pubPlace>
+								<date>1850</date>
 							</imprint>
 						</monogr>
 					</biblStruct>
@@ -64,9 +65,8 @@
 		<encodingDesc>
 			<p>Text encoded in accordance with the latest EpiDoc standards (January 2014)</p>
 		<refsDecl>
-        <cRefPattern n="" matchPattern="(.+).(.+).(.+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@type='edition']/tei:div[@n='$1']/tei:div[@n='$2']/tei:div[@n='$3'])"/>
-        <cRefPattern n="" matchPattern="(.+).(.+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@type='edition']/tei:div[@n='$1']/tei:div[@n='$2'])"/>
-        <cRefPattern n="" matchPattern="(.+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@type='edition']/tei:div[@n='$1'])"/>
+        <cRefPattern n="p" matchPattern="(.+).(.+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@type='edition']/tei:div[@n='$1']/tei:p[@n='$2'])"/>
+        <cRefPattern n="section" matchPattern="(.+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@type='edition']/tei:div[@n='$1'])"/>
       </refsDecl>
     </encodingDesc>
 		<profileDesc>
@@ -79,11 +79,14 @@
 			<change when="2015-12-08" who="dwp"/>
 		</revisionDesc>
 	</teiHeader>
-	<text><body><div type="edition" n="">
+	
+	<text>
+		<body>
+		<div type="edition" n="">
 					<head>
 						<title>AFRICAE CONCILIA.</title>
 					</head>
-					<div type="textpart" subtype="section" n="12">
+					<div n="1" subtype="section" type="textpart">
 						<head>
 							<title>XII
 CONCILIUM CARTHAGINENSE PRIMUM</title>
@@ -399,7 +402,7 @@ a U., <hi rend="italic">Avaritiam</hi> et <hi rend="italic">cupiditatem</hi>.</n
 <note type="footnote">d Ex reliquis praeter A., in quo desunt verba : <hi rend="italic">et
 computare communem injuriam</hi>.</note>
 					</div>
-					<div type="textpart" subtype="section" n="2">
+					<div n="2" subtype="section" type="textpart">
 						<head>
 							<title>XIII
 CONCILIUM CARTHAGINENSE SECUNDUM</title>
@@ -658,7 +661,7 @@ diritanum</hi> scripsissent.</note>
 <note type="footnote">i AE., B. R., T. 1, 2, U., <hi rend="italic">ordinare debebunt
 episcopum</hi>.</note>
 					</div>
-					<div type="textpart" subtype="section" n="3">
+					<div n="3" subtype="section" type="textpart">
 						<head>
 							<title>XIV
 CONCILIUM CARTHAGINENSE TERTIUM</title>
@@ -1305,7 +1308,7 @@ num subscripsi.</p>
 Similiter et omnes episcopi quadraginta quatuor
 subscripserunt.</p>
 					</div>
-					<div type="textpart" subtype="section" n="4">
+					<div n="4" subtype="section" type="textpart">
 						<head>
 							<title>XV
 CONCILIUM CARTHAGINENSE QUARTUM</title>
@@ -1931,7 +1934,7 @@ in reliquis Codicibus.</note>
 					</div>
 <pb n="209"/>
 <pb n="210"/>
-					<div type="textpart" subtype="section" n="5">
+					<div n="5" subtype="section" type="textpart">
 						<head>
 							<title>XVI
 CONCILIUM CARTHAGINENSE QUINTUM</title>
@@ -2116,7 +2119,7 @@ modo deleantur.</p>
 comprehensis in nostro concilio statutis subscripsi.</p>
 						<p>Similiter septuaginta tres episcopi subscripserunt.</p>
 					</div>
-					<div type="textpart" subtype="section" n="6">
+					<div n="6" subtype="section" type="textpart">
 						<head>
 							<title>XVII
 CONCILIUM CARTHAGINENSE SEXTUM</title>
@@ -3056,7 +3059,7 @@ vox ut redundans expuncta est.</note>
 aut in <hi rend="italic">probitate</hi> legendum, ut in excusis et in Graeca
 versione.</note>
 					</div>
-					<div type="textpart" subtype="section" n="7">
+					<div n="7" subtype="section" type="textpart">
 						<head>
 							<title>XVIII
 CONCILIUM CARTHAGINENSE SEPTIMUM</title>
@@ -3186,7 +3189,7 @@ Caesariensis.</p>
 Philippus presbyter legatus Ecclesiae Romanae.</p>
 						<p>Asellus presbyter legatus Ecclesiae Romanae.</p>
 					</div>
-					<div type="textpart" subtype="section" n="8">
+					<div n="8" subtype="section" type="textpart">
 						<head>
 							<title>XIX
 CONCILIUM MILEVITANUM</title>
@@ -3592,7 +3595,7 @@ scripsit.</p>
 						<p>Donatianus Teleptensis primae sedis subscripsit.
 Similiter et omnes episcopi subscripserunt.</p>
 					</div>
-					<div type="textpart" subtype="section" n="9">
+					<div n="9" subtype="section" type="textpart">
 						<head>
 							<title>XX
 CONCILIUM <hi rend="superscript">a</hi> TELEPTENSE</title>
