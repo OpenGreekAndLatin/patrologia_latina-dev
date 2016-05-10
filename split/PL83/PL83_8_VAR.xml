@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><TEI xmlns="http://www.tei-c.org/ns/1.0"><teiHeader>
-    
+<?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
     <fileDesc>
       <titleStmt>
         <title>Patrologiae Cursus Completus. Series Latina (PL)</title> 
@@ -112,10 +113,8 @@
     <encodingDesc>
       <p>The following text is encoded in accordance with EpiDoc standards and with the
         CTS/CITE Architecture.</p>
-    <refsDecl>
-        <cRefPattern n="" matchPattern="(.+).(.+).(.+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@type='edition']/tei:div[@n='$1']/tei:div[@n='$2']/tei:div[@n='$3'])"/>
-        <cRefPattern n="" matchPattern="(.+).(.+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@type='edition']/tei:div[@n='$1']/tei:div[@n='$2'])"/>
-        <cRefPattern n="" matchPattern="(.+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@type='edition']/tei:div[@n='$1'])"/>
+    <refsDecl>        
+        <cRefPattern n="section" matchPattern="(.+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@type='edition']/tei:div[@n='$1'])"/>
       </refsDecl>
     </encodingDesc>
     
@@ -127,11 +126,16 @@
     
 </teiHeader>
 
-  <text><body><div type="edition" n="">
-          <ab>
+  <text>
+    <body>
+    <div type="edition" n="">
+<ab>
             <title type="sub">VARIÆ LECTIONES.</title>
           </ab>
-          <ab>
+
+
+<div n="1" subtype="section" type="textpart">
+<ab>
             <title type="sub">AD LIBRUM DIFFERENTIARUM RERUM.</title>
           </ab>
           <p>Num. i , ut in Dei; al. in Dei, omisso ut. lb., in­ <lb/>
@@ -201,7 +205,10 @@
             at. conversatione. N. 169 , reprimunt ; at. respuunt. <lb/>
             N. 170, et pereat. Jam superbiam; a!. et per avari­ <lb/>
             tiam. Superbiam.</p>
-          <ab>
+          </div>
+
+<div n="2" subtype="section" type="textpart">
+<ab>
             <title type="sub">AD ALLEGORIAS.</title>
           </ab>
           <p>Num. i. obteguntur ; al. lequntur. lb., annotata
@@ -280,7 +287,10 @@
             unam r, interpretatur filius patris , quia Hebraice <lb/>
             barabas dicitur pater. » N. 146 , peregrinus; al. da­ <lb/>
             ctor. N. 230, per quam ; at. in qua.</p>
-          <ab>
+          </div>
+
+<div n="3" subtype="section" type="textpart">
+<ab>
             <title type="sub">DE ORTU ET OBITU PATRUM.</title>
           </ab>
           <p>Num. i. sententiali brevitate; al. sententia, et <lb/>
@@ -513,7 +523,10 @@
             Cretæ Ecelesias.</p>
           <p>
             <milestone unit="PLSection" n="A"/></p>
-          <ab>
+          </div>
+
+<div n="4" subtype="section" type="textpart">
+<ab>
             <title type="sub">AD PROŒMIA.</title>
           </ab>
           <p>Num. i. Testamenti, etc.; al. Testamenti in canone <lb/>
@@ -569,7 +582,10 @@
             ribus. N. 105, ab aliis; al. ab omnibus. N. 108,cum <lb/>
             dracone ; al. contra draconem. N. 109, canticum ; al. <lb/>
             ædificium.</p>
-          <ab>
+          </div>
+
+<div n="5" subtype="section" type="textpart">
+<ab>
             <title type="sub">AD GENESIN.</title>
           </ab>
           <p>PRÆF. Num. 3, et occulta ; al. vel occulta et abscura. <lb/>
@@ -698,7 +714,10 @@
             rint.</p>
           <p>
             <milestone unit="PLSection" n="B"/></p>
-          <ab>
+          </div>
+
+<div n="6" subtype="section" type="textpart">
+<ab>
             <title type="sub">IN EXODUM.</title>
           </ab>
           <p>CAP. II. N. i, attulisset; al. sustulisset.</p>
@@ -767,7 +786,10 @@
             tur. N. 10, aereo colore; Alborn. ærea claritate. N. <lb/>
             14, eruditur; al. enutritur. lb., humilitatem ; al. <lb/>
             humilitatem et castimoniam.</p>
-          <ab>
+          </div>
+
+<div n="7" subtype="section" type="textpart">
+<ab>
             <title type="sub">IN LEVITICUM.</title>
           </ab>
           <p>CAP. I. N. 2, damnaret: Alborn. dominaret. N. 3, <lb/>
@@ -786,7 +808,10 @@
           <p>CAP. XIII. N. i, insignes; ale debiles.</p>
           <p>CAP. XVI. N. 6, desectum, etc.; al. desectis, vel <lb/>
             amputatis testiculis.</p>
-          <ab>
+          </div>
+
+<div n="8" subtype="section" type="textpart">
+<ab>
             <title type="sub">IN NUMEROS.</title>
           </ab>
           <p>CAP. II. N. i, ulteriora; a!. interiora.</p>
@@ -818,7 +843,10 @@
           <p>CAP. XLII. N. 4, prohibuit; at. redarguit. N. 15, <lb/>
             repromissionis; at. remissionis. lb., quia quos, etc.; <lb/>
             al. quia post mundi implicamenta occupati.</p>
-          <ab>
+          </div>
+
+<div n="9" subtype="section" type="textpart">
+<ab>
             <title type="sub">IN JOSUE.</title>
           </ab>
           <p>CAP. XI. N. i, ministrant; ale ministrant, et ser­ <lb/>
@@ -827,7 +855,10 @@
           <p>CAP. XVIII. N. 3, retinentur; a!. nos retinent. Ib.,
             <milestone unit="PLSection" n="B"/><lb/>
             elatio; a, elevatio.</p>
-          <ab>
+          </div>
+
+<div n="10" subtype="section" type="textpart">
+<ab>
             <title type="sub">IN LIBRUM JUDICUM.</title>
           </ab>
           <p>CAP. II. N. 3, et brevi; at. et suo. N. 4, Dominus, <lb/>
@@ -848,5 +879,5 @@
           <p>CAP. VIII. N. 5, reges ipsi; al. leges ipsæ..</p>
           <p>CAP. IX. N. 2, ad Dominum; al. a Domino.</p>
         </div>
-        
+    </div>
         </body></text></TEI>
