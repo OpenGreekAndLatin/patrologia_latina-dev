@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><TEI xmlns="http://www.tei-c.org/ns/1.0"><teiHeader>
+<?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
     
     <fileDesc>
       <titleStmt>
@@ -113,9 +115,8 @@
       <p>The following text is encoded in accordance with EpiDoc standards and with the
         CTS/CITE Architecture.</p>
     <refsDecl>
-        <cRefPattern n="" matchPattern="(.+).(.+).(.+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@type='edition']/tei:div[@n='$1']/tei:div[@n='$2']/tei:div[@n='$3'])"/>
-        <cRefPattern n="" matchPattern="(.+).(.+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@type='edition']/tei:div[@n='$1']/tei:div[@n='$2'])"/>
-        <cRefPattern n="" matchPattern="(.+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@type='edition']/tei:div[@n='$1'])"/>
+                <cRefPattern n="p" matchPattern="(.+).(.+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@type='edition']/tei:div[@n='$1']/tei:p[@n='$2'])"/>
+        <cRefPattern n="section" matchPattern="(.+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@type='edition']/tei:div[@n='$1'])"/>
       </refsDecl>
     </encodingDesc>
     
@@ -127,11 +128,15 @@
     
 </teiHeader>
 
-  <text><body><div type="edition" n="">
+  <text>
+    <body>
+    <div type="edition" n="">
           <head>
             <title type="main">SANCTI ISIDORI HISPALENSIS EPISCOPI LIBER NUMERORUM QUI IN SANCTIS SCRIPTURIS OCCURRUNT.</title>
           </head>
-          <p>
+          
+<div n="1" subtype="section" type="textpart">
+      <p>
             <milestone unit="PLSection" n="B"/></p>
           <ab>
             <title type="sub">220CAPUT PRIMUM.</title>
@@ -139,16 +144,16 @@
           <ab>
             <title type="sub">Quid sit numerus.</title>
           </ab>
-          <p>i. Non est superfluum numerorum causas in Scrip­ <lb/>
+          <p n="1">1. Non est superfluum numerorum causas in Scrip­ <lb/>
             turis sanctis attendere. Habent enim quamdam scien­ <lb/>
             tiae doctrinam, plurimaque mystica sacramenta. <lb/>
             Proinde regulas quorumdam numerorum, ut voluisti, <lb/>
             placuit breviter intimare.</p>
-          <p>2. In principio autem, quid sit numerus definien­ <lb/>
+          <p n="2">2. In principio autem, quid sit numerus definien­ <lb/>
             dum est. Numerus est congregatio unitatis, vel ab <lb/>
             uno progrediens multitudo, cujus quidem universitas <lb/>
             infinita est, nec ulla potest multitudine terminari.</p>
-          <p>5. Par numerus est qui In duabus æquis partibus <lb/>
+          <p n="3">3. Par numerus est qui In duabus æquis partibus <lb/>
             dividi potest; impar vero, qui dividi æquis duabus <lb/>
             partibus nequit, uno medio vel deficiente, vel supe­ <lb/>
             rante. Pariter par numerus est qui secundum par m
@@ -159,13 +164,16 @@
             sedecim, sedecim vero octo, octonarius vero quatuor, <lb/>
             quaternarius duo , binarius unum, qui singularis in­ <lb/>
             divisibilis est.</p>
-          <ab>
+          </div>
+
+<div n="2" subtype="section" type="textpart">
+<ab>
             <title type="sub">CAPUT II.</title>
           </ab>
           <ab>
             <title type="sub">De unitate.</title>
           </ab>
-          <p>4. Unitas est pars minima numerorum, quæ secari <lb/>
+          <p n="4">4. Unitas est pars minima numerorum, quæ secari <lb/>
             non potest. Idem autem unus semen numerorum, <lb/>
             non numerus. Ex ipso enim caeteri manant, vel pro-
             <milestone unit="PLSection" n="D"/><lb/>
@@ -174,7 +182,7 @@
             ram, et incrementorum causam, statumque decre­ <lb/>
             mentorum. Nam omnium incrementa ab ipso incipiunt, <lb/>
             rursusque usque ad ejus unitatem perveniunt.</p>
-          <p>5. Nam et post decem, nisi ab uno rursus incipia­ <lb/>
+          <p n="5">5. Nam et post decem, nisi ab uno rursus incipia­ <lb/>
             tur, nequaquam deinceps numerorum incrementa <lb/>
             consurgunt. Idem etiam insecabilis est, nec per ullas <lb/>
             partes dividi potest, quia ubique pars est, ubique <lb/>
@@ -185,7 +193,7 @@
             unitatis formula insinuanda angelus ille apud Eze­ <lb/>
             chielem limen portae Jerusalem calamo uno me­ <lb/>
             titur.</p>
-          <p>G. Sed et area Noe desuper collecta in unum cubi-
+          <p n="6">6. Sed et area Noe desuper collecta in unum cubi-
             <milestone unit="PLSection" n="C"/><lb/>
             tum coarctatur; in latere quoque arcae fit osium <lb/>
             unum. Unum est etiam in Ecclesia baptismum ; fides <lb/>
@@ -194,7 +202,7 @@
             sapientes hnjus mundi concordiam , vel pietatem , <lb/>
             amicitiamque dixerunt, quod ita nectatur, ut non <lb/>
             secetur in partes.</p>
-          <p>i. Itaque quia divisionem sui unitas non capit, <lb/>
+          <p n="7">7. Itaque quia divisionem sui unitas non capit, <lb/>
             deinde cum unum factum in quocunque defluxerit, <lb/>
             licet ejns linea insecabilis, ac sine una latitudinis <lb/>
             significatione habeatur, tamen conjunctis binarium
@@ -232,7 +240,7 @@
           <ab>
             <title type="sub">De binario numere.</title>
           </ab>
-          <p>8. Binarius numerus prima numerorum procrea­ <lb/>
+          <p n="8">8. Binarius numerus prima numerorum procrea­ <lb/>
             tio, primaque est forma , parilitatis corporatio, mo­ <lb/>
             tusque primi , sociusque praecedentis, et frater, est <lb/>
             etiam medietatis capax. Nam bona malaque partici­ <lb/>
@@ -241,7 +249,7 @@
             bina illa et munda quae figuraliter introducuntur in <lb/>
             arcam, quae quidem, dum ex parilitate consistant, <lb/>
             in se tamen mystice videntur esse divisa.</p>
-          <p>9. Ad hoc genus pertinent et illi duo in agro, qui <lb/>
+          <p n="9">9. Ad hoc genus pertinent et illi duo in agro, qui <lb/>
             invicem discernuntur, quia, adveniente saeculi tribu­ <lb/>
             latione, ex ipsis quidam pertinent in fidem, et rur­ <lb/>
             sum vocantur, quidam vero tentationibus cedunt,
@@ -252,14 +260,14 @@
             tabulae lapideæ, in quibus praecepta legis scripta sunt, <lb/>
             totidemque tubae argenteae legis et gratiae erant, in <lb/>
             quibus patres ad promovenda castra canebant.</p>
-          <p>10. Duo etiam Seraphim scribuntur, qui ante thro­ <lb/>
+          <p n="10">10. Duo etiam Seraphim scribuntur, qui ante thro­ <lb/>
             num sedentes, jugiter hymnum decantantes erum­ <lb/>
             punt; duae etiam olivæ a dextra laevaque lampadis <lb/>
             in Zacharia leguntur. Sunt et duo ubera Testamen­ <lb/>
             torum sponsæ, id est, Ecclesiae in Canticis canti­ <lb/>
             corum; ; ibi etiam et duo hinnuli gemelli pascuntur <lb/>
             inter lilia agri.</p>
-          <p>ii. In Apocalypsi quoque duo testes prophetare <lb/>
+          <p n="11">11. In Apocalypsi quoque duo testes prophetare <lb/>
             jubentur, et in Jeremia duo de cognatione gentis as-
             <milestone unit="PLSection" n="C"/><lb/>
             sumuntur. In Evangelio quoque bini de septuaginta <lb/>
@@ -270,7 +278,7 @@
             mae connectuntur, et quod minus quam inter duos <lb/>
             charitas non habelur. Idem quoque numerus etiam <lb/>
             jusliti r, quo æquis gaudeat pariter ponderatis.</p>
-          <p>ii. Præterea duo sunt et quae hominem ad beatam <lb/>
+          <p n="12">12. Præterea duo sunt et quae hominem ad beatam <lb/>
             vitam 223 perducunt, fides, scilicet, atque opus ; sed <lb/>
             fides constat ex divinitate, opus autem in rectitudine <lb/>
             vitae; quin etiam et duae vitae nobis in Ecclesia prae­ <lb/>
@@ -279,13 +287,16 @@
             contemplabimur.</p>
           <p>
             <milestone unit="PLSection" n="D"/></p>
-          <ab>
+          </div>
+
+<div n="3" subtype="section" type="textpart">
+<ab>
             <title type="sub">CAPUT IV.</title>
           </ab>
           <ab>
             <title type="sub">De ternario numero.</title>
           </ab>
-          <p>13. Ternarius princeps est imparium numerus, <lb/>
+          <p n="13">13. Ternarius princeps est imparium numerus, <lb/>
             perfectusque census; nam iste prior initium, me­ <lb/>
             diumque finemque sortitur, et centro medietatis <lb/>
             principiumque finemque aequali jure componit, qui
@@ -294,7 +305,7 @@
             men unus est, quia tres unum sunt; unum utique in <lb/>
             Divinitate, tres in personarum distinctione; in na­ <lb/>
             tura unum, tres in appellatione.</p>
-          <p>14. Jure ergo hic numerus Trinitatis speciem si­ <lb/>
+          <p n="14">14. Jure ergo hic numerus Trinitatis speciem si­ <lb/>
             gnificat; eodem namque numero in toto orbe sacro­ <lb/>
             sancta Trinitas atque Divinitas praedicatur, eodem­ <lb/>
             que numero trisagion hymnus ab angelis in cœlesti­ <lb/>
@@ -305,8 +316,8 @@
             dit, centies computatus ejusdem longitudinem effi­ <lb/>
             cit; cujus quidem numeri exempla in sacris eloquiis <lb/>
             copiosa sunt.</p>
-          <p>
-            <milestone unit="PLSection" n="B"/>15. Tres namque angelos Abraham sub Trinitatis <lb/>
+          <p n="15">
+<milestone unit="PLSection" n="B"/>15. Tres namque angelos Abraham sub Trinitatis <lb/>
             imagine vidit; tres Isaac puteos effodit; tres Jacob <lb/>
             virgas in aquas ob aspectum pecorum misit; trina <lb/>
             dies Jonam in eorde celi gestavit; tribus diebus per <lb/>
@@ -315,7 +326,7 @@
             minus credidit. Lazari quoque mortem idem post <lb/>
             triduum superavit. Dilectionis fermentum evangelica <lb/>
             mulier in satis tribus abscondil.</p>
-          <p>16. Tertio Deus, utcalix passionis transiret, oravit. <lb/>
+          <p n="16">16. Tertio Deus, utcalix passionis transiret, oravit. <lb/>
             Tertio Petrus Christum negavit. Tertio idem confi­ <lb/>
             tendoamavit. Tribus diebus Dominus noster nedemp­ <lb/>
             tor in sepulcro quievit. Tertio 224 se discipulis , <lb/>
@@ -326,7 +337,7 @@
             sunt evangelici fructus, primus, qui et centenus, mar­ <lb/>
             tyrum; secundus, sexagenarius, virginum ; tertius, <lb/>
             tricenarius, conjugatorum.</p>
-          <p>17. Tria sunt etiam et quae [Forte, ea quae] in <lb/>
+          <p n="17">17. Tria sunt etiam et quae [Forte, ea quae] in <lb/>
             Deum non cadunt, mensura, locus et tempus. Tres <lb/>
             sunt species animæ, sive motus, cupiditas, ira, vel <lb/>
             ratio. Sacrae legis lingua triplex est, Hebræa, Grae­ <lb/>
@@ -335,7 +346,7 @@
             mundi tres sapientiæ partes esse dixerunt : pbysi­ <lb/>
             caro, quae naturalis; logicam, quae rationalis; ethi­ <lb/>
             cam, quae moralis.</p>
-          <p>18. Tria sunt et apud musicos genera sonorum , <lb/>
+          <p n="18">18. Tria sunt et apud musicos genera sonorum , <lb/>
             vox, flatus et pulsus: vox in faucibus, flatus in ti-
             <milestone unit="PLSection" n="D"/><lb/>
             biis, pulsus vero in citharis. Porro genera rationa­ <lb/>
@@ -365,13 +376,16 @@
             <milestone unit="PLSection" n="A"/><lb/>
             anni tempora distinguuntur, et coram tribus testibus <lb/>
             actio cuncta finitur.</p>
-          <ab>
+          </div>
+
+<div n="4" subtype="section" type="textpart">
+<ab>
             <title type="sub">CAPUT V.</title>
           </ab>
           <ab>
             <title type="sub">De quaternario numero.</title>
           </ab>
-          <p>19. Quid quatuor dicam, in quo numero solidita­ <lb/>
+          <p n="19">19. Quid quatuor dicam, in quo numero solidita­ <lb/>
             tis certa perfectio est ? Nam ex longitudine, et lati­ <lb/>
             tudine, et profunditate componitur decas, quae ple­ <lb/>
             num efficit; decem enim ex quatuor numeris grada­ <lb/>
@@ -382,15 +396,15 @@
             Item ac quatuor| numeri mille reddunt; id est c, cc, <lb/>
             ccc, CCCC. Sic decem millia, cæteraque eodem incre. <lb/>
             mento complentur.</p>
-          <p>
-            <milestone unit="PLSection" n="B"/>20. Numerus autem iste quadratus evangelistarum <lb/>
+          <p n="20">
+<milestone unit="PLSection" n="B"/>20. Numerus autem iste quadratus evangelistarum <lb/>
             quatuor deputatur, qui in quatuor partes, vel in an­ <lb/>
             gulos mundi fusi sunt. Quanquam et quatuor sunt <lb/>
             paradisi flumina, quæ totum orbem circumfluunt. <lb/>
             Area quoque Noe quadratis lignis construitur. Te­ <lb/>
             stamenti denique area quatuor aureis circulis vehe­ <lb/>
             batur.</p>
-          <p>it. Vestis etiam sacerdotalis in lege quatuor co­ <lb/>
+          <p n="21">21. Vestis etiam sacerdotalis in lege quatuor co­ <lb/>
             loribus, id est, hyacintho, bysso, cocco, purpura­ <lb/>
             que ex auro contexitur. Praeterea et quatuor venti <lb/>
             terrae in Ezechiele aspirant, ut in figuram futurae <lb/>
@@ -400,7 +414,7 @@
             gnum. Idem quoque Daniel quatuor regna mundi sub
             <milestone unit="PLSection" n="C"/><lb/>
             diversis figuris exponit.</p>
-          <p>22. Similiter Zacharias quatuor cornua regnorum <lb/>
+          <p n="22">22. Similiter Zacharias quatuor cornua regnorum <lb/>
             totidemque fabros describit , et quatuor qnadri­ <lb/>
             gas Evangelii, missas in quatuor cardines cœ- <lb/>
             Ii. Item apud Joannem quatuor animalia vultus <lb/>
@@ -409,7 +423,7 @@
             autem rerum quatuor sunt terræ partes, quatuor <lb/>
             coeli frontes, Oriens, Occidens, Septentrio, sive Me­ <lb/>
             ridies.</p>
-          <p>23. Quatuor etiam mundi elementa habentur, ex <lb/>
+          <p n="23">23. Quatuor etiam mundi elementa habentur, ex <lb/>
             quibus universa subsistunt, ignis, aer, aqua, et <lb/>
             terra. Annus quoque quatuor temporibus volvitur, <lb/>
             aestatis, autumni, hiemis atque veris. Ipsa denique <lb/>
@@ -421,19 +435,22 @@
             <milestone unit="PLSection" n="A"/><lb/>
             titudo et temperantia ; totidemque e contrario vitia, <lb/>
             cupiditas, metus, dolor et gaudium.</p>
-          <p>24. Mortalium quoque rerum quatuor vitæ sunt, <lb/>
+          <p n="24">24. Mortalium quoque rerum quatuor vitæ sunt, <lb/>
             initium, augmentum, status et declinatio. Quatuor <lb/>
             etiam genera animalium in mundo habentur, id est, <lb/>
             coelestia, pennigera, aquatilia, sive terrestria. Iris et <lb/>
             ipse coelestis quadricoloris splendore variatur. Qua­ <lb/>
             tuor quoque quadrantibus ratio bissexti colligitur.</p>
-          <ab>
+          </div>
+
+<div n="5" subtype="section" type="textpart">
+<ab>
             <title type="sub">CAPUT VI.</title>
           </ab>
           <ab>
             <title type="sub">226 De quinario numero.</title>
           </ab>
-          <p>25. Sequitur Quinarius numerus, qui, sive cum <lb/>
+          <p n="25">25. Sequitur Quinarius numerus, qui, sive cum <lb/>
             aliis imparibus, sive cum suo genere sociatur, se <lb/>
             semper ostendit. Nam quinque per quinquies faciunt <lb/>
             viginti quinque, et quinquies terni quindecim, et <lb/>
@@ -443,7 +460,7 @@
             legi est attributus; lex enim quinque libris comple­ <lb/>
             ctitur [Forte comprehenditur]. Unde etiam et Apo­ <lb/>
             stolum in Ecclesia quinque verba loqui delectat.</p>
-          <p>26. Sed et quinque cubilis altare in lege per <lb/>
+          <p n="26">26. Sed et quinque cubilis altare in lege per <lb/>
             quadrum construitur; totidemque urbes in Isaia <lb/>
             Chananæa lingua loquuntur. Sunt et quinque virgi­ <lb/>
             nes prudentes in Evangelio, sunt et aliæ quinque <lb/>
@@ -451,20 +468,23 @@
             praeterea quinque et talenta quinque. Item secun­ <lb/>
             dum mundi philosophos zonæ terrae quinque, et <lb/>
             apud Latinos vocales litterae quinque.</p>
-          <p>27. Sensus quoque corporis quinque, visus, au­ <lb/>
+          <p n="27">27. Sensus quoque corporis quinque, visus, au­ <lb/>
             ditus, odoralus, gustus et tactus; totidemquc hahi­ <lb/>
             tatorum mundi genera, id est, ho mines, quadrupe-
             <milestone unit="PLSection" n="C"/><lb/>
             des, vel reptantes, natantes, sive volantes. Praeterea <lb/>
             et quinquennio lustrum finitur, olympias quinquen­ <lb/>
             nio terminatur.</p>
-          <ab>
+          </div>
+
+<div n="6" subtype="section" type="textpart">
+<ab>
             <title type="sub">CAPUT VII.</title>
           </ab>
           <ab>
             <title type="sub">De senario numero.</title>
           </ab>
-          <p>28. Senarius numerus primus et perfectus, et <lb/>
+          <p n="28">28. Senarius numerus primus et perfectus, et <lb/>
             partibus suis primus impletur. Nam sextam sui intra <lb/>
             continet, quod unus; tertiam, 227 quod duo; et <lb/>
             dimidium, quod tres; haec enim summa in unum <lb/>
@@ -472,7 +492,7 @@
             Nullus autem ante senarium invenilur qui suis parti­ <lb/>
             bus, dum dividitur, impleatur, cujus perfectio etiam <lb/>
             ipso opere mundi clarescit.</p>
-          <p>29. Sex enim diebus perfecit Deus opera sua. Primo <lb/>
+          <p n="29">29. Sex enim diebus perfecit Deus opera sua. Primo <lb/>
             die condidit lucem, secundo firmamentum, tertio
             <milestone unit="PLSection" n="D"/><lb/>
             speciem maris et terrae, quarto sidera , quinto et pis­ <lb/>
@@ -507,14 +527,14 @@
             quarta usque ad Transmigrationem, quinta usque ad <lb/>
             adventum Christi, sexta, quae nunc aetas est, usque <lb/>
             in finem mundi.</p>
-          <p>50. Annus quoque ipse senario numero consumma­ <lb/>
+          <p n="30">30. Annus quoque ipse senario numero consumma­ <lb/>
             tur; sexagenarius enim numerus dierum sexta pars <lb/>
             est', cujus summa per senarium primi versus multi­ <lb/>
             plicata, idest, sexies sexaginta, CCCLX. Residui sunt <lb/>
             quinque dies, quibus si adjiciuntur quadranæ partes, <lb/>
             totum senarium numerum faciunt. Siquidem et ipse <lb/>
             quadrans ex his consistit.</p>
-          <p>31. Idem ipse Senarius numerus quadro et solido
+          <p n="31">31. Idem ipse Senarius numerus quadro et solido
             <milestone unit="PLSection" n="B"/><lb/>
             quaternario sociatus, horas diei noctisque metitur. <lb/>
             Nam quater seni viginti quatuor efficiunt. Praeterea <lb/>
@@ -527,7 +547,7 @@
             ut pecudes ; rationabilia, ut homines ; immortalia, <lb/>
             ut angeli. Novissimus et summus gradus est, qui est <lb/>
             super omnia Deus.</p>
-          <p>52. Item naturalia officia , sine quibus esse nibil po­ <lb/>
+          <p n="32">32. Item naturalia officia , sine quibus esse nibil po­ <lb/>
             test, sex sunt; id est, magnitudo, oculi, figura, in­ <lb/>
             tervalla, status et motus. 228 Item ipsius motus sex <lb/>
             differentiae sunt. Nam movemur ante, a tergo, dextra <lb/>
@@ -538,7 +558,7 @@
             aetate mundi Salvator venit in carnem, et sex <lb/>
             diebus jussum est populo in deserto manna colli­ <lb/>
             gere.</p>
-          <p>33. Hinc et Ezechiel quoque in dextera viri calamum <lb/>
+          <p n="33">33. Hinc et Ezechiel quoque in dextera viri calamum <lb/>
             sex cubitorum vidisse se narravit. Ipse etiam templi <lb/>
             frontes sex cubitis in altum scripsit. Idem sex agnos <lb/>
             in holocaustis principem offerre mandavit. In Evange­ <lb/>
@@ -549,19 +569,22 @@
             emittuntur.</p>
           <p>
             <milestone unit="PLSection" n="A"/></p>
-          <ab>
+          </div>
+
+<div n="7" subtype="section" type="textpart">
+<ab>
             <title type="sub">CAPUT VIII.</title>
           </ab>
           <ab>
             <title type="sub">De septenario numero.</title>
           </ab>
-          <p>34. Septenarius numerus a nullo nascitur, nec gene­ <lb/>
+          <p n="34">34. Septenarius numerus a nullo nascitur, nec gene­ <lb/>
             rat , nec generatur. Nam omnes numeri intra decem <lb/>
             positi aut gignunt alios, aut gignuntur ab aliis. Iste nec <lb/>
             gignit, nec gignitur. Sex enim et octo generantur tan­ <lb/>
             tummodo. Quatuor autem, et duo et creant, et crean­ <lb/>
             tur. Septem nihil gignit, nec ab altero gignitur.</p>
-          <p>35. Hic autem numerus septenarius juxta legiti­ <lb/>
+          <p n="35">35. Hic autem numerus septenarius juxta legiti­ <lb/>
             mum est; sive cum testificatur, ut septuaginta , et <lb/>
             septingenti, sive cum toties in sese septies centeni <lb/>
             septem ; quique etiam juxta sapientes mundi ea ra. <lb/>
@@ -581,7 +604,7 @@
             tiformis gratiæ Spiritus perfectos ostendit, quorum <lb/>
             prædicatio [Forte prædicatione] per quatuor virtutum <lb/>
             genera Trinitatis fides in toto orbe crescit.</p>
-          <p>36. In Scripturis autem sanctis iste numerus in­ <lb/>
+          <p n="36">36. In Scripturis autem sanctis iste numerus in­ <lb/>
             terdum omne tempus sæculi hujus, interdum requiem
             <milestone unit="PLSection" n="C"/><lb/>
             significat, nonnunquam Ecclesiae unitatem demon­ <lb/>
@@ -595,7 +618,7 @@
             Domini sanctificatus vocatur, in quo jam fit vespera, <lb/>
             quia nullis finibus temporum requies aeternae beatitu­ <lb/>
             dinis coarctabitur.</p>
-          <p>37. Inde etiam et in lege septimus dies fcriatus <lb/>
+          <p n="37">37. Inde etiam et in lege septimus dies fcriatus <lb/>
             esse praecipitur, ut requies in ea aeterna significetur. <lb/>
             Inde est, quod post resurrectionem suam Dominus
             <milestone unit="PLSection" n="D"/><note type="footnote"> 50. Quadranæ partes quid sit, non intelligo. Legerem <lb/>
@@ -634,7 +657,7 @@
             igitur genere septenario numero sanctae Ecclesiæ <lb/>
             universitas figuratur, dum per speciem ad genus <lb/>
             transitur.</p>
-          <p>38. Unde et Joannes in Apocalypsi septem scribit <lb/>
+          <p n="38">38. Unde et Joannes in Apocalypsi septem scribit <lb/>
             Ecclesiis, dum septem sint solæ quae specialiter no­ <lb/>
             minantur, sed una Ecclesia, quæ septiformis gratia <lb/>
             Spiritus perfecle in toto mundo diffunditur; scriptum <lb/>
@@ -643,7 +666,7 @@
             numerus iste in Scripturis eminentiorest prae caeteris, <lb/>
             utpote quem Dominus in requiem suam sanctificavit, <lb/>
             et in quo futurae resurrectionis requiem repromisit.</p>
-          <p>230 39. Convenienter itaque septenario numero <lb/>
+          <p n="39">230 39. Convenienter itaque septenario numero <lb/>
             significatur Spiritus sanctus; unde et sanctificatio in
             <milestone unit="PLSection" n="B"/><lb/>
             lege ad diem septimum pertinet.Nam nullum diem Deus <lb/>
@@ -655,7 +678,7 @@
             Spiritus sapientiæ et intellectus, Spiritus consilii et <lb/>
             fortitudinis, Spiritus scientiæ et pietatis, et replebit eum <lb/>
             Spiritus cimoris Domini (Isa. XI, 2).</p>
-          <p>40. Unde etZacharias sub imagine Christi lapidem <lb/>
+          <p n="40">40. Unde etZacharias sub imagine Christi lapidem <lb/>
             habentem oculos septem scribit. Hujus ergo numerl <lb/>
             exempta in divinis voluminibus copiosa sunt. Septi­ <lb/>
             mus enim ab Adam transfertur Enoch. Et septimus <lb/>
@@ -667,7 +690,7 @@
             teri lege celebrari præcipitur pascha. Candelabrum <lb/>
             autem septem ramorum in tabernaculo testimonii <lb/>
             Moyses legislator constituit.</p>
-          <p>41. Area quoque Testamenti clangentibus tubis sep­ <lb/>
+          <p n="41">41. Area quoque Testamenti clangentibus tubis sep­ <lb/>
             ties circumacta Jericho muros subvertit. Elisaeus <lb/>
             namque septies super mortuum puerum excitavit. <lb/>
             Septem quoque mulieres in Isaia virum unum appre­ <lb/>
@@ -675,7 +698,7 @@
             lieri nubunt, sibimet succedentes. Septem etiam panes <lb/>
             populo in Evangelio dividuntur, et septem sportæ <lb/>
             superfuerunt.</p>
-          <p>42. Septem etiam Ecclesiis apostolus Paulus scri­ <lb/>
+          <p n="42">42. Septem etiam Ecclesiis apostolus Paulus scri­ <lb/>
             bit, id est, Romanis, Corinlbiis, Galatis, Ephesiis,
             <milestone unit="PLSection" n="D"/><lb/>
             Philippis, Colossis, Thessalonicis. Et Joannes in <lb/>
@@ -683,7 +706,7 @@
             caudelabrorum, id est, Ecclesiarum Epbesiorum, <lb/>
             Smyrnensium, Pergamorum Thyaturarum, Sardium, <lb/>
             Philadelphiorum, et Laodiciorum.</p>
-          <p>42. Item apud eumdem septem in dextera Dei stellae <lb/>
+          <p n="43">43. Item apud eumdem septem in dextera Dei stellae <lb/>
             leguntur, et septem signaeula libri Agnus occisus resol-
             <milestone unit="PLSection" n="A"/><lb/>
             vit, et septem angeli 231 tnbis canunt, et septem ac­ <lb/>
@@ -700,7 +723,7 @@
             ut legimus bestiam septem capita habentem. Sunt <lb/>
             et septem dæmonum principalia vitia. Infinita quippe <lb/>
             exempla hujus numeri in sacris eloquiis.</p>
-          <p>44. Sed iterum transeamus ad alia, quae nume-
+          <p n="44">44. Sed iterum transeamus ad alia, quae nume-
             <milestone unit="PLSection" n="B"/><lb/>
             rum assignant. Septem apud veteres annumerantur <lb/>
             genera philosophiæ, prima arithmetica, secunda <lb/>
@@ -715,7 +738,7 @@
             eadem figura definiens repetiL Hic etiam numerus et <lb/>
             nomina lunæ significat. Nam unnm,dno, tria, quatuor, <lb/>
             quinque, et sex, et septem viginti octo faciunt.</p>
-          <p>45. Item tot sunt circuli, tot planetae coeli, tot <lb/>
+          <p n="45">45. Item tot sunt circuli, tot planetae coeli, tot <lb/>
             dies mundi, totque transfusiones elementorum. Nam
             <milestone unit="PLSection" n="C"/><lb/>
             ex igne aer, ex aere aqua, ex aqua terra, id est as­ <lb/>
@@ -724,7 +747,7 @@
             tumque dimittunt. Septima quoque die ægri pericli­ <lb/>
             tantur. Vocales quoque Graecae litterae septem ha­ <lb/>
             bentur.</p>
-          <p>46. Ipse autem homo septem meatus habet in ca­ <lb/>
+          <p n="46">46. Ipse autem homo septem meatus habet in ca­ <lb/>
             pite sensibus praeparatos, duos oculos, auresque, et <lb/>
             nares totidem, et os unum. Parvulis etiam seplimo <lb/>
             mense dentes emergunt,. septimo auno mutantur. <lb/>
@@ -735,7 +758,7 @@
             juvenilis aetatis plena perfectio datur ; sexta defluxio
             <milestone unit="PLSection" n="D"/><lb/>
             est, septima senectutis initium.</p>
-          <p>47. Item septem naturas abstrusas membra mor­ <lb/>
+          <p n="47">47. Item septem naturas abstrusas membra mor­ <lb/>
             talium, id est, linguam, cor, pulmonem, lienem, <lb/>
             jecur, et duos renes. Item septem corporis partes <lb/>
             hominem perficiunt, id est, caput, collum, pectus, <lb/>
@@ -753,13 +776,16 @@
             
           <p>
             <milestone unit="PLSection" n="A"/></p>
-          <ab>
+          </div>
+
+<div n="8" subtype="section" type="textpart">
+<ab>
             <title type="sub">CAPUT IX.</title>
           </ab>
           <ab>
             <title type="sub">De octonario numero..</title>
           </ab>
-          <p>48. Octonarius primus et perfectus est; nam ex <lb/>
+          <p n="48">48. Octonarius primus et perfectus est; nam ex <lb/>
             primo motu, id est, ex duobus per duos quatuor ge-, <lb/>
             nerat, et bis facit ocdoadum perfectum. IIic autem <lb/>
             numerus sanctus est, et in figura verae circumcisio­ <lb/>
@@ -767,7 +793,7 @@
             mus est, et ex septem est, sicut in principio idem, <lb/>
             qui fuit octavus in creatione mundi, et perfectio <lb/>
             unitatis est.</p>
-          <p>49. Sed sicut in septenario numero praesens vita <lb/>
+          <p n="49">49. Sed sicut in septenario numero praesens vita <lb/>
             volvitur, et designatur, ita per octonarium spesaeter­ <lb/>
             nae resurrectionis ostenditur. Hoc enim die Dominus <lb/>
             a mortuis resurrexit, qui scilicet a passione Domini <lb/>
@@ -783,7 +809,7 @@
             quia de futuris judicii malit quid denuo tibi incurrat, <lb/>
             incertus es (Eccle. XI, 2). Convenit denique numerus <lb/>
             iste et Domino, et ejus corpori, quasi uni, et septem.</p>
-          <p>50. Inde est, quod octo animae cum Noe introie­ <lb/>
+          <p n="50">50. Inde est, quod octo animae cum Noe introie­ <lb/>
             runt in arcam. Sed in illis septem septiformis Ecclesia <lb/>
             designatur, in octavo Noe 233 Christus, qui est caput <lb/>
             Ecclesiae, figuratur. Ad hoc etiam pertinet quod in
@@ -793,7 +819,7 @@
             quoque de hoc numero legitur, quod post dies octo <lb/>
             coram tribus discipulis suis facies Domini in monte <lb/>
             refulsit.</p>
-          <p>51. Idem elam Salvator post octo dies resurrec­ <lb/>
+          <p n="51">51. Idem elam Salvator post octo dies resurrec­ <lb/>
             tionis Didymo se non credenti manifestavit. In sese <lb/>
             triplicatus iste numerus propter Trinitatem viginti <lb/>
             quatuor seniores efficit qui coronas suas eflerunt <lb/>
@@ -807,13 +833,16 @@
             ingluvies, luxuria, inanis gloria, superbia.</p>
           <p>
             <milestone unit="PLSection" n="A"/></p>
-          <ab>
+          </div>
+
+<div n="9" subtype="section" type="textpart">
+<ab>
             <title type="sub">CAPUT X.</title>
           </ab>
           <ab>
             <title type="sub">De novenario numero.</title>
           </ab>
-          <p>52. Novenarius secundum se perfectus numerus <lb/>
+          <p n="52">52. Novenarius secundum se perfectus numerus <lb/>
             est, et inde magis perfectus dicitur, quoniam ex tri­ <lb/>
             bus perfectis per formam ejus multiplicatus comple­ <lb/>
             tur. At vero secundum alios imperfectus est; nam <lb/>
@@ -823,7 +852,7 @@
             novenario numero illi accipiuntur, qui imperfecti <lb/>
             sunt, et ad decem praecepta legis nequaquam perve­ <lb/>
             niunt.</p>
-          <p>55. Ex hoc numero sunt illi novem leprosi in <lb/>
+          <p n="53">53. Ex hoc numero sunt illi novem leprosi in <lb/>
             Evangelio, qui ab unitatis consortio seclusi, munda­ <lb/>
             tori suo per superbiam gratias non egerunt. Ex eo­ <lb/>
             dem numero accipiUntur a quibusdam et illi nona-
@@ -834,13 +863,16 @@
             Propterea] Hebræi novem libros esse propheticos <lb/>
             dicunt, et 234 gentiles novem musas finxerunt, <lb/>
             quibus perfecta scientia consistit modulationum.</p>
-          <ab>
+          </div>
+
+<div n="10" subtype="section" type="textpart">
+<ab>
             <title type="sub">CAPUT XI.</title>
           </ab>
           <ab>
             <title type="sub">De denario numero.</title>
           </ab>
-          <p>54. Denarius vero ultra omnes habendus est nu­ <lb/>
+          <p n="54">54. Denarius vero ultra omnes habendus est nu­ <lb/>
             merus, quia omnes numeros diversæ virtutis ac per- <lb/>
             lectionis intra se continet; qui licet primi versus <lb/>
             finis sit, secundae monadis complet auspicium , et <lb/>
@@ -850,7 +882,7 @@
             procedat, sed denuo ad unitatem recurrat, sicque <lb/>
             deinceps pro infinita numerorum multitudine ha­ <lb/>
             beatur.</p>
-          <p>55. Est autem in Scripturis sanctis legitimus, sicut <lb/>
+          <p n="55">55. Est autem in Scripturis sanctis legitimus, sicut <lb/>
             et septimus , nunc perfectionem significans , nunc <lb/>
             aperte totum demonstrans, sicut Daniel, qui omnem <lb/>
             Ecclesiam, sive angelorum multitudinem infinitam <lb/>
@@ -858,7 +890,7 @@
             lium ministrabant ei (Dan., VII, 10). Unde et psal­ <lb/>
             mus : Currus , inquit, Dei decem millibus multiplex <lb/>
             millia lætantium (Ps. LXIII, 18).</p>
-          <p>56. Denique hic numerus Decalogi legi ascribitur. <lb/>
+          <p n="56">56. Denique hic numerus Decalogi legi ascribitur. <lb/>
             Decem enim notissima praecepta legis. Ab Adam <lb/>
             progenies usque ad Noe denario numero terminatur ;
             <milestone unit="PLSection" n="D"/><lb/>
@@ -891,7 +923,7 @@
             <milestone unit="PLSection" n="A"/><lb/>
             mon rex decem candelabra in domo Dei dextra læ­ <lb/>
             vaque constituit.</p>
-          <p>57. Denique in Zacharia decem sunt homines, sub <lb/>
+          <p n="57">57. Denique in Zacharia decem sunt homines, sub <lb/>
             specie omnium genuum fimbriain Christi tenentes. <lb/>
             Decem sunt et in Evangelio virgines , quæ in sensi­ <lb/>
             bus carnis et spiritus , quinario numero geminato , <lb/>
@@ -899,7 +931,7 @@
             a Domino, novem ex eis ab unitate seclusis. Decem <lb/>
             sunt præterea urbes, quas si bene rexeris, cordis et <lb/>
             corporis sensus duplicato numero accipies in futurum.</p>
-          <p>58. At contra in Exodo decem plagis percussa est <lb/>
+          <p n="58">58. At contra in Exodo decem plagis percussa est <lb/>
             Ægyptus, et in Apocalypsi decem cornua procedunt <lb/>
             ex mari, et decem dies pressurarum Ecclesiae scri­ <lb/>
             buntur, in quibus status hujus vitae, et tempus osten­ <lb/>
@@ -907,7 +939,7 @@
             <milestone unit="PLSection" n="B"/><lb/>
             fans coagulatur in sanguine. Sunt et alia sexcenta. <lb/>
             Sed hactenus de denario dixisse sufficiat.</p>
-          <p>59. Haec est primi versus numerorum regula, haec <lb/>
+          <p n="59">59. Haec est primi versus numerorum regula, haec <lb/>
             sacramenta, genera et species differentiæ perfectio­ <lb/>
             nis. Omnes autem primi versus numeros recapitu­ <lb/>
             lantes sub hac veritate tractemus. Unus numerus <lb/>
@@ -917,20 +949,23 @@
             genius est. Senarius in opere mundi perfectus est, <lb/>
             et ab imparibus par est. Septenarius legitimus est, et <lb/>
             interdum pro toto est.</p>
-          <p>60. Octonarius a paribus par est. Novenarius a <lb/>
+          <p n="60">60. Octonarius a paribus par est. Novenarius a <lb/>
             perfectis imparibus impar est. Denarius perfectus <lb/>
             atque finalis est. Termini autem numerorum , vel
             <milestone unit="PLSection" n="c"/><lb/>
             limites isti sunt: unus , decem , centum et mille. <lb/>
             Hucusque ad regulam primi versus disputatum est. <lb/>
             Nunc de secunda [Forte, nunc de secundo] tractemus.</p>
-          <ab>
+          </div>
+
+<div n="11" subtype="section" type="textpart">
+<ab>
             <title type="sub">CAPUT XII.</title>
           </ab>
           <ab>
             <title type="sub">De undenario numero.</title>
           </ab>
-          <p>61. Undenarius numerus prima secundi versus <lb/>
+          <p n="61">61. Undenarius numerus prima secundi versus <lb/>
             monas est, qui imparibus suis non habet amplius , <lb/>
             nisi solam undecimam, quod est, sicut quinarius so­ <lb/>
             lam quintam, et ternarius solam tertiam. In Scriptu­ <lb/>
@@ -940,8 +975,8 @@
             Domine, quoniam defecit sanctus. 236 Sicut enim <lb/>
             per denarium scribitur perfectio beatitudinis, ita per <lb/>
             undenarium transgressio legis.</p>
-          <p>
-            <milestone unit="PLSection" n="D"/>62. Hinc est quod Adam progenies per Cain us­ <lb/>
+          <p n="62">
+<milestone unit="PLSection" n="D"/>62. Hinc est quod Adam progenies per Cain us­ <lb/>
             que ad diluvium undenario numero terminatur, ad <lb/>
             significandum scilicet peccatum, quod per transgres-
             <milestone unit="PLSection" n="A"/><lb/>
@@ -953,7 +988,7 @@
             tur, ad demonstrandum illum auctorem transgres­ <lb/>
             sionis diabolum , et filium ejus Antichristum , cujus <lb/>
             regni virtus in peccati potentia exaltatur.</p>
-          <p>63. Nam et Petrus, cadente Juda, ne in undenario <lb/>
+          <p n="63">63. Nam et Petrus, cadente Juda, ne in undenario <lb/>
             numero apostolorum summa permaneret, duodeci­ <lb/>
             mum Matthiam sorte electum constituit, mctuens ne <lb/>
             in numero transgressionis consisteret summa apo­ <lb/>
@@ -963,13 +998,16 @@
             <milestone unit="PLSection" n="B"/><lb/>
             decim etiam perhibentur dierum epacla;, quae per <lb/>
             singulos annos ad cursum lunae adjiciuntur.</p>
-          <ab>
+          </div>
+
+<div n="12" subtype="section" type="textpart">
+<ab>
             <title type="sub">CAPUT XIII.</title>
           </ab>
           <ab>
             <title type="sub">De duodenario numero,</title>
           </ab>
-          <p>64. Duodenarius numerus inter alios numeros le­ <lb/>
+          <p n="64">64. Duodenarius numerus inter alios numeros le­ <lb/>
             gitimus ex legitimis numeris est. Propterea septe­ <lb/>
             narii partes altera pro altera multiplicatur. Nam <lb/>
             quater terni, vel ter quaterni eumdem numerum fa­ <lb/>
@@ -980,8 +1018,8 @@
             que, duodecimam, quod est unum, sextam, quod duo, <lb/>
             quartam , quod tres, tertiam , quod quatuor, dimi­ <lb/>
             diam, quod sex.</p>
-          <p>
-            <milestone unit="PLSection" n="c"/>65. Itaque unum, et duo, et tria, et quatuor, et <lb/>
+          <p n="65">
+<milestone unit="PLSection" n="c"/>65. Itaque unum, et duo, et tria, et quatuor, et <lb/>
             sex, in summam ducta, sedecim sunt. Tali ergo ra­ <lb/>
             tione plusquam perfectus habetur. Hic autem duode­ <lb/>
             narius numerus, ut praediximus, in Scripturis legiti­ <lb/>
@@ -989,13 +1027,13 @@
             tiplicamur : pro toto ponitur, ut XII throni, et III <lb/>
             tribus, dum per XII thronos omnes judicantes, et per <lb/>
             duodecim tribus omnes gentes significantur.</p>
-          <p>66. Pro se ipso autem, sicut duodecim per duo­ <lb/>
+          <p n="66">66. Pro se ipso autem, sicut duodecim per duo­ <lb/>
             decim centum quadraginta quatuor efficiunt, quo <lb/>
             numero omnis Ecclesia designatur. Idem autem fre­ <lb/>
             quentior est in Scripturis, et inter omnes numeros <lb/>
             habetur insignior propter summam patriarcharum et <lb/>
             apostolorum</p>
-          <p>67. Duodenarius est numerus apostolorum, idem
+          <p n="67">67. Duodenarius est numerus apostolorum, idem
             <milestone unit="PLSection" n="D"/><lb/>
             etiam et patriarcharum; sunt enim et totidem mino­ <lb/>
             res prophetae. Lapides etiam duodecim, quos sacer­ <lb/>
@@ -1025,7 +1063,7 @@
             vocantur. Duodecim etiam exploratorcs ad terram <lb/>
             sanctam mittuntur, quibus botrus in ligno sub typo <lb/>
             Christi defertur.</p>
-          <p>68. Denique et propter æternitatis testimonium de <lb/>
+          <p n="68">68. Denique et propter æternitatis testimonium de <lb/>
             Jordanis amne lapides duodecim auferuntur, qui <lb/>
             ponuntur in loco ubi secundo circumcisus est lsrael. <lb/>
             Porro Elias ex duodecim lapidibus ædificavit altare, <lb/>
@@ -1038,13 +1076,13 @@
             <milestone unit="PLSection" n="B"/><lb/>
             civitas xn stadiis est undique versum, et ejusdem <lb/>
             civitatis III portarum ingressus habetur.</p>
-          <p>G9. Hic duodenarius numerus sexies multiplicatus <lb/>
+          <p n="69">69. Hic duodenarius numerus sexies multiplicatus <lb/>
             facit sepluaginta duos discipulos, qui missi sunt ad <lb/>
             praedicandum per totum mundum in septuaginta <lb/>
             duabus linguis divisum. Item multiplicatus in sese <lb/>
             efficit centum quadraginta quatuor, qui est mensura <lb/>
             murorum Jerusalem.</p>
-          <p>238 .Idem ipse quoque multiplicatus facit cen­ <lb/>
+          <p n="70">238 70. Idem ipse quoque multiplicatus facit cen­ <lb/>
             tum, quadraginta quatuor millia signatorum, id est, <lb/>
             universitatem sanctorum. Præterca et in temporibus <lb/>
             et in partibus mundi convenit numerus iste. Duodecim <lb/>
@@ -1053,24 +1091,30 @@
             mundum. Duodecim etiam horae sunt diei, totidemque
             <milestone unit="PLSection" n="C"/><lb/>
             horæ sunt noctis.</p>
-          <ab>
+          </div>
+
+<div n="13" subtype="section" type="textpart">
+<ab>
             <title type="sub">CAPUT XIV.</title>
           </ab>
           <ab>
-            <title type="sub">% De denario ternario numero.</title>
+            <title type="sub">De denario ternario numero.</title>
           </ab>
-          <p>i i. Denarius ternarius numerus propter tria et de. <lb/>
+          <p n="71">71. Denarius ternarius numerus propter tria et de. <lb/>
             cem designat legem, et legislatorem, Decalogum, <lb/>
             videlicet, et Trinitatem. Competenter autem hic nu­ <lb/>
             merus apostolo Paulo ascribimur, qui ejusdem tenet <lb/>
             numeri locum in ordine apostolorum.</p>
-          <p>72. Nam idem ante legis doctor, postea divinæ <lb/>
+          <p n="72">72. Nam idem ante legis doctor, postea divinæ <lb/>
             Trinitatis in gentibus exstitit evangelicus prædicator, <lb/>
             quasi decem et tria tenens. Unde et ipse Benjamin, <lb/>
             de cujus stirpe Paulus est ortus, in tribu tertia de­ <lb/>
             cima computatur, Ephraim et Manasse annumeratis <lb/>
             pro Joseph in ordine patriarcharum.</p>
-          <ab>
+          </div>
+
+<div n="14" subtype="section" type="textpart">
+<ab>
             <title type="sub">CAPUT XV.</title>
           </ab>
           <p>
@@ -1078,7 +1122,7 @@
           <ab>
             <title type="sub">De denario quaternario numero.</title>
           </ab>
-          <p>73. Denarius quaternarius numerus, quia ex duobus <lb/>
+          <p n="73">73. Denarius quaternarius numerus, quia ex duobus <lb/>
             septenariis constat, gemitum nobis insinuat, sive <lb/>
             hunc temporalem, quem veteres in otio figuraliter <lb/>
             utebantur, sive illum aeternum, in quo a laboribus <lb/>
@@ -1090,14 +1134,14 @@
             transmigrationem totidem generationes reperiuntur; <lb/>
             239 rursusque usque ad Christum generationes <lb/>
             quatuordecim computantur.</p>
-          <p>74. In lege quoque quarto decimo die mensis <lb/>
+          <p n="74">74. In lege quoque quarto decimo die mensis <lb/>
             primi pascha celebrari jubetur de carne agni imma­ <lb/>
             culati. In Ezechiele autem quatuordecim extenditur <lb/>
             cubitis crepido coelestis altaris (Ezech. XLIII, 17). <lb/>
             Quatuordecim praeterea annis servivit Jacob Laban. <lb/>
             Quatuordecim anni fuerunt ubertatis [Forte, sterilita­ <lb/>
             tis et ubertatis] in Ægypto sub Joseph.</p>
-          <p>75. Paulus quoque apostolus post annos quatuor­ <lb/>
+          <p n="75">75. Paulus quoque apostolus post annos quatuor­ <lb/>
             decim ad evangelizandum ascendit in Jerusalem, <lb/>
             Barnaba secum et Tito assumptis. Idem quatuorde-
             <milestone unit="PLSection" n="B"/><lb/>
@@ -1106,13 +1150,16 @@
             ovium in fine recepit. Puer quoque in adolescentiam <lb/>
             post annum quartum decimum transit, atque gignendi <lb/>
             virtutemanno quarto decimo sumit.</p>
-          <ab>
+          </div>
+
+<div n="15" subtype="section" type="textpart">
+<ab>
             <title type="sub">CAPUT XVI.</title>
           </ab>
           <ab>
             <title type="sub">De quindenario numero.</title>
           </ab>
-          <p>76. Quindenarius numerus juxta decisionem sua­ <lb/>
+          <p n="76">76. Quindenarius numerus juxta decisionem sua­ <lb/>
             vem rationum, quia ex tribus partibus constat, im­ <lb/>
             perfectus est. Habet enim primam, et tertiam, et <lb/>
             quintam tanlummodo. Sed prima ejus unum est, <lb/>
@@ -1120,8 +1167,8 @@
             eiunt novem. Hic autem myslice in duabus decisus <lb/>
             partibus et praesens tempus significat, et æternum <lb/>
             demonstrat.</p>
-          <p>
-            <milestone unit="PLSection" n="C"/>77. Constat enim ex septeni et octo, qui faciunt <lb/>
+          <p n="77">
+<milestone unit="PLSection" n="C"/>77. Constat enim ex septeni et octo, qui faciunt <lb/>
             quindecim, sed et septem ejus ad temporum cursum <lb/>
             pertineut, quod duobus septenis peragitur, octo vero <lb/>
             ad fidem rationis, ubi in æterna pace gaudebitur. <lb/>
@@ -1131,7 +1178,7 @@
             ptem ejus pro Sabbati cultu Testamentum Vetus insi­ <lb/>
             nuant. Octo vero ejus dominicam resurrectionem <lb/>
             Novum Testamentum demonstrant.</p>
-          <p>78. Recte ergo hic numerus societatem significat <lb/>
+          <p n="78">78. Recte ergo hic numerus societatem significat <lb/>
             Testamentorum. Hinc est quod apostolus Paulusquin­ <lb/>
             decim diebus in Jerosolymis cum 240 Petro se com­ <lb/>
             morasse testatur, ut cum eo utrumque Testamentum <lb/>
@@ -1141,7 +1188,7 @@
             æternam beatitudinem, ut animadverteret qualiter et <lb/>
             temporalia temperaret, et aeterna inhianler appe­ <lb/>
             teret.</p>
-          <p>79. Hic autem quindenarius numerus mystice do­ <lb/>
+          <p n="79">79. Hic autem quindenarius numerus mystice do­ <lb/>
             minico ascribitur templo. Quindecim gradus erant in <lb/>
             circuitu templi , in quibus sacerdotes et Levitæ <note type="footnote"> 70. Duodecim horae diei in Evangelio commemo­ <lb/>
             rantur. Nox quoque quatuor vigiliis constabat, una­ <lb/>
@@ -1164,13 +1211,13 @@
             iste numerus computatus cousurgat, centum quin­ <lb/>
             quaginta psalmos, quos cecinit Propheta, demon­ <lb/>
             strat.</p>
-          <p>80. Certe si paulatim ab uno usque ad se ipsum <lb/>
+          <p n="80">80. Certe si paulatim ab uno usque ad se ipsum <lb/>
             per incrementa consurgat, cxx fideles designat, su­ <lb/>
             per quos infusus est Spiritus sanctus, qui el per se­ <lb/>
             ptenarium numerum septiformis spiritus gratiam <lb/>
             acceperunt, et per octonarium numerum æternæ spei <lb/>
             gloriam mundo praedicaverunt.</p>
-          <p>81. Sunt etiam pleraque in Scripturis numeri hu-
+          <p n="81">81. Sunt etiam pleraque in Scripturis numeri hu-
             <milestone unit="PLSection" n="B"/><lb/>
             jus exempla. Quinta decima enim die solemnitates <lb/>
             incipiunt Domini, et quia decima die mensis fesli­ <lb/>
@@ -1181,19 +1228,22 @@
             crescens totidem cubitis montium juga conscendit. <lb/>
             Incrementum autem quinta decima luna tenet; quinlo <lb/>
             decimo anno indictio solaris finitur.</p>
-          <ab>
+          </div>
+
+<div n="16" subtype="section" type="textpart">
+<ab>
             <title type="sub">CAPUT XVII.</title>
           </ab>
           <ab>
             <title type="sub">De denario senario numero.</title>
           </ab>
-          <p>82. Denarius senarius constat ex duobus perfectis, <lb/>
+          <p n="82">82. Denarius senarius constat ex duobus perfectis, <lb/>
             qui tamen his partibus continetur. Habet enim sex­ <lb/>
             tam decimam, quod est 241 unum; octavam, quod <lb/>
             duo; quartam, quod quatuor ; dimidiam, quod octo;
             <milestone unit="PLSection" n="C"/><lb/>
             qui faciunt edecim.</p>
-          <p>83. Hic tamen per mysterium prophetis creditur <lb/>
+          <p n="83">83. Hic tamen per mysterium prophetis creditur <lb/>
             assignatus. Eoruin enim libri sedecim e se proban­ <lb/>
             tur, id est, Isaias, Jeremias, Ezechiel, Daniel, Osee, <lb/>
             Joel, Amos, Abdias, Jonas, Michæas, Nahum, Ha­ <lb/>
@@ -1201,16 +1251,19 @@
             quorum figuram sedecim bases illæ gestabant ar­ <lb/>
             senteæ, in quibus deauratæ tabulæ stabant contra oc. <lb/>
             cidentalem plagam.</p>
-          <p>84. Bases quidem prophetas intelligimus, super <lb/>
+          <p n="84">84. Bases quidem prophetas intelligimus, super <lb/>
             quorum splendidissimum vaticinii fundamentum con­ <lb/>
             sistit amplissima doctrina apostolorum.</p>
-          <ab>
+          </div>
+
+<div n="17" subtype="section" type="textpart">
+<ab>
             <title type="sub">CAPUT XVIII.</title>
           </ab>
           <ab>
             <title type="sub">De duodevicesimo numero.</title>
           </ab>
-          <p>85. Duodevicesimus a senario per denarium [Forte,
+          <p n="85">85. Duodevicesimus a senario per denarium [Forte,
             <milestone unit="PLSection" n="D"/><lb/>
             per ternarium] adimpletur, qui sex aetates sunt <lb/>
             mundi, cujus senaria series tripertita ratione tempo­ <lb/>
@@ -1220,18 +1273,21 @@
             mysterium evangelica mulier illa , typum Ecclesiae <lb/>
             gerens, expressit, quae a Domino post octo et decem <lb/>
             annos erecta atque sanata est.</p>
-          <p>86. Redemptor enim noster sexta aetate descendit <lb/>
+          <p n="86">86. Redemptor enim noster sexta aetate descendit <lb/>
             ad salutem nostram, cujus senarii numeri formis illa
             <milestone unit="PLSection" n="A"/><lb/>
             ratio adjecta , ter seni decem et oeto efficiunt, et <lb/>
             explent mulieris ejusdem typicum sacramentum.</p>
-          <ab>
+          </div>
+
+<div n="18" subtype="section" type="textpart">
+<ab>
             <title type="sub">CAPUT XIX.</title>
           </ab>
           <ab>
             <title type="sub">De undevicesimo numero.</title>
           </ab>
-          <p>87. Undevicesimus numerus lunaris cycli enuclea­ <lb/>
+          <p n="87">87. Undevicesimus numerus lunaris cycli enuclea­ <lb/>
             tius rationem perstringit ; denique in ejus cursu <lb/>
             paschales quartæ decima: lunæ in omnium annorum <lb/>
             revolutione sine ulla ambiguitate repetuntur, recur­ <lb/>
@@ -1245,28 +1301,31 @@
           <ab>
             <title type="sub">De vicenario.</title>
           </ab>
-          <p>88. Vicesimus quoque numerus, secundi versus
+          <p n="88">88. Vicesimus quoque numerus, secundi versus
             <milestone unit="PLSection" n="B"/><lb/>
             finem faciens, partibus suis plusquam perfectus ha­ <lb/>
             betur. Hic autem ex duplici decalogo constans, de­ <lb/>
             signat geminam legis scientiam, quasi apertum et <lb/>
             absconditum , simplex et mysticum. Pertinet autem <lb/>
             ad tabernaculi dominici sacramentum.</p>
-          <p>89. Ibi namque ad australem et septentrionalem <lb/>
+          <p n="89">89. Ibi namque ad australem et septentrionalem <lb/>
             plagam bis denae tabulae super bases stabant argen­ <lb/>
             teas; et in templo, quod Salomon ædificavit, alae <lb/>
             duorum cherubin xx cubitorum mensura diffunde­ <lb/>
             bantur. Datur etiam et hic numerus Israel atque <lb/>
             Levi; viginti enim annorum ad praelia eliguntur, et <lb/>
             xx annorum tabernaculo deservire mandantur.</p>
-          <ab>
+          </div>
+
+<div n="19" subtype="section" type="textpart">
+<ab>
             <title type="sub">CAPUT XXI.</title>
           </ab>
           <ab>
             <title type="sub">De vicesimo quarto numero.</title>
           </ab>
-          <p>
-            <milestone unit="PLSection" n="C"/>90. Vicesimi quarti summa multa in semetipsa <lb/>
+          <p n="90">
+<milestone unit="PLSection" n="C"/>90. Vicesimi quarti summa multa in semetipsa <lb/>
             Scripturarum continet sacramenta; unde et sacra. at <lb/>
             commendatur hic numerus. Viginti enim quatuor <lb/>
             sunt libri legiset prophetarum. Patres quoque viginti <lb/>
@@ -1274,7 +1333,7 @@
             totidem. Viginti quatuor etiam classes sacerdotum <lb/>
             fuerunt ab initio legis in populo Judæorum, quae vi­ <lb/>
             cissim in templo hostias immolabant.</p>
-          <p>91. Singulæ classes singulos pontifices summos <lb/>
+          <p n="91">91. Singulæ classes singulos pontifices summos <lb/>
             habebant, quorum nominibus classes nuncupabantur. <lb/>
             Apud Joannem quoque sedilia viginti quatuor sunt, <lb/>
             et viginti quatuor seniores tenentes citharas et pbia­ <lb/>
@@ -1286,7 +1345,7 @@
             ciunlur, per quos longitudo arcae, id est, fides Eccle­ <lb/>
             six significatur, in qua infinita sanctorum multitudo <lb/>
             omnium continetur.</p>
-          <p>92. Præterea ex duobus duodenis numeris vicesimi <lb/>
+          <p n="92">92. Præterea ex duobus duodenis numeris vicesimi <lb/>
             quarti numeri 243 summa completur, per quos si­ <lb/>
             gnificatur Ecclesia et ex circumcisione et ex gentibus <lb/>
             congregata. Itaque et si octavus numerus tripliciter <lb/>
@@ -1301,7 +1360,7 @@
             <milestone unit="PLSection" n="A"/><lb/>
             nos debere in Patrem, et Filium, et Spirilum sanc­ <lb/>
             tum.</p>
-          <p>93. Idem etiam numerus septuaginta duos discipulos <lb/>
+          <p n="93">93. Idem etiam numerus septuaginta duos discipulos <lb/>
             ostendit, quos Dominus binos ante faciem suam præ­ <lb/>
             misit, ternario numero in se multiplicato. Denique <lb/>
             ter vicies quaterni septuaginta duo faciunt. Nam et si <lb/>
@@ -1309,13 +1368,16 @@
             ferre elementa mundi, in quibus cuncta subsistunt, <lb/>
             et qui sunt in operibus mundi hujus, in quo ipsa ele­ <lb/>
             menta subsistunt.</p>
-          <ab>
+          </div>
+
+<div n="20" subtype="section" type="textpart">
+<ab>
             <title type="sub">CAPUT XXII.</title>
           </ab>
           <ab>
             <title type="sub">De tricenario numero.</title>
           </ab>
-          <p>94. Tricenarius numerus ex denario triformiter <lb/>
+          <p n="94">94. Tricenarius numerus ex denario triformiter <lb/>
             posito consummatur. Habet enim denarium ter pro­ <lb/>
             pter Patrem, et Filium, et Spiritum sanctum, et
             <milestone unit="PLSection" n="B"/><lb/>
@@ -1324,25 +1386,28 @@
             Hinc est quod arcae altitudo triginta cubitis erigitur, <lb/>
             quia Ecclesia Decalogi mandato fide Trinitatis perfi­ <lb/>
             titur, cujus exempla in Scripturis talia reperiuntur.</p>
-          <p>95. In Zacharia enim Dominus triginta argenteos <lb/>
+          <p n="95">95. In Zacharia enim Dominus triginta argenteos <lb/>
             pretium suæ mortis accepit, et in Evangelio Cbristum <lb/>
             Judas totidem argenteis venundavit. Ipse quoque <lb/>
             Dominus et Salvator noster eadem aetate in Jordanem <lb/>
             descendit, et mundo Evangelium praedicavit. Siqui­ <lb/>
             dem et tricesimus fructus conjngatorum datur propter <lb/>
             carnis conflictum, ne libidine superentur.</p>
-          <p>96. Menses quoque tricenis diebus consistunt; ho­ <lb/>
+          <p n="96">96. Menses quoque tricenis diebus consistunt; ho­ <lb/>
             raeque totidem 244 momentis conficiuntur, atque in <lb/>
             omnium rerum personarumque repetitione tricen-
             <milestone unit="PLSection" n="C"/><lb/>
             na lis annorum objectio tinem ponit. 1</p>
-          <ab>
+          </div>
+
+<div n="21" subtype="section" type="textpart">
+<ab>
             <title type="sub">CAPUT XXIII.</title>
           </ab>
           <ab>
             <title type="sub">De quadragenario numero.</title>
           </ab>
-          <p>97. Quadragenarius numerus plenitudinem indicat <lb/>
+          <p n="97">97. Quadragenarius numerus plenitudinem indicat <lb/>
             temporum, tanquam eo saecula consummantur, cujus <lb/>
             numeri typo et lex, et prophetae, et Evangelia mons­ <lb/>
             trantur; quadragenis enim diebus Moyses, et Elias, et <lb/>
@@ -1353,7 +1418,7 @@
             torum, qui per fidem in quatuor mundi partes dif­ <lb/>
             funditur, ut decies quater ducta quadraginta dies <lb/>
             impleantur.</p>
-          <p>98. Hoc significaverunt quadraginta dies diluvii ,
+          <p n="98">98. Hoc significaverunt quadraginta dies diluvii ,
             <milestone unit="PLSection" n="D"/><lb/>
             procellas scilicet, et turbines saeculi hujus, quae pa­ <lb/>
             titur Ecclesia. Hoc etiam et quadraginta anni in ere­ <lb/>
@@ -1365,18 +1430,21 @@
             quandiu in hoc corpore sumus, tentationes portamus. <lb/>
             Tentatio est enim, ut ait Job, vita humana super ter­ <lb/>
             ram (Job. VII, 1).</p>
-          <p>99. Hinc est quod Ezechiel quadraginta diebus <lb/>
+          <p n="99">99. Hinc est quod Ezechiel quadraginta diebus <lb/>
             solis peccata Judææ pronuntiavit, quia tantum in <lb/>
             hoc mundo licitum est remissionis fructum consequi <lb/>
             pœnitentiam. In futuro autem nihil præstat confessio, <lb/>
             sed sola sanctorum et piorum futura est retributio. '</p>
-          <ab>
+          </div>
+
+<div n="22" subtype="section" type="textpart">
+<ab>
             <title type="sub">CAPUT XXIV.</title>
           </ab>
           <ab>
             <title type="sub">De quadragesimo sexto numero.</title>
           </ab>
-          <p>245 100. Quadraginta, scilicet, et sex numero­ <lb/>
+          <p n="100">245 100. Quadraginta, scilicet, et sex numero­ <lb/>
             rum ratio in Evangelio pro templo ædificatur; qui <lb/>
             refertur ad fabricam dominici corporis, propter quam
             <milestone unit="PLSection" n="B"/><lb/>
@@ -1386,7 +1454,7 @@
             tum Virginis et partum ostendit. Dixerunt enim ei : <lb/>
             Quadraginta et sex annis œdificatum est templum <lb/>
             (Joan. u, 20).</p>
-          <p>101. Quadragies sexies seni fiuntducenti septua­ <lb/>
+          <p n="101">101. Quadragies sexies seni fiuntducenti septua­ <lb/>
             ginta sex, qui numerus dierum complet octo menses <lb/>
             ( F'arte, novem menses], et sex dies , quibus remi­ <lb/>
             narum perfectum tempus pariendi comperitur, non <lb/>
@@ -1395,8 +1463,8 @@
             tum idemnumerus invenitur. Octavo enim Kalendas <lb/>
             Aprilis praedicatur esse conceptus, et octavo Kalen­ <lb/>
             das Januarii natus esse probatur.</p>
-          <p>
-            <milestone unit="PLSection" n="C"/>102. Ab illo ergo die usque ad istum ducenti <lb/>
+          <p n="102">
+<milestone unit="PLSection" n="C"/>102. Ab illo ergo die usque ad istum ducenti <lb/>
             septuaginta et sex dies inveniuntur, quibus compu­ <lb/>
             tatis per senarium numerum quadragies sexies <lb/>
             adimpletur. Quo numero et ædificatio templi, et per­ <lb/>
@@ -1407,7 +1475,7 @@
             genarium temporis hujus labor, vel terminus, ita <lb/>
             per quinquagenarium aeterna illa beatitudo signifi­ <lb/>
             catur.</p>
-          <p>103. Denarius enim additus ad quadragenarium <lb/>
+          <p n="103">103. Denarius enim additus ad quadragenarium <lb/>
             laborantibus in hoc sæculo fidelibus merces illa <lb/>
             persolvitur, quam acceperunt primi et novissimi <lb/>
             operantes in vinea, sicque quinquagenarius in illa
@@ -1435,13 +1503,16 @@
             
           <p>
             <milestone unit="PLSection" n="A"/></p>
-          <ab>
+          </div>
+
+<div n="23" subtype="section" type="textpart">
+<ab>
             <title type="sub">CAPUT XXV.</title>
           </ab>
           <ab>
             <title type="sub">De quinquagenarto numero.</title>
           </ab>
-          <p>246 104. Hic autem numerus in sanctis Scrip­ <lb/>
+          <p n="104">246 104. Hic autem numerus in sanctis Scrip­ <lb/>
             turis sacratus est propter Spiritum sanctum. Quin­ <lb/>
             quagesimo enim die egressionis Israel ex Ægypto <lb/>
             datæ sunt tabulae legis in vertice montis Sina, et <lb/>
@@ -1449,7 +1520,7 @@
             super cxx fideles Spiritus sanctus; ideoque et quin­ <lb/>
             quagesimus psalmus indulgentiæ et remissionis <lb/>
             est.</p>
-          <p>405. Unde et in Evangelio quinquaginta etiam <lb/>
+          <p n="105">105. Unde et in Evangelio quinquaginta etiam <lb/>
             denarii debitoribus relaxantur. Nam quod in diluvio <lb/>
             quinquaginta cubitis arcae altitudo diffusa est, ejus­ <lb/>
             dem sancti Spiritus dilatatam in mundo gratiam
@@ -1463,7 +1534,7 @@
           <ab>
             <title type="sub">De aexagenario numero.</title>
           </ab>
-          <p>106. Sexagenarius numerus, cujus summa a per­ <lb/>
+          <p n="106">106. Sexagenarius numerus, cujus summa a per­ <lb/>
             recto senario per denarium adimpletur, significat <lb/>
             omnes sanctos, qui per observationem decem man­ <lb/>
             datorum perfectionem sanctitatis accipiunt. Haec <lb/>
@@ -1473,8 +1544,8 @@
             connexae, qui dum Salvatori... (per) obedientiam <lb/>
             copulantur, quasi sexagenario numero compu­ <lb/>
             tantur.</p>
-          <p>
-            <milestone unit="PLSection" n="C"/>107. Hi sunt quibus et ille in Evangelio sexagesi­ <lb/>
+          <p n="107">
+<milestone unit="PLSection" n="C"/>107. Hi sunt quibus et ille in Evangelio sexagesi­ <lb/>
             mus fructus permittitur, qui divinis mandatis perfecti <lb/>
             agonem adversus carnis concupiscentiam gerunt; <lb/>
             sed idcirco sexagenarium percipiunt fructum, quia <lb/>
@@ -1485,20 +1556,23 @@
             licis subtrahuntur, et in otio consenescunt.</p>
           <p>
             <milestone unit="PLSection" n="A"/></p>
-          <ab>
+          </div>
+
+<div n="24" subtype="section" type="textpart">
+<ab>
             <title type="sub">CAPUT XXVII.</title>
           </ab>
           <ab>
             <title type="sub">Ratio de sancto Pentecoste.</title>
           </ab>
-          <p>108. Quadragenarius numerus ei se etiam quin­ <lb/>
+          <p n="108">108. Quadragenarius numerus ei se etiam quin­ <lb/>
             quagenarium gignit, additis partibus, per quas partes <lb/>
             quinquaginta efficiuntur ita; assei quadraginta. Bis <lb/>
             deni quadraginta. Quaterni quadraginta. Quinquies <lb/>
             octoni quadraginta. Octies quini quadraginta. Decies <lb/>
             quaterni quadraginta. Vicies bini quadraginta, et <lb/>
             additis x, efficiuntur quinquaginta.</p>
-          <p>109. Per hos numeros significatur in quadragena­ <lb/>
+          <p n="109">109. Per hos numeros significatur in quadragena­ <lb/>
             rio numero praesens vita, in quinquagenario vero fu­ <lb/>
             tura, qui numerus quinquagenarius triplicatus facit <lb/>
             illum numerum perfectorum, qui ad eam in viiam <lb/>
@@ -1511,7 +1585,7 @@
             cipit ab uno, et pervenit usque ad i et VII, et facit <lb/>
             eosdem CLIII. Tres autem qui adduntur, ipsi ante <lb/>
             legem, sub lege et sub gratia.</p>
-          <p>110. ideo in psalmo septimio decimo sic dicitur: <lb/>
+          <p n="110">110. ideo in psalmo septimio decimo sic dicitur: <lb/>
             Cum eripiet eum de manu omnium inimicorum ejus, <lb/>
             et de manu Saulis, ut ostenderetur jam ab omnibus <lb/>
             tentationibus praesentis vitae caruisse, et in illo nu­ <lb/>
@@ -1520,8 +1594,8 @@
             vita, omnibus tentationibus hujus mundi, qui quasi <lb/>
             pelagus est, caruerunt, et jam in illa aeterna beati <lb/>
             sunt.</p>
-          <p>
-            <milestone unit="PLSection" n="C"/>111. Numero autem qui dicitur computari ab uno us­ <lb/>
+          <p n="111">
+<milestone unit="PLSection" n="C"/>111. Numero autem qui dicitur computari ab uno us­ <lb/>
             que 248 XVII multiplicato, fiuntc CLIII, id est, ad unum <lb/>
             adde duo, et fiunt tres. Adde tres, et fiunt sex; adde <lb/>
             iv, et fiunt decem; adde v, et fiunt xv, adde VI, et <lb/>
@@ -1545,4 +1619,4 @@
             addas duo, addas tria, addas quatuor, ut fiant decem, <lb/>
             addendo quinque, ut fiant quinque, etc., addendo decem <lb/>
             et septem, efficiuntur centum quinquaginta tria. </note></p>
-        </div></body></text></TEI>
+        </div></div></body></text></TEI>
