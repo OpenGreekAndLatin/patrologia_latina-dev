@@ -113,9 +113,8 @@
       <p>The following text is encoded in accordance with EpiDoc standards and with the
         CTS/CITE Architecture.</p>
     <refsDecl>
-        <cRefPattern n="" matchPattern="(.+).(.+).(.+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@type='edition']/tei:div[@n='$1']/tei:div[@n='$2']/tei:div[@n='$3'])"/>
-        <cRefPattern n="" matchPattern="(.+).(.+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@type='edition']/tei:div[@n='$1']/tei:div[@n='$2'])"/>
-        <cRefPattern n="" matchPattern="(.+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@type='edition']/tei:div[@n='$1'])"/>
+        <cRefPattern n="p" matchPattern="(.+).(.+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@type='edition']/tei:div[@n='$1']/tei:p[@n='$2'])"/>
+        <cRefPattern n="book" matchPattern="(.+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@type='edition']/tei:div[@n='$1'])"/>
       </refsDecl>
     </encodingDesc>
     
@@ -127,14 +126,19 @@
     
 </teiHeader>
 
-  <text><body><div type="edition" n="">
+  <text>
+    <body>
+    <div type="edition" n="">
           <head>
             <title type="main">SANCTI ISIDORI HISPALENSIS EPISCOPI SYNONYMA DE LAMENTATIONE ANIMÆ PECCATRICIS.</title>
           </head>
-          <ab>
+          
+      <div n="pr" subtype="book" type="textpart">
+
+        <ab>
             <title type="sub">prologus prior.</title>
           </ab>
-          <p>472 1. In subsequenti hoc libro, qui nuncupatur Synonyma, id est, multa verba in unam significationem <lb/>
+          <p n="1">472 1. In subsequenti hoc libro, qui nuncupatur Synonyma, id est, multa verba in unam significationem <lb/>
             coeuntia, sanctæ recordationis Isidorus, archiepiscopus Hispalensis, introducit personam hominis, lamentantis <lb/>
             in ærumnis præsentis sæculi, seque deflentis pene usque ad desperationis defluxum, cui mirabili concursu ratio <lb/>
             obvians, leni hunc moderamine consolatur, atque a lapsu desperationis ad spem 473 veniæ reformat, et quemad­ <lb/>
@@ -171,22 +175,24 @@
             bili concursu ratio alii habent qui miserabili operatione. <lb/>
             Ilic prologus in nonnulis Codicibus prorsus omittitur. </note> <pb n="827"/>
             </p>
-          <p>2. <unclear>Deinde</unclear> usque ad contemplationis ascensum summopere eum <unclear>proveliens</unclear>, usque in arcem perfectionis addu­ <lb/>
+          <p n="2">2. <unclear>Deinde</unclear> usque ad contemplationis ascensum summopere eum <unclear>proveliens</unclear>, usque in arcem perfectionis addu­ <lb/>
             sit. Is denique in perfectum virum perductus, eidem rationi debitas grates exsolvit. In quo quidem opere quisquis <lb/>
             intenta <unclear>monte</unclear> lector nititur pergere, sine dubio reperiet quo pacto caveat 'uia, quomodo defleat peccata commissa, <lb/>
             et qualiter per lamenta pœnitentiæ reparatus, ad fructum sanctæ operationis accedat, ut non cum mundi concu­ <lb/>
             piscentiis pereat, sed æternis præmiis remuneratus vivat cum Christo Domino nostro, qui cum Patre et Spiritu <lb/>
             sancto vivit, et regnat Deus in sœcula sæculorum. Amen.</p>
+          
+
           <ab>
             <title type="sub">prologus alter.</title>
           </ab>
           <ab>
             <title type="sub">Isidorus lectori salutem.</title>
           </ab>
-          <p>3. Venit nuper ad manus meas quædam schedula, quam Synonyma dicunt ; cujus formula persuasit ani­ <lb/>
+          <p n="3">3. Venit nuper ad manus meas quædam schedula, quam Synonyma dicunt ; cujus formula persuasit ani­ <lb/>
             mo quoddam lamentum mihi, vel miseris condere. Imitatus profecto non ejus operis eloquium, sed meum <lb/>
             volum.</p>
-          <p>474 4. Quisquis ergo ille ea, libenter id perlege, et dum adversitatibus mundi tangeris, te ipsum censorio ju­ <lb/>
+          <p n="4">474 4. Quisquis ergo ille ea, libenter id perlege, et dum adversitatibus mundi tangeris, te ipsum censorio ju­ <lb/>
             dicio discute, et statim agnosces quia quascunque afflictiones pateris in hoc sæculo, retributione tibi justissima <lb/>
             inferuntur. Duorum autem personæ hic inducuntur, deflentis hominis, et admonentis rationis.
             <milestone unit="PLSection" n="A"/><note type="footnote"> et recte quidem, nisi monitum cujusdam ad opus Isi­ <lb/>
@@ -276,10 +282,14 @@
             nihil cum tædio dandum , nihil auferendum. Homo <lb/>
             promendo doctrinam gratias agit. Explicit præfatio; <lb/>
             incipit liber primus. Aut. </note> </p>
-          <ab>
+      
+      </div>
+          
+    <div n="1" subtype="book" type="textpart">
+    <ab>
             <title type="sub">LIBER PRIMUS.</title>
           </ab>
-          <p>5. Anima mea in angustiis est, spiritus meus <lb/>
+          <p n="5">5. Anima mea in angustiis est, spiritus meus <lb/>
             æstuat, cor meum 475 fluctuat, angustia animi <note type="footnote"> 5. Al., animat pro animi. Ibid. Indicia non com­ <lb/>
             prehendo. Laurenlianus alier legebat judicia non <lb/>
             comprelamllo. Nos lectionem alteram, quæ aliorum <lb/>
@@ -298,7 +308,7 @@
             effugiendi funeris vestigia non invenio, ubique me <lb/>
             infelicitas mea persequhur, domi forisque mea ca­ <lb/>
             lamitas me non deserit.</p>
-          <p>i. Ubicunque fugio, mala mea me insequunlur; <lb/>
+          <p n="6">6. Ubicunque fugio, mala mea me insequunlur; <lb/>
             ubicunque me convertero, malorum meorum me <lb/>
             umbra comitatur; velut umbram corporis, sic mala <lb/>
             mea fugere non possum. Ego ille homo ignoti nomi­ <lb/>
@@ -312,7 +322,7 @@
             dent atque insaniunt, conserta manu in me pericula <lb/>
             ingerunt, ad exitium me pertrabunt, ad periculum me <lb/>
             adducunt, ad discrimen vocant meam salutem.</p>
-          <p>7. Nullus mihi protectionem præbet, nullus defen­ <lb/>
+          <p n="7">7. Nullus mihi protectionem præbet, nullus defen­ <lb/>
             sionem adhibet, nullus adminiculum tribuit, nullus <lb/>
             malis meis succurrit, desertus sum ab omnibus homi­ <lb/>
             nibus; quicunque me aspiciunt, aut fugiunt, aut for­ <lb/>
@@ -331,7 +341,7 @@
             veritas judicii nulla est, si æquitas abjicitur, si jus <lb/>
             non creditur, si justitia cunctis negatur, pereunt lc­ <lb/>
             ges, avaritia judicante.</p>
-          <p>8. Crevit avarilia, periit lex cupiditatis amore, <lb/>
+          <p n="8">8. Crevit avarilia, periit lex cupiditatis amore, <lb/>
             jura nihil valent, praemia et dona legibus vires tule­ <lb/>
             runt. Ubique pecunia vincit, ubique judicium venale <lb/>
             est; nullus legibus metus, nullus judicii timor. Im-
@@ -341,13 +351,13 @@
             Omne crimen inultum manet, iniqui salvi fiunt, inno­ <lb/>
             centes perennt, boni indigent, improbi abundanr, <lb/>
             scelerati potentes sunt.</p>
-          <p>9. Justi egent, iniqui honorantur, justi desniciun­ <lb/>
+          <p n="9">9. Justi egent, iniqui honorantur, justi desniciun­ <lb/>
             tur, iniqui lætantur, justi in moerore et luctu sunt. <lb/>
             Impius praevalet adversus justum, damnant mali bo­ <lb/>
             nos, honoratur iniquus pro justo, justus damnatur <lb/>
             pro impio, innocentes pro nocentibus pereunt, nulla <lb/>
             re impediente.</p>
-          <p>10. Nulla causa, nulla criminatione, nulla malitia <lb/>
+          <p n="10">10. Nulla causa, nulla criminatione, nulla malitia <lb/>
             crimen mihi objiciunt, crimen mihi impingunt, cri­ <lb/>
             minis nodos contra me nectunt. Criminis et suspi­ <lb/>
             cionis locum in me converlunl. In crimen me pericu-
@@ -359,7 +369,7 @@
             gere, non quiescunt falsa testimonia præparare, non <lb/>
             desinunt accusatores objicere, judices non sinunt <lb/>
             conscribere.</p>
-          <p>477 ii. Testium et judicum falsa et crudeli sen­ <lb/>
+          <p n="11">477 11. Testium et judicum falsa et crudeli sen­ <lb/>
             tentia judicor. Testium falsa sententia ad necem inno­ <lb/>
             cens ducor. Ex eodem concilio testes, ex eodem judices, <lb/>
             ex eodem coetu accusatores. Improbos judices oppo­ <lb/>
@@ -370,7 +380,7 @@
             dam? cui loquar? quem adeam? a quo consilium pe­ <lb/>
             tam? in quo animum meum ponam? quem potissimum <lb/>
             quaeram?</p>
-          <p>12. Omnibus odiosus sum, omnium cbaritate de­ <lb/>
+          <p n="12">12. Omnibus odiosus sum, omnium cbaritate de­ <lb/>
             sertus sum, projiciunt me omnes a se, abominatione <lb/>
             me omnes abominantur, exhorrescunt me omnes, <lb/>
             repudiant omnes, abdicationem intendunt : volo ad <lb/>
@@ -410,8 +420,8 @@
               bere. Verum Codices omnes in eam quam posuimus <lb/>
               leciionem conspirabant. MAB. </note> <pb n="831"/>
               </p>
-          <p>
-            <milestone unit="PLSection" n="A"/>13. Ego autem, reclinato capite, humiliato voltu, <lb/>
+          <p n="13">
+<milestone unit="PLSection" n="A"/>13. Ego autem, reclinato capite, humiliato voltu, <lb/>
             deposita facie, sileo, taceo, in incepto persisto. silen­ <lb/>
             tio, ori meo custodiam posui, ori meo signaculum <lb/>
             dedi, vocem a sermone repressi, linguam a locutione <lb/>
@@ -421,7 +431,7 @@
             persequuntur, magis magisque irruunt super me, ob­ <lb/>
             strepunt super me clamoribus, jactant in me petulan­ <lb/>
             ter convicia voce, habitu, strepitu.</p>
-          <p>14. Super me prosiliunt, voce aperta contumelias <lb/>
+          <p n="14">14. Super me prosiliunt, voce aperta contumelias <lb/>
             et opprobria super me jactant, et, ab alio provocati, <lb/>
             in me omnes concitantur, ad me omnes arma con­ <lb/>
             vertunt: omnes in me saeviunt, omnes in exitium <lb/>
@@ -432,7 +442,7 @@
             sanguis effectus sum, 478 emarcuit cor meum, pa­ <lb/>
             vore æstuo, formidinis melu tabesco, timor et tremor <lb/>
             animam meam quassaverunt.</p>
-          <p>15. Sic exsilio trusus sum, sic exsilio damnatus <lb/>
+          <p n="15">15. Sic exsilio trusus sum, sic exsilio damnatus <lb/>
             sum, sic exsilii pœnam lugeo, sic exsilii damnatio­ <lb/>
             nem gemo, vinculo servitutis addictus, conditionis <lb/>
             pondere pressus, servili opere mancipatus, in algore, <lb/>
@@ -445,7 +455,7 @@
             <milestone unit="PLSection" n="c"/><lb/>
             dignus sum, omni misericordia desolatus sum, qui <lb/>
             misereatur non est.</p>
-          <p>16. Omnes mendicantem spernunt, esurientem <lb/>
+          <p n="16">16. Omnes mendicantem spernunt, esurientem <lb/>
             nec micis suis reficiunt, in os sitientis nullus distillat <lb/>
             guttam refrigerii, nullus præbet mibi vel modicum <lb/>
             undæ rorem, effectus sum enim cunctis abominabilis. <lb/>
@@ -456,7 +466,7 @@
             desunt tormenta, non desunt cruciamenta, non de­ <lb/>
             sunt mibi supplicia, quotidie crudescit in me sæ­ <lb/>
             vitia.</p>
-          <p>17. Corporis mei carnifices novis me cruciatibus <lb/>
+          <p n="17">17. Corporis mei carnifices novis me cruciatibus <lb/>
             lacerant, inaudito genere poenarum viscera mea et
             <milestone unit="PLSection" n="D"/><lb/>
             membra mea dilaniant, quidquid possunt super me
@@ -468,7 +478,7 @@
             putredine diffluunt, cum fletibus sanguis manat, cum <lb/>
             lacrymis. cruor stillat; nec est solus fletus lacryma­ <lb/>
             rum, sed vulnerum.</p>
-          <p>18. Consumptus sum dolore miser, in dolore et <lb/>
+          <p n="18">18. Consumptus sum dolore miser, in dolore et <lb/>
             animus, et corpus deficit: mens jam victa est, anima <lb/>
             dolore praeclusa est, 479 multa intolerabilia sensi, <lb/>
             multa acerba sustinui, multa gravia pertuli; tam <lb/>
@@ -478,7 +488,7 @@
             vitae conjecit. Ignorantem me oppressit subita cala-
             <milestone unit="PLSection" n="B"/><lb/>
             mitas, repentini interitus, casusque mesubruerunt.</p>
-          <p>19. Cur infelix natus sum ? cur in hanc miseram <lb/>
+          <p n="19">19. Cur infelix natus sum ? cur in hanc miseram <lb/>
             vitam projectus sum ? ut quid miser hanc lucem vi­ <lb/>
             di? ut quid misero hujus vitae ortus occurrit? Utinam <lb/>
             velocius egrederer a sæculo quam sum ingressus, <lb/>
@@ -489,14 +499,14 @@
             es miseris! o mors, quam suavis es amare viventi­ <lb/>
             bus! quam jucunda es, o mors, tristibus atque mœ­ <lb/>
             rentibus!</p>
-          <p>20. Accedat ergo ad vitæ magnum malum mortis <lb/>
+          <p n="20">20. Accedat ergo ad vitæ magnum malum mortis <lb/>
             grande solatium , sit vitae terminus finis tantorum <lb/>
             malorum, det finem miseriae requies sepulturæ, et
             <milestone unit="PLSection" n="c"/><lb/>
             si non vita, Mitem vel mors misereri incipiat. Mors <lb/>
             malorum omnium finem imponit, mors calamitati <lb/>
             terminum praebet, omnem calamitatem mors adimit.</p>
-          <p>21. Certe vel mors subvenit miseris, melius est <lb/>
+          <p n="21">21. Certe vel mors subvenit miseris, melius est <lb/>
             bene mori quam male vivere; melius est non esse <lb/>
             quam infeliciter esse; ad comparationem miseriarum <lb/>
             mearum feliciores sunt mortui quam viventes; par- <lb/>
@@ -536,7 +546,7 @@
             <milestone unit="PLSection" n="A"/><lb/>
             nulla fiducia est animi, jam ferre non potest animus, <lb/>
             jam victus miseriis concidit animus.</p>
-          <p>480 22. 0 homo, quid tantum diffidis animo? <lb/>
+          <p n="22">480 22. 0 homo, quid tantum diffidis animo? <lb/>
             cur adeo mente debilitaris? cur spem atque fiduciam <lb/>
             omnem amittis ? cur animo tantum diffunderis? quare <lb/>
             tanta pusillanimitate dejicetis? quare in adversis <lb/>
@@ -546,11 +556,11 @@
             dolorem, ab animo exclude dolorem, inhibe doloris <lb/>
             impetum, non perseveres in dolore, vince animi do­ <lb/>
             lorem, supera mentis dolorem.</p>
-          <p>23. QuaHter? quo pacto ? quomodo? quemadmo­ <lb/>
+          <p n="23">23. QuaHter? quo pacto ? quomodo? quemadmo­ <lb/>
             dum? qua ratione? qua arte? quo consilio? quo in­ <lb/>
             genio?</p>
-          <p>
-            <milestone unit="PLSection" n="B"/>24. Omni ope, omni vi, omni ingenio, omni vir­ <lb/>
+          <p n="24">
+<milestone unit="PLSection" n="B"/>24. Omni ope, omni vi, omni ingenio, omni vir­ <lb/>
             tute, omni arte, omni ratione, omni consilio, omni <lb/>
             instantia sume luctamen contra corporales molestias; <lb/>
             esto in cunctis casibus firmus, patienter tolera om­ <lb/>
@@ -562,7 +572,7 @@
             dum tibi aliena pericula memoras, mitius tua por­ <lb/>
             tas; aliorum enim exempla dolorem relevant, alienis <lb/>
             malis facilius consolatur homo.</p>
-          <p>25. Quid incusas acerbissima tua decreta? quid <lb/>
+          <p n="25">25. Quid incusas acerbissima tua decreta? quid <lb/>
             causas tui periculi tantum iuges ? non sunt nova tua <lb/>
             supplicia, habes exempla calamitatis. Quanti tales
             <milestone unit="PLSection" n="C"/><lb/>
@@ -572,7 +582,7 @@
             affligitur, mortalis est. Tribulatio hujus temporis <lb/>
              <lb/>
             finem habet.</p>
-          <p>26. Transeunt omnia sæculi hujus, nec permanent; <lb/>
+          <p n="26">26. Transeunt omnia sæculi hujus, nec permanent; <lb/>
             omne quod venit stare non potest. Nihil est tandiu, <lb/>
             nihil tam longum, quod non brevi finiatur, omnia <lb/>
             sub coelo finem suum habent; impossibile est ut <lb/>
@@ -586,7 +596,7 @@
             qui nascitur a fletu incipit vivere, flentes projicimur <lb/>
             in hanc miseram vitam, ipse ortus sequentium dolo­ <lb/>
             rum est gemitus. I</p>
-          <p>27. Interpone ergo tibi rationem, particeps esto
+          <p n="27">27. Interpone ergo tibi rationem, particeps esto
             <milestone unit="PLSection" n="A"/><lb/>
             rationis, prævaleat tibi ratio, tempera animum ratione, <lb/>
             animam ratio confirmat, vim tanti mœroris reprimat <lb/>
@@ -599,7 +609,7 @@
             æternum est, supra modum est, pondus excellens <lb/>
             gloriæ; utilis est tribulatio, utiles sunt hujus vitæ <lb/>
             pressurae.</p>
-          <p>28. Malorum pravitas non te occidit, sed erudit ; <lb/>
+          <p n="28">28. Malorum pravitas non te occidit, sed erudit ; <lb/>
             pravorum adversitas non te dejicit, sed extollit; hu­ <lb/>
             inana tentatio arguit te, non interficit; quantum enim <lb/>
             in hoc sæculo frangimur, tantum in perpetuo saeculo
@@ -612,7 +622,7 @@
             nis camino purgaris, ut prior appareas, persecutionis <lb/>
             igne conflaris, ut omnium peccatorum sorde purge­ <lb/>
             ris, ad probationem sunt ista omnia quae sustines.</p>
-          <p>29. Non igitur murmures, non blasphemes, non <lb/>
+          <p n="29">29. Non igitur murmures, non blasphemes, non <lb/>
             dicas : Quare sustineo mala? cur affligor' ut quid <lb/>
             mala patior? sed magis dic : Peccavi, ut eram dignus <lb/>
             recipio. Æqualem vindictam peccati mei non sentio, <lb/>
@@ -625,7 +635,7 @@
             Qui enim in flagellis murmurai, Deum 482 contra <lb/>
             se plus irritat, furorem Dei amplius provocat, iram <lb/>
             Dei indignantis plus sibi exaggerat.</p>
-          <p>30. Qui vero adversa patienler tolerat, Deum <lb/>
+          <p n="30">30. Qui vero adversa patienler tolerat, Deum <lb/>
             citius placat. Si enim vis purgari, in poena te accusa, <lb/>
             et Dei justitiam lauda; ad purgationem tuam profi­ <lb/>
             cit, si ea quae pateris ad justitiam Dei retuleris, si pro <lb/>
@@ -656,8 +666,8 @@
             vocabat. MAR. </note><note type="footnote"> Jbid. II fl milia Deum glorificaveris; ale, humiliabe­ <lb/>
             ris, H Deo glorificaberis. ARBV. </note> <pb n="835"/>
             </p>
-          <p>
-            <milestone unit="PLSection" n="A"/>31. Si enim conversus fueris, emendatio est quod <lb/>
+          <p n="31">
+<milestone unit="PLSection" n="A"/>31. Si enim conversus fueris, emendatio est quod <lb/>
             pateris; conversum namque flagella a peccatis absol­ <lb/>
             vunt, converso instantes plegæ proficiunt ad purga­ <lb/>
             tinnem. Qui enim hic castigatus corrigitur, illic libe­ <lb/>
@@ -667,7 +677,7 @@
             plex damnatio est, gemina his percussio est, quia et <lb/>
             hic habent initium tormentorum, et illic perfectionem <lb/>
             poenarum. Vide quia manus Dei tetradiditad poenam.</p>
-          <p>32. Scito autem, o bomo, nullum tibi adversari <lb/>
+          <p n="32">32. Scito autem, o bomo, nullum tibi adversari <lb/>
             potuisse, nisi Deus potestatem dedisset ; nec <lb/>
             habuisset in te potestatem adversarius, nisi permit­ <lb/>
             teret Deus, universa quæ tibi accidunt absque Dei <lb/>
@@ -684,7 +694,7 @@
             gnationis spiritu agitaris, et hoc ipsum tibi pro pec­ <lb/>
             cato tuo divina justitia irrogat, et ipsum pro culpa <lb/>
             tibi divini judicii infertur sententia.</p>
-          <p>33. Omnis enim adversitas rerum deliclorum tuo­ <lb/>
+          <p n="33">33. Omnis enim adversitas rerum deliclorum tuo­ <lb/>
             tum meritis excitatur, tua contra te dimicant arrna, <lb/>
             sagittis tuis confoderis, telis tuis vulneraris; per quae <lb/>
             enim peccasti, per haec et torqueris (Sap. XI, 17).
@@ -693,7 +703,7 @@
             mis in qua peccasti, in ipsa cruciaris in qua deli­ <lb/>
             quisti, ipsa libi est censura supplicii, quae fuit causa <lb/>
             peccati; unde corruisti ad vitia, inde luges tormenta.</p>
-          <p>34. 0 homo, discute conscientiam tuam, intende <lb/>
+          <p n="34">34. 0 homo, discute conscientiam tuam, intende <lb/>
             mentem tuam, examina te, loquatur tibi cor tuum, <lb/>
             considera meritum tuum ; juste argueris, juste fla­ <lb/>
             gellaris, justo judicio judicaris, procella justa te con­ <lb/>
@@ -701,7 +711,7 @@
             nihil rectum, nihil aequum, nihil justum, nihil san­ <lb/>
             ctum, nihil in te sanctitatis est, nihil pudoris, nulla <lb/>
             memoria dignitatis, nihil Deo dignum.</p>
-          <p>35. Quotidie peccas, quotidie laberis, quolidie <lb/>
+          <p n="35">35. Quotidie peccas, quotidie laberis, quolidie <lb/>
             praeceps in deterius vadis : elatio tua non recedit, <lb/>
             superbia tua non deponitur, tumor et jactantia non
             <milestone unit="PLSection" n="D"/><lb/>
@@ -712,7 +722,7 @@
             <milestone unit="PLSection" n="A"/><lb/>
             ribus solitus, alienis virtutibns semper invidus, alie­ <lb/>
             ais felicitatibus semper aemulus.</p>
-          <p>36. Quem non lacerasti? cui unquam non detraxi­ <lb/>
+          <p n="36">36. Quem non lacerasti? cui unquam non detraxi­ <lb/>
             sti ? cujus non obruisti vitam ? cui non jactasti infa­ <lb/>
             miam? fallax, inconstans, infidus, avarus, tenax, ste. <lb/>
             rilis, inhumanus, infructuosus; non est in te ulla mi­ <lb/>
@@ -723,7 +733,7 @@
             vis, novis facinoribus vetera auges, non diluis sce­ <lb/>
             lus, sed dilatas, nec satias unquam flammam libidi­ <lb/>
             nosae concupiscentiæ.</p>
-          <p>37. O te infelicem, non te pudet per multas aspergi <lb/>
+          <p n="37">37. O te infelicem, non te pudet per multas aspergi <lb/>
             libidines; corruplor libidinose, luxuriose adulter, sic
             <milestone unit="PLSection" n="B"/><lb/>
             in libidines perduras? sic in flagitio perseveras? sic <lb/>
@@ -732,13 +742,13 @@
             effrenata trahet luxuria' jam tandempeccarequiesce, <lb/>
             jam tandem desine a scelere, aliquando mores malos <lb/>
             commuta in melius.</p>
-          <p>38. Cur in peccati sordibus manes? cur in volun­ <lb/>
+          <p n="38">38. Cur in peccati sordibus manes? cur in volun­ <lb/>
             tale peccandi persistis? noli diu errare miser, de malo <lb/>
             jam mutare in melius : pone peccato finem, pone le­ <lb/>
             gem nequitiae, habeat culpa modum , habeat iniqui­ <lb/>
             tas terminum; delictorum tuorum considera magni­ <lb/>
             tudinem; culpas tuas saltem verberatus agnoscito.</p>
-          <p>39. Heu me! heu infelicem me ! heu miseram me ! <lb/>
+          <p n="39">39. Heu me! heu infelicem me ! heu miseram me ! <lb/>
             nesciebam quod pro mea iniquitate percutior, igno-
             <milestone unit="PLSection" n="C"/><lb/>
             rabam quod pro meo merito judicor; quod istum ju­ <lb/>
@@ -750,7 +760,7 @@
             jam exploratum est mihi, occultum mihi jam non est, <lb/>
             jam mihi non est ambiguum, jam mihi non est abs­ <lb/>
             conditum.</p>
-          <p>40. Inde est, homo, inde omnis ista calamitas, inde <lb/>
+          <p n="40">40. Inde est, homo, inde omnis ista calamitas, inde <lb/>
             ista acerbitas, inde esi ista crux, inde est ista poena, <lb/>
             inde ista ærumna ; tibi notae sunt causae, non ex ali­ <lb/>
             quo casu, non ex quolibet eventu, non ex quolihet <lb/>
@@ -759,7 +769,7 @@
             <milestone unit="PLSection" n="D"/><lb/>
             ter putas? an aliter existimas? an aliter sentis? an ali­ <lb/>
             ter contueris? an aliud judicas? an aliud deputas?</p>
-          <p>41. Nihil sane, nihil prorsus, nihil penitus, nihil <lb/>
+          <p n="41">41. Nihil sane, nihil prorsus, nihil penitus, nihil <lb/>
             omnino, nihil 485 habeo, quod contradicam : cedo <note type="footnote"> 5X. Al., ,o",ililUfl, pro ,011.;lio. Et impugfUJlione <lb/>
             spiritum, pro impugnationis spiritu. MAR. </note><note type="footnote">lbid. Aliquando in tenu Grialii desunt litterae no­ <lb/>
             tarum indices. Itaque ex conjectura et aliis Mss. notas <lb/>
@@ -781,13 +791,13 @@
             <milestone unit="PLSection" n="A"/><lb/>
             veritati, negare non possum, fateor esse verum; quis <lb/>
             hoc dubitat? quis istud ambigit! quis istud negat?</p>
-          <p>42. Si ita est, si ita existimas, si certum habes, si <lb/>
+          <p n="42">42. Si ita est, si ita existimas, si certum habes, si <lb/>
             perpensum est, si exploratum est, aufer a te jam <lb/>
             vitium, a vitio et peccato te retrahe ; fuge jam vitæ <lb/>
             maculam, fuge vitii cultum, crimen remove a te; a <lb/>
             'animatis te malo coerce ; fuge turpitudinem vitæ, pu­ <lb/>
             ritatem vitæ tene; veteres maculas ablue.</p>
-          <p>43. Bene dicis, bene doces, bene instruis, bene <lb/>
+          <p n="43">43. Bene dicis, bene doces, bene instruis, bene <lb/>
             admones, bene .persuades, bene instituis; et ego op­ <lb/>
             tabam a peccati uexu resolvi, cupieham a consuetu­ <lb/>
             dine mala retrahi, desiderabam a vitio et peccato re­ <lb/>
@@ -800,7 +810,7 @@
             potest; lana sum in me vitia, ut vix evelli possint, <lb/>
             vix credo peccata mea ullo spatio temporis exo­ <lb/>
             lescere.</p>
-          <p>44. Ultro me miserum antea vitiavi, spontaneo me <lb/>
+          <p n="44">44. Ultro me miserum antea vitiavi, spontaneo me <lb/>
             dudum studio pollui, proprio me prius arbitrio per­ <lb/>
             didi, propria voluntate me maculavi. Bonus eram, <lb/>
             sponte mea ad peccatum dilapsus sum; liber eram, <lb/>
@@ -811,7 +821,7 @@
             viter implicavit, usus peccandi necessitatis vinculis
             <milestone unit="PLSection" n="C"/><lb/>
             me astrinxit; a delicto discedere volo, nec valeo.</p>
-          <p>45. Quæro a lapsu resurgere, et non valeo usui <lb/>
+          <p n="45">45. Quæro a lapsu resurgere, et non valeo usui <lb/>
             repugnare. Trahor boni amore, retrahor malae con­ <lb/>
             suetudinis lege. Longa consuetudo in me jus sibi et <lb/>
             legem fecit, longus peccandi usus me superatum ob­ <lb/>
@@ -823,7 +833,7 @@
             nsui contraire nitnr, sed carnis desiderio aggravor; <lb/>
             ad justitiam me amor erigit, sed ad peccatum con­ <lb/>
             suetudo constringit.</p>
-          <p>486 46. Relucta contra malam consuetudinem,
+          <p n="46">486 46. Relucta contra malam consuetudinem,
             <milestone unit="PLSection" n="D"/><lb/>
             contra consuetudinem peccandi tota virtute repugna ; <lb/>
             vince usum carnalem etiam cum dolore; perniciosam <lb/>
@@ -834,7 +844,7 @@
             <milestone unit="PLSection" n="A"/><lb/>
             cendii, memeria ardoris gehennx ardorem excludat <lb/>
             luxuriæ.</p>
-          <p>47. Fornicationis poenam metus gravioris supplicii <lb/>
+          <p n="47">47. Fornicationis poenam metus gravioris supplicii <lb/>
             vincat, fortior dolor dolorem minorem exsuperet. <lb/>
             Patienter leviora portabis, si graviora fueris recor­ <lb/>
             datus. Versetur ante oculos nos imago futuri judicii, <lb/>
@@ -842,7 +852,7 @@
             sententiam cogita, futura Dei judicia super te formida <lb/>
             terreat te gehennæ metus, terreat te futuri judicii <lb/>
             sententia, revocet te poenarum <unclear>terror</unclear> a culpa.</p>
-          <p>48. Vitæ tuae termiuum quotidie intuere, omni hora <lb/>
+          <p n="48">48. Vitæ tuae termiuum quotidie intuere, omni hora <lb/>
             habeto mortem præ oculis, anteoculos tuos tenebra­ <lb/>
             rum semper versetur adventus. Be morte tua quoti­ <lb/>
             die oogita, finem vitæ tuæ semper considera, recole <lb/>
@@ -854,7 +864,7 @@
             quolidie properamus, ad vitae terminum quotidie <lb/>
             tendimus, momentis decurrentibus ad finem dedu­ <lb/>
             cimur.</p>
-          <p>49. Nescimus quid nobis hodie contingat, neseimus <lb/>
+          <p n="49">49. Nescimus quid nobis hodie contingat, neseimus <lb/>
             quando extremum vitae tempus adveniat. Ignoramus <lb/>
             si hac nocte animam nostram conditio mortis repo­ <lb/>
             scat. Finis noster nobis absconditus est, venturi exi­ <lb/>
@@ -868,7 +878,7 @@
             judicii dum ignoramus diripiat, ne nos repentinus <lb/>
             interitus auferat, ne ignoranle6 subito calamitas <lb/>
             comprehendat.</p>
-          <p>487 50. Spiritus, qui ad peccandum succendit, <lb/>
+          <p n="50">487 50. Spiritus, qui ad peccandum succendit, <lb/>
             peccantem sæpe subito rapit; qui viventes inflammat, <lb/>
             morientes subito devorat; qui inflectit ad vitia, per­ <lb/>
             trahit subito ad tormenta. Quantos ad poenam mortis <lb/>
@@ -883,7 +893,7 @@
             pericula aliena in te pertimesce. Alienos casus tua <lb/>
             fac esse pericula; monentis vocalio tua sit emenda­ <lb/>
             no ; aliorum perditio tua sit cautio.</p>
-          <p>51. Retrahat te a peccato impiorum interitus. Ab­ <lb/>
+          <p n="51">51. Retrahat te a peccato impiorum interitus. Ab­ <lb/>
             slrahat te a culpa pereuntium poema, delinquentium <note type="footnote"> 42. Vitium, a vitio. AI., vitium crimen remove a te, <lb/>
             a vaniltitis te malo coerce, a vitio. AREV. </note><note type="footnote"> 43, At., valde difficile est. Et eluiy pro evelli. MAR. </note><note type="footnote"> t4. Sic, pro sibi. MAR. </note><note type="footnote"> Jbid. Proprium arhilriuln pro libero sunii, notatum <lb/>
             fuit a liignwo. ,REV. </note><note type="footnote"> 4fj. A!., ignem pro testum. MAR. </note><note type="footnote"> Ibid. Remedium id esse contr.i concupiscentias et <lb/>
@@ -908,7 +918,7 @@
             ubi nulla pœnitentiæ patet libertas, ubi nulla cor­ <lb/>
             reciionis datur licentia, ubi nullus est ad confessio­ <lb/>
             nem recursus, ad veniam nullus regressus.</p>
-          <p>52. Verum dicis, verum loqueris, narras milii <lb/>
+          <p n="52">52. Verum dicis, verum loqueris, narras milii <lb/>
             quod opportunum est; informas me quod magis mihi
             <milestone unit="PLSection" n="B"/><lb/>
             expediat : nihil est melius, nibil gratius, nihil acce­ <lb/>
@@ -919,7 +929,7 @@
             est fiducia, si est remissio, si est venia, si est indul­ <lb/>
             gentia, si est locus per pœnitentiam regredi ad justi­ <lb/>
             tiam.</p>
-          <p>488 55. Est plane, est utique, est prorsus, est <lb/>
+          <p n="53">488 53. Est plane, est utique, est prorsus, est <lb/>
             procul dubio, est profecto. Confessio sanat, confessio <lb/>
             justificat, confessio peccati veniam donat, omnis spes <lb/>
             in confessione consistit, in confessione locus miseri­ <lb/>
@@ -931,7 +941,7 @@
             peres salutem, si ad meliora convertaris. Qui enim <lb/>
             veniam de peccato desperat, plus se de desperatione <lb/>
             quam de commisso scelere damnat.</p>
-          <p>54. Desperatio auget peccatum, desperatio pejor <lb/>
+          <p n="54">54. Desperatio auget peccatum, desperatio pejor <lb/>
             est omni peccato. Corrige igitur te, et indulgentiae <lb/>
             habeto spem. Depone injustitiam, et spera vitam ; de­ <lb/>
             pone iniquitatem, et spera salutem. Nulla tam gravis <lb/>
@@ -942,8 +952,8 @@
             divina clementia subvenit, per pœnitentiam indul­ <lb/>
             gentia datur, per pœnitentiam delicta omnia abster­ <lb/>
             guntur.</p>
-          <p>
-            <milestone unit="PLSection" n="D"/>55. Heu miserum me! spem perdideram, fiduciam <lb/>
+          <p n="55">
+<milestone unit="PLSection" n="D"/>55. Heu miserum me! spem perdideram, fiduciam <lb/>
             amiseram, diffideram animo, fractus fuerat animus,
             <milestone unit="PLSection" n="A"/><lb/>
             in desperalionem pene conciderat animus. Jam re­ <lb/>
@@ -955,7 +965,7 @@
             serit, si ad implendum quod cupio adjuverit, hoc fa­ <lb/>
             cere decrevi, hoc statui, defixum hoc in animo meo <lb/>
             esi, evelli hoc ab animo meo non potest.</p>
-          <p>56. Deus tibi optata tribuat, Deus votis tuis faveat, <lb/>
+          <p n="56">56. Deus tibi optata tribuat, Deus votis tuis faveat, <lb/>
             Deus votorum tuorum te compotem faciat, Deus vo­ <lb/>
             luntatem tuam in bono perficiat, Deus vola tua con­ <lb/>
             firmet, Deus votis tuis suffragetur, 489 Deus tibi <lb/>
@@ -973,7 +983,7 @@
             gnosce, lamenta pœnitentiæ te lavent, mœroris tui <lb/>
             unda te irriget, compellat te plangere fluvius lacry­ <lb/>
             marum.</p>
-          <p>57. Heu mihi infelix anima ! in tantis peccatis, in <lb/>
+          <p n="57">57. Heu mihi infelix anima ! in tantis peccatis, in <lb/>
             tantis criminibus , in tam multis iniquitatibus, quid <lb/>
             primum plorem? quid primum plangam ? quid lugeam <lb/>
             prius? quas lacrymas sumam? non sufficit memoria
@@ -982,7 +992,7 @@
             mea mihi sensum doloris tulerunt, hebetudine cordis <lb/>
             coagulatæ sunt lacrymae, obriguit animus, nullo moe­ <lb/>
             rore compungitur.</p>
-          <p>. 58. Anima mea in stuporem conversa est, insen­ <lb/>
+          <p n="58">58. Anima mea in stuporem conversa est, insen­ <lb/>
             sata facta est anima mea. 0 lacrymae, ubi vos sub­ <lb/>
             duxistis? ubi estis fontes lacrymarum? ubi es mœro­ <lb/>
             ris unda? ubi estis lamenta? Redite, obsecro, lacry­ <lb/>
@@ -993,8 +1003,8 @@
             omnes deterius cecidi. Omnium impiorum poenas <lb/>
             scelere meo vici, tartarea tormenta vix malis meis <lb/>
             sufficiunt.</p>
-          <p>
-            <milestone unit="PLSection" n="D"/>59. Non est peccatum super peccatum mcum, non <lb/>
+          <p n="59">
+<milestone unit="PLSection" n="D"/>59. Non est peccatum super peccatum mcum, non <lb/>
             est iniquitas super iniquitatem meam , nequiorem <lb/>
             lue cunctis peccatoribus penso. Comparatione mea <note type="footnote"> 52. AI., in IRe, pro me. Et id nosse tantummodo cu­ <lb/>
             pio. MAR. </note><note type="footnote"> Ibid. Informat me. Sic dici solet inrormare animum, <lb/>
@@ -1026,7 +1036,7 @@
             ro. Gravior est culpa quam feci, minor vindicta quam <lb/>
             perfero. Penso malum quod gessi, non est tantum <lb/>
             quod patior.</p>
-          <p>60. Levior est plaga mea pondere peccatorum meo­ <lb/>
+          <p n="60">60. Levior est plaga mea pondere peccatorum meo­ <lb/>
             rum. Aliud est prorsus, aliud, quod amplius me affli­ <lb/>
             git, quod me magis contristat, quod me magis per-
             <milestone unit="PLSection" n="B"/><lb/>
@@ -1034,11 +1044,11 @@
             nullum est, cui incomparabilis omnis poena est, quod <lb/>
             omnibus suppliciis antefertur, quod antecedit cun­ <lb/>
             cta tormenta, quod exsuperat omnia mala.</p>
-          <p>61. Heu anima! quid est quod multum metuis? <lb/>
+          <p n="61">61. Heu anima! quid est quod multum metuis? <lb/>
             quid est quod te magis corripit? quid est quod ad <lb/>
             mœstitiam te amplius impellit? quid amplius formi­ <lb/>
             das ? quid amplius pavescis ? quid amplius metuis ?</p>
-          <p>62. Metuo diem judicii, metuo diem tenebrarum, <lb/>
+          <p n="62">62. Metuo diem judicii, metuo diem tenebrarum, <lb/>
             diem nebulosum, diem amarum, diem durum. Per­ <lb/>
             pendo quidem malum quod tolero, sed amplius quod <lb/>
             restat formido, lugeo, quae in hac vita jam patior, <lb/>
@@ -1050,7 +1060,7 @@
             sustineo, graviora quæ in perpetuum pertimesco; de <lb/>
             præsentibus quidem poenis doleo, sed de futuris am­ <lb/>
             plius ingemisco.</p>
-          <p>63. Succurre mihi, Deus meus, antequam moriar, <lb/>
+          <p n="63">63. Succurre mihi, Deus meus, antequam moriar, <lb/>
             antequam mors me præveniat, antequam me tartara <lb/>
             rapiant, antequam me flamma comburat, antequam <lb/>
             me tenebræ involvant. Subveni prius quam ad tor­ <lb/>
@@ -1059,7 +1069,7 @@
             more judicii tui terreor, pavore peccati iram tuam <lb/>
             formido, immanitate sceleris examen tuum trepidus <lb/>
             conscientia metuo.</p>
-          <p>64. Si enirn justus vix salvabitur , ego impius ubi <lb/>
+          <p n="64">64. Si enirn justus vix salvabitur , ego impius ubi <lb/>
             ero? quid 491 faciam, dum venerit tremendi formido
             <milestone unit="PLSection" n="D"/><lb/>
             judicii ? cum examen judicii venerit, quid respondebo <lb/>
@@ -1077,7 +1087,7 @@
             fundat, aeterna i iam cæcitas obruat, amittat tempo­ <lb/>
             ris statum, omni memoria exstinguatur, nullis digna <lb/>
             sæculis memoretur.</p>
-          <p>65. Melius mihi fuerat non esse ortum, melius non <lb/>
+          <p n="65">65. Melius mihi fuerat non esse ortum, melius non <lb/>
             fuisse genitum, melius non fuisse in hoc saeculo pro­ <lb/>
             creatum, quam æternos perpeti cruciatus. Flete me, <lb/>
             coelum et terra; lugete me, omnes creaturae; Dlorate
@@ -1090,7 +1100,7 @@
             coinquinatus. Nullus est morbus vitiorum a quo non <lb/>
             contraxerim contagium, nulla sordium sentina exsti­ <lb/>
             tit quae in me miserum non confluxerit.</p>
-          <p>66. Probrosus, sceleratus, flagitiis cunctis obrutus, <lb/>
+          <p n="66">66. Probrosus, sceleratus, flagitiis cunctis obrutus, <lb/>
             innumerabiliter frequentavi impudicitiam foeditatis. <lb/>
             Ut bene viverem ultro promisi, quod pollicitus sum <lb/>
             nunquam servavi. Semper ad peccatum meum redii, <lb/>
@@ -1104,7 +1114,7 @@
             ego multis causa mali exstiti, per me multorum pro­ <lb/>
             positum maculatum est, per me nomen sanctitatis <lb/>
             laceratum est.</p>
-          <p>492 67. Orate pro me ad Dominum , omnes viri <lb/>
+          <p n="67">492 67. Orate pro me ad Dominum , omnes viri <lb/>
             sancti; obsecrate pro me, plebs omnis sanctorum <lb/>
             implorate pro me , omnis chorus justorum; si forte <lb/>
             misereatur mihi Deus, si forte recipiat me, si forte <lb/>
@@ -1141,7 +1151,7 @@
             <milestone unit="PLSection" n="A"/><lb/>
             anima mea, <unclear>afflicta</unclear> merore, contrita luctu, extenua­ <lb/>
             ta gemitu.</p>
-          <p>68. Quis <unclear>miserebitur</unclear> tui, anima i quis consolabi­ <lb/>
+          <p n="68">68. Quis <unclear>miserebitur</unclear> tui, anima i quis consolabi­ <lb/>
             tur te? quit dabit lamentum pro te ? magna est, sic­ <lb/>
             cut mare, contritio tua (Thren. II, 13), afflictio tus <lb/>
             sioat pelagus sæviens, dolor tuus quasi fluctus tu­ <lb/>
@@ -1150,7 +1160,7 @@
             omnes turbulentissimæ tempestates super tuum ea­ <lb/>
             put intonuerunt, plena es augustia et miseriis , ple­ <lb/>
             na es fluctibus, plena es tempestatibus anima.</p>
-          <p>69. Ubi es, custos hominum? ubi es, Redemptor <lb/>
+          <p n="69">69. Ubi es, custos hominum? ubi es, Redemptor <lb/>
             animarum? ubi es, pastor? cur sprevisti me? cur <lb/>
             avertisti faciem tuam a me? utquid longe factus es <lb/>
             a me , consolator animæ meæ? Revertere jam, Deus
@@ -1163,7 +1173,7 @@
             lum relinquis , nullum spernis , nullum detestaris, <lb/>
             nullum recusas a misericordia, sed ultro offers cie­ <lb/>
             mentiam. Peccantes exspectas ut redeant.</p>
-          <p>70. Quanti enim scelerati, quanli luxuriis dediti, <lb/>
+          <p n="70">70. Quanti enim scelerati, quanli luxuriis dediti, <lb/>
             quanti concupiscentiis saeculi saginati, bonitate tua <lb/>
             ad indulgentiam pervenerunt? Multis non merentibus <lb/>
             gratis peccata donasti, ostende et in me elementiam <lb/>
@@ -1176,7 +1186,7 @@
             fessionis aperio. Suscipe, quaeso, clamorem confi­ <lb/>
             tentis ; auende , Domine, vocem deprecantis. Audi <lb/>
             vocem peccatoris clamantis.</p>
-          <p>71. Peccavi, Deus, miserere mei; peccavi, Deus, <lb/>
+          <p n="71">71. Peccavi, Deus, miserere mei; peccavi, Deus, <lb/>
             propiliare mihi. Parce malis meis, ignosce peccatis <lb/>
             meis, indulge sceleribus meis, deleat culpas meas <lb/>
             gratia tua. Sana animam meam, quia peccavi tibi <lb/>
@@ -1197,7 +1207,7 @@
             iniquitatem, qui commoror in pulvere (Job VII, 21), <lb/>
             qui habito in domo lutea, qui terrenum habeo <lb/>
             fundamentum</p>
-          <p>ii. Memorare, Domine, quæ sit mea substantia <lb/>
+          <p n="72">72. Memorare, Domine, quæ sit mea substantia <lb/>
             (Psal. LXXXVIII , 48), memento quia terra sum, <lb/>
             memento quia pulvis et cinis sum (Gen. XVIII, 27), <lb/>
             operi manuum tuarum porrige dexteram (Job XIV, 15). <lb/>
@@ -1211,7 +1221,7 @@
             <milestone unit="PLSection" n="B"/><lb/>
             ignita diaboli meultra non penetrent, non exardescat <lb/>
             in me ulterius.</p>
-          <p>73. Tu enim scis tentationes quas parte. Te scis <lb/>
+          <p n="73">73. Tu enim scis tentationes quas parte. Te scis <lb/>
             fluctus quos patior. Tu nosti tempestates quas tolero, <lb/>
             ubi lapsus sim, ubi defluxus sim, ubi infelix demersus <lb/>
             sim, tu scis. Incurri enioi negligens in ruinam. 494 <lb/>
@@ -1220,7 +1230,7 @@
             miser; erue animam meam captivam ab inferis, erue <lb/>
             me de immanissimo abysso. Non me concludat <lb/>
             profundum', non mibi deneget excitum.</p>
-          <p>74. Ecce dies metuendus tam imminet, jam dies <lb/>
+          <p n="74">74. Ecce dies metuendus tam imminet, jam dies <lb/>
             ultimus appropinquat, jam instat limes vitæ, nihil <lb/>
             superest mibi præter tumulum, nihil superest præter <lb/>
             sepulcrum (Job XVII, 1); parce mihi, antequam eam;
@@ -1228,7 +1238,7 @@
             munda me ab iniquitate mea, antequam ab hac vita <lb/>
             egrediar. Solve, priusquam moriar, peccatorum <lb/>
             meorum vincula.</p>
-          <p>75. Commotus ad lacrymas tuas, ad fletus tuos <lb/>
+          <p n="75">75. Commotus ad lacrymas tuas, ad fletus tuos <lb/>
             compunctus sum ; lamentatio tua me resolvit , <lb/>
             lamentatio tua lacrymas mihi exigit; lamentando ad <lb/>
             lacrymas me coegisti, lamentando ad fletura me <lb/>
@@ -1239,7 +1249,7 @@
             tua laxando dimiUat, criminum tuorum maculas <lb/>
             abluat, ab omni te mali labe detergat, liberet te ab <lb/>
             imminenti peccato.</p>
-          <p>76. Age itaque jam ut eportet, age ut decet, age ut
+          <p n="76">76. Age itaque jam ut eportet, age ut decet, age ut
             <milestone unit="PLSection" n="D"/><lb/>
             dignum est, age ut rectum est, age ut æquum est <lb/>
             Propone ut ulterius non pecces; ne ultra delinquas <lb/>
@@ -1261,7 +1271,7 @@
             Post lapsum denuo non delinquas, non te polluas <lb/>
             post lamentum, post pœnitentiæ luctum non redeas <lb/>
             ad peccatum, non denuo commotas deplorata delicta.</p>
-          <p>77. Ne rursus facias quod iterum plangas, ne <lb/>
+          <p n="77">77. Ne rursus facias quod iterum plangas, ne <lb/>
             culpam pro qua veniam postulas iterare præsumas : <lb/>
             inanis est pœnitentia quam sequens culpa coinquinat, <lb/>
             vulnus iteratum tardius sanaJur, frequenter peccans <lb/>
@@ -1270,7 +1280,7 @@
             poscere, 495 et mala depuo iterare. Persiste ergo
             <milestone unit="PLSection" n="A"/><lb/>
             in confessione, esto in pœnitentia fortiter confirmatus,</p>
-          <p>78. Vitam bonam quam cœpisti tenere non desinas. <lb/>
+          <p n="78">78. Vitam bonam quam cœpisti tenere non desinas. <lb/>
             Propositum vitæ bonæ conserva jugiter. Beatus eris, <lb/>
             si permanseris; beatus, si perseveraveris; tunc erit <lb/>
             perfectum opus tuum, si usque in finem duraveris. <lb/>
@@ -1290,24 +1300,27 @@
             citans tractatu de confessione. Pro ely, al. ista. MAR, <lb/>
             i8. AI., deseras, pro drtinas. Ei, tulus inchoanti­ <lb/>
             bus pro salus perseverantibus. MAR. </note> </p>
-          <ab>
+    </div>
+          
+      <div n="2" subtype="book" type="textpart">
+      <ab>
             <title type="sub">LIBER SECUNDUS.</title>
           </ab>
-          <p>
-            <milestone unit="PLSection" n="B"/>496 1.Quaeso te, anima, obsecro te, deprecor <lb/>
+          <p n="1">
+<milestone unit="PLSection" n="B"/>496 1.Quaeso te, anima, obsecro te, deprecor <lb/>
             te, imploro te, ne quid ultra leviler agas, ne quid <lb/>
             inconsulte geras, ne temere aliquid facias, ne <lb/>
             repetatur malum, ne renascatur peccatum, ne redeat <lb/>
             iniquitas, ne reeurrat malitia, ne denuo exoriatur <lb/>
             nequitia, ne resumat injustitia vires.</p>
-          <p>2. Scito, homo, temetipsum ; scito quis sis, scito <lb/>
+          <p n="2">2. Scito, homo, temetipsum ; scito quis sis, scito <lb/>
             cur ortus sis, quare natus sis, in quem usum genitus <lb/>
             sis, quare sis factus, qua conditione sis editus, aut <lb/>
             quare sis in hoc saeculo procreatus; memento condi­ <lb/>
             tionis tuae, naturae tuae ordinem serva. Esto quod <lb/>
             factus es, qualem te Deus fecit, qualem te factor <lb/>
             condidit, qualem te creator instituit.</p>
-          <p>3. Serva rectam fidem, tene sinceram fidem, custodi <lb/>
+          <p n="3">3. Serva rectam fidem, tene sinceram fidem, custodi <lb/>
             intemeratam fidem, maneat in te recta fides. Sit in te
             <milestone unit="PLSection" n="c"/><lb/>
             incorrupta confessionis fides, nulla te insipiens do­ <lb/>
@@ -1319,7 +1332,7 @@
             conversationem sanctam, quam invocas fide, non <lb/>
             abneges opere, ab omnibus quæ lex vetat abstine, om­ <lb/>
             nia quae Scriptura prohibet cave.</p>
-          <p>4. Noo delinquas in opere, qui in fide perfectus <lb/>
+          <p n="4">4. Noo delinquas in opere, qui in fide perfectus <lb/>
             es. Fidem turpiter vivendo non polluas, fidei inte­ <lb/>
             gritatem pravis moribus non corrumpas, nihil contra <lb/>
             præceptum Dei facias ; vive in bono, nullo adjuncto <lb/>
@@ -1331,7 +1344,7 @@
             bona. Unum malum multa bona perdit. Qui in uno <lb/>
             peccaverit, eum omnibus vitiis subjacere scito (Jac. <lb/>
             II, 10).</p>
-          <p>497 5. Per unum enim peccatum multae justitiae <lb/>
+          <p n="5">497 5. Per unum enim peccatum multae justitiae <lb/>
             pereunt. Per unum malum multa bona possunt sub­ <lb/>
             verti. In ad, quod delectatur corpus, animum non de­ <lb/>
             clines, carnali delectationi consensum non praebeas. <lb/>
@@ -1344,7 +1357,7 @@
             turpis cogitatio non subripiat; discerne cogitationes <lb/>
             tuas, quid vites, quid facias; munda conscientiam <lb/>
             tuam a peccato.</p>
-          <p>6. Sit animus tuus ab omni pollutione purgatus, <lb/>
+          <p n="6">6. Sit animus tuus ab omni pollutione purgatus, <lb/>
             Sit mens tua pura, nullae ibi sordes resideant. Sjc <lb/>
             vitium absterge a te, ut nec animo quidpiam apud te <lb/>
             remaneat. Scito te de cogitationibus judicandum. <lb/>
@@ -1380,7 +1393,7 @@
             <milestone unit="PLSection" n="A"/><lb/>
             ut apparuerit scorpio, contere eum. Caica serpentis <lb/>
             caput, calca pravæ suggestionis initium.</p>
-          <p>7. Culpam ibi emenda, ubi nascitur; in ipso initio <lb/>
+          <p n="7">7. Culpam ibi emenda, ubi nascitur; in ipso initio <lb/>
             cogitationi resiste , et evades cætera. Adversus ini­ <lb/>
             tium cogitationis decerta, et vinces; caput cogitationis <lb/>
             exclude, et cætera superantur. Si expuleris cogita­ <lb/>
@@ -1395,7 +1408,7 @@
             mum, et caro non peccat; si enim volueris, te om-
             <milestone unit="PLSection" n="B"/><lb/>
             uino superare non poterit.</p>
-          <p>8. Audi, anima, quæ loquor, ausculta quae dico , <lb/>
+          <p n="8">8. Audi, anima, quæ loquor, ausculta quae dico , <lb/>
             attende quæ moneo; nulla jam immunditia polluaris. • <lb/>
             nulla libidine maculeris, ab omni te carnis corruptela <lb/>
             suspende, ab omni carnis corruptione te subtrahe. <lb/>
@@ -1404,7 +1417,7 @@
             ulla unquam carnali cogitatione inquineris; fornica­ <lb/>
             tione contaminari deterius omni peccato puta, om. <lb/>
             nibus peccatis fornicatio major est.</p>
-          <p>9. Grave peccatum est fornicatio. Fornicatio uni­ <lb/>
+          <p n="9">9. Grave peccatum est fornicatio. Fornicatio uni­ <lb/>
             versa antecedit mala. Fornicatio gravior est morte; <lb/>
             melius est mori quam fornicari, melius est mori quam <lb/>
             libidine maculari, melius est animam effundere quam <lb/>
@@ -1413,13 +1426,13 @@
             nem Deo proximum reddit, continentia hominem <lb/>
             Deo proximum facit, ubi manserit continentia, ibi et <lb/>
             Deus permanet.</p>
-          <p>10. Castitas hominem cælo jungit, castitas homi­ <lb/>
+          <p n="10">10. Castitas hominem cælo jungit, castitas homi­ <lb/>
             nem ad coelum trahit. Castitati coeli regnum promit­ <lb/>
             titur. Castitas hæreditatem 499 coeli suppetere facit. <lb/>
             Libido vero in infernum mergit hominem , libido ad <lb/>
             tartara hominem mittit, ad poenas tartari hominem <lb/>
             libido perducit.</p>
-          <p>i!. Quod si adhuc carnis molestias sentis, si <lb/>
+          <p n="11">11. Quod si adhuc carnis molestias sentis, si <lb/>
             adhuc carnis stimulis tangeris, si adhuc libidinis
             <milestone unit="PLSection" n="A"/><lb/>
             suggestione pulsaris, si animum tuum adhuc forni­ <lb/>
@@ -1431,7 +1444,7 @@
             propone tibi futura supplicia, propone tibi inferno­ <lb/>
             rum perpetuos ignes, propone tibi gehennæ poenas <lb/>
             horribiles.</p>
-          <p>12. Ora lacrymis indesinenter, ora jugiter, pre­ <lb/>
+          <p n="12">12. Ora lacrymis indesinenter, ora jugiter, pre­ <lb/>
             care Deum diebus ac noctibus, sit sine cessalione <lb/>
             oratio, sit frequens oratio, sint orationis arma assi­ <lb/>
             dua, oratio non deficiat, insiste orationi frequenter , <lb/>
@@ -1441,14 +1454,14 @@
             oratione, et prece, incumbe nocturnis vigiliis. Ad <lb/>
             modicum clausis oculis rursum ora, oratio frequens <lb/>
             diaboli jacula submovet.</p>
-          <p>15. Oratio continua diaboli tela exsuperat. Hæc <lb/>
+          <p n="13">13. Oratio continua diaboli tela exsuperat. Hæc <lb/>
             prima virtus adversus tentationum incursus. Haec <lb/>
             prima tela adversus hostium tentamenta. Immundos <lb/>
             spiritus precum expellit frequentia, immundos spi­ <lb/>
             ritus orationis evincit instantia. Dæmonia oratione <lb/>
             vincuntur, oratione dæmonia superantur, omnibus <lb/>
             malis praevalet oratio.</p>
-          <p>14. Adime quoque tihi saturitatem panis, parci­ <lb/>
+          <p n="14">14. Adime quoque tihi saturitatem panis, parci­ <lb/>
             monia tuum corpus castiga, jejuniis et abstinentiæ <lb/>
             inservi, pallida ora gere, aridum porta corpus. Esuri <lb/>
             et siti, abstine et aresce ; non potes tentationes vin­ <lb/>
@@ -1459,7 +1472,7 @@
             libido semper adjuncta est, at contra 500 jejunio <lb/>
             libido restringitur, jejunio luxuria superatur, se­ <lb/>
             questrata saturitate, non dominatur luxuria.</p>
-          <p>15. Abstinentia enim carnem superat, abstinentia <lb/>
+          <p n="15">15. Abstinentia enim carnem superat, abstinentia <lb/>
             luxuriam frenat, libidinis impetum abstinentia fran­ <lb/>
             git, libidinis virtutem abstinentia solvit; sitis et fames <lb/>
             carnis luxuriam interimunt, fames et sitis carnis la­ <lb/>
@@ -1506,7 +1519,7 @@
             menta luxuriæ sunt. Igni enim adjecto fomite magis <lb/>
             crescit incendium; adjecta igni materia, plus augetur <lb/>
             flamma.</p>
-          <p>46. Oculi quoque prima tela libidinis; visio prima <lb/>
+          <p n="16">16. Oculi quoque prima tela libidinis; visio prima <lb/>
             concupiscentia mulieris, mens enim per oculos capi­ <lb/>
             lur. Aspectus namque amoris jacula mittit, concupi­ <lb/>
             scentiæ libidinem nutrit aspectus; mentem illicit, <lb/>
@@ -1515,14 +1528,14 @@
             carnis. Nullam attendas ad concupiscendum ; nullam <lb/>
             hoc animo inspicias, ut concupiscas; tolle occasio­ <lb/>
             nem peccandi, aufer materiam delinquendi.</p>
-          <p>17. Si vis esse a fornicatione tutus, esto corpore et
+          <p n="17">17. Si vis esse a fornicatione tutus, esto corpore et
             <milestone unit="PLSection" n="B"/><lb/>
             visione discretus, corpore quippe sejunctus a peccati <lb/>
             intentione discedis. Circa serpentem autem non eris <lb/>
             diu illæsus; ante ignem consistens, etsi ferreus sis, <lb/>
             aliquando dissolveris; proximus periculo diu tutus <lb/>
             non eris, per assiduilatem cito peccat homo.</p>
-          <p>18. Saepe familiaritas implicuit multos. Sæpe oc­ <lb/>
+          <p n="18">18. Saepe familiaritas implicuit multos. Sæpe oc­ <lb/>
             casio peccandi voluntatem facit. Sæpe, quos voluntas <lb/>
             non potuit, assiduitas superavit. Otiositati deditum <lb/>
             cito luxuria subripit. Vacantem luxuria cito praeoccu­ <lb/>
@@ -1530,7 +1543,7 @@
             autem libido rebus, cedit operi, cedit industriae, et la­ <lb/>
             bori, libidinem quippe carnis saepe labor cvincit, cor­ <lb/>
             pus enim labore fatigatum minus delectatur flagitio.</p>
-          <p>19. Quapropter præcave otium, non diligas otium, <lb/>
+          <p n="19">19. Quapropter præcave otium, non diligas otium, <lb/>
             non ducas in otio vitam, fatiga corpus laboribus,
             <milestone unit="PLSection" n="c"/><lb/>
             exerce operis cujuslibet studium, quære tibi opus <lb/>
@@ -1547,7 +1560,7 @@
             voluntate sunt, si in voto sunt, si in bonis cunctis <lb/>
             animus est intentus, si in bonis. cunctis animus est <lb/>
             paratus.</p>
-          <p>20. Esto humilis, esto in humilitate fundatus, esto
+          <p n="20">20. Esto humilis, esto in humilitate fundatus, esto
             <milestone unit="PLSection" n="D"/><lb/>
             omnium ultimus, et novissimus, humilitate minimum <lb/>
             te fac, nulli te præponas, nulli te superiorem depu-
@@ -1557,7 +1570,7 @@
             Quamvis summus sis, humilitatem tene; si humilita­ <lb/>
             tem tenueris, habebis gloriam; quantum enim In­ <lb/>
             mitis fueris, tantum te sequetur gloriae altitudo.</p>
-          <p>21. Cave autem jactantiam, cave ostentationis <lb/>
+          <p n="21">21. Cave autem jactantiam, cave ostentationis <lb/>
             appetitum. Cave gloriae inanis studium, non te arro­ <lb/>
             ges, non te jactes, non te insolenter extollas. Alas <lb/>
             superbiae non extendas, elationis pennas non erigas, <lb/>
@@ -1570,7 +1583,7 @@
             <milestone unit="PLSection" n="B"/><lb/>
             inflatur alliditur; de excelso gravior casus est, de <lb/>
             allo major ruina est, initium enim peccati superbia.</p>
-          <p>i!. Superbia angelum deposuit, tumor regna dis­ <lb/>
+          <p n="22">22. Superbia angelum deposuit, tumor regna dis­ <lb/>
             solvit, elalio excelsos dejecit, arrogantia sublimes <lb/>
             humiliavit, humilitas autem casum nescit, humilitas <lb/>
             lapsum non novit, humilitas ruinam nunquam incur­ <lb/>
@@ -1581,7 +1594,7 @@
             lavit, sequere ejus exemplum, imitare vestigia ejus, <lb/>
             existe vilis, existe abjectus, existe despectus, displice <lb/>
             tibi, despectus esto apud temetipsum.</p>
-          <p>23. Qui enim sibi vilis est, ante Deum magnus est; <lb/>
+          <p n="23">23. Qui enim sibi vilis est, ante Deum magnus est; <lb/>
             qui sibi displicet, Deo placet ; esto igitur parvus in
             <milestone unit="PLSection" n="c"/><lb/>
             oculis tuis, ut sis magnus in oculis Dei. Tanto enim <lb/>
@@ -1595,7 +1608,7 @@
             artus cilicium ct cinis involvat, squalentia et tabe­ <lb/>
             scentia membra saccus operiat, exustum corpus <lb/>
             luctuosus habitus tegat.</p>
-          <p>21. Terra sit tibi incessanter cubile, stratus In­ <lb/>
+          <p n="24">24. Terra sit tibi incessanter cubile, stratus In­ <lb/>
             mus : pulvis es, in pulvere sede; cinis es, in cinere <lb/>
             seie semper lugens, semper mœrens, semper ge­ <lb/>
             mens, semper suspiria cordis emittens; sit com-
@@ -1632,7 +1645,7 @@
             tienda est medicina, juxta vulnus sunt adhibenda <lb/>
             medicinæ remedia. Gravia peccata grandia lamenta <lb/>
             desiderant.</p>
-          <p>25. Nulla te res de peccato securum faciat, nulla <lb/>
+          <p n="25">25. Nulla te res de peccato securum faciat, nulla <lb/>
             tibi securitatis deceptio blandiatur, nulla securitas <lb/>
             deceptum a poenitentiae intentione suspendat. Inces­ <lb/>
             santer in corde tuo spes et formido consistant. Pari-
@@ -1641,7 +1654,7 @@
             503 metus; sic spera misericordiam, ut justitiam <lb/>
             metuas; sic te spes indulgentiæ erigat, ut metus <lb/>
             gehennæ semper affligat.</p>
-          <p>26. Timor enim semper emendat, timor expellit <lb/>
+          <p n="26">26. Timor enim semper emendat, timor expellit <lb/>
             peccatum, timor reprimit vitium, timor cautum facit <lb/>
             hominem atqne sollicitum; ubi vero tirnor non est, <lb/>
             ibi dissolutio vitæ est; ubi timor non est, ibi perdi­ <lb/>
@@ -1652,8 +1665,8 @@
             carne, adversa corporis remedia animæ sunt. Ægri­ <lb/>
             tudo carnem vulnerat, mentem curat; languor enim <lb/>
             vitia excoquit, languor vires libidinis frangit</p>
-          <p>
-            <milestone unit="PLSection" n="C"/>27. Si prosperitas arriserit, non extollaris ; si <lb/>
+          <p n="27">
+<milestone unit="PLSection" n="C"/>27. Si prosperitas arriserit, non extollaris ; si <lb/>
             adversitas acciderit, non dejiciaris; si felicitas elu­ <lb/>
             ceat, non sis jaclans; si calamitas contigerit, pusil­ <lb/>
             lanimis non existas. Habelo temperamentum in pro­ <lb/>
@@ -1662,7 +1675,7 @@
             ritate cognosce, ne exalteris : æqualis esto in omni­ <lb/>
             bus. Mentem nec gaudio, nec mœrore commutes; om­ <lb/>
             nia aequali jure sustine, nulla insolentia commuteris.</p>
-          <p>28. Nullus te casus imparalum inveniat, nullus sit <lb/>
+          <p n="28">28. Nullus te casus imparalum inveniat, nullus sit <lb/>
             casus quem non meditatio lua praeveniat. Propone <lb/>
             tibi nihil esse quod non accidere possit, praemeditare <lb/>
             contra omnia fortuita, futuras semper commentare <lb/>
@@ -1677,7 +1690,7 @@
             <milestone unit="PLSection" n="A"/><lb/>
             futuras molestias attenuat, previsio malorum lenit <lb/>
             adventum, iuopinatum autem malum fortiter ferit.</p>
-          <p>29. Acerba sum quae cogitata non fuerunt; gravi <lb/>
+          <p n="29">29. Acerba sum quae cogitata non fuerunt; gravi <lb/>
             existunt, in quibus improvisi incurrimus. Improvisa <lb/>
             mala graviter feriunt, repentium malum cito frangit <lb/>
             quod provisum non est vehementer 504 affligit. Su <lb/>
@@ -1689,7 +1702,7 @@
             bi evenerint porta, et adversa et prospera utcunque <lb/>
             occurrerint tolera; quodcunque evenerit, mente libera <lb/>
             sustine</p>
-          <p>30. Si praevenerit iracundia. restringe illam si
+          <p n="30">30. Si praevenerit iracundia. restringe illam si
             <milestone unit="PLSection" n="B"/><lb/>
             praeoccupaverit, mitiga eam. Tempera furorem, tem. <lb/>
             pera indignationem, cohibe animi motum, refrena <lb/>
@@ -1699,7 +1712,7 @@
             dam molestiam. Disce mala magis tolerare quam fa­ <lb/>
             cere, disce mala ferre potius quam referre. Cave ne <lb/>
             sis ultor injuriarum tuarum.</p>
-          <p>31. Esto patiens, esto mansuetus, esto mitis, esto <lb/>
+          <p n="31">31. Esto patiens, esto mansuetus, esto mitis, esto <lb/>
             modestus. Serva patientiam, serva modestiam, serva <lb/>
             mansuetudinem. Stude patientiae et mansuetudini, <lb/>
             despice probra illatae contumeliae. Irrisionem despi­ <lb/>
@@ -1709,7 +1722,7 @@
             <milestone unit="PLSection" n="C"/><lb/>
             para contra asperum verbum tolerantiæ clypeum, <lb/>
             contra linguae gladium patientiæ scutum praebe.</p>
-          <p>52. Quamvis quisque irritet, quamvis incitet , <lb/>
+          <p n="32">32. Quamvis quisque irritet, quamvis incitet , <lb/>
             quamvis exasperet, quamvis insultet, quamvis iaces­ <lb/>
             sat, quamvis convicietur, quamvis criminetur, quam­ <lb/>
             vis ad litem provocet, quamvis ad jurgium provocet, <lb/>
@@ -1719,7 +1732,7 @@
             lentium. Injuriatus non respondeas, convicium non <lb/>
             retorqueas, contumeliam non repetas. Tene silen­ <lb/>
             hi patientiam, tacendo eitius vinces.</p>
-          <p>53. Disce a Christo modestiam, disce tolerantiam, <lb/>
+          <p n="33">33. Disce a Christo modestiam, disce tolerantiam, <lb/>
             Christum attende, et non doleas injurias. Pro nobis <lb/>
             namque passus, nobis 505 reliquit exemplum ( 1
             <milestone unit="PLSection" n="D"/><lb/>
@@ -1744,7 +1757,7 @@
             mala tua id faciUnt. Quidquid tibi contigit adversum, <lb/>
             pro tuo peccato existima evenire; consideratione <lb/>
             ergo justitiæ dolorem tempera.</p>
-          <p>34. Levius portabis, si pro quibus infertur inten­ <lb/>
+          <p n="34">34. Levius portabis, si pro quibus infertur inten­ <lb/>
             deris; cum ergo derogatur tibi, tu ora; cum male­ <lb/>
             dicitur tibi, tu benedic maledicenti, benedictionem <lb/>
             oppone, irascentem patientia delinire, blandimento <lb/>
@@ -1758,7 +1771,7 @@
             vulnus inclusum, quanto enim magis id tegis, tanto <lb/>
             maxime auges; aperi ergo hoc gravato animo, et non <lb/>
             te excrucia.</p>
-          <p>35. Si contristaveris in aliquo fratrem tuum, sa­ <lb/>
+          <p n="35">35. Si contristaveris in aliquo fratrem tuum, sa­ <lb/>
             tisfac illi. Si peccaveris In eum, age poenitentiam <lb/>
             coram illo, si offenderis quemquam, repropitiare <lb/>
             eum prece. Perge velociter ad reconciliationem of. <lb/>
@@ -1772,7 +1785,7 @@
             vertentem statim amplectere. Redeuntem confestim
             <milestone unit="PLSection" n="c"/><lb/>
             benigna suscipe cbaritate.</p>
-          <p>36. Dimiue, ut dimittatur tibi. Ignosce, ut igno­ <lb/>
+          <p n="36">36. Dimiue, ut dimittatur tibi. Ignosce, ut igno­ <lb/>
             scatur tibi, peccanti 506 in te non retribuas se­ <lb/>
             cundum culpam, sciens quia et in te venturum est <lb/>
             judicium. Non enim habebis indulgentiam, nisi de­ <lb/>
@@ -1788,7 +1801,7 @@
             paradiso ejicit, odium nec passione adimitur, nec
             <milestone unit="PLSection" n="D"/><lb/>
             martyrio expiatur, nec fuso sanguine deletur.</p>
-          <p>37. Quid zeli referam ignem? invidia cuncta virtu­ <lb/>
+          <p n="37">37. Quid zeli referam ignem? invidia cuncta virtu­ <lb/>
             tum germina concremat, invidia cuncta bona ardore <lb/>
             . pestifero devorat. Hæc primum sibi nocet, primum
             <milestone unit="PLSection" n="A"/><lb/>
@@ -1800,7 +1813,7 @@
             leas, de alterius profectibus non tabescas, uultus <lb/>
             prosperitate Iacereris, nullius felicitate crucieris, <lb/>
             nullius invidentiæ facibus agiteris.</p>
-          <p>38. Pacem ama, pacem dilige, pacem cum omni­ <lb/>
+          <p n="38">38. Pacem ama, pacem dilige, pacem cum omni­ <lb/>
             bus retine, omnes in mansuetudine et charitate am­ <lb/>
             plectere; proba te amplius amare quam ipse amaris; <lb/>
             non sis in pace infidus, non sis levis in amicitia. <lb/>
@@ -1812,7 +1825,7 @@
             in affectu, affabilis in sermone, grato animo affare <lb/>
             omnes; nullus existat sermo jurgiorum, qui concor­ <lb/>
             diam dividat.</p>
-          <p>39. Fuge risas, vita lites, cave contentiones, tolle <lb/>
+          <p n="39">39. Fuge risas, vita lites, cave contentiones, tolle <lb/>
             occasionem litis. Litem sperne , vive semper in <lb/>
             pace, in nulla causa contendas, in nulla actione <lb/>
             decertare studeas. Contentio contradictionem exigit, <lb/>
@@ -1823,8 +1836,8 @@
             sarii noli extolli; non lateris super inimici interitu, <lb/>
             ne superveniant in te similia, ne forte convertat <lb/>
             Deus ab eo in te iram suam.</p>
-          <p>
-            <milestone unit="PLSection" n="c"/>. 40. Qui enim gaudet de inimici casu, cito incidet <lb/>
+          <p n="40">
+            <milestone unit="PLSection" n="c"/>40. Qui enim gaudet de inimici casu, cito incidet <lb/>
             in illum: sit magis erga humiliatum humanus af­ <lb/>
             fectus, sit erga dejectum compassionis intuitus, de­ <lb/>
             lectet te dolere super eum qui afflictus est; condole <lb/>
@@ -1834,7 +1847,7 @@
             tuam luge ; in tribulatione alterius et tu esto tristis. <lb/>
             Cum plangentibus plange, cum flentibus fle, cum lu­ <lb/>
             gentibus menia, affectu conjungere.</p>
-          <p>41. In omnihus actibus tuis, in omni opere tuo, <lb/>
+          <p n="41">41. In omnihus actibus tuis, in omni opere tuo, <lb/>
             in omni conversatione tua, imitare bonos, aemulare <lb/>
             sanctos, habeto ante oculos exempla sanctorum, <lb/>
             exempla justorum imitando considera, exempla san­ <lb/>
@@ -1863,7 +1876,7 @@
             stodi bonam famam tuam, nullis fetoribus obscure­ <lb/>
             tur, nullis laceretur opinionibus. Laceratio enim opi­ <lb/>
             uionis boni jacturam facit</p>
-          <p>42. Cave autem gloriam popularem, vita admira­ <lb/>
+          <p n="42">42. Cave autem gloriam popularem, vita admira­ <lb/>
             tionem vulgi, desine jactare te in adulantium oculis, <lb/>
             non sis circumflatus vento favoris. Contemne favo­ <lb/>
             res, contemne laudem popularis favoris ; esse magis <lb/>
@@ -1881,7 +1894,7 @@
             508 dum malus es, si bonus praediceris? aut quid <lb/>
             boni laus pertinet ad te, si aliud es, et aliud esse <lb/>
             fingaris?</p>
-          <p>43. Quapropter vita simulationem, vita fictionem, <lb/>
+          <p n="43">43. Quapropter vita simulationem, vita fictionem, <lb/>
             obscuriori veste non simules sanciitatem ; qualis ha­ <lb/>
             veri vis, talis esto, professionem tuam et habitu et <lb/>
             incessu demonstra, sit in ingressu tuo simplicitas, <lb/>
@@ -1900,7 +1913,7 @@
             iniquos, fuge improbos, pelle ignavos a te ; fuge <lb/>
             turbas hominum, maxime eius aetatis qui ad vilia <lb/>
             proni sunt.</p>
-          <p>44. Bonis te adjunge, bonorum consortium appete <lb/>
+          <p n="44">44. Bonis te adjunge, bonorum consortium appete <lb/>
             bonorum societatem quære. Sanctis individue ad­ <lb/>
             hære. Si fueris socius conversationis, eris et virtu­ <lb/>
             tis ; qui cum sapientibus graditur, sapiens erit, qui <lb/>
@@ -1914,7 +1927,7 @@
             ctorum, sic plurima mala affert socictas malorum ; <lb/>
             qui enim letigerit immundum, coinquinabitur ab eo; <lb/>
             claude etiam aures tuas, ne audias malum.</p>
-          <p>45. Respue sermones impudicos, fuge inhonesta <lb/>
+          <p n="45">45. Respue sermones impudicos, fuge inhonesta <lb/>
             verba, nulla aures tuas sermonum impudicitia sub-
             <milestone unit="PLSection" n="A"/><lb/>
             repat, vanus sermo cito polluit mentew, et faeile <lb/>
@@ -1927,7 +1940,7 @@
             lingua pandit; et qualis sermo ostendilur, talis ani­ <lb/>
             mus 509 comprobatur; ex abundantia enim cordis <lb/>
             os loquitur (Matth. XII, 34).</p>
-          <p>46. Ab otioso sermone compesce linguam , ab <lb/>
+          <p n="46">46. Ab otioso sermone compesce linguam , ab <lb/>
             otioso verbo reprime linguam. Cave a fabulis ineptis­ <lb/>
             simis, aniles fabulas non loquaris. Turpia et inania <lb/>
             verba non garrias, retice verbum quod non ædificat <lb/>
@@ -1942,7 +1955,7 @@
             mus, in magnis prolabimur; minima igitur vita, et <lb/>
             ad majora non pervenies; parva sperne, et in dete­ <lb/>
             rius non incides.</p>
-          <p>47. Ea quae loqueris gravitate atque doctrina <lb/>
+          <p n="47">47. Ea quae loqueris gravitate atque doctrina <lb/>
             digna existant; sit sermo tuus irreprehensibilis, <lb/>
             sit exspectationi audientium utilis : stude dicere, <lb/>
             non quod libet, sed quod oportet. Discerne quid <lb/>
@@ -1951,7 +1964,7 @@
             <milestone unit="PLSection" n="c"/><lb/>
             revocare non possis. Fuge casus linguæ, lingua tua <lb/>
             non te perdat.</p>
-          <p>48. Tolle insidianti occasionem, non pateat inimici <lb/>
+          <p n="48">48. Tolle insidianti occasionem, non pateat inimici <lb/>
             jaculis os tuum, non loquaris quod excipiat adver­ <lb/>
             sarius. Amicum semper habeto silentium, pone cu­ <lb/>
             stodiam ori tuo, labiis tuis signaculum præbe, op­ <lb/>
@@ -1960,7 +1973,7 @@
             loquendi, tempus proferendi sermones inquire, scito <lb/>
             quo tempore loquaris, considera quando dicas, tem­ <lb/>
             pore congruo loquere, tempore congruo tace.</p>
-          <p>49. Tace usquequo interrogeris; non loquaris, <lb/>
+          <p n="49">49. Tace usquequo interrogeris; non loquaris, <lb/>
             nisi interrogatus; non dicas, priusquam audias, <lb/>
             interrogatio os tuum aperiat, sint verba tua pauca. <lb/>
             Tolle verbositatem sermonis superflui, loquendi
@@ -1985,7 +1998,7 @@
             <milestone unit="PLSection" n="A"/><lb/>
             sura, 510 sit in sermone statera, semper verba <lb/>
             tua moderare, modum loquendi non transeas.</p>
-          <p>50. Abscinde etiam a lingua vitium detrahendi. <lb/>
+          <p n="50">50. Abscinde etiam a lingua vitium detrahendi. <lb/>
             Alienam vitam non laceres, de malo alieno os tuum <lb/>
             non coinquines. Non detrahas peccanti, sed con­ <lb/>
             dole ; quod in alio detrahis, in te potius pertimesce. <lb/>
@@ -1994,7 +2007,7 @@
             natio est. Hoc omnes reprehendunt, hoc omnes vi­ <lb/>
             tuperant, hoc fœdius nihil est, hoc summæ turpitu­ <lb/>
             dinis est.</p>
-          <p>51. Canum mos est latrare, canum linguas eae­ <lb/>
+          <p n="51">51. Canum mos est latrare, canum linguas eae­ <lb/>
             rere, canum dente pestifero mordere, soli canes ob­ <lb/>
             trectare noverunt; quando aliis detrahis, le discute; <lb/>
             quando alium mordes, tua peccata redargne; si vis
@@ -2005,7 +2018,7 @@
             de tua igitur correctione esto sollicitus ; de tua <lb/>
             salute et emendatione esto attentus, detrahentes <lb/>
             non audias. Susurrantibus auditum non praebeas.</p>
-          <p>52. Pari reatu detrahentes et audientes tenentur, <lb/>
+          <p n="52">52. Pari reatu detrahentes et audientes tenentur, <lb/>
             utrisque simile discrimen irnpenditur. Qui detrahen­ <lb/>
             tem audit et is qui detrahit aequaliter judicantur; <lb/>
             quod ad te non pertinet noli quaerere, quid inter se <lb/>
@@ -2018,7 +2031,7 @@
             testandae curiositatis subripiat, nec, oblitus tuorum <lb/>
             morum, alienos perquiras ; tanta cura corrige vitia <lb/>
             tua, qnanto studio perspicis aliena.</p>
-          <p>53. Omne quoque genus mendacii summopere <lb/>
+          <p n="53">53. Omne quoque genus mendacii summopere <lb/>
             fuge ; nec casu, nec studio loquaris falsum ; nec <lb/>
             ut præstes mentiri studeas; nec qualibet fallacia <lb/>
             viiam alicujus defendas. Cave mendacium in omni­ <lb/>
@@ -2026,7 +2039,7 @@
             veritas aboletur; 511 nullum justum mendacium, <lb/>
             omne mendacium peccatum est. Omne quod a ve­ <lb/>
             ritate discordat iniquitas est.</p>
-          <p>54. Leges sæculi falsarios damnant, mendaces pu­ <lb/>
+          <p n="54">54. Leges sæculi falsarios damnant, mendaces pu­ <lb/>
             niunt, fallaces perimunt. Si mendacia apud homi-
             <milestone unit="PLSection" n="A"/><lb/>
             nes lege damnantur, si fallacia humano judicio ple­ <lb/>
@@ -2037,7 +2050,7 @@
             enim quod mentitur occidit animam; et: Perdes eos <lb/>
             qui loquuntur mendacium (Ps. v, 7); et: testis falsus <lb/>
             non erit impunitus (Proverb. XIX, 5, 9).</p>
-          <p>55. Refuge ergo fallaciam, declina mendacium; <lb/>
+          <p n="55">55. Refuge ergo fallaciam, declina mendacium; <lb/>
             cave falsum , pure loquere, nunquam mentiaris, <lb/>
             esto verax , neminem mentiendo fallas, neminem <lb/>
             mentiendo in errorem 'inducas, nullum circumscri­ <lb/>
@@ -2047,7 +2060,7 @@
             <milestone unit="PLSection" n="B"/><lb/>
             animo teneas; praebe affectum sine simulatione, <lb/>
             sine fuco exhibe bonitatem.</p>
-          <p>56. Prohibe etiam libi juramentum, tolle jurandi <lb/>
+          <p n="56">56. Prohibe etiam libi juramentum, tolle jurandi <lb/>
             usum ; jusiurandum interdie tibi; periculosum est <lb/>
             enim jurare, assiduitas jurandi perjurii consuetudi. <lb/>
             nein facit. Jurandi usus ad perjurium ducit; sit in <lb/>
@@ -2055,14 +2068,14 @@
             veritas juramento non indiget; fidelis sermo sacra­ <lb/>
             menti retinet locum, firma etiam sii sacramenti tui <lb/>
             fides.</p>
-          <p>57. Fac bonum quod spopondisti. Non sis in ver­ <lb/>
+          <p n="57">57. Fac bonum quod spopondisti. Non sis in ver­ <lb/>
             bisfacilis, et in opere difficilis. Coram Deo aliqudid <lb/>
             facile non promittas; sine consideratione virium <lb/>
             nihil voveas ; quod non potes facere, non pollicearis. <lb/>
             Multum Deo reus eris, si non reddideris quod vove.
             <milestone unit="PLSection" n="C"/><lb/>
             ris; displicent Deo qui vota sua non explent,</p>
-          <p>58. Inter infideles computantur, qui quod vove­ <lb/>
+          <p n="58">58. Inter infideles computantur, qui quod vove­ <lb/>
             runt, non impleverunt; melius est enim non pro­ <lb/>
             mittere quam fidem promissi 512 non exsolvere; me­ <lb/>
             lius est enim non vovere quam post votum promissa <lb/>
@@ -2070,7 +2083,7 @@
             fidem, in turpi volo muta decretum; quod incaute <lb/>
             vovisti non facias, impia est promissio quæ scelere <lb/>
             adimpletur.</p>
-          <p>59. Ante Deum nihil est occultum, verbum ini­ <lb/>
+          <p n="59">59. Ante Deum nihil est occultum, verbum ini­ <lb/>
             quum nec in corde tuo dicas: verbum malum nec <lb/>
             silentio abscondi putes. Omne verbum absconditum <lb/>
             non celabitur ; panditur enim in manifesto, quod in <note type="footnote"> 50. Abscinde. A!., abscide. AREV. </note><note type="footnote"> 51. A I., lacerare, pro latrare. Et oblatrare pro ob-</note> 
@@ -2111,7 +2124,7 @@
             Ita ergo peccata declina, quasi celare non possis. <lb/>
             Ibi pecca, ubi Deum esse nescis : nihil celatur ante <lb/>
             Deum, videt occulta qUi fecit abscondita.</p>
-          <p>60. Divinis enim judiciis eris reus, quamvis sis <lb/>
+          <p n="60">60. Divinis enim judiciis eris reus, quamvis sis <lb/>
             oculis humanis absconditus. Deus ubique praesens <lb/>
             est, spiritus ejus totum implet : majestas ejus om­ <lb/>
             nia penetrat elementa , cuhcia suæ potentiae attingit <lb/>
@@ -2123,7 +2136,7 @@
             novit, ipse cor inspicit; quod intus agimur aut latet <lb/>
             ipse videt, quod intus disponitur ipse comprehendit, <lb/>
             etiam quod homo in se ignorat ille hovit.</p>
-          <p>61. Nemo potest etiam semetipsum effugere, et si <lb/>
+          <p n="61">61. Nemo potest etiam semetipsum effugere, et si <lb/>
             te non damnat publica fama, condemnat propria <lb/>
             conscientia : nulla pœna gravior cofiscientia ; vis <lb/>
             autem nunquam esse tristis? bene vive : secura mens <lb/>
@@ -2135,8 +2148,8 @@
             justitia perseveraveris, tristitia non occurret tibi; <lb/>
             nec olaga, nec mors te terrebit, si bene et pie vixe­ <lb/>
             ris.</p>
-          <p>
-            <milestone unit="PLSection" n="C"/>62. Consilium autem et opus tuUm semper ad <lb/>
+          <p n="62">
+<milestone unit="PLSection" n="C"/>62. Consilium autem et opus tuUm semper ad <lb/>
             Dominum converte. In omni opere tuo Dei auxilium <lb/>
             posce. Omnia divinae gratiae, divino douo ascribe; <lb/>
             nihil meritis tuis attribuas , in virtute tua nihil prae­ <lb/>
@@ -2154,7 +2167,7 @@
             <milestone unit="PLSection" n="D"/><lb/>
             ut vites vitium quam ut emendes, ne forte cum in­ <lb/>
             curreris, revocare non possis.</p>
-          <p>63. Usus eniin difficile vincitur. Consuetudinis <lb/>
+          <p n="63">63. Usus eniin difficile vincitur. Consuetudinis <lb/>
             vincula vix solvuntur, inolita diu tardius corriguntur. <lb/>
             Ancipitem diu delibera sententiam, ante factum cogita <lb/>
             diu, ante opus præmeditare diu : matura consilium,
@@ -2171,7 +2184,7 @@
             enim vires et ingenium defluunt. Negligentia et tor­ <lb/>
             por dissolvunt animum, desidia natura corrumpitur, <lb/>
             desidia frigescit ingenium.</p>
-          <p>64. Torpor enim exsuperat sensum, hebetudo <lb/>
+          <p n="64">64. Torpor enim exsuperat sensum, hebetudo <lb/>
             scientiæ lumen exstinguit; solertia autem seu­ <lb/>
             sum meliorem reddit, pejorem facit 514 negli-
             <milestone unit="PLSection" n="B"/><lb/>
@@ -2187,7 +2200,7 @@
             usui cedunt, usui omnia parent, res ita se agit, ut <lb/>
             uteris. Quod cum difficultate coeperis, per usum cum <lb/>
             voluptate perficies.</p>
-          <p>65. Nihil sapientia melius, nihil prudentia dulcius, <lb/>
+          <p n="65">65. Nihil sapientia melius, nihil prudentia dulcius, <lb/>
             nihil scientia suaVius, nihil stultitia pejus, nihil in­ <lb/>
             sipientia deterius, nihil ignorantia turpius; ignoran-
             <milestone unit="PLSection" n="C"/><lb/>
@@ -2200,7 +2213,7 @@
             labitur. Prudens autem cito deprehendit insidias, <lb/>
             prudens Celerius errores agnoscit; noxia non vita­ <lb/>
             mus, nisi per sapientiam.</p>
-          <p>66. Scientia enim a malis abstinet, sapiens omnia <lb/>
+          <p n="66">66. Scientia enim a malis abstinet, sapiens omnia <lb/>
             prudeuter examinat. Inter bonum et malum sapiens <lb/>
             intelligendo dijudicat. Summum bonum est scire <lb/>
             quid Caveas, summa miseria nescire quo tendas. Di­ <lb/>
@@ -2208,7 +2221,7 @@
             ad illam, et appropinquabit ad te, assiduus esto illi,
             <milestone unit="PLSection" n="D"/><lb/>
             et instruet te.</p>
-          <p>67. Disce quod nescis ne doctor inutilis inveniaris; <lb/>
+          <p n="67">67. Disce quod nescis ne doctor inutilis inveniaris; <lb/>
             antea esto auditor; postea doctor: per disciplinam <lb/>
             nomen magistri accipe; bonum quod audieris dic, <lb/>
             bonum quod didiceris doce; discendi et docendi non <lb/>
@@ -2229,7 +2242,7 @@
             fuerit, tanto magis abundat. Sapientia dando largior <lb/>
             fit, retinendo minoratur; largiendo redundantior est <lb/>
             icientia, et duiu plus confertur, plus abundat.</p>
-          <p>08. Verbum 'Aman præcedant opera, quæ ore <lb/>
+          <p n="68">68. Verbum 'Aman præcedant opera, quæ ore <lb/>
             promis, opere 515 adimple; quae verbis doces, <lb/>
             exemplis ostende; esto non solum magister, sed et <lb/>
             imitator virtutis. Si doces, et iacis, tunc gloriosus <lb/>
@@ -2242,7 +2255,7 @@
             <milestone unit="PLSection" n="B"/><lb/>
             scuritate uti, ita die, ut intelligaris, nec simplicibus <lb/>
             loquendo displiceas, nec prudentes offendas.</p>
-          <p>69. Juxta sensum audientis erit sermo doctoris, <lb/>
+          <p n="69">69. Juxta sensum audientis erit sermo doctoris, <lb/>
             secundum mores est impertienda doctrina. Juxta vul­ <lb/>
             nUS adhibenda remedia; variae voluntates variam <lb/>
             disciplinam desiderant, unusquisque secundum pro­ <lb/>
@@ -2251,7 +2264,7 @@
             cta; communia omnibus, secreta perfectioribus lo­ <lb/>
             qucre; aperta cunctis , operta paucis denuntia; quæ­ <lb/>
             dam enim plurimis, quædam paucis sunt disserenda.</p>
-          <p>70. In omni tempore paratus esto ad instructionem; <lb/>
+          <p n="70">70. In omni tempore paratus esto ad instructionem; <lb/>
             nullum tempus sit vacuum, quo non ædifices, nulla <lb/>
             hora praetereat, qua doctrinæ studium non conferas, <lb/>
             verba bona aperte et constanter praedica, nec erube­
@@ -2259,7 +2272,7 @@
             scas loqui quod nosti defendere; quod deesse tibi <lb/>
             fecientiæ sentis, quære ab aliis; collatione enim ob­ <lb/>
             tecta clarescunt, conferendo difficilia apetiuntur.</p>
-          <p>71. Nulla auteM sit tibi curiositas sciendi latentia. <lb/>
+          <p n="71">71. Nulla auteM sit tibi curiositas sciendi latentia. <lb/>
             Cave indagate quæ sunt a sensibus humanis remota. <lb/>
             Praetermitte, quasi secretum, quod Scripturæ aucto­ <lb/>
             ritate non didicisti. Nihil Ultra quam scriptum est <lb/>
@@ -2269,7 +2282,7 @@
             nosa perit a est; in haeresim provocat, in fabulas sa­ <lb/>
             crilegas mentem præcipitat, in causis obscuris red­ <lb/>
             dit audaces, in rebus ignaris facit præcipitem,</p>
-          <p>516 72. In dispositione autem tolle certamen, <lb/>
+          <p n="72">516 72. In dispositione autem tolle certamen, <lb/>
             tolle pertinacem Vincendi defensionem, Mede cito ve-
             <milestone unit="PLSection" n="D"/><lb/>
             ritati, non contradicas justitiæ , non contendas eva. I <lb/>
@@ -2280,7 +2293,7 @@
             ritatem coneris. In omni disputatione tene rationem, <lb/>
             disputare stude, non superare; plus dilige audire <lb/>
             quam dicere, plus auscultare quam loqui.</p>
-          <p>75. In principio audi, loquere novissimus; finis plus <lb/>
+          <p n="73">73. In principio audi, loquere novissimus; finis plus <lb/>
             habet honoris; in omni re linis intenditur, extrema <lb/>
             quaeruntur. Melior est finis quam principium, melior <lb/>
             novissimus sermo quam primus : venerare omnes <lb/>
@@ -2288,14 +2301,14 @@
             suo merito sanctitatis. Potiori gradui competentem <lb/>
             reverentiam tribue. Juxta dignitatem redde unicui­ <lb/>
             que honorem.</p>
-          <p>74. Superiori aequalem te non exhibeas. Senioribus <lb/>
+          <p n="74">74. Superiori aequalem te non exhibeas. Senioribus <lb/>
             praesta obedientiam, famulare imperiis eorum, eo­ <lb/>
             rum auctoritati cede, obsequere voluntati. Defer ob-
             <milestone unit="PLSection" n="B"/><lb/>
             sequia justa majoribus, obedi cunctis in bonis prae­ <lb/>
             ceptis. Ita autem obtempera homini, ut voluntatem <lb/>
             Dei non offendas.</p>
-          <p>75. Malum facere jussus, non acquiescas; malum <lb/>
+          <p n="75">75. Malum facere jussus, non acquiescas; malum <lb/>
             facere jussus, non consentias. Noli in malum potes­ <lb/>
             tati cuidam consentire, etiam si poena compellat, si <lb/>
             supplicia immineant, si tormenta occurrant; melius <lb/>
@@ -2306,7 +2319,7 @@
             lere, qui ut fieret obedivit. Similis est qui obtempe. <lb/>
             rat in malo ei qui agit maium, facientem et obse­ <lb/>
             quentem par poena constringit.</p>
-          <p>76. A subditis veuerari magis quam timeri stude,
+          <p n="76">76. A subditis veuerari magis quam timeri stude,
             <milestone unit="PLSection" n="c"/><lb/>
             subjecti pius te revereantur quam metuant, plus tibi <lb/>
             officio dilectionis quam conditionis necessitate adhae­ <lb/>
@@ -2316,7 +2329,7 @@
             tuit; timor non servat diuturnam fidem. Ubi timor <lb/>
             est, audacia sequitur; ubi metus est, desperatio oc­ <lb/>
             currit.</p>
-          <p>77. Quapropter tempera dominii austeritatem , <lb/>
+          <p n="77">77. Quapropter tempera dominii austeritatem , <lb/>
             summa bonitate subditos rege, non sis terribilis iu <lb/>
             subjectis. Sic eis dominare, ut tibi delectentur ser­ <lb/>
             vire; et in disciplina, et in modestia modum serva; <lb/>
@@ -2346,8 +2359,8 @@
             cum nota. ARBV. </note><note type="footnote"> 76. De praelatis haec fere eadem exStant lib. III.. <lb/>
             Sen(Cnl., cap. 48 et seqq. ARtv. </note><note type="footnote"> 77. At., iri omni opere 'ub, iii. MAR. </note> <pb n="863"/>
             </p>
-          <p>
-            <milestone unit="PLSection" n="A"/>78. Omnia mediocria utilia, omnia in suo modo <lb/>
+          <p n="78">
+<milestone unit="PLSection" n="A"/>78. Omnia mediocria utilia, omnia in suo modo <lb/>
             perfecta; quae cum temperantia fiunt, salubria sunt. <lb/>
             Bona autem immoderato usu noxia efficiuntur. Ni­ <lb/>
             mietas enim omnis in vitio deputatur; omne aulem <lb/>
@@ -2356,7 +2369,7 @@
             denter, ne de bono fiat malum, pErspice quoque <lb/>
             quid cii aptum sit tempori, quid ubi, quando, qua­ <lb/>
             liter, quandiu facere debeas.</p>
-          <p>79. Causas rerum et temporum regulas inspice, <lb/>
+          <p n="79">79. Causas rerum et temporum regulas inspice, <lb/>
             siugulorulu operum discretionem agnosce; diligen­ <lb/>
             ter distingue omnia quae agis; qualiter bonum inci­ <lb/>
             pias, qualiter peragas, scito. In omni actione tene <lb/>
@@ -2366,13 +2379,13 @@
             cum bene distinxeris opus tuum, optime justus <lb/>
             eris. Quidquid boni cum discretione feceris, virtus <lb/>
             est; quidquid sine discretione gesseris, vitium est.</p>
-          <p>80. Virtus enim indiscreta pro vitio deputatur, <lb/>
+          <p n="80">80. Virtus enim indiscreta pro vitio deputatur, <lb/>
             virtus sine discretione vitii obtinet lucum ; multa <lb/>
             sunt consuetudine vitiata, multa pravo usu praesum­ <lb/>
             pta, multa contra pudicos mores illicite usurpata ; <lb/>
             adime consuetudinem, serva legem ; usus auctoritati <lb/>
             cedat, pravum usum lex et ratio vincat.</p>
-          <p>518 81. Quod tibi fieri vis, fac alleri ; quod vis <lb/>
+          <p n="81">518 81. Quod tibi fieri vis, fac alleri ; quod vis <lb/>
             ut faciat alius tibi, hoc et tu facito illi: talis esto <lb/>
             aliis quales esse optas circa te alios. Testimonio tuo <lb/>
             nulli noceas, ad nullius periculum vocem testifica­ <lb/>
@@ -2383,7 +2396,7 @@
             inferas alii mala, ne patiaris similia. In te serva mo­ <lb/>
             destiafn, in aliis serva justitiam, tene juris æquita­ <lb/>
             tem, sequere veritatem judiciorum.</p>
-          <p>82. Nullum contra veritatem defendas; dum judi­ <lb/>
+          <p n="82">82. Nullum contra veritatem defendas; dum judi­ <lb/>
             cas, nullius personæ affectu deflectaris a vero. Pau­ <lb/>
             per an dives sit, causam perspice, non personam. <lb/>
             In omnibus veritatem custodi, nulla ambitione vel <lb/>
@@ -2394,8 +2407,8 @@
             non appetas, pro justitia nullum saeculi præmium <lb/>
             quæras. Justitiam pro sola aeterna remuneratione <lb/>
             distribue.</p>
-          <p>
-            <milestone unit="PLSection" n="D"/>83. Qui enim praesentia dona affectat, futuram <lb/>
+          <p n="83">
+<milestone unit="PLSection" n="D"/>83. Qui enim praesentia dona affectat, futuram <lb/>
             gloriam non sperat; qui bona hic recipit, ulterius <lb/>
             quod exspectet praemium non habet. Dum enim ju-
             <milestone unit="PLSection" n="A"/><lb/>
@@ -2408,7 +2421,7 @@
             enim quod nimium est, vitium est. Impia justitia est <lb/>
             humanæ fragilitati non ignoscere. Non igitur ames <lb/>
             damnare, sed emendare potius, et corrigere.</p>
-          <p>84. Tene ergo rigorem in discussione justitiae, in <lb/>
+          <p n="84">84. Tene ergo rigorem in discussione justitiae, in <lb/>
             definitione sententiae misericordiam ; judicii examen <lb/>
             sequatur pietas, districtionis censuram temperet ic­ <lb/>
             dulgentia. Ita demens esto in alienis delictis, sicut <lb/>
@@ -2420,7 +2433,7 @@
             eo jure teneberis. Qua lege et poenae conditione <lb/>
             quempiam judicaveris, eadem et ipse judicandus <lb/>
             eris. Lex tua te constringit.</p>
-          <p>85. Judicium quod aliis imponis, ipse portabis; <lb/>
+          <p n="85">85. Judicium quod aliis imponis, ipse portabis; <lb/>
             in quo enim judicas, ipse damnandus es, et qua <lb/>
             mensura mensus fueris, remetietur tibi (Matth. VII, <lb/>
             2). Omnia autem primum inquire, et cum justitia <lb/>
@@ -2429,7 +2442,7 @@
             dica; non enim qui accusatur, sed qui convincitur, <lb/>
             reus est. Periculosum est de suspectione quempiam <lb/>
             judicare.</p>
-          <p>
+          <p n="86">
             <milestone unit="PLSection" n="c"/>86. In ambiguis Dei judicio serva sententiam, <lb/>
             quod nosti tuo, quod nescis divino committe judi­ <lb/>
             cio; non potest condemnari humano examine quem <lb/>
@@ -2441,7 +2454,7 @@
             diciis comprobantur, nisi quae manifesto examino <lb/>
             convincuntur , nisi quae ordine judiciario publi­ <lb/>
             cantur.</p>
-          <p>87. Homo, in summo bonore summa sit tibi hu­ <lb/>
+          <p n="87">87. Homo, in summo bonore summa sit tibi hu­ <lb/>
             militas, quamvis sis in summo honore, humilitatem <lb/>
             tene . Si humilitatem tenueris, habebis gloriam; <lb/>
             quanto enim humilior fueris, tanto te sequetur alti-
@@ -2471,7 +2484,7 @@
             <milestone unit="PLSection" n="A"/><lb/>
             tanto sis majori humilitate conspicuus, quanto ma­ <lb/>
             gna es dignitate praelatus.</p>
-          <p>88. Impositas tibi quoque curas humiliter su­ <lb/>
+          <p n="88">88. Impositas tibi quoque curas humiliter su­ <lb/>
             scipe. Traditum ministerium mente subdita exple, <lb/>
             osto obediens divinæ dispensationi, voluntati ejus <lb/>
             cuutraire non audeas. Jura potestatis adeptæ mode­ <lb/>
@@ -2481,7 +2494,7 @@
             culpa non potes. Sublimitas honorum magnitudo <lb/>
             scelerum est, in majori gradu major sine dubio est <lb/>
             pœna.</p>
-          <p>89. Qui minor est, veniae proximus est. Potentes <lb/>
+          <p n="89">89. Qui minor est, veniae proximus est. Potentes <lb/>
             autem potenter 520 tormenta patientur (Sap. vi, 7). <lb/>
             Judicium enim durissimum in iis qui præsunt fiet
             <milestone unit="PLSection" n="B"/><lb/>
@@ -2493,7 +2506,7 @@
             agitatur, et rami ejus citius in ruina confringun­ <lb/>
             tur; excelsae turres graviori casu procumbunt. <lb/>
             Altissimi montes crebris fulminibus feriuntur.</p>
-          <p>90. In potentem cito cadit invidia, cito patet in­ <lb/>
+          <p n="90">90. In potentem cito cadit invidia, cito patet in­ <lb/>
             sidiis gloriosus. Gloria enim invidiam parit, invidia <lb/>
             vero pericula. Quamvis quis in saeculi gloria ful­ <lb/>
             geat, quamvis purpura auroque resplendeat, quam­ <lb/>
@@ -2506,7 +2519,7 @@
             mœrore, semper in discrimine; in sericis stratis cu­ <lb/>
             bat, sed turbidus; in pluma jacet, sed pallidus ; in <lb/>
             lectis aureis, sed turbatus.</p>
-          <p>91. Brevis est hujus mundi felicitas, modica est <lb/>
+          <p n="91">91. Brevis est hujus mundi felicitas, modica est <lb/>
             hnjus saeculi gloria, caduca est et fragilis temporalis <lb/>
             potentia. Die ubi sunt reges? ubi principes? ubi im­ <lb/>
             peratores? ubi locupletes rerum? ubi potentes sæ­ <lb/>
@@ -2518,7 +2531,7 @@
             venerunt; multis exitiabiles fuerunt divitiae, multis
             <milestone unit="PLSection" n="D"/><lb/>
             mortem generaverunt opes.</p>
-          <p>92. Nunquam mentis requiem habet, qui curis <lb/>
+          <p n="92">92. Nunquam mentis requiem habet, qui curis <lb/>
             terrenis se subdit; sollicitudines enim rerum men­ <lb/>
             tem conturbant, curae rerum mentem exagitant. <lb/>
             Potentia enim sollicitudinis nunquam caret angu­ <lb/>
@@ -2527,7 +2540,7 @@
             <milestone unit="PLSection" n="A"/><lb/>
             abjeceris ; semper interna quiete frueris, si te a <lb/>
             strepitu terrenarum actionum subtraxeris.</p>
-          <p>521 93. Si praesentia despexeris, sine dubio <lb/>
+          <p n="93">521 93. Si praesentia despexeris, sine dubio <lb/>
             æterna invenies; si sæculares res et humanas calca- <lb/>
             veris, facile et leviter coelestem gratiam accipies, et <lb/>
             cdm co regnabis qui vivis et mortuis dominatur. Di­ <lb/>
@@ -2537,7 +2550,7 @@
             divitias possident ad requiem tendant; qui curis ter­ <lb/>
             renis se implicant, a Dei timore se separant. Qui in <lb/>
             rerum amore defigitur, in Deo nullatenus delectatur.</p>
-          <p>94. Curae enim rerum ab intentione Dei avertunt. <lb/>
+          <p n="94">94. Curae enim rerum ab intentione Dei avertunt. <lb/>
             Nemo potest amplecti Dei gloriam simul, et saeculi; <lb/>
             nemo potest amplecli Christum simul, et saeculum.
             <milestone unit="PLSection" n="B"/><lb/>
@@ -2551,7 +2564,7 @@
             reat gloriosus. Propter Deum erGo renuntia omni­ <lb/>
             bus, a saeculi curis te propter Deum suspende, sine <lb/>
             impedimento saeculi Deo servire stude.</p>
-          <p>95. Nullus te amor mundi a Dei amore separet, <lb/>
+          <p n="95">95. Nullus te amor mundi a Dei amore separet, <lb/>
             nulla cura a Dei amore te subtrahat, nulla te sollici­ <lb/>
             ludo rerum ab intentione Dei suspendat. Abjice a te <lb/>
             quidquid impedire bonum propositum potest. Toto <lb/>
@@ -2563,7 +2576,7 @@
             beas curam de saeculo. Tanquam defunctus, ab omni <lb/>
             terreno te priva negotio. Contemne vivens quae post <lb/>
             mortem habere non potes.</p>
-          <p>96. Quod habes, habeto ad misericordiam; suffra­ <lb/>
+          <p n="96">96. Quod habes, habeto ad misericordiam; suffra­ <lb/>
             getur virtus tua egeni inopiae. Si quem positum in ne. <lb/>
             cessitate cognoveris, si quem ad inopiam redactum, <lb/>
             si quem direptione alicujus exinanitum, si quem op­ <lb/>
@@ -2576,7 +2589,7 @@
             praetereas eum qui meretur accipere. Incertus es pro <lb/>
             quo magis placeas Deo, nescis pro quo tibi major fru­ <lb/>
             ctus justitiæ præparetur.</p>
-          <p>97. Quidquid tribuis, cum affectu distribue ; quid­ <lb/>
+          <p n="97">97. Quidquid tribuis, cum affectu distribue ; quid­ <lb/>
             quid largiris, cum hilaritate largire. Praebe misericor­ <lb/>
             diam sine murmuratione; praebe eleemosynam sino <lb/>
             taedio. Major sit benevolentia quam quod datur, ma. <note type="footnote"> 89. Confer. lib. in Sententiar., cap. 50. ARKV. </note><note type="footnote"> 90. A!., cadit in insidiis, pro patet insidii.. MAR. </note><note type="footnote"> M. AI., curre sceculares; al., curre rerum scecula­ <lb/>
@@ -2597,7 +2610,7 @@
             porrigit, fructum remunerationis amittit; qui cum <lb/>
             tristitia largitur, retributionis non percipit fructum. <lb/>
             Non est enim misericordia, ubi non est benevolentia.</p>
-          <p>98. De tuis justis laboribus ministra pauperibus; n&lt;n <lb/>
+          <p n="98">98. De tuis justis laboribus ministra pauperibus; n&lt;n <lb/>
             auferas alteri unde alteri tribuas, nec te misericor­ <lb/>
             dem ostendas de alieno spolio. Nihil prodest, si alte­ <lb/>
             rum inde reficis unde alium inanem facis. Condemnat <lb/>
@@ -2611,12 +2624,12 @@
             æternæ remunerationis expectatio te teneal amplius. <lb/>
             Nec quod ad hujus, sed quod ad ville æternæ gloriam <lb/>
             prosit quæras .</p>
-          <p>99. Si enim hic laus quæritur, illic remuneratio <lb/>
+          <p n="99">99. Si enim hic laus quæritur, illic remuneratio <lb/>
             amittitur. Justi ennii mercedem, non hic, sed in fu­ <lb/>
             turo recipiunt. Fulura merces, nou praesens promit­ <lb/>
             titur justis. In cœlo, non in terra, merces promittitur <lb/>
             sanctis; non est hic exspectandum quod alibi debetur.</p>
-          <p>100. Ecce accepisti monita, data est tibi vivendi <lb/>
+          <p n="100">100. Ecce accepisti monita, data est tibi vivendi <lb/>
             norma, nulla te jam ignorantia a peceato excusat, <lb/>
             non es jam vitæ nescius, non es imprudens, aut igua­ <lb/>
             rus; legem quam debeas sequi exposui, quali. de! eas <lb/>
@@ -2628,7 +2641,7 @@
             quod legendo respicis vivendo contemnas. Donum <lb/>
             scientiæ acceptum retine, imple opere quod didicisti <lb/>
             prædicatione.</p>
-          <p>101. Gratias ago, gratias refero, gratiarum actio­ <lb/>
+          <p n="101">101. Gratias ago, gratias refero, gratiarum actio­ <lb/>
             nes rependo, actiones gratiarum persolvo. Ago at­ <lb/>
             que habeo uberem tibi gratiam ; quantas valeo, gra­ <lb/>
             tias celebro, quantas pro viribus possum gratias ago. <lb/>
@@ -2641,7 +2654,7 @@
             ut tuis præceptis utar, tibi semper obtemperem, tibi
             <milestone unit="PLSection" n="B"/><lb/>
             paream, tibi jubenti obediam ?</p>
-          <p>102. Tu enim es dux vitae, tu magistra virtutis. <lb/>
+          <p n="102">102. Tu enim es dux vitae, tu magistra virtutis. <lb/>
             Tu me, tanquam regula, in directum ducis. Tu es <lb/>
             quæ a recto nunquam discedis. Tu es quæ a veri­ <lb/>
             tate nunquam averteris. Tu inventrix bonorum, tu <lb/>
@@ -2649,7 +2662,7 @@
             ini vita hominis esse potest. Per le cunctis vivendi <lb/>
             regula datur. Per te de vitæ pravitate ad meliorem <lb/>
             vitam homines adducuntur.</p>
-          <p>103. Praeceptis tuis formantur animi. Si quid dis­ <lb/>
+          <p n="103">103. Praeceptis tuis formantur animi. Si quid dis­ <lb/>
             tortum est, tu corrigis; si quid corrigendum est, tu <lb/>
             emendas. Nihil mihi te charius, nihil mihi te dul­ <lb/>
             cius. Nihil mihi te suavius, nihil mihi te jucun­ <lb/>
@@ -2667,4 +2680,5 @@
             prseiereuntur, quod facile luit in tanta sementiarum <lb/>
             verborumque similium copia. AREV. </note> </p>
         </div>
+  </div>
         </body></text></TEI>
