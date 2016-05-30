@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><TEI xmlns="http://www.tei-c.org/ns/1.0"><teiHeader>
-    
+<?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
     <fileDesc>
       <titleStmt>
         <title>Patrologiae Cursus Completus. Series Latina (PL)</title> 
@@ -113,9 +114,9 @@
       <p>The following text is encoded in accordance with EpiDoc standards and with the
         CTS/CITE Architecture.</p>
     <refsDecl>
-        <cRefPattern n="" matchPattern="(.+).(.+).(.+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@type='edition']/tei:div[@n='$1']/tei:div[@n='$2']/tei:div[@n='$3'])"/>
-        <cRefPattern n="" matchPattern="(.+).(.+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@type='edition']/tei:div[@n='$1']/tei:div[@n='$2'])"/>
-        <cRefPattern n="" matchPattern="(.+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@type='edition']/tei:div[@n='$1'])"/>
+        
+        <cRefPattern n="p" matchPattern="(.+).(.+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@type='edition']/tei:div[@n='$1']/tei:p[@n='$2'])"/>
+        <cRefPattern n="section" matchPattern="(.+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@type='edition']/tei:div[@n='$1'])"/>
       </refsDecl>
     </encodingDesc>
     
@@ -127,19 +128,23 @@
     
 </teiHeader>
 
-  <text><body><div type="edition" n="">
+  <text>
+    <body>
+      <div type="edition" n="">
           <head>
             <title type="main">SANCTI ISIDORI HISPALENSIS EPISCOPI DE ORDINE CREATURARUM LIBER.</title>
           </head>
           <p>
             <milestone unit="PLSection" n="D"/></p>
-          <ab>
+
+<div n="1" subtype="section" type="textpart">
+<ab>
             <title type="sub">582 CAPUT PRIMUM.</title>
           </ab>
           <ab>
             <title type="sub">De Fide Trinitatis.</title>
           </ab>
-          <p>i. Universitatis dispositio bifaria ratione debet <lb/>
+          <p n="1">1. Universitatis dispositio bifaria ratione debet <lb/>
             intelligi : in Deo, videlicet, et rebus, hoc est, in <lb/>
             Creatore et creaturis ; non quod Deum in parte
             <milestone unit="PLSection" n="D"/><lb/>
@@ -161,8 +166,8 @@
             librum. Ea praefatio in Editione ParJsiensi anni <lb/>
             1655 aliquanlulum discrepit, ut: Codicem non procul </note> <pb n="915"/>
             </p>
-          <p>
-            <milestone unit="PLSection" n="A"/>588 2 Sancti utique Trinitas Pater, et Filius <lb/>
+          <p n="2">
+<milestone unit="PLSection" n="A"/>588 2 Sancti utique Trinitas Pater, et Filius <lb/>
             et Spiritus sanctus , per omnia jura inseparabilis in <lb/>
             substantia , id est, una divinitas, et in personarum <lb/>
             subsistentiu inconjuncta Trinitas, in qua nihil inferius, <lb/>
@@ -185,7 +190,7 @@
             nibus creaturis infunditur, cum non sit illi locus; <lb/>
             quem nulla capit creatura, nulla comprehendit intel­ <lb/>
             ligentia.</p>
-          <p>5. Deus unus Omnipotens, sancta Trinitas Pater, <lb/>
+          <p n="3">3. Deus unus Omnipotens, sancta Trinitas Pater, <lb/>
             et Filius, et Spiritus sanctus. Pater ergo Deus Omni­ <lb/>
             potens es nullo originem dueit, et ipse origo divini­ <lb/>
             tatis est, a quo Filius Deus Omnipotens genitus sine <lb/>
@@ -195,7 +200,7 @@
             sapientia. Sic et Patri, præter quod Pater est, totum
             <milestone unit="PLSection" n="c"/><lb/>
             commune est Filii.</p>
-          <p>4. Spiritus sanctus eat Deus Omnipotens, nee ge­ <lb/>
+          <p n="4">4. Spiritus sanctus eat Deus Omnipotens, nee ge­ <lb/>
             nitus est, quia non est Filius; nec creans, quia non <lb/>
             est creatura sed ex Patre, et Filio procedens , cui, <lb/>
             præter quod Spiritus sanctus est, totum commune <lb/>
@@ -210,7 +215,7 @@
             est; sed non triplex in illa Trinitate deorum numerus <lb/>
             est; salva enim separatione personarum , totum <lb/>
             commune divinitatis est.</p>
-          <p>5. Filius ex tempore carnem suscepit humanam, <lb/>
+          <p n="5">5. Filius ex tempore carnem suscepit humanam, <lb/>
             quæ vitio caret; humanitatis naturam habuit, animam <lb/>
             prudentem, intellectualem, sapientem, excepta divina <lb/>
             natura, habens, ut humanitas integra Meret; quam ideo <lb/>
@@ -222,7 +227,7 @@
             <milestone unit="PLSection" n="II"/><lb/>
             esse credendus sit, sed quia ex virtute et opere <lb/>
             Spiritus santi conceptus, ex Virgine natus sit.</p>
-          <p>6. Passionem crucis carne, non divinitate sustulit; <lb/>
+          <p n="6">6. Passionem crucis carne, non divinitate sustulit; <lb/>
             mortem pro Bostra redemptione et salute sustinuit; <lb/>
             tridui tempore sepulcro conditus, divina virtute in <lb/>
             eadem carne resurrexit; et postquam Ecclesiam <lb/>
@@ -234,20 +239,22 @@
             cunctis hominibus ad judicium vivorum et mortuo­ <lb/>
             rum affuturus in gloria Patris, impiis æternas poenas, <lb/>
             justis aeterna præmia reddat.</p>
-          <p>7. Haec est catholica fides, banc credere et confi­
+          <p n="7">7. Haec est catholica fides, banc credere et confi­
             <milestone unit="PLSection" n="c"/><lb/>
             teri, quam discutere, plus proficit; quam non pru­ <lb/>
             dent'a saecularis, non mundana philosophia , rerum <lb/>
             potius imagines quam veritatis intelligentiam se­ <lb/>
             quens, agnoscere potuit, sed apostotica fides tradidit, <lb/>
             et ecclesiastica vigilantia custodit.</p>
-          <ab>
-            <title type="sub">CAPUT n.</title>
+          </div>
+<div n="2" subtype="section" type="textpart">
+<ab>
+            <title type="sub">CAPUT II.</title>
           </ab>
           <ab>
             <title type="sub">De creatura spirituali</title>
           </ab>
-          <p>1. De Creatoris vero immensitate tanlulo praemisso, <note type="footnote">ab auctori5 (rvo e.toratuna e no6fli nostro sancti Remigit <lb/>
+          <p n="1">1. De Creatoris vero immensitate tanlulo praemisso, <note type="footnote">ab auctori5 (rvo e.toratuna e no6fli nostro sancti Remigit <lb/>
             Rhemensis archisterio emer"'m. nunc primum publici <lb/>
             juris factum e'ulgamlta. In paefatione, qua... in IBi­ <lb/>
             dnrianis edidi, legitur : Monatierio depromptum, pro <lb/>
@@ -309,7 +316,7 @@
             divinas comprehenduntur, sera;him, scilicet, et <lb/>
             cherubim, throni, dominationes, principatus, potes­ <lb/>
             lates, virtutes, archangeli, angeli.</p>
-          <p>2. Seraphim etenim super solium Domini excelsum <lb/>
+          <p n="2">2. Seraphim etenim super solium Domini excelsum <lb/>
             stare Isaias vidit, et cantare nudivit, et uno ex his
             <milestone unit="PLSection" n="B"/><lb/>
             ad se niisso, purgari de sui oris pollutione prome­ <lb/>
@@ -329,7 +336,7 @@
             gelorum autem et angelorum ostentationibus et nomi­
             <milestone unit="PLSection" n="c"/><lb/>
             nationibus divinorum voluminum prata referta sunt.</p>
-          <p>5. Horum quoque novem ordinum supernorum ci­ <lb/>
+          <p n="3">3. Horum quoque novem ordinum supernorum ci­ <lb/>
             vium significationem novem pretiosi lapides Ezechiel <lb/>
             ostendunt. Ubi sub persona principis Tyri super <lb/>
             summum illum qui lapsus est angelum, sermones <lb/>
@@ -340,7 +347,7 @@
             bus novem opertus idcirco dicitur, quia novem spiri­ <lb/>
             tualium officiorum ordinibus , quibus præerat, orna­ <lb/>
             batur.</p>
-          <p>A. Sicut ergo de numero diximus, sic etiam de <lb/>
+          <p n="4">4. Sicut ergo de numero diximus, sic etiam de <lb/>
             disiinctis officiorum gradibus aliqua pandamus. Se­ <lb/>
             raphim igitur, id est, ardentes vel incendentes dicti
             <milestone unit="PLSection" n="D"/><lb/>
@@ -351,7 +358,7 @@
             <milestone unit="PLSection" n="A"/><lb/>
             et in tanto excelsitatis honore sublimati consistunt <lb/>
             ut inter se ac Dominum nulli alii spiritus sint.</p>
-          <p>5. Secundo quoque ordine cberubim inter super­ <lb/>
+          <p n="5">5. Secundo quoque ordine cberubim inter super­ <lb/>
             nos cives numerantur, cujus ordinis vocabulum <lb/>
             scientiæ multitudo interpretatur, quorum intellectus <lb/>
             dum Dei contemplatione prope hærendo reficitur, <lb/>
@@ -359,7 +366,7 @@
             scientiæ multitudine dilatatur. Qui enim divinæ da­ <lb/>
             ritatis speculum perspicacius intendunt, ab his abdita <lb/>
             creaturarum occulta fieri qualiter possunt?</p>
-          <p>6. Tertio quoque ordine intellectualium spirituum <lb/>
+          <p n="6">6. Tertio quoque ordine intellectualium spirituum <lb/>
             thronorum agmina constituta sunt, qui sedes inter­ <lb/>
             pretantur; in his etenim dum speciali munere Domi­ <lb/>
             nus sedet, per eoS justicia sua in creaturis omnibus <lb/>
@@ -368,37 +375,37 @@
             stam dicitur: Sedisti super thronum, qui judicas justi­ <lb/>
             tiam (Psal. ix, 5). Et in revelati ne Joannis angelus <lb/>
             loquitur : Et qui sedet in throno, defendet eos.</p>
-          <p>7. Quarto etiam gradu officiorum coelestium do­ <lb/>
+          <p n="7">7. Quarto etiam gradu officiorum coelestium do­ <lb/>
             minationes consistunt, quæ illorum qui infra scriben­ <lb/>
             tur quinque graduum ministeria alta præcellunt; <lb/>
             586 et quanto aliis potentiæ magnitudine praepo­ <lb/>
             nuntur, tanto his cæterorum subjectio per obedientiam <lb/>
             exhibetur.</p>
-          <p>8. Dehinc post illas quinto ordine supernorum ei- <lb/>
+          <p n="8">8. Dehinc post illas quinto ordine supernorum ei- <lb/>
             vium principatus vocantur, quibus dum his bonorum <lb/>
             spirituum jam principatus committitur, ad explenda <lb/>
             Dei ministeria quæ facere subjecti debeant princi­ <lb/>
             pantur.</p>
-          <p>9. Sexto quoque statu in bonis spiritibus potestates
+          <p n="9">9. Sexto quoque statu in bonis spiritibus potestates
             <milestone unit="PLSection" n="c"/><lb/>
             sunt ordinati, qui principari diversis potestatibus <lb/>
             Domini munere perceperunt; qui per potestatem ne­ <lb/>
             quitiam malignorum spirituum refrenant, ne, si plus­ <lb/>
             quam oportet permittuntur, sævitiam exercere vel <lb/>
             humanis sensibus inhaerere audeant.</p>
-          <p>10. Septimus gradus spiritualium ministrationum <lb/>
+          <p n="10">10. Septimus gradus spiritualium ministrationum <lb/>
             virtutes nominantur, per quos spiritus virtutes, et <lb/>
             signa, et mirabilia in hominibus sæpe factitantur.</p>
-          <p>ii. Octavus ordo est archangeli, id est, summi <lb/>
+          <p n="11">11. Octavus ordo est archangeli, id est, summi <lb/>
             nuntii vocantur, per quos majora quæque hominibus <lb/>
             nuntiantur ; et quanto angelis in ordinis summitate <lb/>
             excellunt, tanto hominum notitiae, Domini jussione. <lb/>
             excelsiora perferunt.</p>
-          <p>12. Nonus ministrorum coelestium ordo angeli sunt <lb/>
+          <p n="12">12. Nonus ministrorum coelestium ordo angeli sunt <lb/>
             nominatl, qui minora quæque et communi!! ex Dei
             <milestone unit="PLSection" n="D"/><lb/>
             voluntate hominibus nuntiant et suadent.</p>
-          <p>13. Porro in his sciendum est quod quandocunque <lb/>
+          <p n="13">13. Porro in his sciendum est quod quandocunque <lb/>
             nominantur, ex officiorum proprietate, quando ad <lb/>
             homines veniunt, sumpsere vocahula; quta illa su* <note type="footnote"> i. Ms. depicti erant. Apud Dacherinm, mendose, <lb/>
             depincti. Infra, Ms , quadrigam cherubim vidisse <lb/>
@@ -423,7 +430,7 @@
             fortitudo Dei. ad Zachariam et Mariam virginem <lb/>
             missus scribitur, ut qui quod natura negabat futurum <lb/>
             esse predixerat, fortitudo Dei diceretur.</p>
-          <p>14. Ad Tobiam quoque Raphael, id est, Medicina <lb/>
+          <p n="14">14. Ad Tobiam quoque Raphael, id est, Medicina <lb/>
             Dei, mittitur; nimirum enim qui divina virtute sa­ <lb/>
             lutem ferebat, non incongrue medicina Dei nuncupa­ <lb/>
             tur. Et quod in singulis, hoc et in gradibus potest <lb/>
@@ -436,8 +443,8 @@
             assumunt; sicut ex thronorum vicinitate etiam 587 <lb/>
             super cheruhim sedero Dominum Scripturæ dicunt; <lb/>
             sicut et in psalmo scriptum est: Qui aedes super <lb/>
-            cherubim, manifestare coram Ephraim (Psal. LXXIX, 2). <lb/>
-            i5. Sed in illa superna societate, quod in aliquo <lb/>
+            cherubim, manifestare coram Ephraim (Psal. LXXIX, 2). <lb/></p>
+            <p n="15">15. Sed in illa superna societate, quod in aliquo <lb/>
             specialiter habetur, ab omnibus in commune possi­ <lb/>
             detur, quia non minus unumquemque reficit quod <lb/>
             in alio videt quam quod in semelipso possidet; et <lb/>
@@ -449,7 +456,7 @@
             Unde scribitur : Millia millium ministrabant ei, et
             <milestone unit="PLSection" n="c"/><lb/>
             decies centena millia assistebant ei (Dan. VII, 10).</p>
-          <p>16. Utrumque enim supernae potestates pariter <lb/>
+          <p n="16">16. Utrumque enim supernae potestates pariter <lb/>
             faciunt, quia et ministrant, dum mittuntur, et assis­ <lb/>
             tunt, dum contemplantur. Aliquando autem qui <lb/>
             mittuntur angeli, illis, ad quos veniunt hominibus <lb/>
@@ -460,13 +467,15 @@
             riore, dictum minime dubitatur</p>
           <p>
             <milestone unit="PLSection" n="A"/></p>
-          <ab>
+          </div>
+<div n="3" subtype="section" type="textpart">
+<ab>
             <title type="sub">CAPUT III.</title>
           </ab>
           <ab>
             <title type="sub">De aquis quæ super firmamento sunt.</title>
           </ab>
-          <p>i. Verum quoniam de ordine creaturarum sermo­ <lb/>
+          <p n="1">1. Verum quoniam de ordine creaturarum sermo­ <lb/>
             nem sumpsimus, quod tuae propositionis continen­ <lb/>
             tia comprehenderat, post spiritualem creaturam, da <lb/>
             qua paulisper disseruimus, de aquis quae super fir­ <lb/>
@@ -480,7 +489,7 @@
             illas quae supra firmamentum sunt locali spatio esse
             <milestone unit="PLSection" n="B"/><lb/>
             omni corporali creatura superiores.</p>
-          <p>2. Quamvis enim in psalmo centesimo quadrage­ <lb/>
+          <p n="2">2. Quamvis enim in psalmo centesimo quadrage­ <lb/>
             simo octavo post firmamentum, et solem, et lunam, <lb/>
             et stellas, aquae illae quae supra coelos sunt positae <lb/>
             inveniantur, tamen ut illas omnibus esse corporali­ <lb/>
@@ -489,7 +498,7 @@
             mista his anteponit, dicens : Laudate eum, cœli cæ­ <lb/>
             lorum; et aquæ, quæ super cœlos sunt, laudent nomen <lb/>
             Domini (Psal. CXLVIII, 4).</p>
-          <p>3. Unde ostenditur post illa spiritualia spatia , <lb/>
+          <p n="3">3. Unde ostenditur post illa spiritualia spatia , <lb/>
             qualiacunque sunt, ubi spirituales, ut diximus, or­ <lb/>
             dines commorantur, quae coelorum coelos propheta <lb/>
             nominat, ante hoc visibile coelum aquas illas, velut <lb/>
@@ -499,7 +508,7 @@
             los coelorum, antequam de terra diceret, posuit, <lb/>
             paulo post subinferens : Laudate Dominum de terra, <lb/>
             dracones, et omnes abyasi (Ibid., 7).</p>
-          <p>4. Ecce has aquas Psalmista super coelos positas <lb/>
+          <p n="4">4. Ecce has aquas Psalmista super coelos positas <lb/>
             dicit, et tamen his cælos coelorum anteponit. Per <lb/>
             quod demonstratur inter utrosque cælos esse col­ <lb/>
             locatas, id est, coelis spiritualibus humiliores, et <lb/>
@@ -550,7 +559,7 @@
             <milestone unit="PLSection" n="A"/><lb/>
             cundi diei opere factae supra istud corporeum fir­ <lb/>
             mamentum consistunt.</p>
-          <p>5. Sed quid ibi utilitatis in rerum corporalium <lb/>
+          <p n="5">5. Sed quid ibi utilitatis in rerum corporalium <lb/>
             usibus agant, bina intentione magistrorum investi­ <lb/>
             gatur. Quidam enim illas ad terrarum orbis aboli­ <lb/>
             tionem in diluvio, quod sub Noe factum est (sicut <lb/>
@@ -578,7 +587,9 @@
             qui in luminaribus ardet, et sideribus, calorem tem­ <lb/>
             perarent, ne plusquam sufficit, inferiora spatia æstu <lb/>
             torrerent.</p>
-          <ab>
+          </div>
+<div n="4" subtype="section" type="textpart">
+<ab>
             <title type="sub">CAPUT IV.</title>
           </ab>
           <p>
@@ -586,14 +597,14 @@
           <ab>
             <title type="sub">De firmamento cœli.</title>
           </ab>
-          <p>1. Post illas aquas creaturarum corporalium or­ <lb/>
+          <p n="1">1. Post illas aquas creaturarum corporalium or­ <lb/>
             dine secundo loco videtur esse firmamentum, quod <lb/>
             in secunda die , ut supra diximus, factum, inter <lb/>
             utrasque dividit aquas; de cujus etiam statu, utrum <lb/>
             velut discus terram desuper operiat, an uti testa <lb/>
             ovi omnem introclusam creaturam undique cingat, <lb/>
             utriusque æstimationis nOli desunt putatores.</p>
-          <p>2. Nam et illud quod de hoc Psalmista comme­ <lb/>
+          <p n="2">2. Nam et illud quod de hoc Psalmista comme­ <lb/>
             morat, cum dicit: Extendes coelum sicut pellem (Paal. <lb/>
             CIII, 22), utriusque æstimationis assertionibus non <lb/>
             contra facit, quoniam cum animalis carnem cujus­ <lb/>
@@ -602,12 +613,12 @@
             æqualiter undique circumdat; cum vero excita de <lb/>
             carne seorsum extenditur, sive rectam, sive cur­ <lb/>
             vam cameram posse facere non dubitatur.</p>
-          <p>5. Utrum ergo terram desuper, velut extensa pel­ <lb/>
+          <p n="3">3. Utrum ergo terram desuper, velut extensa pel­ <lb/>
             lis tabernaculum, tegat, an sicut animalis membra <lb/>
             corio conteguntur, mundi molem undique firma­ <lb/>
             mentum cingat, utrique asserLioni non difficulter <lb/>
             suffragatur.</p>
-          <p>4. I)e hujus quoque firmamenti situ, utrum ina­ <lb/>
+          <p n="4">4. I)e hujus quoque firmamenti situ, utrum ina­ <lb/>
             ne, ac penetrale, an solidum, ac firmum sit, di­ <lb/>
             versi auctores suas æstimationes, velut quid se ad <lb/>
             has deducat, protulerunt. Quorum sententias utilius <lb/>
@@ -616,7 +627,7 @@
             ad confirmationem sententiæ suæ omnium elemento­
             <milestone unit="PLSection" n="a"/><lb/>
             rum naturas conferunt.</p>
-          <p>5. Terram etenim omnium creaturarum corpora­ <lb/>
+          <p n="5">5. Terram etenim omnium creaturarum corpora­ <lb/>
             lium gravissimam esse non minus ostendunt quam <lb/>
             dicunt; atque illam ideo humillimum in <unclear>creaturi</unclear> <lb/>
             locum tenere aiunt, quia natura aliqua nisi seipsam <lb/>
@@ -625,7 +636,7 @@
             hendimus. Aer namque sub aqua per se subsistere <lb/>
             non valet, sed ad sua spatia, etsi aliqua necessi­ <lb/>
             tatis vi alicubi subductus fuerit, statim evadil.</p>
-          <p>6. Ignis quoque natura supra aerem esse depre­ <lb/>
+          <p n="6">6. Ignis quoque natura supra aerem esse depre­ <lb/>
             henditur ; quod etiam in illo igne, qui in materia <lb/>
             terrena ardet, facile comprobamur, quoniam statim <lb/>
             ut accensus fuerit, flammam ad superna quæ super <lb/>
@@ -637,7 +648,7 @@
             naturam ignis, qui ascendit, aere esse leviorem ; <lb/>
             sicut aquae natura, quae descendit, monstratur esse <lb/>
             gravior.</p>
-          <p>7. Hac ergo talione etiam firmamenti spatium <lb/>
+          <p n="7">7. Hac ergo talione etiam firmamenti spatium <lb/>
             quod supra ignem est levius ac tenuius putant, quia <lb/>
             excelsius his omnibus quas praediximus naturis con­ <lb/>
             stat. In quo spatio etiam stellarum fulgurantium lu­ <lb/>
@@ -682,7 +693,7 @@
             dicunt; Dist forte, ut illi. quos prædiximus aiunt, <lb/>
             omni corporalitate tenuiores et subtiliores ibi con­ <lb/>
             sistunt.</p>
-          <p>8. Quibus etiam ab aliis contra respondetur : Quæ <lb/>
+          <p n="8">8. Quibus etiam ab aliis contra respondetur : Quæ <lb/>
             unquam, quamvis tenuissima, aquarum vaporalitas <lb/>
             quæ firmamento levior esset? Propterea ergo illi alii <lb/>
             firmamentum velut aere solidissimo fusum constare <lb/>
@@ -696,13 +707,15 @@
             est, nullius æstimationem alii præponendam cense­ <lb/>
             mus, sed ad hos lectorem utrarumque partium arbi­ <lb/>
             tros mittimus.</p>
-          <ab>
+          </div>
+<div n="5" subtype="section" type="textpart">
+<ab>
             <title type="sub">CAPUT V.</title>
           </ab>
           <ab>
             <title type="sub">De sole et luna.</title>
           </ab>
-          <p>i. Quia vero in firmamento coeli licet post spe­ <lb/>
+          <p n="1">1. Quia vero in firmamento coeli licet post spe­ <lb/>
             ciem maris et terræ formata duo luminaria magna, <lb/>
             in principio Geneseos , Mosaica lex, imo 591 di-. <lb/>
             vina Scriptura pronuntiat, non est indecens, si, de­ <lb/>
@@ -714,14 +727,14 @@
             elementa sine tempore facta lideli ratione fides ca­
             <milestone unit="PLSection" n="c"/><lb/>
             tholica credat.</p>
-          <p>2. Sol ergo et luna duo luminaria in firmamento <lb/>
+          <p n="2">2. Sol ergo et luna duo luminaria in firmamento <lb/>
             cæli instituta sunt. Unum, quod est majus, ut praees­ <lb/>
             set diei ; secundum, quod est minus, constitutum est <lb/>
             ut praeesset nocti. Sed non eamdem sui spleudoris <lb/>
             lucem quam cum in principio creata sunt habuerunt <lb/>
             nunc per omne sui ministerii tempus dierum ac no­ <lb/>
             ctium decursionibus conservant.</p>
-          <p>3. Hæc enim dum humanis usibus ministrare a Deo <lb/>
+          <p n="3">3. Hæc enim dum humanis usibus ministrare a Deo <lb/>
             creatore destinata sunt, cum homines inculpabiliter <lb/>
             vixissent, et sub Creatoris, quo conditi fuerant, lege <lb/>
             perseverarent, etiam sui luminis plenitudine decora­ <lb/>
@@ -734,7 +747,7 @@
             sicut Paulus apostolus contestatur, dicens : Quoniam <lb/>
             omnis creatura congemiscit, et dole' usque adhuc <lb/>
             (Rom. VIII, 22).</p>
-          <p>4. Sed quia per Redemptoris adventum hUmano <lb/>
+          <p n="4">4. Sed quia per Redemptoris adventum hUmano <lb/>
             generi pristinæ beatitudinis in melius restauratio <lb/>
             promittitur, etiam creatura suum antiquum decorem <lb/>
             acceptura non dubitatur. Unde propheta Isaias de <lb/>
@@ -745,7 +758,7 @@
             vulnus populi sui, et percussuram plagæ ejus sanave-
             <milestone unit="PLSection" n="B"/><lb/>
             rit (Isai. xxx, 25 seq.).</p>
-          <p>5. Cum factum fuerit cœlum novum , et terra no­ <lb/>
+          <p n="5">5. Cum factum fuerit cœlum novum , et terra no­ <lb/>
             va (Apoc. xxi, i ) , et non fuerint in memoria priora <lb/>
             quae corruptioni serviunt ( Isai. LXV, 17), et peccati <lb/>
             vulnus et percussuram plagae mortis in corporibus <lb/>
@@ -757,7 +770,7 @@
             men restaurabitur. Nihil enim restauratur, nisi quod <lb/>
             amissum est, aut corruptum; quod igitur sol amisit, <lb/>
             et luna, hoc rursum accipient.</p>
-          <p>6. Ex quo apparet septimam nunc sui luminis par­ <lb/>
+          <p n="6">6. Ex quo apparet septimam nunc sui luminis par­ <lb/>
             tem luminaria retinere , 592 quam septempliciter
             <milestone unit="PLSection" n="c "/>resument, quando per Habacuc Spiritus sanctus pro <lb/>
             futuris præterita ponens, inquit: Elevabitur sol in ortu <lb/>
@@ -768,7 +781,7 @@
             suo ; et in eo quod dicitur : Luna stabit in ordine suo, <lb/>
             hoc insinuat quod mutationes incrementi et decrc­ <lb/>
             menti sui non patietur, sed in suo ordine semper stabit.</p>
-          <p>7. Hoc autem erit, quando, ut Apostolus loquitur, <lb/>
+          <p n="7">7. Hoc autem erit, quando, ut Apostolus loquitur, <lb/>
             ipsa creatura liberabitur a serviine corruptionis in li­ <lb/>
             bertatem gloria filiorum Dei (Rom. VIII, 21). Cum <lb/>
             enim sancti pro mercede sui laboris, quo Deo ser­ <lb/>
@@ -809,7 +822,7 @@
             huic soli pro mercede sui ministerii, quo servituti <lb/>
             corruptionis subjecta est, in septuplum fulgoris ruti­ <lb/>
             latio restituetur.</p>
-          <p>8. Interim vero quotidianis sui ministerii motibus <lb/>
+          <p n="8">8. Interim vero quotidianis sui ministerii motibus <lb/>
             quoties solem sequitur luna, sui incrementa luminis <lb/>
             auget; qnolies autem solem antecedit, detrimenta sui <lb/>
             splendoris agit. De statu vero lunæ varie putatum <lb/>
@@ -819,7 +832,7 @@
             paulatim pars illius lucida ostenditur, eodem modo <lb/>
             tunc tenebrosa occultatur, similiter quoque dum lu­ <lb/>
             cida vertitur, iterum tenebrosa manifestatur.</p>
-          <p>9. An sit etiam rotunda radiis solis illuminata, quæ
+          <p n="9">9. An sit etiam rotunda radiis solis illuminata, quæ
             <milestone unit="PLSection" n="B"/><lb/>
             quandocunque soli sive ante , sive post appropial, <lb/>
             velut in ora radio luminis illucescat; cum autem <lb/>
@@ -828,13 +841,13 @@
             cnm ad integrum aequiparato orbe facie ad faciem <lb/>
             soli opposita constiterit, tunc plene in se imaginem <lb/>
             solis habere possit.</p>
-          <p>10. De cursibus autem solis ac lunae, nec temporis, <lb/>
+          <p n="10">10. De cursibus autem solis ac lunae, nec temporis, <lb/>
             nec istius quidem loci est disserere , quod idcirco in <lb/>
             hoc opusculo negligenlius assequor, quoniam et ip­ <lb/>
             sius brevitas compendiosa non patitur , et in usum <lb/>
             pene omnibus lectoribus dierum festorum compu­ <lb/>
             taodorum gratia couversi sunt.</p>
-          <p>11. Haec vero lucis organa nonnulli sensibiles crea­
+          <p n="11">11. Haec vero lucis organa nonnulli sensibiles crea­
             <milestone unit="PLSection" n="c"/><lb/>
             turas opinantur, 593 sed quæ dicimus usitatius a ca­ <lb/>
             tholicis auctoribus frequentantur in his ambiguis sen­ <lb/>
@@ -848,20 +861,22 @@
             bus in ambiguo relinquendæ sunt.</p>
           <p>
             <milestone unit="PLSection" n="A"/></p>
-          <ab>
+          </div>
+<div n="6" subtype="section" type="textpart">
+<ab>
             <title type="sub">CAPUT VI</title>
           </ab>
           <ab>
             <title type="sub">De spatio superiore, et paradiso cœli.</title>
           </ab>
-          <p>1. Sermone de firmamento et luminaribus dicto, <lb/>
+          <p n="1">1. Sermone de firmamento et luminaribus dicto, <lb/>
             sequitur inane spatium longum, quod a cœli firma­ <lb/>
             mento usque ad terram deducitur, et in duo spatia <lb/>
             esse divisum, a nonnullis scriptoribus explanatur, <lb/>
             sed superius spatium ad cœlum pertinere dicitur, <lb/>
             inferius amem terras fieri coniunctum non du­ <lb/>
             bitatur.</p>
-          <p>i. Etenim excelsum spatium quod cælo pertinere <lb/>
+          <p n="2">2. Etenim excelsum spatium quod cælo pertinere <lb/>
             diximus, purissimum, ac subtilissimum, nec nubium <lb/>
             tumores, nec ventorum inflationes, nec pluviarum <lb/>
             aut imbrium humidas conspirationes, nec nivium <lb/>
@@ -874,7 +889,7 @@
             acrii spiritus reciproca inflatione reficeret, atque <lb/>
             halitu animaret, nec ullas omnino diversorum be. <lb/>
             misphæriorum perturbationes omnimodis babel.</p>
-          <p>3. Sicut Olympi montis altissima terrarum , et ob <lb/>
+          <p n="3">3. Sicut Olympi montis altissima terrarum , et ob <lb/>
             id caeteris incognita hominibus juga conscendenti­ <lb/>
             bus, comprobatur, et eorum relatione refertur, qui <lb/>
             aceto humectas spongias ad conservandam aerii spi. <lb/>
@@ -889,7 +904,7 @@
             quædam signa ac notas arenis imprimentes redeunt, <lb/>
             quas etiam illic post annum iterum ascendentes il- <lb/>
             laesas atque intemeratas inveniunt.</p>
-          <p>4. Ex quo perspicue demonstratur nibil ibi per­ <lb/>
+          <p n="4">4. Ex quo perspicue demonstratur nibil ibi per­ <lb/>
             turbati aeris consistere, præsertim cum in eodem <lb/>
             loco nihil quod perlineat ad virurem herbarum , <lb/>
             aut arbustorum, reperiri aut videri queal. Sed ta­ <lb/>
@@ -941,7 +956,7 @@
             hujus spatii inferioris et vicina illius superioris con. <lb/>
             finia pertinet. In quo tamen loco eorum qui carne <lb/>
             vestiuntur vita nequaquam potest commorari.</p>
-          <p>5. Undeperspicuum est illud superius purissimum, <lb/>
+          <p n="5">5. Undeperspicuum est illud superius purissimum, <lb/>
             tranquillissimumque spatium , de quo paulo ante <lb/>
             disseruimus, non carnalium habitationi, neque mor­ <lb/>
             talium rerum usibus esse præparatum. Quapropter <lb/>
@@ -951,7 +966,7 @@
             cœlestium angelorum neminem cecidisse arbitrantur, <lb/>
             sed cœlestes, quandiu in angelica beatitudine fue­ <lb/>
             rant, in quo tamen per tempus non steterant.</p>
-          <p>6. Quoniam, ut Scriptura inquit, ipse diebolus ab
+          <p n="6">6. Quoniam, ut Scriptura inquit, ipse diebolus ab
             <milestone unit="PLSection" n="B"/><lb/>
             initio mendax est (Joan. VIII, 44), et in veritate non <lb/>
             stetit ( I Joan. III, 8), hunc locum habitationis sorte <lb/>
@@ -960,7 +975,7 @@
             summum illum angelum apostatam ita loquitur : <lb/>
             Perfectus decore in deliciis paradisi Dei fuisti (Ezech. <lb/>
             XXVIII, 13).</p>
-          <p>7. Quemadmodum enim homines, post peccatum <lb/>
+          <p n="7">7. Quemadmodum enim homines, post peccatum <lb/>
             8uum, de terreni paradisi felicitate dejecti, in hujus <lb/>
             terræ maledictioni obnoxia plagali modo habilatio­ <lb/>
             nem trusi sunt, ut dnm in terra peccaverunt, in de­ <lb/>
@@ -977,7 +992,7 @@
             inconvenienter æstimentur etiam priorem suas beati­ <lb/>
             tudinis sedem in aere, sed puriore et subtiliore, pri­ <lb/>
             dem habuisse.</p>
-          <p>8. Qui tamen locus, dum coelo firmamenti, ut præ­ <lb/>
+          <p n="8">8. Qui tamen locus, dum coelo firmamenti, ut præ­ <lb/>
             dixi, pertinet, coeli nomine censetur, sicut Dominus <lb/>
             ipse perhibet, dicens : Vidi Satanam sicut fulgur dt <lb/>
             cœlo cadentem (Luc. x, 18). Ex ipsius enim loci per­ <lb/>
@@ -991,7 +1006,7 @@
             adversus mundi rectores tenebrarum harum (Eph. vi, <lb/>
             12). Quæ etiam spiritualia nequitiæ in cœlestibus idem <lb/>
             Paulus Christum in semetipso denuntiat triumphasse.</p>
-          <p>9. Dejectis ergo malignis spiritibus cum suo prin­ <lb/>
+          <p n="9">9. Dejectis ergo malignis spiritibus cum suo prin­ <lb/>
             cipe diabolo ex illo quem praediximus limpidissimo <lb/>
             suhcoelestium spatiorum habitaculo, et postmodum <lb/>
             redempto ex Adæ et proprio uniuscujusque delicto <lb/>
@@ -1003,14 +1018,14 @@
             esse nominatum, de quo Dominus latroni in cruce <lb/>
             confitenti responderat : Amen dico tibi, hodie mecum <lb/>
             eris in paradiso (Luc. XXIII. 43).</p>
-          <p>10. Quin imo illo paradiso arboribus consito, et <lb/>
+          <p n="10">10. Quin imo illo paradiso arboribus consito, et <lb/>
             lucido fonte præpollente, animæ exutae corporibus <lb/>
             non indigent; quin imo spiritualis homo carnalem <lb/>
             usum corpore mortis liberatus non possidet , nec <lb/>
             refici terreni paradisi frugiseris arboribus necesse <lb/>
             habet, aeternus enim temporalibus non utilur , sed <lb/>
             æterna et spiritualia contemplatur.</p>
-          <p>ii. Hæc non confirmantium, sed aestimantium <lb/>
+          <p n="11">11. Hæc non confirmantium, sed aestimantium <lb/>
             sensibus perstrinximus, præsertim cum et ipsam <lb/>
             æstimandi de talibus perspicaciam nobis ipsis non <lb/>
             attribuimus. Cum enim necessitas cxegerit. harum
@@ -1024,13 +1039,15 @@
             (æstimmiones) suffragaverint, concordiam subire <lb/>
             parati sumus. Sed de superiore spatio his utcunque <lb/>
             explanatis, ad subsequentia festinemus.</p>
-          <ab>
+          </div>
+<div n="7" subtype="section" type="textpart">
+<ab>
             <title type="sub">CAPUT VII.</title>
           </ab>
           <ab>
             <title type="sub">De spatio inferiori, et hemisphæriis diversis.</title>
           </ab>
-          <p>i. Dehinc inferius spatium aer vocatur, quem ter­ <lb/>
+          <p n="1">1. Dehinc inferius spatium aer vocatur, quem ter­ <lb/>
             rae sociari diximus, et a quo universæ carnis, quae
             <milestone unit="PLSection" n="D"/><note type="footnote"> 5. Cod. Ms., mortalium, corporaliumque '.erum... <lb/>
             eo quod de super cœlestibus angelis neminem cecidisse <lb/>
@@ -1078,7 +1095,7 @@
             cones, et omnes abyssi; ignis, grando, nix, glacies, <lb/>
             spiritus procellarum, qui faciunt verbum ejus (Psal. <lb/>
             CXLVIII, 7).</p>
-          <p>i. Hucusque enim in aere sermo est qui terrae no­ <lb/>
+          <p n="2">2. Hucusque enim in aere sermo est qui terrae no­ <lb/>
             mine voeitatur; postmodum namque de humo et in­ <lb/>
             ferioris terrae naturis Scripturæ vocibus imperatur : <lb/>
             Montes, et omnes colles; ligna fructirera, et omnes ce-
@@ -1090,13 +1107,13 @@
             pene aquatilia marinorum fluctuum recondita natando <lb/>
             penetrant, sic volucres aeria spatia volando pertrans­ <lb/>
             eunt.</p>
-          <p>3. Cuncta etenim quæ aqua præstat ad conservau­ <lb/>
+          <p n="3">3. Cuncta etenim quæ aqua præstat ad conservau­ <lb/>
             dum vitan aquatilibus, hæc aer facit volatilibus, <lb/>
             quoniam sicut reciproco halitu avium , et omnium <lb/>
             quæ in aere et terra vivunt, vita alitur et conserva­ <lb/>
             tur, ita eorum quæ in aquis degunt inspirandi exspi­ <lb/>
             randique traciu per aquam vitalis motus reficitur.</p>
-          <p>4. Unde cum in aerem trahuntur, quia lynaphati­
+          <p n="4">4. Unde cum in aerem trahuntur, quia lynaphati­
             <milestone unit="PLSection" n="c"/><lb/>
             cum spiranientum non habent, cito deficiunt; sicut <lb/>
             Et ea quæ in aere vivunt, cum ab eis aer excluditur, <lb/>
@@ -1108,7 +1125,7 @@
             soliditatem aeris crassitudo, uives, et grandiues, et <lb/>
             staciem, adnitente vi frigoris parit, quando ita effi­ <lb/>
             citur.</p>
-          <p>5. Nam hoc aeris spatium suæ naturae insitum ha­ <lb/>
+          <p n="5">5. Nam hoc aeris spatium suæ naturae insitum ha­ <lb/>
             bel, ut fumali levitate vapores aquarum de terra et <lb/>
             maris specie contrahat et colligat, quos in sublime- <lb/>
             elevans, quand.u minutissimis guttis consistunt, <lb/>
@@ -1117,8 +1134,8 @@
             suspendit. Sed cum, vexante vento, illae guttulæ in <lb/>
             majores stillas coeunt, aeris amplius natura non fe­ <lb/>
             rente, pluvialiter imbres ad terram delapsi cadunt.</p>
-          <p>
-            <milestone unit="PLSection" n="A"/>6. Si vero ipsas, quas prædiximus, stillas vento <lb/>
+          <p n="6">
+<milestone unit="PLSection" n="A"/>6. Si vero ipsas, quas prædiximus, stillas vento <lb/>
             in majusculas moles coagitaute collatas, antequam <lb/>
             deorsum pluant, gelu in nubibus arripuerit, lapillos <lb/>
             coagulatos frigoris violentia constringit. Si autem <lb/>
@@ -1127,7 +1144,7 @@
             vis frigoris eosdem transmittit, et quod in se suspensa <lb/>
             altius nebula taliter nutrit, non sufferente aere, ac <lb/>
             vento dispergente, ad terram dimittit.</p>
-          <p>7. Sicut de hoc codem Psalmista commemorans, de <lb/>
+          <p n="7">7. Sicut de hoc codem Psalmista commemorans, de <lb/>
             Domino dicit : Qui dat nivem velut lanam, nebulam sicut <lb/>
             cinerem spargit. Mittit crystallum sicut buccella ; ante <lb/>
             faciem frigoris ejus quis sustinebit (Psal. CILVII, 5)? <lb/>
@@ -1136,7 +1153,7 @@
             <milestone unit="PLSection" n="B"/><lb/>
             subjungit, dicens : Emittet verbum suum, et liquefa­ <lb/>
             ciet ea; flabit spiritus ejus, et fluent aquæ (Ibid., 7).</p>
-          <p>8. Ut autem perspicuum sit ipsas aquas hoc modo <lb/>
+          <p n="8">8. Ut autem perspicuum sit ipsas aquas hoc modo <lb/>
             in nubibus suspendi, in libro sancti Job scriptum vi­ <lb/>
             detur : Qui suspendit aquas in nubibus suis, ut non <lb/>
             erumpant pariter deorsum (Job xx VI, 8). Attamen illas <lb/>
@@ -1152,14 +1169,14 @@
             <milestone unit="PLSection" n="c"/><lb/>
             per angelos, quibus visibilis regitur mundus, sicut et <lb/>
             caetera, conditor facit.</p>
-          <p>9. Nonnulli vero de effectu tonitru illud intendunt, <lb/>
+          <p n="9">9. Nonnulli vero de effectu tonitru illud intendunt, <lb/>
             quod cum circa aerem duorum elementorum, hoc <lb/>
             est, ignis et aquæ, sunt spatia, unum 598 superius, <lb/>
             sicut diximus, et unum inferius, et tamen aeris na­ <lb/>
             tura utraque in se trahit, id est, aquam vaporaliler de <lb/>
             imis, et ignem caumaliter de supernis, ipsa duo con­ <lb/>
             traria sibi elementa confligunt.</p>
-          <p>10. Impossibile namque est absque humidis nubi­ <lb/>
+          <p n="10">10. Impossibile namque est absque humidis nubi­ <lb/>
             bus et fulgoribus tonitrua moveri, sicut intuentium <lb/>
             oculis perspicue patet ; in quo conflictu ignis et aquæ <lb/>
             confusi sonitus horribilesque fragores suscitantur; et <lb/>
@@ -1168,7 +1185,7 @@
             <milestone unit="PLSection" n="D"/><lb/>
             ram vim, tam in arboribus quam in his quae olerum <lb/>
             diversis speciebus nascuntur, non perdit.</p>
-          <p>ii. Illo enim praecipue tempore tonitrua sonant, <note type="footnote">2. Ms., hic aer terrce... qurnve velut pisces, et <lb/>
+          <p n="11">11. Illo enim praecipue tempore tonitrua sonant, <note type="footnote">2. Ms., hic aer terrce... qurnve velut pisces, et <lb/>
             omnia pene aqualilia. In Excuso deest aeria ante <lb/>
             .patia. quod ex Ms. restitui. </note><note type="footnote"> 2. Dtgunl, etc. A!., degunt in spirandi resp randi­ <lb/>
             que tractu. Et mox volanlia, ut dixi... eadem lerrena <lb/>
@@ -1194,13 +1211,15 @@
             sunt, priasqnam maturescere incipiant. Per creaturas <lb/>
             enim aliarum creaturarum incrementa aut decre. <lb/>
             tenta Domini conditoris imperio gubernantur.</p>
-          <ab>
+          </div>
+<div n="8" subtype="section" type="textpart">
+<ab>
             <title type="sub">CAPUT VIII.</title>
           </ab>
           <ab>
             <title type="sub">De diabolo et natura dæmoniorum.</title>
           </ab>
-          <p>1. In nac autem turbulenta ac nebulosa aeris hujns <lb/>
+          <p n="1">1. In nac autem turbulenta ac nebulosa aeris hujns <lb/>
             mansione de sublimi felicitate, ut diximus, angeli re­ <lb/>
             pulsi cum suo principe commorantur. Sed ille prin­ <lb/>
             eeps Satanas el diabulus nominatur, reliqui vero spi­ <lb/>
@@ -1211,7 +1230,7 @@
             isti nequitiæ sunt nuntii, sicut boni spiritus sunt nun-
             <milestone unit="PLSection" n="B"/><lb/>
             Iii justitiæ, sæpe angeli vocantur.</p>
-          <p>2. Sicut in Evangelio scriptum legitur: Quem præ- <lb/>
+          <p n="2">2. Sicut in Evangelio scriptum legitur: Quem præ- <lb/>
             pravit Pater meus diabolo et angelis ejus (Matth. <lb/>
             XXV, 4I). Et Apostolus ait : Datus est mihi stimulus <lb/>
             carnis meæ angelus Satanæ, qui me colaphixet (IICor. <lb/>
@@ -1227,7 +1246,7 @@
             Quid nobis, et tibi, Jesu fili Dei? tenisti huc perdere
             <milestone unit="PLSection" n="c"/><lb/>
             noi ante tempus (Lac. iv, 34)?</p>
-          <p>3. In adventu namque aeterni judicis (quando com­ <lb/>
+          <p n="3">3. In adventu namque aeterni judicis (quando com­ <lb/>
             munis sanctorum omnium oratio eomplenda est, di­ <lb/>
             centium : Fiat voluntas tua et in terra, 599 sicut i. <lb/>
             cæto [Matth. VI, 10]) ad tenebras exteriores servi in­ <lb/>
@@ -1235,7 +1254,7 @@
             pulit hamo, sio expellet cœlo, quibus æterni ignis <lb/>
             (sicut Dominus ipse testatur) a Petre irremediabili­ <lb/>
             ter præparata est poena (Matth. xxv, 44).</p>
-          <p>4. Qui ideo nec remissionem, nec redemptionem <lb/>
+          <p n="4">4. Qui ideo nec remissionem, nec redemptionem <lb/>
             recipere merentur, quia de sublimissimo ordinis statu <lb/>
             ceciderunt, ac propterea nibit aliud in quod iterum, <lb/>
             dimisso peccato, vocarentur habuerunt, dum omnem <lb/>
@@ -1245,7 +1264,7 @@
             in qua conditi sunt, polluerunt; propter quod nec <lb/>
             pænitere desiderant, nee etiam, si pœnituissent, ve­ <lb/>
             niam recipere omnino possent.</p>
-          <p>5. Quoniam humanum genus a suo cenditore re­ <lb/>
+          <p n="5">5. Quoniam humanum genus a suo cenditore re­ <lb/>
             demptionem idcirco promersit accipere, quia de <lb/>
             inferiore sui ordiais gradu corruit; eam enim esset <lb/>
             adhuc in paradiso terreno positus, generandi efficio <lb/>
@@ -1254,7 +1273,7 @@
             sine morte reciperet, si quandiu in hac conversa­ <lb/>
             tione positus esset, in mandati custodia homo per­ <lb/>
             maneret</p>
-          <p>6. Clementia ergo Conditoris ad illum alatum ad <lb/>
+          <p n="6">6. Clementia ergo Conditoris ad illum alatum ad <lb/>
             quem peccans adhuc non perveuerat per passionem
             <milestone unit="PLSection" n="B"/><lb/>
             Domini revocatur, quem, si inde cecidisset, sicut <lb/>
@@ -1270,7 +1289,7 @@
             spiritualibus corporibus non crescendo, non sene­ <lb/>
             scendo, non moriendo, angelicæ felicitatis consortes <lb/>
             erunt.</p>
-          <p>i. Tempus vero diabolicæ transgressionis si requi­ <lb/>
+          <p n="7">7. Tempus vero diabolicæ transgressionis si requi­ <lb/>
             ritur, ante tempus visibilium rerum diaboli peccatum
             <milestone unit="PLSection" n="c"/><lb/>
             fuisse originaliter deprehenditur; omnia enim quae <lb/>
@@ -1283,7 +1302,7 @@
             factus fuisse minime dubitatur. In eo enim quod dicit, <lb/>
             creavit omnia simul, nihil non factum in omnibus <lb/>
             creaturis reliquit.</p>
-          <p>I. Cai ergo carcer in illa ereaturarum conditione <lb/>
+          <p n="8">8. Cai ergo carcer in illa ereaturarum conditione <lb/>
             praeparatus est, illius peccatum originaliter ipsas <lb/>
             creaturas præcessit ; nequaquam enim adhuc inno­ <lb/>
             cenii pœnam Dominus praeparasset, si non illius
@@ -1320,7 +1339,7 @@
             delictun præparatam pœnam præcessisset. Sed et <lb/>
             hoc enaim sine tempore fecit, qui damnationis ejus <lb/>
             poenam, qua servus fugitivus cruciaretur, effecit.</p>
-          <p>9. Iste autem angelus cum a Conditoris beatitudine <lb/>
+          <p n="9">9. Iste autem angelus cum a Conditoris beatitudine <lb/>
             recessit, omne suæ naturæ bonum, quod in condi­ <lb/>
             tione sua habuit, totum amisit; sed sibimetipsi ma­ <lb/>
             lus, Deo semper bonus perseverat, dum obedienter <lb/>
@@ -1328,7 +1347,7 @@
             tentiam Dei tamen obtemperat. Ex omni enim na­ <lb/>
             turae bono quod habuit hoc nunc tantummodo habet, <lb/>
             quod Dco creatori ad cuncta obedit imperata.</p>
-          <p>10. Sed hoc bonum non in diabolo et ministris <lb/>
+          <p n="10">10. Sed hoc bonum non in diabolo et ministris <lb/>
             ejus bonum est, qui idcirco obediunt, quia non obe­ <lb/>
             dire non possunt; sed hæc eorum obedientia in Deo <lb/>
             bona est, cujus bonae quidem voluntati invita diaboli
@@ -1345,7 +1364,7 @@
             cavit, ac respondit : Vadam, et ero spiritus mendar <lb/>
             in ore omnium prophetarum ejus. Et Dominus dicit : <lb/>
             Vade, et fac ita, et decipies Achab (II Par. XVIII, 21).</p>
-          <p>ii. Valde enim convenerat ut qui veros Domini <lb/>
+          <p n="11">11. Valde enim convenerat ut qui veros Domini <lb/>
             prophetas neci dedisset, pscudoprophetarum falsilo­ <lb/>
             quia seductus et deceptus periret. Ecce promptis­
             <milestone unit="PLSection" n="c"/><lb/>
@@ -1356,7 +1375,7 @@
             justam vindictam exercuit, sed malus minister in <lb/>
             interitu impii et peccatoris malam suam voluntatem <lb/>
             cibavit.</p>
-          <p>12. Sed nec in hominibus, nec in rebus quae ho­ <lb/>
+          <p n="12">12. Sed nec in hominibus, nec in rebus quae ho­ <lb/>
             minibus subditiæ sunt, aliquid absque Dei permis­ <lb/>
             sione facere valet, sicut evangelica veritas perhibet, <lb/>
             qua refertur : Si nos ejicis, mitte nos in gregem porco­ <lb/>
@@ -1364,8 +1383,8 @@
             quibus expellebatur contra Domini praeceptum 601 <lb/>
             ultra permanere non potuit, sic et in porcos absque <lb/>
             ejus introire permissione non potuisse se ostendit.</p>
-          <p>
-            <milestone unit="PLSection" n="D"/>13. Quod in beato Job et in rebus quas possidebat
+          <p n="13">
+<milestone unit="PLSection" n="D"/>13. Quod in beato Job et in rebus quas possidebat
             <milestone unit="PLSection" n="A"/><lb/>
             et amiserat similiter manifestatur. In quibus inimici <lb/>
             nequitia absque Conditoris permissione nihil egisse <lb/>
@@ -1379,7 +1398,7 @@
             ita respondit: Dominus dedit, Dominus abstulit. Quo­ <lb/>
             modo voluit, Dominus fecit : sit nomen Domini benedi­ <lb/>
             ctum (Job i, 21.)</p>
-          <p>14. Non dixit : Dominus dedit, diabolus abstulit; <lb/>
+          <p n="14">14. Non dixit : Dominus dedit, diabolus abstulit; <lb/>
             certissime enim absque Dei permissione in rebus aut <lb/>
             hominibus nihil omnino facere posse adversarium
             <milestone unit="PLSection" n="D"/><lb/>
@@ -1389,13 +1408,13 @@
             bationis dispensatione ministratur ; sub qua bifaria <lb/>
             bonæ et malæ voluntatis distributione et malos per <lb/>
             vindicta. trucidant, et bonos per tentamenta probant.</p>
-          <p>15. Ad hoc namque ipsorum , qwandiu in hoc aere <lb/>
+          <p n="15">15. Ad hoc namque ipsorum , qwandiu in hoc aere <lb/>
             adhne libere volitant, usque ad tempus extremi judi­ <lb/>
             cii pœna a Domino differtur, ut pravi ex hominibus <lb/>
             eorum consortes et sceleris et punitionis appareant, <lb/>
             et boni per tribulationes eorwn ab his irrogatas pro­ <lb/>
             batimanifesti fiant.</p>
-          <p>16. At vero improbi et impuri spiritus, vagi et sub­ <lb/>
+          <p n="16">16. At vero improbi et impuri spiritus, vagi et sub­ <lb/>
             tiles, animo passibiles sunt, et aereis corporibus in­
             <milestone unit="PLSection" n="c"/><lb/>
             duti, nunquam senescunt. et cum hominibus inimiei­ <lb/>
@@ -1408,7 +1427,7 @@
             manis cordibus infundunt; et verisimilia mentientes, <lb/>
             in bonorum etiam angelorum habilum et lucem se <lb/>
             transformant.</p>
-          <p>602 17. Et quomadmodum nequitia, ita et pote­ <lb/>
+          <p n="17">602 17. Et quomadmodum nequitia, ita et pote­ <lb/>
             statum gradibus distant. Et sicut nunc boni spiritus, <lb/>
             hoc est, perfecti angeli, impassibiliter aera penetrant, <lb/>
             ita et hi, si non peccassent, ea quæ .unc passibiliter <lb/>
@@ -1440,8 +1459,8 @@
             bus, et qiiidem solis, reguntur; sed nibil proponitur <lb/>
             quo locus corruptus sanetur. </note><note type="footnote"> 17. Ms ., i".,' p*Ustat4 gradibus distant. </note> <pb n="935"/>
             </p>
-          <p>
-            <milestone unit="PLSection" n="A"/>18. <unclear>E</unclear> hi etiam quando sua nomina proferunt, ex , <lb/>
+          <p n="18">
+<milestone unit="PLSection" n="A"/>18. <unclear>E</unclear> hi etiam quando sua nomina proferunt, ex , <lb/>
             officiis nequitiæ et potestatibus vocabula sibi assu­ <lb/>
             munt, quemadmodum cum a Domino de suo nomine <lb/>
             in regione Gerasenorum adversarius interrogatus fuis­ <lb/>
@@ -1451,13 +1470,15 @@
             potestatis vocabulum protulisse ; et requirenti Domi­ <lb/>
             no, quia aliter loqui non potuit, de semelipso quod <lb/>
             erat verum indicasse.</p>
-          <ab>
+          </div>
+<div n="9" subtype="section" type="textpart">
+<ab>
             <title type="sub">CAPUT IX.</title>
           </ab>
           <ab>
             <title type="sub">De natura aquarum et cursu Occani.</title>
           </ab>
-          <p>i. Post aeris spatia cum suis habitatoribus cursa, <lb/>
+          <p n="1">1. Post aeris spatia cum suis habitatoribus cursa, <lb/>
             nunc ad aquae elementum, quod inter aerem et ter­ <lb/>
             ram constitutum est, intentio dirigitur: cujus congre-
             <milestone unit="PLSection" n="B"/><lb/>
@@ -1468,7 +1489,7 @@
             dinem habet, ut et sitientibus animalibus potamenti, <lb/>
             et caeterorum usuum solatia præberet. et alendis fru­ <lb/>
             ctibus terram fecuudius irrigaret.</p>
-          <p>2. Propter quod et imbres, qui e nubibus cribrati <lb/>
+          <p n="2">2. Propter quod et imbres, qui e nubibus cribrati <lb/>
             per aerem defluunt, ut aptius ad frugiferam vim, et <lb/>
             sedandam sitim, sicut ante diximus, subvenirent, sa­ <lb/>
             pidi fiunt. Ea vero pars immutata aquarum, quae per <lb/>
@@ -1478,7 +1499,7 @@
             bus fructus, quos sapidi liquoris non haberet unda,
             <milestone unit="PLSection" n="c"/><lb/>
             utilius nutriret.</p>
-          <p>6033. Sed utrum sapidum an salsum saporem na­ <lb/>
+          <p n="3">603 3. Sed utrum sapidum an salsum saporem na­ <lb/>
             turalius, an æqualiter utrumque, aqua; habeant, pro <lb/>
             certo Deus viderit; quamvis et plerique salsuginem
             <milestone unit="PLSection" n="A"/><lb/>
@@ -1490,7 +1511,7 @@
             que sapor naturalis esse suo modo non est difficilis <lb/>
             credi, dum ab alterutro in alterum uterque potest re­ <lb/>
             fundi.</p>
-          <p>4. Maris vero frelibus crebro terrarum spatia <lb/>
+          <p n="4">4. Maris vero frelibus crebro terrarum spatia <lb/>
             distinguuntur, ut et gentium terminos intercluderet, <lb/>
             et munificentia suorum fluctuum omnes provincias <lb/>
             diversorum populorum ditarei, et inter omnes patrias <lb/>
@@ -1503,7 +1524,7 @@
             per boras viginti quatuor indesinenter videtur, cu­ <lb/>
             JUs cursus tota convenientia in ledonis et malinæ <lb/>
             divisus vicissitudines partiatur</p>
-          <p>5. Sed ledonis assisa sex semper horas incrementi <lb/>
+          <p n="5">5. Sed ledonis assisa sex semper horas incrementi <lb/>
             sui immutata consuetudine complet, et per totidem <lb/>
             horas ipsa spatia quae texerat retegit. Malinæ autem <lb/>
             assisa quinque horas suae inundationis agit, et per <lb/>
@@ -1513,7 +1534,7 @@
             nascatur, quae per septem dies, et duodecim horas, <lb/>
             et quartam diei partem, diligenti exploratione per­ <lb/>
             severare videtur.</p>
-          <p>
+          <p n="6">
             <milestone unit="PLSection" n="c"/>6. Et ita fit ut cum iterum luna plena minuitur, <lb/>
             etiam malina rursum 604 tenebrosa dimidiatur; in­ <lb/>
             terpositis vero spatiis ledo deprehenditur, qui nec <lb/>
@@ -1581,7 +1602,7 @@
             sex malinæ, et ejusdem numeri ledones inveniuntur, <lb/>
             quia per omnia cum lunæ cursu inseparabiliter mari­ <lb/>
             nus comitatur.</p>
-          <p>7. Quatuor vero ex his, hoc est, temporum, qua­ <lb/>
+          <p n="7">7. Quatuor vero ex his, hoc est, temporum, qua­ <lb/>
             tuor mediae, duae scilicet aequinoctiales malinae, et <lb/>
             aliæ duae, cum aut dies aut nox incrementi et decre­ <lb/>
             menti sui finem faciunt, solito validiores, sicut oculis <lb/>
@@ -1594,7 +1615,7 @@
             dens implet, ut nostra assisa ibi sit recessa, et nostra <lb/>
             recessa ibi sit assisa, dimidium maris ministerium <lb/>
             ignorare fateri compellimur.</p>
-          <p>8. Sed in hoc et multis similibus nihil nostræ <lb/>
+          <p n="8">8. Sed in hoc et multis similibus nihil nostræ <lb/>
             scientiæ conceditur, nisi Creatoris potentiam atque <lb/>
             immensitatem elamare, qui omnia in numero, pon­ <lb/>
             dere et mensura disposuit (Sap. xi, 21). Et interim <lb/>
@@ -1602,7 +1623,7 @@
             gnoscimus, et ex parce prophetamus. Cum autem vene­ <lb/>
             rit quod perfectum est, tunc cognoscam, sicut et co­ <lb/>
             gnitus sum (1 Cor. XIII, 9).</p>
-          <p>9. Ex hoc autem lymphatico elemento piscium et <lb/>
+          <p n="9">9. Ex hoc autem lymphatico elemento piscium et <lb/>
             avium, hoc est, omnium aquatilium et volatilium <lb/>
             diversa genera facta fuisse Geneseos scriptura pro­ <lb/>
             nuntiat. Sed piscium, id est, omnium quæ in aquis
@@ -1611,7 +1632,7 @@
             de rerum naturis ratiocinantur enumerant, quem <lb/>
             numerum apostolica sagena velut ex omni genere <lb/>
             piscium congregans contraxerat.</p>
-          <p>10. Aves vero utrum et ipsae hunc suorum nume­ <lb/>
+          <p n="10">10. Aves vero utrum et ipsae hunc suorum nume­ <lb/>
             rum generum habeant, an majorem, an minorem, <lb/>
             etsi sinl aliqui qui æstiment, tamen quia grandi hoc <lb/>
             auctoritate firmare non possunt, nec sequendi , nec <lb/>
@@ -1628,7 +1649,7 @@
             penna non sublevat, aliae ita excelsa ac remota aeris <lb/>
             spatia volando penetrant, ut aestatis tempore etiam <lb/>
             nivem de altissimis nubibus suis pennis deferant.</p>
-          <p>11. Nisi forte has tam diversissimas consuetudines <lb/>
+          <p n="11">11. Nisi forte has tam diversissimas consuetudines <lb/>
             originis, quamvis de aqua, diversitas conditionis in <lb/>
             omnibus avibus efficit, ut ex his aliae de salsa unda, <lb/>
             aliae ex dulci aqua, aliæ de herbarum rore, aliae ex <lb/>
@@ -1640,13 +1661,15 @@
             sceret, ut ibi et inde quaeque avis viveret, unde prius
             <milestone unit="PLSection" n="B"/><lb/>
             ut esset habuisset.</p>
-          <ab>
+          </div>
+<div n="10" subtype="section" type="textpart">
+<ab>
             <title type="sub">CAPUT X.</title>
           </ab>
           <ab>
             <title type="sub">De paradiso.</title>
           </ab>
-          <p>i. Et quoniam post aquas terra in elementorum <lb/>
+          <p n="1">1. Et quoniam post aquas terra in elementorum <lb/>
             ordine statuta est, primum de paradiso dicemus, <lb/>
             ubi primorum hominum habitatio exstiterat; quam­ <lb/>
             vis commemorandi loco sermo ponendus sit, de quo <lb/>
@@ -1666,7 +1689,7 @@
             etsi non totam, maxima tamen ex parte amisisset, <lb/>
             ut quae beatitudini et felicitati bene viventium opitu­ <lb/>
             laverant male viventium vindictas cumularent.</p>
-          <p>2. An etiam spiritualiter aliquis locus hujus felici­ <lb/>
+          <p n="2">2. An etiam spiritualiter aliquis locus hujus felici­ <lb/>
             tatis beatitudine plenus, hominibus suae creationis <lb/>
             meritum servaturis, dispositus fuerat, in quo ni­ <lb/>
             hil quo beatitudinem corporalem læderet, quandiu <lb/>
@@ -1708,7 +1731,7 @@
             specialiter hic locus tenera videtur, in quo primus <lb/>
             homo atatim post sui conditionem constitutus fuisse <lb/>
             non dubitatur.</p>
-          <p>5. Etenim omnibus modis conveniebat ut caput et <lb/>
+          <p n="3">3. Etenim omnibus modis conveniebat ut caput et <lb/>
             principium humani generis in capite et principio <lb/>
             poneretur orbis, ut inde hominum propago mem­ <lb/>
             brorum suorum incrementa sumeret, unde ter­ <lb/>
@@ -1723,7 +1746,7 @@
             mur (Gen. III, 2). Et paulo ante profertur : EI fons <lb/>
             ascendebat de terra irrigans universam superficiem ter­ <lb/>
             ræ (Gen. II, 6).</p>
-          <p>4. In quibus rebus historialiter absque ullis æni­ <lb/>
+          <p n="4">4. In quibus rebus historialiter absque ullis æni­ <lb/>
             gmatibus. ipsius Scripturae veritatem servari quid <lb/>
             impediret, quomodo et de omnibus quae de princi­ <lb/>
             pio nascentis totius creaturae visibilis continet corpo­ <lb/>
@@ -1732,7 +1755,7 @@
             stellas, aquatilia etiam, atque animalia terrena, et <lb/>
             hominem ipsum, sicut Scriptura Geneseos investi­ <lb/>
             gat bistorialiter, absque ullis ænigmatibus credimus.</p>
-          <p>5. An in hoc solummodo, quod paradisi locum <lb/>
+          <p n="5">5. An in hoc solummodo, quod paradisi locum <lb/>
             frugiferis consitum arboribus, et magno fonte illu­
             <milestone unit="PLSection" n="C"/><lb/>
             stratum, commemorat, nisi in ænigmate non reci­ <lb/>
@@ -1740,7 +1763,7 @@
             est, et secundum rerum gestarum historicam narra- <lb/>
             tionem, et secundum tropologiam, id est, juxta mo­ <lb/>
             ralem explanationem.</p>
-          <p>6. Scriptura etenim sacra ratione tripertita intel­ <lb/>
+          <p n="6">6. Scriptura etenim sacra ratione tripertita intel­ <lb/>
             ligitur, cujus primus intelligendi modus est cum tan­ <lb/>
             tummodo secundum litteram sine ulla figurali inten­ <lb/>
             tione cognoscitur, ut sanctus Hieronymus ait: Actus <lb/>
@@ -1750,8 +1773,8 @@
             vestigatur, ut prima et extrema pars Ezechielis, et <lb/>
             Cantica Canticorum,et Evangelii quarumdam parabo­ <lb/>
             larum expositio, quae aliud loquuntur, et aliud agunt.</p>
-          <p>
-            <milestone unit="PLSection" n="D"/>7. Tertius modus est cum, salva historica rerum <lb/>
+          <p n="7">
+<milestone unit="PLSection" n="D"/>7. Tertius modus est cum, salva historica rerum <lb/>
             narratione, mystica ratione intelligitur, sicut area <lb/>
             Noe, et tabernaculum, et templum historialiter fa­ <lb/>
             cta sunt, et intellectualiter Ecclesiæ mysteria per
@@ -1760,7 +1783,7 @@
             ris Adae, qui forma futuri 607 exstiterat, et Eccle­ <lb/>
             siæ future, quae est terra sequentis Adæ, mysteria <lb/>
             præfigurabat.</p>
-          <p>8. Dum vero ibi nomo immortaliter et beate vive­ <lb/>
+          <p n="8">8. Dum vero ibi nomo immortaliter et beate vive­ <lb/>
             ret, nunquid et totius orbis subjectio sibi non sub­ <lb/>
             jaceret Quid enim iUum ab ingressu orbis inter­ <lb/>
             cluderet, qui in creaturis nocere sibi aliquid oon <lb/>
@@ -1769,7 +1792,7 @@
             cujuscunque rei aculei vulnerarent, non absentia <lb/>
             aeris suffocaret, non omnia quæ nocent mortalibus, <lb/>
             impedirent?</p>
-          <p>9. Corpus enim immortale, et invulnerabile, et <lb/>
+          <p n="9">9. Corpus enim immortale, et invulnerabile, et <lb/>
             illaedibile, nihil quod mortem, et vulnus, et læsu-
             <milestone unit="PLSection" n="B"/><lb/>
             ram inferret in omnibus creaturis, quoadusque <lb/>
@@ -1780,7 +1803,7 @@
             vit, dicens : Crescite, et multiplicamini, et replete ter­ <lb/>
             ram, et subjicite eam; et dominamini piscibus maris, <lb/>
             et volatilibus cœli (Gen. i, 28).</p>
-          <p>10. Sicut enim angelis in his quae sibi subjecta <lb/>
+          <p n="10">10. Sicut enim angelis in his quae sibi subjecta <lb/>
             sunt a sede coeli discurrere liberum est, et tamen in <lb/>
             coelo habent sedes, quid et homines in paradiso <lb/>
             constitutos discurrere per omnem creaturam sibi <lb/>
@@ -1789,7 +1812,7 @@
             munia corpora possidebant, ita et omni labore et
             <milestone unit="PLSection" n="C"/><lb/>
             pigredine carentia habebant.</p>
-          <p>ii. At vero cum paras colonus in loco suas ter­ <lb/>
+          <p n="11">11. At vero cum paras colonus in loco suas ter­ <lb/>
             renae felicitatis peccatum commisisset, in maledictae <lb/>
             terrae habitationem detrusus, protinus illa omnia, <lb/>
             quae prius possedit, partim amisit, partim cum la­ <lb/>
@@ -1800,7 +1823,7 @@
             ginosum hujus aeris locum sortitus est, sic et homo <lb/>
             de sui paradisi terrena beatitudine in maledictae hu­ <lb/>
             jus terræ habitationem detrusus est.</p>
-          <p>12. Sic etenim scribitur : Et ejecit illum Dominus <lb/>
+          <p n="12">12. Sic etenim scribitur : Et ejecit illum Dominus <lb/>
             Deus de paradiso, et projecit in terram de qua sumptus <lb/>
             est. Et constituit ante paradisum cherubim, habentem
             <milestone unit="PLSection" n="D"/><lb/>
@@ -1827,7 +1850,7 @@
             etiam paradisum jubentur defendere, dum flammeum <lb/>
             gladium non ante lignum solummodo vitæ, sed ante <lb/>
             totum paradisum Scriptura indicat esse positum.</p>
-          <p>13. Non satis autem elucet de qua arbore specia­ <lb/>
+          <p n="13">13. Non satis autem elucet de qua arbore specia­ <lb/>
             liter Adam comederit, sed clarum est quod statim <lb/>
             post peccatum nuditatem suam fici 608 foliis ar­ <lb/>
             boris texit, cui soli in tempore suae carnis Dominus <lb/>
@@ -1839,8 +1862,8 @@
             id est, ficum, maledictum delicti Adæ, quæ totam <lb/>
             terram inficeret, priusquam sanguinis sui rore ipsam <lb/>
             mundaret, Christus collegit.</p>
-          <p>
-            <milestone unit="PLSection" n="B"/>14. Utrum autem ab hac primitus homo culpam, <lb/>
+          <p n="14">
+<milestone unit="PLSection" n="B"/>14. Utrum autem ab hac primitus homo culpam, <lb/>
             an de alia susceperit, pro certo Deus viderit. Atta­ <lb/>
             men illa, quaecunque nunc est, quæ tunc scientiae <lb/>
             boni et mali arbor dicta fuerat, non est putandum <lb/>
@@ -1852,7 +1875,7 @@
             facere valeret, sed mandati Domini transgressio, quo <lb/>
             præceptum est ne de hoc ligno comederet, mortem <lb/>
             efficit.</p>
-          <p>15. Cujus obedientia si esset, hoc erat scire bo­ <lb/>
+          <p n="15">15. Cujus obedientia si esset, hoc erat scire bo­ <lb/>
             num; et inobedientia dum fuit, hoc est nosse malum. <lb/>
             Quorum tamen distantiam homo nisi transgressione
             <milestone unit="PLSection" n="c"/><lb/>
@@ -1863,7 +1886,7 @@
             tiam nihil inesset nocivum, ecce non hujus, sed Ii­ <lb/>
             gni vitae via .excluditur, in cujus exclusione prioris <lb/>
             delicti misericorditer remissio præparatur.</p>
-          <p>16. Si enim homo post peccatum illud originale <lb/>
+          <p n="16">16. Si enim homo post peccatum illud originale <lb/>
             de ligni vitæ fruclu comedisset, commissi penitus <lb/>
             maculam misere in aeternum et infeliciler in corpore <lb/>
             senectuti et doloribus obnoxio moriendo deponere <lb/>
@@ -1882,13 +1905,15 @@
             tutis certum est a Domino dictum : Venite, benedicti <lb/>
             Patris mei, possidete regnum quod vobis præparatum <lb/>
             est ab origine mundi.</p>
-          <ab>
+          </div>
+<div n="11" subtype="section" type="textpart">
+<ab>
             <title type="sub">609 CAPUT XI.</title>
           </ab>
           <ab>
             <title type="sub">De situ orbis terrarum, quem inhabitat genus humanum.</title>
           </ab>
-          <p>i. Porro de terrarum orbis situ, quem inhabitat <lb/>
+          <p n="1">1. Porro de terrarum orbis situ, quem inhabitat <lb/>
             genus humanum, psalmista ad Dominum ait : Qui fun­ <lb/>
             dasti terram super slabilitatem suam; non inclinabitur
             <milestone unit="PLSection" n="B"/><lb/>
@@ -1901,7 +1926,7 @@
             ipsum firmamento, et firmamentum aquis superiori­ <lb/>
             bus, substitutum sii, ipse novit, qui ubique et undique <lb/>
             cuncta conspicit.</p>
-          <p>2. Ea vero parte quae hominibus ad habitandum <lb/>
+          <p n="2">2. Ea vero parte quae hominibus ad habitandum <lb/>
             data est, quadrifarium orbem statutum esse multi pro­ <lb/>
             diderunt auctores : quarum partium quatuor vocabula <lb/>
             quatuor litteris nominis primi terrigenæ, hoc est, <lb/>
@@ -1911,7 +1936,7 @@
             Auster, Occidens. Conveniebat enim ut qui suo ge­ <lb/>
             nere totam terram impleret, suo nomine quatuor <lb/>
             quadrati orbis partium vocabula colligeret.</p>
-          <p>3. Quatuor quoque temporum articulis anuiversa­ <lb/>
+          <p n="3">3. Quatuor quoque temporum articulis anuiversa­ <lb/>
             rio ordine distinguitur, atque impleto anni spatio, <lb/>
             terreni orbis dispensatio semper sine cessatione in <lb/>
             circulum redigitur. Veris autem tempore, quo mun­ <lb/>
@@ -1919,7 +1944,7 @@
             floret, et fructificat; autumno maturescit, et aptum <lb/>
             suorum fructuum mortalibus usum tribuit; bieme <lb/>
             vero decidit, et arescit.</p>
-          <p>4. Sed hanc augmenti sui et decrementi consuetu­ <lb/>
+          <p n="4">4. Sed hanc augmenti sui et decrementi consuetu­ <lb/>
             dinem patitur quandiu servituti corruptionis obnoxia <lb/>
             mortalium officio mancipatur. Cum enim nascendi et <lb/>
             moriendi in hominibus conditio cessaverit, tunc etiam
@@ -1957,7 +1982,7 @@
             los novos, et terram novam, et non erunt in memoria <lb/>
             priora, sed gaudebitis, et exsultabitis in his quæ ego <lb/>
             creo.</p>
-          <p>610 5. Quoniam dum immutatis corporibus ho­ <lb/>
+          <p n="5">610 5. Quoniam dum immutatis corporibus ho­ <lb/>
             mines spiritualiter vivent, necesse est ut immutata in <lb/>
             melius habitandi loca, id est, spiritualia habitent. Hoc <lb/>
             corpus (ut Paulus ail) seminatur in corruptione, surget <lb/>
@@ -1969,7 +1994,7 @@
             <milestone unit="PLSection" n="B"/><lb/>
             ribus esse desierint, tunc mortalibus uti et corrupti- <lb/>
             libus homo non necesse habebit.</p>
-          <p>6. Quod et in Dominici corporis resurrectione pro­ <lb/>
+          <p n="6">6. Quod et in Dominici corporis resurrectione pro­ <lb/>
             batum fuisse Evangelia sancta confirmant, dum lin­ <lb/>
             teamina, quibus fuerat involutum, post resurrectionem <lb/>
             ejus in monumento sola posita esse denuntiant, quem­ <lb/>
@@ -1981,7 +2006,7 @@
             terrae natura et superficies in spiritualem statum, qui <lb/>
             spiritualibus conveniat, absque aliqua mutabilitate <lb/>
             instaurabitur.</p>
-          <p>7. Sed quando hoc fiet? Quando Jerusalem laus
+          <p n="7">7. Sed quando hoc fiet? Quando Jerusalem laus
             <milestone unit="PLSection" n="C"/><lb/>
             creata fuerit in terra, et populus ejus gaudium, et <lb/>
             exsultatio, et quando sancti in bis quæ Dominus creat <lb/>
@@ -2000,13 +2025,15 @@
             et sicut sol fulserint in regno patris eorum.</p>
           <p>
             <milestone unit="PLSection" n="D"/></p>
-          <ab>
+          </div>
+<div n="12" subtype="section" type="textpart">
+<ab>
             <title type="sub">CAPUT XII.</title>
           </ab>
           <ab>
             <title type="sub">De natura hominum post peccatum.</title>
           </ab>
-          <p>i. Sed hujus interim orbis habitationi post originale
+          <p n="1">1. Sed hujus interim orbis habitationi post originale
             <milestone unit="PLSection" n="A"/><lb/>
             peecalum homines destinati, non totum quod in con­ <lb/>
             dilione sua habuerant naturale bonum 611 perdide­ <lb/>
@@ -2015,7 +2042,7 @@
             labore terrae maledictæ fructus percipiunt, sic et bo­ <lb/>
             num naturale quod in sc habent non absque laboriosa <lb/>
             cura custodire possunt.</p>
-          <p>2. Et quomodo in serpente, et muliere, et viro <lb/>
+          <p n="2">2. Et quomodo in serpente, et muliere, et viro <lb/>
             consentiente, in protoplasti transgressione tripliciter <lb/>
             ceciderant, pari modo tribus vulneribus amicti omnes <lb/>
             ejusdem filii, id est, dolore, senectute, morte dcfi. <lb/>
@@ -2028,7 +2055,7 @@
             haeredibus non relinquunt, et omnes artes, quas si­ <lb/>
             gillatim in vita capiunt, in hujus vitæ defectu pariter, <lb/>
             dum spiritus funditur, amittunt.</p>
-          <p>5. Parique infirmitatis conditione pauperes et <lb/>
+          <p n="3">3. Parique infirmitatis conditione pauperes et <lb/>
             reges, stulti et sapientes vexantur. Nam similiter <lb/>
             omnes somno indigent, et cibo refici, et vestibus <lb/>
             indui necesse habent. Passionibus vitiorum carna­ <lb/>
@@ -2037,7 +2064,7 @@
             angustiantur. Dolore, et senectute, et moite deficiunt. <lb/>
             De præteritis cito exuuntur; de præsentibus modice <lb/>
             utuntur; de futuris incerta omnia praestolantur.</p>
-          <p>4. Eodem modo auditu, visu, tactu, gustn, odoratu <lb/>
+          <p n="4">4. Eodem modo auditu, visu, tactu, gustn, odoratu <lb/>
             sentiunt et vivunt. Eodem etiam nexu originalis pec-
             <milestone unit="PLSection" n="C"/><lb/>
             cati astringuntur; eodem Redemptoris munere ditati <lb/>
@@ -2048,13 +2075,15 @@
             servantibus vero, sive per Scripturædocumenta, sive <lb/>
             per naturae bonum munimina, primæ conditionis <lb/>
             jura, Redemptoris munere vita praeparata est futura.</p>
-          <ab>
+          </div>
+<div n="13" subtype="section" type="textpart">
+<ab>
             <title type="sub">CAPUT XIII.</title>
           </ab>
           <ab>
             <title type="sub">De diversitate peccantium, et loco pcenarum.</title>
           </ab>
-          <p>i. Sed quoniam peccatorum diversa conditio est, <lb/>
+          <p n="1">1. Sed quoniam peccatorum diversa conditio est, <lb/>
             sunt quædam crimina, quae per ignem judicii purgari <lb/>
             possunt; quaedam vero aeterni ignis poena plectenda <lb/>
             sunl; et ex his quaedam æterna poena digna fiunt, <lb/>
@@ -2087,7 +2116,7 @@
             <milestone unit="PLSection" n="A"/><lb/>
             ad judicium; quosdam autem et subsequuntur (1 Tim. <lb/>
             v, 24).</p>
-          <p>2. De his enim qui judicio carent, Dominus ipse <lb/>
+          <p n="2">2. De his enim qui judicio carent, Dominus ipse <lb/>
             protestatur et dixit: Qui non credit in Filium jam <lb/>
             judicatus est (Joan. III, 18). Unde intelligitur quod qui <lb/>
             fidei sortem subire non merentur, nec gratiam bap­ <lb/>
@@ -2098,7 +2127,7 @@
             intrare in regnum Dei (Joan. III, 3). His etiam Psal­ <lb/>
             mistae verba concordant, quibus ait: Non resurgunt <lb/>
             impii in judicio (Psal. I, 5).</p>
-          <p>3. Qui autem post ablutionem baptismi peccato­ <lb/>
+          <p n="3">3. Qui autem post ablutionem baptismi peccato­ <lb/>
             rum multitudine gravantur, et ipsi in duas factiones
             <milestone unit="PLSection" n="B"/><lb/>
             dividuntur : quidam namque ex ipsis, priusquam ex <lb/>
@@ -2111,7 +2140,7 @@
             (I Cor. vi, 9). Qui enim hæc et his similia crimina ca­ <lb/>
             pitalia usque ad mortem absque medicamento faciunt, <lb/>
             judicati de ea vita ad perpetuas poenas exibunt.</p>
-          <p>4. De quorum reatu conviva pectoris Domini <lb/>
+          <p n="4">4. De quorum reatu conviva pectoris Domini <lb/>
             Joannes loquitur : Est peccatum usque ad mortem? <lb/>
             non pro illo dico ut roget quis ( I Joan. v, 16). Ad <lb/>
             Mortem enim peccatum deducit, qui licet in extremo <lb/>
@@ -2122,7 +2151,7 @@
             omnium reus. Qui enim dixit Non mæchaberis, ipse <lb/>
             dixit Non occides. Quod si non mæcharis, occidas au­ <lb/>
             tem, factus es legis transgressor (Jac. II, 10).</p>
-          <p>5. Quidam vero ad extremum divini examinis ju­ <lb/>
+          <p n="5">5. Quidam vero ad extremum divini examinis ju­ <lb/>
             dicium, qui his capitalibus criminibus non invol­ <lb/>
             ventur, reservati, ex hoc saeculo vadunt, et tamen <lb/>
             sententia superni judicis aeternae damnationis sortem <lb/>
@@ -2135,7 +2164,7 @@
             ipso audient : Ite, maledicti, in ignem æternum, <lb/>
             quem præparavit Pater meus diabolo et angelis ejus <lb/>
             (Matth. xxv, 41).</p>
-          <p>6. Non enim ad appetenda regna cœlorum sufficit <lb/>
+          <p n="6">6. Non enim ad appetenda regna cœlorum sufficit <lb/>
             non agere mala, si quis non curavit facere bona; per <lb/>
             prophetam enim Isaiam pariter a Domino praecipitur : <lb/>
             Quiescite agere perverse, discite benefacere (Isai. I, 16). <lb/>
@@ -2146,7 +2175,7 @@
             tentiae nulla pœnitudine judex flecteretur, in fine <lb/>
             cunctae disputationis ita subinfertur : Tunc ibunt hi in <lb/>
             ignem æternum (Matth. xxv, 46).</p>
-          <p>7. De illius autem ignis aeterni loco, id est, inferni
+          <p n="7">7. De illius autem ignis aeterni loco, id est, inferni
             <milestone unit="PLSection" n="B"/><lb/>
             ergastulo, multi dixerunt quod corpora lis locus sit, <lb/>
             ubi peccatorum corpora cruciabuntur; nisi enim ignis <lb/>
@@ -2159,7 +2188,7 @@
             stridor dentium (Marc. xxv, 30). Ubi vermis corum <lb/>
             non moritur, et ignis non exstinguitur (Isai. LXVI, 24; <lb/>
             Marc. ix, 45) ?</p>
-          <p>8. In quo dicitur loco ad regem Babylonis per Pro­ <lb/>
+          <p n="8">8. In quo dicitur loco ad regem Babylonis per Pro­ <lb/>
             pbetam ita : Subter te sternetur tinea, et opertorium <lb/>
             tuum erunt vermes (Isai. xiv, 11.) De quo loco quidam <lb/>
             etiam dixit: Sicut terræ in profundo aquarum, sic in­
@@ -2171,7 +2200,7 @@
             v, 2). Unde perspicue patethunc locum qualemcun­ <lb/>
             que sub terra esse , qui infernus inferior et terra <lb/>
             oblivionis vocitatur.</p>
-          <p>9. Sed hic ignis dum præparatus diabolo dicitur, <lb/>
+          <p n="9">9. Sed hic ignis dum præparatus diabolo dicitur, <lb/>
             et angelis ejus, quali corporalitate esse putandus est, <lb/>
             qui angelos cruciare potest? Animam quoque divitis, <lb/>
             exutam corpore, iufernalis ille ignis cruciasse descri­ <lb/>
@@ -2212,7 +2241,7 @@
             modo cruciare possit et retinere. Vel certe dum de <lb/>
             filiis resurrectionis et æternæ beatitudinis dicitur: Et <lb/>
             erunt sicut angeli in cœlo (Marc. XII, 25).</p>
-          <p>10. Nimirum at filii æternæ damnationis, cum ad <lb/>
+          <p n="10">10. Nimirum at filii æternæ damnationis, cum ad <lb/>
             pœnam ignis æterni corpora resumpserint , et ipsi <lb/>
             erunt sicut dæmones in inferno; ut 614 filii bonæ <lb/>
             resurrectionis, cum sint filii Dei, bonorum angelorum <lb/>
@@ -2223,7 +2252,9 @@
             multos dies visitabuntur (Isai. xxiv, 22). Quod utrum <lb/>
             ad augendas no ad minuendas pœnas futurum sit, <lb/>
             ignoramus.</p>
-          <ab>
+          </div>
+<div n="14" subtype="section" type="textpart">
+<ab>
             <title type="sub">CAPUT XIV.</title>
           </ab>
           <p>
@@ -2231,7 +2262,7 @@
           <ab>
             <title type="sub">De igne purgatorio.</title>
           </ab>
-          <p>i. At vero hi qui æternæ vitae solatia percipient, <lb/>
+          <p n="1">1. At vero hi qui æternæ vitae solatia percipient, <lb/>
             bino et ipsi modo largitionis munere regni coelorurn <lb/>
             beatitudinem sument. Quibusdam namque ex his ad­ <lb/>
             huc in terra positis, dum pro Christo pauperes effi­ <lb/>
@@ -2239,7 +2270,7 @@
             licet in labore et fatigatione perseverantibus interim <lb/>
             donatur,cumdicilur: Beati pauperes spiritu, quoniam <lb/>
             ipiorum est regnum cœlorum (Matth. v, 3).</p>
-          <p>2. Similiter et qui persecutiones hominum pro <lb/>
+          <p n="2">2. Similiter et qui persecutiones hominum pro <lb/>
             justitia sustinent, eadem mercedis retributione gau­ <lb/>
             dent, dum subinfertur : Beati qui persecutionem pa­ <lb/>
             tiuntur propter justitiam, quoniam ipsorum est regnum <lb/>
@@ -2252,7 +2283,7 @@
             positis dicitur : Quæcuque solveritis super terram, <lb/>
             erunt soLuta et in cœlo. Et quæcunque ligaveritis super <lb/>
             terram, erunt ligata et in cœlo (Matth. XVIII, 18).</p>
-          <p>3. Ac si diceret: in hoc intelligitur quod regnum <lb/>
+          <p n="3">3. Ac si diceret: in hoc intelligitur quod regnum <lb/>
             coelorum adhuc in terra commorantium vestrum est, <lb/>
             dum quemcunque a peccatis solveriiis, ut illius pos­ <lb/>
             sessor; esse possit, hoc possidebit; et quemcunque in <lb/>
@@ -2264,7 +2295,7 @@
             <milestone unit="PLSection" n="D"/><lb/>
             coelestis deleta sunt, et abjecta, vos aeternæ patriæ <lb/>
             hæredes interim scribi necesse est.</p>
-          <p>4. Hi ergo cunctas in hac vita pressuras et mala <lb/>
+          <p n="4">4. Hi ergo cunctas in hac vita pressuras et mala <lb/>
             recipientes, absque examinis aliqua tribulatione et, <lb/>
             ut ita dicam, sine vocatione æternum refrigerium
             <milestone unit="PLSection" n="A"/><lb/>
@@ -2277,7 +2308,7 @@
             potum, nudo vestitum, vaganti domum, infirmanti <lb/>
             et in carcere posito Cbristo praebentes visitationem, <lb/>
             in suis minimis fratribus ministratio praebebatur.</p>
-          <p>5. In ipsorum autem vocatione manifestum videtur <lb/>
+          <p n="5">5. In ipsorum autem vocatione manifestum videtur <lb/>
             quod nunc usque longiuscule a Christo, quamvis in <lb/>
             dextera fuerint constituti, sunt, quibus postmodum <lb/>
             dicitur a summo judice : Venite, benedicti (Ibid.). Ac <lb/>
@@ -2287,7 +2318,7 @@
             igne purgaretur, a salute longiuscule fusUs, nunc, ad <lb/>
             purum examinati ab omni, vel modica, culparum <lb/>
             labe, propius accedite et venite.</p>
-          <p>6. Quasdam culpas in futuro remitti Dominus ipse <lb/>
+          <p n="6">6. Quasdam culpas in futuro remitti Dominus ipse <lb/>
             non denegat, cum dicitur : Qui autem blasphemaverit <lb/>
             in Spiritum sanctum, non habet redemptionem neque in <lb/>
             hoc sæculo, neque in futuro, sed reus erit aeterni delicti <lb/>
@@ -2296,7 +2327,7 @@
             tamen judicio per ignem deleri possunt. Si autem ita <lb/>
             non esset, hanc distinctionem Dominus nequaquam <lb/>
             posuisset.</p>
-          <p>7. De quo igne Baptista Joannes, Dominici præcur­ <lb/>
+          <p n="7">7. De quo igne Baptista Joannes, Dominici præcur­ <lb/>
             sor adventus, loquitur ad Judæos : Venit post me, cu­ <lb/>
             jus non sum dignus calceamenta portare ; ipse vos bap­
             <milestone unit="PLSection" n="c"/><lb/>
@@ -2311,7 +2342,7 @@
             dabit aream suam, et congregabit triticum suum in <lb/>
             horreum; palea' autem comburet igni inexstinguibili <lb/>
             (Matth. III, 12; Luc. III, 17).</p>
-          <p>8. Aliud enim est, igni baptizari, aliud igni Com­ <lb/>
+          <p n="8">8. Aliud enim est, igni baptizari, aliud igni Com­ <lb/>
             buri inexstinguibili. De quo etiam igne idem Joannes <lb/>
             ait : Omnis arbor quæ non facit fructum bonum, exci­ <lb/>
             detur et in ignem mittetur (Matth. III, 10). De igne
@@ -2333,8 +2364,8 @@
             rum, neque. </note><note type="footnote"> '1. Ms., de quo igne Baptista Joanne. : Veni, pott <lb/>
             me, etc. Editio, baptizabil. </note><note type="footnote"> 8, Cod. ms. Dominu. dicit : Qui dixent* </note> <pb n="949"/>
             </p>
-          <p>
-            <milestone unit="PLSection" n="A"/>9. Dc hac quoque differentia eorum quos ignis fu­ <lb/>
+          <p n="9">
+<milestone unit="PLSection" n="A"/>9. Dc hac quoque differentia eorum quos ignis fu­ <lb/>
             luri læsura non tanget, et eorum qui post ignis detri­ <lb/>
             mentum salutem percipient, Paulus apostolus expo­ <lb/>
             nit, ita dicens : Fundamentum enim aliud nemo po. <lb/>
@@ -2345,14 +2376,14 @@
             dem accipiet; 616 si cujus arserit opus, detrimentum <lb/>
             patietur, ipse autem salvus erit, sic tamen quasi per <lb/>
             ignem (I Cor. III, 12 seq.).</p>
-          <p>10. Per hæc autem duo edificia, id est, aurum, et <lb/>
+          <p n="10">10. Per hæc autem duo edificia, id est, aurum, et <lb/>
             argentum, et lapides pretiosos, et ligna, fenum, sti­ <lb/>
             pulam, perfecta et minus perfecta, super fidem <lb/>
             Christi ædificata opera designantur; sed illa , quae
             <milestone unit="PLSection" n="B"/><lb/>
             per ligna , fenum , stipulam designantur, quamvis <lb/>
             fragilia, non tamen polluta fieri demonstrantur.</p>
-          <p>ii. Unde intelligitur, non principalia crimina , <lb/>
+          <p n="11">11. Unde intelligitur, non principalia crimina , <lb/>
             quæ maculant (quorum operarios a regno Dei Paulus <lb/>
             exclusit), sed illa quae non multum nocent , quamvis <lb/>
             minus aedificent, per hæc posse designari, hoc est, <lb/>
@@ -2373,7 +2404,7 @@
             gandum, et eorum factorem, si majoribus non grave­ <lb/>
             tur, sic tamen quasi per ignem salvari putandum <lb/>
             est.</p>
-          <p>12. Pœnitentes autem in extremo vitae praesentis <lb/>
+          <p n="12">12. Pœnitentes autem in extremo vitae praesentis <lb/>
             termino , utrum hic plene remissionem peccatorum <lb/>
             accipiant, an igne purgatorio eorum delicta delean. <lb/>
             tur, ipse scit qui, renes et corda conspiciens, pœni­ <lb/>
@@ -2387,13 +2418,15 @@
             de illo purgatorio igni hoc animadvertendum est, <lb/>
             quod omni quem excogitare in praesenti potest homo <lb/>
             tormentorum modo et longior et acrior sit.</p>
-          <ab>
+          </div>
+<div n="15" subtype="section" type="textpart">
+<ab>
             <title type="sub">617 CAPUT XV.</title>
           </ab>
           <ab>
             <title type="sub">De futura vita.</title>
           </ab>
-          <p>1. De illa autem vera beatitu e futuræ vitæ ex­ <lb/>
+          <p n="1">1. De illa autem vera beatitu e futuræ vitæ ex­ <lb/>
             ponitsancta Scriptura : Quod oculus non vidit, nec <lb/>
             auris audivit, nec in cor hominis ascendit, quæ præpa­ <lb/>
             ravit Deus diligentibus se (1 Cor. II, 9 ). De quibus <lb/>
@@ -2406,7 +2439,7 @@
             pennis est sanitas, qui in monte faciem Moysi cum <lb/>
             Elia coram apostolis evacuavit; cui dum sancti com­ <lb/>
             patiuntur, simul congloriabuntur.</p>
-          <p>2. In eo autem quod prius dixerat : Erunt sicut <lb/>
+          <p n="2">2. In eo autem quod prius dixerat : Erunt sicut <lb/>
             angeli in cœlo (Marc. XII, 25), intuendum est quod <lb/>
             sicut angeli prius per naturam mutabiles facti, quod <lb/>
             probatum est in his qui ceciderunt, nunc vero im­ <lb/>
@@ -2419,13 +2452,13 @@
             desiderabunt peccare, nec poterunt; omnis enim <lb/>
             rationabilis creatura quae Dei contemplatione refici­ <lb/>
             tur, peccare non potest.</p>
-          <p>3. Non quod liberae voluntatis arbitrium vitio ca. <lb/>
+          <p n="3">3. Non quod liberae voluntatis arbitrium vitio ca. <lb/>
             rentes angeli et homines non habeant; omne enim <lb/>
             quod volunt in illa vita, hoc faciunt,sed velle aliquid <lb/>
             quod bonum non sit nequaquam possunt; unde quia <lb/>
             nunquam male volunt, delictum aliquod omnino <lb/>
             non committunt.</p>
-          <p>4. Sed hæc perfecta bona voluntas per contempla­ <lb/>
+          <p n="4">4. Sed hæc perfecta bona voluntas per contempla­ <lb/>
             tionem superni Conditoris perficitur, dum quod crea­ <lb/>
             tura per se habere non potuit, ipsius largitoris munere <lb/>
             donatur; unde perspicue intelligitur quod angeli vel <note type="footnote"> 9. Ms. Paulus opo.tolM' dicit : Si cujus opus arse­ <lb/>
@@ -2467,7 +2500,7 @@
             homines, qui sive in coelo, sive in paradiso, pecca­ <lb/>
             verunt, Deum non viderunt, quoniam si illum vidis­ <lb/>
             sent, nullo modo postea possent delinquere.</p>
-          <p>5. Sed haec contra respondens forte aliquis dicet: <lb/>
+          <p n="5">5. Sed haec contra respondens forte aliquis dicet: <lb/>
             Cur ergo post visionem gloriae, unde facies Moysi in <lb/>
             solitudine rutilabat,ad aquas contradictionis offendit? <lb/>
             Et Petrus post Unigenili gloriam in monte cum Moyse <lb/>
@@ -2479,8 +2512,8 @@
             spexerunt; si enim per semetipsam divinitatem con­ <lb/>
             spexissent, nullo modo in carne postea vivere pos­ <lb/>
             sent.</p>
-          <p>
-            <milestone unit="PLSection" n="B"/>6. Ipse namque Dominus Moysi respondit : Nemo <lb/>
+          <p n="6">
+<milestone unit="PLSection" n="B"/>6. Ipse namque Dominus Moysi respondit : Nemo <lb/>
             videbit faciem meam, et vivet (Exod. XXXIII, 20). <lb/>
             S;;ncti ergo post resurrectionem non per figuras et <lb/>
             ænigmata Dominum videbunt, sicut de hoc eodem <lb/>
@@ -2495,8 +2528,8 @@
             dor lucis illuminabit te, sed erit tibi Dominus in lucem <lb/>
             sempiternam, et Deus tuus in gloriam tuam (Isai. <lb/>
             LX, 19).</p>
-          <p>
-            <milestone unit="PLSection" n="C"/>7. Ex quo intelligitur quod non per creaturas, sed <lb/>
+          <p n="7">
+<milestone unit="PLSection" n="C"/>7. Ex quo intelligitur quod non per creaturas, sed <lb/>
             Domini ipsius majestate Ecclesia illuminabitur, cum <lb/>
             perpetuae felicitatis serenitate secura consortium an­ <lb/>
             gelicæ dignitatis subire permittitur, in qua serenitate <lb/>
@@ -2510,7 +2543,7 @@
             etsi supra haec etiam fuerint illa, quae nec cogitatus <lb/>
             nec ulla ratio hominis adbuc in terra positi appre­ <lb/>
             hendere valet.</p>
-          <p>8. Ex his autem omnibus creaturis, quarum per. <lb/>
+          <p n="8">8. Ex his autem omnibus creaturis, quarum per. <lb/>
             strinximus ordinem, quaedam ex nihilo, quaedam ex <lb/>
             aliquo Conditor creavit; coelum enim et terram, <lb/>
             mare et quae ei eis facta sunt, ex informi materia <lb/>
@@ -2522,8 +2555,8 @@
             quoniam non Dei partem, sed Dei creaturam credi­ <lb/>
             mus esse. Si enim de semetipso eam Deus fecisset, <lb/>
             nequaquam passibilis, et mutabilis, et misera esset.</p>
-          <p>
-            <milestone unit="PLSection" n="B"/>9. Item, si ex creaturis corporalibus illam creasset, <lb/>
+          <p n="9">
+<milestone unit="PLSection" n="B"/>9. Item, si ex creaturis corporalibus illam creasset, <lb/>
             corporale aliquid in sua natuta haberet, aut calorem <lb/>
             de igne, aut flatum ex aere, aut humorem ex <lb/>
             aqua , aut crassitudinem et soliditatem ex terra <lb/>
@@ -2537,7 +2570,7 @@
             imaginis Dei similitudine impressa Propheta com­ <lb/>
             memorat, dicens : Signatum super nos lumen vultus <lb/>
             tui (Psal. IV, 7).</p>
-          <p>10. Utrum autem singulis corporibus sigillatim a
+          <p n="10">10. Utrum autem singulis corporibus sigillatim a
             <milestone unit="PLSection" n="C"/><lb/>
             Deo mittantur, an ex Adam venire, et ex parenti­ <lb/>
             bus, sicut nascentium corpora, putandum sit, cum <lb/>
@@ -2592,8 +2625,8 @@
             positionem destruit, et ipsa non vatet astruere, quod <lb/>
             proponit. Vide not. ad eum loc. </note> <pb n="953"/>
             </p>
-          <p>
-            <milestone unit="PLSection" n="A"/>11. Et idcirco, ne supra nos aliquid appetamus, hanc <lb/>
+          <p n="11">
+<milestone unit="PLSection" n="A"/>11. Et idcirco, ne supra nos aliquid appetamus, hanc <lb/>
             quaestionem, quae a multis scriptoribus insolubilis <lb/>
             esse dicta est, scientiae Conditoris reservemns, quo­ <lb/>
             niam quaecunque ex carnibus agni paschalis come­ <lb/>
@@ -2603,7 +2636,7 @@
             pore nostræ investigationis scientiam effugiunt, do­ <lb/>
             minicae sapientiae rogo igoe illustrata et consummata <lb/>
             fiunt.</p>
-          <p>12. Sed et illa quae velut per exiguam fenestram <lb/>
+          <p n="12">12. Sed et illa quae velut per exiguam fenestram <lb/>
             nostri sensus et sapientiae ex ante aliqua ejus gratiae <lb/>
             illuminatione attigimus, ad perfectum omnia scire, <lb/>
             sicut oportet, non valemus ; ex parte enim cognosci­ <lb/>
@@ -2611,19 +2644,19 @@
             <milestone unit="PLSection" n="B"/><lb/>
             Patris luminum inaestimabile lumen perveniamus, <lb/>
             tunc cognoscemus sicut cogniti sumus.</p>
-          <p>13. Ecce, venerabilis Pater, de ordine creaturarum <lb/>
+          <p n="13">13. Ecce, venerabilis Pater, de ordine creaturarum <lb/>
             tibi proponenti, 620 juxta ingenioli mei modulum, <lb/>
             compendioso sermone summatim respondi. Cujus <lb/>
             munusculi mercedem orationibus tuis compensabo ; <lb/>
             non quod exiguitatis meae obsequium in obedientia</p>
-          <p>13. Totum hunc epilogum in ms. nostro omnino <lb/>
+          <p n="14">14. Totum hunc epilogum in ms. nostro omnino <lb/>
             abesse annotavi in Isidorianis, cap. 25, n. 16. Vide­ <lb/>
             retur legendum orationibus tuis compensatio. Sed ni­ <lb/>
             hil ausim mutare. Pro nam et in gazophylazio quod <lb/>
             ex conjectura in Editione Baluziana legendum astrui­ <lb/>
             tur, in veteri Editione erat omnia esse in gasophy­ <lb/>
             lazio.</p>
-          <p>14. Et contra garrientium. Sic recte in Haluziana
+          <p n="15">15. Et contra garrientium. Sic recte in Haluziana
             <milestone unit="PLSection" n="A"/><lb/>
             tua veneratione et auctoritate conferre possit digna, <lb/>
             sed obedientiae conatus et ea quae non valet assequi, <lb/>
@@ -2634,7 +2667,7 @@
             puræ, et hyacinthi, et cocci, dona conferuntur, etiam <lb/>
             eorum qui pelles caprarum deferunt diligentia non <lb/>
             despicitur.</p>
-          <p>14. Hanc igitur et tu simili modo meae parvitatis <lb/>
+          <p n="16">16. Hanc igitur et tu simili modo meae parvitatis <lb/>
             obedientiam placido pectoris tui portu non dedi­ <lb/>
             gnare, et contra garrientium instabiles Ductus te­ <lb/>
             mone tuæ auctoritatis praesentis opusculi naviculam <lb/>
@@ -2654,5 +2687,5 @@
             iam lectionis varietatem adverti, quam necessarium <lb/>
             non est repetere. </note> </p>
           </div>
-        
+      </div>
         </body></text></TEI>
