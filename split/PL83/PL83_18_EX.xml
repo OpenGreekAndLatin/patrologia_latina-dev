@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><TEI xmlns="http://www.tei-c.org/ns/1.0"><teiHeader>
-    
+<?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
     <fileDesc>
       <titleStmt>
         <title>Patrologiae Cursus Completus. Series Latina (PL)</title> 
@@ -113,9 +114,7 @@
       <p>The following text is encoded in accordance with EpiDoc standards and with the
         CTS/CITE Architecture.</p>
     <refsDecl>
-        <cRefPattern n="" matchPattern="(.+).(.+).(.+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@type='edition']/tei:div[@n='$1']/tei:div[@n='$2']/tei:div[@n='$3'])"/>
-        <cRefPattern n="" matchPattern="(.+).(.+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@type='edition']/tei:div[@n='$1']/tei:div[@n='$2'])"/>
-        <cRefPattern n="" matchPattern="(.+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@type='edition']/tei:div[@n='$1'])"/>
+        <cRefPattern n="section" matchPattern="(.+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@type='edition']/tei:div[@n='$1'])"/>
       </refsDecl>
     </encodingDesc>
     
@@ -127,7 +126,10 @@
     
 </teiHeader>
 
-  <text><body><div type="edition" n="">
+  <text>
+    <body>
+    <div type="edition" n="">
+      <div type="textpart" subtype="section" n="1">
           <head>
             <title type="main">EXCELLENTISSIMO ET EMINENTISSIMO PRINCIPI, ET D. D. LUDOVICO BORBONIO S. R. E. PRESBYTERO CARDINALI TIT. S. MARIÆ DE SCALA , ARCHIEPISCOPO TOLETANO , CANCELLARIO MAJORI CASTELLÆ, ADMINISTRATORI ATORI ARCHIEPISCOPATUS HISPALENSIS, COMITI CHINCHONIS , MAGNATI HISPANIÆ PRIMÆ CLASSIS , PRÆCLARI REGII ORDINIS HISPANICI CAROLI III MAGNA CRUCE , ATQUE ORDINUM SS. JANUARII ET FERDINANDI INSIGNIBUS DECORATO, ETC.</title>
           </head>
@@ -164,5 +166,5 @@
             Princeps eminentissime et Præsul amplissime, a pueritia assueveris, quippe gravissima exercitatus disciplina, ut <lb/>
             hoc tanto munere, ad religionis catholicæ amplificationem et ad Hispaniæ decus, quam diutissime incolumis <lb/>
             fungaris, omnium bonorum votis mea adjungere nunquam intermittam.</p>
-          <p>Ex Urbe, prime Idus Martias, an. 1803.</p>
+          <p>Ex Urbe, prime Idus Martias, an. 1803.</p></div>
         </div></body></text></TEI>
