@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><TEI xmlns="http://www.tei-c.org/ns/1.0"><teiHeader>
-    
+<?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
     <fileDesc>
       <titleStmt>
         <title>Patrologiae Cursus Completus. Series Latina (PL)</title> 
@@ -27,7 +28,7 @@
       
       <publicationStmt>
         <authority>University of Leipzig</authority>
-        <idno type="filename">PL83.xml</idno>
+        <idno type="filename">PL83_12_SA.xml</idno>
         <availability>
           <licence target="https://creativecommons.org/licenses/by-sa/4.0/">Available under a Creative Commons Attribution-ShareAlike 4.0 International License</licence>
         </availability>
@@ -103,7 +104,6 @@
               <biblScope unit="volume">83</biblScope>
             </monogr>
             <ref target="http://hdl.handle.net/2027/pst.000020950231">HathiTrust</ref>
-            
           </biblStruct>
         </listBibl>
       </sourceDesc>
@@ -113,9 +113,9 @@
       <p>The following text is encoded in accordance with EpiDoc standards and with the
         CTS/CITE Architecture.</p>
     <refsDecl>
-        <cRefPattern n="" matchPattern="(.+).(.+).(.+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@type='edition']/tei:div[@n='$1']/tei:div[@n='$2']/tei:div[@n='$3'])"/>
-        <cRefPattern n="" matchPattern="(.+).(.+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@type='edition']/tei:div[@n='$1']/tei:div[@n='$2'])"/>
-        <cRefPattern n="" matchPattern="(.+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@type='edition']/tei:div[@n='$1'])"/>
+        <cRefPattern n="p" matchPattern="(.+).(.+).(.+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@type='edition']/tei:div[@n='$1']/tei:div[@n='$2']/tei:p[@n='$3'])"/>
+        <cRefPattern n="section" matchPattern="(.+).(.+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@type='edition']/tei:div[@n='$1']/tei:div[@n='$2'])"/>
+        <cRefPattern n="book" matchPattern="(.+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@type='edition']/tei:div[@n='$1'])"/>
       </refsDecl>
     </encodingDesc>
     
@@ -127,21 +127,28 @@
     
 </teiHeader>
 
-  <text><body><div type="edition" n="">
+  <text>
+    <body>
+      <div type="edition" n="">
           <head>
             <title type="main">SANCTI ISIDORI HISPALENSIS EPISCOPI DE ECCLESIASTICIS OFFICIIS.</title>
           </head>
-          <ab>
+          
+        <div n="pr" subtype="book" type="textpart">
+        <ab>
             <title type="sub">Epistola missoria.</title>
           </ab>
-          <p>363 Domino meo et Dei servo Fulgentio episcopo Isidorus.</p>
+          <p n="363">363 Domino meo et Dei servo Fulgentio episcopo Isidorus.</p>
           <p>Quœris a me originem officiorum, quorum magisterio in Ecclesiis erudintur, ut quibus sint inventa aucto. <lb/>
             ribus, brevibus cognoscas indiciis. Itaque, ut voluisti, libellum de origine officiorum misi, ordinatum ex scri­ <lb/>
             ptis vetustissimis auctorum, ut locus oblulil, commentatum, in quo pleraque meo stylo elicuit nonnulla vero, <lb/>
             ita ut apud ipsos erant, admiscui. Quo facilius lectio de singulis fidei auctoritatem teneret, Si qua tamen ex <lb/>
             his displicuerint, erroribus meis paratior venia erit, quia non sunt referenda ad culpce meœ titulum de quibus <lb/>
             testificatio adhibetur auctorum.</p>
-          <ab>
+        </div>
+          
+    <div n="1" subtype="book" type="textpart">
+    <ab>
             <title type="sub">LIBER PRIMUS.</title>
           </ab>
           <ab>
@@ -161,19 +168,21 @@
             
           <p>
             <milestone unit="PLSection" n="A"/></p>
-          <ab>
+
+<div n="1" subtype="section" type="textpart">
+<ab>
             <title type="sub">CAPUT I</title>
           </ab>
           <ab>
             <title type="sub">De Ecclesia et vocabulo Christianorum.</title>
           </ab>
-          <p>i. Primum a sancto Petro Ecclesia in Antiochia <lb/>
+          <p n="1">1. Primum a sancto Petro Ecclesia in Antiochia <lb/>
             est fundata, ibique primum nomen Christianorum <lb/>
             pcr ejus est prædicationem 365 exortum, sicut <lb/>
             Actus apostolurum testantur (Act. xi, 26). Vocattlur <lb/>
             autem Christiani, derivato vocabulo ex nomine <lb/>
             Christi.</p>
-          <p>2. Nam sicut ex Judæ nomine vocabulum traxe­ <lb/>
+          <p n="2">2. Nam sicut ex Judæ nomine vocabulum traxe­ <lb/>
             runt Judæi, a quo in illa gente regiæ stirpis dignitas <lb/>
             claruit, ita a Christo Christianæ genU nomen inhæsit. <lb/>
             Cujns et in genibus cl in Judæis praerogativa est <lb/>
@@ -181,7 +190,7 @@
             <milestone unit="PLSection" n="A"/><lb/>
             propter quod omnes ad se vocet, et In unum con­ <lb/>
             gregeL.</p>
-          <p>5. Catholica autem ideo dicitur, quia per univer­ <lb/>
+          <p n="3">3. Catholica autem ideo dicitur, quia per univer­ <lb/>
             sum mundum est constituta, vel quoniam catholica, <lb/>
             hoc est, generalis in ea doctrina est, ad instructionem <lb/>
             hominum de visibilibus atque invisibilibus, cœlestium <lb/>
@@ -306,63 +315,71 @@
             </p>
           <p>
             <milestone unit="PLSection" n="A"/></p>
-          <ab>
+          </div>
+<div n="2" subtype="section" type="textpart">
+<ab>
             <title type="sub">66 CAPUT II.</title>
           </ab>
           <ab>
             <title type="sub">De templis.</title>
           </ab>
-          <p>. Tabernaculum Moyses legislator primum Do. <lb/>
+          <p n="1">1. Tabernaculum Moyses legislator primum Do. <lb/>
             nino condidit (Exod. XL). Salomon deinde templum <lb/>
             prudentia peritus instituit (III Reg. VI). Nostrorum <lb/>
             post hæc temporum fides in toto mundo Christi alta­ <lb/>
             taria consecravit.</p>
-          <ab>
+          </div>
+<div n="3" subtype="section" type="textpart">
+<ab>
             <title type="sub">CAPUT III.</title>
           </ab>
           <ab>
             <title type="sub">De choris.</title>
           </ab>
-          <p>i. Choros idem Moyses (Exod. xv) post transitam <lb/>
+          <p n="1">1. Choros idem Moyses (Exod. xv) post transitam <lb/>
             Rubri maris primus instiluit, 367 et utrumque <lb/>
             sexum, distinctis classibus, se ac sorore præcunte, <lb/>
             canere Domino in choris carmen triumphale perdo­ <lb/>
             cuit. Chorus autem ab imagine factus coronae, et ex
             <milestone unit="PLSection" n="B"/><lb/>
             eo ita vocatus.</p>
-          <p>2. Unde et Ecclesiasticus liber scribit : Stantem <lb/>
+          <p n="2">2. Unde et Ecclesiasticus liber scribit : Stantem <lb/>
             sacerdotem ante aram, et in circuitu ejus coronai <lb/>
             fratrum (Eccli. L, 13). Chorus enim proprie multi­ <lb/>
             tudo canentiumest, quique apud Judæos non minus <lb/>
             a decem constat canentibus, apud nos autem in­ <lb/>
             certo numero a paucioribus plurimisve sine ullo <lb/>
             discrimine constat.</p>
-          <ab>
+          </div>
+<div n="4" subtype="section" type="textpart">
+<ab>
             <title type="sub">CAPUT IV.</title>
           </ab>
           <ab>
             <title type="sub">De canticis.</title>
           </ab>
-          <p>i. Canticum idem tunc Moyses primus invexit, <lb/>
+          <p n="1">1. Canticum idem tunc Moyses primus invexit, <lb/>
             quando, percussa Ægypto decem plagis, et Pha­ <lb/>
             raone submerso cum populis , per insueta maris <lb/>
             itinera ad desertum gratulabundus egressus est, di-
             <milestone unit="PLSection" n="A"/><lb/>
             cens : Cantemus Domino, gloriose enim honorificatus <lb/>
             est (Exod. xv).</p>
-          <p>2. Deinde Debora, non ignobilis temina, inf libro <lb/>
+          <p n="2">2. Deinde Debora, non ignobilis temina, inf libro <lb/>
             Judicum hoc ministerio functa reperitur (Judic. v). <lb/>
             Postea multos non solum viros, sed etiam feminas <lb/>
             spiritu divino completas Dei cecinisse mysterio. <lb/>
             Canticum autem est vox hominis, psalmus autem <lb/>
             qui canitur ad psalterium.</p>
-          <ab>
+          </div>
+<div n="5" subtype="section" type="textpart">
+<ab>
             <title type="sub">368 CAPUT v.</title>
           </ab>
           <ab>
             <title type="sub">De psalmis.</title>
           </ab>
-          <p>i. Psallere usum esse primum post Moysen Da­ <lb/>
+          <p n="1">1. Psallere usum esse primum post Moysen Da­ <lb/>
             vid prophetam, in magno mysterio prodit Ecclesia. <lb/>
             Hic enim a pueritia in hoc munus specialiter a Do-<lb/>
             mine electus, et canorum princeps, psalmorumque <lb/>
@@ -371,7 +388,7 @@
             <milestone unit="PLSection" n="B"/><lb/>
             quentatur, quo facilius animi ad compunctionem <lb/>
             flectantur.</p>
-          <p>2. Primitiva autem Ecclesia ita psallebat, ut mo­ <lb/>
+          <p n="2">2. Primitiva autem Ecclesia ita psallebat, ut mo­ <lb/>
             dico flexu vocis faceret resonare psallentem, ita ut <lb/>
             pronuntianti vicinior esset quam cancenti. Propter <lb/>
             carnales autem in Ecclesia, non propter spiriluales, <lb/>
@@ -457,13 +474,15 @@
             affectus nostri, pro sonorum diversitate vel novitate, <lb/>
             nescio qua occulta familiaritate excitantur magis, <lb/>
             cum suavi et artificiosa voce cantatur.</p>
-          <ab>
+          </div>
+<div n="6" subtype="section" type="textpart">
+<ab>
             <title type="sub">CAPUT VI.</title>
           </ab>
           <ab>
             <title type="sub">De hymnis.</title>
           </ab>
-          <p>I. Hymnos primum eumdem David prophetam <lb/>
+          <p n="1">1. Hymnos primum eumdem David prophetam <lb/>
             condidisse accecinisse 369 manifestum est, deinde <lb/>
             et alios prophetas. Postea quidem et tres pueri in <lb/>
             fornacem positi, convocata omni creatura, Crealori <lb/>
@@ -474,7 +493,7 @@
             lia ad inovendum pie animum et ad inflammandum
             <milestone unit="PLSection" n="B"/><lb/>
             divinae dilectionis affectum.</p>
-          <p>i. Sunt autem divini hymni, sunt et ingenio hu­ <lb/>
+          <p n="2">2. Sunt autem divini hymni, sunt et ingenio hu­ <lb/>
             mano compositi. Hilarius autem, Gallus episcopus <lb/>
             Pictaviensis, eloquentia conspicuus, hymnorum car­ <lb/>
             mine floruit primus. Post quem Ambrosius episcopus <lb/>
@@ -486,14 +505,16 @@
             celebritatis devotio dehinc per totius Occidentis Ec­ <lb/>
             clesias observatur. Carmina autem quaecunque in <lb/>
             laudem Dei dicuntur, hymni vocantur.</p>
-          <ab>
+          </div>
+<div n="7" subtype="section" type="textpart">
+<ab>
             <title type="sub">CAPUT VII.</title>
           </ab>
           <ab>
             <title type="sub">De antiphonis.</title>
           </ab>
-          <p>
-            <milestone unit="PLSection" n="C"/>1. Antiphonas Graeci primi composuerunt duobus
+          <p n="1">
+<milestone unit="PLSection" n="C"/>1. Antiphonas Graeci primi composuerunt duobus
             <milestone unit="PLSection" n="A"/><lb/>
             choris alternatim concinentibus, quasi duo Seraphim, <lb/>
             duoque Testamenta invicem sibi conclamantia (Isai. <lb/>
@@ -501,13 +522,15 @@
             Ambrosius 370 antiphonas constituit, Græcorum <lb/>
             exemplum imitatus. Exhinc in cunctis occiduis re­ <lb/>
             gionibus earum usus increbuit.</p>
-          <ab>
+          </div>
+<div n="8" subtype="section" type="textpart">
+<ab>
             <title type="sub">CAPUT VIII.</title>
           </ab>
           <ab>
             <title type="sub">De precibus.</title>
           </ab>
-          <p>1. Precibus Dominum deprecari Christus nobis et <lb/>
+          <p n="1">1. Precibus Dominum deprecari Christus nobis et <lb/>
             composuit, et constituit. Cum ergo quaererent suppli­ <lb/>
             care apostoli Deo, et nescirent quomodo precarentur, <lb/>
             dixerunt Christo : Domine, doce nos orare, id est, <lb/>
@@ -519,25 +542,29 @@
             lunae, et uti precibus ad instar earum quas consti­ <lb/>
             tuit Christus, quasque primi Græci coeperunt com- <lb/>
             pouere, quibus Domino supplicarent.</p>
-          <ab>
+          </div>
+<div n="9" subtype="section" type="textpart">
+<ab>
             <title type="sub">CAPUT IX.</title>
           </ab>
           <ab>
             <title type="sub">De responsoriis.</title>
           </ab>
-          <p>i. Respousoria ab Ilalis longo ante tempore sunt <lb/>
+          <p n="1">1. Respousoria ab Ilalis longo ante tempore sunt <lb/>
             reperta, et vocata hoc nomine quod, uno canente, <lb/>
             chorus consonando respondeat. 371 Antea autem <lb/>
             id solus quisque agebat; nunc interdum unus, inter­ <lb/>
             dum duo, vel tres communiter canunt, choro in plu­ <lb/>
             rimis respondente.</p>
-          <ab>
+          </div>
+<div n="10" subtype="section" type="textpart">
+<ab>
             <title type="sub">CAPUT X.</title>
           </ab>
           <ab>
             <title type="sub">De lectionibus.</title>
           </ab>
-          <p>i. Lectiones pronuntiare antiquae institutionis
+          <p n="1">1. Lectiones pronuntiare antiquae institutionis
             <milestone unit="PLSection" n="C"/><lb/>
             esse Judaeorum traditio docet. Nam et ipsi legitimis <note type="footnote"> CAP. VI. N. i. Hymnoi primum eumdem David. <lb/>
             Nam librum Psalmorum eumdem hymnorum et soli­ <lb/>
@@ -608,7 +635,7 @@
             psallatur ab omnibus; cum oratur, oretur ab omni­ <lb/>
             bus; cum lectio legitur, facto silentio, æque audiatur <lb/>
             a cunctis.</p>
-          <p>i. Nam etsi tunc superveniat quisque, cum lectio <lb/>
+          <p n="2">2. Nam etsi tunc superveniat quisque, cum lectio <lb/>
             celebratur, adoret tantum Dominum, et, præsignata <lb/>
             fronte, aurem sollicite accommodet. Patet tempus <lb/>
             orandi, cum omnes oramus; patet, cum volueris <lb/>
@@ -616,8 +643,8 @@
             ctionem : quia non semper eam quilibet paratam po­ <lb/>
             test habere, cum orandi potestas in promptu sit, nec <lb/>
             putes parvam nasci utilitatem ex lectionis auditu.</p>
-          <p>
-            <milestone unit="PLSection" n="B"/>3. Siquidem oratio ipsa fit pinguior, dum mens, <lb/>
+          <p n="3">
+<milestone unit="PLSection" n="B"/>3. Siquidem oratio ipsa fit pinguior, dum mens, <lb/>
             recenti lectione saginata, per divinarum rerum, quas <lb/>
             nuper audivil, imagines currit. Nam et Maria soror <lb/>
             Marthæ, quae sedens ad pedes Jesu, sorore neglecta, <lb/>
@@ -627,13 +654,15 @@
             sive dum lectio pronuntiatur, ab omnibus unitas <lb/>
             conservetur, ut quod omnibus praedicatur, aequaliter <lb/>
             ab omnibus audiatur.</p>
-          <ab>
+          </div>
+<div n="11" subtype="section" type="textpart">
+<ab>
             <title type="sub">372 CAPUT XI.</title>
           </ab>
           <ab>
             <title type="sub">De libris Testamentorum.</title>
           </ab>
-          <p>i. Pronuntiantur autem lectiones in Christi Eccle­ <lb/>
+          <p n="1">1. Pronuntiantur autem lectiones in Christi Eccle­ <lb/>
             siis de Scripturis sanctis. Constat autem eadem sacra <lb/>
             Scriptura ei veteri lege et nova. Vetus lex illa est
             <milestone unit="PLSection" n="C"/><lb/>
@@ -644,7 +673,7 @@
             Evangelium, quod dicitur Novum Testamentum, <lb/>
             quod per ipsum Filium Dei Christum, et per suos <lb/>
             apostolos dedit.</p>
-          <p>2. Illa lex vetus velut radix est, hæc nova velut <lb/>
+          <p n="2">2. Illa lex vetus velut radix est, hæc nova velut <lb/>
             fructus ex radice; ex lege enim venitur ad Evange­ <lb/>
             lium. Siquidem Christus, qui hic manifestatus est, <lb/>
             ante in lege praedictus est. Imo ipse locutus est in <lb/>
@@ -653,7 +682,7 @@
             <milestone unit="PLSection" n="A"/><lb/>
             pædagogum, Evangelium vero perfectum vitae magi­ <lb/>
             sterium jam adultis omnibus praestans.</p>
-          <p>3. Ideo in illa operantibus bona terrae promitte­ <lb/>
+          <p n="3">3. Ideo in illa operantibus bona terrae promitte­ <lb/>
             bantur, hic vero sub gratia ex fide viventibus regnum <lb/>
             coeleste tribuitur. Evangelium autem dicitur bonum <lb/>
             nuntium, et re vera bonum nuntium, ut qui suscepe­ <lb/>
@@ -661,7 +690,7 @@
             Testamenti, quos ob amorem doctrinae et pietatis <lb/>
             legendos recipiendosque Ecclesiarum principes tra­ <lb/>
             diderunt.</p>
-          <p>4. Primum namque legis, id est, Moysi libri quin­ <lb/>
+          <p n="4">4. Primum namque legis, id est, Moysi libri quin­ <lb/>
             que sunt. Genesis, Exodus, Leviticus, Numeri, Deu­ <lb/>
             teronomium. Hos sequuntur historici libri sedecim, <lb/>
             Jesu Nave scilicet, et Judicum libri singuli, sive Ruth, <lb/>
@@ -672,14 +701,14 @@
             tici libri sedecim sunt, Isaias, Jeremias, et Ezechiel, <lb/>
             et Daniel, libri singuli : duodecim quoque propheta­ <lb/>
             rum libri singuli, et haec quidem propbetica sunt.</p>
-          <p>5. Post haec versuum octo libri habentur, qui <lb/>
+          <p n="5">5. Post haec versuum octo libri habentur, qui <lb/>
             diverso apud Hebræos metro scribuntur, id est, Job <lb/>
             liber, et Psalmorum, et Proverbiorum, et Ecclesia­ <lb/>
             stes, et Cantica Canticorum, liber Sapientiae, et Ec­ <lb/>
             clesiasticus, Lamentationesque Jeremiæ ; sicque <lb/>
             complentur libri Veteris Testamenti quadraginta <lb/>
             quinque.</p>
-          <p>6. Novi autem Testamenti primum quatuor Evan­ <lb/>
+          <p n="6">6. Novi autem Testamenti primum quatuor Evan­ <lb/>
             gelia sunt Matlhaei, Marci, Lucæ et Joannis. Hos
             <milestone unit="PLSection" n="c"/><lb/>
             quatuordecim Pauli apostoli Epistolae sequuntur. <lb/>
@@ -689,7 +718,7 @@
             culum est Apocalypsis Joannis, quod est revelatio <lb/>
             Jesu Christi, qui omnes libros et tempore concludit, <lb/>
             et ordine.</p>
-          <p>7. Hi sunt libri canonici septuaginta duo, et ob <lb/>
+          <p n="7">7. Hi sunt libri canonici septuaginta duo, et ob <lb/>
             hoc Moyses elegit presbyteros qui prophetarent. Ob <lb/>
             hoc et Jesus Dominus noster septuaginta duos disci­ <lb/>
             pulos praedicare mandavit. Et quoniam septuaginta <lb/>
@@ -732,13 +761,15 @@
             <milestone unit="PLSection" n="A"/><lb/>
             nationes, quibus populi ad percipiendam fidei gra­ <lb/>
             tiam ædificarentur.</p>
-          <ab>
+          </div>
+<div n="12" subtype="section" type="textpart">
+<ab>
             <title type="sub">CAPUT XII.</title>
           </ab>
           <ab>
             <title type="sub">De scriptoribus sacrorum librorum.</title>
           </ab>
-          <p>i. Veteris autem Testamenti secundum Hebraeo­ <lb/>
+          <p n="1">1. Veteris autem Testamenti secundum Hebraeo­ <lb/>
             rum traditionem 374 hi scriptores habentur : pri­ <lb/>
             mus Moyses scripsit Pentateuchum, Jesus Nave edi­ <lb/>
             dit librum suum, Judicum autem et Ruth, et Samue­ <lb/>
@@ -748,7 +779,7 @@
             te.. sparsus erat per singulorum regum historias. Job <lb/>
             librum Hebraei Moysen scripsisse putant, alii unum <lb/>
             • ex prophetis.</p>
-          <p>2. Psalterium vero scripserunt decem prophetæ,
+          <p n="2">2. Psalterium vero scripserunt decem prophetæ,
             <milestone unit="PLSection" n="B"/><lb/>
             id est, Moyses, David, Salomon, Asaph, Etham, <lb/>
             • Idithum, et Eman, et filii Core, id est, Asir, Elcana, <lb/>
@@ -760,7 +791,7 @@
             pserunt Ezechielem, duodecim prophetas, Danielem, <lb/>
             et Paralipomenon, et Esther. Esdras scripsit librum <lb/>
             suum.</p>
-          <p>3. Omnes atem hos libros idem Esdras propheta <lb/>
+          <p n="3">3. Omnes atem hos libros idem Esdras propheta <lb/>
             scriba post incensam legem a Chaldæis, dum Judæi <lb/>
             regressi fuissent in Jerusalem, divino afflatus spiritu <lb/>
             reparavit; cunctaque prophetarum volumina, quae <lb/>
@@ -768,7 +799,7 @@
             <milestone unit="PLSection" n="c"/><lb/>
             Testamentum in XXII libros constituit, ut tot libri <lb/>
             essent in lege, quot habentur et litteræ.</p>
-          <p>4. Primam pest Esdram Editionem de Hebræo in <lb/>
+          <p n="4">4. Primam pest Esdram Editionem de Hebræo in <lb/>
             Græcum LXX interpretes ediderunt sub Ptolomæo <lb/>
             Ægyptio rege, succeasore Alexandri, qui in legendo <lb/>
             dtudiosus fuit, omniumque libros genUum 375 con. <lb/>
@@ -780,7 +811,7 @@
             interpretationis adverteret, singulis eorum qui tue­ <lb/>
             rant destinati singulas cellulas dedit, et assignans <lb/>
             omnibus omnes Scripturas, jussit interpretari.</p>
-          <p>5. Qui, cum per septuaginta dies istius rei nego­ <lb/>
+          <p n="5">5. Qui, cum per septuaginta dies istius rei nego­ <lb/>
             tium adimplessent, omnium simul interpretationes, <lb/>
             quas per diversas cellulas segregati nullo ad ullum <lb/>
             propinquante fecerunt, congregravit in unum. Atque <lb/>
@@ -788,7 +819,7 @@
             inventi sunt, ut non solum in intellectu, verum etiam <lb/>
             in sermonibus cons onantes invenirentur. Hæc fuit <lb/>
             prima interpretatio vera ac divina.</p>
-          <p>6. Hos libros meditari omnium gentium Ecclesiae <lb/>
+          <p n="6">6. Hos libros meditari omnium gentium Ecclesiae <lb/>
             primum coeperunt, eosdemque de Græco in Latinum <lb/>
             interpretantes primi Ecclesiarum provisores tradi­ <lb/>
             derunt. Post hæc secundam Editionem Aquila, ler-
@@ -799,7 +830,7 @@
             dictis Editionibus comparavit. Hi sunt itaque tan­ <lb/>
             tum qui Scripturas sacras de Hebræo in Graecum <lb/>
             verterunL Qui etiam et numerantur.</p>
-          <p>7. Nam Latinorum interpretum, qui de Græco in <lb/>
+          <p n="7">7. Nam Latinorum interpretum, qui de Græco in <lb/>
             nostrum eloquium transtulerunt (ut meminit sanctus <lb/>
             Augustinus [u de Doctr. Christ. c. 11]) infinitus nu­ <lb/>
             Merus. Sicut enim (inquit) primis fidei temporibus <lb/>
@@ -807,7 +838,7 @@
             sibi utriusque linguae peritiam sumpsit, ausus est <lb/>
             statim interpretari, atque inde accidit tam innu* <lb/>
             merabiles apud Latinos exstitisse interpretes.</p>
-          <p>8. De Hebræo autem in Latinum eloquium tan­
+          <p n="8">8. De Hebræo autem in Latinum eloquium tan­
             <milestone unit="PLSection" n="c"/><lb/>
             tummodo Hieronymus presbyter sacras scripturas <lb/>
             convertit. Cujus Edilione generaliier omnes Eccle­ <lb/>
@@ -818,7 +849,7 @@
             populo tuo, et dixisti ut ædificarem templum in no­ <lb/>
             mine sancto tuo , et in civitale habitationis tuæ <lb/>
             (Sap. IX, 7).</p>
-          <p>9. Hoc opus Hebræi (ut quidam sapientium me- <note type="footnote"> CAP. in. N. 1. Et Samuelis primam partem. Idem <lb/>
+          <p n="9">9. Hoc opus Hebræi (ut quidam sapientium me- <note type="footnote"> CAP. in. N. 1. Et Samuelis primam partem. Idem <lb/>
             uenfit Diedorus, qui Samuelis II verba illa : Nam <lb/>
             videntem vocabat populus, qui nunc propheta dicitur, <lb/>
             non ipsius Samuelis, sed ejus qui S nn"etis scripta <lb/>
@@ -876,15 +907,15 @@
             tam aperto saerilegio derogarent, a propheticis eum <lb/>
             voluminibus reciderunt, legendumque suis probi­ <lb/>
             buerunt.</p>
-          <p>
-            <milestone unit="PLSection" n="B"/>10. Librum autem Ecclesiasticum composuit Jesus <lb/>
+          <p n="10">
+<milestone unit="PLSection" n="B"/>10. Librum autem Ecclesiasticum composuit Jesus <lb/>
             filius Sirach Jerosolymitani, nepos Jesu sacerdotis, <lb/>
             de quo meminit Zacharias, qui liber apud Latinos <lb/>
             propter eloquii similitudinem Salomonis titulo prae­ <lb/>
             notantur. Præterea Judith, et Тobiæ, sive Machabaeo­ <lb/>
             rum libros qui auctores scripserunt, minime con­ <lb/>
             stat.</p>
-          <p>ii. In Novo autem Testamento quatuor libros <lb/>
+          <p n="11">11. In Novo autem Testamento quatuor libros <lb/>
             Evangeliorum quatuor evangelistæ singulos scripse­ <lb/>
             runt, quorum solus Matthæus Hebræo scripsisse <lb/>
             perhibetur eloquio, caeteri Græco. Paulus apostolus <lb/>
@@ -896,7 +927,7 @@
             377 propter dissonantiam sermonis. Eamdem que <lb/>
             alii Barnabam conscripsisse, alii a Clemente scri­ <lb/>
             ptam fuisse suspicantur.</p>
-          <p>12. Petrus scripsit duas nomine suo epistolas, <lb/>
+          <p n="12">12. Petrus scripsit duas nomine suo epistolas, <lb/>
             quæ catholicæ nominantur : quarum secunda a qui­ <lb/>
             busdam ejus esse non creditur propter styli sermo­ <lb/>
             nisque distantiam. J acobus suam scripsit Epistolam. <lb/>
@@ -912,7 +943,7 @@
             audivit, vel vidit. Apocalypsin Joaunes evangelista <lb/>
             scripsit eodem tempore, quo ob Evangelii praedica­ <lb/>
             tionem in insulam Pathmos traditur relegatis.</p>
-          <p>13. Ili sunt scriptores sacrorum librorum, divina <lb/>
+          <p n="13">13. Ili sunt scriptores sacrorum librorum, divina <lb/>
             inspiratione loquentes, atque ad eruditionem nostram <lb/>
             pra cepta coelestia dispensantes. Auctor autem ea­ <lb/>
             rumdem Scripturarum Spiritus sanctus esse creditur. <lb/>
@@ -921,13 +952,15 @@
             ctavit. Jam tibi post psalmorum originem atque <lb/>
             hymnoruui, post sanctorum etiam librorum nume­ <lb/>
             rum, postulata sequentia prænotabo.</p>
-          <ab>
+          </div>
+<div n="13" subtype="section" type="textpart">
+<ab>
             <title type="sub">CAPUT XIII.</title>
           </ab>
           <ab>
             <title type="sub">De laudibus.</title>
           </ab>
-          <p>i. Landes, hoc est, Alleluia canere, canticum est <lb/>
+          <p n="1">1. Landes, hoc est, Alleluia canere, canticum est <lb/>
             Hebræorum, 378 cujus expositio duorum verborum <lb/>
             interpretatione consistit, hoc est, laus Dei, de cujus <lb/>
             mysterio Joannes in Apocalypsi refert Spiritu reve­ <lb/>
@@ -935,7 +968,7 @@
             angelorum, tanquam vocem aquarum multarum, et <lb/>
             tanquam vocem validorum tonitruum dicentium Al­ <lb/>
             leluia.</p>
-          <p>2. Ex quo nullus debet ambigere hoc laudis myste­ <lb/>
+          <p n="2">2. Ex quo nullus debet ambigere hoc laudis myste­ <lb/>
             rium, si digna fide et devotione celebretur, angelis
             <milestone unit="PLSection" n="C"/><lb/>
             esse conjunctum. Alleluia autem, sicut et Amen de <lb/>
@@ -943,7 +976,7 @@
             non quia interpretari minime queant, sed, sicut <lb/>
             aiunt doctores, servatur in eis antiquitas propter <lb/>
             sanctiorem auctoritatem.</p>
-          <p>3. In Africanis autem regionibns non omni tero­ <lb/>
+          <p n="3">3. In Africanis autem regionibns non omni tero­ <lb/>
             pore, sed tantum dominicis diebus, et quinquaginta <lb/>
             post resurrectionem Domini Alleluia canlatur pro <note type="footnote"> it. Ad Hebræos autem Epist. Ex Ilieronvmi cata­ <lb/>
             logo. At nunc tlubiiandi nullus relictus horus post <lb/>
@@ -1002,7 +1035,7 @@
             rum traditionem præter dies jejuniorum, vel Quadra­ <lb/>
             tesimæ omni tempore cantatur Alleluia; scriptum <lb/>
             est enim : Semper laus ejus in ore meo.</p>
-          <p>4. Quod vero post consummatam psalmorum, sive <lb/>
+          <p n="4">4. Quod vero post consummatam psalmorum, sive <lb/>
             lectionum prædicationem Alleluia in fine cantatur, <lb/>
             hoc in spe futura facit Ecclesia, significans post an­ <lb/>
             nuntiationem regni coelorum, quae in hac vita per <lb/>
@@ -1014,13 +1047,15 @@
             ditur, ut eadem post finem saculi laus aeterna
             <milestone unit="PLSection" n="B"/><lb/>
             monstretur.</p>
-          <ab>
+          </div>
+<div n="14" subtype="section" type="textpart">
+<ab>
             <title type="sub">379 CAPUT XIV.</title>
           </ab>
           <ab>
             <title type="sub">De offertoriis.</title>
           </ab>
-          <p>1. Offertoria, quae in sacrificiorum honore canun­ <lb/>
+          <p n="1">1. Offertoria, quae in sacrificiorum honore canun­ <lb/>
             tur, Ecclesiasticus liber indicio est veteres cantare <lb/>
             solitos, quando viclimae immolabantur, sic enim <lb/>
             dicit : Porrexit, inquit, sacerdos manum suam in
@@ -1034,13 +1069,15 @@
             accendimur, simulquc corde, et ore laudes Domino <lb/>
             declamantes jubilamus in illo scilicet vero sacr ficio, <lb/>
             cujus sanguine salvatus est mundus.</p>
-          <ab>
+          </div>
+<div n="15" subtype="section" type="textpart">
+<ab>
             <title type="sub">CAPUT XV.</title>
           </ab>
           <ab>
             <title type="sub">De missa et orationibus.</title>
           </ab>
-          <p>i. Ordo autem missae, et orationum, quibus oblata <lb/>
+          <p n="1">1. Ordo autem missae, et orationum, quibus oblata <lb/>
             Deo sacrificia consecrantur, primum a sancto Petro <lb/>
             est institutus, cujus celebrationem uno eodemque <lb/>
             modo universus peragit orbis. Prima earumdem ora-
@@ -1051,7 +1088,7 @@
             nesque eorum. Tertia autem 380 effunditur pro <lb/>
             offerentibus, sive pro defunciis fidelibus, ut per idem <lb/>
             sacrificium veniam consequantur.</p>
-          <p>2. Quarta post haec infertur pro osculo pacis, ut <note type="footnote"> gust. ad Januarium, c. i5 ct 17. GRIAL. </note><note type="footnote"> i. Actionem nostram nOli esse fuiuram9 usque ad <lb/>
+          <p n="2">2. Quarta post haec infertur pro osculo pacis, ut <note type="footnote"> gust. ad Januarium, c. i5 ct 17. GRIAL. </note><note type="footnote"> i. Actionem nostram nOli esse fuiuram9 usque ad <lb/>
             laudabunt te. Verba sunt Augustini, cap. 15. GRIAL., </note><note type="footnote"> Ibid. Hittorpius edidit in spem futuri, quamvis <lb/>
             :lgno'eriL in aliis esse in spe futura. In Editiouc quam <lb/>
             cnravit Cocbleus. multa in hoc capite et in plerisque <lb/>
@@ -1146,7 +1183,7 @@
             stium universitas provocatur, et 381 Hosanna in <lb/>
             excelsis cantatur, quod Salvatore de genere David <lb/>
             nascente salus mundo usque ad excelsa pervenerit.</p>
-          <p>3. Porro sexta exhinc succedit conformatio sacra­ <lb/>
+          <p n="3">3. Porro sexta exhinc succedit conformatio sacra­ <lb/>
             menti, ut oblatio, quæ Deo offertur , sanctificata per <lb/>
             Spiritum sanctum, Christi corpori ae sanguini con­ <lb/>
             formetur. Harum ultima est oratio, qua Dominus <lb/>
@@ -1157,7 +1194,7 @@
             in tribus primis æterna poscuntur: in sequentibus <lb/>
             quatuor temporalia, quae tamen propter æterna adi­ <lb/>
             piscenda petuntur.</p>
-          <p>4. Nam cum dicimus : Sanctificetur nomen tuum, <lb/>
+          <p n="4">4. Nam cum dicimus : Sanctificetur nomen tuum, <lb/>
             Adveniat regnum tuum, Fiat voluntas tua, sicut in <lb/>
             cœlo, et in terra; hic quidem ista tria inchoantur; <lb/>
             sed in illa vita sperantur, ubi sanctificatio Dei, et <lb/>
@@ -1170,7 +1207,7 @@
             remur, Dei auxilium imploramus. Illic autem nihil
             <milestone unit="PLSection" n="C"/><lb/>
             istorum est.</p>
-          <p>5. Hanc itaque orationem Salvator docuit, in qua <lb/>
+          <p n="5">5. Hanc itaque orationem Salvator docuit, in qua <lb/>
             et spes continetur lidelium,et confessio peccatorum ; <lb/>
             de qua propheta praedicens, ait : Et erit, omnis qui <lb/>
             invocaverit nomen Domini salvus erit (Joel. II, 32 ). <lb/>
@@ -1180,13 +1217,15 @@
             sanctæ Ecclesiæ universitatem, vel propter septifor­ <lb/>
             mem gratiæ Spiritum, cujus dono ea quae inferuntur <lb/>
             sanctificantur.</p>
-          <ab>
+          </div>
+<div n="16" subtype="section" type="textpart">
+<ab>
             <title type="sub">382 CAPUT XVI.</title>
           </ab>
           <ab>
             <title type="sub">De Symbolo Nicæno.</title>
           </ab>
-          <p>1. Symbolum autem, quod tempore sacrificii apo­ <lb/>
+          <p n="1">1. Symbolum autem, quod tempore sacrificii apo­ <lb/>
             puto praedicatur, trecentorum decem et octo sancto-
             <milestone unit="PLSection" n="A"/><lb/>
             rum Patrum collatione apud synodum Nicænam est <lb/>
@@ -1197,13 +1236,15 @@
             enim errores impietatum perfidiaeque blaspbemias <lb/>
             calcat, et ob hoc in universis Ecclesiis pari confes­ <lb/>
             sione a populo proclamatur.</p>
-          <ab>
+          </div>
+<div n="17" subtype="section" type="textpart">
+<ab>
             <title type="sub">CAPUT XVII.</title>
           </ab>
           <ab>
             <title type="sub">De benedictionibus.</title>
           </ab>
-          <p>1. Benedictionem autem dari a sacerdotibus popu­ <lb/>
+          <p n="1">1. Benedictionem autem dari a sacerdotibus popu­ <lb/>
             lo, antiqua per Moysen benedictio pandit, et compro­ <lb/>
             bat, qua benedicere populo sub sacramento trinae <lb/>
             invocationis jubetur. Ait enim ad Moysen Dominus : <lb/>
@@ -1213,13 +1254,15 @@
             net Dominus faciem suam super te, et misereatnr <lb/>
             tui, attollat Dominus faciem suam super te, et det <lb/>
             tibi pacem » (Num. VI, 24).</p>
-          <ab>
+          </div>
+<div n="18" subtype="section" type="textpart">
+<ab>
             <title type="sub">CAPUT XVIII.</title>
           </ab>
           <ab>
             <title type="sub">De sacrificio.</title>
           </ab>
-          <p>i. Sacrificium autem , quod a Christianis Deo <lb/>
+          <p n="1">1. Sacrificium autem , quod a Christianis Deo <lb/>
             offertur, primum 383 Christus Dominus noster, et <lb/>
             magister instituit, quando commendavit apostolis <lb/>
             corpus et sanguinem suum, priusquam traderetur; <lb/>
@@ -1233,7 +1276,7 @@
             litudinem Domini et Salvatoris nostri Jesu Christi, <lb/>
             sacerdotis aeterni, ad quem dicitur: Tu es sacerdos <lb/>
             in æternum secundum ordinem Melchisedech (Ps. CIX).</p>
-          <p>2. Hoc ergo sacrificium Christianis celebrare prae­ <lb/>
+          <p n="2">2. Hoc ergo sacrificium Christianis celebrare prae­ <lb/>
             ceptum est, relictis ac finitis Judaicis victimis, quae <lb/>
             in servitute veteris populi celebrari imperata sunt. <lb/>
             Hoc itaque fit a nobis, quod pro nobis Dominus ipse <lb/>
@@ -1269,8 +1312,8 @@
             clarius est. Pro hoc itaque fit, a!., hodie itaque fit. <lb/>
             AREV. </note> <pb n="755"/>
             </p>
-          <p>
-            <milestone unit="PLSection" n="A"/>3. Hoc enim in mysterio tunc factum est quod pri­ <lb/>
+          <p n="3">
+<milestone unit="PLSection" n="A"/>3. Hoc enim in mysterio tunc factum est quod pri­ <lb/>
             mum discipuli corpus et sanguinem Domini non ac­ <lb/>
             ceperunt jejuni. Ab universa antem Ecclesia nunc a <lb/>
             jejuuis semper accipitor. Sic enim placuit Spiritui <lb/>
@@ -1285,8 +1328,8 @@
             ideo corpus Christi nuncupatur, finum autem, quia <lb/>
             sanguinem operatur in carne, ideo ad sanguinem <lb/>
             Christi refertur.</p>
-          <p>
-            <milestone unit="PLSection" n="B"/>4. Hæc autem dem sunt visibilia, sanctificata ta­ <lb/>
+          <p n="4">
+<milestone unit="PLSection" n="B"/>4. Hæc autem dem sunt visibilia, sanctificata ta­ <lb/>
             men per Spiritum sanctum 384 in sacramentum <lb/>
             divini corporis transeant. Proinde autem, ut sanctis­ <lb/>
             simus Cyprianus ait: &lt; Calix dominicus vino et aqua <lb/>
@@ -1298,7 +1341,7 @@
             junctio aquae et vini sic miscetnr In calice Domini, <lb/>
             ut commistio illa ab invicem non possit separari, <lb/>
             sicut nec Ecclesia potest a Christo dividi.</p>
-          <p>5. &lt; Sic autem in sanctificando calice Domini offerri <lb/>
+          <p n="5">5. &lt; Sic autem in sanctificando calice Domini offerri <lb/>
             aqua sola non potest, quod modo nec vinum solum <lb/>
             potest. Nam si vunum tantum quis offerat, sanguis
             <milestone unit="PLSection" n="C"/><lb/>
@@ -1311,14 +1354,14 @@
             tur, quomodo nec corpus. Domini potest esse simila <lb/>
             sola, aut aqua sola, nisi utrumque adunatum fuerit, <lb/>
             et copalatum, et panis altius compage solidatum.</p>
-          <p>6. « Quo et ipso sacramento populus noster ostendi­ <lb/>
+          <p n="6">6. « Quo et ipso sacramento populus noster ostendi­ <lb/>
             tur adunatus, ut quemadmodnm grana multa in unum <lb/>
             collecta, et commolita, et commista panem unum
             <milestone unit="PLSection" n="A"/><lb/>
             faciunt, sic in Christo, qui est panis coelestis, unum <lb/>
             sciamus esse corpus, cui conjunctus sit noster nu. <lb/>
             merus, et adnnatus. »</p>
-          <p>7. Dicunt aliqui, nisi aliquo intercedente peccato, <lb/>
+          <p n="7">7. Dicunt aliqui, nisi aliquo intercedente peccato, <lb/>
             Eucharistiam quotidie accipiendam; hunc enim pa­ <lb/>
             nem dari quotidie nobis, jubente Domino, postula­ <lb/>
             mus, dicentes : Panem nostrum quotidianum da nobis <lb/>
@@ -1333,7 +1376,7 @@
             <milestone unit="PLSection" n="B"/><lb/>
             Hoc est enim indigne accipere, si eo tempore quis <lb/>
             accipiat quo debet agere poenitentiam.</p>
-          <p>8. Cæterum si non sunt tanta peccata, ut excom­ <lb/>
+          <p n="8">8. Cæterum si non sunt tanta peccata, ut excom­ <lb/>
             municandus quisque judicetur, non se debet a me­ <lb/>
             dicina dominici corporis separare, ne, dum forte <lb/>
             diu abstinendus prohibetur, a Christi corpure sepa­ <lb/>
@@ -1344,7 +1387,7 @@
             nem filii hominis, et biberitis ejus sanguinem, non habe­ <lb/>
             bitis vitam in vobis (Joan. VI). Qui enim jam peccare <lb/>
             quievit, communic ire non desinat.</p>
-          <p>9. Conjugatis autem abstinendum est coitu, plu­ <lb/>
+          <p n="9">9. Conjugatis autem abstinendum est coitu, plu­ <lb/>
             rimisque diebus orationi debent vacare, et sic deinde
             <milestone unit="PLSection" n="C"/><lb/>
             ad Christi corpus accederc. Helegamus Regum li­ <lb/>
@@ -1355,7 +1398,7 @@
             a conjugibus propriis, et nisi eos audisset ab heri et <lb/>
             nudius tertius vacasse ab opere conjugali, nequaquam <lb/>
             panes quos prius negaverat concessisset (I Reg. XXI).</p>
-          <p>10. TantulO interest inter propositionis panes et <lb/>
+          <p n="10">10. TantulO interest inter propositionis panes et <lb/>
             corpus Christi, quantum inter umbram et corpus, <lb/>
             inter imag nem et veritatem, inter exemplaria futu­ <lb/>
             rorum et ea ipsa quæ per exemplaria pratiguraban- <note type="footnote"> 5. Catholicam Isidori de sacra Eucharistia doctri­ <lb/>
@@ -1397,14 +1440,14 @@
             lur. Quapropter eligeodi sunt aliquot dies, quibus <lb/>
             prius homo continentius vivat, quo ad tantum sacra­ <lb/>
             mentum dignus accedere possit.</p>
-          <p>386 11. Sacrificium pro defunctorum fidelium <lb/>
+          <p n="11">386 11. Sacrificium pro defunctorum fidelium <lb/>
             requie offerre, vel pro eis orare, quia per totum <lb/>
             hoc orbem custoditur, credimus quod ab ipsis apo­ <lb/>
             stolis traditum sit. Hoc enim ubique catholica tenet <lb/>
             Ecclesia, quae nisi crederet fidelibus defunctis dimitti <lb/>
             peccata, non pro eorum spiritibus vel eleemosynam <lb/>
             faceret, tel sacrificium Deo offerret.</p>
-          <p>12. Nam et cum Dominus dicit : Qui peccaverit <lb/>
+          <p n="12">12. Nam et cum Dominus dicit : Qui peccaverit <lb/>
             in Spiritum sanctum, non remittetur ei, nec in hoc sæ­ <lb/>
             culo, nec futuro (Matth, XII), demonstrat quibusdam <lb/>
             illic dimittenda peccata et quodam purgatorio igne <lb/>
@@ -1416,7 +1459,7 @@
             tamen aliquod quisque sibi meritum preparavit, dum <lb/>
             adhuc in corpore viveret, per quod ista prosint, <lb/>
             qua cunque pro illo fiunt.</p>
-          <p>13. « Nam non omnibus prosunt. Et quare non <lb/>
+          <p n="13">13. « Nam non omnibus prosunt. Et quare non <lb/>
             omnibus prosont, nisi propter differentiam vitae <lb/>
             quam quisque gessit in corpore? Nam pro valde bo­ <lb/>
             nis gratiarum actiones sunt, pro non valde malis <lb/>
@@ -1427,13 +1470,15 @@
             rabilior fiat ipsa damnatio. »</p>
           <p>
             <milestone unit="PLSection" n="C"/></p>
-          <ab>
+          </div>
+<div n="19" subtype="section" type="textpart">
+<ab>
             <title type="sub">CAPUT XIX.</title>
           </ab>
           <ab>
             <title type="sub">De tertiæ, sextæ , et nonæ officiis.</title>
           </ab>
-          <p>1. Horam tertiam, sextam, et nonam Daniel et <lb/>
+          <p n="1">1. Horam tertiam, sextam, et nonam Daniel et <lb/>
             tres pueri supplicationibus devoverunt (Dan. VI, 13), <lb/>
             scilicet, ut ab ortu diei in tempus precationis tres <lb/>
             horæ porrectæ Trinitatis nobis reverentiam declara­ <lb/>
@@ -1445,7 +1490,7 @@
             esi, suo loco, et numero, et tempore, descendit ad <lb/>
             terras impleturus gratiam quam Christus promisit <lb/>
             (Act. n).</p>
-          <p>2. Nam et sexta hora Cbristus passus, ad nonam
+          <p n="2">2. Nam et sexta hora Cbristus passus, ad nonam
             <milestone unit="PLSection" n="A"/><lb/>
             patibuli cruciamenta porrexit. Tali enim sacramento <lb/>
             legitimis ad precem temporibus per ternas horas Tri­ <lb/>
@@ -1458,13 +1503,15 @@
             partes divisae, ternis horarum spatiis secernuniur, <lb/>
             uL et in ipsis nocturnis mundialibusque officiis Tri­ <lb/>
             nitatis mysterium veneretur.</p>
-          <ab>
+          </div>
+<div n="20" subtype="section" type="textpart">
+<ab>
             <title type="sub">CAPUT XX.</title>
           </ab>
           <ab>
             <title type="sub">De vesperis.</title>
           </ab>
-          <p>i. Vespertinum diurni officium finis et alternae <lb/>
+          <p n="1">1. Vespertinum diurni officium finis et alternae <lb/>
             lucis occasus est, cujus ex Veteri Testamento solem-
             <milestone unit="PLSection" n="B"/><lb/>
             nis est celebratio. Denique hoc temporc veterum <lb/>
@@ -1473,7 +1520,7 @@
             regio ac sacerdotali functus officio, dicens : Ascendat <lb/>
             oratio mea, sicut incensum in conspectu tuo, elevatio <lb/>
             manuum mearum sacrificium vespertinum. (Psal. CXL).</p>
-          <p>2. In Novo quoque Testamento eo tempore quo <lb/>
+          <p n="2">2. In Novo quoque Testamento eo tempore quo <lb/>
             Dominus et Salvator noster cœnantibus apostolis <lb/>
             mysterium sui corporis et sanguinis inilio tradidit, <lb/>
             ut tempus ipsum sacrificii vesperum ostenderet sæ­ <lb/>
@@ -1487,13 +1534,15 @@
             decidente sole exoritur. De quo propheta dicit : <lb/>
             Et vesperum super filios hominum prodire facit (Job. <lb/>
             XXXVIII).</p>
-          <ab>
+          </div>
+<div n="21" subtype="section" type="textpart">
+<ab>
             <title type="sub">CAPUT XXI.</title>
           </ab>
           <ab>
             <title type="sub">a De completis.</title>
           </ab>
-          <p>i. De completis autem celebrandis idem etiam in <lb/>
+          <p n="1">1. De completis autem celebrandis idem etiam in <lb/>
             Palrum invenimus exemplis, David propheta dicente: <lb/>
             Si ascendero in lectum strati mei, si dedero somnum <lb/>
             oculis meis. aut palpebris meis dormitationem, aut re­ <lb/>
@@ -1535,13 +1584,15 @@
             sumus, exempla sanctorum imitemur, ne de nobis <lb/>
             dicatur, quod legitur : Dormierunt somnum suum, et <lb/>
             nihil invenerunt (Psal. LXXV), et caetera.</p>
-          <ab>
+          </div>
+<div n="22" subtype="section" type="textpart">
+<ab>
             <title type="sub">CAPUT XXII.</title>
           </ab>
           <ab>
             <title type="sub">De vigiliarum antiquitate.</title>
           </ab>
-          <p>i. Antiqua est vigiliarum devotio, familiare bo­ <lb/>
+          <p n="1">1. Antiqua est vigiliarum devotio, familiare bo­ <lb/>
             num omnibus sanctis. Isaias denique propheta da­ <lb/>
             mabat ad Dominum, dicens : De nocte vigilat spiritus <lb/>
             meus ad te, Deus,quia lux præcepta tua sunt super <lb/>
@@ -1552,7 +1603,7 @@
             (Psal. CXVIII, 62). Hoc namque tempore vaslator an­ <lb/>
             gelus transiens, primogenita Ægyptiorum percussit <lb/>
             (Exod. XII).</p>
-          <p>2. Unde et nos vigilare oportet, ne periculo Ægyp­ <lb/>
+          <p n="2">2. Unde et nos vigilare oportet, ne periculo Ægyp­ <lb/>
             tiorum admisceamur. 389 lisdem etiam horis ven­ <lb/>
             turum sese in Evangelio Salvalor astruxit. Unde et <lb/>
             ad vigilandum auditores suos exsuscitat, dicens: <lb/>
@@ -1562,7 +1613,7 @@
             venerit eos vigilantes, beati sunt servi illi. Itaque et <lb/>
             vos estote parati, quia nescitis, qua hora Filius komi­ <lb/>
             nis venturus est (Luc. XII).</p>
-          <p>3. Siquidem nec verbis solum docuit vigilias, sed
+          <p n="3">3. Siquidem nec verbis solum docuit vigilias, sed
             <milestone unit="PLSection" n="C"/><lb/>
             etiam confirmavit exemplo; sic namque testatur in <lb/>
             Evangelio : Quia erat Jesus pernoctans in oratione Dei <lb/>
@@ -1572,7 +1623,7 @@
             repente terræmotu facto, et concussis carceris fun­ <lb/>
             damentis, et januæ sponte apertae, et omnium vin­ <lb/>
             cula sunt soluta.</p>
-          <p>4. Unde oportet his horis psallendi orandique fre­ <lb/>
+          <p n="4">4. Unde oportet his horis psallendi orandique fre­ <lb/>
             quentiam nos in sanctis habere officiis, finemque <lb/>
             nostrum, vel si advenerit sub tali actu, expectare <lb/>
             securos. Est autem quoddam genus hæreticorum, <lb/>
@@ -1582,13 +1633,15 @@
             vina, qui noctem fecit ad requiem, sicut diem ad la­ <lb/>
             borem. Qui haeretici Graeco sermone Nyctages, hoc <lb/>
             est, somniculosi vocantur.</p>
-          <ab>
+          </div>
+<div n="23" subtype="section" type="textpart">
+<ab>
             <title type="sub">CAPUT XXIII.</title>
           </ab>
           <ab>
             <title type="sub">De matutinis.</title>
           </ab>
-          <p>1.De matutinorum antiquitate et auctoritate testis <lb/>
+          <p n="1">1.De matutinorum antiquitate et auctoritate testis <lb/>
             est idem David propheta, dicens : In matutinis me­ <lb/>
             ditabor in te, quia fuisti adjutor meus, et alibi : Præ­ <lb/>
             venerunt, inquit, oculi mei ad te diluculo, ut medita­ <lb/>
@@ -1600,7 +1653,7 @@
             <milestone unit="PLSection" n="B"/><lb/>
             universum mundum ejusdem celebrationis invaluit <lb/>
             consuetudo.</p>
-          <p>2. Diluculo autem proinde oratur, ut resurrectio <lb/>
+          <p n="2">2. Diluculo autem proinde oratur, ut resurrectio <lb/>
             Christi celebretur; matutina enim luce radiante, Do­ <lb/>
             minus et Salvator noster ab inferis resurrexit, quando <lb/>
             coepit oriri fidelibus lux quæ, moriente Christo, oc­ <lb/>
@@ -1608,13 +1661,15 @@
             cunctis spes futurae resurrectionis creditur, cum <lb/>
             justi et omnes ab hac temporali morte, quasi a so­ <lb/>
             pore somni resurgentes, evigilabunt.</p>
-          <ab>
+          </div>
+<div n="24" subtype="section" type="textpart">
+<ab>
             <title type="sub">CAPUT XXIV.</title>
           </ab>
           <ab>
             <title type="sub">De Dominico die.</title>
           </ab>
-          <p>i. Dominicum diem apostoli iidem religiosa so­ <lb/>
+          <p n="1">1. Dominicum diem apostoli iidem religiosa so­ <lb/>
             lemnitate sanxerunt, quia in eodem Redemptornoster
             <milestone unit="PLSection" n="C"/><lb/>
             a mortuis resurrexit. Quique ideo Dominicus dies <lb/>
@@ -1623,7 +1678,7 @@
             viamus, dantes scilicet huic die! honorem, et reve­ <lb/>
             rentiam propter spem resurrectionis nostrae, quam <lb/>
             habemus in illo.</p>
-          <p>2. Nam sicut ipse Dominus noster Jesus Christus <lb/>
+          <p n="2">2. Nam sicut ipse Dominus noster Jesus Christus <lb/>
             et Salvator noster tertia die resurrexit a mortuis, ita <lb/>
             et nos resurrecturos in novissimo saeculo speramus. <lb/>
             Unde etiam in Dominico die stantes oramus, quod <lb/>
@@ -1665,13 +1720,15 @@
             <milestone unit="PLSection" n="A"/><lb/>
             mini Jesu Christi corpore præmonstratum est, qui <lb/>
             est primogenitus a mortuis.</p>
-          <ab>
+          </div>
+<div n="25" subtype="section" type="textpart">
+<ab>
             <title type="sub">CAPUT XXV.</title>
           </ab>
           <ab>
             <title type="sub">De sabbato.</title>
           </ab>
-          <p>i. Sabbatum autem datum est priori populo in otio <lb/>
+          <p n="1">1. Sabbatum autem datum est priori populo in otio <lb/>
             corporaliter celebrandum, ut figura esset in requiem, <lb/>
             unde et Sabbatum requies interpretatur. Dies tamen <lb/>
             Dominicus non Judæis, sed Christianis per resur­ <lb/>
@@ -1680,7 +1737,7 @@
             qui post septimum reperitur octavus. Unde et in <lb/>
             Ecclesiaste ad duorum Testamentorum significatio­ <lb/>
             nem dicitur, illi septem, et illi octo (Eccl. XI).</p>
-          <p>i. Primo enim solum celebrandum Sabbatum tra­ <lb/>
+          <p n="2">2. Primo enim solum celebrandum Sabbatum tra­ <lb/>
             ditum est , quia erat antea requies morluorum.
             <milestone unit="PLSection" n="B"/><lb/>
             Resurrectio autem nullius erat qui resurgens a <lb/>
@@ -1690,7 +1747,7 @@
             siae, quod corpus Ecclesiae speraret in finem , dies <lb/>
             Dominicus, id est, octavus, qui et primus, in festi­ <lb/>
             vitate successit.</p>
-          <p>3. Apparet autem hunc diem etiam in sacrosanctis <lb/>
+          <p n="3">3. Apparet autem hunc diem etiam in sacrosanctis <lb/>
             Scripturis esse solemnem; ipse enim primus est dies <lb/>
             saeculi, in ipso creati sunt angeli, in ipso quoque a <lb/>
             mortuis resurrexit Chrislus, in ipso de coelis super <lb/>
@@ -1700,20 +1757,22 @@
             autem sexto duplum colligetis (Exod. XVI). Sexta enim
             <milestone unit="PLSection" n="C"/><lb/>
             dies est parasceve, quae ante Sabbatum ponitur.</p>
-          <p>4. Sabbatum autem dies septimus est, quem se­ <lb/>
+          <p n="4">4. Sabbatum autem dies septimus est, quem se­ <lb/>
             quitur Dominicus, 392 in quo primum manna de <lb/>
             coelovenit. Unde intelligant Judæi jam tunc pra'latam <lb/>
             esse Jndaico Sabbato Dominicam nostram; jam tunc <lb/>
             indicatum est quod in Sabbato ipsorum gratia ad <lb/>
             eos de coelo nulla descenderit, sed in nostra Domi­ <lb/>
             nica, in qua primum manna Dominus pluit.</p>
-          <ab>
+          </div>
+<div n="26" subtype="section" type="textpart">
+<ab>
             <title type="sub">CAPUT XXVI.</title>
           </ab>
           <ab>
             <title type="sub">De Natali Domini.</title>
           </ab>
-          <p>i. Natalis Domini dies ea de causa a Patribus <lb/>
+          <p n="1">1. Natalis Domini dies ea de causa a Patribus <lb/>
             votivae solemnitatis institutus est, quia in eo Christus <lb/>
             pro redemplione mundi nasci corporaliter voluit, <lb/>
             prodiens ex virginis utero, qui erat in Patris impe-
@@ -1725,7 +1784,7 @@
             crescebatque in malum vehementius omne genus <lb/>
             mortalium diffusis ubique sceleribus, et, quod est <lb/>
             nequius, omnium cultibus idolorum serviens.</p>
-          <p>2. Volens ergo Deus terminare peccatum, consuluit <lb/>
+          <p n="2">2. Volens ergo Deus terminare peccatum, consuluit <lb/>
             verbo, lege, propbetis, signis, plagis et prodigiis. Sed <lb/>
             cum nec sic quidem errores suos admonitus agnosceret <lb/>
             mundus, misit Deus Filium suum, ut carne induere­ <lb/>
@@ -1740,20 +1799,22 @@
             Dei aequalis Patri, in natura hominis factus mortalis <lb/>
             393 in nobis pro nubis, de nobis, manens quod erat, <lb/>
             suscipiens quod non erat, ut liberaret quod fecerat.</p>
-          <p>3. Haec est ergo dominicae Nativitatis magna so­ <lb/>
+          <p n="3">3. Haec est ergo dominicae Nativitatis magna so­ <lb/>
             lemnitas, haec est diei hujus nova et gloriosa festivi­ <lb/>
             tas, adventus Dei factus ad homines. Itaque dies iste, <lb/>
             pro eo quod in eo Christus natus est, Natalis dicitur; <lb/>
             quemque ideo observare per revolutum circulum <lb/>
             anni festa solemnitate solemus, ut in memoriam <lb/>
             revocetur quo die Christus natus est.</p>
-          <ab>
+          </div>
+<div n="27" subtype="section" type="textpart">
+<ab>
             <title type="sub">CAPUT XXVII.</title>
           </ab>
           <ab>
             <title type="sub">De Epiphania.</title>
           </ab>
-          <p>i. Epiphaniorum diem proinde festa solemnitate
+          <p n="1">1. Epiphaniorum diem proinde festa solemnitate
             <milestone unit="PLSection" n="C"/><lb/>
             viri apostolici signaverunt, quia in eo est proditus <lb/>
             stella Salvator, quando invenerunt magi Christum in <lb/>
@@ -1762,7 +1823,7 @@
             Deo atque passuro. Ideo ergo diem hunc annua cele­ <lb/>
             britate sacraverunt, ut mundus agnoscat Dominum <lb/>
             quem elementa cœlitus prodiderunt.</p>
-          <p>2. Siquidem codem die idem Jesus etiam Jordanis <lb/>
+          <p n="2">2. Siquidem codem die idem Jesus etiam Jordanis <lb/>
             lavacro tingitur, divisoque cælo Spirilus sancii des­ <lb/>
             cendentis testimonio Dei esse Filius declaratur <lb/>
             (Matth. III); cujus diei nomen, ex eo quod apparuit <lb/>
@@ -1803,20 +1864,22 @@
             ostensus , sive quod ea die sideris ortu magis est <lb/>
             proditus, sive quod primo signo per aquam in vinum <lb/>
             versam muhis est manifestatus.</p>
-          <p>3. Refert autem Cassianus apud ÆgyptiosNativi­ <lb/>
+          <p n="3">3. Refert autem Cassianus apud ÆgyptiosNativi­ <lb/>
             tatis diem, 394 et epiphaniorum solemnitatem non <lb/>
             bifarie, ut in occiduis provinciis, sed sub diei .Ains <lb/>
             festivitate celebrari. Epistolæ quoque pontificis <lb/>
             Alexandrini per universas Ægypti Ecelesia. vel mo­ <lb/>
             nasteria diriguntur, quibus et initium Quadragesimæ, <lb/>
             et dies Pasehæ denuntiatur.</p>
-          <ab>
+          </div>
+<div n="28" subtype="section" type="textpart">
+<ab>
             <title type="sub">CAPUT XXVIII.</title>
           </ab>
           <ab>
             <title type="sub">De Palmarum die.</title>
           </ab>
-          <p>i. Dies Palmarum ideo celebratur, quia in eo
+          <p n="1">1. Dies Palmarum ideo celebratur, quia in eo
             <milestone unit="PLSection" n="B"/><lb/>
             Dominus et Salvator noster, sicur propheta cecinit, <lb/>
             Jerusalena tendent, asellum sedisse perhibetur. Tunc <lb/>
@@ -1827,7 +1890,7 @@
             victoria, qua erat Deminus mortem moriendo supe­ <lb/>
             raturus, et trophæo crucis de diabolo mortis prin­ <lb/>
             eipe triumphaturus.</p>
-          <p>2. In asello autem, quem sedendo Jerusalem venit, <lb/>
+          <p n="2">2. In asello autem, quem sedendo Jerusalem venit, <lb/>
             indicavit simplicia corda gentilitatis, quæ præsidendo <lb/>
             atque regendo perducebat 385 ad visionem pacis. <lb/>
             Hoc autem die symbolum competentibus traditur, <lb/>
@@ -1840,13 +1903,15 @@
             <milestone unit="PLSection" n="A"/><lb/>
             observatione Quadragesimæ sordidata ad unctionem <lb/>
             accederent.</p>
-          <ab>
+          </div>
+<div n="29" subtype="section" type="textpart">
+<ab>
             <title type="sub">CAPUT XXIX.</title>
           </ab>
           <ab>
             <title type="sub">De Cæna Domini.</title>
           </ab>
-          <p>1. Cœna Domini, hoc est, quinta feria ultimae <lb/>
+          <p n="1">1. Cœna Domini, hoc est, quinta feria ultimae <lb/>
             Quadragesimæ, quando Dominus et Salvator noster, <lb/>
             post typicum illud pascha eompletum, ad verum <lb/>
             pascha transiens, mysterium corporis et sanguinis <lb/>
@@ -1860,7 +1925,7 @@
             <milestone unit="PLSection" n="B"/><lb/>
             etiam decebat potissimum, ut facto doeeret quod <lb/>
             observare discipulos praemoneret.</p>
-          <p>i. Hinc est quod eodem die altaria templique <lb/>
+          <p n="2">2. Hinc est quod eodem die altaria templique <lb/>
             parietes et pavimenta lavantur, vasaque purifican­ <lb/>
             tur, quae sunt Domino consecrata. Quo die proinde <lb/>
             etiam sanctum chrisma conficitur, quia ante biduum <lb/>
@@ -1868,13 +1933,15 @@
             fudisse perhibetur. Unde et Dominus discipulis suis <lb/>
             dixit: Scitis, quia post biduum pascha fiet, et Filius <lb/>
             hominis tradetur, ut crucifigatur (Matth. XXVI).</p>
-          <ab>
+          </div>
+<div n="30" subtype="section" type="textpart">
+<ab>
             <title type="sub">396 CAPUT XXX.</title>
           </ab>
           <ab>
             <title type="sub">De Parasceve.</title>
           </ab>
-          <p>i. Parasceve, id est, sexta Sabbati, ideo in ac­ <lb/>
+          <p n="1">1. Parasceve, id est, sexta Sabbati, ideo in ac­ <lb/>
             lemnilate habetur, quia in eo die Christus myste-
             <milestone unit="PLSection" n="C"/><lb/>
             rium crucis explevit, propter quod venerat in hunc <lb/>
@@ -1942,7 +2009,7 @@
             dignatus ese sanguine passionis suae saeculum redi­ <lb/>
             mere, et peccatum mundi per crucem morte devi­ <lb/>
             cfa absolvere.</p>
-          <p>2. Cujus quidem crucis injuriam non pertulit illa <lb/>
+          <p n="2">2. Cujus quidem crucis injuriam non pertulit illa <lb/>
             divinitatis substantia, sed sola susceptæ humani­ <lb/>
             tatis natura. Passio enim corporis fuit, divinitas <lb/>
             vero exsors injur æ mansit. Tripertita autem ratio <lb/>
@@ -1953,7 +2020,7 @@
             prædam quam tenebat amitteret, non potentia vi-
             <milestone unit="PLSection" n="B"/><lb/>
             crus, sed justitia , non dominatione, sed ratione.</p>
-          <p>3. Secanda causa est ut secuturis hominibus vitae <lb/>
+          <p n="3">3. Secanda causa est ut secuturis hominibus vitae <lb/>
             magisterium præberetur. Ascendit enim in crucem <lb/>
             Christus, ut nobis passionis et ressurrectionis præ­ <lb/>
             beret exemplum, passionis ad confirmandum pa­ <lb/>
@@ -1961,14 +2028,14 @@
             duas vitas nobis ostenderet in carne, unam laborio­ <lb/>
             sam, atteram beatam : laboriosam, quam tolerare <lb/>
             debemus; beatam, quam sperare debemus.</p>
-          <p>4. Tertia causa est susceptae crucis ut superba <lb/>
+          <p n="4">4. Tertia causa est susceptae crucis ut superba <lb/>
             saeculi et inflata sapientia, per crucis stultam, ut <lb/>
             putatur, prædicationem humiliata, corrueret; ut <lb/>
             putaret id quod stultum Dei est. quanto sit homini­ <lb/>
             bus sapicutius, et quod infirrnum Dei est quanto sit <lb/>
             fortius lota hominum fortitudine (I Cor. i).</p>
-          <p>
-            <milestone unit="PLSection" n="C"/>5. Docet apostolus Paulus (Ephes. v), illuminatos <lb/>
+          <p n="5">
+<milestone unit="PLSection" n="C"/>5. Docet apostolus Paulus (Ephes. v), illuminatos <lb/>
             debere habere oculos cordia ad intelligendum quæ <lb/>
             sit latitudo crucis, et longiludo, et 397 altitudo, <lb/>
             et profundum. Cujus latitudo est transversum Ii­ <lb/>
@@ -1977,7 +2044,7 @@
             sursum usque ad caput, profundum vero quod terræ <lb/>
             infixum absconditur ; quo signo crucis omuis vita <lb/>
             sanctorum describitur.</p>
-          <p>6. Dieilur enim homini: Tolle crucem tuam, et <lb/>
+          <p n="6">6. Dieilur enim homini: Tolle crucem tuam, et <lb/>
             sequere me. Tunc enim crucifigitur caro, cum mor­ <lb/>
             tificantur membra nostra super terram, fornicatio, <lb/>
             immunditia, luxuria, et caetera. Dumque exterior <lb/>
@@ -1988,7 +2055,7 @@
             ces requies est. Ideoque dicitur : Spe gaudentes, ut <lb/>
             eogilanles scilicet requiem futuram, eum hilaritate et <lb/>
             laboribus operemur.</p>
-          <p>7. Hanc hilaritatem significat crucis latitudo in
+          <p n="7">7. Hanc hilaritatem significat crucis latitudo in
             <milestone unit="PLSection" n="A"/><lb/>
             transverso ligno, ubi figuntur manus. Per manua <lb/>
             eum opes intelligitur, per latitudinem hilaritas ope­ <lb/>
@@ -1999,7 +2066,7 @@
             Dei terrena ac temporalia facienda credantur, sed <lb/>
             potius propter illud quod desuper sperat fides, quæ <lb/>
             per dilectionemo operatur.</p>
-          <p>8. Jam vero per longitudinem, qua totum corpus <lb/>
+          <p n="8">8. Jam vero per longitudinem, qua totum corpus <lb/>
             extenditur, ipsa tolerantia signilicatur, ut longani­ <lb/>
             mes permaneamus, unde longanimes dicuntur qui <lb/>
             tolerant. Per profundum autem, hoc est, partem <lb/>
@@ -2009,32 +2076,36 @@
             dicantur judicia Dei ; de quibus occulta ejus volun­ <lb/>
             tate vocatur homo ad participationem tantæ gratia, <lb/>
             alius sic, alit vero sic.</p>
-          <ab>
+          </div>
+<div n="31" subtype="section" type="textpart">
+<ab>
             <title type="sub">398 CAPUT XXXI.</title>
           </ab>
           <ab>
             <title type="sub">De Sabbato Paschæ.</title>
           </ab>
-          <p>i. Sabbati paschalis veneratio hinc celebratur, <lb/>
+          <p n="1">1. Sabbati paschalis veneratio hinc celebratur, <lb/>
             pro eo quod eodem die Dominus in sepulero quievit. <lb/>
             Unde et bene in Hebræo sermone Sabbatum requies <lb/>
             interpretatur, sive quod Deus eodem die requievit <lb/>
             mundo perfecto, sive quod in eo Dominus et He­ <lb/>
             demptor noster quievit in sepulcro.</p>
-          <p>i. Hic autem dies inter mortem Christi et resur­ <lb/>
+          <p n="2">2. Hic autem dies inter mortem Christi et resur­ <lb/>
             rectionem medius est, significans requiem quamdam <lb/>
             animarum ab omni labore omnique molestia post
             <milestone unit="PLSection" n="C"/><lb/>
             mortem , per quam fit transitus per resurrectionem <lb/>
             caruis ad illam vitamquam Dominus noster Jesus Chri­ <lb/>
             stus sua resurrectione praemonstrare dignatus est.</p>
-          <ab>
+          </div>
+<div n="32" subtype="section" type="textpart">
+<ab>
             <title type="sub">CAPUT XXXII.</title>
           </ab>
           <ab>
             <title type="sub">De die sancto Paschæ.</title>
           </ab>
-          <p>i. Jam vero paschale sacramentum, quod nunc <lb/>
+          <p n="1">1. Jam vero paschale sacramentum, quod nunc <lb/>
             in Salvatoris nostri mysterio manifestissime cele­ <lb/>
             bratur, in Veteri Testamento figuraliter primum ge­ <lb/>
             stum est, quando agno occiso pascha celebravit po­ <lb/>
@@ -2049,7 +2120,7 @@
             pro eo celebramus, quod in eodem a mortuis re­ <lb/>
             surrexit, sed etiam et pro aliis sacramentis, quæ <lb/>
             per eumdem significantur</p>
-          <p>2. Quia enim, sicut dicit Apostolus, mortuus est <note type="footnote"> 5. Docet aurem aposlolul, usque ad profundum, <lb/>
+          <p n="2">2. Quia enim, sicut dicit Apostolus, mortuus est <note type="footnote"> 5. Docet aurem aposlolul, usque ad profundum, <lb/>
             verha Mint Uuffilli iu SYlnbol. CRIAL. </note><note type="footnote"> J bid. Cujus lll.;.udo, usque ad describitur, com­ <lb/>
             munia hæc sunt Ruffino cum Augustino, II de Doctr. <lb/>
             Cur., cap. 44, et in lib. de GraL. VeL et No,. Te­ <lb/>
@@ -2078,7 +2149,7 @@
             braretur a Domino pascha cum discipulis: Cum vi­ <lb/>
             disset, inquit, Jesus quia venit hora ut transirel de <lb/>
             hoc mundo ad Patrem (Joan. XIII).</p>
-          <p>3. Transitus ergo de hac vita mortali in aliam vi­ <lb/>
+          <p n="3">3. Transitus ergo de hac vita mortali in aliam vi­ <lb/>
             tam immortalem, hoc est, de morte ad vitam, in <lb/>
             passione et resurrectione Domini commendatur. Hic <lb/>
             transitus a nobis modo agitur per fidem, quae nobis
@@ -2088,7 +2159,7 @@
             transeuntes de pejoribus ad meliora, de corporalibus <lb/>
             ad spiritualia, de conversatione hujus vitae adapem <lb/>
             futurae resurrectionis et gloriae.</p>
-          <p>4. Propter ipsum ergo initium novae vitæ, ad quam <lb/>
+          <p n="4">4. Propter ipsum ergo initium novae vitæ, ad quam <lb/>
             transimus, et propter novum hominem, quem jube­ <lb/>
             mur induere, et cxuere veterem, expurgantes vetus <lb/>
             fermentum , ut simus nova conspersio , quoniam pa­ <lb/>
@@ -2098,8 +2169,8 @@
             dicitur mensis novorum. Quia vero in toto tempore <lb/>
             sæculi nunc tertium tempus apparuit, ideo resurre­ <lb/>
             ctio Domini triduana est.</p>
-          <p>
-            <milestone unit="PLSection" n="C"/>5. Primum enim tempus est ante legem, secundum <lb/>
+          <p n="5">
+<milestone unit="PLSection" n="C"/>5. Primum enim tempus est ante legem, secundum <lb/>
             sub lege, tertium sub gratia, ubi jam manifestum est <lb/>
             sacramentum quod erat ante in prophetico ænigmate <lb/>
             occultum. Hoc ergo et in lunari numero significatur. <lb/>
@@ -2107,7 +2178,7 @@
             quamdam perfectionem mysticus apparere, in tertia <lb/>
             hebdomada lunæ pascha celebratur, id est, qui dies <lb/>
             occurrerit a quarta decima in vicesimam primam.</p>
-          <p>6. Sed et non solum propter tempus tertium, quia <lb/>
+          <p n="6">6. Sed et non solum propter tempus tertium, quia <lb/>
             inde incipit hebdomada tertia, sed etiarn propter ip­ <lb/>
             sam conversionem lanæ. Tunc enim illa ab inferiori­ <lb/>
             bus ad superiora convertitur, et haec nobis de luna <lb/>
@@ -2119,7 +2190,7 @@
             lucem studii nostri, quae ad inferiora vergebat, ad <lb/>
             superiora convertamus, ad illam scilicet æternam <lb/>
             contemplationem immutabilis veritatis (Coloss. m).</p>
-          <p>7. Usque ad vicesimam vero primam ideo Pascha <lb/>
+          <p n="7">7. Usque ad vicesimam vero primam ideo Pascha <lb/>
             observatur, propler septenarium numerum , quo <lb/>
             universitatis significatio saepe figuratur, qui etiam
             <milestone unit="PLSection" n="A"/><lb/>
@@ -2131,7 +2202,7 @@
             vero anniversarius dies paschalis , non ad eumdem <lb/>
             redit anni diem, sicut dies quo creditur Dominus <lb/>
             natus, hoc fit propter Dominicum diem et lunam.</p>
-          <p>8. Manifestum est enim quo die Dominus cruci­ <lb/>
+          <p n="8">8. Manifestum est enim quo die Dominus cruci­ <lb/>
             fixus sit, et in sepulcro fuerit, et resurrexit. Adjun­ <lb/>
             cta est enim ipsorum dierum observatio per Patres <lb/>
             Nicæni concilii, et orbi universo Christiano persna­ <lb/>
@@ -2144,13 +2215,15 @@
             lunam observant. Diem autem Dominicum adden­ <lb/>
             dum Patres nostri censuerunt, ut et nostra festivitas <lb/>
             a Judaeorum festivitate distingueretur.</p>
-          <ab>
+          </div>
+<div n="33" subtype="section" type="textpart">
+<ab>
             <title type="sub">CAPUT XXXIII.</title>
           </ab>
           <ab>
             <title type="sub">De Ascensione Domini.</title>
           </ab>
-          <p>1. Ascensionis dominicae solemnitas ideo celebra­ <lb/>
+          <p n="1">1. Ascensionis dominicae solemnitas ideo celebra­ <lb/>
             tur, quia eodem die, post mundi victoriam, post in­ <lb/>
             ferni regressum, ascendere Christus memoratur ad <lb/>
             coelos, sicut scriptum est : Ascendit in altum, cepit <lb/>
@@ -2165,20 +2238,22 @@
             vidistis eum euntem in cœlum (Act. I), id est, in eadem <lb/>
             carnis specie atque substantia; cujus profectio car­ <lb/>
             nis immortalitatem donavit, naturam non ahstulit.</p>
-          <p>2. Dextera autem Patris, ad quam idem Filius se­ <lb/>
+          <p n="2">2. Dextera autem Patris, ad quam idem Filius se­ <lb/>
             dere creditur, non est corporea, quod nefas est de <lb/>
             Deo sentire. Sed dextera Patris est beatitudo perpe­ <lb/>
             tua, quae sanctis in resurrectione promittitur, id eSI, <lb/>
             universas Ecclesiae, quae est corpus Christi; sicut <lb/>
             et sinistra ejus recte intelligitur miseria, et poena <lb/>
             perpetua, quae impiis dabitur.</p>
-          <ab>
+          </div>
+<div n="34" subtype="section" type="textpart">
+<ab>
             <title type="sub">CAPUT XXXIV.</title>
           </ab>
           <ab>
             <title type="sub">De Pentecosts.</title>
           </ab>
-          <p>1. Initium sane et causa festivitatis Pentecostes
+          <p n="1">1. Initium sane et causa festivitatis Pentecostes
             <milestone unit="PLSection" n="D"/><lb/>
             paulo altius repetenda est. Pentecostes enim dies <lb/>
             hinc accepit exordium, quando Dei vox in Sina <lb/>
@@ -2196,8 +2271,8 @@
             carnis. AI., cujus profecto carnis. AREV. </note><note type="footnote"> CAP. XXXIV. N. i. Pleraque ex eadem Augustini <lb/>
             ad Januar. epistola. GRIAL. </note> <pb n="769"/>
             </p>
-          <p>
-            <milestone unit="PLSection" n="A"/>2. Denique dum portam cœli Christus intrasset, <lb/>
+          <p n="2">
+<milestone unit="PLSection" n="A"/>2. Denique dum portam cœli Christus intrasset, <lb/>
             decem diebus interpositis, intremuit subito orantibus <lb/>
             apostolis locus, et descendente Spiritu sancto super <lb/>
             eos, inilammaii sunl ita, ut linguis omnium gen­ <lb/>
@@ -2206,7 +2281,7 @@
             rietate linguarum diffusus solemnitatem transmisit <lb/>
             in posteros, eaque dc causa Pentecoste celebratur. <lb/>
             et dies ipse proinde insignis habetur.</p>
-          <p>3. Concordat autem haec festivitas Evangelii cum <lb/>
+          <p n="3">3. Concordat autem haec festivitas Evangelii cum <lb/>
             festivitate legis ; illic enim posteaquam agnus immo­ <lb/>
             latus est, interpositis quinquaginta diebus, data est <lb/>
             lex Moysi, scripta digito Dei; hic postquam occisus <lb/>
@@ -2217,7 +2292,7 @@
             digitus Dei super centum 402 viginti discipulos <lb/>
             Mosaicæ ætatis numero constitutos, siquidem et hæc <lb/>
             festivitas aliud obtinet sacramentum.</p>
-          <p>4. Constat enim ex septimana septimanarum (Isai. <lb/>
+          <p n="4">4. Constat enim ex septimana septimanarum (Isai. <lb/>
             LIII), sed dierum quidem septimanæ generant eam­ <lb/>
             dem Pentecosten, in qua fit peccati remissio per <lb/>
             Spiritum sanctum, annorum vero septimanae quin­ <lb/>
@@ -2231,7 +2306,7 @@
             <milestone unit="PLSection" n="C"/><lb/>
             enim ipsa et octava semper, et prima, imo ipsa est <lb/>
             semper una, quae est Dominicus dies.</p>
-          <p>5. Necesse est enim sabbatismum animarum po­ <lb/>
+          <p n="5">5. Necesse est enim sabbatismum animarum po­ <lb/>
             puli Dei illuc recurrere atque ibi compleri, ubi datur <lb/>
             pars his qui octo, sicut quidam disserens Salomonis <lb/>
             dicta sapienter exposuit (Eccle. XI). Idcirco autem <lb/>
@@ -2239,7 +2314,7 @@
             nem soluta abstinentia in sola lætitia celebrantur, <lb/>
             propter figuram futuræ resurrectionis, ubi jam non <lb/>
             labor, sed requies crit laetitiae.</p>
-          <p>6. Ideoque in his diebus nec genua in oratione <lb/>
+          <p n="6">6. Ideoque in his diebus nec genua in oratione <lb/>
             flectuntur, quia, sicut quidam sapientium ait, inflexio <lb/>
             genuum pœnitentiæ, et luctus inditium est, Unde etiam <lb/>
             per omnia eamdem in illis solemnitatem, quam die <lb/>
@@ -2250,20 +2325,22 @@
             verentiam ressurectionis dominicæ, tradiderunt.</p>
           <p>
             <milestone unit="PLSection" n="A"/></p>
-          <ab>
+          </div>
+<div n="35" subtype="section" type="textpart">
+<ab>
             <title type="sub">CAPUT XXX V.</title>
           </ab>
           <ab>
             <title type="sub">De fesitivitatibus martyrum.</title>
           </ab>
-          <p>1. Festivitates apostoloruin, seu in honorem mar­ <lb/>
+          <p n="1">1. Festivitates apostoloruin, seu in honorem mar­ <lb/>
             tyrum solemnitates antiqui Patres in venerationis <lb/>
             myslerio celebrari sanxerunt, 403 vel ad excitan­ <lb/>
             dam imitationem, vel ut meritis eorum consociemur, <lb/>
             atque orationibus adjuvemur, ita tamen ut nulli <lb/>
             martyrum, sed ipsi Deo marlyrum sacrilicemus, <lb/>
             quamvis in memoris martyrum constituamus aharia.</p>
-          <p>i. Quis enim antistitum, in locis sanctorum corpo­ <lb/>
+          <p n="2">2. Quis enim antistitum, in locis sanctorum corpo­ <lb/>
             rum assistens altari, aliquando dixit : Offerimus tibi, <lb/>
             Petre, aut Paule, aut Cypriane? Sed quod offertur, <lb/>
             offertur Deo, qui martyres coronavit , apud memo­ <lb/>
@@ -2272,7 +2349,7 @@
             <milestone unit="PLSection" n="B"/><lb/>
             charitatem et in illos quos imitari debemus , et in <lb/>
             illum quo adjuvante possumus.</p>
-          <p>3. Colimus ergo martyres eo cultu dilectionis et <lb/>
+          <p n="3">3. Colimus ergo martyres eo cultu dilectionis et <lb/>
             societatis quo in hac vita coluntur sancti homines <lb/>
             Dei, quorum cor ad talem pro evangelica veritate <lb/>
             passionem paratum esse sentimus. Sed illos tanto <lb/>
@@ -2280,7 +2357,7 @@
             quanto etiam fidentiori laude. praedicamus jam in <lb/>
             vita feliciore victores, quam in ista adhuc usque <lb/>
             pugnantes.</p>
-          <p>4. At vero illo cultu , quae Graece latria dicitur , <lb/>
+          <p n="4">4. At vero illo cultu , quae Graece latria dicitur , <lb/>
             Latine uno verbo dici non potest, cum sit quadam <lb/>
             propriae Divinitati debita servitus, nec colimus, nec <lb/>
             colendum docemus, nisi unum Deum. Cum autem <lb/>
@@ -2295,7 +2372,7 @@
             corrigatur, sive ut condemnetur, sive ut caveatur, <lb/>
             dum etiam ipsi sancti vel homines, vel angeli, exhi­ <lb/>
             beri sibi nolunt, quod uni Deo deberi norunt.</p>
-          <p>5. Apparuit hoc in Paulo, eL in Barnaba, cum, com­ <lb/>
+          <p n="5">5. Apparuit hoc in Paulo, eL in Barnaba, cum, com­ <lb/>
             moti miraculis quæ per eos facta sunt, Lycaonii, <lb/>
             tanquam diis, immolare voluerunt. Conscissis enim <lb/>
             vestimentis suis, confitentes, et persuadentes se <lb/>
@@ -2335,13 +2412,15 @@
             illuninante lætantur. Honorandi sunt ergo martyres <lb/>
             propter imitationem, non adorandi propter religio­ <lb/>
             nem, honorandi charitate, non servitute.</p>
-          <ab>
+          </div>
+<div n="36" subtype="section" type="textpart">
+<ab>
             <title type="sub">CAPUT XXXVI.</title>
           </ab>
           <ab>
             <title type="sub">De encæniis.</title>
           </ab>
-          <p>1. Festivitates annuos dedicationis ecclesiarum ex <lb/>
+          <p n="1">1. Festivitates annuos dedicationis ecclesiarum ex <lb/>
             more veterum celebrari in Evangelio legimus, ubi <lb/>
             dicitur : Facta sunt autem encænia Jerosolymis (Joan. <lb/>
             x, 22). Eucænia quippe festivitas erat dedicationis <lb/>
@@ -2354,21 +2433,23 @@
             exolevit, quia et cultu et templo ceruerunt, tamen <lb/>
             Christiani servant morem illum patrum, in quos glo­ <lb/>
             ria translata videtur.</p>
-          <p>2. Omnes autem festivitates pro varietate religip- <lb/>
+          <p n="2">2. Omnes autem festivitates pro varietate religip- <lb/>
             num diversoque in honore martyrum tempore ideo <lb/>
             a viris prudentibus institutæ sunt, ne forte rara <lb/>
             congregatio populi fidem minueret in Christo. Pro­ <lb/>
             pterea engo dies aliqui constituti sunt, ut in unum <lb/>
             omne pariter convenirent, ut ex conspectu mutuo <lb/>
             et fides crescat, et lætitia major oriatur.</p>
-          <ab>
+          </div>
+<div n="37" subtype="section" type="textpart">
+<ab>
             <title type="sub">405 CAPUT XXXVII.</title>
           </ab>
           <ab>
             <title type="sub">De jejunio Quadragesimæ.</title>
           </ab>
-          <p>
-            <milestone unit="PLSection" n="c"/>4. Jejuniorum tempora secundum Scripturas san­ <lb/>
+          <p n="1">
+            <milestone unit="PLSection" n="c"/>1. Jejuniorum tempora secundum Scripturas san­ <lb/>
             ctas quatuor suut, in quibus per abstinentiam et <lb/>
             lamentum pœnitentiæ Domino supplicandum est; et <lb/>
             licet onmibus diebus orare et abstinere conveniat, <lb/>
@@ -2378,8 +2459,8 @@
             nio Moysi et Eliæ, et ex Evangelio quia totidem die­ <lb/>
             bus Dominus jejunavit, demonstratus Evangelium non <lb/>
             dissentire a lege et prophetis,</p>
-          <p>
-            <milestone unit="PLSection" n="A"/>I. In persona quippe Moysi lex, in persona Eliae <lb/>
+          <p n="2">
+            <milestone unit="PLSection" n="A"/>2. In persona quippe Moysi lex, in persona Eliae <lb/>
             prophetæ accipiuntur, inter quos in monte Christus <lb/>
             gloriosus apparuit, ut evidentius emineret, quod de <lb/>
             ille dicit Apostolus : Testimonium habent a lege , et <lb/>
@@ -2390,7 +2471,7 @@
             opus est continentia, ut ab ipsius mundi iHecebris <lb/>
             jejunemus I viventes in solo manna, id est, cœlesti­ <lb/>
             bus spiritualibusque præceptis.</p>
-          <p>3. Numero autem quadragenario vita ista propterea <lb/>
+          <p n="3">3. Numero autem quadragenario vita ista propterea <lb/>
             figuratur, quia denarus est perfectio beatitudinis no­ <lb/>
             stræ, creatura autem septenario figuratur, quæ adhae­ <lb/>
             ret Creatori, in quo declaratur unitas Trinitatis ner
@@ -2402,7 +2483,7 @@
             consummantur, quo numero ostenditur omni tempore <lb/>
             a delectatione abstinendum, et jejunandum esse, et <lb/>
             caste continenterque vivendum.</p>
-          <p>4. Licet et aliud sacramenti mysterium exprima­ <lb/>
+          <p n="4">4. Licet et aliud sacramenti mysterium exprima­ <lb/>
             tur, quod quadraginta diebus eadem jejunia celebran­ <lb/>
             tur. Lege enim Mosaica generaliter univero populo <lb/>
             est praeceptum decimas et primitias offerre Domino <lb/>
@@ -2417,7 +2498,7 @@
             diebus, quasi pro totius anni decimis, ad ecclesiam <lb/>
             concurrimus, actuumque nostrorum operationem Deo <lb/>
             in hostiam jubilationis offerimus.</p>
-          <p>5. Cujus quidem Quadragesimæ lege, sicut ait <lb/>
+          <p n="5">5. Cujus quidem Quadragesimæ lege, sicut ait <lb/>
             noster Cassianus, quique perfecti sunt non tenentur, <lb/>
             nec exigui hujus canonis subjectione contenti sunt. <lb/>
             Quem profecto illis qui per totum anni spatium deli- <note type="footnote"> CAP. XXXVI. N. i. Eticcenia quippe feat. Ex August., <lb/>
@@ -2467,13 +2548,15 @@
             mino cogerentur, ac dierum vitæ suae, quos totos <lb/>
             quasi quosdam fructus fuerant voraturi, velut deci­ <lb/>
             mas Domino dedicarent.</p>
-          <ab>
+          </div>
+<div n="38" subtype="section" type="textpart">
+<ab>
             <title type="sub">407 CAPUT XXXVIII.</title>
           </ab>
           <ab>
             <title type="sub">De jejunio Pentecoste.</title>
           </ab>
-          <p>1. Secundum jejunium est quod, juxta canones, <lb/>
+          <p n="1">1. Secundum jejunium est quod, juxta canones, <lb/>
             post Pentecosten alia die inchoatur, secundum <lb/>
             quod et Moyses ait : Initio mensis hordearii facietis <lb/>
             vobis hebdomadas seplem (Deut. XVI, 9). Hoc jeju­ <lb/>
@@ -2484,7 +2567,7 @@
             quid possunt filii .potui lugere, quandiu cum illis est <lb/>
             sponsus? Veniet aule. dies cum auferetur sponsus ab <lb/>
             cis, et tunc jejunabunt (Matth. IX).</p>
-          <p>2.. Dicunt enim, post resurrectionem Domini, <lb/>
+          <p n="2">2.. Dicunt enim, post resurrectionem Domini, <lb/>
             quadraginta illis diebus quibus cum discipulis post­ <lb/>
             ea legitur conversatus, non oportere jejunare, nec <lb/>
             lugere, quia iu lætitia sumus. Postea vero quam <lb/>
@@ -2493,7 +2576,9 @@
             est, ut per cord.s humilitatem et abstinentiam car­ <lb/>
             nis mereamur e cœlis promissum accipere Spiri­ <lb/>
             tum sanctum (Act. i).</p>
-          <ab>
+          </div>
+<div n="39" subtype="section" type="textpart">
+<ab>
             <title type="sub">CAPUT XXXIX.</title>
           </ab>
           <ab>
@@ -2511,7 +2596,7 @@
             rit in ipso die jejunii, exterminabitur de populo suo, <lb/>
             et omnis anima quæ fecerit opus in ipso die, peribit <lb/>
             anima illa de populo suo (Levit. XXIII). »]</p>
-          <p>i. Quo quidem jejunio usos fuisse antiquos, <lb/>
+          <p n="1">1. Quo quidem jejunio usos fuisse antiquos, <lb/>
             Esdræ liber meminit. « Postquam enim redierunt, » <lb/>
             inquit, &lt; filii Israel Jerusalem, et fecerunt sibi laber-
             <milestone unit="PLSection" n="D"/><lb/>
@@ -2523,20 +2608,22 @@
             dum, et legerunt in volumine legis Domini Dei sui, <lb/>
             qualer in die, et quater in nocte confitebantur, et <lb/>
             adorabant Dominum Deum suum » (II Esdr. IX).</p>
-          <p>5. Hoc etiam mense septimo sol secundum com­ <lb/>
+          <p n="2">2. Hoc etiam mense septimo sol secundum com­ <lb/>
             putum incipit facere minus de die, et nox esse ma­ <lb/>
             jor, id est, octavo Kalendas Octobris, quando æqui­ <lb/>
             noctium est. Ideoque et jejunium habetur in hoc <lb/>
             meuse, quia ostenditur in defectione solis et noctis <lb/>
             augmento vita nostra deficere, adveniente morte, <lb/>
             quae mors judicio Dei et resurrectione reparatur.</p>
-          <ab>
+          </div>
+<div n="40" subtype="section" type="textpart">
+<ab>
             <title type="sub">CAPUT XL.</title>
           </ab>
           <ab>
             <title type="sub">De jejunio Kalend. Novembr.</title>
           </ab>
-          <p>1. Quartum jejunium est Kalendarum Novem­
+          <p n="1">1. Quartum jejunium est Kalendarum Novem­
             <milestone unit="PLSection" n="B"/><lb/>
             brium, quod divina auetoritate vel initiatum, vel <lb/>
             institutum Jeremiæ prophetae testimonio declaratur, <lb/>
@@ -2549,7 +2636,7 @@
             Baruch filium Neriæ, et scripsit Baruch ex ore Je­ <lb/>
             remiæ omnes sermones Domini, quos locutus est <lb/>
             ad eum in volumine libri.</p>
-          <p>409 2. Et præcepit Jeremias Baruc. dicens : <lb/>
+          <p n="409">409 2. Et præcepit Jeremias Baruc. dicens : <lb/>
             c Ingredere, et lege de volumine, de quo scripsi­ <lb/>
             sti ex ore meo verha Domini, audiente populo in
             <milestone unit="PLSection" n="c"/><lb/>
@@ -2565,14 +2652,16 @@
             Hac ergo auctoritate divinae Scripturas Ecclesia <lb/>
             morem obtinuit, et universali jejunium observa­ <lb/>
             tione celebrai.</p>
-          <ab>
+          </div>
+<div n="41" subtype="section" type="textpart">
+<ab>
             <title type="sub">CAPUT XLI.</title>
           </ab>
           <ab>
             <title type="sub">De jejunio Kalendarum Januariarum.</title>
           </ab>
-          <p>
-            <milestone unit="PLSection" n="D"/>i. Jejunium Kalendarum Januariarum propter er­ <lb/>
+          <p n="1">
+            <milestone unit="PLSection" n="D"/>1. Jejunium Kalendarum Januariarum propter er­ <lb/>
             rorem gentilitatis instituit Ecclesia. Janus enim <note type="footnote"> Ibid. Velut decimas Domino dedicarent. Ita Cassia- <lb/>
             DUS et Gothicus. Ut decimas, excusi libri. GRIAL. </note><note type="footnote"> Ibid. Cassianum nostrum fortasse vocat isidorus, <lb/>
             quia sæpe ejus sententias et verba profert. AREV. </note><note type="footnote"> CAP. XXX VIII. N. i. Hoc jejunium a plerisque ex <lb/>
@@ -2605,7 +2694,7 @@
             veluti Deum colentes, in religione honoris posteris <lb/>
             tradiderunt. diemque ipsum scenis et luxuriæ sa­ <lb/>
             craverunt.</p>
-          <p>410 2. Tunc enim miseri homines, et, quod pe­ <lb/>
+          <p n="2">410 2. Tunc enim miseri homines, et, quod pe­ <lb/>
             jus est, etiam fideles, sumentes species monstruo­ <lb/>
             sas, in ferarum habitu transformantur : alii, femi­ <lb/>
             neo gestu demutati, virilem vultum effeminant. <lb/>
@@ -2615,26 +2704,30 @@
             diantium plausibus, quodque est turpius nefas, <lb/>
             nexis inter se utriusque sexus choris, inops animi, <lb/>
             furens vino, turba miscetur.</p>
-          <p>
-            <milestone unit="PLSection" n="B"/>3. Proinde ergo sancti Patres considerantes maxi­ <lb/>
+          <p n="3">
+<milestone unit="PLSection" n="B"/>3. Proinde ergo sancti Patres considerantes maxi­ <lb/>
             mam partem generis humani eodem die hujusmodi <lb/>
             sacrilegiis ac luxuriis inservire, statuerunt in uni­ <lb/>
             verso mundo per omnes Ecclesias publicum jeju­ <lb/>
             nium, per quod agnoscerent homines in tantum se <lb/>
             prave agere, ut pro eorum peccatis necesse esset <lb/>
             omnibus Ecclesiis jejunare.</p>
-          <ab>
+          </div>
+<div n="42" subtype="section" type="textpart">
+<ab>
             <title type="sub">CAPUT XLII.</title>
           </ab>
           <ab>
             <title type="sub">De triduani jejunii consuetudine.</title>
           </ab>
-          <p>i. Triduanis autem diebus jejunare de exemplo <lb/>
+          <p n="1">1. Triduanis autem diebus jejunare de exemplo <lb/>
             sumptum est Ninivitarum, qui, damnatis pristinis <lb/>
             vitiis, totos se tribus diebus jejunio ac poenitentiae <lb/>
             contulerunt, et operti saccis Deum ad misericordiam <lb/>
             provocaverunt.</p>
-          <ab>
+          </div>
+<div n="43" subtype="section" type="textpart">
+<ab>
             <title type="sub">CAPUT XLIII.</title>
           </ab>
           <p>
@@ -2642,7 +2735,7 @@
           <ab>
             <title type="sub">De diversorum dierum ac temporum jejuniis.</title>
           </ab>
-          <p>I. Praeter hæc autem legiLima tempora jejunio­ <lb/>
+          <p n="1">1. Praeter hæc autem legiLima tempora jejunio­ <lb/>
             rum omnis sexta feria propter pissionem Domini a <lb/>
             quibusdam jejunatur, sed et Sabbati dies a pleris­ <lb/>
             que, propter quod in eo Christus jacuit in sepulcro, <lb/>
@@ -2653,7 +2746,7 @@
             <milestone unit="PLSection" n="A"/><lb/>
             gentibus praedicemus, praesertim cum apostolica sc­ <lb/>
             des hanc regulam servet.</p>
-          <p>2. Post Pascha autem usque ad Pentecosten licet <lb/>
+          <p n="2">2. Post Pascha autem usque ad Pentecosten licet <lb/>
             traditio Ecclesiarum abstinentiæ rigorem prandiis rc­ <lb/>
             laxaverit, tamen si quis monacborum, vel clerico­ <lb/>
             rum, sive etiam devotarum, vel viduarum religiosa­ <lb/>
@@ -2661,20 +2754,22 @@
             Antonius et Paulus , et caeteri Patres antiqui etiam <lb/>
             his diebus in eremo leguntur abstinuisse, neque sol­ <lb/>
             visse jejunium, nisi tantum die Dominico.</p>
-          <p>3. Quis enim parcimoniam non laudet, jejunium <lb/>
+          <p n="3">3. Quis enim parcimoniam non laudet, jejunium <lb/>
             non praedicet ? Jejunium enim res sancta, opus coe­ <lb/>
             leste, janua regni, forma futuri, quod qui san­ <lb/>
             cte agit Deo jungitur, alienatur mundo, spiritualis ef­ <lb/>
             ficitur. Per hoc enim prosternuntur vitia, humiliatur
             <milestone unit="PLSection" n="B"/><lb/>
             caro, diaboli tenstamenta vincuntur.</p>
-          <ab>
+          </div>
+<div n="44" subtype="section" type="textpart">
+<ab>
             <title type="sub">CAPUT XLIV.</title>
           </ab>
           <ab>
             <title type="sub">De vario usu Ecclesiarum.</title>
           </ab>
-          <p>i. Haec et alia similia multa sunt quae in Ecclesiis <lb/>
+          <p n="1">1. Haec et alia similia multa sunt quae in Ecclesiis <lb/>
             Cbristi geruntur, ex quibus tamen quaedam sunt quae <lb/>
             in Scripturis canonicis commendantur; quædam vero <lb/>
             non sunt quidem scripta , sed tamen tradita custo­ <lb/>
@@ -2686,8 +2781,8 @@
             resoluto die anni, ob memoriam celebrantur, sed <lb/>
             et si quid aliud, quod servatur ab universis, quacun­ <lb/>
             que se diffudit Ecclesia.</p>
-          <p>
-            <milestone unit="PLSection" n="C"/>2. Alia vero , quae varie per diversa loca obser­ <lb/>
+          <p n="2">
+<milestone unit="PLSection" n="C"/>2. Alia vero , quae varie per diversa loca obser­ <lb/>
             vantur, sicuti est 412 quod alii jejunant Sab­ <lb/>
             bato, alii non, alii quotidie communicant, alii certis <lb/>
             diebus, ab aliis nullus dies praetermittitur quo non <lb/>
@@ -2750,13 +2845,15 @@
             ter sequendum, et propter eorum inter quos vivitur <lb/>
             societatem servandum est, ne per diversitatem obser­ <lb/>
             vationum schismato generentur.</p>
-          <ab>
+          </div>
+<div n="45" subtype="section" type="textpart">
+<ab>
             <title type="sub">CAPUT XLV.</title>
           </ab>
           <ab>
             <title type="sub">De carnium usu, vel piscium.</title>
           </ab>
-          <p>1. Carnes autem et vinum post diluvium homini­ <lb/>
+          <p n="1">1. Carnes autem et vinum post diluvium homini­ <lb/>
             bus in usum concessa sunt: nam ab initio permissum <lb/>
             non fuerat, nisi tantum illud, ut scriptum est : Li­ <lb/>
             gnum fructiferum et herbam seminalem dedi vobis in <lb/>
@@ -2770,7 +2867,7 @@
             quens per Ap 'stolum suum : Bonum est non mandu­ <lb/>
             care carnem, et non bibere vinum. Et iterum : Qui in­ <lb/>
             firmus est, olera manducet (Rom. XIV).</p>
-          <p>2. Non igitur quia carnes malæ sunt, ideo prohi­ <lb/>
+          <p n="2">2. Non igitur quia carnes malæ sunt, ideo prohi­ <lb/>
             bentur, sed quia earum epulæ carnis luxuriam gi­ <lb/>
             gnunt, fomes enim ac nutrimentum omnium vitio­ <lb/>
             rum, esca ventri, et venter escis, quia scriptum est : <lb/>
@@ -2778,7 +2875,12 @@
             ne, quia eum post resurrectionem accepit Dominus <lb/>
             (Joun. XXI), possumus manducare. Hoc cniin nec Sal­ <lb/>
             vaLor, nec apostoli vetuerunt. <note type="footnote"> Ibid. Alii, hominibus ill usum concessum eat. AREV. </note></p>
-          <ab>
+    </div>
+</div>
+          
+      
+      <div n="2" subtype="book" type="textpart">
+      <ab>
             <title type="sub">LIBER SECUNDUS.</title>
           </ab>
           <ab>
@@ -2793,13 +2895,15 @@
             muni ab Ecclesia celebrantur ex parte aliqua explicui­ <lb/>
             mus, deinceps exordia eorum qui divino cultui minis­ <lb/>
             teria religionis impendunt ordine prosequamur.</p>
-          <ab>
+
+<div n="1" subtype="section" type="textpart">
+<ab>
             <title type="sub">CAPUT I.</title>
           </ab>
           <ab>
             <title type="sub">De clericis.</title>
           </ab>
-          <p>i. Itaque omnes qui in ecclesiastici ministerii gra­ <lb/>
+          <p n="1">1. Itaque omnes qui in ecclesiastici ministerii gra­ <lb/>
             dibus ordinati sunt generaliter clerici nominantur. <lb/>
             Cleros autem , vel clericos hinc appellatos doctorcs <lb/>
             nostri dicunt, quia Matthias sorte electus est quem <lb/>
@@ -2809,7 +2913,7 @@
             terpretatur, unde et hæreditas graece cleronomia apr
             <milestone unit="PLSection" n="C"/><lb/>
             pellatur, et hæres cleronomos.</p>
-          <p>2. Proinde ergo clericos vocari aiunt, eo quod in <lb/>
+          <p n="2">2. Proinde ergo clericos vocari aiunt, eo quod in <lb/>
             sortem haereditatis Domini dentur , vel pro eo quod <lb/>
             ipse Donnus sors eorum sit, sicut de eis scriplum <lb/>
             est, loquente Domino : Ego hæreditas eorum. Unde <lb/>
@@ -2818,13 +2922,15 @@
             pauperes spiritu esse contendant, ut congrue illud <lb/>
             Psalmistæ dicere possint : Dominus pars hæreditatis <lb/>
             meæ (Psal. XV, 5).</p>
-          <ab>
+          </div>
+<div n="2" subtype="section" type="textpart">
+<ab>
             <title type="sub">414 CAPUT II.</title>
           </ab>
           <ab>
             <title type="sub">De regulis clericorum.</title>
           </ab>
-          <p>i. His igitur lege Patrum cavetur ut, a vulgari vi-
+          <p n="1">1. His igitur lege Patrum cavetur ut, a vulgari vi-
             <milestone unit="PLSection" n="B"/><lb/>
             ta seclusi, a mundi voluptatibus sese abstineant; <lb/>
             non spectaculis, non pompis iutersint; convivia pu­ <lb/>
@@ -2835,7 +2941,7 @@
             materiam cunctorum criminum, fugiant, sæcularia <lb/>
             officia negotiaque abjiciant, honorum gradus per <lb/>
             ambitiones non subeant.</p>
-          <p>2. Pro beneficiis medicinæ Dei munera non acci­ <lb/>
+          <p n="2">2. Pro beneficiis medicinæ Dei munera non acci­ <lb/>
             piant, dolos et conjurationes caveant; odium, æmu­ <lb/>
             lationem, obtrectationem, atque invidiam fugiant. <lb/>
             Non vagis oculis, non infreni lingua, aut petulanti <lb/>
@@ -2844,7 +2950,7 @@
             <milestone unit="PLSection" n="C"/><lb/>
             Obscenitatem etiam verborum , sicut et operum, pe­ <lb/>
             nitus exsecrentur</p>
-          <p>3. Viduarum ac virginum visitationes frequentis­ <lb/>
+          <p n="3">3. Viduarum ac virginum visitationes frequentis­ <lb/>
             simas fugiant, contubernia feminarum extranearum <lb/>
             nullatenus appetant, castimoniam quoque inviolati <lb/>
             corporis perpetuo conservare studeant, aut certe <lb/>
@@ -2872,20 +2978,22 @@
             <milestone unit="PLSection" n="A"/><lb/>
             re, scilicet ut dum scientiae operam dant, doctrinae <lb/>
             gratiam populis administrent.</p>
-          <ab>
+          </div>
+<div n="3" subtype="section" type="textpart">
+<ab>
             <title type="sub">415 CAPUT III.</title>
           </ab>
           <ab>
             <title type="sub">De generibus clericorum.</title>
           </ab>
-          <p>1. Duo sunt autem genera clericorum : unum ec. <lb/>
+          <p n="1">1. Duo sunt autem genera clericorum : unum ec. <lb/>
             clesiasticorum sub regimine episcopali degentium, <lb/>
             alterum acephalorum, id est, sine capite, quem se­ <lb/>
             quantur, ignorantium. Hos neqne inter laicos sæ­ <lb/>
             cularium officiorum studia, neque inter clericos re­ <lb/>
             ligio retentat divina, sed solutos atque oberrantes <lb/>
             sola turpis vita complectitur et vaga.</p>
-          <p>2. Quique dum, nullum metuentes, explendæ vo­ <lb/>
+          <p n="2">2. Quique dum, nullum metuentes, explendæ vo­ <lb/>
             luptatis suae licentiam consectantur, quasi animalia <lb/>
             bruta libertate ac desiderio suo feruntur, habentes <lb/>
             signum religionis, non religionis officium, Hippocen-
@@ -2894,13 +3002,15 @@
             que (ut ait Poeta) genus prolesque biformis. Quorum <lb/>
             quidem sordida atque infemi numerositate satis su­ <lb/>
             perque nostra pars occidua pollet.</p>
-          <ab>
+          </div>
+<div n="4" subtype="section" type="textpart">
+<ab>
             <title type="sub">CAPUT IV.</title>
           </ab>
           <ab>
             <title type="sub">De tonsura.</title>
           </ab>
-          <p>i. Tonsurae ecclesiasticæ usus a Nazaræis, nisi <lb/>
+          <p n="1">1. Tonsurae ecclesiasticæ usus a Nazaræis, nisi <lb/>
             fallor, exortus est (Num. VI), prius crine servato, <lb/>
             denuo post vitæ magnae continentiam devotione com­ <lb/>
             pletam, caput radebant, et capilios in igne sacrificii <lb/>
@@ -2911,7 +3021,7 @@
             tur, quosi Nazaraei, id est, sancti Dei, crine præciso,
             <milestone unit="PLSection" n="c"/><lb/>
             innoventur.</p>
-          <p>i. Hoc quippe et Ezechieli prophetæ jubetur, <lb/>
+          <p n="2">2. Hoc quippe et Ezechieli prophetæ jubetur, <lb/>
             dicente Domiuo ; Tu fili hominis, sume libi gladium <lb/>
             acutum, et duces per caput tuum, et barbam (Ezech. <lb/>
             V); videlicet quia et ipse sacerdotali genere Deo in <lb/>
@@ -2921,7 +3031,7 @@
             Paulum quoque apostolum, et quosdam discipulo­ <lb/>
             rum Christi, qui in hujusmodi cultu imitandi exsti­ <lb/>
             terunt.</p>
-          <p>3. Est autem in clericis tonsura signum quoddam,
+          <p n="3">3. Est autem in clericis tonsura signum quoddam,
             <milestone unit="PLSection" n="A"/><lb/>
             quod in corpore figuratur, sed in animo agitur, <lb/>
             scilicet, ut hoc signo in religione vitra resecentur, <lb/>
@@ -2932,7 +3042,7 @@
             novatur in agnitione Dei (Ephes. IV; Coloss. III). <lb/>
             Quam renovationem in mente oportet fieri, sed in <lb/>
             capite demonstrari, ubi ipsa mens noscitur habitare.</p>
-          <p>4. Quod vero, detonso superius capite, inferius <lb/>
+          <p n="4">4. Quod vero, detonso superius capite, inferius <lb/>
             circuli corona relinquitur, sacerdotium regnumque <lb/>
             Ecclesiae in eis existimo figurari. Tiara enim apud <lb/>
             veteres constituebatur in capite sacerdotum. Hæc ex <lb/>
@@ -2945,7 +3055,7 @@
             militudine qupd scriptum est, Petro apostolo perdo­ <lb/>
             cente : Vos estis genus electum, regale sacerdotium <lb/>
             (I Petr. II, 9).</p>
-          <p>5. Quæritur autem cur , sicut apud antiquos Naza­ <lb/>
+          <p n="5">5. Quæritur autem cur , sicut apud antiquos Naza­ <lb/>
             ræos, non 417 ante coma nutritur, et sic toudetur. <lb/>
             Sed qui hæc exquirunt adveriant quid sii inter illud <lb/>
             propheticum velamentum, et bane Evangelii revela­ <lb/>
@@ -2960,13 +3070,15 @@
             corum qui Domino consecrantur, sed tautum ut re­ <lb/>
             velentur. Quia quod erat occultum in sacramento <lb/>
             prophetice jam in Evangelio declaratum est.</p>
-          <ab>
+          </div>
+<div n="5" subtype="section" type="textpart">
+<ab>
             <title type="sub">CAPUT V.</title>
           </ab>
           <ab>
             <title type="sub">De sacerdoti</title>
           </ab>
-          <p>1. Veniamus ergo nunc ad sacratissimos ordinrs, <lb/>
+          <p n="1">1. Veniamus ergo nunc ad sacratissimos ordinrs, <lb/>
             et singulariter demonstremus, quod est sacerdotii <lb/>
             fundamentum. vel quo auctore pontificalis ordo ado­ <lb/>
             levit in saeculo. Initium quidem sacerdotii Aaron <lb/>
@@ -3005,7 +3117,7 @@
             crificium, et post hunc Abraham, Isaac et Jacob. <lb/>
             Sed isti spontanea voluntate, non sacerdotali aucto­ <lb/>
             ritate ista fecerunt.</p>
-          <p>i. Caeterum Aaron primus in lege sacerdotale no­ <lb/>
+          <p n="2">2. Caeterum Aaron primus in lege sacerdotale no­ <lb/>
             men accepit, primusque pontificali stola infulatus <lb/>
             victimas obtulit, jubente Domino, ac loquente ad <lb/>
             Moysen : &lt; Accipe, inquit, Aaron, et filios ejus, et <lb/>
@@ -3020,7 +3132,7 @@
             <milestone unit="PLSection" n="B"/><lb/>
             cet, et liberes ejus, et impones eis mitras, eruntque <lb/>
             sacerdotes mihi religione perpetua » (Exod. XXIX, 4).</p>
-          <p>3. Quo loco contemplari oportet Aaron summum <lb/>
+          <p n="3">3. Quo loco contemplari oportet Aaron summum <lb/>
             sacerdotem fuisse 418 id eat, episcopum; nam <lb/>
             filios : ejus presbyterorum figuram praemonstrasse. <lb/>
             Fueruut enim filii Aaron et ipsi sacerdotes, quibus <lb/>
@@ -3033,7 +3145,7 @@
             rale, et cætera. quæ supra memorata sunt. Filii <lb/>
             autem Aaron super tunicas lineas cincti tantummo­ <lb/>
             do, et tiarati, astabant sacrificio Dei.</p>
-          <p>
+          <p n="4">
             <milestone unit="PLSection" n="c"/>4. Sed forsitan quæritur et hoc cujus figuram fa­ <lb/>
             ciebat Moyses. Si enim filii Aaron presbyterorum <lb/>
             figuram faciebant, et Aaron summi sacerdotis, id <lb/>
@@ -3043,7 +3155,7 @@
             Christus, qui est verus dux populorum, verus prin­ <lb/>
             ceps sacerdotum, et dominus pontificum, cui cst <lb/>
             honor, et gloria in saecula saeculorum. Amen.</p>
-          <p>5. Hactenus de primordiis sacerdotalibus iu Veteri <lb/>
+          <p n="5">5. Hactenus de primordiis sacerdotalibus iu Veteri <lb/>
             Testamento. In Novo autem Testamento post Chri­ <lb/>
             stum sacerdotalis ordo a Petro coepit. Ipsi enim pri­ <lb/>
             mum datus est pontificatus in Ecclesia Christi ; sic
@@ -3058,7 +3170,7 @@
             cum Petro pari consortio honoris et potestatis ef­ <lb/>
             fecti sunt, qui etiam in toto orbe dispersi Evange­ <lb/>
             lium prædicaverunt.</p>
-          <p>6. Quibusque decedentibus successerunt episcopi, <lb/>
+          <p n="6">6. Quibusque decedentibus successerunt episcopi, <lb/>
             qui sunt constituti per totum mundum in sedibus <lb/>
             apostolorum, qui non jam ex genere carnis et san­ <lb/>
             guinis eliguntur, sicut primum secundum ordinem <lb/>
@@ -3070,7 +3182,7 @@
             nebunt coram me usque in aeternum ; et hunc dicit <lb/>
             Domninus : Nequaquam, sed glorificantes me glorifi­ <lb/>
             cabo, et qui me spernit spernetur » (/ Reg. II, 30).</p>
-          <p>7. Quatuor autem sunt genera apostolorum : <lb/>
+          <p n="7">7. Quatuor autem sunt genera apostolorum : <lb/>
             unum a Deo tantum, ut Moyses ; alterum per homi­ <lb/>
             nem et Deum, ut Josue; tertium tantum per homi­ <lb/>
             nem, sicut his temporibus multi favore populi et <lb/>
@@ -3081,7 +3193,7 @@
             tur, quia ipsos misit Christus evangelizare ad illu­
             <milestone unit="PLSection" n="c"/><lb/>
             minationem omnium populorum.</p>
-          <p>8. Episcopus autem, ut quidam prudentium ait, <lb/>
+          <p n="8">8. Episcopus autem, ut quidam prudentium ait, <lb/>
             nomen est operis, non honoris. Græcum est enim, <lb/>
             atque inde ductum vocabulum, quod ille qui super <lb/>
             efficitur superintendit, curam scilicet subditorum <lb/>
@@ -3089,7 +3201,7 @@
             Latine superintendentes possumus dicere, ut intel­ <lb/>
             ligat non se esse episcopum, qui non prodesse, sed <lb/>
             præesse dilexerit.</p>
-          <p>9. Quod vero per manus impositionem a præces­ <lb/>
+          <p n="9">9. Quod vero per manus impositionem a præces­ <lb/>
             soribus Dei sacerdotibus episcopi ordinantur, anti­ <lb/>
             qua institutio est. Isaac enim patriarcha sanctus po­ <lb/>
             nens manum suam super caput Jacob, benedixit ei <note type="footnote"> :2. Accipe, inquit, Aaron. Exod. XXXIX. GRIAL </note><note type="footnote"> Ibid. ln Vulgata, Et Aaron, el filios ejus applicabis </note> 
@@ -3136,7 +3248,7 @@
             suas, et benedixit eis, factumque est, cum bene­ <lb/>
             dixisset illis, discessit ab eis, et ipsi reversi sunt in <lb/>
             Jerusalem cum gaudio magno » (Luc. XXIV).</p>
-          <p>10. Et in Actibus apostolorum, ex pracepto Spi­ <lb/>
+          <p n="10">10. Et in Actibus apostolorum, ex pracepto Spi­ <lb/>
             ritus sancii, Paulo et Barnabæ ab ap stolis manus <lb/>
             imposita est in episcopatum, et sic missi sunt ad <lb/>
             evangelizandum (Act. xm). Quod auteni a trigesimo
@@ -3147,7 +3259,7 @@
             parvulorum, sed perfectionis vi plena est, et robusta, <lb/>
             et ad omnem disciplinæ ac magisterii exercitium <lb/>
             præparata.</p>
-          <p>it. Quod vero unius matrimonii virginalis sint, <lb/>
+          <p n="11">11. Quod vero unius matrimonii virginalis sint, <lb/>
             qui eliguntur in ordinem pontificatus, et in veteri <lb/>
             lege mandatum est (Levit. XXI), et plenius scripsit <lb/>
             Apostolus, dicens: Unius uxoris virum (I Tim. III). <lb/>
@@ -3162,7 +3274,7 @@
             convenientibus instituitur, aut non minus quam a <lb/>
             tribus præsentibus, cæteris tamen consentientibus <lb/>
             testimonio litterarum.</p>
-          <p>12. Huic autem, dum consecratur, datur baculus, <lb/>
+          <p n="12">12. Huic autem, dum consecratur, datur baculus, <lb/>
             ut ejus indicio subditam plebem vel regat, vel corri-
             <milestone unit="PLSection" n="A"/><lb/>
             gat, vel infirmitates infirmorum sustineat. Datur et <lb/>
@@ -3179,7 +3291,7 @@
             militalis quam administrationem sæcularis potestatis <lb/>
             adeptum, et condemnatione superbiæ, sicut diabo­ <lb/>
             lus, per jactantiam dejiciatur.</p>
-          <p>13. Quomodo enim valebit 8æcularis homo sacer-
+          <p n="13">13. Quomodo enim valebit 8æcularis homo sacer-
             <milestone unit="PLSection" n="B"/><lb/>
             dotis magisterium adimplere, cujus nec officium <lb/>
             tenuit. nec disciplinam agnovit? Aut quid docere <lb/>
@@ -3195,7 +3307,7 @@
             potuit, sed Jesum ne alia tribu elegit, ui sciremus <lb/>
             principalum in populo non sanguini deferendum esse, <lb/>
             sed vitae merilis (Num. XXVII).</p>
-          <p>14. Interdum autem et juxta meritum plebium
+          <p n="14">14. Interdum autem et juxta meritum plebium
             <milestone unit="PLSection" n="C"/><lb/>
             eliguntur personæ rectorum; 422 unde noverint <lb/>
             populi sui fuisse meriti regimen perversi suscepisse <lb/>
@@ -3260,7 +3372,7 @@
             jubemur offerri ad allare Domnini, nisi quae terrena <lb/>
             opera non fecerit, jugumque delicti non traxerit, nec <lb/>
             vinculis peccatorum fuerit alligata (Num. 19).</p>
-          <p>15. Sed quid plura subjiciam? Si enim is qui, jam <lb/>
+          <p n="15">15. Sed quid plura subjiciam? Si enim is qui, jam <lb/>
             in episcopatu vel presbyterio pnsitus, mortale ali­ <lb/>
             quod peccatum admiserit retrabitur ab officio, quanto <lb/>
             magis ante ordinationem peccatur inventus non or­ <lb/>
@@ -3275,7 +3387,7 @@
             ctus sit, et in nullo reprehensibilis habeatur. Qui <lb/>
             enim alium de peccatis arguit, ipse a peccato debet <lb/>
             esse alienus.</p>
-          <p>16. Nam cum qua fronte subjectos arguere poterit, <lb/>
+          <p n="16">16. Nam cum qua fronte subjectos arguere poterit, <lb/>
             cum illi statim possit correptus ingerere : Ante doce <lb/>
             te quæ recta sunt? Quapropter qui negligit recta fa­ <lb/>
             cere, desinat recta docere. Prius quippe semetipsum <lb/>
@@ -3291,7 +3403,7 @@
             et adversarios repercutere, qui ni refutati fuerint, <lb/>
             atque convicti, facile queunt simplicium corda per­ <lb/>
             venere.</p>
-          <p>17 Hujus autem sermo debet esse purus, simplex, <lb/>
+          <p n="17">17 Hujus autem sermo debet esse purus, simplex, <lb/>
             apertus, pleuus gravitate, et honesiate, plenus sua­ <lb/>
             vitate, et gratia, tractans de mysterio legis, de doc­ <lb/>
             trina fidei, de virtute continentiæ, de disciplina <lb/>
@@ -3312,7 +3424,7 @@
             per immoderatam auctor itatem severitatis potesta. <lb/>
             tem exerceat; sed tanto cautius erga commissos <lb/>
             agat, quanto durius a Christo judicari formidat.</p>
-          <p><lb/>
+          <p n="18"><lb/>
             18, Tenebit quoque illam supereminentem donis <lb/>
             omnibus charitatem, sine qua omnis virtus nihil est; <lb/>
             custus enin. sanctitatis charitas, locus autem hujus <lb/>
@@ -3326,7 +3438,7 @@
             mere, viduas ac pur illos tueri, pervigilem in cun­ <lb/>
             ctis exhibere curam, providentiam et distributionem <lb/>
             discretam.</p>
-          <p>19. In quo etiam hospitalitas ita erit præcipua, ut <lb/>
+          <p n="19">19. In quo etiam hospitalitas ita erit præcipua, ut <lb/>
             omnes cum 424 benignitate et charitate suscipiat. <lb/>
             Si enim omnes fideles illud evangelicum audire desi­ <lb/>
             derant : Hospes fui, et suscepistis me (Matth. xxv); <lb/>
@@ -3340,7 +3452,7 @@
             sic debet episcopus suscipere potentem, ut contristet <lb/>
             contra justitiam pauperem, neque pro panoere aufe­ <lb/>
             rat justitiam a potente.</p>
-          <p>20. Non defendat improbum, nec sancta indigno <lb/>
+          <p n="20">20. Non defendat improbum, nec sancta indigno <lb/>
             committenda arbitretur, neque arguat, aut impu­ <lb/>
             gnet, cujus crimen non reprehendit. Erit quoque illi <lb/>
             etiam juxta Apostolum mansuetudo, patientia, so­ <lb/>
@@ -3353,13 +3465,15 @@
             et perfectum sacerdotium repraesentabit.</p>
           <p>
             <milestone unit="PLSection" n="D"/></p>
-          <ab>
+          </div>
+<div n="6" subtype="section" type="textpart">
+<ab>
             <title type="sub">CAPUT VI.</title>
           </ab>
           <ab>
             <title type="sub">De chorepiscopis.</title>
           </ab>
-          <p>1. Chorepiscopi, idest, vicarii episcoporum, juxta <lb/>
+          <p n="1">1. Chorepiscopi, idest, vicarii episcoporum, juxta <lb/>
             quod canones ipsi testantur, instituti sunt ad exem­ <note type="footnote"> creat non tantum mortem spiritualem, sed etiam <lb/>
             mortem canonicam. Nam inter irfegularilales quae <lb/>
             ob"rabanL ne quis promoveretur, recellsehalur exant­ <lb/>
@@ -3385,13 +3499,15 @@
             ordinare non audeant, praeter conscientiam episcopi, <lb/>
             in cujus regione præesse noscuntur; hi autem a solo <lb/>
             episcopo civitalis cui adjacent ordinantur.</p>
-          <ab>
+          </div>
+<div n="7" subtype="section" type="textpart">
+<ab>
             <title type="sub">425 CAPUT VII.</title>
           </ab>
           <ab>
             <title type="sub">De presbyteris.</title>
           </ab>
-          <p>i. Presbyterorum ordo exordium sumpsit (ut di­ <lb/>
+          <p n="1">1. Presbyterorum ordo exordium sumpsit (ut di­ <lb/>
             ctum est) a filiis Aaron. Qui enim sacerdotes voca­ <lb/>
             bantur in Veteri Testamento, hi sunt qui nunc ap­ <lb/>
             pellantur presbyteri, et qui nuncupabantur principes <lb/>
@@ -3400,7 +3516,7 @@
             autem interpretantur seniores, quia seniores aetate <lb/>
             Græci. presbyteros vocant. His enim, sicut episcopis, <lb/>
             dispensatio mysteriorum Dei commissa est.</p>
-          <p>2. Praesunt enim Ecclesiæ Christi, et in confec­ <lb/>
+          <p n="2">2. Praesunt enim Ecclesiæ Christi, et in confec­ <lb/>
             tione divini corporis et sanguinis consortes cum <lb/>
             episcopis sunt, similiter et in doctrina populorum, <lb/>
             et in officio prædicandi. Ac sola propter auctoritatem <lb/>
@@ -3418,7 +3534,7 @@
             aut non subditos. Oportet enim episcopum sine cri. <lb/>
             mine esse » (Tit. I). Qua sententia ostendit presby­ <lb/>
             leros etiam sub episcoporum nomine taxari.</p>
-          <p>3. Unde et ad Timolheum de ordinatione episcopi <lb/>
+          <p n="3">3. Unde et ad Timolheum de ordinatione episcopi <lb/>
             et diaconi scribens (1 Tim. III), de presbyteris om-
             <milestone unit="PLSection" n="A"/><lb/>
             nino tacuit, quia eos in episcoporum nomine com. <lb/>
@@ -3432,7 +3548,7 @@
             (Act. xx). Unde etiam tales in Ecclesia presbyteros <lb/>
             constituendos esse, sicut episcopos, et Apostolus a.! <lb/>
             Titum loquitur, et canones ipsi testantur.</p>
-          <p>4. presbyteros autem merito et sapientia dici, non <lb/>
+          <p n="4">4. presbyteros autem merito et sapientia dici, non <lb/>
             ætate; nam et Moysi praecipitur ut eligat presbyteros <lb/>
             (Num. XI). Unde et in Proverbiis dicitur Gloria senum <lb/>
             canities Proverb. xx . Quas est haec canities haud
@@ -3446,13 +3562,15 @@
             ergo propter decrepitam senectutem, sed propter <lb/>
             sapientiam presbyteri nominantur. Quod si ita est, <lb/>
             mirum est cur insipientes constituantur.</p>
-          <ab>
+          </div>
+<div n="8" subtype="section" type="textpart">
+<ab>
             <title type="sub">427 CAPUT VIII.</title>
           </ab>
           <ab>
             <title type="sub">De diaconibus.</title>
           </ab>
-          <p>1. Diaconorum ordo a Levi tribu accepit exor­ <lb/>
+          <p n="1">1. Diaconorum ordo a Levi tribu accepit exor­ <lb/>
             dium. Præcepit enim Dominus Moysi ut post ordina­ <lb/>
             tionem Aaron sacerdotis et filiorum ejus rursus Levi <lb/>
             tribus in divini cultus ministeriis ordinarentur, et
@@ -3511,8 +3629,8 @@
             i, Anacieti epis-t. 2. AREV. </note><note type="footnote"> CAP. 'III. N. i. Pleraque ex epist. citata ad Rustic. <lb/>
             Narbon. GRIAL. </note> <pb n="789"/>
             </p>
-          <p>
-            <milestone unit="PLSection" n="A"/>2. A xxv annis et supra iisdem in labernaculo <lb/>
+          <p n="2">
+<milestone unit="PLSection" n="A"/>2. A xxv annis et supra iisdem in labernaculo <lb/>
             aervire mandatum est, quam regulam sancti Patres <lb/>
             et in Novo Testamento constituerunt. In Evangelio <lb/>
             primordia eorum in Aclibus apostolorum ita legun­ <lb/>
@@ -3531,7 +3649,7 @@
             anle apostolos, et cum orassent, imposuerunt illis <lb/>
             manus, et verbum Dei crescebat, et multiplicabatur <lb/>
             numerus credentium &gt; (Act. VI).</p>
-          <p>3. Exhinc jam decreverunt apostoli, vel successo­ <lb/>
+          <p n="3">3. Exhinc jam decreverunt apostoli, vel successo­ <lb/>
             res apostolorum, per omnes Ecclesias septem diaco­ <lb/>
             nos, qui sublimiori gradu 428 cæteris proximi circa <lb/>
             arani Christi, quasi columnae altaris assisterent, et <lb/>
@@ -3545,7 +3663,7 @@
             Dominum, acclamant, ipsi quoque evangelizant, sine
             <milestone unit="PLSection" n="C"/><lb/>
              ipsis sacerdos noinen habet, officium non habet.</p>
-          <p>4. Nam sicut in sacerdote consecratio, ita in mi­ <lb/>
+          <p n="4">4. Nam sicut in sacerdote consecratio, ita in mi­ <lb/>
             nistro dispensatio sacramenti est, illi orare, huic <lb/>
             psallere mandatur; ille oblata santificat, hic sancti­ <lb/>
             ficata dispensat. Ipsis etiam sacerdotibus propter <lb/>
@@ -3559,8 +3677,8 @@
             altario albis induti assistunt, ut coelestem vitam ha­ <lb/>
             beant, candidique ad hostias immaculatique acce­ <lb/>
             dant, mundi scilicet corpore, et incorrupti pudore.</p>
-          <p>
-            <milestone unit="PLSection" n="A"/>5. Tales enim decet Dominum hahere ministres, <lb/>
+          <p n="5">
+<milestone unit="PLSection" n="A"/>5. Tales enim decet Dominum hahere ministres, <lb/>
             qui nullo carnis corrumpantur contagio, sed potius <lb/>
             eminentia castitalis splendeant. Quales enim diacoui <lb/>
             ordinentur, apostolus Paulus plenissime seriLit ad <lb/>
@@ -3579,13 +3697,15 @@
             men habentes (1 Tim. III). Utique sicut episcopi, sic <lb/>
             et isti ante ordinationem probari debent, si digni <lb/>
             sunt, ei postea sic ministrent.</p>
-          <ab>
+          </div>
+<div n="9" subtype="section" type="textpart">
+<ab>
             <title type="sub">CAPUT IX.</title>
           </ab>
           <ab>
             <title type="sub">De custodibus sacrorum.</title>
           </ab>
-          <p>i. Custodes sacrarii Levitæ sunt. Ipsis enim jus­ <lb/>
+          <p n="1">1. Custodes sacrarii Levitæ sunt. Ipsis enim jus­ <lb/>
             sum est custodire tabernaculum, et omnia vasa tem­ <lb/>
             pli (Num. VII); quique ideo in lege ab anno quin­ <lb/>
             quagenario eliguntur custodes vasorum, ut, post <lb/>
@@ -3593,14 +3713,16 @@
             pore pariter et mente Deo serviant, præferentes <lb/>
             speciem gravitatis, ne fallantur consilio, ne fidem <lb/>
             deserant, nequo quidquam intemperantius gerant.</p>
-          <ab>
+          </div>
+<div n="10" subtype="section" type="textpart">
+<ab>
             <title type="sub">CAPUT X.</title>
           </ab>
           <ab>
             <title type="sub">De subdiaconis.</title>
           </ab>
-          <p>
-            <milestone unit="PLSection" n="C"/>i. Subdiaconi, qui apud Græcos hypodiaconi vo­ <lb/>
+          <p n="1">
+            <milestone unit="PLSection" n="C"/>1. Subdiaconi, qui apud Græcos hypodiaconi vo­ <lb/>
             cantur, in Esdra inveniuntur, appellanturque ibi Na­ <lb/>
             thinæi, id est, in humilitate Domino servientes (I <lb/>
             Esdr. VIII). Ex eorum ordine fuit ille Nathanael qui, <lb/>
@@ -3609,7 +3731,7 @@
             ad primum divinitatiss indicium fidelis enituit, pro­ <lb/>
             testante Domino ac dicente : Ecce vere Israelua, in <lb/>
             quo dolus non est (Joan. i, 47).</p>
-          <p>2. Denique isti oblationes in templo Domini sus­ <lb/>
+          <p n="2">2. Denique isti oblationes in templo Domini sus­ <lb/>
             cipiunt a populis, isti obediunt officiis Levitarum, <lb/>
             isti quoque vasa corporis et sanguinis Christi dia­ <lb/>
             conibus ad altaria Domini offerUnt. De quibus quidem <lb/>
@@ -3651,13 +3773,15 @@
             suscipiunt, sed patenam tantum, ei calicem de manu <lb/>
             episcopi, et ab archidracono scyphum aquæ cula <lb/>
             aquæmanili et manutergium accipiunt.</p>
-          <ab>
+          </div>
+<div n="11" subtype="section" type="textpart">
+<ab>
             <title type="sub">CAPUT XI.</title>
           </ab>
           <ab>
             <title type="sub">De lectoribus.</title>
           </ab>
-          <p>i. Lectorum ordo formam et initium a prophetis <lb/>
+          <p n="1">1. Lectorum ordo formam et initium a prophetis <lb/>
             accepit. Sunt igitur lectores qui verbum Dei prædi­ <lb/>
             cant, quibus dicitur : Clama, ne cesses, quasi tuba <lb/>
             exalta vocem tuam (Isai. LVIII). Isti quippe, dum or­ <lb/>
@@ -3667,7 +3791,7 @@
             I <lb/>
             eis Codicem apicum divinorum ad Dei verbum an­ <lb/>
             nuntiandum.</p>
-          <p>2. Qui autem ad hujusmodi provehitur graoum, <lb/>
+          <p n="2">2. Qui autem ad hujusmodi provehitur graoum, <lb/>
             iste erit doctrina et libris imbutus, sensuumque ac <lb/>
             verborum scientia perornatus, ita ut in distinctioni­ <lb/>
             bus sententiarum intelligat ubi finiatur junctura, <lb/>
@@ -3679,7 +3803,7 @@
             indicantis voce, modo dolentis, modo increpantis, <lb/>
             modo exhortantis, sive his similia secundum genera <lb/>
             propriæ pronuntiationis.</p>
-          <p>3. In quo maxime illa ambigua sententiarum ad-
+          <p n="3">3. In quo maxime illa ambigua sententiarum ad-
             <milestone unit="PLSection" n="C"/><lb/>
             bibenda cognitio est. Multa enim sunt in Scripturis, <lb/>
             quæ nisi proprio modo pronuntientur, in contrariam <lb/>
@@ -3689,7 +3813,7 @@
             pronuntiationis suæ, dicatur, magna perversitas ori­ <lb/>
             tur. Sic ergo pronuntiandum est, ac si diceret: Deusne <lb/>
             qui justificat ? ut subaudiatur non.</p>
-          <p>4. Necesse est ergo in tantis rebus scientiae inge­ <lb/>
+          <p n="4">4. Necesse est ergo in tantis rebus scientiae inge­ <lb/>
             nium, quo 431 proprie singula, convenienterque <lb/>
             pronuntientur. Proptera et accentuum vum oportet <lb/>
             sCire lectorem, ut novent, in qua syl.aba vox pro­ <lb/>
@@ -3699,8 +3823,8 @@
             <milestone unit="PLSection" n="D"/><lb/>
             titiam, detrahentes, et jurantes penitus nescire quod <lb/>
             dicimus.</p>
-          <p>
-            <milestone unit="PLSection" n="A"/>5. Porro vox lectoris simplex erit, et clara, et ad <lb/>
+          <p n="5">
+<milestone unit="PLSection" n="A"/>5. Porro vox lectoris simplex erit, et clara, et ad <lb/>
             omne pronuntiationis genus accommodata, plena <lb/>
             succo viriti, agrestem, et effugieus so­ <lb/>
             num, non humilis, nec adeo sublimis, non fracta, <lb/>
@@ -3712,13 +3836,15 @@
             nuntiandi causa præcipuam curam vocis habuisse, <lb/>
             ut exaudiri in tumultu possent. Unde et dudum le­ <lb/>
             ctores præcones vel proclamatores vocabantur.</p>
-          <ab>
+          </div>
+<div n="12" subtype="section" type="textpart">
+<ab>
             <title type="sub">CAPUT XII.</title>
           </ab>
           <ab>
             <title type="sub">De psalmistis.</title>
           </ab>
-          <p>i. Psalmistarum, id est, cautorum principes, vel
+          <p n="1">1. Psalmistarum, id est, cautorum principes, vel
             <milestone unit="PLSection" n="B"/><lb/>
             auctores, David, sive Asaph exstiterunt. Isti enim <lb/>
             post Moysen psahnos primi composuerunt et canta­ <lb/>
@@ -3727,7 +3853,7 @@
             cessionem grue' is, sicut et ordo sacerdotalis; ipsique <lb/>
             soli continuis diebus in templo canebant, candidis <lb/>
             induti stoHs, ad vocem unius respondente cboro.</p>
-          <p>2. Ex huc veteri more Ecclesia sumpsit exemplum <lb/>
+          <p n="2">2. Ex huc veteri more Ecclesia sumpsit exemplum <lb/>
             nutriendi psalmistas, quorum cantibus ad effectum <lb/>
             Dei mentes audientium excitentur. Psalmistam au­ <lb/>
             tem et voce et arte præclarum illustremque esse <lb/>
@@ -3741,7 +3867,7 @@
             modulatione demonstret, nec quæ musico gestu vel <lb/>
             theatrali arte redoleat, sed quæ compunctionem ma­ <lb/>
             gis audientibus faciat.</p>
-          <p>3. Aliqui, pridie quam cantandum erat, cibis ab­ <lb/>
+          <p n="3">3. Aliqui, pridie quam cantandum erat, cibis ab­ <lb/>
             stinebant, psaltentes tamen, legumine causa vocis <lb/>
             assidue utebantur. Unde et cautores apud gentiles <lb/>
             fabarii dicti sunt. Veteres, lamma pectori imposita, <lb/>
@@ -3750,7 +3876,9 @@
             absque scientia episcopi, sola jussione presbyteri, <lb/>
             eligi quique quos m cantandi arte probabiles esse <lb/>
             cuustiterit.</p>
-          <ab>
+          </div>
+<div n="13" subtype="section" type="textpart">
+<ab>
             <title type="sub">CAPUT XIII.</title>
           </ab>
           <p>
@@ -3758,7 +3886,7 @@
           <ab>
             <title type="sub">De exorcistis.</title>
           </ab>
-          <p>i. In ordinatione et ministero Ecclesiæ secundum <note type="footnote"> CAP. XI. N. 3. VIM pronuntiationis. AI., usum pro­ <lb/>
+          <p n="1">1. In ordinatione et ministero Ecclesiæ secundum <note type="footnote"> CAP. XI. N. 3. VIM pronuntiationis. AI., usum pro­ <lb/>
             nunt AnEV. </note><note type="footnote"> 3. Alu, In quo maxime illa ambigua senlent mumf <lb/>
             etc. Isidorus, in IUtU cit. bpij-iola; ad Romanos in­ <lb/>
             lerpuiictiouciii sequitur, quam ;isliuit sanctu. Au­ <lb/>
@@ -3791,7 +3919,7 @@
             monis filii, qui actum templi totias sub cura sua lia­ <lb/>
             berent, non tamen sacerdotalibus officiis ministra­ <lb/>
             rent, aut sacris oblationibus deservirenl.</p>
-          <p>2. Et cum fuissent ex ordine et ministerio templi, <lb/>
+          <p n="2">2. Et cum fuissent ex ordine et ministerio templi, <lb/>
             .onge fuerunt 433 ah officio altaris Dei, quia nec <lb/>
             psalmistis, nec ostiariis, nec sacrorum servis attin­ <lb/>
             gere licebat munera altaris, nisi tantummodo leviiis. <lb/>
@@ -3801,7 +3929,7 @@
             <milestone unit="PLSection" n="II"/><lb/>
             eosdem actores de thesauris dominicis reficerentur, <lb/>
             atque excolerentur.</p>
-          <p>3. Ergo actores templi exorcistae sunt in populo <lb/>
+          <p n="3">3. Ergo actores templi exorcistae sunt in populo <lb/>
             Dei; quomodo enim actor prudens et bonus scit quis <lb/>
             sit domini sui census, et omnis substantiæ modus, et <lb/>
             redigit apud se 'otius possesionis instrumenta origi­ <lb/>
@@ -3810,7 +3938,7 @@
             Scripturarum sacramentis, unde exerceat donum <lb/>
             quod illi est a Spiritu sancto concessum, secundum <lb/>
             Apostoli præconium.</p>
-          <p>4. Exorcistas enim memorat Apostolus, cum dicit: <lb/>
+          <p n="4">4. Exorcistas enim memorat Apostolus, cum dicit: <lb/>
             Nunquid omnes habent donationes sanationum (1 Cor. <lb/>
             XII) ? Hi enim, cum ordinantur, sicut ait canon, acci­ <lb/>
             piunt de manu episcopi libellum, in quo scripti sunt
@@ -3818,13 +3946,15 @@
             exorcismi, accipientes potestatem imponendi manus I <lb/>
             super energumenos, sive baptizatos, sive catechu­ <lb/>
             menos.</p>
-          <ab>
+          </div>
+<div n="14" subtype="section" type="textpart">
+<ab>
             <title type="sub">CAPUT XIV.</title>
           </ab>
           <ab>
             <title type="sub">De acolythis.</title>
           </ab>
-          <p>i. Acolythi Graece, Latine ceroferarii dicuntur, a <lb/>
+          <p n="1">1. Acolythi Graece, Latine ceroferarii dicuntur, a <lb/>
             deportandis cereis, quando legendum est Evange­ <lb/>
             lium, aut sacrificium offerendum ; tunc enim accen­ <lb/>
             duntur lumiuaria ab eis, et deportantur, non ad effu­ <lb/>
@@ -3834,13 +3964,15 @@
             <milestone unit="PLSection" n="A"/><lb/>
             gitur : Erat lux vera, quæ illuminat omnem hominem <lb/>
             venientem in hunc mundum.</p>
-          <ab>
+          </div>
+<div n="15" subtype="section" type="textpart">
+<ab>
             <title type="sub">434 CAPUT XV.</title>
           </ab>
           <ab>
             <title type="sub">De ostiariis.</title>
           </ab>
-          <p>i. Ostiarii sunt qui in Veteri Testamento janitores <lb/>
+          <p n="1">1. Ostiarii sunt qui in Veteri Testamento janitores <lb/>
             templi vacabantur, qui praeerant portis templi Jeru­ <lb/>
             salem, quique, ordinati per vices suas, omnia inte­ <lb/>
             riora templi, vel exteriora custodiebant (1 Paralip. <lb/>
@@ -3849,13 +3981,15 @@
             recip unt. Intrare enim templum, nisi per hos non <lb/>
             possumus; habent cnim potestatem tam bonos reci­ <lb/>
             piendi, quam rejiciendi indignos.</p>
-          <ab>
+          </div>
+<div n="16" subtype="section" type="textpart">
+<ab>
             <title type="sub">CAPUT XVI.</title>
           </ab>
           <ab>
             <title type="sub">De monachis.</title>
           </ab>
-          <p>i. Unde autem ad monachos sludium defluxit pau-
+          <p n="1">1. Unde autem ad monachos sludium defluxit pau-
             <milestone unit="PLSection" n="II"/><lb/>
             pertatis, vel quis hujus conversationis exstitit auc­ <lb/>
             tor, cujus isti habitum imitantur? Quantum attinet <lb/>
@@ -3871,7 +4005,7 @@
             sini principes, Pautus et Antonius, Hilarion, Macha­ <lb/>
             rius, cæterique Patres, quorum exemplis per univer­ <lb/>
             sum mundum adolevit sancta institutio monachorum.</p>
-          <p>2. Sex autem sunt genera monachorum, quorum
+          <p n="2">2. Sex autem sunt genera monachorum, quorum
             <milestone unit="PLSection" n="c"/><lb/>
             tria optima, reliqua vero teterrima, atque omnimo­ <lb/>
             dis evitanda. Primum genus esi 435 cœnobitarum, <lb/>
@@ -3882,7 +4016,7 @@
             proprium, sed erant illis omnia communia, et anima <lb/>
             une, et cor unum in Deum (Act. II, 4). Horum igitur <lb/>
             institutione monasteria sumpsere principium.</p>
-          <p>5. Secundum genus est eremitarum qui, procul ab <lb/>
+          <p n="3">3. Secundum genus est eremitarum qui, procul ab <lb/>
             hominibus recedentes, deserta loca et vastas solitu­ <note type="footnote">res redit, ut non videantur aedes sarciri posse, quin <lb/>
             tota; perpetua; ruant. Exemplo esse PUSSUllt et is <lb/>
             quem restituere ntm potuerunt apostoli, ei is quem </note> 
@@ -3926,13 +4060,13 @@
             tur, cui puris menlibus inserviunt, et propter cujus <lb/>
             amorem non solum mundum, sed etiam hominum <lb/>
             consortia reliquerunt.</p>
-          <p>4. Tertium genus est anachoretarum, qui jam cœ­ <lb/>
+          <p n="4">4. Tertium genus est anachoretarum, qui jam cœ­ <lb/>
             nobiali conversatione perfecti, includunt semetipsos <lb/>
             in cdlulis, procul ab hominum 436 conspectu re­ <lb/>
             moti, nulli ad se præbentes accessum, sed in sola
             <milestone unit="PLSection" n="B"/><lb/>
             contemplatione Dei viventes.</p>
-          <p>5. Quartum genus est qui sibi anachoretarum ima­ <lb/>
+          <p n="5">5. Quartum genus est qui sibi anachoretarum ima­ <lb/>
             gine blandiuntur; isti, ut ait Cassianus, in primor­ <lb/>
             diis nil fervore quodam brevi cænobii perfectionem
             <milestone unit="PLSection" n="A"/><lb/>
@@ -3945,7 +4079,7 @@
             existimentur, quae institutio, imo tepor, hos quos <lb/>
             semel infecerit ad perfectionem nunquam permittit <lb/>
             accedere.</p>
-          <p>6. Hoc enim modo non solum non abscinduntur, <lb/>
+          <p n="6">6. Hoc enim modo non solum non abscinduntur, <lb/>
             verumetiam in deterius eorum vitia convalescunt, <lb/>
             ut quoddam lethale, et intestinum virus, quod quan­ <lb/>
             to amplius celatum fuerit, tanto profundius serpens <lb/>
@@ -3954,7 +4088,7 @@
             <milestone unit="PLSection" n="B"/><lb/>
             litarii audet arguere, quae ille ignorari maluit, quam <lb/>
             curari.</p>
-          <p>7. Quintum genus est circumcellionum, qui suo <lb/>
+          <p n="7">7. Quintum genus est circumcellionum, qui suo <lb/>
             habitu monachorum usquequaque vagantur, venalem <note type="footnote"> Ibid. Quae eis per intervalla, etc. Eren.itis olim <lb/>
             victus suppeditabatur a coenobiis, e quibus discesse­ <lb/>
             rant. Severus Sulpicius, dialogo i, transgressis ad <lb/>
@@ -4200,8 +4334,8 @@
             Guillehni Gellonensis : Miserat illis ab Hi,,,,,o'yrai. <lb/>
             per lac',,,r;.,. magni proposili magnique ,.,ifll4lli, </note> <pb n="799"/>
             </p>
-          <p>
-            <milestone unit="PLSection" n="A"/>8. Alii bonnres quos non acceperunt habere se <lb/>
+          <p n="8">
+<milestone unit="PLSection" n="A"/>8. Alii bonnres quos non acceperunt habere se <lb/>
             protestantur ; alii parentes vel consanguineos suos <lb/>
             in illa vel in illa regione se audisse, et videre, et ad <lb/>
             eos pergere mentiuntur, et omnes petunt, al omni­ <lb/>
@@ -4210,7 +4344,7 @@
             in factis suis malis ac verbis deprehensi fuerint, vel <lb/>
             quoquo modo innotuerint, sub generali nomine mo­ <lb/>
             nachorum propositum blasphematur.</p>
-          <p>9. Sextum genus est monachorum, et ipsum teter­ <lb/>
+          <p n="9">9. Sextum genus est monachorum, et ipsum teter­ <lb/>
             rimum atque neglectum, quod per Ananiam et Sap­ <lb/>
             phiram in exordio Ecclesiae 440 pullulavit, et <lb/>
             apostoli Petri severitatc succisum est (Act. v), qui­ <lb/>
@@ -4225,13 +4359,13 @@
             acquirant pecunias, quas recondant. et sicut ait de <lb/>
             ipsis Hieronymus, quasi ars sit sancta, non vita, <lb/>
             quidquid vendiderint, majoris est pretii.</p>
-          <p>10. Re vera (ut idem dicit) solent cerlare jejuniis, <lb/>
+          <p n="10">10. Re vera (ut idem dicit) solent cerlare jejuniis, <lb/>
             ut rem secreti victoriæ faciant. Apud hos affectata <lb/>
             sunt (inquit) omnia, fluxæ manicæ, caligæ follican­ <lb/>
             tes, vestis grossior, crebra suspiria , visitaio v rgi­ <lb/>
             num, detractio clericorum , et si quando dies festus <lb/>
             venerit, saliantur ad vomitum.</p>
-          <p>it. Inter cœnobium autem et monasterium ita
+          <p n="11">11. Inter cœnobium autem et monasterium ita
             <milestone unit="PLSection" n="C"/><lb/>
             distinguit Cassianus, quod monasterium possit etiam <lb/>
             unius monachi habitatio nuncupari, cœnobium au­ <lb/>
@@ -4246,8 +4380,8 @@
             concordissimam vitam sectantur, cogitationesque <lb/>
             suas alterutrum revelantes, invicem discutiunt et <lb/>
             corrigunt.</p>
-          <p>
-            <milestone unit="PLSection" n="A"/>i ?. Nemo quidqnam terrenum sorte peculiari os. <lb/>
+          <p n="12">
+            <milestone unit="PLSection" n="A"/>12. Nemo quidqnam terrenum sorte peculiari os. <lb/>
             sidet, pretiosis vel coloratis vestibus non induantur, <lb/>
             sed vilissimis atque sinceris, lavacris nunquam ulun­ <lb/>
             tur ad delectationem corporis, sed raro propter ne­ <lb/>
@@ -4258,7 +4392,7 @@
             non possit. Canunt autem manibus 441 operantes <lb/>
             et ipsum laborem, tanquam divino celeumate, con­ <lb/>
             solantur.</p>
-          <p>13. Opus autem suum tradunt eis quos decanos <lb/>
+          <p n="13">13. Opus autem suum tradunt eis quos decanos <lb/>
             vocant, eo quod sint denis præpositi, ut neminem <lb/>
             illorum cura sui corporis tangat, neque in cibo, nec <lb/>
             in vestimento, nec si quid aliud opus est, vel quo-
@@ -4273,7 +4407,7 @@
             insignes, omnihus rebus excelsi, nulla superbia con­ <lb/>
             sulunt his quos lilios appellant, magna sua in jubendo <lb/>
             auctoritate, magna illorum in e bediendo voluntate.</p>
-          <p>14. Conveniunt autem omnes frequenter nocte die­ <lb/>
+          <p n="14">14. Conveniunt autem omnes frequenter nocte die­ <lb/>
             que, da:o signo, festina cum properatione, ad ora­ <lb/>
             tionem solemnium horarum, celebrantes fixa inten­ <lb/>
             tione cordis, usque ad consummationem psalmorum <lb/>
@@ -4289,7 +4423,7 @@
             cimoniam concupiscentiam et gulam, ne gravetur <lb/>
             eorum cor, vel in ea ipsa quae praesto sunt, parca et <lb/>
             vilissima.</p>
-          <p>15. Itaque non solum a carnibus et a vino absti­ <lb/>
+          <p n="15">15. Itaque non solum a carnibus et a vino absti­ <lb/>
             nent pro sufficientia domandarum libidinum sed <lb/>
             etiam ab omnibus quae ventris et gutturis provocant <note type="footnote"> sacerdotem , perque duo. monachos Hierosolymitanos <lb/>
             magnæ rel gionis , nec parva: auctoritatis illiid Domi-</note> 
@@ -4332,7 +4466,7 @@
             niunt non solum 442 liberi, sed etiam plerumque <lb/>
             et ex conditione servili, sed propter hoc a dominis <lb/>
             liberati, vel propter hoc potius liberandi.</p>
-          <p>16. Veniunt quoque et ex vita rustica, et ex opi­ <lb/>
+          <p n="16">16. Veniunt quoque et ex vita rustica, et ex opi­ <lb/>
             ficum exercitatione et ei plebeio labore, tanto utique <lb/>
             felicius, quanto fortius educati. Quod si non admit­ <lb/>
             tantur, grave delictum est. Multi enim ex eo numero <lb/>
@@ -4342,7 +4476,7 @@
             ignobilia mundi, et ea quae non sunt, ut ea quæ sunt
             <milestone unit="PLSection" n="B"/><lb/>
             evacuentur, et non glorietur omnis caro coram Deo.</p>
-          <p>17. Simili quoque modo exstant et cœnobia femi­ <lb/>
+          <p n="17">17. Simili quoque modo exstant et cœnobia femi­ <lb/>
              <lb/>
             narum Deo sollicite casteque servientium, quæ in <lb/>
             habitaculis suis segregatæac remotæ a viris quam <lb/>
@@ -4360,7 +4494,7 @@
             <milestone unit="PLSection" n="C"/><lb/>
             banc institutionem tenere videntur coenobia virgi­ <lb/>
             num ac monachorum.</p>
-          <p>18. Monachi autem secundum humilitatem eli­ <lb/>
+          <p n="18">18. Monachi autem secundum humilitatem eli­ <lb/>
             guntur. Multos enim ex eis cenodoxiæ morbus com­ <lb/>
             maculat, multos abstinentia inflat et extollit scientia. <lb/>
             Faciant enim nona, sed propter famam, non propter <lb/>
@@ -4375,13 +4509,15 @@
             junguntur.</p>
           <p>
             <milestone unit="PLSection" n="D"/></p>
-          <ab>
+          </div>
+<div n="17" subtype="section" type="textpart">
+<ab>
             <title type="sub">443 CAPUT XVII.</title>
           </ab>
           <ab>
             <title type="sub">De pænitentibus.</title>
           </ab>
-          <p>1. Poenitentibus Job exemplum primus exhibuit, <lb/>
+          <p n="1">1. Poenitentibus Job exemplum primus exhibuit, <lb/>
             quando post funera vel flagella adhuc in sui redar­ <lb/>
             gutione etiam in cilicio et cinere lamenla pœnitudi-
             <milestone unit="PLSection" n="A"/><lb/>
@@ -4391,7 +4527,7 @@
             nere lapsus, dum audisset a propheta peccatum suum, <lb/>
             confestim pœnitiut, et culpam suani pœnitentiæ con­ <lb/>
             fessione sana vit (II Reg. XII).</p>
-          <p>2. Sit Nim vitæ , et alii multi peccata sua confessi <lb/>
+          <p n="2">2. Sit Nim vitæ , et alii multi peccata sua confessi <lb/>
             sunt, et pœnitentiam egerunt, displicuerunt sibi <lb/>
             quales fuerint, et quales per Deum facti sunt illi <lb/>
             placuerunt (Jonæ III). Est autem pœnitentia medi­ <lb/>
@@ -4402,7 +4538,7 @@
             sumpsit a poena, qua anima cruciatur et caro morti-
             <milestone unit="PLSection" n="B"/><lb/>
             ficatur.</p>
-          <p>3. Hi vero qui poenitentiam agunt, proinde capil­ <lb/>
+          <p n="3">3. Hi vero qui poenitentiam agunt, proinde capil­ <lb/>
             los et barbam nutriunt, ut demonstrent abundantiam <lb/>
             criminum, qu.bus caput peccatoris gravatur. Capilli <lb/>
             enim pro vitiis accipiuntur, sicut scriptum est: Cri­ <lb/>
@@ -4411,7 +4547,7 @@
             est illi, ut ait Apostolus (7. Cor. XI). Ipsam ergo <lb/>
             ignominiam suscipiunt poenitentes pro merito pec­ <lb/>
             catorum.</p>
-          <p>4. Quod vero in cilicio prosternuntur , per cili­ <lb/>
+          <p n="4">4. Quod vero in cilicio prosternuntur , per cili­ <lb/>
             cium quippe recordatio est peccatorum propter hœ­ <lb/>
             dos ad sinistram futuros. Inde ergo confitentes in <lb/>
             cilicio prosternimur, tauquam dicenles : 444 Et <lb/>
@@ -4426,7 +4562,7 @@
             rat peccatum, quia in cilicio asperilas est, et punc­ <lb/>
             tio peccatorum, in cinere autem pulvis ostenditur <lb/>
             mortuorum.</p>
-          <p>5. Et idcirco in u roque pœnitentiam agimus , ut <lb/>
+          <p n="5">5. Et idcirco in u roque pœnitentiam agimus , ut <lb/>
             et punctione cilicii agnoscamus vitia, quæ per culpam <lb/>
             commisimus : et per favillam cineris perpendamus <lb/>
             mortis sententiam , ad quam peccando pervenimus. <lb/>
@@ -4437,7 +4573,7 @@
             tione commendatum sollicite prohibet iterandum, <lb/>
             medicinali remedio pœnitentiæ subrogat adiumen- <lb/>
             tum.</p>
-          <p>6. Cujus remedii egere se cuncti agnoscerc debent <note type="footnote"> t7. Alii, cænobia (ern;narum, elc. AI., cænobia (e.. <lb/>
+          <p n="6">6. Cujus remedii egere se cuncti agnoscerc debent <note type="footnote"> t7. Alii, cænobia (ern;narum, elc. AI., cænobia (e.. <lb/>
             minarum, hoc est, munachales vlryilles, sollicile casie- <lb/>
             Ille servientes Ueo, qtuv habitaculis,etc. AREV. </note><note type="footnote"> CAP. XVII. N. 2. Poenilehtia nomen, etc. At., pceni­ <lb/>
             tentia autem non mensium ac "'nip .'rum cursu pt&gt;.nt&gt;a­ <lb/>
@@ -4471,7 +4607,7 @@
             apud Deum pro baptismate reputantur. Unde quam­ <lb/>
             libet magna sint delicta, quamvis gravia, nOlI tamen <lb/>
             est in illis Dei misericordia desperanda.</p>
-          <p>7. In actione autem pœnitudinis (ut supra dictum
+          <p n="7">7. In actione autem pœnitudinis (ut supra dictum
             <milestone unit="PLSection" n="B"/><lb/>
             est) non 445 tam consideranda est mensura tem­ <lb/>
             poris quam doloris; cor enim Contritum et humilia­ <lb/>
@@ -4485,7 +4621,7 @@
             nitenda committit. Qui vero lacrymas indesinenter <lb/>
             fundit, et tamen peccare non desinit, hic lamentum <lb/>
             habet, sed mundationem non habet.</p>
-          <p>8. Si qui autem per gratiam Dei ad poenitentiam <lb/>
+          <p n="8">8. Si qui autem per gratiam Dei ad poenitentiam <lb/>
             convertuntur, perturbari non debent si rursus post <lb/>
             emendationem relicta vitia eor pulsent, dum non
             <milestone unit="PLSection" n="C"/><lb/>
@@ -4500,7 +4636,7 @@
             quia in termino est ultimo vitæ , quoniam Deus non <lb/>
             respicit quales antea fuimus, sed quales circa finem <lb/>
             vitæ existimus.</p>
-          <p>9. Es fine enim suo unumquemque aut justifiest, <lb/>
+          <p n="9">9. Es fine enim suo unumquemque aut justifiest, <lb/>
             aut eondemnat, sicut scriptum est: Ipse judicat ex­ <lb/>
             trema terræ (1 Reg. n, 10) ; et alibi : V Rive,...,.... <lb/>
             finem ipse considerat (Job. XXVIII, 24). Proinde non <lb/>
@@ -4513,13 +4649,15 @@
             ut ab hac vita securius transeatur.</p>
           <p>
             <milestone unit="PLSection" n="B"/></p>
-          <ab>
+          </div>
+<div n="18" subtype="section" type="textpart">
+<ab>
             <title type="sub">446 CAPUT XVIII.</title>
           </ab>
           <ab>
             <title type="sub">De virginibus.</title>
           </ab>
-          <p>1. Nunc autem quæ sit sacræ virginitatis integri­ <lb/>
+          <p n="1">1. Nunc autem quæ sit sacræ virginitatis integri­ <lb/>
             tas, vel a quo tam sancti propesiti studium sit exer- <lb/>
             tum, breviter intimabo. Quantum enim ad Velus <lb/>
             Testamentum attinet, Elias, Jeremias et Daniel ea­ <lb/>
@@ -4537,7 +4675,7 @@
             meditantes, atque in carne corruptibili incorruptio­ <lb/>
             nem perpetuam retinentes, quibus cedit omnis fe­ <lb/>
             cunditas carnis, omnis pudicitia conjugalis.</p>
-          <p>2. Nam eam et ipsa universa Ecclesia virgo sit, <lb/>
+          <p n="2">2. Nam eam et ipsa universa Ecclesia virgo sit, <lb/>
             desponsata uBi viro, sicut dicit Apostolus (II Cor. <note type="footnote"> licis In, epist. 1, cap. i. Yid. Gratian., d. 50, cap. <lb/>
             Confirmandum, cum scqucnlibiis. GRIAL. </note><note type="footnote"> Ibid. II urum dUllta:rat dignitate servata. lIillorpius, <lb/>
             cum duobus Mss., honorum duntaxat diguilale serva­ <lb/>
@@ -4603,7 +4741,7 @@
             (Luc. XXI 23). Et illud : Tempus jam in collecto est. <lb/>
             Restat ut qui uxores habent, tanquam non habentes <lb/>
             sint (I Cor. VII).</p>
-          <p>3. Et nisi fallor, unius ejusdemque Dei pronuntia-
+          <p n="3">3. Et nisi fallor, unius ejusdemque Dei pronuntia-
             <milestone unit="PLSection" n="B"/><lb/>
             tio est. Tunc quidem Deus in primordio sementem <lb/>
             generis emisit, indultis conjugiorum habenis, donec <lb/>
@@ -4618,7 +4756,7 @@
             dicentibus apostolis quodam loco : Si sic est hominis <lb/>
             causa cum muliere, non expedit nubere, responderit <lb/>
             Dominus : Qui potest capere capiat (Matth. XIX).</p>
-          <p>4. Non ergo praeceptum de continentibus, sed sua-
+          <p n="4">4. Non ergo praeceptum de continentibus, sed sua-
             <milestone unit="PLSection" n="C"/><lb/>
             sio est; nec injungitur virginitas, ut sit necessitatis, <lb/>
             sed ut voluntatis possit esse, laudatur, Apostolo <lb/>
@@ -4633,7 +4771,7 @@
             Il iterum : Si acceperis uxorem, non <unclear>peccasti</unclear> ; <lb/>
             si nupserit virgo, non peccavit. Et si nou vis major <lb/>
             esse , esto vel minor , quia liberæ voluntatis es.</p>
-          <p>448 Nuptiæ enim peccatum non sunt, sed per solli­ <lb/>
+          <p n="5">448 Nuptiæ enim peccatum non sunt, sed per solli­ <lb/>
             citadinem mundi qui nubunt legem Dei servare vix <lb/>
             possunt. Aliter illos dicit non peccare, si nubant qui
             <milestone unit="PLSection" n="D"/><lb/>
@@ -4645,7 +4783,7 @@
             <milestone unit="PLSection" n="A"/><lb/>
             pretio possessionis suæ retinere nihillicuit, ob quam <lb/>
             causam et subita morte prostrati sunt (Act. V.).</p>
-          <p>6. In Evangelio autem virginum diversa genera me­ <lb/>
+          <p n="6">6. In Evangelio autem virginum diversa genera me­ <lb/>
             morantur, sed illis specialiter regni possessio depu­ <lb/>
             tatur, qui se amore Dei castraverunt, id est, non <lb/>
             quos impossibilitatis necessitas cogit, sed quos vo­ <lb/>
@@ -4657,7 +4795,7 @@
             cit se dalurum in domo sua et in muris suis locum <lb/>
             nominatum meliorem multo quam filiorum ac ii- <lb/>
             Harum (Isai. LVI).</p>
-          <p>7. Nam illis qui sic nascuntur, aut quibus ipsum
+          <p n="7">7. Nam illis qui sic nascuntur, aut quibus ipsum
             <milestone unit="PLSection" n="B"/><lb/>
             virile membrum debilitatur, ulgenerarenon possint <lb/>
             (sicut sunt eunuchi potentum et regum) sufficit uti­ <lb/>
@@ -4668,7 +4806,7 @@
             lum, non propter regnum coelorum; neque enim uxo­ <lb/>
             res animi viriute, sed carnis necessitate non du­ <lb/>
             cunt.</p>
-          <p>8. Quantum autem sit in virginibus sanctitatis do­ <lb/>
+          <p n="8">8. Quantum autem sit in virginibus sanctitatis do­ <lb/>
             num, ut etiam Joannes eos tantum Agni vestigiis in­ <lb/>
             hærere præscribat qui contaminati mulierum conven­ <lb/>
             tibus non fueriut (Apoc. XIV)? Ipsi enim sunt duode­ <lb/>
@@ -4680,7 +4818,7 @@
             Sequuntur itaque Agnum et cæteri fideles, qui virgini­ <lb/>
             tatem corporis amiserunt, sed non quocumque ierit, <lb/>
             sed quo usque ipsi potuerunt.</p>
-          <p>9. Unde, ne tantae sanctitatis donum superbia cor­ <lb/>
+          <p n="9">9. Unde, ne tantae sanctitatis donum superbia cor­ <lb/>
             rumpatur, cavendum est; multos enim extollit virgi­ <lb/>
             nitas, elevat continentia, fidenter dioo, facilius se­ <lb/>
             quuntur Agnum, et si non quocunque ierit, certe <unclear>quo</unclear> - <lb/>
@@ -4711,8 +4849,8 @@
             vct (;u,!;rc: L'uld. AREv. .. <lb/>
             ,, </note> <pb n="807"/>
             </p>
-          <p>
-            <milestone unit="PLSection" n="A"/>10. Illæ ergo virgines esse probantur, quae sic con. <lb/>
+          <p n="10">
+<milestone unit="PLSection" n="A"/>10. Illæ ergo virgines esse probantur, quae sic con. <lb/>
             tinentiæ inserviunt, ut nullis criminibus nulloque ter­ <lb/>
             renæ solicitudinis onere prægraventur. Curam enim <lb/>
             mundi conjugalis copula gignit, Paulo docente, qui <lb/>
@@ -4726,7 +4864,7 @@
             carnis, qui illigantur sæcularibus curis. Nisi tantum <lb/>
             quod sibi majora acquirunt supplicia pro eo quod saecu­ <lb/>
             lum minime vincunt, qui carnem vincere potuerunt.</p>
-          <p>11. Quæritur autem cur femin?e virgines in bene-
+          <p n="11">11. Quæritur autem cur femin?e virgines in bene-
             <milestone unit="PLSection" n="B"/><lb/>
             dictione velentur? Quarum hæc causa est. In gradi­ <lb/>
             bus enim vel officiis ecclesiasticis feminæ nullatenus <lb/>
@@ -4739,13 +4877,15 @@
             bilis vel insignis introeat, et honorem sanctificati <lb/>
             coi por s in libertate capitis ostendat, atque mitram, <lb/>
             quasi coronam virginalis gloriæ, in verlice præferat.</p>
-          <ab>
+          </div>
+<div n="19" subtype="section" type="textpart">
+<ab>
             <title type="sub">CAPUT XIX.</title>
           </ab>
           <ab>
             <title type="sub">De viduis. a</title>
           </ab>
-          <p>1. Viduarum multa exempla sunt, quarum prima <lb/>
+          <p n="1">1. Viduarum multa exempla sunt, quarum prima <lb/>
             in Scripturis legitur Noemi (Ruth. I), et vidua, ad
             <milestone unit="PLSection" n="C"/><lb/>
             quam Elias mistus esse scribitur (III Reg. xv, et <lb/>
@@ -4759,7 +4899,7 @@
             <milestone unit="PLSection" n="A"/><lb/>
             agnoscere, antequam potuisset verbum ejus ludire <lb/>
             (Luc. n).</p>
-          <p>2. Cujus quidem gradus virginitati pene conjunc­ <lb/>
+          <p n="2">2. Cujus quidem gradus virginitati pene conjunc­ <lb/>
             tus est; unde et Christum , quem virgo peperit, vidua <lb/>
             prima cognovit. Felix ergo virgo, quia intacta ; for­ <lb/>
             tior vidua, quia experta : utrisque tamen est apud <lb/>
@@ -4770,7 +4910,7 @@
             ginta, unius viri uxor ( I Tim. v). Unde consequens est <lb/>
             ut quae plurimis fuit nexa maritis careat veræ no­ <lb/>
             mine viduiutis.</p>
-          <p>3. Quales esse viduæ debeant, idem Apostolus <lb/>
+          <p n="3">3. Quales esse viduæ debeant, idem Apostolus <lb/>
             expressit, dicens : Si fuerit in operibus bonis, testi-
             <milestone unit="PLSection" n="B"/><lb/>
             monium habens , utique sicut Tabitha (Act. IX) : si fi­ <lb/>
@@ -4783,7 +4923,7 @@
             utique ut ipse earum incessus , motus, vultus, ser­ <lb/>
             mo, silentium quamdam sacrae continentiæ præferat <lb/>
             dignitatem.</p>
-          <p>4. Post hæc cadjecit : Non criminatrices, non multo <lb/>
+          <p n="4">4. Post hæc cadjecit : Non criminatrices, non multo <lb/>
             vine servientes, sed parvo utentes. Nam solent hæ æta­ <lb/>
             tes, quae corporis frixere luxuria , vino se dedere <lb/>
             pro libidine. Post hæc additur: Bene docentes, ut
@@ -4840,7 +4980,7 @@
             <milestone unit="PLSection" n="A"/><lb/>
             etiam curiosae discurrunt, loquentes quæ non opor-<lb/>
             tet.</p>
-          <p>5. Prædicat autem idem Apostolus damnationem. <lb/>
+          <p n="5">5. Prædicat autem idem Apostolus damnationem. <lb/>
             habere viduas, quae post propositum continentiæ nu­ <lb/>
             bere cupiunt. Cum enim, inquit, luxuriatæ fuerint <lb/>
             in ChristO, nubere volunt, habentes damnationem, quia <lb/>
@@ -4849,7 +4989,7 @@
             bunt, sed nubere Volunt; multas enim earum revo­ <lb/>
             cat a nubendo 452 non amor praeclari propositi, <lb/>
             sed aperti dedecoris timor.</p>
-          <p>6. Igitur quae nubere volunt, et ideo non nuhunt, <lb/>
+          <p n="6">6. Igitur quae nubere volunt, et ideo non nuhunt, <lb/>
             quia impune non possunt, hæ melius non voverent <lb/>
             et nuberent quam urerentur (/ Cor. vu), id est, <lb/>
             quam occulta flamma concupiscentiæ vastarentur,
@@ -4861,13 +5001,15 @@
             deliciis agit, vivens mortua est (1 Tim. v), sive in labo-. <lb/>
             ribus, atque jejuniis nulla cordis correctione, sed <lb/>
             magis ostentationi quam emendationi servientibus. :</p>
-          <ab>
+          </div>
+<div n="20" subtype="section" type="textpart">
+<ab>
             <title type="sub">CAPUT xx..</title>
           </ab>
           <ab>
             <title type="sub">De conjugatis.</title>
           </ab>
-          <p>i. De conjugatis lex naturae a saeculo est. Deus <lb/>
+          <p n="1">1. De conjugatis lex naturae a saeculo est. Deus <lb/>
             enim fecit Adam, et dedit ei adjutorem Hevam cum <lb/>
             procreationis subsecuta sentenlia, dicens: Crescile, <lb/>
             et multiplicamini, et replete terram (Gen. i). Sed facta <lb/>
@@ -4878,7 +5020,7 @@
             mulierem suam pulsus agnosceret, libro Geneseos <lb/>
             edocente : Et cognovit Adam mulierem suam, et con­ <lb/>
             cepit, et peperit filium (Gen. IV).</p>
-          <p>2. Ergo adjectum laborem nuptiae praecesserunt, <lb/>
+          <p n="2">2. Ergo adjectum laborem nuptiae praecesserunt, <lb/>
             et tribulos spinasque passuri prævios adjecere con­ <lb/>
             ventus; secula in procreationibus tædia; unde et <lb/>
             pariturae tale præcessit edictum : In dolore, inquit, <lb/>
@@ -4893,7 +5035,7 @@
             tate, conjugii est. Ideoque nec peccatum nuptias <lb/>
             dicimus , nec tamen eas bono virginalis continentiæ <lb/>
             vel etiam vidualis coaequamus.</p>
-          <p>453 5. Conjugia autem tantum per se boqa sunt ; <lb/>
+          <p n="3">453 3. Conjugia autem tantum per se boqa sunt ; <lb/>
             propter ea vero quae circa illa sunt, mala fiunt. Per <lb/>
             id namque mala fiunt, per quod dicit Apostolus: <lb/>
             Qui autem cum uxorc est cogilat quæ sunt mundi; et <lb/>
@@ -4911,7 +5053,7 @@
             Christus et una Ecclesia , sic uiis vir et una uxor <lb/>
             tam secundum generis documentum quam secundum <lb/>
             Christi sacramentum.</p>
-          <p>4. Numerus autem matrimonii a maledicto viro <lb/>
+          <p n="4">4. Numerus autem matrimonii a maledicto viro <lb/>
             coepit. Primus Lamech duabus maritatus tres in <lb/>
             unam carnem effecit. Sed dices quod et patriarchæ <lb/>
             simul pluribus uxoribus usi sunt; ergo propterea. <lb/>
@@ -4924,7 +5066,7 @@
             explendae libidinis causa cum plurimis fornicari. <lb/>
             Saepius enim nubendi licentia jam non est religionis, <lb/>
             sed criminis.</p>
-          <p>5. Nam quod in ipsa conjunctione connubia a sa­ <lb/>
+          <p n="5">5. Nam quod in ipsa conjunctione connubia a sa­ <lb/>
             cerdote benedicuntur, hoc etiam a Deo in ipsa pri­ <lb/>
             ma conditione hominum 454 factum est, sic enim <lb/>
             scriptum est: Fecit Deus hominem: ad imaginem <note type="footnote"> <lb/>
@@ -4974,7 +5116,7 @@
             ginibus legitime nubentibus univiræ pronobæ adhi­ <lb/>
             bentur, scilicet propter monogamiam, etsi auspicii <lb/>
             causa fit, tamen boni auspicium est.</p>
-          <p>6. Quod vero eædem femine, dum maritantur, <lb/>
+          <p n="6">6. Quod vero eædem femine, dum maritantur, <lb/>
             velantur, scilicet ut noverint se per hæc viris suis <lb/>
             esse subjectas, et humiles , unde et ipsum velamen <lb/>
             vulgo mavortem vocant, id est, Martem, quia signum <lb/>
@@ -4990,7 +5132,7 @@
             dicitur. Hinc etiam et nuptæ dictæ, quod vultus suos <lb/>
             velant, unde et nubes dictae, eo quod aethera obte­ <lb/>
             gant.</p>
-          <p>7. Quod autem nubentes post benedictionem a <lb/>
+          <p n="7">7. Quod autem nubentes post benedictionem a <lb/>
             Levita uno vinculo copulantur, videlicet ne compa­ <lb/>
             gem conjugalis unitatis disrumpant. At vero quod <lb/>
             eadem vitta candido purpureoque colore permisce­ <lb/>
@@ -5004,7 +5146,7 @@
             hoc ille candor 455 vittæ insinuat; quod vero sub­ <lb/>
             jungit : Et iterum revertimini in id ipsum, hoc pur­ <lb/>
             pureus color ille demonstrat.</p>
-          <p>8. Illud vero, quod inprimis annulus a sponso <lb/>
+          <p n="8">8. Illud vero, quod inprimis annulus a sponso <lb/>
             sponsae datur, fit hoc nimirum vel propter mutuae
             <milestone unit="PLSection" n="A"/><lb/>
             fidei signum, vel propter id magis, ut eodem pigno­ <lb/>
@@ -5015,7 +5157,7 @@
             amorem unicum carperet. Penes Israel autem illici­ <lb/>
             tum erat puellam viro tradere,nisi postmanifestatum <lb/>
             sanguinem maturitate.</p>
-          <p>9. Apud veteres in eligendis maritis quatuor ista <lb/>
+          <p n="9">9. Apud veteres in eligendis maritis quatuor ista <lb/>
             spectabantur : virtus , genus , pulchritudo, oratio; <lb/>
             in feminis tria : si generosa, si bene morata esset, <lb/>
             si pulchra. Nunc autem non genus, ac mores, sed <lb/>
@@ -5030,7 +5172,7 @@
             quirunt; neque enim sic institutæ sunt, ut carnis <lb/>
             voluptati serviant, sed tantum ut fructum propagi­ <lb/>
             nis quaerant.</p>
-          <p>tU. Nam et ipsae dotales tabulae indicant quod <lb/>
+          <p n="10">10. Nam et ipsae dotales tabulae indicant quod <lb/>
             causa procreandorum liberorum ducitur uxor. Quan­ <lb/>
             do ergo quisque luxuriosc amplius vivit quam neces­ <lb/>
             sitas procreandorum liberorum cogit, jam peccatum <lb/>
@@ -5044,7 +5186,7 @@
             in prole, ut amanter suscipiatur, pudice nutriatur ; <lb/>
             in sacramento, ut conjugium non separetur, neque <lb/>
             causa prolis alteri conjungantur.</p>
-          <p>ii. Sacramentum autem ideo inter conjugatos <lb/>
+          <p n="11">11. Sacramentum autem ideo inter conjugatos <lb/>
             dictum est, quia sicut non potest Ecclesia dividi a <note type="footnote"> 6. Quod vero eadem feminæ, usque ad perveniat. <lb/>
             Legitur totus hic prope locus apud Gralian., 30, q. <lb/>
             I), c. Feminae. GalAL. </note><note type="footnote"> Ibid. Unde et Rebecca, usque ad velavit, ex Ter­ <lb/>
@@ -5109,7 +5251,7 @@
             net, stultus et impius eat (Proverb. XVIII). Ubicunque <lb/>
             igitur fornicatio est, et fornicationis suspicio, libere <lb/>
             uxor dimittitur.</p>
-          <p>12. Quid ergo, si sterilis est, si deformis, si ætate <lb/>
+          <p n="12">12. Quid ergo, si sterilis est, si deformis, si ætate <lb/>
             vetula, si fetida , si temulenta , si iracunda, si malis <lb/>
             moribus, si luxuriosa, si fatua, si gulosa, si vaga, <lb/>
             si jurgatrix et maledica? tenenda est, 457 velis, <lb/>
@@ -5126,7 +5268,7 @@
             adulter sit quisquis compagem corporis in diversa <lb/>
             distraxerit. Servanda igitur fides ab utroque alteri <lb/>
             est.</p>
-          <p>13. Exemplo continentiæ docenda est uxor a viro, <lb/>
+          <p n="13">13. Exemplo continentiæ docenda est uxor a viro, <lb/>
             ut se caste gerat. Iniquum est enim ut id exigas quod <lb/>
             praestare non possis; caput est enim mulieris vir; <lb/>
             ubi autem melius vivit mulier quam vir, capite de­ <lb/>
@@ -5143,7 +5285,7 @@
             <milestone unit="PLSection" n="A"/><lb/>
             descendenti Deo in monte aMittere meruerunt <lb/>
             (Exod. XIX).</p>
-          <p>14. ltern hortatur idem apostolus mulieres subdilas <lb/>
+          <p n="14">14. ltern hortatur idem apostolus mulieres subdilas <lb/>
             esse viris suis (Coloss. III); nam multæ erga simpli­ <lb/>
             ciores viros, divitiis et nobilitate perflatæ, Dei sen­ <lb/>
             tentiae non recordantur , per quam subjectæ sunt <lb/>
@@ -5158,7 +5300,7 @@
             suo, ejusdem criminis rea est, cujus et vir, si non
             <milestone unit="PLSection" n="B"/><lb/>
             subjicitur Christo capiti suo.</p>
-          <p>458 15. Verbum autem Domini blasphematur, <lb/>
+          <p n="15">458 15. Verbum autem Domini blasphematur, <lb/>
             vel contemnitur Dei prima sententia, et pro nihilo <lb/>
             ducilur; vel Christi infamatur Evangelium, dum <lb/>
             contra legem fidemque naturae ea quae Christiana <lb/>
@@ -5169,13 +5311,15 @@
             illa viro imperare desiderat, et ordo naturae <lb/>
             corrumpitur, et domus illa misera et perversa vo­ <lb/>
             cabitur.</p>
-          <ab>
+          </div>
+<div n="21" subtype="section" type="textpart">
+<ab>
             <title type="sub">CAPUT XXI.</title>
           </ab>
           <ab>
             <title type="sub">De catechumenis, de exorcismo et sale.</title>
           </ab>
-          <p>i. Jam nunc rationem sacramentorum, sive ordi­
+          <p n="1">1. Jam nunc rationem sacramentorum, sive ordi­
             <milestone unit="PLSection" n="c"/><lb/>
             nem ad fidem venientium prosequamur. Quorum <lb/>
             gradus primus est catechumenorum, secundus com­ <lb/>
@@ -5188,7 +5332,7 @@
             primum loquitur, catechumenus, id est, audiens, <lb/>
             nominetur, scilicet, ut, unum agnoscens Dominum, <lb/>
             relinquat errores varios idolorum.</p>
-          <p>2. Puto autem et omnes a ioanne in pœnitentiam <lb/>
+          <p n="2">2. Puto autem et omnes a ioanne in pœnitentiam <lb/>
             baptizatos catechumenorum prætulisse figuram. Ex­ <lb/>
             orcizantur autem hi primum, deinde sales accipiunt, <lb/>
             et unguntur. Exorcismus autem sermo increpationis
@@ -5218,7 +5362,7 @@
             <milestone unit="PLSection" n="A"/><lb/>
             quissima virtus et inveterata malitia, vel violenta <lb/>
             incursio expulsa fugetur.</p>
-          <p>3. Hoc significat lunaticos ille, quem increpavit <lb/>
+          <p n="3">3. Hoc significat lunaticos ille, quem increpavit <lb/>
             Jesus, et exiit ab illo dæmonium (Mauh. xvn). Po­ <lb/>
             testas autem diaboli exorcizatur, et insufflatur in <lb/>
             eis, ut ei renuntient, atque, eruti a potestate tene­ <lb/>
@@ -5233,7 +5377,7 @@
             malum exemplum dantes ipsi remaneant, ut alios
             <milestone unit="PLSection" n="B"/><lb/>
             condiant. ■</p>
-          <p>4. Quemadmodum illa, quæ, cum liberaretur a <lb/>
+          <p n="4">4. Quemadmodum illa, quæ, cum liberaretur a <lb/>
             Sodomis, in via posita retro respexit, ibique remansit <lb/>
             statua salis. Quo signo condirentur hi qui per fidem <lb/>
             mundo et actibus desideriisque ejus renuntiant, ut <lb/>
@@ -5242,13 +5386,15 @@
             sententiam, ponens manum suam super aratrum, et <lb/>
             respicieus retro, regno coelorum aptus esse non po­ <lb/>
             test (Luc. IX, 62).</p>
-          <ab>
+          </div>
+<div n="22" subtype="section" type="textpart">
+<ab>
             <title type="sub">CAPUT XXII.</title>
           </ab>
           <ab>
             <title type="sub">De competenitibus.</title>
           </ab>
-          <p>i. Post catechumenos secundus competentium <lb/>
+          <p n="1">1. Post catechumenos secundus competentium <lb/>
             gradus est. Competentes autem sunt, qui jam post <lb/>
             doctrinam fidei, post continentiam vitæ ad gratiam
             <milestone unit="PLSection" n="C"/><lb/>
@@ -5258,19 +5404,21 @@
             enim quasi hospites, et vicini fidelium, deforis au­ <lb/>
             diuM mysteria, et gratiam, sed adhuc non appellan­ <lb/>
             tur fideles.</p>
-          <p>2. Competentes autem jam petunt, jam accipiunt, <lb/>
+          <p n="2">2. Competentes autem jam petunt, jam accipiunt, <lb/>
             jam catechizantur, id est, imbuuntur instructione <lb/>
             sacramentorum. Istis enim salutare symbolum tradi­ <lb/>
             tur, quasi commonitorium tidei et sanctae confessio­ <lb/>
             nis indicium, quo instructi agnoscant quales jarn ad <lb/>
             gratiam Christi exhibere se debeant.</p>
-          <ab>
+          </div>
+<div n="23" subtype="section" type="textpart">
+<ab>
             <title type="sub">460 CAPUT XXIII.</title>
           </ab>
           <ab>
             <title type="sub">De symbolo.</title>
           </ab>
-          <p>1. Symbolum autem, quod iidem competentes
+          <p n="1">1. Symbolum autem, quod iidem competentes
             <milestone unit="PLSection" n="D"/><lb/>
             accipiunt, tali ratione institutum majores nostri di­ <lb/>
             xerunt; tradunt enim his verbis. Quod post ascen­ <lb/>
@@ -5284,7 +5432,7 @@
             praeceptum est eis a Domino datum, ad praedican­ <lb/>
             dum Dei verbum, ad singulas quasque nationes adi­ <lb/>
             re (Matth. XXVIII).</p>
-          <p>2. Discessuri itaque ab invicem, normam prius <lb/>
+          <p n="2">2. Discessuri itaque ab invicem, normam prius <lb/>
             sibi futurae praedicationis in commune constituunt, <lb/>
             ne, localiler ab invicem discedentes, diversum ali­ <lb/>
             quid vel dissonum prædicarent his qui ad fidem <lb/>
@@ -5295,7 +5443,7 @@
              <lb/>
              <lb/>
             statuunt.</p>
-          <p>3. Symboium autem hoc multis et justissimis ex
+          <p n="3">3. Symboium autem hoc multis et justissimis ex
             <milestone unit="PLSection" n="B"/><lb/>
             causis appellare voluerunt. Symbolum enim Græce <lb/>
             et indicium dici potest, et collatio, hoc est, quod <lb/>
@@ -5309,7 +5457,7 @@
             num lineis nuntiantes. Idcirco igitur istud iudicium <lb/>
             posuere, per quod agnosceretur is qui Christum vere <lb/>
             secundum apostolicas regulas praedicaret.</p>
-          <p>4. Denique et in bellis civilibus hoc observari fe­ <lb/>
+          <p n="4">4. Denique et in bellis civilibus hoc observari fe­ <lb/>
             runt, quoniam et armorum per habitus, et sonus <lb/>
             vocis idem et mos unus est, atque eadem instituta
             <milestone unit="PLSection" n="C"/><lb/>
@@ -5324,7 +5472,7 @@
             neminem hoc ex lectione quæ pervenire interdum <lb/>
             etiam ad infideles solet, sed ex apostolorum tradi­ <lb/>
             tione didicisse.</p>
-          <p>5. Discessuri itaque (ut dictum est) ad praedican­ <lb/>
+          <p n="5">5. Discessuri itaque (ut dictum est) ad praedican­ <lb/>
             dum istud unanimitatis et fidei suae apostoli indicium <lb/>
             posuere. Est autem Symbolum per quod agnoscitur <lb/>
             Deus, quodque proinde credentes accipiunt, ut nove­ <lb/>
@@ -5356,13 +5504,15 @@
             tiam salutarem. Est enim breve fidei verbum, et olim <lb/>
             a propheta prædictum : Quoniam verbum breviatum <lb/>
             faciet Dominus super terram (Isai. x; Rom. IX).</p>
-          <ab>
+          </div>
+<div n="24" subtype="section" type="textpart">
+<ab>
             <title type="sub">CAPUT XXIV.</title>
           </ab>
           <ab>
             <title type="sub">De regula fidei.</title>
           </ab>
-          <p>1. Hæc est autem post Symbolum apostolorum cer­ <lb/>
+          <p n="1">1. Hæc est autem post Symbolum apostolorum cer­ <lb/>
             tissima fides, quam doctores nostri tradiderunt. Ut <lb/>
             profiteamur Patrem, el Filium, et Spiritum sanctum <lb/>
             unius essentiæ, ejusdemque potestatis et sempiterni­ <lb/>
@@ -5381,7 +5531,7 @@
             tertia die resurrexisse, et cum eadem ipsa carne glo­ <lb/>
             rificata ascendisse in coelum, in qua et ad judicium <lb/>
             vivorum et mortuorum exspectatur venturus.</p>
-          <p>2. Et quod divinam humanamque substantiam in <lb/>
+          <p n="2">2. Et quod divinam humanamque substantiam in <lb/>
             utroque perfectus una Christus persona gestaverit,
             <milestone unit="PLSection" n="A"/><lb/>
             quia nec geminavit utriusque substantiae integritate <lb/>
@@ -5394,7 +5544,7 @@
             creatura saeculi sit cum paganis aut cum hæreticis <lb/>
             aliquid sentiendum in his rebus, in quibus a veritate <lb/>
             dissentiunt.</p>
-          <p>3. Sed quod in utroque Testamento divina protes­ <lb/>
+          <p n="3">3. Sed quod in utroque Testamento divina protes­ <lb/>
             tantur eloquia, hoc tantummodo sentiendum. Quod <lb/>
             sive hominem, sive universa, nulla Deus necessitate <lb/>
             creaverit, neque ullam omnino esse visibilem invisi­ <lb/>
@@ -5406,7 +5556,7 @@
             Et quod angelorum natura, vel animae non si!. pars <lb/>
             divinae substantiæ, sed Dei creatura ex nihilo condita, <lb/>
             ideoque incorporea, quia ad imaginem Dei creata.</p>
-          <p>4. De pietate morum, sine qua fides divini cultus <lb/>
+          <p n="4">4. De pietate morum, sine qua fides divini cultus <lb/>
             otiosa torpescit, et cum qua integritas divini cultus <lb/>
             perficitur, ut unusquisque Deum propter Deum, et <lb/>
             proximum in Deo diligens, usque ad dilectionem <lb/>
@@ -5494,7 +5644,7 @@
             ex eis quoque originali peccato obnoxia credatur <lb/>
             nasci posteritas, eisque jure fidelium virginum vel <lb/>
             continentium praeferenda doceatur integritas.</p>
-          <p>5. Neque unum Trinitatis bapiisma (quod nefas est) <lb/>
+          <p n="5">5. Neque unum Trinitatis bapiisma (quod nefas est) <lb/>
             iteretur; neque pro diversitate tradentium ministrorum <lb/>
             singulis putetur quibusque conferri, sed a Deo'singu­ <lb/>
             lari potestate donari. De quo 464 dictum legimus : <lb/>
@@ -5510,7 +5660,7 @@
             Beati quorum remissæ sunt iniquitates, et quorum tecta <lb/>
             sunt peccata. Beatus vir cui non imputavit Dominus <lb/>
             peccatum (Psal. XXXI).</p>
-          <p>6. Nullum quoque suis viribus, sed per divinam <lb/>
+          <p n="6">6. Nullum quoque suis viribus, sed per divinam <lb/>
             gratiam capiti Christo subjungi, atque in disruptæ <lb/>
             pacis perseverantia in unitate Ecclesiae ipsius soli­ <lb/>
             dari. Nec humanae voluntatis arbitrio bono quidquam <lb/>
@@ -5529,7 +5679,7 @@
             videre per speculum in ænigmate, in futuro autem <lb/>
             facie ad faciem, cum ad speciem fuerit perducta per <lb/>
             fidem (I Cor. xm).</p>
-          <p>7. Quod donec perficiatur in nobis, ut summi Dei <lb/>
+          <p n="7">7. Quod donec perficiatur in nobis, ut summi Dei <lb/>
             bonis fruamur aeternis, temporalibus fruendo in Deo, <lb/>
             non oberimus et proximis. Eam quoque nos spem <lb/>
             resurrectionis habere, ut eodem ordine, eademque <lb/>
@@ -5547,13 +5697,15 @@
             ducendum (Matth. xxv). Hæc est catholicæ tradi­ <lb/>
             tionis fidei vera integritas, de qua si unum quodlibet <lb/>
             respuatur, tota fldei credulitas amittitur.</p>
-          <ab>
+          </div>
+<div n="25" subtype="section" type="textpart">
+<ab>
             <title type="sub">CAPUT XXV.</title>
           </ab>
           <ab>
             <title type="sub">De baptismo.</title>
           </ab>
-          <p>i. Baptismi sacramentum si prima repetens ab <lb/>
+          <p n="1">1. Baptismi sacramentum si prima repetens ab <lb/>
             origine pandam, baplizavit Moyses in nube, et in <lb/>
             mari, in typo et in figura, ita enim Paulus pronun­ <lb/>
             tiat (I Cor. x). Habuit ergo mare formam aquae, na­ <lb/>
@@ -5573,7 +5725,7 @@
             retur in Israel, quando Spiritus sancti descensione <lb/>
             et Patris voce Filius Dei palam cuneUs ostensus <lb/>
             est.</p>
-          <p>i. Coepit ergo perfectum baptisma a Jesu; ipse <lb/>
+          <p n="2">2. Coepit ergo perfectum baptisma a Jesu; ipse <lb/>
             enim baptizavit primum in Spiritu sancto, sicut et
             <milestone unit="PLSection" n="C"/><lb/>
             Joannes dicit : Ego quidem baptizo in aqua, medius <lb/>
@@ -5593,7 +5745,7 @@
             quo regeneramur ex lavacro, aliud quo consecramur
             <milestone unit="PLSection" n="D"/><lb/>
             ex sanguine.</p>
-          <p>3. Est tertium bapiisma lacrymarum, quod labo­ <lb/>
+          <p n="3">3. Est tertium bapiisma lacrymarum, quod labo­ <lb/>
             riosius transigitur, sicut ille qui per singulas noctes <note type="footnote"> 6. Nec humanee ",.mail arbitrio boni quidquam <lb/>
             deputandum. Haec absurdam sententiam redderent, <lb/>
             si separatim legerentur; sed annectenda sunt se­ <lb/>
@@ -5628,7 +5780,7 @@
             purgel universa, vivilicet cuncto, ideoque cum bapti­ <lb/>
             zamur in Christo, per ipsam renascimur, ut purificati <lb/>
             vivificemur.</p>
-          <p>4. Fons autem origo omnium gratiarum est, cujus <lb/>
+          <p n="4">4. Fons autem origo omnium gratiarum est, cujus <lb/>
             septem gradus sunt : tres in descensu propter tria <lb/>
             quibus renuntiamus; tres alii in ascensu propter tria
             <milestone unit="PLSection" n="B"/><lb/>
@@ -5645,7 +5797,7 @@
             ult.). Proinde si, omissa qualibet Trinilatis persona, <lb/>
             baptisma detur, manifeste in regenerationis solemni­ <lb/>
             tate nihil agilur, nisi tota Trinitas invocetur.</p>
-          <p>5. Nam et Dominus, dum a Joanne baptizaretur, <lb/>
+          <p n="5">5. Nam et Dominus, dum a Joanne baptizaretur, <lb/>
             eumdem baptismum sub Trinitatis sacramento legi-
             <milestone unit="PLSection" n="G"/><lb/>
             tur peregisse. Dicente enim Deo: Hic est Filius meus <lb/>
@@ -5656,7 +5808,7 @@
             diabolo, et pompis, et universae conversationi illius. <lb/>
             Secunda pactio est qua se credere in Patrem, et <lb/>
             Filium, et Spiritum sanctum profitetur.</p>
-          <p>6. Semel autem nos oportet in Christo lavari, quia <lb/>
+          <p n="6">6. Semel autem nos oportet in Christo lavari, quia <lb/>
             Christus semel pro nobis mortuus est. Si enim unus <lb/>
             Deus, et fides una est, necessario et ullum baptisma <lb/>
             sit (Ephes. IV), qnia et Christi mors una pro nobis <lb/>
@@ -5671,7 +5823,7 @@
             <milestone unit="PLSection" n="A"/><lb/>
             expiatur, quae in similitudioe fontis poceata mor­ <lb/>
             tificat.</p>
-          <p>7. Perfectis autem aetate baptismum vel ad pur­ <lb/>
+          <p n="7">7. Perfectis autem aetate baptismum vel ad pur­ <lb/>
             gationem originalis noxæ, vel ad abolitionem actua­ <lb/>
             lis peccati proficere credimus; parvulis autem, ut <lb/>
             ab originali peccato abluantur, quod ab Adam per <lb/>
@@ -5684,8 +5836,8 @@
             nesciunt, sicut etiam ægri, muti, vel surdi, quorum <lb/>
             vice alius profitetur, ut pro eis respondeat, dum <lb/>
             baptizantur.</p>
-          <p>
-            <milestone unit="PLSection" n="B"/>8. Quamvis autem per regenerationem pereat <lb/>
+          <p n="8">
+<milestone unit="PLSection" n="B"/>8. Quamvis autem per regenerationem pereat <lb/>
             originale peccatum, poena tamen mortis, quae per <lb/>
             praevaricationem mandati introivit, manet et in eos <lb/>
             quos a realu originis purgat baptisma Salvatoris. Et <lb/>
@@ -5703,7 +5855,7 @@
             <milestone unit="PLSection" n="C"/><lb/>
             ptizantes eos in nomine Patris, et Filii, et Spiritus <lb/>
             sancti (Matth. ult.).</p>
-          <p>9. Unde constat baptisma solis sacerdotibus csso <lb/>
+          <p n="9">9. Unde constat baptisma solis sacerdotibus csso <lb/>
             tractandum, ejusque ministerium nec ipsis diaconi­ <lb/>
             bus explere est licitum absque episcopo, vel pre­ <lb/>
             sbytero, nisi his procul absentibus, ultima languoris <lb/>
@@ -5715,7 +5867,7 @@
             sed solo chrismate et manus impositione purgandi <lb/>
             sunt. Baptismus enim non est hominis, sed Chrisii; <lb/>
             ideoque nihil interest hæreticus, an fidelis baptizet.</p>
-          <p>10. Quod sacramentum tam sanctum est, ut nec
+          <p n="10">10. Quod sacramentum tam sanctum est, ut nec
             <milestone unit="PLSection" n="D"/><lb/>
             homicida ministrante polluatur. Habet quidem hæ­ <lb/>
             reticus baptismum Christi, sed quia extra unitatem <lb/>
@@ -5743,13 +5895,15 @@
             Dum autem venerit, non mutatur, sed agnoscitur; <lb/>
             character est enim regis mei : non ero sacrilegus, <lb/>
             si corrigo desertorem; et non muto characterem.</p>
-          <ab>
+          </div>
+<div n="26" subtype="section" type="textpart">
+<ab>
             <title type="sub">CAPUT XXVI.</title>
           </ab>
           <ab>
             <title type="sub">De chrismate.</title>
           </ab>
-          <p>1. Chrismatis nnguentum Moyses primum in Exo­ <lb/>
+          <p n="1">1. Chrismatis nnguentum Moyses primum in Exo­ <lb/>
             do , jubente Domino, et composuit, et confecit, quo <lb/>
             primi Aaron et filii ejus in testimonium sacerdotii <lb/>
             et sanctitatis peruncti sunt (Exod. XXX). Deinde quo­ <lb/>
@@ -5760,7 +5914,7 @@
             <milestone unit="PLSection" n="B"/><lb/>
             mystica unctio, qua Christus figurabatur ; unde et <lb/>
             ipsum nomen a chrismate dicitur.</p>
-          <p>2. Sed postquam Dominus noster verus rei et <lb/>
+          <p n="2">2. Sed postquam Dominus noster verus rei et <lb/>
             sacerdos æternus a Deo Patre coelesti ac mystico <lb/>
             unguento est delibutus, jam non solum pontifices et <lb/>
             reges, sed omnis Ecclesia unctione chrismatis con­ <lb/>
@@ -5769,13 +5923,15 @@
             <milestone unit="PLSection" n="A"/><lb/>
             sumus, ideo post lavacrom ungimus, ut Christi <lb/>
             nomine censeamur (I Petr. II, 9).</p>
-          <ab>
+          </div>
+<div n="27" subtype="section" type="textpart">
+<ab>
             <title type="sub">CAPUT XXVII.</title>
           </ab>
           <ab>
             <title type="sub">De manuum impositione, vel confirmatione.</title>
           </ab>
-          <p>i. Sed quoniam post baptismum per episcopos <lb/>
+          <p n="1">1. Sed quoniam post baptismum per episcopos <lb/>
             datur Spiritus sanctus cum manuum imposilione , <lb/>
             hoc in Actibus apostolorum apostolos fecisse memi. <lb/>
             nimus. Sic enim dicitur: « Factum est, dum Apollo <lb/>
@@ -5886,8 +6042,8 @@
             lorum. Valent etiam impiis per modum meriti. Quod <lb/>
             autem pro parvulis defunctis celebrantur missae mor-</note> <pb n="825"/>
             </p>
-          <p>
-            <milestone unit="PLSection" n="A"/>2. Item in alio loco: « Cum audissent autem, qui <lb/>
+          <p n="2">
+<milestone unit="PLSection" n="A"/>2. Item in alio loco: « Cum audissent autem, qui <lb/>
             erant Jerosolvmis apostoli, quod accepit Samaria ver <lb/>
             bum Dei, miserunt ad illos Petrum, et Joannem. Qui <lb/>
             cum venissent, oraverunt pro eis, ut acciperent Spi­ <lb/>
@@ -5895,7 +6051,7 @@
             derat, sed tantum baptizati erant in nomine Domini <lb/>
             Jesu Christi. Tunc imponebant illis manus, et acci­ <lb/>
             piebant Spiritum sanctum. »</p>
-          <p>3. Spiritum autem sanctum accipere possumus, <lb/>
+          <p n="3">3. Spiritum autem sanctum accipere possumus, <lb/>
             dare non possumus, sed, ut detur, Dominum invoca­ <lb/>
             mus. Hoc autem a quo po issimum fiat, quemadmo­ <lb/>
             dum papa sanctus Innocenlius scripserit, subjiciam ; <lb/>
@@ -5903,8 +6059,8 @@
             nam presbyteri, licet sint sacerdotes, pontificatus ta-
             <milestone unit="PLSection" n="B"/><lb/>
             men apicem non habent.</p>
-          <p>
-            <milestone unit="PLSection" n="A"/>4. Hoc autem solis pontificibus deberi, ut Vel con­ <lb/>
+          <p n="4">
+<milestone unit="PLSection" n="A"/>4. Hoc autem solis pontificibus deberi, ut Vel con­ <lb/>
             signent, vel ut Paracletum Spiritum tradant, quod <lb/>
             non solum consuetudo ecclesiastica demonstrat, ve­ <lb/>
             rum et superior illa lectio Actuum apostolorum, quae <lb/>
@@ -5938,5 +6094,6 @@
             sum est quam praecepisse doctrinas, apud Grialiulu et <lb/>
             alios. Postremis verbis orationibus Fulgentii fratris <lb/>
             Isidorus se commendai. AREV. </note> </p>
-        </div>
+        </div></div>
+  </div>
         </body></text></TEI>
