@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><TEI xmlns="http://www.tei-c.org/ns/1.0"><teiHeader>
-    
+<?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
     <fileDesc>
       <titleStmt>
         <title>Patrologiae Cursus Completus. Series Latina (PL)</title> 
@@ -113,9 +114,7 @@
       <p>The following text is encoded in accordance with EpiDoc standards and with the
         CTS/CITE Architecture.</p>
     <refsDecl>
-        <cRefPattern n="" matchPattern="(.+).(.+).(.+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@type='edition']/tei:div[@n='$1']/tei:div[@n='$2']/tei:div[@n='$3'])"/>
-        <cRefPattern n="" matchPattern="(.+).(.+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@type='edition']/tei:div[@n='$1']/tei:div[@n='$2'])"/>
-        <cRefPattern n="" matchPattern="(.+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@type='edition']/tei:div[@n='$1'])"/>
+        <cRefPattern n="section" matchPattern="(.+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@type='edition']/tei:div[@n='$1'])"/>
       </refsDecl>
     </encodingDesc>
     
@@ -131,7 +130,8 @@
         <ab>
             <title type="sub">APPENDIX III.</title>
           </ab>
-          <ab>
+    <div n="1" subtype="section" type="textpart">      
+    <ab>
             <title type="sub">CARMINA S. ISIDQRO ASCRlPTA.</title>
           </ab>
           <p>Versus qui in Bibliotheca sancti Isidori episcopi Hispalensis legebantur, et alii sancto Isidoro ascript.</p>
@@ -348,8 +348,8 @@
             Hæc tibi vera canunt vitae præcepta perennis. <lb/>
             Auribus ille tuis male frivola falsa sonabit.</p>
           <p>
-            <milestone unit="PLSection" n="A"/></p>
-          <ab>
+            <milestone unit="PLSection" n="A"/></p></div>
+          <div n="2" subtype="section" type="textpart"><ab>
             <title type="sub">Carmen de eclipsi luna.</title>
           </ab>
           <p>Tu frte in luco lentus vaga carmina gignis, <lb/>
@@ -466,7 +466,7 @@
             Dum legit amfractus. </note><note type="footnote">58. Cur. Al., ubi, Al., ibi. </note><note type="footnote"> 59. Editio Ulloæ huic versui praeponit Quando <lb/>
             inter terram, etc. </note><note type="footnote"> 60. Almi. Sic Editio Ulloæ; alii, almæ, forte, pro <lb/>
             alma. </note> 
-            <milestone unit="PLSection" n="B"/><note type="footnote"> 61. Vide Isidoriana, loc. cit. </note> </p>
+            <milestone unit="PLSection" n="B"/><note type="footnote"> 61. Vide Isidoriana, loc. cit. </note> </p></div>
           </div>
         
         </body></text></TEI>
