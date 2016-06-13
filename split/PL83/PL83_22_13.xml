@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><TEI xmlns="http://www.tei-c.org/ns/1.0"><teiHeader>
-    
+<?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
     <fileDesc>
       <titleStmt>
         <title>Patrologiae Cursus Completus. Series Latina (PL)</title> 
@@ -113,9 +114,8 @@
       <p>The following text is encoded in accordance with EpiDoc standards and with the
         CTS/CITE Architecture.</p>
     <refsDecl>
-        <cRefPattern n="" matchPattern="(.+).(.+).(.+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@type='edition']/tei:div[@n='$1']/tei:div[@n='$2']/tei:div[@n='$3'])"/>
-        <cRefPattern n="" matchPattern="(.+).(.+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@type='edition']/tei:div[@n='$1']/tei:div[@n='$2'])"/>
-        <cRefPattern n="" matchPattern="(.+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@type='edition']/tei:div[@n='$1'])"/>
+        <cRefPattern n="p" matchPattern="(.+).(.+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@type='edition']/tei:div[@n='$1']/tei:div[@n='$2'])"/>
+        <cRefPattern n="chapter" matchPattern="(.+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@type='edition']/tei:div[@n='$1'])"/>
       </refsDecl>
     </encodingDesc>
     
@@ -127,17 +127,22 @@
     
 </teiHeader>
 
-  <text><body><div type="edition" n="">
+  <text><body>
+
+<div type="edition" n="">
           <head>
             <title type="main">138 SANCTI ISIDORI HISPALENSIS EPISCOPI DE VIRIS ILLUSTRIBUS.</title>
           </head>
-          <ab>
+  
+<ab>
             <title type="sub">LIBER.</title>
           </ab>
-          <ab>
+  
+<div n="pr" subtype="chapter" type="textpart">
+<ab>
             <title type="sub">Praefatio.</title>
           </ab>
-          <p>i. Quamvia superius plurimi veterum tractatorum inter Græcos et Latinos scriptores doctissimi annotentur <lb/>
+          <p n="1">1. Quamvia superius plurimi veterum tractatorum inter Græcos et Latinos scriptores doctissimi annotentur <lb/>
             tamen reor ipse etiam paucorum memoriam facere, quorum lectionem recolo me attigisse.</p>
           <p>I. 138 Xystus, papa Romanus.</p>
           <p>II. Macrobios, diaconus.</p>
@@ -162,7 +167,8 @@
           <p>XV. Itatus Clarus, ep. Hispanus.</p>
           <p>XVI. Siricius, pont. Romanus.</p>
           <p>XVII. Paulinus, presbyter Mediolan., postea ep.</p>
-          <ab>
+
+<ab>
             <title type="sub">Nolanus.</title>
           </ab>
           <p>XVIII. Proba, uxor Adelphii.</p>
@@ -201,10 +207,16 @@
             Hactenus Isidorus. <lb/>
             Hinc Braulio, ep. Cæsaraug.</p>
           <p>XLVII. Isidorus, ep. Ilispal.</p>
-          <ab>
+      
+      </div>
+
+
+
+<div n="1" subtype="chapter" type="textpart">
+<ab>
             <title type="sub">CAPUT PRIMUM.</title>
           </ab>
-          <p>2. Xystus episcopus Romanae urbis, et martyr, com­ <lb/>
+          <p n="2">2. Xystus episcopus Romanae urbis, et martyr, com­ <lb/>
             posuit ad instar Salomonis librum Proverbiorum, tam <lb/>
             brevi eloqnio, ut 140 in singnlis versiculis singalæ <lb/>
             explicentur sententiae. Cui quidem opusculo hæretici <lb/>
@@ -218,10 +230,16 @@
             dicatum. Refellit autem hanc opinionem beatissimus <lb/>
             Augustinus , qui in quodam opere suo ab eodeM <lb/>
             martyre boc opus compositum esse fatetur.</p>
-          <ab>
+        
+        </div>
+
+
+
+<div n="2" subtype="chapter" type="textpart">
+<ab>
             <title type="sub">CAPUT II.</title>
           </ab>
-          <p>3. Macrobius diaconus studium sancti Cypriani in­ <lb/>
+          <p n="3">3. Macrobius diaconus studium sancti Cypriani in­ <lb/>
             geniumque secutus, complexus est congrua ex utro­ <lb/>
             que Teslamento adversus versutias haereticorum ca­ <lb/>
             pilula, de scilicet Dei Patris majestate, et Filii Dei <lb/>
@@ -231,10 +249,13 @@
             subjecit etiam cætera ad utilitatem vitne et disciplinæ <lb/>
             religionis pertinentia, omnia haec in centum distincta <lb/>
             capitulis.</p>
-          <ab>
+          </div>
+
+<div n="3" subtype="chapter" type="textpart">
+<ab>
             <title type="sub">CAPUT III.</title>
           </ab>
-          <p>
+          <p n="4">
             <milestone unit="PLSection" n="c"/>4. Philastrius, Brixieusis episcopus. Hic longe ante <lb/>
             beatissimum Augustinum edidit librum de Hæresibus, <lb/>
             singulas quasque demonstrans, sive quae in popule <lb/>
@@ -290,10 +311,13 @@
             </p>
           <p>
             <milestone unit="PLSection" n="A"/></p>
-          <ab>
+          </div>
+
+<div n="4" subtype="chapter" type="textpart">
+<ab>
             <title type="sub">141 CAPUT IV.</title>
           </ab>
-          <p>5. Theodorus, Mopsuestenæ urbis episcopus, ita <lb/>
+          <p n="5">5. Theodorus, Mopsuestenæ urbis episcopus, ita <lb/>
             clare, copioseque scientiae doctrina refulsisse refer­ <lb/>
             tur, ut prædicaretur (si referre fas est) mille volumi­ <lb/>
             num summam in Græco conscripsisse, adversus om­ <lb/>
@@ -305,10 +329,13 @@
             <milestone unit="PLSection" n="A"/><lb/>
             simae Ecclesiæ doctorem fuisse. Vixit usque ad im­ <lb/>
             perium senioris Leonis.</p>
-          <ab>
+          </div>
+
+<div n="5" subtype="chapter" type="textpart">
+<ab>
             <title type="sub">CAPUT V.</title>
           </ab>
-          <p>6. Usius, Corduoensis ecclesiae civitatis Hispania­ <lb/>
+          <p n="6">6. Usius, Corduoensis ecclesiae civitatis Hispania­ <lb/>
             rum episcopus, eloquentiae viribus exercitatus. Seri- <lb/>
             psit ad sororem suam de laude virginitatis epistolam <lb/>
             pulchro ac diserto comptam eloquio ; omposuitque <lb/>
@@ -438,7 +465,7 @@
             
             <milestone unit="PLSection" n="A"/><lb/>
             etiam concilio quamplurimis edidit ipse sententias.</p>
-          <p>7. Hic autem post longum senium vetustatis, id est, <lb/>
+          <p n="7">7. Hic autem post longum senium vetustatis, id est, <lb/>
             post 143 centesimum primum annum in ipso jam <lb/>
             limine vitae afidei limitibus subruens, serpentis Jaculo <lb/>
             concidit. Nam accersitus a Constantio principe, minis­ <lb/>
@@ -448,10 +475,13 @@
             Patribus sanctis cæteris Ecclesiis sequendum tradide­ <lb/>
             rat, arreptus impietatis furore, damnavit: cujus qui­ <lb/>
             dem vitam, ut meruit, confestim exitus crudelis finivit.</p>
-          <ab>
+          </div>
+
+<div n="6" subtype="chapter" type="textpart">
+<ab>
             <title type="sub">CAPUT VI.</title>
           </ab>
-          <p>8. Toranius Ruffinus scripsit ad quemdam Pauli­ <lb/>
+          <p n="8">8. Toranius Ruffinus scripsit ad quemdam Pauli­ <lb/>
             num presbyterum de Benedictionibus patriarcharum <lb/>
             triplici intelligentia librum salis succinctum, et clara
             <milestone unit="PLSection" n="B"/><lb/>
@@ -462,19 +492,25 @@
             Patrum probet assertio.</p>
           <p>
             <milestone unit="PLSection" n="A"/></p>
-          <ab>
+          </div>
+
+<div n="7" subtype="chapter" type="textpart">
+<ab>
             <title type="sub">CAPUT VII.</title>
           </ab>
-          <p>9. Verecundus, Africanus episcopus, studiis libe­ <lb/>
+          <p n="9">9. Verecundus, Africanus episcopus, studiis libe­ <lb/>
             ralium litterarum disertus, edidit carmine dactylico <lb/>
             duos modicos brevesque libellos, quorum primuin <lb/>
             de Resurrectione et Judicio scripsit, alterum vero de <lb/>
             Poenitentia, in quo lamentabili carmine propria de­ <lb/>
             licta deplorat.</p>
-          <ab>
+          </div>
+
+<div n="8" subtype="chapter" type="textpart">
+<ab>
             <title type="sub">CAPUT VIII.</title>
           </ab>
-          <p>10. Victorinus episcopus composuit et ipse versibus <lb/>
+          <p n="10">10. Victorinus episcopus composuit et ipse versibus <lb/>
             duo opuscula 144 admodum brevia : unum adversus <lb/>
             Manichæos reprobantes Veteris Testamenli Deum, <lb/>
             veramque incarnationem Christi contradicentes; <lb/>
@@ -484,10 +520,13 @@
             <milestone unit="PLSection" n="B"/><lb/>
             rum; alterum bonum, animarum susceptorem et <lb/>
             indultorem criminum.</p>
-          <ab>
+          </div>
+
+<div n="9" subtype="chapter" type="textpart">
+<ab>
             <title type="sub">CAPUT IX.</title>
           </ab>
-          <p>II. ltacius, provinciae Gallæciæ episcopus, secutus <lb/>
+          <p n="11">11. ltacius, provinciae Gallæciæ episcopus, secutus <lb/>
             chronicam Eusebii Gæsariensis episcopi, sive Hiero- <note type="footnote"> 7. C..jus quidem, etc. VideinfrainMarcellino. PERIZ. <lb/>
             Ibid. Miraeus, in favorem Osiit praeter Baronium, <lb/>
             allegat Alderetum, lib. i, cap. 3, de Antiquil. Hisp. <lb/>
@@ -588,10 +627,13 @@
             narrat, quae premebant Hispaniam. Decessit sub <lb/>
             Leone principe, ultima jam pene senectute, sicut <lb/>
             etiam præfationis suae demonstratur indicio.</p>
-          <ab>
+          </div>
+
+<div n="10" subtype="chapter" type="textpart">
+<ab>
             <title type="sub">CAPUT X.</title>
           </ab>
-          <p>12. Eusebius, Dorolitanæ urbis episcopus. Hic in <lb/>
+          <p n="12">12. Eusebius, Dorolitanæ urbis episcopus. Hic in <lb/>
             coetu Chalcedonensis concilii contra Dioscorum hae­ <lb/>
             reticum Alexandrinæ urbis episcopum librum obtulit, <lb/>
             ac praesenti synodo omnes Dioscori errores et bla­ <lb/>
@@ -606,10 +648,13 @@
             damnationis ejus sententiam super eum a sancto <lb/>
             concilio imprecatur, scilicet, ut quod juste ille aliis <lb/>
             intulerat, in eo juste retorqueretur.</p>
-          <ab>
+          </div>
+
+<div n="11" subtype="chapter" type="textpart">
+<ab>
             <title type="sub">CAPUT XI.</title>
           </ab>
-          <p>13. Cerealis, Castellanensis Ecclesiae episcopus. Hic, <lb/>
+          <p n="13">13. Cerealis, Castellanensis Ecclesiae episcopus. Hic, <lb/>
             dum apud Carthaginiensem Africæ provinciae urbem <lb/>
             venisset, de fide sanctae Trinitatis cum Maximiano, <lb/>
             Ammonitarum episcopo, concertatus est, respondens <lb/>
@@ -618,10 +663,13 @@
             sed de testimoniis sanctarum Scripturarum. Ex­ <lb/>
             stat hoc ipsum ejusdem opusculum novem et decem <lb/>
             responsionum capitulis praesignatum.</p>
-          <ab>
+          </div>
+
+<div n="12" subtype="chapter" type="textpart">
+<ab>
             <title type="sub">CAPUT XII.</title>
           </ab>
-          <p>14. r'errandus, Carthaginiensis Ecclesiae diaconus, <lb/>
+          <p n="14">14. r'errandus, Carthaginiensis Ecclesiae diaconus, <lb/>
             146 multum in sacris Scripturis floruisse asseritur,
             <milestone unit="PLSection" n="A"/><lb/>
             multasque cum beato Fulgentio propositiones at. <lb/>
@@ -644,16 +692,22 @@
             Deus indulgentiam dedit, nihil nocet nostra severi­ <lb/>
             tas; sed si supplicium præparavit, nihil prodest <lb/>
             nostra benignitas.</p>
-          <ab>
+          </div>
+
+<div n="13" subtype="chapter" type="textpart">
+<ab>
             <title type="sub">CAPUT XIII.</title>
           </ab>
-          <p>15. Petrus, Herdensis Hispaniarum Ecclesiæ episco­ <lb/>
+          <p n="15">15. Petrus, Herdensis Hispaniarum Ecclesiæ episco­ <lb/>
             pus, edidit diversis solemnitatibus congruentes ora­ <lb/>
             tiones, et missas eleganti sensu, et aperto sermone.</p>
-          <ab>
+          </div>
+
+<div n="14" subtype="chapter" type="textpart">
+<ab>
             <title type="sub">CAPUT XIV.</title>
           </ab>
-          <p>16. Marcellinus, Italiæ presbyter, scripsit Theodosio <lb/>
+          <p n="16">16. Marcellinus, Italiæ presbyter, scripsit Theodosio <lb/>
             Minori, Arcadioque imperatoribus, opusculum unum, <lb/>
             in quo retexit gesta episcoporum qui ad destructio­ <lb/>
             nem homousion Arimini convenerunt; quique ita <lb/>
@@ -723,7 +777,7 @@
             cit Clementino Constantii præfecto vicario, ut mitteret <lb/>
             cum in exsilium. At ille inquit: Non audeo episcopum in <lb/>
             exsilium mittere, nisi prius eum ab episcopatu dajeceris.</p>
-          <p>17. Ut autem vidit sanctus Gregorius quod Osius <lb/>
+          <p n="17">17. Ut autem vidit sanctus Gregorius quod Osius <lb/>
             vellet ferre sententiam , appellat Christum totis <lb/>
             fidei suæ visceribus, exclamans ita : Christe Deus, <lb/>
             qui venturus es judicare vivos et mortuos, ne pII­ <lb/>
@@ -740,7 +794,7 @@
             regalis imperii, cum sententiam conaretur exprime- <lb/>
             Te, os vertit, distorquens pariter et cervicem, ac de <lb/>
             sessa in terram eliditur, atque illico expiravit.</p>
-          <p>18. Tunc, admirantibus cunctis, etiam Clementinus <lb/>
+          <p n="18">18. Tunc, admirantibus cunctis, etiam Clementinus <lb/>
             ille gentilis expavit, et licet esset judex, tamen timens <lb/>
             De in se simili supplicio judicaretur, prostravit se ad <lb/>
             pedessancti viri, obsecrans ut sibi parceret, qui in <lb/>
@@ -752,10 +806,13 @@
             unusquisque enim timuit de illo ulterius judicare.</p>
           <p>
             <milestone unit="PLSection" n="A"/></p>
-          <ab>
+          </div>
+
+<div n="15" subtype="chapter" type="textpart">
+<ab>
             <title type="sub">148 CAPUT XV.</title>
           </ab>
-          <p>19. Itacius, Hispaniarum episcopus, oognomento <lb/>
+          <p n="19">19. Itacius, Hispaniarum episcopus, oognomento <lb/>
             et eloquio clarus I scripsit quemdam librum sub <lb/>
             Apologetici specie, in quo detestanda Priscilliani <lb/>
             dogmata, et maleficiorum ejus artes, libidinumque <lb/>
@@ -767,10 +824,13 @@
             communione privatus, exsilio condemnatur, ibique die <lb/>
             ultimo fungitur, Theodosio Majore et Valentiniano <lb/>
             regnantibus.</p>
-          <ab>
+          </div>
+
+<div n="16" subtype="chapter" type="textpart">
+<ab>
             <title type="sub">CAPUT XVI.</title>
           </ab>
-          <p>20. Siricius, clarissimus pontifex, et Romanae sedis
+          <p n="20">20. Siricius, clarissimus pontifex, et Romanae sedis
             <milestone unit="PLSection" n="B"/><lb/>
             antistes, scripsit decreule opusculum directum ad <lb/>
             Eumerium Tarraconensem episcopum. In quo, in­ <lb/>
@@ -781,10 +841,13 @@
             haereticum, atque Auxentium, caeterosque eorumdem <lb/>
             sequaces. Præfuit Romæ annos quatuordecim. Obiit <lb/>
             Theodosio et Valentiniano regnantibus.</p>
-          <ab>
+          </div>
+
+<div n="17" subtype="chapter" type="textpart">
+<ab>
             <title type="sub">CAPUT XVII.</title>
           </ab>
-          <p>21, Paulinus, presbyter, explicuit in Benedicti onibus <lb/>
+          <p n="21">21, Paulinus, presbyter, explicuit in Benedicti onibus <lb/>
             patriarcharum triplici intelligentiae genere librum <lb/>
             satis succincta brevitate 149 compositum. Idem <lb/>
             etiam, petente Augustino, conscripsit Ambrosii vitaun <lb/>
@@ -858,20 +921,26 @@
             </p>
           <p>
             <milestone unit="PLSection" n="A"/></p>
-          <ab>
+          </div>
+
+<div n="18" subtype="chapter" type="textpart">
+<ab>
             <title type="sub">CAPUT XVIII.</title>
           </ab>
-          <p>22. Proba, uxor Adelphii proconsulis, femina, id­ <lb/>
+          <p n="22">22. Proba, uxor Adelphii proconsulis, femina, id­ <lb/>
             circo inter viros ecclesiasticos posita sola, pro eo <lb/>
             quod in laude Christi versata est, componens cen. <lb/>
             tonem de Christo, Virgilianis coaptatum versiculis. <lb/>
             Cujus quidem non miramur studium, sed laudamus <lb/>
             ingenium. Quod tamen opusculum inter apocryphas <lb/>
             Scripturas inseritur.</p>
-          <ab>
+          </div>
+
+<div n="19" subtype="chapter" type="textpart">
+<ab>
             <title type="sub">150 CAPUT XIX.</title>
           </ab>
-          <p>23. Joannes, sanctissimus Constantinopolitanæ sedis <lb/>
+          <p n="23">23. Joannes, sanctissimus Constantinopolitanæ sedis <lb/>
             episcopus, cognomento Chrysostomus; cujus oratio, <lb/>
             et plurimam cordis compunctionem, et magnam sua­ <lb/>
             viloquentiam tribuit, condidit Græco eloquio multa et <lb/>
@@ -885,7 +954,7 @@
             ipsis admonuit, provocans eum ad propositum, atque <lb/>
             OStendens, nulli peccatori, vel impio, si ad poeniten­ <lb/>
             tiam redeat, desperandum.</p>
-          <p>24. Legimus ejusdem et librum alium, cujus prae­ <lb/>
+          <p n="24">24. Legimus ejusdem et librum alium, cujus prae­ <lb/>
             notatio, est Neminem posse lœdi ab alio, nisi a semet­ <lb/>
             ipsa. Ad personam quoque cujusdam nobilissimae na­ <lb/>
             tronæ Gregoriæ reperitur opus ejus insigne de conver-
@@ -895,7 +964,7 @@
             ejusdem apud Latinos de compunctione cordis. Alter <lb/>
             quoque scriptus ad quemdam Eutropium, cum palatio <lb/>
             pulsus ad altarium confugisset.</p>
-          <p>25. Multos præterea composuit diversosque tracta­ <lb/>
+          <p n="25">25. Multos præterea composuit diversosque tracta­ <lb/>
             tus, quos enumerare perlongum est. Cujus quidem stu­ <lb/>
             dii, etsi non omnia, tamen quam plurima eloquentiæ <lb/>
             ejus fluenta de Græco in Latinum sermonem 151 <lb/>
@@ -908,18 +977,24 @@
             <milestone unit="PLSection" n="B"/><lb/>
             Constantinopolim revocatur, etiam in Apostolorum <lb/>
             ecclesia sepelitur.</p>
-          <ab>
+          </div>
+
+<div n="20" subtype="chapter" type="textpart">
+<ab>
             <title type="sub">CAPUT XX.</title>
           </ab>
-          <p>26. Sedulius, presbyter, edidi: tres libros, dacty­ <lb/>
+          <p n="26">26. Sedulius, presbyter, edidi: tres libros, dacty­ <lb/>
             lico heroico metro compositos, quorum primus signa <lb/>
             et virtutes Veteris Testamenti potentissime resonat, <lb/>
             reliqui vero gestorum Christi sacramenta vel mira­ <lb/>
             cula inlonant.</p>
-          <ab>
+          </div>
+
+<div n="21" subtype="chapter" type="textpart">
+<ab>
             <title type="sub">CAPUT XXI.</title>
           </ab>
-          <p>27. Possidius, Africanæ provinciae episcopus. Hic <lb/>
+          <p n="27">27. Possidius, Africanæ provinciae episcopus. Hic <lb/>
             stylo persecutus est vitam sancti Augustini, cui <lb/>
             etiam operi subjecit indiculum scriptorum ejus, enu­ <note type="footnote"> preshyteros, et Paulinum eliam presbyterum. Schot. <lb/>
             tus putabat Uranium esse cognomen Forlunati poc­ <lb/>
@@ -1002,20 +1077,26 @@
             numque infinitus modus est, ut pene vix possit <lb/>
             quisquam articulo suo aliena tanta scribere, quanta <lb/>
             ille proprio labore composuit.</p>
-          <ab>
+          </div>
+
+<div n="22" subtype="chapter" type="textpart">
+<ab>
             <title type="sub">CAPUT XXII.</title>
           </ab>
-          <p>28. Primasius, Africanus episcopus, composuit ser­ <lb/>
+          <p n="28">28. Primasius, Africanus episcopus, composuit ser­ <lb/>
             mone scholastico de Haeresibus tres libros directos ad <lb/>
             Fortunatum episcopum, explicans in eis quod olim <lb/>
             beatissimus Augustinus in libro Haereseon imperfe­ <lb/>
             ctum, morte interveniente, reliquerat : in primo <lb/>
             152 namque ostendens quid hæreticum faciat, in se­ <lb/>
             cundo et tertio digerens quid haereticum demonstret.</p>
-          <ab>
+          </div>
+
+<div n="23" subtype="chapter" type="textpart">
+<ab>
             <title type="sub">CAPUT XXIII.</title>
           </ab>
-          <p>
+          <p n="29">
             <milestone unit="PLSection" n="B"/>29. Proterius, Alexandrinæ Ecclesiae antistes, scri­ <lb/>
             psit epistolas ad Leonem Romanæ sedis episcopum <lb/>
             de festivitate paschali. Hunc autem Leonis Augu­ <lb/>
@@ -1023,10 +1104,13 @@
             ctore Timotheo, seditione facta, crudelissime pere­ <lb/>
             merunt, ipsumque Timotheum sibi pro Alexandrino <lb/>
             episcopo statuerunt.</p>
-          <ab>
+          </div>
+
+<div n="24" subtype="chapter" type="textpart">
+<ab>
             <title type="sub">CAPUT XXIV.</title>
           </ab>
-          <p>30. Paschasinus, Siciliensis episcopus, edidit unam <lb/>
+          <p n="30">30. Paschasinus, Siciliensis episcopus, edidit unam <lb/>
             epistolam paschalem, ad Leonem supradictum pa­ <lb/>
             pam directam, in qua refert paschalis mysterii mira­ <lb/>
             culum his verbis : Est, inquit, possessio, quæ oppel­ <lb/>
@@ -1040,10 +1124,13 @@
             paucisquequi fuerint corisecratia, cumdeductorium 153 <lb/>
             nullum sit, ut venerat aqua, ex sese discedit. Claruit <lb/>
             sub Theodosio Juniore, Arcadii imperatoris filio.</p>
-          <ab>
+          </div>
+
+<div n="25" subtype="chapter" type="textpart">
+<ab>
             <title type="sub">CAPUT XXV.</title>
           </ab>
-          <p>31. JuHanus quidam , Gallus, cognomento Pome­ <lb/>
+          <p n="31">31. JuHanus quidam , Gallus, cognomento Pome­ <lb/>
             rius. Hic octo libros de animae Natura in dialogi mo­ <lb/>
             rem conscripsit. Horum primus continet quid sit <lb/>
             anima, vel qualiter credatur ad Dei imaginem facta. <lb/>
@@ -1052,7 +1139,7 @@
             anima sit facta. In quarto utrum nova anima sine <lb/>
             peccato fiat, an peccatum primi hominis ex illo pro­ <lb/>
             pagata originaliter trahat.</p>
-          <p>
+          <p n="32">
             <milestone unit="PLSection" n="B"/>32. In quinto describit quae sit facultas animae. <lb/>
             In sexto eloquitur unde sit illa discordia qua carni <lb/>
             spiritus, vel caro spiritui adversatur. In septimo <lb/>
@@ -1062,7 +1149,7 @@
             de his quae in fine mundi futura sunt, vel de <lb/>
             quaestionibus quae solent de resurrectione proponi, <lb/>
             sive de finibus bonorum atque malorum.</p>
-          <p>33. Hic tamen, in secundo ejusdem operis libro, Ter­ <lb/>
+          <p n="33">33. Hic tamen, in secundo ejusdem operis libro, Ter­ <lb/>
             tulliani erroribus consentiens, animam corpoream esse <lb/>
             dixit, quibusdam hoc fallacibus argumentis astruere <lb/>
             contendens. Edidit etiam unum libellum de Virgini­ <lb/>
@@ -1135,10 +1222,13 @@
             </p>
           <p>
             <milestone unit="PLSection" n="A"/></p>
-          <ab>
+          </div>
+
+<div n="26" subtype="chapter" type="textpart">
+<ab>
             <title type="sub">CAPUT XXVI.</title>
           </ab>
-          <p>34. Eugipius, abbas Lucullanensis oppidi, Neapoli <lb/>
+          <p n="34">34. Eugipius, abbas Lucullanensis oppidi, Neapoli <lb/>
             Campaniæ. Hic ad quemdam Paschasiurn diaconum <lb/>
             libellum de Vita sancti 154 monachi Severini trans- <lb/>
             missum brevi stylo composuit. Scripsit ct regulam <lb/>
@@ -1146,10 +1236,13 @@
             fini, quam eisdem moriens quasi testamentario jure <lb/>
             reliquit. Claruit post consulatum Importuni Junio­ <lb/>
             ris, Anastasio imperatore regnantc.</p>
-          <ab>
+          </div>
+
+<div n="27" subtype="chapter" type="textpart">
+<ab>
             <title type="sub">CAPUT XXVII.</title>
           </ab>
-          <p>35. Fulgentius, Afer, ecclesiæ Ruspensis episcopus, <lb/>
+          <p n="35">35. Fulgentius, Afer, ecclesiæ Ruspensis episcopus, <lb/>
             in confessione fidei clarus, in Scripturis divinis co­ <lb/>
             piosissime eruditus, in loquendo quoque dulcis, in <lb/>
             docendo ac disserendo subtilis, scripsit multa. E <lb/>
@@ -1159,7 +1252,7 @@
             Gallix Regiensis urbis episcopo, Pelagianæ pravitati <lb/>
             consentienti, respondens, obnitimur ejus profundam <lb/>
             destruere calliditatem.</p>
-          <p>56. Legimus cl ejusdem librum de sancta Tri­ <lb/>
+          <p n="36">36. Legimus cl ejusdem librum de sancta Tri­ <lb/>
             nitate ad Felicem directum notarium ; librum <lb/>
             quoque Regulæ veræ fidei, et alium de Sacra­ <lb/>
             mento Incarnationis Domini nostri Jcsu Christi. <lb/>
@@ -1169,7 +1262,7 @@
             venit, et quod Deus quosdam prædestinationis suæ <lb/>
             munere justificans præeligit, quosdam vero in suis <lb/>
             reprobis moribus occulto quodam judicio dereliuquit.</p>
-          <p>37. Est et liber altercationis ejus, quo de fide cum
+          <p n="37">37. Est et liber altercationis ejus, quo de fide cum
             <milestone unit="PLSection" n="A"/><lb/>
             Thrasamundo rege idem beatus Fulgentius disputa­ <lb/>
             vit. Ad Ferrandum quoque, ecclesiæ Carthaginien­ <lb/>
@@ -1181,10 +1274,13 @@
             psimus. Sors melior, cui delicias omnium librorum <lb/>
             ejus praestiterit Dominus. Claruit sub Thrasamundo <lb/>
             rege Vandalorum, Anastasio imperatore regnante.</p>
-          <ab>
+          </div>
+
+<div n="28" subtype="chapter" type="textpart">
+<ab>
             <title type="sub">CAPUT XXVIII.</title>
           </ab>
-          <p>58. Eucherius, Franciæ episcopus, elegans senten- <lb/>
+          <p n="38">38. Eucherius, Franciæ episcopus, elegans senten- <lb/>
             Iii!, ornatus in verbis, edidit ad Hilarium Arela­ <lb/>
             tensem antistitem eremi deserta petentem unum <lb/>
             opusculum de Laude ejusdem eremi luculentissi-
@@ -1193,17 +1289,23 @@
             damus doctorem, et si pauca, tamen pulchra dicen­ <lb/>
             tem. Brevitas, ut ait quidam, taus est interdum in aliqua <lb/>
             parle dicendi, in universa eloquentia laudem non habet.</p>
-          <ab>
+          </div>
+
+<div n="29" subtype="chapter" type="textpart">
+<ab>
             <title type="sub">CAPUT XXIX.</title>
           </ab>
-          <p>39. Hilarius, Arelatensis episcopus, scripsit Vitam <lb/>
+          <p n="39">39. Hilarius, Arelatensis episcopus, scripsit Vitam <lb/>
             parentis et prædecessoris sui, sanctissimi ac venera­ <lb/>
             bilis Honorati episcopi, suavi ac praeclaro prædicta- <lb/>
             tam eloquio.</p>
-          <ab>
+          </div>
+
+<div n="30" subtype="chapter" type="textpart">
+<ab>
             <title type="sub">CAPUT XXX.</title>
           </ab>
-          <p>40. Apringius, ecclesiæ Pacensis Hispaniarum epi­ <lb/>
+          <p n="40">40. Apringius, ecclesiæ Pacensis Hispaniarum epi­ <lb/>
             scopus, disertus lingua, et scientia eruditus, inter­ <lb/>
             pretatus est Apocalypsin Joannis apostoli subtili <lb/>
             sensu atque illustri sermone melius pene 156 <lb/>
@@ -1279,10 +1381,16 @@
             Scripsit et nonnulla quæ tamen ad notitiam nostræ <lb/>
             lectionis minime pervenerunt. Claruit temporibus <lb/>
             Theudis principis Gothorum.</p>
-          <ab>
+          
+          </div>
+
+
+
+<div n="31" subtype="chapter" type="textpart">
+<ab>
             <title type="sub">CAPUT XXXI.</title>
           </ab>
-          <p>41. Justinianus imperator, quosdam libros de In­ <lb/>
+          <p n="41">41. Justinianus imperator, quosdam libros de In­ <lb/>
             camatione Domini edidit, quos etiam per diverSas <lb/>
             provincias misit. Condidit quoque et rescriptum <lb/>
             contra Illyr icianam synodum , et adversus Africa­ <lb/>
@@ -1291,10 +1399,16 @@
             dit, id est, Thendori Mopsuesteni episcopi dicta, <lb/>
             sive rescripa Theodoreti, et epistolam, quæ di­ <lb/>
             citUr Ibae Ede-seni episcopi.</p>
-          <ab>
+          
+          </div>
+
+
+
+<div n="32" subtype="chapter" type="textpart">
+<ab>
             <title type="sub">CAPUT XXXII.</title>
           </ab>
-          <p>42. Facundus, Afer, Hermianensis ecclesiæ episco-
+          <p n="42">42. Facundus, Afer, Hermianensis ecclesiæ episco-
             <milestone unit="PLSection" n="B"/><lb/>
             pus, duodecim libros pro defensione trium capitu­ <lb/>
             loruin scripsit, quorum stylo clicuit præfata tria <lb/>
@@ -1305,10 +1419,16 @@
             scopum, et Theodoreti Cyri episcopi dicta. Cla­ <lb/>
             ruit post consulatum Basilii, anno decimo regnarite <lb/>
             Justiniano imperatore.</p>
-          <ab>
+          
+          </div>
+
+
+
+<div n="33" subtype="chapter" type="textpart">
+<ab>
             <title type="sub">CAPUT XXXIII.</title>
           </ab>
-          <p>43. Justinianus, de Hispania, ecclesiæ Valentinæ <lb/>
+          <p n="43">43. Justinianus, de Hispania, ecclesiæ Valentinæ <lb/>
             episcopus, ex quatuor fratribus episcopis, eadem <lb/>
             matre progenitis unus, scripsit librum Responsio­ <lb/>
             num ad quemdam Rusticum de interrogatis QuaeStio­ <lb/>
@@ -1322,28 +1442,39 @@
             Joannis et Christi ; quinta responsio est quia Filius <lb/>
             sicut Patcr 157 invisibilis sit. Floruit in Hispaniis <lb/>
             temporibus Theudis principis Gothorum.</p>
-          <ab>
+          
+          </div>
+
+
+
+<div n="34" subtype="chapter" type="textpart">
+<ab>
             <title type="sub">CAPUT XXXIV.</title>
           </ab>
-          <p>ii. Justus, Urgellitanæ ecclesiæ Hispaniarum epi­ <lb/>
+          <p n="44">44. Justus, Urgellitanæ ecclesiæ Hispaniarum epi­ <lb/>
             scopus, et frater praedicti Justiniani, edidit libellum <lb/>
             expositionis in Cantica canticorum , totum valde <lb/>
             breviter atque aperte per allegoriam sensum discu­ <lb/>
             tiens. Hujus quoque fratres Nebridius et Elpidius <lb/>
             quædam scripsisse feruntur, quibus quia incogniti <lb/>
             sunUS, magis reliconda fatemur.</p>
-          <ab>
+          
+          </div>
+
+
+
+<div n="35" subtype="chapter" type="textpart">
+<ab>
             <title type="sub">CAPUT XXXV.</title>
           </ab>
-          <p>
-            <milestone unit="PLSection" n="B"/>45. Marlinus, Dumiensis monasterii sanctissimus <lb/>
+          <p n="45"><milestone unit="PLSection" n="B"/>45. Marlinus, Dumiensis monasterii sanctissimus <lb/>
             pontifex, ex Orientis partibus navigans, in Gal­ <lb/>
             læciam venit, ibique conversis ab Ariana impietate <lb/>
             ad fidem catholicam Suevorum populiS regulam fi­ <lb/>
             dei et sanctæ religionis constituit, ecclesias confir­ <lb/>
             mavit, monasteria condidit, copiosaque præcepta <lb/>
             piæ instilulionis composuit.</p>
-          <p>46. Cujus quidem ego ipse legi librum de Diffe­ <lb/>
+          <p n="46">46. Cujus quidem ego ipse legi librum de Diffe­ <lb/>
             rentiis quatuor virtutum, et aliud volumen Epi­ <lb/>
             stolarum in quibus hortatur vitæ 158 emenda­ <lb/>
             tionem et conversationem fidei, orationis instau­ <lb/>
@@ -1416,10 +1547,16 @@
             </p>
           <p>
             <milestone unit="PLSection" n="A"/></p>
-          <ab>
+          
+          </div>
+
+
+
+<div n="36" subtype="chapter" type="textpart">
+<ab>
             <title type="sub">CAPUT XXXVI.</title>
           </ab>
-          <p>47. Aditus, Viennensis episcopus, scentia sæcula­ <lb/>
+          <p n="47">47. Aditus, Viennensis episcopus, scentia sæcula­ <lb/>
             rium litterarum doclissimus edidit quinque libellos <lb/>
             heroico metro compositos, quorum primus est de <lb/>
             Origine mundi, secundus de Originali peccato, ter­ <lb/>
@@ -1428,18 +1565,30 @@
             cinam sororem de Laude Virginitatis librum unum <lb/>
             pulcherrimo compositum carmine, et eleganti epi­ <lb/>
             grammate coaptatum.</p>
-          <ab>
+          
+          </div>
+
+
+
+<div n="37" subtype="chapter" type="textpart">
+<ab>
             <title type="sub">CAPUT XXXVII.</title>
           </ab>
-          <p>48. Dracontius composuit heroicis versibus Hexa- <lb/>
+          <p n="48">48. Dracontius composuit heroicis versibus Hexa- <lb/>
             meron creationis mundi; et luculenter quidem cum­ <lb/>
             posuit et scripsit.</p>
-          <ab>
+          
+          </div>
+
+
+
+<div n="38" subtype="chapter" type="textpart">
+<ab>
             <title type="sub">CAPUT XXXVIII.</title>
           </ab>
           <p>
             <milestone unit="PLSection" n="B"/></p>
-          <p>49. Victor, Tunnensis ecclesiæ Africanus episco­ <lb/>
+          <p n="49">49. Victor, Tunnensis ecclesiæ Africanus episco­ <lb/>
             pus. Hic a principio mundi usque ad primum Justini <lb/>
             Junioris imperii armum brevem per consules annuos <lb/>
             bellicarum ecclesiasticarumque rerum nobilissimam <lb/>
@@ -1447,35 +1596,47 @@
             159 ac memoria dignissimam. Hic, pro defensione <lb/>
             iriam capitulorum a Justinidno Augusto Ecclesia <lb/>
             sua pulsus, exsilio in Æġyptum transportatur.</p>
-          <p>50. Inde rursum Constantinopolin vocatus, dum <lb/>
+          <p n="50">50. Inde rursum Constantinopolin vocatus, dum <lb/>
             Justiniano imperatori, et Eutychio, Constantinopoli­ <lb/>
             tanæ urbis episcopo, obtrectatoribus eorumdem trium <lb/>
             capitulorum resisteret, rursus in monasterio ejusdem <lb/>
             civitatis custodiendusMittitur, atque in eadem dam­ <lb/>
             natione atdicunt) permanens moritur.</p>
-          <ab>
-            <title type="sub">CAPUT XXXlX.</title>
+          
+          </div>
+
+
+
+<div n="39" subtype="chapter" type="textpart">
+<ab>
+            <title type="sub">CAPUT XXXIX.</title>
           </ab>
           <p>
             <milestone unit="PLSection" n="c"/></p>
-          <p>54. Joannes, sanctæ merioriæ Constantinopoli­ <lb/>
+          <p n="51">51. Joannes, sanctæ merioriæ Constantinopoli­ <lb/>
             tanus episcopus, natione Cappadox, ad quem beatus <lb/>
             Gregorius librum Regulae pastoralis scripait, vir inae-
             <milestone unit="PLSection" n="A"/><lb/>
             stimabils abstinentiæ, et eleemosynis tantum largissi­ <lb/>
             tius, ut zelo avaritiæ adversus eum imperator. Mau­ <lb/>
             ricius permotus , urbe pauperes pellendos ediceret.</p>
-          <p>52, Hic Græcoeloquio edidit de sacramento ba­ <lb/>
+          <p n="52">52. Hic Græcoeloquio edidit de sacramento ba­ <lb/>
             ptismatis rescriptum ad bonæ recordationis domi­ <lb/>
             num nostrum et prædecessorem Leandrum episco­ <lb/>
             pum, in quo nihil proprium ponit, sed tantummodo <lb/>
             antiquorum Patrum replicat de trina mersione sen­ <lb/>
             tentias. Claruit temporibus Mauricii principis, de­ <lb/>
             functusque est Augusto eodem reguante</p>
-          <ab>
+          
+          </div>
+
+
+
+<div n="40" subtype="chapter" type="textpart">
+<ab>
             <title type="sub">CAPUT XL.</title>
           </ab>
-          <p>53. Gregorius papa Romanae sedis apostolicæ prae­ <lb/>
+          <p n="53">53. Gregorius papa Romanae sedis apostolicæ prae­ <lb/>
             sul, compunctione timoris Dei plenus et humanitate <lb/>
             sUmmus, tantoque pergratiam Spiritus sanctis cientiæ <lb/>
             himine præditus , ut non modo illi in praesentibus
@@ -1486,7 +1647,7 @@
             Constantinopolitanæ sedis episcopum. In quo docet qua­ <lb/>
             lis quisque 160 ad officium regiminis veniat, vel qua­ <lb/>
             liter, dum venerit, vivere, vel docere subjectos studeat.</p>
-          <p>54. Idem etiam, efflagitante Leandro episcopo, <lb/>
+          <p n="54">54. Idem etiam, efflagitante Leandro episcopo, <lb/>
             librum beati Job mystico ac morali sensu disse­ <lb/>
             ruit, totamque ejus propheticam historiam tri­ <lb/>
             ginta quinque voluminibus largo eloquentiæ fonte <lb/>
@@ -1495,8 +1656,7 @@
             vitæ æternæ praecepta, vel quanta clareantorna­ <lb/>
             menta verborum , nemo sapiens explicare valebit, <lb/>
             etiamsi omnes artus ejus vertantur in linguas.</p>
-          <p>
-            <milestone unit="PLSection" n="C"/>55. Scripsit etiam, et quasdam epistolas ad prædi­ <lb/>
+          <p n="55"><milestone unit="PLSection" n="C"/>55. Scripsit etiam, et quasdam epistolas ad prædi­ <lb/>
             ctum Leandrum,e quibus una in eisdem librisJob ti­ <lb/>
             tulo præfationis annectitur ; altera eloquitur de Mer. <note type="footnote"> F '» <lb/>
             , 47. Anno Christi 490. Vide Gregor. Turonens., <lb/>
@@ -1562,17 +1722,23 @@
             fantem in baptismate mergere, vel semel, vel ter, quan­ <lb/>
             do in tribus menionibus personarum Trinitas , et in <lb/>
             una potest Divinitatis singularitas designari.</p>
-          <p>56..Fertur tamen idem sanctissimus vir, et alios Ii­ <lb/>
+          <p n="56">56..Fertur tamen idem sanctissimus vir, et alios Ii­ <lb/>
             bros morales scripsisse, totumque textum quatuor <lb/>
             Evangeliorum sermocinando in populis exposuisse, in­ <lb/>
             cognitum scilicet nobis opus. Felix tamen, et nimium <lb/>
             felix , qui omnia studiorum ejus potuit cognoscere. <lb/>
             Floruit autem Mauricio Augusto imperatore. Obiit <lb/>
             in ipse exordio Phocatis Romani principis.</p>
-          <ab>
+          
+          </div>
+
+
+
+<div n="41" subtype="chapter" type="textpart">
+<ab>
             <title type="sub">CAPUT XLI.</title>
           </ab>
-          <p>57.Leander, genitus patre Severiano, Carthaginien­ <lb/>
+          <p n="57">57.Leander, genitus patre Severiano, Carthaginien­ <lb/>
             sis provinciæ, professione monachus, et ex monacbo
             <milestone unit="PLSection" n="B"/><lb/>
             Hispalensis Ecclesiae provinciæ Betthicæ constitutus <lb/>
@@ -1587,7 +1753,7 @@
             confodit atque detegit pravitalem, ostendens, scilicet, <lb/>
             quid contra eosdem habeat catholica Ecclesia, vel <lb/>
             quantum distat ab eis religione, vel fidei sacramentis.</p>
-          <p>58. Exstat et aliud laudabile ejus opusculum ad-
+          <p n="58">58. Exstat et aliud laudabile ejus opusculum ad-
             <milestone unit="PLSection" n="A"/><lb/>
             versus institutaArianorum, m quo, propositis <lb/>
             eorum dictis, suas responsiones opponit. Practer­ <lb/>
@@ -1598,7 +1764,7 @@
             boravit studio; in toto enim Psalterio duplici edi­ <lb/>
             tione orationes conscripsit; in sacrificio quoque, <lb/>
             laudibus atque psalmis, multa dulci sono composuit.</p>
-          <p>59. Scripsit et epistolas multas : ad papam Grego­ <lb/>
+          <p n="59">59. Scripsit et epistolas multas : ad papam Grego­ <lb/>
             rium de baptismo unam, alteram ad fratrem, in qua <lb/>
             præmonet cuique mortem non esse timendam. Ad <lb/>
             caeteros quoque episcopos plurimas promulgavit fami­ <lb/>
@@ -1607,10 +1773,16 @@
             <milestone unit="PLSection" n="B"/><lb/>
             viro religioso, ac principe glorioso, cujus etiam tem­ <lb/>
             porus mirabili obitu vitæ terminum clausit.</p>
-          <ab>
+          
+          </div>
+
+
+
+<div n="42" subtype="chapter" type="textpart">
+<ab>
             <title type="sub">CAPUT XLII.</title>
           </ab>
-          <p>60. Lucinianus, Cartbaginis Spartariæ episcopus, <lb/>
+          <p n="60">60. Lucinianus, Cartbaginis Spartariæ episcopus, <lb/>
             in Scripturis doctus : cujus quidem multas epistulas <lb/>
             legimus, de sacramento denique baptismatis unam, et <lb/>
             ad Eutropium abbatem, qui postea Valenliae episco­ <lb/>
@@ -1692,10 +1864,16 @@
             </p>
           <p>
             <milestone unit="PLSection" n="A"/></p>
-          <ab>
+          
+          </div>
+
+
+
+<div n="43" subtype="chapter" type="textpart">
+<ab>
             <title type="sub">CAPUT XLIII</title>
           </ab>
-          <p>61. Severus, Malacitanae sedis antistes, collega et <lb/>
+          <p n="61">61. Severus, Malacitanae sedis antistes, collega et <lb/>
             socius Luciniani episcopi, edidit libellum unum ad­ <lb/>
             versus Vincentium Cæsaraugustanæurbis episcopum, <lb/>
             qui ex catholico ad Arianam pravitatem fuerat devo­ <lb/>
@@ -1704,10 +1882,16 @@
             cognovisse titulum, ignorare eloquium. Claruit tem­ <lb/>
             poribus prædicti imperatoris, quo etiam regnante vi­ <lb/>
             tam finivit.</p>
-          <ab>
+          
+          </div>
+
+
+
+<div n="44" subtype="chapter" type="textpart">
+<ab>
             <title type="sub">CAPUT XLIV.</title>
           </ab>
-          <p>62. Joannes, Gerundensis ecclesiæ episcopus, nativi­ <lb/>
+          <p n="62">62. Joannes, Gerundensis ecclesiæ episcopus, nativi­ <lb/>
             late Gothus, 163 provinciae Lusitaniæ Scalabi natus. <lb/>
             Hic, cum esset adolescens, Constantinopolin perre-
             <milestone unit="PLSection" n="B"/><lb/>
@@ -1719,7 +1903,7 @@
             nino resisterct, exsilio trusus, et Barcinonem relega­ <lb/>
             tus, per decem annos mulias insidias, et persecutio­ <lb/>
             nes ab Arianis perpessus est.</p>
-          <p>63. Qui postea condidit monasterium quod no­ <lb/>
+          <p n="63">63. Qui postea condidit monasterium quod no­ <lb/>
             mine Biclaro dicitur, ubi congregata monacho­ <lb/>
             rum societate, scripsit regulam ipsi monasterio
             <milestone unit="PLSection" n="A"/><lb/>
@@ -1731,10 +1915,16 @@
             toqne sermone valde utilem Historiam : et una alia <lb/>
             scribere dicitur, quae ad nostram notitiam non per­ <lb/>
             venerunt.</p>
-          <ab>
+          
+          </div>
+
+
+
+<div n="45" subtype="chapter" type="textpart">
+<ab>
             <title type="sub">CAPUT XLV.</title>
           </ab>
-          <p>64. Eutropius, ecclesiae Valentinæ episcopus, dum <lb/>
+          <p n="64">64. Eutropius, ecclesiae Valentinæ episcopus, dum <lb/>
             adhuc in monasterio Servitano degeret, et pater es­ <lb/>
             set monachorum, scripsit ad papam Lucinianum, cu­ <lb/>
             jus supra fecimus mentionem, valde utilem. episto­ <lb/>
@@ -1744,10 +1934,14 @@
             Petrum 164 episcopum Ircavicensem de districtione <lb/>
             monachorum salubrisermone compositamepistolam, <lb/>
             et valde monachis necessariam.</p>
-          <ab>
+          
+          </div>
+
+<div n="46" subtype="chapter" type="textpart">
+<ab>
             <title type="sub">CAPUT XLVI.</title>
           </ab>
-          <p>65. Maximos, Cæsaraugustanæ civiiatis episcopus, <lb/>
+          <p n="65">65. Maximos, Cæsaraugustanæ civiiatis episcopus, <lb/>
             multa versu prosaque componere dicitur. Scripsit et <lb/>
             brevi stylo historiolam de iis quae temporibus Gotho­ <lb/>
             rum in Hispaniis acta sunt, historico et composito <lb/>
@@ -1807,5 +2001,5 @@
             ab aliis etiam adjungi solet, inter appendices exhibe­ <lb/>
             tur. AREV. </note></p>
         </div>
-        
+</div>
         </body></text></TEI>
