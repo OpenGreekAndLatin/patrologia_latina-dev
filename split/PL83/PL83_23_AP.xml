@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><TEI xmlns="http://www.tei-c.org/ns/1.0"><teiHeader>
-    
+<?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
     <fileDesc>
       <titleStmt>
         <title>Patrologiae Cursus Completus. Series Latina (PL)</title> 
@@ -113,9 +114,7 @@
       <p>The following text is encoded in accordance with EpiDoc standards and with the
         CTS/CITE Architecture.</p>
     <refsDecl>
-        <cRefPattern n="" matchPattern="(.+).(.+).(.+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@type='edition']/tei:div[@n='$1']/tei:div[@n='$2']/tei:div[@n='$3'])"/>
-        <cRefPattern n="" matchPattern="(.+).(.+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@type='edition']/tei:div[@n='$1']/tei:div[@n='$2'])"/>
-        <cRefPattern n="" matchPattern="(.+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@type='edition']/tei:div[@n='$1'])"/>
+       <cRefPattern n="section" matchPattern="(.+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@type='edition']/tei:div[@n='$1'])"/>
       </refsDecl>
     </encodingDesc>
     
@@ -132,9 +131,9 @@
             <title type="sub">APPENDIX II.</title>
           </ab>
           <ab>
-            <title type="sub">liS ARCHIPPlSCOPI TOLETANI VETERES.</title>
+            <title type="sub">178  ARCHIPPlSCOPI TOLETANI VETERES.</title>
           </ab>
-          <ab>
+    <div n="1" subtype="section" type="textpart"><ab>
             <title type="sub">Ex Editione Grialii , et tom. III Patrum Toletanorum.</title>
           </ab>
           <p>
@@ -178,8 +177,8 @@
             tempore fugiens, subscribit concilio Romano sub <lb/>
             Gregorio II. Eodem tempore Oppa, seu Oppas intru­ <lb/>
             sus. item Urbanus functus munere absentis episcopii <lb/>
-            Sinderedi.</p>
-          <ab>
+            Sinderedi.</p></div>
+          <div n="2" subtype="section" type="textpart"><ab>
             <title type="sub">Hinc sequentes episcopi sub jugo Saracenorum.</title>
           </ab>
           <p>40. Urbanus (Post 721) primum vicarius, deinde, <lb/>
@@ -201,7 +200,7 @@
             pag. 83. Aliorum episcoporum notitia desideratur, <lb/>
             usque ad annum 1086, quo post ereptam e Sarace­ <lb/>
             norum jugo Toletum Benardus renunciatus fuit ac­ <lb/>
-            chiepiscopus.</p>
+            chiepiscopus.</p></div>
         </div>
         
         </body></text></TEI>
