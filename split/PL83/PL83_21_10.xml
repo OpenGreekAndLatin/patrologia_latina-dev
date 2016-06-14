@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><TEI xmlns="http://www.tei-c.org/ns/1.0"><teiHeader>
-    
+<?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
     <fileDesc>
       <titleStmt>
         <title>Patrologiae Cursus Completus. Series Latina (PL)</title> 
@@ -113,9 +114,8 @@
       <p>The following text is encoded in accordance with EpiDoc standards and with the
         CTS/CITE Architecture.</p>
     <refsDecl>
-        <cRefPattern n="" matchPattern="(.+).(.+).(.+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@type='edition']/tei:div[@n='$1']/tei:div[@n='$2']/tei:div[@n='$3'])"/>
-        <cRefPattern n="" matchPattern="(.+).(.+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@type='edition']/tei:div[@n='$1']/tei:div[@n='$2'])"/>
-        <cRefPattern n="" matchPattern="(.+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@type='edition']/tei:div[@n='$1'])"/>
+        <cRefPattern n="P" matchPattern="(.+).(.+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@type='edition']/tei:div[@n='$1']/tei:p[@n='$2'])"/>
+        <cRefPattern n="Section" matchPattern="(.+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@type='edition']/tei:div[@n='$1'])"/>
       </refsDecl>
     </encodingDesc>
     
@@ -131,26 +131,27 @@
           <head>
             <title type="main">107 SANCTI ISIDORI HISPALENSIS EPISCOPI HISTORIA DE REGIBUS GOTHORUM, WANDALORUM ET SUEVORUM.</title>
           </head>
-          <ab>
+          <div n="pr" subtype="section" type="textpart">
+            <ab>
             <title type="sub">Prologus.</title>
           </ab>
-          <p>1. 9mnium terrarum , quæque sunt ab occiduo usque ad Indos, <unclear>pucnerrima</unclear> es, o sacra, semperque felix <lb/>
+          <p n="1">1. Omnium terrarum , quæque sunt ab occiduo usque ad Indos, <unclear>pucnerrima</unclear> es, o sacra, semperque felix <lb/>
             principum, gentiumque mater Hispania. Jure tu nunc omnium regina provinciarum, a qua non Occasus tan­ <lb/>
             tum, sed etiam Oriens lumina mutuat. Tu decus , atque ornamentum orbis , illustrior portio terræ : in qua <lb/>
             gaudet multum ac largiter floret Geticæ gentis gloriosa fecunditas.</p>
-          <p>108 2. Merito te omnium uberlate gignentium indulgentior natura dilavit. Tu baccis opima, vis proflua , <lb/>
+          <p n="2">108 2. Merito te omnium uberlate gignentium indulgentior natura dilavit. Tu baccis opima, vis proflua , <lb/>
             messibus læta, segete vestiris, oleis inumbraris, vite piælexeris. Tu florulenta campis, montibus frondua, piscosa <lb/>
             littoribus. Tu sub mundi plaga gratissima sita, nec aestivo solis ardore torreris, nec glaciali rigore tabescis, sed <lb/>
             temperata cœli zona præcincta, zephyris felicibus enuiriris. Quidquid enim arva fecundum, quidquid metalla <lb/>
             pretiosum , quidquid animantia pulchrum el utile ferunt parturis. Nec illis amnibus posthabenda, quos ciara <lb/>
             speciosorum gregum fama nobilitat.</p>
-          <p>3. Tibi cedet Alphæus equis, Clitumnus armentis, quanquam volucres per spatia quadrigas olympicis sacer <lb/>
+          <p n="3">3. Tibi cedet Alphæus equis, Clitumnus armentis, quanquam volucres per spatia quadrigas olympicis sacer <lb/>
             palmis Alpheus exerceat, et ingentes <unclear>Clitamuus</unclear> junvecos capitolinis olim immolaverit victimis. Tu nec Etruriæ <lb/>
             saltus uberior pabulorum requiris, nec lucos Molorchi palmarum plena miraris, nec equorum cursu tuorum eleis <lb/>
             curribus invidebis. Tu superfusis fecunda fluminibus, tu aurifluis fulva torrentibus. Tibi fons equi genitor. Tibi <lb/>
             vellera indigenis fucata conchyliis ad rubore. tyrios inardescunt. Tibi fulgurans inter obscura penitorum mon­ <lb/>
             tium lapis jubare contiguo vicini solis accenditur.</p>
-          <p>4. Alumnis igitur, et gemmis dives et purpuris, rectorious pariter et dotibus imperiorum fertilis, sic opulenta <lb/>
+          <p n="4">4. Alumnis igitur, et gemmis dives et purpuris, rectorious pariter et dotibus imperiorum fertilis, sic opulenta <lb/>
             es principibus ornandis, ut beata pariendis. Jure itaque te jam pridem aurea RoMa caput gentium concu­ <lb/>
             pivit, et licet te sibimet eadem Rornulea virtus primum victrix spoponderit, denuo tamen Golhorum florentissima <lb/>
             gens post multiplices in orbe victorias certatim rapuit et amavit, fruiturque hactenus inter regias infulas et oves <lb/>
@@ -196,19 +197,20 @@
             fulas; a!., regna, insulas. Jan. Chronicon ipsum quod <lb/>
             sequItur, Joan. Baptista Perez nonnullis notis illu­ <lb/>
             stravit. AREV. </note> <pb n="1059"/>
-            </p>
+            </p></div>
+    
+    <div n="1" subtype="section" type="textpart">
           <ab>
             <title type="sub">INCIPIT HISTORIA.</title>
           </ab>
-          <p>
-            <milestone unit="PLSection" n="A"/>1091. Gethorum antiquissimam esse gentem certuM <lb/>
+          <p n="1"><milestone unit="PLSection" n="A"/>109 1. Gethorum antiquissimam esse gentem certuM <lb/>
             est : quorum originem quidam de Magog, filio Japhet, <lb/>
             suspicantur educi a similitudine ultimæ gyllabæ, et <lb/>
             magis de Ezecbiele propheta id colligentes. Hetro <lb/>
             autem eruditio eos magis Getas quam Gog et Magog <lb/>
             appellare consuevit. Gens fortissima etiam Judæam <lb/>
             terram vastatura describitur.</p>
-          <p>i. Interpretatio autem nominis eorum in linguam <lb/>
+          <p n="2">2. Interpretatio autem nominis eorum in linguam <lb/>
             nostram tecti, quo significatur fortitudo; et re vera, <lb/>
             nulla enim gens in orbe fuit quæ Romanum impe­ <lb/>
             rium adeo fatigaverit ut hi. Isti enim sunt quos etiam <lb/>
@@ -218,7 +220,7 @@
             tet tempora per ordinem cursim exponere, et quo no-
             <milestone unit="PLSection" n="B"/><lb/>
             mine actuque regnaverinl, de historiis libata retexere.</p>
-          <p>5. Anno ante aeram conditam XII, dum pro arri­ <lb/>
+          <p n="3">3. Anno ante aeram conditam XII, dum pro arri­ <lb/>
             piendo reipublicae imperio, Cn. Pompeius et C. Ju­ <lb/>
             lius Cæsar arma civilia commovissent, Gothi, ad <lb/>
             præbendum Pompeio auxilium, in Thessaliam adver­ <lb/>
@@ -232,7 +234,7 @@
             peium seire vincere, nec Cæsarem posse vinci. Nam <lb/>
             si Pompeius vincere nosset, hodie cum tam asperis <lb/>
             viris Caesarem superasset.</p>
-          <p>
+          <p n="4">
             <milestone unit="PLSection" n="c"/>4. Æra CCXCIV. Anno Imperii Valeriani et Gal­ <lb/>
             lieni primo, Gothi, 110 descensis montibus A!?;­ <lb/>
             bus, quibus inhabitabant, Græciam, Macedoniam, <lb/>
@@ -244,7 +246,7 @@
             reipublicæ removisset, insigni gloria honorantes, in <lb/>
             foro illi aureum clypeum, in capitolio auream sta­ <lb/>
             tuam collocaverunt.</p>
-          <p>5. ira CCCLXIX, auno XXVI imperii Constantini, <lb/>
+          <p n="5">5. ira CCCLXIX, auno XXVI imperii Constantini, <lb/>
             Gothi, Sarmatarum regionem aggressi, copiosissimis
             <milestone unit="PLSection" n="A"/><lb/>
             super Romanos in ruerunt agminibus, vehementi vir. <lb/>
@@ -256,7 +258,7 @@
             Romani, acclamante senatu, publica laude prosecuti <lb/>
             sunt quod tantam gentem vicerit, quod patriam rem­ <lb/>
             publicam reformaverit.</p>
-          <p>6. Æra CDVII, anno v imperii Valentis, primus <lb/>
+          <p n="6">6. Æra CDVII, anno v imperii Valentis, primus <lb/>
             Gothorum gentis administrationem suscepit Athana­ <lb/>
             ricus, regnans annos XIII, qui, persecutione crude- <lb/>
             lissima adversus fldem commota, voluit se exercere <lb/>
@@ -267,7 +269,7 @@
             persecutionibus affectos, dum pro multitudine horreret <lb/>
             interficere, dedit licentiam, imo magis coegit de regno <lb/>
             suo exire, atque in Romani soli migrare provincias.</p>
-          <p>7. Æra CDXV, anno XIII imperii Valentis, Gothi in <lb/>
+          <p n="7">7. Æra CDXV, anno XIII imperii Valentis, Gothi in <lb/>
             Istrum adversus semetipsos in Alhanarico et Fri­ <lb/>
             digemo divisi sunt, alternis sese exdibus depopu­ <lb/>
             lantes. Sed Athanaricus Fridigernum Valentis impe­ <lb/>
@@ -282,7 +284,7 @@
             praeclaram gentem virus pesuferum semine perni­ <lb/>
             cioso transfudit, sicque errorem quem reCens cre­ <lb/>
             dulitas ebibit, tenuit, diuque servavit.</p>
-          <p>8. Tunc Gulfilas eorum Gothorum episcopus Gothi­ <lb/>
+          <p n="8">8. Tunc Gulfilas eorum Gothorum episcopus Gothi­ <lb/>
             cas litteras condidit, et scripturas Novi ac Veteris Te­ <lb/>
             stamenti in eamdem linguam convertit. Gothi autem, <lb/>
             statim uti litteras et legem habere coeperunt, instruxe­ <lb/>
@@ -329,7 +331,7 @@
             annis CCXIII tenuerunt. Qui tandem reminiscentes sa­ <lb/>
             lutis suæ, rcnunliaverunt inolitae perfidiæ, et per Chri­ <lb/>
             sii gratiam ad unitatem fidei catholicae pervenerunt.</p>
-          <p>9. Æra CDXVI, anno xiv imperii Valentis, Gothi, <lb/>
+          <p n="9">9. Æra CDXVI, anno xiv imperii Valentis, Gothi, <lb/>
             qui primum Christianos a terra sua expulerant, rur­ <lb/>
             gus ipsi ah Hunnis cum rege suo Athanarico expuisi <lb/>
             sunt; transitoque Danubio, cum vim ferre non pos­ <unclear/> <lb/>
@@ -344,7 +346,7 @@
             tem, succenderunt, ut merito ipse ab eis 112 vivus <lb/>
             temporali cremaretur incendio, qui tam pulchras <lb/>
             animas ignibus aeternis tradiderat.</p>
-          <p>10. Invenerunt autem eo praelio Golhi coufessores <lb/>
+          <p n="10">10. Invenerunt autem eo praelio Golhi coufessores <lb/>
             priores Gothos, quos dudum propter fidem a terra sua <lb/>
             expulerant, et voluerunt eos sibi ad prædæ societatem <lb/>
             conjungere. Qui, cum non acquievissent, aliquanti in­ <lb/>
@@ -354,7 +356,7 @@
             raverunt Chrisliani catholici, sed etiam in concor­ <lb/>
             dia Romanorum, a quibus dudum excepti fuerant, <lb/>
             permanserunt.</p>
-          <p>ii. Æra CDXIX, anno imperii Thcodosii Hispani <lb/>
+          <p n="11">11. Æra CDXIX, anno imperii Thcodosii Hispani <lb/>
             in, Athanaricus cum Theodosio jus amicitiamque <lb/>
             disponens, mox Conslantinopolim pergit, ibique <lb/>
             quinto decimo die postquam fuerat a Theodosio ho­ <lb/>
@@ -362,7 +364,7 @@
             rege defunclo, aspicientes benignitatem Theodosii <lb/>
             imperatoris, inito fœdere, Romano se imperio tra­ <lb/>
             diderunt et fuerunt cum Romanis XXVIII annis.</p>
-          <p>12. tERA CDXX, anno imperii Theodosii IV, Golhi, <lb/>
+          <p n="12">12. tERA CDXX, anno imperii Theodosii IV, Golhi, <lb/>
             patrocinium Romani fœderis recusantes, Alaricum <lb/>
             regem sibi constituunt, indignum judicantes Romanae
             <milestone unit="PLSection" n="D"/><lb/>
@@ -370,14 +372,14 @@
             <milestone unit="PLSection" n="A"/><lb/>
             pridem leges imperiumque respuerant, et de quo­ <lb/>
             rum se societate prælio triumphantes averterant.</p>
-          <p>13. Æra CDXIXVII, anno imperii Nono'ii et Ar­ <lb/>
+          <p n="13">13. Æra CDXIXVII, anno imperii Nono'ii et Ar­ <lb/>
             cadii quinto, Gothi, in Alarico et Radagaiso divisi, <lb/>
             dum semetispsos in duabus regni partibus variis cæ­ <lb/>
             dibus lacerarent, ob excidium Romahorum concor­ <lb/>
             des effecti, consilium In commune constituunt, pa­ <lb/>
             rique intentione ad prædandas quascunque regiones <lb/>
             Italiæ ab invicem dividuntur.</p>
-          <p>14. Æra CDXLIII, anno Honorii et Arcadii XI, rex <lb/>
+          <p n="14">14. Æra CDXLIII, anno Honorii et Arcadii XI, rex <lb/>
             Gothorum Radagaisus, genere Scytha, cultui idolola­ <lb/>
             triæ deditus, barbaricæ immanitatis feritate sævis­ <lb/>
             simus, cum ducemUs armatorum millibus Italiæ par­ <lb/>
@@ -388,7 +390,7 @@
             duce Romano in montuosis Thusciæ locis circum­ <lb/>
             clusus, fame est potius quam ferro consumptus. Ipse <lb/>
             postremum rex captus et interfectus est.</p>
-          <p>15. Æra CDXLVII, anno imperii Arcadii xv, ex­ <lb/>
+          <p n="15">15. Æra CDXLVII, anno imperii Arcadii xv, ex­ <lb/>
             stincto Radagaiso, Alaricus consors regni, nomino <lb/>
             quidem Christianus, sed professione hæreticus, <lb/>
             dolens tantam multitudinem Gothorum a Roma­ <lb/>
@@ -408,7 +410,7 @@
             et sanctorum nominaverunt, et ipsis simili miseri­ <lb/>
              <lb/>
             cordia pepercerunt,</p>
-          <p>16. In reliquis autem, etsi praeda hostium patuit, fe­ <lb/>
+          <p n="16">16. In reliquis autem, etsi praeda hostium patuit, fe­ <lb/>
             riendi tamen immanitas refrenata cst. Incursantibus <lb/>
             autem in illa vastitate per Urbem Gothis, dum quidam <lb/>
             potens virginem consecratam ætate provectam repe­ <lb/>
@@ -454,7 +456,7 @@
             ad sacrarium sancti Petri 114 per virginem illam <lb/>
             summa cum reverentia jussit, dicens : Cum Romanis <lb/>
             gessi bellum, non cum apostolis Dei.</p>
-          <p>17. Redit igitur virgo reverentissimis officiis ho­ <lb/>
+          <p n="17">17. Redit igitur virgo reverentissimis officiis ho­ <lb/>
             norata, redeunt et cum illa omnes qui ei sc so­ <lb/>
             ciaverant, super capita sua vasa illa aurea et ar­ <lb/>
             gentea cum hymnis et canticis reportantes, exer­ <lb/>
@@ -465,7 +467,7 @@
             etiam et pagani, atque admisti inter eos, dum ser­ <lb/>
             vos Christi se esse fingunt, etiam et ipsi calamitatis <lb/>
             excidium evaserunt.</p>
-          <p>18. Hac tempestate Gothi Placidiam Theodosii prin­ <lb/>
+          <p n="18">18. Hac tempestate Gothi Placidiam Theodosii prin­ <lb/>
             cipis imperatoris filiam , Arcadii et Honorii im­ <lb/>
             peratorum sororem, cum ingenti auri argent que <lb/>
             thesauro Romæ capiunt; adeptisque multis opi­ <lb/>
@@ -480,7 +482,7 @@
             rentur, damna naufragii eventu victoriæ compensan­ <lb/>
             tes. Mors Alarici confestim secuta, vigesimo octavo <lb/>
             regni anno defunctus est in Italia.</p>
-          <p>19. Æra CDXLVIII, anno imperii Honorii XVII, et <lb/>
+          <p n="19">19. Æra CDXLVIII, anno imperii Honorii XVII, et <lb/>
             primo Theodosii Minoris, Alarico post capiam <lb/>
             Urbem defuncto, Athaulfus a Gothis Italiæ regno <lb/>
             præficitur annis VI. Iste, quinto regni anno de <lb/>
@@ -497,11 +499,11 @@
             cederet. Athaulfus auteip dum, relictis Galliis, Hi­ <lb/>
             spanias peteret, a quodam suorum apud Barcino­ <lb/>
             nam inter familiares fabulas jugulatur.</p>
-          <p>20. Æra CDLIV, ann. imperii Honorii XXII post <lb/>
+          <p n="20">20. Æra CDLIV, ann. imperii Honorii XXII post <lb/>
             obitum Athaulfi, a Gothis Sigericus princeps electus <lb/>
             est, qui, dum ad pacem cum Romanis esset prom­ <lb/>
             ptissimus, mox a suis est interfectus.</p>
-          <p>21. Æra et anno quo supra, Walia Sigerico succe­ <lb/>
+          <p n="21">21. Æra et anno quo supra, Walia Sigerico succe­ <lb/>
             dens, tribus annis regnum tenuit, belli causa prin­ <lb/>
             ceps a Gothia effectus , sed ad pacem divina provi­ <lb/>
             dentia ordinatus, mox enim cum regnare coepit, <lb/>
@@ -512,7 +514,7 @@
             rempublicam omne certamen implendum. Itaque ad <lb/>
             Hispanias per Constantium patricium evocatus, Ro­ <lb/>
             mani nominis causa cædes magnas Barbaris intulit.</p>
-          <p>22. Wandalos Selinguos in Baetica omnes bello ex­ <lb/>
+          <p n="22">22. Wandalos Selinguos in Baetica omnes bello ex­ <lb/>
             stinxit. Alanos, qui Vandalis et Suevis potentabantur, <lb/>
             adeo cecidit, ut exstincio Atace rcge ipsorum, pauci <lb/>
             qui superfuerant, oblto regni nomine, Gunderici <lb/>
@@ -527,7 +529,7 @@
             meritum victoriae secunda Aquilania cum quibusdam <lb/>
             civitatibus confinium provinciarum usque ad Ocea­ <lb/>
             num.</p>
-          <p>23. Æra CDLVII, anno imperii Ilonorii xxv, Rege <lb/>
+          <p n="23">23. Æra CDLVII, anno imperii Ilonorii xxv, Rege <lb/>
             Walia defuncto, Theuderedus successit in regno <lb/>
             annis XXXIII. Qui regno Aquitanico 116 non con­ <lb/>
             tentus, pacis Romanæ foedus recusat , pleraque mu­ <lb/>
@@ -535,7 +537,7 @@
             las nobilissimum Gallix oppidum multa vi obsessum <lb/>
             oppugnat. A cujus obsidione, inminente virtute Ae- <lb/>
             Iii Romanæ militine ducis, non inuunitus abscedit.</p>
-          <p>24. Remoto igitur Valentiniani imperatoris jussu a <lb/>
+          <p n="24">24. Remoto igitur Valentiniani imperatoris jussu a <lb/>
             potestate militari Aetio, dum Theuderedus Narb nensi <lb/>
             urbi diutina obsidione ac fanis esset infestus, rursus
             <milestone unit="PLSection" n="D"/><note type="footnote"> i7. Reportantes, exertis, ele. Editio Grialii, repor­ <lb/>
@@ -583,7 +585,7 @@
             ligi quantum illa quae cum eodem periit multitudo <lb/>
             prodesse potuerit, si fide potius quam fallacibus dae­ <lb/>
             moniorum ostentis uti maluisset.</p>
-          <p>25. Exstincto igitur Litorio, pace deindeTheudere­ <lb/>
+          <p n="25">25. Exstincto igitur Litorio, pace deindeTheudere­ <lb/>
             cum Romanis inita, denuo adversus Hunnos, Gallia­ <lb/>
             rum provincias saeva populatione vastantes, atque ur­ <lb/>
             bes plurimas evertentes, in campisCatalaunicis, auxi­ <lb/>
@@ -594,7 +596,7 @@
             gressi suut, ut inter primum prælium et postremum <lb/>
             trecenta fere millia hominum in eo certamine pro­ <lb/>
             strarentur.</p>
-          <p>26. Multa eodem tempore coeli et terrae signa prae­ <lb/>
+          <p n="26">26. Multa eodem tempore coeli et terrae signa prae­ <lb/>
             cesserunt, quorum prodigiis tam crudele bellum signi­ <lb/>
             ficaretur. Nam, assiduis terraemotibus factis, a parte <lb/>
             Orientis luna fuscata est, a solis occasu stella cometes <lb/>
@@ -604,7 +606,7 @@
             clarioribus in speciem hastarum rutilantium deforma­ <lb/>
             tis. Nec mirum ut tam ingenti cæsorum strage divi­ <lb/>
             nitus tam multa signorum demonstraretur ostensio.</p>
-          <p>27. Hunni autem, usque ad internecionem pene
+          <p n="27">27. Hunni autem, usque ad internecionem pene
             <milestone unit="PLSection" n="c"/><lb/>
             cæsi cum rege 117 suo Athila, relictis Galliis, Ita­ <lb/>
             liam perfugiunl, aliquantis civitatibus irruptis. Qui et <lb/>
@@ -613,7 +615,7 @@
             exercitu, forti plaga cæduntur, affectique nimium ac <lb/>
             diminuti, sedes proprias repetunt, ad quas rex eo­ <lb/>
             rum Attila, mox, ut remeavit, occubuit.</p>
-          <p>28. Post ejus obitum Hunnorum gens proprio se in­ <lb/>
+          <p n="28">28. Post ejus obitum Hunnorum gens proprio se in­ <lb/>
             super excidio devastavit. Statimque inter filios ejus de <lb/>
             obtinendo regno magna sunt exorta certamina. Atque <lb/>
             ita Hunni, qui tot cladibus antea diminuti fuerant, rur­ <lb/>
@@ -623,7 +625,7 @@
             <milestone unit="PLSection" n="D"/><lb/>
             proinde est quia in disciplinam fidelium positi sunt, <lb/>
             sicut populus est gentis Persarum.</p>
-          <p>29.Virga enim furoris Dei sunt, et quoties indignatio <lb/>
+          <p n="29">29.Virga enim furoris Dei sunt, et quoties indignatio <lb/>
             ejus adversus fideles procedit, per eos flagellantur, ut, <lb/>
             eorum afflictionibus emendati, a saeculi cupiditate et <lb/>
             peccato semetipsos coerceant, et coelestis regui hære-
@@ -631,12 +633,12 @@
             ditatem possideant. Adeo autem hæc gens horrida est, <lb/>
             ut cum amem in bello fuerit. passa, venam tangat <lb/>
             equi, et sic excludat hausto sanguine famem.</p>
-          <p>30. Æra CDXC, anno primo imperii Marciani, Turis­ <lb/>
+          <p n="30">30. Æra CDXC, anno primo imperii Marciani, Turis­ <lb/>
             mundus, filius Theuderedi, provehitur ad regnum <lb/>
             anno uno. Qui dum in ipsis regni sui exordiis feralis <lb/>
             ac noxius hostilia inspiraret, et multa ageret insolen­ <lb/>
             tius, a Theuderico et Frigdarico fratribus est occisus.</p>
-          <p>31. Æra CDXCI, anno II imperii Marciani, Theude­ <lb/>
+          <p n="31">31. Æra CDXCI, anno II imperii Marciani, Theude­ <lb/>
             ricus, post fraternam necem, in regnum succedens, <lb/>
             imperavit annis XIII, qui pro eo quod imperatori <lb/>
             Avito sumendi imperialis fastigii cum Gallis auxilium <lb/>
@@ -652,7 +654,7 @@
             telo saucius fugit, praesidioque suorum carens, ad <lb/>
             locum Portucale capitur, regique Theuderico vivus <lb/>
             offertur.</p>
-          <p>52. Quo perempto, nullis qui de priore cerlamine <lb/>
+          <p n="32">32. Quo perempto, nullis qui de priore cerlamine <lb/>
             superfuerant sese tradentibus , aliquantis nihilomi­ <lb/>
             nus trucidatis, regnum pene destructum est, fini­ <lb/>
             tumque Suevorum regnum. Reliqui autem Suevi qui <lb/>
@@ -664,7 +666,7 @@
             dum Emeritensem urbem depraedari moliretur, <lb/>
             sanctae martyris Eulaliae ostentis perterritus, cum <lb/>
             omni protinus exercitu discedit, et Gallias repetit.</p>
-          <p>33. Mox deinde partem unam exercitus, duce Ceu­ <lb/>
+          <p n="33">33. Mox deinde partem unam exercitus, duce Ceu­ <lb/>
             rila, ad Bæticam provinciam mittit, partem aliam sub <lb/>
             Singericoet Nepotiano ducibus ad Gallaeciam dirigit, <lb/>
             qui Suevos apud Lucum saeva depraedatione vasta­ <lb/>
@@ -680,7 +682,7 @@
             Sallanem quoque legatum denuo Theudericus mittit <lb/>
             ad Remismundum. Qui, reversus ad Gallias, Theude­ <lb/>
             ricum ab Eurico fratre suo reperit interfectum.</p>
-          <p>34. Æra DIV, ann. imperii Leonis VIII,Euricus pari <note type="footnote"> 25. Populalione. A!., depopulatione. AREV. </note><note type="footnote"> 26. Grialius, effectus est. lbid. Tam ingenti. Flore­ <lb/>
+          <p n="34">34. Æra DIV, ann. imperii Leonis VIII,Euricus pari <note type="footnote"> 25. Populalione. A!., depopulatione. AREV. </note><note type="footnote"> 26. Grialius, effectus est. lbid. Tam ingenti. Flore­ <lb/>
             zius cum Labbeo in tam ingenti. AREV. </note><note type="footnote"> 27. Irruptis. Labbeus, interrup!i.. AREV. </note><note type="footnote"> 30. Oinnia exemplaria consentiunt in aera 490, et <lb/>
             anno prinlo Marciani; et id videtur esse positum ex <lb/>
             mente Isidori, ut patet ex aeris sequentibus, et ex <lb/>
@@ -710,7 +712,7 @@
             rat, exercitus irruptione evertit. In Gallias autem <lb/>
             reversus, Arelatum urbem et Massiliam bellando ob­ <lb/>
             tinuit, suoque regno uteasque adjecit.</p>
-          <p>35. Iste quodam die, congregatis in colloquio Go­ <lb/>
+          <p n="35">35. Iste quodam die, congregatis in colloquio Go­ <lb/>
             this, tela quae omnes habebant in manibus, a pare <lb/>
             ferri vel acie, alia viridi, alia roseo, alia croceo, alia <lb/>
             nigro colore naturalem ferri speciem vidit aliquandiu
@@ -719,7 +721,7 @@
             in scriptis habere ceperunt, nam antea tantum <lb/>
             moribus et consuetudine tenebantur. Obit Arelati <lb/>
             Euricus rex, morte propria defunctus.</p>
-          <p>36. Æra DiXI, ann. x imperii Zenonis, Eurieo <lb/>
+          <p n="36">36. Æra DiXI, ann. x imperii Zenonis, Eurieo <lb/>
             mortuo, Alaricus, filius ejus, apud Tolosanam ur­ <lb/>
             bem princeps. Gothorum constituitur , regnans ann. <lb/>
             :iUI, adversus quem Fludujus Francorum prio­ <lb/>
@@ -732,7 +734,7 @@
             manus hostium occupaverat, recepit, Gothorum juri
             <milestone unit="PLSection" n="c,"/><lb/>
             restituit. 1</p>
-          <p>37. Æra DXLV, ann. XVII imperii Anastasii, Gisa­ <lb/>
+          <p n="37">37. Æra DXLV, ann. XVII imperii Anastasii, Gisa­ <lb/>
             teicus, superioris regis filius ex concubina creatus, <lb/>
             Narbonæ prineeps efficitur, regnans annos quatuor; <lb/>
             sicut genere vilissimus, ita infelicitate et ignavia <lb/>
@@ -743,7 +745,7 @@
             Barcinonam se contulit, ibique moratus quousque <lb/>
             etiam regni fascibus a Theuderico fugæ ignominia <lb/>
             privaretur.</p>
-          <p>120 38. Inde proiectus ad Africam, Vandalorum <lb/>
+          <p n="38">120 38. Inde proiectus ad Africam, Vandalorum <lb/>
             suffragium poscit, quo in regnum posset restitui. Qui, <lb/>
             dum non impetrasset auxilium, mox de Africa rediens, <lb/>
             ob metum Theuderici Aquitaniam petiit, ibique anno <lb/>
@@ -752,7 +754,7 @@
             commisso prælio superatus, in fugam vertitur, captus­ <lb/>
             que trans fluvium Druentium Galliarum interiit, sic­ <lb/>
             que prius honorem, postea vitam amisit.</p>
-          <p>39. Æra DXLIX, anno XII imperii Anastasii, Theu­ <lb/>
+          <p n="39">39. Æra DXLIX, anno XII imperii Anastasii, Theu­ <lb/>
             dericus Junior, cuin jamdudum consul et rex a Ze.
             <milestone unit="PLSection" n="B"/><lb/>
             none imperatore Romæ creatus fuisset, peremptoque <lb/>
@@ -766,7 +768,7 @@
             dignitas non parva est restituta. Muros namque ejus <lb/>
             iste redintegravit, cujus rei gratia a SeDatu inaura­ <lb/>
             tam statuam meruit.</p>
-          <p>40. Æra DLXIV, ann. imperii Justiniani i, Re­ <lb/>
+          <p n="40">40. Æra DLXIV, ann. imperii Justiniani i, Re­ <lb/>
             gresso in Italiam Theuderico, et ibidem defuncto, <lb/>
             Amalaricus nepos ejus v annis regnavit. Qui, cum a <lb/>
             Childeberto Francorum rege apud Narbonam praelio
@@ -774,7 +776,7 @@
             superatus fuisset, ad Barcinonam trepidus fugit, <lb/>
             effectusque omnium contemptibilis, ab exercitu jugu­ <lb/>
             latus Narbonæ in foro interiit.</p>
-          <p>121 41. Æra DLXIX, anno imperii Justiniani VI, <lb/>
+          <p n="41">121 41. Æra DLXIX, anno imperii Justiniani VI, <lb/>
             post Amalaricum Theudis in Hispania creatus, in re­ <lb/>
             gnum annis XVII, mensibus v, qui dum esset haereticus, <lb/>
             pacem tamen coneessit Ecclesiae. Adeo ut licentiam <note type="footnote"> 34. (Col. proeced.) Partes. A!., partem. IbhJ. Nobi­ <lb/>
@@ -841,7 +843,7 @@
             unius diei noctisque spatio præbuit, Cætera infeli­ <lb/>
             cium turba, cui transitus collati temporis non occur­ <lb/>
             rit, Gothorum perempta gladiio concidit.</p>
-          <p>42. Post tam felicis successum victoriae, trans fretum <lb/>
+          <p n="42">42. Post tam felicis successum victoriae, trans fretum <lb/>
             inconsulte Gothi se gesserunt. Denique, dum adver-
             <milestone unit="PLSection" n="B"/><lb/>
             IUS milites, qui Septem oppidum, pulsis Gothis, inva­ <lb/>
@@ -853,7 +855,7 @@
             terraque conclusum, ignavum atque inermem adeo <lb/>
             prostraverunt, ut ne unus quidem superesset qui tantae <lb/>
             dadis excidium praeteriret.</p>
-          <p>43. Nec mora, prevenit mors debita princi­ <lb/>
+          <p n="43">43. Nec mora, prevenit mors debita princi­ <lb/>
             pem. Vulneratur enim a quodam in palatio, qui <lb/>
             jamdudum dementis speciem, ut regem deciperet, <lb/>
             simulaverat. Finxit enim arte insaniam, perfodit­ <lb/>
@@ -864,7 +866,7 @@
             ne quis interficeret percussorem, dicens se con­ <lb/>
             gruam meriti recepisse vicissitudinem, quod et ipse <lb/>
             privatus ducem suum sollicitatus occiderat.</p>
-          <p>12244. Æra DLXXXVI, ann. Imper. Justiniani XXIII, <lb/>
+          <p n="44">122 44. Æra DLXXXVI, ann. Imper. Justiniani XXIII, <lb/>
             interempto Theudi Theudisclus superioris principis <lb/>
             dux Gothis præficitur, regnans ann. i, menses i!!, <lb/>
             qui dum plurimorum poientum connnbia prosti­ <lb/>
@@ -872,7 +874,7 @@
             mum ad necem multorum, praeventus conjuratorum <lb/>
             manu Hispali inter epulas jugulatur, confossusque <lb/>
             gladio exstinguitur.</p>
-          <p>45. Æra DLIXXVII, imper. Justiniani xxiv, exstin­ <lb/>
+          <p n="45">45. Æra DLIXXVII, imper. Justiniani xxiv, exstin­ <lb/>
             cto Theudisclo, Agila rex constituitur regnans ann.
             <milestone unit="PLSection" n="A"/><lb/>
             v. Iste adversus Cordtibensem orbem praelium mo­ <lb/>
@@ -884,7 +886,7 @@
             tibus, meruit. Nam belli praesentis ultione percussus, <lb/>
             et iilium ibi cum copia exercitus interfeclum amisit, <lb/>
             et thesaurum omnem cum insignibus opibus perdidit.</p>
-          <p>46. Ipse victus, ac miserabili metu fugatus, Eme­ <lb/>
+          <p n="46">46. Ipse victus, ac miserabili metu fugatus, Eme­ <lb/>
             ritam se recepit. Adversus quem interjecto ali­ <lb/>
             quanti temporis spatio, Athanagildus tyrannidem <lb/>
             regnandi cupiditate arripiens, dum exercitum ejus <lb/>
@@ -894,7 +896,7 @@
             metuentes ne Hispaniam milites Romani auxilii oc­ <lb/>
             casione invaderent, Agilanem Emeritae interficiunt, <lb/>
             et Athanagildi sese regimini tradiderunt.</p>
-          <p>47. Æra DXCII, anno imper. Justiniani XXIX, occiso <lb/>
+          <p n="47">47. Æra DXCII, anno imper. Justiniani XXIX, occiso <lb/>
             Agilane, Athanagildus regnum quod invaserat tenuit <lb/>
             ann. xiv. Hic cum jamdudum sumpta tyrannide, Agi­ <lb/>
             lanem regno privare conaretur, 123 militum sibi <lb/>
@@ -904,7 +906,7 @@
             bus antea præliis caesi, nunc vero multis casibus <lb/>
             fracti atque finiti. Decessit autem Athanagildus To­ <lb/>
             leti propria morte , vacante regno mensibus v.</p>
-          <p>48. Æra DCV, ann. II imperii Justini Minoris, post <lb/>
+          <p n="48">48. Æra DCV, ann. II imperii Justini Minoris, post <lb/>
             Atbanagildum Liuva Narbone Gothis præficitur, re­
             <milestone unit="PLSection" n="c"/><lb/>
             gnans ann. III, qui secundo anno, postquam adeptus <lb/>
@@ -915,7 +917,7 @@
             nulla potestas patiens consortis sit. Huic autem unus <lb/>
             tantum annus in ordine temporum reputatar Liuvæ <lb/>
             regis, reliqui Leovigildo fratri annumerantur.</p>
-          <p>49. Æra DCVI, ann. III imper. Justini Minoris, <lb/>
+          <p n="49">49. Æra DCVI, ann. III imper. Justini Minoris, <lb/>
             Leovigildus adeptus Hispaniæ et Galliæ principatum, <lb/>
             ampliare regnum bello et argere opes statuit. Sta­ <lb/>
             dio quippe ejus exercitus, concordante favore, victo­ <lb/>
@@ -962,7 +964,7 @@
             magna ex parte potitus. Nam antea gens Gotborum <lb/>
             angustis finibus arctabatur, sed offuscavit in eo error <lb/>
             impietatis gloriam tantae virtutis.</p>
-          <p>50. Denique Arianæ perfidiæ furore repletus, in <lb/>
+          <p n="50">50. Denique Arianæ perfidiæ furore repletus, in <lb/>
             catholicos persecutione commota, plurimos episcopo­ <lb/>
             rum exsilio relegavit. Ecclesiarum 124 reditus et <lb/>
             privilegia abstulit, multos quoque terroribus in Aria­ <lb/>
@@ -974,7 +976,7 @@
             cerdotalis ordinis dignitate, sicut Vincentium Cæsar­ <lb/>
             augustanum, de episcopo apostatam factum, et .tan­ <lb/>
             quam a coelo in infernum projectum.</p>
-          <p>51. Exstitit autem et quibusdam suorum perniciosus, <lb/>
+          <p n="51">51. Exstitit autem et quibusdam suorum perniciosus, <lb/>
             nam quoscunque nobilissimos ac potentissimos vidit, <lb/>
             aut capite truncavit, aut, opibusablatis, proscripsit, et <lb/>
             proscriptos in exsilium misit. Fiscum quoque primus <lb/>
@@ -990,7 +992,7 @@
             missas adjiciens, plerasque superfluas auferens. Re­ <lb/>
             gnavit autem ann. XVIII, defunctus propria morte <lb/>
             Toleti.</p>
-          <p>52. Æra DCXXIV, ann. III imper. Mauricii, Leovi­ <lb/>
+          <p n="52">52. Æra DCXXIV, ann. III imper. Mauricii, Leovi­ <lb/>
             gildo defuncto, filius ejus Recaredus regno est co­ <lb/>
             ronatus, cultu praeditus religionis, et paternis mo­ <lb/>
             ribus longe dissimilis. Namque ille irreligiosus , et <lb/>
@@ -1001,8 +1003,7 @@
             adeptus totius Gothicae gentis populos, inoliti erroris
             <milestone unit="PLSection" n="D"/><lb/>
             labe deserta, ad cultum rectae fidei revocat.</p>
-          <p>
-            <milestone unit="PLSection" n="A"/>53. Synodum deinde episcoporum ad condemnatio­ <lb/>
+          <p n="53"><milestone unit="PLSection" n="A"/>53. Synodum deinde episcoporum ad condemnatio­ <lb/>
             nem Arianæ hæresis , de diversis Hispaniæ et Galliæ <lb/>
             provinciis congregat. 125 Cui concilio idem religiosis- <lb/>
             simus princeps interfuit, gestaque ejus praesentia sua et <lb/>
@@ -1013,7 +1014,7 @@
             esse, Spiritum sanctum inseparabiliter a Patre Fi­ <lb/>
             lioque procedere, et esse amborum unum Spiritum, <lb/>
             unde et unum sunt.</p>
-          <p>54. Egit etiam gloriose bellum adversus infestas <lb/>
+          <p n="54">54. Egit etiam gloriose bellum adversus infestas <lb/>
             gentes fidei suscepto auxilio. Francis enim sexa­ <lb/>
             ginta ferme millium armatorum copiis Gallias ir­ <lb/>
             ruentibus, misso Claudio duce adversus eos, glo-
@@ -1028,7 +1029,7 @@
             irruptiones Vasconum movit. Unde non magis bella <lb/>
             tractasse, quam potius gentem, quasi in palæstræ <lb/>
             ludo, pro uso certaminis videmur exercuisse.</p>
-          <p>55. Provincias autem quas pater bello conquisivit, <lb/>
+          <p n="55">55. Provincias autem quas pater bello conquisivit, <lb/>
             iste pace conservavit, æquitate disposuit, moderamine <lb/>
             rexit. Fuit autem placidus, mitis, egregiae bonitatis; <lb/>
             tantamque in vultu gratiam habuit, et tantam in ani­ <lb/>
@@ -1039,7 +1040,7 @@
             praedia, quae paterna labes fisco associaverat, juri <lb/>
             proprio restauraret. Adeo demens, ut populi tributa <lb/>
             sæpe indulgentiae largitione laxaret.</p>
-          <p>56. Multos etiam ditavit rebus, plurimos sublimavit <lb/>
+          <p n="56">56. Multos etiam ditavit rebus, plurimos sublimavit <lb/>
             honoribus. Opes suas in miseris, thesauros suos in <lb/>
             egenis recondens, sciens ad hæc illi fuisse collatum <lb/>
             regnum, ut eosalubriter frueretur, bonis initiis bonum <lb/>
@@ -1047,7 +1048,7 @@
             regni percepit, novissime publica confessione pœni­ <lb/>
             tentiæ cumulavit. Toleti fine pacifico transiit, qui <lb/>
             regnavit annos xv.</p>
-          <p>126 57. Æra DCXXXIX, an. imperii Mauricii xix, <lb/>
+          <p n="57">126 57. Æra DCXXXIX, an. imperii Mauricii xix, <lb/>
             post Recaredum regem regnat Liuva filius ejus an. II,
             <milestone unit="PLSection" n="D"/><lb/>
             ignobili quidem matre progenitus, sed virtutisin <note type="footnote"> temporum non congruit. Grotius et Labbeus, adepto <lb/>
@@ -1085,7 +1086,7 @@
             Wictericus, sumpta tyrannide, innocuum regno de­ <lb/>
             jecit, praecisaque dextra occidit anno ætatis XX; re­ <lb/>
             gni vero II.</p>
-          <p>58. Æra DCXLI, aD. imp. Mauricii XXI, exstincto <lb/>
+          <p n="58">58. Æra DCXLI, aD. imp. Mauricii XXI, exstincto <lb/>
             Liuvane, Wictericus regnum, quod vivente illo inva­ <lb/>
             serat, vindicat ann. VII. Vir quidem strenuus in ar­ <lb/>
             morum arte, sed tamen expers victoriae. Namque <lb/>
@@ -1098,11 +1099,11 @@
             conjuratione quorumdam est interfectus, corpus ejus
             <milestone unit="PLSection" n="B"/><lb/>
             viliter est exportatum atque sepullum.</p>
-          <p>59. Æra DCILIIX, an. imp. Phocatis octavo, Gunde­ <lb/>
+          <p n="59">59. Æra DCILIIX, an. imp. Phocatis octavo, Gunde­ <lb/>
             marus post Wictericum regnat an. II. Hic Vascones <lb/>
             una expeditione vastavit, alia militem Romanum <lb/>
             obsedit. Morte propria Toleti decessit.</p>
-          <p>60. Æra DCL, an. imperii Heraclii II. Sisebutus <lb/>
+          <p n="60">60. Æra DCL, an. imperii Heraclii II. Sisebutus <lb/>
             christianissimus post Gundemarum, ad regale fasti­ <lb/>
             gium evocatur, regnat ann. VIII, mens. vi; qui initio <lb/>
             regni Judaeosad fidem Christianam permovens, aemu­ <lb/>
@@ -1116,7 +1117,7 @@
             ciis justitia et pietate strenuus ac praestantissimus, <lb/>
             mente benignus, 127 splendore regni, præcipuus, <lb/>
             in bellicis quoque documentis ac victoriis clarus.</p>
-          <p>61. Astures enim rebellantes , misso exercitu, in <lb/>
+          <p n="61">61. Astures enim rebellantes , misso exercitu, in <lb/>
             ditionem suam reduxit. Ruccones montibus arduis <lb/>
             undique conseplos per duces evicit. De Romanis quo­ <lb/>
             que praesens bis feliciter triumphavit, et quasdam <lb/>
@@ -1133,7 +1134,7 @@
             laicis exstitit luctuosus. Relicto Recaredo filio par­ <lb/>
             vulo, qui post patris obitum princeps paucorum <lb/>
             dierum, morte interveniente, habetur.</p>
-          <p>62. Æra DCLIX, ann. imperii Heraclii x, gloriosis­ <lb/>
+          <p n="62">62. Æra DCLIX, ann. imperii Heraclii x, gloriosis­ <lb/>
             simus Suintila gratia divina regni suscepit sceptra. <lb/>
             Iste sub rege Sisebuto ducis nactus officium, Romana <lb/>
             castra. perdomavit , Ruccones superavit. Postquam <lb/>
@@ -1147,7 +1148,7 @@
             collatum. Autit eo praelio virtutis ejus titulum duo­ <lb/>
             rum patritiorum obtentus, quorum alterum prudentia <lb/>
             suum fecit, alterum virtute praelii sibi subjecit.</p>
-          <p>63. Habuit quoque et initio regni expeditionem <lb/>
+          <p n="63">63. Habuit quoque et initio regni expeditionem <lb/>
             contra incursus Vasconum Tarraconensem provin­ <lb/>
             ciam infestantium, ubi adeo montivagi populi terrore <lb/>
             adventus ejus perculsi sunt, ut confestim, quasi <lb/>
@@ -1157,7 +1158,7 @@
             thorum stipendiis suis et laboribus conderent, polli­ <lb/>
             centes ejus regno ditionique parere, et quidquid im­ <lb/>
             peraretur efficere.</p>
-          <p>
+          <p n="64">
             <milestone unit="PLSection" n="c"/>64. Praeter has militaris gloriæ laudes plurimae <lb/>
             in eo regiae majeslatis virtutes, fides, prudentia, <lb/>
             industria , in judiciis examiuatio, strenua in regendo <lb/>
@@ -1165,7 +1166,7 @@
             largus, erga indigentes et inopes misericordia satis <lb/>
             promptus. Ita ut non solum princeps populorum, <lb/>
             sed etiam pater pauperum vocari sit dignus.</p>
-          <p>65. Hujus filius Racimirus in consortium regni <lb/>
+          <p n="65">65. Hujus filius Racimirus in consortium regni <lb/>
             assumptus, pari cum patre solio conlaetatur, in cujus <lb/>
             infantia ita sacræ indolis splendor emicat, ut in eo <lb/>
             et meritis et vultu paternarum virtutum effigies præ­ <lb/>
@@ -1210,11 +1211,13 @@
             rum regum temporibus ab exordio Athanarici regis, <lb/>
             usque ad quintum gloriosissimi Suinlilae principis an. <lb/>
             num, regnum Gothorum per annos CCLVI , Deo fa­ <lb/>
-            vente, reperitur esse porrectum.</p>
+            vente, reperitur esse porrectum.</p></div>
+    
+    <div n="2" subtype="section" type="textpart">
           <ab>
             <title type="sub">Item recapitulatio ejusdem Isidori in Gothorum laudem.</title>
           </ab>
-          <p>66. Gothorum antiquissima origo de Magog filio <lb/>
+          <p n="66">66. Gothorum antiquissima origo de Magog filio <lb/>
             Japhet fuit, unde et Scytharum genus exstitit. Nam <lb/>
             iidem Gothi Scythica probantur origine nati. Unde <lb/>
             nec longe a vocabulo discrepant. Demutata enim ac <lb/>
@@ -1230,11 +1233,13 @@
             obsessam Urbem capiunt, Gallias aggrediuntur, pate­ <lb/>
             factisque Pyrenæis montibus, Hispanias usque perve­ <lb/>
             niunt, ibique sedem vitæ atque imperium locaverunt.</p>
-          <p>67. Populi natura pernices , ingenio alacres, <lb/>
+          <p n="67">67. Populi natura pernices , ingenio alacres, <lb/>
             conscientiæ viribus freti, robore corporis validi , <lb/>
             staturae proceritate ardui, gestu habituque conspi­ <lb/>
             cui, manu prompti, duri vulneribus, juxta quod ait <lb/>
-            poeta de ipsis:</p>
+            poeta de ipsis:</p></div>
+    
+    <div n="3" subtype="section" type="textpart">
           <p>
             <milestone unit="PLSection" n="c"/></p>
           <ab>
@@ -1245,7 +1250,7 @@
             victrix omnium populorum, subacta captivitatis jugo, <lb/>
             Geticis triumphis accederet, et domina cunctarum <lb/>
             gentium illis ut famula deserviret.</p>
-          <p>68. Hos Europæ omnes tremuere gentes, Alpium his <lb/>
+          <p n="68">68. Hos Europæ omnes tremuere gentes, Alpium his <lb/>
             cessere obices. Vandalica et ipsa crebro opinata bar­ <lb/>
             haries non tantum praesentia eorum exterrita, quam <lb/>
             opinione iugata est. Gothorum vigore Alani exstincti <lb/>
@@ -1256,7 +1261,7 @@
             tenuerunt, turpiori nunc dispendio caruerunt, quan­ <lb/>
             quam tenuisse hucusque valde sit mirum, quo sine <lb/>
             experimento defensionis carere potuerunt.</p>
-          <p>69. Sed quis poterit tantam Gothicæ gentis edicere <lb/>
+          <p n="69">69. Sed quis poterit tantam Gothicæ gentis edicere <lb/>
             virium magnitudinem, quandoquidem dum multis gen­ <lb/>
             tibus vix precum causa et munerum regnave licuerit, <lb/>
             his tamen libertas magis de congressione quam de <lb/>
@@ -1267,8 +1272,7 @@
             fligunt. Nec equestri tantum praelio, sed et pedestri <lb/>
             incedant. Verumtamen magis equitum prapeti cursu <lb/>
             confidunt, unde et poeta: Getes, inquit, quo pergit equo.</p>
-          <p>
-            <milestone unit="PLSection" n="B"/>70. Exercere enim se telis ac praeliis præludere <lb/>
+          <p n="70"><milestone unit="PLSection" n="B"/>70. Exercere enim se telis ac praeliis præludere <lb/>
             maxime diligunt. Ludorum certamina usu quotidia­ <lb/>
             no gerunt. Hac sola tantum armorum experientia <lb/>
             hucusque carebant, quod classica bella in mari ge. <lb/>
@@ -1277,11 +1281,13 @@
             diis ad tantam felicitatis virtutem profecti sunt, ut <lb/>
             non solum terras, sed et ipsa maria suis armis adeant, <lb/>
             subactusque serviat illis Romanus miles, quibus <lb/>
-            servire tot gentes et ipsam Hispaniam videt.</p>
+            servire tot gentes et ipsam Hispaniam videt.</p></div>
+    
+    <div n="4" subtype="section" type="textpart">
           <ab>
             <title type="sub">Vandalorum historia.</title>
           </ab>
-          <p>71. Æra CDILIV, ante biennium irruptionis Roma­ <lb/>
+          <p n="71">71. Æra CDILIV, ante biennium irruptionis Roma­ <lb/>
             næ urbis excitatae per Stiliconem gentes Alanorum, <lb/>
             Suevorum et Vandalorum , trajecto Rheno fluvio, in
             <milestone unit="PLSection" n="c"/><lb/>
@@ -1296,7 +1302,7 @@
             obnoxii, a Constantia Caesare interfecti sunt, ara <lb/>
             CDXLVI , memoratæ gentes Hispaniarum provincias <lb/>
             irrumpunt.</p>
-          <p>72. Æra CDILVI, Vandali, Alani et Suevi Hispa­ <lb/>
+          <p n="72">72. Æra CDILVI, Vandali, Alani et Suevi Hispa­ <lb/>
             nias occupantes, neces vastationesque cruentis dis­ <note type="footnote">$6. In titulo, pro recapitulatio, alii capitulatio. Et <lb/>
             illico : f;otbi de Mayoq, Japhet filio, orti, et cum Scy-</note> 
             <milestone unit="PLSection" n="D"/><note type="footnote"> this una probantur origine suii. e:l1,d" etc. Pro Se­ <lb/>
@@ -1342,7 +1348,7 @@
             rum efferebantur interitum, atque ita quatuor plagis <lb/>
             per omnem Hispaniam sævientibus, divinae iracundiæ <lb/>
             per prophetas scripta olim praenuntiatio adimpletur.</p>
-          <p>73. Æra CDLIX, post plagarum diram perniciem, <lb/>
+          <p n="73">73. Æra CDLIX, post plagarum diram perniciem, <lb/>
             quibds Hispania cæsa est, tandem Barbari, ad pacem <lb/>
             ineundain , Deo miseranie , conversi, sorte in pos­ <lb/>
             sessionem sibi ejns provincias dividunt. Gallæciam <lb/>
@@ -1367,7 +1373,7 @@
             mox Dei judicio in foribus templi dæmonio corre­
             <milestone unit="PLSection" n="c"/><lb/>
             pLuS interiit.</p>
-          <p>74. Æra CDLXVI. Gisericus, frater- Gunderici, sue­ <lb/>
+          <p n="74">74. Æra CDLXVI. Gisericus, frater- Gunderici, sue­ <lb/>
             cedit in regnum annis XL. Qui, ex catholico effectus <lb/>
             apostata, in Arianam primus 132 fertur transisse <lb/>
             perfidiam, Hic de Bæticæ provinciae littore cum Van­ <lb/>
@@ -1377,7 +1383,7 @@
             sistere, pacem mittit, et partem Africae quam VandaH <lb/>
             possiderent tanquam pacifice dedit, conditionibus <lb/>
             ab eo sacramenti acceptis ne quid ultra invaderet.</p>
-          <p>75. Ille autem , de cujus amicitia nihil ambigeba­ <lb/>
+          <p n="75">75. Ille autem , de cujus amicitia nihil ambigeba­ <lb/>
             tur, violata sacramenti religione, Carthaginem doia
             <milestone unit="PLSection" n="A"/><lb/>
             pacis invadit, omnesque opes ejus, exdruciatis diverso <lb/>
@@ -1388,7 +1394,7 @@
             juxta prophetiam Danielis, demutatis mysteriis, san­ <lb/>
             ctorum ecclesias Christi hostibus tradidit. Nec jam <lb/>
             divini cultus loca, sed suorum esse habitacula jusit.</p>
-          <p>76. Adversus quem TheodoSius Minor, Orientis im­ <lb/>
+          <p n="76">76. Adversus quem TheodoSius Minor, Orientis im­ <lb/>
             perator, bellum paravit, quod ad effectum non venit. <lb/>
             Hunnis enim Thraciam Illyricumque vastantibus, <lb/>
             exercitus ad Vandalos missus, ad defendendos Thraces <lb/>
@@ -1401,7 +1407,7 @@
             ditores arripiunt. Sicque Majorianus , a sua disposi­ <lb/>
             tione frustratus, Italiam revertitur; atque , a Ricchi­ <lb/>
             miro patritio fraude circumventus, occiditur.</p>
-          <p>77. Quo comperto, Gisericus, non contentos solis <lb/>
+          <p n="77">77. Quo comperto, Gisericus, non contentos solis <lb/>
             Africæ vastationibus, navibus advectus , Romam <lb/>
             ingreditur, direptisque per xiV dies opibus Ro­ <lb/>
             manorum, relictam Valentiniani, et et filias ejns , et <lb/>
@@ -1414,7 +1420,7 @@
             <milestone unit="PLSection" n="a"/><lb/>
             norumqne spolia atque neces. moritur regni sui <lb/>
             anno XL.</p>
-          <p>78. Æra DVI, post Gisericnm , Ugnericus, Giserici <lb/>
+          <p n="78">78. Æra DVI, post Gisericnm , Ugnericus, Giserici <lb/>
             Mins, regnat annis VII, mensibus v, habens in con­ <lb/>
             jugio Valentiniani filiam , quam pater ejus ex Roma <lb/>
             cum matre captivam adduxerat, qui et ipse, Ariano <lb/>
@@ -1459,8 +1465,7 @@
             filrw;, alii Gunderici filius; et infra, et cunctos sucri <lb/>
             ordinis clericos. ARtV. </note> <pb n="1079"/>
             </p>
-          <p>
-            <milestone unit="PLSection" n="A"/>79. Tunc Lætus, Neptensis civitatis episcopus, <lb/>
+          <p n="79"><milestone unit="PLSection" n="A"/>79. Tunc Lætus, Neptensis civitatis episcopus, <lb/>
             gloriose martyrio coronatur. Qui dum Ariani con­ <lb/>
             tagii labe variis poenis maculari non potuit, victor <lb/>
             repente coelos obtinuit. Ugnericus autem inter in­ <lb/>
@@ -1468,10 +1473,10 @@
             Catholicos exercuerat, octavo regni anno, ut Arius <lb/>
             pater ejus, interioribus cunctis effusis, miserabiliter <lb/>
             vitam finivit.</p>
-          <p>80. Æra DXIV , Ugnerico succedit Guntamundus , <lb/>
+          <p n="80">80. Æra DXIV , Ugnerico succedit Guntamundus , <lb/>
             regnans ann. XII, qui statim Ecclesiae pacem refor­ <lb/>
             mans, Catholicos ab exsilio revocavit.</p>
-          <p>81. Æra DXXVI, Guntamundo mortuo, Trasemun­ <lb/>
+          <p n="81">81. Æra DXXVI, Guntamundo mortuo, Trasemun­ <lb/>
             dus regnat ann. XlVII, mens. IV. Iste, Ariana insania <lb/>
             plenus, Catholicos insectatur, ecclesias claudit, Sar­ <lb/>
             diniam exsilio ex omni Africana Ecclesiacxx epi-
@@ -1479,7 +1484,7 @@
             scopos mittit, Carthagine moritur. Cujus tempore <lb/>
             Fulgentius, Ruspensis episcopus , in nostro dogmate <lb/>
             claruit.</p>
-          <p>82. Æra DLIII, post Trasemundum Ildericus , <lb/>
+          <p n="82">82. Æra DLIII, post Trasemundum Ildericus , <lb/>
             Ugnerici filius, ex Valentiniani imperatoris filia na­ <lb/>
             tus, regnat ann. VII, mens. III. Iste, sacramento a <lb/>
             decessore suo Trasemundo obstrictus, ne Catholicis <lb/>
@@ -1489,7 +1494,7 @@
             tholicos ab exsilio reduci, et ecclesias aperiri, quem <lb/>
             Gilimer, assumpta tyrannide, regno privat, et cum <lb/>
             filiis carceris custodiæ mancipat.</p>
-          <p>83. Æra DLX, Gilimer regnum cum tyrannide <lb/>
+          <p n="83">83. Æra DLX, Gilimer regnum cum tyrannide <lb/>
             sumpsit, multos nobilium Africæ provinciae crudeli­
             <milestone unit="PLSection" n="c"/><lb/>
             ter exstinguens, multorumque substantias tollens , <lb/>
@@ -1501,7 +1506,7 @@
             primo praelio superatos interficit, deinde ipsum Gili­ <lb/>
             mirum in fugam versum. Africam capit nonagesimo <lb/>
             septimo Vandalorum ingressionis anno.</p>
-          <p>84. In ipso autem Belisarii occursu priusquam con­ <lb/>
+          <p n="84">84. In ipso autem Belisarii occursu priusquam con­ <lb/>
             gressio fieret, Gilimer tyrannus Ildericum regem cum
             <milestone unit="PLSection" n="A"/><lb/>
             quibusdam generis ejus affinibus occidit. Belisarius <lb/>
@@ -1510,11 +1515,13 @@
             stantinopolim Justiniano imperatori adducit. Sicque <lb/>
             regnum Vandalorum cum populo atque stirpe deletur <lb/>
             æra DLXIV, quod permansit CXIII ann., a Gunderico <lb/>
-            rege usque ad Gilimiri interitum.</p>
+            rege usque ad Gilimiri interitum.</p></div>
+    
+    <div n="5" subtype="section" type="textpart">
           <ab>
             <title type="sub">Suevorum historia.</title>
           </ab>
-          <p>85. Æra CDXLVII, Suevi, principe Hermerieo, cum <lb/>
+          <p n="85">85. Æra CDXLVII, Suevi, principe Hermerieo, cum <lb/>
             Alanis et Vandalis simul Hispanias ingressi sunt , <lb/>
             atque omnem Gallæciam cum Vandalis occupant. <lb/>
             Vandalis autem Africam transeuntibus, Gallæciam <lb/>
@@ -1532,12 +1539,12 @@
             obtentam propria regno associat. Hermericus autem <lb/>
             pater ejus, per annos VII diuturno languore affectus, <lb/>
             interiit.</p>
-          <p>86. Æra CDLXXIX, Hermerico defuncto, Recchila, <lb/>
+          <p n="86">86. Æra CDLXXIX, Hermerico defuncto, Recchila, <lb/>
             filius ejus, regnat ann. VIII, qui post obitum patris, <lb/>
             Hispali obtenta, Bæticam et Carthaginiensem provin­ <lb/>
             cias in suam potestatem reducit, atque inde Emeri­ <lb/>
             tae, sub cultu, ut ferunt, gentilitatis vitam finivit.</p>
-          <p>
+          <p n="87">
             <milestone unit="PLSection" n="c"/>87. Æra CDXXCVI, Recchiarius , Recchilanis filius, <lb/>
             catholicus factus, succedit in regnum annis IX, ac­ <lb/>
             cepta in conjugium Theuderedi regis Gothorum filia. <lb/>
@@ -1588,7 +1595,7 @@
             <milestone unit="PLSection" n="A"/><lb/>
             prælio adversus eum , primo fugatur, deinde captus <lb/>
             occiditur.</p>
-          <p>88. Æra CDXCV, exstincto Recchiario, Suevi, qui <lb/>
+          <p n="88">88. Æra CDXCV, exstincto Recchiario, Suevi, qui <lb/>
             remanserant in extrema parte Gallaeciae, Maldram <lb/>
             Massilae filium regem sibi constituunt. Mox bifariam <lb/>
             divisi, pars Frantanem, pars Maldram regem appel­ <lb/>
@@ -1596,7 +1603,7 @@
             erant, Recchimundum sequuntur, et, cum Maldra <lb/>
             pace inita, pariter 136 partes Lusitaniae depraedan­ <lb/>
             tur. Maldra autem tertio regni anno a suis jugulatur.</p>
-          <p>89. Æra CDXCIIX. Maldra interfecto, inter Fruma­ <lb/>
+          <p n="89">89. Æra CDXCIIX. Maldra interfecto, inter Fruma­ <lb/>
             rium et Remismundum oritur de regni potestate dis­ <lb/>
             sensio; sed Frumarins cum manu Suevorum, quam <lb/>
             habebat, Flaviensis urbis conventum gravi evertit <lb/>
@@ -1604,7 +1611,7 @@
             <milestone unit="PLSection" n="B"/><lb/>
             Auregensium et Lucensis conventus maritiana popu­ <lb/>
             latur.</p>
-          <p>90. Æra DII, Frumario mortuo, Remismundus, om­ <lb/>
+          <p n="90">90. Æra DII, Frumario mortuo, Remismundus, om­ <lb/>
             nibus Suevis in suam ditionem regali jure revocatis , <lb/>
             pacem cum Gallæcis reformat, legatos fœderis ad <lb/>
             Theudericum regem Gothorum mittit, a quo etiam per <lb/>
@@ -1620,7 +1627,7 @@
             Suevorum lethalis perfidiæ tabe inficiens. Multis dein­ <lb/>
             de Suevorum regibus in Ariana hæresi permanenti­ <lb/>
             bus, tandem regni potestatem Theudemirus suscepit.</p>
-          <p>91. Qui confestim , Arianae impietatis errore de­ <lb/>
+          <p n="91">91. Qui confestim , Arianae impietatis errore de­ <lb/>
             structo, Suevos catholicæ fidei reddidit, inni­ <lb/>
             tente Martino, monasterii Dumiensis episcopo, fide <lb/>
             et scientia claro, cujus studio et pax Ecclesiæ <lb/>
@@ -1632,7 +1639,7 @@
             regi adversus rebellem filium expugnandum Hispa-
             <milestone unit="PLSection" n="B"/><lb/>
             lim pergit, ibique terminum vitae clausit</p>
-          <p>13792. Huic Heboricus filius in regnum succedit, <lb/>
+          <p n="92">137 92. Huic Heboricus filius in regnum succedit, <lb/>
             quem adolescentem Andeca, sumpta tyrannide, regno <lb/>
             privat, et monachum factum in monasterio damnat, <lb/>
             pro quo non diu est dilata sententia. Nam Leovigil­ <lb/>
@@ -1658,5 +1665,5 @@
             Labbeus : Adversus rebellem filium ad expugnandam </note> 
             <milestone unit="PLSection" n="c"/><note type="footnote"> Hi.pflUm venit, et vitae terminum clausit. ARE. </note><note type="footnote">lluccones in veL Cod. </note><note type="footnote"> 92. Audeca in vet. Cod. pro Audeca. </note><note type="footnote"> Ibid. Presbyterii. A!., presbyter;; et congruenti pro <lb/>
             congrua. AREV. </note> </p>
-        </div>
+        </div></div>
         </body></text></TEI>
