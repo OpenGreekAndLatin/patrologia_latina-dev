@@ -1,0 +1,426 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title>Patrologiae Cursus Completus. Series Latina (PL)</title> 
+        <sponsor>University of Leipzig</sponsor>
+        <funder>European Social Fund Saxony</funder>
+        <principal>Gregory Crane</principal>
+        <respStmt>
+          <persName xml:id="Jouve">Jouve</persName>
+          <resp>OCR-ed, corrected and encoded the text</resp>
+        </respStmt>
+        <respStmt>
+          <persName>Greta Franzini</persName>
+          <resp>Project Manager (University of Leipzig)</resp>
+        </respStmt>
+        <respStmt>
+          <persName>Simona Stoyanova</persName>
+          <resp>Project Assistant (University of Leipzig)</resp>
+        </respStmt>
+        <respStmt>
+          <persName>Bruce Robertson</persName>
+          <resp>Technical Advisor (Mount Allison University)</resp>
+        </respStmt>
+      </titleStmt>
+      
+      <publicationStmt>
+        <authority>University of Leipzig</authority>
+        <idno type="filename">PL83.xml</idno>
+        <availability>
+          <licence target="https://creativecommons.org/licenses/by-sa/4.0/">Available under a Creative Commons Attribution-ShareAlike 4.0 International License</licence>
+        </availability>
+        <date>2014</date>
+        <publisher>University of Leipzig</publisher>
+        <pubPlace>Germany</pubPlace>
+      </publicationStmt>
+      
+      <sourceDesc>
+        <listBibl xml:lang="la">
+          <biblStruct>
+            <monogr>
+              <editor>
+                <persName>
+                  <name xml:lang="fr">Jacques Paul Migne</name>
+                </persName>
+              </editor> 
+              <author ref="urn:cite:perseus:author.771">Isidorus Hispalensis</author>
+              <title>Differentiarum Sive De Proprietate Sermonum Libri Duo</title>
+              <title>Allegoriae Quaedam Sacrae Scripturae</title>
+              <title>De Ortu Et Obitu Patrum Qui In Scriptura Laudibus Efferuntur</title>
+              <title>In Libros Veteris Ac Novi Testamenti Proemia</title>
+              <title>Liber Numerorum Qui In Sanctis Scripturis Occurrunt</title>
+              <title>De Veteri Et Novo Testamento Quaestiones</title>
+              <title>Mysticorum Expositiones Sacramentorum Seu Quaestiones In Vetus Testamentum</title>
+              <title>Appendix Ad Libros Regum</title>
+              <title>De Fide Catholica Ex Veteri Et Novo Testamento Contra Judeos</title>
+              <title>Sententiarum Libri Tres</title>
+              <title>De Ecclesiasticis Officiis</title>
+              <title>Synonyma De Lamentatione Animae Peccatricis</title>
+              <title>Regula Monachorum</title>
+              <title>Epistolae</title>
+              <title>De Ordine Creaturarum Liber</title>
+              <title>De Natura Rerum Ad Sisebestum Regem Liber</title>
+              <title>Chronicon</title>
+              <title>Historia De Regibus Gothorum. Wandalorum Et Suevorum</title>
+              <title>De Viris Illustribus Liber</title>
+              <title>Carmina [Ascripta]</title>
+              <title>Chronica Regum Visigothorum (Incertus)</title>
+              <title>Expositio In Canticum Canticorum Salomonis [Incertus]</title>
+              <title>De Conflictu Vitiorum Et Virtutum (Incertus)</title>
+              <title>Expositio In Missa (Incertus)</title>
+              <title>Sententiarum Liber Quartus (Incertus)</title>
+              <title>Exhortatio Humilitatis (Incertus)</title>
+              <title>Testimonia Divinae Scripturae Et Patrum (Incertus)</title>
+              <title>Sermones (Incertus)</title>
+              <title>De Ecclesiasticis Dogmatibus (Incertus)</title>
+              <title>Sentantiae Differentiarum De Activa Vita Atque Contemplativa [Incertus]</title>
+              <title>Exhortatio Poenitendi Cum Consolatione Et Misericordia Dei [Incertus]</title>
+              <title>Lamentum Poenitantiae (Incertus)</title>
+              <title>Oratio Contra Insidias Diaboli (Incertus)</title>
+              <title>Liber De Ortu Et Obitu Patrum Incertus</title>
+              <title>Liber De Numeris (Incertus)</title>
+              <title>Glossae in Sacram Scripturam</title>
+              <title>Differentiarum, sive de Proprietate Sermonum, Liber</title>
+              <title>Liber Glossarum</title>
+              <imprint>
+                <publisher>Garnier</publisher>
+                <pubPlace>Paris</pubPlace>
+                <date>1850</date>
+              </imprint>
+              <biblScope unit="volume">83</biblScope>
+            </monogr>
+            <monogr>
+              <author>Auctor Incertus</author>
+              <title>Archiepiscopi Toletani Veteres</title>
+              <title>Chronologia Gothicorum Regum (Ex Codice Regio Vaticano)</title>
+              <imprint>
+                <publisher>Garnier</publisher>
+                <pubPlace>Paris</pubPlace>
+                <date>1850</date>
+              </imprint>
+              <biblScope unit="volume">83</biblScope>
+            </monogr>
+            <ref target="http://hdl.handle.net/2027/pst.000020950231">HathiTrust</ref>
+            
+          </biblStruct>
+        </listBibl>
+      </sourceDesc>
+      
+    </fileDesc>
+    <encodingDesc>
+      <p>The following text is encoded in accordance with EpiDoc standards and with the
+        CTS/CITE Architecture.</p>
+      <refsDecl n="CTS">
+        <cRefPattern n="no citable units founds" matchPattern="(.+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div/tei:div[@n='$1'])"/>
+      </refsDecl>
+    </encodingDesc>
+    
+    <profileDesc>
+      <langUsage>
+        <language ident="la">Latin</language>
+      </langUsage>
+    </profileDesc>
+    
+</teiHeader>
+  <text>
+    <body><div type="edition" n="urn:cts:latinLit:tmp1438.tmp1438.opp-lat1">
+          <ab>
+            <title type="sub">APPENDIX XIV.</title>
+          </ab>
+          <ab>
+            <title type="sub">SENTENTIÆ DIFFERENTIARUM DE ACTIVA VITA ATQUB CONTEMPLATIVA.</title>
+          </ab>
+          <p>
+            <milestone unit="PLSection" n="C"/><lb/>
+            1. Duae sunt vitæ per quas omnes electi ad aeter­ <lb/>
+            nam beatitudinem perveniunt, activa, videlicet, et <lb/>
+            contemplativa. Activa namque vita pertinet ad di­ <lb/>
+            lectionem proximi, contemplativa vero ad dilectio­ <lb/>
+            nem Dei. Utraque enim ita sibi connexa est, ut una <lb/>
+            sine alia sufficere nequaquam valeat. Quia nec dile­ <lb/>
+            ctio proximi Absque dilectione Dei quidquam prodest; <lb/>
+            neque dilectio Dei sine dilectone proximi perfectum <lb/>
+            eflicere valet (Vide Isidoriana, c. 85, n. 8).</p>
+          <p>2. Inierim vero in activa plurimi, pauci vero in <lb/>
+            contemplativa proficiunt. Ulli vero perfecti esse no­ <lb/>
+            scuntur, qui intra Ecclesiam tempore discreto de <lb/>
+            activa vita ad contemplativam ascendere norunt, et <lb/>
+            de contemplativA ad activam per compassionem <lb/>
+            fraternam descendere sciunt.</p>
+          <p>i. Activa actin, si bene, nt decet, retineatur, se­ <lb/>
+            ctatoribus suis vitam acquirit alternam. Contempla­ <lb/>
+            tiva autem non solum vitam, sed et præmium accu­ <lb/>
+            mulal.</p>
+          <p>
+            <milestone unit="PLSection" n="D"/>4. Ad activam itaque vitam perne honestum <lb/>
+            conjugium, ad contemplativam vero virginitas atque <lb/>
+            continentia. Et ideo de conjugio præceptum est; <lb/>
+            337 de virginitate vero et continentia, non est <lb/>
+            præceptum, sed persuasio.</p>
+          <p>5. Sicut est illud in Apostolo, ubi ait: De virgi­ <lb/>
+            nibus præceptum Domini non habeo, consilium autem <lb/>
+            do (I Cor. VII, 25). Et Veritas in Evangelio : Non <lb/>
+            omnes, inquit, capiunt verbum istud, sed quibus da­ <lb/>
+            tum est (Matth. xix, 11). Et inlra : Qui potest capere <lb/>
+            capiat (Ibid., i ).</p>
+          <p>6. Et per Isaiam prophetam Dominus de ennuchis, <lb/>
+            id est, virginibus, pollicens, ait : Hæc dicit Domi­ <lb/>
+            nus eunuchis : Qui custodierint sabbata mea et ele­ <lb/>
+            gerint quæ volui, et tenuerint fædus meum, dabo eis <lb/>
+            In domo mea et in muris meis locum, et nomen melius
+            <milestone unit="PLSection" n="C"/><lb/>
+            a filiis et filiabus. Nomen sempiternum dabo eis, quod <lb/>
+            non peribit (Isai. LVI, 4, 5). Ubi enim electi propo- <lb/>
+            nilur optio, procul dubio conceditur.</p>
+          <p>7. Ad activam quippe vitam convenit unicuique <lb/>
+            fideli conjuge propria uti, alienam non concupiscere, <lb/>
+            in alteram qnamlibet feminam, vivente uxore, corpus <lb/>
+            suum non dividere. Ad contemplativam autem per­ <lb/>
+            tinet conjugium spernere, carnis commistionem re- <lb/>
+            fugere, caelibem vitam in hac mortalitate imitari, <lb/>
+            filios spirituales non carne, sed verbo et exemplo <lb/>
+            generare.</p>
+          <p>8. Ad activam quippe actionem congruit unicui­ <lb/>
+            que fideli intra Ecclesiam propriam substantiam <lb/>
+            possidere, et eam rationabiliter dispensare; aliena <lb/>
+            vero non concupiscere, neque diripere, aut fraudare. <lb/>
+            Ad contemplativam autem congruit sua omnia fun­ <lb/>
+            ditus relinquere, et absolutum a mundi sollicitudini­ <lb/>
+            bus Deo vacare.</p>
+          <p>9. Ad activam itaque vitam pertinet hoc quod
+            <milestone unit="PLSection" n="D"/><lb/>
+            Veritas cuidam adolescenti se interroganti primum <lb/>
+            proposuit dicens : Si vis ad vitam ingredi, serva <lb/>
+            mandata. Dicit ille : Qua? Jesus autem dixit: Non <lb/>
+            homicidium facies, non adulterabis, non facies fur­ <lb/>
+            tum , non falsum testimonium dices. Honora patrem <lb/>
+            tuum, et matrem , et diliges proximum tuum sicut <lb/>
+            teipsum. Ad contemplativam vero expedit hoc, quod <lb/>
+            illi addidit, dicens : Si vis perfectus esse, vade, vende <lb/>
+            omnia tua, et da pauperibus, et habebis thesaurum <lb/>
+            in cœlo, et veni, sequere me (Matth. XIX, 17).</p>
+          <p>i0. Ad contemplativam igitur vitam pertinet hoc <lb/>
+            quod idem Redemptor noster solus nocte in monte <lb/>
+            orabat. Ad activam autem quod in die turbis ad­ <lb/>
+            mistus, eis praedicabat, et eorum languidos cu­ <lb/>
+            rabat.</p>
+          <p>ii. Ad contemplativam namque vitam convenit <pb n="1245"/>
+            
+            <milestone unit="PLSection" n="A"/><lb/>
+            hoc quod apostolus Paulus de semetipso et cæteris . <lb/>
+            perfectis ait : Sive mente excedimus, Deo. Ad activam <lb/>
+            vero illud, quod addidit : Sive sobrii sumus, vobi. <lb/>
+            Charitas enim Christi argel nos (II Cor. V, ;3, 14).</p>
+          <p>12. Ad contemplativam vitam, per quam Unus­ <lb/>
+            quisque perfectus potiores virtutes supra funda­ <lb/>
+            mentum fidei ædificat, pertinet illud quod Idem Apo­ <lb/>
+            stolus dicit : Si quis autem ædificat supra fundamen <lb/>
+            tum hot aurum, lupides pretiosos, si cujus <lb/>
+            opus manserit, quod superædificat, mercedem accipiet. <lb/>
+            Ad activam vero relertur hoc quod addidit : Lignum, <lb/>
+            fenum, stipulam, id est, terrenam substantiam, et <lb/>
+            rei familiaris sollicitudinem 338 : de quo adjiciens, <lb/>
+            ait : Si cujus opus arterit, detrimentum patietur. Ipse <lb/>
+            tamen salvus erit, sic tamen quasi per iqnem (I Cor. <lb/>
+            III, 12),</p>
+          <p>13. Salvus, inquit, erit, non tamen mercedem acci­ <lb/>
+            piel, dixit, sicut de illo qui aurum , argentum et <lb/>
+            lapides pretiosos, hoc est, spirituales divitias super­
+            <milestone unit="PLSection" n="B"/><lb/>
+            ædificat. Ignem autem hoc in loco tribulationes vitæ <lb/>
+            præsentis, per quas justi probantur, accipiendum <lb/>
+            est.</p>
+          <p>14. Ad activam namque vitam pertinet pauperum <lb/>
+            curam gerere, esurientes pascere, nudos operire, <lb/>
+            infirmos, vel in carcere positos vistare, hospites <lb/>
+            colligere, mœstos consolari, mortuos sepelire, do­ <lb/>
+            mesticos carnis suae non negligere, servis Dei obse- <lb/>
+            qui, negotia populi juste discernere, et unicuique <lb/>
+            jus proprium assignare, oppressis subvenire, imbe- <lb/>
+            callem de manu violenti liberare, viduas ac pupillos <lb/>
+            tueri, imprebis resistere. atque factuorosos per seve­ <lb/>
+            ritatem a malis actibus compescere. Quæ omnia et <lb/>
+            his similia in præsenti vita tantummodo necessaria <lb/>
+            sunt.</p>
+          <p>15. Ad theoreticam , id est, contemplativam vitam <lb/>
+            pertinet praesens sæculum funditus relinquere, et <lb/>
+            mundi actibus alienum existere, cuncta praesentit <lb/>
+            mente postponere, intentionem ad caelestia exten-
+            <milestone unit="PLSection" n="C"/><lb/>
+            dere, et cuncta quæ videntur quasi transacta despi­ <lb/>
+            cere, cogitationem mentis non in ea quæ videntur, <lb/>
+            se ih ille que non videntur figere, lectioni vacare, <lb/>
+            orationi insistere, et in Bei laudibus absque inter­ <lb/>
+            missione vigilare.</p>
+          <p>16. Ille vero, ut supra dictum est, strenue vivit <lb/>
+            qui tempore congruo de activa vitA ad contemplati­ <lb/>
+            vam consurgere scit, et de contemplativa ad activam <lb/>
+            conscendere (Forte, descendere) novit. De qua activa, <lb/>
+            id est, simplici actione, si paulum quispiam ad in­ <lb/>
+            fima declina verit, confestim ad viia corruet, quæ <lb/>
+            illum non sursum levent, sed deorsum in barathum <lb/>
+            peccatorum demergant.</p>
+          <p>s'i. Contemplativam namque vitam significavit <lb/>
+            speluuca illa inter ior in qua Abraham Saram conju­ <lb/>
+            gem suam defunctam sepelivit, et ipse humatus <lb/>
+            quiescit; sicu' et omnes eiectos post excursum vitæ <lb/>
+            praesentis, quæ activae vitæ comparatur, æterna <lb/>
+            contemplatio suscipit.</p>
+          <p>18. Activam vero innuit in eadem spelunca pars
+            <milestone unit="PLSection" n="D"/><lb/>
+            exterior, per quam transitur ad interiorem. Quia <lb/>
+            sicut vitæ mundanae activa vita monumentum, ita <lb/>
+            achivae vitae contemplativa sepulcrum est.</p>
+          <p>19. In illa enim homo, hoc est, in activa moritur <lb/>
+            omni peCcato, sicut dicit Apostolus : Dilectio proximi <lb/>
+            malum non operatur. In ista vero, id est, contempla­ <lb/>
+            tiva, velut mortuus sepelitur ab omnium actione <lb/>
+            sæcularium negotiorum.</p>
+          <p>20. Ad contemplationis intentionem figuraliter <lb/>
+            convenit hoc quod Jacob per innitentem usque in <lb/>
+            coelurn scalam angelos Dei ascendentes vidit; ad <lb/>
+            actualem vero, quod descendentes. De qna ascen­ <lb/>
+            sione atqUe descensione Veritas in Evangelio ait : <lb/>
+            Amen dico vobis, quia videbilis cœlos apertos, et ange­ <lb/>
+            los Dei ascendentes et descendentes super Filium ho­ <lb/>
+            mine (Joan. I, 51). Per augelos quippe Dei sanctos <lb/>
+            prædicatores , per Filium vero hommis universos <lb/>
+            fideles Ecclesiæ, qui membra sunt Christi, ex­ <lb/>
+            primit.</p>
+          <p>
+            <milestone unit="PLSection" n="A"/>21. Actualem quippe vitam, id est, simplicem <lb/>
+            actionem mystice significant sex anni in quibus no­ <lb/>
+            bis lex præcepit agros nostros serere, et vineis <lb/>
+            339 culturam adhibere. Superiorem vero, hoc est, <lb/>
+            contemplativam ligurat annus septimus , in quo <lb/>
+            jubemur a terreno opere eessare, agrum nen serere, <lb/>
+            neque vineam putare,</p>
+          <p>22. Ut terram possessionis nostrae sabbatizare <lb/>
+            Sabbata sua permittamus, hoc est, qui dudum servi- <lb/>
+            vimus mundo, qui in sex diehus factus est, et ejns <lb/>
+            actibus occupati fueramus, tandem ad Dei servitium <lb/>
+            conversi, et a sollicitudine sæculi hujus, et mundi <lb/>
+            onoribus liberi, in Deo sabbatizare, id est, mente <lb/>
+            quiescere valeamus,</p>
+          <p>23. Ad activæ vitae perseverantiam pertinet hoc, <lb/>
+            quud animalia illa per quæ signantur sancti prædica­ <lb/>
+            tores in libro Ezechielis prophetæ, ibant, et non re­ <lb/>
+            vertebantur. In eo autem quod ibant, et reverteban­ <lb/>
+            tur, pertinet ad contemplativæ vitæ mensuram' irt
+            <milestone unit="PLSection" n="8"/><lb/>
+            qua dum quisque intendit, sua reverberatus infirmi­ <lb/>
+            tale, flectitur, atque iterum renovata intentione ad <lb/>
+            ea unde descenderat rursus erigitur. Quod fieri in <lb/>
+            activa vita non potest; de qua si quisque reflectat <lb/>
+            vel ad modicum, statim vitiorum excipi ur luxu.</p>
+          <p>24. SUperiorem vitam, , id est, intellectualem in­ <lb/>
+            nuunt alæ eorumdem animalium, hoc est, sanctorum <lb/>
+            virorUm, per quae ad alta, id est, ad coelestia su­ <lb/>
+            blevantur; actualem vero designant manus eorum <lb/>
+            aiis subter positæ ob hoc, quia contemplatio super- <lb/>
+            eminet actioni, actio vero subsequitur contempla­ <lb/>
+            tionem.</p>
+          <p>25. Activam igitur vitam mystice figurant sex cu­ <lb/>
+            biti in calamo illo, ex quo propheta Ezechiel omne <lb/>
+            ædificium illud spirituale mensurari conspexit. Gon­ <lb/>
+            templativam vero exprimit palmus, qui supra sex <lb/>
+            cubitos in eadein mensura spirituali additus esse <lb/>
+            perhibetur.</p>
+          <p>26. Hoc ideo, quia activa actio præsenti in vita
+            <milestone unit="PLSection" n="6"/><lb/>
+            habet perfectionem suam; contemplativa autem hic <lb/>
+            intipit, sed in futuro perficitUr; et idcirco noh ple­ <lb/>
+            num cubitum, sed quasi medium d6 futura contem- <lb/>
+            planone praesenti in vita attingit.</p>
+          <p>27. Activam vitam mystice significavit Lia uxor <lb/>
+            Jacob, quæ licet fecunda foret in prole, tamen lippis <lb/>
+            erat oculis, quia actualis actio, quamVis in binis ope­ <lb/>
+            ribus plurimos filios generet, tamen præ sollicitudine <lb/>
+            sæculi hujus ea qua Dei sunt clare cernere non valet.</p>
+          <p>28. Contemplativam vero vitam significavit Ra­ <lb/>
+            chel, quiæ sterilis iu Illis suis esse perhibetur, sed <lb/>
+            tamen pura facie, quia contemplativa vita, in quan­ <lb/>
+            tum a mundi actibus libera, tantum in Dei contem­ <lb/>
+            platione perspicua fit. Quam comparationem et de <lb/>
+            Phenenna et Anna, et de Maria ei Martha, strenuus <lb/>
+            lector conjicere potest.</p>
+          <p>29. Sciendum vero est quod OMnis conversus ad <lb/>
+            Deum, prius per activam vitam, hoc est, simplicem <lb/>
+            actionem, exhaUrire debet pristina vitia, quæ se illi <lb/>
+            in via Dei opponunt, et sic demum ad contemplatio-
+            <milestone unit="PLSection" n="D"/><lb/>
+            nem surgere; qualiter deFaecatus ab omni fæce pec­ <lb/>
+            caminum, mundo corde, et justo corpore, ea quæ Dei <lb/>
+            sunt libere valeat speculari.</p>
+          <p>30. Nam qui per simplicem actionem ad bene <lb/>
+            operanduih necdum idoneus est, nequaquam se ad <lb/>
+            contemplationem extendere debet, ne forte 340 <lb/>
+            dum indiscrete inchoare appetit quod perseverare <lb/>
+            non valet, lapsus deficiat, et ea quæ renuntiavit rur­ <lb/>
+            sus repetat, et fiant novissima pEjora prioribus.</p>
+          <p>31. Hoc quippe significat quod Veritas universos <lb/>
+            infirmos mente ab hac intentione salubriter com­ <lb/>
+            pescens, ait : Quod si oculus tum dexter scandalizat <lb/>
+            te, per quem signatur vita contemplativa, erue eum, <lb/>
+            et projice abs te (Matth. v, 29). Duo quippe oculi in <lb/>
+            facie, activa vita, et contemplativa in homine.</p>
+          <p>32. Qui igitur per contemplationem docebat erro­ <lb/>
+            rem, melius eat, si, evulso contemplationis oculo, <lb/>
+            servet sibi unum vitæ actualis obtutum, ul sit utilius <lb/>
+            illi per simplicem actionem ire ad vitam, quam per <pb n="1247"/>
+            
+            <milestone unit="PLSection" n="A"/><lb/>
+            contemplationis errorem mitti in gehennam inexstin­ <lb/>
+            guibilem.</p>
+          <p>53. Hoc rursus idem Dominus in eo quem a le­ <lb/>
+            gione dæmonum curavit ostendit, cum illum se sequi <lb/>
+            volentem prohibuit, dicens : Vade in domum tuam, <lb/>
+            et narra quanta libi fecerit Deus (Matlh. ix, 6); hoc <lb/>
+            mystice exprimens, quia qui multis vitiis adhuc no­ <lb/>
+            xius est, Deum sequi per contemplationem non po­ <lb/>
+            test.</p>
+          <p>34. Hoc etiam lex figuraliter.praecipit, cum dicit: <lb/>
+            Si quis ædificavit domum novam et non dedicavit eam, <lb/>
+            vadat, et revertatur in domum suam, ne forte moriatur <lb/>
+            in bello, et alius homo dedicet eam. Quis eat homo qui <lb/>
+            plantavit vineam, et necdum fecit cam esse communem, <lb/>
+            ex qua vesci possit? Vadat, ei revertatur in domum <lb/>
+            suam (Deut. xx, 5), et caetera.</p>
+          <p>35. Id est, qui adhuc per simplicem vitam neque <lb/>
+            se optime regere novit, neque domui suae prxesse
+            <milestone unit="PLSection" n="B"/><lb/>
+            scit, ad spiritualem malitiam, hoc est, ad sacerdotale <lb/>
+            ministerium nequaquam conspirare dehebit : ne forte <lb/>
+            per ignaviam mentis, et vitam reprobam et ipse pe-
+            <milestone unit="PLSection" n="A"/><lb/>
+            reat, et caeteris se sequentious exemp.um perditionis <lb/>
+            relinquat.</p>
+          <p>36. De talibus ait Apostolus : Qui enim domui suæ <lb/>
+            præesse nescit, quomodo Ecclesiæ Dei diligentiam <lb/>
+            habebit? Non neophytum. ne in superbiam elatus in <lb/>
+            judicium incidat diaboli (I Tim. III, 5, G).</p>
+          <p>37. Sciendum vero est quod activa actio ad obti­ <lb/>
+            nendam vitam si recte, ut decet, teneatur, absque <lb/>
+            contemplativa, id est, absque rerum remuneratione <lb/>
+            sibi sufficit, etiam si cuncta quae habet renuntiare <lb/>
+            non valcat. Contemplativa autem, quousque mortali­ <lb/>
+            ter vivimus, sine activa se explicare non valet.</p>
+          <p>38. Nemo quippe tam perfecte in hac vita in Dei <lb/>
+            contemplatione suspensus vivere potest, ut saltem <lb/>
+            propter carnis infirmitatem et fraternam compassio­ <lb/>
+            nem ad terrenam actionem descendere illi necessa­ <lb/>
+            rium non sit.</p>
+          <p>39. Quamobrem activa vita hic habet inchoatio­ <lb/>
+            nem, et finem; contemplativa autem in hac vita in-
+            <milestone unit="PLSection" n="B"/><lb/>
+            cipit, sed in futura percipitur [Forte, perficitur] Et <lb/>
+            ideo non ante mortem carnis, sed post mortem ad <lb/>
+            id quod ardenter diligit pervenire potest.</p>
+        </div>
+        
+        </body>
+  </text>
+</TEI>

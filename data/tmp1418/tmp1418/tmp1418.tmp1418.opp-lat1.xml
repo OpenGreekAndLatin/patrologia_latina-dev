@@ -1,0 +1,1466 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title>Patrologiae Cursus Completus. Series Latina (PL)</title> 
+        <sponsor>University of Leipzig</sponsor>
+        <funder>European Social Fund Saxony</funder>
+        <principal>Gregory Crane</principal>
+        <respStmt>
+          <persName xml:id="Jouve">Jouve</persName>
+          <resp>OCR-ed, corrected and encoded the text</resp>
+        </respStmt>
+        <respStmt>
+          <persName>Greta Franzini</persName>
+          <resp>Project Manager (University of Leipzig)</resp>
+        </respStmt>
+        <respStmt>
+          <persName>Simona Stoyanova</persName>
+          <resp>Project Assistant (University of Leipzig)</resp>
+        </respStmt>
+        <respStmt>
+          <persName>Bruce Robertson</persName>
+          <resp>Technical Advisor (Mount Allison University)</resp>
+        </respStmt>
+      </titleStmt>
+      
+      <publicationStmt>
+        <authority>University of Leipzig</authority>
+        <idno type="filename">PL83.xml</idno>
+        <availability>
+          <licence target="https://creativecommons.org/licenses/by-sa/4.0/">Available under a Creative Commons Attribution-ShareAlike 4.0 International License</licence>
+        </availability>
+        <date>2014</date>
+        <publisher>University of Leipzig</publisher>
+        <pubPlace>Germany</pubPlace>
+      </publicationStmt>
+      
+      <sourceDesc>
+        <listBibl xml:lang="la">
+          <biblStruct>
+            <monogr>
+              <editor>
+                <persName>
+                  <name xml:lang="fr">Jacques Paul Migne</name>
+                </persName>
+              </editor> 
+              <author ref="urn:cite:perseus:author.771">Isidorus Hispalensis</author>
+              <title>Differentiarum Sive De Proprietate Sermonum Libri Duo</title>
+              <title>Allegoriae Quaedam Sacrae Scripturae</title>
+              <title>De Ortu Et Obitu Patrum Qui In Scriptura Laudibus Efferuntur</title>
+              <title>In Libros Veteris Ac Novi Testamenti Proemia</title>
+              <title>Liber Numerorum Qui In Sanctis Scripturis Occurrunt</title>
+              <title>De Veteri Et Novo Testamento Quaestiones</title>
+              <title>Mysticorum Expositiones Sacramentorum Seu Quaestiones In Vetus Testamentum</title>
+              <title>Appendix Ad Libros Regum</title>
+              <title>De Fide Catholica Ex Veteri Et Novo Testamento Contra Judeos</title>
+              <title>Sententiarum Libri Tres</title>
+              <title>De Ecclesiasticis Officiis</title>
+              <title>Synonyma De Lamentatione Animae Peccatricis</title>
+              <title>Regula Monachorum</title>
+              <title>Epistolae</title>
+              <title>De Ordine Creaturarum Liber</title>
+              <title>De Natura Rerum Ad Sisebestum Regem Liber</title>
+              <title>Chronicon</title>
+              <title>Historia De Regibus Gothorum. Wandalorum Et Suevorum</title>
+              <title>De Viris Illustribus Liber</title>
+              <title>Carmina [Ascripta]</title>
+              <title>Chronica Regum Visigothorum (Incertus)</title>
+              <title>Expositio In Canticum Canticorum Salomonis [Incertus]</title>
+              <title>De Conflictu Vitiorum Et Virtutum (Incertus)</title>
+              <title>Expositio In Missa (Incertus)</title>
+              <title>Sententiarum Liber Quartus (Incertus)</title>
+              <title>Exhortatio Humilitatis (Incertus)</title>
+              <title>Testimonia Divinae Scripturae Et Patrum (Incertus)</title>
+              <title>Sermones (Incertus)</title>
+              <title>De Ecclesiasticis Dogmatibus (Incertus)</title>
+              <title>Sentantiae Differentiarum De Activa Vita Atque Contemplativa [Incertus]</title>
+              <title>Exhortatio Poenitendi Cum Consolatione Et Misericordia Dei [Incertus]</title>
+              <title>Lamentum Poenitantiae (Incertus)</title>
+              <title>Oratio Contra Insidias Diaboli (Incertus)</title>
+              <title>Liber De Ortu Et Obitu Patrum Incertus</title>
+              <title>Liber De Numeris (Incertus)</title>
+              <title>Glossae in Sacram Scripturam</title>
+              <title>Differentiarum, sive de Proprietate Sermonum, Liber</title>
+              <title>Liber Glossarum</title>
+              <imprint>
+                <publisher>Garnier</publisher>
+                <pubPlace>Paris</pubPlace>
+                <date>1850</date>
+              </imprint>
+              <biblScope unit="volume">83</biblScope>
+            </monogr>
+            <monogr>
+              <author>Auctor Incertus</author>
+              <title>Archiepiscopi Toletani Veteres</title>
+              <title>Chronologia Gothicorum Regum (Ex Codice Regio Vaticano)</title>
+              <imprint>
+                <publisher>Garnier</publisher>
+                <pubPlace>Paris</pubPlace>
+                <date>1850</date>
+              </imprint>
+              <biblScope unit="volume">83</biblScope>
+            </monogr>
+            <ref target="http://hdl.handle.net/2027/pst.000020950231">HathiTrust</ref>
+            
+          </biblStruct>
+        </listBibl>
+      </sourceDesc>
+      
+    </fileDesc>
+    <encodingDesc>
+      <p>The following text is encoded in accordance with EpiDoc standards and with the
+        CTS/CITE Architecture.</p>
+      <refsDecl n="CTS">
+        <cRefPattern n="paragraph" matchPattern="(.+).(.+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div/tei:div[@n='$1']/tei:p[@n='$2'])"/>
+        <cRefPattern n="letter" matchPattern="(.+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div/tei:div[@n='$1'])"/>
+      </refsDecl>
+    </encodingDesc>
+    
+    <profileDesc>
+      <langUsage>
+        <language ident="la">Latin</language>
+      </langUsage>
+    </profileDesc>
+    
+</teiHeader><text>
+    <body>
+    <div type="edition" n="urn:cts:latinLit:tmp1418.tmp1418.opp-lat1">
+          <head>
+            <title type="main">SANCTI ISIDORI HISPALENSIS EPISCOPI EPISTOLÆ.</title>
+          </head>
+          <p>
+            <milestone unit="PLSection" n="D"/></p>
+          
+      <div n="1" subtype="letter" type="textpart">
+      <ab>
+            <title type="sub">EPISTOLA PRIMA.</title>
+          </ab>
+          <ab>
+            <title type="sub">ISIDORI LEUDEFREDO EPISCOPO.</title>
+          </ab>
+          <ab>
+            <title type="sub">557 Domino meo Dei servo Leudefredo episcopo Isidorus.</title>
+          </ab>
+          <p n="1">1. Perlectis sanctitatis tuæ litteris, gavisus sum
+            <milestone unit="PLSection" n="D"/><lb/>
+            quod optatam salutem tuam earum relatu cognovi, <lb/>
+            de iis autem quæ in consequentibus insinuare eloquii <lb/>
+            tui sermo studuit, gratias ago Deo, quod sollieitudi­ <lb/>
+            nem officii pastoralis impendis, et qualiter ecclesia­ <lb/>
+            stica officia ordinentur perquiris. Et licet omnia <note type="footnote"> EPIST. i. N. 1. Citatur a Graliano, dist. 25. Pro <lb/>
+            fraterno, a!. paterno. PEl' EZ. </note><note type="footnote"> 1 bid. Multa quæ ad h;mc epistolam illustrandam <lb/>
+            periinere POS--Ullt, explicata jam sunt in IsitlorianiR, <lb/>
+            cap. 73, num. 5 et seqq., ubi etiam suspiciones quo­ <lb/>
+            rumdam exposui, qui dubitarunt au epistola hæc ge­ <lb/>
+            nuina sit Isidori. Relegendi etiam sunt libri Officio­ <lb/>
+            rum sancti isidori,qui in eode inargumeiito versantur. <lb/>
+            Epistolas, ut exstant iI Editione rialana, quam se­ <lb/>
+            quimur, collegit, lIolisquc uOlluullis illustravit vir in <lb/>
+            primis doctus Joannes Haplis'a Perez. AUKV </note> <pb n="895"/>
+            
+            <milestone unit="PLSection" n="A"/><lb/>
+            prudentiæ vestræ sint cognita, tamen quia affectu <lb/>
+            fraterno me consulis, ex parte qua valeo expediam, <lb/>
+            et de omnibus Ecclesiae gradibus, quid ad quem <lb/>
+            pertincat eloquar.</p>
+          <p n="2">2. Ad ostiarium namque pertinent claves ecclesiae, <lb/>
+            ut claudat et aperiat templum Dei; et omnia quae <lb/>
+            sunt intus extraque custodiat, fideles recipiat, ex­ <lb/>
+            communicatos et infideles rejiciat.</p>
+          <p n="3">3. Ad acolythum pertinet praeparatio luminario. <lb/>
+            rum in sacrario, ipse cereum portat, ipse suggesta, <lb/>
+            pro Eucharistia subdiaconis calicem praeparat.</p>
+          <p n="4">4. Ad exorcistam pertinet exorcismos memoriter <lb/>
+            retinere, manus super energumenos et catechumenos <lb/>
+            exorcizandos imponere.</p>
+          <p n="5">5. Ad psalmistam pertinet officium canendi, di.
+            <milestone unit="PLSection" n="B"/><lb/>
+            cere benedictiones , psalmos, laudes , sacrificii <lb/>
+            responsoria, et quidquid pertinet ad cantandi peri­ <lb/>
+            tiam.</p>
+          <p n="6">558 6. Ad lectorem pertinet lectiones pronuu­ <lb/>
+            tiare, et ea quae prophetae annuntiaverunt populis <lb/>
+            prædicare.</p>
+          <p n="7">7. Ad subdiaconum pertinet calicem et patenam <lb/>
+            ad altarium Christi deferre, et Levitis tradere, eisque <lb/>
+            administrare; urceolum quoque, et aquamanilem, et <lb/>
+            manutergium tenere, et episcopo, et presbyteris, et <lb/>
+            Levitis pro lavandis ante altarium manibus aquam <lb/>
+            praebere.</p>
+          <p n="8">8. Ad diaconum pertinet assistere sacerdotibus, <lb/>
+            et ministrare in omnibus quae aguntur in sacramen­
+            <milestone unit="PLSection" n="c"/><lb/>
+            tis Christi, in baptismo scilicet, in chrismate, in pa­ <lb/>
+            tena et calice; oblationes inferre, et disponere in <lb/>
+            altario, componere mensam Domini, atque vestire, <lb/>
+            crucem ferre, praedicare Evangelium et Apostolum. <lb/>
+            Nam sicut lectoribus Vetus Testamentum, ita diaco­ <lb/>
+            nibus Novum prædicare praeceptum est: ad ipsum <lb/>
+            quoque pertinet officium precum, recitatio nominum ; <lb/>
+            ipse præmonet aures ad Dominum habere, ipse hor­ <lb/>
+            tatur clamore, pacem ipse annuntiat.</p>
+          <p n="9">9. Ad presbyterum pertinet sacramentum corporis <lb/>
+            cl sanguinis Domini in altari Domini conticere, ora­ <lb/>
+            tiones dicere, et benedicere populum.</p>
+          <p n="10">10. Ad episcopum pertinet basilicarum consecratio,
+            <milestone unit="PLSection" n="A"/><lb/>
+            unctio altaris, confectio chrismatis, ipse praedicta <lb/>
+            officia et ordines ecclesiasticos constituit, ipse sa­ <lb/>
+            eras virgines benedicit; et dum praesit unusquisque <lb/>
+            in singulis, hic tamen est in cunctis. Hi sunt ordines <lb/>
+            et ministeria clericorum , quætamen auctoritate <lb/>
+            pontificali 559 in archidiaconi cura, et primicerii, <lb/>
+            ac thesaurarii sollicitudine dividuntur.</p>
+          <p n="11">11. Archidiaconus enim imperat subdiaconibus et <lb/>
+            Levitis, ad quem ista ministeria pertinent : ordinatio <lb/>
+            vestiendi altaris a Levitis, cura incensi, et sacrificii <lb/>
+            deferendi ad ahare, cura subdiaconorum de subin­ <lb/>
+            ferendis ad altare in sacrificio necessariis, solliciLudo <lb/>
+            quis Levitarum Apostolum et Evangelium legat, <lb/>
+            quis preces dicat, seu responsorium in Dominicis <lb/>
+            diebus, aut solemnitatum. Sollicitudo quoque paro-
+            <milestone unit="PLSection" n="B"/><lb/>
+            chitanorum, et ordinatio, et jurgia ad ejus pertinent <lb/>
+            curam; pro reparandis diœcesanis basilicis ipse sug­ <lb/>
+            gerit sacerdoti; ipse inquirit parochias cum jussione <lb/>
+            episcopi, et ornamenta, vel res basilicarum parochi. <lb/>
+            tanarum, gesta libertatum ecclesiasticarum episcopo <lb/>
+            idem defert.</p>
+          <p n="12">12. Collectam pecuniam de communione ipse ac­ <lb/>
+            cipit, et episcopo ipse defert, et clericis partes pro­ <lb/>
+            prias ipse distribuit. Ab archidiacono nuntiantur epi­ <lb/>
+            scopo excessus diaconorum ; ipse denuntiat sacerdoti <lb/>
+            in sacrario jejuniorum dies, atque solemnitatum; ab <lb/>
+            ipso publice in ecclesia prædicantur. Quando amem <lb/>
+            archidiaconus absens est, vicem ejus diacouus se­ <lb/>
+            quens adimplet.</p>
+          <p n="13">
+            <milestone unit="PLSection" n="c"/>13. Ad primicerium pertinent acolythi, et exor­ <lb/>
+            cistæ, psalmistæ, atque lectores, signum quoque <lb/>
+            dandum pro officio clericorum, pro vitae honestate, <lb/>
+            et officium meditandi, et peragendi sollicitudo. Le­ <lb/>
+            ctiones, benedictiones, psalmum, laudes, offertorium, <lb/>
+            et responsoria quis clericorum dicere debeat; ordo <lb/>
+            quoque et modus psallendi in choro pro solemnitate <lb/>
+            et tempore; ordinatio pro luminariis deportandis; si <lb/>
+            quid etiam necessariuni pro reparatione basilicarum, <lb/>
+            quae sunt in urbe, ipse denuntiat sacerdoti; epistolas <lb/>
+            episcopi pro diebus jejuniorum parochitanis per <lb/>
+            ostiarios iste dirigit ; clericos quos delinquere co­ <lb/>
+            gnoscit iste distringit : 560 quos vero emendare <note type="footnote"> 9. In Codic. Vat. 378X, ut in Isitlorianis, loc. cit., <lb/>
+            n. 10, iiulir.iivi, qu:ndam proferuntur ex dictis beati <lb/>
+            . </note> 
+            <milestone unit="PLSection" n="D"/><note type="footnote"> J,idm'i ad LlIude(redulU efJi.('Op'''11. quæhic exscri­ <lb/>
+            bere juvat potius quam ad appendices rejicere. « Ad <lb/>
+            presbyteros pertinet "acramentum corporis et san­ <lb/>
+            guinis Domini altari Dei conficere, et oralioneln di­ <lb/>
+            cere, et benedicere dona Dei. haque per omnes <lb/>
+            horas canonicas indeclinabililer in sancta eclesia <lb/>
+            perseverent, ut opus Dei digne et infucate perficia­ <lb/>
+            mur ab eo cui &lt; ominillilur, verens s('lIlentia.u illius <lb/>
+            Sapientis, ubi dicitur : Al alediclus qui opus IJe. ne­ <lb/>
+            gligenter fecerit; atque præceptis episcopi sui oblem­ <lb/>
+            perando, non aliqua accidia aut scurrilitate torpeant, <lb/>
+            sed reminiscantur (.nod labia sacerdotis cu iodiunt <lb/>
+            scientiam. Diehent etiam assidue in eccle..ia stare, ac <lb/>
+            providere ne desit Eucharistia Christi propter infir­ <lb/>
+            mos. De infirmis quoque debent providere, ne forte <lb/>
+            sine c&lt; nfessione vel confirmatione sanguinis Domnini <lb/>
+            nostri Jesu Ch.'isti moriantur. Confessiones autem <lb/>
+            peccantium relisiosissinle recipere, ci exinde per <lb/>
+            jussionem pontificis magna illis debet esse cura. Ad <lb/>
+            Christianos quoque et infantes bapiizaudos, et ad </note> 
+            <milestone unit="PLSection" n="D"/><note type="footnote"> succurrendum omnia a presbyteris in ecde ia fiant.. <lb/>
+            H vc. ul dixi in Isidorianis, addita sunt. Isidoro, non <lb/>
+            minus quam ea quae de archidiaconis, ad num. 2, <lb/>
+            Perezius elst'ripsit. AREV. </note><note type="footnote"> 11. A!., refert. pro defert. PEREZ. </note><note type="footnote"> ii. Post ;,rchidiacolli oflicium ante primicerium <lb/>
+            in uno Complutensi Codice, leguntur haec : Archipre­ <lb/>
+            sbyter vero se esse sub archidiacono, ejusque præceptis, <lb/>
+            sicut episcopi sui, scial obedire; et fq,(()d specialiter ad <lb/>
+            eju* ministerium pertiner) super omnes .presbyteros iri <lb/>
+            ordine positos curamagere, et assidue in ecclesia stare, <lb/>
+            et quundo episcopi sui absentia contigerit ipse vice eyis <lb/>
+            missarum soiemvi i celebret, et colll'cla. dicat, vel cui <lb/>
+            ipse injunxerit. Quæ in reliquis Codicibus noi. sunt, <lb/>
+            neque ex Isidoro, sed ex conrilio Toletano ab aliis <lb/>
+            citantur. Vid. notat. ad GraLian. et fragmenta con­ <lb/>
+            cil. Tolelan. PEREZ. </note><note type="footnote">i5. At., ca,,'andi, pro n.editandi. PEREZ. </note> <pb n="897"/>
+            
+            <milestone unit="PLSection" n="A"/><lb/>
+            non valet, corum excessus ad agnitionem episcopi <lb/>
+            defert. Basilirarios ipse constituit, et matriculas ipse <lb/>
+            disponit. Quando anea primicerius absens est, ea, <lb/>
+            quæ praedicta sunt, ille exsequitur, qui ei aut loco <lb/>
+            est proximus, aut eruditione in his expediendis in­ <lb/>
+            tentus.</p>
+          <p n="14">14. Ad thesaurarium pertinet bnsilicarii et ostiarii <lb/>
+            ordinatio, incensi eura, chrismatis cura conficiendi, <lb/>
+            baptisterii ordinandi, præparatio sacrificii de his <lb/>
+            quæ immolanda sunt; ad eum venient de parochiis <lb/>
+            pro chrismate; cereos et oblationes altaris ipse ac­ <lb/>
+            cipit a populo; ipse colligit per ecclesias cereos in <lb/>
+            festivitatibus. Ad eum pertinent ornamenta, et ve­ <lb/>
+            stimenta altaris, quidquid in usu templi est, sub ejus <lb/>
+            ordinatione existit, vela et ornamenta basilicarum
+            <milestone unit="PLSection" n="B"/><lb/>
+            quae in urbe sunt, et non habent presbyterum, ipse <lb/>
+            custodit. De candelis autem et cereolis quotidianis <lb/>
+            quidquid superest in basilicis, basilicarius per sin­ <lb/>
+            gulos menses huic deportat. Ex quibus thesaurarius <lb/>
+            dat quartam basilicario, ires reliquas partes divident <lb/>
+            æqualiter sibi cum. primicerio, et presbytero, qui <lb/>
+            missam celebrat in eamdem basilicam.</p>
+          <p n="15">15. Ad oeconomum pertinet reparatio basilicarum, <lb/>
+            atque constructio, actiones ecclesiæ in judiciis vel in <lb/>
+            proferendo, vel in respondendo, tribuli quoque ac­ <lb/>
+            ceptio, et rationes eorum quae inferuntur. Cura agro­ <lb/>
+            rum et culturae vinearum, causae possessionum, et <lb/>
+            servitialium stipendia clericorum, viduarum, et de­ <lb/>
+            votarum pauperum ; dispensatio vestimenti, et viclus <lb/>
+            domesticorum. clericorum; servitialium quoque, et
+            <milestone unit="PLSection" n="c"/><lb/>
+            artificum, quae omnia cum jussu et arbitrio sui epi­ <lb/>
+            scopi ab eo implentur.</p>
+          <p n="16">16. Haec sunt quae vel a majoribus per officiorum <lb/>
+            ordines distributa sunt, vel consuetudine ecclesiarum <lb/>
+            in unumquemque servata. Nec aliquid ex his nostri <lb/>
+            judicii deputes, nisi quod aut ratio docuit, aut vetu­ <lb/>
+            statis antiquitas sanxit.</p>
+          <p n="17">17. Patrem autem monasterii, unde innotuistis, <lb/>
+            illum præferri oportet, quem sancta vita et probitas <lb/>
+            morum commendat, quique dum subjectus exstitit, <lb/>
+            fraus in illo non fuii. Huic juste gratia cumulatur, <lb/>
+            dicente Domino : Quia in pauca fuisti fidelis, in multa
+            <milestone unit="PLSection" n="A"/><lb/>
+            te constituam (Matth. XXV, 21). Qui vero adhuc sub <lb/>
+            regimine positus improbe vixit, 561 et fratribus <lb/>
+            fraudem facere non pertimuit, hie prælatus licenter <lb/>
+            ac libere majora et deteriora committet, dum se iD <lb/>
+            potestate et libertate aspexerit.</p>
+          <p n="18">18.. De talibus enim dicit Apostolus: Sed vos inju­ <lb/>
+            riam facitis, et hoc fratribus. An nescitis quia iniqui <lb/>
+            regnum Dei non possidebunt (I Cor. VI, 8)? Sed no­ <lb/>
+            bis ista sufficiat dicere tibi, quod Deo dignum exi­ <lb/>
+            stimas adimple. Post haec autem precari tuam sancti­ <lb/>
+            tatem non desino, ut pro me intercessor apud Domi­ <lb/>
+            num existas, ut, quia meo vitio lapsus sum, per te <lb/>
+            remissionem consequar peccatorum.</p>
+      </div>
+        
+        <div n="2" subtype="letter" type="textpart">
+          <ab>
+            <title type="sub">EPISTOLA II.</title>
+          </ab>
+          <ab>
+            <title type="sub">ISIDORI BRAULIONI ARCHIDIACONO.</title>
+          </ab>
+          <p>
+            <milestone unit="PLSection" n="B"/></p>
+          <ab>
+            <title type="sub">In Cbristo charissimo, et dilectissimo filio, Braulioni archidiacono, Isidorus.</title>
+          </ab>
+          <p n="1">1. Dum amici litteras, charissime fili, suscipis, eas <lb/>
+            pro amico amplecti non moreris. Ipsa est enim se­ <lb/>
+            cunda inter absentes consolatio, ut si non est præ­ <lb/>
+            sens qui diligitur, pro eo litterae amplexentur. Dire­ <lb/>
+            ximus tibi annulum propter nostrum animum, et pal­ <lb/>
+            lium pro amicitiarum nostrarum amictu, unde anti­ <lb/>
+            quitas hoc traxit vocabulum. Ora igitur pro me, in­ <lb/>
+            spiret tibi Dominus ut merear adhuc in vita videre te. <lb/>
+            Et quem mœstificasti abeundo, aliquando iterum <lb/>
+            laetifices te præsentando. Quaternionem regularum <lb/>
+            per Maurentionem primicerium direximus. De cæte­ <lb/>
+            ro autem opto tuam semper cognoscere salutem, di­ <lb/>
+            lectissime mi domine, et charissime fili.</p>
+          <p>
+            <milestone unit="PLSection" n="c"/></p>
+        </div>
+          
+          <div n="3" subtype="letter" type="textpart">
+          <ab>
+            <title type="sub">EPISTOLA III.</title>
+          </ab>
+          <ab>
+            <title type="sub">ISIDORI BRAULIONI ARCHIDIACONO.</title>
+          </ab>
+          <ab>
+            <title type="sub">562 In Christo cbarissimo et dilectissimo fratri Braulioni archidiacono Isidorus.</title>
+          </ab>
+          <p n="1">1. Quia non valeo te frui oculis carnis, perfruar <lb/>
+            saltem alloquiis, ut ipsa amici sit consolatio incolu­ <lb/>
+            mem litteris cognoscere quem cupio videre. Utrum­ <lb/>
+            que bonum esset, si liceret ; sed vel mente de te re­ <lb/>
+            ficiar, si corporali obtutu non valeo. Dum pariter es­ <lb/>
+            semus, postulavi te, ut mihi decadem sextam sancti <lb/>
+            Augustini transmitteres; posco ut quoquomodo me <lb/>
+            cognitum ei facias. <note type="footnote"> -I,. In eamdem bnsilicam; at, in eadem basilica. <lb/>
+            j AREV..... </note><note type="footnote"> 17. De electione abbatis monasterii agitur in Re-</note> 
+            <milestone unit="PLSection" n="D"/><note type="footnote"> gula nlonach.. cap. 't, ARf.V </note><note type="footnote"> Epist. II. N. I. Qualerniolleut refjuhmim. Intelli­ <lb/>
+            gh. ut puto, el dixi in :sidorianist cap. ii, num. 1, <lb/>
+            regulam, quam pro monachis Isidol'us scripsit. In <lb/>
+            Editione epistolar um Isidori ad Braulioneln apud IUs. <lb/>
+            cum haec e..t ordine secunda, cui ejiisdem Kisci h;iic <lb/>
+            apponimur no'a : « Per Maurentionem prinzicier;um. <lb/>
+            Sic Editi quos viderim; lego tamen primiclerum, aut <lb/>
+            primicerium. De primicleri dignitate mentio fit iri <lb/>
+            eoncilio Enlerilensi, cap. 10 et ł 4, et in Toletnno <lb/>
+            xv, in subscriptionibus, et in Compostellano, cap. i. <lb/>
+            Ad huju8 officium spectabat c blationes clericis dis­ <lb/>
+            tribuere secundum uniuscujusque dignitatem, et virtu­ <lb/>
+            tem. De primiceriatu vero videsis lsidoiutn opist. ad <lb/>
+            Laudefredum Cordubensem episcopuin. » In hac <lb/>
+            epiSlola, num. 13, vocatur primicerius, alii dicunt <lb/>
+            primiclerum, alii prinuclerium, alii primicerirun. Pri- <lb/>
+            Dia nominis origo videtur esse primicerius; iia enim <lb/>
+            dicebatur primus cujusque c.assis, quasi primus in <lb/>
+            ceram, seu tabulam relatus. Plura de his Ducangius. <lb/>
+            AREV.,.. </note> 
+            <milestone unit="PLSection" n="D"/><note type="footnote"> EPIST. III. N. 1. Decadem sextam. Bollandiani, tom: <lb/>
+            II, Marlii, pag. 658. divinari facile non posse dicunt <lb/>
+            quwnam sancti Augustini opuscula in ista decade <lb/>
+            continerentur, cum obliterata sit ejusmodi divisionis <lb/>
+            memoria. Sed recte reponit Riscus non esse dubitan­ <lb/>
+            dum sextam Augustini decadem esse Augustinianae <lb/>
+            explanationis in Psahllos certam partem, earn nempe <lb/>
+            quæ complectimur a psalrno LI ad eX. Nam totum Au­ <lb/>
+            gustini commentarium in decades fuisse aliquando <lb/>
+            distributum, et Cassiodorus iu suo prologo ad Psal­ <lb/>
+            mos testatur, et aliquot Inss. Codices ostendunt, ut <lb/>
+            constat ex praefatione Maurinorum ad tom. VI ope­ <lb/>
+            rum Augustini. Certe in bibliotheca Valicana exslant <lb/>
+            etiamnum nonnulli Codices, quibus per decades psal. <lb/>
+            morum explanatio sancti Augustini in eos diSlribui­ <lb/>
+            tur •et in quodam privilegio Ordonii II, apud Flo­ <lb/>
+            rezium, tom. XIV ilisp. sacr., pag. 370, fit mentio <lb/>
+            decadis psalmorum. Felix quoque, in Vita Juliani </note> <pb n="899"/>
+            </p>
+          <p n="2">
+            <milestone unit="PLSection" n="A"/>2. Misimus vobis Synonymorum libellum, non pro <lb/>
+            id quod alicujus utilitatis sit, sed quia eum volueras. <lb/>
+            Commendo autem hunc puerum, commendo et me­ <lb/>
+            metipsum, ut ores pro me misero, quia valde langueo <lb/>
+            et infirmitatibus carnis, et culpa mentis. In utroqne <lb/>
+            tuum praesidium posco, quia per me nihil mereor; <lb/>
+             <lb/>
+            de cætero pete ut dum vita comite portitori ad nos <lb/>
+            regredi fuerit opportunitas, vestris nos jubeatis lae­ <lb/>
+            tificare eloquiis.</p>
+          </div>
+          
+            <div n="4" subtype="letter" type="textpart">
+            <ab>
+            <title type="sub">EPISTOLA IV.</title>
+          </ab>
+          <ab>
+            <title type="sub">ISIDORI MASSONÆ EPISCOPO.</title>
+          </ab>
+          <ab>
+            <title type="sub">563 Domino sancto meritisque beato Massonae episcopo Isidorus.</title>
+          </ab>
+          <p n="1">1. Veniente ad nos famulo vestro viro religioso <lb/>
+            Nicetio, litteras honorificentiæ vestræ nobis detulit,
+            <milestone unit="PLSection" n="B"/><lb/>
+            in quibu8 agnilio salutis vestrae nihilominus perpa­ <lb/>
+            tuit maxime per eum portitorem, cujus lingua epi­ <lb/>
+            Stola vivens erat. Unde pro salute vestra gratiarum <lb/>
+            actionibus Deo nostro rcpensis, in quantum valuit <lb/>
+            mediocritas nostra vice inquisitionis studio poscentes <lb/>
+            meritorum vestrorum suffragiis divinis vos commen­ <lb/>
+            dare conspectibus.</p>
+          <p n="2">2. Verum quod sequenter in epistolis venerabilis <lb/>
+            fraternitaS vestra innotuit, nulla est iri hujusmodi <lb/>
+            sententiis decretorum diversitas iiitelligenda, quod <lb/>
+            alibi legitur in lapsu corporali restaurandum honoris <lb/>
+            gradum post pœnitentiam, alibi, post hujusmodi de­ <lb/>
+            lictum, nequaquam reparandum antiqui ordinis <lb/>
+            meritum.</p>
+          <p n="3">3. Haec enim diversitas hoc modo distinguitur: illos
+            <milestone unit="PLSection" n="C"/><lb/>
+            enim ad pristinos officii gradus redire canon præci­ <lb/>
+            pit, quos pœnitentiæ praecessit satisfactio, vel digna <lb/>
+            peccatorum confessio at contra ii qui iteque a vitio <lb/>
+            corruptionis emendantlur, atque hoc ipsum carnale <lb/>
+            delictum. quod admitlunt etiam vindicAre quadam <lb/>
+            superstitiosa temeritate nitUntur, nec gradum utique <lb/>
+            honoris, nec gratiam communionis recipiunt.</p>
+          <p n="4">4. Ergo ita est utraque dirimenda sententia, ut
+            <milestone unit="PLSection" n="A"/><lb/>
+             <lb/>
+            necesse sit illos restaurari in locum honoris, qui per <lb/>
+            poenitentiam reconciliationem 564 meruerunt divi­ <lb/>
+            nae pietatis. Hi neque immerito consequuntur adem­ <lb/>
+            ptae dignitatis statum, qui per emendationem pœni­ <lb/>
+            tentiæ recepisse noscuntur vitæ remedium. Id enim, <lb/>
+            De forte magis ambiguum sit, divinæ auctoritatis sen­ <lb/>
+            tentia confirmetur.</p>
+          <p n="5">5. Ezechiel enim propheta sub typo prævaricatricis <lb/>
+            Jerusalem ostendit post poenitentiae satisfactionem <lb/>
+            pristinum posse restaurari honorem Confundere <lb/>
+            (inquit) o Juda, et porta ignominiam tuam. Et post <lb/>
+            paululum : Et tu, inquit, et filiæ tuæ revertimini ad <lb/>
+            antiquitatem vestram (Ezech. XVI, 52). Quod dixit, <lb/>
+            confundere, ostendit post confusionem, id est, pec­ <lb/>
+            cati opus, debere quemque erubescere, et pro ad-
+            <milestone unit="PLSection" n="B"/><lb/>
+            missis sceleribus verecundam frontem hunti prostra­ <lb/>
+            tum demergere, pro eo quod dignum confusionis <lb/>
+            perpetraverit opus.</p>
+          <p n="6">6. Deinde praecipit ut portet ignominiam, id est, <lb/>
+            dehonorationem nominis, sive dignitatis, et reverta­ <lb/>
+            tur ad antiquitatem suam. Ergo dunl quisque post <lb/>
+            opera conftisionis suae confunditur, atque Ignomi­ <lb/>
+            niam depositionis suae cum humilitate portaverit; re­ <lb/>
+            vocari secundum prophetam ad prioreM Statum <lb/>
+            poterit. Item Joannes evangelista angelo EpheSi <lb/>
+            Ecclesiae inter caetera simile quiddam sCribit: Memor <lb/>
+            esto unde cecideris, et age pœnitentiam, et prima opera <lb/>
+            tua fac, alioquin veniam tibi, et movebo candelabrum <lb/>
+            tuum de loco suo (Apoc. II, 5).</p>
+          <p n="7">
+            <milestone unit="PLSection" n="C"/>7. I,. angelo Ecclesiæ praepositum utique, id est, <lb/>
+            sacerdotem ostendit, juxta Malachiam, qui dicit : <lb/>
+            Labia sacerdotis custodiunt scientiam, et lex requiriMur <lb/>
+            ex ore ejus, quia angelus Domini exercituum est (Ma­ <lb/>
+            lach. lit 7). Præpositus ergo lapsus in vitium per <lb/>
+            evangelistam monetur, ut memor sit unde ceciderit, <lb/>
+            et agat poenilentiam, et prima opera faciat, ut non <lb/>
+            moveatur candelabrum ejus. <note type="footnote"> meminit decadis vcl llecadultI psahnorullI sancti Au­ <lb/>
+            gustini. Ris('us illa verhap quoquomodo me cojtiitum ei <lb/>
+            facias, aliena e*se asserit a nienle Jsidori, etproisus <lb/>
+            inepLa. Qui enim fieri poterat ut Uraulio bidol'ulU <lb/>
+            coguitum faeerel A ugustiuo, ante duo propemodum <lb/>
+            sæcula InorLun? itaque restituenduin cens.eL, ut quo­ <lb/>
+            quomodo mihi cognitam eam (decadem) facias. Malim </note> 
+            <milestone unit="PLSection" n="D"/><note type="footnote"> autem, me cognitum ejus facias, scilicet ejus deelldis j <lb/>
+            nam cognitus pro gna..o et perito Isidoriano aevo <lb/>
+            usurpahatur, III ignatus pro ignaro. Sic lib. III Etymo. <lb/>
+            log. ,cap. 4, n. 5 : Quorum figuras noti nisi NOTI UUJUS <lb/>
+            ARTis acien.er. 4,ull'()re possunt. Et Brau,lio, in Vita <lb/>
+            sancti Isidori : Non IGNOTUS .div;lluJ'uln humanarum­ <lb/>
+            que sciefitiarum merito ait. Vide Isidoriana, cap. 3, <lb/>
+            num. 10. Verum retineri uuoque potest ",e cognitlulI <lb/>
+            ei jaciaS, ut in libro de Vir. illustr., cap. 54, quibua ill­ <lb/>
+            cogniti sumus. ,Pro decadem in Grialii Editione est <lb/>
+            decadam; sed forla*sc contra meutem Ediloris id ac­ <lb/>
+            ci d it. A R: E V </note><note type="footnote"> 2. Pro id quod; forte pro eo .quod. AREV. </note><note type="footnote"> EPIST. a... J. Massoni, .citatur hæc epist. a Gra­ <lb/>
+            tian., dipt. 50, c. Upmino sancio, et 7&gt;~), q. $, c. Hoc <lb/>
+            ipsum. Fuit autein Massona, sivc Massana, Mve Mas­ <lb/>
+            son, sive Massanus, sive Massenus, E .e'Hensis epi­ <lb/>
+            scopus, qui primus subscribit in concil. ;.tolet. III. <lb/>
+            Pro Nicetio, al.k Vincentio. Et pro perpatuit, al. ,prce• <lb/>
+            patuii9 vel apparuit. .PEREZ. </note> <note type="footnote"> 1 bid. Pro hac epistola ad Massonam, cjiisquc do­ <lb/>
+            ctrina deCensioneru adornavi in Isidorianis, cap. ':i, <lb/>
+            n. ii et seqq. In exordio satis inter se cxemplaria <lb/>
+            discrepant. ln nonnuJ'is magis aij gramniatic;c regu­ <lb/>
+            las : Veniens ad nos famulus vester vir religiosus Ati­ <lb/>
+            eeli".... detulit. Sed retineri potest cum vetustissinis <lb/>
+            mss. Veniente, etc.. ex his q'uæ dixi ad Sedulium, </note> 
+            <milestone unit="PLSection" n="D"/><note type="footnote"> lib. iv, vers. 8 : <lb/>
+            INam quidquid natura negat, se judice, præstati. <lb/>
+            Pro vice i"quisilionis, etc. alii inquisitioni vestræ tlu­ <lb/>
+            duit respondere, poscentes, etc. AREV. </note><note type="footnote"> 2. ln lapsu forporali. Quai ante hæc leguntur in <lb/>
+            quibusdam libris : Idem in canone Ancyrilahi conci- <lb/>
+            Iii, cap. 19, inserta e margine sunt, neque cniin apud <lb/>
+            Hauan., neque in aliis melioris notae Codicibus repe­ <lb/>
+            riuntur. PEREZ. ,T, </note><note type="footnote">ibid. Innoluit proMotum fecit, utalibi jam notatum. <lb/>
+            AREV. </note><note type="footnote"> 4. Alii adeptæ, pro ademptæ, et confirmalur4 pro <lb/>
+            confirmetur. AREV. </note><note type="footnote"> G. bcinde prcec pit, atu Ilic lOCUS alio atque alio <lb/>
+            luodo legitur, ettUcm tamen sensu. Opera tua ruc; vox <lb/>
+            tua nou est apud Kabiii., est tamen in vet. Cod., et, <lb/>
+            apud Auabros. PEREZ. </note><note type="footnote"> Ibid. AI.. suce 'uyeu:j cum humilitate. AREV. </note> <pb n="901"/>
+            </p>
+          <p n="8">
+<milestone unit="PLSection" n="A"/>8. Nam candelabrum doctrina sacerdotalis, vel <lb/>
+            honor potestatis, quem gestat, intelligitur, juxta <lb/>
+            quod scriptum est apud Samuelem in damnationem <lb/>
+            Heli: Oculi ejus caligaverant, nec poterant videre lu­ <lb/>
+            cernam De;, antequam exstingueretur (1, Reg. m, 2); <lb/>
+            lunerna quippe Dei fuerat, quod dignitate sacerdotali <lb/>
+            poliens, justitiæ claritate 565 fulgebat; exstinctam <lb/>
+            propheta asserit, dum ob scelera filiorum sacerdotii <lb/>
+            potestatem meritorumque lumen amisit. Candela­ <lb/>
+            brum ergo, sive lucerna sacerdotis (quæ. intelliguntur <lb/>
+            charismata honoris) tunc penitus juxta Joannem <lb/>
+            exstinguitur, vel movetur, quando post delicti casum, <lb/>
+            neglecta pœnitentia, admissa scelera non deflentur.</p>
+          <p n="9">9. Non enim dicil : Pro eo (juod cecidisti, commo­ <lb/>
+            vebo candelabrum tuum; sed, nisi pœnitentium egeris, <lb/>
+             
+            <milestone unit="PLSection" n="B"/><lb/>
+            movebo candelabrum tuum. Ergo ad quemque præpo­ <lb/>
+            situm peccantem, si prævenerit poenitentia delicti, <lb/>
+            utique sequitur veni-i, et reparatio meriti. Et in <lb/>
+            Proverbiis scriptum esi : Qui abscondit scelera sua, <lb/>
+            non dirige ur; qui vero confessus fuerit, et dercliquerit <lb/>
+            ea, misericordiam consequetur (Proverb. XXVIII, i3).</p>
+          <p n="10">10). Nam et ipsum, quod canonum censura post <lb/>
+            septem annos remeare poenitentem in statum pristi­ <lb/>
+            num præcipit, non ex electione proprii arbitrii sancti <lb/>
+            Patres, sed potius ex sententia divini judicii sanxe­ <lb/>
+            runt. Nam legitur quod Maria soror Moysi prophe­ <lb/>
+            tissa, dum obtrectationis. adversus Moysen incurris­ <lb/>
+            set delictum, illico stigmate lepræ perfusa esi; cum­ <lb/>
+            que peteret Moyses ut emundaretur, præcepit canit <lb/>
+            Deus extra castra septem diebus egredi , atque
+            <milestone unit="PLSection" n="c"/><lb/>
+            post emendationem rursus eam in castra admitti <lb/>
+            (Num XII).</p>
+          <p n="11">11. Maria ergo, soror Aaron, caro intelligitur <lb/>
+            sacerdotis, quæ dum superbiæ dedita, sordidissimis <lb/>
+            corruptionum contagiis maculatur, extra castra se­ <lb/>
+            ptem diebus, id e st, extra collegium sanctæ Ecclesiae <lb/>
+            septem annis projicitur, qui post emundationem <lb/>
+            vitiorum loci, sive pristinæ dignitatis recipit me­ <lb/>
+            ritum.</p>
+          <p n="12">12. Ecce in quantum valui, concilii Ancyritani <lb/>
+            antiquam et plenam auctoritate sententiam sacris <lb/>
+            testimoniis plane explanavi, ostendens eum posse <lb/>
+            restaurari in proprio honore, qui per pœnitentiæ <lb/>
+            satisfactionem novit propria delicta deflere: qui vero <lb/>
+            neque luget quæ gessit, sed lugenda sine ullo pudore
+            <milestone unit="PLSection" n="b"/><lb/>
+            religionis, vel timore judicii divini committit, eum <lb/>
+            nullo modo posse ad pristinum gradum restaurari. <lb/>
+            iri. In finem autem epistoæ hujus hoc adjicien­ <lb/>
+            durn putavi, ut quotiescunque in gestis conciliorum <lb/>
+            discors sententia invenitur, illius concilii magis te­ <lb/>
+            neatur sententia, cujus antiquior aut potior exstat
+            <milestone unit="PLSection" n="A"/><lb/>
+            auctoritas. Datum pridie Kal. Mart., anno tertio • <lb/>
+            regni domini nostri gloriosissimi Witerici regis.</p></div>
+          
+              <div n="5" subtype="letter" type="textpart">
+              <ab>
+            <title type="sub">EPISTOLA V.</title>
+          </ab>
+          <ab>
+            <title type="sub">ISIDORI . HELLADIO ALIISQUE EPISCOPIS.</title>
+          </ab>
+          <ab>
+            <title type="sub">566 .bominis meis et Dei servis Hellando cæterisque qui cum eo sunt coadunati episcopis Isidorus.</title>
+          </ab>
+          <p n="1">1. Afficimur lacrymis, compungimur stimulis pec­ <lb/>
+            catorum nostrorum, cum ruinam tratis agnoscimus, <lb/>
+            quia sicut de salute lætitia, ita de periculo animæ <lb/>
+            gemitus est. Cognovimus enim Hispalensem Cordu­ <lb/>
+            bensis ecclesiae sacerdotem iii pontificali culmine <lb/>
+            caruali labe dilapsum, et de altitudine honoris iu <lb/>
+            profundo flagitiorum flenda ruina demersum; et quia <lb/>
+            vobis sollicitudo pastoralis incumbit, vestroque judi­ <lb/>
+            cin delinqentium errores discutiendoS censura divina
+            <milestone unit="PLSection" n="B"/><lb/>
+            disposuil, dicens : Sacerdotes stabunt in judiciis meis, <lb/>
+            et judicabunt inter sanctum et pollutum (Ezech. XLIV, <lb/>
+            24), hanc igitur vocem Domini cognoscentes, cum <lb/>
+            effusione lacrymarum vestram sanctitatem deposci­ <lb/>
+            mus, ut idem lapsus sancto coetui vestro præsentatus, <lb/>
+            agnito a vobis confessionis eloquio, synodali senten­ <lb/>
+            tia a gradu sarerdotii deponatur.</p>
+          <p n="2">2. Melius est illi ut temporaliter judicetur a vobis, <lb/>
+            quam æterno damnetur judicio. Levior est illi præ­ <lb/>
+            sentis temporis ignominia, quam futura gehennæ <lb/>
+            tormenta. Sciat enim se amisisse nomen, et officium <lb/>
+            sacerdotis, qui meritum perdidit sanctitatis. Qu a- <lb/>
+            propter judicii vestri decreto pœnitentiæ perpetim <lb/>
+            flagitia perpetrata lamentatione deploret; plangit <lb/>
+            sacerdotii cultum, quem male vivendo perdidit; lu­
+            <milestone unit="PLSection" n="c"/><lb/>
+            geat animae suæ statum, quem tanto putredinis cœno <lb/>
+            coinquinavit; fortasse porriget illi manum quando­ <lb/>
+            que Spiritus sanctus, ut per dignam satisfactionem <lb/>
+            mereatur peccatorum remissionem. Pro me quoque <lb/>
+            deprecor, sanctissimi sacerdotes, ut pietatem divi­ <lb/>
+            nam exorare dignemini, ut immemor malorum meo­ <lb/>
+            rum, quibus et ipse collapsus sum, a peccatoruui <lb/>
+            vinculo, quibus huc usque sum colligatus, dissolvat, <lb/>
+            et fructum indulgentiæ vestris meritis tribuat.</p></div>
+          
+                <div n="6" subtype="letter" type="textpart">
+                <ab>
+            <title type="sub">EPISTOLA VI.</title>
+          </ab>
+          <ab>
+            <title type="sub">ISIDORI CLAUDIO DUCI.</title>
+          </ab>
+          <ab>
+            <title type="sub">567 Dilecto in Christo filio Claudio duci Isidorus.</title>
+          </ab>
+          <p n="1">1. Catholicæ strenuitatis tuæ suscipiens schedulas <lb/>
+            Domini nostri Jesu Christi omnipotentiam collauda­
+            <milestone unit="PLSection" n="b"/><lb/>
+            mus, qui de prosperis tuis successibus et triumphis <lb/>
+            Ecclesiæ sanctae suæ misericorditer in praesenti de <lb/>
+            in iniicis triumphare largitur. Te quidem me piis ur­ <lb/>
+            gente petitionibus, tuis inquisitionibus respondere, <lb/>
+            lætor in Domino, quia ea quae sunt de fide catholica, <lb/>
+            sollicite perquiris. Ad id ergo quod objecisti primo, <note type="footnote"> 8. Alii, nam candelabrum angeli doctrina, etc. Et, <lb/>
+            menlisque, pro meritorumque. Vulgata, nec poterat <lb/>
+            videre; lucerna Dci alllequam, etc. AREV. </note><note type="footnote"> EPIST. v, N. 1. Forte redundat vox Hispalensem. <lb/>
+            PEREZ. </note><note type="footnote"> Ibid. Vehementer dubitant nonnulli an genuina sit <lb/>
+            hæc epistola. Ratijiies qu;e genuinarn e,llIl esse pro­ <lb/>
+            bant videri possunt in Isidorianis, cap. 71., num. : et <lb/>
+            seqq., quae etiaw ad explauationein epistulæ facere <lb/>
+            possunt. ARIV. </note><note type="footnote"> EPIST. VI. N. i. Ad hunc Claudium scribit (;I'l'g., <lb/>
+            lib. vii. regist. ep. 124. PEREZ. </note><note type="footnote">lbid. Plerique affirmant, præcipue heterodoxi, <lb/>
+            epistolam ad Claudium Isidori teturn genuillurn !lUll <lb/>
+            esse. III Isidorianis, cap. 7i, num. 9 ct. C'Ilf , argu­ <lb/>
+            menta attuli, quibus hæc epistola Isidoro asseritur; <lb/>
+            m dta quoque exposui, quibus eadem ef&gt;isl5la illu­ <lb/>
+            strari potest. AREV. </note> <pb n="903"/>
+            
+            <milestone unit="PLSection" n="A"/><lb/>
+            prætermissis plurimis rationibus, tibi rationabiliter <lb/>
+            ac simpliciter respondemus.</p>
+          <p n="2">2. Sic nos scimus praeesse Ecclesiae Christi, quate­ <lb/>
+            nus Romano pontifici reverenter, humiliter et devote, <lb/>
+            tanquam Dei vicario, prae cæteris Ecclesiae praelatis <lb/>
+            specialius nos fateamur debitam in omnibus obedien­ <lb/>
+            tiam exhibere. Contra quod quemquam procaciter <lb/>
+            venientem, tanquam haereticum, a consortio fidelium <lb/>
+            omnino decernimus alienum. Hoc vero non ex ele­ <lb/>
+            ctione proprii arbitrii, sed potius auctoritate Spiritus <lb/>
+            sancti habemus firmum, ratumque credimus, et te­ <lb/>
+            nemus.</p>
+          <p n="3">3. Si vero (quod absit) infidelis sit non manifeste, <lb/>
+            in nullo læditur obedientia nostra, nisi praeceperit <lb/>
+            contra fidem. Praeterea pravis praelatis obediendum
+            <milestone unit="PLSection" n="B"/><lb/>
+            in jussionibus bonis Dominus præcipit, ubi dicit: <lb/>
+            Quod dicunt, facite, eorum prava opera præcipit evi­ <lb/>
+            tanda, cum subjungit. : Quod autem faciunt, nolite <lb/>
+            facere (Matth. xxIII, 3). In dubiis etiam praeceptis, <lb/>
+            pravis prælatis obediendum est, quandiu eos Ecclesia <lb/>
+            toleraverit, nisi ex manifesta prælati infamatione in <lb/>
+            præcepto juste possit hæresis suspicio provenire. De <lb/>
+            similibus quoque illaqueationibus idem videtur. In <lb/>
+            præceptis manifeste malis nullatenus est obedien­ <lb/>
+            dum, etiam bonis praelatis, quia quandoque Deus <lb/>
+            occultat majori quod revelat minori.</p>
+          <p n="4">4. Item nobis insinuare curasti quorumdam Græ­ <lb/>
+            corum objectionem, 568 que d in Nicæna vel Con­ <lb/>
+            stantinopolitana synodo sub anathemate prohibitum
+            <milestone unit="PLSection" n="c"/><lb/>
+            legitur in Symbolo, et in illo sancti Athanasii de fide <lb/>
+            catholica diminuere vel addere aliquid; atque ideo <lb/>
+            quidam ex Graecis Latinos proterve nituntur repre­ <lb/>
+            hendere, quod in professione sanctae fidei Deo corde <lb/>
+            et ore decantent : Qui ex Patre Filioque procedit, <lb/>
+            cum in prædictis conciliis fuerit positum ex Patre <lb/>
+            procedit, et sancta Romana Ecclesia ex Patre Filio­ <lb/>
+            que Spiritum sanctum procedere approbat atque <lb/>
+            credit.</p>
+          <p n="5">5. Quae supradicta prohibitio, si subtiliter et recte <lb/>
+            perspicitur, omnis ambiguitas removetur; cum enim <lb/>
+            addere, seu diminuere prohibuit, de re contraria <lb/>
+            intellexit, cui sententiæ illud Apostoli congruit : <lb/>
+            Si quis vobis aliud evangelizaverit, præter id quod ac­ <lb/>
+            cepistis a nobis, anathema sit (Galat. I, 9). Et Joannes
+            <milestone unit="PLSection" n="D"/><lb/>
+            Apostolus ait : Si quis venerit ad vos, aliam doctrinam <lb/>
+            afferens, non eum recipiatis, neque ei ave dixeritis <lb/>
+            (II Joan. I, 10). Cum dixit aliam doctrinam, hære­ <lb/>
+            sim præcavendo, absque ambiguitate de doctrinæ <lb/>
+            contrarietate nobis voluit demonstrare.</p>
+          <p n="6">6. Plura quidem alia prædicaverunt apostoli, mar­ <lb/>
+            tyres et Ecclesiae orthodoxi doctores; sed quia non <lb/>
+            contraria, probibitio apostolica hujusmodi non intelli­ <lb/>
+            gitur contraire, eaquod sint ad unum veritatis finem <lb/>
+            tendentia. Cum ergo de similibus idem constet esse <lb/>
+            judicium, patet procul dubio prædictarum senten-
+            <milestone unit="PLSection" n="A"/><lb/>
+            tiarum prohiBitiones de contrarietate haereseum esse <lb/>
+            recipiendas.</p>
+          <p n="7">7. Spiritum vero sanctum esse Patris, et Filii, et <lb/>
+            a Patre, et a Filio mitti, atque procedere ab utro­ <lb/>
+            que, sanctae Scripturae testimoniis clarius demon­ <lb/>
+            stremus. Apostoli verba sunt haec : Si spiritus ejus, <lb/>
+            qui suscitavit Jesum a mortuis, habitat in vebis, et cae­ <lb/>
+            tera (Coloss. II; 12). Et alibi : Misit Deus Spiritum <lb/>
+            Filii sui in corda nostra (Galat. IV, 6). Ecce manifeste <lb/>
+            patet apostolicis verbis Spiritum sanctum esse Dei <lb/>
+            Patris suscitantis a morte, et Dei Filii suscitati, qui <lb/>
+            non tres dii, sed unus est credendus, et adorandus, <lb/>
+            sicut Moyses testatur : Audi, inquit, Israel, Dominus <lb/>
+            Deus tuus, Deus unus est (Deut. VI, 4).</p>
+          <p n="8">8. A Patre Spiritum sanctum mitti, Dominus in
+            <milestone unit="PLSection" n="B"/><lb/>
+            Evangelio loquitur dicens : Paracletus Spiritus san­ <lb/>
+            ctus, quem mittet Pater in nomine meo, ille vos do­ <lb/>
+            cebit omnia (Joan. xiv, 26). Et quod mittatur a Filio, <lb/>
+            ipsa veritas dicit : Cum venerit Paracletus, quem ego <lb/>
+            vobis mittam a Patre (Joan. xv, 26). His itaque ple­ <lb/>
+            narie declaratur, sancti Spiritus missionem a Patre <lb/>
+            esse, 569 el a Filio. A Patre nempe Spiritus san­ <lb/>
+            ctus procedere ostenditur, cum dicitur : Spiritus <lb/>
+            veritatis, qui a Patre procedit (Joan. xv, 26); a Filio <lb/>
+            vero, cum post resurrectionem suam insufflavit, et <lb/>
+            discipulis suis dixit: Accipite Spiritum sanctum (Joan. <lb/>
+            xx, 22).</p>
+          <p n="9">9. Isaias etiam in persona Patris dicit : Spiritus a <lb/>
+            facie mea egredietur. Dei Patris verbum, vel facies <lb/>
+            Unigenitus ejus est, homo enim per faciem a nobis
+            <milestone unit="PLSection" n="c"/><lb/>
+            agnoscitur, el Deus Pater per Filium innotuit mundo; <lb/>
+            unde Filius ait : Pater, manifestavi nomen tuum, ho­ <lb/>
+            minibus, quos dedisti mihi (Isai. LVII, 56). Et illud : <lb/>
+            Notum feci eis nomen tuum, et notum faciam (Joan. <lb/>
+            XVII, 6, 26). Possumus ad haec latius probanda plura <lb/>
+            inducere; sed forsitan, cui non sufficiunt ista, inulta <lb/>
+            non proderunt ad salutem, quia animalis homo non <lb/>
+            percipit ca quæ Dei Spiritus sunt (I Cor. II, 14), arbi. <lb/>
+            trans esse stultitiam quae dicuntur, et quia profecto <lb/>
+            hoc ex contemptu ignorantiæ provenit, ignorans igno­ <lb/>
+            rabitur.</p>
+          <p n="10">10. Dum autem sanctae Trinitatis personas lo­ <lb/>
+            quendo distinguimus, summopere curemus ne indi­ <lb/>
+            viduam, ac simplicissimam essentiam unius Dei di­ <lb/>
+            videre videamur. Sed quid sit illud ineffabile Patris
+            <milestone unit="PLSection" n="D"/><lb/>
+            generaret illud etiam inæstimabile Filii nasci, gene­ <lb/>
+            rari, vel exire; atque illud incomprehensibile Spiritus <lb/>
+            sancti a Patre et Filio mitti, vel procedere, et caetera, <lb/>
+            quæ hujusmodi de personarum varictate dicuntur, si <lb/>
+            non capimus mente, capiamus fide, ut salvi esse <lb/>
+            perpetuo mereamur.</p>
+          <p n="11">11. Ecce brevitate qua valui tuis inquisitionibus <lb/>
+            satisfeci. Sed quod subjecisti, habere te hæreticos, <lb/>
+            cum quibus assidue disputas, et quos ad Iidem ca­ <lb/>
+            tholicom studes revocare, laudamus zelum. sed ait­ <lb/>
+            daciam reprehendimus. Dicit namque Scriptura di- <note type="footnote"> 4. Quorumdam Græcorum objecliollem, etc. Hinc <lb/>
+            petitur argumentum ne haec epistola auctorem habeat <lb/>
+            Isillorum. sed alium longe posteriorem, cui di fficul­ <lb/>
+            tali facere satis loc. cit. conatus snm. AnEV. </note> <pb n="905"/>
+            
+            <milestone unit="PLSection" n="A"/><lb/>
+            vina : Qui tetigerit picem, inquinabitur ab ea (Eccli.. <lb/>
+            XIII, 1). Cave igitur, dilectissime fili, ut quia Deus <lb/>
+            triumphalibus trophaeis armorum strenuitate prostra­ <lb/>
+            tis inimicis te fecit victoriosum, hæreticis suasionibus <lb/>
+            ignominiose ne victus succumbas; te enim laborante <lb/>
+            eos ab errore mortis eruere, ipsi invigilant te in <lb/>
+            præcipitium erroris demergere, a quorum confabu­ <lb/>
+            latione vel solatio quemlibet Christicolam, tanquam <lb/>
+            a lethifero veneno, sub obtestatione divini judicii <lb/>
+            praecipimus abstinere, nisi fuerit in divinis præceptis <lb/>
+            xperientia operum probatus, et sacris eruditus <lb/>
+            Scripturis.</p>
+          <p n="12">12. Testamur igitur coram Deo, monemus, et quid­ <lb/>
+            quid possumus, hortando præcipimus, ut quam citius <lb/>
+            eos, zelum Dei legis 570 exercens, nisi catholicam
+            <milestone unit="PLSection" n="B"/><lb/>
+            professi fuerint veritatem, a te repellas, atque dicta <lb/>
+            eorum et objectiones nobis scribendo mittere non <lb/>
+            moreris. Deo teste fraternitatem dilectionis lux in <lb/>
+            viscerihus Jesu Christi amplectimur charius; et sin­ <lb/>
+            gula, quantum Deus dederit, ad salutem animae et <lb/>
+            tui corporis honestatem determinabimus, sacris ea <lb/>
+            fulciendo auctoritatibus, ut falsitas veritati cedat, et <lb/>
+            Ecclesiæ Christi gloria roboretur, et crescat. Memen­ <lb/>
+            to communis nostri doctoris Leandri, et ejus fidem <lb/>
+            atque doctrinam pro viribus imitare, ut in præsenti <lb/>
+            bonis perfrui, et in futuro coelestium bonorum par­ <lb/>
+            ticipationem valeas adipisci. Amen. Ora pro me; do­ <lb/>
+            net Dominus ut animae, corporis, fidei et honoris tibi <lb/>
+            servata integritate, merear te videre de cætero, lui <lb/>
+            Domine et charissime fili.</p></div>
+          
+                  <div n="7" subtype="letter" type="textpart">
+                  <p>
+            <milestone unit="PLSection" n="c"/></p>
+          <ab>
+            <title type="sub">EPiSTOLA VII.</title>
+          </ab>
+          <ab>
+            <title type="sub">ISIDORI REDEMPTO ARCHIDIACONO.</title>
+          </ab>
+          <ab>
+            <title type="sub">Dilecto filio in Christo Redempto archidiacono Isidorus.</title>
+          </ab>
+          <p n="1">1. Multis non modo ecclesiasticis, verum etiam <lb/>
+            hujus perituri regni præpeditus negotiis, prout opta­ <lb/>
+            mus, tuæ charitatis quæstionibus ad presens salisfa. <lb/>
+            cere non valemus. Verum, quia, impellente charitate, <lb/>
+            omnibus sumus debilores, ex parte qua valeo pareo <lb/>
+            dilectioni tuae, ad inquisita compendiose respondere <lb/>
+            paratus. innotuisti quippe nobis, in animo tibi ver­ <lb/>
+            sari scrupulum, eo quod orientalis Christi Ecclesia <lb/>
+            ex fermentato pane, occidentalis ex azymo sacratis­ <lb/>
+            simi corporis sacramentum conficere consuevit; et <lb/>
+            quia ipsi Orientales Latinos super hoc reprehendere
+            <milestone unit="PLSection" n="D"/><lb/>
+            non verentur, illud etiam animo tuo insedit, quod <lb/>
+            illi sericos pannos, nos autem lineos, quos corporalia <lb/>
+            dicimus, ad ornamenta tanti sacrificii exhibemus.</p>
+          <p n="2">2. Scias itaque eorum jam dictis consuetudinibus <lb/>
+            minime nos opponere reprehensionis obstaculum, <lb/>
+            quandiu eas Romana Ecclesia duxerit tolerandas, <lb/>
+            maxime cum non sint de essentia, sive substantia <lb/>
+            sacramenti. De substantia sacramenti sunt verba Dei <lb/>
+            a sacerdote in sacro prolata ministerio, scilicet, Hoc <lb/>
+            est corpus meum, panisque frumenti et vinum, cui
+            <milestone unit="PLSection" n="A"/><lb/>
+            consuevit aqua adhiberi, quia 571 utrumquede la - <lb/>
+            tere Christi, videlicet, sanguis et aqua profluxit. Cæ­ <lb/>
+            tera vero pertinent ad decorem sacramenti, futurorum <lb/>
+            exemplum, ad nostram et eorum humiliationem, <lb/>
+            atque in Dei laude exercitationem, et cum praedi­ <lb/>
+            ctorum facta fuerit consecratio, non, ut quidam putant <lb/>
+            indocti, sub panis specie sola caro Christi, et in calice <lb/>
+            tantummodo sumitur sanguis; sed in utroque Deus <lb/>
+            et homo, in corpore glorificato lotus et integer Chri. <lb/>
+            stus, integer Christus in calice, panis vivus, qui de <lb/>
+            cœlo descendit, totus est in utroque.</p>
+          <p n="3">3. Ipse est panis qui reficit, non deficit; panis qui <lb/>
+            totus a singulis sumitur, et in nulla sui parte minui­ <lb/>
+            tur ; visibilis angelis, fide non dubia creditur a nobis <lb/>
+            miraculose et invisibiliter totus in sumentibus sin-
+            <milestone unit="PLSection" n="B"/><lb/>
+            gulis, et integra sui essentia visibiliter totus semper <lb/>
+            regnat in coelis ; quia vero Orientales Romanorum, <lb/>
+            sive nostras consuetudines impudenter obtrectando <lb/>
+            reprehensionis abolitione impugnare nituntur, ad <lb/>
+            arma divini oraculi concurrentes nos, quantum potue­ <lb/>
+            rimus, easdem dcfendere veritate prævia insurgemus.</p>
+          <p n="4">4. Dominus enim noster Jesus Christus, quando <lb/>
+            discipulis corporis sui mysterium agendum tradidit, <lb/>
+            non legilur accepisse panem fermentatum, vel azy­ <lb/>
+            mum, sed accepit panem, et dedit discipulis suis, <lb/>
+            dicens : Hoc est corpus meum; hoc facite, quoties­ <lb/>
+            cunque sumitis, in meam commemorationem (Luc. <lb/>
+            XXII, 19). Legitur tamen praecepisse Dominum Moysi <lb/>
+            ut pascha cum azymis panibus et lactucis agrestibus <lb/>
+            manderetur, et apud quemcunque Hebræorum fer­
+            <milestone unit="PLSection" n="c"/><lb/>
+            mentatus panis per septem dies paschae inveniri <lb/>
+            posset, occideretur (Exod. XII). Dominus igitur no­ <lb/>
+            ster pascha secundum legem celebravit, et in cœna <lb/>
+            suum corpus sub panis et vini specie discipulis eden­ <lb/>
+            dum tradidit, et eis eumdem conficiendi tradidit <lb/>
+            potestatem, atque panem azymum cum quo pascha <lb/>
+            agebatur obtulit.</p>
+          <p n="5">5. Similiter sacratissimum corpus ejus non legitur <lb/>
+            pannis sericis, vel laneis, sed mundis linteaminibus <lb/>
+            in sepultura involutum fuisse. Ergo, cujus myste­ <lb/>
+            rium passionis et sepulturæ, eum quotidie immo­ <lb/>
+            lando, geritur in altare, a tramite recto deviare nou <lb/>
+            possum, qui in pane azymo, vino et aqua, additis et <lb/>
+            mundis, sanctisque linteaminibus, secundum consne­ <lb/>
+            tudinem Ecclesiæ Romanæ corporis et sanguinis Do-
+            <milestone unit="PLSection" n="D"/><lb/>
+            mini sacrosanctum sacrificium student conficere. <lb/>
+            Videtur etiam Dominus nobis favere in Exodo dicens: <lb/>
+            Non 572 immolabis, inquit, super fermento sangui­ <lb/>
+            nem hostiæ meæ</p>
+          <p n="6">6. Quod ctiam de vase agitur ligneo fictili, vel <lb/>
+            melallino, quo agitur immolatio sacrificii, quia nul- <lb/>
+            Ius evangelistarum expresse ostendit cujusmodi fue­ <lb/>
+            rit, ad legis videtur recurrendum potius auctorita­ <lb/>
+            tem, quia in ministerio tabernaculi, aut domus Dei <lb/>
+            nulla vasa sacrae unctionis oleo delibuta leguntur <note type="footnote"> EPI8T. VII. Hæc epistola ad Redemptum multo <lb/>
+            magis suspecta plerisque videtur. In IsiJnrianis, loc. <lb/>
+            Cit., ea omnia protuli (Iuæ ad eam illustrandam per­ <lb/>
+            tiHent, rationesque proposui quibus Isidoro possi( <lb/>
+            asseri. AREV. </note> <note type="footnote"> P"TROL. LXXXIII. </note> <note type="footnote"> 29 </note> <pb n="907"/>
+            
+            <milestone unit="PLSection" n="A"/><lb/>
+            lignea, vel fictilia, sed magis ex metallo erant. Do­ <lb/>
+            minus etiam quæque de melioribus sibi offerri prae­ <lb/>
+            cepit, et tabernaculum testimonii cum maxima dili­ <lb/>
+            gentia auri et argenti mira pulchritudine adornare. <lb/>
+            De Salomonico templo quid? Re vera idem. Quod si <lb/>
+            cæremonialia illa, quae umbra erant veritalis futuræ, <lb/>
+            quibus pecudum carnes immolabantur, vel sanguis, <lb/>
+            tanto voluit Deus decore perfrui, quanto magis sa­ <lb/>
+            crum altare, sanctumque vas, in quo ipsa veritas, <lb/>
+            scilicet unigenitus Deus, quotidie Deo Patri offertur, <lb/>
+            quanto honore, reverentia, gloria et decore debent <lb/>
+            studio et diligentia adornari!</p>
+          <p n="7">7. Liquide patet tam inæstimabile sacrificium in <lb/>
+            vase luteo, vel ligneo, nisi necessitate urgente, vel <lb/>
+            cogente inopia, offerre turpe ac vile, præsumptuosum
+            <milestone unit="PLSection" n="B"/><lb/>
+            esse et temerarium , quod potest justo examine <lb/>
+            reprobari. Sed forsan objicis pannum sericum pre­ <lb/>
+            tiosiorem esse lineo, et idcirco magis divinis usibus <lb/>
+            aptum. Ad quod nos in utroque Teslamenlo dici­ <lb/>
+            mus candorem vestium maxime approbari, eo quod <lb/>
+            in eo mentis sinceritas requiratur, quam constat <lb/>
+            inter cæteras virtutes Deo esse gratiosiorem, ad <lb/>
+            quam pervenire cupienti charitati vestrae, ut pa­ <lb/>
+            teat clarius, sacrae Scripturæ testimoniis ostenda- <lb/>
+            IDUS.</p>
+          <p n="8">8. Dicit enim, omni tempore sint vestimenta tua <lb/>
+            candida, et Domini sacerdotes Ephod lineo excellen­ <lb/>
+            tiæ causa erant superinduti. Evangelium etiam in <lb/>
+            transfiguratione Dominica, quod apparuerint vesti­ <lb/>
+            menta Domini tanquam nix, evidenter testatur; et
+            <milestone unit="PLSection" n="c"/><lb/>
+            in Apocalypsi, qui in conspectu Agni stabam, et qui <lb/>
+            sequuntur ipsum quocunque ierit, stolis albis per­ <lb/>
+            hibentur amicti, et quam plurima alia. Quis inter <lb/>
+            pannos mundus ut lineus, cui ex ablutione frequenti <lb/>
+            candor augetur, cum in sericis magis ex eadem offu­ <lb/>
+            scari videatur? Mentis autem munditiam nullatenus <lb/>
+            esse intelligas ubi infidelitas viget non enim est <lb/>
+            conventio Christi ad Belial.</p>
+          <p n="9">9. De incongruitate vero grammaticæ locutionis, <lb/>
+            quæ in Veteri Testamento reputatur, vel Novo, re­ <lb/>
+            spondemus, verba coelestis 573 oraculi non subja­ <lb/>
+            cent Prisciani regulis, vel Donati, et quamvis sit <lb/>
+            analogia scienda, usui prae omnibus aemulandus
+            <milestone unit="PLSection" n="D"/><lb/>
+            est. Dummodo sententia a veritate non discrepet, et <lb/>
+            a sanctorum Patrum vestigiis nullatenus receden­ <lb/>
+            dum. Lucide babes, fili charissime, in quam partem <lb/>
+            tui animi intellectum debeas inclinare, atque tui <lb/>
+            cordis scrupulum super hoc omnino deponere. Dili­ <lb/>
+            genter per omnia inspice, et reperies, sanctæ Ro­ <lb/>
+            manae Ecclesiae consuetudines a divinis auctoritati­ <lb/>
+            bus in nullo aliquatenus deviare. Pro me ad Domi­ <lb/>
+            num orare, quæso digneris.</p></div>
+          
+                  
+                  <div n="8" subtype="letter" type="textpart">
+                    <p>
+            <milestone unit="PLSection" n="A"/></p>
+          <ab>
+            <title type="sub">EPISTOLA VIII.</title>
+          </ab>
+          <ab>
+            <title type="sub">ISIDORI EUGENIO EP1COPO.</title>
+          </ab>
+          <ab>
+            <title type="sub">Domino charissimo et virtutibus inclyto Eugenio episcopo Isidorus.</title>
+          </ab>
+          <p n="1">1. Vestrae sanctitatis litteras per nuntium susci­ <lb/>
+            piens Verecundum, rerum omnium Conditori grates <lb/>
+            impendimus, quod Ecclesiæ sanctae suæ mentis et <lb/>
+            corporis vestri valetudinem conservare dignatur; <lb/>
+            atque ad inquisita pro modulo parati satisfacere, <lb/>
+            exuramus orationum vestrarum suffragiis ab ærum­ <lb/>
+            nis opprimentibus a Domino sublevari. Verum quod <lb/>
+            in quibusdam quaestionibus venerabilis vestra fra­ <lb/>
+            ternitas, licet vos non ignoremus peritos, me com­ <lb/>
+            pulit respondere, majoris sententiæ innodatio, nisi <lb/>
+            ex dispensationis ariiculo a minori nequaquam va-
+            <milestone unit="PLSection" n="B"/><lb/>
+            leat enodari, sed potius ab inferiori prolata, a supe­ <lb/>
+            riore jure mediante cassetur. Orthodoxi quidem <lb/>
+            Patres Spirilus sancti auctorit ne prævia sanxerunt; <lb/>
+            aliter autem quolibet astrueme, sicut est vestrae <lb/>
+            prudentiæ cognitum , pravum suborietur, scilicet <lb/>
+            gloriatio securis contra eum qui secat in eam <lb/>
+            (Isai. x, 15).</p>
+          <p n="2">2. Quod vero de parilitate agitur apostolorum, <lb/>
+            Petrus præeminet caeteris, quia a Domino audire <lb/>
+            meruit : Tu vocaberis Cephas. tu es Petrus (Joan. I. <lb/>
+            42), et cætera, et non ab alio aliquo, sed ab ipso <lb/>
+            Dei et virginis filio honorem pontificatus in Christi <lb/>
+            Ecclesia primus suscepit. 574 Cui etiam post re­ <lb/>
+            surrectionem Filii Dei ab eodem dictum est : Pasce <lb/>
+            agnos meos (Joan. XXI, 15), agnorunt nomine Eccle.
+            <milestone unit="PLSection" n="c"/><lb/>
+            siarum prælatos notans. Cujus dignitas potestatis <lb/>
+            etsi ad omnes catholicarum episcopos est transfusa, <lb/>
+            specialius tamon Romano autistiti singulari quodam <lb/>
+            privilegio, velut capiti, cæteris membris celsior per­ <lb/>
+            manet in aeternum.</p>
+          <p n="3">3. Qui igitur debitam ei non exhibet reverenler <lb/>
+            obedientiam, a capite sejunctus, Acephalorum schi- <lb/>
+            smati se reddit obnoxium, quod sicut illud sancu <lb/>
+            Athanasii de fide sanctæ Trinitatis sancta Ecclesia <lb/>
+            approbat, et custodit, quasi sit fidei catholicæ arti­ <lb/>
+            culus : Qued nisi quisque fideliter firmiterque credida- <lb/>
+            rit, salvus esse non poterit. Hæc vestræ dulciscsimæ <lb/>
+            charitati breviter prælibavi, considerans illud phi
+            <milestone unit="PLSection" n="D"/><lb/>
+            losophi pauca sufficere sapienti.</p></div>
+          
+                    <div n="9" subtype="letter" type="textpart">
+                    <ab>
+            <title type="sub">EPISTOLA IX.</title>
+          </ab>
+          <ab>
+            <title type="sub">ISIDORI BRAULIONI EPISCOPO.</title>
+          </ab>
+          <ab>
+            <title type="sub">Domino meo et Dei servo, Brauli oni epiacopo, Isidorus.</title>
+          </ab>
+          <p n="1">1. Omni desiderio desideravi nunc videre faciem <lb/>
+            tuam, et utinam aliquando impleret Deus votum <lb/>
+            meum, antequam moriar. Ad praesens autem depre­ <lb/>
+            cor ut commendes me Deo orationibus luis, et, ut in <lb/>
+            hac vita spem meam impleat, et in futura beatitudi- <note type="footnote"> EPIST. vin. N. i. Hic fuit Eugenius secundus sue. <lb/>
+            eessor iusti. PERI. </note><note type="footnote"> Ibid. Minorem esse rationem dubitandi de hac <lb/>
+            epistola quam de praecedenti ad Redemptum. dixi <lb/>
+            in Isidorianis, cap. cit. 74, num. 52, sed ita tamen, <lb/>
+            at concluserim denique, quatuor praedictas epistolas, <lb/>
+            ad Claudium, ad Helladium, ad Redemptum, et ad <lb/>
+            Eugenium, saltem dubias esse. Ut sensus commodus <lb/>
+            eruatu,., fortasse legendum est, jure mediante cas­ <lb/>
+            ""Mr, ut orlhodosi Patres, etc. A.,.:,., </note><note type="footnote"> EPI..T. II. N. i, Epislulas IsiJuri ad Braulionem, <lb/>
+            et hujustad illum genuinasesse, uerno inlicias iveri . <lb/>
+            AREn. </note> <pb n="909"/>
+            
+            <milestone unit="PLSection" n="A"/><lb/>
+            nis tuæ consortium mihi concedat. Et manu sua. <lb/>
+            Ora pro nobis, beatissime domine et frater.</p></div>
+          
+                      <div n="10" subtype="letter" type="textpart">
+                      <ab>
+            <title type="sub">EPISTOLA X.</title>
+          </ab>
+          <ab>
+            <title type="sub">BRAULIONIS EPISCOPI ISIDORO.</title>
+          </ab>
+          <p>Domino meo et vere domino, Christique electo, Isi­ <lb/>
+            doro, episcoporum summo, Braulio servus inutilis <lb/>
+            sanctorum Dei.</p>
+          <p n="1">1. 0 pie domine, et virorum præstantissime, <lb/>
+            sera est inquisitio et tarde data mihi scribendi optio, <lb/>
+            quia peccatis meis ingrucntibus non modo sterilitatis <lb/>
+            vel inopiæ malo, verum etiam luis et hostilitatis, quo­ <lb/>
+            minus inquirerem, horribili sum praepeditus in­ <lb/>
+            cursu.</p>
+          <p n="2">2. Nunc autem etsi mille necessitatibus, mille <lb/>
+            curis attritus , post longum miseriæ tempus, veluti
+            <milestone unit="PLSection" n="B"/><lb/>
+            ab improbi soporis, ut ita 575 dixerim, gravedine <lb/>
+            suscitatus, istius meæ suggestionis affatibus depen. <lb/>
+            dere præsumo salutis obseqnium, et cordis et corpo­ <lb/>
+            ris humilitate prostratus, imprecans excellentissimam <lb/>
+            tuae beatitudinis potestatem, ut peculiarem famulum, <lb/>
+            quem pio illo sacræ dignationis intuitu semper ha­ <lb/>
+            buisti susceptum, usque in finem habere jubeas com­ <lb/>
+            mendatnm.</p>
+          <p n="3">3. Nam et ego (Christus novit) gravi dolore dis­ <lb/>
+            erucior, quod, emenso tempore tam prolixo, vel nunC <lb/>
+            testrun non mereor videre conspectum, sed spero <lb/>
+            in illum qui non obliviscitur misereri, nec repellit <lb/>
+            in finem, quia exaudiet precem pauperis, et vestro <lb/>
+            me miserum repræsentabit aspectui. Suggero sane, <lb/>
+            et omnimoda supplicatione deposco, ut librum Ety­
+            <milestone unit="PLSection" n="c"/><lb/>
+            mologiarum, quem jam, favente Domino, audivimus <lb/>
+            eonsummatum, promissionis vestræ memores, servo <lb/>
+            vestro dirigere jubeatis, quia, ut mihi sum conscius, <lb/>
+            magna ibi ex parte servi tui postulatione sudasti. <lb/>
+            Et ideo in me primum existe munificus; sic in san­ <lb/>
+            Ctorum coetibus et felix habearis, et primus.</p>
+          <p n="4">4. Gesta etiam synodi, in qua Sintharius examinis <lb/>
+            vesiri igni etsi non purificatus , invenitur tamen de- <lb/>
+            Coctus, quaeso ut vestro instinctu a filio vestro do­ <lb/>
+            mino rege nobis dirigantur cito. Nam et nostra ejus <lb/>
+            sic flagitavit gloriam suggestio, quia mutum in con­ <lb/>
+            cilio pro investiganda opus est veritate. De cætero <lb/>
+            Creatoris altissimi pietatem efflagito, ut coronam <lb/>
+            beatitudinis vestrae pro integritate fidei et statu Ec­ <lb/>
+            clesiæ suae longo tempore præcipiat conservare, me-
+            <milestone unit="PLSection" n="D"/><lb/>
+            que Inter oblalranlia praesentis mundi varia et innu­ <lb/>
+            merabilia discrimina munitum reddat tuæ interces­ <lb/>
+            sionis gratia, ac, reconditum in gremium memoriae <lb/>
+            tuae, tutum ab omni tempestate peccati oratu vestro <lb/>
+            eiciat Trinitas sacratissima. Et manu sua. Ego ser-
+            <milestone unit="PLSection" n="A"/><lb/>
+            vus Domini Braulio Isidoro : in Domino fruar te, lu­ <lb/>
+            cerna ardens, et non marcescens</p></div>
+          
+                        <div n="11" subtype="letter" type="textpart">
+                          <ab>
+            <title type="sub">EPISTOLA XI.</title>
+          </ab>
+          <ab>
+            <title type="sub">ISIDORI BRAULIONI EPISCOPO.</title>
+          </ab>
+          <ab>
+            <title type="sub">DomIno meo, et Dei servo Braulioni episcopo Isidorus.</title>
+          </ab>
+          <p n="1">1. Quia te incolumem cognovi, gratias Christo egi; <lb/>
+            et utinam 576 cujus cognovi salutem in hoc corpo­ <lb/>
+            re aspicerem et visionem ! Quid autem mihi evenit <lb/>
+            pro peccatis meis, manifestabo, quia non fui dignus <lb/>
+            tua perlegcre eloquia, statim ut accepi pittatium <lb/>
+            tuum, puer regius ad me venit, dedi cubiculario meo <lb/>
+            illud pittatium ; et confestim ambulavi ad principem, <lb/>
+            ut postca perlegerem et rescriberem.</p>
+          <p n="2">2. Reversus e palatio regis, non solum scripta tua
+            <milestone unit="PLSection" n="B"/><lb/>
+            non inveni, sed etiam quidquid aliud in chartis fuit <lb/>
+            periit. Et idcirco, scit Dominus, luxi meritum meum, <lb/>
+            quia non perlegi eloquium tuum, sed rogo ut quae­ <lb/>
+            cunque occasio venerit, rescribe mihi. Et gratiam <lb/>
+            verbi tui non auferas, ut quod ex meo delicto per­ <lb/>
+            didi, iterum gratia tua recipiam. Et manu sua. Ora <lb/>
+            pro nobis, beatissime domine.</p></div>
+          
+                          <div n="12" subtype="letter" type="textpart">
+                          <ab>
+            <title type="sub">EPISTOLA XII</title>
+          </ab>
+          <ab>
+            <title type="sub">BRAULIONIS EPISCOPI ISIDORO.</title>
+          </ab>
+          <p>Domino meo et vere domino, Christique electo, Isi­ <lb/>
+            doro episcoporum summo, Braulio servus inutilis <lb/>
+            sanctorum Dei.</p>
+          <p n="1">1. Solet repleri lætitia homo interior ac spiritua­ <lb/>
+            lis, cum inquisilione fungitur amantis. Ob id velle <lb/>
+            meum est, mi domine reverentissime, nisi culparum <lb/>
+            maceria mearum obsistat, et benigne te inquisitio­
+            <milestone unit="PLSection" n="c"/><lb/>
+            nem meam amplecti, et querelarum calumniam pa­ <lb/>
+            tienter accipere. Utrumque enim ago, et officium in­ <lb/>
+            quisitionis persolvo, et tibi contra te causarum mea­ <lb/>
+            rum necessitates dirigo, quod ut benignissime tuo <lb/>
+            audilui admittas, in ingressu hujus dictalionis por­ <lb/>
+            taque prostratus, peto a culmine vestri apostolatus; <lb/>
+            et quanquam vacillet calumniae objectio, ubi lacry­ <lb/>
+            marum est intercessio, cum lacryrnae non sint signa <lb/>
+            calumniæ, tamen sint, opto, et lacrymabiles calum­ <lb/>
+            nix, et calumniabiles lacrymæ. Sed utrumque pro <lb/>
+            licentiosa amoris præsumptione, non autem pro <lb/>
+            arrogantiæ temeritate. Sed jam causam exordiar.</p>
+          <p n="2">577 2. Septimum, ni fallor, annum tempora gy­ <lb/>
+            rant ex quo me memini libros a te conditos Origi­ <lb/>
+            num postulasse , et vario diversoque modo præsen-
+            <milestone unit="PLSection" n="D"/><lb/>
+            tem Vos me frustratum esse, et absenti nihil inde vos <lb/>
+            rescripsisse, sed subtili dilatinne modo necdum esse <lb/>
+            perfectos, modo necdum scriptos, modo meas litte­ <lb/>
+            ras intercidisse, aliaque multa opponentes, ad hanc <lb/>
+            usque diem pervenimus , et sine petitionis effect <note type="footnote"> EPIST. x. N. i. Notandum quod Isidorus in litulo <lb/>
+            epi*tol;u episcoporum summus dicitur. Pro ingruenti­ <lb/>
+            tus alii h Ihenl exigentibus, ct addunt: verum etiam <lb/>
+            pt.,is, mortalitatis luis, etc. De hac epistoia vide lsi­ <lb/>
+            doriana, c. 21 et 8. AREV. </note><note type="footnote"> 2. Gravedine. A!., gravitudine. ABI'. </note><note type="footnote"> 3. Alii, ut libros Etymologiarum, quos... audimus <lb/>
+            consummatos, etc. AREV. </note><note type="footnote"> EPIST. II. N. i. Pittacium. In Glossis Isidorianis, <lb/>
+            Pictatium, epistola brevis et modica. Picta,;uncula, <lb/>
+            1 <lb/>
+            membrana. Pro voce pittaciu. RiMus allegat sanctom <lb/>
+            Augustinum. senn. 178, de verbis Apostoli, eap. 7, <lb/>
+            alios Ducangiud. Fortasse non multum aberrabit qui <lb/>
+            dixerit vocem Hispanam pedazo, fragmentum, sive <lb/>
+            par tero rei alicujus, ex piU"cio originem trahere. <lb/>
+            ARE'. </note><note type="footnote"> EPIST. XII. N. I. In epistolae inscriptione, prO <lb/>
+            Christique, alii, hic eL ali bi, Christoque. Pro portaque, <lb/>
+            ut exemplaria mss. exhibent, Grialius edidit portu­ <lb/>
+            que, fortasse per errorem. AREV. </note> <pb n="911"/>
+            
+            <milestone unit="PLSection" n="A"/><lb/>
+            manemus. Ob hoc et ego verlam preces in querelam, ut <lb/>
+            quod supplicatione nequivi, vel calumuia laeessen­ <lb/>
+            do valeam adipisci. Sæpe namque solet mendico <lb/>
+            prodesse vociferatio.</p>
+          <p n="3">3. Quocirca cur, quæso te, mi domine, non tri­ <lb/>
+            buasquod rogaris? Unum scias, non diuinam, qua­ <lb/>
+            si fingens me nolle negata. Sed quæram, et instanter <lb/>
+            quaeram , quousque autem accipiam, aut eliciam, <lb/>
+            piissimo Redemptore jubente : Quærite, el invenietis, <lb/>
+            et adjicienle: pulsate, et aperietur vobis (Luc. XI, 9). <lb/>
+            Quaesivi, et quaero , etiam pulso. Unde et clamito, <lb/>
+            ut aperias. Nam hujus argumenti me consolatur in­ <lb/>
+            ventio, quia qui contempsisti postulantem, exaudies <lb/>
+            forte calumniantem.</p>
+          <p n="4">4. Hinc et ego scienti tua ingero, nec styli jacta-
+            <milestone unit="PLSection" n="B"/><lb/>
+            tione novi aliquid suggerere insipiens perfecto præ­ <lb/>
+            sumo. Nec tamen erubesco imperitus disertissimo <lb/>
+            loqui, apostolici memor præcepti, quo praeciperis <lb/>
+            libenter sufferre insipientem. Quamobrem accipe <lb/>
+            clamores calumniae. Cur rogo talentorum distribu­ <lb/>
+            tionem. et cibariorum dispensationem tibi creditam <lb/>
+            hucusque retentas? Jam solve manum, impertire <lb/>
+            familiis, ne inopia pereant famis. Nosti quid creditor <lb/>
+            veniens reposcat a te. Non minuetur tibi quidquid <lb/>
+            dederis nobis. Memor esto parvis panibus mulitudi- <lb/>
+            nem satiatam , et superasse reliquias fragmentorum <lb/>
+            magnitudine panum.</p>
+          <p n="5">5. An putas donum tibi collatum pro te solum­ <lb/>
+            modo esse datum ? Et vestrum est, et nostrum com­ <lb/>
+            mune est, non privatum. Et quis dicere vel insanus
+            <milestone unit="PLSection" n="C"/><lb/>
+            praesumat, ut privato tuo gaudeas, qui de communi I <lb/>
+            tantum inculpabiliter gaudere scias? Nam cum Deus <lb/>
+            tibi œconomiam sui thesauri et divitiarum , salutis, <lb/>
+            sapientiæ et scientiae tenere concesserit, cur larga <lb/>
+            manu non effundis quod dando non minues ? An <lb/>
+            cum in membris superni capitis uuusquisque 578 <lb/>
+            quod non accepit sic in altero possideat, ut alteri <lb/>
+            quod habet possidendum sciat, tu forsitan ideo no­ <lb/>
+            bis parcus existis, quia quod mutuo a nobis resurnas <lb/>
+            non invenis?</p>
+          <p n="6">6. Sed si habenti das, tantillæ mercedis fructum <lb/>
+            reportas. Sin vero non babenti tribuis, præceptis <lb/>
+            evangelicis satisfacis, ut reddatur tibi in retributione <lb/>
+            justorum. Proinde et ego remordcor conscientia, <lb/>
+            eo quod in me communicabile nihil boni sentiam,
+            <milestone unit="PLSection" n="D"/><lb/>
+            quoniam jubemur per charitatem servire invicem, <lb/>
+            et unusquisque quam accepit gratiam in alterum <lb/>
+            illam administrare , sicut boni dispensatores multi­ <lb/>
+            formis gratiæ Dei (I Petri IV, 10); aLque unicuique, <lb/>
+            sicut divisit Deus mensuram Mei, in unam compa­ <lb/>
+            gem membrorum debeat eam cæteris partibus commu­ <lb/>
+            nicare , quia hæc omnia operatur unus, atque idem <lb/>
+            spiritus dividens singulis prout vult (Rom. XII, 3).</p>
+          <p n="7">7. Sed ad unum ac peculiare subsidium quod
+            <milestone unit="PLSection" n="A"/><lb/>
+            præmisi recurro, ad importunitatem scilicet amicam <lb/>
+            amicitia destitutis, ac nulla membrorum honestorum <lb/>
+            gratia decoralis. Idcirco audi vocem meam tot in­ <lb/>
+            terjacentibus terris. Redde, redde quod debes. Nam <lb/>
+            servus, servus cs Christi et Christianorum, ut illic <lb/>
+            sis major omnium nostr um, el quia nostri causa tibi <lb/>
+            collatam præsentis gratiam , sitientibus animis scien­ <lb/>
+            tixque fauce cruciatis impertiri non dedigneris.</p>
+          <p n="8">8. Non sum saltem pes , qui ad injuncta discur­ <lb/>
+            rens possim alvo eoclesiæ, membrorum scilicet <lb/>
+            judici, obedientiæ discursu parere, nec principatui <lb/>
+            capitis imperanti obsequendo placere. Quin etsi de <lb/>
+            inhonestioribus membris me csse sciam, sufficiat, <lb/>
+            quia quæ te constat a capite percepisse, per me est <lb/>
+            dignum egerere , nec te me non egerere, quamvis
+            <milestone unit="PLSection" n="B"/><lb/>
+            minimum, Christi tamen sanguine redemptum. Nam <lb/>
+            nec dicit caput pedibus : Non estis mihi necessarii, <lb/>
+            quoniam quas videmur membra corporis infirmiora <lb/>
+            esse, necessariora sunt; et quae putantur ignobiliora <lb/>
+            esse, his honorem abundantiorem circumdamus; et <lb/>
+            quae inhonestiora sunt nostra, majorem honestatem <lb/>
+            habent.</p>
+          <p n="9">9. Sic itaque creator noster ac dispensator cuncta <lb/>
+            dispensat, ut cum in altero alteri dona divina , quae <lb/>
+            in se non percipit, possidenda tribuuntur. charitas <lb/>
+            cumuletur. Denique tum bene 579 multiformis <lb/>
+            gratia dispensatur, quando acceptum donum et eis <lb/>
+            qui hoc non habent creditur, quando propter eum <lb/>
+            cui impenditur datum putatur. Hoc Apostoli capitu­ <lb/>
+            tum a nobis in par te præmissum optime novit pru­
+            <milestone unit="PLSection" n="c"/><lb/>
+            dentia charitatis vestrae huic rei congruere totum; <lb/>
+            et quidquid summatim tetigi, te procul dubio nosse <lb/>
+            melius, latet nullum.</p>
+          <p n="10">10. Itaque hoc solum superest, quod et magno­ <lb/>
+            pere peto , ut praestes postulata, etsi non pro me, <lb/>
+            saltem pro ipsa charitate divinitus impertita. Pro <lb/>
+            qua jubemur et nosse et præstare omnia, et sine qua <lb/>
+            nihil sunt. omnia. Sed et si qua superflua, si qua ne­ <lb/>
+            gligenter, si qua minus humiliter, aut inutiliter po­ <lb/>
+            tius effudi quam dixi, cuncta, quæso, benigne susci­ <lb/>
+            pias, cuncta ignoscas, cuncta ores, ut Deus ignoscat. <lb/>
+            Ergo et hoc notesco, libros Etymologiarum, quos a <lb/>
+            le domino meo posco, etsi detruncatos corrososque, <lb/>
+            jam a multis haberi</p>
+          <p n="11">11. Inde rogo ut eos mihi transcriptos integros,
+            <milestone unit="PLSection" n="D"/><lb/>
+            emendatos el bene coaptatos digneris mittere, ne <lb/>
+            raptus aviditate in perversum cogar vitia pro virtu­ <lb/>
+            tibus ab aliis sumere. Ego autem opto, quamvis <lb/>
+            nullius egeas , et ultroneæ dicuutur putere merces, <lb/>
+            ut dignatio vestra benignitatis imperet nobis in id <lb/>
+            quod possumus et valemus , tantum ut obsequio no­ <lb/>
+            stro utaris, imo charitate, quae Deus est, perfruaris.</p>
+          <p n="12">12. His igitur expletis , erunt mihi quætiones de <lb/>
+            sacris divinisque paginis, quarum mihi expositionem <note type="footnote"> 3. Calumniantem , ex Ovet. Gothico; clanaitanteln. <lb/>
+            Rom. Cod. PERU. </note><note type="footnote"> 4. Ex Ovet. Gothico , voce stulti in styli tantum <lb/>
+            mutata. PEREZ. </note><note type="footnote">lbid. Alii, nec stuita jactatione. Et famulis pro ra­ <lb/>
+            mitiif* Pro fami. forte fame. AREV. </note> <note type="footnote"> 6. Alii, in una compage. ARGV. </note><note type="footnote"> 8. Nec leme non egerere. Codex Caesenas, nec te <lb/>
+            me non egere. Utrolibet modo coiruptumid videtur. <lb/>
+            AREV. </note><note type="footnote"> 11. Fortasse legendum dicantur pro dicuntur. </note><note type="footnote"> i2. Reseras. Hoc est, aperis. AREV, </note> <pb n="913"/>
+            
+            <milestone unit="PLSection" n="A"/><lb/>
+            cordis vestri lumen aperiret, si tamen et nobis jubes , <lb/>
+            resplendere, et divinæ legis obscura reserare. Nec <lb/>
+            si ista quæ peto percepero, de illis silebo , sed viam <lb/>
+            reseras capiendæ fiduciæ. Cum in hac prima fronte <lb/>
+            non me confoderis stimulis verecundiæ, et ignaviæ <lb/>
+            meæ, locum dederis veniæ., quod 'quem diligebas, <lb/>
+            qnamlihet immeritum , non jusseris reprobare, quia <lb/>
+            ignominiosum valde videtur, ac vile, si necdum sa­ <lb/>
+            tians quis charitate ab co quem amabat invenitur <lb/>
+            seccdere.</p>
+          <p n="13">13. Obsequio autem meæ servitutis dependo jura <lb/>
+            salutis, et quæso pietatem sanctissimae vestrae po­ <lb/>
+            testatis, ut pro me orare digneris; quatenus quoti­ <lb/>
+            die fluctuantem animam in malis tuo intercessu lu. <lb/>
+            creris, et ad portum tranquillitatis æternæ deducas,
+            <milestone unit="PLSection" n="B"/><lb/>
+            erutam a miseriis et a scandalis. Dulce mihi fuit <lb/>
+            diu ad te loqui , 580 qhasi coram positus vultum <lb/>
+            viderem tuæ faciei. Ideo nec verbositatem cavi, et <lb/>
+            temeritatem forlassis incurri. Sed aut hoc aut aliud <lb/>
+            agere debui, tantum ut quod noluisti per humilita­ <lb/>
+            tem ealtem tribuas per tumultuantem improbi­ <lb/>
+            tatem.</p>
+          <p n="14">14. Ecce quantum audiciæ dedit mihi gratia ve­ <lb/>
+            stræ benevolentiæ. Et ideo si quid in hoc displi­ <lb/>
+            cuerit, sibi imputet, quae tantum amat, ut timorem <lb/>
+            tollat. Nam perfecta charitas foras mittit timorem. <lb/>
+            Speciali quoque gratia fretus speciali domino, in quo <lb/>
+            vires sanctae Ecclesiae consistunt, suggero ut, quia <lb/>
+            Eusebius noster metropolitanus decessit, habeas <lb/>
+            misericordiæ curam. Et hoc filio tuo nostro domino
+            <milestone unit="PLSection" n="c"/><lb/>
+            suggeras, ut utilem illi loco præficiat, cujus doctrina I <lb/>
+            et sanctitas cnteris sit vitæ forma. Hunc autem
+            <milestone unit="PLSection" n="A"/><lb/>
+            filium præpsentem beatissimae potestati vestrae per <lb/>
+            omnia commendo, et tam de his quæ hic suggessi­ <lb/>
+            mus , quam etiam de his quae supra questi sumus, <lb/>
+            eloquio vestro per eum illustrari mereamur.</p></div>
+          
+                            <div n="13" subtype="letter" type="textpart">
+                            <ab>
+            <title type="sub">EPISTOLA XIII.</title>
+          </ab>
+          <ab>
+            <title type="sub">ISIDORI BRAULIONI EPISCOPO.</title>
+          </ab>
+          <ab>
+            <title type="sub">Domino meo et Dei servo Braulioni episcopo Isidorus.</title>
+          </ab>
+          <p n="1">1. Tuae sanctitatis epistolae me in urbe Toletana <lb/>
+            invenerunt. Nam permotus fueram causa concilii. <lb/>
+            Sed quamvis jussio principis in itinere positum re­ <lb/>
+            meare me admonuisset, ego tamen, quia propinquior <lb/>
+            eram prsæsentiæ ipsius quam regressioni, malui po­ <lb/>
+            tius cursum itineris non intercludere. Yeni ad præ­ <lb/>
+            sentiam principis, inveni præesentem diaconum tuum, <lb/>
+            per eum eloquia tua suscipiens, aruplexus sum, et
+            <milestone unit="PLSection" n="I!"/><lb/>
+            legi, et de salute tua Deo gratias egi; desiderio omni <lb/>
+            desiderans, quamvis debilis atque fessus, fiduciam <lb/>
+            tamen habens per Christum in hac vita videndi te, <lb/>
+            quia spes non confunditur per charitatem , quae dif­ <lb/>
+            fusa est in cordibus nostris.</p>
+          <p n="2">2. Codicem Etymologiarum cum aliis Codicibus <lb/>
+            de itinere transmisi, et licet inemendatum præ inva­ <lb/>
+            litudine, tamen tibi modo ad emendandum statue­ <lb/>
+            ram offerre, si ad destinatum conditi locum 581 <lb/>
+            pervenissem. De constituendo autem episcopo Tar­ <lb/>
+            raconensi non eam quam petisti sensi sententiam <lb/>
+            regis; sed tamen et ipse adhuc ubi certius convertat <lb/>
+            animum, illi manet incertum. Peto autem ut pro <lb/>
+            meis peccatis apud Dominum existere digneris in­ <lb/>
+            tercessor, ul impetratu tuo deleantur delicta mea,
+            <milestone unit="PLSection" n="c"/><lb/>
+            et remittantur facinora. Item manu sua. Ora pro nobis, <lb/>
+            beatissime domine, et egregie frater. <note type="footnote"> .ti. Mss. de curam veteres libri, per compendium, <lb/>
+            pro mhericordias curam. PEREZ. </note><note type="footnote"> EPIST. XIII. N. 2. Alii , prat I'alitudine; et sttulue­ <lb/>
+            ram , pro alallleram. Confer Isidoriana , cap. 48, <lb/>
+            num. 7 et seqq., ubi conjiciebam legendum esse, <lb/>
+            si ad destinatum concilii locum pervenisses; nam Isi­ <lb/>
+            dorus, ut videtur, ad aliquod concilium Toletanum <lb/>
+            vocatus erat, quod aliqua de causa celebratum non <lb/>
+            fuit. Fortasse hic esset locus ut in nota epistolam <lb/>
+            medicam Isidoro nostro affictam, de qua dixi in Isi­ <lb/>
+            dorianis, cap. 75, n. 3, adderem; sed tam certe <lb/>
+            Isidori nostri non est, et tam corrupte descripta est <lb/>
+            in Codice Vaticano ibi laudato, ut nullum operae pre­ <lb/>
+            tium fore videatur eam referre. AREV. </note> </p>
+        </div></div>
+        </body></text></TEI>

@@ -1,0 +1,2124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title>Patrologiae Cursus Completus. Series Latina (PL)</title> 
+        <sponsor>University of Leipzig</sponsor>
+        <funder>European Social Fund Saxony</funder>
+        <principal>Gregory Crane</principal>
+        <respStmt>
+          <persName xml:id="Jouve">Jouve</persName>
+          <resp>OCR-ed, corrected and encoded the text</resp>
+        </respStmt>
+        <respStmt>
+          <persName>Greta Franzini</persName>
+          <resp>Project Manager (University of Leipzig)</resp>
+        </respStmt>
+        <respStmt>
+          <persName>Simona Stoyanova</persName>
+          <resp>Project Assistant (University of Leipzig)</resp>
+        </respStmt>
+        <respStmt>
+          <persName>Bruce Robertson</persName>
+          <resp>Technical Advisor (Mount Allison University)</resp>
+        </respStmt>
+      </titleStmt>
+      
+      <publicationStmt>
+        <authority>University of Leipzig</authority>
+        <idno type="filename">PL83.xml</idno>
+        <availability>
+          <licence target="https://creativecommons.org/licenses/by-sa/4.0/">Available under a Creative Commons Attribution-ShareAlike 4.0 International License</licence>
+        </availability>
+        <date>2014</date>
+        <publisher>University of Leipzig</publisher>
+        <pubPlace>Germany</pubPlace>
+      </publicationStmt>
+      
+      <sourceDesc>
+        <listBibl xml:lang="la">
+          <biblStruct>
+            <monogr>
+              <editor>
+                <persName>
+                  <name xml:lang="fr">Jacques Paul Migne</name>
+                </persName>
+              </editor> 
+              <author ref="urn:cite:perseus:author.771">Isidorus Hispalensis</author>
+              <title>Differentiarum Sive De Proprietate Sermonum Libri Duo</title>
+              <title>Allegoriae Quaedam Sacrae Scripturae</title>
+              <title>De Ortu Et Obitu Patrum Qui In Scriptura Laudibus Efferuntur</title>
+              <title>In Libros Veteris Ac Novi Testamenti Proemia</title>
+              <title>Liber Numerorum Qui In Sanctis Scripturis Occurrunt</title>
+              <title>De Veteri Et Novo Testamento Quaestiones</title>
+              <title>Mysticorum Expositiones Sacramentorum Seu Quaestiones In Vetus Testamentum</title>
+              <title>Appendix Ad Libros Regum</title>
+              <title>De Fide Catholica Ex Veteri Et Novo Testamento Contra Judeos</title>
+              <title>Sententiarum Libri Tres</title>
+              <title>De Ecclesiasticis Officiis</title>
+              <title>Synonyma De Lamentatione Animae Peccatricis</title>
+              <title>Regula Monachorum</title>
+              <title>Epistolae</title>
+              <title>De Ordine Creaturarum Liber</title>
+              <title>De Natura Rerum Ad Sisebestum Regem Liber</title>
+              <title>Chronicon</title>
+              <title>Historia De Regibus Gothorum. Wandalorum Et Suevorum</title>
+              <title>De Viris Illustribus Liber</title>
+              <title>Carmina [Ascripta]</title>
+              <title>Chronica Regum Visigothorum (Incertus)</title>
+              <title>Expositio In Canticum Canticorum Salomonis [Incertus]</title>
+              <title>De Conflictu Vitiorum Et Virtutum (Incertus)</title>
+              <title>Expositio In Missa (Incertus)</title>
+              <title>Sententiarum Liber Quartus (Incertus)</title>
+              <title>Exhortatio Humilitatis (Incertus)</title>
+              <title>Testimonia Divinae Scripturae Et Patrum (Incertus)</title>
+              <title>Sermones (Incertus)</title>
+              <title>De Ecclesiasticis Dogmatibus (Incertus)</title>
+              <title>Sentantiae Differentiarum De Activa Vita Atque Contemplativa [Incertus]</title>
+              <title>Exhortatio Poenitendi Cum Consolatione Et Misericordia Dei [Incertus]</title>
+              <title>Lamentum Poenitantiae (Incertus)</title>
+              <title>Oratio Contra Insidias Diaboli (Incertus)</title>
+              <title>Liber De Ortu Et Obitu Patrum Incertus</title>
+              <title>Liber De Numeris (Incertus)</title>
+              <title>Glossae in Sacram Scripturam</title>
+              <title>Differentiarum, sive de Proprietate Sermonum, Liber</title>
+              <title>Liber Glossarum</title>
+              <imprint>
+                <publisher>Garnier</publisher>
+                <pubPlace>Paris</pubPlace>
+                <date>1850</date>
+              </imprint>
+              <biblScope unit="volume">83</biblScope>
+            </monogr>
+            <monogr>
+              <author>Auctor Incertus</author>
+              <title>Archiepiscopi Toletani Veteres</title>
+              <title>Chronologia Gothicorum Regum (Ex Codice Regio Vaticano)</title>
+              <imprint>
+                <publisher>Garnier</publisher>
+                <pubPlace>Paris</pubPlace>
+                <date>1850</date>
+              </imprint>
+              <biblScope unit="volume">83</biblScope>
+            </monogr>
+            <ref target="http://hdl.handle.net/2027/pst.000020950231">HathiTrust</ref>
+            
+          </biblStruct>
+        </listBibl>
+      </sourceDesc>
+      
+    </fileDesc>
+    <encodingDesc>
+      <p>The following text is encoded in accordance with EpiDoc standards and with the
+        CTS/CITE Architecture.</p>
+      <refsDecl n="CTS">
+        <cRefPattern n="paragraph" matchPattern="(.+).(.+).(.+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div/tei:div[@n='$1']/tei:div[@n='$2']/tei:p[@n='$3'])"/>
+        <cRefPattern n="chapter" matchPattern="(.+).(.+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div/tei:div[@n='$1']/tei:div[@n='$2'])"/>
+        <cRefPattern n="book" matchPattern="(.+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div/tei:div[@n='$1'])"/>
+      </refsDecl>
+    </encodingDesc>
+    
+    <profileDesc>
+      <langUsage>
+        <language ident="la">Latin</language>
+      </langUsage>
+    </profileDesc>
+    
+</teiHeader><text>
+    <body>
+      <div type="edition" n="urn:cts:latinLit:tmp1405.tmp1405.opp-lat1">
+          <head>
+            <title type="main">SANCTI ISIDORI HISPALENSIS EPISCOPI DE ORTU ET OBITU PATRUM QUI IN SCRIPTURA LAUDIBUS EFFERUNTUR.</title>
+          </head>
+          <div n="pr" subtype="book" type="textpart">
+
+<ab>
+            <title type="sub">152 Praefatio.</title>
+          </ab>
+          <p n="1">1. Quorumdam sanctorum patrum nobilissimorumque virorUM ortus vel gesta cum genealogiis suis in hoc libello <lb/>
+            indita sunt; dignitas quoque, et mors eorum, atque sepultura, sententiali brevitate notata. Quæ, quamvis omni­ <lb/>
+            bus nota sint qui per amplitudinem percurrunt Scripturarum, facilius tamen ad memoriam redeunt dum brevi <lb/>
+            sermone legunlur.</p></div>
+          
+        
+        <div n="1" subtype="book" type="textpart">
+
+
+<div n="1" subtype="chapter" type="textpart">
+<ab>
+            <title type="sub">EX VETERI TESTAMENTO.</title>
+          </ab><figure type="illustration">
+            <graphic url="PL83_fig7.jpg"/></figure>
+          <p>
+            <milestone unit="PLSection" n="c"/><note type="footnote"> CAP. I. 1. De hi. vid. 11 ieron. Epiphan. Doroth. Sy­ <lb/>
+            nopsin, et Josephum. FOMTIDONIUS. </note><note type="footnote"> Jbid. Librum de ortu et obitu Palrunl cum octo mss. <lb/>
+            libris Petrus Fontidoniuscoqiulii ac breves quasdam </note> 
+            <milestone unit="PLSection" n="C"/><note type="footnote"> notas adjecit, quas proinde Fontidonii nomine sub­ <lb/>
+            scripto aJlegabo. Quid de hoc libro sentiendum, uber­ <lb/>
+            rime cxpo:ii'uIO fuit in bidorjauis 1 cap. 61. AREV, </note></p><pb n="131"/>
+            <figure type="illustration">
+            <graphic url="PL83_fig8.jpg"/></figure>
+          <p>
+            <milestone unit="PLSection" n="A"/></p>
+
+
+
+<ab>
+            <title type="sub">CAPUT PRIMUM.</title>
+          </ab>
+          <p n="2">2. Adam protoplastus, et colonus paradisi, princeps <lb/>
+            humani generis et delicti, ad imaginem Dei factus , <lb/>
+            universitati praelatus, qui creaturis nomina dedit at­ <lb/>
+            que in eis potestatem dominandi accepit.</p>
+          <p n="3">3. Hic in deliciis florentis paradisi constitutus, inter <lb/>
+            redolentes aromatum sylvas ac vernantia floribus arva, <lb/>
+            ruris habitator, novæ vitæ gaudia peragebat: ubi tellus <lb/>
+            fecunda viret perpetuo vere, ubi fons decurrens qua­ <lb/>
+            drifluo labitur amne.</p>
+          <p n="4">4. Sed postquam serpentis dolo, lingua etiam pol­ <lb/>
+            lutus feminea, per tactum ligni, loci beatitudinem pro­ <lb/>
+            fanavit, paradiso projeclus, terram sentibus squal­ <lb/>
+            lentem operarius gemens incoluit. Amissaque im­ <lb/>
+            mortalitate, in pulverem, unde carnis sumpserat
+            <milestone unit="PLSection" n="B"/><lb/>
+            ortum, post cursum annorum nongentorum tri­ <lb/>
+            ginta rediiL. Hinc jarn 154 posteritas in crimine <lb/>
+            hujus parentis exsulem se paradiso factam, ac labori <lb/>
+            mortique subactam ingemuit.</p>
+          <p n="5">5. Sepultus est autem in loco <unclear>Arbec</unclear>, qui loc. <lb/>
+            nomen a numero sumpsit, hoc est quatuor; nam <lb/>
+            tres patriarchæ ibidem sunt sepulti, et hic quartus <lb/>
+            Adam. Distat autem locus iste non procul ab Hebron, <lb/>
+            metropoli urbe Allophylorum, in qua fertur quon­ <lb/>
+            dam fuisse habitatio gigantum, ubi etiam et David <lb/>
+            postea unctus est in regem. Est autem civitas sortis <lb/>
+            Judæ in sacerdotibus separata, distant ad australem <lb/>
+            plagam millibus xxn ab Hierusalem.</p>
+          </div>
+
+<div n="2" subtype="chapter" type="textpart">
+<ab>
+            <title type="sub">CAPUT II.</title>
+          </ab>
+          <p n="6">6. Abel filius Adam et pastorovium, in vita innocens,
+            <milestone unit="PLSection" n="C"/><lb/>
+            in morte patiens, post mortem non silens, in marty­ <lb/>
+            rio primus, in obedientia summus, in sacrificiis Deo <lb/>
+            placens , in meritis fratri displicens; quem Cain im­ <lb/>
+            pius, et parricida novus, stimulante invidia innocuum <lb/>
+            ferro nondum sanguine maculato prostravit, cum ad­ <lb/>
+            huc innocens ferrum cruoris humani facinus non <lb/>
+            haberet.</p>
+          </div>
+
+<div n="3" subtype="chapter" type="textpart">
+<ab>
+            <title type="sub">CAPUT III.</title>
+          </ab>
+          <p n="7">7. Enoch filius Jared, septimus ab Adam, placens <lb/>
+            Deo, malorum nescius, mortis ignarus, qui scelera- <lb/>
+            lorum hominum non ferens angustias, a perniciosis <lb/>
+            contractibus [Al., contactibus] mundi substractus,
+            <milestone unit="PLSection" n="A"/><lb/>
+            meruit in eum locum transferri vivens unde fuerat <lb/>
+            protoplastus expulsus. Sublatus est autem annorum <lb/>
+            trecentorum sexaginta quinque. Manet autem hactenus <lb/>
+            in corpore ; in consummatione mundi restituet [Al., <lb/>
+            saeculi restituens] cum Elia mortalem vitæ conditionem.</p>
+          </div>
+
+<div n="4" subtype="chapter" type="textpart">
+<ab>
+            <title type="sub">155 CAPUT IV.</title>
+          </ab>
+          <p n="8">8. Nue filius Lamech, decimus ab Adam, secundus <lb/>
+            pater orhis atque reparator, justitia insignis, longani­ <lb/>
+            misin spe, sapiens in opere, solus in terris justus.Iste <lb/>
+            jussus arcam condidit, admonitus introivit, nec horruit <lb/>
+            turbulentos diluvii fluctus, nec fragores ventorum,vel <lb/>
+            murmura coeli expavit, gestaturque per procellas, nec <lb/>
+            mergitur, serpentibus sociatur et bestiis, nec terre­ <lb/>
+            tur; cui feræ colla submittunt, alites famulantur.</p>
+          <p n="9">9. Namque avem misit, redeuntem sustinuit,
+            <milestone unit="PLSection" n="B"/><lb/>
+            sed perfida fraude corvi decipitur, ministerio co­ <lb/>
+            lumbæ gestantis ore ramum paciferae arboris edo­ <lb/>
+            cetur. Reseratisque foribus arcæ bestias et cuncta <lb/>
+            animantia per septem dies abire permittens, ipse <lb/>
+            postmodum egressus cum liberis, Deum collaudat ac <lb/>
+            lætus victimas immolat. Cujus arcam veteres rese­ <lb/>
+            disse testantur in Armenia super montes Ararath. <lb/>
+            Hic nongentesimo quinquagesimo anno mortuus est.</p>
+          </div>
+
+<div n="5" subtype="chapter" type="textpart">
+<ab>
+            <title type="sub">CAPUT V.</title>
+          </ab>
+          <p n="10">10. Melchisedech rex Salem, sacerdos Dei altissimi <lb/>
+            primus, verique oblator sacrificii, cujus origo secreta. <lb/>
+            Hunc esse aiunt Hæbrei Sem primogenitum Noe, <lb/>
+            tritavum Abrahæ. Ipse est enim pater patrum, pro­ <lb/>
+            phetarum el apostolorum origo, ipse est qui paternae <lb/>
+            pietatis benedictione, dominus fratris esse promeruit.
+            <milestone unit="PLSection" n="C"/><lb/>
+            Quique versis incedens vestigiis patris genitalia texit, <lb/>
+            nec derisit ebriuM, ut procax et reprobus filius, sed <lb/>
+            velavit, at verecundus.</p>
+          <p n="11">11. Unde accidit, in lege Judæorum pareutes a filiis <lb/>
+            nunquam videri nudatos. Iste Abrahæ revertenti post <lb/>
+            victoriam benedixit, idem in typo veri sacrificii de fru­ <lb/>
+            gil us terræ prior panem et 156 vinum Deo hostiam <lb/>
+            obtulit, quia sacerdotium et regnum vere primogeui­ <lb/>
+            tis debebatur, antequam Aaron sacerdotio fungeretur.</p>
+          <p n="12">12. llic etiam prior omnium post diluvium urbem <lb/>
+            Salem condidit, in qua etiam et regnavit, quæ postea <lb/>
+            Jebns sive Solyma dicta est, et nunc derivato voca-
+            <milestone unit="PLSection" n="D"/><note type="footnote"> 5. Recepta apud veteres post Origeneln, el probata <lb/>
+            fuit opinio Adamum fuisse sepultuni in monte Cat­ <lb/>
+            variæ, in quo eliam excitatum sacellum est, cultui et <lb/>
+            vcnerationi Adami consecraLuln. Vide Bolland. , <lb/>
+            loin. IV Febr., pag. 449. Traditiones Rabbinicas, de <lb/>
+            Arbee sepulcro Adami, Abraham, Isaac et Jacob, refert <lb/>
+            sanctus Hieronymus, Quaest. Hebr. in Genesin. AREV. </note><note type="footnote"> 6. Quo instrumento occisus lueril Abel incertum. <lb/>
+            Pictores mandibula armatum Cainum contra fratrem <lb/>
+            plerumque exhibent, sed nullo prorsus fundalueuto. <lb/>
+            Prudentius sarculo Abelem interfeClum asserit in <lb/>
+            praefat. Hamarligeniae, verse 16, quem ad locurn <lb/>
+            plura in banc rem es interpretibus sacix Scripturae <lb/>
+            loilieavi. AREV. </note> 
+            <milestone unit="PLSection" n="D"/><note type="footnote"> Ibid. Apud Grialium est substractus pro subtructus. <lb/>
+            ARLV. </note><note type="footnote"> 9. Marchio Joannes de Serpos, qui pro Armenf)- <lb/>
+            rum calholicorum causa eruditos nonnullos libros in <lb/>
+            viiigus edhlil, aut edi curavit, in Compendio histo­ <lb/>
+            rico Armeniæ, lib. I, num. 6, auctores refert qui <lb/>
+            reliquias arc;e Noe adhuc in monte Ararath asservari <lb/>
+            contendunt. AREV. </note><note type="footnote">tU. Hieron., epist. ad Evagrium. isidorus, xv lib. <lb/>
+            Etymolog., cap. 1.t'0NT. </note><note type="footnote"> Ibid. Allegatur in Editione Grialii lib. xv KtYIIt., <lb/>
+            c. I, quo loco nulla de Melc'hisedecho mentio de <lb/>
+            quo t imen agitur lib, '11, cap. 6, ei lib. '"I, cap. 5. <lb/>
+            AREV. </note> <pb n="133"/>
+            
+            <milestone unit="PLSection" n="A"/><lb/>
+            bulo Jerosolyma vocitatur; vixit annis sexcentis, et <lb/>
+            perduravit usque ad septuagesimum aetatis Isaac an­ <lb/>
+            unm , mortuusque est ac 6epultus in civitate sua Je­ <lb/>
+            rusalem.</p>
+          </div>
+
+<div n="6" subtype="chapter" type="textpart">
+<ab>
+            <title type="sub">CAPUT VI</title>
+          </ab>
+          <p n="13">13. Abraham pater gentium, filius Thare, de stirpe <lb/>
+            Sem, natione Chaldæus, fide primus, exsul spontaneus, <lb/>
+            obediens in praeceptis, credulus in promissis, pauper <lb/>
+            in patria, in peregrinatione locuples, in praeliis victo­ <lb/>
+            riosus, in victoria non avarus. Reges quinque supera­ <lb/>
+            vit, et spoliis exuit, captivumque parentem reduxit.</p>
+          <p n="14">14. Eo summus ut Trinilatem in typo videret, et <lb/>
+            unitatem in mysterio veneraretur; eo fide lis, ut in <lb/>
+            promisso genere contra spem naturae Deo crederet : <lb/>
+            adeo justus atque devotus, ut indulgentiam unici
+            <milestone unit="PLSection" n="B"/><lb/>
+            pignoris divinitati non praeponeret; sed incunctanter <lb/>
+            praecipienti parens ad immolandum filium religiosus <lb/>
+            parricida gladio dexteram armaret.</p>
+          <p n="15">15. Qui dum dislrinxit ferrum, unicum pignus in vic­ <lb/>
+            timam oblaturus, nec natum perdidit, nec hostiam <lb/>
+            amisit. Filium enim in sacrificium obtulit, et arietem <lb/>
+            pro filio immolavit. Vixit autem centum septuaginta <lb/>
+            quinque annos, sepultusque est in agro Ephron, in spe­ <lb/>
+            lanca duplici in cujus interiori parte sepultum ferunt <lb/>
+            Adam, ia exteriori vero Abraham. Distat autem hic <lb/>
+            locus, ut Josephus edocet, septimo ab urbe Hebron <lb/>
+            stadio , ibique asserit Abrabam et filios ejus sepul­ <lb/>
+            crum habere pulcherrimo instructum marmore.</p>
+          <p n="16">16. Illic etiam, et terebinthum magnam arborem a <lb/>
+            constitutione 157 mundi fuisse asseverat. Hanc bea­
+            <milestone unit="PLSection" n="c"/><lb/>
+            tus Hieronymus usque ad Constantini imperium per­ <lb/>
+            durasse scribit, ipsa est enim quercus Mambrae Amor. <lb/>
+            rhaei, qui fuit amicus Abrahae, quæ apud gentiles in <lb/>
+            tanta exstitit veneratione, ut eam muri ambitu cir­ <lb/>
+            cumseptam solemni veneratione colerent.</p>
+          </div>
+
+<div n="7" subtype="chapter" type="textpart">
+<ab>
+            <title type="sub">CAPUT VII.</title>
+          </ab>
+          <p n="17">17. Isaac filius Abrahæ ex promissione in terra Cha­ <lb/>
+            naan genitas, semen æternum vocatus, conjugalis <lb/>
+            vitæ castimonia clarus, proMptas ad gratiam, ad <lb/>
+            ignoscendum paratus, qui excludentes non armis <lb/>
+            expulit, sed patientia vicit ; qui paenitentes cum <lb/>
+            bonitate recepit, qui per amorem Dei eo usque de­ <lb/>
+            tulit honorem parenti, ut ad oram sponte sacrifican­ <lb/>
+            dus accedaret, atque in figuram Christi mortem non <lb/>
+            recusaret. Obiit centum octoginta annorum, sepul-
+            <milestone unit="PLSection" n="D"/><lb/>
+            tusque est juxta patrem suum.</p>
+          <p>
+            <milestone unit="PLSection" n="A"/></p>
+          </div>
+
+<div n="8" subtype="chapter" type="textpart">
+<ab>
+            <title type="sub">CAPUT VIII.</title>
+          </ab>
+          <p n="18">18. Jacob filius Isaac, natus in terra Chanaan, dile­ <lb/>
+            ctus matris, supplantator fratris, humilis quoque et <lb/>
+            simplex , et innocentem habitans domum. Hic au­ <lb/>
+            tem, postquam primogeniti praeripuit benedictio­ <lb/>
+            nem, obedivit matri, et fraternæ iracundiae patienter <lb/>
+            cessit, patriamque et parentes relinquens, exsul ef­ <lb/>
+            fectus servitutem longam sustinuit, laborem famis <lb/>
+            pertulit et frigoris, servivit socero, ut pastor merce­ <lb/>
+            narius pavit gregem, exspectans non de divisione <lb/>
+            sed de gregis lucro mercedem; qui peregre profc­ <lb/>
+            ctus, dum consortio egeret hominum, comitatum <lb/>
+            meruit angelorum.</p>
+          <p n="19">19. Hic Domino colluctatus praevaluit, hic facie <lb/>
+            ad faciem Deum vidit; hic famis inopia pulsus, cum
+            <milestone unit="PLSection" n="B"/><lb/>
+            praeclara progenie ingressus est in Ægyptum. Emen­ <lb/>
+            sis centum quadraginta septem annis, naturae reddidit <lb/>
+            debitum, sepultusque est cum patribus suis.</p>
+          </div>
+
+<div n="9" subtype="chapter" type="textpart">
+<ab>
+            <title type="sub">158 CAPUT IX.</title>
+          </ab>
+          <p n="20">20. Lot filius Aram consanguineus Abrahae, pater <lb/>
+            Moab, et Amon, apud Chaldæos natus, homo justus, <lb/>
+            hospitalis, in Sodomis pie casteque inter nefariam <lb/>
+            gentem conversatus, qui propter solum hospitalitatis <lb/>
+            officium etiam susceptor effectus est angelorum. Sul­ <lb/>
+            phureumque exitium ac Sodomitarum evasit incen­ <lb/>
+            dium, mansitque postmodum in urbe Segor, quæ est <lb/>
+            juxta mare Mortuum, ubi batsamum gignitur, et co­ <lb/>
+            piosa poma palmarum.</p>
+          </div>
+
+<div n="10" subtype="chapter" type="textpart">
+<ab>
+            <title type="sub">CAPUT X.</title>
+          </ab>
+          <p n="21">21. Joseph princeps Ægypti, filius Jacobex Rachel,
+            <milestone unit="PLSection" n="c"/><lb/>
+            8rtus in terra Chanaan , bencdictus in primogenitum <lb/>
+            Israel, et accipiens primatum Ruben, dilectus patri, <lb/>
+            et solus præ caeteris hæres paternæ possessionis.</p>
+          <p n="22">22. Hic zelo sublatus a fratribus in lacum mittitur, <lb/>
+            ob invidiam venditur, factus humilis usque ad servi­ <lb/>
+            tutem, patiens usque ad carcerem, pudicus usque ad <lb/>
+            passionem, fit in interpretalione sapiens, in consilio <lb/>
+            futuri prudens, in regno particeps, in fecunditate <lb/>
+            ordinator providus, in fame dispensator justus, ad <lb/>
+            reddendam pro malo bonae retributionis gratiam <lb/>
+            promptus, dum injuriam fratribus non rependit, sed <lb/>
+            fame depulsa necessitatis subsidia contulit.</p>
+          <p n="23">23. Principatus est in Ægyptoannis octoginta. Exac <lb/>
+            tisque alatis centum et decem annis, longae quietis gra­ <lb/>
+            tia diem ultimum clausit. Sepultusque est in Ægypto,
+            <milestone unit="PLSection" n="D"/><lb/>
+            cujus ossa transtulerunt filii Israel in Sichem civita­ <note type="footnote"> i5. Pamitem, id est cognatum, vel consanguineum, <lb/>
+            ut ini. CAPW 8. FOM'. </note><note type="footnote"> Ibid. Quod Isidorus ait, fide primus, Prudentius, <lb/>
+            in praefat. Psychomachiae, explicuit primo hoc ver­ <lb/>
+            siculo : Abraham fidelis prima credendi via. Cod. <lb/>
+            Florent. nenuihi! addit : Spontane11«, qui Trinitatem <lb/>
+            in typo vidit, et unkaiem in mgsierio vemrahts ett; hic <lb/>
+            fuit obedit, etc. AREV. </note><note type="footnote">i6. De sepulcro Abraham dictum num. 5. De <lb/>
+            quercu Mambre, quam alii terebinthum ex verbo lIe­ <lb/>
+            braico vertunt, praeter sanctum Hieronymum agunt <lb/>
+            Eusebius, Josephus et alii, in Dictionario biblico <lb/>
+            Cahneli landati. .REV. </note><note type="footnote"> i7. Poerntentes AbimeleCh, et Ochozach, et Phicol. <lb/>
+            Genes. xxvi. FONT. </note><note type="footnote"> Ibid.' In Editione Grialii erat 'alrifandum, pro quo <lb/>
+            fidenter posui sacrificandus, quod etiam apud Breu­ <lb/>
+            lium aliosque elslat. AREV. </note><note type="footnote"> 18. Al. lnnocens habitans domi. Al. Innocenter. FONT. </note><note type="footnote"> 20. liidorus accedere videtur opinioni iilorura qui <lb/>
+            urbem Segor iu littore meridionali maris Mortui <lb/>
+            collocant, ut ad Arabiam pertineat. Eamdem urbem, <lb/>
+            statim ac Lot ex ea recessit, terra hiscente absorptalll, <lb/>
+            nonuulli tradunt, sed DOll satis firmis ratkmiiMis, <lb/>
+            Verum de his fusius interpretes. AREV. </note><note type="footnote"> 23. Vulgata;cap. XLVIII, Genes., XXJI, sic habet: <lb/>
+            Do tibi partem unam extra fratre. tuots Pro quo Sep­ <lb/>
+            tuaginta referunl : Do libi Sieimam, pr&lt;ecipu*m <lb/>
+            super fratres tuos. Alii legunt Sichimam Heb...... <lb/>
+            verbum est Sechem, aut Sichem, quod alibi Volga.. <lb/>
+            reliuet, et Isidorus hoc loco. ARKV. </note> <pb n="135"/>
+            
+            <milestone unit="PLSection" n="A"/><lb/>
+            tem patris sui Jacob, quam nunc tam Latini quam <lb/>
+            Graeci Sichimam vocant. Ipsa est autem quae nunc <lb/>
+            vocatur Neapolis urbs Samaritanorum, ubi sepul­ <lb/>
+            crum ejus usque in hodiernam diem cernitur.</p>
+          </div>
+
+<div n="11" subtype="chapter" type="textpart">
+<ab>
+            <title type="sub">159 CAPUT XI.</title>
+          </ab>
+          <p n="24">24. Judas regalis successionis insignis prosapia, cui <lb/>
+            ducatus bellorum, et lsrael traditur regnum, qui no­ <lb/>
+            men genti ex suo nomine dedit, præpotens ut leo in <lb/>
+            regni virtute, et clarus splendore potentiæ. Cujus <lb/>
+            quidem imperii posteritas non cessavit, quousque <lb/>
+            Christus, quasi catulus leonis, ex germine ejus ortus <lb/>
+            ascenderet, atque spes gentium ex virginali proce­ <lb/>
+            dens utero mirabiliter coruscaret.</p>
+          </div>
+
+<div n="12" subtype="chapter" type="textpart">
+<ab>
+            <title type="sub">CAPUT XII.</title>
+          </ab>
+          <p n="25">25. Ruben primogenitus lilius Israel, ætate fratribus
+            <milestone unit="PLSection" n="B"/><lb/>
+            major, sed posteritatis numero minor, paternum to­ <lb/>
+            ruiu polluit, atque ordinem primogenitæ dignitatis <lb/>
+            amisit.</p>
+          </div>
+
+<div n="13" subtype="chapter" type="textpart">
+<ab>
+            <title type="sub">CAPUT XIII.</title>
+          </ab>
+          <p n="26">26. Simeon princeps scribarum, et violatæ pudicitie <lb/>
+            vindex, non habens hæreditatem, sed manens in tribu <lb/>
+            Juda, particeps in possessione.</p>
+          </div>
+
+<div n="14" subtype="chapter" type="textpart">
+<ab>
+            <title type="sub">CAPUT XIV.</title>
+          </ab>
+          <p n="27">27. Levi sacerdotalis auctor originis, cum tribu Juda <lb/>
+            permixtione generis junctus, sed in Israel toto divi­ <lb/>
+            sus, carens propriae sortis funiculo, et habitans in <lb/>
+            universis sortibus fralrum.</p>
+          </div>
+
+<div n="15" subtype="chapter" type="textpart">
+<ab>
+            <title type="sub">CAPUT XV.</title>
+          </ab>
+          <p n="28">28. Zabulon, possessor maris magni, et littorum, et
+            <milestone unit="PLSection" n=""/><lb/>
+            dominans in cunctis urbibus Phoenicum et Sidonio­ <lb/>
+            rum.</p>
+          </div>
+
+<div n="16" subtype="chapter" type="textpart">
+<ab>
+            <title type="sub">160 CAPUT XVI</title>
+          </ab>
+          <p n="29">29. Issachar studiosus in laboribus terrae, possidens <lb/>
+            Galilæam, et de benedictionis suae fructibus dona <lb/>
+            porrigens regibus.</p>
+          </div>
+
+<div n="17" subtype="chapter" type="textpart">
+<ab>
+            <title type="sub">CAPUT XVII.</title>
+          </ab>
+          <p n="30">30. Dan, cujus ex germine Samson, sceptrum tenet <lb/>
+            Israel, fortis Nazaraeus, et triumphator in hostibus, <lb/>
+            obsidens in morem serpentis Philistinorum semitas, <lb/>
+            et equitatum ejus, ut regulus, spiritu oris sui depo­ <lb/>
+            pulans.</p>
+          </div>
+
+<div n="18" subtype="chapter" type="textpart">
+<ab>
+            <title type="sub">CAPUT XVIII.</title>
+          </ab>
+          <p n="31">31. Gad, in procinctu prælii expeditus, pro fra­ <lb/>
+            tribuslrans Jordanem relictis adversus hostes gentes-
+            <milestone unit="PLSection" n="D"/><lb/>
+            que dimicat, et forti brachio victor triumphat.</p>
+          </div>
+
+<div n="19" subtype="chapter" type="textpart">
+<ab>
+            <title type="sub">CAPUT XIX.</title>
+          </ab>
+          <p n="32">32. Aser, divitiis insignis, replens deliciis principes.</p>
+          </div>
+
+<div n="20" subtype="chapter" type="textpart">
+<ab>
+            <title type="sub">CAPUT XX.</title>
+          </ab>
+          <p n="33">33. Nephthalim in pinguedine terræ uberrimus, et <lb/>
+            in doctrina legis abundans.</p>
+          </div>
+
+<div n="21" subtype="chapter" type="textpart">
+<ab>
+            <title type="sub">CAPUT XXI.</title>
+          </ab>
+          <p n="34">34. Benjamin inter fratres ortu posterior, imperio
+            <milestone unit="PLSection" n="A"/><lb/>
+            prior, cujus nativitatis processus matri dedit occubi­ <lb/>
+            tum. Ipse est lupus vocai et sanguinarius, qui super <lb/>
+            basem sortis suae mane hostiae sanguinem fudit, et <lb/>
+            ad vesperam escas principibus et sacerdotibus dividit.</p>
+          </div>
+
+<div n="22" subtype="chapter" type="textpart">
+<ab>
+            <title type="sub">CAPUT XXII.</title>
+          </ab>
+          <p n="35">35. Ephrahn semen Joseph, et adoptivus filius Israel, <lb/>
+            atque in numero 161 patriarcharum benedictioni <lb/>
+            testamento relictus; minor aetate fratre, sed majori <lb/>
+            prælatus gratia benedictionis, in cunctis tribubus <lb/>
+            fortior, et inter fratres dominator invictus. Hic partem <lb/>
+            tribus levitarum accepit.</p>
+          </div>
+
+<div n="23" subtype="chapter" type="textpart">
+<ab>
+            <title type="sub">CAPUT XXIII.</title>
+          </ab>
+          <p n="36">36. Manasses dilatatus in millibus, una cum Joseph <lb/>
+            patre suo mystice passus tributum [ Al. possedit tri-
+            <milestone unit="PLSection" n="B"/><lb/>
+            bum]. Hi sunt patres [Al. propagmes] apostolorum <lb/>
+            et principes populi Judaeorum, tribus Jacob, et prae­ <lb/>
+            clara progenies Israel. Quibus pater moriens pro <lb/>
+            divitiarum copiis, sanctificationis gratiam dereliquit, <lb/>
+            Quique, regnanle Joseph in Ægypto, regnaverunt, <lb/>
+            ibique etiam post longam vitae quietem occubueruut <lb/>
+            atque sepulti sunt.</p>
+          </div>
+
+<div n="24" subtype="chapter" type="textpart">
+<ab>
+            <title type="sub">CAPUT XXIV</title>
+          </ab>
+          <p n="37">37.JobfiliusZarae de Bosra rexldumaeorum, quar­ <lb/>
+            tus post Esau, successor Balach filii Beor, homo <lb/>
+            gentilis, fide clarus, humilitate summus, hospitalitate <lb/>
+            praecipuus, in disciplina mansuetus, in eleemosynis <lb/>
+            largus, dives in censu, extemplo factus egenus, locu­ <lb/>
+            ples in liberis, repente orbus : tentationi traditur, sed
+            <milestone unit="PLSection" n="C"/><lb/>
+            contra tentationem fidei lorica armatur [Al. fide re­ <lb/>
+            ligionis armatur], factus gloriosus in certamine, <lb/>
+            aequanimis in dolore, damna rerum pertulit, funera <lb/>
+            pignorum doluit, corporisque vulnera patienter ac­ <lb/>
+            cepit [ AI. excepit], et inter supplicia semper Deum <lb/>
+            glorificavit, male suadentem insuper sapienter susti­ <lb/>
+            nuit conjugem; verba amicorum ratione superavit; <lb/>
+            unde, et pro tanta virtute patientiae, duplici in fine <lb/>
+            remuneratione sublevatur, recipiens post rerum ca­ <lb/>
+            sum multiplicem claritatem bonorum [ Al. donorum].</p>
+          <p n="38">38. Post noctem enim tristitiae, diern genuit; post <lb/>
+            felores ulcerum, casiae fragrantiam edidit, post <lb/>
+            abjectionem , cornu uuctionem regni promeruit, et <lb/>
+            tibiam in accentu laudis assumpsit. Vixitautem post <lb/>
+            plagam centum quadraginta annis, et fuerunt omnes
+            <milestone unit="PLSection" n="D"/><lb/>
+            dies vitæ ejus ducenti quadraginta octo anni, et mor­ <lb/>
+            tuus est 162 atque sepuhus in regione sua. Hunc <lb/>
+            Hebræi asserunt non fuisse de genere Esau, sed de <lb/>
+            Nachor fratris Abraham descendisse stirpe, et fuisse <lb/>
+            eum temporibus patriarcharum. Nachor enim genuit <lb/>
+            Hus, de cujus stirpe creditur generatus, secundum <lb/>
+            quod in exordio voluminis ejus notatur : Vir erat <lb/>
+            in terra Hus nomine Job. <note type="footnote"> 24. Pro imperii po.tenla, malim imperii potestas. AREV. </note><note type="footnote"> 26. CAP. XIX , Josue ,1 et 2 : Et egressa eat <lb/>
+            son secunda filiorum Simeon per coguationes suas; <lb/>
+            (ui'qu, hæreditas eorum in medio possessionis filiorum <lb/>
+            Juda. Quod satis Isidorus expressit. AREV. </note><note type="footnote"> 28. Plerique Editi exhibent Sido"um, quod vide­ <lb/>
+            tur approbare Munckerus in not. ad Mytbologicon <lb/>
+            Fulgentii, pag. 29, quia scilicet Editionem Grialii <lb/>
+            non viderat. AREV. </note><note type="footnote"> 57. Isidorus cum Ambrosio et August. putat eum­ <lb/>
+            dem Job et Joab Genes. XXXVI; aliter Hierouyw., in <lb/>
+            Hcb. Quaest. et quaesi. 5B in Genes. </note><note type="footnote"> — Al. Sua damna insuper, patientem sustinuit con* <lb/>
+            juyem. </note></p><pb n="137"/>
+            
+          <p>
+            <milestone unit="PLSection" n="A"/></p>
+          </div>
+
+<div n="25" subtype="chapter" type="textpart">
+<ab>
+            <title type="sub">CAPUT XXV.</title>
+          </ab>
+          <p n="39">39. Moyses filius Amram ex tr.bu Levi, dux ct pro­ <lb/>
+            pheta Israel, regis filiæ adoptivns, Dei amicus, f ha­ <lb/>
+            raonis dominus, in rubo flammante el non urente, <lb/>
+            vocibus angelicis evocatur, quem ut exemplo firma­ <lb/>
+            ret Deus. insinuatam ejus manum jussit emori, et <lb/>
+            rursus retractæ vigorem et motus reddidit, et calo­ <lb/>
+            ris [.4/., coloris] : cujus facies spe [Forte specie] <lb/>
+            futuræ gloriae illuminatur, humilis, ut ait quidam <lb/>
+            sapiens, in recusando ministerio, subditus in susci­ <lb/>
+            pinendo, in conscrvando fidclis, in exquirendo pervigil, <lb/>
+            in regendo populo vigilans, in corrigendo vehemens, <lb/>
+            in amando ardens, in sustinendo patiens, qui pro sub­ <lb/>
+            jectis se Dco interposuit consulenti, opposuit irasce: ti.</p>
+          <p n="40">40. Hic pro populi libertate propriam objecit
+            <milestone unit="PLSection" n="B"/><lb/>
+            salutem, regis sævissimi non minas, non tela trepi­ <lb/>
+            davit. Quin etiam extulit contra dracones ejns vir­ <lb/>
+            gam, ac per manum Dei o. pugnatores Israel decem <lb/>
+            p'agis ejus imperiuin verberavit. Primum in cruo­ <lb/>
+            rcm vertit fontes et flumina, dehinc ranarum multi­ <lb/>
+            tudine urbes, muscarum nubibus acra complevit, <lb/>
+            locustis vastavit cuncta virentia, mortem intulit ju­ <lb/>
+            mentorum, percussit ulcere homines, vastavit grandi­ <lb/>
+            ne terras, obduxit tenebris coelum, corumque primo­ <lb/>
+            genita valido terrore peremit.</p>
+          <p n="41">41. Post hæc exspoliavit Ægyptios, eductisque po­ <lb/>
+            pulis eremi pandit iicr flammea præcedente columna. <lb/>
+            Ncc mora, mare transiens dividit, refrenatisque hiuc <lb/>
+            inde aquarum cumulis, pergenti populo viam sicco ve­ <lb/>
+            stigio prabuil. Hostes dehinc operuit fluctibus, atque
+            <milestone unit="PLSection" n="c"/><lb/>
+            amaras aquas per tactum ligni in suavitatem convertit. <lb/>
+            Quiu etiam inter hæc esurienti Isracl coeleslc præbuit <lb/>
+            pabulum, volucrumque escis replevit loca castrorum.</p>
+          <p n="42">163 42. Percussit iusuper petram, atque extem­ <lb/>
+            plo dura saxorum crepidine copiosa fluenta mana­ <lb/>
+            runt. Ascendit quoque verticem montis Sinai, faciem <lb/>
+            Domini centemplaturus, ibi quadraginta dierum je­ <lb/>
+            junia pertulit; descendens incendit vitulum, sacri­ <lb/>
+            lcgos prostravit gladio, legem acceptam a Deo po­ <lb/>
+            pulo tradidit, ritumque religionis instituit.</p>
+          <p n="43">43. Inter haec quoque bella gessit, victoriis da­ <lb/>
+            ruit, virgam in manu tenens; hostes quos nou conti­ <lb/>
+            ait , superavit : lethiferos aspidum morsus acre! ser­ <lb/>
+            pentis aspectu sanavit. Dathan et Abircn, terræ <lb/>
+            compagibus ruptis, viventes profundo hiatu dejecit.
+            <milestone unit="PLSection" n="D"/><lb/>
+            Ad extremum conscendit montem Nebo, terramque <lb/>
+            repromissionis, demonstrante Domino, as;icit. Mor­ <lb/>
+            tuusquc est, jubcute Domino, in monte Abarim ; se­ <lb/>
+            pultusque est a Domino in valle Moab, quæ est in Arabia.</p>
+          <p n="44">44. Rexit autem populum Dei in cremo annis qua­ <lb/>
+            draginta, obiitque annorum centum viginti. Quidam <lb/>
+            autem eum vivere tetantur, pro eo quod sepul­ <lb/>
+            crum ejus non reperitur. Et quia apparuit Domino <lb/>
+            in monte Thabor cum Elia, mortuum autem illum <lb/>
+            esse, non raptum, certissime sacra Scriptura testatur.</p>
+          <p>
+            <milestone unit="PLSection" n="A"/></p>
+          </div>
+
+<div n="26" subtype="chapter" type="textpart">
+<ab>
+            <title type="sub">CAPUT XXVI</title>
+          </ab>
+          <p n="45">45. Aaron frater Moysi, et insignis miraculorum so­ <lb/>
+            cius, atque in Lege sacerdos Damini primus, cujus <lb/>
+            virga sorte electa, fronde et germine floruit. Quique <lb/>
+            thuribulum in dextra gestans, furenli se flammæ op­ <lb/>
+            posuit, atque stans inier vivos et mortuos, objectu sui <lb/>
+            corporis transire ignem ad agmen viventium non per­ <lb/>
+            misit. Hic pcr hostiam victimarum, et sacrificium <lb/>
+            sanguinis, futuram Christi passionem expressit: hic <lb/>
+            jus et principatum sacerdotii per ordinem generis et <lb/>
+            successionis suae transmisit</p>
+          <p n="46">46. Anno autem quadragesimo egressionis filiorum <lb/>
+            Israel de terra Ægypti, cum esset annorum centum vi­ <lb/>
+            ginti trium, mortuus est juxta præceptum Domini in <lb/>
+            nonne Hor, qui est juxla Petram, insignem Arabiæ
+            <milestone unit="PLSection" n="B"/><lb/>
+            urbem. Ibi et sepulta jacet soror ejus Maria, ubi etiam <lb/>
+            et nunc usque ostenditur i upes, qua percussa, Moyses <lb/>
+            aquas sitienti populo præbuit. Est autem hic locus <lb/>
+            in extremis finibus Idumæorum.</p>
+          </div>
+
+<div n="27" subtype="chapter" type="textpart">
+<ab>
+            <title type="sub">CAPUT XXVII.</title>
+          </ab>
+          <p n="47">164 47. Josuc filius Nun, ut tribu Ephraim in <lb/>
+            Ægypto natus, Moysi discipulus, et potestatis suc­ <lb/>
+            cessor, novique prælii triumphator. Qui, quousquo <lb/>
+            expediret victoriam ut sol staret, cælo imperavit. Jor. <lb/>
+            danis etiam cursum lransitu suo resistere [Al., stare] <lb/>
+            fecit. Jericho inexpugnabiles muros clangentium <lb/>
+            tubarum sono dejecit.</p>
+          <p n="48">48. Chananæorum evertit regna, reges exstin­ <lb/>
+            xit, ac populum Dei solus in terram repromis­ <lb/>
+            sionis induxit, eamque sorle distribuit. Viginti
+            <milestone unit="PLSection" n="c"/><lb/>
+            septem annis præfuit in Israel. Occubuitque centum <lb/>
+            et decem annorum atque sepultus est in Tamna­ <lb/>
+            thsare civitate sua, quæ sita est in latere montis <lb/>
+            Gaas, contra Aquilonem, ubi usque hodie insigne <lb/>
+            monumentum ejus ostenditur. Est autem in tribu Dan.</p>
+          </div>
+
+<div n="28" subtype="chapter" type="textpart">
+<ab>
+            <title type="sub">CAPUT XXVIII.</title>
+          </ab>
+          <p n="49">49.Phnees sacerdos, filiusEleazari sacerdotis, filii <lb/>
+            Aaron, zelum Domini agens, Zambri cocuntem im­ <lb/>
+            pudicum simul cum scorto Madianitide telo percus­ <lb/>
+            sit, atque perpetuas sacerdotii infulas præmiumque <lb/>
+            victimarum in generationibus Israel meruit, pro eo <lb/>
+            quod zelo divini amoris accensus iram Domini fe­ <lb/>
+            riendo placavit.</p>
+          </div>
+
+<div n="29" subtype="chapter" type="textpart">
+<ab>
+            <title type="sub">CAPUT XXIX.</title>
+          </ab>
+          <p n="50">50. Gedeon filius Joas ex tribu Manasse, genitus in
+            <milestone unit="PLSection" n="D"/><lb/>
+            solitudine, libcrator populi, et multorum pater exsti­ <lb/>
+            tit filiorum, manu fortis, consilio strenuus, signis <lb/>
+            explorans futuræ documenta victoriæ, potentiamquo <lb/>
+            Dei in vellere. IIic cum trecentis viris aquam lingua <lb/>
+            lambentibus, non tela in dextris, sed tubas, nec læva <lb/>
+            clypcum, sed hydrias praeferentibus, bostem terroro <lb/>
+            perculit, ac victor de Amalech fortiter triumphavit. <lb/>
+            Judicavit Israel annos quadraginta, mortuusque est <lb/>
+            senex, et sepultus in sepulcro Joas oatris In Ephra <lb/>
+            de familia Ezri. <note type="footnote"> 59. Nomen esse Ægyptiacum Moyses aiunt Pliilo, <lb/>
+            Josephus et Aben Ezra. </note><note type="footnote"> 40. Notatu digna occurrit nOllnulla Scripltir.n die <lb/>
+            screpautia,qux inter varias lectione, viJcti potest. <lb/>
+            Legendum videtur Dei propugnatoris Israel. AREV. </note><note type="footnote"> 50. De hoc Isidori capite conferendi sunt Bollan- <lb/>
+            diani, addiem 7 Sentembris, uag. 8J. AREV. </note> <note type="footnote"> PATROL.. LXXXIII. </note><note type="footnote">5 </note></p><pb n="139"/>
+            
+          <p>
+            <milestone unit="PLSection" n="A"/></p>
+          </div>
+
+<div n="30" subtype="chapter" type="textpart">
+<ab>
+            <title type="sub">CAPUT XXX.</title>
+          </ab>
+          <p n="51">185 51. Jephte Galaadites, felix in praeliis, fidelis <lb/>
+            in promissis, affectum pietafis exsuperans tolerantia <lb/>
+            InIitis. Hic enim voverat Deo, ut si quid illi post victo­ <lb/>
+            riam revertenti primum occurreret, immolaret. Nam <lb/>
+            rediens ex hostibus, Ammonitarum triumphator, ne <lb/>
+            pollueretur labe perjurii, pollicitam sponsionem com­ <lb/>
+            l levit, ac filiam, quae victori occurrerat, immolavit. <lb/>
+            Judicavit Israel sex annis, et mortuus est sepultusque <lb/>
+            in civitate Galaad, quae est in dimidia tribu Manassae.</p>
+          </div>
+
+<div n="31" subtype="chapter" type="textpart">
+<ab>
+            <title type="sub">CAPUT XXXI.</title>
+          </ab>
+          <p n="52">52. Samson, filius promissionis, genitus patre Manue <lb/>
+            ex tribu Dan, Nazarxus vocatus, liberalor Israel, el <lb/>
+            omnium fortissimus. Iste rugientem mactavit leo­ <lb/>
+            nem, favumque ab ore mortui tulit, seras quoque
+            <milestone unit="PLSection" n="B"/><lb/>
+            portarum humeris tollens, in vertice montis impo­ <lb/>
+            suit. Vulpium caudis igne vinclis totam regionem <lb/>
+            Philistinorum succendit. Vinctus etiam rescissis fu­ <lb/>
+            nibus, maxilla asini mille viros peremit. Nervis in­ <lb/>
+            texta vincula , ut lanea fila, dsrupit.</p>
+          <p n="53">53. Post hæc avaritia illecebrosae mulieris dece­ <lb/>
+            pIUS, detonsis crinibus, vim suæ virtutis amisit: nec <lb/>
+            mora, efFossis oculis, columnas templi concutiens, <lb/>
+            ruina oppressus pariter cum hostibus defecit. Judicavit <lb/>
+            Israel annis viginti et positus est in sepulcro patris <lb/>
+            sui in civi ate Esthaol, quæ est in tribu Juda, decimo <lb/>
+            procul lapide ab bleutheropoli, contra septentriona­ <lb/>
+            leui plagam, juxta viam quæ ducit Nicopolim.</p>
+          </div>
+
+<div n="32" subtype="chapter" type="textpart">
+<ab>
+            <title type="sub">CAPUT XXXII.</title>
+          </ab>
+          <p n="54">54. Samuel propheta, filius. Elcana, de Ramatha, ex
+            <milestone unit="PLSection" n="C"/><lb/>
+            tribu Ephraim, connumeratus Moysi in sacerdotibus <lb/>
+            Dei. ab ipis cunabulis Domino 168 consecratus, se­ <lb/>
+            dulus in ministerio, in gente princeps, in templo <lb/>
+            vales, cujus verbo obtemperaverunt cœli, occurre­ <lb/>
+            runt nubila, effusi sunt imbres.</p>
+          <p n="55">55. IIic triumphator ex hostibus, Adjutorii lapidem <lb/>
+            posuit; hic primum principem in regno unxit. Sepultus <lb/>
+            est autem in vico suo Ramatha quæ est in Bethlehem ; <lb/>
+            cujus ossa Arcadius Augustus de Judæa in Thraciam <lb/>
+            transtulit, et super tumulum ejus Christi aram erexil.</p>
+          </div>
+
+<div n="33" subtype="chapter" type="textpart">
+<ab>
+            <title type="sub">CAPUT XXXIII.</title>
+          </ab>
+          <p n="56">56. David, rex idem atque propheta, ortus de genere <lb/>
+            Juda, filius Jesse, natus in Bethlehem, puer pastor <lb/>
+            ovium inter fratres reLate minor, virtute præstantior, <lb/>
+            a Domino in regnum vocatus, a propheta iti regem
+            <milestone unit="PLSection" n="D"/><lb/>
+            unctus, belliger juveuis, in certamine singularis, in <lb/>
+            triumpho gloriosus, vincendo veteranus, patiens in <lb/>
+            adversis, prudens in periculis, in peccato proprio <lb/>
+            dolens, in alieno funere lugens, pronus ad poeniten­ <lb/>
+            tiam, velox ad veniam. in convicio mitis, ad mise­ <lb/>
+            ricordiam facilis.</p>
+          <p n="57">57. Qui inimicum regem, dum posset, innocuum non <lb/>
+            tantum reservavit traditum, sed et vindicavit occisum.
+            <milestone unit="PLSection" n="A"/><lb/>
+            Hic leonem et ursum sine gladio interfecit, citharæ <lb/>
+            suavitate immundum spiritum pepulit, gigantem expu­ <lb/>
+            gnavil. Igitur quadragesimo regni, et septnagesimd <lb/>
+            ætatis anno, diem vitæ supremum consummavit, se­ <lb/>
+            pultusque est in civitate sua Bethlehem, quæ a io <lb/>
+            vocabulo dicitur Ephrata, ubi cliam Dominus no ter <lb/>
+            Jesus Christus secundum carnem est natus.</p>
+          <p n="58">58. Ibi quoque, et Rachel, cum Benjamin peperis­ <lb/>
+            se!, occubuit. Ibi etiam sepulerum Jesse patris Da­ <lb/>
+            vid ostenditur. Est autem hic locus in tribu Juda <lb/>
+            sexto ab Jerusalem milliario positus contra meri­ <lb/>
+            diem in itinere quo pergitur in Hebron.</p>
+          </div>
+
+<div n="34" subtype="chapter" type="textpart">
+<ab>
+            <title type="sub">CAPUT XXXIV.</title>
+          </ab>
+          <p n="59">59. Salomon filius David edilus ex Dethsabee in Jcru-. <lb/>
+            salem, antequam nasceretur, vocatus sapientissimus
+            <milestone unit="PLSection" n="B"/><lb/>
+            omnium, et dominici dedicator templi : felix impe­ <lb/>
+            rio, paternis meritis impar, dilectus a Deo, sapiens <lb/>
+            in judicio, in sententia justus, pacificus in regno. Qui <lb/>
+            poposcit 167 sap entiam, et impetravit, ut sciret <lb/>
+            dispositionem orhis terrarum, et virtutes elemento­ <lb/>
+            rum, naturas animalium, et cogitationes hominum.</p>
+          <p n="60">60. Hic quoque mores composuit, rerum naturas <lb/>
+            reperit, sacramenta Christi et Ecclesir revelavit. Cujus <lb/>
+            principia bona fuerunt, nnvissima vero mala. Nam, <lb/>
+            post multarum virtutum gloriam, amore depravatus <lb/>
+            femineo, et acceptam sapientiam perdidil, et in pro­ <lb/>
+            fundum idololatriæ flenda ruina demersus est. Qua­ <lb/>
+            draginta annis regnavit, quinquaginta et duobus aeta­ <lb/>
+            tem peregit. Dehinc finem imperio et vitai dedit, <lb/>
+            sepultusque est in civitate patris sui Bethlehem,</p>
+          <p>
+            <milestone unit="PLSection" n="C"/></p>
+          </div>
+
+<div n="35" subtype="chapter" type="textpart">
+<ab>
+            <title type="sub">CAPUT XXXV.</title>
+          </ab>
+          <p n="61">61. Elias Thesbites sacerdos magnus atque prophe­ <lb/>
+            ta, habitator solitudinis, fide plenus, devotione sum­ <lb/>
+            mus, in laboribus fortis, industria solers, excellenti <lb/>
+            in enio praeditus, in exercitatione disciplinæ structus, <lb/>
+            in sancta meditatione assiduus, metuquc mortis in­ <lb/>
+            trepidus, verberavit tyrannos, sacrilegos interfecit, <lb/>
+            multisque signis virtutum effulsit. Trienni namqie sic­ <lb/>
+            citate clausit imbribus cœlum. Oravit rursum, ct cœlum <lb/>
+            dedit pluvias, mortuumque mulieris filium suscitavit.</p>
+          <p n="62">62. Cujus virtute hydria farinae non dcfecil, vas <lb/>
+            olei perpetuo fonte manavit. Cuius verbo super <lb/>
+            sacrificium ignis de cælo descendit. Hic duos quin­ <lb/>
+            quagenarios cum militibus coelesti igne combussit. <lb/>
+            Jordanem transiens , tactu melotis abrupit. Post
+            <milestone unit="PLSection" n="D"/><lb/>
+            igneo curru in cælum rapius ascendit, venturus juxta <lb/>
+            Malachiam prophetam in fine mundi, ac praecessu­ <lb/>
+            rus Christum, nuntiaturus ultimum ejus adventum <lb/>
+            cum magnis virtuiibus prodigiisque signorum: ita <lb/>
+            ut e'iam in terra bellum gerat Antichristus adversus <lb/>
+            eum, vel qui cum eo venturus esi, et occidet eos, <lb/>
+            cadavera quoque eorum in plateis insepulta jacebunt.</p>
+          <p n="63">63. Dehinc suscitati a Domino regnum Anticbristi <note type="footnote"> fit. Laudat Isidorus, quod Jephte fldelis in pro­ <lb/>
+            missis iiliam immolaverit. Quæ sententia a nonnullis <lb/>
+            sanctis Patribus recenlioribu..que theologis probata, <lb/>
+            testimonio sancti Pauli, lIelJr. XI, 52, 33, confirmari <lb/>
+            potest. Alii in alias abeunt selltehtias, qtia;exponuniur <lb/>
+            a Cal rlleti.. crudlla UisserlallOllc tie Voto Jephte. AREV. </note><note type="footnote"> 53., Al., inter Sara, etEsthaol. Jud. xvi. I OM. </note> <note type="footnote"> 60. Canlica Canticorum videtur innuere Isitlorus, <lb/>
+            dum ait Salomonem sacramenta Christi et Ecclesiæ <lb/>
+            revelasse. AD EV. </note><note type="footnote"> (»2. Adt'er.u. eum, vel qui cum eo : hoc est, adver­ <lb/>
+            sus eum etquicumeo; nam vel pro el ponitur. AREV. </note><note type="footnote"> 65. tertullianus, lib. de Anima, c. 55 et 50, de <lb/>
+            Elia et lleoocb : Aleriiuri retervanlur ut AniUhri' </note> <pb n="141"/>
+            
+            <milestone unit="PLSection" n="A"/><lb/>
+            plaga magna 168 percutient, Post hæc veniet Domi- <lb/>
+            IIUS, et interficiet Antichristum gladio oris sui, et eos <lb/>
+            qui adoraverunt eum. Et regnabit Dominus cum <lb/>
+            omnibus sanctis suis in gloria sempiterna.</p>
+          <p n="64">64. Item. Elias Thesbites de terra Arabum, de iTI­ <lb/>
+            bu Aaron, cum esset in utero matris suae Galaath, <lb/>
+            Sobac pater ejus somnium vidit, quod nascentem <lb/>
+            Eliam viri candidis vestibus salutabant, igneisque <lb/>
+            eum vestimentis [AL instilis] obvolvebant, atque pro <lb/>
+            cibo ignem ei ad nutriendum subministrabant. Hoc vi­ <lb/>
+            sum pater Pius prophetis in Jerosolymis indicavit, <lb/>
+            hocque ab eis accepit responsum : Ne timueris, in­ <lb/>
+            quiunt, erit enim natio ejus lumen, verbumque ejus <lb/>
+            fixis sententiis. Judicabit enim Israel in gladio et igne.</p>
+          </div>
+
+<div n="36" subtype="chapter" type="textpart">
+<ab>
+            <title type="sub">CAPUT XXXVI.</title>
+          </ab>
+          <p n="65">
+<milestone unit="PLSection" n="B"/>65. Elisaeus Eliae discipulus, ex Abel Meula oppido, <lb/>
+            ex tribu Ruben, in cujus ortu aurea vitula in Ga galis <lb/>
+            mugitum dedit, ejusque vox in Jerusalem personavit. <lb/>
+            Tunc quidam praesagus vates prædixit : Hodie in Israel <lb/>
+            natus est propheta, qui cuncta eorum destruet idola.</p>
+          <p n="66">66. Hic gemino Eliae glorificatus spiritu, plu­ <lb/>
+            rimis atque magnis virtutum signis emicuit. Jor. <lb/>
+            dancm transitu suo divisum, refrenatis uudis, retro <lb/>
+            convertit; aquas Jericho steriles, demerso vasculo, <lb/>
+            ad fecunditatem perduxit; pueros insultantes sibi <lb/>
+            verbo tradidit bestiis repente vorandos ; sanguineas <lb/>
+            aquas in necem hostium decurrere fecit: inter haec <lb/>
+            sterilem conceptionem verbo fecundavit, ejusque fi­ <lb/>
+            lium mortuum suscitavit ; ciborum temperat amari­ <lb/>
+            tudinem, 169 deniquc ex decem panibus plebe re-
+            <milestone unit="PLSection" n="C"/><lb/>
+            fecta reliquias collegit.</p>
+          <p n="67">67. Et Naaman lepræ stigmatibus a vacro ordanis <lb/>
+            purgavit; lepra quoque maledictum aspersit discipu­ <lb/>
+            lum : ferrum securis in Jordane mersum, ligno in aquas <lb/>
+            misso, supernatare fecit. Hostes Syriæ cæcitate percus­ <lb/>
+            sit, mortem incredulo praedixit, fragore quadrigarum <lb/>
+            fugavit hostem, obsidionem dispersit, famem repulit.</p>
+          <p n="68">68. Postremo post mortem exanimis cadaveri vi­ <lb/>
+            tam dedit. Cujus sepulcrum usque hodie in Sebastia <lb/>
+            civiiate ostenditur honore satis dignum, et digna ha­ <lb/>
+            bitum veneratione</p>
+          </div>
+
+<div n="37" subtype="chapter" type="textpart">
+<ab>
+            <title type="sub">CAPUT XXXVII.</title>
+          </ab>
+          <p n="69">69. Isaias filius Amos, non Amos prophetæ, sed al-
+            <milestone unit="PLSection" n="A"/><lb/>
+            lenius qui simili nuncupatus est nomine: ille enim <lb/>
+            ei numero pastorum fuit de oppido Thecue, hic au­ <lb/>
+            tem genere nobili ortus in Jerusalem ; quem etiam <lb/>
+            aiunt Hebræi soccrurn fuisse Manasse. In quo tanta <lb/>
+            fuit sanctitatis et vitæ excellentia, ut onam tantum <lb/>
+            dicatur habuisse tunicam, et hanc cilicinam, quaque <lb/>
+            etiam postmodum pro delicto populi abjecta, sacco <lb/>
+            membra cooperuit.</p>
+          <p n="70">70. Sed, et hoc ad extremum deposito, juxta Domi­ <lb/>
+            ni imperium nudo corpore nudoque vestigio in con­ <lb/>
+            ventu populorum versatus est, sicque fervorem æsti- <lb/>
+            vum hiemisque pruinas atque imbrium tempestate' <lb/>
+            sustinuit, ut, et Dei praeceptis obediret, et populi <lb/>
+            deploraret delicta.</p>
+          <p n="71">71. Hic quindecim gradibus ascendentem umbram
+            <milestone unit="PLSection" n="B"/><lb/>
+            retrodescendere jussit. Hujus oraculo rex Ezechias <lb/>
+            mortis dilationem promeruit. Hunc autem Manasses <lb/>
+            extensum a vertice per 'medium secuit, alrocique <lb/>
+            supplicio excruciaturn exstinxit.</p>
+          <p n="72">72. Tradunt autein Hebræi duabus ex causis inter­ <lb/>
+            fectum fuisse 170 isaiam : una, quod eos appellaverit <lb/>
+            principes Sodomorum et populum Gomorrhæ; alte­ <lb/>
+            ra, quod, testante Domino ad Moysem : Non poteris <lb/>
+            videre faciem meam, iste ausus est exclamare: Vidi <lb/>
+            Dominum sedentem super solium excelsum et eleva­ <lb/>
+            tum; non animadvertentes cæcati mente Judæi, <lb/>
+            quod in sequentibus faciem et pedes Dei Sera­ <lb/>
+            phim texisse narraverat, ac media tantum ejus vi­ <lb/>
+            disse propheta ascribat. Jacet sub quercu Ragel, <lb/>
+            juxta decursus aquarum, quas Ezechias rex Juda
+            <milestone unit="PLSection" n="C"/><lb/>
+            mole constructa terræ exposuerat.</p>
+          </div>
+
+<div n="38" subtype="chapter" type="textpart">
+<ab>
+            <title type="sub">CAPUT XXXVIII.</title>
+          </ab>
+          <p n="73">73. Jeremias ex tribu sacerdotali ortus, in vico Ana­ <lb/>
+            thot, qui est tribus millibus ab Jerusalem, sacerdos in <lb/>
+            Judæa positus, propheta in gentibus consecratu, <lb/>
+            antequam plasmaretur agnitus, antequam procederet <lb/>
+            sanctificatus, et ut virgo permaneret, admonitus. Iiic <lb/>
+            prædicare puer cœpit, arguens populum ob delicta, <lb/>
+            et si pius cohortans ad pœnitentiam, sed plebis per­ <lb/>
+            fidæ sævientis crudelitate afficitur saepe atque liga­ <lb/>
+            tur, in carcerem etiam mittitur, projicitur in lacum, <lb/>
+            catenis cingitur, ad uhimum apud Taphnas in Ægy­ <lb/>
+            pto a populo lapidatur.
+            <milestone unit="PLSection" n="D"/><note type="footnote"> stum sanguine SHO exstingnant. Quod dehinc susci- <lb/>
+            (:Huli erunt a Domino, ut regnuin Antichristi magna <lb/>
+            plaga percutiant, forlasse non alio innititur funda­ <lb/>
+            m*nto, nisi his verbis Tertulliani. Certum tamen est, <lb/>
+            quod resurgent ad gloriae immortalitatem. AREV. </note><note type="footnote"> 64. Haec addebantur in tribus exemplaribus Isidori, <lb/>
+            et habet Epiphan. in Vita Eliæ. </note><note type="footnote"> 65. Abel M eula, III lieg. xix. Abel ,Jut", in Epi­ <lb/>
+            phanio. Abel Bllet, in Dorotheo. </note><note type="footnote">lbid. In Vulgata scribimur Abel ,nehula. In Dorotheo <lb/>
+            Tyrio mendum est terra liubim pro ex tribu Hnben. <lb/>
+            Opusculuin inscribitur De sanctis prophetis, apostoli, <lb/>
+            ei LXX Chriti tlilcip.'i., ac falso Dorotheo ascriptum <lb/>
+            creditur. Editum fuit ab Alberto Fabricio simul cum <lb/>
+            Isidori et aliorum de simili argumento libris, qui <lb/>
+            etiam aliud anonymu II opusculum de tu aposto is in <lb/>
+            iiibliotheca ecclesiaStica inseruit. Vaticinium pr:esagi <lb/>
+            vatis, quod IBidoruI refert, in eo Dorothei opere si­ <lb/>
+            iniliier narratur. AIE'- </note><note type="footnote">US. iScbattopoli Samariæ, ait Epiphanius. <lb/>
+            ..... , </note> 
+            <milestone unit="PLSection" n="D"/><note type="footnote"> 69. Hebraei asserunt Amos patrem Isaiæ fuisse fra­ <lb/>
+            trem Amasiae regis Juda, de quo IV Reg. xiv. </note> <note type="footnote"> 70. An nuditas Isaie ad liUeraln accipienda sit, <lb/>
+            dissident interpretes, ad cap. xx Isaiæ, 2. ARI:V. </note><note type="footnote"> 71. Isaiam serra per medium sectum, constans <lb/>
+            traditio veterum est. Vide Calmetum in Dissertat. <lb/>
+            de suppliciis Hebraeorum ad Deuterononiunl, ei in <lb/>
+            Prolegomenis ad Isaialn. AREV. </note><note type="footnote"> 72. Tradunt. Urigen. in Isaiam, et Hieronym. </note><note type="footnote"> lbid. Exposuerat. — Obstruxerat, ait lIieron)"nl. </note><note type="footnote">Ibid. Nolanllurn ctiam hoc loco, quod saepe- alibi <lb/>
+            notavi, Isidorum interdum nominati vum pro abl:ni vo <lb/>
+            absoluto adhibuisse, u1 non animadvertentes Judcei <lb/>
+            pro non animadvertentibus Judæis, nisi releras ad <lb/>
+            .radunt, quod praecessit. De sepulcro Isaiæ Dorotheus <lb/>
+            sic refert : Conditusque sub quercu est prope fontem <lb/>
+            Rogel, juxta transittim aqllaruna. quas EZl'chias rex <lb/>
+            pulvere obstruxerat. Alii narrant translatum corpus <lb/>
+            prophetæ fuisse Paneadeln ad fontes Jordanis inde <lb/>
+            Constantinopolim. AREV. </note></p><pb n="143"/>
+            
+          <p n="74">
+<milestone unit="PLSection" n="A"/>74. Scpullus est in eo loco, ubi Pharao rex Ægypti <lb/>
+            habitavit. Verumtamen, quia precibus suis serpen­ <lb/>
+            tibus ab eo loco effugatis, Ægyptios a noxio aspidum <lb/>
+            morsu eripuit, insigni cum veneratione amplissimo­ <lb/>
+            que honore iidem Ægyptii colunt, sepulcrumque <lb/>
+            ejus insigni cultu hactenus venerantur.</p>
+          </div>
+
+<div n="39" subtype="chapter" type="textpart">
+<ab>
+            <title type="sub">CAPUT XXXIX.</title>
+          </ab>
+          <p n="75">75. Ezechiel sacerdos, filius Buzi, genitus in terra <lb/>
+            Sarira, in typo Christi filius hominis nuncupalur. Hic <lb/>
+            caplivus cum Joachim in Babyloniam ductus, ad conca- <lb/>
+            plivos prophelavil, corripiens corum 171 offensiones, <lb/>
+            et zelo Dei motus cuncia eorum crimina turpitudines­ <lb/>
+            que arguens. Quem dux populi Israel interfecit, pro <lb/>
+            eo quod severitate et auctoritate pontificali corripe­ <lb/>
+            retur ab eo ob impietatem sacrilegii. Sepultus est a
+            <milestone unit="PLSection" n="B"/><lb/>
+            populo in agro Maurim, in sepulcro Sem et Arphaxat.</p>
+          </div>
+
+<div n="40" subtype="chapter" type="textpart">
+<ab>
+            <title type="sub">CAPUT XL.</title>
+          </ab>
+          <p n="76">76. Daniel, de tribu Juda in Betheron superiorc na­ <lb/>
+            tus, genere nobilis, princeps omnium Chaldæorum, <lb/>
+            regumque prosapia et florens patriae nobilitate. Hic <lb/>
+            sub Joachim rege Juda, post excidium Jerusalem, <lb/>
+            cum tribus pueris admodum puer in Babylonem trans­ <lb/>
+            latus, et princeps Chaldæorum effectus est, vir glo­ <lb/>
+            riosus, et aspectu decorus, mente humilis, corpore <lb/>
+            castus, perfectus in fide, egregius in opere, in virtute <lb/>
+            summus, in prodigiis clarus, terribilis in signis, co­ <lb/>
+            gnitor secretorum cœlestium, præscius futurorum, <lb/>
+            visionum interpres, ,-index castimoniæ; qui continua­ <lb/>
+            tis jejuniis et orationis instantia futura prænoscere <lb/>
+            meruit sacramenta.</p>
+          <p n="77">
+<milestone unit="PLSection" n="C"/>77. Hic inter cætera visionum mysteria, his virtu­ <lb/>
+            tum gestis atque signis effulsit. Principio sceleratorum <lb/>
+            senum mendacium reprehendens, castitatem feminæ <lb/>
+            revelavit; tribus bebdomadibus dierum cxorans pro <lb/>
+            populo jejunavit; simulacrum Bel divinæ aspirationis <lb/>
+            argumentis elisit : draconem Babyloniæ numen ejus­ <lb/>
+            dem gentis, offa pice, et adipe, et capillis confecta, di­ <lb/>
+            vinæ mentis instinctu, incredibili admiratione disru­ <lb/>
+            pit; in lacum quoque missus, rabiem mitigavit fera­ <lb/>
+            rum, atque virtute animi fortis inter frementes se­ <lb/>
+            curus epulatur ieones.</p>
+          <p n="78">78. Hunc Darius, postquam Babylonium subvertit <lb/>
+            imperium, honore maximo habitum, secum tulit et <lb/>
+            in Medos abduxit. Qui etiam fertur dedisse signa in <lb/>
+            montibus super Babyloniam, dicens : Dum montes a
+            <milestone unit="PLSection" n="D"/><lb/>
+            Borea fumaverint, finem instare Babyloniæ ; dnm visi <lb/>
+            fuerint incendiis conflagrare, finis erit tonus mundi. <lb/>
+            Item dum ad parlem Noti refluxerit Tigris, regressio <lb/>
+            erit populi ad Jerusalem. 172 Vixit autem usque <lb/>
+            ad tempus Darii regis Persarum, annis centum et de-
+            <milestone unit="PLSection" n="A"/><lb/>
+            cem, sepultusque est jam senex in spelunca regia, <lb/>
+            solus in captivitate cum gloria.</p>
+          </div>
+
+<div n="41" subtype="chapter" type="textpart">
+<ab>
+            <title type="sub">CAPUT XLI.</title>
+          </ab>
+          <p n="79">79. Osee de tribu Issachar, ortus in Belemoth; hic <lb/>
+            prænuntians dedit signum : Veniet Dominus in ter­ <lb/>
+            ram suam, si quercus, quæ est in Silo, ei semet­ <lb/>
+            ipsa in duodecim divisa fuerit partes, totidemque <lb/>
+            quercus effecerit. Hic in terra sua sepultus, placida <lb/>
+            quicte dormivit.</p>
+          </div>
+
+<div n="42" subtype="chapter" type="textpart">
+<ab>
+            <title type="sub">CAPUT XLII.</title>
+          </ab>
+          <p n="80">80. Joel, hic fuit de tribu Ruben, natus in agro Be­ <lb/>
+            theron, ubi etiam in pace mortuus est atque sepul­ <lb/>
+            tus.</p>
+          </div>
+
+<div n="43" subtype="chapter" type="textpart">
+<ab>
+            <title type="sub">CAPUT XLIII.</title>
+          </ab>
+          <p n="81">81. Amos, pastor, et rusticus, et ruborum moradi-
+            <milestone unit="PLSection" n="B"/><lb/>
+            stringens, propheta non genere, sed gratiae vocatio­ <lb/>
+            ne. llic autem fuit ex oppido Tecue, quod distat ad <lb/>
+            australem plagam sex millibus contra Bethlehem. <lb/>
+            Ultra autem nulla est habitatio, sed sola eremi dif­ <lb/>
+            fusa vastitas patens, usque ad mare Rubrum, atque <lb/>
+            Judæorum [Al., Indorum] fines, solis tantum pasto, <lb/>
+            ribus conscia, et late vagantium pecorum.</p>
+          <p n="82">82. Ex hac, itaqqe pastorali regionefuit.Amos, unus <lb/>
+            de numero pastorum, quem Dominus ablatum inde misit <lb/>
+            ad populum Israel, præcipiens ei ut in Samariam perge­ <lb/>
+            ret, et ibi quæ ventura erant prophetaret, quem Ama­ <lb/>
+            sias rex frequenter plagis affecit; novissime Ozias filius <lb/>
+            ejus, vecte per tempora transfixo, crudeli morte ne­ <lb/>
+            cavit. Post hæc semivivus, evectus in terram suam , <lb/>
+            post aliquot dies dolore nimio vulneris animam cun-
+            <milestone unit="PLSection" n="C"/><lb/>
+            ctanter [AI., cunctantem] efflavit, sepullusque est cum <lb/>
+            patribus suis.</p>
+          </div>
+
+<div n="44" subtype="chapter" type="textpart">
+<ab>
+            <title type="sub">173 CAPUT XLIV.</title>
+          </ab>
+          <p n="83">83. Abdias, de lerra Sicbem, ortus in agro Bethaca­ <lb/>
+            ram. Iste est ille, qui subOchozia rege Samariæ, centum <lb/>
+            pavit prophetas. Iste est tertius ille dux cui pepercit <lb/>
+            Elias, qui postmodum, relicto Ochoziæ regis minislc­ <lb/>
+            rio, Eliæ factus discipulus prophetavit. Quique etiam <lb/>
+            morte propria obiit, sepultus cum patribus suis in <lb/>
+            Sebastia civitate, ubi et Elisaeus propheta et Joannes <lb/>
+            Baptista venerabiliter requiescunt.</p>
+          </div>
+
+<div n="45" subtype="chapter" type="textpart">
+<ab>
+            <title type="sub">CAPUT XLV.</title>
+          </ab>
+          <p n="84"><lb/>
+            84. Jonas, columba, et dolens, filius Amatbi, qui <lb/>
+            fuit de Geth, quae est in Opher, ad gentium præconia <lb/>
+            mittitur, missus contemnit, contemnens fugii, fugiens
+            <milestone unit="PLSection" n="D"/><lb/>
+            dormit : propter quem periclitabatur navis, sed rna­ <lb/>
+            gister navis latentem reperit, cetus abjectum devo­ <lb/>
+            ravit, orantem revomuit; rejectus praedicavit subver­ <lb/>
+            sionem.</p>
+          <p n="85">85. Sed contristatus in poenitentia urbis, et sa- <note type="footnote"> 71. Aspidum. Hieronym., crocodiluruI11 aitEpiphao. <lb/>
+            et l)ofOlh. </note><note type="footnote"> Ibid. Jcremiam lapidibus a Judocis obrutum fuisse, <lb/>
+            consenLiL etiam TerLullianus, Scorpiac. cap. 8. AREV. </note><note type="footnote"> 76. De tribu Juda. Vid. Epiphi, Hieronym., Joseph. </note><note type="footnote">lbid. Pro prænoscere alii habent prænotescere, quod <lb/>
+            IsillorianulD puto pro prædice e, notum prius reel,hre ; <lb/>
+            nam supra jam est præscius futurorum. In Cod. Palat. <lb/>
+            est promeruit pro prænotescere, aut prvenoscere. AREV. </note><note type="footnote"> 77. Forte, mendacium deprehendens. Consonat his <lb/>
+            Dorotheus. Vide etiam Josephum, Dc Antiq., cap. <lb/>
+            .._. <lb/>
+            ult. I. to. AREV. </note><note type="footnote"> 79. Bt'lenlolh etiam Epiphan. et Dorotll. </note><note type="footnote"> -Si quercus. At. Quasi quercu., quce est in Silo, <lb/>
+            eum IX semetipsa. </note><note type="footnote"> 80. De tribu Ru'tn. lIieronym. Epiphan. </note><note type="footnote"> H3. Quo tempore prophetaverit Abdias, inquirit <lb/>
+            Mariana in not. ad IibrullI Pruoemiorum, n. G7, qui <lb/>
+            etiam similes de aliis prophetis quaestiones explicat <lb/>
+            III notis ad eumdem hbruw, a nobis suo loco descri- <lb/>
+            Lel1dis. AIU:;v. </note> <pb n="145"/>
+            
+            <milestone unit="PLSection" n="A"/><lb/>
+            lUi gentium invidit; gaudet etiam sub hederæ vi­ <lb/>
+            rentis umbraculo, et dolet subito arescenle. Tradunt <lb/>
+            Hebræi, hunc esse viduae filium quem a mortuis susci­ <lb/>
+            tavit Elias. Cujus sepulcrum in quodam urbium Geth <lb/>
+            viculo demonstratur, quod est in secundo milliario a <lb/>
+            Sephorim in itinere quo pergitur Tiberiadem.</p>
+          </div>
+
+<div n="46" subtype="chapter" type="textpart">
+<ab>
+            <title type="sub">CAPUT XLVI.</title>
+          </ab>
+          <p n="86">86. Michæas, de tribu Epbrem in Morasthi ortus est. <lb/>
+            Hic quoniam peccantem Acbab sæpius arguebat, sub <lb/>
+            Joram filio ejus de præcipitio magno projectus occu­ <lb/>
+            buit. Sepultus est in terra sua juxta Polyandrum9 <lb/>
+            quod est prope Naim.</p>
+          </div>
+
+<div n="47" subtype="chapter" type="textpart">
+<ab>
+            <title type="sub">174 CAPUT XLVII.</title>
+          </ab>
+          <p n="87">87. Nahum, de tribu Simeon, in Helcesi trans Betha­ <lb/>
+            rim natus, ibique mortuus, suo jacet in tumulo.</p>
+          <p>
+            <milestone unit="PLSection" n="B"/></p>
+          </div>
+
+<div n="48" subtype="chapter" type="textpart">
+<ab>
+            <title type="sub">CAPUT XLVIII.</title>
+          </ab>
+          <p n="88">88. Habacuc, de tribu Simeon, in agro Bethsachar <lb/>
+            ortus est; hic ante biennium regressionis filiorum Is­ <lb/>
+            rael de captivitate, in agro Sabarith, qui est in Ceila, <lb/>
+            I vita decessit.</p>
+          </div>
+
+<div n="49" subtype="chapter" type="textpart">
+<ab>
+            <title type="sub">CAPUT XLIX.</title>
+          </ab>
+          <p n="89">89. Sophonias, de tribu Simeon, filius Cbusi, in agro <lb/>
+            Sarabath ortus, et gloriosa majorum suorum stirpe <lb/>
+            progenitus, prophetavit, mortuusque Cit atque sepul­ <lb/>
+            tus in agro suo.</p>
+          </div>
+
+<div n="50" subtype="chapter" type="textpart">
+<ab>
+            <title type="sub">CAPUT L.</title>
+          </ab>
+          <p n="90">90. Aggæus, natus in Babylonia, juvenculus Jerusalem <lb/>
+            venit, æditicationem templi ex parte aspexit, ac juxta <lb/>
+            sacerdotum monumenta gloriose sepultus requiescit.</p>
+          </div>
+
+<div n="51" subtype="chapter" type="textpart">
+<ab>
+            <title type="sub">CAPUT LI.</title>
+          </ab>
+          <p n="91">
+<milestone unit="PLSection" n="C"/>91. Zacharias de regione Chaldæorum valde senex <lb/>
+            in terram suam reversus est, in qua et mortuus est ac <lb/>
+            sepultus juxta Aggæum, quiescit in pace.</p>
+          </div>
+
+<div n="52" subtype="chapter" type="textpart">
+<ab>
+            <title type="sub">CAPUT LII.</title>
+          </ab>
+          <p n="92">92. Malachias post egressionem populi, in Sophia est <lb/>
+            genitus ; vir justus et aspectu decorus, quem Judaei <lb/>
+            Malachiam, id est angelum Domini ideo asseruntvo­ <lb/>
+            citatum, quia quaecunque prædicebit, 175 confe­ <lb/>
+            stim, angelo de coelis veniente confirmabantur. IIic <lb/>
+            amem admodum juvenis moritur, atque in agro pro­ <lb/>
+            prio sepelitur.</p>
+          </div>
+
+<div n="53" subtype="chapter" type="textpart">
+<ab>
+            <title type="sub">CAPUT LIII.</title>
+          </ab>
+          <p n="93">93. Nathan propheta, ex Gabaonitis, qui David re­ <lb/>
+            gem legem Dei docuit, et peccatum quod esset in Beth­ <lb/>
+            sabee prævaricatus manifestavit. Hic etiam quad non
+            <milestone unit="PLSection" n="v"/><lb/>
+            adilicaret David Domino templum praedixit. Hic Sa­ <lb/>
+            lomonem ungens, in principem consecravit. Obiit au­ <lb/>
+            tem senex in terra sua, sepultusque est cum dignitate.</p>
+          </div>
+
+<div n="54" subtype="chapter" type="textpart">
+<ab>
+            <title type="sub">CAPUT LIV.</title>
+          </ab>
+          <p n="94">94. Achias Silonites de civitate Heli sacerdotis, ubi <lb/>
+            primum tabernaculum et arca Dei erat, Salomoni regi <lb/>
+            praedixit, quod per mulieres gentium a mandatis Dei <lb/>
+            declinaret, et divisionem populi in prole non tacuit.
+            <milestone unit="PLSection" n="A"/><lb/>
+            Mortuus est ergo Achias, atque sepultus juxta quercum <lb/>
+            in Silo.</p>
+          </div>
+
+<div n="55" subtype="chapter" type="textpart">
+<ab>
+            <title type="sub">CAPUT LV.</title>
+          </ab>
+          <p n="95">95. Addo in Samaria [Al., Sama Samariæ natus est. <lb/>
+            Hic est qui ad Jeroboam immolantem vitulum missus, <lb/>
+            in sermone Domini venit, eumque arguit immolantem. <lb/>
+            Hunc ad propria revertentem propter inobedientiam <lb/>
+            leo in via strangulavit, sepultumque tenet Bethel et <lb/>
+            prophetam illum qui eum fefellerat.</p>
+          </div>
+
+<div n="56" subtype="chapter" type="textpart">
+<ab>
+            <title type="sub">CAPUT LVI.</title>
+          </ab>
+          <p n="96">96. Azarias in terra oritur Sabatha, mortuusque <lb/>
+            est ac sepultus in agello suo.</p>
+          </div>
+
+<div n="57" subtype="chapter" type="textpart">
+<ab>
+            <title type="sub">CAPUT LVII.</title>
+          </ab>
+          <p n="97">97. Zacharias propheta atque sacerdos, filius Joiadæ <lb/>
+            sacerdotis, 176 qui et Barachias cognominatus es',
+            <milestone unit="PLSection" n="B"/><lb/>
+            quem congregatus in atrio domus Domini populus, juxta <lb/>
+            Joas regis imperium, missis in eum lapidibus exstin­ <lb/>
+            xit. Hunc sublevatum cnutinuo sacerdotes juxta pa­ <lb/>
+            trem suum sepelierunt in Jerusalem.</p>
+          </div>
+
+<div n="58" subtype="chapter" type="textpart">
+<ab>
+            <title type="sub">CAPUT LVIII.</title>
+          </ab>
+          <p n="98">98. Tobias filius Ananiel, ex tribu Nephthalim de ci­ <lb/>
+            vitate Cibel, quae est in regione Galilææ. Hic captivus <lb/>
+            ductus est a Salmanasar rege Assyriorum in Ninive. <lb/>
+            Vir in timore Dei summus, in opere magnificus, in <lb/>
+            misericordia gloriosus, in exsequiarum curis devotus; <lb/>
+            qui dum mortuos sepeliret, et inopes pasceret, cæci­ <lb/>
+            tate lumine caruit, et post tenebras reseratis oculis, <lb/>
+            lumen claritatis promeruit. Jacct in Ninive civitate <lb/>
+            sepultus in pace.</p>
+          </div>
+
+<div n="59" subtype="chapter" type="textpart">
+<ab>
+            <title type="sub">CAPUT LIX.</title>
+          </ab>
+          <p n="99">
+<milestone unit="PLSection" n="C"/>99. Tres pueri, ex stirpe regia clari, memoria glorio­ <lb/>
+            si, scientia erudili, fide pares, devotione stabiles, in <lb/>
+            corrupti corpore,sobrii mente, judices provinciarum, <lb/>
+            et regionum principes, paternarum quoque memores <lb/>
+            legum, et a cibis gentilium vel immolatis nequaquam <lb/>
+            polluti, leguminibus vitam degentes et oleribus.</p>
+          <p n="100">100. Hi vigore virtutis contempserunt mortem, idolo­ <lb/>
+            rum non adoraverunt ritum, regem sævissimum fidei <lb/>
+            virtute vicerunt, restinxerunt quoque camini flam­ <lb/>
+            nantis incendia, et inter horrendas spissa caligine <lb/>
+            flammas hymnum apertis vocibus cecinerunt. Jacent <lb/>
+            in Babylonia pariter sub uno specu positi, et cum <lb/>
+            magna vencratione sepulti.</p>
+          </div>
+
+<div n="60" subtype="chapter" type="textpart">
+<ab>
+            <title type="sub">CAPUT LX.</title>
+          </ab>
+          <p n="101">
+<milestone unit="PLSection" n="v"/>101. Esdras sacerdos Dei, qui a plerisque Malachias, <lb/>
+            id est angelus Dei vocatur. .lic sacræ scriptor exstitit <lb/>
+            historiæ, atque alter lator legis post.Moysem, nam­ <lb/>
+            que post captivitatem legem incensam ex gentibus <lb/>
+            renovavit, Hebraicarumque litterarum elementa <lb/>
+            177 invenit. Hic reduxit Israel, et reædificare fecit <lb/>
+            Jerusalem. Mortuus est autem ac sepullus cum patri­ <lb/>
+            bus suis humatus in Jerusalem. <note type="footnote"> 87. Dorotheus : Et in terra .Utl aepult... AaEv. </note><note type="footnote"> 91. lloc caput deest in aliis. Vide, infra. cap. 97. </note><note type="footnote"> !ł5. Propheta a leone strangulatus, de quo III <lb/>
+            Uf'g. xui,- a Dorotheo vocatur Joath; in Constitutio­ <lb/>
+            niliiis Apostolicis, lib. IV, cap. 6, Adonias, quem ad <lb/>
+            locum videndus C;olelerius. Alii Semeam eum pro- <lb/>
+            Dhetam appellant, alii Joamum. Nonnulli Achiain <lb/>
+            fuisse suspicantur. Non facile est, nec refert, veruin <lb/>
+            nomen investigare. AREV. </note><note type="footnote"> 101. Nonnullos existimasse Malachiam fuisse Es­ <lb/>
+            dram, legitur etiam in Prooemiis, ubi quaedam Ma­ <lb/>
+            riana annotavtt. AREV, </note></p><pb n="147"/>
+            
+          <p>
+            <milestone unit="PLSection" n="A"/></p>
+          </div>
+
+<div n="61" subtype="chapter" type="textpart">
+<ab>
+            <title type="sub">CAPUT LXI</title>
+          </ab>
+          <p n="102">102. Zorobabel et Nehemias, ex tribu Juda, sub Da­ <lb/>
+            fio rege templum Domini ædificant, muros Jerusalem <lb/>
+            exstruunt, atque Israel ad pristinum statum redu­ <lb/>
+            cunt, cultum quoque religionis jusque sacerdotum et <lb/>
+            Levitarum restituunt. Item et ipsi in Jerusalem se­ <lb/>
+            pulti quiescunt.</p>
+          </div>
+
+<div n="62" subtype="chapter" type="textpart">
+<ab>
+            <title type="sub">CAPUT LXII.</title>
+          </ab>
+          <p n="103">103. Estherregina, filia fratris Mardochæi, de stirpe <lb/>
+            Benjamin, captiva de Jerusalem in urbem Susim <lb/>
+            translata est, atque aspectu formae, et perspicua vir­ <lb/>
+            ginitatis excellentia regi Persarum connubiis copu­ <lb/>
+            lata. Haec, ut populum suum a periculo liberaret, <lb/>
+            morti se obtulit, amicumque regis adversus populum
+            <milestone unit="PLSection" n="B"/><lb/>
+            Dei nefaria persuadentem, cruci tradendum per­ <lb/>
+            suasit, gentemque liberam ab excidio eruit atque a <lb/>
+            servitute eripuit. Jacet sepulta in Susis, urbe Medo­ <lb/>
+            rum, in qua etiam regnavit.</p>
+          <p>
+            <milestone unit="PLSection" n="A"/></p>
+          </div>
+
+<div n="63" subtype="chapter" type="textpart">
+<ab>
+            <title type="sub">CAPUT LIlII.</title>
+          </ab>
+          <p n="104">104. Judith vidua, filia Merari, de tribu Simeon, ma­ <lb/>
+            gnanimis in gloria, viris praestantior. Haec pro salute <lb/>
+            populi morti se obtulit, nec trepidavit furorem regium. <lb/>
+            Nam dormientem necavit principem, salvo pudore <lb/>
+            suis civibus triumphum victoriæ rcportavit. Vixit <lb/>
+            autem annis centum et quinque, sepultaque est in <lb/>
+            spelunca viri sui Manasse in Bethulia civitate, quæ est <lb/>
+            in tribu Juda inter Dothain et Balmon [Al., Babylon.]</p>
+          </div>
+
+<div n="64" subtype="chapter" type="textpart">
+<ab>
+            <title type="sub">178 CAPUT LXIV.</title>
+          </ab>
+          <p n="105">105. Machabæi septem fratres, in fide stabiles, in spe <lb/>
+            fortes, divinae legis constantissimi observatores, in­ <lb/>
+            ter tormenta acerbissima patientes, ab Antiocho rege <lb/>
+            pro lege Dei cum matre eorum atrociler interempti, <lb/>
+            coronas martyrii meruerunt.</p>
+          <p n="106">
+<milestone unit="PLSection" n="B"/>106. Machabæi quoque, quos triumphos gesserint <lb/>
+            adversus gentem Persarnm, vel de circumfinitimis aliis <lb/>
+            nationibus, et quomodo pro legis observantia pluri­ <lb/>
+            mum sunt puniti, eorum plenissime narrat historia. <note type="footnote"> 10i. Fontidonius diversum lectioDPm indicat Aa­ <lb/>
+            pali pro Bethulia. Sed quid sit Aapali. non intelligo. <lb/>
+            Graecus et Syrus feruni Manassem sepultum fuisse in <lb/>
+            agro inter Dothaim et Belmon. Pro Belmon alii legunt <lb/>
+            Belmaim, Belma, Bt'lem, Baalmeon. Pulant itonntilli <lb/>
+            serulonpm esse de Atila, Abelina, aut Abilina. Ve­ <lb/>
+            ruua non satis hæc cohaerent cum Vulgata nostra, <lb/>
+            quae pr.Tferenda est, Judith, VIII, 3: Mortuus eat <lb/>
+            (Manasses) in Belhuhacivitute sua, et sepultus est illic <lb/>
+            cum patribus suis. it cap. xvi, 28: Ac sepulta (Judilh) <lb/>
+            cum viro au" ill N. thulia. Arev. </note><note type="footnote"> 105. In Cod. V er on. ita de Machabæis legitur : <lb/>
+            Jlacll.,bæ; septem fratres ab una matre nomine Macha­ <lb/>
+            bæa geniti, custodientes legem, pairia Iradilio"t' non <lb/>
+            tnm .lucantes carnes porcilla.. Ob hoc ab Antiocho rege <lb/>
+            sævissimo in Antiochia martyrii gloria coronati sunt cum <lb/>
+            matre sua, atque aepulli cum magna veneratione. Arf.v. </note><note type="footnote"> In sex exeipplanbus hoc posterius tantum legitur. </note>
+          </p></div>
+        </div>        
+        
+          <div n="2" subtype="book" type="textpart">
+
+
+<div n="65" subtype="chapter" type="textpart">
+<ab>
+            <title type="sub">EX NOVO TESTAMENTO.</title>
+          </ab><figure type="illustration">
+            <graphic url="PL83_fig9.jpg"/></figure>
+          <p>
+            <milestone unit="PLSection" n="G"/></p>
+
+<ab>
+            <title type="sub">CAPUT LXV.</title>
+          </ab>
+          <p n="107">107. Zacharias et Elisabeth ante Deum justi, sterilcs <lb/>
+            in juventute, fecundi in senio, requiescunt in Jerusalem.</p>
+          </div>
+
+<div n="66" subtype="chapter" type="textpart">
+<ab>
+            <title type="sub">179 CAPUT LXVI.</title>
+          </ab>
+          <p n="108">108. Joannes Baptista filius Zachariæ, ex tribu Levi, <lb/>
+            in Jerusalem ortus, angelo denuntiante conceptus, <lb/>
+            prænuntius Christi, præBeo Judicis, propheta Altis-<lb/>
+            simi, vox Verbi, amicus Sponsi, testis Domini, lu­ <lb/>
+            cerna Luminis, terminus prophetarum, baptismatis <lb/>
+            imtium ; qui praenuntiatus parentis vocem abstulit, <lb/>
+            genitus officium lingua' resulvit; qui necdum editus <lb/>
+            Christum prophelavit, salutavit in utero, in columba <lb/>
+            agnovit, in deserto monsravit.</p>
+          <p n="109">109. Cujus vestimentum lanugo fuit camelorum, <lb/>
+            habitatio eremus, victus mellis, et locustarum cibus.
+            <milestone unit="PLSection" n="D"/><lb/>
+            Hic, dum Herodi prohiberet fraternum violare connu­ <lb/>
+            bium, carceralibus tenebris mancipatur. Cujus caput <lb/>
+            regis filia ludi præmium a patre postulavit; at ille <lb/>
+            desectum male poscenti filæ ebrius inter pocula dedit.</p>
+          <p n="110">
+<milestone unit="PLSection" n="C"/>110. Sepultus est in Sebastia oppido Palæstinæ, <lb/>
+            quæ olim Samaria vocabatur; quam Herodes rex <lb/>
+            Judææ, Anlipatri lilius, ob honorem Cæsaris Au­ <lb/>
+            gusti Graeco sermone Augustam vocavit.</p>
+          </div>
+
+<div n="67" subtype="chapter" type="textpart">
+<ab>
+            <title type="sub">CAPUT LXVII.</title>
+          </ab>
+          <p n="111">111. Maria (quæ interpretatur Domina, sive Illumina­ <lb/>
+            trix),clara stirps David, Virga Jesse, Hortus conclusus, <lb/>
+            Fons signatus, Mater Domini, Templum Dei, Sacrarium <lb/>
+            Spiritus sancti, Virgo sancta, Virgo feta, virgo ante par­ <lb/>
+            tum,virgo post partum, salutationem ab angelo accepit, <lb/>
+            et mysterium conceptionis agnovit : partus qualita­ <lb/>
+            tem inquirii, et contra legem naturæ obsequii fidem <lb/>
+            non renuit, quam Dominus ipse in cruce positus, <lb/>
+            per sanguinem Testamenti virgini commendavit dis­ <lb/>
+            cipulo, ut ipsum mater haberet vitæ comitem quem
+            <milestone unit="PLSection" n="D"/><lb/>
+            filius noverat integritatis esse custodem.</p>
+          <p n="112">112. Hanc quidam crudeli necis passione asserunt ab <lb/>
+            hac vita migrasse, pro eo quod justus Simeon comple­ <lb/>
+            ctens brachiis 180 suis Christum, propheta verit, matri <note type="footnote"> ł 12. Quidam. Vide Ambros. </note><note type="footnote"> Ibid. Hic Isid(Jri locus l:'udatur ejus nom.ne ab <lb/>
+            auctore sermonis de Assumptione Mariae ,'irginis, <lb/>
+            qui a nonnullis Ambrosius Autpertus esse creditur; <lb/>
+            cujus verba protuli in Isidorianis, cap. 6t, num. 12. <lb/>
+            Quod ait Isidorus, nec obitus ejus uspiam legitur. Aut­ <lb/>
+            pertus, sive quis alius auctor, ita explicat : Nec illl'e- <lb/>
+            nitur apud Latinos aliquis tractatorum de ejns morte <lb/>
+            quidpiam aperte dixisse. Sanctus Epiphanius proba­ <lb/>
+            l,ilius esse censebat Deuin gratiam immortalitatis </note> <pb n="149"/>
+            
+            <milestone unit="PLSection" n="A"/><lb/>
+            dicens : Et tuam ipsius animam pertransibit gladius. <lb/>
+            Quod quidem incerlum est, utrum pro materiali gla­ <lb/>
+            dio dixerit an pro verbo Dei valido et acutiori omni <lb/>
+            gladio ancipili. Specialiter tamen nulla docet histo­ <lb/>
+            ria, Mariam gladii animadversione peremptam, quia <lb/>
+            nec obitus ejus uspiam legitur. Dum tamen reperiatur <lb/>
+            cjus sepulcrum, ut aliqui dicunt, in valle Josaphat.</p>
+          </div>
+
+<div n="68" subtype="chapter" type="textpart">
+<ab>
+            <title type="sub">CAPUT LXVIII.</title>
+          </ab>
+          <p n="113">113. Simon Petrus filius Joannis, frater Andreæ, or­ <lb/>
+            tus in vico Bethsaida provinciæ Galilææ, qui est juxla <lb/>
+            stagnum Genesareth, cujus primi vocatio nominis Bar- <lb/>
+            Jona, legis directa generatio esi. Petrus in Christo Ec­ <lb/>
+            clesiae firmanantum est. Cephas corporis Christi prin­ <lb/>
+            cipatus et capul est. Simon Joannis, virginitatis re­ <lb/>
+            gcneratio incorrupta est.</p>
+          <p n="114">
+<milestone unit="PLSection" n="B"/>114. Qui dum juxta Joannem habeatur tertius, <lb/>
+            juxta Matthæum eligitur primus : nec immerito, <lb/>
+            quia Apostolorum princeps est. Et confessor primus <lb/>
+            Filii Dei, et discipulus, et pastor humani gregs, Pe­ <lb/>
+            tra Ecclesiæ, clavicularins regni, amator Domini, <lb/>
+            atque negator i confitendo laudatus, præsumendo <lb/>
+            clatus, ncgando lapsus, lacrymando purificatus, con­ <lb/>
+            fitendo probatus, patiendo coronatus, cui nomen ex <lb/>
+            opere datur, titulus ex merito potestatis imponitur.</p>
+          <p n="115">115. Hic in Galalia, Ponto, Cappadocia, Bithynia, <lb/>
+            Asia, atque Italia Evangelium praedicavit, atque ha­ <lb/>
+            rum virtutum signis effulsit. Pendulo gressu fervidum <lb/>
+            mare calcavit, præterien sumbra sua mortuos 181 ani­ <lb/>
+            mavit, claudis pristinum reiteravit officium, paraly­ <lb/>
+            ticis fluida membra in proprium reparavit statum.</p>
+          <p n="116">
+<milestone unit="PLSection" n="c"/>116. Inter haec defunctam viduam suscitavit. Ana­ <lb/>
+            niam et Saphiram reos perfidiæ, mortis animadver­ <lb/>
+            sione damnavit. Simonem etiam magicis artibus cœ­ <lb/>
+            lum conscendentem ad terram elisit. Hic postquam <lb/>
+            Antiochenam Ecclesiam fundavit, sub Claudio Cæsa­ <lb/>
+            re contra cumdem Simonem Magum Romam pergit, <lb/>
+            ibique prædicans Evangelium viginliquinquc annis, <lb/>
+            ejusdem urbis tenuit pontificatum.</p>
+          <p n="117">117. Sexto autem ct tricesimo anno post pas­ <lb/>
+            sionem Domini, a Nerone Cæsare in urbe Roma <lb/>
+            deorsum, ut ipse voluit, crucifixns est. Sicque post <lb/>
+            apostolicum meritum , etiam martyrio coronatur. <lb/>
+            Sepultus Romæ in Vaticano, secus viam Triumpha-
+            <milestone unit="PLSection" n="A"/><lb/>
+            lem, tertio lapide. ab Urbe, ad orientalem plagam.</p>
+          </div>
+
+<div n="69" subtype="chapter" type="textpart">
+<ab>
+            <title type="sub">CAPUT LXIX.</title>
+          </ab>
+          <p n="118">118. Paulus, qui ante Saulus, apostolus gentium, ad­ <lb/>
+            vocatus Judæorum, a Christo de cœlo vocatus, in ter­ <lb/>
+            ram prostratus, qui oculatus cecidit, cæcatus sur­ <lb/>
+            rexit, ex persecutore effectus est vas electionis, ex <lb/>
+            lupo ovis , inter apostolos vocatione novissimus, <lb/>
+            prædicatione primus. In lege Gamalielis discipulus, <lb/>
+            in Evangelio Christi servus. Cujus patria Tharsus <lb/>
+            fuit, genus Benjamin.</p>
+          <p n="119">119. Hic secundo post Ascensionem Domini anno <lb/>
+            baptizatus, dignitatem meruit apostolatus, atque plus <lb/>
+            omnibus I laborans, multo latius inter cæteros vel'hi <lb/>
+            gratiam seminavit, atque doclrinam evangelicam sua <lb/>
+            prædicatione implevit.</p>
+          <p n="120">
+<milestone unit="PLSection" n="B"/>120. Incipiens cnim ab Jerosolymis, usque ad Hiy­ <lb/>
+            ricum, et Ualiam Hispaniasque processit, ac nomen <lb/>
+            Christi multarum manifestavit gentium nationibus, <lb/>
+            quibus ante nondum fuerat declaratum, cujus mira­ <lb/>
+            cula isa esse noscunlur.</p>
+          <p n="121">182 121. Raptus sursum in tertiun coelum con. <lb/>
+            scendit, demersus deorsum nocte et die in profundo <lb/>
+            maris fuit, seducentem Pythonis spiritum imperata di­ <lb/>
+            scessione damnavit, adolescenti mortuo vitalem redin­ <lb/>
+            tegravit spiritum, cxcitate percussit magum, claudo <lb/>
+            proprium reformavit incessum; diri quoque serpen­ <lb/>
+            tis nec sensit nec horruit morsum, sed igni dedit arsu­ <lb/>
+            tum, patrem etiam Publii a febribus orando sanavit.</p>
+          <p n="122">122. Hic ab amorem Christi multas passiones gra­ <lb/>
+            viaque corporis sustinuit tormenta. In primis Judaicas
+            <milestone unit="PLSection" n="C"/><lb/>
+            persecutiones, et gentium miscrias, et lahorem, fa­ <lb/>
+            mem, silim, frigus, et nuditatem, naufragia, et mille <lb/>
+            pericula, rabiem ferarum, verbera, carcerales tene­ <lb/>
+            bras, et tormenta catenarum, squalores, et vincula.</p>
+          <p n="123">123. Inter hæc ligatur a Judæis, traditur genti­ <lb/>
+            bus, lapidatur ad neccm, in sporta per murum de­ <lb/>
+            mittitur, virgis cæditur, poenis arctatur, in carcere <lb/>
+            vinclis terræmotu facto resolvitur, ad ultimum a <lb/>
+            Nerone gladio cæditur eo die quo et Petrus cruci­ <lb/>
+            fixus est. Sic enim oportuerat ut hi qui simul confessi <lb/>
+            sunt uno die coronarentur. Sepultus Romæ in via <lb/>
+            Ostiensi, anno post passionem Domini tricesimo sexto, <lb/>
+            tertio ab urhe milliario, contra occidentalem plagam. <note type="footnote"> beatissim.-c Virgilli concessisse, sed Ecclesiæ universae <lb/>
+            sensus repugnati, et solum controversia est inter sciip-</note> 
+            <milestone unit="PLSection" n="D"/><note type="footnote"> tores, utrum Ephesi an II crosnlYlllæ obierit; quam <lb/>
+            fuse perse'luilu,' Tilhmontius, 10m. I, sex prifHor. <lb/>
+            Ecrle*. sircul., in Yita jUt' i pa r:p, et in 110l:s. AI;EV. </note><note type="footnote"> 1 13. Caput. Quasi <foreign xml:lang="grc">ϰεϕαλή</foreign>. </note><note type="footnote"> lbid. Quod inmiii Isidorus, C(phas esse ex Graeco <lb/>
+            caput, multi alii veler,'s c.'eclitlenll1f. Joannes <lb/>
+            XXII, in lulla contra Mar&gt;ilium et Jtlanuem : Cephas <lb/>
+            aniLin (; ræcc interprelatur Luline caput. Verurn noinen <lb/>
+            Cephas Syrum est, et pear-alB siguifical, ut bidurus <lb/>
+            quoque agnoscere videtur lih. VII Etymolog., c. 9. <lb/>
+            l!:dll;HU auctores de apostolas et LXX discipulis gene­ <lb/>
+            ratim tel de iioninillis npostuIissingulatim,scripserint, <lb/>
+            recenset Zai caria in Bibliotheca selecta Hislon;*; ec-Lle­ <lb/>
+            siasiicue, pari. II, cap. 8. lllud vero ai inad versione di­ <lb/>
+            gnuin , quod de sancto Jacob&gt; Majore loquens ait: <lb/>
+            Antonii Ilojo historill de sancto Dietjo de Alcala criticis <lb/>
+            vitis placere d.t poterit. Quid sanct) Jacobo Majori <lb/>
+            apostolo cmn saucio Didaco, sive Jacobo Complutensi <lb/>
+            ordinis Minorum de Ohservanlia l"iCI)? AREV. </note> <note type="footnote"> ln.Do sepulcrosancti Petri in Vaticano sn pern unnt <lb/>
+            est verba facere post eruditissimum opus eminentiss. </note> 
+            <milestone unit="PLSection" n="D"/><note type="footnote"> cardi aKis Borgi;e de Confessione Vaticana.Vide etiam <lb/>
+            Bosiuln, Rom. SlIh:err. it, 2, et Boltarium i, 27. No­ <lb/>
+            lau,lnl11 quod milliaria a foro Romano incipiehant, et <lb/>
+            crant nnno':w milliaribus Italicis. Non vero sats ill[d- <lb/>
+            ligitur quo sensu sepulcrum sancti Petri dicatur csse <lb/>
+            ad orientate", plagam. AREV. </note><note type="footnote"> 1'2U. Adventus sancti Pauli in Hispanias antiquissi­ <lb/>
+            mis testimoniis comprobatur lIippolyLi, Epiphanii, <lb/>
+            Chrysostomi, aliorulu; negant alii, et adhuc sub ju­ <lb/>
+            dice lis est. AREV. </note><note type="footnote"> 12;). Paulum gladio cnesum eodem anno eodemque <lb/>
+            die qiio Petrus crucifixus est, communis est opinio. <lb/>
+            Priideutius tenuit eodem die, sed non eodem anrio <lb/>
+            Petrum et Paulum martyrio coronatos fuisse. Vide <lb/>
+            comment. ad hymn. 12 Peristeph. vers- 5. Paulus <lb/>
+            contra occidentalem pl nam dicitur sepultus, quod <lb/>
+            noii facile explicatur. Alii exhibent contra orientalem <lb/>
+            pla(jam. Anrv. </note></p><pb n="151"/>
+            
+          <p>
+            <milestone unit="PLSection" n="A"/></p>
+          </div>
+
+<div n="70" subtype="chapter" type="textpart">
+<ab>
+            <title type="sub">CAPUT LXX.</title>
+          </ab>
+          <p n="124">124. Andreas, qui interpretatur decorus, frater <lb/>
+            Petri, secundum Joannem primus, juxta Matthæum a <lb/>
+            primo secundus. flic in sorte prædicationis Scythiam <lb/>
+            utque Achaiam accepit, in qua etiam civitate Patris <lb/>
+            cruce suspensus occubuit.</p>
+          </div>
+
+<div n="71" subtype="chapter" type="textpart">
+<ab>
+            <title type="sub">CAPUT LXXI.</title>
+          </ab>
+          <p n="125">125. Jacobus filius Zebedaei, fra:er Joannis, quartus <lb/>
+            iiiordine, 183 duodecim tribubus qnaesuntin disper­ <lb/>
+            siene gentium scripsit, atque Hispaniæ, et occidenta­ <lb/>
+            lium locorum genlibus Evangelium prædicavit, et in oc­ <lb/>
+            casu mundi lucem prædicationis infudit. Hicab Herode <lb/>
+            tetrarcha gladiocæsus occubui. Sepultus in Marmarica.</p>
+          </div>
+
+<div n="72" subtype="chapter" type="textpart">
+<ab>
+            <title type="sub">CAPUT LXXII.</title>
+          </ab>
+          <p n="126">126. annes, apostolus et evangelista, filius Zebe-
+            <milestone unit="PLSection" n="B"/><lb/>
+            dæi, frater Jacobi, virgo electus a Domino, atque inter <lb/>
+            caeteros magis dilectus, qui etiam super pectus Ma­ <lb/>
+            gistri recumbens, et Evangelii fluenta de ipso sacro <lb/>
+            dominici pectoris fonte potavit, et quasi unus de na­ <lb/>
+            radisi fluminibus, verbi Dei gratiam in toto terrarum <lb/>
+            orbe diffudit. Quique in locum Christi, Christo ju­ <lb/>
+            Lente, successit, dum suscipiens matrem Magistri <lb/>
+            discipolns, etiam ipse pro Christo alter quodammodo <lb/>
+            dorelictus est filius.</p>
+          <p n="127">127. Hic, dum Evangelium Christi in Asia prædica­ <lb/>
+            ret, a Domitiano Cassare in Pathnios insulam metallo <lb/>
+            relegatur, ubi etiam positus Apocalypsim scripsit. <lb/>
+            Interfecto autem a senatu Domitiano, exsilio resolu­ <lb/>
+            tus, recessit Ephesum, ibique ob hæreticorum refu­ <lb/>
+            tandas versutias, efflagitatus ab Asiæ episcopis Evan-
+            <milestone unit="PLSection" n="C"/><lb/>
+            gelium novissimus edidit.</p>
+          <p n="128">128. Cujus quidem inter alias virtutes, magnitudo <lb/>
+            signorum 184 hæc fuit. Multavit in aurum sylve tres <lb/>
+            frondium virgas littoreaque saxa in gemmas. Item <lb/>
+            gemmarum fragmina in propriam reformavit natu­ <lb/>
+            ram, vidu m quoque ad precem populi suscitavit, et <lb/>
+            redivivnm juvenis corpus revocata anima reparavit. <lb/>
+            libens lethiferum haustum, non seNam evasit peri­ <lb/>
+            culum, sed eodem prostratos noculo in vitæ reparavit <lb/>
+            statum</p>
+          <p n="129">
+<milestone unit="PLSection" n="A"/>129. Hicanno sexagesimo septimo post passionem <lb/>
+            Domini Salvatoris sub Trajano principe longo jam <lb/>
+            vetustatis senio fessus, cum diem transmigrationis <lb/>
+            sue imminere sibi sentiret, jussisse fertur effodi sibi <lb/>
+            sepulerum, atque inde vale dicens fratribus, facta <lb/>
+            oratione vivens tumulum introivit, deinde tanquam <lb/>
+            in lectulo in eo requievit.</p>
+          <p n="130">130. Unde aocidit ut quldam cum vivere asse­ <lb/>
+            rant, nec mortuum in sepulcro, sed dormientem ja­ <lb/>
+            cere contendant, maxime pro eo quod illic terra sen­ <lb/>
+            sim ab imo scaturiens, ad superficiem sepulcri con­ <lb/>
+            scendat, et, quasi flatu quiescentis, deorsum ad su­ <lb/>
+            periora pulvis ebulliat. Quievit autem apud Epbesum <lb/>
+            sexto Kalendas januarii.</p>
+          </div>
+
+<div n="73" subtype="chapter" type="textpart">
+<ab>
+            <title type="sub">CAPUT LXXIII.</title>
+          </ab>
+          <p n="131">
+<milestone unit="PLSection" n="B"/>131. Philippus a Bethsaida civitate, unde et Pe­ <lb/>
+            trus, Gallis prædicat Christum, barbarasque gentes, <lb/>
+            vicinasque tenebris, et tumenti Oceano conjun­ <lb/>
+            ctas, ad scientiæ lucem fideique portum deducit. <lb/>
+            Dcinde in Hierapoli Phrygiæ provinciæ urbe cruci­ <lb/>
+            fixus, lapidatusque obiit, rectoque sepalius cadavere, <lb/>
+            simul cum filiabus suis ibidem requie cir.</p>
+          </div>
+
+<div n="74" subtype="chapter" type="textpart">
+<ab>
+            <title type="sub">CAPUT LXXIV.</title>
+          </ab>
+          <p n="132">132. Thomas apostolus Christi, Didymus nomnatus, <lb/>
+            et juxta Latinam linguam Christi geminus, ac similis <lb/>
+            Sulvatori, audiendo incredulus, vidend» fidelis. Hic <lb/>
+            Evangelium prædicavit Parthis, et Medis, 185 et <lb/>
+            Persis, Hyrcanisque, ac Bactrianis, et Indis tenentibus <lb/>
+            Orientalem plagam, et intima gentium penetrans,
+            <milestone unit="PLSection" n="C"/><lb/>
+            ibique prædicationem suam usque ad usque suæ <lb/>
+            passionis perducens; lanceis enim transfixus occu­ <lb/>
+            buit i i Calamina civitate Indiæ, ubi et sepultus est <lb/>
+            in honore.</p>
+          </div>
+
+<div n="75" subtype="chapter" type="textpart">
+<ab>
+            <title type="sub">CAPUT LXXV.</title>
+          </ab>
+          <p n="133">133. Bartholomæus apostolus, nomen ex Syralingua <lb/>
+            suscipiens, Lycaoniam in sorte prædicationis accepit, <lb/>
+            atque Evangelium juxta Matthæum apud Indos in <lb/>
+            eorum lingna. convertit. Ad ultimum in Albano <lb/>
+            [AI. Abano] Majoris Armeniæ urbe, vivens a crude- <note type="footnote"> 124. Vera fortasse est lectio nonnullorum Cudi­ <lb/>
+            cnm, civitute Palras, qtiasi indeclinabile sJt Patrol. <lb/>
+            III similia urhiun. nomina uliquaitdo apud Isidoriim <lb/>
+            et alio,-, occurrunt. In Asia passum fuis&gt;e Andream </note> 
+            <milestone unit="PLSection" n="D"/><note type="footnote"> nonnulli tradunt. A R F.V. </note><note type="footnote"> 125. Assentimur ii:; qui verbum scripsit alienum cen­ <lb/>
+            seut. Reliqua ex iis qua: llieronyini Catalogo a Græcis <lb/>
+            adjecla suut sumpta videntur. </note><note type="footnote"> Ibid. Marmarica. AI., Carmarica, vel Archis Mar­<lb/>
+            maricæ. vel Achimarmarica. </note><note type="footnote"> J bitl. Qtix hoc loco de pnedicatione sancti Jacobi <lb/>
+            Majoris in lIispania annotari possent, præoccupata <lb/>
+            a nobis sunt in Isidol"i;anis, cap. 61. Aliis de hoc ar­ <lb/>
+            gumento scriptoribus addendus est elegans et erudi­ <lb/>
+            tus llispanus Joannes Josepli Tulr;, : Jaslificacion <lb/>
+            I,i,'o,.;cocr;liea de la venida de Santiago eI Mayor a <lb/>
+            Espana, y de su sepulcro en Compostela. Matriti, 1797, <lb/>
+            in-4". Pio ab Herode teirarcha fortasse I"gelldurr. <lb/>
+            ab Herode Ayrippa. liis qiue dixi cit, cap. Ut :ul.le <lb/>
+            Mariyrologiuin Gellonense, sive sancti <unclear>Guilleliri</unclear> de <lb/>
+            Deserlo. scriplulu umio circiler 80to:u. III Bache­ <lb/>
+            rii, initio : Jacobus, qui interpretatur supplantaior , <lb/>
+            filius Z..bedæi, fraler JO"'II';'. IIi.: lIisp""iæ. it orci­ <lb/>
+            dentalibus locis prædicavit, et sub Herode 9 adio c..æsru <lb/>
+            OL'C'ubll;l. sepultusque est in Achaia Marmarica, viii <lb/>
+            Kat. "'''qll''fl'. Et lliI.lehp'I"III'n Cenomaneasem, qui <lb/>
+            sæculo 11 et XII floruit. cui. 1350, in Editione Bean­ <lb/>
+            gendrii, de sancto Jacobo Majori : </note> 
+            <milestone unit="PLSection" n="D"/><note type="footnote"> Galliciccque solum se gaudet habere colonum. - <lb/>
+            In Codice Vaticano Reginae '533, page 27, exstat nar­ <lb/>
+            ratio anohyma de JacolJi Majoris capite in monaste­ <lb/>
+            rio Yeueto sancti Fclicis al manes exisIAutP., in 11111 <lb/>
+            assiTiuir reliquum corpus Compostellæ existere. In <lb/>
+            Codice Ottoboniano ł2 ł. et in Codice Itcgill:t! 1222, <lb/>
+            descriptus est byinniis in honoreru sanc i Jacobi, in <lb/>
+            quo a lventu&gt; ejus in lIispaniam et sepulcrum Coin­ <lb/>
+            posiell.e astruimur. AREV. </note><note type="footnote"> ł 30. :1n sanctus Joannes evangolisia obierit, an <lb/>
+            post obitutn re;urrl!scrit t ut adversus Anlichristum <lb/>
+            prædicet in fins; mundi, a nonnullis qiixsituin est. <lb/>
+            Communis 14.cclesiæ sententia est, vere eum, ut c;c- <lb/>
+            tcro4 homines, uhiis..e, neque resurrexisse, aut <lb/>
+            romrecturu ii, nisi de extremi judicii. Vide Deue­ <lb/>
+            di&lt;tum XIV, de lIe:llif. lib. I, cap.14, et Serarium , <lb/>
+            filii clcu:LullI opuscululU ediditde xn Apostolis. ARE'. </note><note type="footnote"> I :&gt;1. Dcsaticto Phi!ippo aposlola confer Patresapo. <lb/>
+            st olicos cuiu notis Cotelcrii, pag. 334 lOin. I. Arev I </note> <pb n="153"/>
+            
+            <milestone unit="PLSection" n="A"/><lb/>
+            lissimis gentibus barbaris decoriatur, sicque terræ <lb/>
+            conditur.</p>
+          </div>
+
+<div n="76" subtype="chapter" type="textpart">
+<ab>
+            <title type="sub">CAPUT LXXYI.</title>
+          </ab>
+          <p n="134">134. Matthæus apostolus et evangelista, qui etiam <lb/>
+            ex tribu sua Levi sumpsit cognomen, ex pub icano a <lb/>
+            Christo clectus, ex peccante translatus. Hic primum <lb/>
+            quidem in Judæa evangelizat, postmodum in Mace­ <lb/>
+            donia prædicat, requicscit in montibus Parthorum.</p>
+          </div>
+
+<div n="77" subtype="chapter" type="textpart">
+<ab>
+            <title type="sub">CAPUT LXXVII.</title>
+          </ab>
+          <p n="135">135. Jacobus Alphæi, episcopus Jerosolymorum pri. <lb/>
+            mus, cognomento Justus, sororis matris Domini filius, <lb/>
+            unde et frater Domini vocatus, homo lucis et opera­ <lb/>
+            rius veritatis, tanteque etiam sanctitatis, ut fimbriam <lb/>
+            vestimenti ejns certatim cuperent attingere populi.</p>
+          <p n="136">136. Hic, dum in Jerusalem Christum Dei Filiu n
+            <milestone unit="PLSection" n="B"/><lb/>
+            prædicaret, de templo a Judæis præcipitatus, lapidibus <lb/>
+            opprimitur, ibique juxta templum humatur. Quem <lb/>
+            Josephus tantæ sanctitatis et venerationis in Judæa <lb/>
+            perhibet exstiti se, ut propter ejus interfectionem <lb/>
+            Jerosolyma credatur esse diruta.</p>
+          </div>
+
+<div n="78" subtype="chapter" type="textpart">
+<ab>
+            <title type="sub">186 CAPUT LXXVIII</title>
+          </ab>
+          <p n="137">137. Judas Jacobi frater in Mesopotamia, atque in­ <lb/>
+            terioribus Ponti evangelizans, feras et indomitas gen­ <lb/>
+            tes, quasi belluarum naturas suo dogmate mitigat, et <lb/>
+            fidei dominicae subjugat, sepultus est autem Bery- <lb/>
+            tho Armeniæ urbe.</p>
+          </div>
+
+<div n="79" subtype="chapter" type="textpart">
+<ab>
+            <title type="sub">CAPUT LXXIX.</title>
+          </ab>
+          <p n="138">138. Matthias, de septuaginta discipulis unus, et pro <lb/>
+            Juda Iscarioth duodecim inter apostolos subrogatus, <lb/>
+            electus est sorte, et solus sine cognomine. Huic datur
+            <milestone unit="PLSection" n="c"/><lb/>
+            Evangelii prædicatio in Judaea.</p>
+          </div>
+
+<div n="80" subtype="chapter" type="textpart">
+<ab>
+            <title type="sub">CAPUT LXXX.</title>
+          </ab>
+          <p n="139">139. Simon Zelotes, qui prius dictus est Chananæus, <lb/>
+            zelo Domini fervens, par in cognomento Petri, et <lb/>
+            similis in honore, accepit Ægypti principatum, et <lb/>
+            post Jacobum Justum cathedram tenuit Jerosoly­ <lb/>
+            morum. Post annos autem centum viginti meruit sub <lb/>
+            Trajano per crucem sustinere martyrii passionem. <lb/>
+            Jacet in Bosphoro.</p>
+          <p>
+            <milestone unit="PLSection" n="A"/></p>
+          </div>
+
+<div n="81" subtype="chapter" type="textpart">
+<ab>
+            <title type="sub">CAPUT LXXXI.</title>
+          </ab>
+          <p n="140">140. IIi fuerunt Christi discipuli, prædicatores fidei, <lb/>
+            et doctores gentium, qui cum omnes unum sint, singuli <lb/>
+            tamen eorum propriis certisque locis in mundo ad <lb/>
+            praedicandum sortes proprias acceperunt.</p>
+          <p n="141">141. Petrus namque Romam accepit, Andreas <lb/>
+            Achaiam, Jacobus Hispaniam, JoannesAsiam, Thomas <lb/>
+            Indiam, Matthæus Maccdoniam, 187 Philippus Gal­ <lb/>
+            liam, Bartholomæus Lycaoniam, Simon Zelotes <lb/>
+            Ægyptum, Mathias Judæam, Jacobus frater Domini <lb/>
+            Jerosolymam, Judas frater Jacobi Mesopotamiam.</p>
+          <p n="142">142. Paulo autem cum cæteris apostolis nulla sors <lb/>
+            propria traditur, quia omnibus gentibus magister et <lb/>
+            prædicator eligitur. Nam sicut Petro et reliquis cir­ <lb/>
+            cumcisionis est apostolatus datus, ita Paulo præputii
+            <milestone unit="PLSection" n="B"/><lb/>
+            in gentibus. IIic autem septem Ecclesiis et tribus <lb/>
+            evangelizat discipulis.</p>
+          </div>
+
+<div n="82" subtype="chapter" type="textpart">
+<ab>
+            <title type="sub">CAPUT LXXXII.</title>
+          </ab>
+          <p n="143">143. Lucas Antiochenus, evangelista, et apostolicæ <lb/>
+            conscriptor historiæ, natione Syrus, arte medicus, <lb/>
+            Græco eloquio eruditus, quem plerique tradunt pro­ <lb/>
+            selytum fuisse, et Hebræas litteras ignorasse. Hic <lb/>
+            tauten fuit Pauli discipulus et individuus conies pe­ <lb/>
+            regrinationis ejus.</p>
+          <p n="144">144. Quique ab ineunte puerilia castissimus fuit, <lb/>
+            et evangelicae prædicationis opus exercuit. Obiit <lb/>
+            septuagesimo quarto v tae suæ anno. Sepultus in Di­ <lb/>
+            thynia, cujus quidem ossa regnante Constantino Con­ <lb/>
+            stantinopolim fuerunt translata.</p>
+          </div>
+
+<div n="83" subtype="chapter" type="textpart">
+<ab>
+            <title type="sub">CAPUT LXXXIII.</title>
+          </ab>
+          <p n="145">145. Marcus evangelista, Petri discipulus, ejusque in
+            <milestone unit="PLSection" n="c"/><lb/>
+            baptismate 188 filius. Cujus quidem Evangelium non­ <lb/>
+            nulli a Petro Romæ dictatum ferunt. Hic, ne ad sacer­ <lb/>
+            dotium promoveretur, abscidisse sibi pollicem fertur.</p>
+          <p n="146">146. Primus autem Alexandriae cathedram tenuit, <lb/>
+            primusque Ecclesias Ægyptiorum fundavit, tantis <lb/>
+            doctrinæ et continentiæ virtutibus florens, ut omnes <lb/>
+            discipuli Christi ejus imitationem sequerentur. Mur. <lb/>
+            tuus est octavo Neronis anno in Alexandria, placida <lb/>
+            quiete sepultus. <note type="footnote"> 45i. In Cod. Flor. sancti Marci ita exhibetur hoc <lb/>
+            caput: hlattluFut in Hebræo donatus exprimitur. ldem <lb/>
+            appellamr Levi ex tribu, a qua ortus f,,;I; in Latino <lb/>
+            autern ex opere publicani nomen accepit, ijuia ex publica- <lb/>
+            I';' fuit fleel"', et in apostolum translatus, etc. ARF.V, </note><note type="footnote"> 157. Beritho. Sic Dorotlieus; alii, Nerito. </note> 
+            <milestone unit="PLSection" n="D"/><note type="footnote"> 43'J. Kx adjectis lIieronyn.i Catalogo a Græcis, <lb/>
+            qn r tainen non huic Simoni, sed Simeoni couvt"niunl. </note><note type="footnote"> lbid. Quod Simon Apostolus in Bosphoro jacue­ <lb/>
+            rit, incertum aliunde est. Eum in AEgypto pnuli­ <lb/>
+            ca*se, et in Persitte Inartyrio coronatum, certioribus <lb/>
+            documentis constat. Anr.v. </note><note type="footnote"> i 40. Ue septuaginta discipulis, aut septuaginia <lb/>
+            duobus scripsit Dorotheus Tyrius, qui singillatim <lb/>
+            eos recenset. David Blondellus notas adjecit, et <lb/>
+            crassiores Dorothei nævos iudicat. AuE:v, </note><note type="footnote"> 44i. Dorotlieus perperam asserit Lucam Ephesi <lb/>
+            oliiisse. Noiinulli apud Pa tras Achai:c der....,;,u.n <lb/>
+            irudijit, alii Thebis Achaicis. Sed verior est senten. <lb/>
+            lia Isidori. Evangelium sancti Luc;e Grinco sermone <lb/>
+            scriptum esse, uti Evangelia sancti Joannis ci Marci, <lb/>
+            communis cst uviniH, quam Ish.lurus quoqne tenet in <lb/>
+            J'. uællliol"uw libro, num. 91, ubi qii;cdam annotati <lb/>
+            sunt III li.uic sententiam. AREV. </note><note type="footnote"> I bid. Ossa bancti Lucae Constanlinopolim , non <lb/>
+            Constantino, sed Constantio in1peralurc, translata <lb/>
+            fuisse , multorum est opinio. Quibus fundanientis <lb/>
+            utraque sententia innitatur, videri potest in Biblio­ <lb/>
+            tl.eca ecclesiastica Fahricii ad caput sancti Hierony­ <lb/>
+            mi de sancto Luca, apud quem plerique lcgunt <lb/>
+            Constantio, alii reponunt tOllalalllino. In Editione </note> 
+            <milestone unit="PLSection" n="D"/><note type="footnote"> hujus libri sancti Isidori. de oriu et obitu Palnu.., <lb/>
+            quam F;thricius CIISD aliis rjusdein argunieini :acJor­ <lb/>
+            navit, notatur sanctum Hieronymum in pratlat. super <lb/>
+            Lucam assignare quoque obitum sancti Luca: anno <lb/>
+            7i, sed, in calalngu Scriptorum ecclesiast., dicere <lb/>
+            eum annos vixisse LXXXIV sine ulore ; credibiie veru <lb/>
+            esse hæc verba addita fui..se, cum iri anii.juis (utli.. <lb/>
+            cibns non habeamur; Glossain ordinariain vilio Ii.. <lb/>
+            brariorum accidisse existimare. AREV. </note><note type="footnote"> 4 45. In EdiLione laudata FalJricii h;ec e,t nota ad <lb/>
+            '"crhulu absciditte, etc. &lt; Ois'. 55 : Si quis ah:o.citlit, <lb/>
+            in glossa super verb. Cler;cu.. Et liabeiur etiairi in <lb/>
+            proogo Evangelii ipsius sancti Marci. Sed hoccu.us­ <lb/>
+            dam Marci anachoreix factum falso tribui Marco <lb/>
+            evangelistae docet Baronius, tum. I Annal., Mib ann. <lb/>
+            lhristi ,i;), num. inarg. 46. r AnEv. </note><note type="footnote"> ł 46. De translatione corporis sancti. Marci Verae.. <lb/>
+            tias videndus, praeter alios, Flaminius CoraeI&lt;us9 <lb/>
+            tom. XIII t:cclesiar. Venetar. ARCV. </note></p><pb n="155"/>
+            
+          <p>
+            <milestone unit="PLSection" n="A"/></p>
+          </div>
+
+<div n="84" subtype="chapter" type="textpart">
+<ab>
+            <title type="sub">CAPUT LXXXIV.</title>
+          </ab>
+          <p n="147">147. Barnabas, qui et Joseph, natione Cypriæ civi­ <lb/>
+            latis, a Gyro rege Persarum conditæ, cum Paulo in <lb/>
+            gentibus apostolatum adeptus, deinde propter Joan­ <lb/>
+            nem discipulum, qui etiam cognomenlo Marcus ap­ <lb/>
+            pellatur, sejunctus a Paulo, nihilominus evangelicae <lb/>
+            praedicationis injunctum sibi opus exercuit.</p>
+          </div>
+
+<div n="85" subtype="chapter" type="textpart">
+<ab>
+            <title type="sub">CAPUT LXXXV.</title>
+          </ab>
+          <p n="148">148. Timotheus Ephesiorum episcopus de civi­ <lb/>
+            tate Listrensium, patre Graeco, id est, ethnico, <lb/>
+            matre autem Judaea, ut refert Apostolus dicens : <lb/>
+            Quia habitavit fides in avia tua Loide, et matre
+            <milestone unit="PLSection" n="A"/><lb/>
+            tua Eunice, certum autem sclo, quod in te quoque</p>
+          <p n="149">149.Hic autem fuit discipulus Pauli, ejusque spiri­ <lb/>
+            tualis filius, quem puerum prope secum idem Pau­ <lb/>
+            ius assumpsit. Qui pudicus et virgo permansit, quique <lb/>
+            apud Ephesum in monte qui vocatur Phion, cum <lb/>
+            magno honore sepultus quiescit.</p>
+          </div>
+
+<div n="86" subtype="chapter" type="textpart">
+<ab>
+            <title type="sub">189 CAPUT LXXXVI.</title>
+          </ab>
+          <p n="150">150. Titus, Pauli discipulus, et in baptismo filius, <lb/>
+            natione Græcus, ex gentibus solus a Paulo apostolo <lb/>
+            post Evangelium circumcisus, quem ad instruendas <lb/>
+            Cretae Ecclesias præfatus reliquit Apostolus. Ibique <lb/>
+            in pace defunctus est, atque sepultus.
+            <milestone unit="PLSection" n="B"/><note type="footnote"> łł7. De sancto Barllaba Apostolo. cjusque epis. <lb/>
+            tola, vide Editionem Cotelerii Patrum apostolic., et <lb/>
+            pibliothecam ecclesiasticaii) Gallandii, lom. I. AREV. </note><note type="footnote"> 148. Dicem, etc. Cod. Alban. : Dicent: Recorda­ <lb/>
+            tionem accipiens ejut fide;, quæ esi iii le non ficla; quce <lb/>
+            et habiiavit prinzu," in avia tnat etc. AUEV. </note><note type="footnote"> 149. Dorotheus Tyrius inepte Ticno;heu II inter <lb/>
+            septungima Christi discipulus recenset, cum puer a <lb/>
+            sancto Pauloapostolo secum assumptus fuerit. AREV. </note> 
+            <milestone unit="PLSection" n="B"/><note type="footnote"> ł 50. Neque Titus inter septuaginta Christi disci­ <lb/>
+            pulos cum Dorotheo collocandus , qui fuit potius <lb/>
+            Pauli discipulus. Vide Pauli Epist. ad 'fiLuID, cap. II, <lb/>
+            7. Codex V cron. post ,epullu, addit: De nomin bus <lb/>
+            duodecim aposlolorunl, qui ad universum orbem terra­ <lb/>
+            rum dimissi sunt ad prædicantlum. Duodecim fue,""u' <lb/>
+            CJuiSli discipuli, etc. Tribrn evanyelizat discipulis, ut <lb/>
+            supra, cap. 81. AREV, </note> </p></div>
+        </div></div>
+        </body></text></TEI>

@@ -1,0 +1,389 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title>Patrologiae Cursus Completus. Series Latina (PL)</title> 
+        <sponsor>University of Leipzig</sponsor>
+        <funder>European Social Fund Saxony</funder>
+        <principal>Gregory Crane</principal>
+        <respStmt>
+          <persName xml:id="Jouve">Jouve</persName>
+          <resp>OCR-ed, corrected and encoded the text</resp>
+        </respStmt>
+        <respStmt>
+          <persName>Greta Franzini</persName>
+          <resp>Project Manager (University of Leipzig)</resp>
+        </respStmt>
+        <respStmt>
+          <persName>Simona Stoyanova</persName>
+          <resp>Project Assistant (University of Leipzig)</resp>
+        </respStmt>
+        <respStmt>
+          <persName>Bruce Robertson</persName>
+          <resp>Technical Advisor (Mount Allison University)</resp>
+        </respStmt>
+      </titleStmt>
+      
+      <publicationStmt>
+        <authority>University of Leipzig</authority>
+        <idno type="filename">PL83.xml</idno>
+        <availability>
+          <licence target="https://creativecommons.org/licenses/by-sa/4.0/">Available under a Creative Commons Attribution-ShareAlike 4.0 International License</licence>
+        </availability>
+        <date>2014</date>
+        <publisher>University of Leipzig</publisher>
+        <pubPlace>Germany</pubPlace>
+      </publicationStmt>
+      
+      <sourceDesc>
+        <listBibl xml:lang="la">
+          <biblStruct>
+            <monogr>
+              <editor>
+                <persName>
+                  <name xml:lang="fr">Jacques Paul Migne</name>
+                </persName>
+              </editor> 
+              <author ref="urn:cite:perseus:author.771">Isidorus Hispalensis</author>
+              <title>Differentiarum Sive De Proprietate Sermonum Libri Duo</title>
+              <title>Allegoriae Quaedam Sacrae Scripturae</title>
+              <title>De Ortu Et Obitu Patrum Qui In Scriptura Laudibus Efferuntur</title>
+              <title>In Libros Veteris Ac Novi Testamenti Proemia</title>
+              <title>Liber Numerorum Qui In Sanctis Scripturis Occurrunt</title>
+              <title>De Veteri Et Novo Testamento Quaestiones</title>
+              <title>Mysticorum Expositiones Sacramentorum Seu Quaestiones In Vetus Testamentum</title>
+              <title>Appendix Ad Libros Regum</title>
+              <title>De Fide Catholica Ex Veteri Et Novo Testamento Contra Judeos</title>
+              <title>Sententiarum Libri Tres</title>
+              <title>De Ecclesiasticis Officiis</title>
+              <title>Synonyma De Lamentatione Animae Peccatricis</title>
+              <title>Regula Monachorum</title>
+              <title>Epistolae</title>
+              <title>De Ordine Creaturarum Liber</title>
+              <title>De Natura Rerum Ad Sisebestum Regem Liber</title>
+              <title>Chronicon</title>
+              <title>Historia De Regibus Gothorum. Wandalorum Et Suevorum</title>
+              <title>De Viris Illustribus Liber</title>
+              <title>Carmina [Ascripta]</title>
+              <title>Chronica Regum Visigothorum (Incertus)</title>
+              <title>Expositio In Canticum Canticorum Salomonis [Incertus]</title>
+              <title>De Conflictu Vitiorum Et Virtutum (Incertus)</title>
+              <title>Expositio In Missa (Incertus)</title>
+              <title>Sententiarum Liber Quartus (Incertus)</title>
+              <title>Exhortatio Humilitatis (Incertus)</title>
+              <title>Testimonia Divinae Scripturae Et Patrum (Incertus)</title>
+              <title>Sermones (Incertus)</title>
+              <title>De Ecclesiasticis Dogmatibus (Incertus)</title>
+              <title>Sentantiae Differentiarum De Activa Vita Atque Contemplativa [Incertus]</title>
+              <title>Exhortatio Poenitendi Cum Consolatione Et Misericordia Dei [Incertus]</title>
+              <title>Lamentum Poenitantiae (Incertus)</title>
+              <title>Oratio Contra Insidias Diaboli (Incertus)</title>
+              <title>Liber De Ortu Et Obitu Patrum Incertus</title>
+              <title>Liber De Numeris (Incertus)</title>
+              <title>Glossae in Sacram Scripturam</title>
+              <title>Differentiarum, sive de Proprietate Sermonum, Liber</title>
+              <title>Liber Glossarum</title>
+              <imprint>
+                <publisher>Garnier</publisher>
+                <pubPlace>Paris</pubPlace>
+                <date>1850</date>
+              </imprint>
+              <biblScope unit="volume">83</biblScope>
+            </monogr>
+            <monogr>
+              <author>Auctor Incertus</author>
+              <title>Archiepiscopi Toletani Veteres</title>
+              <title>Chronologia Gothicorum Regum (Ex Codice Regio Vaticano)</title>
+              <imprint>
+                <publisher>Garnier</publisher>
+                <pubPlace>Paris</pubPlace>
+                <date>1850</date>
+              </imprint>
+              <biblScope unit="volume">83</biblScope>
+            </monogr>
+            <ref target="http://hdl.handle.net/2027/pst.000020950231">HathiTrust</ref>
+            
+          </biblStruct>
+        </listBibl>
+      </sourceDesc>
+      
+    </fileDesc>
+    <encodingDesc>
+      <p>The following text is encoded in accordance with EpiDoc standards and with the
+        CTS/CITE Architecture.</p>
+      <refsDecl n="CTS">
+        <cRefPattern n="no citable units founds" matchPattern="(.+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div/tei:div[@n='$1'])"/>
+      </refsDecl>
+    </encodingDesc>
+    
+    <profileDesc>
+      <langUsage>
+        <language ident="la">Latin</language>
+      </langUsage>
+    </profileDesc>
+    
+</teiHeader>
+  <text>
+    <body><div type="edition" n="urn:cts:latinLit:tmp1440.tmp1440.opp-lat1">
+          <ab>
+            <title type="sub">APPENDIX XVI.</title>
+          </ab>
+          <ab>
+            <title type="sub">EXBORTATIO POENIТENDI CUM CONSOLATIONE ET MISERICORDIA DEI, AD ANIMAM FUTURA JUDICIAFORMIDANTEM a,</title>
+          </ab>
+          <p>Curfluctuas, anima, moerorum quassata procellis?
+            <milestone unit="PLSection" n="D"/><lb/>
+            Usquoquomultimoda cogitatone turbans ? <lb/>
+            Mens confusa tædiis, itineris devia carpens, <lb/>
+            Tramites caliginis subducta fuce percurrit. <lb/>
+             Non ablatas res, cellulas mundi facesque suspires, <lb n="5"/>
+            Nec oasus honoris, sed ruinas animæ plora, <lb/>
+            Non hæn defunctoria doleas exiLia carnis; <lb/>
+            Sed perseverantia i artari tormenta formida. <lb/>
+            Nec ærumnas carceris abigas, quibus fine carebis ; <lb/>
+             Sed juges A verni miserias prospectans evita, <lb n="10"/>
+            947 Quæ hic redimi facili compendio pos- <lb/>
+            [ sunt , <lb/>
+            Si mundi affectus in amorem Christii conver- <lb/>
+            ( tas , <lb/>
+            Et te non negligas ab iniquitate privare. <lb/>
+            Cuncta peccata a corde divulsa propellas, <lb/>
+             Res iniquas penitus remove, saltemque percus- <lb n="15"/>
+            [sus, <lb/>
+            Abhorre, ut sinceritate rum vel sero reniteas. <lb/>
+            Abjecit te mundus percussitque, rescripsit, <lb/>
+            [ derisit. <note type="footnote"> * Vide Isidoruna, c. st. a. 18 et seqq. </note> <lb/>
+            Quare non consideras quid a te Christus ex-
+            <milestone unit="PLSection" n="D"/><lb/>
+            L quirit ? <lb/>
+            Non humana manu talia te perpeti putes, <lb/>
+            Sei hæc proVenisse divine judicio crede. <lb/>
+             Irritasti contra te Dominum offensa delicti, <lb n="20"/>
+            Qui teflagris arguens curripit, coercet, at- <lb/>
+            [flagit, <lb/>
+            flagelli impendio monet, ut errata cognoscas <lb/>
+            Et agnita pœnitens corrigas distringas, emen- <lb/>
+            [des. <lb/>
+             Hoc sentiredebes, quod instantiverbere pul- <lb n="25"/>
+            [satus, <lb/>
+            Ut benevolus a malo segregatus existas, <lb/>
+            Et perniciosa respuens, innoxia quæras. <lb/>
+            Vult contritionis hunc te examinare camino, <lb/>
+            Quo conflatus pristinas vitiorem sordes amittas. <lb/>
+             Cur ergo per quæquam diffusus mento vacua <lb n="30"/>
+            [curris ? <lb/>
+            Ad calcem examinis sensus tui collige gressus. <lb/>
+            Discute cur tuum, cautius interroga mentem. <lb/>
+            Uuid ludibriosum retinet, vel gessit, exponat. <pb n="1253"/>
+            
+            <milestone unit="PLSection" n="A"/><lb/>
+            quid sævupm, quid nexium concepit, vel operil, <lb/>
+            [ pandat; <lb/>
+             Et dum est licentia, totum praedamuare festina. <lb n="35"/>
+            Ecce perpetrala cuncta coram oculis constant , <lb/>
+            Et secreto murmure mens universa proponit. <lb/>
+            Quid admissa crimina nisi lamenta requirunt? <lb/>
+            Quid vult facti vulnus, nisi malagmata fletus? <lb/>
+             Nullum scelus aliter oisi pœnitendo <lb n="40"/>
+            Expiatur, imo puniendo, ne sit jam ultra, <lb/>
+            Deletur. Ergo si ruisse nequiter vivendo <lb/>
+            Pisplicet, surge decenler. Melius agendo prae- <lb/>
+            [ curre <lb/>
+            Judicem futurum, timeus perdentem iniquos. <lb/>
+             Hunc post saeculi crimina opere justitiæ placa. <lb n="45"/>
+            Atros igne, ioferi, quod est mors secunda, pa- <lb/>
+            [vesce; <lb/>
+            Sed admissa poenitens puni peccata, et vives. <lb/>
+            In hac vita lacrymis exstingue Tartari flam- <lb/>
+            [mas,
+            <milestone unit="PLSection" n="B"/><lb/>
+            Et necando crimina vires evacua mortis. <lb/>
+             Mors illic non repetit quos hic viventes amittit, <lb n="50"/>
+            Nam qui se peccato dirimit, justitiae jungit; <lb/>
+            Et spiritus vitæ obsequens. mandata custodit, <lb/>
+            Peccata repudians morti servire contemnit. <lb/>
+            Ultra jam non moritur, nec mors dominabitur <lb/>
+            [illi, <lb/>
+            Neque eum Tartarum excipiet io morte, sed <lb n="55"/>
+            [ coelum , <lb/>
+            348 Nullatenus dubites in hoc , nec unquam <lb/>
+            [diffidas; <lb/>
+            Nam sic protestanda divina dicta deceruunt: <lb/>
+            Ad regnum profecto transierunt cum Christo <lb/>
+            [victuri, <lb/>
+            Qui pœnituisse mala perpetrata probantur. <lb/>
+            Nulla te res dubium de misericordia reddat. <lb n="60"/>
+            Nam parcere Deus promptus est clementer in- <lb/>
+            [ dignis, <lb/>
+            Atque pœnitentibus veniam libenter donare,
+            <milestone unit="PLSection" n="C"/><lb/>
+            Tantum si poeniteas, nec jam pœnitenda com- <lb/>
+            [ mittas; <lb/>
+            Et ob hoc irrigor atque subsannator vocatus , <lb/>
+             Vertas pœnitentiam iv punitionem pericli. <lb n="65"/>
+            Labor sine fructu est, et spes vanissima valde, <lb/>
+            Sic peccata plangere, ut non desinatur pee- <lb/>
+            [ care. <lb/>
+            Quasi quis instructa destruat, diruta reformet, <lb/>
+            Si quod lavat hodie, polluat et sordidet cras ; <lb/>
+             Sic enim non lotus habetur, sed semper im- <lb n="70"/>
+            [mundus. <lb/>
+            Nec capit hujusmodi veniam, sed provocat <lb/>
+            [iram, <lb/>
+            Quoniam non diluit, sed dilatat crimirnum gesta. <lb/>
+            Tu denique cautius talium exempla declinans, <lb/>
+            Et jam peccasse pœnitere, et jam peccare de- <lb/>
+            ( siste. <lb/>
+             Dissipa praeteritas lacrymarum opere culpas. <lb n="75"/>
+            Da eleemosynam, si habes, redime probra, <lb/>
+            Et sequi vanissima respue, contemnere cura.
+            <milestone unit="PLSection" n="D"/><lb/>
+            Sit jam abdicabile, sit abominabile semper pec- <lb/>
+            [catum, <lb/>
+            Quod coelo distrahit, in infernum deponit. <lb/>
+             Melius sit regni gloriam nitore carpere, <lb n="80"/>
+            Quam regni jacturam sordium horrore per- <lb/>
+            Conversus ad ferre.Dominum post tenebras lucem <lb/>
+            [arripe, <lb/>
+            Amplectensque vitam mortalia facta relinque. <lb/>
+            Confitere illi, cumpungere, plangito, roga, <lb/>
+            Dic : Peccavi nimium, parce, mserere, pro- <lb/>
+             Curva cordis genua, prostratus corpore in ter- <lb n="85"/>
+            Obsecra assidue, profusis lacryrmis ora, [ram, <lb/>
+            # Lenias ut humilis, quem exasperasti superbus.
+            <milestone unit="PLSection" n="A"/><lb/>
+            Nam Dei clementiam humiles et flentes aequi­ <lb/>
+            l runt, <lb/>
+            Non ridentes impetrant, neque contumaces ex- <lb/>
+            [orant. <lb/>
+             Certo te poeniteat perperam quaecunque ges- <lb n="90"/>
+            [sisti, <lb/>
+            Ut odiens horreas quidquid indecenter amabas, <lb/>
+            Quod pudore congruo rubor verecundus asper- <lb/>
+            Rite demum veniam lacrymarum prece requi- <lb/>
+            [ ras. <lb/>
+            His namque fomentis animae peccata medetur. <lb/>
+             Et omnia vulnera priscam sanitatem receptant. <lb n="95"/>
+            Sic namque divinum sedas cito furorem ; <lb/>
+            Sic profeCto capies quidquid lacrymando depo- <lb/>
+            [scis ; <lb/>
+            Sic denique poteris evadere quidquid. <lb/>
+            Claudit, obligat, officit, affligit, obumbrat, <lb/>
+             349 Et ad Dei gratiam hoc modo redire gau-
+            <milestone unit="PLSection" n="B"/><lb n="100"/>
+            [ debis. <lb/>
+            Quamvis sis peccator impius, malignus, ini- <lb/>
+            [quus, <lb/>
+            Criminis omni genere contagioque pollutus, <lb/>
+            Pete a Deo veniam, hæsitans nequaquam in <lb/>
+            [fide, <lb/>
+            Qui omni peccamine cunctos poenitentes expur- <lb/>
+            [gat- <lb/>
+             Omne dimittit facinus vera poenitudo delicti, <lb n="105"/>
+            Nec est crirnen ullum quod nequaquam lacryrmæ <lb/>
+            [ tergant. <lb/>
+            Quamvis de justitia terreat judicii dies, <lb/>
+            Nunc misericordia certa poenitudo potitur. <lb/>
+            Delinquentem Deus de præterito damnat, <lb/>
+             Si bonus ex malo fuerit extremo repertus, <lb n="110"/>
+            Ut dicitur impio, si impietates relinquat, <lb/>
+            Opera justitiæ faciat, extremo conversus, <lb/>
+            impietas illius omnis oblita demetur, <lb/>
+            Mortique sublatus aeterna per secula vivet.
+            <milestone unit="PLSection" n="C"/><lb/>
+             Sic denique Paulus fidelis ex infido factus <lb n="115"/>
+            Cunctis caret criminibus, quae impie gesserat <lb/>
+            [ olim. <lb/>
+            Sic ex publicano venit evangelista Matthæus. <lb/>
+            Sicque Cyprianus ex mago sacerdos et martyr. <lb/>
+            Sic et Augustinus ardentior earuis amator, <lb/>
+             Fit ex Manichæo mutii probalus magister a. <lb n="120"/>
+            Sic et Ninivitæ impia, obscena, nefanda de- <lb/>
+            [flentes <lb/>
+            Flagitia, vitam poenitendo merentur. <lb/>
+            Manasses, qui idolis templum repleverat Dei, <lb/>
+            Et de cœlo pridem datam profanaverat legem, <lb/>
+             Post, amisso regno, captivus, et ferreis vinculis <lb n="125"/>
+            I multis <lb/>
+            Ligatus, Dominum pœnitentia placans, regno <lb/>
+            Restitutus est, nexibus culpisque solutus. <lb/>
+            Sic David stupri culpam homicidiique redemit. <lb/>
+            Et Achaz similiter cœlitus pendentem evasit <lb/>
+            [iram. <lb/>
+             De quo coininus dixerat ulcisci Deus.
+            <milestone unit="PLSection" n="D"/><lb n="130"/>
+            Petrus fide lapsus, rursus poenitendo resurgit. <lb/>
+            Sic et Evangelii meretrix, ac publicanus <lb/>
+            Parvis fusis lacrymis, mullo se piaculo mun- <lb/>
+            [ dant. <lb/>
+            Et plurimi alii, qwos olim Scripturae decla- <lb/>
+            [rant <lb/>
+             Post crimina cælibes factos peenitudine viros. <lb n="135"/>
+            Sic e contra polum habentes ad Tartara ca- <lb/>
+            [dunt, <lb/>
+            Qui bona priora malum appetendo relinquunt. <lb/>
+            Ut dicitur justo, si ab iniquitate <lb/>
+            Egressus iniquus exstiterit, justitia omnis <lb/>
+             Ejus depereat, et ipse morte damnetur b. <lb n="140"/>
+            Sic Judas olim subito malignus effectus, <lb/>
+            Omne bonum perdidit, quod dudum beate per­ <lb/>
+             [egit. <note type="footnote"> Vide Isidoriana, .oct. cit. </note> <note type="footnote"> b Fortasse aliquid deest. </note> <pb n="1255"/>
+            
+            <milestone unit="PLSection" n="A"/><lb/>
+            Sic et Salomoni nihil imputatur bono <lb/>
+            Quod antea gessit, sed extremo malo damna- <lb/>
+            [ tur. <lb/>
+             350 In qua voluntate postremo ouispiam vel <lb n="145"/>
+            [ actu <lb/>
+            Fuerit inventus, in hac judicandus erit, sicut <lb/>
+            De hoc ipso Dominus locutus est dicens : <lb/>
+            In quo te in venero in hoc te judicabo. <lb/>
+            Et si credis amplius, hos ipsos diligit Deus, <lb/>
+             Qui post pravitates esse rectiores student, <lb n="150"/>
+            Ac sic se post vitia virlulibus magnis exer- <lb/>
+            [cent, <lb/>
+            Quam qui maia gravia nunquam perpetrasse <lb/>
+            [ noscuntur, <lb/>
+            Et bona praecipue torpentes agere piget. <lb/>
+            Sicut quispiam dominus illum magis servum <lb/>
+             Amplectitur, qui post damna potiora a lucra <lb n="155"/>
+            [ reportat,
+            <milestone unit="PLSection" n="B"/><lb/>
+            Quam qui nihil perdidit, et nihil augmenti fe-<lb/>
+            [cit. <lb/>
+            Sic imperator illum magis militem amat, <lb/>
+            Qui, post fugam remeans, hostem persequendo <lb/>
+            [prosternit,
+            <milestone unit="PLSection" n="A"/><lb/>
+            Quam qui nunquam fugit, et nil unquam fortiter <lb/>
+            [ fecit, <lb/>
+             Sic agricola illam terram plus amat, quae uberes <lb n="160"/>
+            [ illi <lb/>
+            Post spinas affert fruges, quam quæ spmas b <lb/>
+            [nunquam nutrivit, <lb/>
+            Et fertilem messem nunquam aliquando pro- <lb/>
+            [duxit. <lb/>
+            Non desperes veniam, sed potius spera salu- <lb/>
+            [tem, <lb/>
+            Si facturus optima, pessima damnare decernas. <lb/>
+             Corrige delictum, muta mores , renova vitam, <lb n="165"/>
+            Et nulla te plecti dolebis postea pretia. <lb/>
+            Non erit in crimine, quem poenitet ante fuisse ; <lb/>
+            Nec dicetur impius, qui fuerit denuo pius. <lb/>
+            Sequentia vero carmina constructa lamentis <lb/>
+            Suspirando lectita nonnunquam plorando de- <lb n="170"/>
+            [canta. <lb/>
+            Nam potest Dominus transferre in gaudium lu-
+            <milestone unit="PLSection" n="B"/><lb/>
+            [ctum, <lb/>
+            Et adversa omnia in prosperitatem mutare. <lb/>
+            Quem æternis laudibus glorificant in coelo coeli, <lb/>
+            Et summis honoribus cultores efferunt mundi. <lb/>
+            Amen. <note type="footnote"> a Editio, damna quasdam potiora. </note> <note type="footnote"> b Editio, quam iltam, quae .Iribulo. vel .pinas. </note> </p>
+        </div>
+        
+        </body>
+  </text>
+</TEI>

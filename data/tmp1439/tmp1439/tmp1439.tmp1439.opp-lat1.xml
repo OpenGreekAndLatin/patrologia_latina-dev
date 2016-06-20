@@ -1,0 +1,502 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title>Patrologiae Cursus Completus. Series Latina (PL)</title> 
+        <sponsor>University of Leipzig</sponsor>
+        <funder>European Social Fund Saxony</funder>
+        <principal>Gregory Crane</principal>
+        <respStmt>
+          <persName xml:id="Jouve">Jouve</persName>
+          <resp>OCR-ed, corrected and encoded the text</resp>
+        </respStmt>
+        <respStmt>
+          <persName>Greta Franzini</persName>
+          <resp>Project Manager (University of Leipzig)</resp>
+        </respStmt>
+        <respStmt>
+          <persName>Simona Stoyanova</persName>
+          <resp>Project Assistant (University of Leipzig)</resp>
+        </respStmt>
+        <respStmt>
+          <persName>Bruce Robertson</persName>
+          <resp>Technical Advisor (Mount Allison University)</resp>
+        </respStmt>
+      </titleStmt>
+      
+      <publicationStmt>
+        <authority>University of Leipzig</authority>
+        <idno type="filename">PL83.xml</idno>
+        <availability>
+          <licence target="https://creativecommons.org/licenses/by-sa/4.0/">Available under a Creative Commons Attribution-ShareAlike 4.0 International License</licence>
+        </availability>
+        <date>2014</date>
+        <publisher>University of Leipzig</publisher>
+        <pubPlace>Germany</pubPlace>
+      </publicationStmt>
+      
+      <sourceDesc>
+        <listBibl xml:lang="la">
+          <biblStruct>
+            <monogr>
+              <editor>
+                <persName>
+                  <name xml:lang="fr">Jacques Paul Migne</name>
+                </persName>
+              </editor> 
+              <author ref="urn:cite:perseus:author.771">Isidorus Hispalensis</author>
+              <title>Differentiarum Sive De Proprietate Sermonum Libri Duo</title>
+              <title>Allegoriae Quaedam Sacrae Scripturae</title>
+              <title>De Ortu Et Obitu Patrum Qui In Scriptura Laudibus Efferuntur</title>
+              <title>In Libros Veteris Ac Novi Testamenti Proemia</title>
+              <title>Liber Numerorum Qui In Sanctis Scripturis Occurrunt</title>
+              <title>De Veteri Et Novo Testamento Quaestiones</title>
+              <title>Mysticorum Expositiones Sacramentorum Seu Quaestiones In Vetus Testamentum</title>
+              <title>Appendix Ad Libros Regum</title>
+              <title>De Fide Catholica Ex Veteri Et Novo Testamento Contra Judeos</title>
+              <title>Sententiarum Libri Tres</title>
+              <title>De Ecclesiasticis Officiis</title>
+              <title>Synonyma De Lamentatione Animae Peccatricis</title>
+              <title>Regula Monachorum</title>
+              <title>Epistolae</title>
+              <title>De Ordine Creaturarum Liber</title>
+              <title>De Natura Rerum Ad Sisebestum Regem Liber</title>
+              <title>Chronicon</title>
+              <title>Historia De Regibus Gothorum. Wandalorum Et Suevorum</title>
+              <title>De Viris Illustribus Liber</title>
+              <title>Carmina [Ascripta]</title>
+              <title>Chronica Regum Visigothorum (Incertus)</title>
+              <title>Expositio In Canticum Canticorum Salomonis [Incertus]</title>
+              <title>De Conflictu Vitiorum Et Virtutum (Incertus)</title>
+              <title>Expositio In Missa (Incertus)</title>
+              <title>Sententiarum Liber Quartus (Incertus)</title>
+              <title>Exhortatio Humilitatis (Incertus)</title>
+              <title>Testimonia Divinae Scripturae Et Patrum (Incertus)</title>
+              <title>Sermones (Incertus)</title>
+              <title>De Ecclesiasticis Dogmatibus (Incertus)</title>
+              <title>Sentantiae Differentiarum De Activa Vita Atque Contemplativa [Incertus]</title>
+              <title>Exhortatio Poenitendi Cum Consolatione Et Misericordia Dei [Incertus]</title>
+              <title>Lamentum Poenitantiae (Incertus)</title>
+              <title>Oratio Contra Insidias Diaboli (Incertus)</title>
+              <title>Liber De Ortu Et Obitu Patrum Incertus</title>
+              <title>Liber De Numeris (Incertus)</title>
+              <title>Glossae in Sacram Scripturam</title>
+              <title>Differentiarum, sive de Proprietate Sermonum, Liber</title>
+              <title>Liber Glossarum</title>
+              <imprint>
+                <publisher>Garnier</publisher>
+                <pubPlace>Paris</pubPlace>
+                <date>1850</date>
+              </imprint>
+              <biblScope unit="volume">83</biblScope>
+            </monogr>
+            <monogr>
+              <author>Auctor Incertus</author>
+              <title>Archiepiscopi Toletani Veteres</title>
+              <title>Chronologia Gothicorum Regum (Ex Codice Regio Vaticano)</title>
+              <imprint>
+                <publisher>Garnier</publisher>
+                <pubPlace>Paris</pubPlace>
+                <date>1850</date>
+              </imprint>
+              <biblScope unit="volume">83</biblScope>
+            </monogr>
+            <ref target="http://hdl.handle.net/2027/pst.000020950231">HathiTrust</ref>
+            
+          </biblStruct>
+        </listBibl>
+      </sourceDesc>
+      
+    </fileDesc>
+    <encodingDesc>
+      <p>The following text is encoded in accordance with EpiDoc standards and with the
+        CTS/CITE Architecture.</p>
+      <refsDecl n="CTS">
+        <cRefPattern n="no citable units founds" matchPattern="(.+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div/tei:div[@n='$1'])"/>
+      </refsDecl>
+    </encodingDesc>
+    
+    <profileDesc>
+      <langUsage>
+        <language ident="la">Latin</language>
+      </langUsage>
+    </profileDesc>
+    
+</teiHeader>
+  <text>
+    <body><div type="edition" n="urn:cts:latinLit:tmp1439.tmp1439.opp-lat1">
+          <ab>
+            <title type="sub">APPENDIX XV</title>
+          </ab>
+          <ab>
+            <title type="sub">NORMA VIVENDI.</title>
+          </ab>
+          <p>341 1. Age, fili, ut oportet, age ut decet, age ut di­ <lb/>
+            gnum est. Propone tibi ut non pecces, ut culpas tuas <lb/>
+            non reileres, post lapsum denuo ne delinquas; bona et <lb/>
+            mala prouteveniunttolera; quaecunque eveniuntmente <lb/>
+            libera sustine; patientiæ et mansuetudini ante omnia <lb/>
+            operam des ; irrisionem despiciendo supera ; sagittas <lb/>
+            contumeliæ patientiæ clypeo frange; praepara contra <lb/>
+            omnem aspectum clypeum patientiæ ; contra linguae <lb/>
+            gladium tolerantiæ praebe scutum, tacendo siquidem <lb/>
+            melius vinces (Vide Isidoriana, cap. 82).</p>
+          <p>
+            <milestone unit="PLSection" n="C"/>i. Disce a Christo modestiam, disce et moderan­ <lb/>
+            tiam tolerantiamque Christi attende, et non dolebis <lb/>
+            injurias. Maxima est virtus, si non laedis a quo læsus <lb/>
+            fueris, vel clsi læsus permittis. Maxima est virtus, si <lb/>
+            cuicunque nocere potuisti parcis ; quando enim cru­ <lb/>
+            ciaris propterea, peccata tua præcingunt te; quando <lb/>
+            minaris, mala tua iter faciunt; quidquid tibi adversi <lb/>
+            evenit, propter peccata tua tibi evenit. Consideratione <lb/>
+            igitur justitiæ dolorem tempera; melius dolorem <lb/>
+            portabis, si pro quibus tibi eveniunt intendas.</p>
+          <p>3. Cum igitur tibi derogatur, ora; cum maledici­ <lb/>
+            tur, tunc benedic; maledictioni benedictionem oppo. <lb/>
+            ne, et irascentem patientia delinire stude; blandi­ <lb/>
+            mento iracundiam fervescentem dispelle; nequitiam <lb/>
+            bonitate verbi vince ; malitiam benignitate, inimicos <lb/>
+            omnes modestia placa, aliorum mala tua bonitate su­ <lb/>
+            pera. Tranquilla mente illatas contumelias perde, <lb/>
+            aperi tranquillo corde dolores; vulnus in imo corde, <lb/>
+            quamvis grave sit, apertum evaporat, valde autem <lb/>
+            comedit animum inclusum. Quanto enim magis te-
+            <milestone unit="PLSection" n="D'"/><lb/>
+            Sis, tanto magis auges; aperi igitur grato animo, et <lb/>
+            non te excruciet.</p>
+          <p>4. Si tristaveris in aliquo fratrem tuum, satisfac <lb/>
+            ei. Si peccaveris in illum, poenitentiam age cum eo. <lb/>
+            Si offenderis aliquem, propitia eum prece, parce <lb/>
+            velociter, ad reconciliationem offensioni tuae cito <lb/>
+            veniam postula; non dormites, nisi convertaris ad <lb/>
+            pacem; non requiescas, nisi reconciliatus fueris fra­ <lb/>
+            in tuo. Revoca eum celerrimo dilectionis affectu. <lb/>
+            Revoca eum humilitate ad gratiam; humilitatis af­ <lb/>
+            rectu illi te prosterne, et supplici modo veniam de­ <lb/>
+            precare; petenti quoque tibi veniam libenter indulge, <lb/>
+            et poscenti indulgentiam placatus dimitte.</p>
+          <p>5. Reverentiam sanctam amplectere, et confestim <lb/>
+            benigna suscipe charitate; peccanti juste non dimit­ <lb/>
+            tus, sed culpam sciturus, quia in te est venturum <lb/>
+            judicium ; non habebis indulgentiam, nisi dederis. <lb/>
+            Etsi ille non supplicet, sibique bumiliter dimitti non <lb/>
+            postulet, si peccatum suum mala consuetudine non <lb/>
+            cognoscat conscientia, tu tamen ex corde relaxa, ve­ <lb/>
+            niam quoque propria voluntate concede; aufer a <lb/>
+            corde fraternam otfensam, vel offensionem, et alienae <lb/>
+            nequitiæ non servito; odinm enim a Deo separat, <lb/>
+            nec sanguine fuso deletur.</p>
+          <p>6. Pacem ama, pacem dilige, pacem cum omnibus <lb/>
+            habe et tene, 342 omnesque in mansuetudine et <lb/>
+            charitate complectere; praepara amplius amare quam <lb/>
+            ameris ipse; non sis in pace infidus, non sis levis in <lb/>
+            amicitia, retine semper vinculum constantiæ ; odien-
+            <milestone unit="PLSection" n="C"/><lb/>
+            tes ad pacem invita.</p>
+          <p>7. Discerne te tuo, non alieno judicio; nec ex <lb/>
+            alieno sermone, sed ex tua te mente metire. Nemo <lb/>
+            melius et magis scire potest quid tu scis quam tu, <lb/>
+            cum conscius tui es. Quibus vero prodest, si malus, <lb/>
+            si bonus praediceris; aut quae laus hominum pertinet <lb/>
+            ad te, si alius es quam laudaris? Quapropter vita si­ <lb/>
+            mulationem, vita bypocrisin, sub obscuriori veste non <lb/>
+            simula sanctitatem. Qualis haberi vis, talis esto pro­ <lb/>
+            fessione tua et habitu; et in incessu tuo sit simplici­ <lb/>
+            tas, et in motu puritas; nihil dedecoris, nihil lasci­ <lb/>
+            viae, nihil petulantiae, nihil insolentiae in incessu tuo <lb/>
+            appareat; gestus enim corporis signum est mentis; <lb/>
+            non praebeas de te aliis spectaculum, nec aliis ob­ <lb/>
+            trectandi locum.</p>
+          <p>8. Non te adjungas levibus personis, nec te admi­ <lb/>
+            sceas vanis; vita malos, cave iniquos, fuge mali­ <lb/>
+            gnos, sperne ignaros, fuga a te turbas hominum, <lb/>
+            maxime illius aetatis qui ad vitia proni sunt. Bonis <lb/>
+            jungere, et sanctis individue sociare. Si feceris, so-
+            <milestone unit="PLSection" n="D"/><lb/>
+            cius conversationis illius eorum eris at virtutum ; <lb/>
+            periculum enim est pessimis sociari, melius est eo­ <lb/>
+            rum odium quam consortium.</p>
+          <p>9. Claude aures, ne audias aliquid impudicum; <lb/>
+            vanus enim sermo cito polluit mentem, et facile læ­ <lb/>
+            ditur turpibus, et malis omnibus,agiturque libenter <lb/>
+            quod auditur. Nemo enim creditur odisse quorum <lb/>
+            relatione non læditur ; nihil ex ore tuo procedat quo <lb/>
+            turpescas, vel quod turpe sit; sed hæc erumpant ex <lb/>
+            ore tuo, et ex labiis, quae aures non polluant au­ <lb/>
+            dientium; sermo enim vanus conscientiae vanæ est <lb/>
+            index. Mores hominis lingua pandit, et qualis sermo <lb/>
+            ostenditur, talis animus comprobatur. Ab otioso <lb/>
+            sermone compesce linguam, nec inania verba lo­ <lb/>
+            quaris; sermo cnim otiosus non erit sine judicio. <lb/>
+            Unusquisque enim redditurus est rationem sermo­ <lb/>
+            num suorum , ante uniuscujusque hominis faciem <lb/>
+            stabunt verba sua. Qui verba mala non reprimit, ad <lb/>
+            noxia cito transit; et qui minima non respuit, in <pb n="1249"/>
+            
+            <milestone unit="PLSection" n="A"/><lb/>
+            maxima valde prorumpit ; minorum namque culpa <lb/>
+            majorem generat.</p>
+          <p>10. Particulatim crescunt vitia, et dum parva non <lb/>
+            cavemus, in magnis prolabimur; minora itaque de­ <lb/>
+            vita, et ad majora non devenies. Ea quæ loqueris <lb/>
+            gravitate atque doctrina existant culta, sitque sermo <lb/>
+            tuus irreprehensibilis, ad exspectationem audien­ <lb/>
+            tium utilis ; stude loqui omnino quodlibet secundum <lb/>
+            quod oportet; discerne quid loquaris, quid taceas. <lb/>
+            Intende, et loquere, et loquendo peritus esto. Mul­ <lb/>
+            lum autem delibera quod loqui vis, ne revocare non <lb/>
+            possis quod dixeris; fuge casus linguæ, nec pateat <lb/>
+            injuria jaculis os tuum. Cum amico semper habeto <lb/>
+            silentium, vide opportunitatem loquendi, et profe­ <lb/>
+            rendi sermonem, et expendendi. Maneat in ore tuo <lb/>
+            mensura, in sermone tuo sit statera, abscinde et a <lb/>
+            lingua tua vitium detrahendi, et de alieno malo os <lb/>
+            tuum non coinquines; quod in alio detrahis, hoc in <lb/>
+            te potius pertimesce.</p>
+          <p>
+            <milestone unit="PLSection" n="B"/>ii. Quod inter se loquuntur nomines, hOC nun­ <lb/>
+            quam scire desideres, 343 nec quaeras aliquem qui <lb/>
+            dicat tibi; omitte causam quae ad animam tuam non <lb/>
+            pertinet, nec oblitus morum tuorum alienos perscru­ <lb/>
+            teris; tanto animo corrige vitia tua, quanto studio <lb/>
+            prospexeris aliena.</p>
+          <p>12. Omne genus mendacii summopere fuge; non <lb/>
+            studium loquacium fratrum, nec qualibet fallacia <lb/>
+            vitam alicujus defendas; nullum mendacium justum, <lb/>
+            quod a veritate discordat, in quo etiam prohibetur <lb/>
+            duplex juramentum, assiduitas enim perjurii assue­ <lb/>
+            tudinem facit. F'ac bonum quod spopondisti, non in <lb/>
+            verba facilis, sed etiam factis et operibus difficilis : <lb/>
+            sine consideratione unquam nil facias, vel praesu­ <lb/>
+            mas; quando poteris facere, non pollicearis facere. <lb/>
+            Multum Deo reus eris, si non reddideris quod voves; <lb/>
+            in malis autem promissis rescinde fidem. Non est <lb/>
+            promissio quae dolore adimpletur.</p>
+          <p>13 Si vis tuas adimplere virtutes, prodere noli;
+            <milestone unit="PLSection" n="c"/><lb/>
+            occulta virtutes pro elatone ; absconde bona facta <lb/>
+            pro arrogantia ; fuge videri quod esse meruisti; qui <lb/>
+            manifestando poteras amittere, tacendo custodi. Vi­ <lb/>
+            tia vero cordis tui revela, pravas cogitationes ma­ <lb/>
+            nifesta illico, peccatum enim revelatum cito cura­ <lb/>
+            tur, simulata culpa crescit. Si patet vitium, ex ma­ <lb/>
+            gno fit pusillum; si latet peccatum, ex minimo fit <lb/>
+            maximum. Melius est amem ut vites vitium quam ut <lb/>
+            emendes, ne forte cum incurreris, pessima consue­ <lb/>
+            tudine revocare non possis. Consuetudinis viucula <lb/>
+            vix solvuntur, et inolila diu tardius corriguntur.</p>
+          <p>14. incipientem diu delibera sententiam, et quod <lb/>
+            vis diu agere, diu exquire, proba, et age; nil enim <lb/>
+            in agendo præcipiti consilio, sed mora melius est. In <lb/>
+            rebus autem bonis tarditas removeatur; in bonis <lb/>
+            enim dilatio nocet, et. quod expeditdifferre impedit. <lb/>
+            In bonis absit remissa segnities, absit negligentia, <lb/>
+            carnis vitia cito captant inertes ; per torporem enim <lb/>
+            vires et ingenium defluunt, et desidia natura corrum-
+            <milestone unit="PLSection" n="D"/><lb/>
+            pilur; hebetudo scientiae lumen exstinguit, solertia <lb/>
+            autem meliorem reddit; ardentius fit ingenium sub­ <lb/>
+            juncto studio, et tardiora ingenia studiis acuuntur. <lb/>
+            Torporem naturae industria excitat, spiritus tardita­ <lb/>
+            tem assiduitas acuit. Expergiscentia perticit spiri­ <lb/>
+            tum, expergiscentia plus scitur, saepe namque con­ <lb/>
+            suetudinem superat, sæpe ex consuetudine naturas <lb/>
+            est effectus ; assiduitas enim mores facit, jugis usus <lb/>
+            in naturam se vertit, quod cum difficultate per usum <lb/>
+            sine difficultate perficies.</p>
+          <p>15. Disce quod nescis, ne doctor inutilis inveniaris; <lb/>
+            bonum autem quod didiceris duce; sapientiam cum <lb/>
+            caeteris impertieris, tibi hanc auges, sapientia exinde <lb/>
+            longior fit; retinendo minor est, et dum plus confer­ <lb/>
+            tur, abuudat. Verba tua cum præcedunt opus, quae <lb/>
+            ore promis, quæ ore promittis, opere adimple ; quæ <lb/>
+            verbis doces , exsecutione exhibe ct ostende. Esto <lb/>
+            non solum magister, sed imitator virtutum. Si do­ <lb/>
+            ces, et facis, tunc gloriosus eris. Non enim satis est <lb/>
+            laudarc quod dixeris, nisi dictis facta commiseas,
+            <milestone unit="PLSection" n="A"/><lb/>
+            In doctrina tui ipsius ap numana te laude tempora; <lb/>
+            sic instrue alios, ut teipsum custodias, sic doce, ut <lb/>
+            humilitatis gratiam non amittas.</p>
+          <p>16. Cave, ne, dum alius docendo erigis, ipse lau­ <lb/>
+            dis appetitione derogeris. 344 Cum autem instruis <lb/>
+            eos, obscuritate noli uti, sed ita dic ut intelligaris, ne <lb/>
+            loquendo simplicibus displiceas, ne prudentes offen­ <lb/>
+            das; juxta spiritum audientium erit sermo docto­ <lb/>
+            rum. Secundum mores incipienda est doctrina; juxta <lb/>
+            vulnus adhibenda sunt remedia, variæ enim volun­ <lb/>
+            tales diversam disciplinam desiderant. Unusquisque <lb/>
+            igitur secundum suam professionem est docendus. <lb/>
+            Inspicienda est utilitas personarum, et unumquem­ <lb/>
+            que taliter in erudiendo tracta. Committe omnibus <lb/>
+            secreta professionis tuæ, loquere aperte.</p>
+          <p>17. Cunctis operta paucis annuntia; ne erubescas <lb/>
+            loqui quod nosti defendere; et quod tibi scientiae <lb/>
+            sentis deesse, ab aliis quære ; quaerendo enim ob­ <lb/>
+            tecta clarescunt, et difficilia conferendo aperiuntur.
+            <milestone unit="PLSection" n="B"/><lb/>
+            Nulla sit tibi curiositas sciendi latentia, nec ultra <lb/>
+            quam scriptum erit quæras scientiam. Non cupias <lb/>
+            quod scire nOn licet.ln disputatione non contradicas <lb/>
+            justitiae; nec contendas evacuare quod rectum est; <lb/>
+            in omni disputatione rectum tene, et plus dilige au­ <lb/>
+            dire quam loqui. In principio audi, in line loquere. <lb/>
+            In omni re finis attendatur, extrema quaerantur, me­ <lb/>
+            liorque est sermo novissimus quam primus.</p>
+          <p>18. Venerare omnes scientia et vita meliores, et <lb/>
+            unumquemque pro suo merito sanctitatis potiori <lb/>
+            gradui competentem reverentiam tribue, nec te <lb/>
+            æqualem sanctiori exhibeas. Senioribus praesta obe­ <lb/>
+            dientiam, et eorum senio obsequio obedi. Cunctis in <lb/>
+            praeceptis sic obtempera, ut obtemperando hominum <lb/>
+            votis Deum non oSTendas. Malum visus facere, non <lb/>
+            consuescas, nec adhuc si poenae immineant, peccanti <lb/>
+            cuiquam non aquiescas; melius narnque est pati <lb/>
+            mortem quam perniciosa maia adimplere. Non solum <lb/>
+            quippe factorum, sed conscius peccati tenetur obno­
+            <milestone unit="PLSection" n="c"/><lb/>
+            xius; neque immunis est a scelere qui, ut faceret <lb/>
+            male, obedivit. Similis est qui obtemperat malo ei <lb/>
+            qui facit maium; facientem et obsequentem pari <lb/>
+            poena constringe.</p>
+          <p>19. A subditis magis venerari quam timeri stude, <lb/>
+            ut tibi plus dilectionis officio quam coutradictionis <lb/>
+            necessitate adhaereant. Subjecti te plus reverenntur <lb/>
+            quam timeant ; ex reverentia euim amor procedit, et <lb/>
+            odium tremor confert; fidem metus tollit, affectus <lb/>
+            restituit; timor non servat diuturnam fidem ; ubi <lb/>
+            timor audet, eum sequitur robur; ubi timor, auden­ <lb/>
+            tia sequitur; et ubi metus, desperatio occurrit. Qua­ <lb/>
+            propter tempera oris sementem, summaque bonitate <lb/>
+            subditos convenit regere; non sis terribilis in sub­ <lb/>
+            jectis, sed sic dominare, ut tibi delecteut servire.</p>
+          <p>20. Tene modum in omni tempore, ut nihil intem­ <lb/>
+            peratum agas, nec minus, nec ultra quam oportet, <lb/>
+            nec in bonis nisi moderatus esse non debes. Omnia <lb/>
+            enim medicamenta utilia sunt, et cum tempore om-
+            <milestone unit="PLSection" n="D"/><lb/>
+            nia fiunt utilia ; recta enim iminoderato usu corrum­ <lb/>
+            puntur, omnis nimietas in vitio est; prospice igitur <lb/>
+            quid aptum sit tibi, et tempori, et ubi, quando, <lb/>
+            quare, quandiu facere debeatur; causas reruin et <lb/>
+            tempora inspice, et singulorum operum discretiones <lb/>
+            diligenter distingue.</p>
+          <p>21. Dignosce omna quae agis, quare bonum inci­ <lb/>
+            pias, quare peragas; in omni operatione discretionem <lb/>
+            tene, nec in aliquo indiscretus sis. 345 Cum bene dis­ <lb/>
+            creveris opus tuum, multa sunt consuetudine vi­ <lb/>
+            tiata, multa pravo usu præsumpta, et multa contra <lb/>
+            pudicos mores usurpata; tunc minime consuetudi­ <lb/>
+            nem serva et legem, usus auctoritali cedat, pravum <lb/>
+            usum lex et ratio vincant. Testimonio tuo nulli no­ <lb/>
+            ceas, nec ad alicujus periculum vocem testificationis <lb/>
+            adhibeas. Sermo tuus nec animam cujusquam, nec <lb/>
+            res impediat, nullum contra veritatem defendas.</p>
+          <p>22. Cum judicas, ne ullius personæ affectu de­ <lb/>
+            flectaris, a viro paupere, aut a divite, causam pro­ <lb/>
+            spice, non personam. Sperne manus, ue per hoc jus- <pb n="1251"/>
+            
+            <milestone unit="PLSection" n="A"/><lb/>
+            titia corrumpatur ; munera enim semper veritatem <lb/>
+            prævaricant et cito a viro violatur justitia. De justo <lb/>
+            judicio temporalialucra non appetas, pro justitia nul <lb/>
+            lum libi præmium quærasdum judicas, pro futuro <lb/>
+            serva mercedem, nec quxras in terra rependi ilud <lb/>
+            tibi iu futuro debetur. Excute manus tuas ab omni <lb/>
+            munere, si iu cœlis velis habitare ; in judicio quoque <lb/>
+            sine misericordia sedeas. Custodi justitiam discretio­ <lb/>
+            nis, et noli plus justus esse quam oportet. Omne c- <lb/>
+            nim quod nimium est vitium est.</p>
+          <p>23. Impia justitia est frag litati humanæ npnigHos­ <lb/>
+            cere; non igitur ames damnare, sed emendare potius <lb/>
+            quam corrigere. Tene rigorem in discretione justitiæ, <lb/>
+            judicii examen sequatur pietas, disciplinæ rigorem <lb/>
+            temperet indulgentia, ita clemens esto iu alieni. de­ <lb/>
+            lictis, sicut in tuis, nec quemquam districtius judices <lb/>
+            quam sicut teipsum. Sic alios judicd, ut te Judicari <lb/>
+            cupis ; dum enim indulges aliena peccata, tibi mise­ <lb/>
+            reris; judiciumquod allis imponis ipse portabis. In
+            <milestone unit="PLSection" n="B"/><lb/>
+            eo enim in quo judicas cs judicandus, in qua men­ <lb/>
+            sura meusus fueris, remetietur tibi.</p>
+          <p>x4. Omnia quæ iuquisieris cum justitia definias, <lb/>
+            nunquam judices suspicionis arbitrio ante proba, <lb/>
+            tunc judica ; non enim qui accusatur, sed criminator <lb/>
+            reus est; periculum est aliquid præsumptuose judi­ <lb/>
+            care. In ambignis de judicio serva sententiam. Qui <lb/>
+            nosti tua, quando nescis, divino serva judicio ; non ni­ <lb/>
+            taris damnarejudicio humano quod Deus suo exami­ <lb/>
+            ni servat ; incerta oq judicemus, quoadusque novis­ <lb/>
+            sime veniat Dominus, qui latentia producat in lucem. <lb/>
+            Quamvis enim non credenda sunt, ideo tamen dimit­ <lb/>
+            tentur, nisi qua. certis iudiciis approbantur, et non <lb/>
+            quæ manifesto examini committuntur, et non quæ <lb/>
+            ordine judiciario comprobantur.</p>
+          <p>25, ln summo honore tihi suprema sit verius; <lb/>
+            quamvis sublimis sis potestatis, in te celsitudinem <lb/>
+            reprime ; nun te extollat honor, sed præsideat humi­ <lb/>
+            litasculmen sublimitatis, Tanto esto majori bumili-
+            <milestone unit="PLSection" n="C"/><lb/>
+            me conspiCuus, quanto es magna dignitate præcla­ <lb/>
+            rus. Impusitas tibi curas humiliter exple, et traditum I <lb/>
+            tibi ministerium mente subdita suscipe. Esto obediens <lb/>
+            divinai dispositioni, et voluntati ejus contrairenon <lb/>
+            audeas. Jura potestatisadeptæ moderanter exerce, <lb/>
+            et omnia non turbulento, sed tranquillo cordedispo­ <lb/>
+            ne. Cave honores, quos sine culpa tenere non pote-
+            <milestone unit="PLSection" n="A"/><lb/>
+            ris. Sublimitas enim honorum magnitudo scelerum <lb/>
+            in majori gradu sine dubiu pœna major,</p>
+          <p>26. Si vis esse quietus, nihil sæculi appetas. Sem­ <lb/>
+            per requiem mentis habebis, si a te curam mundi ab­ <lb/>
+            jicias,semperque quiete æterna frueris, si te <lb/>
+            a strepitu terrenarum rerum abstraxeris, Abjice a te <lb/>
+            quidquid bonum propositum impedire poterit, et toto <lb/>
+            animo odies damna qu e diligit mundus. Quidquid ha­ <lb/>
+            bes, tubeto ad misericordiam. Suffragatur virtus tua <lb/>
+            in operibus. Non eligas cui miseriaris, ue forte prae­ <lb/>
+            tereas illum qui meretur accipere. Omnibus da, ne <lb/>
+            forte cui non dederis ipse sit Christus ; et cui largi­ <lb/>
+            ris, cum hilaritate largire; et quidquid tribuis, cum <lb/>
+            affectu tribue; tribue misericordiam sine murmura­ <lb/>
+            tione, præbe eleemosynam sine tædio.</p>
+          <p>27, Major autem sit benevolentia quam quod da­ <lb/>
+            tur. Major sit gratiaquam quod impenditur ; tale <lb/>
+            eniui crit opus tuum qualis lucrit intentio tua. Quod <lb/>
+            enim affectu bono dispensatur. hoc accipit Detis: qui
+            <milestone unit="PLSection" n="B"/><lb/>
+            amem cuiq tædio dat, perdit mercedem stain. Qui <lb/>
+            cum tristitia manum porrigit, fructum amittit remu­ <lb/>
+            nerationis ; non est misericordia, ubi non est bene­ <lb/>
+            volentia. De luis justis laboribus ministra pauperibus. <lb/>
+            Non auferas ulli unde tribuas alteri. Nihil prodest si <lb/>
+            alium imle relicis unde alium inanem facis. Condem­ <lb/>
+            nat miseratio Ista, non propitiat. Bonum quod facis <lb/>
+            misericordiæ: causa, non jactantiæ. facito ; nil prop­ <lb/>
+            ter temporatem opinionem, <unclear>nihil</unclear> propterfamam, sed <lb/>
+            propter vitamæternam et Dei charitatem. Quidquid <lb/>
+            agis, pro futura mercedeage, æternæ remunerationis <lb/>
+            exspectatio te teneat. Amphus quidquid egeris causa <lb/>
+            gioriæ, hoc est facti tui,</p>
+          <p>28. Si dederis ita, III hominibus innotescat, non <lb/>
+            homim sed propriae personæ præstitisti,nec quod <lb/>
+            ad æternæ sed quod ad hujus hujus vitæ] <lb/>
+            gloriam proficit. Ecce accepisti modica, data est tibi <lb/>
+            norma vivendi ; nulla te ignorantia excusat, non es <lb/>
+            jam vitæ nescius, non es imprudens. aut ignarus, le-
+            <milestone unit="PLSection" n="C"/><lb/>
+            gem quam debes sequi, dispositionis qualis esse de­ <lb/>
+            beas, descripsi. Cognitionesmandatorum habes. Jam <lb/>
+            scis quid est recte vivere. vide ne ultra offendas, vi­ <lb/>
+            de ne quod recipis legendo contemnas vivendo. Bo­ <lb/>
+            num scire, acceptum retin æ, et imple opere quod di­ <lb/>
+            dicisti præceptione. V ide deinceps ne bonum quod <lb/>
+            accepisti despicias. Amen.</p>
+        </div>
+        
+        </body>
+  </text>
+</TEI>

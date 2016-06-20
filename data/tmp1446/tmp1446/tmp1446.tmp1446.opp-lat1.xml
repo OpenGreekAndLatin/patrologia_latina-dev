@@ -1,0 +1,1386 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title>Patrologiae Cursus Completus. Series Latina (PL)</title> 
+        <sponsor>University of Leipzig</sponsor>
+        <funder>European Social Fund Saxony</funder>
+        <principal>Gregory Crane</principal>
+        <respStmt>
+          <persName xml:id="Jouve">Jouve</persName>
+          <resp>OCR-ed, corrected and encoded the text</resp>
+        </respStmt>
+        <respStmt>
+          <persName>Greta Franzini</persName>
+          <resp>Project Manager (University of Leipzig)</resp>
+        </respStmt>
+        <respStmt>
+          <persName>Simona Stoyanova</persName>
+          <resp>Project Assistant (University of Leipzig)</resp>
+        </respStmt>
+        <respStmt>
+          <persName>Bruce Robertson</persName>
+          <resp>Technical Advisor (Mount Allison University)</resp>
+        </respStmt>
+      </titleStmt>
+      
+      <publicationStmt>
+        <authority>University of Leipzig</authority>
+        <idno type="filename">PL83.xml</idno>
+        <availability>
+          <licence target="https://creativecommons.org/licenses/by-sa/4.0/">Available under a Creative Commons Attribution-ShareAlike 4.0 International License</licence>
+        </availability>
+        <date>2014</date>
+        <publisher>University of Leipzig</publisher>
+        <pubPlace>Germany</pubPlace>
+      </publicationStmt>
+      
+      <sourceDesc>
+        <listBibl xml:lang="la">
+          <biblStruct>
+            <monogr>
+              <editor>
+                <persName>
+                  <name xml:lang="fr">Jacques Paul Migne</name>
+                </persName>
+              </editor> 
+              <author ref="urn:cite:perseus:author.771">Isidorus Hispalensis</author>
+              <title>Differentiarum Sive De Proprietate Sermonum Libri Duo</title>
+              <title>Allegoriae Quaedam Sacrae Scripturae</title>
+              <title>De Ortu Et Obitu Patrum Qui In Scriptura Laudibus Efferuntur</title>
+              <title>In Libros Veteris Ac Novi Testamenti Proemia</title>
+              <title>Liber Numerorum Qui In Sanctis Scripturis Occurrunt</title>
+              <title>De Veteri Et Novo Testamento Quaestiones</title>
+              <title>Mysticorum Expositiones Sacramentorum Seu Quaestiones In Vetus Testamentum</title>
+              <title>Appendix Ad Libros Regum</title>
+              <title>De Fide Catholica Ex Veteri Et Novo Testamento Contra Judeos</title>
+              <title>Sententiarum Libri Tres</title>
+              <title>De Ecclesiasticis Officiis</title>
+              <title>Synonyma De Lamentatione Animae Peccatricis</title>
+              <title>Regula Monachorum</title>
+              <title>Epistolae</title>
+              <title>De Ordine Creaturarum Liber</title>
+              <title>De Natura Rerum Ad Sisebestum Regem Liber</title>
+              <title>Chronicon</title>
+              <title>Historia De Regibus Gothorum. Wandalorum Et Suevorum</title>
+              <title>De Viris Illustribus Liber</title>
+              <title>Carmina [Ascripta]</title>
+              <title>Chronica Regum Visigothorum (Incertus)</title>
+              <title>Expositio In Canticum Canticorum Salomonis [Incertus]</title>
+              <title>De Conflictu Vitiorum Et Virtutum (Incertus)</title>
+              <title>Expositio In Missa (Incertus)</title>
+              <title>Sententiarum Liber Quartus (Incertus)</title>
+              <title>Exhortatio Humilitatis (Incertus)</title>
+              <title>Testimonia Divinae Scripturae Et Patrum (Incertus)</title>
+              <title>Sermones (Incertus)</title>
+              <title>De Ecclesiasticis Dogmatibus (Incertus)</title>
+              <title>Sentantiae Differentiarum De Activa Vita Atque Contemplativa [Incertus]</title>
+              <title>Exhortatio Poenitendi Cum Consolatione Et Misericordia Dei [Incertus]</title>
+              <title>Lamentum Poenitantiae (Incertus)</title>
+              <title>Oratio Contra Insidias Diaboli (Incertus)</title>
+              <title>Liber De Ortu Et Obitu Patrum Incertus</title>
+              <title>Liber De Numeris (Incertus)</title>
+              <title>Glossae in Sacram Scripturam</title>
+              <title>Differentiarum, sive de Proprietate Sermonum, Liber</title>
+              <title>Liber Glossarum</title>
+              <imprint>
+                <publisher>Garnier</publisher>
+                <pubPlace>Paris</pubPlace>
+                <date>1850</date>
+              </imprint>
+              <biblScope unit="volume">83</biblScope>
+            </monogr>
+            <monogr>
+              <author>Auctor Incertus</author>
+              <title>Archiepiscopi Toletani Veteres</title>
+              <title>Chronologia Gothicorum Regum (Ex Codice Regio Vaticano)</title>
+              <imprint>
+                <publisher>Garnier</publisher>
+                <pubPlace>Paris</pubPlace>
+                <date>1850</date>
+              </imprint>
+              <biblScope unit="volume">83</biblScope>
+            </monogr>
+            <ref target="http://hdl.handle.net/2027/pst.000020950231">HathiTrust</ref>
+            
+          </biblStruct>
+        </listBibl>
+      </sourceDesc>
+      
+    </fileDesc>
+    <encodingDesc>
+      <p>The following text is encoded in accordance with EpiDoc standards and with the
+        CTS/CITE Architecture.</p>
+      <refsDecl n="CTS">
+        <cRefPattern n="no citable units founds" matchPattern="(.+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div/tei:div[@n='$1'])"/>
+      </refsDecl>
+    </encodingDesc>
+    
+    <profileDesc>
+      <langUsage>
+        <language ident="la">Latin</language>
+      </langUsage>
+    </profileDesc>
+    
+</teiHeader>
+  <text>
+    <body><div type="edition" n="urn:cts:latinLit:tmp1446.tmp1446.opp-lat1">
+          <ab>
+            <title type="sub">APPENDIX XXII.</title>
+          </ab>
+          <ab>
+            <title type="sub">GLOSSÆ IN SACRAM SCRIPTURAM.</title>
+          </ab>
+          <ab>
+            <title type="sub">Ex Codice veteri 1 archivii Vaticani.</title>
+          </ab>
+          <p>
+            <milestone unit="PLSection" n="D"/></p>
+          <ab>
+            <title type="sub">GENESIS.</title>
+          </ab>
+          <p>CAP. I. Spiritus Dei ferebatur. Providentia qualiter <lb/>
+            cuncta creasset. Fiat lux. Ipsa est quæ postea in <lb/>
+            vasa corii, hoc est, sidera, diffundebatur. Dixit. <lb/>
+            Per verbum suum fecit. Mane. Initium creaturæ. <lb/>
+            Vespere. Finis ejusdem. Imaginem, similitudinem. <lb/>
+            Imago eminet in spirilu hominis ; similitudo in Lu­ <lb/>
+            nis operibus.</p>
+          <p>II. Patrarat. Perfecerat. Paradisum. Duo sunt: <lb/>
+            unum terrenum. ubi Adam fuit, alterum cœlestium. <lb/>
+            Lignum vitæ, lignum scientiæ. In custodia praecepti
+            <milestone unit="PLSection" n="D"/><lb/>
+            scientia erat bani. Boni et mali. In transgressione <lb/>
+            scientia erat mali. Bidellium. In arbore colligitur, et <lb/>
+            est pigmentum. Evilat. Hoc est proprium nomen <lb/>
+            terræ.</p>
+          <p>III. Perizomata. Femoralia. Versatilem. Vibran­ <lb/>
+            tem. Versatilis dicitur pro eo, quod quandoque ve­ <lb/>
+            nisset tempus ut etiam removeri potuisset.</p>
+          <p>408 IV. Concidit. Mutavit colorem vultus sui <lb/>
+            Siu. Si non sic. Maledicta terra in operibus tuis. IIic <lb/>
+            non opera colendi, sed peccata exprimit. Num. Di <lb/>
+            cis. Eden. Sacratissimum ipsum paradisi locum in­ <lb/>
+            terpretatur. Porro. Videlicet. <note type="footnote"> GESESIS. — CAP. I. De bis glossis consule isido­ <lb/>
+            riana, cap. 65, num. 38 et seqq. Incipit Cade:; : Dei <lb/>
+            ferebatur; fortasse deinde Icgeudurn pruvidens quali­ <lb/>
+            liler.Scriplun1 erat creasse pro creasset. Interpunctum <lb/>
+            erat verbum suum. Fecit mane. </note><note type="footnote"> . II. In Vulgata cst plantaverat pro patrarat. Fortasse <lb/>
+            legendam unus terrenus... alter cælestis. Glossæ lignum <lb/>
+            yitee, ele., possent aliter ordinari, seu trausjici. <lb/>
+            Vulgata habet bdellium; sed apud scriptores medii <lb/>
+            snvi reperitur bidellium. Piius fieri deberet mentio <lb/>
+            Ilcvilal". III est in Vulgala, scu Evilnt, quam bdellii. </note><note type="footnote">iv. In Vulgata, maledictus eris super terram, lI'si <lb/>
+            licc verba ex cap. III huc translata sint, nbi Vulgata <lb/>
+            laalJet, vers. 17 : Maledicta terra in opere suo. Cx <lb/>
+            vers. U cap. iv dc'sulnitur inun, scilicet iYuro e'f,'o., <lb/>
+            etc. </note> <pb n="1303"/>
+            </p>
+          <p>
+            <milestone unit="PLSection" n="A"/>vi Famosi. Fama nominati. Habitavit in terra <lb/>
+            Haid. In Hebræo habet nodus instabilis. Lævigatis. <lb/>
+            Limpiditatis. Bitumen. Genus gluti, alii piculam, <lb/>
+            ali resinam Tristega. Tricamerata.</p>
+          <p>VII. Cataractæ. Fenestræ. In <unclear>culo</unclear> diei. Initio <lb/>
+            dici</p>
+          <p>IX. Dilatet Deus Japheth, et habitet in tabernaculis <lb/>
+            Sem. Japheth latitudo dicitur. ex quo gentium na­ <lb/>
+            citur multitudo, Sem, ex quo Hebræi minores nu­ <lb/>
+            mero ejecti. Vegetat. Confortat.</p>
+          <p>XI. Ur. Ignis, vel lumen.</p>
+          <p>XII. Illustrem. Magiificum.</p>
+          <p>XIII. In oppidis. In castris.</p>
+          <p>XV. Trimam. Triennem. Altrinsecus. Separatim. <lb/>
+            Abigebat. Ex pellebar.</p>
+          <p>XVI. Libet. Secundum arbitrium luum. Ferus. <lb/>
+            Iracundus, indomitus.</p>
+          <p>XVIII. Sata.. Nomen mensuræ : habet modium et
+            <milestone unit="PLSection" n="B"/><lb/>
+            semis.</p>
+          <p>XIX. Cubitum. Passi duo. Vallaverunt. Circumde­ <lb/>
+            derunt Culminis. Altitudinis. Vim. Fortitudinis. In­ <lb/>
+            tuitus. Attendens.</p>
+          <p>XXI. Sirpi. Generi. Nemus. Arborum ordo com­ <lb/>
+            osius, vel de silva.</p>
+          <p>XXII. Pariter. Simul. Vepres. Rumices.</p>
+          <p>XXIII. Funeris. Corporis. Quin. Magis, vel potius. <lb/>
+            Sictus. Sex denarii. Antrum. Speluncam.</p>
+          <p>xxiv. Destravit. Dividit, vel vendidit. Aio. Dico. <lb/>
+            Suscitati. interrogati.</p>
+          <p>xxv. Hispidus. Pilosus : Protinus. Statim. Adultis. <lb/>
+            Maturis. Gnarus. Expertus. Edulio. Victu, esca, vel <lb/>
+            esu. Parvipendens. Pro nihilo habens.</p>
+          <p>XXVI. Arcersito. Evocato. Perspicuum. Manifestum. <lb/>
+            Coire. Concumbere, vel convenire. Quispiam. Modi­ <lb/>
+            cus aliquis. Sevit. trascitur. Locupletatus. 409 Dita- <lb/>
+            tus. Invidentes Invidia habentes. Humo. Terra. Olim. <lb/>
+            III antiquo. Repererunt. Invenerunt. Jurgium. Rixa- <lb/>
+            Auctum. Inventum.</p>
+          <p>
+            <milestone unit="PLSection" n="C"/>XXVII. Pharietram. Theca ad sagittas portandas. <lb/>
+            Dudum. Antea. Consternatus. Indomitus. Orbabor. <lb/>
+            Sine filiis.</p>
+          <p>XXVIII. Innixum. Incumbentem.</p>
+          <p>
+            <milestone unit="PLSection" n="A"/>XXIX. Valet. Sanus est. Hebdomadam. Septem an­ <lb/>
+            nis. Copula. Conjunctioni.</p>
+          <p>x II. Edente. Generante. Mandragoras. Fruelus si­ <lb/>
+            miles pomi in illa herba nascuntur, et habet duorum <lb/>
+            sexum, masculmi et feminini, et in radice ostendit si­ <lb/>
+            militudinem, et est fertilis, et dicitur qui eatn eradi­ <lb/>
+            cat non posse vivere. Experimento.Exercitudine <lb/>
+            sciens. Dem. Tradam. Furvus. Brunus. Populeas. Bi­ <lb/>
+            dulaneas. Serotinus. Tardus.</p>
+          <p>XXXI. Facultate. Possibilitate. Inclytus. Nobilis. Fe­ <lb/>
+            tus. Portantes. Opes. Divitias. Clam. Occulte. Abige­ <lb/>
+            res. Expelleres. Esto. Etsi putaveris, vel ecce si. <lb/>
+            Necetur. Occidatur. Nequeo. Non possum. Depopula­ <lb/>
+            ti. Vastati.</p>
+          <p>xxxiv. Stupri. Corruptelæ virginitatis. Scorto. Me­ <lb/>
+            retrice.</p>
+          <p>XXXV. Cedentes. Obedientes. Libans. Dagustans.</p>
+          <p>XXXVI. Ad puteum juramenti. Ad aquam fidei.</p>
+          <p>XXXVII. Ditioni. Potestati. Fomitem. Incendium,
+            <milestone unit="PLSection" n="B"/><lb/>
+            mitium. Nitebatur. Laborabat. Polymita. Operis plu­ <lb/>
+            marii. Stactem. Genus resinx pretiosæ. Acquieverunt. <lb/>
+            Consenserunt.</p>
+          <p>XXXVIII. Divertit. Non convertit. Opilio. Pastor <lb/>
+            ovium. Teristrum. Ligatura capitis, vel sindones.</p>
+          <p>xxxix. Arbitris. Judicibus. Lacinia. Ora vestimenti.</p>
+          <p>XL. Pincerna. Buliliarius. Canistra. Quae palma­ <lb/>
+            rum virgulis texitur ad panes portandos.</p>
+          <p>XLI. Conjectores. Æstimatores. In culmo. In ca­ <lb/>
+            lamo, in stipula. Uredine. Vento incendente. Demum. <lb/>
+            Postmodum. Præsagum. 4<unclear>0</unclear> Præscientem. Conji­ <lb/>
+            cere. Æstimare. Macie. Exilitate corporis. Squalore. <lb/>
+            Sorde. Industrium. Instantem. Segetes. Semina.</p>
+          <p>XLII. Nutum. Provideniiam, vel potestatem. Ma­ <lb/>
+            chinantur. Argumentantur. Molimur. Cogitamus , vel <lb/>
+            tentamus.</p>
+          <p>XLIII. Dilatio. Admissio.</p>
+          <p>XLIV. Augurari. Sortiri. Flagitii. Peccati, vel mali, <lb/>
+            vel turpitudinis.</p>
+          <p>XLV. Quantocius. Ocius. Solo. Terra.</p>
+          <p>
+            <milestone unit="PLSection" n="C"/>XLVII. In ærarium. In thesaurarium. Hemina. <lb/>
+            Dimidium sextarium. Serite. Seminate.</p>
+          <p>XLIX. Cerastes. Cornuta serpens , flatu nocens. <lb/>
+            Emissus. Emissus dicitur cervus, quando cervam se­ <note type="footnote"> "I. Scripturn nominata pro nominati. Non appa­ <lb/>
+            ret quo pertinent verba habitavit... instabilis. Obscu­ <lb/>
+            rtiui csl nodus in coinj endio liUerarunl. Mox fortasse <lb/>
+            legesuJulu limpidat;s. De voce tristega, vide Ducan­ <lb/>
+            gium. </note><note type="footnote"> II. Exaratum erat vegetati. Pro ejecti mallem ge­ <lb/>
+            niti. Transposiue sunt glossx; vegeta, pertinet ad <lb/>
+            vers. 13; dilatei, etc., ad verso 27. , </note><note type="footnote"> x'i!. Restitui in oppidi., pro in opisy in Ms. DiscI i.. <lb/>
+            men tamen aliquod notari solet inter caslrunl, cas­ <lb/>
+            tellum et oppidum., </note><note type="footnote"> XVIII. In Glossis Roberti de Sorbona, capiens "'0- <lb/>
+            dium et semissem. Confer Isidorum, I. xvi Etymol., <lb/>
+            c. i6, et Ducangium. </note> 
+            <milestone unit="PLSection" n="D"/><note type="footnote"> xix. Intelligo verbum cubitu". pertinere ad caput <lb/>
+            xix, de duobus angelis a Lot lIuSpilio susceptis : <lb/>
+            Prius autem qualll irent cubicum; non amem intHIigo <lb/>
+            (Jull1 innuat glos,a passi duo, nisi legamus pasti duc. </note><note type="footnote">xxiv. Auctor glossai videtur in textu legisse dis­ <lb/>
+            traxit, aut deftraxit9 mutato i in e9 ut fieri tunc sole­ <lb/>
+            bat. In Vulgata est des'ravit, hoc est, sarcinas depo­ <lb/>
+            suil, a verbo desterno. Pro glossa interrogati, lege­ <lb/>
+            "rena interrogarunt., </note><note type="footnote"> xxv. Scriptu... erat iesea. Apud Hoberlum de Sor­ <lb/>
+            bona male distinguuntur duas glossue : Edulium, vi­ <lb/>
+            ctus; Esca, e&gt;us. </note><note type="footnote"> xxvi. In Vulgata scribitur accersito. In Codice le­ <lb/>
+            gitur modicum aliquid. Ab ineplo aliquo addita est <lb/>
+            glossa iralcituJ., pro sevit, quod est a .ero, non a sce* <lb/>
+            vio. Sic etiam inepta est glossa inventum oro au.. <lb/>
+            ctum. </note><note type="footnote">x 1 VII. Siclegendum theca, vel thecam, pro tega, in <lb/>
+            vet. Cod. Indomitus fortasse mendum est. </note> <note type="footnote"> xxix. Pro .eIJ.'enl annist mallem septenarium. ' </note><note type="footnote"> xxx. (;Iossana de mandragoris huc transtuli, quic <lb/>
+            in veL Ms. reperitur inter cubitum et vallaverunt, sci­ <lb/>
+            licet cap. xix. Quæ &lt;!e mandragoris dicuntur , confe­ <lb/>
+            renda sunt. cuin Etymol., cap. 9, I. xvn, et CUBI diet. <lb/>
+            Bibl., et COnUnt'nt. Calmeti, et diction, Valinontis de <lb/>
+            IJomare. Pleraque enim sunt fabulosa. Vox bidula­ <lb/>
+            neus uon obvia est. In Actis i I Julii, I. II, Vii. Sancti <lb/>
+            Uh.la..ici : Concidit sibi baculum de tigno bidlAllauro. <lb/>
+            In additionibus ad Hurangiuln cnujiciaur legenduM' <lb/>
+            betulaneus, seu betulaceus, a betula.Ex nostis glos. <lb/>
+            sis vera significatio eruitur. </note><note type="footnote"> xxxi. In veL Ms. Fetos, portantes. Mox, pro vaslatl <lb/>
+            scribendum fuisset vastaverunt. Sed multa bujusmodi </note> 
+            <milestone unit="PLSection" n="D"/><note type="footnote"> ad medium sevuin pertinent. </note><note type="footnote"> XXXV. In . Vulgata est recedentes, aec congruit ,glossa <lb/>
+            obediente. Exstat vox cedentes in Dibliis Gothicis To- <lb/>
+            Jetanis. Vide prolog., cap. G5. </note><note type="footnote"> . XXXVI. Iuter glossas funeris et quin cap. XlIII, exa- <lb/>
+            rattim erat in vel. Cod. Ad puteum, &lt; te. </note><note type="footnote"> XXXVII Gloss.e nonnihil . transpositæ sunt. Pro i,. <lb/>
+            eelldium, initium, fortasse legendum est incentivum. </note><note type="footnote"> XXXVIII. Paruin opportuna esl glossa non convertit. <lb/>
+            fie lerislro, sive, ut in Vu'g&gt;ta It'gilur. tl)(',.;stro, cun. <lb/>
+            Icr Etyinolog., I. XIX, c. 25, glossas Rolwni de Sor­ <lb/>
+            bona , et Ducangiuin. Vel. Coli., instantium pro in* <lb/>
+            stantem. </note><note type="footnote"> XL. Ab aliis dicitur b,,';cular;lls, su buttelarius, <lb/>
+            seu bottellarius. Adisis Ducingiuin, verb. D,clla. <lb/>
+            Scriptum est In vet. Cod. texetur, et fortasse voluit <lb/>
+            auctor lex;lur. </note><note type="footnote"> XLI. HeSlilui in culmo pro in culmille. </note><note type="footnote"> ' XLVII. Non reperitur verbum toto in V ulg:lla ; cx-</note> <pb n="1305"/>
+            
+            <milestone unit="PLSection" n="A"/><lb/>
+            quitur. Obiit. Morluus est. Aream. Terram arabilem. <lb/>
+            Resistere. Effugere, vel contradicere.</p>
+          <ab>
+            <title type="sub">EXODUS.</title>
+          </ab>
+          <p>CAP. I. Ellesmoth Hebraice, Exodus Graece, Exi­ <lb/>
+            tus latine. Lateris. Tegulis non coctis : de terra et <lb/>
+            paleis efficiuntur. Mares. Masculos. Ingrueret. Irrueret.</p>
+          <p>II. Elegantem. Pulchrum. Fiscellam. Ponaer in mo­ <lb/>
+            duni navis. Scirpeam. Juncinam. In carecto, loco pa­ <lb/>
+            lustri, vel in marisco; alii canalem. Per crepidinem. <lb/>
+            Per summitatem ripæ. Alvei. Canalis in amne ,vel si­ <lb/>
+            nus aquæ. Papyrione. Papyrus. Adultum. Maturum, <lb/>
+            vel juvenem.</p>
+          <p>III. Hubi. Spina, in qua rosa crescit.</p>
+          <p>IV. Instar. Similitudo. Ab hiri et nudius tertius. To­ <lb/>
+            tum tempus præteritum significat. Impeditioris. Impa­ <lb/>
+            ratioris. Diversorio. Receptaculo. Illico. Statim , vel <lb/>
+            mox. In montem Dei. In montem Sinai. Coreb et Si­ <lb/>
+            nai unum sunt. Sponsus sanguinis tu mihi ea. Quia de
+            <milestone unit="PLSection" n="II"/><lb/>
+            sanguine meo namus es, vel quia circumcisus.</p>
+          <p>v. Exactoribus. Ministris cum vi exigentibus.</p>
+          <p>VI. Adonai. Dominus. Ergastulo. Privata custodia, <lb/>
+            vel carceres. Præsertim. Maxime. Patruelem. Fi:ius <lb/>
+            patrui, vel filia.</p>
+          <p>VII. Colubrum. Colubrum et draconem pro uno po­ <lb/>
+            suit. Virga Aaron, et virga Moysis una erat, Arcana. <lb/>
+            Secreta, vel occulta. Malefici. Magicæ artis invento­ <lb/>
+            res.</p>
+          <p>VIII. Abigantur. Expellantur. Condixerat. Conve­ <lb/>
+            nit, vel consensit. Statuit. Decrevit. Aggeres. Terræ <lb/>
+            tumultum. Sciniphe. Muscæ minutissimæ. Abomina­ <lb/>
+            tiones Ægyptiorum. Oves, quas coluerunt, et nolue­ <lb/>
+            runt manducare.</p>
+          <p>ix. Renuis. Recusas. Turgentium. Tumentium. Vi­ <lb/>
+            rens. Viride. Induravit. Quia non emollivit.</p>
+          <p>x. Corrodet. Demanducabit, delacerabit. Densæ. <lb/>
+            411 Spissæ.</p>
+          <p>. XI. In solio. Throno. Mutiet. Modice murmuret. Os­
+            <milestone unit="PLSection" n="c"/><lb/>
+            tenta. Prædicta signa.</p>
+          <p>XII. Coetum. Conventum. In ædibus. In domibus, <lb/>
+            vel templis. In monumentum. In memoriam. More. <lb/>
+            ,Ritu, observantia. Indigenis. Civibus, vel qui ibi nati <lb/>
+            sunt. Dimittit. Permittit. Cæremonias. Ritus sacrifi­ <lb/>
+            candi. Dudum. Antiquitus , vel antea. Religio. San­ <lb/>
+            ctitas, bonitas, pietas. Efferetis. Asporletis.</p>
+          <p>XIII. Israel. Proficiscentis. Columna. Columna ignis <lb/>
+            et columna nubis una esse creditur ex altera parte <lb/>
+            ignea, et ahera similis nubi. <lb/>
+            xv. Obriguerunt. Coturnix et perdix.</p>
+          <p>XVI. Pilo. Pistillo, alio loco lancea. Gomor. Men-
+            <milestone unit="PLSection" n="A"/><lb/>
+            sura habens XII sextariorum. Scatere. Ebullire , vel <lb/>
+            efferbere. Atui. Nutrivi. vel pavi. Ephi. Ephi et batus <lb/>
+            unum sunt, mensura habens modios tres.</p>
+          <p>XVII. Jurgata. Rixata, vel injuriam habentia. Pau­ <lb/>
+            xillum. Madicum.</p>
+          <p>XVIII. Præstolatur. Observat, vel exspectat. Disce- <lb/>
+            ptatio. Altercatio, vel contentio, vel disputatio. Tri­ <lb/>
+            bunus. Qui super mille viros est. Strenuis. Utilibus , <lb/>
+            vel fortibus.</p>
+          <p>XIX. Jaculis. Telis, vel sagittis actis, vel jactis. <lb/>
+            Clangere. Sonare. Micare. Coruscare, fulgere. Perstre­ <lb/>
+            pebat. Personabat. Paulatim. Per partes. Protixius. <lb/>
+            Longius. Contestare. Conjurare.</p>
+          <p>xv. Zelotes Insontem. Innocentem. Frustra. <lb/>
+            Sine causa, sine ratione, in vanum.</p>
+          <p>XXI. Liberi. Infantes. Diis. Id est, sicut do tibi. De <lb/>
+            industria. De instantia, de cura. Cornupeta. Petulcus, <lb/>
+            cornu petens.</p>
+          <p>XXII. Acervos. Tumulos. Segetes. Messes. Deferat.
+            <milestone unit="PLSection" n="II"/><lb/>
+            Portet. Conductum. Congregatum.</p>
+          <p>XX III. Solamnitatem. Septem hebdomadas a Pascha <lb/>
+            usque Pentecosten. Severis. Seminabis. Crabrones. <lb/>
+            Furrlones. Ultroneus. Spontaneus.</p>
+          <p>XXV. Concinnanda. Componenda. Ephod. Stola li­ <lb/>
+            nea, vel superhumerale , vel dalmatica. Compingite. <lb/>
+            Jungite. Oracutum. Oraculum et propitiatorium 412 <lb/>
+            unum sunt, ubi audiebantur divina eloquia. Interra­ <lb/>
+            silem. Auteranaglypham. Acetabula. Acmarios. Phia­ <lb/>
+            las. Calices minores. Calamos. Modum calami. Scy­ <lb/>
+            phos. Calices majores. Sphærulas. In modum sphæræ <lb/>
+            rotundatas.</p>
+          <p>XXVI. Saga. Una tela in cortinis. Fibulas. Hrincas, <lb/>
+            vel fibulas. A summo usque ad summum. A fine usque <lb/>
+            in finem. Inseretur. Imponetur, immiscetur, inclu­ <lb/>
+            detur.</p>
+          <p>XXVII. Fuscinulas. Tridentes. Arula. Vas æneum <lb/>
+            quandrangulum , in quo prunas portant. Cælaturis. <lb/>
+            Picturis. Paxillos. Genus mensuræ palus nominatæ.
+            <milestone unit="PLSection" n="c"/><lb/>
+            Contusum. Contritum. Oppansum velum. Extensum, <lb/>
+            quo undique pandatur.</p>
+          <p>XXVIII. Applica. Junge. congrega. Fungantur. Utan­ <lb/>
+            tur, obsequantur. Rationale. Pannus in pectore qua­ <lb/>
+            dratus. Cidarim. Cidarim, mitra et tiara unum sunt. <lb/>
+            In marginibus. In his summitatibus vestimentorum. <lb/>
+            Malum Punicum et mala granala unum sunt, poma <lb/>
+            miræ pulchritudinis. Portabit iniquitates. Qui inter­ <lb/>
+            cedit pro iniquitate. Feminalia. Femoralia. Femora. <lb/>
+            A femine.</p>
+          <p>XXIX. Arietes immaculatos. Unius coloris, non mor­ <lb/>
+            bidos, non scabiosos, non læsos. Lagana. De farina <note type="footnote"> stat in Dibliis Go,hicis, pro terræ loco. Vide prole­ <lb/>
+            gunt., cap. 65. Fortasse, in thesaurum. Vox hemilln <lb/>
+            I!esciu, unde in hunc locum advecla fuerit. Ceeljris <lb/>
+            est controversia de libra panis , et vini hciuina in <lb/>
+            regula sancti nenedicti , do qua vidl'ri potest Ducan­ <lb/>
+            gius, ici Dict. Confer eliam \. xvi Elym., c. C2G. </note><note type="footnote"> EXODUS. — CAP. I. Sciipium videtur Ellesmoth; </note> 
+            <milestone unit="PLSection" n="D"/><note type="footnote"> in btymol., I. vi, cap. i, in hoc eodem nostro Co­ <lb/>
+            dice Elesmoth. Apud alios, Veellesemoth. </note><note type="footnote"> II. Menduui videtur ponaer, pro panerium; exara. <lb/>
+            tum etiam erat in domum navis, ei mox plalulri vel <lb/>
+            iri maris, quo atii. De marisco, vide DucangiulIl. </note><note type="footnote"> v. Obscurum est cum l'iln t pro t.'i. Glossae hoc lo­ <lb/>
+            co præpostero ordine co1l0t:uæ erant. II:nc enim in <lb/>
+            Ms. praecedit alias capitis iv, ubi in Vulgata legitur <lb/>
+            ,pOI.,US sanguinum pro sanguinis. </note><note type="footnote"> VI. Forte, carcere. </note><note type="footnote"> ' '"III. Glossa statuit non videtur ad hunc locum <lb/>
+            po thtere , nisi lorte sit etiam hoc verbum explicatio <lb/>
+            verbi cOlldixerat. </note><note type="footnote"> . XI. Ilic etiam inversus erat ordo glossarum, ut <lb/>
+            saepe alibi. </note><note type="footnote">xii. Vel. Cod. dIu observantium, et postea, vel ibi <lb/>
+            qui. </note><note type="footnote"> xvi. Forte, sextarios. Reposui ephi pro æphi, quarn­ <lb/>
+            vis in Bibliis Gothicis Tolebuis ita sit scriptuui æphi. </note> <note type="footnote"> XVII. In Vulg. legitur jurgatus et paululum, pro <lb/>
+            pauxillum. In Bibliis Gothieis eliam est pauscillum, et <lb/>
+            fortasse etiam jurgtua; nam ibi est lapidabit prd la­ <lb/>
+            pidabunt. </note><note type="footnote">xx. Deest glossa pro voce zelotes, quæ in Ms. uni. <lb/>
+            tur verbo, tive glossæ conjurare. III Huucrli glossis, <lb/>
+            zelotes, .Tinulator, ulciscens. </note> 
+            <milestone unit="PLSection" n="D"/><note type="footnote"> xv. Fortasse, sicut diis, pro sicut do tibi. In Vul­ <lb/>
+            gata est per induntriam. Biblia Toletana, de industria. </note><note type="footnote"> XXIII. In Vulg:ua hoc capite non est severis, sed <lb/>
+            .emi1l11bis vers. hi, et seminaverts vers. 16, ubi Uiblia <lb/>
+            Gothica serveris. Vox milii ignota iu,,"'olle,. </note><note type="footnote">xxv. Pro anteranaglypham , fortasse legendum in­ <lb/>
+            teranaglypham. Plerique ;nterrt"ile exponunt per alia- <lb/>
+            glyphum, sculptum. Aclisis Ducangnni. In gln.s"is <lb/>
+            Roberti de Surbona male du;c glossæ distinguuntur, <lb/>
+            interrasilem, dstinclain. Anaglypham, sculptam. Sunt <lb/>
+            enini hæc iria notnina explicatio vocis interTasil Nil. <lb/>
+            Mox legendum videtur in modum calami, ut legimur <lb/>
+            in llobeni glossis. Ihid. , legitur rotundas pro rOll,n- <lb/>
+            datas, sive rotunditas, ut est In nostro Ms. </note><note type="footnote">xxvi. I.ihcn ter legam ,'rincas, vel fibtas; hinc Itali <lb/>
+            strillga, fibbia. Mox miscebitur. </note><note type="footnote">xxix. Verbum latinum est axungia; sed fortasse <lb/>
+            medio ccvo scribebatur exuiigia, ex quo lIispani en* <lb/>
+            jru,dia..Confer Ducangium, verb. exudia. Explicatio </note> <pb n="1307"/>
+            
+            <milestone unit="PLSection" n="A"/><lb/>
+            est, primum in aqua, postea in oleo frigitur. Initia­ <lb/>
+            beris. Sanclificaberis, quando redeunte tempor' anni <lb/>
+            cuncta concludunt, mense septimo, quia Æsyptii <lb/>
+            initium anni et finem sic fecerunt. Mactabis. Occides. <lb/>
+            Jecoris. Hepatis. Arvinam. Exungiam. Vitalia. IUra <lb/>
+            ilia. Expiandum. Espurgandum. Jugiter. Perseveran­ <lb/>
+            ter. Hin. Major sextariorum xix , minor IX. Liban­ <lb/>
+            dum. Sacrificandum.</p>
+          <p>xxx. Liba. Sacrificia. Summam. Numerum. Recen­ <lb/>
+            siti. Numerali. Nomen. Potestatem. Obolus. Scupu­ <lb/>
+            lus semi. Labrum. Labium et Labrum unum sunt : <lb/>
+            vas æneum quadrangulum, in quo lavantur sarerdo­ <lb/>
+             les. Zmirnæ. Calami. Casiæ. Fistulæ.</p>
+          <p>XXXII. Callide. Astute, caute ducere. Quivero. Post <lb/>
+            reatum culpæ.</p>
+          <p>XXXIII. Papilivnis. Tentorii.</p>
+          <p>xxxiv. Deinceps. Rursum,.vel iterum. Aras. Alta­ <lb/>
+            ria. Lucus et nemus unum sunt: et dictus est : quod <lb/>
+            minime transluecat. Æmulator. Imitator, vel invi-
+            <milestone unit="PLSection" n="B"/><lb/>
+            ' dens, vel sectator. Pepigi. Pactum feci, vel spondi. <lb/>
+            Fædus. Pax perpetua, vel amicitia.</p>
+          <p>xxxv. Catervam. Turbam. multitudinem , conven­ <lb/>
+            tum. Prompto. Velocitate 413 voluntatis, vel præ. <lb/>
+            ceps. Posuit testimonium in arca : duas talmlas. Ar­ <lb/>
+            millas. Rotundarunt. Dextralia. Ampla sunt, et ante <lb/>
+            manicas portantur. Abictavii. Lignarii, abiete arbore. <lb/>
+            Polymitarii. Pro rotunditate imaginis : polum, rotun­ <lb/>
+            dum.</p>
+          <p>XXXVI. Necteretur. Ligaretur, Compagem. Junc'u- <lb/>
+            ram. Cyathos. Viginti unum cochlearia faciunt.</p>
+          <p>XXXVIII. Ad plagam. Ad latus. Septentrionalem. <lb/>
+            Contra mediam noctem. Australem. Contra meri­ <lb/>
+            diem. Bracteas. Laminas aureas subtilissimas. Excu­ <lb/>
+            babant. Vigilabant.</p>
+          <p>XI. Sub lecto testimonii. Tabernaculi.</p>
+          <ab>
+            <title type="sub">LEVITICUS.</title>
+          </ab>
+          <p>Vagecra Hebraice,Leviticus Græce, Ministerialis
+            <milestone unit="PLSection" n="c"/><lb/>
+            Latine, quia miuisteria sacerdotum in eodem scripta <lb/>
+            sunt.</p>
+          <p>CAP. I. Crepidinem. Fundamentum.</p>
+          <p>II. In clibano. In camino, in furno. Torres. Asses. <lb/>
+            Farris. Genus frumenti.</p>
+          <p>III. Ilia. Latus prope inguinem. Inficians. Insi-
+            <milestone unit="PLSection" n="A"/><lb/>
+            dians. Quodlibet. Qualecunque. Collyridas. Cybus , <lb/>
+            quem nos nebulam dicimus.</p>
+          <p>x. Sanctificabor in eis. Præsumentes punio. Profa­ <lb/>
+            num. Illicitum, violatum, pollutum. Lugubri. Flebili.</p>
+          <p>XI. Chærogryllus. Bestia spinosa , major crinacco. <lb/>
+            Haliæetum. Avis similis aquilæ, sed major, tamen <lb/>
+            minor vulture. Larum. Avis maritima , habens ungu­ <lb/>
+            las, quasi accipiter. Bubonem. Nycticorax. Quocrota­ <lb/>
+            tus. Avis que sonitum facit in aqua, vel pelicanus. <lb/>
+            Porphyrionem. Alii avem albam similem cygno. He- <lb/>
+            rodionem. Major est omnibus avibus, quia aquilam <lb/>
+            prehendit. Bruchus. Similis locustæ, sed major. Cro­ <lb/>
+            codilus. Bestia in flumine, similis lacerta, sed gran­ <lb/>
+            dis. Mygale. Similis chamæleonti. Chamæleon. Simi­ <lb/>
+            lis lacertæ , et 414 sub aspectu mutat colores. <lb/>
+            Stellio. Verpestilio. Tatpa. Sorex. Chytropodes. Vas <lb/>
+            fictile, pedes habens.</p>
+          <p>XIII. Inolita. Contaminata. Effloruerit. Appellaverit. <lb/>
+            Perspicuæ. Manifestæ, apertæ. Ulcus. Vulnus , sed
+            <milestone unit="PLSection" n="B"/><lb/>
+            minus. Haud dubie. Sine dubio.</p>
+          <p>XIV. Papulas. Verrucas, quae in leprosis apparent. <lb/>
+            Vallicula. Concava loca.</p>
+          <p>xv. Sagma. Sella.</p>
+          <p>XVI. Nebula eorum. Fumus aromatum. Imprecans. <lb/>
+            Solvens.</p>
+          <p>x VII. Quilibet. Quicunque sit. Aurupio. Aviseapio , <lb/>
+            vel qui avium cantus auscultat.</p>
+          <p>XVIII. In pellicatum. In domum concubinarum.</p>
+          <p>XIX. Praeputia. Pomorum immunditia , quæ idolis <lb/>
+            immolantur. Susurro. Occulte murmurans , vel inju­ <lb/>
+            rias seminans. Stigmata. Figuras, vel signa. Noverca. <lb/>
+            Matrasta. Pythoncus. Incantatio, divinatio.</p>
+          <p>xxi. Incisuras. Pro luctu. Aula. Vic nus. Prostibu­ <lb/>
+            lum. Donnus foinicaria.</p>
+          <p>XXII. Inquilinus. Colonus, vernaculus. Spatulas. <lb/>
+            Fructus palmæ, antequam aperiantur.</p>
+          <ab>
+            <title type="sub">NUMERI.</title>
+          </ab>
+          <p><lb/>
+            Vaje Dabber, id est numerus, quia in co numeran­
+            <milestone unit="PLSection" n="c"/><lb/>
+            tur filli Israel.</p>
+          <p>CAP. I. Cuneos. Multitudines.</p>
+          <p>II. Vexilla. Victorias.</p>
+          <p>III. Sanctificavi. Caput radet. De omnibuS cibis <lb/>
+            pulmentum. <note type="footnote"> mensur.T hill obscura est in veL Ms.; eam restitui <lb/>
+            cx aliis glossariis, sed in glossis Houerti de Sorltona <lb/>
+            mendose legitur H , pro viui, ut cst in nosiro Ms. </note><note type="footnote"> xxx. Pro liba, Vulgata refert lib,Uf,illQ. Bildia Go­ <lb/>
+            thica Toletana cum giossis retinentiliba. Rectius erit <lb/>
+            scrupulus semis, vel semiscrupulus. Vide lib. xvi <lb/>
+            F:tym., cap. 25. Pro zmiruai 1'u gata exhibet myr­ <lb/>
+            "lIæ; gloss;e Rohel Ii de Sorhon.1 , lm:rrhæ cum ill­ <lb/>
+            , terpretatione : alii calami, alii myrrluv reS;llallt esse <lb/>
+            volunt. SUfellectilem, diversae res. </note><note type="footnote">xxxiv. y'et. end.. dictus et quod ; forte, dictus ro <lb/>
+            quod. infra Iugi poterit melius spopondi. </note><note type="footnote">xxxv. Vulgata exhibet, vers. r&gt;, et prono animo. </note> 
+            <milestone unit="PLSection" n="D"/><note type="footnote"> Dihlia GOLlJica, et prompto animo. In veteri libro oh­ <lb/>
+            scurum est verbum prwceps, ac fortasse mutilus locus <lb/>
+            hic est. Fxemplar Gothicum , vers. 25, habel : Ob. <lb/>
+            tulit, etc., ad faciendum opus labernacuti tesiimonii. <lb/>
+            Vulgaia nova : Obtulerunt, etc. Paulo post pr;estiterit <lb/>
+            legere cum Roberti glossis rotundæ sunt .pro rotun­ <lb/>
+            darunt. Glossa pro polymitarii ab aliquo aMo videtur <lb/>
+            intrusa, quasi a polus. Exaratum erat in Cod. imagini. </note><note type="footnote"> XXXVI. Vulgata compaginem. Riblia Gothica, c01n- <lb/>
+            pagem. In vet. Cod. est signum ponderis post viginti <lb/>
+            nnum9 qualia describit Isidorus I. xvi, cap. 27; qui­ <lb/>
+            bus t;unen ab omnibus signum m strum didci t. In­ <lb/>
+            lerpretalus sum cochlearia ; nam cyathus constare <lb/>
+            dicimur decent drachmis, et cochlear est dimidi 1 pais <lb/>
+            drachmæ. </note><note type="footnote"> LEVITICUS. — CAP. I. Vet. Cod. , Vagecra, Ut in <lb/>
+            J. vi Etym., c. i ; alii scribunt Vajicra, alii Vaijera. </note><note type="footnote"> II. In vet. Cod. est turres. In Bibliis Gothicis, tor­ <lb/>
+            res, In LVulgata , lor,.ebis I </note> <note type="footnote"> III. ()c nebula pro ci1JO plura Ducangius. </note><note type="footnote"> XL. Nomina clurrogrylli, ct halii eti expressi ex <lb/>
+            Vulgata, nam in vel. Jih!'. corrupta apparem. De vo­ <lb/>
+            ce cavannIs consulendus Ducangiu!t. Codex exhibet <lb/>
+            avis qui, avem album. Deest eliam aliquid in explica­ <lb/>
+            tione Porphyrionis. Glossæ Hoberl i de SOl'bona refe­ <lb/>
+            runl : Po.'pllyr;on, avis purpurei coloris, ut nomen <lb/>
+            significare videtur; alii autem albam similem ryg'lo, <lb/>
+            alii pe:icanurH esse dicunt. Glossa stellionis ab Inter­ <lb/>
+            polatore addita est. Deinde pro catva surric conjeci , <lb/>
+            tal pa -sorcI. V espl'rli I inn is fit mentio supra vers. ł 9, <lb/>
+            ac fortasse multus sic locus est : Steliio...Vesperti­ <lb/>
+            lio... Talpa. In:glossis Robertide SOI:hon:t pro chytro• </note> 
+            <milestone unit="PLSection" n="D"/><note type="footnote"> podes, sive, III ibi iegitur, sertropodes, t.8xplic:Hi,) est <lb/>
+            coquendi vasa pctilia cum tribus pedibus. Aliter Cal­ <lb/>
+            metus, in Dici. hihl. </note><note type="footnote"> XIII. Iu Ms. csl inolitam, et nominatam ; restitui <lb/>
+            contaminatnm , et pro appellaverit , apparuerit. For.. <lb/>
+            tasse pro effloruerit, cum liibliis Gf)lhids. legendum <lb/>
+            fuerit. Codex exhibet vulnus set minor. </note><note type="footnote"> xiv. Vulgala refert t'all;(:ulds. </note><note type="footnote"> xv1. Suspicari licet '.'Ot'CnS pro solvens. </note><note type="footnote"> XVII. Corrupta IIOPC sic erant in libro veteri : accu* <lb/>
+            satio, vel qui ovium cantus austat pro avisrapio, etc., <lb/>
+            ut coujicio ex. I. x Elym., verb. aucelJs. </note><note type="footnote">xxi. Nescio quo pertinet glossa Autl', vicinus, aut <lb/>
+            quid sub his verbis lateat.. </note><note type="footnote"> NU)IF.RI. — In Ms. codice dcsil1er:tfur verhum he.. <lb/>
+            braicum Vaje Dabbe", sive Vagedaber; incipit enim <lb/>
+            EI est, vel Id est; nain e pro i passim occurrit. </note><note type="footnote"> CAP. III. Obscura sunt verba De omnibus9 et ali'luid <lb/>
+            deest ad sensum. </note> <pb n="1309"/>
+            </p>
+          <p>
+            <milestone unit="PLSection" n="A"/>IV. Hyacinthinus. Violaceas. Coccineas. Rubeas. <lb/>
+            Batilla. Spatula ferrea.</p>
+          <p>v. Zelotypiæ. Invidiæ. roro. Lecto. Congesti. Co­ <lb/>
+            adunavi, vel collegi. Duntaxat. Videlicet, certe.</p>
+          <p>VII. Consuleret. Requireret, et interrogaret.</p>
+          <p>VIII. Stipes. Mendicus, in alio loco lignum. Con­ <lb/>
+            scius. Longius.</p>
+          <p>x. Dimicant. Pugnant, in alio loco, lucent.</p>
+          <p>xi. Nausea. Vomitus.</p>
+          <p>xn. Ænigmata. Propositio, quæstiones</p>
+          <p>xit. Præcoce. Nimis mature. Lustravimus. Circui­ <lb/>
+            vimus.</p>
+          <p>XIV. Vasta. Profunda.. Querelas. Accusationes, vel <lb/>
+            clamores. Forent. Essent.</p>
+          <p>XVI. Proceres. Primates, vel excelsi. Concilium. <lb/>
+            Conventum. Parum. Parvum, vel modicum. Expas- <lb/>
+            sus. Duo passus. Globus. Agmen, vel rotundus. Co. <lb/>
+            acervassent. Congregassent. Desævit. Ab iracundia le­ <lb/>
+            nivit. vel desinivit.</p>
+          <p>
+            <milestone unit="PLSection" n="B"/>415 XVII. Cohibebo. Privabo. Querimonias.. Planctus.</p>
+          <p>XVIII. Sceptro. Regia potestate. Cedit. Evenit. Pa­ <lb/>
+            teat. Obedi at.</p>
+          <p>XXI. Contagione. Inquinamento.</p>
+          <p>xx. Petra. Quam jussit Dominus Moysen percutere. <lb/>
+            Alioquin quod si non, vel :'liter.</p>
+          <p>XXI. Puteus. Super quo Dominus locutus est. In li­ <lb/>
+            bro bellorum Domini. Bellorum Israel. Quin potius. <lb/>
+            Multo magis.</p>
+          <p>XXII. Ariolus. Sortitor, vel divinus. Cuncteris. In. <lb/>
+            quireris.</p>
+          <p>. XXIII. Rhinocerotis. Bestia in nare cornu habens. <lb/>
+            Augurium. Sortientes.</p>
+          <p>XXIV. Complosi. Mutuo percussis. In trieribus. In <lb/>
+            navibus exercitus.</p>
+          <p>xxv. Pugionem. Gladium. Lupanar. Locus meretri­ <lb/>
+            Cum.</p>
+          <p>XXVII. Replicavit. Retexuit, vel revolvit.</p>
+          <p>XXVIII. Juge. Perpetue , semper perseverans.</p>
+          <p>xxx. Pollicita. Promissa. Distulerit. Dissimulaverit,</p>
+          <p>
+            <milestone unit="PLSection" n="c"/>XXXI. Norunt. Sciunt. Jugulate. Necate, punit. Co­ <lb/>
+            gnorunt. Convenerunt. Periscelides. Armillæ; alii or­ <lb/>
+            namenta tibiarum. Cis. Mista ripa.</p>
+          <p>XXXIII. Clavi in oculis. Compunctiones.</p>
+          <p>XXXV. Impulerit. Coegerit, impegerit.</p>
+          <p>XXXVI. Promulgatur. Perfertur, ostenditur.</p>
+          <ab>
+            <title type="sub">DEUTERONOMIUM.</title>
+          </ab>
+          <p>Helle addabarim Hebraice, Deuteronomium Græce, <lb/>
+            Secunda lex Latine.</p>
+          <p>CAP. I. Guaros. Scientes. Ennnacherim et Enim. De <lb/>
+            genere gigantum erant. Fanum. Templum. Egregiam. <lb/>
+            Nobilem, praeclaram, summam.</p>
+          <p>iv. Portenta. Miracula.</p>
+          <p>v. Sequester. Susceptor pignoris. Protelentur. Pro­ <lb/>
+            longentur, differentur.</p>
+          <p>VII. Spurcitia. Immundhia. Anathema. Abomina­ <lb/>
+            tionem.</p>
+          <p>
+            <milestone unit="PLSection" n="A"/>VIII. Dipsas. Genua serpentis, pede et semis lon­ <lb/>
+            gus , et duorum pahnorum grossus, caudam [habens] <lb/>
+            curvam. et venenatam , cum qua pungit; et interpre­ <lb/>
+            tatur sitis, quia homo, ab ea percussus, siti moritur.</p>
+          <p>ix. Ingentes. Magnos. Concio. Conventus populi.</p>
+          <p>x I Procul. Longe.</p>
+          <p>XII. Caprea. Silvatica. Capra. Domestica.</p>
+          <p>XIV. Sicera. Omnis pOLus absque viuo, qui iuebriare <lb/>
+            potest.</p>
+          <p>xvi. Lucum. Lucus in isto loco nomen est arbo­ <lb/>
+            ris, cujus folia non cadunt.</p>
+          <p>XVIII. Lustret. Illuminet per ignem trahendo.</p>
+          <p>xx. Cuneos. Multas turbas populorum.</p>
+          <p>XXI. Reatus. Culpa. Cruore. Sanguine. Cæsariem. <lb/>
+            Comam capitis. Ungues. Ungulas. Contumacem. Con- <lb/>
+            temptorem. Protervum. Perversum. Coercitus. ProHi­ <lb/>
+            bitus, contradictus. Plectendum. Decollandum.</p>
+          <p>XXII. Nefas. Crimen.</p>
+          <p>xx!!!. Mamzer. Filius scorti. Gerens. Agens, por-
+            <milestone unit="PLSection" n="B"/><lb/>
+            tans.</p>
+          <p>416 XXIV. Nuper. Nunc.</p>
+          <p>xxvi. In cartallo. Pancrio de virgis. Funebri. Mor­ <lb/>
+            tali.</p>
+          <p>XXVII. Lævigabis. Planabis. Impolitis. Non rotun­ <lb/>
+            dis.</p>
+          <p>XXVIII. Rubigine. Vento corrumpente. Pruriginem. <lb/>
+            Scalpitudinem. In suris. In poplitibus. Procacissimam. <lb/>
+            Ingratissimam. Illuvie secundarum. Immundi humo­ <lb/>
+            res qui sequuntur post partum,</p>
+          <p>xxix. Classibus. Navigiis militum. Absumat ebria <lb/>
+            sitientem. Quæ jam ebria fuit, in idolis sitientem in <lb/>
+            Dei cultura ducit in errorem.</p>
+          <p>xxx. Cardines caeli. Oriens, Meridies, Occidens et <lb/>
+            Aquilo. In sobole. In genere.</p>
+          <p>XXXII. Meracissimum. Purissimum. Op tulentur. <lb/>
+            Adjuvent. Recens. In præsenti. Novum. In foturo.</p>
+          <p>XXXIII. Thesaurus arenarum. Terrena sapientia.</p>
+          <ab>
+            <title type="sub">SANCTI HIERONYMI PRÆFATIO IN JOSUE.</title>
+          </ab>
+          <p>
+            <milestone unit="PLSection" n="c"/>Tandem. Po tremo, vel modo. Efferunt. Dicunt. <lb/>
+            Exaplois. Exemplaribus. Arcuato vulnere. Quia cauda <lb/>
+            scorpionis curva est, unde feril. Editiones. Translatio­ <lb/>
+            nes. Postlimen. Post mortem patris ct matris. Flagi­ <lb/>
+            tat. Postulat, petit. Sirenarum. Meretricum per magi­ <lb/>
+            cas artes; vel undarum crispantium.</p>
+          <ab>
+            <title type="sub">LIBER JOSUE.</title>
+          </ab>
+          <p>CAP. II. Quippe. Certe, nimirum, sine dubio. Fateor. <lb/>
+            Confiteor. Funiculus iste. Quo se cinxit a renibus us­ <lb/>
+            que pectus. Coccinea. Rubeus.</p>
+          <p>III. Mole. Magnitudine.</p>
+          <p>v. Polenta. Farina subtilissima.</p>
+          <p>VII. Per prona. Per præceps, per inclinata. Con­ <lb/>
+            globati. In unum collecti, vel collecti. Legulam. La <lb/>
+            blelli .</p>
+          <p>VIII. Vallatus. Circumdatus. Digesserat. Descripse­ <lb/>
+            rat, ordinavit.
+            <milestone unit="PLSection" n="D"/><note type="footnote"> IV. Scriptura vetus magis indicat glaucas] quam <lb/>
+            mlaceas. Exaratum etiam est 'paludrl' pro spatula. <lb/>
+            In aliis Rlossis est palla (erf'ea. </note><note type="footnote"> VIII. Stips , vel stipest sumi solet pro pecunia qua? <lb/>
+            pauperibus confertur; sed hoc loco ,'ipe. est tignum. <lb/>
+            9!erb., COllse;lll tongins non intelliguntur. </note><note type="footnote"> XIII. In Vulgata, ",.æcoquæ. </note><note type="footnote"> xvi. Vetus libcr, primati, quod retineri fortasse <lb/>
+            poterit. Verba eXptUaul, duo passus, corrupta esso <lb/>
+            facile ,credam. </note><note type="footnote"> XVIII. Glossa pareat. obediat alterius loci videtur <lb/>
+            esse. </note><note type="footnote"> XXII. Pro inquireris, fortasse reponendum erit in­ <lb/>
+            au eteris, (lualJquarn neque hoc ipsum placet. </note><note type="footnote"> x x III. Malim aorlilegiu," pro sortientes. </note><note type="footnote"> xxxi. In Vulgata, "over"n' pro norunt; et cogno­ <lb/>
+            terant iro cegnorunt. Non assequor quid lateat in <lb/>
+            verbis Cis mista ripa.. </note><note type="footnote"> •XXXV. 'In vet. Cod. erat impingerit pro impegerit. </note> 
+            <milestone unit="PLSection" n="D"/><note type="footnote"> XXXVI. Vulgata, pro promulgatur. exhibet "..0,",,1- <lb/>
+            ga'o est. </note><note type="footnote"> DEUTERONOMIUM. — Alii, Elle naddebarim. </note><note type="footnote">tAP. I. In Vulgata, Enacim et Emi"a scribitur. </note><note type="footnote"> vni. Rescripsi duorum palmorum, pro durum p.,I. <lb/>
+            marumt et supplevi IIt:abens, nisi ma1is legel e caudti <lb/>
+            eurva et .tntuala. </note><note type="footnote">x VI. Corrigam cadunt. </note><note type="footnote"> XXIII. Liber vetus Mazcr pro Mamzer ; alii a!io <lb/>
+            modo. </note><note type="footnote"> xxvi. In ms. Cod. erat paner. De voce panerio pro <lb/>
+            corbe, sporta, consulendus Ducangius cum :uhliLiu­ <lb/>
+            .i bus. </note><note type="footnote">xxix. Cod. ms., adsumat pro absumat, et cultu­ <lb/>
+            ram pro cultura. </note><note type="footnote"> PRÆF. IN JOSUE L!DRUII. — Editi exhibent postti <lb/>
+            tninio, quod est jus amissae rei recipiendæ- ab extra <lb/>
+            neo, et in antiquum statum restituendæ. Glossae Uu. <lb/>
+            berti de Sorbona cum nostris etiam faciunt. </note> <pb n="1311"/>
+            </p>
+          <p>
+            <milestone unit="PLSection" n="A"/>IX. Pittaciis. Emplastris. Decrevit. Constituit.</p>
+          <p>x. In libro justorum. In annalibus Hebræorum. <lb/>
+            Præsidia. Firmitates. Saltem. Videlicet.</p>
+          <p>XI. Subnervabis. Subjugabis, vel deficere facies. <lb/>
+            Unam tantum Asur flamma combussit.Quia ipsam solam <lb/>
+            totam combussit.</p>
+          <p>XII. Ruphaim. Gigantum.</p>
+          <p>xv. A linqua maris. A sonitu maris. Civitas littera­ <lb/>
+            rum. Quia in ea litterati fuerunt, vel litteræ custo- <lb/>
+            diebantur.</p>
+          <p>XVIII. Marcetis. Languctis. Ignavia. 417 Imbe- <lb/>
+            cillitate.</p>
+          <p>XIX. Carmelum maris. Proprium nomen loci.</p>
+          <p>XXIII. Connubia. Conjugia. Sudes. Stipites.</p>
+          <p>xxiv. Novellis ovibus. Unius anni, quæ necdum ge­ <lb/>
+            nerarunt.</p>
+          <ab>
+            <title type="sub">LIBER JUDICUM.</title>
+          </ab>
+          <p><lb/>
+            CAP. I. Judas ascendit. Othoniel. De ipsa tribu. <lb/>
+            Arctavit. Oppressit undique. Ascensu scorpionis. Pro-
+            <milestone unit="PLSection" n="B"/><lb/>
+            prium nomen loci.</p>
+          <p>II. Experiar. Certe sciam.</p>
+          <p>III. Satrapas. Principes Philistinorum. Filii Gemini. <lb/>
+            Filii filiorum Joseph, quia duo erant. Ancipitem. <lb/>
+            Utraque parte acutam. Capulum. Manubrium gladii. <lb/>
+            Sicam. Gladium. Alvi. Ventris. Posticam. Porticum. <lb/>
+            Circiter. Quasi.</p>
+          <p>iv. Clavum tabernaculi. Ferrcum, quod portavit de <lb/>
+            tabernculo.</p>
+          <p>v. Barathrum. Profundum, vel hiatus terr;r. Discri­ <lb/>
+            mini. Judicio. Magnanimorum. Rubenitarum. Sibilos <lb/>
+            regum. Blandimenta.</p>
+          <p>VII. Hydrias. Fictiles. Confodere. Collidere.</p>
+          <p>VIII. Bullas. Sigilla, vel ornamenta cinguli. Pondus <lb/>
+            et libra unum sunt; sed pondus ferri, libra aui. <lb/>
+            Monilibus. Fidelis, vel ornamentis. Torques. Circuli <lb/>
+            aurei in collo.</p>
+          <p>IX. Rhamnum. Arbor spinosa modica. Compulit. <lb/>
+            Coegit, vel impingit. Palantes. Fugentes.</p>
+          <p>
+            <milestone unit="PLSection" n="c"/>XI. Sodalibus. Coævis, sociis. i</p>
+          <p>III. Jugulabant. Necabant, vel perimebant.</p>
+          <p>xiv. Problema. Propositio, quæstio, parabola. Pro­ <lb/>
+            nubis. Paranymphis, vel qui nuptiis præsunt.</p>
+          <p>xv. Faces. Faculas, vel flammas. Suram. Suri­ <lb/>
+            culam.</p>
+          <p>XVII. Teraphim. Imaginem.</p>
+          <p>XVIII. Opulentam. Divitiis plenam, vel abundan­ <lb/>
+            tem. Haud procul. Non longe</p>
+          <p>
+            <milestone unit="PLSection" n="A"/>XIX. Belial. Nomen idoli.</p>
+          <p>xx. Diverti Posui in locum. Bacchati. Furentes.</p>
+          <p>XXI, Ducentes choros. In choro tenentes manum <lb/>
+            invicem.</p>
+          <ab>
+            <title type="sub">LIBER RUTH.</title>
+          </ab>
+          <p>CAP. I. Confecta. Debili. Pubertatis. Barbam emft. <lb/>
+            tentis. Vetulæ. Anæ. Obstinato. Perseveranti, in­ <lb/>
+            tento, irrevocabili.</p>
+          <p>II. Sarcinulas. Sagmas. Congessit polentam. Con­ <lb/>
+            gregavit farinam. De industria. De incuria. Rubore. <lb/>
+            Verecundia. In horreis. In spicariis.</p>
+          <p>. 418 III. Aream. Locum ubi annona excutitur.</p>
+          <p>IV. Cedo juri. Locum do, perdono legi. Privilegio. <lb/>
+            Propria 'ege. Celebre. Præclarum. Gerulæ. Nutricis, <lb/>
+            vel comportatricis.</p>
+          <ab>
+            <title type="sub">SANCTI HiERONYMI PROLOGUS GALEATUS IN LIBROS REGUM.</title>
+          </ab>
+          <p>Characteribus. Figuris. Samaritani etiam Penta­ <lb/>
+            teuchum Moysi totidem litteris scriptitant. Antiquis
+            <milestone unit="PLSection" n="B"/><lb/>
+            Hebæorum litteris scriptitant. Sed unde apud eos <lb/>
+            antiquæ litteræ inventæ sunt? Quia postquam de As­ <lb/>
+            syriis colones illuc directi fuere, et a leonibus, be­ <lb/>
+            stiisque comesti, postea mandaverunt regibus Persa­ <lb/>
+            rum se illic habitare non posse ; et misit illis sacer­ <lb/>
+            dotem , qui doceret eos legitima terræ; quique <lb/>
+            veniens Bethel, accepit exemplar legis a tribu Juda, <lb/>
+            et descripsit illis Pentatenchum, et legem exposuit. <lb/>
+            Et postquam Juda et Benjamin a Chaldæis captivi <lb/>
+            fuerunt, et lex incensa, remansit in Samaria, id est, <lb/>
+            post colones illos exemplar legis antiquis Itteris ex­ <lb/>
+            pressum, scriptum, dum nibil illis nocuerunt; sub­ <lb/>
+            jecti enim illis erant.</p>
+          <p>2. Esdras. At as reperit litteras, quia non noverat <lb/>
+            prinres. Nomen Domini tetragrammaton, antiquis lit­ <lb/>
+            teris expressum. Scriptum invenimus litteris, in qui­ <lb/>
+            busdam Græcis voluminibus (non tamen in canoue) <lb/>
+            quæ a LXX interpretibus interpretata fuerunt, dum <lb/>
+            lex a Chaldæis incensa est, et post tantum interval­
+            <milestone unit="PLSection" n="c"/><lb/>
+            tum in regno Græcorum Septuaginta interpretati <lb/>
+            sunt. Sed in historiis propriis, quia nomen Domini <lb/>
+            per omnes gentes atque omnia regna terrarum d iffa­ <lb/>
+            matum est, audierunt multa mirabilia, quæ opera­ <lb/>
+            tus est.</p>
+          <p>3. Incisionibus. In discerptionibus, ac divisionibus <lb/>
+            versuum. Duplices. Duplices apud Hebræos quinque <lb/>
+            litteræ, quia duplicem figuram habent, et duplex vo­ <lb/>
+            cabulum, ut aleph, ain, sudet samech, sin. Aliter enim <note type="footnote"> JOSUK LICER. — CAP. VII. Fortasse, vei in globum <lb/>
+            collecti. Iteposui lablelli pro iabiegi, quod Cod. ms. <lb/>
+            refert. fle voce lablellus, sive tabellas, agit Itucan­ <lb/>
+            gius. In V ulgata exstat regula," auream; retinui ta- <lb/>
+            I..en ex Ms. ieguhmi, qua; est ima auricula! pars, <lb/>
+            &lt;IU.T elia,u lamina dicitur, quasi ligula ; nisi malis ita <lb/>
+            legere I;gulam pro l;ngulll, ut minus bene nOllnulli <lb/>
+            efferunt. Confer ForC'ellinuln. Interpretes sacra: Scri­ <lb/>
+            ptur.T regulam auream exponunt virgulam aucam in­ <lb/>
+            star ling..:!', vel lanimaui auream ; quod cum legu-</note> 
+            <milestone unit="PLSection" n="D"/><note type="footnote"> lam, veliujuiamt mirifice convenit. </note><note type="footnote"> IX. Rescripsi t,upla.,r;s. pro palaatr;.: nam pilla­ <lb/>
+            ciun pro emplastro a Celso accipitur. Huc loco eu­ <lb/>
+            jusvis panni vel corii parliciilam indicat. </note><note type="footnote"> 11. Vulgata : Asor flamma consumpsit. </note><note type="footnote"> LIBER JuDicuM. — C"I'. I. Fortasse deest glossa <lb/>
+            post a't;e"d. /, vel ascentlet. </note><note type="footnote"> in. Vulgata, filii Jemi,,;, nempe ex tribu Benja­ <lb/>
+            min, qui Jeminus cliam dicebatur. Auctor, sive in­ <lb/>
+            terpolator glossæ in alii' abiii, voce Gemini, quae <lb/>
+            etiam in B,bliis nonnullisoccuri il. deceptus. Fortasse <lb/>
+            I igendum esi acutum ; nam in V ulgal:t est gladium <lb/>
+            ancipitem. Pro porticum, reponendum vide'lur pusti. <lb/>
+            cum; III Vulgata quidem ita lcgitm : Per posticum <lb/>
+            egressus est. Inve itur tamen portle::s pro janua, <lb/>
+            porta, apud medii xvi scrip!orc's. G&lt;*n&gt;ule Ihu'au­ <lb/>
+            giulu ,'uln additionibus, vel'b. Posticium, Porticus. </note><note type="footnote"> iv. Forte, ferrum, quod. </note><note type="footnote"> V. Vulgata, sibitos grey.CI". </note> <note type="footnote"> VII. Vulgata, et hydria. cOII(regiaell'; nequedcinde <lb/>
+            verbum confodio occurrit, se't complodere, vers. 19. </note><note type="footnote"> \111. In vel. COfl. est pondus pro pondot quod ab­ <lb/>
+            solute posiium pro libra accipitur; sed utrumque <lb/>
+            nomen de auro et ferro, et de aliis rl'bus dicitur. <lb/>
+            Iloc cap. VIII occurril ponIMus, cap. seq. pondo, pro <lb/>
+            quo glossa scripta est, ut videtur. Nescio quid lateat <lb/>
+            in glossa fidelis pro monilibus. </note><note type="footnote"> xxi. Vulgata, ad duceudos churos </note><note type="footnote"> LID; R nUTII. — CAP. I. Auctor glossæ, ut puto, </note> 
+            <milestone unit="PLSection" n="D"/><note type="footnote"> scripserit anus. non anæ. </note><note type="footnote"> II. Sagma Gr.ice, ei apud nonnullos L-lioos neu­ <lb/>
+            trum est, apud ISlduruu. clialu i. et c. ult. Etyin. <lb/>
+            femirie im. In ms. evar.num est sacmas, atil saomas. <lb/>
+            Pro de iacuria, reponendum est, cuin glossis Ro­ <lb/>
+            berli de 8olohona, de crera. </note><note type="footnote"> iii. De verbo perdono, vide not. ad Juvenc., I. If, <lb/>
+            vers. 8&lt;. </note><note type="footnote"> SANCTI HIERONYMI PROLOGUS CALf.ATl'S. — CAP. i. <lb/>
+            Bis in Ms. occurrit colones pro culoni. Pro ..(billet, <lb/>
+            reposui Bethel, ex I. IV Rej!., cap. xvu. Mox hta.. <lb/>
+            tasse legeudmii apud colonos illos. </note><note type="footnote"> 2. I.. vel. Cud. crat interpretati fuerunt, dum lext <lb/>
+            etc., et infra, postea tantum. </note><note type="footnote"> 5. Ilicrouymus has quiuqiie duplit'e, Hebræorum <lb/>
+            litteras commemorat, Cl'P". nlt'''I, lilli', pe, sade. Ac ie <lb/>
+            vera hæ solae quinque suiil qiuc diVt'fSO IIMUO III tine <lb/>
+            verborum scribuntur , quamvis ,nonnullæ alias iu <lb/>
+            ampliorem formam dilatentur. </note> <pb n="1313"/>
+            
+            <milestone unit="PLSection" n="A"/><lb/>
+            per has principia. Ut apud nos sæpius initia verborum , <lb/>
+            per k litteram scribuntur, ul in kalendæ, fines per <lb/>
+            c, ut fac.</p>
+          <p>A. Dibre hajamin. Verba dierum : dibre verba, ha­ <lb/>
+            jamin dierum, nonjamin dexirx. Beresith. In princi­ <lb/>
+            pio; quia Hebræi voluminibus suis nomina ex prin­ <lb/>
+            cipiis posuerunt. Exodus. Exitus. Hebræi Genesi <lb/>
+            aleph litteram inscribunt, quæ interpretatur doctri­ <lb/>
+            na, ut In principio fecit Deus cœlum el terram; Exodo <lb/>
+            beth, quæ interpretatur domus pro instructione ta­ <lb/>
+            bernaculi; Levitico gimel, quia plenissime de victi­ <lb/>
+            mis dispulat; numero daleth, 419 tabularum, quia <lb/>
+            de compositione tabernaculi tabularum loquitur; <lb/>
+            Deuteronomio he, quæ interpretatur isla lex, pro <lb/>
+            iteratione legis ; Job, David, Daniel inter agiographa <lb/>
+            non pro dedignatione, sed pro dignitate et sancti­ <lb/>
+            tate. Agio. Sancta. Graphia. Scriptura. Quod pro­ <lb/>
+            phetarum ordinem incipiunt a JusSU Nave, quia tota <lb/>
+            sancta Scriptura digna est prophetiæ vocabulo, dum
+            <milestone unit="PLSection" n="B"/><lb/>
+            futura significat. Josue vero in omnibus pene gestis <lb/>
+            suis futura Christi opera prophetavit.</p>
+          <p>5. Chronicon. Temporale. Quinque incisionibus. <lb/>
+            Quinque incisiones pro satisfactione eorum dixil, <lb/>
+            qui hoc affirmare solebant. Prostratis vultibus. Incli­ <lb/>
+            natis capitibus. Coronas suas. Opem, opera sua olte­ <lb/>
+            rentes, quia opera reverentiæ et subjectionis unius <lb/>
+            Dei docent cultum, per quæ ad coronas perve­ <lb/>
+            nitur.</p>
+          <p>6. Stantibus coram quatuor animalibus. Dum tota <lb/>
+            prophetiæ Scriptura in Evangelio impleta est. Ga­ <lb/>
+            leatum. Munitum, vel ornatum. Apocrypha. Occulta, <lb/>
+            vel dubia. Seponendum. Separandum : dictum. quasi, <lb/>
+            seorsum pono. Phrasin. Locutionem, vel interpre­ <lb/>
+            tationem.</p>
+          <p>i. Paraphrasten. Conjectorem, vel interpretato­ <lb/>
+            rem. Pelles, cilicia. Fortitudinem et labores in Ec­ <lb/>
+            clesia, quæ tentationibus et persecutionibus bene <lb/>
+            resistunt. Canticum canticorum. Pro excellentia car­ <lb/>
+            minis. Sapientia Salomonis. Apud Hebræos non in­
+            <milestone unit="PLSection" n="c"/><lb/>
+            venitur, quod antea nesciebam; iu Septuaginta, et in <lb/>
+            aliis Codicibus.</p>
+          <ab>
+            <title type="sub">LIBER I REGUM.</title>
+          </ab>
+          <p>CAP. I. Ramatha. Civitas ipsa, quae in veteri trans­ <lb/>
+            latione Arimathia dicimur, et fuit Helcanæ et Sa­ <lb/>
+            muelis in regione Tamnitica juxta Diospolim, unde <lb/>
+            fuit Joseph, qui in Evangelio de Arimalhia scribitur. <lb/>
+            Sophim. Mons in tribu Ephraim. Statutis diebus. <lb/>
+            Phase, Pentecosten, Scenopegia. In Silo. Silo est in <lb/>
+            tribu Ephraim, in quo ioco area testamenti fuit usque <lb/>
+            ad tempus Samuelis. Est auteM undecimo milliario <lb/>
+            Neapoleos in regione Acrabitena. Partem unam. <lb/>
+            Quando offerenant. Æmula. Adversa. Angebat. Cru­ <lb/>
+            ciabat. Redeunte tempore. Anni circulo. Temulentam. <lb/>
+            Vinolentam , ebriam. Digere. Ebrietatem depone. <lb/>
+            Mades. Humida es. Filiabus Delial. 420 Filiabus
+            <milestone unit="PLSection" n="A"/><lb/>
+            sine jugo legis Domini. Belial Hebraice Bel dicitur, et <lb/>
+            fuit idolum Ninivitarum, quia Bel pater Nini. Vultus <lb/>
+            ejus non est in diverso mutatus. In alia translatione : <lb/>
+            Et facies ejus nun cecidil amplius; hoc est, ut nullam <lb/>
+            hahere. tristitiam, vel differentiam. Non vadam, do­ <lb/>
+            nec ablactetur infans. Contra morem dixit; ideo com­ <lb/>
+            memorat Scriptura. Hebræi asserunt tempus abla­ <lb/>
+            ctationis sex annos, alii XII. Ut impleat Dominus ver­ <lb/>
+            bum suum. Quod promisit per os Heli sacerdotis <lb/>
+            dicendo : Dei libi Deus petitionem. Obsecro, mi Do­ <lb/>
+            mine. Subauditur : Ut benigne suscipias. Commodavi <lb/>
+            eum Domino. Quandiu fuerit, accommodatur Domino; <lb/>
+            quandiu vivet.</p>
+          <p>II. Cornu meum. Altitudo mea, et fortitudo. Vete­ <lb/>
+            ra. Opprobria, et convicia. Saturati prius pro panibus <lb/>
+            se locaverunt. xx.... et colligunt ad alios postulando <lb/>
+            panem, et quodlibet, necessaria quaeque, si antea <lb/>
+            quasi nullius rei indigere videbamur : hoc de Phe­ <lb/>
+            nenna dicitur. Deducit ad inferos. In pericula, quasi
+            <milestone unit="PLSection" n="B"/><lb/>
+            ad mortem. Cardines. Fundamenta. Filii Belial, lilii <lb/>
+            diaboli. Fuscinulam. Tridentem. Lebetem. Cacibum. <lb/>
+            Non enim accipiam a te carnem coctam, sed crudam. <lb/>
+            Carnes crudas in altari semper offerre mos erat; el <lb/>
+            primum incendebatur adeps, et tunc hi qui porta­ <lb/>
+            bant coquebant carnes, iam sacerdotibus quan sibi. <lb/>
+            Retranebant homines a sacrificio Domini. Quia nolue­ <lb/>
+            runt venire homines ad sacrificandum Domino; quia <lb/>
+            illi per mala exempla sua plebem a sacrilicio separa­ <lb/>
+            runt; vel quia homines in sacrificio blasphemare <lb/>
+            compellerent. Quomodo dormiebant cum mulieribus, <lb/>
+            quæ observabant. Viduæ erant, quæ ibi vacabant ora­ <lb/>
+            tionibus, et tamen non habuerunt licentiam in. <lb/>
+            troeundi in templum, sicut alia plebs. Si autem in <lb/>
+            Dominum peccaverit vi,., qu s orabit pro eo ? Duficul­ <lb/>
+            tatem in hoc ostendit, ut oretur <unclear>pro</unclear> eo, non ut ipse <lb/>
+            sacerdotali more oret pro cæteris. Virilem ætatem. <lb/>
+            Ad bellum aptam. Coram christo. Coram rege. Tor­ <lb/>
+            tam panis. Pro qualicunque petitione intelligendum <lb/>
+            est, ut per hoc omeret sacerdotium. Ut comedam
+            <milestone unit="PLSection" n="c"/><lb/>
+            buccellam. III loco tabernaculi, sicut et cæteri sacer­ <lb/>
+            dotes.</p>
+          <p>III. Sermo Domini. De prophetia dicit. Pretiosus. <lb/>
+            Rarus. Non erat visio. Prophetalis. Porro Samuel <lb/>
+            nondum sciebat Dominum. Non habuit consuetudinem <lb/>
+            audire verbum Domini. Secando. Bis. Tinnient ambæ <lb/>
+            aures ejus. Præ terrore sonent, quasi aliquid audia­ <lb/>
+            tua.. Et non cecidit. In vanum, quod irrevocabile im­ <lb/>
+            pletur. Verbis ejus. Samuelis. Et evenit sermo. Inno­ <lb/>
+            tuit.</p>
+          <p>IV. Aphec. Civitas Israelis. Heri et nudius tertius.... <lb/>
+            Incurvavit se, et peperit. Natura feminarum est cum <lb/>
+            subito terrore cito parere.</p>
+          <p>v. Et percutiebat viros. Percussi sunt passione, <lb/>
+            quam Græci syringion dicunt. Extales et attus unum <lb/>
+            sunt, quos fecerunt in similitudine intestinorum. <lb/>
+            421 Satrapæ. Philistæa lingua principes dicuntur.
+            <milestone unit="PLSection" n="D"/><note type="footnote"> .I. In glossis Roberti de Sorbona plura ex nostris <lb/>
+            de huc prologo reperiuntur; pro verbis autem Non­ <lb/>
+            jamin, etc., sic illae habent : DIIIRE verba, JAMIN die­ <lb/>
+            rum9 nonut jalll j"dexte OnESITIt. principium, quod <lb/>
+            Mebraii voluminibus suis. Opporlulluln &lt;rit lcgere <lb/>
+            cum K berio tjimel, id eat, pteniludo9 quia, etc. Pio <lb/>
+            ista lex, inalim ulcera lex, vcl iterata lex. </note><note type="footnote"> 5. Forte, decent cultum. </note><note type="footnote"> 6. Vet. Cnd., occul!allu. ænoia. </note><note type="footnote"> 7. In vet. Ms., conjectionem, et fuit etiam interpre- <lb/>
+            14JiCJIlel'l, quod eadein prima manus in interpretato­ <lb/>
+            rem muiavit Scriptuin etiam ciat nesciebas pio fle­ <lb/>
+            sciebam; ilico supple sed invenitur in S,!plulIgi"ta. <lb/>
+            Glossæ b..jus prologi extra suum locum interdum <lb/>
+            sunt collocataj; sed facile prologi verba reperiri pus­ <lb/>
+            sunt. </note><note type="footnote"> LIBER I REGUM. — CAP. I. Explicatio verbi Rama- <lb/>
+            II," ex Eusebio et Hieronymo desumpta e*t. Vide <lb/>
+            Bonfrerium, Onoluastic. uro. et locor, sacr. Script., </note> 
+            <milestone unit="PLSection" n="D"/><note type="footnote"> verb. A,.matlta Sophim. Secus opinatur Calmetus, in <lb/>
+            Dict. bibl, Vt-rb. Ramathaim Sophim. Confer etiam <lb/>
+            (;asparCIJI Sanctium, ad I Reg. cap. I. In vel. Cod. <lb/>
+            legitur Diaspolim pro Diospolim, et infra, Arabiti­ <lb/>
+            nia pro Acrubiteua, ex Uierunyuao, loe. 'cit., verb. <lb/>
+            Selo. Pro humida est Codex liabct humide.", Robertus <lb/>
+            de SUI ma humidas. Vulgata, verse i8, sic refert : <lb/>
+            V ullu,que illius non sunt amplius in diversa mutati. <lb/>
+            De ablactationis diverso leuipore et genere tonbule <lb/>
+            Gasp. Sanctium. Dubiuin est au accommodatur, au <lb/>
+            accommodatus voluerit librarius. </note><note type="footnote"> It. In Ms., formido, pro fortitudo. Post vetera, vi­ <lb/>
+            detur S4'ri pi (1111 enim. Vol locaverunt, legilur cuUCJca- <lb/>
+            bitis scti , quod obscurum est. l'ro caines crudas in <lb/>
+            aliari, er.it carnes crudm in altare, et mox detrahebant <lb/>
+            homines sacrifiaum Dun,;',., pro quo verba Vulgatæ <lb/>
+            ."CSC' ipsi. </note><note type="footnote"> iv. Libraritis '.misit glossanl pro heri el nudius ter­ <lb/>
+            tius, </note> <pb n="1315"/>
+            </p>
+          <p>
+            <milestone unit="PLSection" n="A"/>vi. Levitæ autem ibi deposuerunt arcam Domini. Fue. <lb/>
+            runt enim tunc aliqui Levitæ. Ab urbe murata <lb/>
+            usque ad villam. Unde ab omnibus congregant pecu­ <lb/>
+            niam : de quibus vasa faciebant, ut proficeret om­ <lb/>
+            nibus, dum una plaga omnibus erat. Adabelmagnum. <lb/>
+            Proprium nomen lapidis. Percussit autem. Dominus, <lb/>
+            quia illicituM erat videre arcam, nisi solis sacerdo­ <lb/>
+            tibus. De populo septuaginta viros. Civitatis Bethsa­ <lb/>
+            mitis. Et quinquaginta millia plebis. Vulgaris extra <lb/>
+            civitatem. Cariathiarim. Cariatham, et Gabaa civita­ <lb/>
+            tes prope inter se, et ibi fuerunt levitæ.</p>
+          <p>VII. Abinadab. Sacerdos fuit in diebus illis. Gabaa. <lb/>
+            Civitas Samuelis. Annus vicesimus. Ab eo tempore <lb/>
+            enumerat quod ducta est area in domum Abinadah, <lb/>
+            usque dum eam David ad se transtulit, et requievit <lb/>
+            omnis Israel in religione divina, non colentes idola; <lb/>
+            et omnia mala cessaverunt ab eis. Hauserunt aquam, <lb/>
+            et effuderunt coram Domino. Hoc ad testimonium fe­ <lb/>
+            cerunt. ut ultra non revocaretur mens eorum a Do-
+            <milestone unit="PLSection" n="B"/><lb/>
+            mino, sicut diffusa aqua non potest colligi, aut revo­ <lb/>
+            cari, Subter Bethchar. Juxta Masphat et Sen, duo <lb/>
+            loca et civitates. Nec apposuerunt ultra. Pro longo <lb/>
+            tempore dicitur.</p>
+          <p>VIII. Focarias. QUID cibum ei parent, vel tinctorias. <lb/>
+            Reditus vinearum. Quod. de vinea et melle potest <lb/>
+            cotligi. In auribus Domini. Orans ante, coram Do­ <lb/>
+            mino.</p>
+          <p>IX. Filii viri Jemini. Jemini vero familia erat quae <lb/>
+            ad tribum Benjamin pertinebat, de qua et Saul ortus <lb/>
+            est : Melior illo. Dignior. Terra Salisa. Proprium <lb/>
+            nomen loci, non quæ salsa sit. In sitarciis. In saecis, <lb/>
+            vel in pera. Clivum. VaUem. In excelso. Quia sole­ <lb/>
+            bant semper altaria ponere in loco excelso, non ta­ <lb/>
+            men sub ædificio.</p>
+          <p>x. Lenticulam olei. Modicmn vas æneum quadran­ <lb/>
+            gulum in latere apertum. Juxta sepulcrum Rachetis <lb/>
+            in finibus Benjamin. Quia in tribu Juda prope sunt
+            <milestone unit="PLSection" n="c"/><lb/>
+            fmes Benjamin. Ad quercum Thabor. !)c nomine ho­ <lb/>
+            minis alicujus, ut quercus Mambre. Collem Domini. <lb/>
+            Proprium nomen loci propter aliquod adjutorium <lb/>
+            Domnini, vel quia ibi excelsum fuit, et altarc, et ha­ <lb/>
+            bitant prophetæ. Gregem prophetarum. Non quia sem­ <lb/>
+            per de futuris prophetarent, sed quia semper parati <lb/>
+            erant ad prædicendum et laudandum. Et ante eos <lb/>
+            psalterium. Quia eum tenebant in manibus. Descendes <lb/>
+            ante me in Golgala. Subauditur, ac si diceret: Sem­ <lb/>
+            per cum necessarium tibi sit, aut pericula aliqua im­ <lb/>
+            minent, descende illuc, ut habeas certum locum ad <lb/>
+            exspectandum me. Immutavit ei Dominus cor aliud. <lb/>
+            Confirmavit eum in regnum. Exspectabis septem die­ <lb/>
+            bus. Noli lædiosus esse in exspectando; ideo in Gat­ <lb/>
+            gala, quia ibi populus cum Jesu pascha celebravit, et <lb/>
+            422 ibi circumcisus est; ideo locus honorabitur. <lb/>
+            In proverbium : Num et Saul inter prophetas ? Ideo <lb/>
+            quia ante non est visus iuter eos, nec de genere <lb/>
+            prophetali fuit. Et convocavit Samuel populum ad
+            <milestone unit="PLSection" n="A"/><lb/>
+            Dominum. Quia in praesentia Domini disputavit cum <lb/>
+            populo.</p>
+          <p>xi. Jabes Galaad. Jahes civitate. Galaad populi. Se­ <lb/>
+            quens boves. Casu evenit ut boves praecederent eum. <lb/>
+            Insiluit spiritus Domini in Saul. Sant non propheta­ <lb/>
+            vit de futuro, sed laudavit Dominum.</p>
+          <p>XII. Et Jephte, et Samuel. De ipso dixit</p>
+          <p>XIII. Filius unius anni Saul. Viginti unum annum <lb/>
+            habuit, quia in lege praeceptum fuit ut viginti annis <lb/>
+            et supra eligerentur ad bellum, et ideo unius anni <lb/>
+            dicitur, quia unum annum super viginti habuit. Ali­ <lb/>
+            ter filius unius anni subauditur filius Cis unnm an­ <lb/>
+            num regnans nihil magnum egit, s d humilis per­ <lb/>
+            mansit. hi alia translatione filius unius anni, qui in <lb/>
+            co anno nati sunt, ut ad ministerium suum nutriren­ <lb/>
+            tnr. Duobus annis regnavit. Tunc, cum ejus filius <lb/>
+            eligeretur. Stationem. Exercitum. Clamavit post Saul. <lb/>
+            Secutus est eum, vel exhortavit se ad pugnam. Ile­ <lb/>
+            bræi autem transierunt Jordanem. Ad orientalem pla-
+            <milestone unit="PLSection" n="B"/><lb/>
+            gam fugerunt. Pergebant contra viam Ephrata. Ad <lb/>
+            viam quæ ducit ad terram Saul, in tribu Benjamin, <lb/>
+            ubi Ephrata est. Ad iter termini imminentis valli Se­ <lb/>
+            boim. Terminus enim qui divisit Philisthæos ct Ju­ <lb/>
+            dæos imminebat valli Seboim. Faber ferrarius non <lb/>
+            inveniebatur. Quia Philisthæi non permittebant. De­ <lb/>
+            scendebat Israel ad Philisthiim. Quandocunque neces­ <lb/>
+            sarium fuit ut exacuerent ferramenta sua ad aliqua <lb/>
+            opera. Ligonem. Quo foditur terra. Ensis. Arma. <lb/>
+            Usque ad stimulum. A majoribus usque ad minora. <lb/>
+            Corrigentem. Buves, et quælibet jumenta.</p>
+          <p>XIV. In extrema parte Cabaa. In extrema Cabaa. In <lb/>
+            Magron. Proprium nomen loci. In media parte ju­ <lb/>
+            geri. Tale spatium fuit terræ, quale sufficiebat cada­ <lb/>
+            veribus viginti virorum. Applica arcam Dei. Porta <lb/>
+            huc. Contrahe manum. Exspecta adhuc, donec scia­ <lb/>
+            mus unde tumultus oriatur, dum ante dixit : Applica <lb/>
+            arcam. Clamavit Saul, et populus, cohortantes se ad <lb/>
+            pugnam. Fluens mel. In herbis, et in foliis arborum,
+            <milestone unit="PLSection" n="c"/><lb/>
+            ut sæpe contingit, dum terra fit; aut lavus mellis u <lb/>
+            multis locis apparuit collectus ab apibus. In alia <lb/>
+            translatione habet : Ecce examen apum crat. Et illu­ <lb/>
+            minali sunt oculi ejus... Volvite ad me jam nunc saxum <lb/>
+            grande. Ut ædificaret altare in oblationem pro pec­ <lb/>
+            cato, sive ut, juxta rituin, fuissenl 423 testes, quia <lb/>
+            populum carne vesti cum sanguine prohiberent. Ad­ <lb/>
+            ducat ad me unusquisque bovem, etc. Facite in præ­ <lb/>
+            sentia mea, nec peccetis. Absque retractatione morie­ <lb/>
+            tur. Sine n:ora morietur. Da sanctitatem. Da nos <lb/>
+            scire, ut in vindicta tua moriamur. Si ceciderit ca­ <lb/>
+            pillus. Non cecidit capillus. Reges Soba. tu Syria; <lb/>
+            Soba enim civitas in Syria.</p>
+          <p>XV. Quasi agnos. Propter obedientiam. Recensuit, <lb/>
+            quomodo restitit Amalec Israeli. Exeuntibus de Ægy­ <lb/>
+            pro. Dixitque Saul Cinæo. Quia de genere uxoris <lb/>
+            Moysis fuerunt Cinæi. Pænitet me, quod constituerim <lb/>
+            Saul regem. Pœnitentia Domini dicitur rerum ab eo <lb/>
+            constitutarum mutatio, quod pro rerum vicssitu-
+            <milestone unit="PLSection" n="D"/><note type="footnote"> VI. Pro pecuniam, fortasse legendum pecunias; et <lb/>
+            Abelmagnum, cum Vulgata, pro Adabelnagnum. Re­ <lb/>
+            posui c;vitati, pro civitatinos, ut est in Mi. </note><note type="footnote"> vii. In Me. legitur Aminadab. </note><note type="footnote"> ' vii. In Ms. fJaremu pro parent. Focaria proprie <lb/>
+            est, quae circa focum Ininistrat. Glossæ Roberri de <lb/>
+            Sorbona hoc loco, quæ cibum appararent, vel linctu­ <lb/>
+            rase In Cod. erat Bonrilli pro Domino. </note><note type="footnote">x. Forte, habiiabant propheta:. Paulo post reposui <lb/>
+            prædicendum pro prædicandum; et cor aliud, pro <lb/>
+            cor David, et visus inter pro usus inter. </note><note type="footnote">xr. In Cod., Jabes 6ataad9 civitate in Galiad po­ <lb/>
+            puli. </note><note type="footnote"> xiii. Be difficili hoc loco, Filius unius anni erat <lb/>
+            Saul, etc., consuli potest Gaspar Sanctius, in com­ <lb/>
+            mente Contra primam expositionem nostri auctoris <lb/>
+            facit, quod Saul, cum regnare coepit, filiulD jam ha­ <lb/>
+            bebat, quem mille viris praifecit. In tertia exposi­ <lb/>
+            tione fortasse aliquid deildera,ur. Vulgata ,exhibet <lb/>
+            ., </note> 
+            <milestone unit="PLSection" n="D"/><note type="footnote"> contra viam Ephra. et postea stimulum corrigendum. <lb/>
+            liiblia GOlhica, contra viam Ephrala. </note><note type="footnote">xiv. Reposui unde tumullus pro videre 'UHU"'U't <lb/>
+            quod nulluin sensum reddit. In Vuigala eat clamavit <lb/>
+            pro in conclamavit. Neocio quid sibi velit dum terra fit. <lb/>
+            nMs. legitur favum, et collectum ab apis9 et examen <lb/>
+            apium. Diversa illa tr.llIslaLw : Ecce examen apum <lb/>
+            erat, non indicatur a Saba,iero in AlIliq. Lat. Ver­ <lb/>
+            sion. Uibior. Desideratur tu membranis glossa pro <lb/>
+            verbis Et illumtnali sunt oculi ejus. Pro moriemurf <lb/>
+            restitui moriamur, nisi lualis el in vindicta tua ....iar- t&gt; <lb/>
+            mur. Glossa pro verbis Si "cider;t capillus, obscure ' <lb/>
+            legilur. </note><note type="footnote"> XV. Corruptum erat in Codkie quia degeneris uxoris <lb/>
+            mos fuerunt Cinæi. Post arcum volutum duo verba <lb/>
+            legi sakie non posaunt; ac fortasse sooant <unclear>Siccine</unclear>, <lb/>
+            sic etiam , ex "W's. 51 hujus cap. : Sictine .ep"raf <lb/>
+            amara mors? </note> <pb n="1317"/>
+            
+            <milestone unit="PLSection" n="A"/><lb/>
+            dine, vel pro recti dispositione succedit. In Carmelo. <lb/>
+            Carmelus Græce et Latine dicitur, Hebraice Carme. <lb/>
+            Puomontes sunt qui hoc nomine appellantur, unus, <lb/>
+            in quo fuit Nabat, maritus Abigailis, ad plagam au­ <lb/>
+            stralem ; alter juxta Ptolemaidem mari imminens, in <lb/>
+            quo Elias prophetanexis genibus pluvias impetravit. <lb/>
+            Fornice triumphalem Cameram, vel arcum volu­ <lb/>
+            lum. Siccine. Sic e iam. Et non vidit Samuel ultra <lb/>
+            Saul. Quia Samuel non venit ad Saul, ncc visitavit <lb/>
+            eum antea.</p>
+          <p>XVI. Sanctificavit lsa:, et filiosejus. Quia Samuel <lb/>
+            præcept ut lavarent seaqua, et abstinerent ab <lb/>
+            uxoribus. Exag tabat Saul spiritus nequam a Domino. <lb/>
+            Iu terram. Spiritus Dei malus. Quomodo Dei, si ma­ <lb/>
+            tus erat ? quia cuncta Domino auctore prolatadivina; <lb/>
+            sunt subdita ditioni. Ergo ipse diabolus, non qualis <lb/>
+            nunc est, scJ bonus a Domino creatus, et a Domino <lb/>
+            semper pro omnipotente potestate subjectus , Do­ <lb/>
+            mini erat. Scientem psallere cithara. Quia naturale est
+            <milestone unit="PLSection" n="B"/><lb/>
+            mentem ipsam per hanc artem mitigari posse in ad­ <lb/>
+            miratione.</p>
+          <p>XVII.Socoth el Azecha. Duo loca. In finibus Dom­ <lb/>
+            mim. Nomen civitatis. Spurius. Immundus. Cassis. <lb/>
+            Quæ est galea. Lorica squamata. Catenata. In cruri­ <lb/>
+            bus. In tibiis ocreas. Phalangas. Agmina, exercitus. <lb/>
+            Alebat. Dicebat. Ephi polentæ. Hanc mensuram trium <lb/>
+            modiorum farinæ delicatissimæ. Quispiam. Aliquis. <lb/>
+            Nunquid non verbum eat ? Nunquidnon jussit me fla­ <lb/>
+            tur meus venire !Limpidissimas. Sincerissimas. De <lb/>
+            torrente. Torremes dicimus rivos qui aquis hiemali­ <lb/>
+            bus colliguntur, et vcris 424 tempore torrescunt. <lb/>
+            Fundam. Fundibulam. Ecclesia. Advocatio populi. <lb/>
+            De qua stirpe descendit.Pro invidia, quasi nesciens <lb/>
+            interrogavit, sive ut ve st garet cogitatum cæterorum <lb/>
+            do co. Si novi. Non novi.</p>
+          <p>XVIII. Usque ad gladium, et arcum, et balteum. Illa <lb/>
+            similiter dedit. in sistris. Hi genus musicæ artis. <lb/>
+            Parcussit Suul mlle, et David dtcem millia. In his nu­ <lb/>
+            meris sola perfectio fuit requirenda, quod David ma-
+            <milestone unit="PLSection" n="c"/><lb/>
+            jorem exerceret victoriam. Et prophetabat in medio <lb/>
+            domus suae. Insanicusloquebatur. Secundo. Prospere. <lb/>
+            In duabus rebus gener meus. Quia majorem promisit, <lb/>
+            et minoremdedit, sive quia Goliam occidisset, et <lb/>
+            Philisthinor uni tuliset præputia.</p>
+          <p>xix. Nisus casso vulnere. Declinato vulnere. Sa­ <lb/>
+            tellites. Appariorcs, lictores. Pellem pilosam capra­ <lb/>
+            rum. Nigram, quia capilli nigriluerunt Davidi et <lb/>
+            pulcherrimi in habitu corporis. In Nabaiot in Rama­ <lb/>
+            tha.Inexcelso loco illius civitatis. Exspoliavit se ves­ <lb/>
+            stimentis suis. Hoc ideo fecit, qu a in exstasi mentis <lb/>
+            fuit. Nudus. Non quia omnino nudus esset.</p>
+          <p>XX. Quod crat in Rama. in excelso loco sila. Et <lb/>
+            juravit rursum David. Jonatha juravit, ut non celaret <lb/>
+            sibica quæ audiret a Saule. Perendie. Tertia. In quo <lb/>
+            licuit operari. Et requirere Dominum : hoc scriptor <lb/>
+            inscruit. Vindictam. Sessio tua. Tu qui reddere de­ <lb/>
+            buisti, requireris. Zehel. Proprium nomen lapidis.
+            <milestone unit="PLSection" n="A"/><lb/>
+            Intra te. In ista parte. Et surrexit Jonatha, Idcirco <lb/>
+            surrexit, ne Abner juxla halus aliud regis in sede <lb/>
+            David sederet, sed ut appareret. vucua sessio David. <lb/>
+            Obnixe. Intente, subjecte. Filius mulieris. Subaudi­ <lb/>
+            tur : Non es filius meus, sed adulteræ matris. dum <lb/>
+            diligis inimicum luum.</p>
+          <p>XXI. Post ephod. Juxta ephod. Epilenticos. Ca­ <lb/>
+            ducos.</p>
+          <p>XXII. In angustiis constituit. Qui exsules fuerunt de <lb/>
+            aliis gentibus. Pressi ære alieno. Tributo, qu d alie­ <lb/>
+            nis debebant. In præsidio, in loco munito, quem ha-, <lb/>
+            buit ibi. Venit in saltum Haret, in nemore quod est in <lb/>
+            Rama. Nemus fuit in exc celso loco urbis. Num hodie <lb/>
+            cœpi pro eo consulere Deum? Quia in|micum tuum <lb/>
+            cum scio.</p>
+          <p>XXIII. Et ait David : Domine Deus Israel. Ut sibi <lb/>
+            postea respouderet per 425 sacerdotem : In monte <lb/>
+            opaco, iu colleRachilla. Fuit ibi co lis et locus ex­ <lb/>
+            celsi in civitate, quæ est civitas ad dexteram deserti,
+            <milestone unit="PLSection" n="B"/><lb/>
+            ad meridiem tribus Juda. Ziph et Maon. Loca deserta <lb/>
+            fuerunt.</p>
+          <p>XXIV. Engaddi. Locus deserti est prope ripam ma­ <lb/>
+            ris Mortui.</p>
+          <p>xxv. Mortuusest Samuel. Iloc addidit David. Sala <lb/>
+            polentæ. Sala, genus [mensuræ]; polenta, farina. <lb/>
+            Uvæ passæ... Caricarum. Fructum ficuum. In fasci- <lb/>
+            culo viventium. In congregatione viventium.</p>
+          <p>XXVI.Odoretur sacrificium. Sit gratum, quasi sacri­ <lb/>
+            ficium.</p>
+          <p>XXVIII. Hi pagi habitabantur in terra antiquitus. Es­ <lb/>
+            dras hoc dixit, ac si dice ret, non nunc, sed aliquan­ <lb/>
+            do in diebus. Euntibus Sur usque ad terram Ægypti. <lb/>
+            Pergentes per pagos illos iter agebant. Jeramel et <lb/>
+            Ceni. In tribu Juda ; ideo sine mendacio dixit contra <lb/>
+            Me idiem eorum, ita ut non putaret rex quod genti <lb/>
+            suæ propriæ noceret.</p>
+          <p>XXVIII. Samuel autem mortuus. Hic recapitulatio <lb/>
+            est. Magos et ariolos... Habentem pythonem. Divina­
+            <milestone unit="PLSection" n="c"/><lb/>
+            tionem : python dicebatur ille serpens quem Jano <lb/>
+            immisit ad persequendam Latonam, quando præ­ <lb/>
+            gnans fuit, ct in Delo iusula Apollinem et Dianam <lb/>
+            genuit, ct postea Latoua pracepit Apollini ut [sc] vin­ <lb/>
+            dicaret in pythone, qui persequebatur, et ita evenit <lb/>
+            ut ipse interfecerit pythonem in jugis Perine ; et ex­ <lb/>
+            coriavil cum, ct ædificavit templum in Delo insula, <lb/>
+            ubi ipse nutritus est; unde et Apolo Delius dictus, <lb/>
+            et corium serpentis posuit in templo, quæ dicebatur <lb/>
+            corinna. Lude et cortinæ tabernaculorum dictæ sunt, <lb/>
+            ct ibi semper responsa tam ipse quamsacerdotes sui <lb/>
+            audire [Forte, edere] consuerunt; et divinabant a <lb/>
+            corio pythonis. Unde et pythones dicti sunt qui di­ <lb/>
+            vinant.</p>
+          <p>XXIX. Et estapad me multis dicbus, vel annis. Pro <lb/>
+            multo tempore hoc dixit. In millibus suis. In exerci- <lb/>
+            tibus suis. In decem millibus suis. Quasi majorem <lb/>
+            exercitum haberet.
+            <milestone unit="PLSection" n="D"/><note type="footnote"> xvi. In malus erat. Obscurum est verb im erat. <lb/>
+            Coriuptuui etiamest in Ms. pro omnipoientis pietatis; <lb/>
+            et niux naturele est mentis ipsa mentium mitigare posse, <lb/>
+            e:c. Coijidcb'H&lt; est mentes ipsas musicum mitigare <lb/>
+            posse, vel mutare potse in admirationem. </note><note type="footnote"> xvu. In VulgaUt Socho et Azeca. Uepravalum erat <lb/>
+            Superius immuiutisf pro quo scripsi Spu,.,us, i""IlM.1- <lb/>
+            dus, uti mox squumuta pro amnta9 vel hamatu ; aie­ <lb/>
+            bat. dicebat, pro ageJunt, dicebant; et farinæ pro <lb/>
+            (a,.illa. Vulgata cxbiJjet timpidissimos lapidea. lix <lb/>
+            conieclura restilui ei veris tempore lOTrC:.'CUt, t, pro et <lb/>
+            ceriis temporescunt. Yide ttyuiol., I. SUI, c. 'iI, II. 2. <lb/>
+            Obscuruui esi cojitatum Ctl'lt:ror.nl. </note><note type="footnote"> xviii. Interpretes ,eculldo accipiunt pro bis iterum; <lb/>
+            et reiu alii alio ntodo explicant. </note><note type="footnote"> xix. Uihll.. Gotbiea Rama pro Ramatha, uti etiam <lb/>
+            c. seq. hi glossa pro pellein pilosam, cte., quaedam <lb/>
+            verba corrupta 6..11&amp;. ut nigrum pro nigram, J Mtlæi <lb/>
+            pro Davidi, ut conjicio. Vulgata legit in Nmotk in </note> 
+            <milestone unit="PLSection" n="D"/><note type="footnote"> Ramatha. Post lictores in Ms. c.)t quoddam verbum <lb/>
+            obscurum, et illico et ligatores pertment. </note><note type="footnote"> xx. Vulgata, quæ est in Ramatha. Implexæ et ob­ <lb/>
+            scura; sunt glossae perendie, etc. In Vulgita scribitur <lb/>
+            Ezel pro Zohel. </note><note type="footnote"> xxi. Desideratur in Vulgaia vox epilent;coI, quje <lb/>
+            reperitur etiam in glossis Koberti de Sorbona. For­ <lb/>
+            tasse pertinet ad vers. 5 : An desunt nubis furiosi ? <lb/>
+            Legendum vero cpitepticos; nam epiJepsiaul tingebat <lb/>
+            David. </note><note type="footnote"> xxi!. Vulgata, in angustia. Post glossam Num hodie <lb/>
+            coepi, ctc., quatuor, vel quinque lineæ ita fere cva­ <lb/>
+            nucrunt, ut contextus legi nequeat. </note><note type="footnote"> xxv. Supplevi ,uen.uræ post genus. Praeterita est <lb/>
+            glosi-a pro uvæ passæ. </note><note type="footnote">xxvii. Fortasse addendum in diebus antiquis. In <lb/>
+            lIs. erat (Jut! gentis pro quod genti. </note><note type="footnote"> xx VIII. Forte hcec recapitulatio est. Deest glossa pro <lb/>
+            magos et 'riflo" </note> <pb n="1319"/>
+            </p>
+          <p>
+            <milestone unit="PLSection" n="A"/>XXX. Careth, Caleb. Urbes in finibus Judxorum.</p>
+          <ab>
+            <title type="sub">LIBER II REGUM.</title>
+          </ab>
+          <p>CAP. I. Stansque super illum, occidi tum. Hoc men- <lb/>
+            titus est, sed ob adulationem regi indicavit. In libro <lb/>
+            justorum. Quia multos habuerunt libros, quos Esdras <lb/>
+            non restauravit. In compitis. Vicis. A sanguine inter­ <lb/>
+            fectum Propter sanguinem.</p>
+          <p>II. Et venerunt usque ad collem aquæductus. Quia
+            <milestone unit="PLSection" n="A"/><lb/>
+            aquæductus in ipso colle fuit. Ex adverso vallis. E <lb/>
+            regione vallis. Itineris deserti in Gabaon. Quia iter <lb/>
+            per desertum ducit ad civitatem. Et venerunt us­ <lb/>
+            que ad castra. Castra dicit locum ubi Jacob vidit an­ <lb/>
+            gelum.</p>
+          <p>III. Canis caput. Dum me omnes odio habebant <lb/>
+            causa tui. Sira. Nomen distemne est. Tenens fusum- <lb/>
+            Sic molles et mulier. (Desiderantur reliqua.) <note type="footnote"> LIIER II ReGuM. - CAP. I. Obscurumest ob adula­ <lb/>
+            : onem. </note><note type="footnote"> II. In Ms. erat tlen,runt usque ad colle"" quia aqucc­ <lb/>
+            ductus in ipso colle aquæductus monitu fuit lustrata. </note><note type="footnote"> III. Obscura est conjunctio et ante mulier. Fortc <lb/>
+            sic mollia ut mulier. </note></p>
+        </div>
+        
+        </body>
+  </text>
+</TEI>

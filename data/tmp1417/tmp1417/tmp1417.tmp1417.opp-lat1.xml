@@ -1,0 +1,1940 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title>Patrologiae Cursus Completus. Series Latina (PL)</title> 
+        <sponsor>University of Leipzig</sponsor>
+        <funder>European Social Fund Saxony</funder>
+        <principal>Gregory Crane</principal>
+        <respStmt>
+          <persName xml:id="Jouve">Jouve</persName>
+          <resp>OCR-ed, corrected and encoded the text</resp>
+        </respStmt>
+        <respStmt>
+          <persName>Greta Franzini</persName>
+          <resp>Project Manager (University of Leipzig)</resp>
+        </respStmt>
+        <respStmt>
+          <persName>Simona Stoyanova</persName>
+          <resp>Project Assistant (University of Leipzig)</resp>
+        </respStmt>
+        <respStmt>
+          <persName>Bruce Robertson</persName>
+          <resp>Technical Advisor (Mount Allison University)</resp>
+        </respStmt>
+      </titleStmt>
+      
+      <publicationStmt>
+        <authority>University of Leipzig</authority>
+        <idno type="filename">PL83.xml</idno>
+        <availability>
+          <licence target="https://creativecommons.org/licenses/by-sa/4.0/">Available under a Creative Commons Attribution-ShareAlike 4.0 International License</licence>
+        </availability>
+        <date>2014</date>
+        <publisher>University of Leipzig</publisher>
+        <pubPlace>Germany</pubPlace>
+      </publicationStmt>
+      
+      <sourceDesc>
+        <listBibl xml:lang="la">
+          <biblStruct>
+            <monogr>
+              <editor>
+                <persName>
+                  <name xml:lang="fr">Jacques Paul Migne</name>
+                </persName>
+              </editor> 
+              <author ref="urn:cite:perseus:author.771">Isidorus Hispalensis</author>
+              <title>Differentiarum Sive De Proprietate Sermonum Libri Duo</title>
+              <title>Allegoriae Quaedam Sacrae Scripturae</title>
+              <title>De Ortu Et Obitu Patrum Qui In Scriptura Laudibus Efferuntur</title>
+              <title>In Libros Veteris Ac Novi Testamenti Proemia</title>
+              <title>Liber Numerorum Qui In Sanctis Scripturis Occurrunt</title>
+              <title>De Veteri Et Novo Testamento Quaestiones</title>
+              <title>Mysticorum Expositiones Sacramentorum Seu Quaestiones In Vetus Testamentum</title>
+              <title>Appendix Ad Libros Regum</title>
+              <title>De Fide Catholica Ex Veteri Et Novo Testamento Contra Judeos</title>
+              <title>Sententiarum Libri Tres</title>
+              <title>De Ecclesiasticis Officiis</title>
+              <title>Synonyma De Lamentatione Animae Peccatricis</title>
+              <title>Regula Monachorum</title>
+              <title>Epistolae</title>
+              <title>De Ordine Creaturarum Liber</title>
+              <title>De Natura Rerum Ad Sisebestum Regem Liber</title>
+              <title>Chronicon</title>
+              <title>Historia De Regibus Gothorum. Wandalorum Et Suevorum</title>
+              <title>De Viris Illustribus Liber</title>
+              <title>Carmina [Ascripta]</title>
+              <title>Chronica Regum Visigothorum (Incertus)</title>
+              <title>Expositio In Canticum Canticorum Salomonis [Incertus]</title>
+              <title>De Conflictu Vitiorum Et Virtutum (Incertus)</title>
+              <title>Expositio In Missa (Incertus)</title>
+              <title>Sententiarum Liber Quartus (Incertus)</title>
+              <title>Exhortatio Humilitatis (Incertus)</title>
+              <title>Testimonia Divinae Scripturae Et Patrum (Incertus)</title>
+              <title>Sermones (Incertus)</title>
+              <title>De Ecclesiasticis Dogmatibus (Incertus)</title>
+              <title>Sentantiae Differentiarum De Activa Vita Atque Contemplativa [Incertus]</title>
+              <title>Exhortatio Poenitendi Cum Consolatione Et Misericordia Dei [Incertus]</title>
+              <title>Lamentum Poenitantiae (Incertus)</title>
+              <title>Oratio Contra Insidias Diaboli (Incertus)</title>
+              <title>Liber De Ortu Et Obitu Patrum Incertus</title>
+              <title>Liber De Numeris (Incertus)</title>
+              <title>Glossae in Sacram Scripturam</title>
+              <title>Differentiarum, sive de Proprietate Sermonum, Liber</title>
+              <title>Liber Glossarum</title>
+              <imprint>
+                <publisher>Garnier</publisher>
+                <pubPlace>Paris</pubPlace>
+                <date>1850</date>
+              </imprint>
+              <biblScope unit="volume">83</biblScope>
+            </monogr>
+            <monogr>
+              <author>Auctor Incertus</author>
+              <title>Archiepiscopi Toletani Veteres</title>
+              <title>Chronologia Gothicorum Regum (Ex Codice Regio Vaticano)</title>
+              <imprint>
+                <publisher>Garnier</publisher>
+                <pubPlace>Paris</pubPlace>
+                <date>1850</date>
+              </imprint>
+              <biblScope unit="volume">83</biblScope>
+            </monogr>
+            <ref target="http://hdl.handle.net/2027/pst.000020950231">HathiTrust</ref>
+            
+          </biblStruct>
+        </listBibl>
+      </sourceDesc>
+      
+    </fileDesc>
+    <encodingDesc>
+      <p>The following text is encoded in accordance with EpiDoc standards and with the
+        CTS/CITE Architecture.</p>
+      <refsDecl n="CTS">
+        <cRefPattern n="paragraph" matchPattern="(.+).(.+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div/tei:div[@n='$1']/tei:p[@n='$2'])"/>
+        <cRefPattern n="section" matchPattern="(.+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div/tei:div[@n='$1'])"/>
+      </refsDecl>
+    </encodingDesc>
+    
+    <profileDesc>
+      <langUsage>
+        <language ident="la">Latin</language>
+      </langUsage>
+    </profileDesc>
+    
+</teiHeader><text>
+    <body>
+    <div type="edition" n="urn:cts:latinLit:tmp1417.tmp1417.opp-lat1">
+          <head>
+            <title type="main">SANCTI ISIDORI HISPALENSIS EPISCOPI REGULA MONACHORUM.</title>
+          </head>
+          <div n="pr" subtype="section" type="textpart"><p>
+            <milestone unit="PLSection" n="D"/></p>
+          <ab>
+            <title type="sub">524 PRÆFATIO.</title>
+          </ab>
+          <p n="1">1. Plura sunt præcepta, vel instituta majorum, quæ <lb/>
+            a sanctis Patribus sparsim prolata reperiuntur9 quæ­ <lb/>
+            que etiam nonnulli latius, vel obscurius posteritati
+            <milestone unit="PLSection" n="D"/><lb/>
+            composita tradiderunt, ad quorum exemplum nos hæc <lb/>
+            pauca vobis eligere ausi sumus, usi sermone plebeio, vel <lb/>
+            rustico, ut quam facillime intelligatis ouo ordine pro­ <lb/>
+            fessionis vestræ votum retineatis <note type="footnote"> PRÆf. N. 1. Caput 71 in Isidorianis hoc titulo in­ <lb/>
+            scriptum fuit ; l(egulll monachorum. Expenduntur <lb/>
+            aryumeula viri clarissimi Petri Emmanuelis Hernan­ <lb/>
+            de:, qui eam J ,'iidoro abjuHcandam censet. Conullen. <lb/>
+            titii sunt commentarii in regulam sancli Benedicti, quos <lb/>
+            J,idorQ Constantinus Cajelanus affilljil. Isidonana re­ <lb/>
+            gula canonicorum. Edii ones regula; monachorum. Ca­ <lb/>
+            put ultimum regulifi deVQlarum ex Martenio quidnum <lb/>
+            sit? lnde peti possunt quae monili loco hic essenf <lb/>
+            apponenda. In Edilione Holsl.eun insr.riplio est : <lb/>
+            Sanctis fratribus in monasterio llonorlanensi constitu­ <lb/>
+            tis Isidorus. De quo fusius cil. capf 71, n. 15 et <lb/>
+            seqq. Apud M&gt;billunitiin to.IU. i Aimal. Benedict., <lb/>
+            page 363. vocatur m naster.ium Honoriaceuse, et ex <lb/>
+            Codice vetusiissimo Lirilleusi describitur pactum <lb/>
+            quod illius monasterii pjonaciii faciebant, quod iu <lb/>
+            eodem Codice præmittitur regulye liidori in luec <lb/>
+            verba : i Hoc est pactum SHlod facimus nos quorum </note> <pb n="869"/>
+            </p>
+          <p n="2">
+<milestone unit="PLSection" n="A"/>525 2. Præterea quisquis vestrum ulam universam <lb/>
+            veteRUm disciplinam contendit appetere , pergat, in <lb/>
+            quantum placet, et arduum illum limitem atque an­ <lb/>
+            gustum levigato cursu incedat. Qui vero tanta jussa <lb/>
+            priorum explere nequierit, in hujus limite disciplinæ <lb/>
+            gressus constituat, nec ultra declinandum disponat, <lb/>
+            ne, dum declinatus appetit inferiora, tam vitam quam <lb/>
+            nomen monachi perdat. Quapropter sicut illa præcepta <lb/>
+            priorum perfectum monachum reddunt ac summum, <lb/>
+            ita faciunt ista vel ultimum. Illa custodiant verfecti, <lb/>
+            ista sequantur post peccatum conversi.</p></div>
+     
+
+<div n="1" subtype="section" type="textpart">
+<ab>
+            <title type="sub">CAPUT PRIMUM.</title>
+          </ab>
+          <ab>
+            <title type="sub">De monasterio.</title>
+          </ab>
+          <p n="1">1. Imprimis, fratres charissimi, monasterium ve­ <lb/>
+            strum miram conclavis diligentium habeat, ut firmita-
+            <milestone unit="PLSection" n="B"/><lb/>
+            tem custodiæ munimenta claustrorum exhiheant; ini­ <lb/>
+            micus enim noster diabolus, sicut lea rugiens, cir­ <lb/>
+            cuit ore patenti, quxrens unumquemque nostrum, <lb/>
+            quem devoret (I Petri vm).</p>
+          <p n="2">2. Monasterii autem munitio tantum januam ex­ <lb/>
+            trinsecus habeat, unumque posticum, per quem catur <lb/>
+            ad hortum. Vilia sane longe remota debet esse a <lb/>
+            monasterio, ne vicinius posita aut labis inferat peri­ <lb/>
+            culum, aut famam inficiat dignitatis. Cellulae fratri­ <lb/>
+            bus juxta ecclesiam constituantur, ut possint prope­ <lb/>
+            rare quantocius ad officium.</p>
+          <p n="3">3. Locus autem ægrotantium remotus erit a basi­ <lb/>
+            lica, vel cellulis fratrum, 526 ut nulla inquietudine <lb/>
+            vel clamoribus impediantur. Cellarium monachorum <lb/>
+            juxta coenaculum esse oportet, ut secus positura sine
+            <milestone unit="PLSection" n="c"/><lb/>
+            mora mensis ministerium præbeatur. Hortulus sane <lb/>
+            intra monasterium sit inclusus, quatenus, dum in­ <lb/>
+            tus monachi operantur, nulla occasione exterius <lb/>
+            evagentur.</p>
+          <p>
+            <milestone unit="PLSection" n="A"/></p>
+          </div>
+<div n="2" subtype="section" type="textpart">
+<ab>
+            <title type="sub">CAPUT II.</title>
+          </ab>
+          <ab>
+            <title type="sub">De eligendo abbate,</title>
+          </ab>
+          <p n="1">1. Abbas interea eligendus est in institutione san­ <lb/>
+            ctæ vitae duratus, atque inspectus patientiæ ut humi. <lb/>
+            litatis experimentis, qui etiam per exercitium vitam <lb/>
+            laboriosam tolerans, ac transcendens ætatem ado­ <lb/>
+            lescentiæ, juventule sua senectutem tetigerit; cui <lb/>
+            etiam majores non dedignentur parere, obedientes ci <lb/>
+            tam pro ætate quam etiam pro mogunt probitate.</p>
+          <p n="2">2. Isle enim se imitandum in cunclis operum ex­ <lb/>
+            emplis exhibebit; neque enim aliquid imperasse <lb/>
+            cuique licebit quod ipse non fccerit. Singulos autem <lb/>
+            hortamentis mutuis excitabit , alloquens cunctos, <lb/>
+            exhortans, vel ædificans in eis, si quid eorum vitae <lb/>
+            pro uniuscujusque gradu prodesse perspexerit.</p>
+          <p n="3">
+<milestone unit="PLSection" n="B"/>3. Circa omnes quoque servans justitiam, contra <lb/>
+            nullum livore odii inardescens, omne ex corde am­ <lb/>
+            plectens, nullum conversum despiciens, paratus <lb/>
+            etiam quorumdam infirmitati compati misericordia, <lb/>
+            ApoStolum sequens, qui dicit : Facti sumus parvuli <lb/>
+            in medio vestrum, tanquam si nutrix foveat pullos suos <lb/>
+            (I Thess. II).</p>
+          </div>
+<div n="3" subtype="section" type="textpart">
+<ab>
+            <title type="sub">527 CAPUT III.</title>
+          </ab>
+          <ab>
+            <title type="sub">De monachis.</title>
+          </ab>
+          <p n="1">1. Monachis autem summupere studendum est ut, <lb/>
+            apostolicam vitam tenentes, sicut in unum constituti <lb/>
+            esse noscuntur, ita cor habeant unum, nihil sibi pro­ <lb/>
+            prium vindicantes, nec quantulumcunque amorem <lb/>
+            rei privatae habentes, sed, juxta exemplum aposto­ <lb/>
+            licum, omnia communia habentes (Act. iv), in prae­
+            <milestone unit="PLSection" n="c"/><lb/>
+            ceptis Christi fideliter permanendo proficiant.</p>
+          <p n="2">2. Patri honorem debitum referentes, erga senio­ <lb/>
+            res obedientiam, erga aequales incitamenta virtutum, <lb/>
+            erga minores boni exempli magisterium conserva- <note type="footnote"> subter annotata sunt nomina, tibi Patri iU. abbati. <lb/>
+            Cum hos rt"gu!aris anliquitas doceat monaslicam <lb/>
+            non sine abbate ducere vitam, nec prolicuurn esse <lb/>
+            81iCu1 mottacho' um juxta suum prajudicium secum <lb/>
+            lforle, stilum] agere [forts, eligimusj te iN priinis <lb/>
+            luco abbaiis, cui contradimus animas nostras simul­ <lb/>
+            que et corpora, ut juxta spiritualem censuram nobis <lb/>
+            ea quae sunt Dei imperes; animas nostras imbutas <lb/>
+            casiilicatasque Deo offeras. Nostrum ergo erit ab ho­ <lb/>
+            dieriio die ei tempore tuis monilis ulJe(jirc, praecepta <lb/>
+            servare, actus et conscientias tuas I'evereri; luum <lb/>
+            vero id omne quod a nlajo.'IIJus legendo vel audiendo <lb/>
+            didicisli nobis sine cunctalione imperare. Si quis </note> 
+            <milestone unit="PLSection" n="D"/><note type="footnote"> sane hoc pactum, nostrum videlicet, quorum subter <lb/>
+            affixa sunt nomina, violare tentaverit, quia hoc non <lb/>
+            sine inimici suasiolle acturus est, sit tandiu reus et <lb/>
+            a coetu fratrum anathemate percussus, quandiu , <lb/>
+            pænitenLialu ducens, omnibus satisfaciat fralribu:;. &gt; <lb/>
+            Simile pactum legitur in fine regulae communis san­ <lb/>
+            cti Fructuosi. In Editione Crialii paucæ sunt imtje, <lb/>
+            quas Grialii nomine exponam, quamvis in collatione <lb/>
+            hujus operis parteui etiam lIollnulhuu Petrus Chacon <lb/>
+            habuerit. AnooLaLiones Alenardi iu Concordiam re­ <lb/>
+            guiarum in compendium redigam, et lectionis dis­ <lb/>
+            crepantiain, quam ipse indicat, ubi opus fuerit, ex­ <lb/>
+            primam. ita etiam ex Petro Casimensi, et notis Con­ <lb/>
+            stantiui Cajetani, de quibus in Isidorianis, cap. 71, <lb/>
+            n. 22 et iey., dixi, ea seligam qua: ad reui esse vi­ <lb/>
+            debuntur; nam omnia describere minus est necessa­ <lb/>
+            riulu. lu præfatione Dum. i, pro volum Mellardus, p. <lb/>
+            33, morem. AREV. </note><note type="footnote"> i. Notat Menardus, ex PlauLo, limitem esse viam, <lb/>
+            cailem. Levigatum exponit facilem, planum, non sea. <lb/>
+            brosum. Idein legit, in Iluju. limitis disciplinum gres­ <lb/>
+            suni ponat; et cJel,cal;us, pro declinatus, s&lt;'d legendum <lb/>
+            nionel decliuatius. Post sequantur posi peccatum con­ <lb/>
+            versi addit : UIFC igitur, o servi Dei, et alia, quue a <lb/>
+            regula excusa abesse ail; sed revera h;&lt;r ipa ex­ <lb/>
+            staut in fine capitis ultimi, tanquam epilogus. Simili <lb/>
+            fere modo a Petro Casinensi, cap. 73t praelatio et <lb/>
+            epilogus coiijunguiitur, apud quem legktir in hujtis <lb/>
+            limims disciplina. bEV. </note><note type="footnote"> CAP. I. N. 2. Ju&gt;tinian., consUL, novell. 133, </note><figure type="illustration">
+              <graphic url="PL83_fig36.jpg"/></figure> <figure type="illustration">
+              <graphic url="PL83_fig37.jpg"/></figure>
+            <milestone unit="PLSection" n="D"/><figure type="illustration">
+              <graphic url="PL83_fig38.jpg"/></figure><note type="footnote"> 3. Urcull us advertit cænaculuml hic esse refecLo­ <lb/>
+              rium. Pro præbealuI', lIobleni liS præbeat. AREV. </note><note type="footnote"> CAP. II. N. i. Hoc caput penultimum eat in Codiee <lb/>
+              GOlhico Ovetensi. GRIAL. </note><note type="footnote"> Ibid. Menardus, pag. 150, retinendam ait scriptu <lb/>
+              rain Concordiae regularum, IraluceJldelLl wtatem ado­ <lb/>
+              lescentice, juventutem seu senectutem tetigerit, cum <lb/>
+              juventus, juxta ipsum Isidorum, ab anno incipial, <lb/>
+              juxta alios ab anno 38. ila etiam legit Ilolsienius. <lb/>
+              Ego mallem, trauscendens ætatem adolescentiæ, leII <lb/>
+              juventutis, senectuiem tetigerit. COn[ei' regulam sancti <lb/>
+              Fructuosi, cap. 3, et Codicis leg. 4C, de episc. et <lb/>
+              cleric. AREV. </note><note type="footnote"> 3. Menardus legi posse putat compati, misericor­ <lb/>
+              diam Apasloli sequens. AREV. </note><note type="footnote"> CAP. III. N. 2. Me.oardu:i, pag. 215 : Palri honorem <lb/>
+              debitum reverenl.es : 6K quo coJligil : Patrem Uonort <lb/>
+              debito reverentes. AftEV. </note> <pb n="871"/>
+              
+            <milestone unit="PLSection" n="A"/><lb/>
+            hunt. Nemo cæteris se judicans meliorem, sed in­ <lb/>
+            feriorem se omnibus deputans , tanto humilitate <lb/>
+            clarescat, quanto plus cæteris culmine virtutum co­ <lb/>
+            ruscat. Abstineat se etiam a furore, et a detractione <lb/>
+            parcat monachus linguam.</p>
+          <p n="3">3. Indecenter quoque vel notabiliter non incedat, <lb/>
+            philargyriæ contagium, ut lethiferam pestem, ab­ <lb/>
+            horreat; a turpibus verbis vel otiosis linguam aver­ <lb/>
+            tat, atque indesinenter cor mundum labiaque exhi­ <lb/>
+            beat. Affectus quoque animi turpes ab intentione <lb/>
+            cogitationis abstergat, per compunctionem cordis in <lb/>
+            stadio se sanctæ meditationis exerceat.</p>
+          <p n="4">4. Torporem somni atque pigritiam fugiat, vigi­ <lb/>
+            liisque et orationibus sine intermissione intendat, <lb/>
+            gulae concupiscentiam deprimat, atque abstinentiae
+            <milestone unit="PLSection" n="B"/><lb/>
+            virtutibus semetipsum per studium domandarum <lb/>
+            libidinum affligat, domans jejuniis carnem, quantum <lb/>
+            valetudo corporis sinat, livore quoque invidiæ de <lb/>
+            fraternis profectibus 528 nequaquam tabescat, sed <lb/>
+            quietus atque pacilicus per amorem fraternæ di­ <lb/>
+            lectionis de cunctorum gaudeat meritis, iracundia <lb/>
+            perturbationem rejiciens, et patienter omnia susti­ <lb/>
+            nens; nulla tristitia, nullo temporali moerore affi­ <lb/>
+            ciatur, sed contra omnia adversa interiori gaudio <lb/>
+            fretus, ipsam postremo vanæ gloriæ laudem procul <lb/>
+            a se abjiciat, et Deo tantum interius humili corde <lb/>
+            placere sludeat, ut dum his virtutibus radiat, merito <lb/>
+            nomen suae professionis retineat.</p>
+          </div>
+<div n="4" subtype="section" type="textpart">
+<ab>
+            <title type="sub">CAPUT IV.</title>
+          </ab>
+          <ab>
+            <title type="sub">De conversis.</title>
+          </ab>
+          <p n="1">
+            <milestone unit="PLSection" n="C"/>1. Qui renuntians saeculo, ad monasterium vene- <lb/>
+            ril, non statim in coetum deligendus est monachorum. <lb/>
+            Vitam enim unicuique in hospitalitatis servitium tri­ <lb/>
+            bus mensibus considerare oportet, quibus peractis <lb/>
+            ad coetum sanctæ congregationis accedet; neque enim <lb/>
+            intus suscipi quemquam convenit, nisi, prius foris <lb/>
+            positus, ejus humilitas sive patientia comprobetur. <lb/>
+            Qui relicto saeculo ad militiam Christi pia et salubri <lb/>
+            humilitate convertuntur, omnia sua primum aut in­ <lb/>
+            digenlibus dividant, aut monasterio conferant. Tunc <lb/>
+            enim servi Chrisii liberum animum divinae militiæ <lb/>
+            offerunt, quando a se spei saecularis vincula cuncta <lb/>
+            præcidunt.</p>
+          <p n="2">2. Qui non rigida intentione convertuntur, cito <lb/>
+            aut superbiæ morbo, aut vitio luxuriæ subduntur.
+            <milestone unit="PLSection" n="D"/><lb/>
+            Nequaquam ergo debent a tepore inchoare , qui
+            <milestone unit="PLSection" n="A"/><lb/>
+            mundo renuntiant, ne per ipsum teporem rursus in <lb/>
+            amorem saeculi cadant. Omnis conversus non est <lb/>
+            recipiendus in monasterio, nisi prius ipse scripto se <lb/>
+            spoponderit permansurum. Sicut enim ii qui ad sae­ <lb/>
+            cularem promoventur militiam in legionem non trans­ <lb/>
+            eunt nisi ante in tabulis conferantur, ita et ii qui in <lb/>
+            spiritualibus castris coelesti militiæ sunt signandi, <lb/>
+            nisi prius professione verbi aut scripti teneantur, in <lb/>
+            numerum 529 societatemque servorum Christi <lb/>
+            transire non possunt.</p>
+          <p n="3">3. Qui in monasterio prior ingreditur, primus erit <lb/>
+            in cunctis gradu, vel ordine; nec quaerendum est <lb/>
+            si dives aut pauper, servus an liber, juvenis an senex, <lb/>
+            rusticus an eruditus; in monachis enim nec aetas, nec <lb/>
+            conditio quæritur, quia inter servi et liberi animam
+            <milestone unit="PLSection" n="B"/><lb/>
+            nulla est apud Deum differentia. Qui tamen jugo alienæ <lb/>
+            servitutis astrictus est, nisi Dominus vincula ejus dis­ <lb/>
+            solverit, nequaquam recipiendus est; scriptum est <lb/>
+            enim : Quis dimisit onagrum liberum? et vincula ejus <lb/>
+            quis solvit (Job. XXXIX)? Onager enim liber dimissus <lb/>
+            monachus est sine dominatu et impedimento sæculi <lb/>
+            deserviens, et a turbis remotus. Tunc enim libera <lb/>
+            servitute Deo quisque famulatur, quando nullius <lb/>
+            carnalis conditionis pondere premitur. Ubi enim jam <lb/>
+            suave jugum et leve onus Christi est, durum et <lb/>
+            grave est portare servilium saeculi.</p>
+          <p n="4">4. Qui aliquid habentes in saeculo, convertuntur, <lb/>
+            non extollantur, si de suis facultatibus quodcum­ <lb/>
+            que monasterio contulerunt; sed potius timeant, <lb/>
+            ne hic per superbiam eleventur et pereant. Qui-
+            <milestone unit="PLSection" n="C"/><lb/>
+            bus melius esset, si divitias suas cum humililate <lb/>
+            in saeculo fruerentur, quam ut jam pauperes effecti <lb/>
+            de earum distributione elatione superbiæ extollas­ <lb/>
+            tur. Hi qui de paupertate in monasterio convertuntur <lb/>
+            non sunt despiciendi ab eis qui saeculi divitias reli­ <lb/>
+            querunt, quia apud Deum unius ordinis habentur <lb/>
+            omnes qui convertuntur ad Christum ; neque enim <lb/>
+            differt utrum ex inopi vel servili conditione ad ser­ <lb/>
+            vitium Dei quisque venerit, an ex generosa et lu­ <lb/>
+            cuplele vita; multi enim ex plebeio censu documentis <lb/>
+            virtutum eximiis enitentes, prælatiores nobilibus <lb/>
+            facti sunt, eosque virtutum excellentia praevenerunt, <lb/>
+            et qui erant conditione infimi, virtutis merito effecti <lb/>
+            sunt primi sapientes.</p>
+          <p n="5">5. Nam propterea infirma mundi elegit Deus, ut
+            <milestone unit="PLSection" n="D"/><lb/>
+            confunderet fortes. et ignobilia mundi, et ea Quæ non <note type="footnote"> 3. Indecenter quoque, ele. Consonant haec regulae <lb/>
+            sancti Fructuosi Bracarensis, c. 8. N otabililer expo­ <lb/>
+            nitur pro .upe,.be et fastuo.e a Menardo : sed potius <lb/>
+            indicat insolitum. Philatgyria est avaritia, argenti <lb/>
+            cupido. ARBV. </note><note type="footnote"> 4. Ex his aliisque Isidori praeceptis natum, opi. <lb/>
+            nor, est quoddam opusculum quod in nonnullis Mss. <lb/>
+            Isidori nomine exstat, de quo sermoncm habui in <lb/>
+            Isidorianis, cap. 85, n. 9. Titulus est: Tractatus qui­ <lb/>
+            dam sancti lsidori, in quo in brevi comprehenditur <lb/>
+            II'..ridquid pertinet ad statum perfectionis cujusdalJ1 fide- <lb/>
+            Ii, personæ. Sed cum nihil peculiare addat, et cur­ <lb/>
+            ruptissime descriptus sit hujusmodi tractatus, sine <lb/>
+            ullo damno prsetermiili potest. AREV. </note><note type="footnote"> CAP. IV. N. I. Holstenius, uniuscujusque in hospita­ <lb/>
+            lis servitio... considerari oportet. AREV. </note> <note type="footnote"> 2. Nisi prius ipse scripto, etc. A!., nisise prius ibi <lb/>
+            scriptis su(B professionis .poponderit permansurum. De <lb/>
+            tironibus, qui ad ssecularem promoventur loillLianJ, <lb/>
+            videndus Isidorus, lib. ix Elyrunlog., cap. 3, num, <lb/>
+            56 et 53, et Vegetius, lib. i de Ite rnililari, cap. 8, <lb/>
+            et lib. II, cap. 5, ex quo constat milites, expleto liro­ <lb/>
+            cinio, quibus puncturis in cule signari solitos, quo <lb/>
+            alludit 'sidorus, sunt signandi. .REV. </note><note type="footnote"> 3. Servus, an liber, etc. Sancius Hieronymus, in <lb/>
+            epistola ad Celantiam, inter alia, sic ait in hanc <lb/>
+            sententiam : Sola apud Deum libertas est non servire <lb/>
+            peccatis, summa apud Deum est nobilita, ciarum esse <lb/>
+            virtutibus. AREV. </note><note type="footnote"> 5. Nam propterea. Eodem testimonio est usus <lb/>
+            lib. II deOff., cap. 16. CaJAL. </note> <pb n="873"/>
+            
+            <milestone unit="PLSection" n="A"/><lb/>
+            sunt, ut ea quæ sunt 530 evacuaret, ut non glorietur <lb/>
+            omnis curo coram illo ( I Cor. I, 27). Qui ex pau­ <lb/>
+            pertate ad monasterium veniant, non extollantur in <lb/>
+            superbiam, quia se ibi aequales aspiciunt iis qui ali­ <lb/>
+            quid in saeculo videbantur ; neque enim dignum est <lb/>
+            ut ubi divites celsitudine deposita sæculari ad humi­ <lb/>
+            litatem descendunt, ibi pauperes elatione mentis <lb/>
+            superbi efficiantur ; qui oportet ut, deposita arro­ <lb/>
+            gantia, humililer sapiant, suaeque paupertatis et ino­ <lb/>
+            piae memores semper existant.</p>
+          </div>
+<div n="5" subtype="section" type="textpart">
+<ab>
+            <title type="sub">CAPUT V.</title>
+          </ab>
+          <ab>
+            <title type="sub">De opere monachorum</title>
+          </ab>
+          <p n="1">1. Monachus semper operetur manibus suis ita, <lb/>
+            ut quibuslibet variis opificum artibus laboribusque <lb/>
+            studium suum impendat, sequens Apostolum, qui
+            <milestone unit="PLSection" n="B"/><lb/>
+            dicit : Neque panem gratis manducavimus, sed in la­ <lb/>
+            ore et fatigatone nocte et die operantes; et iterum : <lb/>
+            Qui non vult laborare, non manducet (II Thess. III). <lb/>
+            Per otium enim libidines et noxiarum cogilationum <lb/>
+            nutrimenta concrescunt, per laboris vero exercitium <lb/>
+            vitia nihilominus elabuntur</p>
+          <p n="2">2. Nequaquam debet monachus dedignari versari <lb/>
+            in opere aliquo monasterii usibus necessario. Nam <lb/>
+            patriarchae greges paverunt, et gentiles philosophi <lb/>
+            sutores et sartores fuerunt, et Joseph justus, cui <lb/>
+            virga Maria desponsata exstitit, faber ferrarius fuit. <lb/>
+            531 Si quidem et Petrus princeps apostolorum <lb/>
+            piscatoris officium gessit, et omnes apostoli carpo. <lb/>
+            rale opus faciebant, unde vitam corporis sustenta­ <lb/>
+            bant.</p>
+          <p n="3">
+            <milestone unit="PLSection" n="c"/>3. Si igitur tantae auctoritatis homines laboribus <lb/>
+            et operibus etiam rusticanis inservierunt, quanto <lb/>
+            magis monachi, quos oportet non solum vitae suae <lb/>
+            necessaria propriis manibus exhibere , sed etiam <lb/>
+            indigentiam aliorum laboribus suis reficere! Qui
+            <milestone unit="PLSection" n="A"/><lb/>
+            viribus corporis et integritate salutis consistunt, si <lb/>
+            in opere otiosi sunt, dupliciter peccare noscuntur, <lb/>
+            quia non solum non laborant, sed etiam alios vitiant, <lb/>
+            et ad imitationem suam invitant. Propterea enim <lb/>
+            quisque convertitur, ut Deo serviens laboris habeat <lb/>
+            curam, non ut, otio deditus, inertia pigritiaque <lb/>
+            pascatur.</p>
+          <p n="4">4. Qui si volunt lectioni vacare, ut non operentur, <lb/>
+            ipsi lectioni contumaces existunt, quia non faciunt <lb/>
+            quod ibi legunt; ibi enim scriptum est : Operantes <lb/>
+            suum panem manducent; et iterum : Ipsi enim scitis <lb/>
+            quomodo oportet imitari nos, quia non inquieti fuimus <lb/>
+            inter vos, neque panem gratis ab aliquo manducavimus, <lb/>
+            sed in labore et fatigatione die ac nocte operantes, ne <lb/>
+            quem vestrum gravaremus (II Thess. m). Qui per in-
+            <milestone unit="PLSection" n="B"/><lb/>
+            firmitatem corporis operari non possunt, humanius <lb/>
+            clementiusque tractandi sunt. Qui vero sani sunt et <lb/>
+            fallunt, procul dubio dolendi atque lugendi sunt, <lb/>
+            quia non corpore, sed, quod pejus est, mente ægroli <lb/>
+            sunt; qui etsi humanis oculis convinci non possunt, <lb/>
+            Deum tamen latere non possunt. Tales igitur aut fe­ <lb/>
+            rendi sunt, si aegritudo latet; aut distringendi, si <lb/>
+            sanitas pateat.</p>
+          <p n="5">5. Monachi operantes meditari aut psallere de. <lb/>
+            bent, ut carminis verbique Dei delectatione conso­ <lb/>
+            lentur ipsum laborem. Si enim saecula'es opifices <lb/>
+            inter ipsos labores amatoria turpia cantare 532 non <lb/>
+            desinunt, atque ita ora sua in cantibus et fabulis impli­ <lb/>
+            cant, ut ab opere manus non subtrahant, quanto <lb/>
+            magis servi Christi, qui sic manibus operari debent,
+            <milestone unit="PLSection" n="c"/><lb/>
+            ut semper laudem Dei in ore habeant, et linguis <lb/>
+            ejus psalmis et hymnis inserviant! Laborandum est <lb/>
+            enim corpore animi fixa in Deum intentione; sicque <lb/>
+            manus in opere implicanda est ut mens non aver­ <lb/>
+            tatur a Deo. <note type="footnote"> Ibid, Huc referri potest quod ex Smaragdo Con­ <lb/>
+            stanlinus Cajetanus, pag. 7i, descripsit : t Hinc <lb/>
+            Isidorus ait : Quicunque autem monasterium primus <lb/>
+            ingreditur, primus sedet, primus ambulat, primus <lb/>
+            psalmum dicit, primus in niensam extendit manum, <lb/>
+            in ecclesia prior communicat; nec aetas inter eos <lb/>
+            quaritur, sed professio. Quod dicit, Samuel et Uaniel <lb/>
+            pueri presbyteros judicaverutlt, de Heli et de illis qui <lb/>
+            Susannam opprimere voluerunt intelligitur. Samuel <lb/>
+            presbyteros .judicavil, quando filios Heli peccare </note> 
+            <milestone unit="PLSection" n="D"/><note type="footnote"> vrdil, et eos in corde suo praevaricatores judicavit. <lb/>
+            lIeli autem, quia non eos districta animadversione <lb/>
+            repressit, et ab iniquitate non compescuit, similiter <lb/>
+            reprehendit, et jndicavit. Daniel quoque tunc presby­ <lb/>
+            teros jndicavit, quando illos iniquf' cogitatione ple­ <lb/>
+            nos, qui Susannam falso voluerunt tesLinaollio con­ <lb/>
+            demnare, reprehendit, damnavit, et angellco eos gla­ <lb/>
+            dio trucidatos esse praedixit. &gt; AREV. </note><note type="footnote"> CAP. v. N. i. Elabuntur. AI., evelluntur. GRIAL. </note><note type="footnote"> Ibid. Illustrari hoc caput potest ex t. I Patrum <lb/>
+            apostolicorum, pag. 52, cum notis Co(elerii. AREV. </note><note type="footnote"> ^2. Nam et patriarchae... reficere. Tolain hanc pe­ <lb/>
+            nodum ab Hjymone Halberstatensi, lib. II de Varie­ <lb/>
+            tate, cap. 2, referri notat Menardus, pag. 8-0. Phi­ <lb/>
+            losophi gentiles sartores et sUlores, e!c., recensen­ <lb/>
+            tur Hippias Sophista, Simon Alheniensis, et Melle- <lb/>
+            demus Eretriensis. Sanctum Josf-phuru fabrum li­ <lb/>
+            gnarium fuisse communior est sententia, cui astipu­ <lb/>
+            latur Isidori frater sanctus Leander, cap. U de In­ <lb/>
+            stitutione virginum. Nescio; inquit BreuJius ubinam <lb/>
+            Isidorus legerit Josephum fabrum ferrarium fuisse, <lb/>
+            nam cum dolabra depingitur. Verum etiam sanctus <lb/>
+            Ambrosius et Theophilus Antiochenus follis et ignis <lb/>
+            in officina sancti Josepbi meminerunt. Nonnulli all.. <lb/>
+            rificeln fuisse putant sanctum Josephum, alii fabrum <lb/>
+            lapidarium. Vide Calmetum, in Dictlon., ac praeser­ <lb/>
+            tim eruditissimi Mazochii de sancti Josephi et Christi <lb/>
+            Domini opiticio manLissaru ad epist. de Dedicat. sub <lb/>
+            ascia. AREV. </note><note type="footnote"> A.Tractandi sunt. In Concordia regularum, et apud </note> 
+            <milestone unit="PLSection" n="D"/><note type="footnote"> Holstenium, additur : « Nec contra eos murmuran­ <lb/>
+            dum est ab eis, qui vires laborandi habent; sed <lb/>
+            magis consulendum esteisquos sciuot corpore in­ <lb/>
+            lirnio. Ipsi autem qui non-possunt eos qui laborant <lb/>
+            et possunt meliores sibi felicioresque fateantur. Qui <lb/>
+            vero languidus est, et laborem operun. corporalium <lb/>
+            sustinere non potest, consulendum e&gt;t illi, et ejus <lb/>
+            inlirinitas temperanda est. Qui sani, etc. &gt; Quod <lb/>
+            all vere sit Isidori, an eidem ab alio fuerit add. LUlU, <lb/>
+            definire non audeo. AREV. </note><note type="footnote"> 5. Ut carminis. Lib. II de Off., cap. &lt;6. Canunt <lb/>
+            autem psalmos inanibus operantes, et ipsum la­ <lb/>
+            borem, tanquam divino celeumate consolantur. GRIAL. </note><note type="footnote"> Ibid. Sanctos Augustinus, de Opere InonachorullI. <lb/>
+            cap. i7 : Canl;c:a vero divina canlare etiam manibus <lb/>
+            operantes facile pOS'IInt, et ipsum labarem divino ce­ <lb/>
+            leumate consolari. Alia addit sanctus Augustinus. quæ <lb/>
+            Isiiorus quoque sumpsit, et ex Isidoro Haymo, lib. <lb/>
+            cit., cap. 50. AREV. </note> <note type="footnote"> PATROL. LXXXIII. </note> <note type="footnote"> 28 </note> <pb n="875"/>
+            </p>
+          <p n="6">
+<milestone unit="PLSection" n="A"/>6. Propriis autem temporibus oportet operari mo­ <lb/>
+            nachum, et propriis orationi lectionique incumbere. <lb/>
+            Horas enim debet habere monachus congruas ad <lb/>
+            singula officia deputatas. Paries autem annui tem­ <lb/>
+            poris suis quibusque operibus taliter deputantur. <lb/>
+            Æstate enim a mane usque ad horam tertiam labo­ <lb/>
+            rare oportet; a tertia autem usque ad sextam lectioni <lb/>
+            vacare; dehinc usque ad nonam requiescere; post <lb/>
+            nonam autem osque ad tempus vespertinum iterum <lb/>
+            operari. Alio autem tempore, id est, autumno et <lb/>
+            hieme, sive vere a mane usque ad tertiam legendum, <lb/>
+            post celebrationem tertiæ usque ad nonam laboran­ <lb/>
+            dum est 5 post refectionem autem nonae aut ope­ <lb/>
+            rari opertet, aut legere, aut sono vocis aliquid medi­ <lb/>
+            tari.</p>
+          <p n="7">
+<milestone unit="PLSection" n="B"/>7. Quaecunque autem operantur monachi manibus <lb/>
+            suis, praeposito deferant, præpositus autem principi <lb/>
+            monachorum ; nihil operis apud fratrem remaneat, <lb/>
+            ne sollicitudinis ejus cura mentem ab intentione con­ <lb/>
+            templationis avertat. Horti olera vel apparans ei­ <lb/>
+            borum propriis sibi manibus fratres exerceant; <lb/>
+            aedificiorum autem constructio vel cultus agrorum ad <lb/>
+            opus servorum pertinebunt. Nullus monachus amore <lb/>
+            privati operis illigetur, sed omnes in communi la <lb/>
+            borantes patribus sine obmurmuratione obtemperare <lb/>
+            debent, De forte murmurando pereant, sicut perie­ <lb/>
+            runt qui in deserto murmuraverunt. Si enim illis <lb/>
+            parvulis adhuc in lege et rudibus nequaquam indul­ <lb/>
+            tum est, quanto magis iis qui perfectionis legem <lb/>
+            perceperunt non parcet, si talia gesserint.</p>
+          <p>
+            <milestone unit="PLSection" n="C"/></p>
+          </div>
+<div n="6" subtype="section" type="textpart">
+<ab>
+            <title type="sub">533 CAPUT VI.</title>
+          </ab>
+          <ab>
+            <title type="sub">De officio.</title>
+          </ab>
+          <p n="1">1. In psallendis autem officiis ita erit discretio ; <lb/>
+            doto enim legitimis temporibus signo ad horas ca­ <lb/>
+            nonicas, festina cum properatione omnes ad chorum <lb/>
+            occurrant, hullique ante expletam officium licebit
+            <milestone unit="PLSection" n="A"/><lb/>
+            egredi præter eum quem necessitas nalurae compule­ <lb/>
+            rite Hecitantibus autem monachis, post consumma­ <lb/>
+            tionem singulorum psalmorum prostrati omnes humi <lb/>
+            pariter adorabunt, celeriterque surgentes psalmos <lb/>
+            sequentes incipiant, eodemque modo per singula of­ <lb/>
+            ficia faciant.</p>
+          <p n="2">2. Quando celebrantur psalmorum spiritualia sa­ <lb/>
+            cramenta, refugiaj monachus risus vel fabulas; sed <lb/>
+            hoc meditetur corde, quod psallitur ore. In tertia, <lb/>
+            sexta, vel nona tres psalmi dicendi sunt, responso­ <lb/>
+            num unum, lectiones ex Veteri Novoque Testamento <lb/>
+            duae, deinde laudes, hymnus atque oratio. In vesper- <lb/>
+            linis autem ofliciis primo lucernarium, deinde psal- <lb/>
+            Ini duo, responsorius unus, et laudes, hymnus atque <lb/>
+            oratio dicenda esl.</p>
+          <p n="3">
+<milestone unit="PLSection" n="B"/>3. Post vespertinum autem, congregatis fratribus, <lb/>
+            oportet, vel aliquid meditari, vel de aliquibus divinae <lb/>
+            lectionis quæstionibus disputare, conferendo pie et <lb/>
+            salubriter, tantumque meditando, 534 disputando­ <lb/>
+            que immorari, quoadusque completorii templis possit <lb/>
+            occurrere. Ante somnum autem, sicut mos est, per­ <lb/>
+            acto completorio, valedictis invicem fratribus, cum <lb/>
+            omni cautela et silentio requiescendum est, usquequo <lb/>
+            ad vigilias consurgatur.</p>
+          <p n="4">4. In quotidianis vero officiis vigiliarum primum <lb/>
+            ires psalmi canonici recitandi sunt, deinde tres mis­ <lb/>
+            sæ psahnorum, quarta canticorum, quinta matulino­ <lb/>
+            rum officiorum. In Dominicis vero diebus, vel festi­ <lb/>
+            vitatibus martyrum, solemnitatis causa singulæ su­ <lb/>
+            peradjiciendæ sunt missæ. Verum in vigiliis recitandi
+            <milestone unit="PLSection" n="c"/><lb/>
+            aderit usus; in matutinis psallendi canendique con­ <lb/>
+            suetudo, ut utroque modo servorum Dei menles di­ <lb/>
+            versitatis oblectamento <unclear>caerceantur</unclear>, et ad laudeui <lb/>
+            Dei sine fastidio <unclear>afli</unclear> :eutius excitentur.</p>
+          <p n="5">5. Post vigilias autem usque ad matutinum requie­ <lb/>
+            scendum, aut aliquid perlegendum erit. Post matu- <note type="footnote"> 7. Quftcunque aulem operantur, etc. Isidorus. lib. <lb/>
+            II de eccles. Offic., cap. i6, ex sancto Augustino, lib. <lb/>
+            II de Moribus Ecclesiæ. In Editione apponitur nota <lb/>
+            littera b, elabuntur, ex Goth.; al., evelluntur.Sed trans- <lb/>
+            posita est, et ad num. i hujus capitis pertinet. <lb/>
+            Ante hoc cap. 5 Holstenius IH'ælniUit alia ex cap. <lb/>
+            !9. Pro non parcel forte non parcetur. AREV. </note><note type="footnote"> CAP. VI. N. i. Festina cum properatione. Idem, <lb/>
+            lib. II de Offic., c. i6 : Convenium autem omnes fre­ <lb/>
+            quenler nocte ac die festina cum properatione ad ora-</note> 
+            <milestone unit="PLSection" n="D"/><note type="footnote"> tion,m. GRIAL. </note><note type="footnote">lbid. Post coMummationem. Vide Cass., lib. II, <lb/>
+            cap. 7. GliAL. </note><note type="footnote"> Ibid. In psaltendis autem officiis; :il., in psallendi <lb/>
+            auteni officio. AREV.. </note><note type="footnote"> i. Duce, deinde laudes, hoc est Altduia, uL constat <lb/>
+            ex lib. I de Off., c. i. GRIAL. <lb/>
+            lbid. Primo tueerllar;un,. 'ill. annotat. in Cassiau. <lb/>
+            G..AL... , </note><note type="footnote"> lbid. Alii, lectiones ex utroque Testamento duce, <lb/>
+            dein laus, lI,m".s. etc. In dissertatione de hyinuis <lb/>
+            prævia ad HYlnnodialn llispanicam, pag. 81, contra <lb/>
+            Martenium ostendi in regula sancii Isidori et aliorum <lb/>
+            mentionem hymnorum occurrere. Lucernariurn ab <lb/>
+            Isidoro distingui ab oflicio vespertino notat Menar­ <lb/>
+            dus, pag. 332, qui fuse pag. 366 in expositione re­ <lb/>
+            gulae Magistri probare conteodit lucernalem synaxin <lb/>
+            eamdem fuisse ac vespertinam, et sancti .Isidori <lb/>
+            locum explicat de precatione quae dicebatur dum Ill­ <lb/>
+            cernae accendebantur. Quod ex ipso breviario Moza­ <lb/>
+            rabico manifestum est; nam primum fit oratio pro <lb/>
+            lumine accenso, et oblato, deinde sequitur ordo <lb/>
+            "e.peraruJn. Apud alios .autem passim lucernariuul <lb/>
+            et vespertinum officium prollliscue sumuntur. Quod <lb/>
+            in Grialii nota indicantur annotationes in Cassianum, <lb/>
+            sermo videtur esse de Petri Ciaconii annotationibus. <lb/>
+            AREV. </note><note type="footnote"> i. Deinde Ire. missce. Vide annotate in Cassian. <lb/>
+            GRIAI. « </note> 
+            <milestone unit="PLSection" n="D"/><note type="footnote"> lbid. Missas psalmorum. Menardus intelligit esse <lb/>
+            collectas, seu orationes, qua; ad finem psahnOfulU <lb/>
+            dicebantur, præsertim ex Cassiano, lib. 11 de noc:turn. <lb/>
+            oration., cap. 7 et 10. Sed advertit diversum fuisso <lb/>
+            apud varias nationes usum lujusmodi collectarum <lb/>
+            dicendarum. Isidoro concinit sanctus Fructuosus <lb/>
+            bracarensis, cap. 2 regulæ. De his orationibus, quae <lb/>
+            psahllis subjtingebanlur, verba feci iu Isidorianis, <lb/>
+            cap. 87, n. 2U et seq y. De hujusmodi orationibus, <lb/>
+            quae non solum psahnis, sed etiam callticis adjicic. <lb/>
+            baulur, inteliigenduin esl quod in Breviario Komano <lb/>
+            de sancio l)atricio dicitur ad diem i7 Martii : Aiunt <lb/>
+            enim, iutegrum quotidie psalterium una cum canticis <lb/>
+            et hym,,;. dutenii.Hfue or itionibus consuevisse rtcitare. <lb/>
+            In fcditione Grialil corr pte legitur : In vigilivt reci­ <lb/>
+            tandis aderit usque in matutini psallendi, quod es <lb/>
+            Hoistenio ex Concordia regularum correxi. AREV. <lb/>
+            a. Hequiescetidum est. At., reficiendunl est; quod <lb/>
+            ideui souat, et fortasse boc genuinum est, et ex </note> <pb n="877"/>
+            
+            <milestone unit="PLSection" n="A"/><lb/>
+            tinum autem aut operandum aliquid, aut Ugendum; <lb/>
+            lectiones autem ex Novo aut Veteri Testamento <lb/>
+            tempore officii quotidianis diebus recitentur; Sabbato <lb/>
+            autem die atque Dominico ex Novo tantum pronun­ <lb/>
+            tientur. Monachus autem corporis sanitate cousistens, <lb/>
+            si vigiliis vcl quotidianis officiis defuerit, perdat <lb/>
+            communionem, si sanitas patet.</p>
+          </div>
+<div n="7" subtype="section" type="textpart">
+<ab>
+            <title type="sub">535 CAPUT VII.</title>
+          </ab>
+          <ab>
+            <title type="sub">De collatione.</title>
+          </ab>
+          <p n="1">1. Ad audiendum in collatione patrem tribus in <lb/>
+            hebdomada vicibus fratres post celebrationem tertiae, <lb/>
+            dato signo, ad collectam conveniant; audiant doccn­ <lb/>
+            tem seniorcm, instruentem cunctos salutaribus præ­ <lb/>
+            ceptis; audiant patrem studio summo, et silentio, <lb/>
+            intentionem animorum suorum suspiriis et gemitibus
+            <milestone unit="PLSection" n="B"/><lb/>
+            demonstrantes. Ipsa quoque collatio erit vel pro <lb/>
+            corrigendis vitiis, instruendisque moribus, vel pro <lb/>
+            reliquis causis ad utilitatem cœnobii pertinentibus. <lb/>
+            2.Quod si talia desunt, pro consuetudine tamen <lb/>
+            disciplinæ nequaquam erit omittenda collatio, sed in <lb/>
+            præfinitis diebus, cunctis pariter congregatis, præ­ <lb/>
+            cepta Patrum regularia recensenda sunt, ut qui <lb/>
+            necdum didicerunt percipiant quod sequantur; qui <lb/>
+            vero didicerunt, frequenti memoria admoniti, solli­ <lb/>
+            cite luslodiant quod noverunt. Sedentes autem omnes <lb/>
+            in collatione tacebunt, nisi forte quem auctoritas pa­ <lb/>
+            tris praeceperit, ut loquatur.</p>
+          </div>
+<div n="8" subtype="section" type="textpart">
+<ab>
+            <title type="sub">CAPUT VIII.</title>
+          </ab>
+          <ab>
+            <title type="sub">De Codicibus.</title>
+          </ab>
+          <p n="1">1. Omnes Codices custos sacrarii habcat deputa­ <lb/>
+             
+            <milestone unit="PLSection" n="c"/><lb/>
+            os, a quo singulos singuli fratres accipiant, quos <lb/>
+            prudenter lectos vel habitos semper post vesperam <lb/>
+            reddant. Prima autem hora Codices singulis diebus <lb/>
+            petantur ; qui vero tardius postulai, nequaquam <lb/>
+            accipiat.</p>
+          <p n="2">2. De his autem quæstionibus, quæ leguntur, nec <lb/>
+            forte intelliguntur, unusquisque fratrum aut in colla­ <lb/>
+            tione aut post vesperam abbatem interroget, et, reci­ <lb/>
+            tata in loco lectione, ab eo expositionem suscipiat, <lb/>
+            ita ut, dum uni exponitur, cæteri audiant.</p>
+          <p n="3">536 3. Gentilium libros vel hæreticorum volu­ <lb/>
+            mina monachus legere caveat; melius est enim
+            <milestone unit="PLSection" n="A"/><lb/>
+            eorum perniciosa dogmata ignorai e; quam per expe­ <lb/>
+            rientiam in aliquem laqueum erroris incurrere.</p>
+          </div>
+<div n="9" subtype="section" type="textpart">
+<ab>
+            <title type="sub">CAPUT IX.</title>
+          </ab>
+          <ab>
+            <title type="sub">Be mensis.</title>
+          </ab>
+          <p n="1">1. Tempore quo refectionis debitum solvitur, clau­ <lb/>
+            stra monasterii obserentur, nec oculus extianeus <lb/>
+            interesse præsumat, ne quietem fraternam 'præsentia <lb/>
+            sua impediat. Refectionis tempore, dato signo, pari­ <lb/>
+            ter omnes concurrant. Qui autem ad mensam tardius <lb/>
+            venerit, aut pœnitentiam agat, aut jejunus ad suum <lb/>
+            opus, vel cubile recurrat. Nemo autem ad vescendum <lb/>
+            ibit, antequam ad vocandum omnes vot signi solita <lb/>
+            insonuerit.</p>
+          <p n="2">2. Refectorium pariter unum erit; ad singulas <lb/>
+            mensas deni convescentes resideant; reliqua tarba
+            <milestone unit="PLSection" n="B"/><lb/>
+            parvuloruni assistent. Tempore convescentium fra­ <lb/>
+            trum omnes disciplinae geram silentium, Apostolo <lb/>
+            Obtemperantes, qui dicit : Cum silentio operantes <lb/>
+            suam panem manducent (II Thess. III). Unus tamen <lb/>
+            in medio residens, benedictione accepta, de Scriptu­ <lb/>
+            ris aliqUid legat, caeteri vescentes tacebunt, lectio­ <lb/>
+            nem attentissime audientes, ut sicut illis corporalis <lb/>
+            cibus refectionem carnis praestat, ita mentem eorum <lb/>
+            spiritualis sermo reficiat.</p>
+          <p n="3">3. Nullus ad mensas clamor excitetur, soli tantum <lb/>
+            præposito sollicitudo maneat in his quæ sunt vescen­ <lb/>
+            tibus necessaria. Abbas citra languoris necessitatem <lb/>
+            cibos in conspectu pariter cum fratribus 537 <lb/>
+            sumat; nec aliud quam caeteri, nec ciltius quam quae <lb/>
+            in communi Consistunt, praeparari sibi quidpiam ex­
+            <milestone unit="PLSection" n="c"/><lb/>
+            petat; sicque iit ut dum praesens est, omnia diligen­ <lb/>
+            tius administreniur; et dum communia sunt, salubri­ <lb/>
+            ter et cum charitate sumantur. Æqualia quippe erunt <lb/>
+            mensura omnium fercula , similibusque alimentis <lb/>
+            cuncti reficiendi sunt fratres.</p>
+          <p n="4">4. Uuidquid praesens refectio dederit, omnes sine <lb/>
+            murmuratione percipiant; nec id desiderent, quod <lb/>
+            edendi voluptas appetit, sed quod naturæ necessitas <lb/>
+            quærit, scriptum est enim : Carnis curant ne feceri­ <lb/>
+            lis in desideriis (Rom. XIII). Per omnem autem heb­ <lb/>
+            domadam fratres viles olerum cibos ac pallentia <lb/>
+            utantur legumina. Diebus vero sanctis inducam cum <note type="footnote"> Cassiano desuinpium, lib. )11 de diurn. Oration., <lb/>
+            cap. 4 et 8, C'X cujus nb. II de nocuum. Oraliou., <lb/>
+            cao. '2, sequentia pelu itur. AREV. <lb/>
+            . </note> 
+            <milestone unit="PLSection" n="D"/><note type="footnote"> CAP. vii. rs. 1.Atlaudiendum III coLl. Patrem. Ea­ <lb/>
+            dem ii de Off., c. 11:. GRIAL. </note><note type="footnote"> ':L. Grialius, quod lequuntur. AREV. </note><note type="footnote"> (:1\1'. VIII. N. i. Petantur. Lxpetantur Goth. GaJAL. </note><note type="footnote">lbid. De custode sacram sermo redit infra, cap. iO, <lb/>
+            II. i. A BE V . </note><note type="footnote"> 3. Hoc praeceptum, quo libros gentilium et haere­ <lb/>
+            ticorum monachus legere prohiueLur, cohæret cum <lb/>
+            iis quae Isidorus tradidit lib. III Seul., cap. 12 et 15. <lb/>
+            AREV. </note><note type="footnote"> CAP. IX N. i. Nec Qculus extran. Ex Golh. A!., <lb/>
+            nec uLLus exlrane U I. GRIAL. </note><note type="footnote"> Ibid. Pænitentiam agat, etc. Juxta institula sancti <lb/>
+            Pacbomii, art. 12 ut notat Menardus, page 779. <lb/>
+            AREV. </note><note type="footnote"> 2. Sermo reficia,. Vox sermo non est in Goth. <lb/>
+            GRIAL. </note><note type="footnote"> • lbid. In regula Magistri, eap. 29, simiiiler prae­ <lb/>
+            scribitur quod lector benediclionem petat, antequam <lb/>
+            legere incipiat. In Concordia regularum, pag. 69 , <lb/>
+            legitur : ut sicut corporalia cibus refeclionem corpori </note> 
+            <milestone unit="PLSection" n="D"/><note type="footnote"> præstat. Auf. </note><note type="footnote"> ». Non suul ollliUclH.læ dua' Menardi Boi;e ad IJlIIW <lb/>
+            locum : t Abbas citra languoris uecessitutem. Ugregiu <lb/>
+            sane institutio, quia dis* ipliua regularis custoditur, <lb/>
+            eL intempestivis abbatum coinesationibus, hospitali­ <lb/>
+            tatis prætextu, ac proinde Inouaslel'ii c1ilapidatiolli oc­ <lb/>
+            curritur. — Neque cultius. Haud nupar sane institutio, <lb/>
+            quui caliliationibus abbatum inedetur. t Fusius ealH. <lb/>
+            dem quæstionem de illisa abbatis AI,:uardus per­ <lb/>
+            traclat, .pag. './2«), Pro mcusura .omnium fercuLa in <lb/>
+            Concordia regularum, et apud Ilolstniuin est "tt'lt­ <lb/>
+            sarunt omnium fecutu, quod videtur præfere:ldurll. <lb/>
+            Aiuv. </note><note type="footnote"> i. Pallt:lllia lequmina. II, de Off.t c. 12. Antiqui , <lb/>
+            pridie quum cuntundum crul, cibhabuin baul, pullen­ <lb/>
+            lill tanum legu •ma causa cuc;:) sumebunt, unde vulg'J <lb/>
+            canlores fubarii ,.icli :)(Ult. (;HIAL. </note> <pb n="879"/>
+            
+            <milestone unit="PLSection" n="A"/><lb/>
+            oleribus levissimarum carnium alimenta. Non erit <lb/>
+            usque ad satietatem reficiendum corpus, Me forte in­ <lb/>
+            tereat animus; nam ex plenitudine ventris cito exci­ <lb/>
+            tatur luxuria carnis.</p>
+          <p n="5">5. Qui autem appetitum edacitatis reprimil, sine <lb/>
+            dubio lasciviae motus restringit. Tanta cum discre­ <lb/>
+            tione reficiendum est corpus, ut nec nimia abstinen­ <lb/>
+            tia debilitetur, nec superflua edacitate ad lasciviam <lb/>
+            moveatur. In utroque ergo temperantia adhibenda <lb/>
+            est, scilicet, ut et vitia carnis non praevaleant, et vis <lb/>
+            ad ministerium bonae operationis sufficiat. Quicunque <lb/>
+            ad mensam residens a carnibus vel vi no abstinere <lb/>
+            voluerit, non est prohibendus; abstinentia enim non <lb/>
+            prohibetur, sed potius collaudatur, tantum ne ex <lb/>
+            contemptu creatura Dei humanis concessa usibus ex-
+            <milestone unit="PLSection" n="B"/><lb/>
+            secretur</p>
+          <p n="6">6. Nullum esus furtiva contaminiopolluat, aut im­ <lb/>
+            pudens vel privatus extra communem mensam appe­ <lb/>
+            titus; excommunicationis enim 538 sententiæ sub­ <lb/>
+            jacebit qui vel occulte vel extra ordinariam mensam <lb/>
+            aliquid degustaverit. Ante refectionis tempus nullus <lb/>
+            vesci audeat præter eam qui ægrotat; qui enim tem­ <lb/>
+            pus edendi antecesserit, subsequentibus poenis abs­ <lb/>
+            tinentiæ subjacebit. Sitienti aut cujuspiam defectum <lb/>
+            patienti ante edendi tempus consulendum est, abba­ <lb/>
+            te, vel praeposito ordinante, non tamen palam, ne <lb/>
+            forte sitire, vel esurire alios cogat.</p>
+          <p n="7">7. Hebdomadarius solus cibos degustet, nec quis <lb/>
+            id alius audeat, ne sub occasione degustandi gulæ, <lb/>
+            vel gutturi satisfaciat. Laici ministri mensis mona­ <lb/>
+            chorum nullatenus intererunt, nec enim poterit illis
+            <milestone unit="PLSection" n="c"/><lb/>
+            mensæ communis esse locus, quibus diversum est <lb/>
+            proposilum. Monachi cum a mensa surrexerint, ad <lb/>
+            orationem omnes concurraht. Quod mensæ redun­ <lb/>
+            daverit, omni cura servatum egentibus dispensetur.</p>
+          <p n="8">8. In refectione monachorum a diebus Peniecostes
+            <milestone unit="PLSection" n="A"/><lb/>
+            usque ad autumni principium tota aestas interdiana <lb/>
+            prandia invitet, reliquum tempus suspendat prandia, <lb/>
+            coena tantum apponatur.</p>
+          <p n="9">9. In utrisque temporibus refectfo mensae tribus <lb/>
+            erit pulmentis, olerum scilicet et legnminum, et, si <lb/>
+            quid tertium fuerit, id est, pomorum. Ternis quoque <lb/>
+            poculis fraterna reficienda est sitis. 539 In obser­ <lb/>
+            vatione autem qnadragesimali, sicut fieri solet post <lb/>
+            exemptum jejunium, pane solo, et aqua contenti om­ <lb/>
+            nes erunt, a vino quoque et oleo abstinebunt.</p>
+          </div>
+<div n="10" subtype="section" type="textpart">
+<ab>
+            <title type="sub">CAPUT X.</title>
+          </ab>
+          <ab>
+            <title type="sub">De feriis.</title>
+          </ab>
+          <p n="1">1. Haec sunt feriæ monachorum, in quibus jejunia <lb/>
+            conquiescunt, in primis venerabilis dies Dominicus <lb/>
+            nomini Christi dicatus. Qui, sicut propter mysterium
+            <milestone unit="PLSection" n="B"/><lb/>
+            resurrectionis ejus solemnis est, ita et apud omnes <lb/>
+            servos ejus celebritatem convivii votivo gaudio reti­ <lb/>
+            nebit. Item a primo die Paschae usque ad Penteco­ <lb/>
+            stem, quinquaginta scilicet quotidianis diebus, jeju­ <lb/>
+            nium a sanctis Patribus dissolutum est, propter re­ <lb/>
+            surrectionem videlicet Christi, et adventum Spiritus <lb/>
+            sancti, ut hi.dies non in figura laboris, quod Quadra­ <lb/>
+            gesimae tempus significat, sed in quiete lætitiæ laxa­ <lb/>
+            tis jejuniis celebrentur.</p>
+          <p n="2">2. Placuit etiam Patribus a die Natalis Domini us­ <lb/>
+            que ad diem Circumcisionis solemne tempus efficcre, <lb/>
+            licentiamque vescendi habere; non aliter et dies <lb/>
+            Epiphaniorum veteri regula reficiendi indulgentiam <lb/>
+            consecuta est, siquidem et dum quisque fratrum COli.. <lb/>
+            vertitur, aut ex aliis monasteriis fratres visitandi
+            <milestone unit="PLSection" n="c"/><lb/>
+            gratia occurrunt, pro charitate adimplenda inter­ <lb/>
+            rumpuntur jejunia.</p>
+          <p n="3">3. Praeter haec alia tempora libere libenterque <lb/>
+            cultui jejuniorum inserviant. Si qui autem mona­ <lb/>
+            cborum praedictis temporibus jejunare disponunt, <note type="footnote"> Ibid. Inducant. ExGoth. A!., interdum. GRIAL. </note><note type="footnote">Ibid. Voluptas. Grialius voluntas. Pro utantur, at. <lb/>
+            habeant. In verbis levissimarum carnium Menardus, <lb/>
+            p. 712, quantitatem intelligit, non qualitatem, quod <lb/>
+            ex sequentibus elarum putat. Sed mihi non ita da­ <lb/>
+            rum videtur; et verius arbitror, hoc loco qualitatem <lb/>
+            carnium praescribi, sequentibus verbis satietatem si­ <lb/>
+            veolerum, sive leguminum, sive carnium prohiberi. <lb/>
+            AREV... </note><note type="footnote"> 5. Et vis ad ministerium, AI., et virtus ad ministe-</note> 
+            <milestone unit="PLSection" n="D"/><note type="footnote"> r;unl, eodem SPIISU. AREV. </note><note type="footnote"> H. Nullum furtiva conlaminatio. Cassian., lib. IV, <lb/>
+            cajt. i li, i,1I8,. monachorum delicta numerat extraordi­ <lb/>
+            narium . aut futrivam re(ectionena. GRIAL. </note><note type="footnote"> Ibid. Esus : (;rialius esu;. AREV. </note><note type="footnote"> 7. Menard'ls, pag. 642, contrarium statuere ait <lb/>
+            sancl..", Pachomium, art. 21 suæ regulae : Qui pul­ <lb/>
+            wl'ntatia coquunt, ipsi ,,;/,;1 gustantes edentibus mini­ <lb/>
+            strabunt. Sed, nt ego puto, sanctus Isidorus solum <lb/>
+            julJet hebdomadaridm degustare cibns, ut dijudicet <lb/>
+            an sini hene conditi, sanctus Pachomins, ne coquus <lb/>
+            edat antequam coeteris minisiret. Quæ duo contraria <lb/>
+            non suul. Grialius, diversus est propositus. Holstenius, <lb/>
+            diversus est præpositus. AREV. </note><note type="footnote"> 8. In Concordia regularum, inuital... suspendit, <lb/>
+            cænam apponit tantum. Autumni initiu,,, est rcquino­ <lb/>
+            ctiuin autumnale octavo Kal. Octobris.lnterdiana pran­ <lb/>
+            dia intelliguniiir die doniinica, feria tertia, quinta <lb/>
+            et sabbato. Nam hoc temporis spatio jejunabatur <lb/>
+            fcria secunda,quariaetsext9, ut infra, cap. II. AHEV. </note> <note type="footnote"> 9. In utrisque temporibus, scilicet hienlc, et æstate, <lb/>
+            quibus continentur autumnus, et ver, ut exponit Me­ <lb/>
+            nardus, pag. 712. In Cuncordia regularll'lI, tertium <lb/>
+            fuerit, pomorum... post expletum jejunium 1Jane solo, <lb/>
+            vel aqua, etc. Quod ternis poculi. sit bibendum, est <lb/>
+            Cli:..n praeceptum Ausonii in gripho Ter bibe. In cas- <lb/>
+            Iris ad Muiinaln ter bibere solitum Augustum rcl'ert <lb/>
+            Suetonius, c. 77. Apud Petrum CasiucnselD post po­ <lb/>
+            morum alia adduntur ex lsidoro, ut videtur, scilicet: <lb/>
+            (Festis vero diebus.ternis vel quaternis ferculis .int <lb/>
+            corporn reficienda, sic tamen ut (quo) pluriora sunt </note> 
+            <milestone unit="PLSection" n="D"/><note type="footnote"> cibaria numero, sint minora, ut et corpora necessa­ <lb/>
+            rio cilio relicianlur, non nimia saturitate damnentur, <lb/>
+            Quando in mensa cibus administratur, nullus prius <lb/>
+            cibum comed il quam signum ad benedicendum in­ <lb/>
+            sonet, et cum signum audierint, una voce benedi­ <lb/>
+            ctionem postulent, et data, sic comedant. Itlud praeci­ <lb/>
+            pue decernimus, ut nullus ex mensura sua vel acci­ <lb/>
+            pere ab altero praisumat, vel dare, praeter abbatem, <lb/>
+            vel praepositum, cui ab abbate coulluissum est.. <lb/>
+            AREV. </note><note type="footnote"> CAr. x. N. i. Dum quisque fralrum convenerit, <lb/>
+            Gulh. GRIAL. </note><note type="footnote"> Jbid. Convertitur : Gr., convertuntur. Huc faciunt <lb/>
+            verba Cassiani relata hb. vi Etymol., cap. i9, n. G:i, <lb/>
+            in nota. Post ituerrlunpuntur jejunia in Concordia <lb/>
+            regularum additur si tamen non fuerint generalia. <lb/>
+            ARIv. </note><note type="footnote"> 3. Si qui autem monachorum , etc. Eamdem rih. I <lb/>
+            de Offic, ecclesiast., cap. 45, N. 2. Vide notim. A </note> <pb n="881"/>
+            
+            <milestone unit="PLSection" n="A"/><lb/>
+            nequaquam prohibendi sunt; nam et multi antiquo­ <lb/>
+            rum Patrum his diebus in eremo abstinuisse, nec <lb/>
+            aliquando 540 jejunia solvisse, leguntur, nisi tan­ <lb/>
+            tum diebus Dominicis propter resurrectionem Gbristi.</p>
+          </div>
+<div n="11" subtype="section" type="textpart">
+<ab>
+            <title type="sub">CAPUT XI.</title>
+          </ab>
+          <ab>
+            <title type="sub">De jejunio.</title>
+          </ab>
+          <p n="1">1. Jejuniorum autem hos dies potissime veteres <lb/>
+            elegerunt. Primum jejunium Quadragesimæ quoti­ <lb/>
+            dianum, in quo major abstinentiae observantia mane­ <lb/>
+            bit in monachis , quando non solum a praudiis , sed <lb/>
+            etiam a vino et oleo abstinent. Secundum jejunium <lb/>
+            interdianum post Pentecosten alia die inchoatum us­ <lb/>
+            que ad æquinoctium autumnale protenditur, ternis <lb/>
+            scilicet diebus per singulas hebdomadas propter æsti­ <lb/>
+            vos solis ardores jejunium celebratur.</p>
+          <p n="2">
+<milestone unit="PLSection" n="B"/>2. Te! lium sequilur quotidianum jejunium, ab oc­ <lb/>
+            tavo Kalendas Octobris usque ad Natalem dominicum, <lb/>
+            in quo quotidiana jejunia nequaquam solvuntur. <lb/>
+            Quartum nem quotidianum jejunium post diem Cir­ <lb/>
+            cumcisi onis exoritur , peragiturque usque ad solem­ <lb/>
+            nia Paschæ.</p>
+          <p n="3">3. Hi autem qui, vetustate corporis consumpti, <lb/>
+            aut teneræ aetatis fragilitate detenti sunt , non sunt <lb/>
+            quotidianis jejuniis exercendi , ne aut senescens <lb/>
+            ætas, antequam moriatur, deficiat; aut crescens, <lb/>
+            priusquam proficiat, eadat, et ante intereat quam <lb/>
+            bonum facere discat.</p>
+          </div>
+<div n="12" subtype="section" type="textpart">
+<ab>
+            <title type="sub">CAPUT XII.</title>
+          </ab>
+          <ab>
+            <title type="sub">De habitu monachorum.</title>
+          </ab>
+          <p n="1">1. Cultus vestium vel indumentorum insignes mo-
+            <milestone unit="PLSection" n="C"/><lb/>
+            nacho deponendi. Munitus debet esse monachus, non <lb/>
+            delicatus; sicut autem 541 non oportet in monacho <lb/>
+            esse notabilis hubitus , ita nec satis abjectus ; nam <lb/>
+            pretiosa vestis animum ad lasciviam pertrahit, nimis <lb/>
+            vilis aut dolorem cordis parit, aut morbum vana
+            <milestone unit="PLSection" n="A"/><lb/>
+            gloriæ contrahit. Vestimenta non erunt xqualiter <lb/>
+            distribuenda omnibus, sed cum discrctione , prout <lb/>
+            cujusque ætas, gradusque expostulat; ita enim apo­ <lb/>
+            stolos fecisse legimus, sieut scriptum est : Erant illis <lb/>
+            omnia communia , et distribuebatur unicuique , prout <lb/>
+            opus erat (Act. IV).</p>
+          <p n="2">2. Uniuscujusque fratris supplementum , vel indi­ <lb/>
+            gentia inspiciatur, ut qui habent contenti sint, et qui <lb/>
+            non habent accipiam ; nam habenti non dabitur , ut <lb/>
+            sit unde egentibus distribuatur. Porro linteo non <lb/>
+            oportet monachum indui ; orarium, birros, planetas <lb/>
+            non est fas uti, neque indumenta, vel calceamenta , <lb/>
+            quæ generaliter caetera monasteria abutuntur. Ternis <lb/>
+            autem tunicis , et binis palliis, et singulis cucullis <lb/>
+            contenti erunt servi Christi, quibus superadjicietur
+            <milestone unit="PLSection" n="B"/><lb/>
+            melotes pellicea, mappula, manicæ quoque, pedules, <lb/>
+            et caligæ. His tantum contenti erunt, nihil præterea <lb/>
+            aliud praesumentes</p>
+          <p n="3">3. Pedules autem utendi in monasterio , quandiu <lb/>
+            hiemis coegerit violentia, sive dum fratres gradiun­ <lb/>
+            tur in itinere, vel proficiscuntur ad urbem. Monachi <lb/>
+            autem in monasterio palliis semper operiantur , ut <lb/>
+            pro honestate tecti incedant, et pro ministerio ope­ <lb/>
+            ris expediti discurrant. Sane si quis forte pallium <lb/>
+            non habet, humeris mappulam superponat. Nullus <lb/>
+            monachorum vultus curam gerat, per quem lasciviae <lb/>
+            et petulantiae crimen incurrat; non est enim 542 <lb/>
+            mente castus, cujus aut corporis cultus, aut impudi­ <lb/>
+            cus exstat incessus.</p>
+          <p n="4">4. Nullus monachorum comam nutrire debet; nam
+            <milestone unit="PLSection" n="C"/><lb/>
+            qui hoc imitatur , etsi ipsi hoc ad decipiendum ho­ <lb/>
+            mines per speciem simulationis non faciant, alios ta­ <lb/>
+            men scandalizant, ponentes offendiculum inlirmis, et <lb/>
+            sanctum propositum usque ad blasphemiam perdu­ <lb/>
+            centes. Toudcre debet ergo iste, quando et omnes, <note type="footnote"> jejunio quotidiano diem Dominicum excipiebant quo­ <lb/>
+            que aliae regulae Patrum , ex can. &lt;8 concilii Gan­ <lb/>
+            grensis. Confer Cassianun), lib. III de diurn. Oralioll., <lb/>
+            cap. i2. Quod autem cum hoc capite , tum praece­ <lb/>
+            denti, mentio fit Circumcisionis, quod festum Isitlori <lb/>
+            tempore nondum videtnr fuisse institutum, id mirum <lb/>
+            no.o est; nam, ut fusius explicui in Isidorianis, cap. <lb/>
+            71, n. iG et 17, vel potuit extremo Isidori tempore <lb/>
+            ejusmodi festum jam esse institutum, vel certe opor­ <lb/>
+            tuit ut monachi , quibus regula prdelegebalur ad ob-</note> 
+            <milestone unit="PLSection" n="D"/><note type="footnote"> servantiain , post institutionem festi Circumcisionis <lb/>
+            pro Kalendis Januarii apponerent post diem Circum­ <lb/>
+            cisiollis. AREV. </note><note type="footnote"> CAP. xi. N. 1. Abstinent. Apud PetrumCasinensem, <lb/>
+            cap. 4i, abstineant; apud quem etiam additur : quod <lb/>
+            vespere reficiant, ipsius Domini imitantur exemplum, <lb/>
+            et alia quas non videntur Isidori, ccite non sunt hu­ <lb/>
+            jus loci. AREV. </note><note type="footnote"> CAP. XII. N.l. Petrus Casinensi: v c. 55, nuaedam <lb/>
+            hic iuterserit : &lt; Pertrahit. Unde et Domninus de <lb/>
+            Joaune aii: Quid existis in desertum videre ? lIrundi­ <lb/>
+            nem vento agitatam? sed quid existis videre? hominem <lb/>
+            mollibus vestitum ? Ecce qui mollibus vesiiuniur in do­ <lb/>
+            tnibus regum sunt. Et Petrus (tl1l0 Paulus, lTim. II) <lb/>
+            Non vesle pretiosa. Vilis veatis, etc. &gt; ARKV. </note><note type="footnote"> 2. B,rro., planetas. Via. annot. in Cassia... GBIAL. </note><note type="footnote">Ibid. Pedules et caligas. Sanctus Benedictus , in <lb/>
+            regula, cap. 55, indumenta pedum lJedulea et caligas. <lb/>
+            Smaiagd. PedMle. modo dicimus calceos, caligas non <lb/>
+            subtalares vel soccos vocamus. GRlAL. </note> <note type="footnote"> Ibid. Supplementum Menardus, p. 904, explicat <lb/>
+            abundan'iam. Duplicem orarii siHoiUcationelD disiin <lb/>
+            guit idem Menardus; nam primo orarium est linteum, <lb/>
+            seu textile oblongum, ad mucorem excipiendum, aut <lb/>
+            sudorem extergendum , secundo orarium est textile <lb/>
+            illud oblongum sericum pretiosum , quo pontifices , . <lb/>
+            presbYleri et tliaconi utuntur, quod nunc stola dici­ <lb/>
+            tur. Hac secunda significatione accipi putat ab Iso­ <lb/>
+            doro orarium. Vide conunent. ad Prudent., hymn. i <lb/>
+            VeristejJh., vera. 86. De birro, planeta, .neloLe, lib. </note> 
+            <milestone unit="PLSection" n="D"/><note type="footnote"> xix Ktymolog., cap. 24. De caligis, lib. xix, cap. 54. <lb/>
+            Multa quoque de his Menardus, et Holstenius , qua; <lb/>
+            jam passim obvia sunt in Lelicis, et Giossariis me­ <lb/>
+            dii aevi. AREV. </note><note type="footnote"> 5. In Concordia regularum, pedules autem utentur <lb/>
+            in monasterio. AREV. </note><note type="footnote"> 4. Tondere. Fortassis, louderi, vel 1 intellige toude,.e <lb/>
+            comam, aut caput. Olim monachis toluiu caput ton­ <lb/>
+            debatur, ut probat Menardus. Clerici in modum <lb/>
+            coronae attonsi fuerunt, Græci vero in modum ern. <lb/>
+            cis; pontitices Graeci medium duntaxat caput at. <lb/>
+            tondebant. Antiqua clericorum lonsura erat, ut ra. <lb/>
+            sum esset totum caput, et in circuitu inferius modi­ <lb/>
+            coru.n capillorum ordo appareret, uL constat ex Gre­ <lb/>
+            gorio Turonensi, in Vitis Patrum, cap. 57, et Isitloro. <lb/>
+            de Offic. ecclesiast., lib. II, cap. 4, II. 4. Apud Gria­ <lb/>
+            lium , in fiue capitis erat diversus propositus, quod <lb/>
+            ex Concordia regolarum , et ex Editione Holstenii <lb/>
+            luulQvi iu diversum propositum. AREV. </note> <pb n="883"/>
+            
+            <milestone unit="PLSection" n="A"/><lb/>
+            imo et simul ac pariter omnes. Nam reprehensibile <lb/>
+            est diversum habere cultum , ubi non est diversum <lb/>
+            propositum.</p>
+          </div>
+<div n="13" subtype="section" type="textpart">
+<ab>
+            <title type="sub">CAPUT XIII.</title>
+          </ab>
+          <ab>
+            <title type="sub">De stramentis.</title>
+          </ab>
+          <p n="1">1. Abbatem cum fratribus pariter in congregatione <lb/>
+            commorari oportet ut communis conversatio et tes­ <lb/>
+            timonium bonae vitæ , et reverentiam praebeat disci­ <lb/>
+            plinæ. Fratres quoque omnes , si possibile est, in <lb/>
+            uno conclavi commorari decet. Quod si difficile fue­ <lb/>
+            rit, certe vel decem , quibus unus est præponendus <lb/>
+            decanus, quasi reclor et custos. Speciosam vel va­ <lb/>
+            riam supellectilem monachum habere non licet, cu­ <lb/>
+            jus stratus erit storea , et stragulum , pelles lanatae <lb/>
+            duae, galnapis qnoque , et facistergium, geminusque
+            <milestone unit="PLSection" n="B"/><lb/>
+            ad caput pulvillus.</p>
+          <p n="2">543 2. Per singulos menses abbas, sive praepo­ <lb/>
+            situs lectulos cunctorum perspiciat, ne quid indigeant <lb/>
+            fratres, nec superfluum habeant. Nocte, dum ad dor­ <lb/>
+            miendum vadunt, seu postquam quiescitur, unus al­ <lb/>
+            teri nemo loquatur. Duobus in uno lecto jacere non <lb/>
+            licet. In nocturnis tenebris nemo loquatur fratri, cui <lb/>
+            obviat. Juncta autem nocte, dormientium lucerna lo­ <lb/>
+            cum illuminet, ut, depulsis tenebris, tetimonium <lb/>
+            pateat singularis quietis. <lb/>
+             </p>
+          <p n="3">3. Stratus monachi in nulla turpi cogitatione ver­ <lb/>
+            setur, sed in sola contemplatione Dei; accubans et <lb/>
+            requiem corporis et quietem habcal cordis, cogitatio­ <lb/>
+            nesque pravas a se repellat, bonasque amplectens,
+            <milestone unit="PLSection" n="C"/><lb/>
+            turpes a se rejiciat; nam animi motus imaginibus suis <lb/>
+            agitatur, et qualis vigilantis cogitatio fuerit, talis et <lb/>
+            imago per soporem occurrit. Qui nocturna illusione <lb/>
+            polluitur, publicare hoc Patri monasterii uon moretur, <lb/>
+            culpæque sum merito hoc tribu at, et occulto poe ii­ <lb/>
+            tentiam agat, sciens quia nisi praecessisset in eo luxus <lb/>
+            animi turpia cogitantis , non sequerentur sordidae <lb/>
+            atque immundæ pollutiones; quem enim praevenit <lb/>
+            cogitatio illicita, tentatio illum cito fedat immunda.</p>
+          <p n="4">4. Qui nocturno delusus phantasmale fuerit, tempore <lb/>
+            officii in sacrarii, stabit, nec audebit eadem die ec-
+            <milestone unit="PLSection" n="A"/><lb/>
+            clesiam introire, antequam sit lotus et aquis et lacry <lb/>
+            mis. In lege quippe qui somno nocturno polluebatur, <lb/>
+            egredi jubebatur a castris , nec regredi priusquam <lb/>
+            ad vesperam lavaremur (Deut. XXIII). Et si illi in car­ <lb/>
+            nali populo ita faciebant , quid spiritualis servus <lb/>
+            Christi facere debet, qui magis contaminationem <lb/>
+            suam debet respicere et longe ab altario positus <lb/>
+            inente 544 et corpore pertimescere, atque in' figura <lb/>
+            aqua pœnitentiæ lacrymas adhibere, ut non solum <lb/>
+            aquis, sed etiam fletibus studeat ablui, quod forte <lb/>
+            per culpam occultam immunda contaminatio polluit?</p>
+          <p n="5">5. Qui fornicationis tentamentis exæstuat, oret in­ <lb/>
+            desinenter, atque abstineat, nec erubescat confiteri <lb/>
+            libidinis æstum , quo uritur, quia vitium delectum <lb/>
+            cito curatur, latens vero quanto amplius occultatum
+            <milestone unit="PLSection" n="B"/><lb/>
+            fuerit, tanto magis profundius serpit, quod revera <lb/>
+            qui publicare negligit curari minime cupit.</p>
+          </div>
+<div n="14" subtype="section" type="textpart">
+<ab>
+            <title type="sub">CAPUT XIV.</title>
+          </ab>
+          <ab>
+            <title type="sub">De delinquentibus.</title>
+          </ab>
+          <p n="1">1. Si quis in aliquo levi delicto titubans oberrave­ <lb/>
+            rit, semel atque iterum admonendus est; qui, si post <lb/>
+            secundam admonitionem nequaquam fuerit emenda­ <lb/>
+            tus, congrua animadversione coerceatur. Peccantem <lb/>
+            autem nullus occultet; criminis enim est consensio <lb/>
+            post secundam admonitionem celare quemniam pec­ <lb/>
+            cantem.</p>
+          </div>
+<div n="15" subtype="section" type="textpart">
+<ab>
+            <title type="sub">CAPUT XV.</title>
+          </ab>
+          <ab>
+            <title type="sub">De sæpius peccante.</title>
+          </ab>
+          <p n="1">1, Si quis saepius peccantem viderit, prius hoc uni,
+            <milestone unit="PLSection" n="C"/><lb/>
+            ve[ duobus demonstret fratribus, quorum testimonio <lb/>
+            possit convinci. Si negaverit qui deliquit, peccatum <lb/>
+            palam commissum palam est arguendum, ut dum <lb/>
+            manifeste peccans emendatur, ii qqi eum in mala <lb/>
+            imitati sunt corrigantur. Sicut autem unius delicto <lb/>
+            sæpe multi percunt, ita unius emendatione plerum­ <lb/>
+            que multi salvantur.</p>
+          </div>
+<div n="16" subtype="section" type="textpart">
+<ab>
+            <title type="sub">545 CAPUT XVI.</title>
+          </ab>
+          <ab>
+            <title type="sub">De culpa indulgenda, vel culpati correctione.</title>
+          </ab>
+          <p n="1">1. Qui vero ip fratrem peccaverit, si statim remi. <lb/>
+            Discens ad veniam poscendam fuerit inclinatus, per- <note type="footnote"> CAP. x'u. H. i. Ualnapit quoque. Smaragdi, ad cap. <lb/>
+            55 regu', sandj IJened. LMa (inquit) specks vestis <lb/>
+            est, qmm nos iQtwaw dicimus, alii vero gatuapem vo- <lb/>
+            C((nl. Legitur quoque vox galnapis sine illterpretaUfJ­ <lb/>
+            iie, XIX Ejymolog., tap. 26. GRU,L. </note> 
+            <milestone unit="PLSection" n="D"/><note type="footnote"> Ibid. Juncta autemnocte , etc. Ex Goth. A!, : Lux <lb/>
+            autem nocte dormientium locum illuminet. GRIAL </note><note type="footnote"> Ibid. 'Storea ; al., storia. Vide lib. xx Etymel. a, <lb/>
+            cap. ii. Velles (qnaUe duæ præscribuntur etiam <lb/>
+            sancto Fructuoso Bracharensi, in regula. Pro galna­ <lb/>
+            pi8 alii legullL galnabis. Menarduş, ex Ms. Y indoci­ <lb/>
+            nensi, legendum contendit gq((fanis. Apud Martia­ <lb/>
+            lem, lib. III, epigr. 4. gqiifanqtus in lecto. Apud Ju­ <lb/>
+            vena lell., sat. ::l, galbana rqsa. AREV. </note><note type="footnote"> 2. Duobus in uno lecto jacere non (icet. Hoc ipsum <lb/>
+            indicatur paulo popt smgularif q";elj" et cap. 17 <lb/>
+            num. 3, herulI. inculcatur. Hoc ipsummonitum est <lb/>
+            aliorum Patrum, M.igtsiri in sua regula, fructuosi <lb/>
+            Bracharensis, i'acholuii, concilii Turonensis, c ap 15* <lb/>
+            sancti Benedici, etc. AHEV. </note><note type="footnote"> 3. Videretur legendum stratus monachus; sed mo­ <lb/>
+            nachi legitur in Concordia regularum pag. 465. apud <lb/>
+            Petrum Casinensem, et apud Holstenium. Pro accu­ <lb/>
+            bant, alii occl,mbens. Sententia eadem est apud Frn­ <lb/>
+            ctuosum Bracharensem, et Pachomium, necnon apud <lb/>
+            sanctum Ambrosium, lib. III de Virginibus. Mox in <lb/>
+            Concordia regularum : Fluxus animi turpia cOl1icuutis. </note> 
+            <milestone unit="PLSection" n="D"/><note type="footnote"> non sequeretur in eo fluxu, sordidce et immundæ co­ <lb/>
+            gitationis. AREV.' </note> <note type="footnote"> 4. Qui nocturno, etc. Haec sunt duriuscula, ait Me­ <lb/>
+            nardus, chi olnn a quibusdam sanctis u"irala ;• alii <lb/>
+            Patres docuerunt unumquemque in his debere suam <lb/>
+            conscientiam consulere. Vide sanctum Thomam , Iii <lb/>
+            p., q. i8, art. 17, et sanctum Gregorium Magnulli, in <lb/>
+            episl. apud Bedam, lib. i IJis'. anglor., cap. 27, qui <lb/>
+            addit : Sed lavandus est aqua, ut culpa; cogilationis <lb/>
+            lacrymis abluat. Pro in sacrarillm , ut erat ajwd (;ri1.. <lb/>
+            lium, reposui insacrario ex Concordia regiilarum ' et <lb/>
+            Holstenio. ARKV.. </note><note type="footnote"> CAP. XVI. N. 1. Qui vero. lla rectills quam alii, qui <lb/>
+            verbo, ut notat Menardus, pag. 481, qui etiam incli <lb/>
+            natus explicat provolulus genibus, et Collationem deU­ <lb/>
+            niL esse concessum monachorum, in quo abbas hor - <lb/>
+            tatur IHonachos, culpae c.orrigunnir, ere., ex cap. 7 <lb/>
+            regulae Isidori, et lib. II de Officiis eccles., cap. to; <lb/>
+            n. i4. Pro cognoscitur, Grialius iynoscUur. ARBV. </note> <pb n="885"/>
+            
+            <milestone unit="PLSection" n="A!"/><lb/>
+            cipiat ab eo indulgentiam, cui cognoscitur intulisse <lb/>
+            injuriam. Qui autem non petit, aut non ex animo <lb/>
+            poscit, in collationem deductus juxta excessum inju­ <lb/>
+            riae congruae subjaceat disciplinæ. Qui sibi invicem <lb/>
+            convicia objiciunt, si iterum invicem sibi celeriter <lb/>
+            laxando ignoscunt, hi ab alio judicandi non sunt, quia <lb/>
+            pariter sibi veniam dare festinaverunt, si tamen ex­ <lb/>
+            cedere in semetipsos frequentius non praesumant.</p>
+          <p n="2">2. Qui sponte culpam confitetur quam gessit, ve­ <lb/>
+            niarn promereri debet quam expetet. Oretur igitur <lb/>
+            pro eo, eique confestim, si levis culpa est, postulata <lb/>
+            indulgentia praebeatur. Qui pro gravi vitio sæpe ex­ <lb/>
+            communicatus emendari neglexerit, tandiu damna­ <lb/>
+            lioni subjaceat, quousque vitia inolita deponat, ut <lb/>
+            quem semel illata animadversio non coercuit, fre-
+            <milestone unit="PLSection" n="B"/><lb/>
+            quens severitas censeat emendandum. Quamvis fre­ <lb/>
+            quentium, graviorumque vitiorum voragine sit quis­ <lb/>
+            piam immersus, non tamen est a monasterio proji­ <lb/>
+            ciendus, sed juxta qualitatem coercendus, ne forte <lb/>
+            qui poterat per diuturnam pœnitudinem emendari, <lb/>
+            dum projicitur, ore diaholi devoretur.</p>
+          </div>
+<div n="17" subtype="section" type="textpart">
+<ab>
+            <title type="sub">546 CAPUT XVII.</title>
+          </ab>
+          <ab>
+            <title type="sub">De delictis.</title>
+          </ab>
+          <p n="1">1. Delicta autem aut gravia sunt, aut levia. Levio­ <lb/>
+            ris culpæ reus est, qui otiosus esse dilexit; qui ad <lb/>
+            officium, vel ad collationem, vel ad mensam tardius <lb/>
+            venerit; qui in churo horis riserit, fabulisve vacaverit; <lb/>
+            qui, relicto officio vel opere, extra necessitatis cau­ <lb/>
+            eam foras discesserit; qui torporem aut somnum <lb/>
+            amaverit; qui sæpius juraverit ; qui multiloquus fue-
+            <milestone unit="PLSection" n="C"/><lb/>
+            fit; qui ministerium cujuslibet operis injunctum sibi <lb/>
+            sine benedictione susceperit, aut perfecto opere be­ <lb/>
+            nedictionem minime postulaverit ; qui injunctum <lb/>
+            opus negligenter vel tardius expleverit; qui casu <lb/>
+            aliquid fregerit; qui damnum rei parvæ intulerit; qui <lb/>
+            codicem negligenter usus fuerit; qui alicubi ad mo­ <lb/>
+            mentum secesserit; qui occulte ab aliquo litteras vel <lb/>
+            quodlibet munus acceperit; vel epistolam suscipiens <lb/>
+            I'ne abbatis consensu rescripserit; vel quemlibet pa­ <lb/>
+            rentum seu saecularium sine jussu senioris aut viderit, <lb/>
+            aut cum eis locutus fuerit; qui seniori inobediens fue­ <lb/>
+            rit; qui contumaciter seniori responderit; qui erga <lb/>
+            seniorem linguam non represserit ; qui lascivus in
+            <milestone unit="PLSection" n="A"/><lb/>
+            lingua fuerit, qui inhoneste incesserit; qui jocaverit; <lb/>
+            qui satis riserit; qui cum excommunicato locutus fue­ <lb/>
+            fit, oraverit, autcomederit; qui illusionem nocturnam <lb/>
+            Patri non patefecerit. Haec igitur et his similia tri­ <lb/>
+            duana excommunicatione emendanda sunt.</p>
+          <p n="2">2. Graviori autem culpæ obnoxius est, si temulen­ <lb/>
+            tus quisquam sit; si discors; si turpiloquus; si femi­ <lb/>
+            narum familiaris ; si seminans 547 discordias ; si <lb/>
+            iracundus; si altæ et rectæ cervicis ; si mente tumi­ <lb/>
+            dus, vel jactanti incessu immod ratus; si detractor; <lb/>
+            si susurro, vel invidus; si præsul ,nor rei peculiaris; <lb/>
+            si pecuniae contagio implicitus; si aliquid praeter re­ <lb/>
+            gularem dispensationem superfluum possidens; si <lb/>
+            fraudator rei acceptae aut commissæ sibi, aut minus <lb/>
+            commissae.</p>
+          <p n="3">
+<milestone unit="PLSection" n="B"/>3. Inter haec, si de rebus secum allatis extulerit, <lb/>
+            vel de iis per inobedienliam murmuraverit; si falsum <lb/>
+            dixerit; si conlentiones vel rixas amaverit; si mani­ <lb/>
+            festum convicium fratri intulerit; si personam inno­ <lb/>
+            centem falso crimine maculaverit; si contumaci <lb/>
+            animo seniorem despexerit; si rancorem adversus <lb/>
+            fratrem tenuerit; si peccanti in se et postea suppli­ <lb/>
+            canti veniam non concesserit; si cum parvulis joca­ <lb/>
+            verit, riserit, vel eos osculatus fuerit; si cum altero <lb/>
+            in uno lecto jacuerit; si rei majoris damnum intule­ <lb/>
+            rit; si furatus fuerit; si perjuraverit; si extra com­ <lb/>
+            munem mensam privatim vel furtim quidpiam sum­ <lb/>
+            pserit; si alicubi, extra consultum præpositi vel <lb/>
+            abbatis, discedens, medio die, vel amplius, commo. <lb/>
+            ratus fuerit; si, ut otiosus sit, falsam in(irmitatem
+            <milestone unit="PLSection" n="C"/><lb/>
+            prætenderit. Haec et his similia juxta arbitrium Patris <lb/>
+            diuturna excommunicatione purganda sunt, et flagel­ <lb/>
+            lis emendanda, ut qui gravius pecasse poscuntur, <lb/>
+            acriori severitate coeceantur, consideratis tamen <lb/>
+            personis, qui sint humiles, quive superbi.</p>
+          </div>
+<div n="18" subtype="section" type="textpart">
+<ab>
+            <title type="sub">CAPUT XVIII.</title>
+          </ab>
+          <ab>
+            <title type="sub">De excommunicatione</title>
+          </ab>
+          <p n="1">1. Satisfactio delinquentium hæc est: in officio <lb/>
+            fratribus constitutis, peracto poenitentiae tempore, <lb/>
+            vocatus is qui excommunicatus est, salvet statim <lb/>
+            cingulum, bumique extra chorum prostratus jacebit, <lb/>
+            agens pœnitentiam, quousque expleatur celebritas, <lb/>
+            cumque jussus fuerit ab abbate de solo surgere, in- <note type="footnote"> 2. Pro dl;lm,.a"ioni Smaragdus habet enJendation4. <lb/>
+            In nonnullis Editionibus male est quisque, pro qU()U'. </note> 
+            <milestone unit="PLSection" n="D"/><note type="footnote"> 9,ue. Quod Isidorus docet, pon esse e monasterio pro­ <lb/>
+            liciendum, qui per diuturnam pœnitudinem polest <lb/>
+            emendari, ab aliis Patribus eum dissentire atfvertii <lb/>
+            Menardus. Verum etiani apud Isidorum focus reliiir <lb/>
+            quitur, ut qui dicuntur e( sunt incorrigibiles e mo­ <lb/>
+            nastel'io proj lei possint. AREY. t. </note><note type="footnote"> CAP. XVII. N. ł. Qui aliculti, etc. Cass., lib. iv, cap. <lb/>
+            i6. , Si ad punctum temporis uspiam secesserit, el pmilo <lb/>
+            post : Si epistolam cujusque. suscipere, si rescribere <lb/>
+            sine abbate suo tentaverit. GRIAL. </note><note type="footnote"> Ibid. QMI contumqciter, etc. Cassian., ilfid, Si su­ <lb/>
+            perfluo, SI durlu;s; si contumacius responderit. GRIAL. </note><note type="footnote"> Ibid. Qui cum e.rcouullunic(l(o, etc. Cassian : Si <lb/>
+            oratler;' cum eo qui est ab oral if; ne suspensus. GRIAL. </note><note type="footnote"> lbid. Ex cit. iuc. (.assiant nniln (juoijue exscripsit <lb/>
+            sanctus Columltanus sub liiicni sui Poinitentialis. <lb/>
+            Pro in choro horis riserit, fot tasse iti chori horis rise­ <lb/>
+            fit vel certe oniiiteudum 1iorist ut in Concordia re­ <lb/>
+            lularom, pag. 497. Risum in choro coercet etiam <lb/>
+            sanctus Pachomius, et contra eos qui in ecclesia </note> 
+            <milestone unit="PLSection" n="D"/><note type="footnote"> rident invehitur sanctus Joannes Chrysostomus , <lb/>
+            serm. i5, in e)Jist. ad Hebraeos, uhi sanctus Ambro­ <lb/>
+            sius, lib. III de Virgin., contra eos qui in ecclesia <lb/>
+            fabulis vacant. ABE;V.. </note><note type="footnote"> 2. Qui pecunice , etc. Cassini. : Philargyriæ conta­ <lb/>
+            gio affectus, atque possessio rerum super fluarum. GRIAL. </note><note type="footnote"> CAP. XVIII. N. i, Humique extra chorum prostrate <lb/>
+            Ex Goth. Cassiag., lib. IV. cap. 16 : Cunctis in syn­ <lb/>
+            axi (ralribus congregatis, tandiu, proftratus iti terra <lb/>
+            veniam postulabit, donec orationum consummetur 10- <lb/>
+            lemnilas. impetraturus eam; ciwt jitfsus fuerit apbatis <lb/>
+            judicio de solo surgere. GRIAL. </note><note type="footnote"> Ibid. Ex sancto Pachomio et Fructuoso episcopo, <lb/>
+            et altero Fructuoso, conslat hic mos, ut cinguiun) <lb/>
+            solverent monachi, qui venialn petebant, aut palam <lb/>
+            increpaoallLuf. In Concordia regularum, pag. fi5i : <lb/>
+            Ingrediensque chorum orel. Post hwc data oratione, <lb/>
+            etc. ARBV. </note> <pb n="887"/>
+            
+            <milestone unit="PLSection" n="A"/><lb/>
+            grediensque 548 in chorum, data oratione pro eo <lb/>
+            ab abbate, et respondentibus cunctis amen, surgat, <lb/>
+            atque ab omnibus pro negligentia veniam poscat, <lb/>
+            adepturus indulgentiam post hujus emendatoriæ sa­ <lb/>
+            tisfactionis censuram.</p>
+          <p n="2">2. In minori vero ætate constituti non sunt coer­ <lb/>
+            cendi sententia exconmmunicationis, sed pro qualitate <lb/>
+            negligentiæ congruis affligendi sunt plagis, ut quos <lb/>
+            aetatis infirmitas a culpa non revocat, flagelli disci­ <lb/>
+            plina compescat. Excommunicati autem ab iis locis <lb/>
+            quibus fueriut constituti ante pœnitentiæ tempus <lb/>
+            expletum prohibeantur progredi. Ad excommunica­ <lb/>
+            tum nulli licebit ingredi citra imperium senioris. <lb/>
+            Cum excommunicato nulli penitus vesci liceat. ne <lb/>
+            ipsi quidem qui alimenta victui praebet.</p>
+          <p n="3">
+<milestone unit="PLSection" n="B"/>3. Si excommunicatio biduana fuerit, excommuni­ <lb/>
+            calo nihil alimenii praebendum est; certe si pluri­ <lb/>
+            morum dierum illata fuerit communionis suspensio, <lb/>
+            sola panis et aquae in vespertinum erit adhibenda <lb/>
+            refectio. Excommunicatis praeter hiemis violentiam <lb/>
+            cubile hunnus erit, stratum, sive storea; amicus au­ <lb/>
+            tem tegmen rasum, aut certe cilicium; calceamen­ <lb/>
+            tum, aut sparteæ, aut quodlibet genus solearum.</p>
+          <p n="4">549 4. Excommunicandi potestatem habeant <lb/>
+            Pater monasterii, sive praposilus; reliqui autem <lb/>
+            excessus monachorum in collectam abbati vel præ­ <lb/>
+            posito deferentur, ut is qui deliquisse coguoscilur <lb/>
+            competenti severitate coerceatur.</p>
+          <p>
+            <milestone unit="PLSection" n="A"/></p>
+          </div>
+<div n="19" subtype="section" type="textpart">
+<ab>
+            <title type="sub">CAPUT XIX.</title>
+          </ab>
+          <ab>
+            <title type="sub">De familiari vita.</title>
+          </ab>
+          <p n="1">1. Monachi io communi viventes nihil peculiare <lb/>
+            sibi facere audeant, neque in suis cellulis quidquam <lb/>
+            quod ad victum, vel habitum, vel ad quamlibet rem <lb/>
+            aliam pertineat, sine regulari dispensatione abbatis <lb/>
+            possidere præsumant. In Pentecoste autem, quae est <lb/>
+            dies remissionis, omnes fratres sub divina profes­ <lb/>
+            sione se alligent nihil peculiare apud conscientiam <lb/>
+            suam habere. Si quod a parentibus vel extraneis mu­ <lb/>
+            nus cuilibet monacho fuerit directum, in conventum <lb/>
+            fratrum redactum sit, ut cui necesse erit præbeatur. <lb/>
+            Monachus enim quidquid acquirit, non sibi, sed mo­ <lb/>
+            nasterio acquirit.</p>
+          <p n="2">550 2 Nullus peculiariter separatam sibi ad ha-
+            <milestone unit="PLSection" n="B"/><lb/>
+            bitandum cellulam expetat, in qua privatim a cœtu <lb/>
+            remotus vivat, praeter eum qui fortasse morbo, vel <lb/>
+            ætate defessus, et hoc ex consultu Patris monasterii <lb/>
+            promeruerit. Cæteri vero, quibus nec languor, nec <lb/>
+            senectus inest, in sancta societate communem vitam <lb/>
+            et conversationem retinebuut. Nullus separatam cel­ <lb/>
+            lulam a coetu remotus sibi expetet, in qua subsidio <lb/>
+            reclusionis, aut instanti otio, aut latenti vitio servia­ <lb/>
+            tur, et maxime vanae gloriae, aut mundialis opinio­ <lb/>
+            nis famæ.</p>
+          <p n="3">3. Nam plerique proinde reclusi latere volunt, ut <lb/>
+            pateant; ut qui viles erant, aut ignorabantur foris <lb/>
+            positi, sciamur, atque houorentur inclusi. Nam re­ <note type="footnote"> i. Smaragdus, cap. 26 : Hinc laidoru. ait : Cum <lb/>
+            excommunicaio neque orare, neque lofui cuiquam Ifce­ </note> 
+            <milestone unit="PLSection" n="c"/><note type="footnote">bil, cum excommumcaio nulli penitus vesci ticet, ne <lb/>
+            ipsi quidem, qui alimentum victui priebe'. GRIAL. </note><note type="footnote"> Ibid. In minori vero rela'e. etc. Hoc monitum exstat <lb/>
+            non soluin in regula sancti Benedict;. sed ctiam in <lb/>
+            regula Magistri, ut vocant. Vide Menardum, pag. <lb/>
+            582 et seqq. In Decrelo Gratiani, caus. 1 q. i, c, 1 S, <lb/>
+            citantur verba : Cum excommunicato mque orare, <lb/>
+            neque loqui, nisi ea quæ ad eamdem excomniu .icalio­ <lb/>
+            nem pertinent, nec vesci liceat. Simili modo apud <lb/>
+            Burchardum, et in DecrelO Ivouis adduntur hitloro <lb/>
+            illa verba : nisi ea qua: ad eamdem excommunicatio­ <lb/>
+            nem pertinent. Legendus praeterea de hoc loco He­ <lb/>
+            r:-rdus, in Isidorianis, cap. 52, num. i "&gt;. Apud Pe­ <lb/>
+            trum Casineusem, cap. 30, post compescal, additur : <lb/>
+            Illi vero fratres post quindecim annos ætati. vupulent, <lb/>
+            si satis gravem, aut furti fugacis, aut crimillaliler ali­ <lb/>
+            quam culpam commiserint. AnEv. </note><note type="footnote"> 3. (;ubile humus. Slnaragtl. : Lectus eorum aut nuda <lb/>
+            humus, aut ce,lte storea, id est, matta super huntu,,,. </note> 
+            <milestone unit="PLSection" n="D"/><note type="footnote"> GRIAL. </note><note type="footnote"> Ibid. Si excomnlunicatio... refectio. In Concordia re­ <lb/>
+            gnlarulli : Cujus biduana, vel 'riduana fuerit illata <lb/>
+            exconanlunicaliollis suspensio, sola panis et aquoe in <lb/>
+            vespertinum erit adhibenda refect;o. Tegmen rasum, <lb/>
+            lib. xix Elymolog., rap. 22, n. 23, est vesiis ralla, <lb/>
+            qua; vulgo rasilis dicitur, scilicet, ex sententia Nonnii, <lb/>
+            vestis ralla a rarilale ita vocata, rasilis aut rasa alia <lb/>
+            fortasse de causa appellata esi. C.liciurn est vestis ex <lb/>
+            pilis contexta, a cilicibus populis nomen sortita. De <lb/>
+            'parlo, Plinius, lib. IX, cap. 2 : Hinc calceamenta, et <lb/>
+            pasturum vestis. Soleas defuit Isidorus, lib. XIX Ety-<lb/>
+            molog., cap. 24, II. 11, cui concilii Gellius, lib. XIII, <lb/>
+            cap. 20. AREV. </note><note type="footnote"> 4. In collectam. Hoc est, in collationem, de 'Iua <lb/>
+            cap. i . Ad hunc locum referri possunt quaedam verba <lb/>
+            (]uui in Concordia regulai um, p.ig. 568, exscribuntur <lb/>
+            ex regula sancti Isidori episcopi, c. 14, § 4; sed quæ <lb/>
+            in regula edit:! non exsuint, neque Menardus quid­ <lb/>
+            quam super eis annotavit. &lt; Si aliquis excommunica­ <lb/>
+            ius in prima interrogatione querelosus vel murmu­ </note> 
+            <milestone unit="PLSection" n="C"/><note type="footnote">rans apparuerit, et suas sententias superbe, vel im­ <lb/>
+            portune vindicaverit, et hoc senior manifestum esse <lb/>
+            cognoverit, usque in diein tertium maneat excommu­ <lb/>
+            nicatus, ita ut nullus cum eo loquatur. Cum tertio <lb/>
+            vero die ita sCisciLaLlIs, et in superbia, quam diximus, <lb/>
+            fuerit deprehensus, quousque ergaslulo COi.rctalus <lb/>
+            perseVt'ret, donec omnem arroganti.un superbiæ de­ <lb/>
+            neget. Quod si in malo perseverans perduraverit, et <lb/>
+            proua (forte, prava) voluntate pœnitentiam agere no­ <lb/>
+            luerit, et sæpe ac saepe conlulllax contra seniores, <lb/>
+            vel fratres in facie perstiterit, et cum vropifl'luis se <lb/>
+            vindicare maluerit, in collatione deducius exuatur <lb/>
+            monasterii vestibus, et induatur quas oliin deduxerat <lb/>
+            saecularibus, et cum confusionis nota a monasterio <lb/>
+            expellatur, ut caeteri emendentur, dum fortasse so- <lb/>
+            Ius tali correptione ille delinquens corrigitur. &gt; Hiec <lb/>
+            si Isidori sunt, conciliari po&gt;sunt cum his quæ cap. <lb/>
+            i6. num. 2, dixit, ila ut ibi neget e mouasterio ex­ <lb/>
+            pellendos de quibus spes aliqua affulget eos posse ad </note> 
+            <milestone unit="PLSection" n="D"/><note type="footnote"> bonam frugem revocari, hic vero expelli jubeat illos <lb/>
+            qui incorrigibiles censeantur. Aatv. </note> <note type="footnote"> CAP. xix. N. I. Neque ill suis cellulas quidquam, <lb/>
+            etc; ha etiam praescribuut Pachomius, Teridius, et <lb/>
+            alii in regulis monachorum. Quod paulo post sequi­ <lb/>
+            tur : Si quod a parentibus, etc., in Concordia I'eguia­ <lb/>
+            rum ita effertur : Si quid a parentibus, vel extranais <lb/>
+            cuilibet ,,,onacllo collatum fuerit, non erit sub j " re <lb/>
+            privatæ rei habendum, sed iri potestate abbatis in com­ <lb/>
+            mune redactum, cum necesse est, præbealuJ". Sententia, <lb/>
+            quod non achus quidquid acquirit, non sibi, sed no­ <lb/>
+            nasterio acquirit, in multis juris canonici locis adop­ <lb/>
+            lata est, ut cap. Statutum I, caus. i8, qusest. i; cap. <lb/>
+            Abbates, ł 6., caus. 18,quacst. 2 i rap. Quia ingredien­ <lb/>
+            libul, 7, caus. 19, q. 3, et aliis. AREV. </note><note type="footnote"> 2. S'lbsidio reclusionis. Ex Goth. AI., ,"b studio <lb/>
+            reclusionis. G,UAL. </note><note type="footnote"> Ibid. Vanæ gloriæ incurrat. In Goth., una plUf <lb/>
+            voce. C lUAt. </note> <pb n="889"/>
+            
+            <milestone unit="PLSection" n="A"/><lb/>
+            vera omnis qui propter vitæ quietem a turbis disce­ <lb/>
+            dil, quanto magis a publico separatur, tanto minus <lb/>
+            latet. Oportet ergo tales in sancta societate commo­ <lb/>
+            rari, atque sub testimonio vitan suam transigere, ut <lb/>
+            si quid in eis vitiorum est, dum non celatur, cure­ <lb/>
+            tur; si quid vero virtutum, ad imitamentum proficiat <lb/>
+            aliornm, dum humilitatis eorum exempla alii con­ <lb/>
+            fuentes, erudiuntur.</p>
+          <p n="4">4. Non est præsumendum sine conscienlia abbatis <lb/>
+            egenis vel quibuslibet conferre de eo quod regulari <lb/>
+            dispensatione noscitur monachus possidere; nec <lb/>
+            cum alio fratre quidpiam commutare, nisi abbas vel <lb/>
+            præpositus illi jusseril, nulli licebit; nec habebit <lb/>
+            quispiam præter illa quæ communi monasterii lege <lb/>
+            concessa sunt de rebus monasterii. Abbati vel mo-
+            <milestone unit="PLSection" n="B"/><lb/>
+            nacho monasterii servum non licebit facere liberum: <lb/>
+            qui ennii nihil poprium habet, libertatem rei alienae <lb/>
+            dare non debet. Nam sicut saeculi leges sanxerunt, <lb/>
+            non potest alienari possessio, nisi a proprio domino : <lb/>
+            551 ita et omne quod in monasterio in nummo in­ <lb/>
+            gredimur, sub testimonio senioruro accipiendum.</p>
+          <p n="5">5. Eadem pecunia in tribus partibus dividenda est; <lb/>
+            quarum erit una pro infirmis et senibus, et pro ali­ <lb/>
+            quo coemendo in diebus sanctis cultius ad victum <lb/>
+            fratrum; alia pro egenis ; tertia pro vestimentis fra­ <lb/>
+            trum, et puerorum, vel quibusque ad necessitatem <lb/>
+            monasterii coemendis. Quas tres partes custos sa­ <lb/>
+            crarii percipiat, ac, praecipiente abbate, sub testimo­ <lb/>
+            nio praepositi vel seniurum de singulis partibus pro <lb/>
+            suis necessariis causis expendat.</p>
+          <p>
+            <milestone unit="PLSection" n="c"/></p>
+          </div>
+<div n="20" subtype="section" type="textpart">
+<ab>
+            <title type="sub">CAPUT XX.</title>
+          </ab>
+          <ab>
+            <title type="sub">Quid ad quem pertineat.</title>
+          </ab>
+          <p n="1">1. Ad praepositum autem pertinet sollicitudo mo­ <lb/>
+            nacborum, actio causarum, cura possessionum, sa­ <lb/>
+            tio agrorum, plantatio et cultura vinearum, diligen­ <lb/>
+            t'a gregum, constructio aedificiorum, opus carpenta­ <lb/>
+            riorum, sive fabrorum. Ad custodem sacrarii perli­ <lb/>
+            net cura vel custodia templi, signum quoque dandi <lb/>
+            in vespertinis, nocturnisque officiis, vel vestes <lb/>
+            suere, ac vasa sacrorum, Codices quoque instru-
+            <milestone unit="PLSection" n="A"/><lb/>
+            mentaque cuncta, oleum in usus sanctuarii, cera <lb/>
+            et luminaria. Iste a vestiario monasterii susci­ <lb/>
+            piet acus, etiam et fila diversa pro consuendis <lb/>
+            vestibus fraternis habebit, et omnibus, ut necesse <lb/>
+            est, ministrabit. Ad hunc quoque pertinebit aurum <lb/>
+            atque 552 argentum, caeteraque fracta æris ferri­ <lb/>
+            que metalla, ordinatio quoque linteariorum, fullo­ <lb/>
+            num, calceat iorum atque sartorum.</p>
+          <p n="2">2. Ad janitorem pertinebit cura hospitum, denun­ <lb/>
+            tiatio advenientium, custodia exteriorum claustro­ <lb/>
+            cum, Ad eum qui cellario praeponitur pertinebit sol­ <lb/>
+            licitudo eorum quae in promptuario sunt: iste prae­ <lb/>
+            bet hebdomadariis quidquid necessarium est viclui <lb/>
+            monachorum, hospitum et infirmorum ; isto præ­ <lb/>
+            sente, dispensantur ea quæ mensis deferenda sunt;
+            <milestone unit="PLSection" n="B"/><lb/>
+            is etiam quidquid residuum fuerit pro pauperum <lb/>
+            usibus conservabit, huic quoque hebdomadarius, <lb/>
+            expleta hebdomada, vasa sibi tradita exhibebit, ad <lb/>
+            perspiciendum utique, si negligentius habita sunt, <lb/>
+            et ad denuo succedentem hebdomadarium coram <lb/>
+            isto tradentur. Ad bunc quoque pertinent horrea, <lb/>
+            greges ovium et porcorum, lana et linum, de area <lb/>
+            sollicitudo, cibaria administrandi pistoribus, jumen­ <lb/>
+            tis, bobus et avibus, industria quoque calceamento­ <lb/>
+            rum, cura pastorum, seu piscatorum.</p>
+          <p n="3">3. Ad hebdomadarium pertinet cura ferculorum, <lb/>
+            administratio mensarum, signum dandi in diurnis <lb/>
+            officiis, sive in collatione, vel in collecta post solis <lb/>
+            occubitum. Ad hortulanum quoque pertinebit muni­
+            <milestone unit="PLSection" n="c"/><lb/>
+            tio custodiaque hortorum, alvearia apum, cura se­ <lb/>
+            minum diversorum, ac denuntialio quid et quando <lb/>
+            oporteat in hortis seri, sive plantari. Ars autem pi­ <lb/>
+            storia ad laicos pertinebit; ipsi enim triticum pur­ <lb/>
+            gent, ipsi ex more molant; massam tantumdem mo­ <lb/>
+            nachi conficiant, et panem sibi propriis manibus ipsi <lb/>
+            faciant. Porro pro hospitibus, vel infirmis, laici fa­ <lb/>
+            ciant panes.</p>
+          <p n="4">4. Instrumentorum et ferramentorum custodia ad <lb/>
+            unum quem Pater monachorum elegerit pertinebit, <lb/>
+            qui ea operantibus distribuat receptaque custodiat. <note type="footnote"> 4. EgEnis, etc. Scilicet nisi urgeat necessitas. Vide <lb/>
+            sanctum Thoni., 2-i, q. 32, art. 8, et glossam 16, <lb/>
+            q. 1, cap. 5. Commutare etiam quidpiam cum alio <lb/>
+            prohibuerunt .sanctus Pachoniius, etsanctus Basilius. </note> 
+            <milestone unit="PLSection" n="D"/><note type="footnote"> hervum facere liberUlI1 prohibetur etiam abbas in <lb/>
+            cnncilio Agalhensi, can. 59 , et Epaon., ('all. 8. I)u- <lb/>
+            plicem libertatem. seu manumissionem, distiuguit <lb/>
+            Menardus, pag. 188, alteram regiam, qua: fiebat do­ <lb/>
+            mini consensu coram rege excussione nummi; alte­ <lb/>
+            tam eccl,,;cu'icam, qlJæ fiebat in eccle&gt;io Miie cornu <lb/>
+            altariscoram presbyteris et populo tam a tamis quam <lb/>
+            ab ecclesiasticis. Anf. v. </note><note type="footnote">a. (:ullius. At., culiihus, ex Goth. Supra, cap. 9 : <lb/>
+            Nec cult;ua quam lJuæ in communi consitiunt. Neutro <lb/>
+            tamen modo satis mteger viditur locus. r;RIAL. </note><note type="footnote">ibid. Necestitaiis. Ex Goih. At., necessuriis, GRIAL. </note><note type="footnote"> Ibid. He custoile sai rarii IlerUII' cap. seq., num. <lb/>
+            i. Menardus, Inc. cit., cusiodtiu sacrarii eum esse <lb/>
+            ait quem sacristam tnodo appellamus et multa de <lb/>
+            sacrarii voce disserit. AREV. </note><note type="footnote"> (;AP. xx. N. i. In Concordia regularum, pag. 430, <lb/>
+            ratio agrorum, minus bene, pro satio agrorum, Ex <lb/>
+            eadem Concordia, et ex Holstenio reposui diligentia <lb/>
+            gregum, et vespertinis nocturnisque officiis. In Edi­ <lb/>
+            tione Grialii diligentia legum, et vespertitiis nocturnis <lb/>
+            officiis. Custos sacrarii a Lanfranc'o, cap. 6 Consti­ <lb/>
+            tui., dicitur secretarius, a Graecis cimiliarcha, in non-</note> 
+            <milestone unit="PLSection" n="D"/><note type="footnote"> nullis Hispamae ecclesiis thesaurarius. Instrumenta <lb/>
+            hic accipiuntur pro chartis contractuum, fundatiio­ <lb/>
+            num, cic. (;rialius legit in iisum sacrarii, ceram ad <lb/>
+            luminaria. in Concordia regularum pro iste a ve,'ia­ <lb/>
+            no, cle., sic legitur, flu; t'esl;a;;tJ monasterii suscipiet, <lb/>
+            quique etiam jila (1egeutlum, acus etiam, et fila) di­ <lb/>
+            versa pro consuendis, etc. Quod Menardo melius vi­ <lb/>
+            detur. In eadem Concordia facta infectaque9 pro <lb/>
+            fracla; et ferariorutII, pro calcearioru".. AREV. </note><note type="footnote"> 2. Area, t'X Goth. AI., ex arcu. (; RIAL. </note><note type="footnote"> Ibid. Exteriorum. I.. regularum Concordia, p. <lb/>
+            411, exterorum, minus bene. In eadem Coucrdi.i, <lb/>
+            p. c&gt;91, residuum sumptui fuerit. Ei mox, Imum, <lb/>
+            aviu,.;a, solticitudo cibaria ad m,nistrand.', at pistoribus. <lb/>
+            Ex quo Meuardus legendum putat, linum, avillria : <lb/>
+            sollicitudo sibaria adminislranilt pialonbul. Sunt au­ <lb/>
+            tern a,';nria æditicia apta nutriendis avibus. AREV. </note><note type="footnote"> 3. Ex more. Itu Goth., et Sinaragd. AI., ex mole. <lb/>
+            GB.AL. </note> <pb n="891"/>
+            
+            <milestone unit="PLSection" n="A"/><lb/>
+            Et licet hæc cuncta specialiler singulis maneant di­ <lb/>
+            stributa, omnia tamen a Patre ordinata ad curam <lb/>
+            præpositi pertinebunt. Ad custodiendam autem in <lb/>
+            urbe cellam 553 unus senior, et gravissimus mo­ <lb/>
+            nachorum cum duobus parvulis monachis constituen­ <lb/>
+            dus est, ibique, si cuI caret, convenit eum perpe­ <lb/>
+            tim perdurare.</p>
+          <p n="5">5. Porro cura nutriendorum parvulorum pertine­ <lb/>
+            bit ad virum quem elegerit Palcr, sanctum sapien­ <lb/>
+            temque, atque ætate gravem, informantem parvulos <lb/>
+            non solum studiis litterarum, sed etiam documentis <lb/>
+            magisterioque virtutum. Cura peregrinorum, vel <lb/>
+            pauperum eleemosyna pertinebit ad eum cui di­ <lb/>
+            spensationis potestas commissa est. Iste quod habet <lb/>
+            tribuat, et communicet, in quantum potest, non ex <lb/>
+            tristitia, aut necessitate : Hilarem enim datorem dili­ <lb/>
+            git Deus (II Cor. IX).</p>
+          <p>
+            <milestone unit="PLSection" n="B"/></p>
+          </div>
+<div n="21" subtype="section" type="textpart">
+<ab>
+            <title type="sub">CAPUT XXI.</title>
+          </ab>
+          <ab>
+            <title type="sub">De infirmis.</title>
+          </ab>
+          <p n="1">1. Cura infirmorum sanie sanctæque conversatio. <lb/>
+            nis viro committenda est, qui pro eis sollicitudinem <lb/>
+            ferre possit, magnaque cum industria præsto faciat <lb/>
+            quidquid imbecillitas eorum exposcit. Ipse autem <lb/>
+            sic ægrotis deserviet, ut de sumptibus corum vesci <lb/>
+            non præsumat. Ægrotis delicatiora sunt præbenda <lb/>
+            alimenta, quousque ad incolumitatem perveniant. <lb/>
+            Postquam salutem receperint, ad usum pristinum <lb/>
+            revertentur</p>
+          <p n="2">2. Inlirmi autem pro eo quod delicatius aguntur, <lb/>
+            fortiores inde nequaquam scandalizentur; qui enim <lb/>
+            sani sunt infirmos tolerare 554 debent; qui autem
+            <milestone unit="PLSection" n="c"/><lb/>
+            infirmi sunt sanos et laborantes anteponendos sibi <lb/>
+            non dubitent. Nullum oportet vel veram corporis in­ <lb/>
+            firmiiatem celare, vel falsam prætendere. Sed qui <lb/>
+            possunt Deo gratias agant, et operentur; qui vcro <lb/>
+            non possunt manifestent suos languores, humanius­ <lb/>
+            que tractentur.</p>
+          <p n="3">3. Sub prætextu infirmitatis nihil peculiare ha-
+            <milestone unit="PLSection" n="A I"/><lb/>
+            bendum est, ne lateat libido cupiditatis sub languo­ <lb/>
+            ris specie. Lavacra nulli monacho adcunda studio <lb/>
+            lavandi corporis, nisi tantummodo propter necessi­ <lb/>
+            tatem languoris, et nocturnam pollutionem. Nec dii­ <lb/>
+            ferendum est propter medelam, si expedii ; nec <lb/>
+            murmurandum est, quia non fit pro appetitu volu­ <lb/>
+            ptatis, sed pro remedio tantum salutis.</p>
+          </div>
+<div n="22" subtype="section" type="textpart">
+<ab>
+            <title type="sub">CAPUT XXII.</title>
+          </ab>
+          <ab>
+            <title type="sub">De hospitibus.</title>
+          </ab>
+          <p n="1">1. Advenientibus hospitibus prompta atque ala­ <lb/>
+            cris susceptio est adhibenda , scientes ob hoc in <lb/>
+            novissimum consequi retributionem. Sicut enim Do­ <lb/>
+            minus dicit: « Qui vos recipit, me recipit, et qui me <lb/>
+            recipit recipit illum qui misit me ; qui recipit pro­ <lb/>
+            phetali in nomine prophetæ, mercedem prophetæ <lb/>
+            accipiet; et qui recipit justum in nomine justi, mer <lb/>
+            cedem justi accipiet; et qui potum dederit uni ex
+            <milestone unit="PLSection" n="B"/><lb/>
+            minimis istis calicem aquæ frigidae tantum in no­ <lb/>
+            mine meo, amen dico vobis, non perdet mercedem <lb/>
+            suam (Matth. x). »</p>
+          <p n="2">2. Et licet omnibus hospitalitatis bonum cum <lb/>
+            gratia oporteat referri, uberior tamen monachis de­ <lb/>
+            ferenda esi honorificentia hospitalitatis. Præbeantur <lb/>
+            eis habitacula, laventur eorum pedes, ut 555 præ­ <lb/>
+            ceptum Dominicum impleatur; congruis etiam sum­ <lb/>
+            ptibus eisdem humanitatis gratia praebeatur.</p>
+          </div>
+<div n="23" subtype="section" type="textpart">
+<ab>
+            <title type="sub">CAPUT XXIII.</title>
+          </ab>
+          <ab>
+            <title type="sub">De profectione.</title>
+          </ab>
+          <p n="1">1. Nullus monachus, inconsulto abbate, audeatus­ <lb/>
+            piam progredi, nec aliquid praesumere sine imperio <lb/>
+            ejus, seu praepositi. Si quando abbas vel prapositus,
+            <milestone unit="PLSection" n="c"/><lb/>
+            alicubi proiiciscuntur, ille ferat fratrum sollicitudi­ <lb/>
+            nem, qui est præpositus secundus in ordiue. Nullus <lb/>
+            propinquum, vel extraneum, hospiteiriycl monachum, <lb/>
+            familiarem seu parentem videre absque imperio senio­ <lb/>
+            ris, neque sine jussu abbatis quispiam accipere epi­ <lb/>
+            stolam vel dare cuiquam præsumat.</p>
+          <p n="2">2. Quando fratres foras proficiscuntur, vei redeunt <note type="footnote"> 5. Studiis litterarum. Hinc. colligit Menaroua pue­ <lb/>
+            ros monachos litteris imbui debere. Sanctus Ca'sa­ <lb/>
+            rius pueros in monasterio suscipi nolebat, f'lIi litte­ <lb/>
+            ras ediscere non valerent. Vide llahillontUnl, de <lb/>
+            studiis monasticis. In Concordia regularum, ) ag. <lb/>
+            991, referuntur quaedam verba ex regula sancti Isi­ <lb/>
+            dori, quae in regula excusa non exstanl, et ad hunc <lb/>
+            locum referri possunt. « Quicunque a parentibus <lb/>
+            propriis in monasterio fuerit delegatus, noverit se </note> 
+            <milestone unit="PLSection" n="n"/><note type="footnote">ibi perpetuo mansurum. Nam Anna Samuel puerum <lb/>
+            natum et ablactatum Deo pietate qua vuveraL obtulit; <lb/>
+            quique in ministerio templi quo a matre fuerat luri- <lb/>
+            C'us permansit, et ubi constitutus est, servivit. » <lb/>
+            Eadem referuntur rans. 2U, q. i, cap. Quicunque, <lb/>
+            suK' ull.t libri aut capitis citatione. Smaragdus ei­ <lb/>
+            dem sumpsit ex Concordia regularum. In causa ci­ <lb/>
+            tata legitur cum pietate obUdil; et deputatus, pro fun- <lb/>
+            CIIl'. HelegenJus hac de rc llerardus, in Isidoriullis, <lb/>
+            c ip. 5i, n. 46. AREV. </note><note type="footnote"> CAP. XXI. N. i. IJe sumptibus, etc. Id clarius in­ <lb/>
+            lelligiiur ex sancto Fructuoso, c. 1U : IJe his quæ <lb/>
+            i.lis residua Blent, neque fiumiem (adlu,', neque. oc­ <lb/>
+            r III Ie se illicita comestionc Ii lliiani. Aiu.v. </note><note type="footnote"> 2. Apud I&gt;clruln Casinensem, c.ip. 56, post non <lb/>
+            dubitent additur : « Qui sani eunt corpore sani de­ <lb/>
+            jent e&gt;seetmente. Et ideo convenit sanis ipH.',uos <lb/>
+            portare, etmagisquani ab infirmis portari. Necesse <lb/>
+            est enim ul patiellter portemus infirmos, ut ilerum <lb/>
+            infirmi patienter portemur a sanis. Tempore enim <lb/>
+            infirmituiis eorum copiosam mercedem providendo <lb/>
+            conquiramus ab illis, ut et iUi icmpore infirmitatis <lb/>
+            nostrae copiosam mercedem serviendo conquiraut de <lb/>
+            nobis. Ilinc Apostolus (Galal. vi) : Jnvicem onera t'e.. <lb/>
+            stra "or.ate, et sic adimplebitis legem Christi. &gt; :REV. </note><note type="footnote"> 3. In Concordia regularum, pag. liGS : Tantuni­ </note> 
+            <milestone unit="PLSection" n="n"/><note type="footnote">unodo pro necessilate languoris. Nec differendum, eic. <lb/>
+            Nonnulli, nec murmurandum eat, si fiat. quia, etc. <lb/>
+            Apud Petrum Casinensem, post verba pro remedio <lb/>
+            sulutis, additur : Bro cura tuedendi balneorum usus <lb/>
+            summo adhibeatur studio, sanis vero, ei præcipue ju­ <lb/>
+            venculis tardius concedatur. .REV. </note><note type="footnote"> CAP. J XII. N. 2. V berior monachis, etc. Scilicet ex <lb/>
+            præscripto etiam pachomii, Macarii, Magistri, et <lb/>
+            aliorum, ut in Concordia regularum, pag. hOU. AREV. </note><note type="footnote"> CAP. XXIII. N. ł. Præsume..e. Iloc est, forcre. Lit <lb/>
+            leras a monachis ct rcligiosis neque scribendas, ne­ <lb/>
+            que recipii-inJas .sine superioris facull:ilc comproba­ <lb/>
+            tur in Concordia reguUruin, pag. 622 et 874. ARKV. </note><note type="footnote"> i. In regularum C&lt;&gt;nc.&lt;&gt;rdia, page 1661, et apud <lb/>
+            Ilolstenium Icgihllo: Quuudu frulres foris proficiscun­ <lb/>
+            ',r, vel redeunt, covgregatis omnilfusin unum itieccle­ <lb/>
+            sia benedictionem accipiant. Eodemque inpdo bebdofAa-</note> <pb n="893"/>
+             
+            <milestone unit="PLSection" n="4"/><lb/>
+            congregatis omnibus in ecclesia, benedictionem acci­ <lb/>
+            piant. Eodemque modo hebdomadarius, vel quilibet <lb/>
+            rerum dispensatores; sed dum pro necessitate aliqua <lb/>
+            monasterii diriguntur, duo fratres spirituales ac pro­ <lb/>
+            batissimi eligantur. Adolescentuli autem vel nuper <lb/>
+            conversi a tali ministerio removendi sunt, ne aut in­ <lb/>
+            firma ætas carnis desiderio polluatur, aut rudis con­ <lb/>
+            versatio ad saeculi desiderium revertatur.</p>
+          <p n="3">3. Monachus, dum ad aliquod monasterium mitte­ <lb/>
+            tur visitandum, quandiu cum eis fuerit, ad quos de­ <lb/>
+            stinatus est, it:, eum ibi oportet vivere, sicut reliquum <lb/>
+            coetum sanctarum videt, propter scandalum, scilicet, <lb/>
+            et perturbationem infirmorum.</p>
+          </div>
+<div n="24" subtype="section" type="textpart">
+<ab>
+            <title type="sub">CAPUT XXIV.</title>
+          </ab>
+          <ab>
+            <title type="sub">De defunctis.</title>
+          </ab>
+          <p n="1">
+<milestone unit="PLSection" n="B"/>1. Transeuntibus de hac luce fratribus, antequam sepeliantur, pro dimittendis eorum peccatis, sacrifi-
+            <milestone unit="PLSection" n="4"/><lb/>
+            cium Domino offeratur. Corpora 556 fratrum uno <lb/>
+            sepelienda sunt loco, ut quos viventes charitatis te­ <lb/>
+            nuit unit is, morientes unus locus amplectatur.</p>
+          <p n="2">2. Pro spiritibus defunctorum altera die post Pen­ <lb/>
+            tecosten sacrificium Domino offeratur, ut beatæ vitae <lb/>
+            participes facti, purgatiores corpora sua in die resur­ <lb/>
+            rectionis accipiant</p>
+          <p n="3">3. Hæc igitur, o servi Dei, et milites Christi, con­ <lb/>
+            templores mundi, ita vobis custodienda volumus, ut <lb/>
+            majora præcepta potius servetis. Suscipite igitur in­ <lb/>
+            ter illa et hanc admonitionem nostram, humili corde <lb/>
+            custodientes quæ dicimus, libenter sumentes quod <lb/>
+            dispensamus; quatenus et vobis de fructu operis sit <lb/>
+            gloria, et nobis pro ipsa admonitione postulata pro­ <lb/>
+            veniat venia. Deus autem omnipotens custodiat vos
+            <milestone unit="PLSection" n="B"/><lb/>
+            in omnibus bonis, et quomodo coepit, sic et confirmet <lb/>
+            gratiam suam m vobis. Amen. <note type="footnote"> darii, vel quirumlibet rerum dispensatores, sive dum <lb/>
+            promoveniur. sive dum recedunt. froyta necessilatem <lb/>
+            aliquam monasterii duo fratre; spirituales comprobatis­ <lb/>
+            feimi eligantur, qui ad urbem. vel ad possessionent (vii­ <lb/>
+            lain, ('UflP-lII) mittantur. Adolescentuli autem, etc. <lb/>
+            Meuard us vehementer laudat has institutiones, seu <lb/>
+            regulas. AREV. </note><note type="footnote"> CAP. XXIV. N. 1. De more antiquo ofifefendi sacrifi­ <lb/>
+            cium pro mortuis, sive de igne purgatorio ex niente <lb/>
+            Isidori vide Isidoriana, cap. 45, It. 17 et 18, et not. <lb/>
+            ad lib. de Ordiuecreaturaruln, c. t i, II. i i. Menardus, <lb/>
+            pag. 217, mulla in hanc sententiam congerit t'x sancto <lb/>
+            Augustino, Cassiano, comilio Bracarensi, Aurelia­ <lb/>
+            nensi, V;tsensi i et II, etc. Recenset alios auctores <lb/>
+            qui præter exsequias in die obitus meminere di i ter­ <lb/>
+            hi, septimi, noni, trigesimi et quadragesimi. Praete­ <lb/>
+            rea beatus ,EHq, abbas FuMenSis, quod in Concordia <lb/>
+            regularum, loc. cit., notatur, instituit ut profratribus <lb/>
+            ileluiviis anniversariæ preces et missae quotannis die <lb/>
+            .. </note> 
+            <milestone unit="PLSection" n="c"/><note type="footnote"> sancti Iguani martyris agereMur. Sanctus Hugo, abfoas <lb/>
+            Cluniacensis idem stituit Het'i feria quinta post OCI3- <lb/>
+            vas Pentecosies. Alii aliulil diem desiguarunt. AREV. </note><note type="footnote"> 3. Ei majora præcepta Patrum per omnia observen­ <lb/>
+            tur, Golli.,bed non convenit cum praefatione. GRIAL </note><note type="footnote"> Ibid. In Concordia regularuni, ut majorum I1net"c- <lb/>
+            pIa patruUl, quod Menardo quoque displicuit. Post <lb/>
+            hoc uHiluun) caput in nonnullis Mss. adjicitur caput <lb/>
+            aliud De regula devntarum, de quo ej;i in Isidnrianis. <lb/>
+            cap. 71, n. 28 et seqq. Ita autem se habet. Sententia <lb/>
+            de regula devotarum. c Nelllo adeas vadat visitandas, <lb/>
+            nisi qui habet ibi mairem, vel sororem, aut fili;uu, <lb/>
+            et propinquas, et consobrinas, sive mairem filiorum <lb/>
+            suorUIIl. Si autem necessitas fueril ut videant eas, ut <lb/>
+            antequam renuntiarent saeculo, et intrarent in 1110- <lb/>
+            nasterio, paterna eis debetur auctoritas, aut aliqua <lb/>
+            causa manifesta est, mittent cum his probat.T virum <lb/>
+            aetatis, ac vitare, videbunt eas, et pariter revertentur. <lb/>
+            Nemo vadat ad illas, IIM flUDS supra diximus. Si eas <lb/>
+            videre voluerint, primum faciant nuntiari patri mo­ <lb/>
+            nasterii, et. ille mittet adseniores, qui ad niinisteriuni <lb/>
+            viriginum delegati sunt. Qui occuirenl eis, et cum ip­ <lb/>
+            sis videbunt, quas necesse In ibuerint, cum omui dis­ <lb/>
+            cipliua et timore Dei. Cumque eas viderint, non eis <lb/>
+            loquemur de rebus sæcularibus. Ouicunque de his <lb/>
+            mandatis preterierit, absque ulla letractatione negli­ <lb/>
+            gentiii!, atque conleinptus ag&lt;'t publice pœnitentiam, <lb/>
+            ••i.i </note> 
+            <milestone unit="PLSection" n="c"/><note type="footnote"> ut possidere valeamus regna cuelorum. i rurte, possi­ <lb/>
+            dere vuleat reqna coclorum. In Isidoi !:&lt;!&lt; s etiam, loc. <lb/>
+            cit., dixi, in nonnullis Mss. post ciput regula; devu­ <lb/>
+            tarum addi consiitutionein II concilii II Uispalensis, <lb/>
+            cui lsi Iorus præfuit, quæ est de mOllusleriis iiiyinum, <lb/>
+            III a monachis tueantur, etlegi potest in ipso concilio <lb/>
+            descripl'. in'Appendice A, ad Isidoriana, page 5t5, <lb/>
+            ac propterea hnc loco praetermittitur. AREV. </note> </p>
+        </div>
+    </div>
+        </body></text></TEI>

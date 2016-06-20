@@ -1,0 +1,881 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title>Patrologiae Cursus Completus. Series Latina (PL)</title> 
+        <sponsor>University of Leipzig</sponsor>
+        <funder>European Social Fund Saxony</funder>
+        <principal>Gregory Crane</principal>
+        <respStmt>
+          <persName xml:id="Jouve">Jouve</persName>
+          <resp>OCR-ed, corrected and encoded the text</resp>
+        </respStmt>
+        <respStmt>
+          <persName>Greta Franzini</persName>
+          <resp>Project Manager (University of Leipzig)</resp>
+        </respStmt>
+        <respStmt>
+          <persName>Simona Stoyanova</persName>
+          <resp>Project Assistant (University of Leipzig)</resp>
+        </respStmt>
+        <respStmt>
+          <persName>Bruce Robertson</persName>
+          <resp>Technical Advisor (Mount Allison University)</resp>
+        </respStmt>
+      </titleStmt>
+      
+      <publicationStmt>
+        <authority>University of Leipzig</authority>
+        <idno type="filename">PL83.xml</idno>
+        <availability>
+          <licence target="https://creativecommons.org/licenses/by-sa/4.0/">Available under a Creative Commons Attribution-ShareAlike 4.0 International License</licence>
+        </availability>
+        <date>2014</date>
+        <publisher>University of Leipzig</publisher>
+        <pubPlace>Germany</pubPlace>
+      </publicationStmt>
+      
+      <sourceDesc>
+        <listBibl xml:lang="la">
+          <biblStruct>
+            <monogr>
+              <editor>
+                <persName>
+                  <name xml:lang="fr">Jacques Paul Migne</name>
+                </persName>
+              </editor> 
+              <author ref="urn:cite:perseus:author.771">Isidorus Hispalensis</author>
+              <title>Differentiarum Sive De Proprietate Sermonum Libri Duo</title>
+              <title>Allegoriae Quaedam Sacrae Scripturae</title>
+              <title>De Ortu Et Obitu Patrum Qui In Scriptura Laudibus Efferuntur</title>
+              <title>In Libros Veteris Ac Novi Testamenti Proemia</title>
+              <title>Liber Numerorum Qui In Sanctis Scripturis Occurrunt</title>
+              <title>De Veteri Et Novo Testamento Quaestiones</title>
+              <title>Mysticorum Expositiones Sacramentorum Seu Quaestiones In Vetus Testamentum</title>
+              <title>Appendix Ad Libros Regum</title>
+              <title>De Fide Catholica Ex Veteri Et Novo Testamento Contra Judeos</title>
+              <title>Sententiarum Libri Tres</title>
+              <title>De Ecclesiasticis Officiis</title>
+              <title>Synonyma De Lamentatione Animae Peccatricis</title>
+              <title>Regula Monachorum</title>
+              <title>Epistolae</title>
+              <title>De Ordine Creaturarum Liber</title>
+              <title>De Natura Rerum Ad Sisebestum Regem Liber</title>
+              <title>Chronicon</title>
+              <title>Historia De Regibus Gothorum. Wandalorum Et Suevorum</title>
+              <title>De Viris Illustribus Liber</title>
+              <title>Carmina [Ascripta]</title>
+              <title>Chronica Regum Visigothorum (Incertus)</title>
+              <title>Expositio In Canticum Canticorum Salomonis [Incertus]</title>
+              <title>De Conflictu Vitiorum Et Virtutum (Incertus)</title>
+              <title>Expositio In Missa (Incertus)</title>
+              <title>Sententiarum Liber Quartus (Incertus)</title>
+              <title>Exhortatio Humilitatis (Incertus)</title>
+              <title>Testimonia Divinae Scripturae Et Patrum (Incertus)</title>
+              <title>Sermones (Incertus)</title>
+              <title>De Ecclesiasticis Dogmatibus (Incertus)</title>
+              <title>Sentantiae Differentiarum De Activa Vita Atque Contemplativa [Incertus]</title>
+              <title>Exhortatio Poenitendi Cum Consolatione Et Misericordia Dei [Incertus]</title>
+              <title>Lamentum Poenitantiae (Incertus)</title>
+              <title>Oratio Contra Insidias Diaboli (Incertus)</title>
+              <title>Liber De Ortu Et Obitu Patrum Incertus</title>
+              <title>Liber De Numeris (Incertus)</title>
+              <title>Glossae in Sacram Scripturam</title>
+              <title>Differentiarum, sive de Proprietate Sermonum, Liber</title>
+              <title>Liber Glossarum</title>
+              <imprint>
+                <publisher>Garnier</publisher>
+                <pubPlace>Paris</pubPlace>
+                <date>1850</date>
+              </imprint>
+              <biblScope unit="volume">83</biblScope>
+            </monogr>
+            <monogr>
+              <author>Auctor Incertus</author>
+              <title>Archiepiscopi Toletani Veteres</title>
+              <title>Chronologia Gothicorum Regum (Ex Codice Regio Vaticano)</title>
+              <imprint>
+                <publisher>Garnier</publisher>
+                <pubPlace>Paris</pubPlace>
+                <date>1850</date>
+              </imprint>
+              <biblScope unit="volume">83</biblScope>
+            </monogr>
+            <ref target="http://hdl.handle.net/2027/pst.000020950231">HathiTrust</ref>
+            
+          </biblStruct>
+        </listBibl>
+      </sourceDesc>
+      
+    </fileDesc>
+    <encodingDesc>
+      <p>The following text is encoded in accordance with EpiDoc standards and with the
+        CTS/CITE Architecture.</p>
+      <refsDecl n="CTS">
+        <cRefPattern n="section" matchPattern="(.+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div/tei:div[@n='$1'])"/>
+      </refsDecl>
+    </encodingDesc>
+    
+    <profileDesc>
+      <langUsage>
+        <language ident="la">Latin</language>
+      </langUsage>
+    </profileDesc>
+    
+</teiHeader><text>
+    <body>
+    <div type="edition" n="urn:cts:latinLit:tmp1411.tmp1411.opp-lat1">
+<ab>
+            <title type="sub">VARIÆ LECTIONES.</title>
+          </ab>
+
+
+<div n="1" subtype="section" type="textpart">
+<ab>
+            <title type="sub">AD LIBRUM DIFFERENTIARUM RERUM.</title>
+          </ab>
+          <p>Num. i , ut in Dei; al. in Dei, omisso ut. lb., in­ <lb/>
+            telligerent ; al. intelligunt. N. 3, et color; a!. et calor. <lb/>
+            N. 7, Spiritus sanctus... procedens; a!. Spiritus ex <lb/>
+            Patre et Filio non genitus, sed procedens. N. 9, nec
+            <milestone unit="PLSection" n="B"/><lb/>
+            genitus ; alii addunt, nec genitus , nec creatura esse <lb/>
+            videtur, sed increatus. N. ii , relative tria ; at. rela­ <lb/>
+            tiva tria. N. 14, gratiae et veritatis; ale gratiae' veri­ <lb/>
+            tale. N. 30, facta, præcessit, etc.; a!. facta processit, <lb/>
+            quæ tamen res ex se facta non æternitate. Ib., cantum; <lb/>
+            al. cantu. N. 32, receptionem; at. resurrectionem. <lb/>
+            N. 35, genus; at. genus futuri sæculi. N. 36, De re­ <lb/>
+            rum, etc.; al. om. titulos, hic, et alibi. N. 41, scrip­ <lb/>
+            serunt; at. decreverunt. N. 43, singuli animo immor­ <lb/>
+            tales; al. singulari animo mortales. lb., impares; a!. <lb/>
+            pares. Ib., ad voluptates... caduci; at. ad voluntatem <lb/>
+            Dei vita caduci. lb., queruli ; a!. quasi soli. N. 53 , <lb/>
+            confert decentiam; at. conferat dignoscentiam. N. 55, <lb/>
+            aggeribus; al. custodiarum aggeribus. lb., aer ictus ; <lb/>
+            al. erectus. N. 57, defluendi; at. defluentis. N. 61, <lb/>
+            partes sunt ; at. arces sunt. N. 68, in circulorum, etc.; <lb/>
+            al. in circulorum complexus ordinata sunt modo. N. 70, <lb/>
+            admisisse; at. adivisse. N. 74, et actionem; at., et <lb/>
+            rationem, corporisque virtutem a vicesimo. N. 75, qua-
+            <milestone unit="PLSection" n="C"/><lb/>
+            dragesimo ; at. quadragesimo nono. N. 78, inducunt; <lb/>
+            at. induunt. N. 80, potestatem; ale possibilitatem. Ib., <lb/>
+            pubertatem, etc.; al. pubertatem autem egressi mox <lb/>
+            adolescentes. N. 82, mollier ; al. mollior. N. 83, vi­ <lb/>
+            rilitate ; al. viriditate. N. 93, caro est, quae proprie; <lb/>
+            al. omnis caro eat corpus, non omne corpus caro ut, <lb/>
+            sed caro est, quia proprie. lb., non subjaceat; a!. om. <lb/>
+            non. N. 95, sopiri; al. separari. N. 98, corporis; forte, <lb/>
+            corpori. IV. 101, sive colore; a!. sine calore. N. 103, <lb/>
+            Deus esset; al. Deus non esset. N. 104, dixerunt, etc.; <lb/>
+            al. dixerunt, rationabilem , per quam, invisibilem rem <lb/>
+            concupiscit; irascibilem, per quam impetus irce sunt, <lb/>
+            emendat et corrigit; concupiscibilem , per quam , etc. <lb/>
+            N. 107, non concipiuntur; at. om. non. Ib., alte­ <lb/>
+            ram propositionem destruit; al. alienæ propositioni <lb/>
+            deseruit. N. 109, procedens ; al. descendens. N. 112 , <lb/>
+            exaltat; al. exsultat. N. 113, lapsam ; at. lassam. lb., <lb/>
+            victores ultimo; al. victores ultimus. N. 115, effe­ <lb/>
+            ctum; at. affectum. Ib., volentem; al. nolentem. <lb/>
+            N. 116, peccandum; at. prævaricandum. N. 117, ob-
+            <milestone unit="PLSection" n="D"/><lb/>
+            sequentem ; at. subsequentem. Jb., prædestinando; a. <lb/>
+            prædestinatos. N. 124, esus; a!. esca. N. 127, omnes <lb/>
+            servos; al. homines servos. N. 131 , transituri ; a!. <lb/>
+            transitoria. N. 136, ei qui; forte, ejus qui; vel ille <lb/>
+            qui. N. 138, destruunt; al. differunt. N. 140, specta­ <lb/>
+            tronis; at. exspectatione. Ib., cujus; al. cujus chari­ <lb/>
+            tati. N. 146, ad boni; al. ad unum. N. 148, ex verbis. <lb/>
+            Sapientiam ; a!. ex verbis, sapientia ex sententiis; sed <lb/>
+            sapientia. lb., indiserta ; apud Grialium indiscreta, <lb/>
+            quod mendum puto. N. 153, hac, etc.; ale hæc, ut <lb/>
+            quidam ait, sicut ferrum venenum, sic armat eloquium. <lb/>
+            N. 156 , referre; al. deferre , quod fortasse melius. <lb/>
+            N. 158, restinguit ; at. restringit. N. 160, studioque; <lb/>
+            ale studioque boni. lb., tenetur; a!. terretur. N. 161, <lb/>
+            octo suut; al. septem sunt. lb., et harum , etc.; a!. <lb/>
+            et earum regina ebrietas, et superbia. N. 165, dum <lb/>
+            quemlibet ; al. dum quia non libet. N. 168, genus eo­ <lb/>
+            rum; ał. genus superbiae est eorum. lb., observatione; <lb/>
+            at. conversatione. N. 169 , reprimunt ; at. respuunt. <lb/>
+            N. 170, et pereat. Jam superbiam; a!. et per avari­ <lb/>
+            tiam. Superbiam.</p>
+          </div>
+
+<div n="2" subtype="section" type="textpart">
+<ab>
+            <title type="sub">AD ALLEGORIAS.</title>
+          </ab>
+          <p>Num. i. obteguntur ; al. lequntur. lb., annotata
+            <milestone unit="PLSection" n="B"/><lb/>
+            al. mutata lb., brevis, etc.. a!. breviter stylo scribendi <lb/>
+            decrevi. N. 2, in ratione; al. in oratione. N. 5, pastor <lb/>
+            ovium; at. pastor, et rector fidelium. N. 6, aetate; a!. <lb/>
+            fratre. N. 9, spe invocavit; at. primus cœpit invocare. <lb/>
+            N. 17, altitudinem ; al. capita. N. 33, opera pariuut. <lb/>
+            Sic legendum. Grialius, opere pereunt; a!. opere pa­ <lb/>
+            riuntur. N. 36, stabili; al. stabiliores. N. 38, somno; <lb/>
+            al. somno quievit. N. 55, consolandi studium; ale con- <lb/>
+            sulendi negotium. N. 69 , quem Chrislus , etc.; al. <lb/>
+            quem cum peccato dies judicii invenerit. N. 70, qui <lb/>
+            Israeliticum, etc.; at. a quibus Israeliticus populus <lb/>
+            colligatur, ne cum gratia confiderent. N. 80, reperti ; <lb/>
+            al. præcepti. N. 81, Dalila. Grialius mendose, Dulida. <lb/>
+            N. 87, sacerdotes; ale sacerdotis, quod non displicet. <lb/>
+            N. 88, æmulationem; al. imaginem. N. 94, eleva­ <lb/>
+            tionis ; al. elationis. IN. 95, ila Christus... assumptus <lb/>
+            est; al. ita Christus carnem suam, in qua natus est, <lb/>
+            et passus, et resurrexit, assumpsit. N. 99, auctorita­ <lb/>
+            tem; al. austeritatem. N. 104, acquirendam; al. ex-
+            <milestone unit="PLSection" n="C"/><lb/>
+            sequendam. N. 110, in otio; al. in vita. I. 113, in <lb/>
+            gentibus; al. in cantibus. N. 116, constitutus; al. ele­ <lb/>
+            vatus. N. 120, patet ingressus ; at. fuit regressus, vel <lb/>
+            fuisse regressus comprobatur. N. 123, Judaicæ hirun­ <lb/>
+            dines; al. Judaici passeres. lb., dum eos... obcæcant ; <lb/>
+            at. dum ejus luminis sacramentum male obscurant. <lb/>
+            N. 127, devictam; al. devinctam. N. 131, comparat ; <lb/>
+            al. orsus. N. 137, peragitur; al. spargitur. N. 139, <lb/>
+            parit; al. parturit. N. 142, populos... cognituros ; <lb/>
+            al. populos , qui fidei luce cognita prædicaverunt. <lb/>
+            N. 151, detraxit; al. detrusit; forte, retraxit.N. 160, <lb/>
+            laborabat, figuram; al. add. laborabat, et curata est, <lb/>
+            filia quidem archisynagogi Judæorum typum tenuit, <lb/>
+            hæc autem, quæ profluvio sanguinis laborabat, et cu­ <lb/>
+            rata est, figuram. N. 170, recreatur; al. sanaMur. <lb/>
+            N. 174, a diaboli laqueis abstractam ; al. diabuli la­ <lb/>
+            queis astrictam. N. 175, præceptorum, sed sicut ; at. <lb/>
+            præceptorum sunt fenerati, sed tamen. N. 182, vene­ <lb/>
+            runt; al. convertuntur. N. 183, emundat; al. emendat. <lb/>
+            lb., exercuit; at. expressit. N. 188, perdit; al. perdet;
+            <milestone unit="PLSection" n="D"/><lb/>
+            forte, perdidit. N. 189, vocaverunt; al. provocaverunt9 <lb/>
+            vel prædicaverunt. No. 191, homo autem, etc.; al. <lb/>
+            hominem autem non habentem. Quod sustineri potest, <lb/>
+            ut urbem quam statuo , vestra est. Num. 196 , disce­ <lb/>
+            dunt; al. decidunt. N. 200 , eaque morali; al. atque <lb/>
+            moraliter. Grialius edidit ea quæ mortali. N. 202, <lb/>
+            corporis acceptos; al. operis accipitur. N. 209, postu­ <lb/>
+            labat ab amico; al. postulat amicum. N.210,aufe­ <lb/>
+            runt ; al. repetunt. Sic Vulgata, Luc. XII, 20. N. 211, <lb/>
+            humanum... schismatis ; al. humanam fidem, et reli­ <lb/>
+            gionem invicem separatum in dissensionem schismatis. <lb/>
+            N. 213, humilitatis ; al. per gratiam humilitatis. lb., <lb/>
+            commutabilur; al. renovabitur. N. 214, curata : a!. <lb/>
+            erecta est. lb., quibus... accipimus; al. quibus curvata <lb/>
+            erat. erigitur, accipiens. N. 216, conversione; al. con­ <lb/>
+            fessione. N. 221, ad sacerdotes; al. ad sacramentum. <lb/>
+            Ib., varictate; at. vanitate. N. 229, accepta gratia; <lb/>
+            al. acceptam gratiam. Scilicet ulor cum accusativo, ut <pb n="435"/>
+            
+            <milestone unit="PLSection" n="A"/><lb/>
+            alibi. N. 231 , quod laboravit ; at qui inde plus labo­ <lb/>
+            ravit. N. 233. mutatur ; al. misit. N. 234, per Jesum <lb/>
+            deductum ; at. per Jesum Evangelio priori de Ægypto <lb/>
+            inductum. N. 239 , angelo; at. piscina illa. N. 240 , <lb/>
+            viliatum; a!. venumdatum. N. 241, quatriduanum ; a!. <lb/>
+            triduanum. lb., propago mrtis ; al. pro plaga mortis. <lb/>
+            Ib.. contemptus: al. tempus. N. , servus: al. si­ <lb/>
+            milia. N. 244 , Barabbas ; Cod. Flor. Barrabas cum <lb/>
+            hac nota : i Si legitur per duo rr interpretatur filias <lb/>
+            magistri, quia rabbi dicitur magister; si vero per <lb/>
+            unam r, interpretatur filius patris , quia Hebraice <lb/>
+            barabas dicitur pater. » N. 146 , peregrinus; al. da­ <lb/>
+            ctor. N. 230, per quam ; at. in qua.</p>
+          </div>
+
+<div n="3" subtype="section" type="textpart">
+<ab>
+            <title type="sub">DE ORTU ET OBITU PATRUM.</title>
+          </ab>
+          <p>Num. i. sententiali brevitate; al. sententia, et <lb/>
+            libri novitate. Ib., nolata ; at. sociata. lb., leguntur ; <lb/>
+            al. leguntur, qui in Scriptura laudibus præfuerant. N. 2, <lb/>
+            dominandi; al. dominatus. N. 3, florentis ; al. fluentia.
+            <milestone unit="PLSection" n="B"/><lb/>
+            Ib., fecunda... vere; a!. fecundabatur perpetuo vivore. <lb/>
+            N. 4, exsulem, etc.; al. expulsam se e paradisi gaudiis <lb/>
+            mortisque labore subactam ingemuit. N. 6, uon silens ; <lb/>
+            a!. nobilis. N. 7, angustias; at. insaniam. lb., con­ <lb/>
+            tractibus ; al. contactibus, quod genuinum puto pro <lb/>
+            contagionibus. lb., expulsus ; III. exclusus ; scilicet in <lb/>
+            d'qualem habitationem beatæ vita. lb., restituet, etc.; <lb/>
+            a!. restiturus cum Elia ad mortalis vitæ conditionem ; <lb/>
+            quod verum arbitor, ut restiturnus vit pro restituendus <lb/>
+            more Isidoriano. Num. 8, iste jussus ; al. iste justus. <lb/>
+            Ib., nec horruit; stI. nec horruit turbulentum diluvii <lb/>
+            fluctum. N. 9, edocetur ; at. educitur. lb., ac lætus ; <lb/>
+            al. electusque; at. electisque. Forte, electasque. N. 10, <lb/>
+            versis; al. aversis. N. 11, vere; at. jure. N. 12, Isaac <lb/>
+            annum; al. Abrahæ annum. N. 13, peregrinatione ; <lb/>
+            at. peregrinis. Ib.. victoria; al. victoriae præda. Num. <lb/>
+            J4, in mysterio veneraretur; al. in ministero de­ <lb/>
+            monstraret. Ib., genere; al. germine. Ib., devotus; at. <lb/>
+            dilectus. N. 15, septimo ; al. sexto. Ib., marmore; al. <lb/>
+            marmore, et opere elegantissimo. N. 16, qui fuit ami-
+            <milestone unit="PLSection" n="C"/><lb/>
+            cus Abrahæ ; al, quæ fuit curia Abrahæ. Ib., venera­ <lb/>
+            tione ; al. consecratione ; vel sacratione ; vel sacramentis. <lb/>
+            N. 17, amorem; al. timorem. N. 18. et innocentem <lb/>
+            habitans domum ; at. et innocentem abjiciens domum, <lb/>
+            qui peregre profectus, dum consortium exigeret (forte, <lb/>
+            effugeret) hominum, comitatum meruit angelorum. Hic. <lb/>
+            autem; at. innocenter habitans domum, nec hispidus, <lb/>
+            ut frater, nec sanguinarius, ut Edon. Hic autem. Ib., <lb/>
+            pertulit ; al. præcipuit. Ib., dum consortio; at. dum <lb/>
+            consortium, ut accusativus sit pro ablativo. Num. 19, <lb/>
+            cum patribus suis ; al. cum patribus suis, et a filiis <lb/>
+            reductus est in terram Chanaan, et cepultus juxta pa­ <lb/>
+            trem. N. 21, possessionis ; al. successionis. N. 22, <lb/>
+            fit... futuro; al. fit interpretatione sapiens in concilio <lb/>
+            futuro. lb., ad reddendam, etc.; al. ad reddenda bona <lb/>
+            pro malis, et ad retributionem gratiæ. Ib., fame de­ <lb/>
+            puisa necessitatis; al. famis depulsa necessitate. N. <lb/>
+            23, centum, et decem annis; al. cxv annis. Ib., quam <lb/>
+            nunc, etc.; al. quæ nunc tam Latine, quam Graece Si-
+            <milestone unit="PLSection" n="D"/><lb/>
+            chima vocatur. Num. 25, primogenitus; al. primitivus. <lb/>
+            N. 27, junctus; at. unctus. Ib., sortibus; at. sceptris; <lb/>
+            vel sceptis. N. 29, de benedictionibus, etc.; al. de <lb/>
+            benedictionibus fructus donans, porrigensque regibus. <lb/>
+            N. 31, pro fratribus; al. pro filiis israel. Ib., hostes <lb/>
+            gentesque ; al. hostes gentis. N. 32, replens deliciis <lb/>
+            principes; al. repletus deliciis principum. N. 33, abun­ <lb/>
+            dans ; al. abundantior. N. 54, escas principibus; al. <lb/>
+            suo mystico robore possidet tribuens principibus. N. 36, <lb/>
+            una cum Joseph, etc.; at. una cum fratre possedit <lb/>
+            Joseph tribum. Num. 57, clarus; al. stabilis. Ib., ex­ <lb/>
+            templo; al. exempto. Ib., fidei lorica armatur ; al. <lb/>
+            fidem religionis armans. Ib., doluit; at. non doluit. <lb/>
+            lb., inter supplicia ; al. super dira supplicia. Ib., male <lb/>
+            suadentem; al. malesuadam. Ib., duplicem claritatem; <lb/>
+            al. multiplici claritate. N. 58, in accentu ; al. in ac­ <lb/>
+             cinctu. Ib., quadraginta; at. septuaginta; at. septua­ <lb/>
+            ginta octo. Ib., quadraginta octo; al. sexaginta qut­ <lb/>
+            tuor. Ib., notatur; al. notatur, inquiens : Amram
+            <milestone unit="PLSection" n="A"/><lb/>
+            mater, cujus fuit Tocabet, ex tribu. N. 39, firmaret; <lb/>
+            at. formaret. Ib., insinnatam; a. in sinu; vel in si­ <lb/>
+            num positam. Ib., caloris; at. coluris. lb., exquirendo; <lb/>
+            al. exsequendo. Ib., interposuit; al. interposuit iras­ <lb/>
+            centi, consulentique opposuit modum irascendi. Num. f <lb/>
+            40, oppugnatores Israel; at. oppugnatum Israel; vel <lb/>
+            oppugnatoris. Fortasse propugnatoris Israel ; vel op­ <lb/>
+            pugnatoris sine Israel. Ib., corumque; al. ad ultimum. <lb/>
+            N. 42, pertulit; al. adimplevit. N. 43, non contigit; <lb/>
+            at. om. non. lb., superavit; at. separavit. Ib.. Nebo; <lb/>
+            al. Thabor. N. 45, Moysi; al. Moysi uterinus. Ib.; <lb/>
+            elecla; a!. ejecta. N. 46, qua percussa Moyses ; al. <lb/>
+            quæ percussa a Moyse. N. 47, expediret victoriam, <lb/>
+            al. expediretur victoria. Ib., resistere. at. stare; vel <lb/>
+            sistere. Ib., inexpugnabiles ; al. inæstimabiles. N.49, <lb/>
+            percussit; at. perculit; vel transfixit. Ib., præmium­ <lb/>
+            que... meruit, al. primum æternæ memoriæ nomen <lb/>
+            Israel meruit. Ib., placavit ; at. accepit. Num. 50, ex­ <lb/>
+            plorans; al. exploratus. N. 51, Galaadites; a!. filius
+            <milestone unit="PLSection" n="B"/><lb/>
+            meretricis mulieris Galaaditis; at. ortus ex tribu Gad. <lb/>
+            lb., exsuperans; al. spernens. N. 52, rugientem ; al. <lb/>
+            fugientem. lb., mortui ; al. leonis mortui. Ib., vinctis, <lb/>
+            a!. junctis. Ib., rescissis; al. rescinctis. N. 53, viginli; <lb/>
+            al. XXII. N. 54, connumeratus Moysi ; al. cognomina­ <lb/>
+            tus cum Moyse. N. 53, in Bethlehem; at. secus Beth­ <lb/>
+            leem. N. 57, innocuum non tantum ; al. non noc it, <lb/>
+            nec tantum. Ib., quadragesimo; a!. quadragesimo , <lb/>
+            atque tertio. N. 58, in Hebron; al. contra Hebron. <lb/>
+            Num. 59. dispositionem ; al. disputationem. Ib., cogi­ <lb/>
+            tationes; al. iras bestiarum, et cogitationes. N. 61, <lb/>
+            Elias; a). Elias, qui interpretatur dominus Deus. In., <lb/>
+            disciplinæ structus in sancta; at. districtus in disci­ <lb/>
+            plinæ sanctæ. N. (2, vel qui cum e o; a!. e: Enoch , <lb/>
+            qui cum ipso. Ib., jacebunt; al. tribus diebus. et sex <lb/>
+            horis jacebunt. iV. C3, suscitati ; at. suscitata. Id est, <lb/>
+            cadavera. N. 65, personavit ; al. personuit. N. 66, <lb/>
+            vasculo; a!. solis vasculo. Ib., insultantes sibi; al. <lb/>
+            insultantes se. Ib., plebe refecta ; at. ubertate facta. <lb/>
+            Num. 67. lavacro: a!. repletum lavacro. Ib.. misso:
+            <milestone unit="PLSection" n="C"/><lb/>
+            at misso resilire et. Ib., fecit; al. cœpit. Ih., præ­ <lb/>
+            dixit; at. prædicavit. IV. 68, cadaveri. Sic Mss. Gria- <lb/>
+            Itus, cadaveris. Ib., satis dignum, etc.; al. satis digno <lb/>
+            mortaus est, sepultusque in Samaria digna habitus ve­ <lb/>
+            neratione. N. 69, ex numero; al. ex genere. Ib., qua­ <lb/>
+            que... abjecta; al. quamque... abiit et; forte, abjecit, <lb/>
+            et. N. 70, tempestates ; al. potestates. N. 71, ascen­ <lb/>
+            dentem; al. recedentem; vel redientem, pro redeun­ <lb/>
+            tem. Ib., descendere ; a!. ascendere. Ib., secuit; al. <lb/>
+            serra secuit. Cod. Florent. sancti Marci sic exhibet <lb/>
+            hanc periodum : Ultimo a Manasse genero suo a ver­ <lb/>
+            tice per medium tectus sic perhibetur occisus. Num. 72, <lb/>
+            non poteris, etc.; at. nemo potest ridere faciem meam, <lb/>
+            et vivet. Ib., narraverat ; al. noverat. Ib.. ac media, <lb/>
+            etc.; al. ac mrdiam tantum ejus vidisse speciem , <lb/>
+            omisso propheta scribat. Pro mediam, al. nudam. Ib., <lb/>
+            exposuerat; al. operuerat. N. 74, colunt, etc.; al. <lb/>
+            coluerunt, cujus sepulcrum insigni cultura hactenus <lb/>
+            iidem Ægyptii veneratur. N. 76, Chaldæorum ; at.
+            <milestone unit="PLSection" n="D"/><lb/>
+            Chaldæorum sacerdotum. lb., Juda- post; al. Juda filio <lb/>
+            Josiæ post. Ib., instantia; al. constantia. N. 77, ges­ <lb/>
+            hs; a. portentis. Ib.. mendacium ; al. judicium. Ib., <lb/>
+            aspirationis ; al. inspirationis. Num. 78, subvertit; at. <lb/>
+            cum Cyro destruxit. Ib., montes a Borea ; a!. mon­ <lb/>
+            tis arbores. Ib. ad pariem, etC. ; al. ad Parthiam <lb/>
+            non defluxerit. N. 79, effecerit ; al. effecerit. Et ita <lb/>
+            accidit. N. 80; hic fuit, etc.; al. filius Phatuel de <lb/>
+            tribu. N. 81, ruborum mora distringens; al. sycomoros <lb/>
+            velticans ; vel roborum morit. distribuens. Ib., ad <lb/>
+            Australem plagam; al. ab australi plaga. lb., eremi ; <lb/>
+            a!. in premo. lb., usque ad mare, etc.; Cod. Alban. <lb/>
+            usque mare Rubrum, atque a mari Rubro usque ad lu­ <lb/>
+            dorum fines. Num. 83, prophetavit ; al. prophetavit <lb/>
+            annis quitque. N. 84, de Gelh, quæ est in Op er; al. <lb/>
+            de Geth civitate. Ib., sed magister; al. sed sors. N. 85, <lb/>
+            in pœnitentia ; al. in præsentia. Ib., et saluti; al. et <lb/>
+            salutem. In., umbraeulo; at. umbram. iV. 86, ma­ <lb/>
+            guo projectus; al. valde porrecto jactatus. N. 92, <pb n="437"/>
+            
+            <milestone unit="PLSection" n="A"/><lb/>
+            egressionem ; a!. regressionem. lb., prædicebat ; a!. <lb/>
+            prædicabat. N. 93, esse!; at. gessit. Ab., prævarica­ <lb/>
+            tus ; al. prædicaturus. N. 94 , gentium ; al. gen­ <lb/>
+            tium alienigenarum. Num, 95, sepultumque, etc.; <lb/>
+            al. sepultusque est in Bethel, et propheta ille, qui. <lb/>
+            K. 97, sacerdotis, qui, etc., at. sacerdotis CXXX annos <lb/>
+            agens, congregatis... populis... exstinctus est. N. 98, <lb/>
+            lumine; al. cæcitatem luminis incurrit. N.99, immota­ <lb/>
+            tis; a1. immolatitiis. N. 100, restinxerunt ; al exstin­ <lb/>
+            xerunt quoque caminum flagrantis incendii. N. 101, <lb/>
+            feci! Jerusalem; a). fecit templum in Jerusalem. N. 102, <lb/>
+            lus quoque sacerdotum ; al. ejusque sacerdotes. Num. <lb/>
+            103, Susim; at. Susis, quod verum pmo, ut Susis &gt;it <lb/>
+            velut indeclinabile. Ib., cruci tradendum ; al. truci­ <lb/>
+            dandum. N. 104, viris; at. virorum. Quod noti displi­ <lb/>
+            cet. Ib., principem al. principem sævum. N. 108, <lb/>
+            vox Verbi; al. dux Verbi. N.109, Herodi prohiberet ; <lb/>
+            at. Herodem prohiberet. Ib., præmium ; al. promissum. <lb/>
+            N. 110, sermone ; al. nomine. N. 111, clara stirps; a!. <lb/>
+            clara ex stirpe; Cod. Veron. stella clara, sermone Syro
+            <milestone unit="PLSection" n="B"/><lb/>
+            Domina, stirps David. N. 112, crudeli necis; a. cor- <lb/>
+            poratis necis Ib., pertransibit ; al. pertransiet. Ib., an <lb/>
+            pro verbo, etc.; al. an per verbum validum, et acutum <lb/>
+            omni. Ib , reperiatur ; a!. nec reperiatur. N. 113, Petrus; <lb/>
+            a!. Petrus obediens, vel agnoscens. lb., principatus, et <lb/>
+            caput ; al. firmamentum. N. 115 ; harum virtutum si­ <lb/>
+            gnis ; al. his virtutibus mugnus. Ib.. mortuos animavit ; <lb/>
+            al. infirmos sanavit. Ib. reiteravit. a4. redintegravit. N. <lb/>
+            116. villuam. al. filiam. Num. 117, sexto; al.septimo. <lb/>
+            Ib., deorsum ; al. deorsum vero capite. Ib., crucifixus <lb/>
+            CSl ; al. add. eo die, quoet Paulus apostolus decolla­ <lb/>
+            tus est. Ib., tertie... plagam; Cod. Palat.om. N. 118, <lb/>
+            Ovis; al. agnus Ib., Tharsus ; al. Judæa.Ib., genus; <lb/>
+            al. nitusde tribu. N 119, verbi; a! verbi Dei. N. 121, <lb/>
+            onis,etc.;al. Pythoni discedere imperavit, ac dis­ <lb/>
+            cessisse damnavit. N. 222 nuditatem, etc.; al. nudita­ <lb/>
+            tem, die ac nocte profundi maris naufragia, mille peri­ <lb/>
+            cula ferarum, verbera, etc. N. 123, sexto ; al. septimo. <lb/>
+            Ib., occidentalem; al. orientalem. N. 124, decorus ; al. <lb/>
+            virilis, ac decorus. Ib., Patris ; at. Patras, scilicet, ut
+            <milestone unit="PLSection" n="a:"/><lb/>
+            indeclinabile.Num. 125, Jacobus; a, Jacobus, qui <lb/>
+            interpretatur supplantator. Ib. , in Marmarica ; al. in <lb/>
+            Achaia Marmarica ; vel in Marmarica Achaiæ. Vide <lb/>
+            Isidoriana, cap. 61. N. 121i, Joannes; al. Joannes qui <lb/>
+            interpretatur gratia. N. 127, metallo ; al. exsilio. N. 128, <lb/>
+            fuit; Cod. Pal. fecit. Ib., littoreaque... fragmina ; al. <lb/>
+            littoreaque saxa in gemmarum fragmina. N. 129, sexa­ <lb/>
+            gesimo septimo; al. LXXIII,vel LXXVII. Ib.,vetustatis ; <lb/>
+            ał. vetusto; forte, vetustus. N. 131, Philippus ; al. Phi­ <lb/>
+            lippus, qui interpretatur os. Ib., unde et Petrus; at. <lb/>
+            Andreæ, et Pelri. Ib., Gallis; at. Galatis, vel Galliis. <lb/>
+            Ib.. crucilixus... obiit; al. crucifixus est, lapidatusque <lb/>
+            oppetiit. Ib., requiescit ; al. add. cujus natalis esi Ka­ <lb/>
+            lendas Maias. Num. 132, Thomas , etc.; at. Thomas, <lb/>
+            qui interpretatur abyssus Christi, Didymus Græceno­ <lb/>
+            minatus. N. 133, ex Syra lingua suscipiens: al. Syra <lb/>
+            lingua suscepit, interpretatur filius suspendentis aquas. <lb/>
+            Ib., in sorte ; al. in sortem. Ib., conditur ; al. conditus <lb/>
+            est, cujus natalitium octavo Kalendas Septembri. cre­ <lb/>
+            ditur. N. 134, Matthæus ; al. Matthæus, qui interpre­ <lb/>
+            tatur danatus. Ib. electus, etc.; at. electus est, et in <lb/>
+            apostolatum translatus. N. 136, in Jerusalem; a!. add.
+            <milestone unit="PLSection" n="D"/><lb/>
+            hic duodecim tribubus, quæ sunt in dispersione gentium, <lb/>
+            epistolam scribit, qui dum in Jerusalem, Num. 137, <lb/>
+            frater ; al. add. qui interpretatur confessor. Ib., urbe ; <lb/>
+            at. urbe v Kalendas Novembris. N. 158, septuaginta ; <lb/>
+            al. septuaginta duobus. N. 139, Zelotes ; al. add. qui <lb/>
+            interpretatur zelus. Ib., Jerosolymorum ; al. pontifica­ <lb/>
+            lem in Jerusalem. N. 144, septuagesimo ; al. octogesi­ <lb/>
+            mo. N. 145, discipulus; al. secundus discipulus. N. 147, <lb/>
+            sejunctus, al. derelictus. N. 148, episcopus ; a!. epis­ <lb/>
+            copus :ancletus. Ib., Litrensium; al. Tharensium ; vel Ta­ <lb/>
+            listrensium. Ib., ethnico ; al. Atheniense. N. 149, spiri­ <lb/>
+            tualis; al. apostoli. Ib., prope; al. proprie; vel pro­ <lb/>
+            prio; forte, propius. N. 150 a Paulo apostolo ; at. a po­ <lb/>
+            pulo. Ib., instruendas Cretæ Ecclesias; al. instituendas <lb/>
+            Cretæ Ecelesias.</p>
+          <p>
+            <milestone unit="PLSection" n="A"/></p>
+          </div>
+
+<div n="4" subtype="section" type="textpart">
+<ab>
+            <title type="sub">AD PROŒMIA.</title>
+          </ab>
+          <p>Num. i. Testamenti, etc.; al. Testamenti in canone <lb/>
+            catholicæ Ecclesiæ tam juxta priorum vetustam traditio­ <lb/>
+            nem, quam posteriorum.N. 6, acciderunt ; al. accesse­ <lb/>
+            runt. N. 7, enumerat ; al. commemorat. N. 13, apos­ <lb/>
+            tolorum ; al. apostolorum a Luca conscripti. N. 20, or­ <lb/>
+            dinantur ; al. ordinantur ducentorum. N. 21, signantur ; <lb/>
+            at. add. profectiones quoque eorum usque in locum in <lb/>
+            quo sepultus est Moyses. N. 23, quoddam legis medi­ <lb/>
+            tatorium ; al. quemdam legis mediatorem. Ib., omnium ; <lb/>
+            a!. omnia quasi iterando continet. N. 26, commemo­ <lb/>
+            rant; at, memorantur. N. 29, ab eis, al. apud Hebræos. <lb/>
+            Ib., in duabus, etc.; at. in duas discissus est partes. <lb/>
+            N. 30, textus ; al. tempus. Num. 32, proferunt ; al. <lb/>
+            prophetaverunt. N. 33, existimantur ; al. existimant. <lb/>
+            N. 36, Salomon tria: al. Salomon nomina habuit et <lb/>
+            tria. N. 38, in Canticis ; at. in Cantica. N. 39, descri­ <lb/>
+            ptio; at. ædificatio. N. 44, solitudinem maris ; al. so­ <lb/>
+            litudines ejus, onus maris. Ib)., mutatur ;al, mutavit.
+            <milestone unit="PLSection" n="B"/><lb/>
+            N. 45. eversione; al. conversione. Ib., tentatio, etc.; <lb/>
+            at. tentationes declarantur, quæ venturæ os enduntur. <lb/>
+            N. 45, per vallem; al. per excidium vallis. Ib., ut sæcu­ <lb/>
+            li ; at. quod vestustates. Ib., convertantur ; al. conver­ <lb/>
+            tatur. Num. 4i, LXX ; al. LXXII. N. 50, perrigit ; al. tra­ <lb/>
+            didit etiam Jerusalem. N. 51, increpat ; al. increpatur. <lb/>
+            N. 52, quæque... vidit ; al. quoque non tantum prænun­ <lb/>
+            tiavit, sed etiam præsentem vidit. Ib., per quatuor, etc.; <lb/>
+            al. super quatuor regna ostensa. N.53, contuetur ; al. <lb/>
+            constituit. N. 57, reticeant ; al. recipiant. N. 59, ma­ <lb/>
+            nifestior ; al. manifestatio. N. 62, operosior ; ai. copio­ <lb/>
+            sior. N. 63, qui præceptorum, etc.; al. qui præcepta <lb/>
+            Dei custodire se mentiuntur. Num. G5, datæ, etc.; at. <lb/>
+            datæ legis non obedierunt Dei præceptis. lb., ignem; <lb/>
+            al. ignem veni mittere. lb. judicii ; a . supplicii. N. 66, <lb/>
+            tonitruum ; at. cælos. pII. 67, Christum, etc,; al. Chris­ <lb/>
+            tum non timuit occidere. Ib., sub Josia; at. sub Josa­ <lb/>
+            phat ; at. sub Ozia. N. 68, qui salutem, etc.; al. qui ad <lb/>
+            salutem gentium non tantum Christum advenire. N. 69, <lb/>
+            Uzia; al, Josia. N. 70, Sophonias; a!. Isaias. N. 76,
+            <milestone unit="PLSection" n="C"/><lb/>
+            roseum, etc.; a. sive mortem passionis suæ. Num. 77, <lb/>
+            sordibus carni ; at sordibus, vestimentis, id est, carne. <lb/>
+            Ib., positas, etc., al. posita quæ... significant. N. 79, <lb/>
+            mundo; at in Evangelio. N. 80, desolutionis, etc.; <lb/>
+            a!. quo solutionem et captivitatem populi prædixit. N. <lb/>
+            81, mittendum ; al. mittendum Jerusalem. Num. 86, <lb/>
+            processit; a!. egrediens. N. 88 , intelligentia ; al. ad <lb/>
+            speculandum. N. 92, Apostolus, etc.; al. Apostolus <lb/>
+            Epistolas prædicationis Græco perstrinxit stylo. N. 95, <lb/>
+            canonica ; al. catholicæ. N. 104,ardoribus ; at. doio­ <lb/>
+            ribus. N. 105, ab aliis; al. ab omnibus. N. 108,cum <lb/>
+            dracone ; al. contra draconem. N. 109, canticum ; al. <lb/>
+            ædificium.</p>
+          </div>
+
+<div n="5" subtype="section" type="textpart">
+<ab>
+            <title type="sub">AD GENESIN.</title>
+          </ab>
+          <p>PRÆF. Num. 3, et occulta ; al. vel occulta et abscura. <lb/>
+            Ib., ut præcedente, etc.; at. ut præcedentis historiæ <lb/>
+            fundamentum,</p>
+          <p>CAT. i. N. i, et carnales ; al. terram, id est, carnales. <lb/>
+            N. 4, conversione; al. confessione. eripiendum ; <lb/>
+            at. diripiendum. N. 10, sapientiæ ministrantes ; iI. <lb/>
+            scientiæ demonstrantes, N. 15, gradibus, al. sacramen-
+            <milestone unit="PLSection" n="D"/><lb/>
+            tis. N. 4 7, mandatr; al. mandati, experimentum pariter <lb/>
+            veritatis et erroris.</p>
+          <p>CAP. ii. N. I, insigniunt ; al. insinuant. N. 6, specie; <lb/>
+            a!. plebem. Quod fortasse vestigium est veræ lectionis <lb/>
+            latentis adhuc. N. 15, prophetiam. Grialius in lextu <lb/>
+            prophetam.I b.,invisibilem ; Albornoz. Cod., visibilem. <lb/>
+            N. 16, marcescentum ; at. arescentem.</p>
+          <p>CAP. III. N. 2, fluentis... verbo; al. fluentis, a quo <lb/>
+            origo est omninm rerum,qui sitientem Ecclesiam suam <lb/>
+            unicus irrigat verbo. N. 7, ait : Speciosus ; al. ait : <lb/>
+            Quis similis erit Deo inter filios Dei. Et iterum : Spe­ <lb/>
+            ciosus.</p>
+          <p>CAP. iv. N . 2, quæ media est; at. quæ in Ecclesia <lb/>
+            est. N. 4, oblectetur illa; at. delectetur illius. N. 7, <pb n="439"/>
+            
+            <milestone unit="PLSection" n="A"/><lb/>
+            cupiditas; al. calliditas. N. 9, obscuretur; a!. excaece­ <lb/>
+            tur.</p>
+          <p>CAP. v. N. i, arantur; a!. urantur. lb., mendacio­ <lb/>
+            rum; al. mandatorum. N. i, vivit; a!. se convertit. N. <lb/>
+            8, leonem, etc.; at. draconem diabolum, nec occulte <lb/>
+            insidiantem leonem Antichristum in ultimo aperte sæ­ <lb/>
+            vientem. lb., voluntas a!. voluptas. Ib., cum aliquam <lb/>
+            malam; a!. quæ cum dolore reluctaverat, ut faceret <lb/>
+            consuetudinem bonam, cum aliquam malam.</p>
+          <p>CAP. VI. N. 7, vox sanguinis; a!. vox sanguinis <lb/>
+            Christi. N. 8, in confessione; al. in confusione. N. 16, <lb/>
+            dispersionem; at. subjectionem. Ib., meruerint; ai. <lb/>
+            meruerunt, qui superbo regno dominum interfece­ <lb/>
+            runt.</p>
+          <p>CAP. VII. N. i, donantur; a!. dominantur. N. 3, <lb/>
+            jubetur, undique; a!. jubetur. sic Ecclesia de sanctis <lb/>
+            construitur, quadratum enim lignorum undique. N. 4, <lb/>
+            compage firmetur unitatis significatur; Grialius, <lb/>
+            compage unitatis significetur. N. 5, litterae T nume­ <lb/>
+            rus ; Grialius om. T. N. 7, legis autem cor; in Al-
+            <milestone unit="PLSection" n="B"/><lb/>
+            born. notatur, ex originali, lex autem cur. lb., <lb/>
+            tricenis; al. triginta; a!. trecentis. N. i?, quingentis... <lb/>
+            significatur. Alborn., quingentis transiit usque ad sex­ <lb/>
+            centos significant, id est, anni istius aetatis. N. 26, <lb/>
+            teterrimos; al. improbos, et peccatis teterrimos. N. <lb/>
+            34, in diluvio; ale in diluvio separati ab Ecclesia.</p>
+          <p>CAP. VIII. N. 4, intuentes; at. intrantes. N. 5, <lb/>
+            praeteritorum; ale peccatorum. Ib., prospectat; ale <lb/>
+            exspectat. N. 7, assertionis; a!. assensionis, vel ascen­ <lb/>
+            tionis. N. ii, impatientiae; al. insipientiæ.</p>
+          <p>CAP. IX. N. 3, confusione; al. et confessione.</p>
+          <p>CAP. XI. N. 2, quos ille; at. nisi quos ille. N. 6, <lb/>
+            nasciturum, etc.; Alborn. quod rusciturum Ecclesiæ <lb/>
+            habentis præputium benediceret in Abraham circumci­ <lb/>
+            sionis sacerdotium, signatum est.</p>
+          <p>CAP. XII. N. 9, considens; at. considentibus, quod <lb/>
+            melius videtur.</p>
+          <p>CAP. XIII. N. 4, parentum mutantur nomina; ale <lb/>
+            ubi parentes mutantur, et nomina.</p>
+          <p>CAP. XIV. N. 4, habitaverunt; al. prædicaverunt.
+            <milestone unit="PLSection" n="c"/><lb/>
+            N. 11, angore; at. rancore9 vel languore.</p>
+          <p>CAP. xv. N. 3, concremandi; al. concrematuri.</p>
+          <p>CAP. XVI. N. 2, scire volo; al. om., et forte me­ <lb/>
+            lius. N. 3, pulchritudinis; al. pulchritudini, quod <lb/>
+            magis placet. N. 7, omnes sancti; a!. addunt sicut <lb/>
+            ipse dixit, ita dici. lb., effabilius; a!. affabilibus.</p>
+          <p>CAP. XVII. N. 5, veterascerent; al. vesceretur. N. <lb/>
+            4. Judaica, etc.; Alborn. Judaicam purificationem <lb/>
+            significabatur defecturam, sive doctrinam eorum carna­ <lb/>
+            tem... clausam... damnatam.</p>
+          <p>CAP. XVIII. N. 2, et cum jam; at. et cum percuterel, <lb/>
+            et jam. N. 4, quae senecta; a!. qua senectute. N. 6, <lb/>
+            humilitatem; al. humanitatem. N. 7, impietalis; at. <lb/>
+            pietatis. N. 13, gemina, etc.; a!. geminam vitæ re­ <lb/>
+            quiem suscipit.</p>
+          <p>CAP. XIX. N. 1, subter femur meum; a!. super fe­ <lb/>
+            more meo.</p>
+          <p>CAP. XXI. N. 3, imo quid, etc.; al. imo quid con-
+            <milestone unit="PLSection" n="D"/><lb/>
+            venienter accommodatum est Abraham, et Isaac, ac pro­ <lb/>
+            pheta, etc.</p>
+          <p>CAP. XXII. N. 3. Paulus; a!. Paulus, et cæteri <lb/>
+            apostoli, vel doctores. N. 6, ingerunt; a!. demer­ <lb/>
+            gunt.</p>
+          <p>CAP. XXIII. N. 5, excellentissimæ; al. clementissi­ <lb/>
+            mæ. Ib., et religionis, etc.; al. et relicto lumine <lb/>
+            unitatis Deum neglectum significat. N. 11, ex ore, <lb/>
+            etc.; al. ex ea populi parte ignorantis benedicitur. lb., <lb/>
+            ecce, etc.; at. ecce benedictione promissa, repente <lb/>
+            major venit: expavit. Quod fortasse genuinum est.</p>
+          <p>CAP. XXIV. N. 5, sublimiter; al. humiliter. N. 7, <lb/>
+            mundati; a!. inundati.</p>
+          <p>CAP. XXV. N. 2, quarum; ad. quare, quod fortasse <lb/>
+            melius. N. 4, delectationem; Alborn., ex Isidoro, <lb/>
+            dilectionem. N. 8, furaberis; al. perjurabis. N. 11, <lb/>
+            tendendum; at. contradendum. N. 14, agendi; Al <lb/>
+            born., ex Isidoro, angi. N. 16, concitantur; at. co­ <lb/>
+            gitantur. N. 21, incerta; al. certamina. N. 28, latius,
+            <milestone unit="PLSection" n="A"/><lb/>
+            etc.; ale ratio non infametur, sed potius glorificetur. <lb/>
+            N. 30, grava. Alborn. infirma.</p>
+          <p>CAP. XXVIII. N. 4, obruatur; al. obsideatur; vel <lb/>
+            absorbeatur.</p>
+          <p>CAP. XXIX. N. 5, moeror; a!. memor; vel terror. <lb/>
+            N. 17, pervenire; al. pervenire cupiens.</p>
+          <p>CAP. xxx. N. 7, decoratam ; II. deauratam. N. 18, <lb/>
+            exprimitur, induiturque ; a!. imprimitur, induitque. <lb/>
+            N. 25, lavat faciem, etc.; Alborn, lavit faciem suam <lb/>
+            post fletum, lavit et Christus, ubi baptizatus est.</p>
+          <p>CAP. XXXI. N. 1, dicente; a!. benedicente. N. 5, <lb/>
+            ferre; al. ostendisse. N. 8, gesta, ipso; Alborn. <lb/>
+            gesta, et ideo in præteritum non est referendum, ipso. <lb/>
+            N. 21, veniant, quae reposita sunt ei; at. vaniat, qui <lb/>
+            mittendus est. N. 27, austeritatem; a!. auctoritatem. <lb/>
+            N. 28, comminuendo; a!. comedendo. N. 40, contin­ <lb/>
+            gere; a!. constringere. N. 55, excujus ore; Alborn. <lb/>
+            ex cujus femore. N. 64, convertetur; ale cum vene­ <lb/>
+            rint.</p>
+          <p>
+            <milestone unit="PLSection" n="B"/></p>
+          </div>
+
+<div n="6" subtype="section" type="textpart">
+<ab>
+            <title type="sub">IN EXODUM.</title>
+          </ab>
+          <p>CAP. II. N. i, attulisset; al. sustulisset.</p>
+          <p>CAP. IV. N. i, prævaleat; a!. prævaleret. In Grialii <lb/>
+            textu mendum prævalat.</p>
+          <p>CAP. VI. N. i, ab Ægyptio injuriam; a!. ab Ægypto <lb/>
+            liberavit, injuriam.</p>
+          <p>CAP. VIII. N. 4, volvitur; ale movetur.</p>
+          <p>CAP. XI. N. 1, proficisci; a!, producere. N. 3, pla­ <lb/>
+            tere procurant; a!. placare curant.</p>
+          <p>CAP. XII. N. 3, mortem carnis; a!. mortem crucis.</p>
+          <p>CAP XIV. N. 1, erratica; al. hæretica. N. 3, im­ <lb/>
+            portunip : a!. inopportunis. N. 5, cessaverunt; al. ces­ <lb/>
+            serunt; vel accesserunt. N. 13, et ignem; at. et ignem, <lb/>
+            quo debebat depaaci spinas et tribulos.</p>
+          <p>CAP. xv. N. 3, efferri; a!. offerri. Ib., quae... uni­ <lb/>
+            tate; a!. qui... veritate.</p>
+          <p>CAP. XVII. N. 2, versemur; ale vescimur. N. 3, <lb/>
+            prioribus; a!. pecoribus.</p>
+          <p>CAP. xx. N. 3, perfruentes, etc.; at. fruentes pro­
+            <milestone unit="PLSection" n="c"/><lb/>
+            missam patriam.</p>
+          <p>CAP. XXIII. N. i, praedicationes d. missae; at. <lb/>
+            prædicatores d. missi. N. 3, corruptibiles; ale incor­ <lb/>
+            ruptibile.</p>
+          <p>CAP. XXIV. N. I, est scripta ; a!. scripta occidit.</p>
+          <p>CAP. xxv. N. i, extendit; al. extollit; vel os­ <lb/>
+            tendit.</p>
+          <p>CAP. XXVI. N. 2, eo suggerente; a!. Evangelio <lb/>
+            suggerente.</p>
+          <p>CAP. XXVIII. N. 4, dixit; Alborn. texit.</p>
+          <p>CAP. xx IX. N. i, innocentiæ ; a!. ignorantiæ. N. 4, <lb/>
+            diebus, etc.; a!. diebus non est nuntiata operum san­ <lb/>
+            ctificatio. N. 9, quibus parcere; al. quomodo aliis <lb/>
+            præstare.</p>
+          <p>CAP. XXXI. N. i, insensibilitatem; al. insensua­ <lb/>
+            litatem.</p>
+          <p>CAP. XXXIV. N. i, inseparabilem; at. insecabilem.</p>
+          <p>CAP. XXXVI. N. 4, signacula; at. singula.</p>
+          <p>
+            <milestone unit="PLSection" n="D"/>CAP. XXXVII. N. 2, et perfectionis percipimus; at. <lb/>
+            et bonæ perfectionis donatur.</p>
+          <p>CAP. XL. N. i, ad instar priorum iteratim; al. in­ <lb/>
+            star priorum rursus.</p>
+          <p>CAP. XLII. N. 2, proficiat; a!. perferatur; vel <lb/>
+            proferatur. lb., indefessa; at. indivisa.</p>
+          <p>CAP. XLVI. N. i, jam porro, etc.; at. erat porro <lb/>
+            propitiatorium.... positum, id est, ipse Christus, etc.</p>
+          <p>CAP. XLIX. N. i, ramorum; al. calamorum. N. 3, <lb/>
+            accenditur; at. ostenditur.</p>
+          <p>CAP. LIII. N. i, et legis Decalogum siguificent; at. <lb/>
+            significentque fideles populos per complementum man­ <lb/>
+            da'orum legis Decalogo servientes.</p>
+          <p>CAp. nIV. N. i. sanctos..... ostenderat; at. perfe­ <lb/>
+            ctionem legis tenentes imaginati sunt.</p>
+          <p>CAP. LV. N. 2, habere sancta, etc.; a!. sunt, id <lb/>
+            est, sancta conversatio esse potest.</p>
+          <p>CAP. LVI. N. i, tum præterea; Albori. thus præ­ <lb/>
+            terea. N. 3, quod vero, etc.; al. quod vero in orna- <pb n="441"/>
+            
+            <milestone unit="PLSection" n="A"/><lb/>
+            mento tabernaculi quæ. N. 7, carnis; ale charitatis.. <lb/>
+            N. 9, crateres; at. cathedræ.</p>
+          <p>CAP. LIX. N. 3, induitur. castitatem corporis; a!. <lb/>
+            induit, castitatem carnis, N. 4, muniuntur; al. tenen­ <lb/>
+            tur. N. 10, aereo colore; Alborn. ærea claritate. N. <lb/>
+            14, eruditur; al. enutritur. lb., humilitatem ; al. <lb/>
+            humilitatem et castimoniam.</p>
+          </div>
+
+<div n="7" subtype="section" type="textpart">
+<ab>
+            <title type="sub">IN LEVITICUM.</title>
+          </ab>
+          <p>CAP. I. N. 2, damnaret: Alborn. dominaret. N. 3, <lb/>
+            retinemus; al. ostendimus.</p>
+          <p>CAP. II. N. 1 , regnum ; ale Testamentum et <lb/>
+            regnum.</p>
+          <p>CAP. VI. N. 2, perdomuit; a!. perdotavit. N. 4, <lb/>
+            tertium; at. tertium ex persona Patris. lb., sociatam ; <lb/>
+            a!. sociatam ex persona Patris.</p>
+          <p>CAP. IX. N. 7, suem; at. porcum suemque. N. 8, <lb/>
+            mentium ; a!. corruptionis.</p>
+          <p>CAP. XI. N. 12, macram; al. tetram; vel aerem.</p>
+          <p>CAP. III. N. i, consecratæ; al. unctæ. N. 8, legis,
+            <milestone unit="PLSection" n="B"/><lb/>
+            al. infidelitatis legis.</p>
+          <p>CAP. XIII. N. i, insignes; ale debiles.</p>
+          <p>CAP. XVI. N. 6, desectum, etc.; al. desectis, vel <lb/>
+            amputatis testiculis.</p>
+          </div>
+
+<div n="8" subtype="section" type="textpart">
+<ab>
+            <title type="sub">IN NUMEROS.</title>
+          </ab>
+          <p>CAP. II. N. i, ulteriora; a!. interiora.</p>
+          <p>CAP. XI. N. i, dissolutio; ale desolatio. N. 2, immi­ <lb/>
+            nutio; a!. immutatio.</p>
+          <p>CAP. XII. N. 5, colluvie; al. passione. N. 9, expri­ <lb/>
+            mitur; a!. reprimitur.</p>
+          <p>CAP. XIII. N. 3, omnes donum; a!. eos bonum.</p>
+          <p>CAP. XIV. N. i, Christo, etc.; Alborn. Christi Sal­ <lb/>
+            vatoris Ecclesiæ congregatæ ex gentibus.</p>
+          <p>CAP. xv. N. 1, calens; al. candens. N. 3, impe­ <lb/>
+            tum; a!. populum. N. 4, florem profert, etc.; at. <lb/>
+            flores præfert, et folium. N. 13, formaliter ; at. figu­ <lb/>
+            raliter. N. 16, venitque; al. venitque inter vivos et <lb/>
+            mortuos. N. 18, ipsum florem ; II. ipsum florentem. <lb/>
+            N. 24, baptismus; a!. martyrium. IV. 29, combustæ; <lb/>
+            al. combustæ, et hyssopi.</p>
+          <p>
+            <milestone unit="PLSection" n="A"/>CAP. xxv. N. 1, in Methca; al. in Methca, in excel­ <lb/>
+            sum patris admiratus est.</p>
+          <p>CAP. XXXII. IV. i, non ponuntur; a!. componuntur.</p>
+          <p>CAP. XXXIII. N. 4, effecta est vita; al. effusa est, <lb/>
+            vitam. N. 5, habemus, etc.; at. amenus enim de hac <lb/>
+            re præclaram vitam, et fidelissimam vocem. N. G, iu <lb/>
+            cruce, a I. in carne.</p>
+          <p>CAP. XXXIV. N. 2, Israel et in locum; al. Jesus in <lb/>
+            doMum.</p>
+          <p>CAP. XXXVI. N. 3, humilitatem; al. humanitatem.</p>
+          <p>CAP. XLII. N. 4, prohibuit; at. redarguit. N. 15, <lb/>
+            repromissionis; at. remissionis. lb., quia quos, etc.; <lb/>
+            al. quia post mundi implicamenta occupati.</p>
+          </div>
+
+<div n="9" subtype="section" type="textpart">
+<ab>
+            <title type="sub">IN JOSUE.</title>
+          </ab>
+          <p>CAP. XI. N. i, ministrant; ale ministrant, et ser­ <lb/>
+            viunt, et aliquid veritatis impendunt ad ornatum Eccle­ <lb/>
+            siæ, etc.</p>
+          <p>CAP. XVIII. N. 3, retinentur; a!. nos retinent. Ib.,
+            <milestone unit="PLSection" n="B"/><lb/>
+            elatio; a, elevatio.</p>
+          </div>
+
+<div n="10" subtype="section" type="textpart">
+<ab>
+            <title type="sub">IN LIBRUM JUDICUM.</title>
+          </ab>
+          <p>CAP. II. N. 3, et brevi; at. et suo. N. 4, Dominus, <lb/>
+            etc.; a!. Dominus Deus Israel : Et tu ascende. N. 5, <lb/>
+            palo; at. clavo vel palo.</p>
+          <p>CAP. III. N. 1, deduceret; a!. reduceret. N. 3, exu­ <lb/>
+            reret; al. exueret.</p>
+          <p>CAP. IV. N. 3, in manifestatione. etc.; cum mani­ <lb/>
+            festationem Christi totus orbis habeat, illa vacuata <lb/>
+            est.</p>
+          <p>CAP. v. N. 5, circuiens; al. circumiens. N. 9, a <lb/>
+            bellica intentione; al. ad bella interdictione. N. 14, <lb/>
+            prosternerent; at. præservarent.</p>
+          <p>CAP. VI. N. 1, utrum; a!. si. N. 8, posuit legem; <lb/>
+            Alborn. plantavit vineam. N. 9, vitem autem, etc.; <lb/>
+            Alborn. vitis autem Salvatoris nostri typum figurat, <lb/>
+            ut Evangelium dicit.</p>
+          <p>CAP. VIII. N. 5, reges ipsi; al. leges ipsæ..</p>
+          <p>CAP. IX. N. 2, ad Dominum; al. a Domino.</p>
+        </div>
+    </div>
+        </body></text></TEI>

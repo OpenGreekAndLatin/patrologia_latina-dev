@@ -1,0 +1,1165 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title>Patrologiae Cursus Completus. Series Latina (PL)</title> 
+        <sponsor>University of Leipzig</sponsor>
+        <funder>European Social Fund Saxony</funder>
+        <principal>Gregory Crane</principal>
+        <respStmt>
+          <persName xml:id="Jouve">Jouve</persName>
+          <resp>OCR-ed, corrected and encoded the text</resp>
+        </respStmt>
+        <respStmt>
+          <persName>Greta Franzini</persName>
+          <resp>Project Manager (University of Leipzig)</resp>
+        </respStmt>
+        <respStmt>
+          <persName>Simona Stoyanova</persName>
+          <resp>Project Assistant (University of Leipzig)</resp>
+        </respStmt>
+        <respStmt>
+          <persName>Bruce Robertson</persName>
+          <resp>Technical Advisor (Mount Allison University)</resp>
+        </respStmt>
+      </titleStmt>
+      
+      <publicationStmt>
+        <authority>University of Leipzig</authority>
+        <idno type="filename">PL83.xml</idno>
+        <availability>
+          <licence target="https://creativecommons.org/licenses/by-sa/4.0/">Available under a Creative Commons Attribution-ShareAlike 4.0 International License</licence>
+        </availability>
+        <date>2014</date>
+        <publisher>University of Leipzig</publisher>
+        <pubPlace>Germany</pubPlace>
+      </publicationStmt>
+      
+      <sourceDesc>
+        <listBibl xml:lang="la">
+          <biblStruct>
+            <monogr>
+              <editor>
+                <persName>
+                  <name xml:lang="fr">Jacques Paul Migne</name>
+                </persName>
+              </editor> 
+              <author ref="urn:cite:perseus:author.771">Isidorus Hispalensis</author>
+              <title>Differentiarum Sive De Proprietate Sermonum Libri Duo</title>
+              <title>Allegoriae Quaedam Sacrae Scripturae</title>
+              <title>De Ortu Et Obitu Patrum Qui In Scriptura Laudibus Efferuntur</title>
+              <title>In Libros Veteris Ac Novi Testamenti Proemia</title>
+              <title>Liber Numerorum Qui In Sanctis Scripturis Occurrunt</title>
+              <title>De Veteri Et Novo Testamento Quaestiones</title>
+              <title>Mysticorum Expositiones Sacramentorum Seu Quaestiones In Vetus Testamentum</title>
+              <title>Appendix Ad Libros Regum</title>
+              <title>De Fide Catholica Ex Veteri Et Novo Testamento Contra Judeos</title>
+              <title>Sententiarum Libri Tres</title>
+              <title>De Ecclesiasticis Officiis</title>
+              <title>Synonyma De Lamentatione Animae Peccatricis</title>
+              <title>Regula Monachorum</title>
+              <title>Epistolae</title>
+              <title>De Ordine Creaturarum Liber</title>
+              <title>De Natura Rerum Ad Sisebestum Regem Liber</title>
+              <title>Chronicon</title>
+              <title>Historia De Regibus Gothorum. Wandalorum Et Suevorum</title>
+              <title>De Viris Illustribus Liber</title>
+              <title>Carmina [Ascripta]</title>
+              <title>Chronica Regum Visigothorum (Incertus)</title>
+              <title>Expositio In Canticum Canticorum Salomonis [Incertus]</title>
+              <title>De Conflictu Vitiorum Et Virtutum (Incertus)</title>
+              <title>Expositio In Missa (Incertus)</title>
+              <title>Sententiarum Liber Quartus (Incertus)</title>
+              <title>Exhortatio Humilitatis (Incertus)</title>
+              <title>Testimonia Divinae Scripturae Et Patrum (Incertus)</title>
+              <title>Sermones (Incertus)</title>
+              <title>De Ecclesiasticis Dogmatibus (Incertus)</title>
+              <title>Sentantiae Differentiarum De Activa Vita Atque Contemplativa [Incertus]</title>
+              <title>Exhortatio Poenitendi Cum Consolatione Et Misericordia Dei [Incertus]</title>
+              <title>Lamentum Poenitantiae (Incertus)</title>
+              <title>Oratio Contra Insidias Diaboli (Incertus)</title>
+              <title>Liber De Ortu Et Obitu Patrum Incertus</title>
+              <title>Liber De Numeris (Incertus)</title>
+              <title>Glossae in Sacram Scripturam</title>
+              <title>Differentiarum, sive de Proprietate Sermonum, Liber</title>
+              <title>Liber Glossarum</title>
+              <imprint>
+                <publisher>Garnier</publisher>
+                <pubPlace>Paris</pubPlace>
+                <date>1850</date>
+              </imprint>
+              <biblScope unit="volume">83</biblScope>
+            </monogr>
+            <monogr>
+              <author>Auctor Incertus</author>
+              <title>Archiepiscopi Toletani Veteres</title>
+              <title>Chronologia Gothicorum Regum (Ex Codice Regio Vaticano)</title>
+              <imprint>
+                <publisher>Garnier</publisher>
+                <pubPlace>Paris</pubPlace>
+                <date>1850</date>
+              </imprint>
+              <biblScope unit="volume">83</biblScope>
+            </monogr>
+            <ref target="http://hdl.handle.net/2027/pst.000020950231">HathiTrust</ref>
+            
+          </biblStruct>
+        </listBibl>
+      </sourceDesc>
+      
+    </fileDesc>
+    <encodingDesc>
+      <p>The following text is encoded in accordance with EpiDoc standards and with the
+        CTS/CITE Architecture.</p>
+      <refsDecl n="CTS">
+        <cRefPattern n="no citable units founds" matchPattern="(.+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div/tei:div[@n='$1'])"/>
+      </refsDecl>
+    </encodingDesc>
+    
+    <profileDesc>
+      <langUsage>
+        <language ident="la">Latin</language>
+      </langUsage>
+    </profileDesc>
+    
+</teiHeader>
+  <text>
+    <body><div type="edition" n="urn:cts:latinLit:tmp1442.tmp1442.opp-lat1">
+          <ab>
+            <title type="sub">APPENDIX XVIII.</title>
+          </ab>
+          <ab>
+            <title type="sub">ORATIO PRO CURREPTIUNE VITÆ. FLENDA SEMPER PECCATA a.</title>
+          </ab>
+          <p>
+            <milestone unit="PLSection" n="A"/>1. Deus omnium mirabilium auctor, misericor­ <lb/>
+            diarum Pater, et consolationis, in tribulatione refri­ <lb/>
+            gerium , cujns gratia præventus homo sua peccata <lb/>
+            considerat, plangit, et emendat; cujus respectu et <lb/>
+            munere incipit vel bonum facere , vitare malum , et <lb/>
+            refutare, sequi justitiam , et declinare ali iniquitate, <lb/>
+            desiderare perennia , et horrescere peritura, confi­ <lb/>
+            teri misericordias tuas, et abnegare impretates suas; <lb/>
+            quia nihil proprium habet homo, sed conversio et <lb/>
+            profectus illius donum tuum est; nec a se quisquam <lb/>
+            potest corrigi, sed a te ; dicente propheta : Scio, <lb/>
+            Domine, quia non est hominis via ejus, nec viri es! ut <lb/>
+            ambulet, et dirigat gressus suos (Jerem. x, 23) ; et <lb/>
+            Apostolus ait : Non volentis, neque currentis, sed mi­ <lb/>
+            serantis et Dei (Rum. ix, 16); et ipse dicis : Mise­ <lb/>
+            rebor cui voluero, el clemens ero, qui [Vulg., in quem] <lb/>
+            mihi placuerit (Exod. XXXIII, 19).</p>
+          <p>2. Adesto igitur supplicationibus meis , intende <lb/>
+            deprecationem meam. Et quod expeto perfice pro-
+            <milestone unit="PLSection" n="B"/><lb/>
+            pitius, et intende placatus. Tu enim abstraxisti me <lb/>
+            de laqueis muudi, et eduxisti me de retiaculo pecca­ <lb/>
+            torum. Tu reserasti os meum ad confitendum tibi, <lb/>
+            cum essem peccatis omnibus obligatus ; et fecisti <lb/>
+            intelligere me quomodo aut pro quibus obsecrarem <lb/>
+            te. Posuisti liduciam in corde meo postulandi ne­ <lb/>
+            cessaria animæ meæ, quoniam (ut propheta d xit) : <lb/>
+            Volens misericordiam reverteris, el misereris, oblivi­ <lb/>
+            scens mala hominum, et peccata benigni ate pertrans­ <lb/>
+            iens (Mich. VII, 18, 19); et ipse dixisti; Petite, et <lb/>
+            accipietis; quærite, et invenietis ; pulsate, et aperietur <lb/>
+            vobis (Matth. vn, 7).</p>
+          <p>3. Qui enim peti se et pulsari licentiam tribuit, <lb/>
+            dare siue dubio et aperire paratus est; nec est ava-
+            <milestone unit="PLSection" n="A"/><lb/>
+            rus ad impertiendum, qui petere clamat non haben­ <lb/>
+            tibus; ac per hoc ipse se postea poenitebit egere, <lb/>
+            qui ad dandum sihi a dispensatore congruentia re­ <lb/>
+            media modo neglexerit impetrare. Ideo silere ne­ <lb/>
+            queo tactu gratie supervenientis admonitus. Nam <lb/>
+            fateor, Domine, quod indignum me prævenit mise­ <lb/>
+            ricordia tua , et dum grabato multorum peccatorum <lb/>
+            sarculi hujus mortifero quodam jacerem sopore de­ <lb/>
+            pressus, misisti gratiam tuam cum flagellorum stre­ <lb/>
+            pitu suscitare dammabili torpentem segnitia, ut aper­ <lb/>
+            lis oculis expergefactus, dum in me nihil victus boni <lb/>
+            operis recognocerem, venirem ad te, vitae petiturus <lb/>
+            alimoniam , ne me egestas superveniens in novissi­ <lb/>
+            simo præfocaret.</p>
+          <p>4. Idetreo consurgens ad te lamentationum cla­ <lb/>
+            moribus prece multifaria 359 pietatis tuæ pulsans <lb/>
+            anditus, per alphabetum , quod præmisi, singulas <lb/>
+            ejus litteras rigans [Forte, rigo] flumine lacryma­ <lb/>
+            rum. Compulit enim me pavor jud cii tui flere diu-
+            <milestone unit="PLSection" n="B"/><lb/>
+            tius, et gratia tua f cit fiducialiter exorare, credens <lb/>
+            quia in te Deo meo transgrediar murum omnium <lb/>
+            iniquitatum mearum , quæ circumdederunt me, at­ <lb/>
+            que, præceptus angustiarum mearum afflictionibus, <lb/>
+            pertranseam ad amplitudinem latissimæ jucundita­ <lb/>
+            lis, scilicet non hujus saeculi, sed futuri. Hanc ob <lb/>
+            rem non desinam exorare te, donec miserearis mei, <lb/>
+            et salves animam meam ; quæ confitetur tibi hodie in <lb/>
+            convalle sita plorationis, quia introduxisti me; quia <lb/>
+            non meo merito, sed tuo dono ad arctissimæ pœ­ <lb/>
+            nitentiæ claustra perveni, et in fontem lacryma <lb/>
+            rum illius ingressus sum , varias nequitiæ macu­ <lb/>
+            las lavaturus, quæ nondum me petente, sed te <lb/>
+            præstante, mihi collata est , tuaque misericordia <note type="footnote"> * Vide Isidoriana, cap. 81, n. S9. </note> <pb n="1263"/>
+            
+            <milestone unit="PLSection" n="A"/><lb/>
+            procurante, (cum) necdum eam quærerem, inveni.</p>
+          <p>5. Ecce jam nn minimo tempore in æstu affli­ <lb/>
+            ctionis ejus desulo subdistrictionis ejus regulal aboro. <lb/>
+            Cum ipsa contende as quotidiana examinatione dis­ <lb/>
+            cutior, pressura ilius magnos mihi gentius trahit, <lb/>
+            et flere me quia deliquerim, magis magisque compet- <lb/>
+            Iit et gratias tibi referre jugiter docet pro patientia <lb/>
+            tua magna, qua diutius sustinuisti me lascivientem, <lb/>
+            et servasti tempus correction s, quo relicta prævari­ <lb/>
+            cationee converterer, ne peccatum incessaanter perse­ <lb/>
+            quens, in :ternum cum peccato perirem ; et nunc <lb/>
+            miosericorditer erudiens me in virga tua, oper aris sa­ <lb/>
+            lutem meam, subtrabensde corruptione vitam meam, <lb/>
+            et animam de interitu.ut scirem electionem bono­ <lb/>
+            rum iniqua praetergredi.</p>
+          <p>6. Et hoc confidens spero, quia sicut induxisti pœ­ <lb/>
+            nitentiæ tribulationes,ita et indulgentiae miseratio­ <lb/>
+            nes im ertias. Non solum antem, sed et benedico no­ <lb/>
+            men sanctum tuum, quia distu ,isti eventum mortis,
+            <milestone unit="PLSection" n="B"/><lb/>
+            ne in peccati torpore ad pœnam sempiternam desi­ <lb/>
+            perem ; et subvenisti mihi de longe provdens reme­ <lb/>
+            dium curationis mea, eo quod ulcere pestiferolace­ <lb/>
+            ratam animam meam hujus pœnitentiæ medicamini­ <lb/>
+            bus tradideris sanandam. Bona enim mihi est stimu­ <lb/>
+            latio illius, quæ offensiones præteritas fugere docet, <lb/>
+            et futuras cavere me præmonet. L ve reputo jugum <lb/>
+            oneris ejus. quia graviores tollit cruciatus quam in­ <lb/>
+            ferat, et dum temporaliter premit, æter naliter redimit.</p>
+          <p>7. Amabilia sunt mihi vincula illIUs, quænunc in <lb/>
+            parvo ligant, ut abs lutum in perpetuum l aciant. Pla­ <lb/>
+            citae sunt extetiores sordes illius, eo quod earumdem <lb/>
+            scabrositate inter ins anima prac ulis emundetur. Et <lb/>
+            suavior nunc mihi est ejus amaritudo, quati dulcedo <lb/>
+            luxuriosæ vitæ in præterito, quia per i tam vitam <lb/>
+            anima præfocatur, per istam veroab hujusmodimorte <lb/>
+            resurgitur. Quod illa sordidavit, ista dilu v. Quod <lb/>
+            cruentav t illa, medetur et sanal hæc. Si e aim noxium <lb/>
+            exterius cernerem in corpore vulnus, aut aliquem <lb/>
+            intrisecus sentirem viscerum dotorem, ocius omnino
+            <milestone unit="PLSection" n="C"/><lb/>
+            ad n edicum currerem, secandam cum doloribus ferro <lb/>
+            trado, rem carnem, et ignito cremandam cauterio, at­ <lb/>
+            que causa reparandæ salutis amarissima bibere non <lb/>
+            recusarem antidota.</p>
+          <p>8. Cur ergo ista moleste feram, per quæ anima <lb/>
+            de sempiteno interitu 360 saluti perpetuæ restau­ <lb/>
+            ratur? Quid retribuamtibi, Ueus piissime, amator <lb/>
+            hominum et clemens justficator peccatorum, prohis <lb/>
+            quæ præstitisti In. hi ? Calicem salutis accipiam, no­ <lb/>
+            men tuum obinde cum laudibus in vocabo ; III viam <lb/>
+            vitæ reduxisti gressus meos, grates tibi referte non <lb/>
+            desinam. Hæc est enim via per quam de inferis ad <lb/>
+            cœlum recurritur, de peccaload justitiam reditur,de <lb/>
+            offensione ad tuam gratiam revocatur; et ut in brevi <lb/>
+            cone ludam, omnis ruinæ hæc est reparatio. Hæc de­ <lb/>
+            nique, orante Publicano in templo, superai justitias <lb/>
+            Pharisæ, in hac reddit justiorem ; hæc Lazarum per <lb/>
+            flazella temporalia ad requiem deduxit aternam.</p>
+          <p>9. Tilii, Domine, laus et gloria, qui percutis et sa­
+            <milestone unit="PLSection" n="D"/><lb/>
+            nas, vulneras et mederis. D s dolorem transitorium, <lb/>
+            et post paululum æterna jucunditate refrigeras,quo­ <lb/>
+            niam justus, et pius es: justus, quia nequaquam de­ <lb/>
+            linquenti parns; pius autem, qua pœnitentimiseri­ <lb/>
+            cordiam non subti ahis : item justus et pius es, quia <lb/>
+            prius hichominem a peccatis emendas, et postea ab <lb/>
+            æterno supplicio liberas. Peccatori enim, ut prætuli, <lb/>
+            nonparcis, dum eum aut flagello temporali ad pur­ <lb/>
+            gationem feris, aut judicio æterno <unclear>purieudum</unclear> relin­ <lb/>
+            quis, aut ipse in se homo pœnitendo punit quod male <lb/>
+            commisit, ac permde est quod delinquenti parcere <lb/>
+            nequaquam diceris. Nullum enim peccatum impuni­ <lb/>
+            tum relinquipotest, quoniam pœnam peccata me­ <lb/>
+            rentur; sed aut punit hoc homo, et liberas eum tu; <lb/>
+            aut si ille distulerit, punis tu, juxta quod dicit Aposto­ <lb/>
+            tus : Si nos ipsos judicaremus, non utique judicaremur. <lb/>
+            Quasi dicerert : Si nos in hoc sæculo a peccato discer­ <lb/>
+            neremus, pœna nos peccati futura non plecteret.</p>
+          <p>10. Necesse est ergo homini puoire peccatum, ut
+            <milestone unit="PLSection" n="A"/><lb/>
+            æternum non incurrat supplicium ;nam a punitione <lb/>
+            pœnitentianomen accepit, quasi punitentia, dum ipse <lb/>
+            homo poenitendo punit quod male admisit. NacH nihil <lb/>
+            aluid agunt quos veraciter pœniter, nisi ul quod male <lb/>
+            fecerint impuaitum esse non sinant. Eo quippe modo <lb/>
+            sibi non parcentibus tu parcis, cuj usaltum justum­ <lb/>
+            que judicium nullus contemptor evadit. Perfecta est <lb/>
+            autem pænitentiæ, præterita delere, et futura non <lb/>
+            admittere. Hæc secundum similitudinemfoliis est, <lb/>
+            ut si forte, impugnantediabolo. aliquod peccatum <lb/>
+            irreperit, hujus sa isfactione purgetur. Satisfactio <lb/>
+            autem est causas peccatorum et suggestiones exclu­ <lb/>
+            dere, et ultra peccatum non iterare. Ipsa autem poe­ <lb/>
+            nitentiajuxta qualitatem delictorum agenda est; nam <lb/>
+            sicut levia peccata occulta oratione delentur, ita gra­ <lb/>
+            via co ram Ecclesia per pœnitentiam et satisfactionem <lb/>
+            remittuntur.</p>
+          <p>11. Unde qui pœnitentiæ satisfactio judicio tuo, <lb/>
+            non humano pensatur, el occulta est indulgentiæ tuæ
+            <milestone unit="PLSection" n="B"/><lb/>
+            miseratio, fl re sine intermissione necesse esi. Nec <lb/>
+            unquam de peccalo securitatem hahere pœnitentem <lb/>
+            oportet, quia inimica illius hæc est; parturit enim illi <lb/>
+            negligentiam, et negligentia saepe insollicitos ad vitia <lb/>
+            transacta reducit, sed tantum debet esse promptus <lb/>
+            ad pœnitendum, quantum et pronus ad peccandum <lb/>
+            exstitii, tanttoque sublimius per humilitatem prolicere, <lb/>
+            quanto iiferius per elationem noscitur prolapsisse ; <lb/>
+            et non solum plangere quia malum quod 36 l non <lb/>
+            debud fecit, sed etiam quia bonum non gessit quod <lb/>
+            debuit. Cautissimum eniin hæc res, non inertem jus­ <lb/>
+            tificat operarium ; pœnitentia enim vera in omni <lb/>
+            sancto opere sollicitius anxiatur.</p>
+          <p>12. Non habet omnino risus, fabulas vanas non re­ <lb/>
+            cipit, neque desideriis inqumatur, factisque proter­ <lb/>
+            vis; terrena non concupiscit, cœlestia desiderat, de <lb/>
+            fine suo cogitat, judicium futurum semper inten­ <lb/>
+            dit, et qualiter curati Deo digne appareat, hoc quo­ <lb/>
+            tidie sibi procurat ; soli Deo mili at, in nullis mun­ <lb/>
+            di negotiis invelvitur. In vigilis et orationibus fre-
+            <milestone unit="PLSection" n="C"/><lb/>
+            quentissima est, in j juniis exercitata, in cibo et potu <lb/>
+            moderata, in labore, et lectione assidua, in charitate <lb/>
+            perennis, in casititate perpetua, in sermone verissi­ <lb/>
+            ma, in juramento continens, benigna est, et patiens, <lb/>
+            invidia non succenditur, ira non superatur, cavet <lb/>
+            jactantiam, humilitatem amat, contumeliam non re­ <lb/>
+            pendit, odit avaritiam , fugit vanam gloriam, super­ <lb/>
+            biam detestatur, gaudia respuit, gemittus, suspiria) , <lb/>
+            et tribulationes amplectitur, sciens quia misericor­ <lb/>
+            dia tua non negligentibus, neque ridentibus coice­ <lb/>
+            dilur; sed afflictis et contritis corde dunatur, sicut <lb/>
+            ipse ais : Beali, qui lugent. quoniam ipsi consolabun­ <lb/>
+            tur ( Matth. v, 5). Et iterum : Væ vobis, qui nunc <lb/>
+            ridens , quoniam lugebitis, et flebilis (Jac. IV, 9, 10). <lb/>
+            EtApostolus : Miseri, inquit, estote, et lugete, et plu­ <lb/>
+            rate ; risus vester in luctum converietur [ V ulg., conver­ <lb/>
+            tatur], el gaudium in mærorem. Humiliumini ante Do­ <lb/>
+            minum [Vulg., in conspectu Dom ni], et exaltabit vos.</p>
+          <p>15. Certum sane est quod omnis culpa fletu resol-
+            <milestone unit="PLSection" n="D"/><lb/>
+            vitur, si renovata morum pravitate , tramacta mali­ <lb/>
+            lia non repetatur. Nani non sufficit a malo discede­ <lb/>
+            re, nisi subsequatur bonum etiam operari; sicut <lb/>
+            scriptum est : Declina a malo, et fac bonum (Psalm. <lb/>
+            xxx VI, 27). Et alibi : Quiescite agere perverse, discite <lb/>
+            benefacere (Isai. I, 16); quatenus peccato satisfactio <lb/>
+            pœnitudinis opposita I simulque præterita malitia, <lb/>
+            succedente honitate cooperta et obvoluta, pereat, et <lb/>
+            minor inventa mortificetur. Quamobrem quia per <lb/>
+            satisfactionem fletus lapsa rursum crigitur anima, <lb/>
+            et hujuscemodi lavacro nitoris pristini recipit digni­ <lb/>
+            tatem, expedit mihi augere fletus, et celebres facere <lb/>
+            lacrymas super crebro repetitas iui quitates meas, <lb/>
+            quas innumerabiliter frequentavi. Non enim mihi <lb/>
+            plorasse sufficere puto juxta copiam deliciorum ; <lb/>
+            plangam ob huc assidue in amaritudine delicta mea, <lb/>
+            si forte tibi placeat usquequaque mundare me ab it <lb/>
+            lis. Utinam mei capitis in cruorem latices verteren­ <lb/>
+            tur, et pro lacrymis sanguimen funderem ; ut cru- <pb n="1265"/>
+            
+            <milestone unit="PLSection" n="A"/><lb/>
+            Jela peccata erudelibus lamentis abstergerem, qui­ <lb/>
+            bus me olim ignava fatuitate nequiter vulneravi.</p>
+          <p>14. Immensis idcirco tædiis satagens evertimur <lb/>
+            anima mea, quæ etiam exaruit formidine tui furoris <lb/>
+            exterrita. Conversa est in succum absintbii vita <lb/>
+            mea, felle et aceto redundant viscera mea, doloribus <lb/>
+            profundis corrumpuntur præcordia, suspirium su­ <lb/>
+            spirio excipitur, et gemitus in gemitum irruit. Ti­ <lb/>
+            more futurarum poenarum , et praesenti flagellorum <lb/>
+            ærumna incurvatus, et humiliatus sum usque in li­ <lb/>
+            nem; nec possum onere multiplci prægravatus ca­ <lb/>
+            put erigere. Stat mors , stant et immensa crimina <lb/>
+            coram oculis meis; et res nulla non est, unde pos­ <lb/>
+            sit esse redemptio. Ob hoc ineffabiliter conturbatus, <lb/>
+            nec regimine utor, nec consilium angustia 362 <lb/>
+            pressuræ usque in desperationis perducit articulum, <lb/>
+            et velut in aranea filo consistens status mentis nutat, <lb/>
+            ut subruat, intendum timens propter anteritatem <lb/>
+            culparum , ne notis ignoscere , interdum confidens
+            <milestone unit="PLSection" n="B"/><lb/>
+            propter lenitatem misericordiarum , quia statuas Ii. <lb/>
+            berare; et inter spem et metum non est parva com­ <lb/>
+            motio cordis mei , quia si vis perdere, incitas justi­ <lb/>
+            tia , si autem vis salvare, invitat misericordia; et <lb/>
+            licet flagella præsentia conversum a peccatis absol­ <lb/>
+            vant, mens tamen ideo titubat, ne plagæ meai non <lb/>
+            sufficiant ad expurganda omnia delicta mea; et ta­ <lb/>
+            nt II sapientiæ tuæ subtilitas ita exlerius irrogat <lb/>
+            poenas, sicut interius prospicit culpas.</p>
+          <p>15. Sed quis de judicio tuo poterit esse quictus, <lb/>
+            cum apud districtionem examims tui nec justitia <lb/>
+            jiisti secura sit? si etiam de otioso sermone redden­ <lb/>
+            da est ratio, quomodo securus ero, qui principalia ma­ <lb/>
+            la commisi? Non est omnino securitas in mente mea a <lb/>
+            vultu judicii tui, neque pax in conscientia mea a facie <lb/>
+            peccatorum meorum. Ideo magna est, velut mare, <lb/>
+            contritio mea, quia pessima est plaga mea. Quaero por­ <lb/>
+            tum evasionis, et nequaquam reperio quomodo re­ <lb/>
+            gredi (possim) de pedica deceptionis Satanæ ; illaquea­
+            <milestone unit="PLSection" n="c"/><lb/>
+            vit pedes meos , et nullo modo prævaleo. Vocilero <lb/>
+            dolorum mutlitudine superatus, et non est qui eruat. <lb/>
+            Laboro in luctu et genutu compeditus, et desertus <lb/>
+            in angustia carceris , nec est qui consoletur. Heu <lb/>
+            no ! <unclear>eu</unclear> miserum et infelicem ! quem pœnæ justis- <lb/>
+            simæ terrent, quem ultiones dignæ comminuunt, <lb/>
+            quem flagella et jurgia recte collidunt, quem variæ <lb/>
+            miseriarum afflictiones opportune depopulantur, quia <lb/>
+            peccavi nequiter, deliqui crudeliter, erravi vehemen­ <lb/>
+            ter, corrui fortiter ! Væ mihi, qui me tantis italis <lb/>
+            politi, tanto malo fædavi t qui non sapui evitare, ne <unclear/><lb/>
+            biterem de veneno calicis diaboli, quod necavit <lb/>
+            animam !</p>
+          <p>i6. Et modo non indigerem denuo vivificari, qui <lb/>
+            circumspeccissime non custodivi ne transfoderer <lb/>
+            lanceis illius , et essem modo sine vulnere , ei non <lb/>
+            quærerem medicinam, qui non intellex ut fugerem, <lb/>
+            et non irretirer laqueis ejus, ut essem modo liber, <lb/>
+            et non clamarem pro resolutione. Infelix ego homo,
+            <milestone unit="PLSection" n="D"/><lb/>
+            quis me de tantis nexibus liberabit, ei de discrimine <lb/>
+            mortis hujus, nisi gratia tua, Pater omnipotens, per <lb/>
+            Jesum Christum Dominum nostrum , quem posuisti <lb/>
+            redemptionem in salute mundi; et in cujus justitia et <lb/>
+            sanctificatione omnis deletur iniquitas, et mortis eva­ <lb/>
+            cuatur imperium ? qui lactus est (ut propheta dicit) <lb/>
+            petra refugium herinaciis (Psal. cui, 18), id est, su. <lb/>
+            sceptio ut salvatio peccatoris, de quo et Joannes ait : <lb/>
+            Si quis peccaverit, adv catum habemus apud Patrem <lb/>
+            Jesum Christum justum, et ipse est propit alio pro pec­ <lb/>
+            calis nostris, non pro nostris tantum, sed etiam pro <lb/>
+            totius mundi (I Joan. II, 1); in quo omnis est a te <lb/>
+            constituta salvatio, dicente Petro Judæis : Non est <lb/>
+            in alio aliquo sulus; nec aliud nomen est sub cœlo <lb/>
+            datum hominibus, in quo oporteat salvos fieri. Qui <lb/>
+            habet clavos mortis et inferi, qui reserat portas abyssi, <lb/>
+            et claudi' ostia tenebrarum, aperit, et nemo c audit, <lb/>
+            claudit, et nemo aperit; cui dedisti omnem potestatem <lb/>
+            in cœlo et in terra. In cujus nomine omne genu fiecti­ <lb/>
+            tur cœlestium, 363 terrestrium et inferuorum; qui
+            <milestone unit="PLSection" n="A"/><lb/>
+            est vir voluntatis tuæ; in cujus manu perficitur omne <lb/>
+            quod est placitum coram te. Qui eum sit splendor <lb/>
+            gloriæ, et figura substantiæ tuæ, portans omnia verbo <lb/>
+            virtutis suæ, sedens ad dexteram tuam, purgationem <lb/>
+            peccatorum faciens , et te pro peccator bus interpellans, <lb/>
+            qui est universæ rei principium et finis (Act. iv, ii; <lb/>
+            Apoc. I, 18; III, i ; Philipp. II, 10; Hebr. I, 3).</p>
+          <p>17. Quia et ante eum nulla exstilerit creatura, <lb/>
+            et per ipsum facta cœpit esse universa creatura, et <lb/>
+            ipse erit consummatio omnis creaturæ, cum finem <lb/>
+            mundo, et judicium dederit; quoniam ipse est vir, quem <lb/>
+            præparasti judicare vivos et mortuos, nec judicas tu <lb/>
+            quemquam, sed omne judicium dedisti ei; qui solus ha­ <lb/>
+            bet potestatem perdere, et liberare, quia complacuit <lb/>
+            tihi in illo; exaltasti eum super omnes coelos, et <lb/>
+            super omnem principatum, et potestatem, et domi­ <lb/>
+            nationem, dans illi gloriam et honorem, constituens <lb/>
+            eum super omnia opera manuum tuarum, et suhji- <lb/>
+            ciens universi sub pedibus ejus; per quem facta et
+            <milestone unit="PLSection" n="B"/><lb/>
+            condita sunt omnia in coelis, et in terra, visibilia, et <lb/>
+            invisibilia, a quo continentur in quo constant universa; <lb/>
+            per quem fundasti terram, stabilisti coelos, conclusisti <lb/>
+            abyssum, vallasti mare; quia sapientia, et consilium, <lb/>
+            virtus , manus , et dextera tua ipse est, concreante <lb/>
+            et convivificante, cooperante atque convivificante <lb/>
+            omnia, et quæ sunt in omnibus , Spiritu sancto, qui <lb/>
+            a te et ab eodem filio tuo procedit ineffabiliter ; cui <lb/>
+            et ego ab ineunte ætate fideliter credidi: cui et pec­ <lb/>
+            casse confiteor, et a quo veniam profunda cordis <lb/>
+            humilitate deposco.</p>
+          <p>18. Unde, Domine Ini Jesu , quia multae sunt mi­ <lb/>
+            serationes in manu tua, et nnn pateris perire quem­ <lb/>
+            quam, sel omnes vis salvos fieri, et ad agnitionem <lb/>
+            vertatis veuire; quoniam essecrando mortem non <lb/>
+            leUDis in perditione vivorum; neque vis interitum <lb/>
+            hominis , sed salutem, et ob hanc causam te ipsum <lb/>
+            humilians, cum esses Deus , ut homo inveniretur, <lb/>
+            qui utique perierat, lieri homo dignatus es. Ad te
+            <milestone unit="PLSection" n="c"/><lb/>
+            mihi redeundum esse de prævaricationibus meis op­ <lb/>
+            portune decrevi; suscipe me in manibus tuis rever­ <lb/>
+            tentem cum fletibus coram te; excipe dignanter pre­ <lb/>
+            ces confessionum mearum, et salva confitentem; <lb/>
+            noli contemmere pœnitentiam, Domine, poenitet me <lb/>
+            errasse, ct doleo nunc stulte dudum perpetrasse ne­ <lb/>
+            quissima; sed noti a me avertere faciem tuam, quia, <lb/>
+            si vis. potes me mundare tibi enim mortificandi, <lb/>
+            et vivificandi, et liberandi, ligandi et solvendi pote. <lb/>
+            stas est'; animam meam diversorum criminum tra­ <lb/>
+            d.di nexibus illigandam, quam et scelere pessimo, <lb/>
+            sicut inspicis, vulneravi; sulve, Domine, solve jam <lb/>
+            vincula colli mei, quibus ad te diu clamo multipli­ <lb/>
+            ciler obligatus , et enudato vulneri miseratus adhibe <lb/>
+            medicinam.</p>
+          <p>tU. Redde mihi prislinam sanilaiem ; et vivat ani­ <lb/>
+            ma mea remedio tui. Dirum siquidem arguas vulnus <lb/>
+            meum , nec ego dirum esse <unclear>diteor</unclear>, te tamen hoc <lb/>
+            medicari indubitanter posse contido; quia nihil esse
+            <milestone unit="PLSection" n="D"/><lb/>
+            tibi difficile, nihil. impossibile credo; eo quod omnia <lb/>
+            possibilia apud Dominum, te perhibente, didicerim, <lb/>
+            cum transite camelum per foramen acus facile pro­ <lb/>
+            testatis. Deliqui, Domine, deliqui multum, et hanc <lb/>
+            ob causam, sicut ipse præcernis, tribulationes meaI <lb/>
+            dilatatæ sunt, nocte et die torquentes 364 cor <lb/>
+            meum. Non enim culpae meæ, vel peccatorum parva <lb/>
+            congeries, ideo multi gemitus mei, et mens mea ma­ <lb/>
+            gnæ perturbationis eversione mœstissima ;sed con­ <lb/>
+            sideratione magnarum et innumerabilium miseratio­ <lb/>
+            num tuarum a labe discriminis surgere paulatim rc­ <lb/>
+            nitens me direxit ad spem indulgentiæ pietas tua, <lb/>
+            ut in fide nihil hæsitans, petam veniam, et non mo­ <lb/>
+            liar, sed vivam.</p>
+          <p>20. Ideo reversus ad percutientem me, et haben­ <lb/>
+            tem potestatem super plagas meas, te scilicet, et <lb/>
+            Dominum meum, curvo tui genua mea, et sedula <lb/>
+            oratione cuti confessione pœnitudinis in contritione <lb/>
+            jejunii deprecor te, dans gloriam nomini tuo in lau­ <lb/>
+            de et benedictione frequentissima. Hoc enim do- <pb n="1267"/>
+            
+            <milestone unit="PLSection" n="A"/><lb/>
+            cuisti me in solitudine cenclusionis meae. Nanquid <lb/>
+            non hoc modo reparabis casus ruinæ meæ? credo <lb/>
+            plane quod facias. Habeo igitur spem in confessio­ <lb/>
+            ne , in qua constantissime solidatns nec desp ravi, <lb/>
+            nec desperabo, sed perfecta Utor fiducia; qua erasa, <lb/>
+            et abolita de corde nequitia, possim , postulatione <lb/>
+            præmissa, ab omni morte criminum per te revivi­ <lb/>
+            scere, et omni colluvione peccatorum, interjecta <lb/>
+            confessione, purificari, quia fidelis es in verbis tuis, <lb/>
+            et quæ processerunt de labiis tuis non facies irrita; <lb/>
+            non sunt enim consummatæ miserationes ture ; ne­ <lb/>
+            que præcisa est in hac vita quocumque casu ruenti­ <lb/>
+            bus surgendi fiducia; quoniam in omnigeno peccato <lb/>
+            posuisti reditura, et serva -Ii pœnitentiam in remedio <lb/>
+            peccatoris : Nolo, dicens , mortem impii, donec re­ <lb/>
+            vertatur, et vivat (Ezech. XXXIII. 11). Et iterum : <lb/>
+            Si dicente me ad impium, Morier s, et conversus ab <lb/>
+            impietate suo pænttentiam egerit, justitiam fecerit, in <lb/>
+            mandatis vitæ ambulaverit. et reliqua, vita vivet, et
+            <milestone unit="PLSection" n="B"/><lb/>
+            non morietur (Ibid., 14).</p>
+          <p>21. Et in Jeremia : Repente loquar adversus gen­ <lb/>
+            tem , et adversus regnum, ut eradicem , et destruam, <lb/>
+            et disperdam illud ; si pænitentiam egerit gens illa a <lb/>
+            malo suo , gu d locutus sum adversus eam , agam et <lb/>
+            ego pænitenti am super malo, quod cogitavi ut facc­ <lb/>
+            rem ei (Jerem. XVIII, 7); et cætera. Rursua que : <lb/>
+            Ecce ego fingo contra vos malum, et cogito contra vos <lb/>
+            cogitationem , revenatur unusquisque a via sua mala, <lb/>
+            et dirigite vias vestras , et studia vestra. Qui dixerit, <lb/>
+            Nequaquam , desperavimus , post cogitationes nosfras <lb/>
+            ibimus, et unusquisque pravitatem cordis sui mali fa­ <lb/>
+            ciemus. Et ad Jerusalem cum prono populo omni <lb/>
+            crimine scleratissimo ætate post idola declinante <lb/>
+            retinere dicis (Jerem. II, 23) : Vide vias tuas in con­ <lb/>
+            valle , scito quid feceris , curser levis explicans vias <lb/>
+            tuas; onager assuetus in solitudine animæ suæ attraxit <lb/>
+            ventum amoris sui. nullus avertet eam ( Vide Isidoria­ <lb/>
+            na, loc. cit., n. 31).</p>
+          <p>
+            <milestone unit="PLSection" n="c"/>22. Vulgo dicitur : Si dimiserit vir uxorem suam, <lb/>
+            et recedens ob eo duxerit virum alterum, nunquid re­ <lb/>
+            vertetur ultra ad eum ? nunquid non polluta et conta­ <lb/>
+            minata erit mutier illa? Tu autem fornicata es cum <lb/>
+            amatoribus multis; tamen repetere ad me, dicit Do­ <lb/>
+            minus. Leva in directum oculos tuos, et vide ubinam <lb/>
+            prostrata sis; tu qui sedebas exspectans eos, quasi la­ <lb/>
+            tro in solitudine , polluisti terram in fornicationibus <lb/>
+            tuis , et in malitiis tuis; quamobrem prohibitæ sunt <lb/>
+            stillæ pluviarum , et serotinus imber non fuit; frons <lb/>
+            mulieris meretricis facta est tibi , noluisti erubescere. <lb/>
+            Ergo saltem am do voca me, pater meus, et dux rir­ <lb/>
+            ginitatis meæ tu es. 365 Nunquid irasceris in per­ <lb/>
+            petuum, aut persevorabis usque iti fiuem ?</p>
+          <p>23. Et iterum : Revertcre, adversatrix Israel, ait <lb/>
+            Dominus, ud me, et non avertam faciem meam a vobis, <lb/>
+            quia sanctus ego sum, dicit Dominus, et non irascar in <lb/>
+            perpetuum. Convertimini revertentes, quia ego vir vester <lb/>
+            assisnam vos, si abstuleris offendicula tua a facie mea,
+            <milestone unit="PLSection" n="D"/><lb/>
+            non commoveberis (Jerem. III, 12). Ipse autem per Je­ <lb/>
+            remiam, permanenti in scelere populo, nec velle <lb/>
+            [Forte, volenti] reverti adhuc retinendo patientiam <lb/>
+            dicis : Noli subtrahere verbum, si forte audiant, et re­ <lb/>
+            vertatur unusquisque a via sua mala, et pæniteat me, <lb/>
+            quod cogitavi facere eis propter malitiam studiorum <lb/>
+            suorum. Et in Isaia dicit : Ego sum qui loquor justi­ <lb/>
+            tiam, et propugnator sum ad salvandum. Si reverta­ <lb/>
+            mini, et requiescatis, salvi eritis. Et iterum : Revertere <lb/>
+            ad me, non obliviscaris me, et redimam te. Ego sum, <lb/>
+            ego sum ipse qui deleo iniquitates tuas propter me, et <lb/>
+            peccatorum tuorum non recordabor; scio enim quia <lb/>
+            prævaricans prævaricabis, et transgressorem ex ventre <lb/>
+            vocavi se; propter nomen meum longe faciam furoreM. <lb/>
+            meum, et laude mea infrenabo te, ne intereas.</p>
+          <p>xi. Et iterum peccatoribus, nt per pænitentiam <lb/>
+            abluatur, ait : Lavamini, mundi estote, auferte ma­ <lb/>
+            lum cogitationum vestrarum ab oculis meis; quiescite <lb/>
+            cagere perverse, discite bene facere; et reliqua; et si fue­ <lb/>
+            rint peccuta vestra quasi Phænicium, velut nix dealba-
+            <milestone unit="PLSection" n="A"/><lb/>
+            buntur, et si fuerint rubra, quasi vermiculus, velut <lb/>
+            lana munda erunt. Et praevaricanti, ac delinquenti no­ <lb/>
+            pulo, et nolenti converti, de quo jam dixeras ut pro <lb/>
+            immanitate facinorum ira tua disperderes eum, in <lb/>
+            Osee dicis : Conversum est in me cor meum, pariter <lb/>
+            conturbata est in me poenitudo mea, non faciam in fu­ <lb/>
+            rore iræ mece. Non convertam, ut disperdam te, quo­ <lb/>
+            niam Deus ego, et non homo, in medio tui sanctus <lb/>
+            (Ose. XI. 8). Si enim averso populo, nec pæniternti, <lb/>
+            qui, te relinquens, omnibus se abominationibus, et <lb/>
+            impudicitiis, et idolis subjecerat, tanta patientia su. <lb/>
+            stinens, talem misericordiam obtulisti, quantum <lb/>
+            placabilior esse poteris super eum qui non est aver­ <lb/>
+            sus abs te, et pro peccato suo poenitens incurvatus <lb/>
+            deprecatur te?</p>
+          <p>25. Recte idcirco alius propheta clamat: Conver­ <lb/>
+            timini ad Dominum, quia benignus et misericors eSI. <lb/>
+            patiens et multæ misericordiæ, et cornpræstabilis super <lb/>
+            malitia (Joel II. 13). David antem ait : Miseratoret
+            <milestone unit="PLSection" n="B"/><lb/>
+            misericors Dominus, patiens et multum misericors non <lb/>
+            secundum peccata nostra fecit nobis, neque secundum <lb/>
+            iniquitates nostras retribuet nobis (Psal. CII, 8). Et in <lb/>
+            Salomone : Misertus est Dominus poenitentibus ( Ec­ <lb/>
+            cli. XII, 3). Et rursum : Quoniam pius et misericors <lb/>
+            est Dominus, et remittens in tempore tribulationis pec­ <lb/>
+            cata omnibus exquirentibus se in veritate ( Eccli. II, <lb/>
+            15). Hinc etiam cum prophetæ testimonio Apostolns <lb/>
+            exhortatur, dicens : Hodie si vocem ejus audieritis9 <lb/>
+            nolite obdurare corda vestra; non enin habemus pon­ <lb/>
+            tificem, qui non possit compati infirmitatibus nostris; <lb/>
+            adeamus ergo cum fiducia ad thronum gloriæ ejus, ut <lb/>
+            misericordiam consequamur, et gratiam inveniamus in <lb/>
+            auxilio opportuno (Hebr. IV, 7). Tu autem, Domine, <lb/>
+            laborantibus in iniquitate, et oneratis pondere pecca­ <lb/>
+            torum clamas : Venite ad me omnes qui laboratis, et <lb/>
+            onerati essi, et ego vos requiescere faciam (Matth. XI, <lb/>
+            28). Et multa alia hujusmodi, quae de omnibus Scri­ <lb/>
+            pturis scribere longum est.</p>
+          <p>
+            <milestone unit="PLSection" n="c"/>366 26. Tantae igitnr patientiae, tantarumque <lb/>
+            miserxordiarum Domi.um desideranrer quæram, <lb/>
+            audacter adeam, libenter sequar, fortiter amplectar, <lb/>
+            humiliter teneam, nullatenus dimittam, fiducialiter <lb/>
+            deprecabor, in cujus miseratione, et misericordia <lb/>
+            patet mihi per pœnitentiæ viam ad vitam de morte <lb/>
+            regressio, ad cœlum de inferno recursus, ad lucem <lb/>
+            de lenebris aditus. Hoc ergo inprimis, Domine, peto, <lb/>
+            et sic ad reliqua transeam : da niihi devotissimam <lb/>
+            ad poenitendum mentis intentionem, quæ sit accepta­ <lb/>
+            bilis, et placita coram te; da humilitatis compun­ <lb/>
+            ctionem, ut suspiret mens mea ex affectu tuo, et in­ <lb/>
+            gemiscat in vulnere suo cordis resoluta duritia. <lb/>
+            Excita omnes sensus præcordiorum meorum, ut <lb/>
+            clament ad te internae vocis fortitudine, si forte <lb/>
+            quandoquidem audias deprecantem, commoveantur <lb/>
+            suspira pectoris mei, et sonet in auribus luis mur­ <lb/>
+            murans gemitus. Relaxa oculorum meorum habenas, <lb/>
+            et largo fontis manantes flumine palpebræ meae pro­ <lb/>
+            fluant aquas, ut piacula cunctorum criminurn abluan-
+            <milestone unit="PLSection" n="D"/><lb/>
+            tur impetu lacrymarum, currantque sine defectu tra­ <lb/>
+            mites venarum capitis mei, donec abstergatur omnis <lb/>
+            immunditia iniquitatis.</p>
+          <p>27. Repleatur os meum veracissimae confessionis <lb/>
+            sermonibus, quibus delectatus et parcere clementer <lb/>
+            studeas, et præstare veniam non moreris; fiatque <lb/>
+            mihi tructuosa paenitudo mea, gaudium ex luctu <lb/>
+            parturiens, ex indigentia indulgentiam afferens, et <lb/>
+            ex labore requiem adducens, quatenus angusto calle <lb/>
+            carceralium afflictiornum ad vitae me perducas in­ <lb/>
+            troitum, et catenae ferræ vinculo resolulionem fa­ <lb/>
+            cias accipere peccatorum. Ecce, Domine, tempus <lb/>
+            instat confessionis, et dies remissionis adsunt, qui­ <lb/>
+            bus promissa venia petentibus condonatur; quid <lb/>
+            enim amplius tibi confitear, et cum omnibus iniquis <lb/>
+            me esse non denegem nequiorem, quos comparatione <lb/>
+            mea justos esse constitues? quia nullius sceleris pec <lb/>
+            catorum, nullius facinoris defuit vitium , cuius me <lb/>
+            sordibus non coinquiuaverim, cujus uun sim pollu­ <lb/>
+            <pb n="1269"/>
+             
+            <milestone unit="PLSection" n="A"/><lb/>
+            tus contagio : præceps ad libildinem, improbns ad <lb/>
+            petutantiam, frequens ad luxuriam, inverecundus ad <lb/>
+            fornicationem, crimen quotidie crimini superponens, <lb/>
+            non cessavi pessimis deteriora contingere, voluntate <lb/>
+            dirus, mente pravus, moribus inhonestus, corde pol- <lb/>
+            Intus, et labiis blasphemus, iracundus et contume­ <lb/>
+            liosus.</p>
+          <p>28. Propter quod confundor, et erubesco nunc <lb/>
+            extollere oculos, indignum me videre coelestia sidera <lb/>
+            judicatis. Sed fac propter gloriam nominis tui, Deus <lb/>
+            meus. Pone mihi confitenti tibi veniam in salutem, <lb/>
+            et indulgentiæ concede remedium, ut propitius et­ <lb/>
+            fectus, atque placabiliS, dcleas universa facinora pec­ <lb/>
+            catorum meorum, et non reqniras iniquitates meas, <lb/>
+            quas juventutis, et ignorantiæ meae gessit ætas lu­ <lb/>
+            brica, rudis, lasciva, vana, et insipiens, ad malum <lb/>
+            prona, ad bonum pigerrima, velox ad mortem, ad <lb/>
+            vitam difficilis, cui exosa sunt opera lucis, et tene­ <lb/>
+            brarum amatissima, quæ cadere dit git, surgere nc-
+            <milestone unit="PLSection" n="B"/><lb/>
+            gligit; amara est. illi salus, et dulcis perditio; solve, <lb/>
+            Domine, reum inexplicabilibus nodis astrictum, et, <lb/>
+            abruptis laqueis criminum, abire facito liberatem, ut <lb/>
+            salves me in bona voluntate tua, et non peream in <lb/>
+            mea malitia, neque descendam in infernum, unde ultra <lb/>
+            non est ascensio ; quia copiosior est misericordia tua, <lb/>
+            367 quam peccatorum meorum abundantia. Et am­ <lb/>
+            piius tu benignissimus, quam ego nequissimus. Ego <lb/>
+            quidem malignus, ei. praeceps, tu autem militis, et pt­ <lb/>
+            tiens; ego ad corruendum pronus, et fragilis, tu ad <lb/>
+            erigendum promptus, et fortis. Si tetro gesta respi­ <lb/>
+            cias, periturum illico censeas; si veile præsens et <lb/>
+            votum intendas, credo quod salvare me judices, eo <lb/>
+            quod direxeris cor meum in desideriis tuis, quibus <lb/>
+            mentem meam ardentins servire conspicis, quiasitit <lb/>
+            te anima mea, pariter et caro delectatur.</p>
+          <p>29. Redime me, Domine Deus mens, ab omnibus <lb/>
+            angustiis meis, et placeat tibi ne interitu eripere me. <lb/>
+            Revoca me de janua mortis, et reduc me in via æter-
+            <milestone unit="PLSection" n="C"/><lb/>
+            na, ut curram in semitam mandatorum tuorum, et <lb/>
+            ambulent in veritate tua. Non me tenebrarum caverna <lb/>
+            retineat, non barathrum abyssi, vel antra concłudant; <lb/>
+            sed patefacito mihi, lux lucis, aditum æternæ vitæ. <lb/>
+            Resera portum, quia tu es Deus, contriti cordis et­ <lb/>
+            cipiens lacrymas, et poenitentium aceeptans humilia­ <lb/>
+            tionem. Nee enim vocaberis In non peccantibus <lb/>
+            pius, sed cum conversus fueris impio, et reccatori <lb/>
+            misertus a malo. Semper corrui in deterius, et de <lb/>
+            malis in pejora deffuxi; sed valde peritus es artifex, <lb/>
+            sciens de inutili utile tibi vascutum ligurare; hoc est <lb/>
+            enim ab ultio opus tuum justos ex iniquis efficere, <lb/>
+            et dignos ex indignis formare; erigere rursum eli­ <lb/>
+            sos, et labentium antiquas reparare ruinas; quo­ <lb/>
+            niam, ut ipse protesturis, Non est opas .unis medi­ <lb/>
+            sus , sed male habentibus (Matth. IX, 12); hæc etiam <lb/>
+            causa fecit te in hunc mundum descendere, ut pec­ <lb/>
+            tatores salvos faceres, quorum principati or ego sum; <lb/>
+            et si tunc inimicos adversarios aversos et impios
+            <milestone unit="PLSection" n="D"/><lb/>
+            cum doloribus tuæ passionis salvos facere voluisti, <lb/>
+            amicos nunc conversos et poenitentes perdere pote­ <lb/>
+            ris Absit. Delectat vere te, peccatoribus, si conver­ <lb/>
+            tantur, indulgere, qui pro peccatoribus mortem non <lb/>
+            recusasti suscipere. Nam nequaquam pro iniquis cru - <lb/>
+            cem ascenderes, si inquis parcere recusares.</p>
+          <p>0. Si enim legioni dæmonum impœnitenti et sine <lb/>
+            lacrymus poreornm gregem expetitum non negasti, <lb/>
+            quanto magis animæ fideli te fletibus impreeanli fa­ <lb/>
+            cilius concedere p ecatorum veniam promptior eris? <lb/>
+            Fidus ob hoc iili prœnitentiæ mæ preces et lacry­ <lb/>
+            mas offero, salvabis me sicut et caeteros quos defi­ <lb/>
+            quisse pœnitet. An nfecunda remanebit ex me, vel <lb/>
+            in me solum arida, et irrita thet fiducia, et promis­ <lb/>
+            sio pietatis et indulgentiæ tuæ, per quam omnes sal­ <lb/>
+            vantur conversæ cognationes terræ? Nunquid in uno <lb/>
+            pœnitente fiet insufficiens multa clementia tua, quae <lb/>
+            numquam dando potest minorari, nec alicujus ege­ <lb/>
+            statis effectu coarctatur ? Nunquid in me solum te <lb/>
+            continebis, ne postutata largiaris misericordiæ fructu
+            <milestone unit="PLSection" n="A"/><lb/>
+            factus sterHis? Num dolebis contra me in perpetuum, <lb/>
+            propter peccatum parvi temporis, quod tua providen­ <lb/>
+            tia disponente exsecrans et abhorrens poeniteo, cum <lb/>
+            sim ego creatura ex terra et cinere corruptibilis, et <lb/>
+            mortalis, tu autem Deus creator incorruptibilis et im­ <lb/>
+            mortalis? Nonquid obduratus in clementia atritum <lb/>
+            et humiliatum non exaudies, aut jndicabis punire <lb/>
+            confitentem tibi, aut obsecrantem te disperdere cen­ <lb/>
+            ses Non ita credam, nec velle te suspicabor, quia <lb/>
+            hoc impium, 368 et contra naturam divinae pieta­ <lb/>
+            tis. Ideo supplex et confidens exoro misericordiam <lb/>
+            tuam, ut petitiones meas benigna voluntate perficias.</p>
+          <p>31. Inclina, Domine, aurem tuam, et audi, aperi <lb/>
+            oculos tnos, et vile desolationem meam. Vide affli­ <lb/>
+            ctiones multas, et miserias. quæ me, strui plau­ <lb/>
+            strum paleas, conterunt, sicu' laneam tineæ, devo­ <lb/>
+            rant, sicut lignum putridum [Forte deest ignis] con­ <lb/>
+            sumunt; et furorem mitescens, suspende flagellum. <lb/>
+            Jam miserere mei, placare, et revertere, parce ani-
+            <milestone unit="PLSection" n="B"/><lb/>
+            mæ meæ, parce peccatis meis. Non me obliviscaris <lb/>
+            in finem, non mihi in perpetuum irscaris, non me <lb/>
+            usquequaque deseras, neque periturum uitatemus de­ <lb/>
+            relinquas, sed resntue mi i gratiam tuam, ei salvum <lb/>
+            me fac in loco periculi, quo jacet caro mea præstri­ <lb/>
+            cta ferro, percussa plagis, fatagata pœnis, tessa lan­ <lb/>
+            guoribus, humanis deserta curis, segregata consor- <lb/>
+            His, quadris obserata lapidibus, in sterqudmio, et <lb/>
+            fetoribus justo judicio dedita, in tenebris et umbris <lb/>
+            mortiferis diuturnis exposita miseris. Quæ ipse cun­ <lb/>
+            cta prospicis, qui sedes super cherubin, et abyssus <lb/>
+            intueris.</p>
+          <p>32. Jam antiqua facta est ct vetusta contritio, et <lb/>
+            percussio mea, nec est qui memoretur pietatis tuæ, <lb/>
+            neque qui compunctus corde recogitet dicens : Jain <lb/>
+            propter Dominum miserebor mortalis, mortali æter­ <lb/>
+            num dedit carcerem, ferrumque perenne. Ereptionis <lb/>
+            non est mihi misericordia reservata, judicio sum ir­ <lb/>
+            revocabili condemnatus, quia non dictum : Reverta­
+            <milestone unit="PLSection" n="c"/><lb/>
+            mnr impertire veniam perituro. Recordare, Domine, <lb/>
+            mis' ricordiarum tuarum super me, et gravenu hanc <lb/>
+            atque præduram muta sententiam, quia tu dixisti : <lb/>
+            Non affliges in aeternum proximum tuum, quia mise­ <lb/>
+            ricordiam volo, et non sacrificium, atque contra im­ <lb/>
+            pietatem, qua licet juste moriot, tu tamen, quia pius <lb/>
+            es, clementer vitae para suffragium; impende, Do­ <lb/>
+            mune, propitius divinum, ubi humanum recessit, <lb/>
+            auxilium; unicus tantum tibi relictus sum; et ad­ <lb/>
+            juva me solitarium. Non sis mihi alienus in diebus <lb/>
+            angustræ, neque derelinquas in tempore tribulationis, <lb/>
+            protegens custodire me nou desinas, ct fovens alere <lb/>
+            ne cesses.</p>
+          <p>33. Conlirma oculos tuos super me, ne peream, <lb/>
+            tuere el sat vifica me; esto animæ meæ simul et <lb/>
+            corpoi vivificator, et vita, omniumque infirmitatum <lb/>
+            mearum sanator, et sanitas, ut vivam munere bene­ <lb/>
+            ficii lui, et collaudem te in vita mea coram fratribus <lb/>
+            meis, donec placatus inspiratione tua , ct quiescat
+            <milestone unit="PLSection" n="D"/><lb/>
+            indignatio tribulantis me, quoniam tibi potestas est, <lb/>
+            ut hic corda principum corpori placetur inflectere, <lb/>
+            et illic a futuris poenis animam liberare, cui nemo <lb/>
+            dicturus est : Quid fecisti ? nec quisquam resultabit <lb/>
+            judicro tuo, neque voluntati resislet ; neque vero au­ <lb/>
+            debit arguere tunc quispiam remo, quem tu nunc a <lb/>
+            culpis suis feceris absolutum ; sed erit sine aliqua <lb/>
+            contradictione beatus, sicut scriptum est : Beuti, <lb/>
+            quorum remissæ sunt iniquitates, et quorum tecta sunt <lb/>
+            peccata. Beatus vir, cui non imputavit Dominus pecca­ <lb/>
+            tum (Psal. XXXI, i, 2); et Apostolus : Si Deus, inquit, <lb/>
+            pro nobis, quis contra nos? Deus qui justificat, quis <lb/>
+            est qui condemnet (Rom. VIII, 33)? Proba me, Do­ <lb/>
+            mine, proba me in canino humiliationis, quo diu­ <lb/>
+            tius indignum examiuas.</p>
+          <p>369 34. Rogo tantum ne reprobes noxias pec­ <lb/>
+            cammum comburere rubigines; permciobos ustula <lb/>
+            criminum squalores, ut de adulierina plumbe com­ <lb/>
+            mistione aurum purissimum et rutitans educas; et <lb/>
+            accelera, ut eripias me sica flagello temporali; <pb n="1271"/>
+            
+            <milestone unit="PLSection" n="A"/><lb/>
+            culparum mearum excessus resera, ut nihil in futuro <lb/>
+            quod pnnias, sed quod beatifices, dere inquas. Hic <lb/>
+            me, Domine Deus, ab omnibus multa criminibus, <lb/>
+            hic ab omni vitiorum colluvione deterge, hic ab <lb/>
+            omni peccatorum vinculo solve, ut aut si vive ntem <lb/>
+            laxaveris, purificatus abeam, aut si vocare decreve­ <lb/>
+            ris, usquequaque mundatus assumar. Tu meam ani­ <lb/>
+            mam in corpore positam rege, tu exeuntem a cor. <lb/>
+            pore suscipe, tibique in æternum adhærere concede, <lb/>
+            ut nullatenus pereat res per multas lacrymas com­ <lb/>
+            mendata tibi Domino Deo et creatori suo. Quod si <lb/>
+            adhuc in carne milii prolixior vita servatur, nova <lb/>
+            præconiorum honestate componatur. Exue me foedi­ <lb/>
+            tate omnium viliorum, et indue dignitatem [Forte <lb/>
+            dignitate] cunctarum virtutum, charitatis et benigni­ <lb/>
+            tatis, humilitatis et continentiæ injiciens intersere <lb/>
+            germina. Cupiditatis autem, et avar tiæ, vanitatis et <lb/>
+            arrogantiæ, iræ et impatientiæ, cæterarumque ne­ <lb/>
+            quitiarum putridas amputa vetustates, circumcide
+            <milestone unit="PLSection" n="B"/><lb/>
+            superflua, inhonesta deseca, elata deprime, noxia et <lb/>
+            infecunda recide, ut malignæ arboris amaritudo bo­ <lb/>
+            nos succos generet demutata ; dulces tibi post mole­ <lb/>
+            Stiarum acerbitatem parturias fructus, ut quod non <lb/>
+            habuit prius natura , offerat amodo collatum ex <lb/>
+            gratia.</p>
+          <p>35. Peccandi a me fuga occasionem, et in exer­ <lb/>
+            cilium boni excita sollicitudinem. Rursum peccandi <lb/>
+            tolle desiderium, et omnes exclude carnales affe­ <lb/>
+            ctus. Non sit in anima mea concupiscentia fœdæ li­ <lb/>
+            bidinis, SInd amor inhabitet pulchertimæ castitatis. <lb/>
+            Mundi hujus ambitio longe sit a me, ut impedimento <lb/>
+            illius a ncio proposito non declinem. Tui tantum <lb/>
+            timoris et amoris op o in me gratiam semper inesse, <lb/>
+            quorum in fructu ab omni vitiorum mortalitate de­ <lb/>
+            nuo reviviscam. Nam per timorem a malo receditur, <lb/>
+            ft per charitatem bonum opus peragitur Rursumque <lb/>
+            quod operatur charitas, per amorem custodit timor, <lb/>
+            ne pereat per elationem. Item charitas festinat, Deo
+            <milestone unit="PLSection" n="c"/><lb/>
+            conjungit, et timor non dimittit ab eo separari. Ipse <lb/>
+            est timor sanctus permanens in sæculum saeculi. <lb/>
+            Noxiæ prosperitate, et amicitiæ hujus sæculi non <lb/>
+            mihi appropinquent; adversitates autem tempera, ut <lb/>
+            possim sustinere, quoniam prosperitas dejicit, ad­ <lb/>
+            versitas erudit. ei sæpe ad peccandum prosperitas <lb/>
+            animum illicit, adversitas autem et a peccato su­ <lb/>
+            spendit, et præsentem odire vitam atque futuram <lb/>
+            desiderare semper provocat, et suadet. In nu lis <lb/>
+            ergo mundi negotiis mc ulterius permittas involvi, <lb/>
+            sed ubi soli militem, tibi semper berviam; te inces­ <lb/>
+            santer adorem, tibi die noctuque psallam. Malarum <lb/>
+            cogitationum sentina, rorem et incentorem inutilium <lb/>
+            desideriorum ac bonæ intentioni contrariorum re­ <lb/>
+            pede a me, et contra omnia tentamenta illius caplio­ <lb/>
+            sasque deceptiones auxilii tui et delensionis poue <lb/>
+            præsidium, ut ad perseverantiam bonam inflexibi­ <lb/>
+            lem me (diabolus) præcernens confusus abscedat.</p>
+          <p>36. Omnia peccata mea flere tantum, non deside­ <lb/>
+            rare permittas. Fac me 370 odire quæ odis, am-
+            <milestone unit="PLSection" n="D"/><lb/>
+            plecti quæ tingis. Obtemperet mens mea mandatis <lb/>
+            luis, et voluntas mea voluntati tuæ concordet, ut ni­ <lb/>
+            bil turpe, nihil injustum, nihil inhonestum, nihil in­ <lb/>
+            decens vel impium in conscientiæ meæ delectamento <lb/>
+            obortum inhæreat; sed amore tuo intentio mentis <lb/>
+            anhelans justitiæ et pietatis operam assequatur. Sit <lb/>
+            autem opus ,nundum, et oratio, sicut præcipis, in <lb/>
+            occulto, ut non ad oculum serviam quasi hominibus <lb/>
+            placitus, legum tuarum admonita et patrum hone­ <lb/>
+            stissima gesta scire me permitte, et tactis inplere <unclear/> <lb/>
+            concede. Ab omni laqueo peccati me retrahe, et ab <lb/>
+            omnium errorum laba suspende. Disciplinæ ture re. <lb/>
+            pagulis semper astringe, et ne ulterius decidam, fir­ <lb/>
+            missime tene. Trahe me post te, et duc quocunque <lb/>
+            placet, et ne dimittas ullatenus retrogradum terga <lb/>
+            rursum diverli [Forte, divertere]; sim in tuo timore <lb/>
+            sollicitus, in amore perfectus, in fide constans, in <lb/>
+            spe nullatenus dubius, dilectione proximi ferveam, <lb/>
+            odii ardore non urar, nec invidiae livore tabescam.</p>
+          <p>
+            <milestone unit="PLSection" n="A"/>37. Sanctum semper opus .nspira ut cogitem, <lb/>
+            compeile ut faciam, sunde ut diligam, coutirma ut <lb/>
+            teneam, custodi ne perdam. Mater et regma septem <lb/>
+            principolium vitiorum superbia non ingrediatur, nec <unclear/><lb/>
+            requiescat in domicilio cordis mei, neque soboles <lb/>
+            ejus mihi adhæreat, id est, gula concupiscentia, <lb/>
+            fornicatio, avaritia, invidia, ira, tristitia, vana glo­ <lb/>
+            ria. Da au em mihi e contrario profundam humilita­ <lb/>
+            tem, qua curvetur altitudo superbiæ ; da mensura­ <lb/>
+            tam abstinentiam, qua superflua ventris refrenetur <lb/>
+            edacitas. Da castitatem, cordis munditiam, qua im­ <lb/>
+            munda luxuria soptatur; da velle largifluum ad <lb/>
+            erogandum eleemosynam, quo tenax avaritia te­ <lb/>
+            sp<unclear>oatur</unclear>. Da perfectæ dilectionis amorem, quo zelus <lb/>
+            exstinguatur invidiæ. Concede tolerantiæ patientiam, <lb/>
+            per quam ira superata deficiat; tribue æterni gaudii <lb/>
+            spem, quo tristitiæ amaritudo demulceatur; fac <lb/>
+            deinde sic intrinsecus in mente de bono opere glo­ <lb/>
+            riari in te, ut vanæ gloriæ loris ei me procedat ja-
+            <milestone unit="PLSection" n="B"/><lb/>
+            ctantia.</p>
+          <p>38. Dona etiam mihi in omnibus tenere justitiam, <lb/>
+            magnanimitatem, temperantiam; et fac me cum <lb/>
+            simplicitate esse prudentem, ut et beatam vitam <lb/>
+            sinc riter agam, et malum prudenter refugiam; at.. <lb/>
+            que fraudulentam et deceptoriam astutiam diaboli, ne <lb/>
+            me perspectem boni fallat ut et discernere rationa­ <lb/>
+            biliter valeam, et prævidere ; fac me post hæc mitem <lb/>
+            et benev' lum, pacificum et mansuetum, modestum <lb/>
+            et verecundum, reverentem et trepidum, æquum, et <lb/>
+            sine simulatione veridicum, et sine dolo rationabi­ <lb/>
+            lem, bonisque concordem, in vigiliis, et jejuniis, et <lb/>
+            oratione constanter strenuum : <unclear>de</unclear> etiam in mansue­ <lb/>
+            tudine moderatum habere sermonem, et amico sub­ <lb/>
+            inde <unclear>rni</unclear> silentio, ut loquar quod condecet, taceam <lb/>
+            quod loqui nuM oportet; vel quidquid ex virtutum <lb/>
+            fructibus conferre dignaberis, mortiticata jactantia, <lb/>
+            patrona servet humilitas.</p>
+          <p>39. Da sine aliquo errore pravæ religionis imma-
+            <milestone unit="PLSection" n="C"/><lb/>
+            culatam tibi servare fidem, et juxta fidem dignum <lb/>
+            esse operarium, ut Iidem rectam onere pravo non <lb/>
+            polluam; et quem bene credendo confiteor, uiale vi­ <lb/>
+            vendo non denegem ; quemque strenua fide sequor, <lb/>
+            actu negligentiæ non offendam; fac me in sancto <lb/>
+            conversantem proposito sequi justitiam, diligere uii­ <lb/>
+            sericordiam, 371 amare veritatem, refutare men­ <lb/>
+            dacium, falsum nihil mediLari vel loqui, te indesi­ <lb/>
+            neuter timere, religionem venerari, pacem cum om­ <lb/>
+            nibus sine dolo tenere, discordes ad concordiam re­ <lb/>
+            vocare, charitatem insimulatam offerre, nullum <lb/>
+            scandalizare, nulli me praelerre, sed inferiorem <lb/>
+            omni infimo judicare, principibus et potestatibus iv <lb/>
+            nullo resistere, in omnibus obtemperare, reveren­ <lb/>
+            tiam et honorem exhibere senioribus, obedientiam <lb/>
+            et charitatem æqualibus offerre, gratiam opportunæ <lb/>
+            dilectionis junioribus ostendere, fraterna onera, sive <lb/>
+            pericula æquanimiter sustinere, amicum velut ani­ <lb/>
+            mam meam vcuerari, parentem et proximum sicut <lb/>
+            meipsum diligere, cunctisque simul prodesse. non
+            <milestone unit="PLSection" n="D"/><lb/>
+            obesse, nulli nocere, nulli adversari, nullum ca­ <lb/>
+            lumniari, nulli offendiculum ponere, nullum judi­ <lb/>
+            care, nulli detrahere, nullum condemnare, nulli in­ <lb/>
+            juriosum esse, nullius carpere vitam, nullius explo­ <lb/>
+            rare rectam semitam, de me tantum esse sollicitum, <lb/>
+            malum pro mato nequaquam rependere, injuriarum <lb/>
+            mearum, nec memorem ullatenus esse, nec vindi­ <lb/>
+            cem, sed omnem bonitate superare malitiam, male­ <lb/>
+            dicenti benedictionem parare, adversa pati, non in­ <lb/>
+            ferre, inimicum ut amicum diligere, convicta et con­ <lb/>
+            tumelias irascentium sustinere, non rcpendere, in­ <lb/>
+            juriæ cito oblivisci, offenso me festinanter ignoscere, <lb/>
+            ad veniam concedendam semper paratum esse, aliena <lb/>
+            non concupiscere, nec occasione qualibet auferre <lb/>
+            mea vero non habentibus misericorditer erogare, de­ <lb/>
+            bitum debitori dimittere, reformare quod inique die <lb/>
+            reptum est, pignus reddere mutuanti, et nilul alie­ <lb/>
+            num apud me retinere, esurientem deinde reficere, <lb/>
+            sitientem potarc, hospitem colligere, nudum ope- <pb n="1273"/>
+            
+            <milestone unit="PLSection" n="A"/><lb/>
+            rire, visitare languidum, requirere carceratum, con. <lb/>
+            solari tristem, afflicto et lugenti compati , non <lb/>
+            habenti præbere necessaria, victum et vestitum divi­ <lb/>
+            dere cum egeno, amplecti indigenam, fovere dome­ <lb/>
+            sticum, amare peregrinum, redimere captivum, su­ <lb/>
+            scipere advenam, tueri pupillum, et orphanum, suf­ <lb/>
+            fragari viduæ, subvenire oppresso, præstare auxi­ <lb/>
+            lium desolato, dirumpere colligationes impietatis, <lb/>
+            confractos relinquere liberos, et omne onus dirum­ <lb/>
+            pere, velut quæque præceptorum tuorum documenta <lb/>
+            declarant, ardenter exquirere, diligenter legere, <lb/>
+            prudenter tractare, festinanter exercere, desideran­ <lb/>
+            ter implere.</p>
+          <p>40. Averte, Domine, a vanitate oculos meos, et <lb/>
+            transgressus meos ab injustitiae semitis. Non reci <lb/>
+            piant aures meae opprobrium adversus proximum; <lb/>
+            neque relicta veritate pruriant audire fabulas vani­ <lb/>
+            talis, aut verba mendacii ; neque lingua mea pruriat <lb/>
+            detrahere, aut maledicere principi, aut sacerdoti,
+            <milestone unit="PLSection" n="B"/><lb/>
+            aut cuiquam subsequenter hominum. Non sit scur­ <lb/>
+            rilis, nec vaniloqua, non maledica, non dolosa. Non <lb/>
+            decipiam proximum, bonam dicens viam illius, cum <lb/>
+            maligna fortasse patuerit, sed, humili compassione <lb/>
+            cominotus, loquar privatim veritatem, ut avertatur <lb/>
+            ab ern re, et siquidem audierit, salvetur anima il­ <lb/>
+            lius, et meorum (sicut scriptum est) operiatur mul­ <lb/>
+            titudo peccaminum. Sim in audiendo festinus, in re­ <lb/>
+            spondendo moderatus. Non scientia infler, non ar­ <lb/>
+            rogantia tumore d stendar, sed sermo: e, et opere <lb/>
+            bono redundans, humilis semper existam, ut sur­ <lb/>
+            gam, non decidam, erigar, non <unclear>subruar</unclear>, ascendam, <lb/>
+            non descendam. Non 372 me laudes corrumpant, <lb/>
+            non vituperationes conturbent : non adulationes de­ <lb/>
+            cipiant, non mendacia deludant ; non prosperitas <lb/>
+            elevet, non adversitas curvet; non secunda opinio <lb/>
+            extollat, non sinistra dejiciat; non jucunditas mu­ <lb/>
+            tabilem reddat, non tristitia dissimiliem faciat; sed <lb/>
+            in omnibus sit vita mea æqualis, et vultus uno modo
+            <milestone unit="PLSection" n="c"/><lb/>
+            constans.</p>
+          <p>i. In salute collaudem, in infirmilate gratias <lb/>
+            agam, in correptione non resultem, in flagello non <lb/>
+            murmurem ; de bono opere non extollar, nihil boni <lb/>
+            facti mihi ascribam, pro nulla re in me glorier, ne­ <lb/>
+            que confidam ; sed gloria, spes, virtus, laus et omnis <lb/>
+            delectatio animæ mei III ipse sis ; te corde credam, <lb/>
+            te laudibus confitear, te vox mea sonet, te lingua <lb/>
+            mea jugiter prædicet ; tibi, non mihi placeam, <lb/>
+            tuamque non meam iaciam voluntatem, et omnis <lb/>
+            mens mea te meditetur, te delectetur, et sequatur <lb/>
+            intentio, ut memetipsum abnegans sequar te cum <lb/>
+            cruce mea, perderepro te promptus alii nam meam, <lb/>
+            ut pcr te inventam illam, quatenus novum tibi ho­ <lb/>
+            minem ex inulili vetustate, cunctis vitiorum vepri­ <lb/>
+            bus concrematis, pœnitentiæ caminus restituat, et <lb/>
+            iturum pravitate comptissimum extrema vim [Forte, <lb/>
+            vita] reformet, ut in hoc, abdicatis erroribus, nihil <lb/>
+            in me suorum antiquus hostis in futuro recognoscat, <lb/>
+            vel reperiat. Nunc itaque, Domine Deus <unclear>meus</unclear>, cum
+            <milestone unit="PLSection" n="D"/><lb/>
+            magua exstiltatione glonfico nomen luum sanctum, <lb/>
+            qui persistens erudisti insipientiam meam, et emol­ <lb/>
+            liisti duritiam per flagratores tuos, donec vel invitus <lb/>
+            audirem voces tuas, me diutius clamitantes, et con­ <lb/>
+            versus sequerer præconantem mihi junia capitulum <lb/>
+            psalmi dicentis : In freno et camo maxillas eorum <lb/>
+            contringe qui non approximant ad te (Psal. XXXI, 9).
+            <milestone unit="PLSection" n="A"/><lb/>
+            Et ego, Domine, cognovi et intellexi sonum clamo <lb/>
+            ris tui, et reprehendens me conversus sum, et egi <lb/>
+            pœnitentiam coram te, sicut hæc dies probat, id­ <lb/>
+            circo in laudem tuam et consolationem meam pro­ <lb/>
+            phetica tibi verba decantem : Castiga me, Domine, <lb/>
+            quia eruditus sum, quasi juvenculus indomitus.</p>
+          <p>42. Postquam enim convenisti me, egi pœniten­ <lb/>
+            tiam; el postquam ostendisti mihi, percussi femur <lb/>
+            meum, confusus sum, et erubui, quoniam sustinui <lb/>
+            opprobrium adolescentiæ meae, et recordatus sum <lb/>
+            Deo meo, et dixi : Confitebor Domino, quoniam bo­ <lb/>
+            nuS, quoniam in sæculum misericordia eius (Psal. <lb/>
+            CXVII, 1); in tua enim misericordia revixit anima <lb/>
+            mea, et surrexit a mortuis, quoniam segregasti me <lb/>
+            a peccatis adolescentiæ <unclear>me</unclear> i , et a juventute mea <lb/>
+            corripuisti me, et convertisti me, et egi pœniten­ <lb/>
+            tiam coram te. Ideo bonæ spei factus sum vir, quia <lb/>
+            servasti mihi tempus conversionis, quo considerans <lb/>
+            peccata mea compunctus sum, et egi pœnitentiam
+            <milestone unit="PLSection" n="B"/><lb/>
+            coram te. Lætus jam deine libi nunc et semper in­ <lb/>
+            numeras gratias referam, te totis visceribus implo- <lb/>
+            rans, tibi me tota devotione commendans, quia, ut <lb/>
+            invenirer, tu quæsisti me ; ut redirem, tu compuli- <lb/>
+            Iii me ; ut verberarer, tu respexisti ; ut conliterer, <lb/>
+            tu es operatus ; ut me recognoscens plangerem, tu <lb/>
+            dedisti mihi. Pone, Domine, lacrymas meas in con. <lb/>
+            spectu tuo, et perveniat ad te in coelum deprecatio <lb/>
+            mea puhlicani et peccatoris. Placita tibi fiat confes­ <lb/>
+            sio oris mei, et pro munerum 373 oblationibus, <lb/>
+            quas nunu non offero, hunc contriti cordis mei ne­ <lb/>
+            tum tibi in sacrificium submitto ; et hanc pœntien- <lb/>
+            Hae actionem pro acceptione, si mihi fuerit dene­ <lb/>
+            gata, suscipito, quia et actio a te injungilur, non ac- <unclear/> <lb/>
+            ceptio demandatur.</p>
+          <p>43. Esto, Domine, adjutor, et protector meus in <lb/>
+            salutem , et misericordia tua subsequatur me omni­ <lb/>
+            bus diebus vitæ meæ ; atque in umbris lætabilibus <lb/>
+            collocatus umbra alarum tuarum me protegens re-
+            <milestone unit="PLSection" n="C"/><lb/>
+            crea. Dum vero diem vocationis induxeris, ecce, <lb/>
+            Domine flens, dico, introibo miser, tremebundus, <lb/>
+            et pavidus viam amarissimæ mortis obscurissimam , <lb/>
+            ignotam, ei irremediabilem, profunda demergentem <lb/>
+            caligine. Adesto, precor, et subveni, atque in ma­ <lb/>
+            nus tuas commendatum tibi spiritum suscipe, libe­ <lb/>
+            rans animam meam de ore draconis sævissimi, et <lb/>
+            de manu atrocissimi inferni, cum acceperis eam, et <lb/>
+            auferas me de medio umbrae mortis ; imo deducas <lb/>
+            super semitam lucis nemorosam, et clarissimam re­ <lb/>
+            gionem viventium. Colloca me , Domine, in caulis <lb/>
+            tutissimis gregum tuorum , et associatum numera <lb/>
+            cum ovibus tuis in supernarum mansionum guber­ <lb/>
+            naculis , quo sancti lui Abraham, Isaac et Jacob, <lb/>
+            amœnitate fruentes lucis et retrigerii, cum uni­ <lb/>
+            versa multitudine sanctorum tuiorum inhabitant, <lb/>
+            quia tu es pastor bonus, qui ducis et reducis per­ <lb/>
+            diU , lucris et salvas inventa, foves et sanas lan­ <lb/>
+            guentia, et tu es nnsericors Dominus, qui sperantes <lb/>
+            in te non confundis, requireutes te nOli derelinquis,
+            <milestone unit="PLSection" n="D"/><lb/>
+            revertentes ad te non despicis, sed exsultando et <lb/>
+            laudando suscipis, amplius gaudens coram angelis <lb/>
+            tuis super unum pœnitentem , et conversum <unclear>eri</unclear> u- <lb/>
+            lum, quam super novem et nonaginta numeros bea­ <lb/>
+            torum ; cui est cum Patre et Spiritu sancto una <lb/>
+            deitas, gloria, virtus, imperium, et potestas in <lb/>
+            sæcula sæculorum. Amen.</p>
+        </div>
+        
+        </body>
+  </text>
+</TEI>

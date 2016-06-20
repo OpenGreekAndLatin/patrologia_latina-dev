@@ -1,0 +1,1860 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+    <fileDesc>
+			<titleStmt>
+				<title>Patrologiae Cursus Completus. Series Latina (PL)</title>
+				<sponsor>University of Leipzig</sponsor>
+				<funder>European Social Fund Saxony</funder>
+				<principal>Gregory Crane</principal>
+				<respStmt>
+					<persName xml:id="Jouve">Jouve</persName>
+					<resp>OCR-ed, corrected and encoded the text</resp>
+				</respStmt>
+				<respStmt>
+					<persName>Greta Franzini</persName>
+					<resp>Project Manager (University of Leipzig)</resp>
+				</respStmt>
+				<respStmt>
+					<persName>Simona Stoyanova</persName>
+					<resp>Project Assistant (University of Leipzig)</resp>
+				</respStmt>
+				<respStmt>
+					<persName>Bruce Robertson</persName>
+					<resp>Technical Advisor (Mount Allison University)</resp>
+				</respStmt>
+			</titleStmt>
+
+			<publicationStmt>
+				<authority>University of Leipzig</authority>
+				<idno type="filename">PL50.xml</idno>
+				<availability>
+					<licence target="https://creativecommons.org/licenses/by-sa/4.0/">Available under a
+						Creative Commons Attribution-ShareAlike 4.0 International License</licence>
+				</availability>
+				<date>2014</date>
+				<publisher>University of Leipzig</publisher>
+				<pubPlace>Germany</pubPlace>
+			</publicationStmt>
+
+			<sourceDesc>
+				<listBibl xml:lang="la">
+					<biblStruct>
+						<monogr>
+							<editor>
+								<persName>
+									<name xml:lang="fr">Jacques Paul Migne</name>
+								</persName>
+							</editor>
+							<author ref="http://data.perseus.org/catalog/urn:cts:latinLit:stoa0076c">Cassianus
+								Ioannes</author>
+							<title>Paucae Quaedam Sententiae Piam Interpretationem Desiderantes</title>
+							<imprint>
+								<publisher>Garnier</publisher>
+								<pubPlace>Paris</pubPlace>
+								<date>1846</date>
+							</imprint>
+							<biblScope unit="volume">50</biblScope>
+						</monogr>
+						<monogr>
+							<author>Vigilius Diachonus</author>
+							<title>Regula Monachorum</title>
+							<imprint>
+								<publisher>Garnier</publisher>
+								<pubPlace>Paris</pubPlace>
+								<date>1846</date>
+							</imprint>
+							<biblScope unit="volume">50</biblScope>
+						</monogr>
+						<monogr>
+							<author>Fastidius Episcopus</author>
+							<title>De Vita Christiana Liber Unus</title>
+							<imprint>
+								<publisher>Garnier</publisher>
+								<pubPlace>Paris</pubPlace>
+								<date>1846</date>
+							</imprint>
+							<biblScope unit="volume">50</biblScope>
+						</monogr>
+						<monogr>
+							<author>Antoninus Honoratus Episcopus</author>
+							<title>Epistola Consolatoria Ad Arcadium</title>
+							<imprint>
+								<publisher>Garnier</publisher>
+								<pubPlace>Paris</pubPlace>
+								<date>1846</date>
+							</imprint>
+							<biblScope unit="volume">50</biblScope>
+						</monogr>
+						<monogr>
+							<author>Sixtus III</author>
+							<title>Epistolae Ed Decreta</title>
+							<imprint>
+								<publisher>Garnier</publisher>
+								<pubPlace>Paris</pubPlace>
+								<date>1846</date>
+							</imprint>
+							<biblScope unit="volume">50</biblScope>
+						</monogr>
+						<monogr>
+							<author>Vincentius Lirinensis</author>
+							<title>Commonitorium Primum</title>
+							<title>Commonitorium Secundum</title>
+							<imprint>
+								<publisher>Garnier</publisher>
+								<pubPlace>Paris</pubPlace>
+								<date>1846</date>
+							</imprint>
+							<biblScope unit="volume">50</biblScope>
+						</monogr>
+						<monogr>
+							<author ref="http://data.perseus.org/catalog/urn:cts:latinLit:stoa0117">Eucherius Lugdonensis Episcopus</author>
+							<title>Epistola Paraenetica Ad Valerianum Cognatum</title>
+							<title>Homiliae Quaedam</title>
+							<title>Exhortatio Ad Monachos</title>
+							<title>Epitomes Operum Cassiani Ad Castorem Aptensem Libri Duo</title>
+							<title>Epistola Ad Philonem Presbyterum Suum [Incertus]</title>
+							<imprint>
+								<publisher>Garnier</publisher>
+								<pubPlace>Paris</pubPlace>
+								<date>1846</date>
+							</imprint>
+							<biblScope unit="volume">50</biblScope>
+						</monogr>
+						<monogr>
+							<author ref="http://data.perseus.org/catalog/urn:cts:latinLit:phi2434">Hilarius
+								Arelatensis Episcopus</author>
+							<title>Sermo De Vita Sancti Honorati Episcopi Arelatensis</title>
+							<title>Epistola Ad Sanctum Eucherium Episcopum Lugdunensem</title>
+							<title>Sermo De Miraculo Sancti Genesii Martyris Arelatensis</title>
+							<title>Versus In Natali Machabeorum Martyrium</title>
+							<title>Metrum In Genesim Ad Leonem Papam</title>
+							<imprint>
+								<publisher>Garnier</publisher>
+								<pubPlace>Paris</pubPlace>
+								<date>1846</date>
+							</imprint>
+							<biblScope unit="volume">50</biblScope>
+						</monogr>
+						<ref target="https://archive.org/details/patrologiaecursu50hammuoft">Internet
+							Archive</ref>
+
+					</biblStruct>
+				</listBibl>
+			</sourceDesc>
+
+		</fileDesc>
+		<encodingDesc>
+			<p>The following text is encoded in accordance with EpiDoc standards and with the CTS/CITE
+				Architecture.</p>
+		  <refsDecl n="CTS">
+        <cRefPattern n="no citable units founds" matchPattern="(.+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div/tei:div[@n='$1'])"/>
+      </refsDecl>
+    </encodingDesc>
+
+		<profileDesc>
+			<langUsage>
+				<language ident="la">Latin</language>
+			</langUsage>
+		</profileDesc>
+
+	</teiHeader>
+  <text>
+    <body><div type="edition" n="urn:cts:latinLit:stoa0263b.stoa003.opp-lat1">
+					<head>
+						<title type="main">XYSTI III PAPÆ 
+							EPISTOLÆ ET DECRETA, Quibus nonnulla intexta AD EUMDEM
+							PONTIFICEM PERTINENTIA.</title>
+					</head>
+					<ab>
+						<title type="sub">(Ex edit. Epist. Rom. Pont. P. Coustantii, apud Gallandium Vett. Patr.
+							Bibl tom. IX.)</title>
+					</ab>
+					<p>
+						<milestone unit="PLSection" n="D"/>
+					</p>
+					<ab>
+						<title type="sub">MONITUM IN DUAS EPIST. SEQUENTES.</title>
+					</ab>
+					<p>1. E Græco exemplari Regiæ bibliothecæ primum <lb/> a Joanne Baptista Cotelerio erutæ,
+						Latinitate donatæ <lb/> ac Monumentorum Græcorum lomo I vulgatæ sunt <lb/> illæ epistol
+						æ. Easdem subinde Steph. Baluzius in <lb/> nova collectione conciliorum pag. 638 recudi
+						cura­ <lb/> Vit. Ambæ dubio procul Latine, præsulum Romano­ <lb/> rum more, scriptæ
+						sunt, licet earum Græca tantum <milestone unit="PLSection" n="D"/><lb/> interpretatio ad
+						nos pervenerit. Utramque vero sta­ <lb/> tim ab ordinatione Xysti conscriptam esse
+						liquet, <lb/> adeo'tue aano 432, aut circa initium Maii, si non falsa <lb/> esi vulgaris
+						de die ordmationis hujus papæ senten­ <lb/> tia, aut circa exitum Julii, si Pagii opinio
+						præferenda <lb/> est. Utraque satisfacere aggreditur Xystus litteris <lb/> quas Cyrillus
+						et alii Orientales episcopi, pro compo­ <lb/> nenda Orientis pace, ad decessorem ipsius
+						Cœlesti­ <lb/> num per legatos miserant. Idcirco forsitan prima non <pb n="583"/>
+						<milestone unit="PLSection" n="A"/><lb/> sim liciter Xysti, sed Xysti successoris
+						Cælestini no­ <lb/> mine, memorato praeter morem Coelestino , inscribi­ <lb/> tur.
+						Quamquam hoc fieri potuit, uno antiquarii stu­ <lb/> dio, ut ab aliis Xystis noster
+						distingueretur.</p>
+					<p>2. Prima non ad Cyrillum tantum, sed et ad alios <lb/> Orientis episcopos, a quibus
+						destinati fuerant legati, <lb/> et ad quos scribi legati ipsi petieranl, a pari scripta
+						<lb/> est, licet unum præseferat Cyrilli nomen ; haud dubie <lb/> quia quod ipsi
+						nominatim inscriptum erat exemplum, <lb/> unum ad nos pervenit. Hinc neminem movere
+						debent <lb/> Cyrilli landes, quas Xystus, nisi ad alios etiam per­ <lb/> tinuisset hæc
+						epistola, vel facere, vel aliter efferre <lb/> debuisset. Eamdem ad Acacium B rœæ
+						episcopum <lb/> missam esse, nec aliam ab ipso iudicari opinamur <lb/> in Synodico, quod
+						Baluzius post Christianum Lnpum <lb/> novo coli. concil. recudit, cap. 55 pag. 757, ubi
+						sic <lb/> loquitur : Episcopus, qui Romæ est, unam ad me <lb/> scripsit epistolam. Et
+						vero inter eos qui a Joanne <lb/> stabant, aut Cyrillo adversabantur, precipuus erat
+						<lb/> ille Acacius. Unde et ipse Joannes cum sua synodo, <milestone unit="PLSection" n="B"/><lb/> apud eumdem Baluzium ii. c. 17 pag. 711, ad <lb/> Theodosium imp. ita
+						scribit: Hæc autem ( Cyrilli <lb/> capitula) sicut vestrum agnovit imperium, et Deo ami­
+						<lb/> cissimus et sanctissimus pater noster et episcopus Aca­ <lb/> cius sanctam synodum
+						per litteras edocuit, quod Apol­ <lb/> linarii impietati conveniant. Novit vero hæc
+						clare vir, <lb/> qui centum decem vitæ annos explevit, omnem vero <milestone unit="PLSection" n="A"/><lb/> vitam in evangelicis certaminibus desudando transegit,
+						<lb/> et synodis multis interfuit. Alia præterea Xysto ad <lb/> Acacium scribendi causa
+						fuit, quod nimirum is, cum <lb/> Ephesum vocatus præssenio adesse non valuisset , <lb/>
+						litteras proxime a Joanne memoratas vice sui ad <lb/> Theodosium misit cum synodo
+						communicandas, quas <lb/> re ipsa imperator ille perferri Ephesum curavit <lb/> (Lab.
+						tom. III Concil. pag. 722). Harum Acacii litte­ <lb/> rarum ipse meminit Theodosius in
+						sacra quam post <lb/> Nestorii, Cyrilli ac Memnonis depositionem ad syno­ <lb/> dum
+						scripsit. Cum igilur Xystus Acacium non modo <lb/> apud Joannem et socios, sed etiam
+						apud imperato­ <lb/> rem tantum posse animadverteret; plurimi interesse <lb/> judicavit
+						ut ad componendam pacem, idoneis condi­ <lb/> tionibus propositis, ille in primis
+						adduceretur. De <lb/> nique hanc primam Xysti epistolam notare voluisse <lb/> videtur
+						Gennadius lib. de Vir. Illustr. ubi ait: Xystus <lb/> successor Cœlestini pro eadem re
+						et ad ipsum Nesto­ <lb/> rium et ad Orientis episcopos adversus errorem ejus <lb/>
+						succidendum sententias direxit. Quod si ita est, gra- <milestone unit="PLSection" n="B"/><lb/> viter ballucinatus est ille, cum epistolam ad ipsum <lb/> Nestorium directam
+						dixit, in qua diserte adversus <lb/> eum pronuntiat Xystus ( Num, 4): Solus igitur ille
+						<lb/> sit naufragus, quem in tanta caligine propriarum <lb/> doctrinarum nihil cernentem
+						impietati fluctus allisit <lb/> scopulo depositionis.</p>
+					<ab>
+						<title type="sub">a EPISTOLA I</title>
+					</ab>
+					<ab>
+						<title type="sub">XYSTI III, BEATISSIMI PAPÆ ROMÆ, SUCCESSORIS CŒLE- STINI, AD
+							CYRILLUM.</title>
+					</ab>
+					<figure type="illustration">
+						<graphic url="PL50_2_fig1.jpg"/>
+					</figure>
+					<ab>
+						<title type="sub">Episcopis Orientis nuntiat unanimi consensu factam esse ordinationem
+							suam; cui et illos in legatis suis inter­ fuisse gratulatur. Cyrilli erga Nestorii
+							sectatores pia petitio laudatur et confirmatur.</title>
+					</ab>
+					<p>i. Gratiam habentes Dei nostri circa nos humani­ <lb/> tati, quod eo tempore quo nos ad
+						supremum saccr­ <lb/> dotii apicem vocare dignatus est, concessit nobis, <lb/> secundum
+						pietatern suam, presentiam sanctorum <milestone unit="PLSection" n="c"/><lb/> fratrum et
+						cœpiscoporum nostrorum Hermogenis Iet <lb/> Lampetii, necessario ad vestram
+						fraternitatem per <lb/> eos has litteras dedimus b testes ordinationis nostræ. <lb/> In
+						his enim omnes vos a quibus illi missi fuerunt, <lb/> astitisse credidimus, quandoquidem
+						nullatenus inter­ <lb/> vallo separantur quos connectit gratia spiritalis. <lb/> Quali
+						autem omnium concordia, per divinae Provi­ <lb/> dentiae dispensationem, haec nostra
+						facta fuerit ordi­ <lb/> natio, ubi sanctitas vestra didicerit tum ex nostris <lb/>
+						litteris, tum ex relatione fratrum, omnino gratiam <lb/> præbenti Domino pro nobis
+						habitura est, dilectissime <lb/> frater, ut proprii doni custos, ecclesiasticam pacem
+						<lb/> conservare dignetur. Deus noster, qui cuncta quæ ad <lb/> se pertinent ita
+						dispensat, ut ne unum quidem defi­ <lb/> cere permittat, beneficium mihi in occasione
+						frater- <milestone unit="PLSection" n="D"/><lb/> nitatis dedit. Nam per sanctos
+						consacerdotes nostros <lb/> Ilermogenem et Lampetium qui interfuerunt ordina­ <lb/>
+						tioni nostræ has litteras mittere visum est ad pieta­ <lb/> tem tuam, quales utique ad
+						sanctam synodum e mi­ <lb/> simus, de seductoribus Nestorii.</p>
+					<figure type="illustration">
+						<graphic url="PL50_2_fig2.jpg"/>
+					</figure>
+					<p>
+						<milestone unit="PLSection" n="c"/>
+						<figure type="illustration">
+							<graphic url="PL50_2_fig3.jpg"/>
+						</figure>
+						<milestone unit="PLSection" n="D"/>
+						<figure type="illustration">
+							<graphic url="PL50_2_fig4.jpg"/>
+						</figure>
+						<note type="footnote"> * Scripta circa med. ann. '3'. </note>
+						<note type="footnote">v Observat Cotelerilll vocabulum testes ad litteras, <lb/> non ad
+							legatos referendum, adeoque Græce <lb/> poGvra loco <foreign xml:lang="grc">μαρτυρούντων</foreign> legendum esse : Qumnvis <lb/> enim ordinationis Xysti testes
+							fuerint legati, si istud <lb/> tamen enuntiare voluisset inierpresGraecus jxaprupojv
+							<lb/> potius quam <foreign xml:lang="grc">μαρτφρούντων</foreign> verbo usus fuisset.
+							Quac <lb/> observatio prins nuiu. 3 verbis firlnaLnr. </note>
+						<note type="footnote"> c Si Xysius Cælestini epistolam 22 hic indicat ad <lb/> Ephesinam
+							synodum ioseripLau,. in qua de Nestorii <lb/> sectatoribus agitur, ac circa eos quid
+							sequendum sit <lb/> decernitur ; verbomiitmus ideo utitur, aut quia cen­ <lb/> setur
+							in decessore suo successor illius, aut quia lit­ <lb/> teras illas e sententia
+							concilii in quo ipse Xystus <lb/> praecipuas agebat partes Coelestinus miserat. Sed
+							hoc <lb/> potius signilicat, tales a se ad CyriHnm literas initti, <lb/> quales seu
+							quarum paria et similia exempla simus <lb/> mittebat ad ca:teros Orientis episcopos,
+							quorum no­ <lb/> mine LaropeLius et llermogenes Romam venerant. </note>
+					</p>
+					<pb n="585"/>
+
+					<p>
+						<milestone unit="PLSection" n="A"/>2. Valde igitur, fateor, lætati sumus, quia conti­
+						<lb/> git nobis una eademque opportunitate et quæ ad ti­ <lb/> dem, ct quæ ad nos ipsos
+						pertinent, communicare. <lb/> Omnes quippe fratres præsentes habuit ordinatio no. <lb/>
+						stra. Quis enim non interesse visus est, quando <lb/> Oriens per suos b legatos aderat,
+						qui quidem specta­ <lb/> runt unum omnium cor, et unam in cunctis aniinam <lb/>
+						agnoverunt. consonamque divinæ multitudinis vo­ <lb/> cem ? Sic Romana Ecclesia unum
+						suffragium custo­ <lb/> divii in institutione praedicatoris fidei, ut in ipsa fi­ <lb/>
+						dei prædicatione ..naiD semper sententiam servavit.</p>
+					<p>3. Quoniam ergo sufficit paucis verbis significasse <lb/> ordinationem meam, nobis
+						loquendum superest de <lb/> iis quæ sanctus frater noster Cyrillus, immemor <lb/>
+						propriæ contumelias et laborum, postulat. Etenim <milestone unit="PLSection" n="B"/><lb/> sufficiunt quae jam a beatæ memoriae dr cessore meo <lb/> scripta fuerunt de
+						fide, pro qua gaudemus trium­ <lb/> phautes secondum auxilium Christi Dei nostri, in
+						<lb/> quem quæstio mota fuerat. Attamen quoniam pigere <lb/> non debet, sæpe repetere
+						quae salubriter defiuita <lb/> sunt, necessarium duxi, scribens nunc ad fraterni­ <lb/>
+						tatem tuam per sanctos fratres et coepiscopos no­ <lb/> stros Hermogenem et Lampetium,
+						hæc paucis de­ <lb/> clarare, quæ multo jam sermone olim apostolicæ sedis <lb/>
+						sententia delinivit; etne fatiscat audiens, sed et liben­ <lb/> ter audiat, quia vicit.
+						Si enim Nestorius a impiarum <lb/> disputationum magister librosedidit prædicans subver­
+						<lb/> tenda, quanto magis nos oportet apparere paternæ fidei <lb/> custodes, quæ sunt e
+						subversa omnino auferentes?</p>
+					<p>
+						<milestone unit="PLSection" n="c"/>4. Sanctus autem et cocpiscopus noster frater an­
+						<lb/> tistes Alexandrinorum Ecclesiæ, ostendens quomodo <lb/> et quantam fidei curam
+						gerat, contemnensque con­ <lb/> tumelias quas gloriose secundum Apostolum passus <lb/>
+						eet (II Cor. XII, 9), magis ordinari Ecclesias, quam <lb/> se vindicari desiderat.
+						Confestim autem in naufragio <lb/> laborantibus petit aperiri portum : ejus unius con­
+						<lb/> tentus morte, qui cum in imperitia doctor esse vide­ <lb/> retur, vindicavit sibi
+						Dominici g temonis guberna­ <lb/> cula ; sed permanere in sede non potuit, qui docere
+						<lb/> nescivit. Solus igitur ille sit naufragus, quem in tanta <lb/> caligine propriarum
+						doctrinarum nihil cernentem, <lb/> impietatis fluctus allisit scopulo depositionis.
+						Habuit <lb/> quidem omnes una tempestas; verum, eo qui isia <lb/> excogitavit submerso,
+						sanari vult caeteros. Est ita- <milestone unit="PLSection" n="D"/><lb/> que et in nobis
+						cadem sententia. Praestat enim pie <milestone unit="PLSection" n="A"/><figure type="illustration">
+							<graphic url="PL50_2_fig5.jpg"/></figure>
+						<milestone unit="PLSection" n="B"/><figure type="illustration">
+							<graphic url="PL50_2_fig6.jpg"/></figure>
+						<milestone unit="PLSection" n="C"/><figure type="illustration">
+							<graphic url="PL50_2_fig7.jpg"/></figure>
+						<milestone unit="PLSection" n="D"/><figure type="illustration">
+							<graphic url="PL50_2_fig8.jpg"/></figure><note type="footnote"> a Lsg. <foreign xml:lang="grc">πρεσευτῶν</foreign>. </note><note type="footnote">k Cot.*lerius
+							quidem litteram Graecnm seculus ila <lb/> convenit, per preSbyteros suos; sed inendiim
+							in Græ­ <lb/> Cum textum irrepsisse, acitf&gt;t&lt;T6tvT&amp;v\oCi&gt;itpt&lt;T6yTipm
+							<lb/> restituendum esse non inflicias ip'l'i,. qui animadverterit <lb/> CUln supra
+							num. i, IUln nunc Orientis episcopos <lb/> Xysti ur.linalinni non Ali" noluine
+							praesentes dici, <lb/> IIISI qiiod ipsoruni legati Hermogenes et Lampetius <lb/> illi
+							imerfuisseni. Hi auteni le*jati non pr,'sbyteri, <lb/> sed eoi&gt;copi erant,
+							lampetius Casii, et Hermoge­ <lb/> nes Rhinocurorum, ambo in Augustamnica pruvin­
+							<lb/> cia. </note><note type="footnote"> * Leg. i-r-4 pYla.v. </note><note type="footnote"> a Apud Couior. et Baluz., in'p;æ scholæ magister. <lb/> Nestorium
+							IIHllius schol." magistrum exsiitisse legi­ <lb/> nius, sed ex Amiocliena Ecclesia in
+							episcopalem <lb/> regiao urbis sedem assumptum, statim adversus natir <lb/> vitatem
+							Chrisfi atque genitricis ejus dignitatem im­ <lb/> pias disputationes excitare ac
+							fovere ru'pisse. </note><note type="footnote">e Baluz. cum Coieler., subvertenda,
+							quasi de fa. <lb/> nondum acta ageretur. Pracferendum quod et littera <lb/> Graeca
+							exigit. subversa nempe quae Nestorius prædi.. <lb/> caverat, primum Crelesliui, tum
+							etiam Ephesilli con­ <lb/> cilii auctoritate subversa sunt, </note><note type="footnote"> I Forte, <foreign xml:lang="grc">ϕροντιζει</foreign>. </note><note type="footnote"> I Greca litiera verbis Dominici ';'lIor;, aut terroris <lb/> Latine
+							cH88vf'rlenda esset. Cotelerius vero, utramque <lb/> vocem ad Xysti st'opnm ininns
+							aptam judtcans, Do­ <lb/> mifucaf religionis substituit. Sed obscurum non est <lb/>
+							interpretcm Græcum vocabulorum affinitate dece­ <lb/> ptum, in exemplari Latino
+							limo,.;. aut lerrori,. loco <lb/> temonis, legisse. Lectioni nostrae cOBoa.. haec est
+							<lb/> Coelestiui in epistola 24 ad Maximianum Dum. i . <lb/> Sume gubernacula nota
+							tibi navis. </note>
+						<note type="footnote"> PATBOJU L. </note>
+						<note type="footnote"> 18 </note>
+						<pb n="587"/>
+						<milestone unit="PLSection" n="A"/><lb/> circa illos agere, qui erga Deum impie se
+						gerere <lb/> cessaverint. Unde recipiantur qui voluerint ad re­ <lb/> ctam viam reverti.
+						De quibus multa loqui opus non <lb/> est, cum haec pauca sufficiant. Sciant enim a
+						eccle­ <lb/> siarum ab ipsis occupatarum curam fore, si non <lb/> ipsi sibi
+						consuluerint, et ea ipsa quae nos, sentire <lb/> voluerint.</p>
+					<p>5. De Joanne autem Antiochiæ haec detinimus de­ <lb/> bere servari, quae in litteris b
+						ante missis praescripta <lb/> sunt, ut noverit futurum se unum catholicorum, si <lb/>
+						cuncta per synodum a eversa subvertens, ostenderit <lb/> se ipsum catbolicum sacerdotem.
+						Retine fortiter igi­ <lb/> tur, cum quæ a synodo, tum quae a nobis definita <lb/> sunt,
+						frater dilectissime. Remittit enim d frater con­ <lb/> tumelias quae ei utiles sunt
+						coram communi Domino. <milestone unit="PLSection" n="B"/><lb/> Hujusmodi enim contumelia
+						victoria est. Unde æquo <lb/> animo tulit omnium aculeorum plagas; neque illa <lb/> eum
+						contristarunt de quibus nunc laetatur, memor <lb/> quod certaverit propter coronam.
+						Novit enim qualia <lb/> maneant praemia eos qui talia vicerunt. Exsultet <lb/> de
+						triumphi hujosmodi societate <unclear>o</unclear> omnis qui rever­ <lb/> sus fuerit, et
+						animo in eamdem sententiam conspi­ <lb/> rarit.</p>
+					<p>6. Haec vero ad vicinorum fratrum notitiam volo <lb/> mitti per pietatem tuam, ut
+						discant in re tanta etsi <lb/> olim cuncta plenissime definita fuerint, non cessare
+						<lb/> aut segnem esse tamen apostolicam sedem, neque <lb/> enim permittit nos quietos
+						esse ab ejusmodi curis <lb/> omnium Ecclesiarum solliciludo.</p>
+					<p>
+						<milestone unit="PLSection" n="A"/>
+						<figure type="illustration">
+							<graphic url="PL50_2_fig9.jpg"/>
+						</figure>
+						<milestone unit="PLSection" n="B"/>
+						<figure type="illustration">
+							<graphic url="PL50_2_fig10.jpg"/>
+						</figure>
+					</p>
+					<ab>
+						<title type="sub">f EPISTOLA II.</title>
+					</ab>
+					<ab>
+						<title type="sub">XySTI III PAPÆ AD CYRILLUM.</title>
+					</ab>
+					<figure type="illustration">
+						<graphic url="PL50_2_fig11.jpg"/>
+					</figure>
+					<ab>
+						<title type="sub">itteras ei mittit testes ordinationis sua, cui ipsum in legatis
+							interfuisse gavisus est. De Joanne Antiocheno celerisque Nestorii consortibus quid
+							decretum sit, significat.</title>
+					</ab>
+					<p>
+						<milestone unit="PLSection" n="c"/>1. Laetatus sum in iis quae per epistolam a
+						sanctitate <lb/> tua indicata sunt mihi de sanctis et coepiscopis <lb/> g meis, quos
+						brevis usus et congressio quales quan­ <lb/> tique essent ostendit. Et forsan minus
+						litteris quas <lb/> de eis scripsisti credidissemus, nisi earum testimo­ <lb/> nium
+						vicisset sibi ipsi attestans hominum praesentia. <lb/> Vidimus vere Domini sacerdotes;
+						vidimus viros pie­ <lb/> nos gratia spiritali, quae in primis ab ipso concedi­ <lb/> tur
+						Deo. Sed et ipsos gratiores nobis Dei circa nos <lb/> judicium efffecit. Illos enim
+						praesentes habuit nostra <lb/> ordinatio. Et in cunctis quae sacerdotem perficiunt <lb/>
+						ornati, ipsam nobis praesentiam exhibuerunt sancti­ <lb/> tatis tuae, quam non sine
+						multo merito, fraterno af­ <lb/> c <figure type="illustration">
+							<graphic url="PL50_2_fig12.jpg"/></figure>
+						<milestone unit="PLSection" n="D"/><note type="footnote"> a Coteler. Latine convertit,
+							Circa ecclesias ab iis <lb/> derelictas, licet Graece legerit ac retinuerit xa-rOtl". <lb/>
+							<foreign xml:lang="grc">ϕθεισας</foreign>, non <foreign xml:lang="grc">ϰαταλειϕθεισας</foreign>. Nihil autem causae vide­ <lb/> nr cur recedamus a Graeco
+							textu. Neque tamen hic <lb/> sermonem esse puto de iis qui, ut Coelestinus epist.
+							<lb/> "22 nuin. 8 loquitur, .ubripiendum in ecclesiasticis <lb/> causis Christianis
+							principibus crediderunt, et alio rur­ <lb/> sus ordine ecclesias occuparunt, sed de
+							iis qui, licet <lb/> legitimo ordine ecclesias suas obtinuerint, hoc ho­ <lb/> nore
+							sese indignos per favorem quem haeresi ilnpen­ <lb/> debant, subinde praebuerunt.
+							Quibus Interminatur <lb/> Xystus fore, ut nisi resipiscant, ipsorum ecclesiis, <lb/>
+							meliores subrogando pastores, pro""iciatur. Eodem <lb/> nodo Ctelestinul epist. ii ad
+							Cyritlum num. 4 de </note>
+						<milestone unit="PLSection" n="D"/><note type="footnote"> Nestorio scribit, ut uia hoc
+							fecerit quod praecipiebat, <lb/> mox sanctitas tua illi ecclesiæ (quam occupabat sive
+							<lb/> obtinebat) provisura, a nostro eum corpore modis <lb/> omnibus sciat esse
+							removendum. </note><note type="footnote"> * Coelestini videlicet epist. 22.
+							</note><note type="footnote"> e Sive, ut loquitur Coelestinus in modo laudata <lb/>
+							epistola ii. n. 8, damnala cum auctoribus sociisque <lb/> damnans, se profiUatur
+							catholicum sacerdotem. </note><note type="footnote">* Cyrillus. </note><note type="footnote"> * Coteler., omnis assistens et animo consentiens. </note><note type="footnote"> f Simul tum superiore, quae episcopis Orienti3 <lb/> communis erat,
+							haec privaU et peculiaris ,Cyrillo <lb/> missa fuit. </note><note type="footnote"> I
+							Hermoffene et Lampelio legaljs. </note>
+						<pb n="589"/>
+						<milestone unit="PLSection" n="A"/><lb/> rectu complectimur. Tantum euim Ubi debet orbis
+						<lb/> Ecclesia, quantum tibi omnes sunt obnoxii, qui uti­ <lb/> que omnes ubique
+						vicisti.</p>
+					<p>i. Insistente igitur, et salubriter cuncta sugge­ <lb/> rente filio nostro Themisone
+						archidiacono, congruas <lb/> dedimus litteras a ad fratres et coepiscopos nostros, <lb/>
+						ad quos petierant praedicti consacerdotes nostri. <lb/> Sufficiebant quidem illae, quas
+						et antea per Ecclesiae <lb/> Constantinopolitanæ b clericos, et postea per diaco­ <lb/>
+						nos tuæ sanctitatis plenas omnibus necessariis misi : <lb/> at nunc d obsequens tum
+						exspectationi sanctitatis <lb/> tuæ, tum nostræ consuetudini, quæ mihi salubriter <lb/>
+						suggesta sunt, agere non omisi: gratiam habens, <lb/> et in beneficiis ducens hoc, quod
+						persuasum habco <lb/> mihi coclitus donatum fuisse III de mea ordinatione <milestone unit="PLSection" n="B"/><lb/> ac fide eadem ad unanimitatem tuam conseramus <lb/>
+						verba.</p>
+					<p>3. De Autiocheno autem et reliquis qui cum eo <lb/> sectatores Nestorii fieri
+						voluerunt, et de cunctis qui <lb/> præter ecclesiasticam disciplinam Ecclesias insti­
+						<lb/> tuunt, e jam antea hoc definivimus custodiendum : <lb/> ut si resipuerint, et cum
+						suo duce rejecerint omnia <lb/> quæcumque sancta synodus nobis confirmantibus rc­ <lb/>
+						jecit, redeant in sacerdotum consessum. Sicut enim <lb/> persistentes prioribus non
+						potuerunt in nostra esse <lb/> communione, sic volumus eos, propter unitatem ac <lb/>
+						pacem Ecclesiarum, satisfacientes ut diximus sus­ <lb/> cipi. Ipsi vero in seipsos
+						invenientur æquam senten­ <lb/> tiam protulisse, si extra manentes, cum eo f qui de­
+						<lb/> jectus et expulsus est, tantae impietatis sese ostende­ <milestone unit="PLSection" n="c"/><lb/> rint socios atque participes.</p>
+					<p>
+						<milestone unit="PLSection" n="A"/>
+						<figure type="illustration">
+							<graphic url="PL50_2_fig13.jpg"/>
+						</figure>
+						<milestone unit="PLSection" n="B"/>
+						<figure type="illustration">
+							<graphic url="PL50_2_fig14.jpg"/>
+						</figure>
+						<milestone unit="PLSection" n="c"/>
+						<figure type="illustration">
+							<graphic url="PL50_2_fig15.jpg"/>
+						</figure>
+					</p>
+					<ab>
+						<title type="sub">MONITUM IN EPISTOLAM SEQUENTEM.</title>
+					</ab>
+					<p>i. Hæc epistola , quam ex Ephesini Concilii III <lb/> parte cap. 27 huc revocamus, a
+						Baronio et aliis re­ <lb/> fertur ad annum 432, a Tillemontio autem in men­ <lb/> sem
+						Martium anni 453 differtur. Præcessit certe <lb/> concionem quam Cyrillus 28 die mensis
+						Pharmuti, <lb/> hoc est 25 Aprilis, confirmata jam pace, ad populum <lb/> suum habuit.
+						Nec permittunt itus ac reditus, quibus <lb/> ad hanc pacem perventum est, ut hoc citius
+						anno 433 <lb/> contigisse censeamus. Sed ut qua ratione pax illa <lb/> inita confectaque
+						sii, non ignorare, adeoque rem <lb/> paulo altius repetere juverit.</p>
+					<p>i. Maximianus regiæ urbis antistes his Cœlestini <lb/> verbis (Epist. 24) animatus,
+						Gloriam et vigilantis pu­ <lb/> storis et benigni sacerdotis exerceas, el saporem Chri­
+						<lb/> stianæ salubritatis infundas, ut plus in reparando po- <lb/> luisse te liqueat,
+						quam ille (Nestorius) potuit in læden­ <lb/> do, pacis curandæ gratia episcopos, quos
+						Constanti­ <lb/> nopoli esse comperit, una cum universo clero convo­ <lb/> cavit;
+						eorumque consensu id in primis constituit, ut <lb/> imperator ipsorum rogatu ad Joannem
+						Antiochenum <lb/> episcopum litteras mitteret, quibus sponderet fore ut <lb/> omnis
+						altercationis materia e medio tolleretur, si <lb/> Nestorii depositioni subscriberet,
+						illiusque doctrinam <lb/> anathematizaret (Ephes. conc. III part. c. 24). His an­ <lb/>
+						nuens Theodosius. litteris ad Joannem, dum adhuc <lb/> Cœlestinum superstitem crederet,
+						per Archelaum <lb/> tribunum missis, pradictas pacis conditiones propo­ <lb/> suit
+						(Ibid.). Quibus commotus Joannes, non statim <lb/> tamen cessit, sed aliquamdiu, ut ex
+						epistola discimus <lb/> Cyrilli ad Donatum (Ibid. c. 38), ubi tota rei gestæ <lb/>
+						series enarratur, tergiversatus cst. Primo enim non­ <lb/> nuili qui cum eo erant
+						auctores ipsi fuerunt ut ad <milestone unit="PLSection" n="D"/><note type="footnote"> a
+							Hoc est, paria dedimus epistolæ exempla ad eos <lb/> Orientis episcopos, ad quos
+							Lampetius et Ilcranoge­ <lb/> ncs ea mitti petierant. </note><note type="footnote">b
+							Per Ecclesiæ Constantinopolitana' l'tcricps, Joan­ <lb/> nem scilicet presbyterum et
+								<unclear>Epictetum</unclear> diaconmn, <lb/> missae sunt quatuor posteriores
+							Cœlestini epistolae. <lb/> Nec alias hic intelligere licet, siquidem Xystus hanc <lb/>
+							statim ab ordin:-tione sua, iintequam ullas mittere <lb/> poltiissel, scripsit. Itas
+							igitur misisse se dicit, quia <lb/> jubente Caelestino primum illas per Ecclesiai CP.
+							<lb/> cte"i('os miserit, ac postea Cyrilli diaronis interve­ <lb/> nienlihns earum
+							exempla eisdem tradiderit. Magis <lb/> Slaceret misimus, scilicet ex synodo Komana cui
+							<lb/> ysiosinterfuerat. </note><note type="footnote"> c Forte, <foreign xml:lang="grc">άπεστειλαμεν</foreign>. </note><note type="footnote"> . GræEu.m Cotelerius ita
+							reddidit, Sequens vero </note>
+						<milestone unit="PLSection" n="D"/><note type="footnote"> nunc tum patientiam
+							sanctitatis lUll!, tum eonsuetudi­ <lb/> nem nostram, non dereliqui, eLl'.. haud satis
+							ad men­ <lb/> tem Xysti, docentis eum esse Romanorum moreuiv <lb/> III propriis
+							liueris eos a quibus fuerint salutati, resa­ <lb/> lutent, neque dubitare se quin, si
+							huic officio dees­ <lb/> set, Cyiilli exspectationem deciperet. </note><note type="footnote">c Seu ad litteram : Occupavimus hoc deknire custo­ <lb/> diendum.
+							Quippe verbum Gracc. xwrsikrifojec uon hic, <lb/> ut Cotelerius Latine convertit,
+							accipientes, sed occu• <lb/> pantes et antevenientes sonat. Hoc autem occupatum <lb/>
+							est a Coelestino et synodo ipsius in epist. 22 n. 8, quam <lb/> apertius in epistola
+							superiori II. 5Xystus indicat his <lb/> verbis : De Joanne autem A,,'iocheno hcec
+							definivimus <lb/> debere servari quæ in litteris ante musis prcescripta <lb/> sunt.
+							</note><note type="footnote">i Nestorio. </note>
+						<pb n="591"/>
+						<milestone unit="PLSection" n="A"/><lb/> Cyrillum scriberet Acacius Beroensis episcopus,
+						et <lb/> omnia ipsius adversus Nestorium scripta supprimi, <lb/> et velut irrita haberi
+						postularet. Quod et factum est: <lb/> sed <unclear>tum</unclear> absurdæ petitioni
+						assensum neg ovit Cyrillus, <lb/> ac longe æquius esse respondit, ut ipse Joannes cum
+						<lb/> suis Nestorii blasphemias anathematizaret, subscri­ <lb/> beret illius
+						depositioni, et ordinationem Maximiani <lb/> comprobaret. Tum Joannes ac socii Paulum
+						Emise­ <lb/> num episcopum Alexandriam mittunt, qui Cyrillo <lb/> litteras traderet (
+							<unclear>Exstant</unclear> apud Baluz. Synodici cap. <lb/> 80) communio
+							<unclear>us</unclear> quidem indices, sed quas ille. ob <lb/> instauratas adversus se
+						querelas nonnullas, non prius <lb/> admittendas duxit, quam Paulus hoc tx mera animi
+						<lb/> simplicitate scriptum jurasset. Demum idem Paulus, <lb/> eorum qui ipsum miserant
+						nOluine, Cyrillo libellum <lb/> offert (Habetur Ephes. conc. p. III c. 28), in quo quid­
+						<lb/> quid de pactis pacis conditionibus flagitabatur præ­ <lb/> stat. Necdum taimen his
+						contentus Cyrillus, duos e <lb/> clericis suis, Cassium scilicet et Ammonium, cum
+							<milestone unit="PLSection" n="B"/><lb/> Aristolao tribuno Antiochiam destinat, qui a
+						Joanne <lb/> ut easdem conditiones subscriptione sua firmet exi­ <lb/> gunt. Quibus cum
+						Joannes et qui cum eo illustriores <lb/> erant satisfecissent, eam continuo ad Cyrillum
+						mise­ <lb/> runt epistolam, quæ ad pacis complementum exspe­ <lb/> ctabatur, quamque in
+						III parte concilii Ephesini c. <lb/> 30 videre licet. Miserunt autem, inquit
+						Cyrillus(Ibid., <lb/> c. 38), eamdem illam epistolam, quam ad me scripse­ <lb/> runt, ad
+						piissimos quoque sunctissimosque Xystum ma­ <lb/> gnæ Romæ et Maximianum sanctas
+						Ecclesiæ Constanti­ <lb/> nop. episcopos.</p>
+					<p>3. Ex iis igitur quæ Cyrillus, cum in prædicta epi­ <lb/> stola ad Donatum, tuin in
+						altera ad Acacium Meliti­ <lb/> nensem narrat, sequitur, ut Joannes post imperatoris
+						<lb/> sacram ab Archelao acceptam, concilium habuerit, <milestone unit="PLSection" n="A"/><lb/> indeque miserit Berœam qui Acacium ad scriben­ <lb/> dum Cyri lo induceret; tum
+						Acacius quidem litteras <lb/> Alexandriam miserit, sed cum a Cyrillo repudiatæ <lb/>
+						fuissent, Paulus Emisenus episcopus a Joanne et so­ <lb/> ciiS sequester pacis
+						delegatus, Alexandriam conten­ <lb/> derit, Cyrillo novas J.annis litteras necnon
+						ejusdem <lb/> ac sociorum nomine ob ulerit libellum, ac tum de­ <lb/> mum Alexandria
+						Constantinopolim legati fuerint Cy­ <lb/> rilli clerici, quibus epistola nosira credita
+						est. Neque <lb/> conjectura deest, dUs illas Pauli Emiseni ad popu­ <lb/> lum
+						Alexandrinum homilias, quarum una Decembris <lb/> 25, altera Januarii 1 die consignatur,
+						per illam mo­ <lb/> ram habitas esse, qua legatorum mox dictorum re­ <lb/> ditus
+						exspectabatur (Ephes. concil, p. III, cap. 31 et <lb/> 32). Quod si ita est, epistolam
+						istam, quam retule­ <lb/> runt, circa initium anni 433 scriptam fuisse conce­ <lb/>
+						dendum est. Sane rerum ab inito pacis negotio ge­ <lb/> starum series eam citius
+						scriptam credi nou permit­ <lb/> tit. Cum his igitur stare nequit opinio Baronii, sive
+							<milestone unit="PLSection" n="B"/><lb/> cum banc epistolam e concilio quod Joannes
+						post <lb/> acceptam Theodosii sacram Antiochiæ coegit, scri­ <lb/> piam putai, sive cum
+						eamdem Cyrillo datam negat. <lb/> Ipsi enim non secus atque Xysto et Maximiano in­ <lb/>
+						scriptam fuisse ejus enuntiat epigraphe, quam et ipsa <lb/> Cyrilli verba superius
+						relata diserte confirmant. AI­ <lb/> tera quidem ad idem tempus altinens III part.
+						concil. <lb/> Ephes. cap. 30 habetur soli Cyrillo inscripta ; sed in <lb/> hujusmodi
+						negoti s uihil vetat quominus uni eidem­ <lb/> que episcopo duas epistola simul
+						scriptas, unam cum <lb/> alus communem, alterum privaiam, admittamus. Nec <lb/> longe
+						quærenda exempla, cum hujus rci testes sint <lb/> duæ superiores Xysti epistolæ ad
+						eumdem Cyrillum <lb/> simul missæ.</p>
+					<ab>
+						<title type="sub">a EPiSTOLA III.</title>
+					</ab>
+					<ab>
+						<title type="sub">JOANNIS ANTIOCHENI EPISCOPI CÆTERORUMQUE QUI CUM JLLO ERANT AD XYSTUM
+							EPISCOPUM ROMANUM. CYRIL­ LUM ALEXANDRIUM ET MAXIMIANUM CONSTANTINO­
+							POLITANUM.</title>
+					</ab>
+					<figure type="illustration">
+						<graphic url="PL50_2_fig16.jpg"/>
+					</figure>
+					<ab>
+						<title type="sub">Probare se declarant depositionis sententiam a sancta synodo adversus
+							Nestorium prolatam, necnon blasphemas ejus doctrinas anathematizare, et assentiri
+							Maximiani ordinationi.</title>
+					</ab>
+					<p>
+						<milestone unit="PLSection" n="c"/>Sanctissimis Deoque dilectissimis fratribus et consa-
+						I <lb/> cerdotibus XYSTO, CYRILLO et MAXIMIANO, JOANNES <lb/> et reliqui omnes qui mecum
+						sunt, in Domino sa­ <lb/> lutem.</p>
+					<p>1. Omnibus qui sacerdotium sortiti sunt et quibus <lb/> divinum episcopatus ministerium
+						a Salvatore omnium <lb/> nostrum Christo creditum est, studium et scopus is <lb/> esse
+						debet, ut in recta fide excellant, eamque popu­ <lb/> los sibi subditos doceant. Cum
+						itaque res ita habeat, <lb/> anno b elapso, ex religiosissimorum Christique aman­ <lb/>
+						tium imperatorum decreto, doctrinæ Nestorii gratia, <lb/> in Ephesiorum metropoli
+						convenit sancta synodus <lb/> Deo dilectissimorum episcoporum : qui cum « lega­ <lb/>
+						tis a beatæ memoriae Cœlestino, Romanae urbis quon­ <lb/> dam episcopo, missis facto
+						consessu, dicta deposi­ <lb/> tionis sententia, ejecerunt memoratum Nestorium, <lb/> ut
+						qui profana ulerelur doctrina, et multis scandalo <lb/> esset, ac non recte circa fldem
+						ambularet. Cum vero <milestone unit="PLSection" n="D"/><lb/> et nos eo properassemus,
+						rem invenientes confectum, <lb/> ægre tulimus. Hac de causa cum inter nos et san­ <lb/>
+						ctam svnodum controversia intercessisset, ac multa <milestone unit="PLSection" n="c"/><figure type="illustration">
+							<graphic url="PL50_2_fig17.jpg"/></figure><figure type="illustration">
+							<graphic url="PL50_2_fig18.jpg"/></figure>
+						<milestone unit="PLSection" n="D"/><figure type="illustration">
+							<graphic url="PL50_2_fig19.jpg"/></figure><note type="footnote"> a Circa initium anni
+							433. </note><note type="footnote"> * Anno43t Junii 2ą die primum convenit Ephe­ <lb/>
+							sina synodus. Ex quo sequitur ut si elapsus anutis <lb/> hic memoratus iot&lt;
+							lligemlus sit proximus, hæc epi­ <lb/> Stola ad annum 432 pertineat. </note><note type="footnote"> * 8eu ad litteram Gr,t'C810, defwtoribui. Qui a <lb/> CæJastino ad
+							Ephesin:"n synodum missi I..nl, In <lb/> Gra •cis iatsitls com ilii actis nusquam
+							cxSixot, sed voce <lb/> Latina Gracis aceommodaia lihyGCTOI 31'1 ellanlur. <lb/>
+							Quamquam cum missi sint ut senieniiam a Cœlestino <lb/> adversus Nestorium prolatam
+							defeudereot Ie vindK <lb/> carent, .<foreign xml:lang="grc">ε̎ϰδιϰοι</foreign> non
+							maie <unclear>vocantes</unclear>
+						</note>
+						<pb n="593"/>
+						<milestone unit="PLSection" n="A"/><lb/> ultro cilroqne dicta et facta essent, ad
+						nostras Ec­ <lb/> clesias ac civitates reversi sumus : neque per id tem­ <lb/> pus
+						eatenus consensimus sanctæ synodo, ut prolatae <lb/> adversus Nestorium depositionis
+						sententiæ subscri­ <lb/> heremus.</p>
+					<p>2. Cum Ecclesiae in graves discordias incidissent, <lb/> quando omnes id maxime curare
+						operrebat quomodo, <lb/> omni animorum dissensione sublata, ad concordiam <lb/>
+						adducerentur, atque ut hoc fieret religinsissimi ac <lb/> Deo amantissimi reges a
+						præcepissent, ejusque rei <lb/> gratia spectabilem tribunum et notarium Aristolam <lb/>
+						misissent; nos ipsi quoque, ut omnis e medio tolle­ <lb/> retur contentio atque
+						Ecclesiis Dei pax redderetur, <lb/> decrevimus sanctæ synodi sententiæ adversus Nesto­
+						<lb/> num prolatæ assentire. ipsumque habere pro depo- <milestone unit="PLSection" n="B"/><lb/> sito, et blasphemas ejus doctrinas anathematizare : <lb/> eo quod nostræ
+						Ecclesiæ, perinde ac vestri sancti­ <lb/> tas, rectam semper et sinceram b habuerint
+						fidem, <lb/> eamque semper servaverint ac populis tradiderint. <lb/> Assentimur etiam
+						ordinationi Maximiani sanctissimi <lb/> et religiosissimi sanctae Ecclesiæ
+						Constantinopoli­ <lb/> tanæ episcopi, et cum omnibus totius orbis religio­ <lb/>
+						sissimis episcopis, quicumque fidem orthodoxam et <lb/> immaculatam habent ac servant,
+						communicamus. <milestone unit="PLSection" n="A"/><figure type="illustration">
+							<graphic url="PL50_2_fig20.jpg"/></figure>
+						<milestone unit="PLSection" n="B"/><figure type="illustration">
+							<graphic url="PL50_2_fig21.jpg"/></figure></p>
+					<ab>
+						<title type="sub">c EPISTOLA IV,</title>
+					</ab>
+					<ab>
+						<title type="sub">DEO AMICISSIMI d EUTHERII TYANENSIS EPISCOPI ET HELLADII TARSENSIS,
+							SCRIPTA AD MAGNI NOMINIS ROMÆ EPI­ SCOPUM e XYSTUM.</title>
+					</ab>
+					<ab>
+						<title type="sub">De Joannis Anthiocheni mutatione attoniti, plurium provinciarum nomine
+							Xystum rogant ut orbi succurrere non differat, cum in ea parte quæ errat, tum in ea
+							quæ tyrannidem sustinet.</title>
+					</ab>
+					<p>1, Multam providentiam humani generis per sin­ <lb/> gula tempora faciens Dominus
+						Christus, alio tem­ <milestone unit="PLSection" n="c"/><note type="footnote"> a Ea
+							srilicct sacra, qiue III part. concil. Ephes. <lb/> cap. 24 hnhiMnr, 'nantque
+							excipiinit alin- duæ ( una <lb/> nimirum ad SIII,enIU.mt et :..1 Ac:,ciun8
+							net'recuse.n <lb/> Ilte.'a), quibus TlieodoMtis rorum preces ei nper:un <lb/> regat ut
+							joannes acsocii ad concordiam revocentur. </note><note type="footnote"> b Quain vere
+							In c a"Sf'r:u In:U8I8es, dubitare nos <lb/> non simint ipsius ad Nesioriuni
+							liilerxnuicconcilium <lb/> Ephesiuuln scripta', qtithus eum vehenuMilrr cohor­ <lb/>
+							tatur ut emendare non pudeat quod incoiisulto pro­ <lb/> tulisset, nec sacram Virginem
+							appellare detrectet <lb/> Deiparam, cum hoc nomen nullut umquam (cclesia,'i- <lb/>
+							corum doctorum repudiarit. Exstant hæ litlerye i part. <lb/> concil. Ephes. cap. 25.
+							</note><note type="footnote"> c Ex ils est epistolis.quas e Casinensi codice ernit
+							<lb/> Cbrislianu! LUIUtS, nc subinde Stephanus Ealuzius <lb/> nov. cull. C -ocil. suh
+							Syuodici titulo rap. H7 edidit. <lb/> , Nomine pluriiiKtrum episcoporum ex utraque
+							Calicia, <lb/> 'lcuIlda Ca,'pl,docia. Bi,hynia. Thessalia ei Thracia, <lb/> uti II. i2
+							.Iec'ar;.tur, per clericos ei monachus Iltissa <lb/> est. Prius autem 'IU:IIU ad
+							Xystum pciferrriur, illam </note>
+						<milestone unit="PLSection" n="D"/><note type="footnote"> ilelladius et E..lhea'ius. ut
+							altera Eutheri epislola in <lb/> eodcm Symdico cap. 116 relata nos decct, Alcxan­
+							<lb/> dro Hierapoleos et Tln odoreio Cyri episcopis, quo <lb/> ab eis probaretur.
+							mitti curaverunt, simul rogantes <lb/> ut et suas ei litteras adjungerent. Festinandum
+							vero <lb/> pUl:aballL ne Romanus antistes Ju:,ullis liuel is ante­ <lb/> occuparetur.
+							Huic igiiur epistolæ occasionem præbuit <lb/> Joannis mutatio, de qua prospiciebant
+							tore ut ipse <lb/> Joannes Xystum quamprimum certiorem farerct, <lb/> ql10d re ipsa
+							sIII,eriu,'ihus litteris præstitit. Quocirea <lb/> his Jonnnis literis istam Euilierii
+							et Helladii episto­ <lb/> lam liaud multo po&gt;teriorem esse nianifestuin ent. <lb/>
+							Hic notatu digna videtur ea in tota Nestorii causa <lb/> partium festinatio, qua
+							Nestorius ipse, Cyrillus, <lb/> .Joannes ac socii, Eutherius ac reliqui episcopi CillO
+							<lb/> ;s iis conseniientes, hoc est, hæretici, catholici, sch:­ <lb/> imaiici seu a
+							schisrnaic discedentes, seu in eodem </note>
+						<milestone unit="PLSection" n="c"/><note type="footnote"> pertinaces, aposlolicse sedis
+							præsulem antevenire ac <lb/> sibi concilinre contenderunt. Simile quidpiam in <lb/>
+							Jonnnis Ch "y..oslolui causa COlli igis" e ex iis quae in <lb/> Notitia cpMol irum non
+							exstantium Innocentii colle- <lb/> Biallus l)fUhal ur. </note><note type="footnote">d
+							Apud Cyrillum, ut ipse in episola ad Donatnm <lb/> SCt ihiL. Pnulus Emisenus pacis
+							sequester in gratiam <lb/> EULherii. llelladii, lIinll'rii. ct Dorothei vehementer
+							<lb/> in&gt;titcr:it, ut ea qu.T contia ipsos derreta erant ab­ <lb/> roga lenl IIr,
+							contendeus pacem Eceloiarum perfici <lb/> nliter nnn posse; t-cd cum
+							respoudisseiCyrillus rem <lb/> eum conari quæ lieri non posset, proposito dc*tilitv
+							<lb/> nec in pactisparis conditionibus ulla eorum facta est <lb/> mentio. Ilos
+							meiropolitnnos, uti jam observavimii8v <lb/> a synodo (118;'. Maxiiniantim episcopuin
+							Constantino­ <lb/> poliinuum orcli.."viL, depo-ilos fuisse Garnerius "..tis <lb/> in
+							Mar. M.'rc:.' HI ern p. 557 asserit, immo t'L proha­ <lb/> bilc putai alios eoiuin
+							loco fuisse sulfi:clus. In Syn­ <lb/> o.lico Lalllen apud Clirisiinnum Lui um et :'pud
+							linlti­ <lb/> zium c. -'8 letfiMir epistola Joanms Antiocheni episconl </note>
+						<milestone unit="PLSection" n="D"/><note type="footnote"> ad Helladium Tarsi episcopum,
+							quando (i.lt'ln Hella­ <lb/> dius), allata sibi MAXIMIASI SYNODICA (de &lt;
+							ordinationo <lb/> ipsius), notuit ejus nomen in dypticl,a recipere. Tun, <lb/> cap. 49
+							sequitur altera ejusdem Joannis c(Jhlola ad <lb/> ,lerunt et populum Tarsensis
+							EfCle"ilf'. quando perso <lb/> nuerat quod imperator jussisset ut inde pelleretur H
+							el­ <lb/> ladius, eo quod minime susc-pixset MAXIMIANI episcopi <lb/>
+							(Constantinopolitani) SYNODICAM. Q '011 argumento <lb/> esi,saliem Helladium nequaquam
+							a syno.lo qn;e M:.­ <lb/> ximianum ordinavit, sed aliquanto postea, cum hujus <lb/>
+							præsulis ordinationem suscipere noluisset, fuisse depo­ <lb/> situm; aut certe hanc ob
+							causam sentiMinx :th Eplie-1 <lb/> sim synodo adversus hxreticos Inte obnoxium fuisse
+							<lb/> judicatum, adeoquedignuin qui a sede sua imperatoris </note><note type="footnote"> e In Synodico, Syxtum. </note>
+						<pb n="595"/>
+						<milestone unit="PLSection" n="A"/><lb/> pore alia luminaria praeparavit ad eorum
+						ducatum <lb/> qui bonae sint voluntatis,a convictionemque contra­ <lb/> riorum et
+						mendacii quidcm destructionem, veritatis <lb/> autem confirmationem. Sicut etiam sub
+						illo b amaro <lb/> Pbaraone beatum Moysen contra Jamnes et Mamhre <lb/> (II Tim. III,
+						8), et sicut per Simonem Magum Petrum <lb/> bene vincentem; sic et contra eos qui nunc
+						insurre­ <lb/> xerunt, inimicos tuam protulit sanctitatem, per quam <lb/> bonæ ,spei
+						sumus et nos, quod orbis terrarum ab Æ­ <lb/> gyptio e liberetur errore; qui Moyses
+						novus existens, <lb/> oninem quidem Ægyptium haereticum percuties, sal­ <lb/> vabis vero
+						omnem Israelitam orthodoxum. Igitur <lb/> contra veritatem mulUs millibus gestis et
+						mundissi­ <lb/> ma orthodoxiæ d margarita multas excipiente inimi­ <lb/> citias, et
+						quantas nulla umquam tradit historia, ab <milestone unit="PLSection" n="B"/><lb/> his
+						qui harum vocum novitatem contra pateram fi­ <lb/> dem apostolicam e repererunt: nostrum
+						quidem est, <lb/> qui triplices multiplicesque patimur tempestates, et <lb/> pene in
+						piratas incidimus, ad eum clamare qui a Deo <lb/> productus est gubernator, eumque pro
+						amore veri­ <lb/> tatis quanta possibile est edocere: tuæ autem gratiae <lb/>
+						sapientiæque est non despicere neque otiose trans- <lb/> currere hujusmodi qnæstionem
+						tantamque causam, <lb/> sed et perscrutari cum dilectione ..ini laboris, et im­ <lb/>
+						ponere emendationem cum tota constantia et Deo <lb/> dilecta fiducia.</p>
+					<p>2. Et olim siquidem sæpius jam, ex Alexandria <lb/> hujusmodi hæreticis zizaniis
+						insurgentibus suffecit <lb/> vestra apostolica sedes per universum tempus illud <lb/> ad
+						mendacium convincendum, impietatemque repri­ <milestone unit="PLSection" n="c"/><lb/>
+						mendam, et corrigenda quae necessarium fuit, mu­ <lb/> niendumque orbem terrarum ad
+						gloriam Christi, <lb/> tam sub illo ter beato et inter sanctos habendo epi­ <lb/> scopo
+						f Damaso, quam sub pluribus aliis gloriosis <lb/> atque admirabilibus. Cujus rei gratia
+						et nos praesu­ <lb/> mimus has supplicationes offerre : ut adjuvetis or- <milestone unit="PLSection" n="A"/><lb/> bem terrarum, et in illa parte quae errat, et in illa
+						<lb/> quæ tyrannidem sustinet, quæque ad hoc impugna­ <lb/> tur, ut iis quae non
+						conveniunt assensum praebeat, <lb/> eo quod nec velit nec expedire judicet, ut Ægyptio­
+						<lb/> rum capitulorum varias vocum novitates excipiat.</p>
+					<p>3. Scribens enim Cyrillus Alexandrinus biasphe- <lb/> mam vocum novitatem per bis sena
+						capitula univer­ <lb/> sæ divinitus inspiratæ Scripturae contrariam, et ana­ <lb/>
+						thematizantem legitimas et antiquas sanctorum Pa­ <lb/> trum traditiones, et maxime
+						illorum qui excelsa <lb/> quidem Christi divinitati ascribunt, humilia vero <lb/>
+						humanitati ejusdem, nusquam unitione ejus interci­ <lb/> denda ; proposuit ei qui tunc
+						sanctam sedem rege­ <lb/> bat magni nominis urbis f, qui fuit a principio pro­ <lb/>
+						batus et notus circa fidem, circa vitam, circa doctri- <milestone unit="PLSection" n="B"/><lb/> nam Verbi et circa universa, Nestorio, ut aut con­ <lb/> sentiret capitulis
+						ejus, atque subscriberet ea, et <lb/> permaneret episcopus, aut certe periclitaretur in
+						<lb/> gradu, et a sancta Ecclesia pelleretur. Ille autem, <lb/> propositioni nequam Dei
+						timore praelato, eligit po­ <lb/> tius multis millibus periculis sibi injuste inferendis
+						<lb/> tradere semetipsum, quam dolis haereticis praebere <lb/> consensum, et confirmare
+						totius orbis errorem.</p>
+					<p>4. Ad haec synodus convenit in Epheso, et in <lb/> nullo correptus, neque rationem
+						reddere expetitus, <lb/> antequam convenirent qui h sustinebantur universi, <lb/>
+						exactus est ultionem, dum illorum capiturum bla­ <lb/> sphemiae obviaverit, et omni
+						credulitate ei quae di­ <lb/> citur damnationi et aliis aliquibus subjectus est, <lb/>
+						dum certe Cyrillus auctoritatem judicis non haberet, <milestone unit="PLSection" n="c"/><lb/> sed ejus qui judicandus est ordinem, eo quod con­ <lb/> tra invicem moverint
+						quaestiones. Et erat præsidens <lb/> reus et i sententiat princeps, qui i sustinebatur
+						<lb/> multis sententiis supponendus.</p>
+					<p>5. His gestis, aliis quidem cuncta quae acta sunt <lb/> lacrymis digna, aliis vero
+						ridicula videbantur; ita <note type="footnote"> jussu pelleretur. Hic obiter notandus
+							Ecclesiæ mos <lb/> antiquus, quo recens instituti episcopi nomen, syn­ <lb/> odicis
+							ejus sn,cepLis, in communinnis indicium di­ <lb/> ptycbis inscribi solebat. Hoc pacto
+							Bassianus Ephesi <lb/> episcopus in ChalcedoDensi concilio act. ii p. 693, <lb/> tum
+							Proclo communicasse se approbmt, testantibus <lb/> Ecclesiae CP. clericis, quod revera
+							suscepit eum, et <lb/> communicamt ei beatce memorias Proclus, it fecit syn­ <lb/>
+							oaicas litteral, e' in dyptichis eum posuit. </note><note type="footnote"> * U'DC est,
+							ad eos revincendos qUI hominibus bonae <lb/> voluntatis ,adversa!uur. </note>
+						<milestone unit="PLSection" n="D"/><note type="footnote"> b Lupus amore in archetypo
+							olfendisse se præmo­ <lb/> nens, in t'iiu rnajore exbibei, quasi hic Pharaoni <lb/>
+							comparatus Cyrillus Pharao minor dicendus innua­ <lb/> tur. Sed neque in hac
+							conjectura stans, forte Achori, <lb/> quo nomine Pharaonem Hebraeorum perseculorern
+							<lb/> secundum quosdam appellitum ait, pro amore sub­ <lb/> stilnendu.D.l opinatur.
+							Ipsam archetypi lectionem Ba­ <lb/> luzius, eti inisi omni sensu destitutam fateatur,
+							re- <lb/> Vocavit. Simplicior acnulli errori obnoxiaest no&gt;tra. <lb/> Scil.
+							Cyrillo. </note><note type="footnote">d Id est, Nestorio. </note><note type="footnote">a Apud Lupu,n, pepererunt. Cyrilli 12 anathemati­ <lb/> smi hic taxantur.
+							</note><note type="footnote"> t Cum nuncupare Julium potuissent, qui Athana­ <lb/> sii
+							ad se confugienlis causam, donec sedi suae resti­ <lb/> tueretur, propugnare non
+							destitit; I)amasum in me­ <lb/> dium proferre maluerunt, ut qui Apollinarii damna-
+							<lb/> I fc* baeresitu, fl1l31113 Cyrillo instauratam volcbant, <lb/> Quocirca
+							Theodnretus lib. v Hist. cap. 3 Melelillul <lb/> AIJollin:trio qui cum Damaso
+							communicare se jacl i- <lb/> tahat, dixiVe testatur : Miror te, o amice, tam impu­
+							<lb/> denter repugnare veritati, idque cum probe scias Da­ <lb/> masum asserere
+							perfectum nominem a Ijo assum­ <lb/> p',un, te (Onfrar;,nn affirmare non cessare....
+							Quod bl <lb/> falsa sunt qute dicimus, nunc saltem renuntia novitati, <lb/> etDamasi
+							doctrinam amplectere. Tum his ad adrlil Tlleo­ <lb/> doretus, Ex hac (Apollinarii)
+							radice pullulavit in Ec­ <lb/> clesiis opinio illa, !lIll"" esse naturam carnis et
+							deila­ <lb/> tis, et illa quce Vnigemti divinitati passionem attri-</note>
+						<milestone unit="PLSection" n="D"/><note type="footnote"> ut. Quihu!' verlus notare
+							forie voluit Cyrillulu. <lb/> cui, quia epist. I ad Successum id excidit, ut unam
+							<lb/> Dei verbi naturam incarn'7Ia". diceret, h.)jus:uolli <lb/> opinionem Theodoretus
+							;tC socii falso affingebant. <lb/> Unde Damasum non modo, ut Lupus interpretatur,
+							<lb/> propter Lucium Aria"uln episcopum, aut Maximum <lb/> GyniclIUJ ab eo damnatos,
+							sed etiam maximc pro­ <lb/> pter Apollinarii errores ab eodoni epist. 5 ad Pau­ <lb/>
+							linum proscriptos , hic commemoratum intelli­ <lb/> gere est: </note><note type="footnote"> I Constantinopolif:ln:e. </note><note type="footnote"> II Graecum vel
+							hnm Latino exspectabantur, aptius <lb/> redditum esse!. De Joanne Antiocheno et aliis
+							qui <lb/> cwm eo erant, hoc dictum esse facile quisque videt. <lb/> Sed antea
+							Nestorius falso negatur rationem reddere <lb/> expeiitue. </note><note type="footnote">i Forte, sententiabat. </note><note type="footnote">i FUirsum hic præferendum fuisset
+							exspectabor </note>
+						<pb n="597"/>
+						<milestone unit="PLSection" n="A"/><lb/> ut et ille qUI Antiochenam tenebat Ecclesiam
+						Dei, <lb/> post hæc veniens, Cyrillum quidem et Memnonem <lb/> damnationi subjiceret
+						communi a decreto Deo ami­ <lb/> cissimorum sanctissimorumque episcoporum usque <lb/> ad
+						viginti duorum metropolitanorum, caeterorumque <lb/> qui pariter aderant, qui illos
+						haereseos ac seditionis <lb/> principes judicarunt et ecclesiasticarum b æmulos <lb/>
+						sanctionum; cæteros vero qui eis ad omnia incoh­ <lb/> grua complices exstiterant,
+						alienos a cotnmunione <lb/> fecerunt. Sed illi egregii contra veritatem simul et <lb/>
+						regulas sibimetipsis indulgentiam relaxantes, ter­ <lb/> ribilium mysteriorum
+						communionem irreverenler <lb/> sibi continuo præsumpserunt ; alios vero communi­ <lb/>
+						care sibi periculose fecerunt : ita ut omnes divinae <lb/> regule c decreto subjaceant,
+						quae eos qui ita regunt <milestone unit="PLSection" n="B"/><lb/> omnino perdamnat.</p>
+					<p>6. Haec addiscens Deo amicissimus et bonus vi­ <lb/> ctor princeps, continuo definivit
+						d vacare quae sic <lb/> inordinate iuconsequenterque sunt gesta contra eum <lb/> qui in
+						nullo convictus est, abrupte vero et furiose <lb/> addictus; denuo autem de dogmate cum
+						veritatis <lb/> amore fieri quaestionem per interrogationem et re­ <lb/> sponsionem et
+						demonstrationem, quae omnibus sua­ <lb/> deret, non quæ auctoritate tyrannica
+						imperaret.</p>
+					<p>7. Illi vero ad solutionem canonum id quoque <lb/> adjecerunt, ut nec his piis litteris
+						obedirent. Et ni­ <lb/> hil de fide dicere vel audire acquiescentes ulterius, <lb/> ad
+						solam se universi pertinaciam contulerunt. Ad <lb/> consensum coeperunt habere iniqui
+						judicii, alios qui­ <lb/> dem fraude, alios violentia, alios praemiis.</p>
+					<p>
+						<milestone unit="PLSection" n="c"/>8. Constupentes super his nos, per multum tem­ <lb/>
+						pus rogabamus, obtestabamur, cum omni fiducia <lb/> provocabamus, ut nihil
+						irrationabiliter Geret aut te­ <lb/> neretur ; sed de quaestione quidem dogmatum et de
+						<lb/> Cyrilli capitulis communis proponeretur tractatus <milestone unit="PLSection" n="A"/><lb/> atque concilium, et quod omnibus placuisset, una <lb/> sententia
+						firmaretur ; de eo e vero qui tyrannidem <lb/> sic aperte pertuferat, judicium verax
+						fieret atque <lb/> legitimum ; ut convictus quidem de corruptione ve­ <lb/> ritatis,
+						adjudicationem consone sustineret ab omni­ <lb/> bus: si vero ex toto innoxius
+						probaretur, in scripto <lb/> abdicaret illa nobiscum quæcumque incongrua f qui­ <lb/>
+						dam vel ejus personæ vel et aliorum nomine ex su­ <lb/> spicione aut accusatione
+						jactaverant.</p>
+					<p>9. Sed ista quidem displicebant iis qui ex sola <lb/> auctoritate devincere, non autem
+						vel Madere vel <lb/> suaderi volebant. Praecipiebant vero universis ut <lb/> abrupte
+						anathematizarent et damnationi subscribe­ <lb/> rent. Quicumque autem se integriori
+						deliberationi <lb/> servasset, damnabatur, g ordinabatur ab eis, subji- <milestone unit="PLSection" n="B"/><lb/> ciebatur calumniis, malae doctrinae vocabatur. Ordi­
+						<lb/> nabantur pro talibus alteri: quia consentire nole <lb/> bant b laudare quidem
+						damnatione digna capitula, <lb/> damnare vero eum qui, quantum nos conscii sumus, <lb/>
+						nihil aliud dixit nisi ea quae a sanctis prophetis et <lb/> evangelistis et apostolis
+						per Spiritum sanctum mani­ <lb/> feste sunt tradita.</p>
+					<p>10. Volebant enim et apostolos criminari, dum <lb/> supervacue adjudicant illum qui ea
+						quae ipsorum <lb/> sunt praedicabat. Talem namque et eorum quae di­ <lb/> cuutur
+						gestorum fecerunt actionem, ut inconsona <lb/> et incerta adversus illum virum
+						proferrent, et ple­ <lb/> rumque irreprebensibilia reprehenderent : Cur, in­ <lb/>
+						quiunt, Neatorius dixit, quod passio non deitatem, sed <milestone unit="PLSection" n="C"/><lb/> humanitatem Christi i attigerit? interdum vero falsa <lb/> scriberent, ponendo
+						quod ab ipso dicta fuissent <lb/> verba quae nec quicumque infidelium, immo nec <lb/>
+						agrestium daemonum, dicere præsumpsisset, id est, <lb/> quod Christus esset i Christus
+						Domini, sicut Saul, <note type="footnote"> . S <lb/> tur, hoc est, de qpo exspectabamus
+							fore ut multi­ <lb/> plici sententiae subjiciendus esset ut reus, is ipse <lb/>
+							sententiam dicit ut judex. </note><note type="footnote"> * Decretum hoc cuin ..3
+							episcoporum subscriptio­ <lb/> nibus exstat in EphesiDo conciliabulo. Lab. 1ft 0).
+							III, <lb/> pag. 598. Mox forte legendum, atque viginliduorum. </note><note type="footnote"> b Hoc est, adversarios. Eosdem in decreto modo <lb/> citato sic
+							compellant: Tu, Cyrill. Atexandrine. et lwv <lb/> M ernnon hujus civitotis episcope,
+							,eilote vos deposi­ <lb/> tos.... ut qua in causa fuistis at Patrum canones f,on­
+							<lb/> cutcarentur, et imperatorum decreta COnl""nere,,'.,. </note>
+						<milestone unit="PLSection" n="D"/><note type="footnote"> Ubi observare est, id quod
+							illic Patrum canones, <lb/> hic ecclesiasticas constitutiones vocari. Ipse etiam <lb/>
+							Joannes in prooemio seutentirc adversus Cyrillum <lb/> ei Memnonetn prolalre
+							locutionibus iisdem promi­ <lb/> scue utitur. </note><note type="footnote"> * <lb/> c
+							Antiocheni videlicet cOllcilii, cujus canone 4 <lb/> constituitur : Si quis episcopus
+							a synodo fuerit depo­ <lb/> situs.... et prcesumpserit sacerdotii seu sacri ministerii
+							<lb/> aliquam actionem, non ei amplius liceat neque in alia <lb/> synodo spem restitu
+							iortis habere.... sed et communi­ <lb/> canles ei abjici ab Ecclesia. Quapropter infra
+							restitui­ <lb/> mus perdamnat, ubi obtinebat perdamnant, Clarius <lb/> legeretur, ut
+							omnes subjaceant decreto divinae regulte, <lb/> quæ. Sed hunc canonem in ipsos qui
+							illum obiiciunt <lb/> facile retorquere licet, siquidem communione Nesto­ <lb/> rii
+							iion absistebant, quem Coelestini ejusque concilii <lb/> sententia, a tot Ephesinx
+							synodi Patribus confir­ <lb/> mata, depositum noverant. Eodem decreto Joannis <lb/>
+							Chrysostomi adversarios abusos esse observavimus. </note><note type="footnote"> a
+							Inter acta Ephesini conciliaboli pag. 703 hæc <lb/> Theodosii sanctio habetur.
+							</note><note type="footnote">e Nestorio. </note><note type="footnote">f Negare non
+							audent, incongrua et scripto abdi­ <lb/> canda esse ea quorum causa Nestorius damnatus
+							est. </note><note type="footnote"> I Orationis series postulat abdicabatur, seu
+							depone- <lb/> batur ab eis, aut quid simile. </note><note type="footnote">b Clarius
+							hoc ita efferretur, quia cum itlis in eo <lb/> consentire nolebant, ut laudarent
+							quidem danu,at;on, <lb/> digna capitula, damnarent vero. Quod autetn proxinie </note>
+						<milestone unit="PLSection" n="D"/><note type="footnote"> legimus, Ordinabantur pro
+							talib", alteri, luaxilUt1 di­ <lb/> ciiim est propter Nestorium, cujus loco ordinatus
+							est <lb/> Maximianus. An siiniliter alii aliorum locis suffecti <lb/> sini, ignoramus.
+							Tantum plures c sedibus suis pul- <lb/> 801 esse num. II et 43 perspicue docemur.
+							</note><note type="footnote">i In 64 non erat reprehensione dignus. quod duas <lb/>
+							Christi naturas distinguens, passionem humanitati, <lb/> non dehati, attribuebat; sed
+							quod, persona; unitatem. <lb/> non admittens, Deum passum negabat, uli negabal na­
+							<lb/> tum. Quapropter et Dei arce nomen Mariie nolebat <lb/> ascribi : hoc tantum
+							exigebatur ab eo, ut propter <lb/> unitas in una Verbi persona naturas Deum passum
+							<lb/> esse fateretur. </note><note type="footnote"> I Lupns, qui legit CArl,t;
+							Dominus, recte a Baluii&lt;t <lb/> emendatus est; nusquam enim vel Saul. vet David
+							<lb/> vel Cyrus, aut quivis alius Ch,i,t.i Dominus dictus e. <lb/> aut dici queat.
+							Quod autem' Helladius et EUlbel'iuj <lb/> a Nestorio dictum negant, hoc ab illo dictum
+							esse in </note>
+						<pb n="599"/>
+						<milestone unit="PLSection" n="A"/><lb/> sicut David, sicut infidelis Cyrus In quibus
+						facile est <lb/> convincere volenti calumniam.</p>
+					<p>ii. Ea vero quæ de Antiocheno Joanne sunt ge <lb/> sta, si esset possibile, tacere
+						velimus. Sic irrationa­ <lb/> bilis apud nos ejus mutabilitas facta est et manife­ <lb/>
+						sta transgressio, et proditio veritatis, quæ ex im­ <lb/> proviso completa est sive
+						peracta. Ille enim, quia <lb/> antequam veniremus ad Ephesum, hæreticam repe­ <lb/> rit
+						capitulorum fraudem, plurimis per litteras a in­ <lb/> dicavit : per primam Cappadociam
+						secundamque, et <lb/> per diversos locos, ut ab eis se observarent, admo­ <lb/> nuit,
+						quasi Eunomio et Ario et Apollinario consona­ <lb/> rent; b et qui acute ac fervide in
+						Cyrilli damnatio­ <lb/> nem prosilivit, et ad hoc omnes hortatus est. Quippe <lb/> adiit
+						et ipsam regiam civitatem, ut huic impietati <milestone unit="PLSection" n="B"/><lb/>
+						resisteret ; et idem nobis scripsit adhuc c Ephesi <lb/> constitutis, prius quidem
+						dicens, Quia illum, id esi <lb/> Nestorium, dimissum cognoscentes ab Epheso, valde <lb/>
+						doluerunt animæ nostræ, eo quod illa quæ sine judicio <lb/> et inique sunt gesta,
+						videantur interim roborari; <milestone unit="PLSection" n="A"/><lb/> deinde, Quia etsi
+						illa blasphema capitula Cyrillus ab- <lb/> jecerit, eum ne tunc quidem suscipere per
+						sacramenta <lb/> promisimus; eo quod princeps ipse sit factus iniquae <lb/> hæresis.
+						Unde d alterum cor accipietis ignoramus, <lb/> ominibus motibus suis esi adversatus, et
+						(yrilli <lb/> communicator effectus non repellemis quae male <lb/> conscripserat, qui
+						eum numquam suscepturum se, <lb/> vel si ea refutasset in scripto, juraverat : el solus
+						<lb/> vinculum solvit, quod cum e tantis Cyrillo et Mem­ <lb/> noni noxiis consequenter
+						intulerat. Et nullam secu­ <lb/> ritatem his qui pro pietate fuerant offensi f procu.
+						<lb/> rans, ipse quidem reconciliatus est ei quem pridem <lb/> sic amare notaverat ;
+						permisit vero Ecclesias per­ <lb/> turbari, et præsules quosdam quidem manere depul­
+						<lb/> sos, :,Iios autem adhuc multipliciter exturbari. Sed <milestone unit="PLSection" n="B"/><lb/> etiam litteras mirabiles fecit, in quibus ait damna. <lb/> tum se habere
+						Nestorium, et anathematizare quid­ <lb/> quid impic dixit aut sapult. Sic ct accusatione
+						et de. <lb/> monstratione defecit, ut nec diceret, Illam vel illam <lb/> sive illam
+						anathematizo sententiam ; sed ait g Quid­ <note type="footnote"> concilio Ephesino
+							ar&gt;t. 1, pag. 521, ex ejusdem qua­ <lb/> terniunp. 27 prohatmn esi. Ips&gt;; quoque
+							Nestorius <lb/> apud Baluzium Synndici cap. 0. paR. 693, i sUlci di­ <lb/> xisse si
+							fatetur : Sicut dicitur Christus Sanl el Chri­ <lb/> stus David, et rursus Christus
+							Cyus. et deinde Baby­ <lb/> lonius, d'&gt;m certe David circn lJ;et"",n non fuerint
+							si­ <lb/> mites; sic rocamus quidem Christum vel Fitinm etiam <lb/> !Jomiualf'rem :
+							verumtamen cominunio nOllli,.."" cetfna­ <lb/> litalem non facit dignitatis. Be hoc
+							uno cum its qui <lb/> h,ec verba sua proferebant , exp istulai quod ex­ <lb/>
+							ceptionem istam, verumtamen communio nominum </note>
+						<milestone unit="PLSection" n="c"/><note type="footnote"> æqualitatem non facit
+							dignitatis, sup ressisseut. Sed <lb/> et in hoc adjuncto fraits merito metuenda erat,
+							re­ <lb/> cordantihiu olim Vnlenlem ei Urs:adun, iri Arimi­ <lb/> nensi concilio
+							conclamasse : Si quis dixerit Filium <lb/> Dei creaturam esse, sicut sunt ccelerm
+							CI.'"'llræ. ana­ <lb/> thema sit; et cun his vt'rhis Filium cieiturain sin­ <lb/> cere
+							negasse existimarentur, posiea p:i'ain, t:'ste <lb/> Jl eroiiymo Dial. contra Lucifer.
+							jactitare cæpisse, <lb/> se Filiun. non creaturam negasse, sed Iti",iltm cceteris
+							<lb/> creatlf'.;s. Quippe fraudi longe nmgis p i(eh;it Nestorii <lb/> exceptio, quam
+							prædicta verhn Ursacii et Valentis. </note><note type="footnote"> a Capitula illa,
+							antequam Cyrillus eorum interpre­ <lb/> tationem edidisset, Joannes vehementer
+							improba­ <lb/> bat; ct in epistola quidem ad Firmum C;csarerc clu­ <lb/> sco,&gt;nm
+							apucl Baluzium 8y"cl(l. cap. 4. pag. 691, nec <lb/> Cyi -illi ea credere se scribit:
+							Consonnm eniln, inquit, <lb/> magis t'ero sunt eadem his propter qtue Apot.inarius a
+							<lb/> Christi est disruptus Ecclesia. In Ephesino autem <lb/> conciliahulo ,na. 595 et
+							:libi ea conceptis verbis </note>
+						<milestone unit="PLSection" n="D"/><note type="footnote"> hceretica appellat. Unde
+							Synodici cap. 32, pag. 751, <lb/> imperatoreiu per tremendum Dei jll.lieinln contesta­
+							<lb/> tur, jubeat ut hæretica illu Cal,;,,.'a quas .uperill'ro­ <lb/> ducta sunt
+							fidti. expellantur, quia sunt omnimode a <lb/> rertis dogmatibus aliena et hmre,ici.
+							vesaniis consona. <lb/> Silu enim persuaserat. ut in laudata ad Firmium <lb/> cpisrola
+							loquitur, capitulis illis id intendi, ut corpus <lb/> qnod Deus Verbum de sancta
+							V;rg;ne nssumpsit, ejus­ <lb/> dem cujus divinitas, esse naturce credatur. At eorum
+							<lb/> explicationem a Cynllo subinde vulgatam ne Theo­ <lb/> doretus quidem. etiam
+							antequam a schismaticorum <lb/> soc;pt't tte discederet, rectae fidei consentaneam
+							nega­ <lb/> vii. Ita In II ILre sopiri possent dispuL:nifluel, si recia <lb/>
+							sent'ens, sed perv..r..e illlelleclu..., apertiorem ver­ <lb/> bnmti sii orum
+							explicationem edere i on dedignare- <lb/> L,,( ; ei qui ••ii;ii antea prave sentire
+							suspicati erant, <lb/> "i,i I;IIHI&lt;-III c:,. holi(O;"" sul)jccit vcilioruui suoruui
+							<lb/> explicationem, hanc laudare ci suscipcI'e non re­ <lb/> nucrcoi ul orthodoxam.
+							Hoc agendi modo Cyrillus <lb/> JIC Joanucs primum, ac paulo serips Theodoretus et
+							<lb/> alii ad pacem et nuit iiem adducti simt. Notanda est <lb/> ca de re in capite 17
+							Svnoilici inscriptio scu summa <lb/> epistolæ Joannis ad Theod sium imp. in qUfl. nt
+							ibi <lb/> legitur, etinm catholicce fidei Uti confessio continetur, <lb/> quam postea
+							Cyril:,u per pacifiram taudavit ep;,fo­ <lb/> tam; licci ad rjiixlem episiolac
+							c.-Ice.., Joaimcs scri. <lb/> bnt. nh &lt;&gt;mnil&gt;us e"is("o"is damnanda esse ea
+							quce ad <lb/> inficiendas Ecclesias introducta sunt contra orlho. <lb/> doxam fidem a
+							præfato Cyrillo capitula. His niniiriim <lb/> coiivinis nequaquam deterritus est
+							(Wiillus, qUit mi­ <lb/> nus JoMunis fidem quam rectam ei integram proba­ </note>
+						<milestone unit="PLSection" n="c"/><note type="footnote"> bat, palam I:HI,I:tre,', eaque
+							agendi ratione Joa-uuem. <lb/> uL ira de ipso sentiiet, facilius addulil. </note><note type="footnote">h Forle , atqne acnte. </note><note type="footnote"> « Eo, ut.
+							conjectura est, ipso tempore quo i.lem <lb/> Joannes ac socii legiti Coustinlinopoli
+							ad Orienta­ <lb/> lc&lt;. qui Euhe"i relll:tnserallt. scripserunt, ut apud <lb/>
+							Baluzium Synod cap. 't() legimus : Ex opillione co­ <lb/> gnovimus, quia ante octo
+							dies adv ntus nostri pissimo <lb/> imperatori placuerit dominum N estori"", ab Epheso
+							<lb/> dnnitti qnocumqne ire volnerit, ei nn,,,illo doluit anima <lb/> nostra. Hanc
+							autem epistolam Gor"iæ; mensis unde­ <lb/> cimo, hoc est, ut inlerlu'clalur Uarouins,
+							Sepiem­ <lb/> bris utidecimo, vel, ut censei Lupus, ejiMlem luen. <lb/> sis " cli,.,
+							seripsisse se iiidicani. Epistolam vero <lb/> pr.cfer-iorum qua Nestorius ab Epheso
+							dimissus est, <lb/> Synorli con s.rpe menioralutn cap. 24 e"I..llel. </note><note type="footnote"> a i larius hoc ita enuniiirelur : At ignoramus un.. <lb/> de ( seu
+							cIlia de causa) alterum cor accipiens. </note><note type="footnote"> 8 Hoc est. cum
+							tot ac tantis, scilicet A2 episco-</note>
+						<milestone unit="PLSection" n="D"/><note type="footnote"> pis, qui Cyr.Jlu et Memnoni
+							adversabantur eorum­ <lb/> que danuiationi suh-cripseraut. </note><note type="footnote"> r Tacite sese neglectos, nec utin sedes suas resti­ <lb/> tuer..ntur,
+							Joainiem curasse arguant. Huic tamen <lb/> officio eum non defuisse testis e..t. uti
+							jam exposui­ <lb/> mus, Cyrilli ad Donatum epistola. Præterea idem <lb/> Joannes
+							Synod. car. 91, png. 798, ita in eoriim gra­ <lb/> limi ad imperatorem scrihit :
+							Suppiicamus autem <lb/> pietati vestræ ut perfectam festivitatem præstetis mun­ <lb/>
+							do, quatenus nutla c;v;Ia. ab hac Crlebr;late communis <lb/> festivitatis extorris
+							sit, et jubeatis Deo amicissimis &lt;pi­ <lb/> scopis qui inter præcedentes turbas
+							expelli ecclesiis <lb/> visi sunt, ad priorem habitum reducantur. </note><note type="footnote">g Joannes in superiori rpi:nl • ad Xystuo. n i, <lb/> pr.ifiieturje
+							blasphamas ejus doc rinas anati'enmiiznre. <lb/> Eadem verba et in ivustola ad
+							f:ynl"ph ":1'111':--. vo- <lb/> cil. part. iti cap. 30 rcpeiit. Quihus conciuit ,tbut
+							<lb/> libelli, quem Puilus Emiseanus Joannis nomine Cy­ <lb/> rillo Ir;uJidit :
+								<foreign xml:lang="grc">ὰναθεμαίζομεν τὰ</foreign> iv a).tac fjupsi <lb/>
+							<foreign xml:lang="grc">ὰσεω̃ε αὐτ ψ̄</foreign> 9ifyxiw' Scd a verbis modo oUjectii
+							</note><pb n="601"/>
+						<milestone unit="PLSection" n="A"/><lb/> quid av eo impie dictum est, dum certe aperte
+						dicere <lb/> debuisset, ut ab eo sensu quisque cautior reddere­ <lb/> tur : sicut clare
+						abominamur nos Cyrilli capitula, <lb/> et quæsumus universos ut se ab insita illins
+						maligni­ <lb/> late custodiant, præconvicentes eas qn:c in ipsis <lb/> sunt blasphemias,
+						et eas clare omnibus publicantes.</p>
+					<p>12. Hæc pauca de plurimis cum multa abbrevia­ <lb/> tione conscripsimus , scientes quod
+						horum malorum <lb/> nimietas non solum Jeremiæ lamentationibus digna <lb/> sit, sed et
+						universali tragœdiam superaverit. Roga­ <lb/> mus vero, et sanctis tuæ religiositatis
+						provolvimur <lb/> pedibus, ut manum porrigas salutarem , et auferas <lb/> mundi
+						naufragium, omniumque horum inquisitio­ <lb/> nem jubeas fieri , et his illicitis
+						caeletem superduci <lb/> correctionem , ut revocenlur quidem sancti pastores <milestone unit="PLSection" n="B"/><lb/> qui injuste sunt a suis ovibus effugati, et reddatur
+						<lb/> gregibus ordo et antiqua concordia , et ut nnn ultra <lb/> lamentatus et mugitus
+						pro voiis offerantur ac psal­ <lb/> mIs, dum multi dispersi sunt; et De quiquam per:­
+						<lb/> clitentur circa ea quæ præcipua sunt, dum vitant <lb/> ab hæreticis vcl lavacrum
+						regenerationis vel mysti­ <lb/> cam communionem accipere, quæ ab orthodoxis <lb/> sumere
+						ad salutem minime permittuntur.</p>
+					<p>13. Quæ ex parte quidem videntes, ex parte vero <lb/> audientes, olim concurrissemus ad
+						sanctitatem tuam <lb/> nos qui e diversis regionibus sumus, id est ex Eu­ <lb/>
+						phralesia, ex utraque Cilicia, secunda Cappadocia, <lb/> Bilhynia, Thessalia et Mœsia :
+						ut et fontes effunde­ <lb/> remus lacrymarum, et publice defleremus peregrina <lb/> et
+						insueta hujus vitæ mala, nisi detineret nos lupo­ <milestone unit="PLSection" n="c"/><lb/> rum terror insidiantium gregibus ad rapinam et <lb/> ad errorem omnemque
+						adversitatem. Unde concti <lb/> sumus nostra vice dirigere religiosissimos clericos
+						<lb/> et monaclios, qui impleant locum nostrum.</p>
+					<p>14. Quæsumus igitur ut absque dilatione exsurga­ <lb/> lis, et fervido zelo magnum
+						victorine tropæum con­ <lb/> tra aemulorum cuneos erigatis, ante oculos haben­ <lb/> les
+						boni Pastoris diligentiam simul et studium circa <lb/> ovem quæ erraverat (Luc. xv, 4).
+						Et non absque pe­ <lb/> riculo deputeris, si quid fastidiose circa tot pastores <lb/> et
+						ores agatur; dum illæ quidem errent, illi vcro <lb/> tyrannicam sustineant violentiam.
+						Imitamini potius <lb/> et magnum pietatis præconem Paulum , oculum <lb/> mundi, quem nos
+						ut pignus habere familiaritatis <milestone unit="PLSection" n="A"/><lb/>
+						<lb/> nostræ erga vestram credimus sanctitatem. Civis <lb/> enim noster A existens,
+						errore totius orbis extin­ <lb/> cto, illius apostolicæ sedis factus est ornamentum,
+						<lb/> et a beato Petro dexteram socielatis accepit (Gal. <lb/> ii, 9), ut appareret ab
+						utrisque æquam subtilitatem <lb/> dogmatum custodiri.</p>
+					<p>15. Etiam quæsumus ne despiciamur a vobis nos, <lb/> quos tot mala circumdant. Non enim
+						de pecuniis vel <lb/> gloria aut quolibet alio temporalium decertamus ; <lb/> sed pro
+						pietatis possessione comn uni, pro paterno <lb/> fidei thesauro, pro spe communi
+						fidelium, pro bona <lb/> confessione apostolorum , pro immortali certamine <lb/>
+						martyrum, et maxime pro adventu clementiaque Do­ <lb/> minica ; cujus virtutem
+						invincibilem invocantes sine <lb/> cessatione clamamus :Parce, Domine, populo tuo, el ne
+							<milestone unit="PLSection" n="B"/><lb/> dederis hæreditatem tuam in opprobrium (Joel.
+						II, 17).</p>
+					<p>Euihcrius episcopus melropolis Tyanensium sub­ <lb/> scripsi , et quæso ut me ores
+						incolumem, Deo ami­ <lb/> cissimc et sanctissime pater.</p>
+					<p>Helladius episcopus metropolis Tarsi subscripsi ; <lb/> ct rogo ut me ores incolumem,
+						Deo amicissime et <lb/> sanctissime pater.</p>
+					<ab>
+						<title type="sub">b EPISTOLA V,</title>
+					</ab>
+					<ab>
+						<title type="sub">S. XySTI PAPÆ AD CYRILLUM ALETANDRINUM, POST PACEM FACTAM INTER IPSUM
+							CYRILLUM ET JOANNEM.</title>
+					</ab>
+					<ab>
+						<title type="sub">Rd hujus relationem in conventu episcoporum se no­ tam fecisse. Quanta
+							hinc Ecclesiæ lætitia. Felicem fuisse laborum Cyrilli exitum, eosque sibi et con­
+							cilio suo in omnibus probatos esse.</title>
+					</ab>
+					<p>XYSTuS episcopus CYRILLO episcopo Alexandrino.</p>
+					<p>1. Magna sunnis lætitia alacritatis impleti, post­ <milestone unit="PLSection" n="c"/><lb/> quam, sicut ierimus, ex alto nos Oriens a visitavit <lb/> (Luc. I, 78). Eccc
+						enim sollicitis nobis, quia nemi­ <lb/> nem perire volumus, sanctitas na redintegratum
+						<lb/> corpus Ecclesiæ suis epistolis indicavit. Redeuntibus <lb/> ejus in sua membra
+						compagibus, neminem foiis jam <lb/> videmus errare, quia intus omnes positos fides una
+						<lb/> testatur. Lætamur e medio nostrum qui hoc opus <lb/> fecit ablatum d : soli sibi
+						nunc non credenti quod <lb/> sensit intelligit obfuisse, qui contra hunc e nixus <lb/>
+						est, quem profitemur omnibus profuisse.</p>
+					<p>2. Sed convenit a tristibus nos ad Iæta transire, <lb/> quia ipse cui quæstio mota
+						fuerat, de Ecclesia uni­ <lb/> versali maerore sublato, tempus nobis præstitit gau­
+						<lb/> diorum. Christus denique Deus noster, quam f vero <milestone unit="PLSection" n="D"/><note type="footnote"> propius abest, quod Joannes in epistola ad Theodo­ <lb/>
+							sium Synod. cap. 91 pag. 798 ait : Deponitum sive <lb/> damnatum lIobe,nu. Nestorium
+							.... anuihemalhmo <lb/> subjicientes qucecumque ab eo uliene ac peregrine dicta <lb/>
+							sunt contra upo,'oI;calll doctrinam. </note><note type="footnote"> * Utpote nUtUS
+							Tarsi, cujus Helladius id scribens <lb/> episcopus erat. </note><note type="footnote">h Cyri:lus, ut Rusticus Vigilii papx diaconus ali­ <lb/> quanto post initium dial. gi
+							contra Acephalos obser- <lb/> V:'t , ephtolas suas et Orientalium de pnce transmissas
+							<lb/> Romanæ Ecdesiw sedi a sanctissimo Xytto confirmari <lb/> sategit. Xystus
+							epstolis illis in syoodo sacerdotum, <lb/> qui ad ortli &gt;a'ionis ipsius dicm
+							celebrandullI conve­ <lb/> lIt'r:' lit . peiiMiis, ex endeni synodo I uti infra ii. 7
+							<lb/> tisiamr, reserip"iL Cvrilli labores cum a se tuin ab <lb/> omni fraternitate
+							probari in omnibus ct confirmari. <lb/> Hoc lese ri plum clialu Rusticus in cilnto
+							dialogo lau­ <lb/> et cx eo nOn. ut elistiallaviL Pibiiotheqa* </note>
+						<milestone unit="PLSection" n="D"/><note type="footnote"> Patrum ellilor. ipsn verba,
+							sed sententias quasdam <lb/> suuimaiini dehbatas excerpsit. Tam pretiosum mo. <lb/>
+							niinenium ab Antonio de Aquino e Vaticano cndice <lb/> dc--cript.ur. Uar.tnills in
+							Annalibus ad ann. 433 CIH <lb/> dendum curavit. Illud deinde Labheul paulo emen­ <lb/>
+							datius actis Ephesinæ Synodi I)ar'. III cap. 41 <lb/> pag. ł ł 73 subjecit.
+							</note><note type="footnote"> c Ad Jnallnem ;dludit qui Orienti praeerat, cujtis <lb/>
+							jam ai-ceperat litteras cum caeteris pacis confectæ <lb/> gestis qllæ Cyrillus
+							miserat. </note><note type="footnote"> d Nesiorium videlicet, cultis opera ab
+							Ecclesiae <lb/> compage multa membra discesserant. </note><note type="footnote"> •
+							llic Nestorio opponi videtur Cyrillus, qui litiic <lb/> resi-lens , ulnnihns profuit;
+							sed hunc tamcn potius <lb/> intelligere est Chrisiinti, cujus digniiatem Nesloriuj
+							<lb/> impugnavit. Totus iste locus apud Barou. valde est <lb/> depravatus.
+							</note><note type="footnote"> f Ita Baron, At Lab., quam vera ,il. </note>
+						<pb n="603"/>
+						<milestone unit="PLSection" n="A"/><lb/> sit sua causa, monstravit, quando ita res
+						dignatus <lb/> est gubernare, ut tantæ rei et talis a indicium ser­ <lb/> varet suorum
+						cOnventui sacerdotum. In unum con­ <lb/> gregati apostoli-de fide saepe tractarunt: in
+						unum <lb/> nunc convenientes apostolici de ejus victoria gratu­ <lb/> lantur. 0 relatio
+						digna mittente, digna conventu I <lb/> Gaudii cœlestis indicium tales habere debuit
+						cogni­ <lb/> tores. Et quia res et causa deposcit, locum quoque <lb/> convenit b non
+						taceri.</p>
+					<p>3. Ad beatum apostolum Petrum fraternitas uni­ <lb/> versa convenit: ecce auditorium
+						congruens audito­ <lb/> ribus, conveniens audiendis. Habuerunt coepiscopi <lb/> nostri
+						illum congratulationis testem, qucm c habe­ <lb/> mus honoris exordium ; sanctæ namque
+						et venera­ <lb/> bili synodo, quam natalis d mihi dies favente Do- <milestone unit="PLSection" n="B"/><lb/> mino congregarat, quia sic credendum est, ipse <lb/>
+						pfaesedit, quandoquidem probatur nec spiritu nec <lb/> corpore defuisse. Affuit palmae,
+						qui contentioni non <lb/> defuit; juvit animorum vota nostrorum, qui e videt <lb/>
+						symbolo primum inter Apostolos tradito derogari : <lb/> non passus est f nefandum caput
+						gaudere solatiis, <lb/> nec turbari diu sivit lutulento gurgite fontis illius <lb/>
+						perspicui puritatem. Ad nos reversi sunt fratres, ad <lb/> nos, inquam , qui morbum
+						communi studio perse­ <lb/> quentes, animarum curavimus sanitatem.</p>
+					<p>
+						<milestone unit="PLSection" n="A"/>4. Non se exsuli I vestro sanctus frater noster <lb/>
+						Joannes addiderat, non ejus est blasphema praedi­ <lb/> catione deceptus; nam , quantum
+						rerum exitus do­ <lb/> cet, suspendit suam sententiam , non negavit. Nam <lb/> quid in
+						inventorem malorum posset aliud judicare, <lb/> nisi h quod probatur ipse per sacerdotes
+						suos cujus <lb/> agebatur causa, sentire ? Statuerat hoc nimirum de <lb/> nostrorum
+						desertore castrorum , quod a ducibus fi­ <lb/> dei 1 suaderet perfidia judicari. Numquam
+						se a no­ <lb/> stro numero separasset, in quem potuit et reverti.</p>
+					<p>5 Exsulta, frater charissime, et ad nos recollectis <lb/> fratribus victor exsulta.
+						Quaerebat Ecclesia quos re­ <lb/> cepit. Nam si neminem perire volumus de pusillis,
+						<lb/> quanto magis gaudendum nobis est sanitate recto­ <lb/> rum ? Legimus una ovis
+						quantum gaudii reportata <milestone unit="PLSection" n="B"/><lb/> praestiterit (Luc. xv,
+						6) ; et idcirco intelligendum est <lb/> quid laudis habeat tantos revocasse pastores.
+						Gre­ <lb/> ges aspiciuntur in singulis; nec unius hic causa <lb/> traCtatur, quoties
+						agitur de sanitate i multorum. <lb/> Lætamur k hic nihil egisse nos praecoquum, quando
+						<lb/> fructu nostræ sententiae gratulamur. Sustinuimus <lb/> fratres, certi eos non
+						spinas, sed uvas esse 1 factu­ <lb/> ros (Matth. VII, 17). In evidenti est nostrorum
+						vin­ <lb/> demia gaudiorum, quæ sanctam synodum largitate <lb/> gratulationis implevit.
+						Vineam suam custos ille cu­ <note type="footnote"> • Et hic indicium, et infra , Gaudii
+							cæleslis indi­ <lb/> cium _ praeferimus ; quamvis utrobique in vulgatis <lb/> obtineat
+							judicium. Quippe de re non agitur judican­ <lb/> da, sed de indicanda et percipienda,
+							quae cognito­ <lb/> res non ad excutiendam cau,aua, sed ad læLhialn <lb/> cum eis ex
+							causa feliciter finita contmiinicandam </note>
+						<milestone unit="PLSection" n="c"/><note type="footnote"> postulet. In veteribus autem
+							libris judicium cl indi­ <lb/> cium non aliter pinguntur. </note><note type="footnote"> It Apud Baron., convenit intueri. </note><note type="footnote"> « Affinis est hic
+							locus illi Siric-ii in exordio epist. 4*: <lb/> Cum in unum plurimi convenissemus ad
+							sancti apo­ <lb/> itoti Petri reliqu;ii., per qucm et apostolatus et epi­ <lb/>
+							scopatus ix Chrilto coepit exordium. </note><note type="footnote">a Non is quo in
+							terris ortus, sed quo Ecclesiæ <lb/> Romanae ordiualus est episcopus. Huiic diem
+							pariter <lb/> ab Anastasio I natalem suum vocatum e,se ,4Id eum­ <lb/> que, veluti
+							more jam recepto, multos episcopos <lb/> ipv;alri consuevisse, Xysti successor Leo
+							plures <lb/> in eadem celebritate sermones habuit. Et in primo <lb/> quidem , cap. 3 ,
+							plurimos episcopos ad illam con- <lb/> - venire sotitos notat his verbis : Cumque hanc
+							vene­ <lb/> . rjibilium consacerdoium splendidissimam frequeniiam <lb/> video,
+							angelicum nobis in tot sanctis sentio interesse <lb/> conventum. Exinde celebritatem
+							illam, Xysti instar, <lb/> ad beati Petri gloriam referens, adjecit: Nec abest, </note>
+						<milestone unit="PLSection" n="D"/><note type="footnote"> ut confido, ab hoc ccetu
+							beatissimt apostoli Petri pia <lb/> d;gnatio et fida devotio, nec vestram devotionem
+							ille <lb/> deserit, cujus nos reverentia congregavit. Quocirca <lb/> sermonem 3 sic
+							claudit: llli ergo hunc servitutis no­ <lb/> stroe NATALITIUM DIEM, illi ascribamus
+							hoc festum, cu­ <lb/> jus patrocinio sedis ipsius meruimus esse COJ'sorta. <lb/> Eadem
+							quoque ratione de hoc festo Hilarus papa <lb/> epist. 8 loquitur. </note><note type="footnote"> e Apud Baron., qui videret. Quæ in epistolam 13 <lb/> Nestorii num. 4
+							de Nicæni symboli depravatione <lb/> annotata sunt, videsis. </note><note type="footnote">i Cuni Xystus Nestorium nunc nefandlun caput, <lb/> mox exsulem
+							vestrum , subinde inventorem malorum , <lb/> postea de.erlorem castrorum vocet,
+							aliaque ratione <lb/> supra iudighet t nOlnini illius videtur parcere vo­ <lb/>
+							liiissn, qu ad ne semel quid -in appellat. </note><note type="footnote">I Rusticus
+							diaconus paulo post initium Dial. con- <lb/> In Acepb. proprio stylo ista sic reddit:
+							Quoniam <lb/> numquam similia N eslorio Inp"it, sed a principio <lb/> fuerit
+							orthodoXll' Joannes sanctissimus frater noster, <lb/> licet olim sententiam suam
+							suspenderit, ut nobiscum <lb/> Nestorium minime condemnaret. Cum orthodoxus ab <lb/>
+							initio fuerit Joannes, atque egregia epistola Nesto­ <lb/> rium , antequaul
+							damnareiur, arguere non dubiU­ </note>
+						<milestone unit="PLSection" n="c"/><note type="footnote"> verit, cur postmodum ab hoc
+							hxretico conde.lI­ <lb/> nando sese sustinuit? Hoc nimirum in causa fuit, <lb/> quod
+							Nestorius accepta ipsius epistola rescripsit, <lb/> ideo tantujn a se nomen Deiparae
+							vilari , ne inde no. <lb/> sequaces hæretici Apollinarii reprehenderent. Unde et <lb/>
+							Joannes ad Firmum Synodici cap. 4 de Nestorio <lb/> scribit: Quia vero et ante
+							.apuerit ( de Uei genitrice <lb/> sicut nos), inde convincitur quia et cito constitit
+							admo­ <lb/> nerztibua nobis. sicut a propriis fit t et ipsum nomen <lb/> accepit, et
+							iti duobus sermonibus sanam fidei expo.;­ <lb/> tionem et irreprehensibilem nobis
+							direxit. Verum hae­ <lb/> reticus ille etiamsi quandoque linguam, numquam <lb/> tamen
+							animuiu, virorum prudentum judicio,mu­ <lb/> tavit. </note><note type="footnote">h Id
+							est, nisi id, quod Christus, cujus causa age­ <lb/> bn'ur, probatur per sacerdotes
+							suos in synodo Ephe­ <lb/> sina congregatos sentire. </note><note type="footnote"> *
+							Labhcus mallet, sua deberet. Retinendum sua­ <lb/> deret hoc intellectu, Joannem id de
+							Neslorio statuis-</note>
+						<note type="margin"> D </note>
+						<note type="footnote"> se, quod perfidia ejus nota suaderet de illo a duci­ <lb/> bus
+							fidei judicari. </note><note type="footnote">i Non displicet Labbei conjectura , qua
+							rectorum <lb/> forte legendum esse admonei. QuanHluam curo ple­ <lb/> bis multitudo
+							censeatur in rectoribus, rectoris <lb/> cujusqne sanitas, sanitas est multorum.
+							</note><note type="footnote">k Hanc sententiam Rusticus loco cilato sic retinet, <lb/>
+							ut verba prorsus mutet in hunc modum : quia bene <lb/> fecimus, qui nihil contra tum
+							definivimus immalurum; <lb/> clarent enim nostrorum vindemiæ gaudiorum. </note><note type="footnote"> 1 Apud Baron., lecturos. l.ab. ad marg., laturos; <lb/> rectius tamen
+							in textu , facturos. Alludit quidem <lb/> Xystus ad illud Matth. : Numquid colligunt
+							de spinis <lb/> uvas ? sed hinc probat spinas non esse , quia certus <lb/> erat fore
+							ut facturi essent uvas; cum Christus dicat: <lb/> Non potest arbor mala fructus bonos
+							facere. Quo in <lb/> loco vers. 17, 18 et i9, verbi facere, non ferre, con­ <lb/>
+							fttans usus est, </note>
+						<pb n="605"/>
+						<milestone unit="PLSection" n="A"/><lb/> ravit, quem ad costodiendam domum Israel nec
+						<lb/> dormitare nec obdormire David propheta testatur <lb/> (Psal. exi, 4). Infecundum
+						illud Christo nostro, nec <lb/> afferens fructum, suscepit flamma sarmentum (Joan. <lb/>
+						xv, 6). Sed ut hoc videmus convenire damnato, ita <lb/> de reversis ad nos fratribus
+						convenit dicere, quia <lb/> non potuit a diabolo eradicari plantatio quam plan­ <lb/>
+						taverat Pater (Matth. XV, 13). Illum ergo sibi ignis <lb/> aeternus, hos possessoris
+						æterni vinea vindicavit in <lb/> tantum ut Antiochenæ Ecclesiae sacerdotem vocari <lb/>
+						a sanctitate tua jam nunc venerabilem virum et a <lb/> domnum gaudeamus. Et merito
+						vocatur domnus, qui <lb/> communem Dominum recognovit, qui incarnatio­ <lb/> nis ejus
+						mysterium voce catholica nobiscum confi­ <lb/> tetur.</p>
+					<p>
+						<milestone unit="PLSection" n="B"/>6. Bene nobis breviter tua fraternitas quae sunt
+						<lb/> super eodem negotio gesta narravit; sed mirati non <lb/> sumus, quod a
+						dissentientibus in te compositam le­ <lb/> gimus b dejectionis injuriam ( Matth. v, 11).
+						Novi­ <lb/> mus FREQUENTER PATERE calumniis veritatem, nec <lb/> tamen umquam posse
+						falsitate superari. Votivæ <milestone unit="PLSection" n="A"/><lb/> sunt semper
+						molesliae fidem praedicanti. His namqne <lb/> cum beatitudine copiosa merces paratnr in
+						coelo <lb/> (Ibid. 12), quibus propter justitiam maledictiones, <lb/> persecutiones et
+						omne malum præcipitur sustinere. <lb/> Passus es falsitatem, ut victricem faceres
+						veritatem ; <lb/> et ideo nunc insullandum est falsitati, quia nullus <lb/> perire
+						potuit veritati.</p>
+					<p>7. Exspectamus igitur memorati fratris nostri <lb/> Joannis clericos, et optamus venire
+						: scimus et pro <lb/> honore et labore tuo dare responsum. Non c es , <lb/> secuti
+						fratri et coepiscopo nostro Maximiano sæpe <lb/> jam scripsimus, etiam ipse redeuntibus
+						difficilis <lb/> aperire januam : ut vere nisi perditionis filius ne­ <lb/> no sit
+						perditus (Joan. XVII , 12 ); sitque ei major <lb/> causa lugendi, quod meruit solus
+						excludi. Haec ad <milestone unit="PLSection" n="B"/><lb/> venerationem tuam fraternitas
+						mecum sancta scri­ <lb/> bit, probans tuos in omnibus et confirmans labores : <lb/> qui
+						tamen graves aut amari esse non potuerunt, <lb/> quia huic impensi sunt, cujus onus leve
+						et jugum <lb/> suave portamus (Matth. XI, 30). a Datum 15 kal. <lb/> Octobris, Tbeodosio
+						xm et Maximo consulibus. <note type="footnote"> • Cyrillus in inscriptione epistolae
+							quam Joanni <lb/> post compositam pacem misit, Ephes. concH. part. <lb/> III, c. 34,
+							illum appellat dominuM, sed non addit <lb/> venerabilem virum. Quapropter epistolam a
+							Cyrillo ad <lb/> ipsum Xystum scriptam, quae desideratur, hic indi­ <lb/> cari
+							existimamus. Si nullum est hic in archetypo <lb/> mendum, fallitur Quesnellus not. '3
+							in Leonis epi­ <lb/> stolam 34, ubi vocis domnus usum ante Leonis tem­ <lb/> pora
+							receptum negat. Ipsius opinioni item adversa­ <lb/> tur, quod apud Augustinum ad
+							calcem sermonis i 11 <lb/> nov. edit. legio,us : Quod novit charita, vestra sugge.
+							<lb/> rQnUl; dies anniversarius ordination;. DOMNI senis </note>
+						<milestone unit="PLSection" n="c"/><note type="footnote"> Aurelii crastinus illucescit.
+							Ad haec in concilio Chal­ <lb/> cedonensi act. x, pag. fis7, d, idem usus firmatur
+							<lb/> bis verbis: DOMNUS autem Samuel tnale habebat. Por­ <lb/> ro jiominum dominus et
+							domnus discrimen et usum <lb/> expooit antiquus iste versus a Pagio ad anti. "33,
+							<lb/> num. 4, laudatus : <lb/> Goelestem Dominum, terrestrem dicite domnum. <lb/>
+							Eodem usu et Græci coelestem Dominum <foreign xml:lang="grc">Χύριον</foreign> et <lb/>
+							terrestrem <foreign xml:lang="grc">ϰύρον</foreign> appellant. Qnocirca in loco
+							concilii <lb/> Chalcedonensis proxime laudato, domnus Samuel <lb/>
+							<foreign xml:lang="grc">ϰύρος</foreign>, non xvpioe vocatur. In hunc autem Xysti lo­
+							<lb/> cum Pagius istud notat: Porro depositi non amplius <lb/> vocabantur DOIINI, nec
+							ullo honoris titulo exornuban­ <lb/> tur. Ac deinde infert: Xystus gaudet Joannem a
+							Cy­ <lb/> rillo jam nominari venerabilem domnum; exindeque <lb/> colligit lcesum
+							Joannis honorem plane resarcitum fuis-</note>
+						<milestone unit="PLSection" n="D"/><note type="footnote"> se. Verum ex verbis Xysti hoc
+							tanlum seqGitur, ut <lb/> Cyrillus honorificis titulis Joannem exornans, palam <lb/>
+							eum communionis ejusdem consorteD. agnoscere se <lb/> testatus sit. At non inde
+							pariter sequitur, ut Cyril- <lb/> Ius antea Joannis honorem heserit, aut eum ut de­
+							<lb/> positione mulct atum habuerit. Certe auctor ei fuit <lb/> Coelestinus, ut summa
+							cum illo prudentia et mode­ <lb/> ratione ageret. </note><note type="footnote"> b
+							Baron. et Lab. ad marginem , diction;,; sed <lb/> recte præferunt, dejeclionis. Non
+							enim hic aliqua <lb/> adversus Cyrillum dictio aut contumeliosus sermo t <lb/> sed ea
+							notatur deposilionis sententia, quae Ephesi <lb/> adversus illum ab iis qui Joanuem
+							Antiochenum se­ <lb/> quebantur, lata et parietibus affixa fuerat, de qua <lb/>
+							ninnrum synodus Ephesina episL. 20 ad Coelestinuni <lb/> n. 3 conqueri Lur .
+							</note><note type="footnote"> In vulgatis, Non est; quod de Joanne dictum <lb/> esse
+							oporteret; sed ad illum referri nequit, cum .IAte <lb/> initam pacem nihil esset, cur
+							de illius ad aperien­ <lb/> dam redeuntibus januam facilitate Xystus ad Maxi­ <lb/>
+							mianum scriberei. Idcirco restituendum duximr.s <lb/> Non ea, ut id de Cyrillo ipso
+							dicatur, cujus pro pace <lb/> studium Xystus supra in epistola it quae et ad Ma­ <lb/>
+							ximianum missa est, eo commendat, quod proprias <lb/> contemnens contumelias, magis
+							Ecctesias ordinari, <lb/> quam xe vindicari desiderat; confestim autem in nau­ <lb/>
+							fragio laborantibus petit aperiri portum, etc. </note><note type="footnote"> ®
+							Septemb. die 45 ann. '33. Chronicam hanc <lb/> notam Pagius falsi suspectam habet,
+							quia cum e </note>
+						<milestone unit="PLSection" n="c"/><note type="footnote"> concilio episcoporum, quos
+							anniversarius ordinatio­ <lb/> nis Xysti dies congregarat, scripta sii haec epistola ,
+							<lb/> cum eo tamen die quo Xystum consecratum esse pro <lb/> certo ponit, nota illa
+							componi non potest, Observat <lb/> quoque Tillemontius, Joannis clericos, qui litteras
+							<lb/> ejus Xysto reddituri exspeciabantur, necdum. in <lb/> urbem pervenisse, cum haec
+							epistola scriptaest; <lb/> adeoque hujus et sequentis epistolae, quae post ad­ <lb/>
+							ventum ,Joannis clericorum data est, epochani non <lb/> unam esse debuisse. NOII
+							jnficiatur tamen fieri pp. <lb/> tuisse ut, licet una prius, altera posterius scripta
+							sit, <lb/> ambae tamen simul datae eodemque die consignatae <lb/> fuerint. Sed hoc
+							posito, niutapdum fuisse censet eum <lb/> num. 7 locum, in quo Xystus Joannis clericos
+							ex­ <lb/> spectare se dicit. Verum ex nieris huiusmodi con­ <lb/> jecturis certas
+							notas, quas veius cxenap ar alias in iis <lb/> exhibendis fidele asservat, rejicere
+							vel mutare pru. <lb/> dentis non est, et ipse quidem Xystus., qui Cyrilli <lb/>
+							litteras In concilio episcoporum ad ordinationis suæ </note>
+						<milestone unit="PLSection" n="D"/><note type="footnote"> diem congregatorum lectas et
+							ab universis probatas <lb/> fuisse "uperius num. 2 docet eo dem episcopos ,pa­ <lb/>
+							riter litterarum Joannis lectionem audivisse io <lb/> epistola sequenti num. 3
+							indicat. Unde sequitur ut <lb/> Xystus episcopos qui ad natalis sui celebrilatem <lb/>
+							convenerant. ad clericorum Joannis adventum deti­ <lb/> lJendos judicaril ; quo ii qui
+							Cyrilli de pace Orieutis <lb/> litteris recreati jam fuerant, de eadem re auditis
+							<lb/> Joannis scriptis certiores facti, perfecto gaudio cu- <lb/> IDularentur. Nec
+							ambigendum quin simul retenti <lb/> sint et qui a Cyrillo venerant, nec nisi cum
+							Joannis <lb/> clericis fuerint dimissi. Tum utrisque eodem diedatae <lb/> sunt
+							epistolae, et licet una paulo ante adventum <lb/> clericorum Joannis scripta eos
+							exspectari indicet, <lb/> istud non dcbuil mutarit cum ii per quos mittebatur <lb/> ad
+							rcrum gestarum ordinem enarrandum idonei es­ <lb/> seul. </note></p>
+					<pb n="607"/>
+
+					<p>
+						<milestone unit="PLSection" n="A"/>
+					</p>
+					<ab>
+						<title type="sub">a EPISTOLA VI,</title>
+					</ab>
+					<ab>
+						<title type="sub">I. XYSTI PAPÆ III AD JOANNEM ANTIOCHENUM.</title>
+					</ab>
+					<ab>
+						<title type="sub">Ecclesiæ de Joannis reditu lætitia. Æquitas latæ ad­ versus Nestorium
+							sententiæ. Romanæ Ecclesia in servanda fide constantia, et in ejusdem fidei causa
+							imperatorum studium, Quam idoneus sit Maximia­ nus, qui malis a Nestorio illatis
+							medeatur.</title>
+					</ab>
+					<p>XYSTUS episcopus JOANNI episcopo Antiocheno.</p>
+					<p>i. Si ecclesiastici corporis gloriam, si ejus inte­ <lb/> gritatem dilectio tua
+						considerare dignetur, profecto <lb/> lætitiæ nostræ non quæret interpretem. Ipsae namque
+						<lb/> res evidentissime loquuntur, moerorem nostrum re­ <lb/> pentino sancti fratris
+						Cyrilli sermone in gaudium <lb/> esse conversum. Tantam hanc ergo sollicitudinem <lb/>
+						nostram nos evasisse delectat, postquam reo fidei <milestone unit="PLSection" n="B"/><lb/> nostræ tua fuit b sanitas pœnitudo.</p>
+					<p>2. Nunc vere c se exsulem d, nunc se sentit eje­ <lb/> ctum. Abundant ei in deserlo
+						spinæ (Matth. VII, 16) : <lb/> quia deest uva quam colligat. Hos habet fructus, <lb/>
+						qui erga vineam Domini nostri noluit exercere cuI- <lb/> turam. Credo ad dilectionem
+						tuam rerum cursus et <lb/> ordo pervenerit, qualiter ei voluimus nostra admo­ <lb/>
+						nitione succurrere. Retinuimus in præceps eun­ <lb/> tem, qui erat blasphemiarum pondere
+						in profundum <lb/> mergendus. Si negotii qualitatem justa lance pense­ <lb/> mus, nulli
+						non videbitur Nestorius sero damnatus. <lb/> f llic fuerit debitus sermo præteritus.
+						Fruamur nunc <lb/> præsentibus bonis, nec diu hæreamus in tristibus, <lb/> quibus
+						Dominus gaudere concessit.</p>
+					<p>
+						<milestone unit="PLSection" n="A"/>3. Audivit universa fraternitas, quæ ad natali <lb/>
+						mei convenerat diem, qualiter bono humani generis, <lb/> apostolicae sedis me prande
+						g.... Excedant licet <lb/> meritum meum et extra me hæc esse cognoscam, <lb/> exordium
+						tamen tui sermonis gratus accipio, quia <lb/> non est tibi controversia perferenda, qui
+						Christum <lb/> Dominum nostrum bono humani generis ita ut natus <lb/> est confiteris.
+						Subsequenter Ecclesiae addis lucife­ <lb/> rum et ubique lucentem. Sed et nunc vos, immo
+						<lb/> omnes qui lucis illius signum fronte h gestamus, <lb/> luciferos confitemur. Sint
+						ergo omnes fidem præ­ <lb/> dicantes Domini sacerdotes luciferi et ubique lu­ <lb/>
+						centes.</p>
+					<p>4. Sit et Nestorius ille lucifer de quo scriptum <lb/> est : Cecidit lucifer, qui mane
+						oriebatur (Isa. xiv, 12). <milestone unit="PLSection" n="B"/><lb/> Cecidit, sed
+						superbiens cecidit, sed elisus cum ascen­ <lb/> dere disponit in coelum, et ponere super
+						coeli sidera <lb/> sedem suam, et promittit Altissimo similem se futu­ <lb/> rum. Ille
+						ad similitudinem se aptabat Altissimi ; isto <lb/> in suam similitudinem vocabat
+						Altissimum. Homi­ <lb/> nem namque natum cum tantummodo prædicabat, <lb/> auferens
+						incarnationis mysterium, et illud evacuans, <lb/> immo illud impugnans, quo secundum
+						symbolum et <lb/> fides et salus nostra subsistit. Non est certandi jam <lb/> tempus,
+						hoste prostrato : transeundum nobis ab his <lb/> est quæ bella moverunt, importunum
+						victoria!: tem­ <lb/> pore adhuc de præliis disputare.</p>
+					<p>5. Quæ hic evidentior rerum fides, quae ratio ma- <milestone unit="PLSection" n="C"/><note type="footnote"> H Una cum superiore ab Antonio de Aquino e <lb/> ronce Vatic.
+							eruta, Ibirnnii studio in liicem prudlit. <lb/> Lau laiur a Vincenlin Lirinensi
+							Commonit. cap. 4. <lb/> Nnn superiori Joannis epistol « 3, sed alteri i qu;e nun <lb/>
+							exstai, qua'nl"le Jua nnes a X)'sli laudibus exortlie­ <lb/> batur. respondet.
+							</note><note type="footnote">b ApuhLah., fnit sanctitas plen;t"do; lectio non <lb/>
+							fpemeiida foret, si antea rebus fidei no*triv legi <lb/> suhnexa sinerent. Quan; quod
+							Barouins ex Valic. <lb/> ros. lide expressit. revocamus, atque ita in!el!igi­ <lb/>
+							nms, ut Nertorio fidei nostrw subversæ r('o pravis <lb/> ac molesti fuerit JO:""li-.
+							saniias. Cene de Nesto­ <lb/> rio serinoneni Xys...s prosequitur. </note><note type="footnote"> c Supple, bestorius. </note><note type="footnote">d Opera s-ilicei
+							ipsius Joannis, qui, ut F:,.:allrins <lb/> lih. I cap. 7 tradit, cum ceruerei
+							Nestorium in suh­ <lb/> urb;al1o Anti..chi:.e dejieniem , blasphemia sua ne­ <lb/>
+							quaquam desistere, ilod :..1 iniperaioreni referens, <lb/> effecit ut perpetuo exsilio
+							condemnaretur. Huc au-</note>
+						<milestone unit="PLSection" n="D"/><note type="footnote"> tern perpetui .!Isilii
+							ejusdecreiinn legere est III part. <lb/> Ephes. concil. cap. 14 el 15, Quocirca cum
+							Nesto­ <lb/> rius apud eUlluJenl livagrium ihid, qll:uh'ienuio se <lb/> in monasterio
+							ad quod ab Epheso dimissus fuerat, <lb/> commoratum ess- affirmat, aut m&gt; ml'llIil
+							Uf', aut qua­ <lb/> drie.,..iulIl illud aliierac verha illius apud E,oagrium <lb/>
+							snnant , est intelligendum. Ut eniin in supe:'ioreln <lb/> episiol:im 4 observavimus,
+							Nestorius anno 431 octo <lb/> dies ante Gorpiasi mensis undecimum , hoc est, vel <lb/>
+							Augusto mense CleunLe vel ineunte Septembre, ab <lb/> Epheso dimissus ac relrgatus in
+							nmnastei ium suum <lb/> ahiit. Jafn vero rx hac epistola liqueteuiq ante men­ <lb/>
+							sem Septemhrem anni .&amp;3.&gt; e frequenti urbe in deser­ <lb/> timi locum, ubi
+							nullus erat quem pervertere valeret, <lb/> ruis,e amaiidatum. A primo igitur exsilio
+							ad hoc <lb/> alterum ne biennium quldem lotuni in monasterio <lb/> suo exegit.
+							</note><note type="footnote"> * Favere videtur is Incus verbis Gennadii lib. de <lb/>
+							Script, Ectl. dicentis, Xystum ud ipsutn Nfitorfuni </note>
+						<milestone unit="PLSection" n="C"/><note type="footnote"> et ad Orientis episcopos
+							adversus errorem tjus succi-­ </note>
+						<note type="footnote"> dendunJ sententtas dirtxisJt. Sed jam a pruua epi!'to­ <lb/> la
+							quam Xystus iniens episcopatum scripsit, de Ne­ <lb/> storio ut prorsus desperato
+							l4pntur, probatque <lb/> Cyrilli sententinn, qua ejus unius contentu. est morte, <lb/>
+							ipseque de hoc h æresiarcha statim etlir.it: Solne. <lb/> igitur ille ait naufragus.
+							quem in tanta caliqine pro-­ <lb/> priarunl doclrinarum nihil cernentem impielntis
+							ftuclus <lb/> aliisit scopulo del,os:l;on;s. Hecolendunl esi Xystum <lb/> de iis qua:
+							decessor illius Coelestiuus in hac causa <lb/> gessit, tamquam de rebus a se gestis
+							loqui solere. <lb/> Coelestinus autem Ne-torium datis induciis, ad sanio­ <lb/> rem
+							fideui suscipiendam est cohortatu*. Ac postea, <lb/> coiisuttus a Cyril. an emenso
+							induciarum tempore <lb/> SI'nLt'.lIi:. in itluni lala pcr'tlur:are non deherel, cpist.
+							<lb/> 16. num. 3, paterne respioidit: Studeo pereuntis <lb/> saluti, si tamen voluerit
+							cegritudin&gt; m COllfiltri. </note><note type="footnote">f n.arOIl. elli non
+							profuerit; yua leclione ad mar­ <lb/> ginem te&lt;&lt; C!a L'lh. restituit, hic
+							fuerit. Deinde pro </note>
+						<milestone unit="PLSection" n="D"/><note type="footnote"> debitus maMcinus deietus ,
+							quasi diceret Xystus : <lb/> Sermo ille quo Joannes ac socii Nestorium nnecipiti <lb/>
+							judicio damnatum conquerebantur, obliviotic jam <lb/> delealur. nec memoretur amplius
+							; hæc tristia jaiM <lb/> pror-us ahierinl. </note><note type="footnote"> K Hic
+							ali'lllill deesse Lahbeus admonet: quod qui­ <lb/> dem Bironius addito verbo
+							gratulentur supplere <lb/> con itus est. Tamen ad Xy"ti mentem aptius ita rc­ <lb/>
+							sarciretur : apoxtolicte sedi me prcesidere gral,.le,'i.. <lb/> Apparet quippe
+							Joauneui iu exordio episioljc suas <lb/> Xystum ita laudasse ut euin hono generi
+							humani <lb/> apostolicae sedi praeesse pr;rdicarit. Quatn laudem <lb/> modesta quadvm
+							industria Xystus a se ad gloriam <lb/> Chrisli, qui revera bono humani generis natus
+							est, <lb/> coavertil. SuhiauJe. ubi eum Joannes luciferum et <lb/> ubique lucentem
+							prædicabat, eadem solertia et hanc <lb/> lautletn cuui onutihus fidci ejusdem
+							coqsortibuf 8ł <lb/> pr.Tdii-aloribus cominunicat, </note><note type="footnote">h
+							JJaron,, gestatis. </note>
+						<pb n="609"/>
+						<milestone unit="PLSection" n="A"/><lb/> jor potest esse, quam palma a ? Fruamur,
+						auctore <lb/> Domino, hono atque jucundo, quia in unum fratres <lb/> rursus cœpimus
+						habitare (Ps. CXXXII, 1). Hæc san­ <lb/> clitatem tuam volumus prædicare quæ scribis.
+						Ex­ <lb/> pertus es negotii præsentis eventu, quid sit sentire b <lb/> nobiscum. Beatus
+						.'etrus apostolas in successoribus <lb/> suis, quod accepit, hoc tradidit. Quis ab ejus
+						se <lb/> vell separare doctrina, quem ipse inter apostoloa <lb/> primum magister
+						edocuit? Non hunc aud tus per at­ <lb/> terum, non senno lectus instruxit : doctus est
+						cum <lb/> aliis ore Docturis. Non scripturæ, non scriptorum <lb/> passus est quæstionem
+						; absolutam et simplicem fi­ <lb/> dem, et quæ controversiam non habcret, accepit, <lb/>
+						quam utique meditari semper, et in qua manere de­ <lb/> bemus, ut sensu puro sequentes
+						Apostolos, interapo- <milestone unit="PLSection" n="B"/><lb/> stolicos esse mereamur.
+						Non parum nobis oneri, <lb/> non parum laboris incumbit, ut Ecclesiae Domini ma­ <lb/>
+						cula desit et ruga (Ephes. v, 27).</p>
+					<p>6. Quam semper super Roc esse solliciti nos de­ <lb/> beamus, clementissimorum et
+						christianissimorum re­ <lb/> gum cura testatur. Aspice, frater charissime, cœle- <lb/>
+						Iti negotio quam se vigilanter impenderint. Cogita­ <lb/> tionum « ferias nesciverunt ;
+						nec dignati sunt terrena <lb/> curare, nisi coelestibus paruissent. Quoties apostoli­
+						<lb/> eam sedem, quoties diversos fratres eorum sermo <lb/> commovit ? Impenderunt se
+						ejus negotio qui se eo­ <lb/> rum numquam negavit imperio. Sciunt se illi fenerare <lb/>
+						sollicitudinem suam qui earn cum grandi reddat <lb/> usura. De qua re nos convenit
+						gloriari, quia cœlestem <lb/> 'Regem videmus foederatos reges habere terrarum.
+							<milestone unit="PLSection" n="c"/><lb/> Intelligunt, sicut ait David, et eruditi sunt
+						qui judi­ <lb/> cant terram (Ps. II, 10), quando, sicut dicit alibi, <lb/> ipsi et omnes
+						populi laudant nomen Domini (Ps. <lb/> CXLVIII, 12).</p>
+					<p>7. Ergo quia, sicut ait Apostolus, fides una est <lb/> (Ephes. IV, 6), qua et d
+						vincenter obtinuit, dicenda <lb/> credamus,et tenendi dicamus. Nihil ultra liceat no­
+						<lb/> vitati, quia nihil adjici convenit vetustati. Dilucida <lb/> et perspicua majorum
+						e credulitas nulla cœni per­ <lb/> mixtione turbetur. Habet probatum nobis virum fra­
+						<lb/> trem et coepiscopum nostrum Maximianum Constan­ <lb/> tinopolitanæ Ecclesiæ
+						sacerdotem, divino illic judi- <milestone unit="PLSection" n="A"/><lb/> cio consecratum,
+						ut ægritudines morbum quem astu­ <lb/> tiæ venena f solius infuderant, superet
+						simplicitatis <lb/> dulcedo succedens ; qui non ilic aliud quam credi­ <lb/> mus poterit
+						prædicare, nisi quod a decessoribus <lb/> meis, nobiscum positus frequenter audivit. g
+						Data <lb/> xv kalendas Octobris, Theodosio XIV et Maxima <lb/> consulibus.</p>
+					<ab>
+						<title type="sub">h EPISTOLA VII,</title>
+					</ab>
+					<ab>
+						<title type="sub">XYSTI III PAPÆ AD PERIGENEM CORINTHIORUM EPISCOPUM.</title>
+					</ab>
+					<ab>
+						<title type="sub">Ut vicarii apostolicæ sedis dignitatem Anastasio Thessalonicensi
+							antistiti a se ex antiquo more con­ cessam reverentur, atque ejus auctoritati se
+							subtra­ here ne tentet.</title>
+					</ab>
+					<ab>
+						<title type="sub">Dilectissimo fratri PERIGENI XYSTUS.</title>
+					</ab>
+					<p>
+						<milestone unit="PLSection" n="B"/>i. Gratulari potius quam conqueri deberemus de <lb/>
+						tuæ fraternitalis actibus, cum tibi apostolicæ sedis <lb/> auctoritas in ipsis tuæ
+						ordinationis initiis, quod te <lb/> semper meminisse oportet, i affuerit. Sed ut no­
+						<lb/> strum est non ista retcxere, ita tuæ convenit fidei <lb/> retinere. Nunc aliqua
+						incitare voluisse cognovimus : <lb/> sed hirc, cum res per nostrorum præsentiam, quos
+						<lb/> vice nostra ad eas partes propter has causas direxi­ <lb/> mus, sopitæ sint,
+						præterimus. Nam et sanctos fra­ <lb/> tres nostros Martianinum presbyterum j idem et
+						dia­ <lb/> conum Lollianum egisse credas, quod et utilitatibus <lb/> tuis et scdis
+						apostolicæ auctoritati congrueret: et <lb/> idcirco nunc ad fraternitatem tuani n l tale
+						scripsi­ <lb/> mus, quo tibi tristitiam generemus, quia malumus <lb/> correctione
+						pacifica id quod tentatum fuerat aboleri.</p>
+					<p>
+						<milestone unit="PLSection" n="C"/>2. Nunc ergo, frater charissime, admonitus nostris
+						<lb/> epistolis per fratrem et coepiscopum nostrum Lu­ <lb/> cam, qui ad vos sola
+						charitatis gratia provocatus ad­ <lb/> venit, sancto fratri et coepiscopo nostro
+						Anastasio <lb/> Thessalonicensis urbis antistiti eam servato reveren­ <lb/> tiam quam
+						caeteri quoque pontifices per Illyricum <lb/> constituti erga praedicti dignitatem
+						reservare non <lb/> abuuunt ; cum sciamus nihil novum illi a nobis fuisse <lb/>
+						concessum, sed id quod ejus decessoribus nostri de­ <lb/> cessores detulerant, habita
+						consideratione discipli­ <lb/> na: ecclesiasticæ constitutum. Tua enim magis in. <lb/>
+						terest ut huic plurimum deferatur k Ecclesiæ, quæ tibi <note type="footnote"> *
+							Snh:anditur de fidei adversariis relata. Xysti ar­ <lb/> giimeiilu-n verbis nititur I
+							Joan. v, 4 : Hæc etl vi­ <lb/> ctoria ,,,Ie v*ncit mundum, fides vestra; qua*i
+							diceret: </note>
+						<milestone unit="PLSection" n="D"/><note type="footnote"> bi Udei pro.inum est vincere,
+							quod inajus indiciuln <lb/> esse po&gt;sit peues nos esse vera.., lidell', (IHalll
+							quod <lb/> penes nos palma est affine victorin ? Ouapropter non <lb/> placci i ..(Uti
+							B .ronii. quam ut p(llma (Tuamu, auctore <lb/> Domino et bono. </note><note type="footnote">b Hoc est, cum apostolica sede, cui in primis fidei <lb/>
+							4l&lt;*posiium a Christo in Petro crediimii, et a Petro <lb/> Mu'r..s...ori h.." suis
+							tiadiium atque transmissum fuit. </note><note type="footnote"> c .Kadem lo quendi
+							ratione iititnr Snuplicius pa p:a, <lb/> qui el,is'ulan. If) sic orditur :
+							Cogitationum ferias non <lb/> habe'IIu,; neceuim qniescere nos causa permittit.
+							</note><note type="footnote">d Apud 8a.'on. et Lab.: Una estet vineenies obtinuit.
+							<lb/> I nvulgatio Vincentii Lirin. Coimnonitorio rap. 43, ubi <lb/> h f.C sententia
+							refertur, Una est quaz evidellter obtinuit. <lb/> Pro tuid,"'er. in peramiqiio ejusdem
+							Cunmonitorii <lb/> fAxel8'pl.tri Curb. exstit ti"Cell,e,. quod perimle cst <lb/>
+							AI.,t:e cum victoriæ palma. Rursum hic ad verba <lb/> v,4, Xysius sua exigit,
+							</note><note type="footnote"> e Apud Vincen,ium Lirin., fides et eredulilal.
+							</note><note type="footnote"> ' Darnu., sopitis. Viln:c Nestorii eloquentiæ, quæ <lb/>
+							solo asiu fulta hiereseos venenum infundebat, sun.. </note>
+						<milestone unit="PLSection" n="D"/><note type="footnote"> plicitas opponiiur
+							piaidicationis Maxiuiani, qui li­ <lb/> dem certaiu elab apostolica sede acceptam, nun
+							s:uc <lb/> ea dulcedme quam veriias parit, tradebat. </note><note type="footnote"> s
+							Sel,'enab, t5 ami. 453. </note><note type="footnote"> h l(;cc el)is:ula una cum tribus
+							subsequeinili; s <lb/> COllcihn Runaann suhi B 'I,,(;u.in II, qiiod Lucas lIul.....
+							<lb/> tcnius publici juris fecit, insertt est. Chronica nota <lb/> qutc huic dee&gt;i,
+							ex sequenti supplenda eI. Obscu­ <lb/> rmu cui.., non est utramque eadem de causa
+							eadeniquc <lb/> occasione conscriptam esse. </note><note type="footnote">i Cujus rei
+							lidcm faciunt Bonifacii I epistolae 4, 5 <lb/> et 15. </note><note type="footnote">
+							Forte. item. </note><note type="footnote">k Perigenes mullum Romanae debeh3lEcclesiæ.
+							ut. <lb/> pOie cujus præsul Bonifacius eum præfecerat Corin­ <lb/> lhii;;, aiipitMil
+							liauc SIMICIII invitis ;rmulis retineret <lb/> cfTecrar. Nomtihil quoq c deluiit
+							Thessalonicens, <lb/> præsertim cum Bonitacius illum Corinthiorum epi-</note>
+						<pb n="611"/>
+						<milestone unit="PLSection" n="A"/><lb/> tantum honoris contulit, ut pro te contra eos
+						qui tibi , <lb/> tunc æmuli fuerant repugnaret.</p>
+					<ab>
+						<title type="sub">a EPISTOLA VIII,</title>
+					</ab>
+					<ab>
+						<title type="sub">XYSTI III PAPÆ AD SYNODUM THESSALONICÆ CONGREGANDAM.</title>
+					</ab>
+					<ab>
+						<title type="sub">Vicarii dignitatem per Illyricum se de more Anastasio Thessalonicensi
+							episcopo tribuisse. Quæ ejus sit pa­ tellas, quæ munia. Ut ei Perigenes. Corinthiorum
+							episcopus subjiciatur.</title>
+					</ab>
+					<ab>
+						<title type="sub">Dilectissimis fratribus universis episcopis synodo apud Thessalonican
+							congregandis XYSTUS.</title>
+					</ab>
+					<p>i. Si quantum inservitur legibus et principum con­ <lb/> stitutis, quae sunt temporalia
+						et mutantur, et saepe <lb/> saepius abolentur, tantum divinis legibus aeternisque
+							<milestone unit="PLSection" n="B"/><lb/> mandatis obedentiae præstaremus, essemus
+						profecto <lb/> summae beatitudinis compotes, et mundanae vexatio­ <lb/> nis molestias
+						vitaremus, illo recLore vel praesule qui <lb/> subinde subvenire cupiens quotidianis
+						vocibus cla­ <lb/> mat : Convertimini ad me. et convertar ad vos (Zach. <lb/> I, 5)...
+						(Inter cætera et ad locum) Nos fratri et co­ <lb/> episcopo nostro Anastasio tantum
+						tribuimus, quantum <lb/> decessoribus ipsius a nostris decessoribus attributum. <lb/>
+						Priorum judicium sequimur, hæc constituendo quae <lb/> ab bis novimus constituta : quia
+						et ipsum hujus pro­ <lb/> bamus meriti, cujus fuerunt illi qui talia meruerunt. <lb/>
+						Nullus obviet salubribus constitutis, nullus præce­ <lb/> ptionibus his resultet.
+						Habeant honorem suum metro­ <lb/> politani It singularum, salvo hujus privilegio quem
+						<lb/> honorare debeant amplius honorati. In provincia <milestone unit="PLSection" n="c"/><lb/> sua jus habeant ordinandi; sed hoc, inscio vel invito I <lb/> Quem de omnibus
+						volumus ordinationibus consuli, <lb/> nullus audeat ordinare. Ad Thessalonicensem majo­
+						<lb/> res causæ referantur antistitem. Ipsum major cura <lb/> respeciet, eos qui ad
+						episcopatum vocantur discu­ <lb/> tiendi sollicitius et probandi. Ipse optimos
+						solerlissi­ <lb/> mosque de vestro numero eligat, quos negotiis secum <lb/> asciscat
+						arbitros ; aut sine se tribuat, qui in disce­ <lb/> ptationem missa componat.</p>
+					<p>2. Noverit Corinthius episcopus sibi licentiam po­ <lb/> testatis liberæ minime
+						tribuendam, si huic voluerit <lb/> Ecclesiae c resultare, quam sibi noverit profuisse.
+							<milestone unit="PLSection" n="A"/><lb/> Cui necesse est nos quoque, si quid tentare
+						voluerit, <lb/> obviare; qui praeleritorum quæ illi per nos praestita <lb/> sunt memores
+						sumus et illicitis semper usurpationi­ <lb/> bus obviamus.</p>
+					<p>3. De caeteris vero, quaecumque illae sunt, nostris <lb/> praesentibus volumus
+						finiantur : quoniam d tota illo­ <lb/> rum apud nos fides est, ut quae illi probaverint,
+						nos <lb/> credamus judicasse pariter et probasse. e Data VIII <lb/> idus Julias,
+						Theodosio xv et Valentiniano IV augu- <lb/> Itis consulibus.</p>
+					<ab>
+						<title type="sub">EPISTOLA IX,</title>
+					</ab>
+					<ab>
+						<title type="sub">XYSTI III PAPÆ AD PROCLUM CONSTANTINOPOLITANUM EPISCOPUM.</title>
+					</ab>
+					<ab>
+						<title type="sub">Ut sine Thessalonicensis antistitis formata, ex ii, pro­ vinciis quæ
+							ad illum pertinent, nullum sacerdotem ad se venientem suscipiat.</title>
+					</ab>
+					<p>
+						<milestone unit="PLSection" n="B"/>
+					</p>
+					<ab>
+						<title type="sub">Dilectissimo fratri PROCLO XYSTUS.</title>
+					</ab>
+					<p>I. Licet fraternitatem tuam, disciplinis ecclesia­ <lb/> sticis eruditam, ea omnia quae
+						ad regularum et cano­ <lb/> num observantiam pertinent custodire summa sollici­ <lb/>
+						tudine noverimus, nec quidquam aut ipsam facere, <lb/> aut facere alios sacerdotes se i
+						connivente permit­ <lb/> tere, quod vetusta Patrum constituta pervertat, do­ <lb/>
+						cumentis evidentibus probaverimus (id enim optimo <lb/> convenit et Deo dignissimo
+						sacerdoti, ut et ad se per­ <lb/> tinentia qua potest cura custodiat, et alios fratribus
+						<lb/> suis debita minime inquietare vel temerare ex aliqua <lb/> parte, MODERATIOREM
+						HONORIFICENTIAM suam majore <lb/> gloria servaturus, si nihil licere contra morem vete­
+						<lb/> rum attentantibus sinat), nostra tamen adhortatione <milestone unit="PLSection" n="c"/><lb/> per gratiam charitatis hoc fraternitati tuae specialiter <lb/> debet
+						accedere, ut contra subreptiones aliquorum <lb/> circumspecta sanctitas tua facultatem
+						non praebeat <lb/> horum incongruæ voluntati, qui Ecclesiis per se scan­ <lb/> dalum
+						cupiunt et discordiam generare, volentes per <lb/> Ecclesiarum perturbationem crescere,
+						et locum sibi <lb/> per dispensationem facere sacerdotum,</p>
+					<p>2. Id ergo, quod nos quoque servamus, fraternita­ <lb/> tem tuam, quam scimus hoc suo
+						more g facturam, <lb/> volumus custodire ; id est, ut si quis ad fratrem et <lb/>
+						coepiscopum nostrum Thessalonicensis urbis antisti­ <lb/> tem harum provinciarum h, quae
+						ad eum .pertinent, <note type="footnote"> scopum, nisi Rufi Thessalonicellsis antistitis
+							testimo­ <lb/> nioet opera, institui noluerit. Perigenes tamen, IIi <lb/> nostra nos
+							fallit conjerlura, quam ex Lennis epistola <lb/> i 3 finnare licet, synodis a
+							Thessatouicensr episcopo <lb/> indictis interesse, aut ei ulla in re Subesse detre­
+							<lb/> ctahat. </note>
+						<milestone unit="PLSection" n="D"/><note type="footnote"> " Tantum decurtata in actis
+							concilii Romani, qurc <lb/> Lucas Holstenius in lucem emisit, prolata est. Nec <lb/>
+							aliud succurrit exemplnr nnd4. resarciatur, Njijcciie <lb/> fuit omissum quod ad
+							apostolicae sedis in IIlyrlci pro­ <lb/> vincias jus stabiliendum conferebat, cum ea
+							tantim <lb/> ti" catis:i prolata sit. </note><note type="footnote"> b Supple
+							provinciarum. </note><note type="footnote">t The salonicensi. </note><note type="footnote">d Leaæ.', tanta. Hic fides commendatur legatorum, <lb/> quos Xystus ad
+							synodum mittebat. </note><note type="footnote"> . Julii 8 anni 435. </note><note type="footnote"> , Apud Holslen., cohibente. Experti nihil in vete­ <lb/> rihus
+							lilrris usitatius offendi, quam ut pro connivere <lb/> et conniventta pingatur
+							conhibere et conhibentia, hic <lb/> re'li, ue,'e non dubitamus connivente.•
+							</note><note type="footnote"> g Quo nimirum ea quae ecclesiasticae disciplinae <lb/>
+							sunt, servare solet. Ut antern nihil a Proclo durum. <lb/> aut ipso indignurn exigere
+							se suadeat, et hoc quod <lb/> rogat. a se erga episcopos IlIyrici servari proxime
+							<lb/> testatur. </note><note type="footnote">h Holstenius hic aliquid deesse, atque
+							ita suppleji-</note>
+						<milestone unit="PLSection" n="D"/><note type="footnote"> diim putat : Qna* ad tuam
+							spectaret Ecclesiam, sa­ <lb/> cerdus sine ttUJ consensu accesserit, val contra ad
+							tuam <lb/> sanctitatem isturum provinciarum, quæ ad eum IJert ,-­ <lb/> nentf etc.
+							Verum hoc suppleinenio antistiti Const.ui­ <lb/> tinopolitano præter Xysti Inenlern,
+							daudariiin for.. <lb/> matarum, :Hleo"ne et metropoliticum jus concedi:ur. <lb/> quod
+							longe postea Gelasius ci negavit, episi. R3 <lb/> lIurn. 10, scribens CP. civitatem
+							non solum in.erse­ <lb/> des minime numerari, sed nec inter metropolitanotum <lb/>
+							jura censeri Integer eriL locus, si ita legatur, ut si <lb/> quis a fratre et
+							corpiscopo nostro Tlaessalo,,;eeu,i. <lb/> urbis antistite harum provinciarum, etc.
+							Planior au­ <lb/> tem sic fieret : U t si quis harum provinciarum, qua <lb/> ad
+							fratrem et coepiscopum nostrum Thessalonicensit. <lb/> urbis antistitem pertinent,
+							etc. Ambigua certe noii </note>
+						<pb n="613"/>
+						<milestone unit="PLSection" n="A"/><lb/> Baeerdos adveniat praeter ejus conscientiam, si
+						sine <lb/> ejus epistolis atque formata venire tentaverit, tam­ <lb/> quam disciplinæ
+						ecclesiasticæ despector et contem­ <lb/> ptor canonum, quos nos temerari ex aliqua parte
+						<lb/> non patimur, habeatur. Reverendae vestræ in coni­ <lb/> mune præstatur, si alter
+						alterius honori debita, præ­ <lb/> venientes invicem per charitatis gratiam, reservetis;
+						<lb/> quæ fieri a nolumus ut legimus. Discant omnes illius <lb/> provinciae sacerdotes
+						tantæ fraternitatem tuam esse <lb/> censurae, ut non permittas fieri quod non licet a
+						<lb/> sacerdote tentari.</p>
+					<p>5. Diceremus plura, si non de tuæ fraternitatis <lb/> mente nossemus majora et ex hac
+						parte sentire, <lb/> quam nos in nostras epistolas hasce quas ad te di­ <lb/> rigimus,
+						possumus sermone conferre. Habes recen- <milestone unit="PLSection" n="B"/><lb/>
+						tissimum nuper habitæ actionis exemplum fratris <lb/> nostri Idduae b, circa quem tuæ
+						fraternitatis decre­ <lb/> vimus judicium custodiri ; cognitioni tuæ facere no­ <lb/>
+						lentes injuriam, cum ejus intentionem justissimam <lb/> innocentia tuereris. Monendi c
+						sunt ignorantes; at <lb/> scientem atque servantem talia si diutius velis in­ <lb/>
+						struere, non tam admonere quam exprobrare igno­ <lb/> rantiam videaris. Sufficiant ergo
+						quae scripsimus, <lb/> frater charissime, quoniam ad hæc corrigenda atque <lb/> servanda
+						animum tuum atque censuram nobiscum <lb/> sentire confidimus : quoniam unum cor et
+						animum, <lb/> ut dicit Scriptura (Act. iv, 32), circa religionis ob­ <lb/> servantiam,
+						canonum custodiam et disciplinam ec­ <lb/> clesiasticam retinendam nos habere, ut
+						debemus <lb/> d et credimus. e Data 15 kalendas Januarias, Aelio <milestone unit="PLSection" n="c"/><lb/> iterum et Segisvulto consulibus</p>
+					<ab>
+						<title type="sub">MONITUM IN EPISTOLAM SEQUENTEM.</title>
+					</ab>
+					<p>4. Ad epistolae hujus scopum assequendum non <lb/> parum rerert nosse quid sibi velit
+						Xystus his num. <lb/> 3 verbis : Nec his vos, fratres charissimi, constitutis, <lb/> quæ
+						præter nostra praecepta Orientalis synodus decer­ <lb/> nere voluit, credatis teneri,
+						præter id quide n, quod <lb/> de fide nobis consentientibus judicavit. Quæ sit illa
+						<lb/> synodus Orientalis, quæve illius constituta, quibus <lb/> Illyricanæ Ecclesiæ non
+						teneantur quæritur.</p>
+					<p>2. Lucas Holstenius, notis in hunc locum, verbis <lb/> illis innui existimat negotium
+						Juvenalis episcopi, qui <milestone unit="PLSection" n="A"/><lb/> Ephesina in synodo
+						Palestinæ provinciae principatum <lb/> obtinere studuit ; eaque de re consulendum monet
+						<lb/> Leonem in epistola ad Maximianum episcopum, hoc <lb/> est, quod in epistola illa
+						legimus : Difficile est ut <lb/> cupiditas improborum non aliquid supra mensuram <lb/>
+						moliatur appelere; sicut etiam in Ephesina synodo <lb/> Juvenalis episcopus ad
+						obtinendum Palestinæ provinciæ <lb/> principatum credidit se posse sufficere, et
+						insolentes <lb/> ausus per commentitia scripta firmare (Leo epist. 1 10 <lb/> cap. 6).
+						Verum ad haec Xystum minime respicere <lb/> hinc nobis persuasum est: primo quod,
+						Cyrillo Juve­ <lb/> nalis ambitioni intercedente, irriti fuerint illius <lb/> conatus,
+						adeo ut nullum ea de re decretum, immo <lb/> nec verbum in Epbesina synodo exstet; cum
+						tamen <lb/> Xysto de constitutis, non quae unus episcopus, sed <lb/> quæ synodus
+						decernere voluit, hic serrno sit. Deinde <lb/> etiamsi obtinuisset Juvenalis quod
+						ambiebat, idque <lb/> firmari decreto aliquo impetrasset; ad episcopos <lb/> Illyrici
+						quid attinebat usurpatus Palestinae principa- <milestone unit="PLSection" n="B"/><lb/>
+						tus? quidve opus erat, ut eos Xystus ad synodum <lb/> vocaret, ubi hujusmodi statuto se
+						minime teneri <lb/> admonerentur ?</p>
+					<p>3. Eadem verba quo referri queant, incompertum <lb/> sibi esse scribit Tillemontius
+						(Tom. XIV pag. 264), <lb/> nisi his decretum notetur Ephesinæ synodi act. 7, in <lb/>
+						quo non solum ecclesiarum Cypri asseritur libertas, <lb/> sed et sua caeteris Ecclesiis
+						jura servantur, atque <lb/> edicitur : Placuit igitur sanctæ et æcumenicæ synodo <lb/>
+						unicuique provinciæ pura et inviolata, quæ jam inde <lb/> ab initio habuit, sua jura
+						serventur juxta veterem con­ <lb/> suetudinem, et libetum sit cuique metropolitano acto­
+						<lb/> rum exempla ad suam securitatem excipere. At simul <lb/> fatetur vir
+						modestissimus, decretum illud, post­ <lb/> quam sedis apostolicæ legati Ephesum
+						advenissent, <lb/> constitutum esse, nec tamen uspiam quidquam legi, <lb/> unde legatos
+						illos ei recłamasse colligamus. Xystus <lb/> autem de constitutis loquitur quæ sedes
+						apostolica <lb/> numquam probaverit. Praeterea Xystum synodi quae <lb/> summam sedi
+						apostolicæ reverentiam exhibuit, vel <milestone unit="PLSection" n="c"/><lb/> decreta
+						reiecisse, vel auctoritatem imminuere vo­ <lb/> luisse quis credat? Ille certe concilium
+						œcumenicum <lb/> non vago synodi Orientalis, sed saltem proprio syn­ <lb/> odi Ephesinæ
+						nomine designasset.</p>
+					<p>4. Hujus papæ verba prima fronte congruere ma­ <lb/> gis videntur Constantinopolitanae
+						synodo anno 381 <lb/> habitae, utpote cujus decreta, in iis quae ad fidem <lb/>
+						attinent, ita receperunt Romani pontifices, ut cæ­ <lb/> tcra constituta etiam
+						diutissime post Xysti tempora <lb/> probare prorsus noluerint. Quocirca hujusmodi de­
+						<lb/> creta, cum ab Anatlio valde jactitarentur, nullius <lb/> momenti esse Leo ad
+						ipsummet Anatilium rescri­ <lb/> bens contendit his verbis : Persuasioni enim tuæ in
+							<note type="footnote"> est mens Xysti. Vult quippe nulli licere IlIyrici epi­ <lb/>
+							scopo quoquam sine antistitis Thessalonicensis for­ <lb/> mata proftcisci.
+							</note><note type="footnote"> a .Restituendum videtur, volumus ut legimu" sci­ <lb/>
+							licet apud Paulum (Rom. XII, 10) praecipientem, <lb/> tionore invicem prævenientes. </note>
+						<milestone unit="PLSection" n="D"/><note type="footnote"> k Epbesino iri concilio pag.
+							544, e, depositionis <lb/> Nestorii sententiae subscribit Jdduas Smyrnae episco­ <lb/>
+							pus. Unde. Holstenius Proclum in hunc episcopum <lb/> patriarchico jure egisse, ab
+							ejus judicio Idduam ad <lb/> apostolicam sedem provocasse, et Xystum Procli <lb/>
+							sententialn ratam esse jussissc opinamur. Ex quo <lb/> sequeretur ut Xyslus ejus in
+							Asianam dioecesin pa­ <lb/> triarchicum jus ratum habuisset; quod ipsius sedi <lb/> ne
+							Constantinopolitana quidem syn.dus attribuerat. <lb/> Hujus quippe synodi canone i
+							decernitur ut Asiance <lb/> diæctsi, episcopi quce sunt in sol a Asiana admin;'lreut,
+							<lb/> et Thraciæ episcopi Thraciam tantum regant. Quam­ <lb/> vis autein huc illi jus
+							primum Chalcedonensis con­ <lb/> cilii canone concessum sit, illud tamen Aetius archi­
+							<lb/> diaconus in eadem synodo act. i5, pag. 796, sic <lb/> Vindicat, quasi Jam eidem
+							sedi a tP. synodo auri­ <lb/> butum fuerit. Immo nisi Coiistaniinopolitaimni an­ <lb/>
+							.'istit.em, etia n ante Chalcedonensem synodum hoc <lb/> in Asianas provincias jure
+							potitum esse largiamur, <lb/> a mendacio purgari nequit Philippus presbyłer, cum <lb/>
+							in Chalcedonensi concilio act. 15 Leontio episcopo <lb/> Asianbrum provinciarum
+							priYilegiuln vindicanti ac <lb/> dicenti : A sancto Timotheo usque nunc t7 episcopi
+							<lb/> facti, omnes in Epheso sunt ordinati, respondit, </note>
+						<milestone unit="PLSection" n="D"/><note type="footnote"> Sanctæ memoriæ Joannes
+							(Chrysost.) episcopus Con: <lb/> ,tanl;nopolitalulS quindecim episcopos deposuit
+							profe­ <lb/> ctus in Asiam, et alios orditiavit, et M emllOR hic ordi­ <lb/> natus
+							est. At quoquo modo Constantinopolitani con­ <lb/> cilii canones 3 et 5 inlerprelali
+							sunt regiae urbis <lb/> praesules, eos a Xysti successoribus, saltem ad Hol'­ <lb/>
+							misdam usque, nedum ab ipso Xysto, admissos n6n <lb/> esse certum est. </note><note type="footnote"> c Non cum proxime dictis de Iddua, cujus exem­ <lb/> plum Xystus
+							velut in transcursu attigit, sed cum <lb/> superioribus haec connectenda sunt. Xystus
+							nempe, <lb/> qui non plura dicere se praemiserat, rei hujus ratio­ <lb/> nem reddit:
+							quia nimirum pluribus docendi suBIt <lb/> qui ignorant, non qui, ut Proclus, quid
+							officii sui sit <lb/> apprime callent. <lb/> d Supple, ita. </note><note type="footnote"> • Decemb. 18 ann. 457., </note>
+						<pb n="615"/>
+						<milestone unit="PLSection" n="A"/><lb/> nullo penitus suffragatur quorumdam episconorum
+						<lb/> ante sexaginta , ut jactas. annos facta conscriptio, <lb/> numquamque a præce
+						soribus tuis at apostolicæ sedis <lb/> transmissa notitiam (Leo epist. 97. II. 6).
+							Qu<unclear>æ</unclear> autem <lb/> de fide tum defin ta fuerant, ab eadem sy nodo ad
+						<lb/> Damasum missa .sse, ex ipsins synodi ad eamdem <lb/> papam epistola 13 n. 4
+						colligatur, nec a quoquam <lb/> catholico exinde repudiata essi' legimus. Certe hu­
+						<lb/> jus synodi symbolum in Conedio Chalcedonensi act. <lb/> 2 cum omnium plausu recit
+						tum, act. 5 ejusdem <lb/> Concilii definitiom totum cum N cæno insertum fuit. <lb/>
+						Verum nonnullis decretis, quæ recentius constituta <lb/> sint, Xystum hic moveri prope
+						ceitum est.</p>
+					<p>5. Censemus igitur synodum ab hoc papa notari <lb/> ipsus ævo habitam, in qua quædam
+						adversus Ec. <lb/> clesiarum, ac nominatim Thessalonicensis, jnra, <lb/> Proclo
+						instigante, sive, ul lenius loquitur ipse Xystus, <lb/> connivent e, constituta sint.
+						Quocirca Xystus III epi­ <lb/> stola superiore Proclum summa moderatione ac <milestone unit="PLSection" n="D"/><lb/> prudentia corripiens, totus in eo est, ut illum et <lb/>
+						ad vetusta Patrum constituta custo lienda, et ad <lb/> servandum antistiti
+						Thessalonicensi honorem debi­ <lb/> tum cobortetur. Porro ex Theodoreti episiola 86 ad
+						<lb/> Flavianum eo isco. um CP., discimus sub Proclo <lb/> celebratam esse synodum, in
+						qua nonnulla, haud <lb/> dubie n gratiam Constantinopolitani antistitis, con- <lb/> Ira
+						Ecclesiarum aliarum jora constituta sunt. Sic <lb/> enim ini Theodoretus Flavianum
+						alloquilur : Scito, <lb/> dom ne mi, hanc illum (Dioscerum Alexandrinum <lb/> cpscopum)
+						adversus me pusillitatem genere, ex quo <lb/> synodivis vestris sub beatæ memoriæ Proclo
+						factus, <lb/> sanctorum Patrum regulis inhærentes, assensimus ; <lb/> ac de hoc nos
+						semel atque iterum increpasse, quasi et <lb/> Antiochenorum ut ait, et Alexandrinorum
+						jura prodi­ <lb/> derimus. Sane in his Theodoreti verbis mihil est <lb/> quod non eu m
+						iis quæ Xystus de Orientali synodo <lb/> habet apprime componatur.</p>
+					<p>6. Quod si ili est, de Concilio quod sub Proclo <lb/> halutum esse memorat Theodoretus,
+						hoc affirmare <milestone unit="PLSection" n="c"/><unclear/><lb/> becat, primo illid nen
+						serius anno 457 celebranum <lb/> esse, et in eo alia quidem de fine cum apostolicæ <lb/>
+						sedis consensu, alia extra fidem et circa disciplinam <lb/> præter ejusdem sedis I
+						ræcepta lui se constituta. <lb/> Deinde Xy tus manifeste docet constitutis illis, quæ
+						<lb/> præter ipsius præcepta cdi a sunt, læsa fuisse Thes­ <lb/> salonicensis
+							<unclear>antistitis</unclear> jura. Neque minus ex Theo­ <lb/> doreto liquet, iisdem
+						pariter, saltem Dioscori judi­ <lb/> cio, violata fuisse Alexandrinorum atine Antioche­
+						<lb/> norum privilegia : adeo ut Dioscorus Theod retom, <lb/> quod asensu suo decreta
+						illa comprobarat. veluti <lb/> proditorem haberet Alexadrinorum et Antioche­ <lb/> nerum
+							<unclear>jorum</unclear>, eaque de cansa justo illum edio pro­ <lb/> sequi se
+						existimaret. Unde merito conjicere est, <lb/> constitutis illis ea confirmata vel etiam
+						au la esve <lb/> privilegia. quæ jam ah anno 381 in alio Con­ <lb/> stantum politano
+						regiæ urbis præsuli attributa sunt. <lb/> Si etiam synodo sub Proclo non interfuit
+						Theodo­ <lb/> retus, sed ejus decretis postmodum assensit, con­ <milestone unit="PLSection" n="D"/><lb/> stituta illa per provin, ias. ut episcoporum assensu
+						<lb/> ac subscri tione firmarentur, missa esse inde col­ <lb/> lig tur.</p>
+					<p>7. Hinc corrigendi Baronius et qui cum secuti sunt <lb/> conciliorum editores, qui
+						quidem concilium illud sub <lb/> Proclo ad annum 439 referunt. ac de illo, unis Theo­
+						<lb/> doreti verbis fulti, multa commiimscuntur abeo pror­ <lb/> sus aliena. F ugunt
+						nempe hiscorum adhuc diaco­ <lb/> num , cum Const minopoli apocrisarium Ecclesiæ <lb/>
+						Alexandrinæ ageret, cum Antiocheno episcopo con <lb/> lendisse pro primatu, eamque ob
+						causam c ngregata <lb/> synoda fuisse definitum, ut quæ in Nicæno aliisque <lb/>
+						conciliis hac de re clim constituta fuissent, rata ac firma <lb/> manerent (Baron. sub
+						finem ann 439 ; Lab. tom. III, <lb/> pag. 1284), ac demum Theoderetum Cyri episcopum
+							<milestone unit="PLSection" n="A"/><lb/> sese ad tuendas Antiocheni episcopi pertes
+						contu­ <lb/> lisse, ideoque grave Hioscori odium suscepisse. Et <lb/> vero Theodoretus
+						in laudata epistola Dioscori odium <lb/> non ideo in se concitatum dicit, quia præsulis
+						Antio­ <lb/> &lt; heni jura defenderit acriter , sed quia synodi sub <lb/> Pro do habitæ
+						constitutis assentiens, Antioheni po­ <lb/> lius præsulis, non secus atque Alexandrini
+						jura pro­ <lb/> didisse judicabatur. Nec in illa synodo firmata sunt <lb/> Nicæna
+						decreta, sed de illis, ut ex Xyt o conficine, <lb/> fuit derogatum. Altercationis vero
+						Dioscori diaconi <lb/> cum Antiocheno præsule nullum apparet in verbis <lb/> Theodoreti
+						vestigium, idque meram fabulam sapit.</p>
+					<p>8. Non immerito igitur a Baronii sententia Joan. <lb/> Garnerius in Auctario
+						Theodoreti, Historiæ ejusdem <lb/> cap. 7, ii. 7, et ad ejus imitationem Auton. Pagins
+						<lb/> ad annum 439, n. 13. disce serunt. Sed nec illi multo <lb/> felictus Theodoreti
+						mentem videntur assecuti, dum ab <lb/> hoc scriptore memorari putant litteras synodicas,
+						<lb/> quas Proclus ad domnum Antiochenum antistitem in <milestone unit="PLSection" n="D"/><lb/> gratiam Athanasii Pyrrhnorum episcopi scripsit , <lb/> quæque actioni 14
+						concilii Chalcedonensis insertae <lb/> sunt. Quod ut evidentius pateat, observandum est
+						<lb/> epistolum cujus explicationem quærimus, eo consilio <lb/> a Theodoreto scriptam
+						esse, ut Flaviani opem aique <lb/> subsidium adversus Dioscori calumnias sibi concilia­
+						<lb/> rei. Hujus rei gratia Flavianum urget, ut decretorum <lb/> in generali conelio
+						Constantinopolitano sancitorum <lb/> sit viodex, ac Dioscori superbiam, qua præfinitis
+						sibi <lb/> limitibus contineri non vult, retundat. Tum in epi­ <lb/> scopi hujus odium
+						ex eo incurtisse se uarrat, quod <lb/> latteris synodicis sub Proclo factis assensetit ,
+						quasi <lb/> hoc assensu Alexandrinorum Antiochenorumque jura <lb/> prodi disset. Jam
+						vero litterarum Procli in gratiam <lb/> Athanasii scriptarum, et synod &lt;ar m, quibus
+						assen­ <lb/> sit Theodoretus, quæ consensio ? Procul dubio si <lb/> tantum ltteris pro
+						Pyrrhenorum episcopo scriptis <lb/> subscripsisset Theodoretus, nihil inde fusset causæ
+						<lb/> cur apud Dioscorum Antiochenorum, longe minus <lb/> Alexandrinorum, jurium
+						proditor andiisset. Primo <milestone unit="PLSection" n="c"/><lb/> enim mere &lt;
+						ommendatitiæ sunt hæ litteræ, nec in <lb/> iis Proclus quidquam sibi juris arrogai. Immo
+						An­ <lb/> tiochenæ Ecclesiæ jura in huc toto negtio salva et <lb/> illæsa esse diserte
+						declarat, ubi ejus antis item Do­ <lb/> muum sic alloquitur : Non igitur tua
+						religiositas arbi­ <lb/> tretur quia tamquam ad injuriam sedis Antiochenæ <lb/> max mæ
+						civitatis huc venit memoratus Dei amantissi­ <lb/> mus episcopus Athanasius, etc.
+							<unclear>Delude</unclear> ltteras illas <lb/> non suo tantum sed ipsius etiam Cyrilli
+						nomme scri­ <lb/> ptasesse testificatur ac dicit : Præsentibus eum (Atha­ <lb/> nasium)
+						litteris consolantes , confidere jussimus ego <lb/> atque sanctissimus episcopus et
+						consacerdos Cyrillus. <lb/> A II Ecclesiæ suæ jura tunc ignorasse aut prodidisse <lb/>
+						Cyrillus existumandus est ? Longe potiori jure credi­ <lb/> devimus synodicas Prodi
+						luteras, quas Theodoretus <lb/> epist. 86 ad Flavianum memorat, omnino altas esse <lb/>
+						ah ris quas concilium Chalcedonense act. 15 exhibet. <lb/> Sed ubi epistolam Xysti cum
+						prædicta Theodoreti <lb/> epistola conterimus, ex mu na luce quam sibi invi- <milestone unit="PLSection" n="D"/><lb/> cem conferunt, de una eademque synodo deque iis­ <lb/>
+						dem constitutis in utraque sermonem esse haud dif­ <unclear/>
+						<lb/> ficulter deprehendimus.</p>
+					<ab>
+						<title type="sub">EPISTOLA X.</title>
+					</ab>
+					<ab>
+						<title type="sub">XYSTI PAPÆ III AD a TOTIUS ILLYRICI EPISCOPOS.</title>
+					</ab>
+					<ab>
+						<title type="sub">Vices suas per Illyricum Anastasio de more commi­ sisse se significat.
+							Quæ sit illius potestas. Ut ei re­ verentiam exhibeant.</title>
+					</ab>
+					<ab>
+						<title type="sub">Dilectissimis fratribus universis episcopis per Illyri­ ricum cons
+							stentihus XYSTUS.</title>
+					</ab>
+					<p>1. Doctor gentium, vas cletionis, religionis no­ <lb/> stræ firmissimum fundamentum,
+						epistolis omnibus <note type="footnote"> 18 QIIO", videlicet ut tina in synodo
+							coogregalos <lb/> X5&gt;itis In eiotdio all quitur. <unclear>Hujus</unclear> autem
+							convo­ <lb/> caoda; i'."Ot!1 quantium e bUjkTifio cpibtola ei cx <lb/> hac ipsa
+							augurari licea, ea causa fuit ut Tessaloni- ' <lb/> censis Ecclesiæ jura, quæ Produs
+							ulurlJare aul <lb/> imminuere tentabat, integra vindicarentur. </note>
+						<pb n="617"/>
+						<milestone unit="PLSection" n="A"/><lb/> quas ad singularum civitatum scribit Ecclesias,
+						de <lb/> sua in Domino gratulatione testatur, quos legis præ­ <lb/> ceptis parere
+						videat, et in Dei nostri timore versari. <lb/> Si tanta igitur Apostolo tam docto quam
+						sancto est <lb/> mentis hilaritas, quod a tantos pariter, quod novit <lb/> et his ad
+						quos scribit et religioni proficere, unis ap­ <lb/> pellet epistolis, quanto nobis
+						gaudio existimatis esse, <lb/> quoniam in commune sanctitatis vestrae datur nobis <lb/>
+						appellare concilium, et sermonem nostrum affectio­ <lb/> nis piæ circa vos testimonia
+						continentem, cum ve­ <lb/> stra sanctitate conjungere? Ille enim singulas, utdixi­ <lb/>
+						mus, epistolis suis visitat Ecclesias : nos b tot pariter <lb/> credimus Ecclesias
+						nostris appellare nos litteris, <lb/> quot estis qui ad sanctam synodum convenitis. ili
+						<lb/> est sermo cum rudibus atque discipulis ; nobis ser- <milestone unit="PLSection" n="B"/><lb/> mo cum collegis et doctis. Et ut a beatissimi Pauli, <lb/> fujus maxime
+						praeceptis obedire vos convenit, non <lb/> recedamus exemplo, non vobis grave sit de his
+						quæ <lb/> ad nostram notitiam perveniunt, ut servetur disci. <lb/> plina ecclesiastica,
+						commoneri ac si præsentes. Ergo <lb/> vobiscum quod ad regularum canonumque custo­ <lb/>
+						diam proficere novimus, pro sollicitudine nostra <lb/> conferimus, sequestro filio
+						nostro Artemio presby­ <lb/> tero cujus nobis efficacia in agendo pariter et mode- <lb/>
+						ratio placnit et amor, ut traditus trames a patribus, <lb/> firmis vestræ dilectionis
+						vestigiis teneatur, et ea <lb/> quae a nobis propter quietem Ecclesiarum sunt c cu­
+						<lb/> stodita, serventur.</p>
+					<p>2. Illyricanae omnes Ecclesiae, ut a decessoribus <lb/> nostris accepimus, et nos
+						quoque fecimus, ad curam <milestone unit="PLSection" n="C"/><lb/> nunc pertinent
+						Thessalonicensis antistitis; ut sua <lb/> sollicitudine, si quae inter fratres
+						nascantur, ut as­ <lb/> solent, actiones distinguat atque definiat, et ad eum <lb/>
+						quidquid a singulis sacerdotibus agitur, referatur. <lb/> Sit concilium quoties causae
+						fuerint, quoties ille pro <lb/> necessitatum emergentium ratione decreverit : ut <lb/>
+						merito sedes apostolica, relatione ejus instructa, <lb/> quæ fuerint acta confirmet.
+						Evocatus vestrum venire <lb/> nemo contemnat, nec congregationi sanctae ad quam <lb/>
+						debet festinare, se deneget. Excusatio per contuma- <milestone unit="PLSection" n="A"/><lb/> ciam non requiratur : ut vobis pariter convenienti­ <lb/> bus possit in commune
+						consUtu!, quod Ecclesiarum <lb/> servet quietem, et populos teneat ad salutem.</p>
+					<p>3. Nec his vos, fratres charissimi, constitutis, quae <lb/> præter nostra praecepta
+						Orientalis synodus decer­ <lb/> nere voluit, credatis teneri, praeter id quidem quod
+						<lb/> de fide consentientibus judicavit. A canonum præ­ <lb/> ceptis vestrum nemo
+						discedat, nec ab his deviet, <lb/> quae juxta regularum ordinem frequens ad vos dire­
+						<lb/> cta sedis apostolicae decrevit auctoritas. Si quid <lb/> forsitan aut inter
+						fratres natum fuerit, aut fratri cui­ <lb/> piam aliqua actio qua pulsetur, illata; aut
+						illic fratre <lb/> et coepiscopo nostro Anastasio judice eveniens ne­ <lb/> gotium
+						terminetur, qui vices apostolicae sedis agere, <lb/> ut beatae memoriae Rufus decessor
+						ipsius, ex nostra <milestone unit="PLSection" n="B"/><lb/> volutate cognoscitur; aut ad
+						nos, si illic finiri non <lb/> potuerit, eodem tamen suis litteris causam omnem <lb/>
+						quæ vertitur prosequente, veniat examen.</p>
+					<p>4. Nullum corpus eSI, quod capite non regatur. <lb/> Estis quidem membra, ut novimus
+						sancta; sed ve. <lb/> strum caput respicere et honorare vos condecet : <lb/> quoniam
+						honor capitis ad spem totius proficit san­ <lb/> ctitatis; et suum corpus sollicitis
+						tuetur oculis, quod <lb/> sibi aptum et dignis videatur ad unamquamque rem <lb/>
+						officiis convenire. Sed ut orone corpus capite regi­ <lb/> tur, ita ipsum caput, nisi
+						suo corpore sustentetur, <lb/> firmitatem et vigorem suum perdit, et non tenet <lb/>
+						quam habuerat dignitatem. Estote igitur, ut esse <lb/> convenit Domini sacerdotes,
+						Ecclesiarum praesules, <lb/> riligionis nostræ doclores. Reservate fratri et coepi-
+							<milestone unit="PLSection" n="C"/><lb/> scopo nostro reverentiam quam debetis, et
+						inter vos <lb/> pacem et concordiam custodite. Sit in vobis, ut esse <lb/> credimus, cor
+						unum et anima una (Act. IV, 52). Nec <lb/> credatis vobis minui quidquid reverentiae
+						illius, ad <lb/> quem et majores nostri et nos Illyricanas Ecclesias <lb/> justa morem
+						traditum voluimus pertinere, a vestra <lb/> dilectione et servari volumus et deferri. d
+						Data <lb/> 15 kalendas Januarias, Aetio iterum et Segisvulto <lb/> consulibus. <note type="footnote"> * Id est, tam multos pariier. </note><note type="footnote">b Primum
+							istud nos in recto, sequens in quarto <lb/> casu sumitur. </note><note type="footnote"> c Mallet Holstenius constituta. A Xysti tamen sco­ <lb/> po alienum non est
+							custodite. Nihil enim novi con­ <lb/> stituit, sed quae a majoribus sunt constituta
+							cu­ <lb/> stodit. </note><note type="footnote"> d Decemb. is anni 437. </note>
+					</p>
+				</div>
+
+				</body>
+  </text>
+</TEI>

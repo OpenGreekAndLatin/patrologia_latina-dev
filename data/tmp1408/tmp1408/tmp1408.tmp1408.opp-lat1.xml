@@ -1,0 +1,694 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title>Patrologiae Cursus Completus. Series Latina (PL)</title> 
+        <sponsor>University of Leipzig</sponsor>
+        <funder>European Social Fund Saxony</funder>
+        <principal>Gregory Crane</principal>
+        <respStmt>
+          <persName xml:id="Jouve">Jouve</persName>
+          <resp>OCR-ed, corrected and encoded the text</resp>
+        </respStmt>
+        <respStmt>
+          <persName>Greta Franzini</persName>
+          <resp>Project Manager (University of Leipzig)</resp>
+        </respStmt>
+        <respStmt>
+          <persName>Simona Stoyanova</persName>
+          <resp>Project Assistant (University of Leipzig)</resp>
+        </respStmt>
+        <respStmt>
+          <persName>Bruce Robertson</persName>
+          <resp>Technical Advisor (Mount Allison University)</resp>
+        </respStmt>
+      </titleStmt>
+      
+      <publicationStmt>
+        <authority>University of Leipzig</authority>
+        <idno type="filename">PL83.xml</idno>
+        <availability>
+          <licence target="https://creativecommons.org/licenses/by-sa/4.0/">Available under a Creative Commons Attribution-ShareAlike 4.0 International License</licence>
+        </availability>
+        <date>2014</date>
+        <publisher>University of Leipzig</publisher>
+        <pubPlace>Germany</pubPlace>
+      </publicationStmt>
+      
+      <sourceDesc>
+        <listBibl xml:lang="la">
+          <biblStruct>
+            <monogr>
+              <editor>
+                <persName>
+                  <name xml:lang="fr">Jacques Paul Migne</name>
+                </persName>
+              </editor> 
+              <author ref="urn:cite:perseus:author.771">Isidorus Hispalensis</author>
+              <title>Differentiarum Sive De Proprietate Sermonum Libri Duo</title>
+              <title>Allegoriae Quaedam Sacrae Scripturae</title>
+              <title>De Ortu Et Obitu Patrum Qui In Scriptura Laudibus Efferuntur</title>
+              <title>In Libros Veteris Ac Novi Testamenti Proemia</title>
+              <title>Liber Numerorum Qui In Sanctis Scripturis Occurrunt</title>
+              <title>De Veteri Et Novo Testamento Quaestiones</title>
+              <title>Mysticorum Expositiones Sacramentorum Seu Quaestiones In Vetus Testamentum</title>
+              <title>Appendix Ad Libros Regum</title>
+              <title>De Fide Catholica Ex Veteri Et Novo Testamento Contra Judeos</title>
+              <title>Sententiarum Libri Tres</title>
+              <title>De Ecclesiasticis Officiis</title>
+              <title>Synonyma De Lamentatione Animae Peccatricis</title>
+              <title>Regula Monachorum</title>
+              <title>Epistolae</title>
+              <title>De Ordine Creaturarum Liber</title>
+              <title>De Natura Rerum Ad Sisebestum Regem Liber</title>
+              <title>Chronicon</title>
+              <title>Historia De Regibus Gothorum. Wandalorum Et Suevorum</title>
+              <title>De Viris Illustribus Liber</title>
+              <title>Carmina [Ascripta]</title>
+              <title>Chronica Regum Visigothorum (Incertus)</title>
+              <title>Expositio In Canticum Canticorum Salomonis [Incertus]</title>
+              <title>De Conflictu Vitiorum Et Virtutum (Incertus)</title>
+              <title>Expositio In Missa (Incertus)</title>
+              <title>Sententiarum Liber Quartus (Incertus)</title>
+              <title>Exhortatio Humilitatis (Incertus)</title>
+              <title>Testimonia Divinae Scripturae Et Patrum (Incertus)</title>
+              <title>Sermones (Incertus)</title>
+              <title>De Ecclesiasticis Dogmatibus (Incertus)</title>
+              <title>Sentantiae Differentiarum De Activa Vita Atque Contemplativa [Incertus]</title>
+              <title>Exhortatio Poenitendi Cum Consolatione Et Misericordia Dei [Incertus]</title>
+              <title>Lamentum Poenitantiae (Incertus)</title>
+              <title>Oratio Contra Insidias Diaboli (Incertus)</title>
+              <title>Liber De Ortu Et Obitu Patrum Incertus</title>
+              <title>Liber De Numeris (Incertus)</title>
+              <title>Glossae in Sacram Scripturam</title>
+              <title>Differentiarum, sive de Proprietate Sermonum, Liber</title>
+              <title>Liber Glossarum</title>
+              <imprint>
+                <publisher>Garnier</publisher>
+                <pubPlace>Paris</pubPlace>
+                <date>1850</date>
+              </imprint>
+              <biblScope unit="volume">83</biblScope>
+            </monogr>
+            <monogr>
+              <author>Auctor Incertus</author>
+              <title>Archiepiscopi Toletani Veteres</title>
+              <title>Chronologia Gothicorum Regum (Ex Codice Regio Vaticano)</title>
+              <imprint>
+                <publisher>Garnier</publisher>
+                <pubPlace>Paris</pubPlace>
+                <date>1850</date>
+              </imprint>
+              <biblScope unit="volume">83</biblScope>
+            </monogr>
+            <ref target="http://hdl.handle.net/2027/pst.000020950231">HathiTrust</ref>
+            
+          </biblStruct>
+        </listBibl>
+      </sourceDesc>
+      
+    </fileDesc>
+    <encodingDesc>
+      <p>The following text is encoded in accordance with EpiDoc standards and with the
+        CTS/CITE Architecture.</p>
+      <refsDecl n="CTS">
+        <cRefPattern n="paragraph" matchPattern="(.+).(.+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div/tei:div[@n='$1']/tei:p[@n='$2'])"/>
+        <cRefPattern n="section" matchPattern="(.+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div/tei:div[@n='$1'])"/>
+      </refsDecl>
+    </encodingDesc>
+    
+    <profileDesc>
+      <langUsage>
+        <language ident="la">Latin</language>
+      </langUsage>
+    </profileDesc>
+    
+</teiHeader><text><body><div type="edition" n="urn:cts:latinLit:tmp1408.tmp1408.opp-lat1">
+          <head>
+            <title type="main">SANCTI ISIDORI HISPALENSIS EPISCOPI DE VETERI ET NOVO TESTAMENTO QUÆSTIONES.</title>
+          </head>
+          <p>
+            <milestone unit="PLSection" n="A"/></p>
+
+
+<div n="1" subtype="section" type="textpart">
+<ab>
+            <title type="sub">QUÆSTIO PRIMA.</title>
+          </ab>
+          <p n="1">249 1. Die mihi, quid esi inter Novum et Vetus <lb/>
+            Testamentum ? Respondit : Vetus est peccatum <lb/>
+            Adæ; unde dicit Apostolus : Regnavit mors ab Adam <lb/>
+            usque ad Moysen (Rom. v, 14), et reliqua. Novum <lb/>
+            est Christus de Virgine natus.</p>
+          <p n="2">2. Unde Propheta dicit: Cantate Domino canticum <lb/>
+            novum : quia homo novus venit; nova præcepta attu­ <lb/>
+            lit, id est, Novum Testamentum.</p>
+          </div>
+
+<div n="2" subtype="section" type="textpart">
+<ab>
+            <title type="sub">QUÆSTIO II.</title>
+          </ab>
+          <p n="3">3. Die mihi, quanti libri intelliguntur in Novo <lb/>
+            Testamento' Respondit : XXVII, et in Veteri Testa­ <lb/>
+            mento legis Moysi XLV libri sunt; juxla sepluaginta <lb/>
+            duas linguas septuaginta duo libri intelliguntur.</p>
+          <p n="4">4. Vetus est, quando i es alienas tollit homo ; No-
+            <milestone unit="PLSection" n="B"/><lb/>
+            vum, quando propria largitur. Vetus est, quando <lb/>
+            malum pro malo redditur, unde dicitur : Oculum pro <lb/>
+            oculo, dentem pro dente, et cætera, quæ ad vindi­ <lb/>
+            clam pertinent. Novum est inimicos diligere. Domi­ <lb/>
+            nUS dixit in Evaugelio : Diligite inimicos vestros; <lb/>
+            benefacite his qui oderunt vos (Matth. v, 44).</p>
+          <p n="5">250 5. Vetus esi, peccalores in infernum de­ <lb/>
+            scendere; Novum est, conversos in regnum Domini <lb/>
+            introire. Et Vetus erit omnes peccatores et impios ad <lb/>
+            diem judicii in infernum descendere, ubi semper <lb/>
+            manebunt. Novum est omnes justos in regnum Do. <lb/>
+            mini introire; unde sanctus Petrus dicit : Novus <lb/>
+            homo, et nova terra (11 Petr. m, 13) ; et nova erunt in <lb/>
+            memoria priora.</p>
+          <p n="6">6. Et Vetus erit in igne purgatorio pro minutis
+            <milestone unit="PLSection" n="c"/><lb/>
+            peccatis purgari; Novum, quando purgatus exinde <lb/>
+            fuerit in regnum Domini.</p>
+          </div>
+
+<div n="3" subtype="section" type="textpart">
+<ab>
+            <title type="sub">QUÆSTIO III.</title>
+          </ab>
+          <p n="7">7. Die mihi, liber quibus modis dicitur. Respon­ <lb/>
+            dit: Quatuor : libri dicuntur ad legendum, vel libe­ <lb/>
+            randum. Codex dicitur ad condiendum. Volumen di­ <lb/>
+            citur ad volvendum.</p>
+          <p>
+            <milestone unit="PLSection" n="A"/></p>
+          </div>
+
+<div n="4" subtype="section" type="textpart">
+<ab>
+            <title type="sub">QUÆSTIO IV.</title>
+          </ab>
+          <p n="8">8. Die mihi, prima littera a pro quo accepit no­ <lb/>
+            men a ? De angelis, de ante sæcula, de Adam, de <lb/>
+            anima.</p>
+          </div>
+
+<div n="5" subtype="section" type="textpart">
+<ab>
+            <title type="sub">QUÆSTIO V.</title>
+          </ab>
+          <p n="9">9. Die mihi, quibus nominibus dicitur a? Respon­ <lb/>
+            dit : Tribus, id est, aleph in Hebræo, alpha in <lb/>
+            Graeco, a in Latino.</p>
+          </div>
+
+<div n="6" subtype="section" type="textpart">
+<ab>
+            <title type="sub">QUÆSTIO VI.</title>
+          </ab>
+          <p n="10">10. Die mihi, Evangelium in cujus lingua dicitur? <lb/>
+            In Graeca; et in Latina, id est, bona nuntiatio.</p>
+          </div>
+
+<div n="7" subtype="section" type="textpart">
+<ab>
+            <title type="sub">QUÆSTIO VII.</title>
+          </ab>
+          <p n="11">11. Die mihi, pro quo dixit Dominus ad Abra­ <lb/>
+            hain : Exi de 251 terra tua, et de cognatione lua, et
+            <milestone unit="PLSection" n="B"/><lb/>
+            de domo patris tui (Gen. XII, 1)? Abraham personam <lb/>
+            Christi gerebat. Sicut Abraham dimisit terram, et <lb/>
+            cognationem, et domum patris sui; venit in terram, <lb/>
+            quam ignorabat : ita et Christus dimisit gentem <lb/>
+            suam, hoc est, Judæorum.</p>
+          <p n="12">12. Ita eximus de terra nostra nos, quando de <lb/>
+            divitiis hujus mundi , et de facultatibus contemni­ <lb/>
+            mus, et de cognalione nostra, hoc est, vitiis, et de <lb/>
+            domo patris nostri, hoc est, de memoria hujus <lb/>
+            mundi,</p>
+          </div>
+
+<div n="8" subtype="section" type="textpart">
+<ab>
+            <title type="sub">QUÆSTIO VIII.</title>
+          </ab>
+          <p n="13">13. Dic mihi, nomen aposlolorum cujus lingua di. <lb/>
+            citur? Respondit: In Graeca; in Latina missi inter­ <lb/>
+            pretantur.</p>
+          </div>
+
+<div n="9" subtype="section" type="textpart">
+<ab>
+            <title type="sub">QUÆSTIO IX.</title>
+          </ab>
+          <p n="14">
+<milestone unit="PLSection" n="c"/>14. Die mihi, episcopus in cujus lingua dicitur? <lb/>
+            Respondit : In Græca; in Latina speculatores. Epi­ <lb/>
+            scopus autem nomen est operis, non honoris. Sciat <lb/>
+            se non esse episcopum, qui praeesse desiderat, non <lb/>
+            prodesse.</p>
+          </div>
+
+<div n="10" subtype="section" type="textpart">
+<ab>
+            <title type="sub">QUÆSTlO X.</title>
+          </ab>
+          <p n="15">15. Die mihi, clerus in cujus lingua dicitur? Re­ <note type="footnote"> Num. i. De hoc opere, et de rationibus quae per­ <lb/>
+            suadent fetum esse genuinum sancti Isidori, quam­ <lb/>
+            vis adhuc publicam lucem non viderit, abunde dis­ <lb/>
+            putavi in Isidorianis, cap. 64. In eo autein descri­ <lb/>
+            bendo ita librarii errores correxi, ut. nonnunquam <lb/>
+            aperta vitia inlacla reliquerim, ex quibus genius <lb/>
+            scribentis colligi possit. Pro respondit, quod est iu <lb/>
+            Ws., reponi posset respondet, aut respondetur. </note><note type="footnote"> 3. Ms., lex Moysi. Libros Veteris et Novi Testa­ <lb/>
+            rnenli eodem modo sepluaginta duos lsidorus nume­ <lb/>
+            rat in Prooemiis, initio. </note><note type="footnote"> 5. Verba sancti Petri sunt : Novos vero caelos et <lb/>
+            novam terram, secundum promissa ipsius, exspectamus. </note><note type="footnote"> 6. In Ms. pro minuta peccata; sic passim occurrit <lb/>
+            nominativus pro ablativo : ac fortasse legendum erit <lb/>
+            in regno Domini, nisi aliquod verbum desit. Numeri <lb/>
+            4, 5, 6, videntur collocari debere ante num. 3. </note><note type="footnote"> 7. Forte a legendo... a condendo, etc. </note><note type="footnote"> 8. Ms., pro quid; sic etiam num. 11. Forte prc­ <lb/>
+            pterquid. </note><note type="footnote"> 11. In Vulgata : Egredere de terra, etc. </note><note type="footnote"> 12. Pro contemnimus forte recedimus, vel concedi' <lb/>
+            mus, vel contendimus exire. </note><note type="footnote"> 14. Sinctus Augustinus, de Civit. Dei, c. 19: J,,­ <lb/>
+            telligat, non se esse. episcopum, qui præesse dilexerit, <lb/>
+            non prodesse. Vide eLi:ulI Quæstionum dialogum sub <lb/>
+            Augustini nomine quaest. ultimi. </note> <note type="footnote"> PATROL. LXXXIII. </note> <note type="footnote"> 7 </note> <pb n="203"/>
+            
+            <milestone unit="PLSection" n="A"/><lb/>
+            spondit : In Graeca; io Latina sors Domini interpre­ <lb/>
+            tatur.</p>
+          </div>
+
+<div n="11" subtype="section" type="textpart">
+<ab>
+            <title type="sub">QUÆSTIO XI.</title>
+          </ab>
+          <p n="16">16. Die mihi, abba qua lingua dicitur? Hebraice, <lb/>
+            Graece pater, Latine genitor.</p>
+          </div>
+
+<div n="12" subtype="section" type="textpart">
+<ab>
+            <title type="sub">QUÆSTIO XII.</title>
+          </ab>
+          <p n="17">17. Dic mihi, qui primus fuit clericus? Respon­ <lb/>
+            dit : Sanctus Petrus.</p>
+          </div>
+
+<div n="13" subtype="section" type="textpart">
+<ab>
+            <title type="sub">QUÆSTIO XIII.</title>
+          </ab>
+          <p n="18">252 18. Die mihi, quanta sunt quæ ex nihilo <lb/>
+            creavit omni potens Deus? Respondit : IV, id est, <lb/>
+            angelus, et anima, cœlum, et terra. Reliquæ vero <lb/>
+            creaturæ ex ipsis procedunt.</p>
+          </div>
+
+<div n="14" subtype="section" type="textpart">
+<ab>
+            <title type="sub">QUÆSTIO XIV.</title>
+          </ab>
+          <p n="19">
+<milestone unit="PLSection" n="B"/>19. Die mihi, coelum quid intelligitur? Respon­ <lb/>
+            dit : Angelus, et terra, id est, sancta Ecclesia. Et <lb/>
+            eoelum animæ justæ, et terra peccalores.</p>
+          </div>
+
+<div n="15" subtype="section" type="textpart">
+<ab>
+            <title type="sub">QUÆSTIO XV.</title>
+          </ab>
+          <p n="20">20. Die mihi, quibus modis creditur Dens? Re­ <lb/>
+            spondit : Tribus sive quatuor, id est, Deus bonus, <lb/>
+            perfectus, omnipotens, sempiternus debetur credi, <lb/>
+            quia sine his dici non potest Deus.</p>
+          </div>
+
+<div n="16" subtype="section" type="textpart">
+<ab>
+            <title type="sub">QUÆSTIO XVI.</title>
+          </ab>
+          <p n="21">21. Die mihi, quibus modis adoratur Deus? Re­ <lb/>
+            spondit : Tribus: qui adoratur, non adorat; qui <lb/>
+            ereator est, et non crealura ; qui sine peccato est, <lb/>
+            et peccata dimittit.</p>
+          </div>
+
+<div n="17" subtype="section" type="textpart">
+<ab>
+            <title type="sub">QUÆSTIO XVII.</title>
+          </ab>
+          <p n="22">22. Die mihi, quibus modis facit Deus justitiam
+            <milestone unit="PLSection" n="C"/><lb/>
+            cum sanctis suis? Respondit: Tribus : monstrat, ut <lb/>
+            sciant; persuadet, ut diligant; adjuvat, ut perficiant.</p>
+          </div>
+
+<div n="18" subtype="section" type="textpart">
+<ab>
+            <title type="sub">QUÆSTIO XVIII.</title>
+          </ab>
+          <p n="23">23. Die mihi, cur Adam accepit mandatum ? Re­ <lb/>
+            spondit : Ne se Deum putaret. sed subditum.</p>
+          </div>
+
+<div n="19" subtype="section" type="textpart">
+<ab>
+            <title type="sub">QUÆSTIO XIX.</title>
+          </ab>
+          <p n="24">253 24. Die mihi, cur vultus Moysi terribilis <lb/>
+            erat in populo? Respondit : Quia peccatoribus le­ <lb/>
+            gem dabat.</p>
+          </div>
+
+<div n="20" subtype="section" type="textpart">
+<ab>
+            <title type="sub">QUÆSTIO XX.</title>
+          </ab>
+          <p n="25">25. Die mihi, in Apocalypsi pro quo dicit : Acci­ <lb/>
+            pe libruM, et comede illum; et erit in ore meo dulcis, <lb/>
+            quasi mel, et amarus in ventre (Apoc. x, 9, 10)? <lb/>
+            Respondit : Mellica est Scriptura in ore Ecclesiæ, <lb/>
+            qui sunt sapientes, et fideles ; amara est in hæreticis
+            <milestone unit="PLSection" n="D"/><lb/>
+            saevientibus.</p>
+          </div>
+
+<div n="21" subtype="section" type="textpart">
+<ab>
+            <title type="sub">QUÆSTIO XXI.</title>
+          </ab>
+          <p n="26">26. Dic mihi, cur circumcisus est Dominus, et cir­ <lb/>
+            cumcidere non debent homines? Respondit : Quia cir­ <lb/>
+            cumcisionem ad finiendum Vetus Testamentum
+            <milestone unit="PLSection" n="A"/><lb/>
+            focit, baptismum vero ad incipiendum Novum.</p>
+          </div>
+
+<div n="22" subtype="section" type="textpart">
+<ab>
+            <title type="sub">QUÆSTIO XXII.</title>
+          </ab>
+          <p n="27">27. Dic mihi, cur esuriit Salvator? Ut illuderet <lb/>
+            Satanam.</p>
+          </div>
+
+<div n="23" subtype="section" type="textpart">
+<ab>
+            <title type="sub">QUÆSTIO XXIII.</title>
+          </ab>
+          <p n="28">28. Die mihi, cur non amplius XL diebus jejunavit <lb/>
+            Christus? Respondit : Ut Moysi et Eliæ concor­ <lb/>
+            daret.</p>
+          </div>
+
+<div n="24" subtype="section" type="textpart">
+<ab>
+            <title type="sub">QUÆSTIO XXIV.</title>
+          </ab>
+          <p n="29">29. Die mihi, quomodo pater Judæorum men­ <lb/>
+            dax fuit? Id est: Cain pater Judæorum vocatus <lb/>
+            est, qui dixit Domino : Nescio ubi est frater meus, <lb/>
+            quem occiderat. Et pater Cain I id est, diabolis, <lb/>
+            qui mentitus est Adæ : Quod non morte morieris, si <lb/>
+            prœceptum dominicum transgressus fueris.</p>
+          <p>
+            <milestone unit="PLSection" n="B"/></p>
+          </div>
+
+<div n="25" subtype="section" type="textpart">
+<ab>
+            <title type="sub">QUÆSTIO XXV.</title>
+          </ab>
+          <p n="30">254 30. Die mihi, cur dictum est: Oculum pro <lb/>
+            oculo, dentem pro dente, et reliqua quæ ad vindictam <lb/>
+            pertinent? Respondit : Ut esset timor in populo, <lb/>
+            ne quidquam liceret quod sihi nolebat.</p>
+          </div>
+
+<div n="26" subtype="section" type="textpart">
+<ab>
+            <title type="sub">QUÆSTIO XXVI.</title>
+          </ab>
+          <p n="31">31. Die mihi, justitia quibus vel quantis modis <lb/>
+            dicitur? Respondit: Quinque . justitia Veteris Testa­ <lb/>
+            menti, justitia Novi Testamenti, justitia ad judican­ <lb/>
+            dum, justitia ad misericordiam, justitia, quae vide­ <lb/>
+            tur ab hominibus esse.</p>
+          </div>
+
+<div n="27" subtype="section" type="textpart">
+<ab>
+            <title type="sub">QUÆSTIO XXVII.</title>
+          </ab>
+          <p n="32">32. Die mihi, quanta continet ignis in se? IV. id <lb/>
+            est, urit, illuminat, calefacit et sanctificat. Sanctifi­ <lb/>
+            care autem proprie in sua natura non habet, licet
+            <milestone unit="PLSection" n="C"/><lb/>
+            figuram Spiritus sancti teneat, qui urit vitia, cale­ <lb/>
+            facil frigidam animam, sanclificat peccatorem, illu­ <lb/>
+            minat cur, unde tenebras ignorantiae fugat.</p>
+          </div>
+
+<div n="28" subtype="section" type="textpart">
+<ab>
+            <title type="sub">QUÆSTIO XXVIII.</title>
+          </ab>
+          <p n="33">33. Die mihi, quid intelligitur in hoc quod dici. <lb/>
+            tur : Da partes VII, necnon et VIII. Respondit : Judæi <lb/>
+            non dederunt partes VIII, denegantes resurrectionem <lb/>
+            diei Dominicæ; sed dederunt partes VII, credentes <lb/>
+            Sabbato. Tu vero crede et honora utrumque, id est, <lb/>
+            nova et vetera legis, ut non sis Judæus, neque gen­ <lb/>
+            tilis.</p>
+          </div>
+
+<div n="29" subtype="section" type="textpart">
+<ab>
+            <title type="sub">QUÆSTIO XXIX.</title>
+          </ab>
+          <p n="34">34. Die mihi, cur caput nominatur? Respondit : <lb/>
+            Eo quod hinc capiunt initium sensus et nervi.</p>
+          </div>
+
+<div n="30" subtype="section" type="textpart">
+<ab>
+            <title type="sub">QUÆSTIO XXX.</title>
+          </ab>
+          <p n="35">255 35. Die mihi, eleemosyna qua lingua dicitur.
+            <milestone unit="PLSection" n="D"/><lb/>
+            vel quid interpretatur? Græce dicitur ele emosyna, <lb/>
+            quod Latine dicitur Dei mei muneratio. Misericurdia <lb/>
+            a misero corde dicta : unde Dominus misericors die <lb/>
+            cilur, et quod subvenit homini misero corde ba­ <lb/>
+            benti. <note type="footnote"> i8. Legi potest Dominus pro ,Deus; et mox an­ <lb/>
+            geli ; in lIs. est angelos et reliquas ... creaturas. </note><note type="footnote"> 2i). Coli., credetur... Deum bonum, etc., debe'ur <lb/>
+            credere. </note><note type="footnote"> 't I. Melius videretur quia adoratur, etc. Et iterum <lb/>
+            ac tertio, quia pro qui. </note><note type="footnote"> 2:1 Forte leg..'udum se Dominum. </note><note type="footnote"> 25. Verba Aporalyp&gt;is : Accipe librum , et det'ora <lb/>
+            illum... et erui III ore meo tanquam mel dulce, et cum <lb/>
+            devorussem eum, unlaricatul est venter meus. </note> <note type="footnote"> 26. Forte circumcidi non debent omnes; prius fuit <lb/>
+            *homnes. </note><note type="footnote"> 30. Forte licere pro liceret. </note><note type="footnote"> 52. In Ms. lecit pro licet, et tenit pro teneat. </note><note type="footnote"> 55. Ms., vetera legem. Forte novam et lIelcr,,,. <lb/>
+            legem. Quid siut velint hæ partes sepiem et octo iu­ <lb/>
+            dicum fuit-in librod* NIJmeris. ad cap. U. </note><note type="footnote"> 54. Vel. Cud., capiuntur initinm sensi. </note><note type="footnote"> 55. Forte eo quod subvenit hOlllinl miserum ,or, </note></p><pb n="205"/>
+            
+          <p>
+            <milestone unit="PLSection" n="A"/></p>
+          </div>
+
+<div n="31" subtype="section" type="textpart">
+<ab>
+            <title type="sub">QUÆSTIO XXXI.</title>
+          </ab>
+          <p n="36">36. Dic mihi, quantos, vel quales spiritus creavit <lb/>
+            omnipotens Deus? Respondit : Tres : unum , qui <lb/>
+            carne non tegi;ur, id esi, angelorum ; alium, qui <lb/>
+            carne tegitur, et non cum carne morietur, id est, <lb/>
+            bominum; tertium, qui carne legitur, et cum carne <lb/>
+            morictur, id est, jumentorum et brutorum anima­ <lb/>
+            lium. Homo itaque sicut in modio creatus est, ut <lb/>
+            esset inferior augelorum , superior jumentorum.</p>
+          </div>
+
+<div n="32" subtype="section" type="textpart">
+<ab>
+            <title type="sub">QUÆSTIO XXXII.</title>
+          </ab>
+          <p n="37">37. Dic mihi, dilectio vel charitas in quot mo­ <lb/>
+            dis consistunt? In IV. Hoc est, primum in Dei timore, <lb/>
+            vel dilectione. Secundum , sicut nosmetipsos , sic <lb/>
+            Deum amemus. Tertium proximos. Quartum etiam <lb/>
+            inimicos.</p>
+          <p n="38">
+<milestone unit="PLSection" n="B"/>38. Deum ergo plus quam nos diligere debemus : <lb/>
+            proximuna , sicut nos : inimicum, uL proximum. Et <lb/>
+            nisi Deum primum dilexerimus, nOsmetipsos mini­ <lb/>
+            me diligere poterimus.</p>
+          </div>
+
+<div n="33" subtype="section" type="textpart">
+<ab>
+            <title type="sub">QUÆSTIO XXXIII.</title>
+          </ab>
+          <p n="39">39. Die mihi, regnum Dei quibus modis intelligi­ <lb/>
+            tur? Respondit : Quinque : id est, Christus, fides, <lb/>
+            Evangelium, Ecclesia praesens, vel ipsum regnum <lb/>
+            cœlorum. Non fuit poenitentia prædicuta ante Joan­ <lb/>
+            flem, quia ipse dixit : Pænitentiam agite; appropin­ <lb/>
+            quavit enim regnum coelorum (Matth. iii, 2).</p>
+          </div>
+
+<div n="34" subtype="section" type="textpart">
+<ab>
+            <title type="sub">QUÆSTIO XXXIV.</title>
+          </ab>
+          <p n="40">256 40. Dic mihi, pro quibus causis se voluit <lb/>
+            Dominus a Joanne baptizari ? Respodit : Pro iv :
+            <milestone unit="PLSection" n="c"/><lb/>
+            prima ut quia homo natus est, ut omnem justitiam <lb/>
+            impleret et humilitatem. Secunda baptismus, ut <lb/>
+            suum baptismum Joannes confirmaret. Tertia, ut <lb/>
+            aquas Joannes sanctificaret. Quarta, ut nullus dedi­ <lb/>
+            gnetur a servo suo baptizari, dum ipse Dominus a <lb/>
+            servo suo baptizatus est.</p>
+          </div>
+
+<div n="35" subtype="section" type="textpart">
+<ab>
+            <title type="sub">QUÆSTIO XXXV.</title>
+          </ab>
+          <p n="41">41. Die mihi, quomodo, vel quando implevit <lb/>
+            Christus septem gradus? Respondit: Primus gradus <lb/>
+            lector, quando aperuit librum Isaiæ prophetæ, et <lb/>
+            dixit : Spiritus Domini super me (Luc. iv, 18).</p>
+          <p n="42">42. Secundus gradus exorcista, quando ejecit VII <lb/>
+            dæmonia de Maria Magdalene.</p>
+          <p n="43">43. Tertius gradus subdiaconus, quando fecit vi­ <lb/>
+            num de aqua in Chanan Galilææ.</p>
+          <p n="44">
+<milestone unit="PLSection" n="A"/>44. Quartus gradus diaconus, quando lavavit pe­ <lb/>
+            des discipulorum suorum.</p>
+          <p n="45">45. Quintus gradus presbyter, quando benedixit <lb/>
+            panem, et fregit, dedit discipulis suis. Istos quinque <lb/>
+            gradus ante passionem implevit Christus.</p>
+          <p n="46">46. Sextus gradus ostiarius, quando dixit : Tor­ <lb/>
+            lite portas, priticipes, vestras, et elevamini, portæ æter­ <lb/>
+            nales (Psalm. XXIII, 7).</p>
+          <p n="47">257 47. Septimus gradus episcopus, quando <lb/>
+            levavit manum suam super capita discipulorum suo­ <lb/>
+            rum, et benedixit eos.</p>
+          </div>
+
+<div n="36" subtype="section" type="textpart">
+<ab>
+            <title type="sub">QUÆSTIO XXXVI.</title>
+          </ab>
+          <p n="48">48. Die mihi, quid est hoc quod dixit Dominus in <lb/>
+            Evangelio : Facilius est camelum per fotamen acui <lb/>
+            transire, quam divitem in regnum Dei introire?
+            <milestone unit="PLSection" n="B"/><lb/>
+            Respondit: Quid per camelum , nisi gentiles homi­ <lb/>
+            nes significat ? qu:a antequam Christus veniret, tor- <lb/>
+            tuosi, et gembrosi erant, idola adorando, vel colendo.</p>
+          <p n="49">49. Quid per illud foramen, nisi incarnatio Christi <lb/>
+            in utero sanctæ Mariæ deseribitur? Quid per illum <lb/>
+            divitem, nisi Judæi, qui de legis littera se divites <lb/>
+            sperabant?</p>
+          <p n="50">50. Tria refugia Domini habebant, id est, in mon­ <lb/>
+            te, in deserto, et in mare. Exemplum nobis ad alio­ <lb/>
+            rem justitiam ascendere tanquam in monte; contem­ <lb/>
+            plativa sectari, tanquam in deserto; fugere, tanquam <lb/>
+            ir mare.</p>
+          </div>
+
+<div n="37" subtype="section" type="textpart">
+<ab>
+            <title type="sub">QUÆSTIO XXXVII.</title>
+          </ab>
+          <p n="51">51. Die mihi, quibus substantiis constat homo? <lb/>
+            Respondit: Tribus, id est, anima et corpore. Una
+            <milestone unit="PLSection" n="c"/><lb/>
+            est anima quæ, dum contemplatur, spiritus est; dum <lb/>
+            sentit, sensus est; dum sapit, anima est; dum intel­ <lb/>
+            ligit, mens est; dum discernit, ratio est; dum con­ <lb/>
+            sentit, voluntas est; dum recordatur, memoria est; <lb/>
+            dum membra vegetat, anma est.</p>
+          </div>
+
+<div n="38" subtype="section" type="textpart">
+<ab>
+            <title type="sub">QUÆSTIO XXXVIII.</title>
+          </ab>
+          <p n="52">52. beptem sunt modi prædicationis, id est, do. <lb/>
+            ceudo, persuadendo, increpando, arguendo, terren­ <lb/>
+            do, mulcendo et promittendo : hoc est, docendo <lb/>
+            discipulos , persuadendo personis, increpando su­ <lb/>
+            perbos, arguendo contrarios, terrendo trepidos, <lb/>
+            mulcendo iracundos, 258 promittendo pravis et <lb/>
+            bonis, pravis tormenta, bonis vitam aeternam.</p>
+          </div>
+
+<div n="39" subtype="section" type="textpart">
+<ab>
+            <title type="sub">QUÆSTIO XXXIX.</title>
+          </ab>
+          <p n="53">53. Dic mihi, qui primus prophetavit? Respondit:
+            <milestone unit="PLSection" n="D"/><note type="footnote"> 37. Cod.., consistent pro consistunt9 et secunda, <lb/>
+            quarta, pro secundum, quartum. </note><note type="footnote"> 58. III Ms., potemus pro poterimus. </note><note type="footnote"> 40. Praestabii legere, utaquas Joanni: sanctifica­ <lb/>
+            ret; nam i facile vertitur in e. </note><note type="footnote"> 41. Septem gradus, sive ordines plerique theologi <lb/>
+            dislinguullt, sed alio modo eos percensent. </note><note type="footnote"> 42. Exorcistae gradus inchoatus, ei denotatus <lb/>
+            quoque fuit, cum Jesus Christus tetigit nures surdi <lb/>
+            et fJluli, dicens : Ephp"etll, quod est adaperire. </note><note type="footnote"> 45. Alii dicunt subdiaconatum institutuw a Chri­ <lb/>
+            biD in ultima frena. </note><note type="footnote"> 44. Kx aliorum opinione Christus diaconatum <lb/>
+            instituit cum in ultima coena corpus suum et sangui­ <lb/>
+            tiem discipulis dispensavit. </note><note type="footnote"> 45. Forte, dedilque discipulis suis. </note><note type="footnote"> 4U. Censent alii ostiariatum ante passionem a </note> 
+            <milestone unit="PLSection" n="D"/><note type="footnote"> Christo institutum fuisse inchoative, et denotative. <lb/>
+            ut alunt, cum ementes et vendeules ejecit de lemplo; <lb/>
+            completive, cum in ultima coena primam sacerduLii <lb/>
+            pI tt.slalenl discipulis suis contulit. </note><note type="footnote"> 47. Episcopatum verum es.c: ordinem a presby­ <lb/>
+            ter.itu disiincium, tenenl jamcum canonislis plerique <lb/>
+            recentiores theologi.' </note><note type="footnote"> 48. Forte et gibbo.i erant. Alii camelum de fune <lb/>
+            explicant. </note><note type="footnote"> 5). Videtur id pertinere ad aliam quaestionem, <lb/>
+            cujusdesit initium. </note><note type="footnote"> Gl. Reponendum censeo duabus pro tribus. Mutia <lb/>
+            in line erat hæc quaestio sic, dum membra vegetat; <lb/>
+            supplevi ex Opere imperfecto de Numeris fortasse <lb/>
+            sancti Isidori in Ms. Vatic.. Reginæ, 199, in qui; h;ec <lb/>
+            ipsa sunt, et supra iegitur dumsapit, animus, etc. </note><note type="footnote"> 52. Deest initium hujus quacstionU. </note> <pb n="207"/>
+            
+            <milestone unit="PLSection" n="A"/><lb/>
+            Adam, quando dixit: Hoc nunc os ex ossibus meis, <lb/>
+            et caro de carne mea.</p>
+          </div>
+
+<div n="40" subtype="section" type="textpart">
+<ab>
+            <title type="sub">QUÆSTIO XL.</title>
+          </ab>
+          <p n="54">54. Die mihi , infans parvulus quantas virtutes <lb/>
+            habet? Respondit: IV : Non laesus meminit; non <lb/>
+            perseverat in ita; non delectatur pulchra femina; <lb/>
+            non aliud cogitat vel aliud loquitur.</p>
+          <p>
+            <milestone unit="PLSection" n="A"/></p>
+          </div>
+
+<div n="41" subtype="section" type="textpart">
+<ab>
+            <title type="sub">QUÆSTIO XLI.</title>
+          </ab>
+          <p n="55">55. Die mihi, quare fuit diluvium super terra? <lb/>
+            Respondit: Filii Dei acceperunt filias hominum ex <lb/>
+            omnibus quas sibi elegerant; natique sunt ex eis <lb/>
+            filii. Illi fuerunt gigantes, et multa mala fecerunt in <lb/>
+            terra, et non placuit Domino. Propterea delevit eos <lb/>
+            Dominus per aquas diluvii.</p>
+        </div>
+  </div>
+                </body>
+  </text>
+</TEI>
