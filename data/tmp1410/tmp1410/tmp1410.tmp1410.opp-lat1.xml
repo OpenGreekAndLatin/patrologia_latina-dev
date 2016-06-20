@@ -1,0 +1,597 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title>Patrologiae Cursus Completus. Series Latina (PL)</title>
+        <sponsor>University of Leipzig</sponsor>
+        <funder>European Social Fund Saxony</funder>
+        <principal>Gregory Crane</principal>
+        <respStmt>
+          <persName xml:id="Jouve">Jouve</persName>
+          <resp>OCR-ed, corrected and encoded the text</resp>
+        </respStmt>
+        <respStmt>
+          <persName>Greta Franzini</persName>
+          <resp>Project Manager (University of Leipzig)</resp>
+        </respStmt>
+        <respStmt>
+          <persName>Simona Stoyanova</persName>
+          <resp>Project Assistant (University of Leipzig)</resp>
+        </respStmt>
+        <respStmt>
+          <persName>Bruce Robertson</persName>
+          <resp>Technical Advisor (Mount Allison University)</resp>
+        </respStmt>
+      </titleStmt>
+
+      <publicationStmt>
+        <authority>University of Leipzig</authority>
+        <idno type="filename">PL83.xml</idno>
+        <availability>
+          <licence target="https://creativecommons.org/licenses/by-sa/4.0/">Available under a
+            Creative Commons Attribution-ShareAlike 4.0 International License</licence>
+        </availability>
+        <date>2014</date>
+        <publisher>University of Leipzig</publisher>
+        <pubPlace>Germany</pubPlace>
+      </publicationStmt>
+
+      <sourceDesc>
+        <listBibl xml:lang="la">
+          <biblStruct>
+            <monogr>
+              <editor>
+                <persName>
+                  <name xml:lang="fr">Jacques Paul Migne</name>
+                </persName>
+              </editor>
+              <author ref="urn:cite:perseus:author.771">Isidorus Hispalensis</author>
+              <title>Differentiarum Sive De Proprietate Sermonum Libri Duo</title>
+              <title>Allegoriae Quaedam Sacrae Scripturae</title>
+              <title>De Ortu Et Obitu Patrum Qui In Scriptura Laudibus Efferuntur</title>
+              <title>In Libros Veteris Ac Novi Testamenti Proemia</title>
+              <title>Liber Numerorum Qui In Sanctis Scripturis Occurrunt</title>
+              <title>De Veteri Et Novo Testamento Quaestiones</title>
+              <title>Mysticorum Expositiones Sacramentorum Seu Quaestiones In Vetus
+                Testamentum</title>
+              <title>Appendix Ad Libros Regum</title>
+              <title>De Fide Catholica Ex Veteri Et Novo Testamento Contra Judeos</title>
+              <title>Sententiarum Libri Tres</title>
+              <title>De Ecclesiasticis Officiis</title>
+              <title>Synonyma De Lamentatione Animae Peccatricis</title>
+              <title>Regula Monachorum</title>
+              <title>Epistolae</title>
+              <title>De Ordine Creaturarum Liber</title>
+              <title>De Natura Rerum Ad Sisebestum Regem Liber</title>
+              <title>Chronicon</title>
+              <title>Historia De Regibus Gothorum. Wandalorum Et Suevorum</title>
+              <title>De Viris Illustribus Liber</title>
+              <title>Carmina [Ascripta]</title>
+              <title>Chronica Regum Visigothorum (Incertus)</title>
+              <title>Expositio In Canticum Canticorum Salomonis [Incertus]</title>
+              <title>De Conflictu Vitiorum Et Virtutum (Incertus)</title>
+              <title>Expositio In Missa (Incertus)</title>
+              <title>Sententiarum Liber Quartus (Incertus)</title>
+              <title>Exhortatio Humilitatis (Incertus)</title>
+              <title>Testimonia Divinae Scripturae Et Patrum (Incertus)</title>
+              <title>Sermones (Incertus)</title>
+              <title>De Ecclesiasticis Dogmatibus (Incertus)</title>
+              <title>Sentantiae Differentiarum De Activa Vita Atque Contemplativa [Incertus]</title>
+              <title>Exhortatio Poenitendi Cum Consolatione Et Misericordia Dei [Incertus]</title>
+              <title>Lamentum Poenitantiae (Incertus)</title>
+              <title>Oratio Contra Insidias Diaboli (Incertus)</title>
+              <title>Liber De Ortu Et Obitu Patrum Incertus</title>
+              <title>Liber De Numeris (Incertus)</title>
+              <title>Glossae in Sacram Scripturam</title>
+              <title>Differentiarum, sive de Proprietate Sermonum, Liber</title>
+              <title>Liber Glossarum</title>
+              <imprint>
+                <publisher>Garnier</publisher>
+                <pubPlace>Paris</pubPlace>
+                <date>1850</date>
+              </imprint>
+              <biblScope unit="volume">83</biblScope>
+            </monogr>
+            <monogr>
+              <author>Auctor Incertus</author>
+              <title>Archiepiscopi Toletani Veteres</title>
+              <title>Chronologia Gothicorum Regum (Ex Codice Regio Vaticano)</title>
+              <imprint>
+                <publisher>Garnier</publisher>
+                <pubPlace>Paris</pubPlace>
+                <date>1850</date>
+              </imprint>
+              <biblScope unit="volume">83</biblScope>
+            </monogr>
+            <ref target="http://hdl.handle.net/2027/pst.000020950231">HathiTrust</ref>
+
+          </biblStruct>
+        </listBibl>
+      </sourceDesc>
+
+    </fileDesc>
+    <encodingDesc>
+      <p>The following text is encoded in accordance with EpiDoc standards and with the CTS/CITE
+        Architecture.</p>
+        <refsDecl n="CTS">
+        <cRefPattern n="paragraph" matchPattern="(.+).(.+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div/tei:div[@n='$1']/tei:p[@n='$2'])"/>
+        <cRefPattern n="section" matchPattern="(.+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div/tei:div[@n='$1'])"/>
+      </refsDecl>
+    </encodingDesc>
+
+    <profileDesc>
+      <langUsage>
+        <language ident="la">Latin</language>
+      </langUsage>
+    </profileDesc>
+
+</teiHeader>
+<text>
+    <body>
+      <div type="edition" n="urn:cts:latinLit:tmp1410.tmp1410.opp-lat1">
+
+        <div n="1" subtype="section" type="textpart">
+          <ab>
+            <title type="sub">APPENDIX AD LIBROS REGUM.</title>
+          </ab>
+          <p>
+            <milestone unit="PLSection" n="A"/>553 De unitate fidei, et charitate, quæ plenitudo
+            <lb/> legis est.</p>
+          <p n="1">1. Quid vir unus! Non solum ille unus dicitur, <lb/> sed omnes competentes unus
+            dicuntur. Unam sa­ <lb/> pientiam omnes habentes unum Christum Jesum <lb/> confitentur ;
+            in uno spiritu Dei replentur ; inde dicit <lb/> Apostolus : Omnes quidem currunt, sed
+            unus accipit <lb/> palmam (I Cor. IX, 24).</p>
+          <p n="2">2. Unusquisque insipientium non est unus, sed <lb/> multi, quia per Scripturam
+            insipiens, sicut luna <lb/> mutatur. Luna cum videatur una esse per substan­ <lb/> tiam,
+            per muLationem dierum semper a semetipsa <lb/> alia est, et diversa ; sic peccatores,
+            qui mutantur <lb/> semper scientia, et cupiunt diversa.</p>
+          <p n="3">3. Unus autem dicitur Deus, non de numero, sed <lb/> qnia nunquam a semetipso
+            alter efticitur. Ideo nun­ <lb/> quam mutatur, ut est: Tu autem idem ipse es, et an­
+            <lb/> si tui non deficient Psat. CI, 28).</p>
+          <p n="4">
+            <milestone unit="PLSection" n="B"/>4. De monte Ephraim. Id est, non de vallihus, ne­
+            <lb/> que de campis, non de collibus. De monte Ephraim, <lb/> qui interpretatur
+            fructificatio; id est ergo, de monte <lb/> frugifero, Dominus inquit: Dominus montium,
+            non <lb/> convallium.</p>
+          <p n="5">5. Elcana interpretatur possessio Dei est. Vir ille <lb/> habuit duas uxores :
+            prima nobilior Anna sterilis <lb/> erat, ut fuit prima uxor sterilis Abrahæ Sarra nobi­
+            <lb/> lior; secunda Ægyptia Agar ignobilior fuit. Et effe­ <lb/> ctus est Abraharn pater
+            de ignobili, sic tamen post de <lb/> nobili conjuge pater.</p>
+          <p n="6">6. Ita Elcana, qui possessio Dei, prius de secunda <lb/> uxore efficitur pater,
+            quia clauserat Deus vulvam <lb/> ejns Annx, ut prius vulvam Sarrae. Post parium <lb/>
+            Phenennae aperuit Deus vulvam Annae. Phenenna <lb/> interpretatur conversio, Anna gratia
+            interpretatur.</p>
+          <p n="7">7. Qui vult effici possessio Dei ducat has duas <lb/> uxores, et jungat sibi
+            primum eam quæ nobilior est, <lb/> gratiam ; haec enim prima per fidem conjungitur, ut
+            <lb/> Apostolus ait: Gratia enim Dei salvati estis per dem <milestone unit="PLSection" n="C"/><lb/> (Ephes. II, 8). Secundæ conjungitur Phenennæ, id <lb/> est, conversioni,
+            quia post gratiam credulitatis mo­ <lb/> rum emendatio lit.</p>
+          <p n="8">8. Prima filios nobis generat Phenenna, quia pri­ <lb/> mos nobis fruclus
+            proferimus. 554 Et nisi conver­ <lb/> tamur a malo, non poterimus ethici patres de Anna.
+            <lb/> Phenenna filios habet, sed qui non assistunt; nec <lb/> tamen inanes, nam de
+            sacrificiis divinis edunt.</p>
+          <p n="9">9. Unusquisque ergo, qui convertitur a peccato, <lb/> ex conversione generat
+            opera justitiæ. Et postea ex­ <lb/> citata Anna per zelum bonum precem fundit Do­ <lb/>
+            ntiO, ut ipsa lilios generet, qui assistant Deo, hoc <lb/> est, filios gratiæ, qui Deo
+            vacent. In Evangelio hujus <lb/> historiæ forma ostenditur.</p>
+          <p n="10">10. Videlicet Martha satagit circa frequens mini­ <lb/> sterium : explet opera
+            conversationis, et per hæc <lb/> velut filios conversationis generat. Et Maria sedens
+              <milestone unit="PLSection" n="A"/><lb/> secus pedes verbi Domini, optimam partem
+            dicitur <lb/> elegisse, et intelligitur velut gratia gemina pro­ <lb/> creare.</p>
+          <p n="11">11. Sic Anna generat filium Samuel, qui Deo as­ <lb/> sistit, de quo dicitur:
+            Moyses et Aaron in sacerdoti­ <lb/> bus ejus et Samuel inter eos qui invocant nomen ejus
+            <lb/> (Psalm. XCVIII, 6); quod interpretatur : Ubi ipse <lb/> Deus. Ubi enim spiritus
+            gratiae, ibi dicitur Deus, ut <lb/> Paulus dicit. Et cadens in faciem adoravit Deum di­
+            <lb/> cens : Vere Deus in vobis est.</p>
+          <p n="12">12. Nisi praecedant opera conversionis, non pos­ <lb/> sumus dona spiritus
+            generare in Silo. Silum nomen <lb/> loci, in quo offerebantur sacrificia, priusquam tem­
+            <lb/> plum aedificaretur in Jerusalem, et purgatio flebat <lb/> peccatorum. Silum
+            interpretatur evulsio, sive ex­ <lb/> calceatio, id est, calceamenti resolutio. Locus
+            autem, <lb/> in quo purgantur peccata, evulsio nominatur, ubi <lb/> evellitur cor
+            lapideum ; et excalceatio, quia omnes, <lb/> donec ad locum veniamus sanctum, calceati
+            sumus ; <milestone unit="PLSection" n="B"/><lb/> cum autem perveniamus ad eum,
+            discalceari ju­ <lb/> bemur.</p>
+          <p n="13">13. Ut Moysi dicitur : Solve corrigiam calceamenti <lb/> tui, locus enim in quo
+            stas terra sancta est (Exod. III, <lb/> 5), ut indicia mortalitatis abjiceret, quae in
+            calcea­ <lb/> mentis pelliceis designantur. Unde Salvator dicit: <lb/> Neque ealceamenta
+            in pedibus vestris, quippe qui illam <lb/> viam incederent. Qui dicit: Ego sum via, et
+            veritas, <lb/> et vita. Nemo enim viam vitae cum indicio mortalita­ <lb/> tis
+            incedit.</p>
+          <p n="14">14. Silum, ubi est Heli, vir minus laudabilis; pro <lb/> peccato enim retrorsum
+            corruens expiravit. Si quis <lb/> retrorsum convertitur a fide, et veritate, necesse est
+            <lb/> ut cadat, et continuo moriatur.</p>
+          <p n="15">15. Heli interpretatur extraneus; extraneus quippe <lb/> a Deo, qui non tenet
+            disciplinam, et filium non co­ <lb/> gitat, non corripit, aut emendat, qui indulget
+            vitiis. <lb/> Filius Heli Ophni interpretatur excelsus conversionis, <lb/> quia longe
+            efficitur ab emundatione, hæc convertit <lb/> ad Dominum.</p>
+          <p n="16">
+            <milestone unit="PLSection" n="C"/>16. Duos Phinees novimus in Scriptura, illum <lb/>
+            justum filium Aaron, 555 et injustum filium Heli. <lb/> significatur Phinees oris
+            obturatio et ont parcens. Sunt <lb/> in sacerdotibus hodie uterque : qui parcit ori suo,
+            <lb/> et omnis sermo malus in sacerdote non procedit, <lb/> Phinei filio Aaron
+            comparatur. Comparantur filio <lb/> Heli hi sacerdotes qui obturatum os habent, sive
+            <lb/> imperitia, vel vitio, sive conscientia peccatorum.</p>
+          <p n="17">17. Donec amoveret eum a lacte. De rationali iacto <lb/> Annæ Samuel depellitur,
+            quia qui Deo offertur, of. <lb/> ferri ante non potuit, quam depelleretur a lacte; <lb/>
+            quandiu puer est sensibus , Paulus dicit : Lac vobis <lb/> polum dedi, non escam.</p>
+          <p n="18">18. Omnis qui primo ab hæresi ad fidem vertitur, <lb/> a lacte alitur : alienus
+            est sermo justitiæ, et non <lb/> habet sensus ad discretionem boni et mali. Parvulus
+            <lb/> non potest ascendere ad templum Dei; et ad mini­ <note type="footnote"> i.
+              Fragmentum hoc, ut dixi in Isidorianis, cap. </note>
+            <milestone unit="PLSection" n="D"/><note type="footnote"> 102, n. 26, in Codice Vatic.
+              Palat. 276,commen­ <lb/> tario Isidori in lib. quartuiu Regum annexuin est <lb/> eodem
+              contextu. Quamvis Litul,,:; sit De unitate <lb/> lid,';, etc., re tamen vera est
+              expositio quorumdam <lb/> locorum librorum Regum, et a primo libro, cap. I, <lb/> I,
+              initium ducit, scilicet : Fuit vir unus de Rama­ <lb/> thaim Sopnim, de monte Ephraim,
+              etc. Pro compe. <lb/> tentes fortasse legellduln competenter, etsi illico ne­ <lb/>
+              gatur insipientes esse unum. </note><note type="footnote"> 2. In Ms. est cum videtur.
+              Insipientes mulli di­ <lb/> cuntur, quia siulLoiiim inlinitns est numerus, et hoc
+              <lb/> ienlU nonnulii intelligunt quod dicitur, multi multa <lb/> loquuntur, quia
+              stulti sunt loquaces. </note>
+            <note type="footnote"> 3. Forte, ut est scriptum : Tu autem, etc. </note>
+            <milestone unit="PLSection" n="D"/><note type="footnote"> 8. In Ms. Phenennce filios
+              habuit. </note><note type="footnote"> 9. In Ms. erat vacat. </note>
+            <note type="footnote"> 10. Pro conversationis praestiterit legere convertio­ <lb/> nis.
+              Mendosum videtur gratia gemina. </note><note type="footnote"> 13. Ms. incederat. Forte
+              incedebant. Haec et seqq. <lb/> pertinent etiam ad cap. II lib. I Regum. In Vulgata,
+              <lb/> loc. cit. Exod., est: Solve calceamentum de pedibui <lb/> tuis. </note><note type="footnote"> 15. Forte, filium non castigat.... longe efficitur <lb/> ab
+              emendatione. </note><note type="footnote"> 16. Forte, ut omnis sermo malus in
+              sacerdote non <lb/> procedat. </note><note type="footnote"> 18. Forte, alienus est a
+              sermone ju.ti,iæ. </note>
+            <note type="footnote"> PATROL. LXXXIII. </note>
+            <note type="footnote"> it </note>
+            <pb n="427"/>
+            <milestone unit="PLSection" n="A"/><lb/> steria sacerdotum interesse; sed nec mater ejus
+            <lb/> ascendit, cum posset ascendere; gratia enim est ma­ <lb/> ter ejus, quæ servat
+            eum, et enutrit.</p>
+          <p n="19">19. Et oravit Anna, et dixit: Nen invenitur orare, <lb/> nisi per duo verba
+            tantum , et dicit : Lætata sum in <lb/> salutari tuo. Et aliud est : Quia non est Deus
+            præter <lb/> te. Apostolus autem dicit : Urale sine intermissione <lb/> (I Thess. v.
+            17).</p>
+          <p n="20">20. Is. qui iu divino versatur officio., omnia gesta <lb/> ejus, dictaque ad
+            orationem reputamur, quia justus <lb/> sine intermissione quae justa sunt agit. Propter
+            hoc <lb/> siue intermissione justus orabit. Et in Psalmis dicit: <lb/> Elevatio manuum
+            mearum sacrificium vespertinum <lb/> (Psalm. CXL).'</p>
+          <p n="21">21. Elevat manus actus suos. Aliter, Moyse ele­ <lb/> vante manum, vincebat
+            Israel, demittente vero, vin­ <lb/> cebat Amalech, quia donec famulus elevat actas suos
+            <lb/> ad Dominum, vincit plebs Dei; cum autem demiserit <lb/> actus suos, vincit Amalech
+            inimicus Dei.</p>
+          <p n="22">
+            <milestone unit="PLSection" n="B"/>22. Ama inquit : Exsultavit cor meum. Necessario
+            <lb/> addidit, in Domino. Ut Paulus dixit : Gaudete in <lb/> Domino (Philipp. IV. 4).
+            Quia potest quis gaudere in <lb/> carnalibus. Cum me bomines laudant, non in Domino
+            <lb/> gaudeo ; si gaudeo, pungar.</p>
+          <p n="23">23. Propter verbum Domini cornua justorum. Id <lb/> vel dicentes : In te
+            inimicos nostros ventilabimus cornu <lb/> (Psalm. XLIII, 6). In Graeco laeta testatio.
+            Quia ergo <lb/> cornu petimus vel cornu ventilabimus. Cornua justi, <lb/> quia de crucis
+            Christi apicibus justis conTeruntur.</p>
+          <p n="24">24. In his deslruemus adversarias potestates de <lb/> anima nostra. Dein
+            plantatur in nobis vinea. Dilata­ <lb/> tum est os meum , id est, per meditationem verbi
+            <lb/> Dei ad elevationem cordis veniamus, etiam Apostolo <lb/> dicente : Os meum
+            dilatatum est ad vos, o Corinthii <lb/> (II Cor. VI, 11). Ex altitudine enim cordis ori
+            sapien­ <lb/> tia ministratur.</p>
+          <p n="25">25. Quia dilautus sum in salutari tuo , id est , si <lb/> lætatus fuero in
+            salutare Domini, tunc dilatatum est <lb/> os meum. Non est sanctus, sicut Deus.
+            Distinctione <milestone unit="PLSection" n="C"/><lb/> utitur : non dixit, nisi Dominus,
+            sed nullus est, sicut <lb/> Dominus. Non est Deus , prceter te , id est, nihil eo­ <lb/>
+            rum quae sunt naturaliter. Qui solus ea ; cui , quod <lb/> es, a nullo datum est. Nam et
+            umbra 556 ad com­ <lb/> parationem corporis nuu est, et fumus ad compara­ <lb/> tionem
+            iguis non est.</p>
+          <p n="26">26. Nolite multiplicare loqui excelsa. Ut Salomon <lb/> dicit : Altiora te ne
+            quæsiveris (Eccli. III, 22). De qui­ <lb/> bus praecipitur tibi haec intelligere :
+            Nolite multipli­ <lb/> care loqui, nisi de Patre , et Filio, et Spiritu sancto, <lb/> ut
+            plenus manifestum fiat, quod loquimur? Post hæc <lb/> tria nibil loquaris.</p>
+          <p n="27">27. Nou exeat inaniloquium de ore vestro, ut <lb/> Apostolus ait : Quia me
+            liberabit de corpore mortis <lb/> hujus (Rom. VII, 24)? Aliter : Angelus Satanæ , qui
+            <lb/> me colaphizet (II Cor. XII, 7). It! est , ne magna de <lb/> me ipso loquar. Non
+            exeat magniloquium de ore <lb/> vestro. Non declines cor meum in verba malitiæ ad <lb/>
+            excusandas excusantiones in peccatis (Psalm. CXL, 4).</p>
+          <p n="28">
+            <milestone unit="PLSection" n="D"/>28. Et Salomon dicit : Occasiones quærit piger, et
+            <lb/> dicit: Leo foris. Idem dicit : Diabolus subsannabit me, <lb/> ut mulier me seduxit
+            (Proverb. XVIII , 1; XXII, 13). <lb/> Justus primum accusator sui est, Injustus non est
+            <lb/> sui accusator, sed aliorum. Donec quis peccat, neque <lb/> justus est, nec
+            accusator sui. Non enim qui agit <lb/> accusat.</p>
+          <p n="29">29. Arcus potentium infirmatus. Si indutus sis ar- <milestone unit="PLSection" n="A"/><lb/> mis Dei, scuto fidei, et galea salutis, et gladio spiri­ <lb/> tus, arcus
+            potentium munimentis tali bus firmabitur. <lb/> Et infirmi accincti sunt robore , ut est
+            : Quæ stulta <lb/> sunt mundi elegit Deus, ut conjundat fortia (/ Cor, <lb/> xn, 8).</p>
+          <p n="30">30. Infirmus populus est gentilis, qui alienus a <lb/> Testamento Dei adeptus
+            est fortitudinem , ut Pro­ <lb/> pheta dicit: Fortitudo mea et laudatio mea Dominus
+            <lb/> (Psalm. CXVII, 14) ; id est, fortuudo ipse Christus <lb/> est. Usfue sterilis
+            mater nostra est Ecclesia. Et hæc <lb/> peperit septem, id est, septenarium numerum.</p>
+          <p n="31">31. Et caro mea habens plurimos fructus carnis , <lb/> fornicationem,
+            immunditiam, impudicitiam, idolola­ <lb/> triam, veneficia, coutentiones, æmulationes,
+            incita­ <lb/> tiones, dissensiones. Sterilis , id est, anima ; uam <lb/> aliquando non
+            afferebat fructus jusitiæ; nec pcr <lb/> fidem Christi repleta est spiritu sapientiae,
+            et intel. <lb/> lectus, et consilii, et fortitudinis, et sclentiæ, et pie­ <lb/> tatis,
+            et timoris Dei.</p>
+          <p n="32">
+            <milestone unit="PLSection" n="B"/>32. Deus mortificat, et vivificat. Mortificat me, cum
+            <lb/> essem mortuus peccato , et tunc vivificat me , cum <lb/> me facit vivere Deo.
+            Verus David, servans oves patris <lb/> sui, apprehendit leonem, et interfecit. Titulus
+            psalmi <lb/> est; Ipsi David, quondo filius persequebatur eum.</p>
+          <p n="33">33. Hoc factum legimus in libris Regum, illum non <lb/> dilectum inique, sed
+            humiliatum pic, accepisse a <lb/> Domino discip inam , sustinuisse medicinam , non <lb/>
+            retributionem iniquitati. Ille David '.dabitis, sed <lb/> alius David forli9 manu
+            Dominus Jesus Christus.</p>
+          <p n="34">34. Praeterita enim illa facta figuræ futurorum <lb/> erant. Agnoscamus
+            quemadmodum et Christum filius <lb/> suus persequebatur. Habebat Christus filios, 557
+            <lb/> de quibus dicebat : Non jejunant filii sponsl , quan­ <lb/> diu cum iltis est
+            sponsus. Inter boe fuit persecutor <lb/> Judas.</p>
+        </div>
+
+        <div n="2" subtype="section" type="textpart">
+          <ab>
+            <title type="sub">De proximi vel defuncti fratri. copula.</title>
+          </ab>
+          <p n="35">35. Ex lege proximo defuncti vel fratri copula <milestone unit="PLSection" n="C"/><lb/> deferebatur ejus uxoris, ut semen fratris vel proximi <lb/> suscitaret. Inde eat
+            quod Ruth, licet ipsa alienigena, <lb/> tamen quia maritum habuerat ex Judæis, qui
+            relique­ <lb/> rat superstitem proximum, eam colligentem mani­ <lb/> pulos suæ messis,
+            quibus aleret socrum, Boz vidit, <lb/> et amavit.</p>
+          <p n="36">36. Non aliter eam accepit uxorem, nisi calcea­ <lb/> mentum ejus ante
+            solvisset, cui uxor debebatur ex <lb/> lege. Historia simplex, sed alta mysteria ; aliud
+            enim <lb/> gerebatur, aliud figurabatur. Designabatur enim futu­ <lb/> rus ex Judaeis
+            Christus,qui proximi sui, hoc est, populi <lb/> mortui semen doctrinae coelestis semine
+            resuscitaret.</p>
+          <p n="37">37. Cui calceameutum nuptiale Ecclesiæ copu­ <lb/> landæ perscripta legis
+            spiritualia deterebant? Non <lb/> Moyses sponsus. Illi enim dicimur : Solve calceamenta,
+            <lb/> ne ex similitudine nominis sponsus Ecclesiae crede­ <lb/> retur. Non alius
+            sponsus, sed solus Christus erat, <lb/> de quo dixit Joannes : Qui habet sponsam,
+            sponsus <lb/> est (Joan. III, 29).</p>
+          <p n="38">
+            <milestone unit="PLSection" n="D"/>38. Illius igitur calceamentum solvitur; hujus <lb/>
+            solvi non potest, sicut Joannes : Non sum dignus, <lb/> inquit, solvere corrigiam et
+            reliqua. Solus ergo sponsus <lb/> Christus est : cui illa veniens ex gentibus spunsa
+            <lb/> ante inops, atque jejuna, sed jam Christi meaM <lb/> dives, innubaque, manipulos
+            fecundæ segetis verbi <lb/> reliquias gremio ligat mentis interno, ut exhaustam <lb/>
+            illam viduam morte filii atque inopem defuncti populi <note type="footnote"> Ii. Forte :
+              St gaudeo, el nON in DomIno gaudIo, <lb/> pungar. </note><note type="footnote"> 24.
+              Vulgata : Os nostrum patcl ad vos , o Corin­ <lb/> thii, cpr nostrum dilaluium est.
+              </note><note type="footnote"> 26. In Vulgata : Molite multiplicare loqui sublimia.
+              </note><note type="footnote"> 48. Cap. XVHI Proverb. : Utc.alon,s quærit, qui <lb/>
+              vult recedere ab amico. Et cap. x III : Dicit piger : Leo <lb/> est foris. In Me.
+              fortasse deeat aliquid. </note><note type="footnote"> 55. Pro sustinuisse mallei,
+              .uballtuiase t seu adhi­ <lb/> buia.e. Verum non satis hæc cohsreut cum expusi­ <lb/>
+              tione Cantici Annae : Deus mortt!ital, etc. </note><note type="footnote"> 55. Ilsec
+              pertinent ad librum Kuth, qui libri Judi. <lb/> cum veluti appendix est, ac præfatio
+              ad libros Re­ <lb/> gum. In Ms. est proximi supra proximo, ..l fratris <lb/> pro
+              fratri, et quia relitfueral, et eamque coJtigll.'IJII. </note><note type="footnote">
+              36. IIic erat mos antiquus in Israel, de quo <lb/> cap. iv, i, libri Ruth, ut qui juri
+              sue cedebat sotve? <lb/> ret calce.tnientum tuum, et daret pro,in.o auu. </note><note type="footnote"> 5b. In Ms., innubatque, et nobis pascat. </note>
+            <pb n="429"/>
+            <milestone unit="PLSection" n="A"/><lb/> matrem novis pascat alimentis, non relinquens
+            de­ <lb/> stitutam, et novos quærens.</p>
+          <p n="39">39. Solus ergo sponsus est Christus, qui nec sy­ <lb/> nagogæ ipsi manipulos suæ
+            messis invideat. (Jtinam <lb/> se non ipsa excluderet, habuit, quos per se colle­ <lb/>
+            gisset, quia populus ejus morluus est, quasi filio <lb/> indigena defuncto per Ecclesium
+            manipulos. qnibus <lb/> viveret, colligebat, quos venientes in exsultatione <lb/>
+            portabant, sicut scriptum est, Venientes autem vanient, <lb/> et reliqua.</p>
+          <p n="40">40. Etcana pater venerabilis Samuelis, qui erat pos­ <lb/> sessio Dei; Helcana
+            quippe in possessionem Dei <lb/> transfertur; animi virtute vir dicitur, et non solum
+            <lb/> vir, verum etia n vir unus appellatur. Non enim iu <lb/> diversa vagabundus, velut
+            mohilis, atque instabilis, <lb/> ferebatur, sed liranus, atque inconcussus persistens
+            <lb/> vir unus erat.</p>
+          <p n="41">558 41. Et idcirco in monte Ephraim frugifero <lb/> morabatur, in alia scilice'
+            conteplatione virtutum, <milestone unit="PLSection" n="B"/><lb/> ut a nullis
+            subjacentibus et circumlatrantibus vitio­ <lb/> rum cogitationibus mentis ejus
+            sublimitas dejiceretur, <lb/> vel unitas scinderetur.</p>
+          <p n="42">42. David cum sociis fugiens a facie Saul figurabat <lb/> Christum, qui cum
+            apostolis principem mundi lateret, <lb/> nisi tantum sacerdotibus, ut demonstraret
+            sacerdo­ <lb/> talem cibum ad usum transiturum esse prophetam. <lb/> Sive quia omnes
+            vitam sacerdotalem debeamus imi­ <lb/> tari, sive quia omnes filii Ecclesiæ sacerdotes
+            sunt, <lb/> offerentes semetipsos Deo hostias sprituales.</p>
+          <p n="43">43. Ergo intravit David domum sacerdotis, nec <lb/> sacerdos, periculo mortis
+            proposito, hospitem recu­ <lb/> savit; ut sive moraliter hospitalitatis gratia libenter
+            <lb/> in nos aliena pericula transferamus, sive mystice <lb/> nec præsumpto mortis
+            exitio Christum hospitio suae <lb/> mentis excludant sacerdotes.</p>
+          <p n="44">44. Ubi Christus spiritualis nequitiæ manubias su­ <lb/> mens, illum Goliam suis
+            spoliis armisque (apoliavit), <lb/> ibi Davit' panes petivit. Sed unum accepit, quia non
+            <lb/> Quinque libris Moysi, sed Christi corpore cibus fi­ <milestone unit="PLSection" n="c"/><lb/> delibus paratur.</p>
+          <p n="45">45. Doeg autem, camelorum infructuosi gregis <lb/> custos, Judæ proditoris typo.
+            implet. Sed in domo <lb/> Achimelech solus Abiathar priuceps sacerdotum a <lb/>
+            persecutore Saul immunis ea... quia nomo potest no­ <lb/> cere Christo, principi
+            sacerdotum.</p>
+          <p n="46">46. Quid enim? quia David, qui retribuenti mala <lb/> non reddidit, eum Saol et
+            Jonathas bello occumbe­ <lb/> rent, Gelboo montibus maledicit dicens : Montes <lb/>
+            Gelboe, nec foa, nec pluviat veniat super vos, neque <lb/> sint agri primitiarum , quia
+            ibi abjectus est clypeus <lb/> Saul, quasi non esset unctus oleo. Quid ergo, Saul <lb/>
+            moriente, montes deliquerunt, qualenus in eis nec <lb/> ros, nec pluvia eaderet? Sed
+            quia Gelboe interpreta­ <lb/> tur decursus, per Saul unetum et mortuum mors <lb/>
+            mediatoris exprimitur; non immerito per Gelboe <lb/> montes superba Judæorum corda
+            signantur : quæ <lb/> dum in hujus mundi desideriis defluunt, in Christi, <lb/> id est,
+            uncti, se morte miscuerunt.</p>
+          <p n="47">
+            <milestone unit="PLSection" n="D"/>47. Et quod in eis unctus rex corporaliter moritur,
+            <lb/> ipsi ab omni gratiæ rore siccantur, de quibus et <lb/> bene dicitur ut agri
+            primitiarum esse non possint. <lb/> Superbæ quippe Hebræorum mentes primitivos fructus
+            <lb/> non ferentes, quia in Redemptoris adventu ex parte <lb/> maxima in perfidia
+            remanentes , priMordia fidei <lb/> sequi noluerint.</p>
+          <p n="48">48. Sancta namque Ecclesia in primitiis multitudine <milestone unit="PLSection" n="A"/><lb/> gentium fecundata 559 vix in mundi fine Judæos, <lb/> quos invenit,
+            suscipit, extrema colligens, eos quasi <lb/> reliquias frugum ponit; de quibus Isaias :
+            Si fuerit <lb/> numerus filiorum Israel quasi arenæ maris, reliquiæ <lb/> salvæ fient
+            (Isai. X, 22).</p>
+          <p n="49">49. Possunt demum idcirco Gelboe montes ex ore <lb/> prophetae maledici, ut dum
+            fructus, exarescenle <lb/> terra, non oritur , possessores tamen sterilitatis <lb/>
+            danino feriantur, quatenus ipsi maledictionis sen. <lb/> tentiam acciperent , quia apud
+            se mortem regis sus­ <lb/> cipere, iui quitate sna exigente, meruissent.</p>
+          <p n="50">50. Sic plerumque res quaelibet per historiam vir­ <lb/> tus est, per
+            significationem culpa. Sicut aliquando <lb/> res gesta in facto causa damnationis, in
+            scripto autem <lb/> prophetia virtutis. Quod verum citius ostendimus, si <lb/> David
+            factum ad medium deducamus, in uno testi­ <lb/> monio ad utraque probaudo.</p>
+          <p n="51">51. Quisnam audiens non solum fidelium, sed ipso­ <lb/> rum quoque infidelium,
+            non detestatur, quod David <milestone unit="PLSection" n="B"/><lb/> in solario
+            deambulans Bethsabee Uriæ concupiscit <lb/> uxorem ? quem tamen a prælio revertentem ire
+            ad <lb/> domum admonet pedes lavare. Qui protinus res­ <lb/> pundit, dicens : Arca Dei
+            sub pellibus est, et ego iu <lb/> doNno mea requiescam ?</p>
+          <p n="52">52. Quem David ad mensam propriam suscepit, <lb/> eique epistolas , per quas
+            mori debeat tradidit. Cu­ <lb/> jus autem David in solario deambulans typum tenet, <lb/>
+            nisi ejus de quo scriptum est : In sole posuit taber­ <lb/> naculum suum (Psal. XVIII,
+            6)? Et quid est Bethsabee <lb/> ducere, nisi legem litteræ carnali populo conjunctam
+            <lb/> spirituali sibi intellectu sociare?</p>
+          <p n="53">53. Bethsabee enim puteus septimus dicitur, quia <lb/> nimirum per cognitionem
+            legis infusione spiritualis <lb/> gratiae perfecta nobis sapientia ministratur. Quem
+            <lb/> vero Urias, nisi Judaicum populum, significat? cujus <lb/> nomen interpretatum
+            dicitur lux mea Dei. Judaicus <lb/> autem populus, quia de accepta legis scientia tolli­
+            <lb/> tur, quasi de Dei gloriatur luce.</p>
+          <p n="54">54. Sed huic Uriæ David uxorem abstulit, sibique <milestone unit="PLSection" n="c"/><lb/> conjunxit, quia videlicet manu foliis, qui David <lb/> dicitur, in carne
+            Redemptor apparens , dum de se <lb/> spiritualiter loqui legem innotuit, per hoc, quod
+            <lb/> juxta litteram tenebatur, hanc a Judaico populo ex­ <lb/> traneam demonstiavit,
+            sibique conjunxit, qui se <lb/> per illain prædicari declaravit.</p>
+          <p n="55">55. Uriam tamen ad domum ire David admouet <lb/> pedes lavare, quia incarnatus
+            Dominus veniens Ju­ <lb/> daico populo præcepit ut ad conscientiam redeat, <lb/> et
+            surdes operum tergat, ut spirilualiter mandata <lb/> legis intelligat, et post tantam
+            duritiam præceptorum <lb/> fontem baptisimatis inveniens, ad aquam post labo­ <lb/> rem
+            recurrat.</p>
+          <p n="56">56. Sed Urias, qui arcam Dei esse sub pellibus <lb/> meminit, respondit. quod
+            domuum suam intrare non <lb/> possit. Ac si Judaicus populus dicat : Ego mandata <lb/>
+            Dei in sacrificiis carnalibus video, et redire ad con­ <lb/> scientiam per spiritualem
+            intelligentiam non requiro. <lb/> Quasi enim arcam esse sub pellibus 560 dicit, qui
+            <lb/> præcepta Dei non nisi ad exhibendum ministerium <milestone unit="PLSection" n="D"/><lb/> sacrificii carnalis intelligit.</p>
+          <p n="57">57. Hunc tamen etiam redire ad domum nolentem <lb/> David advocat. Quia quamvis
+            Judaicus populus ad <lb/> conscientiam reverti contemnat, tamen Redemptor <lb/> veniens
+            mandata spiritualia prædicat, dicens : Si <lb/> crederetis Moysi, crederetis forsitan et
+            mihi; de me <lb/> enim ille scripsit (Joan. v, 46).</p>
+          <p n="58">58. Legem itaque Judaicus populos tenet, quia <note type="footnote"> 40. Hæc
+              referenda' sunt ad. lib. I Regum, cap. i. </note><note type="footnote"> 43. De fugn
+              Davidis agitur lib. I Reg. xix. Mea­ <lb/> dosus videtur hoc loco CoJex, ac fortasse
+              legendum <lb/> prupheta pro1 prophetam. </note><note type="footnote"> 44. In Mss.
+              deeratspoliavit, aut simile aliquod ver­ <lb/> bum.Stipramanu6iaserat manubrias vetcri
+              manu scri­ <lb/> ptum. Pro libri reposui libris, aut legend. Christi corpus.
+              </note><note type="footnote"> 45. Quæ de Doer, sive, ut in Mss. legilnr, Doech <lb/>
+              hie narrantur, iistaut lib. t Regum, cap. xxn. In <lb/> Mss. scribitur Abimelec""
+              </note><note type="footnote"> '46. Forte, cur Da"id? cum interrogatione. Pro <lb/>
+              occumberent in Ms. esi accumberent. </note><note type="footnote"> 47. Forte, sequi
+              noluerunt. </note><note type="footnote"> 48. Vulgata : Si enim (u,rit populus tuua
+              Israel, <lb/> quasi arena maris, reliquiæ convertentur ex eo. </note><note type="footnote"> 51. Allegoria hæc de David, et Uersabce exposita <lb/> eliatu est in
+              Allegoriis, num. Ut, sed itu ut Uria <lb/> typus sit dL, boli. </note>
+            <pb n="431"/>
+            <milestone unit="PLSection" n="A"/><lb/> ejus divinitatem loquitur, cui idem populus
+            credere <lb/> dedignatur. Unde et Urias cum epistolis ad Joab, ex <lb/> quibus occidi
+            debebat, mittitur, quia idem ipse Ju­ <lb/> daicus populus legem portat, qua convincente
+            mo­ <lb/> riatnr. Dum enim mandata legis retinens implere <lb/> nititur, ipse nimirum
+            defert judicium unde dam­ <lb/> netur.</p>
+          <p n="59">59. Gaza enim, et Ascalon, et Accaron diversa <lb/> supplicia sustinebunt. Gaza
+            interpretatur fortitudo <lb/> ejus. Omnes ergo qui sibi applaudunt in fortitudine <lb/>
+            corporis, et potentia sæculari, et dicunt cum diabolo : <lb/> Fortitudinem faciam,
+            diripientur in die iræ Domi­ <lb/> ni, et ad nihilum redigentur.</p>
+          <p n="60">60. Ascalon quippe, quæ (inlerpretatur) pondera, <lb/> vel ignis homicidæ, cum
+            venerit dies irae , sceleris <lb/> sui mensuram sentiet, et eodem quo operatus est <lb/>
+            pondere deprimetur. Et quia arsit ad effundendum <lb/> sanguinem, et multas
+            scandalizavit animas, et im­ <lb/> pletum est in ea : Virum sanguinum et dolosum abo-
+              <milestone unit="PLSection" n="B"/><lb/> minaMur Domanus, non diripietur, ut Gaza ,
+            sed in <lb/> solitudinem redacta gehennae ignibus concremabitur <lb/> usque ad
+            pulverem.</p>
+          <p n="61">61. Necnon et Azotus, quæ Hebraice dicitur ea <lb/> David, et in lingua nostra
+            sonat ignis generationis , <lb/> clara luce testabitur. Arsit enim libidine, et genera­
+            <lb/> tionis incendio dissipata est; et quia omnes adulte­ <lb/> rantes, quasi clibanus,
+            corda eorum , et sagittis ar­ <lb/> dentibus vulnerati sunt. Non in tenebris, non in oc­
+            <lb/> culto judicio , sed in meridie, hoc est , quando <lb/> sancti plenam recipient
+            claritatem , projicientur in <lb/> tenebras, et sanctorum consortium non habebunt in
+            <lb/> die judicii.</p>
+          <p n="62">62. Sed et Accaron, quæ interpretatur sterilitas, <lb/> vel eradicatio, quia
+            nullos fructus habuit., et perver­ <lb/> sitate doctrinae suæ eradicavit plurimos,
+            ipsaque <lb/> eradicabitur. Has omnes varietates intellige in ani­ <lb/> marum vitiis
+            atque peccatis. Et quod uniuscujusque <lb/> opus quale sit ignis probabit. Idcirco
+            infirmi diju­ <lb/> dicant sæpe multa, quae a fortibus dicuntur, quia <milestone unit="PLSection" n="C"/><lb/> ignorant quod in bubus calcitrantibus inclinata illa
+            <lb/> Testamenti arca , jamque casuram credens Levites <lb/> erigere voluit, moxque
+            sententiam damnationis ac­ <lb/> cepit.</p>
+          <p n="63">63. Quid est namque mens justi, nisi area Testa­ <lb/> menti? quæ gestata bubus
+            calcitrantibus inclinatur, <lb/> quia nonnunquam etiam qui bene praeest, dum subji­
+            <lb/> cietur, populorum confusione concitus, ad dispensa­ <lb/> tionis condescensionem
+            ex sola dileclione permove­ <lb/> tur. Sed in hoc, quod dispensatorie 561 agitur, <lb/>
+            inclinalio ipsa fortitudinis casus putatur imperitis. <lb/> Unde et nonnulli subditi
+            contra hanc manum repre­ <lb/> hensionis mittunt, sed protinus ipsa vitæ merita <lb/>
+            deficiunt.</p>
+          <p n="64">64. Recte Oza dicitur, qui videlicet robustus Do­ <lb/> mini interpretatur.
+            Quoniam praesumptores quique, <lb/> nisi audaci mente robustos se esse in Domino cre­
+            <lb/> derent, nequaquam meliorum facta vel dicta velut <lb/> infirma judicarent.</p>
+          <p n="65">
+            <milestone unit="PLSection" n="D"/>65. Dabo tibi reges in furore meo. Si ergo, irascente
+            <lb/> Deo, secundum nostra merita rectores accipimus, in <lb/> illorum actione legimus,
+            quia de sola æstimatione <lb/> pensemus, quamvis plerumque electi subjacent <lb/>
+            reprobis. Inde et David Saulem pertulit, quia dignus <lb/> tunc fuit qui tanta præpositi
+            asperitate premeretur. <milestone unit="PLSection" n="A"/><lb/> Sic ergo, sicut merita
+            subditorum, tribuuntur per­ <lb/> sonae regnantium, ut saepe qui videntur boni, ac­
+            <lb/> repto mex regimine permutentur, Scriptura dicente: <lb/> Qui cor cum dignitate
+            mutavit.</p>
+          <p n="66">66. Unde scriptum est: Ecce cum esses parvulus <lb/> in oculis tuis, caput te
+            constitui in tribus Israel. Sic <lb/> pro qualitatibus subditorum disponuntur acta <lb/>
+            regnantium. Ut saepe pro malo gregis etiam vere <lb/> boni delinquat vita pastoris. Ille
+            enim , Deo at­ <lb/> testante, laudalus, ille supernorum conscius David <lb/> propheta,
+            populum numerando peccavit. Et tamen <lb/> vindictam populus, David peccante,
+            suscepit.</p>
+          <p n="67">67. Cur hoc? videlicet per meritum plebium dispo­ <lb/> nitur ordo rectorum.
+            Justus vero judex peccantis <lb/> vitium ex ipsorum animadversione corripuit, ex <lb/>
+            quorum causa peccavit. Sed quia ipsa voluntate <lb/> superbiens, a culpa alienus non
+            suscipit, vindictam <lb/> culpae etiam ipse suscipit. Nam ira saeviens, quae <lb/>
+            corporaliter populum perculit, reclorem quoque <milestone unit="PLSection" n="B"/><lb/>
+            populi intimo cordis dolore prostravit.</p>
+          <p n="68">68. Ibant autem in directum vaccae per viam quæ <lb/> ducit Bethsames, pergentes
+            , et mugientes , et non <lb/> declinabant neque ad dexteram, neque ad sinistram. <lb/>
+            Quid igitur vaccæ, nisi fideles quosque in Ecclesia <lb/> designant ? Qui dum sacri
+            eloquii praecepta conside. <lb/> rant, quasi superimpositam Domini arcam portant.</p>
+          <p n="69">69. De quibus hoc etiam prænotandum, quia fuisse <lb/> fetae memorantur, quia
+            sunt plerique, qui in via Dei <lb/> intrinsecus positi, foris carnalibus affectibus
+            ligantur, <lb/> sed non declinant a recto itinere, qui arcam Domini <lb/> portant. Ecce
+            etenim Baal Bethsames, quippe dicit <lb/> domus solis. Et Propheta ait : Vobis autem,
+            qui <lb/> timetis nomen Domini, orietur sol justitiæ (Malach. iv, <lb/> 2). Si igitur ad
+            aeterni solis habitationem tendimus, <lb/> dignum profecto est ut de Dei ilinere pro
+            carnalibus <lb/> affectibus non declinemus.</p>
+          <p n="70">70. Tota enim virtute pensandum est, quod vaccae <lb/> Dei plaustro suppositae
+            562 pergunt, et gemunt; <lb/> dant ab intimis rugitus, et tamen de itinere non
+              <milestone unit="PLSection" n="C"/><lb/> declinant gressus. Sic nimirum praedicatores
+            Dei <lb/> verbi, sic doctores, sic fideles quique esse intra <lb/> sanctam Ecclesiam
+            debent, ut compatiantur proximis <lb/> per cbaritatem, et tamen de via Dei non
+            exorbitent <lb/> per compassionem.</p>
+          <p n="71">71. Nix itaque nunc innocentiae nitor et gratiae, <lb/> nunc hiems et frigus
+            charitatis intelligi potest. Quod <lb/> autem legimus in Kegnorum libris, Banaiam
+            quemdam <lb/> de fortibus lsrael descendisse in cisternam, ct per­ <lb/> cussisse leonem
+            in tempore nivis, indifferenter puto <lb/> in locis illis positam nivem, quia et Christi
+            gratia, <lb/> quae in hoc mundo resplenduit, et frigus charitatis <lb/> Dei, quo
+            refrixerunt homines niris nomine potuit <lb/> Scriptura sacra significari.</p>
+          <p n="72">72. Banaiam vero figuraliter intelligimus Salvato­ <lb/> rem, quia juxta vim
+            nominis sui ipse aedificator <lb/> Dominus; de quo propheta vaticinaverat, quia per
+            <lb/> eum ædificandam Ecclesiam dixit: Ædificans Jeru­ <lb/> salem Dominus. Itemque:
+            Ædificavit Sion; quod <milestone unit="PLSection" n="D"/><lb/> verbum in factura Hevæ,
+            quæ Ecclesiae typum ha­ <lb/> buil, Scriptura propria significatione posuit, dicens :
+            <lb/> Et ædificavit dominus Deus costam, quam tulerat de <lb/> Adam in mulierem. Et
+            Paulus construi eam videns, <lb/> ait; Dei ædificado estis.</p>
+          <p n="73">73. Samuel cur ter vocatur ? quia et propheta <note type="footnote"> 59. In Ms.,
+              qui sibi applaudent. </note><note type="footnote"> 60. Supplevi interpretatur, quod
+              verbum exstat <lb/> num. praec. In Ms.erat concremetur, et supra conere­ <lb/> ,nature
+              </note><note type="footnote"> 65. Videtur delendum de ante sola. Quae hac et <lb/>
+              seqq. numeris de rectoribus, sive praepositis et sub­ <lb/> ditis dicuntur, uberius
+              Isidorus pertractat lib. III <lb/> Sententiar., cap. 48 et seqq. </note><note type="footnote"> 67. Videretur legendum a culpa alienus non fuit, <lb/> vel a culpa
+              alienos. </note><note type="footnote"> 68. Haec petuntur ex hbro IV Regum, cap. VI.
+              </note><note type="footnote"> 69. Corruptum videtur Ecce eteuim Baal Bethsa­ <lb/>
+              me.. Pro dicit crederem reponendum dicitur. Verb.i <lb/> Malachiae in Vulgata sunt: Et
+              orietur vobis timentibus <lb/> nomen meum sol justitie. ' </note><note type="footnote">7t. Banaiæ factum enarratur lib. II Regum, cap. <lb/> XXIII, 20 et seqq. In Ms.
+              videtur esse quoniam infr;xe. <lb/> runt pro quo refrixerunt. </note><note type="footnote"> 72. Forte, qui per eum. In Ms., quia verbum ; <lb/> correxi quod
+              verbum. </note><note type="footnote"> 75. Ita confuso rerum et annorum ordine desinit
+              <lb/> hoc fragmentum, addita rubrica : Incipiunt capitula <lb/> tie libru Esdræ. De
+              septuaginla annis caplit'itatis, etc., <lb/> ut apud Jsidoruln. Sacerdotjum Samuelis
+              Isidorus </note>
+            <pb n="433"/>
+            <milestone unit="PLSection" n="A"/><lb/> fuit, sacerdos, et dux. David annis XL primum
+            ex <lb/> tribu Juda regnavit. Roboam annis... Abia... Assa <lb/> justus... Joram...
+            Ochozias... Athalia... Johas... <lb/> Amasias.,. Azarias... Joatham... Achaz... Eze­
+            <lb/> chias... Manasses... Ammon... Josias... Joas... <lb/> Eliachim... Joachim...
+            Ezecbias... Astraph XIV, III <milestone unit="PLSection" n="A"/><lb/> annis, XLI, VII
+            annis, L annis, IV annis, xt annis, VI <lb/> annis, xiv annis, xvi annis, XXIX annis, LV
+            armis.</p>
+        </div>
+
+        <div n="3" subtype="section" type="textpart">
+          <ab>
+            <title type="sub">RUBRICA.</title>
+          </ab>
+          <p>Incipiunt capitula de libro Esdrae. <lb/> De. septuaginta annis captivitatis, etc.
+              <note type="footnote"> alibi testatur; negant alii, ut dictum est in not. ad .libr.
+              Allegoriar., num. 86. </note>
+          </p>
+        </div>
+      </div>
+    </body>
+  </text>
+</TEI>

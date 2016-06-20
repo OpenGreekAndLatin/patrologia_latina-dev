@@ -1,0 +1,911 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title>Patrologiae Cursus Completus. Series Latina (PL)</title> 
+        <sponsor>University of Leipzig</sponsor>
+        <funder>European Social Fund Saxony</funder>
+        <principal>Gregory Crane</principal>
+        <respStmt>
+          <persName xml:id="Jouve">Jouve</persName>
+          <resp>OCR-ed, corrected and encoded the text</resp>
+        </respStmt>
+        <respStmt>
+          <persName>Greta Franzini</persName>
+          <resp>Project Manager (University of Leipzig)</resp>
+        </respStmt>
+        <respStmt>
+          <persName>Simona Stoyanova</persName>
+          <resp>Project Assistant (University of Leipzig)</resp>
+        </respStmt>
+        <respStmt>
+          <persName>Bruce Robertson</persName>
+          <resp>Technical Advisor (Mount Allison University)</resp>
+        </respStmt>
+      </titleStmt>
+      
+      <publicationStmt>
+        <authority>University of Leipzig</authority>
+        <idno type="filename">PL83.xml</idno>
+        <availability>
+          <licence target="https://creativecommons.org/licenses/by-sa/4.0/">Available under a Creative Commons Attribution-ShareAlike 4.0 International License</licence>
+        </availability>
+        <date>2014</date>
+        <publisher>University of Leipzig</publisher>
+        <pubPlace>Germany</pubPlace>
+      </publicationStmt>
+      
+      <sourceDesc>
+        <listBibl xml:lang="la">
+          <biblStruct>
+            <monogr>
+              <editor>
+                <persName>
+                  <name xml:lang="fr">Jacques Paul Migne</name>
+                </persName>
+              </editor> 
+              <author ref="urn:cite:perseus:author.771">Isidorus Hispalensis</author>
+              <title>Differentiarum Sive De Proprietate Sermonum Libri Duo</title>
+              <title>Allegoriae Quaedam Sacrae Scripturae</title>
+              <title>De Ortu Et Obitu Patrum Qui In Scriptura Laudibus Efferuntur</title>
+              <title>In Libros Veteris Ac Novi Testamenti Proemia</title>
+              <title>Liber Numerorum Qui In Sanctis Scripturis Occurrunt</title>
+              <title>De Veteri Et Novo Testamento Quaestiones</title>
+              <title>Mysticorum Expositiones Sacramentorum Seu Quaestiones In Vetus Testamentum</title>
+              <title>Appendix Ad Libros Regum</title>
+              <title>De Fide Catholica Ex Veteri Et Novo Testamento Contra Judeos</title>
+              <title>Sententiarum Libri Tres</title>
+              <title>De Ecclesiasticis Officiis</title>
+              <title>Synonyma De Lamentatione Animae Peccatricis</title>
+              <title>Regula Monachorum</title>
+              <title>Epistolae</title>
+              <title>De Ordine Creaturarum Liber</title>
+              <title>De Natura Rerum Ad Sisebestum Regem Liber</title>
+              <title>Chronicon</title>
+              <title>Historia De Regibus Gothorum. Wandalorum Et Suevorum</title>
+              <title>De Viris Illustribus Liber</title>
+              <title>Carmina [Ascripta]</title>
+              <title>Chronica Regum Visigothorum (Incertus)</title>
+              <title>Expositio In Canticum Canticorum Salomonis [Incertus]</title>
+              <title>De Conflictu Vitiorum Et Virtutum (Incertus)</title>
+              <title>Expositio In Missa (Incertus)</title>
+              <title>Sententiarum Liber Quartus (Incertus)</title>
+              <title>Exhortatio Humilitatis (Incertus)</title>
+              <title>Testimonia Divinae Scripturae Et Patrum (Incertus)</title>
+              <title>Sermones (Incertus)</title>
+              <title>De Ecclesiasticis Dogmatibus (Incertus)</title>
+              <title>Sentantiae Differentiarum De Activa Vita Atque Contemplativa [Incertus]</title>
+              <title>Exhortatio Poenitendi Cum Consolatione Et Misericordia Dei [Incertus]</title>
+              <title>Lamentum Poenitantiae (Incertus)</title>
+              <title>Oratio Contra Insidias Diaboli (Incertus)</title>
+              <title>Liber De Ortu Et Obitu Patrum Incertus</title>
+              <title>Liber De Numeris (Incertus)</title>
+              <title>Glossae in Sacram Scripturam</title>
+              <title>Differentiarum, sive de Proprietate Sermonum, Liber</title>
+              <title>Liber Glossarum</title>
+              <imprint>
+                <publisher>Garnier</publisher>
+                <pubPlace>Paris</pubPlace>
+                <date>1850</date>
+              </imprint>
+              <biblScope unit="volume">83</biblScope>
+            </monogr>
+            <monogr>
+              <author>Auctor Incertus</author>
+              <title>Archiepiscopi Toletani Veteres</title>
+              <title>Chronologia Gothicorum Regum (Ex Codice Regio Vaticano)</title>
+              <imprint>
+                <publisher>Garnier</publisher>
+                <pubPlace>Paris</pubPlace>
+                <date>1850</date>
+              </imprint>
+              <biblScope unit="volume">83</biblScope>
+            </monogr>
+            <ref target="http://hdl.handle.net/2027/pst.000020950231">HathiTrust</ref>
+            
+          </biblStruct>
+        </listBibl>
+      </sourceDesc>
+      
+    </fileDesc>
+    <encodingDesc>
+      <p>The following text is encoded in accordance with EpiDoc standards and with the
+        CTS/CITE Architecture.</p>
+      <refsDecl n="CTS">
+        <cRefPattern n="no citable units founds" matchPattern="(.+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div/tei:div[@n='$1'])"/>
+      </refsDecl>
+    </encodingDesc>
+    
+    <profileDesc>
+      <langUsage>
+        <language ident="la">Latin</language>
+      </langUsage>
+    </profileDesc>
+    
+</teiHeader>
+  <text>
+    <body><div type="edition" n="urn:cts:latinLit:tmp1436.tmp1436.opp-lat1">
+          <ab>
+            <title type="sub">APPENDIX XII.</title>
+          </ab>
+          <ab>
+            <title type="sub">SERMONES.</title>
+          </ab>
+          <ab>
+            <title type="sub">SERMO PRIMUS.—Ad carnes tollendas.</title>
+          </ab>
+          <p>i. Fratres charissimi, rogo vos, et admoneo vos, <lb/>
+            ut in isto legitimo ac sacratissimo die, exceptis Do­ <lb/>
+            minicis diebus, nullus prandere praesumat, nisi forte <lb/>
+            ille quem jejunare infirmitas non permiuit; quia <lb/>
+            aliis diebus jejunare aut remedium, aut praemium <lb/>
+            est; in Quadragesima non jejunare peccatum esi; <lb/>
+            alio tempore qui jejunat, accipit indulgentiam, in <lb/>
+            Quadragesima qui potest, et non jejunat, sentiet <lb/>
+            poenam.</p>
+          <p>2. Et ipse tamen qui (non) jejunare praevalet, sed <lb/>
+            rectius sibi soli, aut sive alius inlirmus cum ipso sibi <note type="footnote"> Sermo I. n. i. De hoc sermone dixi in Isidorianis, <lb/>
+            cap. 7i, n. 8 et seqq. Quibusdam in locis librario­ <lb/>
+            rum incuria corruptus est. Pro ,acrati..imo die prae­ <lb/>
+            stiterit legere sacratissimo tempore. </note> <note type="footnote"> 2. Excusus, jejunare prævalet. Sed addendum non, <lb/>
+            Reliqua, etsi correctione indigent, satis tamen in­ <lb/>
+            tetiiguntur. In Impresso erat non valere, pro quo po­ <lb/>
+            sui non velle. Quid sit adlucet, non intelligo. </note> <pb n="1219"/>
+            
+            <milestone unit="PLSection" n="A"/><lb/>
+            in domo sua præparet quod accipiat. Et illos qui <lb/>
+            jejunare praevalent ad prandium non invitent, quia <lb/>
+            ii hoc fecerint, non solum Deus, sed etiam homines <lb/>
+            possunt illos intelligere non pro infirmitate non <lb/>
+            posse, sed pro gula jejunare non velle. Sufficiat ipsi, <lb/>
+            quod jejunare non prævalet. Et magis cum gemitu, <lb/>
+            et. suspirio, et animi dolore adlucet pro eo quod, <lb/>
+            aliis jejunantibus, ille abstinere non potest.</p>
+          <p>3. Et quod opus est unicuique infirmo secrete, <lb/>
+            aut sibi soli, aut cum alio similiter intimo faciat <lb/>
+            praeparari, quia non ei oportet aliquem sanum ut ro­ <lb/>
+            get ad prandium, ne sibi augeat etiam de alterius <lb/>
+            gula peccatum. Pro eo tamen quod non potest jeju­ <lb/>
+            nare, amplius debet erogare pauperihus, ut peccata <lb/>
+            quae non potest jejuuando curare, possit eleemosynas <lb/>
+            dando redimere. Bonum esi jejunare, fratres, sed <lb/>
+            melius est eleemosynas dare.</p>
+          <p>4. Si aliquis utrumque potest, duo sunt bona; si <lb/>
+            vero non potest, melius est eleemosyna. Si possibi-
+            <milestone unit="PLSection" n="B"/><lb/>
+            litas non est jejunandi, eleemosyna sufficit sine jeju­ <lb/>
+            nando; jejunium vero sine eleemosyna omnino non <lb/>
+            sufiicit. Ergo si aliquis non potest jejunare, eleemo­ <lb/>
+            synam faciat. Eleemosyna sine jejunio bona esi. Si <lb/>
+            ergo praevalet jejunium cum eleemisyna , duplex <lb/>
+            bonum est; jejunium vero sine eleemosyna nullum <lb/>
+            bonum est, nisi forte si 309. ita sit aliquis pauper, <lb/>
+            ut non habeat omnino quod tribuat. Ilis vero qui non <lb/>
+            habuerint unde tribuant, sufficit voluntas bona, se­ <lb/>
+            cundum illud quod scriptum est : Gloria in excelsis <lb/>
+            Ueo, et in terra pax hominibus bonæ voluntatis.</p>
+          <p>5. Sed quis erit qui se possit excusare, cum <lb/>
+            etiam pro calice aquæ frigidæ mercedem se Domi. <lb/>
+            nus esse dixerit? Et quare frigidæ dixerit ? Ne forte <lb/>
+            se possit aliquis pauper lignorum penuria excusare, <lb/>
+            aut certe dicere se vasculum ubi aquam calefaceret <lb/>
+            non habere. Denique et per beatum prophetam, fra­ <lb/>
+            tres charissimi, Dominus ita hortatur et admonet <lb/>
+            eleemosynam fieri, ut prope nullus pauper sit qui se
+            <milestone unit="PLSection" n="C"/><lb/>
+            valeat excusare. Sic enim ait: Hoc est jejunium quod <lb/>
+            elegi, dicit Dominus : Frange esurienti panem tuum. <lb/>
+            Non dicit ut integrum daret, ne forte pauper ille <lb/>
+            alium non haberet ; sed frange, inquit, hoc est di­ <lb/>
+            cere, etiam si tanta sit tibi paupertas, ut non ha­ <lb/>
+            beas nisi unum panem, ex ipso tamen frange, et <lb/>
+            pauperi tribue, et egenum ac sine tecto indue in do­ <lb/>
+            mum tuam. Si aliquis ita pauper est, ut non habeat <lb/>
+            cibum, vel in uno angulo domus suae praeparet pere­ <lb/>
+            grino lectulum.</p>
+          <p>6. Quid nos dicturi sumus, fratres? qualem excu­ <lb/>
+            sationem habere poterimus, qui, amplas et spatiosas <lb/>
+            domos habentes, vix aliquando dignamur excipere <lb/>
+            peregrinum? ignorantibus, imo non credentibus, <lb/>
+            quod in omni peregrino Christus excipitur, sicut et <lb/>
+            ipse dixit: Hospes fui, et non suscepistis me; cl : <lb/>
+            Quandiu non fecistis uni de minimis iis, nec milii fe­ <lb/>
+            cistis.</p>
+          <p>i. Laboriosum et fastidiosum nobis est in paupe-
+            <milestone unit="PLSection" n="D"/><lb/>
+            ribus excipere Christum in patriam nostram ? Timeo <lb/>
+            ne nobis ille dicat : Ite, et non nos recipiat in bea­ <lb/>
+            titudine sua. Contemnimus illum in mundo? Timeo <lb/>
+            ne nos contemnat in coelo, secundum quod ipse <lb/>
+            dixit : Esurivi, el non dedistis mihi manducare; et: <lb/>
+            Quandiu non fecistis uni de minimis iis, nec mihi feci­ <lb/>
+            stis ; et quod post sequitur.</p>
+          <p>8. Fratres avertat hoc Deus a nobis; hoc enim <lb/>
+            postea addit, dicens : Discedite a me, maledicti, ite in
+            <milestone unit="PLSection" n="A"/><lb/>
+            ignem .ternum. Ego in hanc sententiam neminem <lb/>
+            judico. Unusquisque attendat sententiam suam; hec <lb/>
+            tamen arguo, et reprehento, quia forte aliquoties <lb/>
+            venit per negligentiam, ut vestimenta quae debue­ <lb/>
+            runt accipere pauperes deformentur a tineis; et Ii­ <lb/>
+            meo ne ipsis panni ad testimonium proferantur in <lb/>
+            die judicii, secundum quod Jacobus dicit : Agite <lb/>
+            nunc, divites, plorate, ululantes in miseriis quæ adve­ <lb/>
+            nient vobis. Divitiæ vestræ putrefactæ sunt.</p>
+          <p>U. Et omnia, sicut dixit, fratres charissimi, qui <lb/>
+            per Apostolum suum comminatur Christus, licet nos <lb/>
+            nimium terreant, non tamen de Dei misericordia <lb/>
+            desperandum est. Aut ego et. mei si negligenter cum <lb/>
+            Dei adjutorio, cum possumus, nos emendare volu­ <lb/>
+            mus, eleemosynas, quas hucusque parcius fecimus, <lb/>
+            largius erogemus, et quae pro pecccatis praeteritis <lb/>
+            cum 310 dolore, et gemitu, et spe repausationis <lb/>
+            domintea misericordia docemur.</p>
+          <p>10. Ergo, sicut supra suggessimus. fratres cha-
+            <milestone unit="PLSection" n="B"/><lb/>
+            rissimi , jejunia nostra eleemosynarum pinguedo <lb/>
+            commmendet, quia tale est jejunium sine eleemosyna, <lb/>
+            qualis sine oleo est lucerna. Nam sicut lucerna quae <lb/>
+            sine oleo accenditur fumare potest, lucere non po­ <lb/>
+            test, ita jejunium sine eleemosyna carnem quidem <lb/>
+            cruciat, sed charitas lumine animam non illustrat. <lb/>
+            Interim vel quod ad præsens agitur, fratres, sic je­ <lb/>
+            junemus, ut prandia nostra pauperibus erogemus, <lb/>
+            ut quod pransuri eramus, non in nostris sacculis, sed <lb/>
+            in visceribus pauperum reponamus, quia manus <lb/>
+            pauperum gazophylacium Christi est: quidquid ac­ <lb/>
+            cipit, ne in terra pereat, in coelo reponit; quia <lb/>
+            quamvis quod pauper accipit consumatur, merces <lb/>
+            tamen boni operis in coelo reconditur.</p>
+          <p>ii. Nam si prandia nostra exquisitis saporibus et <lb/>
+            multiplicatis ferculis expendere sludemus ad cœ­ <lb/>
+            nam, sicut corpori nostro deliciæ non solum non <lb/>
+            subtrahuntur, sed etiam duplicantur, ac sic corpori <lb/>
+            vestro nihil minuitur, sic animae nihil augetur. Hoc,
+            <milestone unit="PLSection" n="c"/><lb/>
+            fratres, timens magis, quam de vobis aliquid sini­ <lb/>
+            strum credens, admoneo. Scio enim ex vobis plu­ <lb/>
+            res, Deo propitio, et peregrinos assidue accipere, et <lb/>
+            pauperibus frequenter dare. Et ideo quod suggero <lb/>
+            ad hoc proiiciat. Qui vero non facit, aut forte tar­ <lb/>
+            dius faciebat, tam sanctam sibi et omnino placitam <lb/>
+            operationem in consuetudinem trahat.</p>
+          <p>12. Et licet credam quod, Deo inspiranle, sem­ <lb/>
+            per supervenientibus festivitatibus, castitatem et <lb/>
+            charitatem ante plures dies etiam cum propriis uxo­ <lb/>
+            ribus custodiat charitas vestra, tamen, licet et su­ <lb/>
+            perfluo etiam, quod vos facere credo, charitatem <lb/>
+            contemplationis admoneo, ut per totam Quadragcsi­ <lb/>
+            mam, et usque ad finem Paschae castitatem et cha­ <lb/>
+            ritatem, Deo auxiliante, servetis, ut in illa sacro­ <lb/>
+            sancta solemnitate paschali charitatis lucerna ve­ <lb/>
+            stiri, eleemosynis dealbari, orationibus, vigiliis et <lb/>
+            jejuniis, vel aliquibus coelestibus et spiritualibus <lb/>
+            margaritis ornan possitis, non solum cum amicis,
+            <milestone unit="PLSection" n="D"/><lb/>
+            sed etiam cum inimicis, ut pacifici libera et secura <lb/>
+            conscientia ad altare Domini accedentes, corpus ac <lb/>
+            sanguinem ejus, non ad judicium, sed ad remedium <lb/>
+            possitis accipere.</p>
+          <p>13. Sed cum de eleemosynis loquimur, nun con­ <lb/>
+            turbetur angusta paupertas. 311 Omnia enim com­ <lb/>
+            plere quisquam poterit, cum fecit quod potuit, quia <lb/>
+            voluntas perfecta faciendi reputatur pro opere facti. <lb/>
+            Sed hoc illc implet, qui hominem pauperem quasi <note type="footnote"> 4. Forte, tufficit ,i,le jejunio. </note><note type="footnote"> 6. Videretur tegendum, ignoran,es... non creden­ <lb/>
+            tes, aut certe, ignorantibus nobis... non credenlibus, <lb/>
+            quae iocutio apud isidoruin et alios occurrit. Vide <lb/>
+            MOt. ad Sedulium, lib. iv, verSe 8. </note><note type="footnote"> 9. Aut ego, etc. Gorrupta haecsunt, nec sine M ,5. <lb/>
+            ope facile sanari possunt. </note><note type="footnote"> to. Forte, interim vero quod ad praet, ele. <lb/>
+            Paulo pott repolui ne in terra peteal, pro quo in bre­ <lb/>
+            *iario est, ne inUr pereai. </note> <note type="footnote"> ii. Fortasse, ac sicut corpori vestro nihil, etc. </note><note type="footnote"> 13. Secum fieri cupiebat. Sic legendum, vel sibi fieri <lb/>
+            cupiebut. In Breviario est se fieri cupiebat. Ex aliis <lb/>
+            sermonibus, de quibus dixi in fsidorianis) cap. cit. 7':!, <lb/>
+            tres tantuln subjiciam: nam alii aut Isidori non sunt, <lb/>
+            ut tunc dixi, aut excerpti sum ex aliis Isidori operi­ <lb/>
+            bus, eli.lm homilia quae luci...iL: Brevis est fiujus mundi <lb/>
+            feltcitas, scilicet ex Synonymis, lib. 11, nuni. 9i. Quod <lb/>
+            autem Editor Matritensis ad serinoneiu 4, nuui. ii, <lb/>
+            uutaveral, verba, nisi tnandu'IJweritis, etc., in con-</note> <pb n="1221"/>
+            
+            <milestone unit="PLSection" n="A"/><lb/>
+            seipsum considerare voluerit, et sic pauperi tribuat, <lb/>
+            quomodo si ipse in tali necessitate esset, secum <lb/>
+            fieri cupiebat; et qui fecerit sic, et Novi et Veteris <lb/>
+            Testamenti praecepta complevit, implens illud Evan­ <lb/>
+            gelium (sic) : Omnia quæcunque vultis ut faciant vobis <lb/>
+            homines, et vos facite illis similiter. Etenim lex et pro­ <lb/>
+            pheta sic impletur ad gloriam, ad quam veræ et <lb/>
+            perfectae charitatis legem pius vobis Dominus sua <lb/>
+            protectione perducat. Amen. Præstante Domino no­ <lb/>
+            stro Jesu Christo, cui est honor, et imperium sine <lb/>
+            fine in saecula sæculorum. Amen.</p>
+          <ab>
+            <title type="sub">SERMO II. — Contra Arianos.</title>
+          </ab>
+          <p>i. Veni, domine Jesu Christe Redemptor noster, <lb/>
+            qui æqualem potestatem cum Patre habes. Veni, et <lb/>
+            contere caput draconis magni; et die nobis quid es, <lb/>
+            quomodo Arius iste aliud docet quam es. Die, die, <lb/>
+            audiamus, unde haereticos convincamus. Audite, <lb/>
+            fratres charissimi, quid Dominus dicat. Ego sum,
+            <milestone unit="PLSection" n="B"/><lb/>
+            inquit, via, veritas, et vita. Nemo uenit ad Patrem, <lb/>
+            nisi per me. Secundum divinitatem veritas et vita, <lb/>
+            secundum humanitatem via. Tu autem , hæretice <lb/>
+            Ariane, qui minorem vis esse divinitate vitam et ve­ <lb/>
+            ritatem, sequitur ut non pervenias ad Patrem. Sed <lb/>
+            adhuc, domine Jesu, contere caput draconis, et die <lb/>
+            quid cum Patre sis. Te audiamus dicentem, non hae­ <lb/>
+            reticum blasphemantem ; die, quid sis cum Patre. <lb/>
+            Ego, et Pater unum sumus. Die adhuc. Ego in Patre, <lb/>
+            et Pater in me eat. Adhuc die. Qui videt me, videt et <lb/>
+            Patrem.</p>
+          <p>2. Credis jam, haeretice, tantæ auctoritati ? aD <lb/>
+            ipsius testimonium de se ipso non admittis, sed alios <lb/>
+            testes inquiris? Ecce introducuntur adversum te qui <lb/>
+            te convincant. Die, testis Dei Paule, sanctæ matris <lb/>
+            Ecclesiae organum, qui usque ad sanguinem pro.isto <lb/>
+            testimonio accessisti, et ne falsae doctrinae succum­ <lb/>
+            beres, animam posuisti; die. Audiat qui convinci <lb/>
+            formidat. Singulis quibusque dicis : Hoc sentite in
+            <milestone unit="PLSection" n="c"/><lb/>
+            vobis, quod et in Christo Jesu ; qui cum in forma Dei <lb/>
+            esset, non rapinam arbitratus est esse se æquaLem Deo. <lb/>
+            Audis, hæretice, aequalem Deo, audis formam Dei ? <lb/>
+            et tu minorem Patre filium dicere audes? Veniat et <lb/>
+            alius testis, ut in duobus vel tribus testibus confir­ <lb/>
+            metur æquitas veritatis. Dic et tu, sancte Petre, <lb/>
+            quid tibi revelaverit, non caro, et sanguis, sed pa­ <lb/>
+            ter coelestis : Tu ea Filius Dei vivi. Et in epistola ad <lb/>
+            gentes secunda. Notam facimus vobis domini nostri <lb/>
+            Jesu Christi virtutem, et praescientiam, et magnitudi­ <lb/>
+            nrm. Audis, praestigiator, virtutem, audis praescien­ <lb/>
+            tiam, audis et magnitudinem; in quo ergo, hære­ <lb/>
+            tice, Christum dicis esse minorem ? Sed ingrediatur <lb/>
+            et tertius testis, ut tres unum verum testimonium <lb/>
+            dicant uni Trinitati, et trinae divinitati. Die et tu, <lb/>
+            sancte Joannes, qui super, pectus Salvatoris discum­ <lb/>
+            bebas, et videbas super coelestia mirabilia verbum <lb/>
+            Dei. Die, inquam, quid veritatis de Dei Filio sentis. <lb/>
+            In principio 312 erat Verbum, et Verbum erat apud <lb/>
+            Deum, et Deus erat Verbum. Et in epistola : Scimus
+            <milestone unit="PLSection" n="D"/><lb/>
+            quoniam Filius Dei venit, et dedit nobis intellectum, <lb/>
+            ut sciamus quod verum est, et simus in vero Filio <lb/>
+            ejus; hic est enim verus Deus, et vita æterna.</p>
+          <p>3. Tu autem, virulente serpens, minorem di­ <lb/>
+            cendo Filium, qui est verus Deus, non habebis vi­ <lb/>
+            tam æternam, Sed ad confutandam contumaciam <lb/>
+            tuam ipse Pater testimonium Filio dicat, ut nihil <lb/>
+            amplius quaeras, nihilque amplius credas. Dicit enim <lb/>
+            per prophetam : Tecum principium in die virtutis <lb/>
+            tuæ. Principium Pater, principium Filius ; ergo Pa­ <lb/>
+            ter et Filius principium sine ullo principio. Tecum, <lb/>
+            inquit, principium in die virtutis tuæ in splendoribus <lb/>
+            sanctorum, ex utero ante luciferum genui te. Tanquam <lb/>
+            diceret: Ut sancti illuminarentur, processisti ex me. <lb/>
+            Nec scilicet fuit, dilectissimi, alia causa cur vel ipsa
+            <milestone unit="PLSection" n="A"/><lb/>
+            nomina Patris, seilicet, et Filii, et Spiritus saucti <lb/>
+            sejuncta viderentur, nisi ut sancti homines instrue- <lb/>
+            rentur. Caeterum quid Moysi ab ipsa Triuitatis sub­ <lb/>
+            stantia dictum est ?Ego sum, qui sum ; et sic dices : <lb/>
+            Qui eat misit me. Ergo ex utero in splendore sancto­ <lb/>
+            rum generatus est Filius. Sed ne hanc generationem <lb/>
+            carnaliter vel temporaliter acceperis factam, audi <lb/>
+            quomodo eum genuerit. Eruclavit cor meum, inquit. <lb/>
+            Verbum bonum, Joannes testis dicit: In principio erat <lb/>
+            Verbum. Deus Pater dicit: Eructavit cor meum, in­ <lb/>
+            quit, Verbum bonum. Propheta Habacuc dicit: Ambu­ <lb/>
+            labat Verbum. Audis Verbum, et hoc in principio <lb/>
+            esse apud Deum, et Deum esse Verbum. Testimo­ <lb/>
+            nium Trinilatis per totum mundum contra te cla­ <lb/>
+            mat. Et tu, pessime Ariane, contra totum mundum <lb/>
+            veluti rabidus canis delatras?</p>
+          <p>4. Sed audi adhuc unde plenius convincaris, quod <lb/>
+            perfecta Trinitas unus sit verus Deus. Patris namque <lb/>
+            vox est ad Filium per prophelam : ln splendore, in-
+            <milestone unit="PLSection" n="B"/><lb/>
+            quit, sanctorum ex utro genui te. Ejusdem quoque <lb/>
+            Patris vox est per prophetam de Spiritu sancto : Spi­ <lb/>
+            ritus, inquit, a me prodiit. Filii autem vox est in <lb/>
+            Evangelio, ostendens Patrem in se esse, seque in <lb/>
+            ipso, ubi ait, Pater in me manens facit ipse opera. <lb/>
+            Ejusdem eliam Filii vox est de Spiritu sancto, <lb/>
+            ostendens quia quomodo procedit ex Patre, ita quo­ <lb/>
+            que ex se ipso, ubi ait ad discipulos suos : Accipite <lb/>
+            Spiritum sanctum. Si cui remiseritis peccata, remit­ <lb/>
+            tentur illi. Unde et apostoli Pauli : Si quis spiritum <lb/>
+            Christi non habet, hic non est ejus. Si ergo Filius in <lb/>
+            Patre, et ex Patre, et Spiritus sanctus simul est et <lb/>
+            in Filio, et in Patre, non est divisa Trinitas, ubi <lb/>
+            perfecta unitas est. Discedat ergo Arianus pestifer <lb/>
+            labyrintheus, quod draco; jam, inquam, confusus <lb/>
+            discedat, et reus, quia Trinitas unus est Deus.</p>
+          <p>5. Sed quomodo tibi perversa haeresis, verba <lb/>
+            mea profictent, cum sis aspis surda, obturans aures, <lb/>
+            ne audias incantantium voces ? Noveris te tamen a
+            <milestone unit="PLSection" n="c"/><lb/>
+            virga serpentis edendam, dum oves quas tenes ca­ <lb/>
+            ptivas ad suum ille pastor ovile reduxerit, ut sit <lb/>
+            unus grex et unus pastor. iste igitur pastor noster, <lb/>
+            dilectissimi, qui in virga pascit, et regit, ipse pasior <lb/>
+            est, ipse rector noster est, ipse fabricator, ipse ar­ <lb/>
+            chitectus noster. Magnum te pastorem video, do­ <lb/>
+            mine Jesu, oves pascentem, errantem inquirentem, <lb/>
+            313 inventamque cum gaudio ad gregem tuis hu­ <lb/>
+            meris reportantem. Magnum quippe te video archi­ <lb/>
+            tectum, virgam ferentem, et de ista virga multa Iui­ <lb/>
+            racula facientem. Multum itaque, fratres, expositio­ <lb/>
+            nem expavesco virgae; sed dum divinarum Scriptu­ <lb/>
+            rarum considero loca, virga sancta Maria, virga ipse <lb/>
+            Christus, virga crux. Et in ista o quam magna mira­ <lb/>
+            que fecit ! Scalas, per quas hominem lapsum levavit <lb/>
+            ad Patrem , per has denique scalas ascenderunt <lb/>
+            sancti homines, continentes conjuncti atque fideles, <lb/>
+            non quidem gradibus pedum, sed gressibus morum.</p>
+          <p>6. Boni ergo mores si requirantur, in omnibus in <lb/>
+            veniuntur. Uterque enim sexus et omnis ætas in his
+            <milestone unit="PLSection" n="D"/><lb/>
+            sanctorum moribus unitationis habet exemplum. Imi­ <lb/>
+            tentur itaque senes mores Tobiæ , qui cum corpore <lb/>
+            caecus esset, viam vitæ lilio demonstrabat in corde; <lb/>
+            ille eum in terra manu ducebat, iste monitis eum <lb/>
+            sanctis erigebat ad cœlum. Imitentur adolescentes <lb/>
+            Joseph sanctum, pulchrum corpore, sed pulchriorem <lb/>
+            mente, queni castitas sic possederat, ut impudicæ <lb/>
+            dominæ minis ejus non posset violari corpus, cujus <lb/>
+            jam Dominus possederat mentem. Imitentur virgines <lb/>
+            sanctae beatam Domini sui matrem Mariam. Imiten­ <lb/>
+            tur viduae religiosam viduam Annam. Imitentur et <lb/>
+            conjugatae castam Susanuam, quia virg' Christi ma­ <lb/>
+            ter Maria quod novit implevit; Anna vidua in oratio­ <lb/>
+            nibus et jejuniis usque in finem perseverantem te­ <lb/>
+            nuit; Susanna casta pro pudicitia conjugali usque ad <note type="footnote"> grue baptismo aptari, ut ipsi videbatur, id omiuen­ <lb/>
+            dum censui ; nam auctor ejus sermonis non ea bapti- <lb/>
+            Imo .ptat, sed ex eis coliigit baptismuni conferri par­ <lb/>
+            vulis non solum propter gloriam, sed etiam ut vitam <lb/>
+            spiritualem in se habeant. </note> <pb n="1223"/>
+            
+            <milestone unit="PLSection" n="A"/><lb/>
+            periculum mortis accessit. Nunc igitur, coniugatae, <lb/>
+            intendite qualis hujus vocis a Scriptura sancta imi­ <lb/>
+            latio proponalur; non enim prædicat quod fuerit au­ <lb/>
+            ro, monilibus, vel veste pretiosa, forinsecus compta, <lb/>
+            cum fuerit intus utique castitatis ornata pudore. Om­ <lb/>
+            nibus vero Christus vitali donavit, quibus bonos in­ <lb/>
+            stituit mores. Et propterea ipse vir de femina est <lb/>
+            nasci dignatus, quia ab ipso uterque erat sexus a <lb/>
+            morte liberandus. Multa diximus, fratres. Intentissi­ <lb/>
+            me audistis, epulas dominicas libentissime comedis­ <lb/>
+            tis. Rependite ergo vicem ministratori vestro, ut si nun <lb/>
+            verbo, vestris saltem orationibus pascat. Explicit.</p>
+          <ab>
+            <title type="sub">SERMO III. — Homilia.</title>
+          </ab>
+          <p>1. Fratres, oportet, nos satis timere tres causas <lb/>
+            per quas tonus mundus periit, gula, cupiditas, super­ <lb/>
+            bia. Quia diabolus per istas tres caUSsas Adam pri­ <lb/>
+            mum hominem circumvenit, dicens : In quacunque <lb/>
+            die comedcr s de hoc ligno, statim aperientur oculi tui.
+            <milestone unit="PLSection" n="B"/><lb/>
+            Nos autem semper timeamus has tres causas, ne, si­ <lb/>
+            cut Adam, in inferno damnemur. Fratres, contra <lb/>
+            gulam teneamus abstinentiam , contra cupiditatem <lb/>
+            largitatem, contra super biam humilitatem. Nam hoc <lb/>
+            scimus, quod Christiani dicimur, quod angelum cu­ <lb/>
+            stodem habemus, quia ipse Salvator dixit: Amen dico <lb/>
+            vobis quia angeli eorum semper vident faciem Patris <lb/>
+            mei, qui in cælis est.</p>
+          <p>i. Quia pro cer o nobis credendum est quia omnia <lb/>
+            opera nostra tam in diequ am in nocte, omni hora. sive <lb/>
+            bona, sive mala, quecunqne facimus, ab ipso angelo <lb/>
+            renuntiantur in conspectu Dei. Nam cum angelus hor­ <lb/>
+            tatur nubis consilium ad bona opera facienda, ipsum <lb/>
+            angelum semper 314 habere credimus a dextris ; <lb/>
+            cum autem cogitamus malum agere, aut aliqua pec­ <lb/>
+            cata conamur committere tam capitalia quam minu­ <lb/>
+            ta, tunc habemus hortatorem malignum diabolufn, <lb/>
+            ut cum peccare cogitamus , et peccamus, diabolus <lb/>
+            gaudet, ille sanctus angelus tristatur. Cum dicimus
+            <milestone unit="PLSection" n="C"/><lb/>
+            otiosa verba, et prava , consilium est diaboli; cum <lb/>
+            autem ingemiscimus, et suspiramus, et cogitamus <lb/>
+            aliqua bona opera facere , tunc habemus consiliato­ <lb/>
+            rein illum sanctum angelum Dei.</p>
+          <p>3. Nam illa tria mala opera, quæ superius dixi­ <lb/>
+            mus , diabulus subministravit per malum consilium <lb/>
+            in Adam, hoc est, gula, cupiditas, superbia. Istæ <lb/>
+            tres causæ mulia itala generant, id est, sacrilegium, <lb/>
+            homicidium, adulterium, furtum, avaritiam , luxu­ <lb/>
+            riam, falsum testimonium, iram, discordiam, perju­ <lb/>
+            rium. Ista omnia per illas tres prævaricationes sub­ <lb/>
+            ministraverunt [Forte subministrantur] ante homi­ <lb/>
+            nem per artem diabolicam. Istis periculis animae in <lb/>
+            infernum religantur. Ergo sumamus nos arma angeli <lb/>
+            Dei, hoc est, crucem Christi. Ponamus contra super­ <lb/>
+            biam humilitatem, contra gulam abstinentiam, con­ <lb/>
+            tra cupiditatem eleemosynarum largitionem, contra <lb/>
+            sacrilegium veram pænitentiam, contra homicidium <lb/>
+            dilectionem Dei et proximi, contra fornicationem
+            <milestone unit="PLSection" n="D"/><lb/>
+            continetiam, contra furtum bonitatem et benignita­ <lb/>
+            tem, contra avaritiam largitatem , contra luxuriam <lb/>
+            castitatem, * patientiam, contra discordiam bonam <lb/>
+            concordiam et verissimam pacern, contra perjurium <lb/>
+            timorem Domini et viam rectam, firmissimam fidem <lb/>
+            tenentes coram Deo, et hominibus cum justitia et <lb/>
+            sanctitate.</p>
+          <p>4. Ista sunt arma angelica, et lorica fortis, et scu­ <lb/>
+            tum firmissimum , et galea salutis. Qui ista arma in <lb/>
+            omni loco secum habuerit, nullus diabolus ei nocere <lb/>
+            poterit ; sed hic et in æternum salvus erit. 0 dile­ <lb/>
+            ctissimi fratres, contra pessimum hostem tantum ar­ <lb/>
+            mare nos debemus, ut illum superare valeamus , <lb/>
+            quia ipse præparans esi, ut latro, ad furandum bona <lb/>
+            opera, mala consiliat et subministrat. Sunt multi <lb/>
+            qui per audaciam adversarii mala securitate d ci­ <lb/>
+            piuntur, et cogitant inter se dicentes : Juvenis sum, <lb/>
+            et tempus habeo mundo Irui; cum ad senectutem ve­ <lb/>
+            nero, pœnitentiam agam. 0 unser qui hæc cogitas ,
+            <milestone unit="PLSection" n="A"/><lb/>
+            quia una hora vitæ tuæ spatium non babes, ncc po­ <lb/>
+            testatem unius diei.</p>
+          <p>5. Fratres, non decipiat vos ista prava securitas, <lb/>
+            sed semper diem mortis ante oculos habeamus cum <lb/>
+            timore, et vera pœnitentia. Dic, ubi sunt reges, ubi <lb/>
+            divites, ubi divitiae eorum , et ornamenta eorum ? <lb/>
+            Ipsi, velut umbra, transierunt, ut somnium evanue­ <lb/>
+            runt; aurum, et argentum, et omnia ornamenta eo­ <lb/>
+            ruin in hoc mundo remanserunt, et ipsi sine fine <lb/>
+            cruciantur in inferno, ubi vermes eorum non moriun­ <lb/>
+            tur, et ignis eorum non exstingnitur. In quo inferno <lb/>
+            non est ulla vox, nii gemitus; ibi non est ulla re­ <lb/>
+            quies, nisi flamma, ubi multi quærunt finem mortis, <lb/>
+            et mori non possunt. Scriptum est enim : Potentes <lb/>
+            potenter tormenta patiuntur.</p>
+          <p>6. 0 fratres, intelligite, dicit Psalmista : Non mor­ <lb/>
+            tui laudabunt te, Domine, neque omnes qui descendunt in <lb/>
+            infernum. Fratres, quomodo possunt nominare Deum, <lb/>
+            qui semper sunt in tenebris, et in loco tenebroso, et
+            <milestone unit="PLSection" n="B"/><lb/>
+            semper clamant : Væ tam tenebrosum locum, tam te­ <lb/>
+            nebrosam foveam, 315 lam obscuram cavernam, tam <lb/>
+            amarum locum, tam miserrimam vitam, lam dolorosam <lb/>
+            manisionem ? O miseri, de tam parva vua tam longam <lb/>
+            mortem, de tam parva consolatione tam longam capti­ <lb/>
+            vitatem, de tam parva lætitia tam longam tristitiam, <lb/>
+            de tam parvo lucro lam grave damnum, de tam par­ <lb/>
+            vo honore tam longas dolores, de tam parva jucun­ <lb/>
+            ditate tam amaras lacrymas, tam immensa suspiria, <lb/>
+            tam luctuosos gemitus, tam magnam tran et tristiam. <lb/>
+            ibi non adjuvat pater ad lilium, nec filius ad patrem ; <lb/>
+            ibi non invenitur amicus qui redimat ami um, neque <lb/>
+            frater qui succurrat fratri. Ibi amatur pœnitentia, sed <lb/>
+            tarde agitur. Væ I duram mansionem, tam crucia­ <lb/>
+            bile.n flammam, tam immensa tormenta.</p>
+          <p>7. Ibi miseri cuin miseris. superbi cum superbis, <lb/>
+            homicidæ cum homicidis, adulteri cum adultens, ini. <lb/>
+            qui lues cum falsis mercatoribus, falsi monachi cum <lb/>
+            falsis puellis, falsi sacerdotes cum falsis episcopis, laici
+            <milestone unit="PLSection" n="c"/><lb/>
+            similiter cum pessimis laicis. Ibi pessimæ mulieres <lb/>
+            cum intelicissimis meretricibus : omnes inenarrabi­ <lb/>
+            libus cruciabuntur flammis, et non habebunt re­ <lb/>
+            quiem, nisi Dominica die resurrectionis, sicut beatus <lb/>
+            Augustinus dicit : Dominica die resurrectionis qua <lb/>
+            hora Dominus noster surrexit a mortuis mane, illæ <lb/>
+            animæ juslorum veniunt visitare sepulcra sua, et <lb/>
+            dicere : Bene va eas , bone socie quia bene egisti <lb/>
+            mecum in hoc sæculo, bonum vas, amice dilectissi­ <lb/>
+            me. Tu magis consensisti arma angelica, quam im­ <lb/>
+            pugnationem diaboli, quia scriptum est : Volui je­ <lb/>
+            junare, pœnitentiam agere, eleemosynas dare, IIU­ <lb/>
+            dos vestire, infirmos visitare, ad ecclesiam venire, <lb/>
+            sanctas Scripturas audire I et custodire , Dei servos <lb/>
+            amare, tu mihi consensisti, et honorasti, quia t'i es <lb/>
+            iactura Dei, et ego inspiratio vitæ , et a Deo creata. <lb/>
+            Tu requiesce modicum tempus iu pace securus, et <lb/>
+            ego revertar ad te in mansione æterna , ut videas <lb/>
+            qualem mansionem et quantam gloriam nobis præ­ <lb/>
+            paravit Deus in æternum, quia felices sunt qui ser-
+            <milestone unit="PLSection" n="D"/><lb/>
+            viunt ei , et lucebunt cum eo sicut sol, sicut ipse <lb/>
+            Dominus ait : Justi fulgebunt sicut sol in regno Patris <lb/>
+            mei, et tunc gaudebunt mecum sine fine. Quia quan­ <lb/>
+            vis dux concupiscentiæ fuissent inter oculorum et <lb/>
+            oris luxuriam, eis non consensisti. Prope est ubi me­ <lb/>
+            Cum mercedem æternam recipias, et ibi requiesces <lb/>
+            in saecula sæculorum.</p>
+          <p>8. Similiter et illa peccatrix anima cum nequissi­ <lb/>
+            mo angelo Satanæ cum calumnia et cum viliis suis <lb/>
+            loquitur dicens : Heu ! heu! miserum coi pus , quid <lb/>
+            tanta mala egisti mecum ? Et ego cum Satana fui cum <lb/>
+            vitiis suis , quia non consensisti aru.a angelica con­ <lb/>
+            tra insidias diaboli Quia tu com upisti manducare , <lb/>
+            bibere, luxuriari, occidere, adulterari, fornicari, fu­ <lb/>
+            rari, concupiscere, mentiri, falsum testimonium di­ <lb/>
+            cete, opera diaboli facere , et non egisti poeniten­ <lb/>
+            tiam, sed in mala securitate, et negligentia defecisti. <lb/>
+            tu jaces in imo , ego crucior in interno. Prope esi <lb/>
+            dies judicii, quando revertar ad te, et resurges in <pb n="1225"/>
+            
+            <milestone unit="PLSection" n="A"/><lb/>
+            novissima die, ut recipias mala quæ operans es in <lb/>
+            mundo cum auctore diabolo mortis, et mecum eris <lb/>
+            in damnatione mortis, et sine fine cruciaberis in sæ­ <lb/>
+            cula saeculorum. O homo, qui haec audis, expavesce <lb/>
+            pro.peccatis et negligentiis, et dum tempus habes <lb/>
+            316 et spatium, festiua, et age pœnitentiam, ante­ <lb/>
+            quam claudatur janua vitae, ut securus recipias præ­ <lb/>
+            mia gloriæ, et vitam aeternam cum angelis Dei, et <lb/>
+            cum omnibus sanctis in saecula saeculorum. Amen.</p>
+          <ab>
+            <title type="sub">SERMO IV. — De corpore et sanguine Domini in Pascha.</title>
+          </ab>
+          <p>i. Magnitudo coelestium beneHciorum angustias <lb/>
+            humanæ menlis excedit. Et propterea ita ordinavit <lb/>
+            divina Providentia, ut quod capere in nobis ratio, re­ <lb/>
+            rum mole victa, non poterat, fides devota concipe­ <lb/>
+            ret, et intellectum credulitas robusta nutriret. Cum <lb/>
+            ergo per primam transgressionem per Adam origini <lb/>
+            et morti teneremur obnoxii, prospiciens ex alto Do-
+            <milestone unit="PLSection" n="B"/><lb/>
+            minus, in quo essemus genen debitores, juxta qua­ <lb/>
+            litatem captivitatis reparavit munus redemptionis. Id <lb/>
+            est, ut pro debita morte offerret indebitam, quia nec <lb/>
+            nos habebamus uude viveremus, nec ille unde mo­ <lb/>
+            reretur.</p>
+          <p>2. Materiam de nostra mortalitate suscepit, ut de <lb/>
+            suo immortalitate collata mori posset vita pro mor­ <lb/>
+            tuis. Et ideo quia corpus assumptum ablaturus erat <lb/>
+            ex oculis nostris, et sideribus illaturus, necessarium <lb/>
+            erat ut nobis in hac die sacramentum corporis et <lb/>
+            sanguinis sui consecraret, ut coleretur jugiter per <lb/>
+            mysterium quod semel offerebatur in pretium. Ut <lb/>
+            quia quotidiana et indefessa currebat pro hominum <lb/>
+            salute redemptio, perpetua esset etiam redemptionis- <lb/>
+            oblatio. Et perennis illa victima viveret in memoria, <lb/>
+            ut semper præsens esset in gratia. Vere unica et per­ <lb/>
+            tecta hostia fide æstimanda, non specie. Nec exte­ <lb/>
+            riori censenda visu, sed interiori affectu.</p>
+          <p>3. Unde merito cælestis confirmat auctoritas quia
+            <milestone unit="PLSection" n="C"/><lb/>
+            caro Christi vere est cibus, et sanguis ejus vere est <lb/>
+            potus. Recedat ergo omne infidelitatis ambiguum , <lb/>
+            quandoquidem qui auctor est muneris ipse eliam <lb/>
+            testis est veritatis. Nam invisibilis sacerdos visibiles <lb/>
+            creaturas in substantiam corporis et sanguinis sui <lb/>
+            verba suo secreta potestate evertit [Forte, convertit], <lb/>
+            ita dicens : Accipite et edite; hoc est enim corpus <lb/>
+            meum. Et sanctificatione repetita : Accipite, inquit, et <lb/>
+            bibite; hic est aanguis meus (Matth. xxvi, 26, 27). Ergo <lb/>
+            sicut ad nutum præcipientis Domini repente ex nihi­ <lb/>
+            lo substiterunt excelsa cælorum, profunda fluctuum, <lb/>
+            vasta terrarum, pari potentia in spiritualibus sacra­ <lb/>
+            mentis Verbi praecipit virtus, et servit effectus.</p>
+          <p>4. Quanta itaque et quam celebranda beneficia vis <lb/>
+            divinae benediclionis operetur attende. Et ut tibi <lb/>
+            novum et impossibile non debeat videri quod in <lb/>
+            Christi substantiam terrena et mortalia commuten­ <lb/>
+            tur, te ipsum, qui jam es in Christo regeneratus, in­ <lb/>
+            terroga. Dudum alienus a vila , peregrinus a miseri­ <lb/>
+            cordia , a salutis via intrinsecus mortuus exsulabas.
+            <milestone unit="PLSection" n="D"/><lb/>
+            Subito initiatus Christi legibus, et salutaribus mys­ <lb/>
+            teriis innovatus, in corpus Ecclesiae, non videndo, <lb/>
+            sed credendo transisti, et de filio perditionis adopti­ <lb/>
+            vus Dei filius occulta puritate fieri meruisti.</p>
+          <p>5. In mensura visibili permanens major factus es te <lb/>
+            ipso invisibiliter sine quantitatis augmento. Cum ip. <lb/>
+            se atque idem esses, multo altius 317 fidei processi­ <lb/>
+            bus exstitisti. In exteriori nihil additus es , et totus in <lb/>
+            interiori homine mutatus es. Ac sic homo Christi filius <lb/>
+            effectus, et Christus in hominis mente formatus est. Sic­ <lb/>
+            ut ergo sine corporali sensu, praeterita vilitate deposi­ <lb/>
+            ta, subito novam indutus es dignitatem, et sicut hoc <lb/>
+            quod in te Dominus læsa curavit, infecta diluit, macula­ <lb/>
+            ta detersit, non oculis, sed sensibus tuis credis: ita et <lb/>
+            tu cum ad reverendum altare salutari cibo potuque re­ <lb/>
+            ficieudus accedis, sacrum Domini tui corpus et sangui­ <lb/>
+            nem fide respice, honore mirare, mentem erige, cor­ <lb/>
+            dis manususcipe, et maxime haustu interiori assumne.</p>
+          <p>6. Quod si illud legis manna, de quo luitur : Pluit
+            <milestone unit="PLSection" n="A"/><lb/>
+            illis manna, ut ederent (Psal. LXXVII, 24), hoc unicui <lb/>
+            que sapiebat, quod desideriis concupisset, aliud erat <lb/>
+            quod sumebatur, aliud erat quod videbatur, et invi­ <lb/>
+            sibiliter sapor ille in singulorum sensibus formabatur, <lb/>
+            ergo illud legis manna cœlitus illapsum per multimodas <lb/>
+            suavitates naturae suae meritum etgeneris sui excede­ <lb/>
+            bat intuitum. Et cum creaturam suam dispensatio lar­ <lb/>
+            gitoris multiplici diversitate condiret, praebebat gustus <lb/>
+            quod ignorabat aspectus. Juxta percipientis affectum <lb/>
+            escæ ilłi novitas et dignitas nascebatur, et unumquem­ <lb/>
+            que variis et alienis saporibus reficiebat mellifluum <lb/>
+            illius pluviae donum, et muliiplex sicci imbris obse­ <lb/>
+            quium.</p>
+          <p>7. Quæ cum ita sint, quod illic aviditas faciebat, <lb/>
+            hic fides faciat. Sic legimus : Accedit homo ad cor al­ <lb/>
+            tum, et exaltabitur Deus (Psal. LXIII , 7). Ideo quod <lb/>
+            ibidelectatio obtinebat in faucibus, hic benedictio ope­ <lb/>
+            retur in sensibus. Ad agnoscendum et percipiendum <lb/>
+            sacrificium veri corporis ipsa roborat potentia con-
+            <milestone unit="PLSection" n="B"/><lb/>
+            secrantis. Qui tunc latuit præfiguratus in manna, sit <lb/>
+            tibi nunc manifestus in gratia. ipsum autem fuisse in <lb/>
+            mannæ illius specie præsignatum, etiam Propheta evi­ <lb/>
+            denter ostendit, dicens : Panem cœli dedit eis, panem <lb/>
+            angelorum manducavit homo (Psal. LXXVII, 25). Et <lb/>
+            quis panis angelorum est, nisi Christus, qui eos ciho <lb/>
+            suae charitatis et lumine suae claritatis exsatiat? Hoc <lb/>
+            pane, dicente Propheta, sexta die duplum colliges <lb/>
+            Sabbato autem non colliges, dum a prino, id est, <lb/>
+            Dominico die , in lege tribuitur, et in solo Sabbato <lb/>
+            denegatur.</p>
+          <p>8. Jam tunc Christus ab Ecclesia, cui Dominicum <lb/>
+            resurrectio consecravit, recipiendus ostenditur, et a <lb/>
+            Synagoga, ad quam cultus Sabbati pertinebat, negan­ <lb/>
+            dum esse prædicitur, dum dies iste septimus est, qui <lb/>
+            coelestis panis fraude multatur. De quo pane vetus narrat <lb/>
+            historia: Nec qui plus collegerat habuit amplius, nec qui <lb/>
+            minus paraverat reperit minus (Exod. XVI,18). Quod cor­ <lb/>
+            pus, sacerdote dispensante, tantum est in exiguo, quan-
+            <milestone unit="PLSection" n="C"/><lb/>
+            tum esseconstat in toto. Quod cum ecclesia fidelium su­ <lb/>
+            mit, sicut plenum in universis, ita integrum esse pro­ <lb/>
+            batur in singulis. De quo sensu apostolica sententia <lb/>
+            derivata est dicens : Qui multa habet, non abundavit ; <lb/>
+            et qui modicum, non minoravit (II Cor. vm, 15).</p>
+          <p>9. Si forte panis esum esurientibus apponeremus, <lb/>
+            non ex toto perveniret ad singulos, quia particula­ <lb/>
+            tius et minutatius pro portione sua unusquisque <lb/>
+            perciperet. De hoc vero pane, cum assumitur, nihil <lb/>
+            minus habent singuli quam universi. Totum unus, <lb/>
+            totum duo, totum plures sine diminutione percipiunt, <lb/>
+            quia benedictio hujus sacramenti scit distribui, ne­ <lb/>
+            scit 318 distributione consumi. Sacramenti itaque <lb/>
+            hujus formam etiam in Judæorum paginis invenimus <lb/>
+            expressam. Nam de Melchisedech in Genesi legimus : <lb/>
+            Et Melchisedech rex Salem protulit panem, et vinum <lb/>
+            et benedixit Abrahæ; fuit autem sacerdos Dei summi <lb/>
+            (Gen. xiv, 18, 19). In quo dum a praeputio, id est, <lb/>
+            a gentilitate circumcisio futura benedicitur, Ecclesiae <lb/>
+            gloria praedicatur, et synagogae infideli plebs ex gen-
+            <milestone unit="PLSection" n="D"/><lb/>
+            tibus acquisita praeponitur.</p>
+          <p>10. Hic ergo Melchisedech, cujus genealogia vel <lb/>
+            origo notitiam illius temporis latuit, oblatione panis et <lb/>
+            vini hoc Christi sacrificium præsignavit. De quo Pro­ <lb/>
+            pheta pronuntiat : Tu es sacerdos in æternum secundum <lb/>
+            ordinem Melchisedech (Psal. CII, 4). Nam et beatus <lb/>
+            Moyses, de eo mysterio loquens, vinum et sanguinem <lb/>
+            sub una appellatione significat in benedictione pa­ <lb/>
+            triarchæ dominicam passionem multo ante demon­ <lb/>
+            strans, ita inquiens ; Lavabit in vino stolam suam, et <lb/>
+            in sanguine uvæ pallium suum (Gen. XLIX, 11). Adverte <lb/>
+            quam evideuter constet vim creaturam Christi san­ <lb/>
+            guinem nuncupandam.</p>
+          <p>11. Quiquid adhuc de hac duplici specie inquirere <lb/>
+            debeas, ipso Domino attestante, agnosce. Nisi, inquit, <lb/>
+            manducaveritis carnem Filii hominis, et biberitis ejus <lb/>
+            sanguinem, non habebitis vitam in vobis (Joan. vi, 54). <lb/>
+            Quod testimonium contra Pelagianos evidentissimum <lb/>
+            atque validissimum est, qui asserere arrepta impietate <note type="footnote"> PATROL. LXXXIII. </note> <note type="footnote"> 39 </note> <pb n="1227"/>
+            
+            <milestone unit="PLSection" n="A"/><lb/>
+            præsumunt, non propter vitam, sed propter regnum <lb/>
+            cælorum baptisma parvulis conferendum. Sub iis enim <lb/>
+            Domui verbis quibus evangelista pronuntiat non habe­ <lb/>
+            bilis vitam in vobis , aperte intelligenda est omnis <lb/>
+            anima munerf baptismi vacua, non solum gloria ea­ <lb/>
+            rere, sed vita. Hoc itaque domiuici sanguinis vinum <lb/>
+            aqua esse miscendum, non solum traditione, sed e­ <lb/>
+            tiam ipso geuere passionis Dominus ostendit, ex cujus <lb/>
+            sacro latere sanguis et aqua lanceæ illisione profluxil. <lb/>
+            Sicut Prophela multo aul,e præcinuit, dicens : Per­ <lb/>
+            cussit petram, et fluxerunt aquæ ([Psal. LXXVII, 20). Et <lb/>
+            Apostolus : Bibebant, inquit, de consequenti eos petra <lb/>
+            (1 Cor. x, 4). Vides quod qui de Christi biberit gra­ <lb/>
+            tia, sequitur eum Christi misericordia.</p>
+          <p>12. Sed et in Salomone de ipso Christo prædictum le <lb/>
+            gimus : Sapientia, inquit, ædificavit sibi domum (Pro­ <lb/>
+            verb. ix, 1), id est, coipus hominis assumpsit, in quo <lb/>
+            habitavit plenitudo divinitatis. Et subdidit : Excidit <lb/>
+            columnas septem. Quia illum benedictio Spiritus sau-
+            <milestone unit="PLSection" n="B"/><lb/>
+            cii gratia septiformi implevit. Mactavit hostias suas, <lb/>
+            miscuit in cratera vinum suum, et paravit mensam suam. <lb/>
+            Et III sequenti : Venite, et edite de panibus meis, et <lb/>
+            bibile vinum quod miscui vobis. <unclear>Admistum</unclear> ergo aqua <lb/>
+            vinum legimus; nunc <unclear>causum</unclear> qua utrumque misceri <lb/>
+            Dominus voluerit inquiramus. Quando in Judæorum <lb/>
+            convivio nuptiali viuum, id est, fides deficiebat iu eis, <lb/>
+            vinum, inquam, deficiebat, qia vinea fructum nega­ <lb/>
+            bat. De qua dicitur : Exspectavi ut faceret uv is, fecit au­ <lb/>
+            tem spinas (Isai. v, 2). Unde et sertum spineum capiti <lb/>
+            Redemptoris imposuit.</p>
+          <p>13. Quando ergo Dominus nuptiali tempore, id est, <lb/>
+            quando sponsus Ecclesiæ sua paschali exsultatione <lb/>
+            jungendus aquas tu vina convertit, manifeste præfi­ <lb/>
+            gurabat multitudines gentium sanguinis sui gratia es­ <lb/>
+            se victuras. Per aquas enim significari populos, sa­ <lb/>
+            cris aperitur eloquiis. Sic 319 legimus : Aqua istas, <lb/>
+            quas vidisti, populi sunt, et gentes, et linguæ (Apoc. xvu, <lb/>
+            13) Videmus in aquis figuram gentium demonstrari <lb/>
+            in vino autem dominicæ passionis sanguinem osten­ <lb/>
+             
+            <milestone unit="PLSection" n="c"/><lb/>
+            die Ac sic dum in sacramentis vinum aqua miscetur, <lb/>
+            Christo fidelis pupulus incorporatur et jungitur, et <lb/>
+            quadam ei copula perfectæ charitatis unitur, ut possit <lb/>
+            dicere cuna Apostoio : Quis nos separabit a charitate <lb/>
+            Christi? Tribulatio ? An perseculto, et cætera (Rom. VIII, <lb/>
+            35) ?</p>
+          <p>14. Deus autem homini suscepta sanctificatione <lb/>
+            Discetur, quando fides in ipso pectore, affectus jus­ <lb/>
+            ticiæ, misericordiæ, pietatis, infunditur. Etiam in hoc <lb/>
+            ipsum quod numerosis tritici granis panem confici <lb/>
+            novimus, unitatem constat assiguari pupułorum. Sicut <lb/>
+            enim frumentum quod solida purgantis sollicitudino
+            <milestone unit="PLSection" n="A"/><lb/>
+            præparatur in candidam speciem molarum labore <lb/>
+            perficitur, ac per aquam ct ignem in unius panis sub­ <lb/>
+            stantiam congregatur, sic varix gentes diversæque <lb/>
+            nationes in unam fidem convenientes unum de se Chri­ <lb/>
+            sti corpus efficiunt ; et Christianus populus, quasi tritici <lb/>
+            innumerabilis grant, a sacrilegis nationibus, fide pur­ <lb/>
+            gaute atque <unclear>cribiante</unclear>, collectus cernitur, quando <lb/>
+            discernitur, et iti unum, quasi infidelium lolio per­ <lb/>
+            transeunte, colligitur, et dum Testamentorum instru­ <lb/>
+            ctione, velut frumentum gemino mularum opere, <lb/>
+            curatum nitescit, et in illam primæ originis dignitatem <lb/>
+            nativo candore mutatur ac per aquam baptismi, <lb/>
+            velut per ignem Spiritus sancti, aeterni illius panis <lb/>
+            corpus efficitur.</p>
+          <p>! a. Sicut ergo separari grana ab tHius confecti <lb/>
+            panis adunatione uon possunt, et sicut aqua ad pro­ <lb/>
+            priam redire substantiam vino mistam jam non potest : <lb/>
+            sic et fideles quique, atque sapientes, qui redemptes <lb/>
+            se Christis anguine et passione eognoscunt, ita debent
+            <milestone unit="PLSection" n="B"/><lb/>
+            quasi inseparabilia membra capiti suo fide, eunver­ <lb/>
+            satione et ardentissima religione sociari, ut ab eo <lb/>
+            non voluntate, n on nec essitate sejungi, non ulla ter­ <lb/>
+            reu.e spei ambitione, non denique ipsa possint .horte <lb/>
+            divelli. Nec dubitet quisquam primarias creaturas <lb/>
+            nutu potentiæ præsentia majestatis in dominici corporis <lb/>
+            transire naturam, cum ipsum hominem videat artilicio <lb/>
+            coelestis misericordiæ Christi corpus effectum. Sicut <lb/>
+            autem quicunque ad fidem veniens ante verba baptis­ <lb/>
+            mi adhuc in vinculo est veteris debiti, bis vero com­ <lb/>
+            memoratis, mox exurtur omni fæce peccati, ita quaudo <lb/>
+            benedicendæx verbis cœlestibus creaturæ sacris ahari­ <lb/>
+            bus imponuntur, antequam invocatione summi nominis <lb/>
+            consecrentur, substantia illic est panis et vin. Post <lb/>
+            verba autem Christi, corpus et sanguis est Christi.</p>
+          <p>16. Quid autem mirum est, si ea quæ verbo potuit <lb/>
+            creare, verbo possit creata convertere ? Imo jam uti­ <lb/>
+            noris videtur esse miraculi, si id quod ex nihilo <lb/>
+            agnoscitur condidisse, jam conditum in melius valeat <lb/>
+            commutare. Require quid ei posUit ese difficile, cui
+            <milestone unit="PLSection" n="c"/><lb/>
+            facile tuit visibilia et invisibilia voluntatis imperio <lb/>
+            suscitare ; cui facile fuit hominem de limi materia <lb/>
+            figurare, imagine etiam suæ divinitatis induere; cui <lb/>
+            promptum est eum sursum revocare de inferis, res­ <lb/>
+            tituere de perditione, reparare de pulvere, de terra <lb/>
+            in cælum levare, de homine angelum lacere, corpus <lb/>
+            humanum conforme corpori claritatis suæ reddere, <lb/>
+            et figmentum suum in regni sui consortio sublimare. <lb/>
+            Ut qui corpus nostras fragilitatis sumpserat, nos in <lb/>
+            320 corpus suae immortalitatis assumat. Ad quam <lb/>
+            gloriosam resurrectionem piis vos operibus præparare <lb/>
+            dignetur, qui regnat iN sæcula sæculorum. Amen.</p>
+        </div>
+        
+        </body>
+  </text>
+</TEI>

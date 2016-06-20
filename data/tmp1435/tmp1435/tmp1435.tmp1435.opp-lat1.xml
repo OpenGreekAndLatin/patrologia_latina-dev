@@ -1,0 +1,1389 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title>Patrologiae Cursus Completus. Series Latina (PL)</title> 
+        <sponsor>University of Leipzig</sponsor>
+        <funder>European Social Fund Saxony</funder>
+        <principal>Gregory Crane</principal>
+        <respStmt>
+          <persName xml:id="Jouve">Jouve</persName>
+          <resp>OCR-ed, corrected and encoded the text</resp>
+        </respStmt>
+        <respStmt>
+          <persName>Greta Franzini</persName>
+          <resp>Project Manager (University of Leipzig)</resp>
+        </respStmt>
+        <respStmt>
+          <persName>Simona Stoyanova</persName>
+          <resp>Project Assistant (University of Leipzig)</resp>
+        </respStmt>
+        <respStmt>
+          <persName>Bruce Robertson</persName>
+          <resp>Technical Advisor (Mount Allison University)</resp>
+        </respStmt>
+      </titleStmt>
+      
+      <publicationStmt>
+        <authority>University of Leipzig</authority>
+        <idno type="filename">PL83.xml</idno>
+        <availability>
+          <licence target="https://creativecommons.org/licenses/by-sa/4.0/">Available under a Creative Commons Attribution-ShareAlike 4.0 International License</licence>
+        </availability>
+        <date>2014</date>
+        <publisher>University of Leipzig</publisher>
+        <pubPlace>Germany</pubPlace>
+      </publicationStmt>
+      
+      <sourceDesc>
+        <listBibl xml:lang="la">
+          <biblStruct>
+            <monogr>
+              <editor>
+                <persName>
+                  <name xml:lang="fr">Jacques Paul Migne</name>
+                </persName>
+              </editor> 
+              <author ref="urn:cite:perseus:author.771">Isidorus Hispalensis</author>
+              <title>Differentiarum Sive De Proprietate Sermonum Libri Duo</title>
+              <title>Allegoriae Quaedam Sacrae Scripturae</title>
+              <title>De Ortu Et Obitu Patrum Qui In Scriptura Laudibus Efferuntur</title>
+              <title>In Libros Veteris Ac Novi Testamenti Proemia</title>
+              <title>Liber Numerorum Qui In Sanctis Scripturis Occurrunt</title>
+              <title>De Veteri Et Novo Testamento Quaestiones</title>
+              <title>Mysticorum Expositiones Sacramentorum Seu Quaestiones In Vetus Testamentum</title>
+              <title>Appendix Ad Libros Regum</title>
+              <title>De Fide Catholica Ex Veteri Et Novo Testamento Contra Judeos</title>
+              <title>Sententiarum Libri Tres</title>
+              <title>De Ecclesiasticis Officiis</title>
+              <title>Synonyma De Lamentatione Animae Peccatricis</title>
+              <title>Regula Monachorum</title>
+              <title>Epistolae</title>
+              <title>De Ordine Creaturarum Liber</title>
+              <title>De Natura Rerum Ad Sisebestum Regem Liber</title>
+              <title>Chronicon</title>
+              <title>Historia De Regibus Gothorum. Wandalorum Et Suevorum</title>
+              <title>De Viris Illustribus Liber</title>
+              <title>Carmina [Ascripta]</title>
+              <title>Chronica Regum Visigothorum (Incertus)</title>
+              <title>Expositio In Canticum Canticorum Salomonis [Incertus]</title>
+              <title>De Conflictu Vitiorum Et Virtutum (Incertus)</title>
+              <title>Expositio In Missa (Incertus)</title>
+              <title>Sententiarum Liber Quartus (Incertus)</title>
+              <title>Exhortatio Humilitatis (Incertus)</title>
+              <title>Testimonia Divinae Scripturae Et Patrum (Incertus)</title>
+              <title>Sermones (Incertus)</title>
+              <title>De Ecclesiasticis Dogmatibus (Incertus)</title>
+              <title>Sentantiae Differentiarum De Activa Vita Atque Contemplativa [Incertus]</title>
+              <title>Exhortatio Poenitendi Cum Consolatione Et Misericordia Dei [Incertus]</title>
+              <title>Lamentum Poenitantiae (Incertus)</title>
+              <title>Oratio Contra Insidias Diaboli (Incertus)</title>
+              <title>Liber De Ortu Et Obitu Patrum Incertus</title>
+              <title>Liber De Numeris (Incertus)</title>
+              <title>Glossae in Sacram Scripturam</title>
+              <title>Differentiarum, sive de Proprietate Sermonum, Liber</title>
+              <title>Liber Glossarum</title>
+              <imprint>
+                <publisher>Garnier</publisher>
+                <pubPlace>Paris</pubPlace>
+                <date>1850</date>
+              </imprint>
+              <biblScope unit="volume">83</biblScope>
+            </monogr>
+            <monogr>
+              <author>Auctor Incertus</author>
+              <title>Archiepiscopi Toletani Veteres</title>
+              <title>Chronologia Gothicorum Regum (Ex Codice Regio Vaticano)</title>
+              <imprint>
+                <publisher>Garnier</publisher>
+                <pubPlace>Paris</pubPlace>
+                <date>1850</date>
+              </imprint>
+              <biblScope unit="volume">83</biblScope>
+            </monogr>
+            <ref target="http://hdl.handle.net/2027/pst.000020950231">HathiTrust</ref>
+            
+          </biblStruct>
+        </listBibl>
+      </sourceDesc>
+      
+    </fileDesc>
+    <encodingDesc>
+      <p>The following text is encoded in accordance with EpiDoc standards and with the
+        CTS/CITE Architecture.</p>
+      <refsDecl n="CTS">
+        <cRefPattern n="no citable units founds" matchPattern="(.+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div/tei:div[@n='$1'])"/>
+      </refsDecl>
+    </encodingDesc>
+    
+    <profileDesc>
+      <langUsage>
+        <language ident="la">Latin</language>
+      </langUsage>
+    </profileDesc>
+    
+</teiHeader>
+  <text>
+    <body><div type="edition" n="urn:cts:latinLit:tmp1435.tmp1435.opp-lat1">
+          <ab>
+            <title type="sub">APPENDIX XI.</title>
+          </ab>
+          <ab>
+            <title type="sub">TESTIMONIA DIVINÆ SCRIPTURi, ET PATRUM.</title>
+          </ab>
+          <ab>
+            <title type="sub">CAPUT PRIMUM. — De uno Deo.</title>
+          </ab>
+          <p>i. In. Propheta. Audi Israel, Dominus Deus tuus <lb/>
+            unus est, et diliges Dominum Deum tuum ex toto <lb/>
+            corde tuo, et ex tota anima tua, et ex tota virtute tua. <lb/>
+            In Evangelio. Nemo bonus, nisi solus Deus. Paulus <lb/>
+            ad Timotheum. Unus enim Deus, et immediator (sic) <lb/>
+            Dei. et hominum. Homo Christus Jesus, qui dedit se-
+            <milestone unit="PLSection" n="C"/><lb/>
+            metipsum redemptionem pro nobis.</p>
+          <ab>
+            <title type="sub">291 CAP. II. — De distinctione personarum Patris, Filii, et Spiritus sancti.</title>
+          </ab>
+          <p>i. In Epistola Joannis. Quoniam tres sunt qui <lb/>
+            testimonium dant in terra, Spirilus, aqua, et San­ <lb/>
+            guis; et tres unum sunt in Christo Jesu; et tres <lb/>
+            sunt, qui testimonium dicunt in coelo, Pater, Vcr­ <lb/>
+            bum, et Spiritus, et tres unum sunt. In Epistola II. <lb/>
+            Quoniam multi fallaces prodierunt in hunc mun­ <lb/>
+            dum,qui non confitentur, Dominum nostrum Jesum <lb/>
+            in carne venisse, hi sunt fallaces, et antichristi <lb/>
+            sunt.</p>
+          <ab>
+            <title type="sub">CAP. III. — De conversione et contemptu sæculi.</title>
+          </ab>
+          <p>i. In Salamone. Non tardes converti ad Dominum, <lb/>
+            et ne differas de die in diem. Subito enim venit ira <lb/>
+            illius, et in tempore vindic tæ disperdet te. In Evan­ <lb/>
+            gelio. Ideo dico vobis : Omne peccatum et blasphe­ <lb/>
+            mia remittitur hominibus. Quicunque in Spiritu
+            <milestone unit="PLSection" n="D"/><lb/>
+            blasphemaverit, non remittetur illi, neque in hoc <lb/>
+            sæculo, neque in futuro. In Proverbiis. Multo melior <lb/>
+            est panis cum auavitate in pace, quam domus plena <lb/>
+            mullorum bonorum, et iniquis æmulationibus, cum <lb/>
+            rixa. In illis. Qui celat injuriam quaerit amicitiam. <lb/>
+            Qui odit celare disjungit amicos et domesticos. In <lb/>
+            illis. Quasi a facie colubri fuge peccata. Si aecesse­ <lb/>
+            ris ad illa, suscipient te, sicut dentes leonis in de­ <lb/>
+            vorando. In Jeremia, Corrigite vias vestras, et cogi­ <lb/>
+            tationes vestras. Nolite confidere vos in falsis ser­ <lb/>
+            monibus, quia in toto proderunt vobis. In Evangelio. <lb/>
+            Intrate per angustam portam, quia lata, et spatiosa <lb/>
+            via est, quae ducit ad perditionem, et multi sunt per <lb/>
+            eam. Quam angusta et arcta via est qua ducit ad <lb/>
+            vitam, et pauci sunt qui inveniunt eam. In illis. Si­ <lb/>
+            cut enim in diebus Noe, ita erit et adventus Filii <lb/>
+            hominis, sicut erant in diebus illis ante diluvium, <lb/>
+            manducantes, et bibentes, et nubentes, et nuptui <lb/>
+            dantes, et non senserunt donec venit diluvium, et <lb/>
+            tulit omnes, sic erit adventus Filii hominis.</p>
+          <ab>
+            <title type="sub">CAP. IV.— De timore Domini.</title>
+          </ab>
+          <p>i. In Proverbiis. Timor Domini adjiciet dies; anni <lb/>
+            autem impiorum peribunt. In illis. Munitio justi li­ <lb/>
+            mor Domini, contritio autem operantibus mala. In <lb/>
+            illis. Beatus qui metuit omnia per timorem, nam <lb/>
+            qui duro est corde incidit in mala. In Ecclesiaste. <lb/>
+            Timor Domini expellit peccatum, nam qui sine ti­
+            <milestone unit="PLSection" n="c"/><lb/>
+            more est non poterit justificari. In illis. Timor Do­ <lb/>
+            mini, non despieere justum hominem pauperem, et <lb/>
+            non justificare virum peccatoreni divitem. In Pro­ <lb/>
+            verbiis. Si non timorem Dei tenueris instanter, cito <lb/>
+            subvertetur domus tua. In illis. Timor Domini odit <lb/>
+            malitiam, et superbiam, et vias malorum. Quod Deus <lb/>
+            noverit occulta cordis. In omni loco oculi Domini <lb/>
+            speculantur bonos et malos. ln illis. Mors et infer­ <lb/>
+            nus manifesla sunt apud Dominum; quomodo non <lb/>
+            etiam corda hominum ? In Actis Apostolorum. Tu, <lb/>
+            Domine, qui nosti corda omnium, ostende nobis <lb/>
+            ouem elegeris unum ex his duobus.</p>
+          <ab>
+            <title type="sub">CAP. V.— Juste judicandum.</title>
+          </ab>
+          <p>i. In Exodo. Non perverteris judicium pauperis <lb/>
+            in judicio, et justum non occides. Item illic. Non <lb/>
+            accipictis personam, nec accipietis munera; munera <lb/>
+            enim excæcant oculos sapiendum , et subtrahunt <lb/>
+            sermonem justum. In Proverbiis. Perdet semetipsum <lb/>
+            qui rnunera accipit; nam qui adit munera acceptio.
+            <milestone unit="PLSection" n="D"/><lb/>
+            I-lis, vivet. Item illic. Qui dicit justum impium esse, <lb/>
+            maledictus erit populis, et odibilis gentibus, nam qui <lb/>
+            arguunt meliora sperabuut. Item illic. Aperi os tuum <lb/>
+            verbo Domini, et judica 292 omnibus integre. <lb/>
+            Aperi os tuum, et judica juste; discerne autem inter <lb/>
+            pauperem et infirmum. In Levitico. Maledictus qui <lb/>
+            declinaverit judicium advenæ, et orphano, et vi­ <lb/>
+            duae, et dicit omnis populus : Fiat, fiat. In Ecclesia­ <lb/>
+            stico. Xenia et dona excaecant oculos judicum; et <lb/>
+            quasi mutus in oculis multorum avertit correctio­ <lb/>
+            nem. In Job. Testimonium enim impii mors; et <lb/>
+            ignis comburet domos eorum qui munera accipiunt</p>
+          <ab>
+            <title type="sub">Cat. VI. — Benefaciendum pauperi.</title>
+          </ab>
+          <p>i. In Proverbiis. Qui contumeliam facit pauperi­ <lb/>
+            bus peccat; qui autem miseretur pauperis beatus <lb/>
+            est. Qui calumniam facit pauperi irritat-eum qui fecit <lb/>
+            illum, Nam qui honorat eum miseretur pauperi. <lb/>
+            Qui dat pauperibus non egebit, qui autem avertit <lb/>
+            oculum suum in magna erit inopia. In Levitico, Non <pb n="1205"/>
+            
+            <milestone unit="PLSection" n="A"/><lb/>
+            consummabis messem agri tui permetere, et quae <lb/>
+            cadent ex messe tua non colliges, neque in vineam <lb/>
+            tuam ex racemis grana decidentia colliges, sed pau­ <lb/>
+            peribus et peregnnis relinques ea. Quia ego Domi­ <lb/>
+            nes Deus vester. In Proverbiis. Qui obturat aures <lb/>
+            suas, ut- non audiat infirmum , et ipse invocabit Do­ <lb/>
+            minum, et non erit qui exaudiat eum. In Job. Non <lb/>
+            avertat voluptas animæ tuae precibus infirmorum, <lb/>
+            cum in necessitate fuerint.</p>
+          <ab>
+            <title type="sub">CAP. VII. — Non ambulandum in do.o.</title>
+          </ab>
+          <p>i. In Ecclesiaste. Vaeduplici corde, et labiis see­ <lb/>
+            lestis, et peccatori ingredienti duas vias. Item illic. <lb/>
+            Cor ingrediens duas vias non habebit successum, et <lb/>
+            pravicordius (sic) in illis scandalizabitur. Qui in <lb/>
+            alto mittit lapidem, in ipso cadit; et plaga dolosi <lb/>
+            dividit vulnera; et qui fodit foveam, in illam cadit; <lb/>
+            et qui statuit laqueum proximo suo, periet in illo, <lb/>
+            facienti nequissimum super ipsum devolvitur, et
+            <milestone unit="PLSection" n="B"/><lb/>
+            non agnoscet unde veniet illi. In Job. Simulatores <lb/>
+            et callidi provocant iram Dei. In Jeremia. Ferrum <lb/>
+            vulnerans lingua eorum, dolosa verba oris eorum, <lb/>
+            proximo suo loquens pacifica, et in semetipso babens <lb/>
+            inimicitiam; in hujus ergo non visitabo, dicit Domi­ <lb/>
+            nus; aut in populo tali non vindicabit anima mea? <lb/>
+            In Evangelio. Cavete a pseudoprophetis, qui veniunt <lb/>
+            ad vos in vestitu ovium, intus autem sunt lupi ra­ <lb/>
+            paces; ex fructibus eorum cognoscetis eos. In Pro­ <lb/>
+            verbiis. Si ceciderit inimicus tuus, noli gratulari, et <lb/>
+            in supplantatione ejus noli extolli, ne forte videat <lb/>
+            Dominus, et non placeat ei, ut avertat iram suam <lb/>
+            ab eo. Paulus Apostolus. Si esurierit inimicus tuus, <lb/>
+            ciba illum; sisitit, da illi potum, hoc enim faciendo, <lb/>
+            carbones ignis acervas super caput ejus; Deus au­ <lb/>
+            tem. retribuet tibi. In Evangelio. Accesssit ad Jesum <lb/>
+            Petrus, et ait illi : Domine, si peccaverit in me fra­ <lb/>
+            ter meus, quolies remittam illi? Septies? Respondit <lb/>
+            Dominus : Non dico tibi usque septies, sed usque <lb/>
+             
+            <milestone unit="PLSection" n="c"/><lb/>
+            septuagies septies. In Exodo. Obedite parentibus per <lb/>
+            omnia; hoc enim placet Deo.</p>
+          <ab>
+            <title type="sub">CAP. VIII. — De filio superbo.</title>
+          </ab>
+          <p>1. In Proverbiis. Filio doloso nihil erit boni, qui <lb/>
+            non honorificat patrem suum, et repellit matrem <lb/>
+            suam, filius confundetur, et opprobrium erit. Item <lb/>
+            illic. Filius qui amittit disciplinam patris meditabi­ <lb/>
+            tur cloquia malitiæ. Item illic. Maledicenti patri et <lb/>
+            matri exstinguetur lumen; pupillæ autem oculorum <lb/>
+            ejus videbunt tenebras. Item illic. Qui irascens pa­ <lb/>
+            trem suum aut matrem. suam existimat se non pec­ <lb/>
+            care, hic similis est viro impio. Item illic. Benedi­ <lb/>
+            ctio patris firmat domos fillorum, maledictio autem <lb/>
+            matris eradicat fundamenta.</p>
+          <ab>
+            <title type="sub">CAP. IX. — De thesauro.</title>
+          </ab>
+          <p>293 1. In Proverbiis. Melius est modica pars <lb/>
+            cum timore Domini quam thesauri magni sine ti­ <lb/>
+            more, melius est modica acquisitio cum justitia <lb/>
+             
+            <milestone unit="PLSection" n="D"/><lb/>
+            quam multi tructus cum iniquitate. Item ibi. Melius <lb/>
+            est nomen bonum quam divitiæ multæ, super aurum <lb/>
+            et argentum gratia bona est. In Ecclesiaste. Nihil <lb/>
+            est iniquius quam amare pecunias; talis enim etiam <lb/>
+            animam suam venundat, quoniam in vita sua proje­ <lb/>
+            cit intima sua. Viro cupido tenaci non est bonum <lb/>
+            substantia, et homini libido; ut quid aurum? Sicut <lb/>
+            exit de utero matris suae, nudus revertitur, sicut <lb/>
+            venit, et nihil aceipiet ex labore suo, ut vadat in <lb/>
+            manu sua. Dixi, melior est super hunc abortum re. <lb/>
+            quies huic magis quam illis. In Sophonia. Disperie­ <lb/>
+            runt omnes qui exaltamur in argento et auro; <lb/>
+            effundam sanguinem eorum sicut limum, et carnes <lb/>
+            eorum sicut stercora boum; et argentum et aurum <lb/>
+            non poterit liberare eos in die iræ Domini. In Ha­ <lb/>
+            bacuc. 0 qui acquirit avaritiam malam domui suae; <lb/>
+            cogitasti confusionem domui tuae, peccavit anima tua. <lb/>
+            In Ecclesiaste. Via peccantium plena ab offensis; in <lb/>
+            fine illorum inferi, et tenebrae, et poenae.</p>
+          <p>
+            <milestone unit="PLSection" n="A"/></p>
+          <ab>
+            <title type="sub">CAP. X.— De eleemosynis.</title>
+          </ab>
+          <p>1. In Proverbiis. Ne dicas pauperi: Vade, et veni, <lb/>
+            eras dabo, cum possis statim benefacere, non enim <lb/>
+            scis quid contingat sequenli die. Item illic. Qui mi­ <lb/>
+            seretur pauperi beatus est; eleemosyna et fides <lb/>
+            mundat peccata; qui autem miseretur, misericor­ <lb/>
+            diam conseqnitur. Qui honorat Deum miseretur <lb/>
+            pauperi. In Evangelio. Omnipotenti retribue, ct ab <lb/>
+            eo qui multum vult accipere noli te avertere. Item <lb/>
+            ibi. Te autem faciente eleemosynam, nesciat sini­ <lb/>
+            stra tua quid faciat dextera tua, ut sit eleemosyna <lb/>
+            tua in abscondito; et Pater tuus, qui videt in ab­ <lb/>
+            scondito, reddet tibi. Item illic. Verumtamen date <lb/>
+            eleemosynam, et ecce omnia munda sunt vobis. <lb/>
+            Item ibi. Intendens autem Jesus, videns eos qui mit­ <lb/>
+            tebant munera sua in gazophylacio divites, vidit <lb/>
+            autem et quamdam viduam pauperem mittentem <lb/>
+            æramina duo, dixit : Vere dico vobis quia vidua <lb/>
+            hæc pauper plus omnibus misit, omnes enim hi ex
+            <milestone unit="PLSection" n="B"/><lb/>
+            abundantia miserunt in dona Dei; haec autem ex eo <lb/>
+            quod In deest illi, omnem victum quem habuit, misit. <lb/>
+            In Proverbiis. Sicut probatur argentum in camino, <lb/>
+            et aurum, ita electa corda apud Dominum. Item ibi. <lb/>
+            Vas figuli probat fornax, et homines justos tentatio <lb/>
+            et tribulationes.</p>
+          <ab>
+            <title type="sub">CAP. XI. — De correptione et de superbia.</title>
+          </ab>
+          <p>i. In Proverbiis. Argue sapientem, et amabit te; <lb/>
+            insipientem et adjiciet odisse te. Item. Da sapienti <lb/>
+            occasionem, et sapientior erit; notum fac justo, et <lb/>
+            adjiciet te. Qui diligit disciplinam diligit sensum, <lb/>
+            nam qui odit arguentem se stultus est. Item. Non <lb/>
+            diligit indisciplinatus arguentem se, cum sapientibus <lb/>
+            autem non colloquitur. Item. Qui excepit discipli­ <lb/>
+            nam in bonis erit, nam qui custodit increpationes <lb/>
+            sapiens fiet. Item illic. Pestifero castigato, insipleus <lb/>
+            astutior fiet; si autem arguas virum prudentem, <lb/>
+            intellexit sensum; si flagellaveris stultum in medio
+            <milestone unit="PLSection" n="c"/><lb/>
+            concilio, contumeliam faciendo, non aufers stulti­ <lb/>
+            liam ej us. In Ecclesiaste. Qui odit correptionem ve­ <lb/>
+            stigium est peccaloris; el qui timent Dominum, con­ <lb/>
+            vertent ad cor suum. In Proverbiis. Sicut canis con­ <lb/>
+            vertitur ad vomitum suum, et odibilis efficitur, sic <lb/>
+            stultus in malitia sua conversus in peccatis suis. <lb/>
+            284 In Ecclesiaste. Initium superbiae homines apo­ <lb/>
+            stareadeo (sic) quoniam initium peccati omnis su­ <lb/>
+            perbia. Item illic. In duobus timuit cor meum, et in <lb/>
+            tertio iracundia mibi advenit; vir bellator deficiens <lb/>
+            prae inopia, et vir sensatus contemptus, et qui trans- <lb/>
+            greditur justitiam in peccato, Deus parat eum ad <lb/>
+            romphæam. In Psalmis. Non habitabit in medio do­ <lb/>
+            mus meae qui facit superbiam. In Apostolo. Humili­ <lb/>
+            bus Deus dat gratiam, superbis autem resistit. In <lb/>
+            Proverbiis. Qui custodit os suum, el linguam, con­ <lb/>
+            servat de angustiis animam suam, nam qui proter­ <lb/>
+            vus est labiis terrebit semetipsum. Item illic. Domos <lb/>
+            superborum destruet Dominus; immundus apud <lb/>
+            Dominum omnis qui exaltai cor suum. Item illic.
+            <milestone unit="PLSection" n="D"/><lb/>
+            Filius superbus malos oculos babet, palpebris suis <lb/>
+            extoiliiur temerarius, et superbus pestilentia voca­ <lb/>
+            tur. Item illic. Noli superbire ante conspectum regis, <lb/>
+            neque in locis potentium subsistens. Melius est tibi <lb/>
+            dictas (sic) antequam humiliare in conspectu poten­ <lb/>
+            tis. In Ecclesiaste. Odibilis coram Deo, et hominibus <lb/>
+            superbia. Item ibi. Et quid superbis, terra et cinis? <lb/>
+            Item illic. Qui tetigerit picem inquinabitur ab ea, <lb/>
+            qui communicat superbo induit superbiam. Item <lb/>
+            illic. Qui superbi sunt contumelia conterentur, et <lb/>
+            humiliabuntur, et cadent excelsi gladio. Item iUic. <lb/>
+            Cessavit superbia, et divitiae superborum, quia quod <lb/>
+            altum est in hominibus, abominatio est apud Deum.</p>
+          <ab>
+            <title type="sub">CAP. XII. — De mansuetudine, de patientia et de humilitate.</title>
+          </ab>
+          <p>i. In Proverbiis. Mansuetus vir cordis medicus est <lb/>
+            (sic) in ea ossibus cor intelligens. Item illic. Melior <lb/>
+            cst mansuetus cum humilitate quam qui dividit præ- <pb n="1207"/>
+            
+            <milestone unit="PLSection" n="A"/><lb/>
+            dam cum contumeliosis. In Ecclesiaste. Esto man- ,suetus <lb/>
+            suetus ad audiendum verbum, ut intelligas. cl cum <lb/>
+            sapienlia Influere responsum verum. Item illic. Fili, <lb/>
+            in mansuetudine opera tua perfice, et ab homine di­ <lb/>
+            ligeris. Item. In corde viri boni invenietur patientia; <lb/>
+            nam in corde insipientium non agnoscimur. In Pro­ <lb/>
+            verbiis. Metior vir patiens quam forns, nam qui reli­ <lb/>
+            net iram melior est quam qui civitatem capit. Item <lb/>
+            illic. Qui parcit verbum proferre durum prudens est; <lb/>
+            patiens autem vir copiosus in sapientia; pusillanimis <lb/>
+            autem vehementer insipiens. Item. Omnis opera hu­ <lb/>
+            milis manifesta apud Deum, nam impii in die malo­ <lb/>
+            rum peribunt. Item illic. Responsum humile avertit <lb/>
+            iram. Et iterum in Isaia. Ad quem respiciam, dicit <lb/>
+            Dominus, nisi super humilem, et quietum, et tre­ <lb/>
+            mentem verha mea? In Evangelio. Omnis qui se <lb/>
+            exaltat humiliabitur, et qui se humiliat exaltabitur. <lb/>
+            In Epistola Jacobi. Humiliate vos ante conspectum <lb/>
+            Domini, et exaltabit vos.</p>
+          <p>
+            <milestone unit="PLSection" n="B"/></p>
+          <ab>
+            <title type="sub">CAP. XIII.— De sapientia.</title>
+          </ab>
+          <p>1. In Proverbiis. Gloriam. sapienles possidebunt, <lb/>
+            et insipientes dividunt contumeliam. Item illic. Or­ <lb/>
+            namentum adolescentibus sapientia, gloria autem <lb/>
+            seniorum cani. Item illic. Cor sapientium possidebit <lb/>
+            'sensum. Item ibi. Melior sapiens quam fortis, et vir <lb/>
+            prudentiam habens quam ager magnus. Item ibi. <lb/>
+            Felix sapiens qui in sapientia sua veritatem et justi­ <lb/>
+            tiarn meditabitur; in sensu suo cogitavit circuminspe­ <lb/>
+            ctionem Dei. Item illic. Homo sapiens tacebit usque <lb/>
+            in tempus; lascivus autem et imprudens non serva­ <lb/>
+            bunt tempus. Item illic. Sapiens in verbis se ipsum <lb/>
+            affabilem facit, Item illic. Homo pius in sapientia <lb/>
+            manet, sicut sol; nam 295 stultus sicut luna im­ <lb/>
+            mutabitur. Item illic. Cor sapientium in domo lu­ <lb/>
+            clus, et cor insipientium in domo luxuriæ. Item illic. <lb/>
+            Vir peritu, multos erudivit, et animæ suæ suavisest. <lb/>
+            In Job. Quoniam sapieniia est timere Dominum, <lb/>
+            abstinere autem se a mala scientia.</p>
+          <p>
+            <milestone unit="PLSection" n="C"/></p>
+          <ab>
+            <title type="sub">CAP. XIV. -De conversatione juvenum.</title>
+          </ab>
+          <p>i. In Ecclesiaste. Fili, a juventute tua excipe doc­ <lb/>
+            trinam, et usque ad annos invenies sapientiam. Item <lb/>
+            illic. Fili, in juventute tua tenta animam tuam, et si <lb/>
+            fuerit nequam, non des ei potestatem. Non enim <lb/>
+            omni animæ omne genus placet. Item illic. Adoles­ <lb/>
+            cens, luquere in tua causa , ut interrogatus habeat <lb/>
+            caput (sic) responsum tuum. In multis esto inscius <lb/>
+            .simul, et quærens, in medio magnatorum ne præsu­ <lb/>
+            mas verbum, et ubi sunt senes, ne multum loquaris; <lb/>
+            ante grandinem praecedit coruscatio, et ante hominem <lb/>
+            verecundum praecedit gratia.</p>
+          <ab>
+            <title type="sub">CAP. XV. — Non jurandum, et non dicendum falsum, et non mentiendum.</title>
+          </ab>
+          <p>1. * In Levitico. Jurationi non suescas os tuum; <lb/>
+            multi enim casus in illa, et nominibus non admiscea­ <lb/>
+            fis, quoniam eris imminuis ab eis; sicuti enim servus <lb/>
+            assidue a livore minuitur, sic omnis jurans et nomi­ <lb/>
+            nans in toto peccato non purgabitur. Item. Vir mul-
+            <milestone unit="PLSection" n="D"/><lb/>
+            tum jurans implebitur iniquitate, et non discedit a <lb/>
+            domo illius plaga, et si vane juraverit, non justitica­ <lb/>
+            bitur. ln Evangelio, Audistis quia dictum est anti­ <lb/>
+            quis, non perjurabis, reddes autem Domino juramenta <lb/>
+            tua? Ego autem dico vobis non jurare omnino, neque <lb/>
+            per coelum, quia thronus Dei eat, neque per terram, <lb/>
+            quia scabellum pedum ejus est, neque per Jerosoly­ <lb/>
+            mam, quia civitas est magni Regis. Neque per caput <lb/>
+            tuum juraveris, quia non potes unum capillum album <lb/>
+            facere, aut nigrum. Sit autem sermo vester: Est, est; <lb/>
+            Non, non. Quod autem abundantius est, a malo est. <lb/>
+            In Proverbiis. Arcessit falsa testis injustus, et im­ <lb/>
+            mittet judicia in fratres. Item illic. Testis autem ve­ <lb/>
+            lox linguam habebit iniquam Item illic. Er piet de <lb/>
+            malis animam testis lideli s; incendit autem falsa do- <note type="footnote"> * Non in Levitico, sed in Ecclesiastico. Cæterum <lb/>
+            in hac appendice non semel vapulant syntaxis et <lb/>
+            Axpipst*, EDIT. </note> 
+            <milestone unit="PLSection" n="A"/><lb/>
+            losus. Item illic. Vir mutabilis linguam incidit In ma­ <lb/>
+            lis, testis falsus non erit impunitus, qui, cum accu­ <lb/>
+            sat injuste. non evadit. Item illic. Testis mendax <lb/>
+            peribit, vir autem obediens cante loquitur. Item illic. <lb/>
+            Clava, et gladius, et sagitta, perniciosa sunt, sic et <lb/>
+            vir .tultus, qui adversus amicum suum falsum testimo­ <lb/>
+            nium dicit. Item illic. Lingna me dax odit veritatem, <lb/>
+            os autem incontinens facit seditiones. In Sapientia. <lb/>
+            Os autem quod mentitur occidit animam. Non velle <lb/>
+            mentiri omne mendacium, assiduitas enim illius non <lb/>
+            est bona. Item illic. Melior est pauper ambulans in <lb/>
+            veritate, quam dives mendax. In Jeremia. Omne <lb/>
+            mendacium non est de veritate. In Paalmo. Perdes <lb/>
+            eos qui loquuntur mendacium.</p>
+          <ab>
+            <title type="sub">CAP. XVI. — Non fornicandum.</title>
+          </ab>
+          <p>1. In Proverbiis. Mulier autem virorum pretiosas <lb/>
+            animas capit. Alligabit quis in sinum ignem, vesti­ <lb/>
+            menta autem non comburet? Aut ambulabit super <lb/>
+            carbones ignis, pedes vero non comburet? Item illic.
+            <milestone unit="PLSection" n="B"/><lb/>
+            Adulter autem propter inopiam sensum interitum <lb/>
+            (sic) animæ suæ acquirit dolores et lurpitudines; <lb/>
+            super opprohrinm autem ejus non delebitur. Abo­ <lb/>
+            minatio est Domino cogitatio iniqua. sanctorum au­ <lb/>
+            leni sermones pndici sunt. Item illic. Viri amantis <lb/>
+            sapientiam lætabitur pater; qui autem pascit mere­ <lb/>
+            trices, perdet divitias. In Ecclesiaste. Non des forni­ <lb/>
+            cari animam tuam 296 in illo, ne perdas te. et hæ­ <lb/>
+            reditatem tuam. Item. V'num et mulieres apostatare <lb/>
+            faciunt sapientes, et arguent sensatos; et qui se <lb/>
+            jungit fornicariis, erit nequam putredo, et vermes <lb/>
+            hæreditabunt illum. In Evangelio. Omnis qui viderit <lb/>
+            mulierem ad concipiscendum eam, jam moechatus <lb/>
+            est in corde suo. Item ibi. Omnis qui dimiserit uxo­ <lb/>
+            rem suam, et aliam ducit, mœchatur; et qui dimis­ <lb/>
+            sam a viro duxerit mœchatur. In Exodo. Et facies <lb/>
+            illis braccas lineas. ut tegant verecundiam corporis <lb/>
+            a lumbis, usque ad genicula.</p>
+          <ab>
+            <title type="sub">CAP. XVII.- Item de continentia oris.</title>
+          </ab>
+          <p>
+            <milestone unit="PLSection" n="c"/>1. In Proverbiis. Odium suscitat contentio, omnes <lb/>
+            autem non contendentes protegit amicitia. Paulus ad <lb/>
+            Timotheum. Profanas autem vocum novitates devita, <lb/>
+            multum enim proficiunt ad impietatem, et sermo <lb/>
+            eorum ut cancer serpit. In Psalmo CIXXIV. Vir lin­ <lb/>
+            guosus non dirigetur super terram. In Proverbiis. Ex <lb/>
+            multiloquio non effugies peccatum; parcens autem <lb/>
+            labiis sapiens erit. Item illic. Qui multis utitur verbis <lb/>
+            lædit animam suam Item illic. Multum (Forte, mu­ <lb/>
+            tum) te faciens, videris sapiens esse. ltem illic. Qui <lb/>
+            respondit verbum prius quam audiat, stuhitia esi illi <lb/>
+            et opprobrium. Item illic. Mors et vita in manibus <lb/>
+            linguæ esi, qui aulem continens est edet fructus ejus. <lb/>
+            Irem illic. Qui custodit os suum, et linguam, conser­ <lb/>
+            vat de angustiis animam suam. Item illic. Si videris <lb/>
+            virum velocem in verbis, scito quia spem habet magis <lb/>
+            insipiens quam ille. Item illic. Noli tacitus esse in <lb/>
+            lingua tua. et inutilis, et remissus in operibus tuis. <lb/>
+            Item illic. Qui susurro est iii omnibus, et non neces-
+            <milestone unit="PLSection" n="D"/><lb/>
+            sano, odietur. Item illic. Tacitus et sensatus honore, <lb/>
+            honorabitur. Item illic. In medio sensatorum serva <lb/>
+            verbum temporis. In medio autem tractantium assi­ <lb/>
+            duus esto. Item illic. Indisciplinose non suescas os <lb/>
+            tuum, est enim illic verbum peccati.</p>
+          <ab>
+            <title type="sub">CAP. XVIII. — Fugiendam ebrietatem.</title>
+          </ab>
+          <p>i. In Proverbiis. Prolerva res est vinum, et inju­ <lb/>
+            rtosa ebrietas; omnis autem stultus his commiscetur. <lb/>
+            Item illic. Noli esse vinolentus, neque extendas te ad <lb/>
+            emendandam carnem; omnis enim ebriosus et forni­ <lb/>
+            carius mendicabit, et vestietur conscissos pannos, <lb/>
+            et omnis somniculosus. Item illic. Si enim inficias <lb/>
+            et calices dederitis oculos vestros (sic), novissimo <lb/>
+            ambulabitis nudiores pilo. Item illic. Potentes, qui <lb/>
+            iracundi sunt, vinum non bibant, ne cum biberint, <lb/>
+            obliviscantur sapientiam, et recte non possint judi­ <lb/>
+            care infirmibus (Forte, infimis). Item illic. Spinæ <lb/>
+            nascuntur in manibus ebriosi. In Ecclesiaste. Vinum <lb/>
+            et mulieres apostatare faciunt sapientes, et arguunt <lb/>
+             <pb n="1209"/>
+            
+            <milestone unit="PLSection" n="A"/><lb/>
+            ;ensatos, et qui se jungit fornicariis erit neqnam <lb/>
+            putredo, et vermes hæreditabunt illum. Item illic <lb/>
+            Mulier ebriata, et erronea, magna ira, et contumelia, <lb/>
+            et turpitudo illius non tegitur. Item illic. Homini dis­ <lb/>
+            ciplinato vinum exiguum, et in dormiendo non labo­ <lb/>
+            rabit ab illo, et non sentiet dolorem vigiliæ. Item illic. <lb/>
+            Diligentes vinnm no'ite provocare, multos enim ex­ <lb/>
+            terminavit vinum. Sicut ignis probat ferrum durum, <lb/>
+            sic vinum corda superborum arguet; æqua vita homi­ <lb/>
+            nibus vinum, non ebrietate. Vinum in jucunditate <lb/>
+            creatum est, non in ebrielate; ab initio exsultatio <lb/>
+            animæ et cordis vinum modice potatum. Vinum mul­ <lb/>
+            tum potatum irritationem, et iram, et rninas multas <lb/>
+            facil ebriositatis animos tas. 297 In Ecclesiasticis. <lb/>
+            Optimum est ire in domum luctus quam in domum <lb/>
+            potationis. Paulus ad Ephesios. Nolite inebriari v ino, <lb/>
+            in quo est luxuria, sed implemini Spiritu sancto. <lb/>
+            Item ad Corinthios. Non ebrios!, non maledici re­ <lb/>
+            gnum Dei possidebunt. In Proverbiis. Nolite inten-
+            <milestone unit="PLSection" n="B"/><lb/>
+            dere fallaciæ mulieris meretricis, quae ad tempus <lb/>
+            impinguat tuas fauces; novissime tamen amarius felle <lb/>
+            invenes, et acutior erit magis qnam gladius ex utra­ <lb/>
+            que parte arnas. Item illic. Noli nimius esse alienæ, <lb/>
+            neque conjungaris amplexibus ejus (quae) non est <lb/>
+            tua. Item illic. Fili, non te vincai formæ desiderio, <lb/>
+            neque a piaris (sic) oculis tuis, neque rapiaris palpe­ <lb/>
+            bris tuis; pretium meretricis quantum est unius pa­ <lb/>
+            nis? Item illic. Sicut tinea vestimentum, et vermis <lb/>
+            lignum. ita virum perdet mulier maligna. Item illic. <lb/>
+            Ne respicias mulierem multivolam ; ne forte incidas <lb/>
+            in laqueos ejus. Cum saliatrice ne assiduus sis, nec <lb/>
+            audias il am, ne forte pereas in efficatione illius, Item <lb/>
+            illic. Non des mulieri potestate animæ tuæ, ne gradia­ <lb/>
+            tur in virtute tua, et confundaris. Non des fornica­ <lb/>
+            riis animam tuam in nullo, ne perdas te. et hæredi­ <lb/>
+            tatem tuam. Ne vageris in vitiis civitatis, nec vage­ <lb/>
+            ris in plateis ejus, averte faciem tuam a muliere <lb/>
+            composita, et non respicias speciem alienam. Omnis
+            <milestone unit="PLSection" n="C"/><lb/>
+            mulier quaestuaria quasi stercus in via conculcatur. <lb/>
+            Speciem alienæ mulieris multi mirati reprobati sunt. <lb/>
+            Colloquium enim ejus quasi ignis exardet. Cum alie­ <lb/>
+            na muliere non accumbas supra cubilum, et non a!­ <lb/>
+            terceris cum illa in vino, ne forte declinet cor tuum <lb/>
+            ad illam, et sanguine labaris in perditione.</p>
+          <ab>
+            <title type="sub">CAP. XIX. — Parvulos emendandos inscientes.</title>
+          </ab>
+          <p>i. In Proverbiis. Qui parcit baculo odit filium <lb/>
+            suum; qui diligit diligenter erudil. Item illic. Non <lb/>
+            latet turpatum in filio non erudito. Item illic. Noli <lb/>
+            cessare parvulnm emendare, quoniam, si percusse­ <lb/>
+            ris eum virga, non morietur; tu quidem percuties <lb/>
+            eum virga, animam autem ejus liberabis a morte. <lb/>
+            Item illic. Erudi filium luum, et exhilarabit te, et <lb/>
+            dabit decorem animae tuae. Item illic. Juvenis, qui <lb/>
+            cum sancto est, directa est via ejus, auris audit; <lb/>
+            oculus videt, et opera Domini utraque. In Ecclesiaste. <lb/>
+            Filii tibi sunt? erudi illos a puerilia illorum; (iliae
+            <milestone unit="PLSection" n="D"/><lb/>
+            tibi sunt? custodi corpus illarum, et non hilarem <lb/>
+            faciem tuam ostendas ad illas. Item illic. Qui diligit <lb/>
+            lilium suum assiduat illi flagella, ut lætetur in no­ <lb/>
+            vissimo suo, et non palpet ostia proximorum; qui <lb/>
+            do et filium suum laudabitur in illo, et in medio <lb/>
+            amicorum honorabitur in illo. Item illic. Qui docet <lb/>
+            filium suum in zelo, mittit inimicum; mortuus est <lb/>
+            pater, quasi non mortuus; similem enim relinquet <lb/>
+            post se. Item illic. Equus indomitus vadit dumis; <lb/>
+            filius remissus vadit praeceps. Curva cervicem ejus <lb/>
+            in juventute, et tunde latera ejus dum inlans est, ne <lb/>
+            forte crescat, et non duret, et non obaudiat te, et <lb/>
+            sit dolor animae tuæ. In Ecclesiaste. Cum sancto as­ <lb/>
+            siduus esto, quemcunque cognoveris conservantem <lb/>
+            timorem Dei, secundum virtutem tuam cave tibi a <lb/>
+            proximo tuo, et cum sapientibus et sensatis tracta.</p>
+          <ab>
+            <title type="sub">CAP. XX. — Justas mensuras et pondera.</title>
+          </ab>
+          <p>i. In Deuteronomio. Non erit in domo tua pondus <lb/>
+            prande et pusillum; non erit in domo tua mensura
+            <milestone unit="PLSection" n="A"/><lb/>
+            grandis et pusilla; pondus vero, 298 et mensura <lb/>
+            justum sit libi, ut multorum diernm sis super terram, <lb/>
+            quam Dominus Deus tuus dabit tibi in sortem, quia <lb/>
+            abominandus est Domino omnis qui faciit injusla. In <lb/>
+            Proverbiis. Statera iniqua abominatio est coram Do­ <lb/>
+            mino; pondus autem æquum acceptum est ei. Item <lb/>
+            illic. Abominatio est Dominoduplex pondus etstatera <lb/>
+            dolosa non bonum ante eum.</p>
+          <ab>
+            <title type="sub">CAP. XXI. — De volo.</title>
+          </ab>
+          <p>i Item illic. Statim ut voveris votum Domino, non <lb/>
+            tardabis reddere illud; tu itaque quod voveris, red­ <lb/>
+            de; melius est non vovere quam vovisse, et non <lb/>
+            solvere. In Ecclesiaste. Stultus in risu exaltat vocem <lb/>
+            suam; vir autem sapiens vix tacite ridebit. Item <lb/>
+            illic. Melius est indignatio quam risus, quia in vultu <lb/>
+            oblectabitur; cor sapientium in domo luctus, et cor <lb/>
+            insipientium in domo luxuriæ. In Deuteronomio. <lb/>
+            Non erunt res viriles super mulierem, nec induetur <lb/>
+            vir vestem muliebrem, quia abominatio est Domino
+            <milestone unit="PLSection" n="B"/><lb/>
+            qui fecerit hæc. Item illic. Non morientur parenles <lb/>
+            pro filiis, et filii non morientur pro parentibus; sed <lb/>
+            unusnuisque in suo peccato morietur. Paulus ad <lb/>
+            Ephesios. Et vos, parentes , nolite provocare ad ira­ <lb/>
+            cundiam filios vestros, sed nutrite illos in disciplina <lb/>
+            et correptione Domini. In Osee propheta. Seminate <lb/>
+            vobis justitiam, et vindemiate fructum vitae; exqui­ <lb/>
+            rite vos lumen justitiæ, sustinete Domino, donec <lb/>
+            veniatvobis , fructus justitiæ ejus vindemiate. <lb/>
+            In proverbiis. Quis gloriatur mundum se habere cor, <lb/>
+            aut quis audebit dicere purum se esse a peccatis? Item <lb/>
+            illic. Fili, in mortuo tuo produc lacrymas, et quasi <lb/>
+            dura passus incipies plorare, et secundum judicium <lb/>
+            contege corpus ejns, et non despicias sepulturam <lb/>
+            illius; propter delaturam amare fles luctum illius <lb/>
+            unius diei, et consolare propter tristitiam.</p>
+          <ab>
+            <title type="sub">CAP. XXII. — Non fraudandum, et (de) non gloriando.</title>
+          </ab>
+          <p>i. InExodo. Non facietis furtum. et non mentie-
+            <milestone unit="PLSection" n="C"/><lb/>
+            mini. In Proverbiis. Qui petitur cum fure odit ani­ <lb/>
+            mam suam. Paulus ad Corinthios. Non fures, non <lb/>
+            avari, non ebriosi. non maledici, non rapaces regnum <lb/>
+            Dei possidebunt. In Proverbiis. Esto confidens in <lb/>
+            toto corde tuo in Domino, in tua autem sapientia <lb/>
+            noli extolli. Item illic. Noli esse sapiens apud te; <lb/>
+            time Dominum, et declina a malo, tunc sanitas erit <lb/>
+            corpori tuo, et diligentia ossibus tuis. Item ibi. Vidi <lb/>
+            virum æstimantem se sibi sapientem esse; spem <lb/>
+            autem habuit magis insipiens quam ille. In Isaia. <lb/>
+            Væ his qui sapientes sunt apud se; et in conspectu <lb/>
+            suo prudentes. Paulus ad Romanos. Dicentes enim <lb/>
+            se esse sapientes, stulii fiunt. Ad Corinthios. Ubi sa­ <lb/>
+            piens, ubi scriba, ubi conquisitor bujus saeculi? <lb/>
+            Nonne stultam fecit Deus sapientiam hujus mundi? <lb/>
+            Item illic. Nemo se fallat. Si quis videtur sapiens <lb/>
+            esse in hoc mundo, stultus fiat, ut sit sapiens. Nam <lb/>
+            sapientia hujus mundi stultitia est apud Deum. Scri­ <lb/>
+            ptum est enim : Comprehendam sapientes in astutia
+            <milestone unit="PLSection" n="D"/><lb/>
+            eorum; et iterum : Novit Dominus cogitationes <lb/>
+            sapientium, quia vanæ sunt. In Ecclesiaste. Melius <lb/>
+            est tibi dici, ascende ad me, quam humiliare in <lb/>
+            conspectu potentis. In Exodo. Non enim adversus <lb/>
+            nos murmuratio vestra, sed adversus Deum. Paulus <lb/>
+            ad Thessalonicenses. Qui spernit hominem, non ho­ <lb/>
+            minem spernit, sed Deum. Ad Romanos. Sicut enim <lb/>
+            per inobedientiam unius hominis peccatores 299 <lb/>
+            constituti sunt multi, ita et per unius obedientiam <lb/>
+            justi constituuntur multi.</p>
+          <ab>
+            <title type="sub">CAP. XXIII. — Altiora non scrutari, neque audire hæreticos.</title>
+          </ab>
+          <p>1. In Proverbiis. Qui fidit in falso, hic ventos <lb/>
+            pascit; ipse autem sequitur aves volanles; derelin­ <lb/>
+            quet enim viam vineaesuae, et orbitas culturae agri <lb/>
+            sui errabit; perambulat autem per arida, et deserta, <lb/>
+            et terram constitulam in siccitatibus; congregat autem <lb/>
+            manus suae sterilitatem. Item illic. Secede ergo ab <lb/>
+            aqua aliena, et a fonte alieno noli bibere, ut multo vi­ <pb n="1211"/>
+            
+            <milestone unit="PLSection" n="A"/><lb/>
+            vas tempore, et adjicientur tibi anni vitae. Item illic. Qui <lb/>
+            sectatur vana, eget sensibus. Noli adjicere ad mandata <lb/>
+            ejus, ne arguaris, et mendax sis. In Ecclesiaste. Altiora <lb/>
+            te ne quaesieris, et fortiora ne perscrutaveris, sed <lb/>
+            quae præcipit tibi Dominus, illa cogiia semper; et in <lb/>
+            pluribus ejus non erit cur ; multos enim reducit <lb/>
+            suspicio eorum, et in vanitate detineuit sensum illo­ <lb/>
+            rum. In libro Sapientiæ. Difficile æstimamus quæ in <lb/>
+            terra sunt, et quae in prospecto sunt invenimus cum la­ <lb/>
+            bore; quæ autem in calis sunt quis investigavit ? Sen­ <lb/>
+            sum autem tuum quis scit, nisi tu dederis sententiam?</p>
+          <ab>
+            <title type="sub">CAP. XXIV. -- De jejunio.</title>
+          </ab>
+          <p>1. In Ecclesiasle. Qui baptizatur a mortuo, quid pro­ <lb/>
+            fecit lavatio eius? Sic et homo qui jejunat in pecca­ <lb/>
+            lis suis, et iterum eadem facit. Quid profecit humi­ <lb/>
+            liando se? Orationem ejus quis exaudiet' Sacrificium <lb/>
+            salutare attendere mandatis, et discedere ab omni <lb/>
+            iniquitate. In Evangelio. Cum autem jejunalis, nolite <lb/>
+            fieri, sicut hypocritæ, tristes. Exterminant enim
+            <milestone unit="PLSection" n="i;"/><lb/>
+            facies suas, ut pareant hominibus jejunantes. Amen <lb/>
+            dico vobis, perceperunt mercedem suam ; tu autem <lb/>
+            cum jejunas, unge caput tuum, et faciem tuam lava, <lb/>
+            ne videaris hominibus jejunans, sed Patri tuo, qui <lb/>
+            videt in abscondito, et Pater tuus, qui videt in <lb/>
+            abscondito, reddet tibi.</p>
+          <ab>
+            <title type="sub">CAP. XXV. — Homini exemplum formicæ vel apis sine pigritia laboris.</title>
+          </ab>
+          <p>1. In Prouerbiis. Vade ad formicam, o piger, et <lb/>
+            æmulare videns vias ejus, et esto illa sapientior. <lb/>
+            Illa enim cum agrum non possideat, neque compel­ <lb/>
+            lentem se habeat, neque sub domino sit, quomodo <lb/>
+            parat aestate alimenla? Copiosam autem facit in <lb/>
+            messe repositionem. Vel vade ad apem, et disce <lb/>
+            quam laboriosa est, operationem autem quam san- <lb/>
+            Clam mercatur. Cujus labores reges et mediocres ad <lb/>
+            sanitatem proferunt; gratiosa est autem in omnibus, <lb/>
+            et gloriosa; et cum sit viribus infirma, sapientiam <lb/>
+            prædicans producta est. Usque quo piger jacebis
+            <milestone unit="PLSection" n="c"/><lb/>
+            quando autem surpes ? Modicum quidem dormis, <lb/>
+            modicum autem sedes. Modicum vere dormitas, mo­ <lb/>
+            dicum autem manibus amplecteris pectus. Deinde <lb/>
+            adveniet tibi, sicut malus viator, paupertas inopia <lb/>
+            autem, sicut bonus cursor, fugiet te. Item illic. In. <lb/>
+            crepatus piger non erubescit. Similiter autem qui <lb/>
+            mutant triticum in messe. Item ibi. Desideria pigrum <lb/>
+            occidunt, non enim destinat manus facere aliquid. <lb/>
+            Item. Occasiones quærit piger, et dicit : Leo in <lb/>
+            plateis est, in plateis autem homicidæ. Item ibi. <lb/>
+            Sicut ostium in cardine vertilur, ita pigcr in lecto <lb/>
+            suo. Item ibi. Sapientior sibi piger videtur quam qui <lb/>
+            in multitudinem feret nunlium.</p>
+          <ab>
+            <title type="sub">CAP. XXVI. — De stulto.</title>
+          </ab>
+          <p>i. Vir stultus mala sibi fabricat, in inis autem <lb/>
+            labiis thesaurizat ignem. Non conveniunt stulto labia <lb/>
+            fidelia, reque justo labia mendacia. Item illic. 300 <lb/>
+            Ut quid abundant divitiae stulto, possidere autem <lb/>
+            sapientia insensatis non poterit? Item. Ira est patri
+            <milestone unit="PLSection" n="D"/><lb/>
+            filius insipiens, et dolor matris ejus. Item ibi. Non <lb/>
+            desiderat sapientia, cui deest sensus; magis enim <lb/>
+            dicitur imprudentia. Item ibi. Os hominis stulti con­ <lb/>
+            tritio est ei; labia autem ejus laqueus animae ejus. <lb/>
+            Item illic. Gravis est lapis, et vix portabilis arena, <lb/>
+            ira autem stulto gravius est ambobus. Item illic. <lb/>
+            Sicut canis qui convertitur ad vomitum suum, et <lb/>
+            odibilis efficitur, sic stultus malitia sua reversus in <lb/>
+            peccatis suis. Item illic. Qui minoratur cute, cogitat <lb/>
+            inania, et vir imprudens et errans cogitat stulta. <lb/>
+            Cor fatui quasi vas confractum, et omnium scientia <lb/>
+            non tenebit domos. Fatuo clausa sapentia, et scien­ <lb/>
+            tia sensati enarrabilia verba. Compedes. Iedes stul­ <lb/>
+            torum doctrina, et quasi vincula manus dextrae; <lb/>
+            fatuus in risu exaltat vocem suam, et vir sapiens vix <lb/>
+            tacite ridebit. Item illic. In ore fatuorum cor illorum, <lb/>
+            et in corde sapientium os illorum. Qui ducat fatuum <lb/>
+            sapientis, quasi inglutinat testa. Item illic. Arenam, <lb/>
+            et salem, et massam ferri facilius est portare quam
+            <milestone unit="PLSection" n="A"/><lb/>
+            hominem imprudentem et fatuum impium. Item illic. <lb/>
+            Cum fatuis nec consilium habeas: non enim poterunt <lb/>
+            continere. Item in Isaia propheta. Stultus stulta lo­ <lb/>
+            quitur, et cor ejus vana intelligit.</p>
+          <ab>
+            <title type="sub">CAP. XXVII. — Iracundiam deponendam.</title>
+          </ab>
+          <p>1. In Proverbiis. Anima benedicta omnis simplex; <lb/>
+            vir autem animosus, vel iracundus non honeste agit. <lb/>
+            Item illic. Stultus ipse eadem die pronuntiat iram <lb/>
+            suam, occultat autem contumeliam suam astutus. <lb/>
+            Item illic. Sunt qui dicendo vulnerant, ut gladii. <lb/>
+            iracundus agit sine consilio; vir autem prudens <lb/>
+            multa sustinet. Ira perdet etiam sapienles, respon­ <lb/>
+            sum autem humile avertit iram. Item. Vir iracundus <lb/>
+            parat lites; patiens autem etiam futuras mitigat. <lb/>
+            Item. Noli esse amicus viro animoso. Cum amico au­ <lb/>
+            tem iracundo noli commorari, ne forte discas vias <lb/>
+            ejus, et sumas laqueum animae tuae; totam iram <lb/>
+            suam profert stultus, sapiens autem dispensat eam <lb/>
+            per partes. Item. Vir animosus fodit contentionem,
+            <milestone unit="PLSection" n="i;"/><lb/>
+            vir autem iracundus exsorbuit peccata. In Ecclesiaste, <lb/>
+            Homo iracundus exhorruit litem, et vir peccator <lb/>
+            turbavit amicos. In medio pacem habentium mittit <lb/>
+            delaturam. Item illic. Zelus, et iracundia minuit dies, <lb/>
+            et ante tempus senectam adducit cogitatus. Item illic. <lb/>
+            Noli festinare spiritu tuo irasci, quia ira in sinu <lb/>
+            stultorum requiescit. Paulus ad Ephesios. Nunc de­ <lb/>
+            ponite vos omnem iram, indignationem, malitiam, <lb/>
+            blasphemiam, multiloquium. In Evangelio. Omnis qui <lb/>
+            irascit fratri suo sine causa, reus erit judicio. Item. <lb/>
+            Quicunque autem dixerit fratri suo racba, reus erit <lb/>
+            concilio; quicunque vero dixerit fatue, reus erit ge­ <lb/>
+            hennæ ignis.</p>
+          <ab>
+            <title type="sub">CAP. XXVIII. — Hic misti.</title>
+          </ab>
+          <p>i. In Ecclesiaste. Esto mansuetus ad audiendum <lb/>
+            verbum, ut intelligas, et cum sapientia loquere re­ <lb/>
+            sponsum. In Proverbiis. Servus prudens obtinebit <lb/>
+            dominorum imprudentia , et inter fratres dividet <lb/>
+            partem. Item illic. Filio doloso nihil erit boni, servo
+            <milestone unit="PLSection" n="c"/><lb/>
+            autem sapienti prosper erit actus. In Ecclesiaste. Si <lb/>
+            est tibi servus fidelis, sit tibi quasi anima tua, et <lb/>
+            quasi fratrem, sic illum tracta, quia in sanguinem <lb/>
+            animæ tuæ comparasti 301 illum. leseris illum <lb/>
+            injuste, et extollens se discesserit, quem quaeris, et <lb/>
+            qua via quaeris illum? Item illic. In Proverbiis. Lu­ <lb/>
+            cerna est mandatum legis, sicut uva acerba dentibus <lb/>
+            nociva est, et fumus oculis, sic iniquitas eis qui <lb/>
+            utuntur eam. Item ibi. Homo autem se occidit per <lb/>
+            malitiam suam. Item illic. Per quae peccat quis, per <lb/>
+            haec et torquetur. Item illic. Dominus constituit ho­ <lb/>
+            minem, et reliquit illum in arbitrio suo; adjecit <lb/>
+            mandata, et praecepta, si volens mandata servare, <lb/>
+            et fidem placidam facere; apposuit aquam et ignem, <lb/>
+            ad quod vis, extende manum tuam; ante hominem <lb/>
+            vita et mors, bonum et malum, quod placuerit dabi­ <lb/>
+            tur illi.Item illic. Sicut tinea vestimentum,et vermis <lb/>
+            lignum. ita tristitia nocet cor. Item. Cor laetum bo­ <lb/>
+            nam voluntatem facit; viro autem tristi arescunt
+            <milestone unit="PLSection" n="D"/><lb/>
+            ossa. In Jeremia. Maledictus homo qui spem habet <lb/>
+            in homine, et confirmaverit carnem brachii sui, et a <lb/>
+            Domino recesserit cor ejus. Item illic. Qui conlidunt <lb/>
+            in homine maleJicti sunt, quoniam Deus nihil fecit <lb/>
+            illum. In Ecclesiaste. Non desis plorantibus in eorro­ <lb/>
+            gatione, et cum lugentibus ambula; non pigriteris <lb/>
+            visitare infirmum, extus (sic) enim in dilectione <lb/>
+            firmaberis. Paulus ad Romanos. Lividum facio cur­ <lb/>
+            pus meum, et servituti afficio, ne cum aliis praedica­ <lb/>
+            verim, ipse reprobus efficiar. In Proverbiis. Domos <lb/>
+            superborum destruet Dominus. Item illic. Qui allati <lb/>
+            facit domum suam quaerit ruinam. Item illic. Cum <lb/>
+            sapientia ædificabitur domus, et cum intellectu eri­ <lb/>
+            gitur ; cum sensu implentur horrea plena omnibus <lb/>
+            bonis et pretiosis. Item illic. Non enim omnem ho­ <lb/>
+            minem inducas in domum tuam ; multae enim insidiæ <lb/>
+            sunt dolosi. In Canticis. Cavete vobis a vulpibus <lb/>
+            pusillis, exterminantibus ,iDeM. Væ his qui pro­ <lb/>
+            phetant de corde suo, et omnino aon vident, sicut <pb n="1213"/>
+            
+            <milestone unit="PLSection" n="A"/><lb/>
+            vulpes in deserto. In Evangelio. Alii laboraverunt, <lb/>
+            et vos in labores eorum introistis. Item illic. Quicun­ <lb/>
+            que dimiserit uxorem suam, excepta fornicationis <lb/>
+            causa, et aliam duxerit, adulterat. Item illic. Si <lb/>
+            peccaverit frater tuus in te, corripe illum, et si pœni­ <lb/>
+            tentiam egerit, dimitte illi; et si septies in die pec­ <lb/>
+            caverit in te, et septies in die conversus fuerit ad <lb/>
+            te, dicens: Poenitet me, dimitte illi. Item illic. Qui <lb/>
+            seminat bonum semen est Filius hominis, ager au­ <lb/>
+            tem hic mundus; bonum vero semen hi sunt filii <lb/>
+            regni. Nam zizania filii sunt iniqui; inituicus, qui <lb/>
+            seminavit ea, diabolus est; messis autem consum­ <lb/>
+            matio saeculi est; messores autem angeli sunt. Sicut <lb/>
+            et. ergo colliguntur zizaniae, et igni comburuntur, sic <lb/>
+            erit in consummatione sæculi. In Salomone. Sex suut <lb/>
+            quae odit Domiuus, et septimum quod detestatur <lb/>
+            anima ejus : oculum sublimem, linguam mendacem, <lb/>
+            manus effundentes innoxium sanguinem, cor machi­ <lb/>
+            nans cogitationes pessimas, pedes veloces ad curren-
+            <milestone unit="PLSection" n="B"/><lb/>
+            dum in malum, proferentem mendacium, testem <lb/>
+            fallacem, et eum qui seminat inter fratres discordias.</p>
+          <ab>
+            <title type="sub">CAP. XXIX. — Testimonia Patrum.</title>
+          </ab>
+          <p>1. Quatuor sunt perturbationes homiuum animæ, <lb/>
+            id est, cupiditas, laetitia, metus, tristitia. Ipsum ani­ <lb/>
+            mum esse memoriam, et vim quæ memoria voca. <lb/>
+            tue. Item illic. Octo sunt principalia vitia, quæ hu­ <lb/>
+            manum infestant genus. Primum gastrimargia, quod <lb/>
+            est ventris ingluvies; 302 secundum fornicatio; <lb/>
+            tertium philargyria, id est, avaritia, sive amor pecu­ <lb/>
+            niae; quartum ira; quintum tristitia ; sextum acidia, <lb/>
+            id est, anxietas, seu tædium cordis; septimum ce. <lb/>
+            nodoxia, iti esi, jactantia, sive vana gloria; octavum <lb/>
+            superbia (In libro Collationum, scilicet, Cassiani).</p>
+          <ab>
+            <title type="sub">CAP. XXX. — Testimonia de Sententiis Evagrii ad Fratres.</title>
+          </ab>
+          <p>i. Quemadmodum enim flamma comburit silvam, <lb/>
+            sic visiones malas exstinguit esuries. Item illic.
+            <milestone unit="PLSection" n="C"/><lb/>
+            Somniculosus monachus incidit in malis, qui autem <lb/>
+            vigilat sicut passer erit. Item illic. Sicut ignis tabe­ <lb/>
+            facit ceram, ila vigilia bona cogitationes pessimas. <lb/>
+            Illic. Qui amat argentum non videbit scientiam, et <lb/>
+            qui congregat illud obscurabitur. Illic. Sicut aurum <lb/>
+            et argentum probat ignis, sic cor monachi tentatio. <lb/>
+            Item illic. Melior paupertas cum scientia quam divi­ <lb/>
+            tiae cum. ignorantia. Illic. Quemadmodum evolat <lb/>
+            corvus de suo nido, ita immunda anima de suo cor­ <lb/>
+            pore. Illic. Sicut Africus ventus in pelago, ita furor <lb/>
+            e corde viri. Item illic. Melior est saecularis in in­ <lb/>
+            firmitate serviens fratri super monachum non mi­ <lb/>
+            serentem proximo suo. Piger monachus murmurat <lb/>
+            multa, et somniculosus incusat dolorem capitis sui. <lb/>
+            Monachus bilinguis conturbat fratres, fidelis autem <lb/>
+            requiem adducit. Melior est sxcularis mausuetus, <lb/>
+            quam iracundus monachus, aut animosus. Mona­ <lb/>
+            chum mansuetum diligit Deus, turbulentum autem <lb/>
+            repellit a se. Charitatem praecedit humilitas, scien-
+            <milestone unit="PLSection" n="D"/><lb/>
+            tiam autem dilectio. Sicut enim lucifer in coelo, et <lb/>
+            sicut nil in paradiso, sie in anima miti mens pura. <lb/>
+            Investiganti convivia exstinguitur lumen, anima au­ <lb/>
+            tem ejus videbit tenebras. Statue in pondere panem <lb/>
+            tuum, et bibe in mensura aquam tuam, et spiritus <lb/>
+            fornicationis fugiet a te. Da senioribus vinum, et <lb/>
+            Infirmis infer escas, propter quod contriverunt car­ <lb/>
+            nes in juventute sua. Vidi iracundum senem, et <lb/>
+            elevatum in tempore suo, spem autem habuit magis <lb/>
+            juvenis quam ille. Qui diligit apem, manducat Cavum <lb/>
+            ejus, et congregans eam, replebitur melle.</p>
+          <ab>
+            <title type="sub">CAP. XXXI. — Testimonia de libro sancti Martini, non illius Turonici episcopi, sed iste pater fuit mona­ chorum.</title>
+          </ab>
+          <p>1. Quamvis invalidum mox laudaveriS, plus vale­ <lb/>
+            bit. Si parum ponderis portantem quasi admiratus <lb/>
+            fueris, succumbit. Si pigro dixeris quia velox est, <lb/>
+            continuo 6volabit. Quamvis generaliter multis haec <lb/>
+            superbiæ labes infesta sit, non plus tamen aliis me-
+            <milestone unit="PLSection" n="A"/><lb/>
+            tuenda est quam his qui aut spiritualiter ad perfe­ <lb/>
+            ctionem virtutum , aut carnaliter ad vitiorum co­ <lb/>
+            piam. Ibi semper elationis fortior ventus est, ubi et <lb/>
+            honoris fortior altitudo. Facile credimus, et ante­ <lb/>
+            quam judicemur irascimur; multi enim suspicionibus <lb/>
+            impelluntur, ex vultu risuque alieno pejora interpre­ <lb/>
+            tali in noctibus irascuntur. Curiosus qui inquirit <lb/>
+            quod de se dictum sit, et malignos sermones, etiamsi <lb/>
+            secreto sunt dicti, eruit, ipse se inquietat; dum <lb/>
+            eniti interpretantur, ad hoc perducuntur ut videan­ <lb/>
+            tur. Multas injurias transit, et plerasque non acce­ <lb/>
+            pit, quia aut eas nescit, aut si scierit, in ludum eas <lb/>
+            jocumque convertit. Si bonus vir est, qui injuriam <lb/>
+            fecit, noli reddere; si malus, noli imitari, pruden­ <lb/>
+            tiori cede, stulto remitte. Regis quisque intra se <lb/>
+            animum habet, ut licentiam sibi in alios dari velit, <lb/>
+            in se nolit. IVon oportet, peccantem peccata corri­ <lb/>
+            gere : quod si tantum irascatur sapiens, quantum <lb/>
+            scelerum indignitas exigit, non irascendum est illi,
+            <milestone unit="PLSection" n="B"/><lb/>
+            sed insaniendum. Nihil gloriosius quam iram amicitia <lb/>
+            commutare. 303 Irascitur aliquis? tu contra bene­ <lb/>
+            ficus provoca, cadit statim simultas. Remedia me­ <lb/>
+            dicorum non in accessibus infirmitatum. sed in re­ <lb/>
+            missionibus prosunt. Crebro siquidem faciem men­ <lb/>
+            dacii veri liS retinet. Crebro mendacium specie <lb/>
+            veritatis occulitur. Nam sicut aliquoties frontem <lb/>
+            amicus, et blandam adulator ostendit, sic verisimili <lb/>
+            coloratur. Lauda parce, vitupera parcius; nam si­ <lb/>
+            militer reprehensibilis est nimia laudatio, quam im­ <lb/>
+            moderata culpatio. Prudens nunquam otio pascit <lb/>
+            animum, aliquando habet, nunquam tamen solutum. <lb/>
+            Humilitatis virtus non verborum elatione, sed men­ <lb/>
+            tis puritate requiritur. A verbis quoque turpibus ab­ <lb/>
+            stine, quia licentia eorum impudentiam nutrit. Ser­ <lb/>
+            mones subtiles magis (sic) quam facito. Omnes tibi <lb/>
+            pares facies. Si inferiores superbiendo non contem­ <lb/>
+            nas, superiores recte vivendo non timeas. Cunctis <lb/>
+            esto benignus, nemini blandus; paucis familiaris;
+            <milestone unit="PLSection" n="C"/><lb/>
+            omnibus tamen aequus. Sapientia cupido et docili <lb/>
+            quae nosti sine arrogantia postulanti imperties, quae <lb/>
+            nescis, sine occultatione ignorantiae tibi postula im­ <lb/>
+            pertiri. Justus secreta non prodit, tacenda enim ta­ <lb/>
+            cet, loquenda loquitur; atque ita alta illi pax est et <lb/>
+            secura tranquillitas, dum alia malis vincuntur aD <lb/>
+            illo mala. Magnanimitas est nec timendum hominem, <lb/>
+            nec audacem.</p>
+          <ab>
+            <title type="sub">CAP. XXXII. — De libro sancti Ambrosii.</title>
+          </ab>
+          <p>i. In vite religio, in oleo pax, in rosa pudor sa­ <lb/>
+            crae virginitatis inolescat. Frater meus candidus, et <lb/>
+            rubeus; candidus merito, quia patris splendor; ru­ <lb/>
+            beus, quia partus est virginis, color in eo fulget et <lb/>
+            rutilat utriusque naturae. Castitas etiam angelos fa­ <lb/>
+            cit ; qui eam servavit, angelus est; qui perdidit, <lb/>
+            diabolus. Virgo est, qui Deo nubit; meretrix, quæ <lb/>
+            deos facit. Hinc inversis vestigiis filii Noe pudenda <lb/>
+            texerunt. Quae procax vidit, modestus erubuit, pius
+            <milestone unit="PLSection" n="D"/><lb/>
+            texit offensuros, si et ipsi vidissent. Quanta vini est <lb/>
+            vis, ut quem diluvia non nudaverunt, vina nudarent! <lb/>
+            Debet enim is qui docet super eum qui docetur ex­ <lb/>
+            cellere. Tolerabilius est mentem virginem quam car­ <lb/>
+            nem habere. Umbra Judaeis carnalibus, imago nobis, <lb/>
+            veritas resurrecturis. Tria enim haec secundum le­ <lb/>
+            gem esse cognovimus, umbram, imaginem, verita­ <lb/>
+            tem ; umbram in lege, imaginem in Evangelio, in <lb/>
+            judicio veritatem ; et ideo per Moysen lex per um­ <lb/>
+            bram, quasi per hominem, figura per legem, per Jesum <lb/>
+            verius. Quid est gazophylacium? consolatio fidelium, <lb/>
+            sumptus pauperum, requies egenorum. Peccata autem <lb/>
+            aut donantur, aut delentur, aut leguntur; donantur per <lb/>
+            gratiam, delentur per sanguinem, teguntur per cha­ <lb/>
+            ritatem. Quod David dicit: Libera me de sanguinibus, <lb/>
+            id est, a peccatis mortalibus se postulat liberari. Non <lb/>
+            te subjuges potestatibus carnis, quem Deus liberuin <lb/>
+            voluit. Nulla tibi excusatio de ambitu nuptiarum est, <lb/>
+            voluptatis sunt, non necessitatis. Si beniguus sis <lb/>
+            erga iudigentes, magnus eris apud Deum. Quod <pb n="1215"/>
+            
+            <milestone unit="PLSection" n="A"/><lb/>
+            Deum patrem vocas, hnc in actibus tuis ostende. <lb/>
+            Bona mens chorus est Dei, mala mens chorus est <lb/>
+            dæmonum. Quania vitia habet anima, tot et domi­ <lb/>
+            nos. Fundamentum pietatis est continentia, culmen <lb/>
+            autem pietatis est amicitia. Nulli suadenti te V- <lb/>
+            quiescas facere quod non est bonum. Pessimum est <lb/>
+            peccatoribus in unum convenire, cum peccant. Multi <lb/>
+            cibi impediunt charitatem, et incontinentia ciborum <lb/>
+            immundum 304 hominem faciunt. Non cihi, qui <lb/>
+            per os inferuntur, polluunt hominem, sed ea quæ ex <lb/>
+            malis moribus proferuntur. Ea excipe a Deo, quae <lb/>
+            accipere ab homine non potes. Melius est lapidem <lb/>
+            frustra jactare quam verbum. Brevis erit in sermo­ <lb/>
+            nibus sapiens in judicio, imperitiæ est longa narra­ <lb/>
+            tio. Cum præes hominibus, memento quia tibi est <lb/>
+            Deus, et judicans homines, scito quia et ipse judica­ <lb/>
+            beris a Deo. Cole sapientem virum, quasi imaginem <lb/>
+            Dei viventis. Nullum propterea honores, qui habet <lb/>
+            nullas pecunias; diflicile est divitem salvari. Nun-
+            <milestone unit="PLSection" n="B"/><lb/>
+            quam eris sapiens, si te putaveris sapientem. ura­ <lb/>
+            tionem non exaudit Deus hominis qui egenum non <lb/>
+            exaudit. Qui sapienti non obtemperat, nec Deo ob­ <lb/>
+            temperabit. Quod nnn posuisti, non tollas, sed suffi­ <lb/>
+            ciant tibi quae tua sunt. Temulentiam quasi infamem <lb/>
+            fuge, quia qui ventii belluæ similis est, vincitur. <lb/>
+            Quantum laboras pro corpore, si tantum pro anima <lb/>
+            laboras, sapiens eris. Philosophum hominem, tan­ <lb/>
+            quam Dei ministrum, honora post Deum. Ministrare <lb/>
+            aliis melius quam ministrari ab aliis. Melius est per <lb/>
+            tamem mori, quam per incontinentiam ventris ani­ <lb/>
+            mam maculare. Verbum de Deo qui loquitur his qui­ <lb/>
+            bus non licet, proditor Dei putandus est. Nun est <lb/>
+            verum quod Deum colat, qui hominem laedit. Melius <lb/>
+            est niliil habere quam multa habentem nemini im­ <lb/>
+            pertire. Si non das egentibus, cum possis, non acci­ <lb/>
+            pies a Deo, cum postulas.</p>
+          <ab>
+            <title type="sub">CAP. XXXIII. — Testimonia de libro Prosperi.</title>
+          </ab>
+          <p>
+            <milestone unit="PLSection" n="c"/>i. Si me mea rusticitas faciebat invalidum, vestra <lb/>
+            fieri credidi fide, qui jubebatis, idoneum. Necessa­ <lb/>
+            riarum tractatio quæstionum etsi non instruet inve­ <lb/>
+            nientis quod quærit animum, exercet salutem quae­ <lb/>
+            rentis ingenium. Scientia, sicut sine dono Dei, quod <lb/>
+            est chariias, inflat, ita, si ei charitas adnusceatur, <lb/>
+            ædificat. Sic ab iniquis justi separati sunt in æter­ <lb/>
+            num, ut nec jam remunerati præmium finiant, nec <lb/>
+            damnati supplicium. Sicut enim corporalis saturitas <lb/>
+            ones saturos aequaliter habet, quamvis singuli ci­ <lb/>
+            bos, non æqualiter, sed pro possibilitate percepe­ <lb/>
+            rint ; ita omnes sancti, et si fuerint aliqua graduum <lb/>
+            suorum diversitate distincti, omnes una beatitudine <lb/>
+            perfecti erunt, quia et una perfectione beati futuri <lb/>
+            sunt. Nec a nobis in dicm judicii verba quaerenda <lb/>
+            sunt, sed opera. Qui non crediderit, non habendo <lb/>
+            fidem, nec justitiam cordis habere poterit, nec sa­ <lb/>
+            lutem. Tam gravis sermo debet esse pontificis, ut ab <lb/>
+            intelligentia sui nullus, quamvis imperitus, excludat.
+            <milestone unit="PLSection" n="D"/><lb/>
+            Sana mens incorporabiliter amplius obedientiæ Iru­ <lb/>
+            ctum debet appelere, quam vitare injust:e obtrecta­ <lb/>
+            tionis opprobium. Cum veritas undecunque clama- <lb/>
+            verit, non sit ingenio humano deputanda, sed Deo. <lb/>
+            Obedientiæ ac patientiæ virtute fundati, majorum <lb/>
+            suorum non discutiunt constituta, sed faciunt. Ad <lb/>
+            fac eui publicam patienter jam fugiunt, et in animo <lb/>
+            iracundiae virus abscondunt, ad nocendum parati, <lb/>
+            cum nocendi tempus invenerint. Sic debet omnis <lb/>
+            homo, modo docendo, modo exhortando, modo su­ <lb/>
+            stinendo, modo increpaudo, curari ut sub ope <lb/>
+            Christi nullus de salute in hac vita debeat despe­ <lb/>
+            rare. Argue, obsecra, increpa in omni patientia, et <lb/>
+            doctrina, quasi diceret, argue coæquales, obsecra <lb/>
+            seniores , increpa juniores. Leniter castigatus ex­ <lb/>
+            hibet reverentiam castiganti , asperitatem autem <lb/>
+            305 nimiæ increpationis oflensus, nec increpa­ <lb/>
+            tio (sic) , nec salutem. Blanda pietate portandi <lb/>
+            sunt, qui increpari pio sua increpatione non pos­ <lb/>
+            sint. Sicut virtus onerosa est vitioso, ita virtutis
+            <milestone unit="PLSection" n="A"/><lb/>
+            amico vitiosa voluptas amara est. Tandiu enim quis <lb/>
+            peccata sua, quae nosse, et deflere debet, ignorat, <lb/>
+            quandiu curiosus aliena considerat, quod si mores <lb/>
+            suos ad se ipsum conversus aspiciat, non requirit <lb/>
+            quod in aliis specialiter reprehendat, quia in se ipso <lb/>
+            habet quod ligeat; proinde fratrum nostrorum non <lb/>
+            facile debemus accusare. sed gemere. Illis enim quo­ <lb/>
+            rum peccata humana notitia latent, nec ab ipsis con­ <lb/>
+            fessa, nec ab aliis publicata, si ea confileri vel emen­ <lb/>
+            dare noluerint, Deum, quem habent testem, ipsum <lb/>
+            habituri sunt et ultorem. Contumeliosus est, qui <lb/>
+            mendaciter arguit; et mendaciter arguit, qui contu­ <lb/>
+            meliam facit. Securus quippe malina, qui coelestia <lb/>
+            non habet, terrena strenue militantibus praestat. Illæ <lb/>
+            nobis sunt ambiendæ divitiæ. quae nos ornare pos­ <lb/>
+            sunt pariter, et munire; propter hoc igitur eis qui <lb/>
+            militant Deo fugiendae sunt; quas divitias ex toto <lb/>
+            corde qui habere volunt, sine labore non qua runt, <lb/>
+            sine difficultate non inveniunt, sine cura non servant.
+            <milestone unit="PLSection" n="B"/><lb/>
+            sine anxia delectatione non possident, sine dolore <lb/>
+            non perdunt. Qui otiosa quiete perfruitur, nisi spiri­ <lb/>
+            tualitcr vixerit, more pecudum vivit. Nemo possidet <lb/>
+            Deum, nisi qui possidetur a Deo; sit ipse primitus <lb/>
+            Dei possessio, ut efficiatur ei Deus possessio, et por­ <lb/>
+            tio. Omnium conditor, cui nihil potest eorum quae <lb/>
+            fecit æquari, non dignatur cum his quæ condidit <lb/>
+            possideri. Qui vull Deum possidere, renuntiet mundo, <lb/>
+            ut sit illi Deus beata possessio. Dei opus agit, qui <lb/>
+            res Deo consecratas non alicujus cupiditatis, sed <lb/>
+            fidelissimæi dispensationis intentione non deserit. <lb/>
+            Quapropter possessiones, quas ablatas a populo su­ <lb/>
+            scipiunt. sacerdotes, non sunt jam res mundi cre­ <lb/>
+            dendae, sed Dei. Non ideo erubescebant Adam et Eva, <lb/>
+            quia veste erant extrinsecus protecti divina ; dent­ <lb/>
+            que ante peccatum nudi erant, et nnn eruhescebant, <lb/>
+            quia nihil contra voluntatem Dei, unde confunde­ <lb/>
+            rentur, admiserant. Non igitur a creatore suo in <lb/>
+            creaturam divinitat s affectione collapsos moveret
+            <milestone unit="PLSection" n="c"/><lb/>
+            aperta concupiscentia, nisi eos ante corrupisset oc­ <lb/>
+            culta superbia. Concupiscentia carnis ab eis impleta <lb/>
+            est, quod de ligno vetito gustaverunt; concupiscentia <lb/>
+            oculorum, quod sibi aperere oculos cupierunt; et <lb/>
+            ambitio saeculi, quod se fieri posse quod Deus est <lb/>
+            crediderunt. Dulcior enim fit salus, cum dolor ex­ <lb/>
+            cruciat eet sanitatis amissae dulcedinem languoris <lb/>
+            amaritudo commendat. Adam nos obnoxiavit malis <lb/>
+            omnibus per propriam culpam, quibus nos liberavit <lb/>
+            adventus Christi per gratiam. Deliciæ quxlibet, si <lb/>
+            absque desiderio percipiantur, ofliciunt, et viles cibi <lb/>
+            plerumque abstinentiae profeclui, si appetenter ac. <lb/>
+            cipiantur, impediunt. Infirmum stomachum modera­ <lb/>
+            tus usus vini confortat, ebrietas animum corpusque <lb/>
+            debilitat. Nihil contra abstinentiam faciunt, qui vi. <lb/>
+            num non pro ebrietate, sed tantum pro corporis sa­ <lb/>
+            lute percipiunt, nec hoc eis offert voluptas, sed per­ <lb/>
+            mittit infirmitas. Si enim quoslibet advenientes jejunio <lb/>
+            intermisso reficio, non solum jejuno, sed exemptum
+            <milestone unit="PLSection" n="D"/><lb/>
+            charitatis efficio. Cæterum si propter abstinentiam <lb/>
+            spirituales fratres, quos 306 novi, mea remissione <lb/>
+            delectaie contristo, abstinentia mea non est dicenda, <lb/>
+            sed vitium. Sicut virtus animum sibi veraciter inhae­ <lb/>
+            rentem, si fuerit vera, justificat, ita simulata con­ <lb/>
+            demnat. Non potest mens regnum habere virtutum, <lb/>
+            nisi jugum prius excusserit vitiorum. Tantos invidus <lb/>
+            habet justa poena tortores, quantos invidiosus ha­ <lb/>
+            buerit laudatores. Siquidem invidiosum facit excel­ <lb/>
+            lentia, erit invidia pœna peccati; nec ei ab homine <lb/>
+            potest adhiberi remedium, cujus est vulnus occul­ <lb/>
+            tum. Hoc enim loquuntur quique quod diligunt, de­ <lb/>
+            lectabiliter audiunt quod assiduis cogitationibus vol­ <lb/>
+            vuut. Cogitatio quippe est quæ mentem sicut turpis <lb/>
+            inquinat, ita, si fuerit honesta, purificat. Non surdidæ <lb/>
+            cogitationes .nentem sordidati reddunt, sed ex mente <lb/>
+            sordida sordidae cogitationes existunt. AuribuS enim <lb/>
+            castis obsceni sermones cum sono deficiunt, nec se­ <lb/>
+            cretum pudici cordis irrumpunt. Per os carnis non <lb/>
+            irrumpit delectatio gustus ad mentem; nec erumpi <pb n="1217"/>
+            
+            <milestone unit="PLSection" n="A"/><lb/>
+            sermo turpis ex mente, nisi se volantarie mens ante <lb/>
+            Corrumpat. Cadem quisque nomina frequenter habet <lb/>
+            in ore, quorum desideria vulnerato gestat in corde, <lb/>
+            ac turpitudinem , quam exercere verecundatur in <lb/>
+            facto, tenet rens in animo, non humano judicio, sed <lb/>
+            divino. Considerate, obsecro, qualiter invidi pu­ <lb/>
+            niendi sint malis suis, quos etiam bona puniunt <lb/>
+            aliena. Quid prodest cuiquam, si foris, ubi potest <lb/>
+            magnus credi, splendeat, et intus, ubi Deus videt <lb/>
+            solus, squaleat</p>
+          <ab>
+            <title type="sub">CAP. XXXIV. — De jejunio</title>
+          </ab>
+          <p>i. Jejunia, abstinentiæ, vigiliae, eleemosynæ, et <lb/>
+            cætera hujusmodi augere debent bonum. Nam non <lb/>
+            vclare, peccatum (sic). Nulla res nos ab omni pec­ <lb/>
+            cato sic servat immunes, s cut timor supplicii, et <lb/>
+            amor Dei; elati per supercilium vanæloquacitatis <lb/>
+            dicta sua magis cupiunt laudari quam fieri; nec sunt <lb/>
+            de sanctitate operis, sed de sermonis elucubrati ve-
+            <milestone unit="PLSection" n="B"/><lb/>
+            nustate solliciti, Ex ea enim parte quis peccat, ex <lb/>
+            qua minus diligit Deum, quem si ex toto corde dili­ <lb/>
+            gamus, nihil erit in nobis unde peccati desiderio <lb/>
+            serviamus. Sicut nobis subveniri optamus, ita aliis <lb/>
+            pro viribus subveniamus; aut si facultas defuerit, <lb/>
+            voluntatem subveniendi 'emamus. Si peccantem <lb/>
+            video, et non solum non arguo, sed etiam peccanti <lb/>
+            consenlio, participem me damnationis cjus efficio, <lb/>
+            et in omnibus peccantibus pecco, quando eos quos <lb/>
+            scio peccasse quadam crudelis animi malignitate non <lb/>
+            increpo. Qui amicum propter commodum quodlibet <lb/>
+            amai temporale, non amicum convincitur amare, sed <lb/>
+            commodum.</p>
+          <ab>
+            <title type="sub">CAP. XXXV. — De libro Sententiarum.</title>
+          </ab>
+          <p>1. Innocentia vera est, quæ nec sibi, nec alteri <lb/>
+            nocet, et nemo prius in se quam in alium peccat. <lb/>
+            Sic diligendi sunt homines, ut eorum non diligantur <lb/>
+            errores, quia aliud est amare, quod facti sunt, aliud <lb/>
+            odisse quod faciunt. Vera est confessio benedicentis, <lb/>
+             
+            <milestone unit="PLSection" n="C"/><lb/>
+            cum mem sonus est et oris, et cordis; bene autem <lb/>
+            loqui, et male vivere, nihil est aliud quam se sua <lb/>
+            voce damnare. Bonum intellectum habet, qui quod <lb/>
+            faciendum recte intelligit, qualis sine timore sapien­ <lb/>
+            tiæ (sic). Mala mors putanda non est, quam bona <lb/>
+            vita præcesserit. Justis quidquid malorum ab iniquis <lb/>
+            Dominus irrogatur, non pœna est criminis, sed vir­ <lb/>
+            tutis examen; nam bonus, etiam si regnet, ser­ <lb/>
+            vus est. Diabolus superbus hominem superbientem <lb/>
+            perduxit ad mortem, Christus humilis hominem <lb/>
+            obedientem reduxit 307 ad vitam. Quia sicut ille <lb/>
+            elatus cecidit, et jecii ob et consentientem ; sic iste <lb/>
+            humiliatus surrexit credentem (sic). Perlectum odium <lb/>
+            est, quod nec justitia, nec scientia caret, id est, ut <lb/>
+            nec propter vitia homines oderis, nec vitia propter <lb/>
+            homines diligas. In magna egestate sunt, qui in ini­ <lb/>
+            quinte sunt, justitiæ opus et sapientiæ thesauros non <lb/>
+            habentes; qui autem serviunt Domino, ea bona ac­ <lb/>
+            quirunt quæ perire non possunt. Bona est peccati <lb/>
+            confessio, si ei curatio consequatur. Nam quid pro-
+            <milestone unit="PLSection" n="D"/><lb/>
+            dest detegere plagam, et non adhibere medicinam.
+            <milestone unit="PLSection" n="A"/><lb/>
+            Prima mors animam doleotem tenet in corpore, nh <lb/>
+            miraque parte communiter habetur, ut quod non vult <lb/>
+            anima, de suo corpore patiatur. Cum bonum opera­ <lb/>
+            ris, hilaris operare; nam si quid boni tristis facis, fit <lb/>
+            deterior magis quam facis. Melior est enim in malis <lb/>
+            factis humilis confessio, quam in bonis superba glo­ <lb/>
+            riatio. Nemo injustus benefacit, etiam si bonum est <lb/>
+            quod facit, quia nihil prodest spiritus timoris, ubi <lb/>
+            non esl spiritus charilatis. Melior est animi æquitas <lb/>
+            quam corporis sanitas. Finis enim legis Christus est, <lb/>
+            hi quo lex justitiæ non sumitur, sed impletur. Sicut <lb/>
+            terra de cœlo exspectat pluviam, et lucem, sic homo <lb/>
+            de Deo exspectare debet misericordiam, et verita­ <lb/>
+            tem. Prima salus est declinare peccatum, secunda <lb/>
+            est non desperare de venia; nam ipse in æternum <lb/>
+            perit, qui apud misericordem judicem ad pœniten­ <lb/>
+            tiæ remedium non recurrit. Virgo lidei Christianæ <lb/>
+            tribus temporihus incitamur, vespere, malle, et me­ <lb/>
+            ridie; vespere enim Dominus in cruce, mane in re-
+            <milestone unit="PLSection" n="B"/><lb/>
+            surrectione, meiidie in ascensione. Unum ad patien­ <lb/>
+            tiam occisi, aliud ad vitam resuscit ti, tertium ad <lb/>
+            gloriam pertinet majestatis in Patris dextera consi­ <lb/>
+            deutis. Ad hoc exagitant homines tribulationes, ut <lb/>
+            vasa electionis evacuentur nequitta, et impleantur <lb/>
+            gratia. Melior est tristitia iniqua poenitentis, quam <lb/>
+            lætitia iniqua facientis. Bonum est a veritate vinci, <lb/>
+            ad correptionem superet verilas voluptalem. Nam et <lb/>
+            invitum ipsa superat. Sic sunt qui colunt idola, quo­ <lb/>
+            modo qui in somniis vident vana. Si autem vigilent <lb/>
+            animæ ipsorum, intelligit, quando facta est, et non <lb/>
+            colit quod ipse fecit. Qui Deo sitiunt, tota sua de­ <lb/>
+            bent sitire substantia, id est, et anima, et carne; <lb/>
+            quia et animæ Deus dat panem suum, id est, ver­ <lb/>
+            bum veritatis; et carnis necessaria Deus praebet, <lb/>
+            quia utraque ipse pascit, quia utraque ipse fecit. <lb/>
+            Duas in toto mundo civitates faciunt duo amores; <lb/>
+            Jerusalem facit amorem Dei; Babylonia amorem sae­ <lb/>
+            cuti. interroget se ergo unusquisque, et inveniet unde <lb/>
+             
+            <milestone unit="PLSection" n="C"/><lb/>
+            D <lb/>
+            sii civis. Non est in carena o difficultas, nisi cum est <lb/>
+            in habendo cupiditas, et ideo id solum recte dligi­ <lb/>
+            tur, quod nunquam bene admittitur. In primo ho­ <lb/>
+            mine patuit, quod hominis arbitrium valeret ad mor­ <lb/>
+            tem, in secundo autem, quod Dei adutorium valeret <lb/>
+            ad vitam. Primus enim homo non is homo; secundus <lb/>
+            vero Deus et homo; peccatum vero factum est re­ <lb/>
+            licto Deo, justitia non fit sine Deo. Dominus ait : Ego <lb/>
+            sum via, et veritas, et vita, hoc est, peruie venitur ad me, <lb/>
+            in me pervenitur, permanetur in me. Odor bonus <lb/>
+            fama bona est, quam quisque bonae vitæ operibus <lb/>
+            habuerit, dum Christi vestigia sequitur : pedes quo­ <lb/>
+            dammodo ejus pretiosi unguenti odore perfundit. La­ <lb/>
+            bor piorum 308 exercitatio est, non damnatio. <lb/>
+            Justi ex Deo, non ex hominibus nascuutur, quo­ <lb/>
+            niam nascendo, non ascendendo lit justus, unde <lb/>
+            etiam regenerati filii Dei dicuntur. Aliud est migrare <lb/>
+            corpore, aliud migrare corde; migrare corpore, quo­ <lb/>
+            modo corpus mutat locum; migrare corde, quomo­ <lb/>
+            do tu cordis mutas affectum. Si aliud amas. aliud
+            <milestone unit="PLSection" n="D"/>amabas, non es ibi ubi eras.</p>
+          </div>
+        
+        </body>
+  </text>
+</TEI>

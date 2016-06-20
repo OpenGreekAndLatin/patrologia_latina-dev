@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title>Patrologiae Cursus Completus. Series Latina (PL)</title> 
+        <sponsor>University of Leipzig</sponsor>
+        <funder>European Social Fund Saxony</funder>
+        <principal>Gregory Crane</principal>
+        <respStmt>
+          <persName xml:id="Jouve">Jouve</persName>
+          <resp>OCR-ed, corrected and encoded the text</resp>
+        </respStmt>
+        <respStmt>
+          <persName>Greta Franzini</persName>
+          <resp>Project Manager (University of Leipzig)</resp>
+        </respStmt>
+        <respStmt>
+          <persName>Simona Stoyanova</persName>
+          <resp>Project Assistant (University of Leipzig)</resp>
+        </respStmt>
+        <respStmt>
+          <persName>Bruce Robertson</persName>
+          <resp>Technical Advisor (Mount Allison University)</resp>
+        </respStmt>
+      </titleStmt>
+      
+      <publicationStmt>
+        <authority>University of Leipzig</authority>
+        <idno type="filename">PL83.xml</idno>
+        <availability>
+          <licence target="https://creativecommons.org/licenses/by-sa/4.0/">Available under a Creative Commons Attribution-ShareAlike 4.0 International License</licence>
+        </availability>
+        <date>2014</date>
+        <publisher>University of Leipzig</publisher>
+        <pubPlace>Germany</pubPlace>
+      </publicationStmt>
+      
+      <sourceDesc>
+        <listBibl xml:lang="la">
+          <biblStruct>
+            <monogr>
+              <editor>
+                <persName>
+                  <name xml:lang="fr">Jacques Paul Migne</name>
+                </persName>
+              </editor> 
+              <author ref="urn:cite:perseus:author.771">Isidorus Hispalensis</author>
+              <title>Differentiarum Sive De Proprietate Sermonum Libri Duo</title>
+              <title>Allegoriae Quaedam Sacrae Scripturae</title>
+              <title>De Ortu Et Obitu Patrum Qui In Scriptura Laudibus Efferuntur</title>
+              <title>In Libros Veteris Ac Novi Testamenti Proemia</title>
+              <title>Liber Numerorum Qui In Sanctis Scripturis Occurrunt</title>
+              <title>De Veteri Et Novo Testamento Quaestiones</title>
+              <title>Mysticorum Expositiones Sacramentorum Seu Quaestiones In Vetus Testamentum</title>
+              <title>Appendix Ad Libros Regum</title>
+              <title>De Fide Catholica Ex Veteri Et Novo Testamento Contra Judeos</title>
+              <title>Sententiarum Libri Tres</title>
+              <title>De Ecclesiasticis Officiis</title>
+              <title>Synonyma De Lamentatione Animae Peccatricis</title>
+              <title>Regula Monachorum</title>
+              <title>Epistolae</title>
+              <title>De Ordine Creaturarum Liber</title>
+              <title>De Natura Rerum Ad Sisebestum Regem Liber</title>
+              <title>Chronicon</title>
+              <title>Historia De Regibus Gothorum. Wandalorum Et Suevorum</title>
+              <title>De Viris Illustribus Liber</title>
+              <title>Carmina [Ascripta]</title>
+              <title>Chronica Regum Visigothorum (Incertus)</title>
+              <title>Expositio In Canticum Canticorum Salomonis [Incertus]</title>
+              <title>De Conflictu Vitiorum Et Virtutum (Incertus)</title>
+              <title>Expositio In Missa (Incertus)</title>
+              <title>Sententiarum Liber Quartus (Incertus)</title>
+              <title>Exhortatio Humilitatis (Incertus)</title>
+              <title>Testimonia Divinae Scripturae Et Patrum (Incertus)</title>
+              <title>Sermones (Incertus)</title>
+              <title>De Ecclesiasticis Dogmatibus (Incertus)</title>
+              <title>Sentantiae Differentiarum De Activa Vita Atque Contemplativa [Incertus]</title>
+              <title>Exhortatio Poenitendi Cum Consolatione Et Misericordia Dei [Incertus]</title>
+              <title>Lamentum Poenitantiae (Incertus)</title>
+              <title>Oratio Contra Insidias Diaboli (Incertus)</title>
+              <title>Liber De Ortu Et Obitu Patrum Incertus</title>
+              <title>Liber De Numeris (Incertus)</title>
+              <title>Glossae in Sacram Scripturam</title>
+              <title>Differentiarum, sive de Proprietate Sermonum, Liber</title>
+              <title>Liber Glossarum</title>
+              <imprint>
+                <publisher>Garnier</publisher>
+                <pubPlace>Paris</pubPlace>
+                <date>1850</date>
+              </imprint>
+              <biblScope unit="volume">83</biblScope>
+            </monogr>
+            <monogr>
+              <author>Auctor Incertus</author>
+              <title>Archiepiscopi Toletani Veteres</title>
+              <title>Chronologia Gothicorum Regum (Ex Codice Regio Vaticano)</title>
+              <imprint>
+                <publisher>Garnier</publisher>
+                <pubPlace>Paris</pubPlace>
+                <date>1850</date>
+              </imprint>
+              <biblScope unit="volume">83</biblScope>
+            </monogr>
+            <ref target="http://hdl.handle.net/2027/pst.000020950231">HathiTrust</ref>
+            
+          </biblStruct>
+        </listBibl>
+      </sourceDesc>
+      
+    </fileDesc>
+    <encodingDesc>
+      <p>The following text is encoded in accordance with EpiDoc standards and with the
+        CTS/CITE Architecture.</p>
+      <refsDecl n="CTS">
+        <cRefPattern n="section" matchPattern="(.+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div/tei:div[@n='$1'])"/>
+      </refsDecl>
+    </encodingDesc>
+    
+    <profileDesc>
+      <langUsage>
+        <language ident="la">Latin</language>
+      </langUsage>
+    </profileDesc>
+    
+</teiHeader><text>
+    <body>
+    <div type="edition" n="urn:cts:latinLit:tmp1421.tmp1421.opp-lat1">
+      <div type="textpart" subtype="section" n="1">
+          <head>
+            <title type="main">EXCELLENTISSIMO ET EMINENTISSIMO PRINCIPI, ET D. D. LUDOVICO BORBONIO S. R. E. PRESBYTERO CARDINALI TIT. S. MARIÆ DE SCALA , ARCHIEPISCOPO TOLETANO , CANCELLARIO MAJORI CASTELLÆ, ADMINISTRATORI ATORI ARCHIEPISCOPATUS HISPALENSIS, COMITI CHINCHONIS , MAGNATI HISPANIÆ PRIMÆ CLASSIS , PRÆCLARI REGII ORDINIS HISPANICI CAROLI III MAGNA CRUCE , ATQUE ORDINUM SS. JANUARII ET FERDINANDI INSIGNIBUS DECORATO, ETC.</title>
+          </head>
+          <ab>
+            <title type="sub">FAUSTINUS AREVALUS.</title>
+          </ab>
+          <p>Non dubitabam, Princeps eminentissime, quin opus sexto abhinc anno auspiciis et munificentia Domini mei <lb/>
+            Francisci Lorenzanæ S. It. E. cardinalis edi cæptum, et nunc tandem post tot tantarumque rerum discrimina <lb/>
+            ad exitum perductum, gratum tibi acceptumque, si a me offerretur, futurum esset; tamen, ne id facere auderem, <lb/>
+            impediebar cum ingenuo quodam pudore, conscientiaque tenuitatis meæ, tum maxime amplitudinis tuæ contem­ <lb/>
+            platione, quæ quanta sit, quantique fieri ab omnibus debeat, non poteram non intelligere. Ac destitissem plane, <lb/>
+            fateor, ab eo tibi offerendo, omnemque istam cogitationem penitus abjecissem, nisi i, quem proxime nominavi, <lb/>
+            Franciscus Lorenzana cardinalis gravissima sua auctoritate intercessisset; qui quidem dubium ac verecundantem <lb/>
+            suadendo atque hortando, ac tantum non jubendo, cogendoque, ad id impulit quod me vides modo facere, timide <lb/>
+            quidem ac pudenter, sed tamen obsequentissime, ut decet, et humillime. Et sane qui facere poteram ut ei morem <lb/>
+            non gererem? Nec vero hic quidquam aliud, etsi postulare id a me locus videtur, de illius viri laudibus attingam; <lb/>
+            quod minime necesse est apud te qui eum et jam inde a prima pueritia plane cognitum ac perspectum habes, et <lb/>
+            observare etiamnum, ac diligere, non secus atque parentem filius, perseveras. Sed ad Isidorum accedamus. Eat <lb/>
+            hic profecto communis omnium nostrum, quicunque Hispani nati sumus, magister et parens. Sed, præter com­ <lb/>
+            munia cætera, sunt illi tecum quædam propria, quæ faciunt ut jure quodam vestro uterque, et ille, perfecta <lb/>
+            jam ejus operum Editione, venire ad te debeat, et tu vicissim advenientem excipere. Rexit ille, at quanta cæ­ <lb/>
+            terarum sedium approbatione, ne dicam, invidia ! rexit Hispalensem Ecclesiam; idemque concilio Toletano IV <lb/>
+            omnium celeberrimo præfuit, et luculentissimos canones digessit. Vides igitur, eminentissime Princeps, quam <lb/>
+            istud opus proprie ad te respiciat, qui exemplo parentis optimi, serenissimi Hispaniarum infantis Ludovici Bor <lb/>
+            bonii, utramque sedem Toletanam et Hispalensem singulari prudentia regis, et sanctissimi moribus informas. <lb/>
+            Succurrebat etiam illud quod Joannes Grialius Philippo III, [Hispaniarum regi catholico, jam olim suggessit, <lb/>
+            dum regiam Matritensem Isidori operum Editionem illi nuncuparet; cujus Isidori, inquit, ipse a stirpe genus <lb/>
+            ducis. Sed gratius fortasse jucundiusque tibi accidet, quod Notkerus Balbulus Salomonem, Constantiensem <lb/>
+            deinde episcopum, sæculo nono præmonebat, cum aliquot rerum ecclesiasticarum scriptores illi commendaret : <lb/>
+            &lt; Libri, ait, lsidori Hispalensis episcopi, Etymologiarum nomine titulati, omnimoda te perficiunt scientia. <lb/>
+            Item Sententiarum ejus utilissimus liber. Item alius de Officiis et ordinibus ecclesiasticis. Qui tibi mox Dei gra­ <lb/>
+            tia futuro sacerdoti maxime sunt necessarii; in quibus omnem rationem, et nomina singularum festivitatum et <lb/>
+            jejuniorum reperies, ut praeco Dei populo futuras stationes prænuntiare possis. » Quibus doctrinis cum ipse , <lb/>
+            Princeps eminentissime et Præsul amplissime, a pueritia assueveris, quippe gravissima exercitatus disciplina, ut <lb/>
+            hoc tanto munere, ad religionis catholicæ amplificationem et ad Hispaniæ decus, quam diutissime incolumis <lb/>
+            fungaris, omnium bonorum votis mea adjungere nunquam intermittam.</p>
+          <p>Ex Urbe, prime Idus Martias, an. 1803.</p></div>
+        </div></body></text></TEI>

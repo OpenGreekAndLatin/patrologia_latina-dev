@@ -1,0 +1,1322 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+    <fileDesc>
+			<titleStmt>
+				<title>Patrologiae Cursus Completus. Series Latina (PL)</title>
+				<sponsor>University of Leipzig</sponsor>
+				<funder>European Social Fund Saxony</funder>
+				<principal>Gregory Crane</principal>
+				<respStmt>
+					<persName xml:id="Jouve">Jouve</persName>
+					<resp>OCR-ed, corrected and encoded the text</resp>
+				</respStmt>
+				<respStmt>
+					<persName>Greta Franzini</persName>
+					<resp>Project Manager (University of Leipzig)</resp>
+				</respStmt>
+				<respStmt>
+					<persName>Simona Stoyanova</persName>
+					<resp>Project Assistant (University of Leipzig)</resp>
+				</respStmt>
+				<respStmt>
+					<persName>Bruce Robertson</persName>
+					<resp>Technical Advisor (Mount Allison University)</resp>
+				</respStmt>
+			</titleStmt>
+
+			<publicationStmt>
+				<authority>University of Leipzig</authority>
+				<idno type="filename">PL50.xml</idno>
+				<availability>
+					<licence target="https://creativecommons.org/licenses/by-sa/4.0/">Available under a
+						Creative Commons Attribution-ShareAlike 4.0 International License</licence>
+				</availability>
+				<date>2014</date>
+				<publisher>University of Leipzig</publisher>
+				<pubPlace>Germany</pubPlace>
+			</publicationStmt>
+
+			<sourceDesc>
+				<listBibl xml:lang="la">
+					<biblStruct>
+						<monogr>
+							<editor>
+								<persName>
+									<name xml:lang="fr">Jacques Paul Migne</name>
+								</persName>
+							</editor>
+							<author ref="http://data.perseus.org/catalog/urn:cts:latinLit:stoa0076c">Cassianus
+								Ioannes</author>
+							<title>Paucae Quaedam Sententiae Piam Interpretationem Desiderantes</title>
+							<imprint>
+								<publisher>Garnier</publisher>
+								<pubPlace>Paris</pubPlace>
+								<date>1846</date>
+							</imprint>
+							<biblScope unit="volume">50</biblScope>
+						</monogr>
+						<monogr>
+							<author>Vigilius Diachonus</author>
+							<title>Regula Monachorum</title>
+							<imprint>
+								<publisher>Garnier</publisher>
+								<pubPlace>Paris</pubPlace>
+								<date>1846</date>
+							</imprint>
+							<biblScope unit="volume">50</biblScope>
+						</monogr>
+						<monogr>
+							<author>Fastidius Episcopus</author>
+							<title>De Vita Christiana Liber Unus</title>
+							<imprint>
+								<publisher>Garnier</publisher>
+								<pubPlace>Paris</pubPlace>
+								<date>1846</date>
+							</imprint>
+							<biblScope unit="volume">50</biblScope>
+						</monogr>
+						<monogr>
+							<author>Antoninus Honoratus Episcopus</author>
+							<title>Epistola Consolatoria Ad Arcadium</title>
+							<imprint>
+								<publisher>Garnier</publisher>
+								<pubPlace>Paris</pubPlace>
+								<date>1846</date>
+							</imprint>
+							<biblScope unit="volume">50</biblScope>
+						</monogr>
+						<monogr>
+							<author>Sixtus III</author>
+							<title>Epistolae Ed Decreta</title>
+							<imprint>
+								<publisher>Garnier</publisher>
+								<pubPlace>Paris</pubPlace>
+								<date>1846</date>
+							</imprint>
+							<biblScope unit="volume">50</biblScope>
+						</monogr>
+						<monogr>
+							<author>Vincentius Lirinensis</author>
+							<title>Commonitorium Primum</title>
+							<title>Commonitorium Secundum</title>
+							<imprint>
+								<publisher>Garnier</publisher>
+								<pubPlace>Paris</pubPlace>
+								<date>1846</date>
+							</imprint>
+							<biblScope unit="volume">50</biblScope>
+						</monogr>
+						<monogr>
+							<author ref="http://data.perseus.org/catalog/urn:cts:latinLit:stoa0117">Eucherius Lugdonensis Episcopus</author>
+							<title>Epistola Paraenetica Ad Valerianum Cognatum</title>
+							<title>Homiliae Quaedam</title>
+							<title>Exhortatio Ad Monachos</title>
+							<title>Epitomes Operum Cassiani Ad Castorem Aptensem Libri Duo</title>
+							<title>Epistola Ad Philonem Presbyterum Suum [Incertus]</title>
+							<imprint>
+								<publisher>Garnier</publisher>
+								<pubPlace>Paris</pubPlace>
+								<date>1846</date>
+							</imprint>
+							<biblScope unit="volume">50</biblScope>
+						</monogr>
+						<monogr>
+							<author ref="http://data.perseus.org/catalog/urn:cts:latinLit:phi2434">Hilarius
+								Arelatensis Episcopus</author>
+							<title>Sermo De Vita Sancti Honorati Episcopi Arelatensis</title>
+							<title>Epistola Ad Sanctum Eucherium Episcopum Lugdunensem</title>
+							<title>Sermo De Miraculo Sancti Genesii Martyris Arelatensis</title>
+							<title>Versus In Natali Machabeorum Martyrium</title>
+							<title>Metrum In Genesim Ad Leonem Papam</title>
+							<imprint>
+								<publisher>Garnier</publisher>
+								<pubPlace>Paris</pubPlace>
+								<date>1846</date>
+							</imprint>
+							<biblScope unit="volume">50</biblScope>
+						</monogr>
+						<ref target="https://archive.org/details/patrologiaecursu50hammuoft">Internet
+							Archive</ref>
+
+					</biblStruct>
+				</listBibl>
+			</sourceDesc>
+
+		</fileDesc>
+		<encodingDesc>
+			<p>The following text is encoded in accordance with EpiDoc standards and with the CTS/CITE
+				Architecture.</p>
+		  <refsDecl n="CTS">
+        <cRefPattern n="no citable units founds" matchPattern="(.+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div/tei:div[@n='$1'])"/>
+      </refsDecl>
+    </encodingDesc>
+
+		<profileDesc>
+			<langUsage>
+				<language ident="la">Latin</language>
+			</langUsage>
+		</profileDesc>
+
+	</teiHeader>
+  <text>
+    <body><div type="edition" n="urn:cts:latinLit:tmp814.tmp814.opp-lat1">
+					<pb n="1249"/>
+					<head>
+						<title type="main">SANCTI HILARII ARELATENSIS EPISCOPI OPUSCULA GENUINA.</title>
+					</head>
+					<ab>
+						<title type="sub">a SERMO DE VITA S. HONORATI EPISCOPI ARELATENSIS.</title>
+					</ab>
+					<ab>
+						<title type="sub">b Praefatio.</title>
+					</ab>
+					<p>
+						<milestone unit="PLSection" n="A"/>1. c Agnoscitis, dilectissimi, diem publicis fidelium
+						<lb/> a moeroribus consecratum, qui mihi quamdiu hos <lb/> caducos vitae hujns dies
+						Dominns indulserit, semper <lb/> quidem acerbitatibus gravis, c plenus tamen digni­
+						<lb/> latis adveniet. Hodie enim ille sanctae recordationis <lb/> Ecclesiæ hujus
+						antistes virtute, sacerdotio, nomine <lb/> Honoratus, corpore exutus est. Quidquid ad
+						clau­ <lb/> sulam eloculionis adjecero, absurdum poterit judi­ <lb/> cari. Si enim
+						dixero : Ad astra migravit, ille, etiam <lb/> dum in terris moraretur, inter illa
+						splendidissima <lb/> astra Dei numeratus est. Addam: Chrislo astaL? <lb/> Quando autem
+						ei in vita sua non astitit? Cujus omnis <lb/> vita illam Eliaevocem habuit: Vivit
+						Dominus cui asto <lb/> hodie (III Reg. XVIII, 15). Dicam: Terrena deseruit, <lb/> cujus,
+						ut Apostolus ait, conversatio semper in coelis <milestone unit="PLSection" n="B"/><lb/>
+						fuil (Philip. III, 20)? Similiter itaque, quantum ani­ <lb/> mus meus habet, quidquid de
+						tali viro dicendum <lb/> occurrerit, ipsa sui magnitudine congruo exitu caret. <lb/>
+						Compugnant mœroribus gaudia. Talem reminisci <lb/> dulce est; tali carere
+						supplicium.</p>
+					<p>2. Duplex itaque materia me provocat. Illinc me <lb/> laudum suarum gratia ad sermonem
+						trahit; hinc ad <lb/> singultus f retrahunt damna communia. Ignoscite <lb/> itaque, si
+						diripientibus sibi duobus his affectibus <lb/> mentem meam, oris mei officium tamquam
+						duobus <lb/> dominis famulatum congruum negat. Quidquid re­ <lb/> cordatio in laudis
+						partibus suggerit, totum hoc sibi <lb/> inler damna numerans dolor vindicat. Quamquam
+						<lb/> etsi adesset mihi serenitas mentis, et famulatu ido­ <lb/> neo menti lingua
+						serviret, num abundantius laus <milestone unit="PLSection" n="c"/><lb/> ejus proferri
+						sermonibus meis poterit, quam in vc- <milestone unit="PLSection" n="A"/><lb/> stris
+						sensibus manet? Nemo est, ut puto, cui non <lb/> illius viri gratia major occurrat, quam
+						possit opu- <lb/> lentissima cujuslibet proferre facundia. Quia ergo, <lb/> ut Scriptura
+						loquitur, memoria justorum cum lau­ <lb/> dibus semper est (Prov. X. 7), nec potest
+						quisquam <lb/> meritorum illustrium viros non cum laude memo­ <lb/> rare, proferam, ut
+						facultas datur, aliqua ex his que <lb/> de illo dilectionis vestrae corda I meditantur.
+						Adju­ <lb/> vabunt utique sensus vestri conatus meos; et h <lb/> quidquid sermoni meo
+						expedire difficile est, vestra <lb/> sibi pectora propriis cogitationibus
+						eloquentur.</p>
+					<p>3. i Scriptum est : Sapientia in exitu canitur; hoc <lb/> est dicere : Sapientis
+						conversatio i in conversa­ <lb/> tionis fine laudatur. Unde et in alio Ioco : Ne laude.
+						<lb/> hominem in vita sua. Et iterum : Ante mortem ne <milestone unit="PLSection" n="B"/><lb/> laudes quemquam (Eccli. XI, 30); ac si dicat: <lb/> Lauda post mortem; in
+						viventis enim laudibus et <lb/> laudato locus vanae exsultationis offertur, et lauda­
+						<lb/> tori It nota assentationis (affigitur. Multis modis au­ <lb/> tem utile est
+						laudare defunctum : primum quia dum <lb/> abest cui gratificari laudatione possimus,
+						necesse <lb/> est ut ad largitorem gratiae i laus tota referatur; <lb/> deinde, quia
+						sola virtutis admiratio residet, ubi <lb/> suspicio assentationis aufertur. Defuncti
+						itaque <lb/> laus in sancta fidelium congregatione prolata plena <lb/>
+						<lb/> est sedificationis, vacua jactantiæ. Merita quoque <lb/> in hoc ejus qui laudatur
+						accrescunt, quod plu­ <lb/> res sua laude proficiunt. Nec vercbor ne nimis for­ <lb/>
+						sitan favorabiliter de meo loqui credar, quia prælier <lb/> quam nihil non inferius dici
+						suis virtutibus potest, <milestone unit="PLSection" n="c"/><lb/> nemo est qui illum non
+						suum computet, suum sen­ <note type="footnote"> • In ms. Vat. Reginae 645, hic titulus
+							legitur : <lb/> lncipit Vita S. HOllorat; Arelatensi. episcopi, cujus <lb/> depositio
+							agitur XVII kal. Februarii. In fiue nutein <lb/> appellatur sermo et S. Hilarius
+							auctor profertur sic: <lb/> Explicit sermo de Vita S. Honorati episcopi edit". a <lb/>
+							S. Hilario Arelatensi episcopo depositionis ej", in die, <lb/> (tlidler. Alitis
+							recentior coIt. Vat. Reginæ 1025 Im c <lb/> hahet : XVII Februarii. Sermo S. Hil",ii
+							in depnsi- <lb/> I;ofle sanctas memoriæ domini Honorati episcopi. De­ <lb/> leiiR vero
+							conspiciuntur, hae voces : Eodem die habi­ <lb/> tus; et mf'rito. inquit D. Joannes
+							Salinas : nam Sf'r- <lb/> monem hahuit lIilarius elapso anno ab HUllorali <lb/> morte,
+							nempe anno 430. </note><note type="footnote"> b Bollandianam capitum ac numerorum
+							dislil,tl.io- <lb/> nem servavunus (etsi acrurailo,. inin p, irat) ne <lb/> ,,
+							citationum v:arit.las ei Scriptores f'llig..., &lt;t (11th.., <lb/> lectores.
+							QUESNELLUS. </note><note type="footnote">c Cod. Ripai. a D,.lIando adhibitus :
+							Agnoscite, di­ <lb/> lectissimi. </note><note type="footnote"> J At., memoriis.
+							</note><note type="footnote">e Quesnellus, cum quibusdam editis : Plennt con­ <lb/>
+							solatoria laude, plenus et dignitatis adveniet. Quæ :1 li­ <lb/> tem delevimus, desunt
+							in codice Bolland. ei in <lb/> uTrisque Vat. Reg. </note><note type="footnote"> f Ita
+							ex duobus Vat. Reg. et alio cod. noli. Quos­ <lb/> nellus, trahunt. </note><note type="footnote"> c Sic laudati codd. Apud Quesn., meditentur. </note><note type="footnote">h Quesn., qucd sermoni. Magis placuit lectio trium <lb/> mClunralurum
+							exemplarium. </note><note type="footnote">i Ball., Scr;pl"ra quodam loco continet,
+							astipulan­ <lb/> tibus utrisque mss. VaL. Reg. </note><note type="footnote">i Unus
+							codd. Vat. Ucg. et Doll., in consumma <lb/> tionis fine. </note><note type="footnote">k li.terH addunt, nln:rime. </note><note type="footnote"> i Cod. VaL. Res. 645 addit,
+							Deunu </note>
+						<pb n="1251"/>
+						<milestone unit="PLSection" n="A"/><lb/> serit, suumque crediderit. Non tamen ego
+						ingenii <lb/> fiducia. neque fretus eloquio ad attingendam tanti <lb/> viri vitam manum
+						mitto : quam si quis priscæ elo­ <lb/> quentiae auctor attingeret, nOli solum facundia
+						non <lb/> ornaret, sed victus materiæ mole succumberet. <lb/> Vester me amor provocat,
+						vester affectus de illo <lb/> aliquid loquendi fiduciam subministrat. Animabitur, <lb/>
+						ut credimus, ipsius meritis sermo quamvis a tepen­ <lb/> tis ingenii; et quod jacet
+						verbis elevabitur rebus; <lb/> et effusa in illum charitate vestrorum pectorum do­ <lb/>
+						micilio condietur.</p>
+					<ab>
+						<title type="sub">CAPUT PRIMUM.</title>
+					</ab>
+					<ab>
+						<title type="sub">Consularis Honorati nobilitas. Baptizatur adolescens.</title>
+					</ab>
+					<p>4. Est illud notum omnibus oratoriæ disciplinae, <lb/> quorum laudandam receperint
+						vitam, patriam prius <milestone unit="PLSection" n="B"/><lb/> et originem praedicare ;
+						ut quod in propriis virtuti­ <lb/> bus deest, in pairum gloria præcessisse videatur. Nos
+						<lb/> autem omnes in Christo unum sumus; et fastigium <lb/> nobilitatis est inter Dei b
+						filios computari, nec addere <lb/> nobis quidquam ad dignitatem terrenae originis de­
+						<lb/> cus, nisi contemptu suo, potest. Nemo est in coele­ <lb/> stibus gloriosior, quam
+						qui repulso patrum stemmate <lb/> elegit sola Christi paternitate censeri. Prætermitto
+						<lb/> itaque commemorare avita illius saecularium bono­ <lb/> rum insignia, et quod
+						concupiscibile ac pene sum­ <lb/> mum habet mundns, usque ad consulatus provectam <lb/>
+						familiæ suæ nobilitatem, majore generositate pecto­ <lb/> ris fastiditam. Nec placuisse
+						illum sibi de superva­ <lb/> cuis suorum honoribus, qui per amorem veritatis <lb/> jam
+						suos non optabat.</p>
+					<p>
+						<milestone unit="PLSection" n="c"/>5. Ad illud potius meus sermo festinat, qua fide
+						<lb/> baptismum in adolescentiæ annis proprio concupierit <lb/> arbitratu, quam maturo
+						consilio sanus mortem ex­ <lb/> paverit; c qualiter ante baptismum vita cariturum se
+						<lb/> esse prospexerit; qua siti vitam suam desideraverit <lb/> renovari; quam dulcis ei
+						infantia; quam modesta <lb/> puerilia; quam gravis adolescentia fuerit; quam om­ <lb/>
+						nes etiam ætatum gradus gratia semper et virtute <lb/> transcenderit, majorque se semper
+						inventus sit, ut <lb/> prorsus divino quodam a pædagogio educatum putes. <lb/> Eruditur
+						sine aliqua suorum instantia. Servat, ju­ <lb/> vante Deo, baptismum præter ullam
+						hominum solli­ <lb/> citudinem; et, quod his majus est, recenti adhuc et <lb/> illibato
+						nitore e foniis sine admonitore convertitur. <lb/> Sine admonitore, dixi; et ubi illud
+						quod patria ob- <milestone unit="PLSection" n="D"/><lb/> stabat, quod obluctabatur
+						pater, quod propinquitas <lb/> tota f renitebatur? Intraverat enim gratia sua om. <lb/>
+						nium sensus; et cum eum sibi Cbristus assumeret, <lb/> certatim in suis omnibus mundus
+						tenebat. Alios dul­ <lb/> cedo ipsius obligaverat; alios collegii blandimenta <lb/>
+						devinxerant; alios in variis juvenum exercitiis admi­ <lb/> ratio sæcularium virtutum
+						tenebat. Quot illi vitae <milestone unit="PLSection" n="A"/><lb/> prioris gratiae
+						fuerant, tot a conversione vinculis re­ <lb/> trahebatur. Commune quoddam familiæ decus
+						pro­ <lb/> ripi omnes timebant. Et vere quis umquam illum <lb/> habitus non quasi g
+						proprium accepit? Quos ali­ <lb/> quando amictus non ornavit? Itaque velut splendi­
+						<lb/> dissimam gemmam et commune omnium decus eripi <lb/> sibi simul patria, simul
+						familiares, simul parentes <lb/> putabant; neque enim immutanda haec omnia et re­ <lb/>
+						formanda in melius, ut vidimus, sed quasi moritura <lb/> esse credebant. Et inde illud
+						erat quod quia omnia, <lb/> quæ adorsus erat, strenue eum pater agere perspe­ <lb/>
+						xerat, a baptismate quamdiu potuit, avertit, timens <lb/> ne totus, sicut consecutum
+						esi, religionis amore ra­ <lb/> peretur. Invaluit tamen desiderium et amor Christi,
+						<lb/> et baptismum discussis patris dissimulationibus, pue- <milestone unit="PLSection" n="B"/><lb/> ritia fidelis invasit. Ita enim se adhuc catecbumenus <lb/> inter prima
+						fidei rudimenta formaverat, lasciviam <lb/> pro reverentia accipiendi quandoque
+						baptismalis <lb/> respuens, clericos ut patres honorans, et puerili in­ <lb/> terdum
+						censu pauperem juvans. Quidquid habere ad <lb/> huc illa ætas, et plus utique pro
+						novitaie habendi <lb/> amare poterat, miseratione prodigus offerebat : jam <lb/> tunc in
+						parvo præmeditans cuncta contemnere, et <lb/> sua simul universa largiri.</p>
+					<p>6. His itaque et talibus exercitiis ad baptismum <lb/> se calechumeni fides robusta
+						proripuit. Hinc jam <lb/> providus pater, et h terrenae pietatis suspicione sol­ <lb/>
+						licitus, variis eum oblectationibus provocare, studiis <lb/> juventutis illicere,
+						diversis mundi vanitatibus irre­ <lb/> tire, et quasi in collegium cum filio adolescente
+						ju­ <milestone unit="PLSection" n="c"/><lb/> venescere; venatibus et ludorum
+						varietatibus occu­ <lb/> pare, et tota, ad subjugandam illam aetatem, sæculi <lb/> hujus
+						dulcedine armari. Nec immerito eum sæcularis <lb/> i pater proripi timebat, quem inter
+						reliquos ornatis­ <lb/> simos juvenes velut unicum complectebatur.</p>
+					<p>7. Verum illi major inter hxc omnia erat custo­ <lb/> diendi baptismatis cura.
+						Fastidiebat adolescens, quo <lb/> grandæ vus oblectabamur pater, tali se semper adhor­
+						<lb/> latione compellans : Delectat hæc vita, sed decipit. <lb/> Alia in ecclesiis
+						praecepta recitantur; alia in auribus <lb/> meis mandata sonuerunt : illic modestia, et
+						conti­ <lb/> nentia, et quies, et pudor traditur; hic effrenata <lb/> luxuria nutritur.
+						Ibi pietas viget; hic exercitatio cor­ <lb/> poralis. Illic ad æternum regnum Christus
+						invitat; <lb/> hic diabolus ad tecnporale sollicitat. Omne quod in <milestone unit="PLSection" n="D"/><lb/> mundo est, vanitas est et concupiscenlia oculorum, <lb/>
+						et mundus transit et concupiscentia ejus; qui autem <lb/> fecerit voluntatem Dei manet
+						in aeternum, sicut et ille <lb/> manet in æternum. Festinemus ergo erui ab his la­ <lb/>
+						queis, dum adhuc minus tenemur. j Difficile diu Ii­ <lb/> gata solvuntur. Facilius est
+						tenera evellere quam <lb/> robusta succidere. In monte salvam fac animam tuam, <note type="footnote"> , a Ita recte Quesn. ex codd. Arel, Lirin. et Sur. <lb/> Bollarulus
+							vera et laudatus Vat. Reg., repentis. </note><note type="footnote"> * Cudd. Lir.,
+							Arel. ei Sur. ita legunt. Bollandus, <lb/> ramuloa, minus bene. QUESN. </note><note type="footnote"> « Boll. et unus Vat. Reg., qui eam ante bap,i.mum <lb/> vita
+							ear;turam esse perspexerat. </note><note type="footnote"> * Arel, præsagio.
+							</note><note type="footnote"> * Lir.. ad (ollIe,; minus bene; agitur enim de fuga
+							<lb/> saeculi, non de festinatione ad baptismum. QUESN. </note><note type="footnote">
+							i B&gt;ll., retinebat. </note><note type="footnote"> R Boll.t proprius. </note><note type="footnote"> h Boll., tenerce. </note><note type="footnote"> i Salinas addit, sibi
+							a Christo. </note><note type="footnote"> J Unus cod. Vat. Reg.. Diuilligata tardius
+							.olt,,,,,,, <lb/> tur. Alius cum BolL, Difficile diu illignta solvuntur. </note>
+						<pb n="1253"/>
+						<milestone unit="PLSection" n="A"/><lb/> ne forte apprehendant te a malæ cogitationes.
+						Cito <lb/> serpit voluptatis venenum, servanda est Christo per <lb/> ejus gratiam sumpta
+						libertas. Alii aurum argentum­ <lb/> que miremur. Dominentur, ut video, metalla domi­
+						<lb/> nantibus. Alii pradia atque mancipia non sine animi <lb/> sui captivitate
+						possideant. Alii honoribus gaudeant, <lb/> et honorem divinae in se imaginis premant :
+						mihi <lb/> satis est mancipium non esse vitiorum; mihi salus, <lb/> gaudium; mihi
+						conjux, sapientia; mihi in virtulibus <lb/> b voluptas; mihi Christus thesaurus sit, qui
+						pensabit <lb/> mihi gaudia caduca melioribus, dabit et in hac vita <lb/> studiis
+						disciplinae et oblectari et ornari, et inter haec <lb/> dignum fieri coelestibus
+						regnis.</p>
+					<p>8. Nec longas talis meditatio moras protulit; sed <lb/> illico in flammam conversionis
+						nutrita bujusmodi fo- <milestone unit="PLSection" n="B"/><lb/> mentis scintilla c
+						prorupit. Jugum Dominicae servi­ <lb/> tutis subdita cervice suscipiens, jugum
+						libertatis ex­ <lb/> cussit, intelligens summum esse captivitatis genus, <lb/> licentiam
+						juventutis. Rediguntur ad breves capillos <lb/> luxuriantes comae. Transfertur ad
+						nitorem mentis <lb/> vestium splendor. Cervicis lacteae decus palliis rigen­ <lb/> tibus
+						occupatur. Transit lætitia in d serenitatem, <lb/> membrorum vigor animi vigore mutatur.
+						Virtus cor­ <lb/> poris in virtutem spiritus migrat. Pallescit jejunio <lb/> speciosa
+						facies, et prius e succi plena, fit plena gra­ <lb/> vitatis. Et quid plura? ita repente
+						totus alius ex alio <lb/> ostenditur, ut non aliter genitor ipsius, quam orba­ <lb/> tus
+						filio pater lamentaretur. Et vere plena mortifica­ <lb/> tio corporis; sed vita illi
+						spiritus erat. Tota hinc pa­ <lb/> rentum persecutio suscitatur. Tunc solum et primum
+							<milestone unit="PLSection" n="c"/><lb/> patri contumax fuii, cum Dei Patris filius
+						esse con­ <lb/> tendit, ordinata jam tunc in eo, sicut Salomon prae­ <lb/> cepit,
+						charilate. Ita enim propheta memoratus sub <lb/> Dei voce pronuntiat : Urdinate in me
+						charitatem <lb/> (Cant. II, 4). Ordinavit plane eam ille, et sub chari­ <lb/> latis
+						dispositione prospexit primo Deum, tum proxi­ <lb/> mum diligendum. Condemnari itaque se
+						senectus pa­ <lb/> tris, aetatis illius f conversione credebat. Occurrit, <lb/>
+						renititur, comminatur; nec tamen ullo horum pue­ <lb/> ritia Deo freta concutitur.</p>
+					<ab>
+						<title type="sub">CAPUT II.</title>
+					</ab>
+					<ab>
+						<title type="sub">Cum Venantio fratre peregrinatur. — Hujus obitus. Honoratus et
+							Venantius patria abscedunt, — Pere­ grinationes ad loca sacra.</title>
+					</ab>
+					<p>9. Assistit tironi suo Dominus consolator, nec dia- <milestone unit="PLSection" n="D"/><lb/> simulat unum ei ex germanis suis in collegium susci-' <lb/> lare, qui exemplo
+						ipsius ad conversionem vocatus, et <lb/> senior juniorem secutus, in ipso brevi quo
+						vixit tem­ <lb/> pore, sicut collegio illum, ita etiam virtute comitatus <lb/> est. Hinc
+						jam inter illos certamina grata propositi, <milestone unit="PLSection" n="A"/><lb/>
+						cujus mens ad pietatem mollior, cnjus g cibus durior, <lb/> cujus sermo blandior, cujus
+						amictus asperior; quis <lb/> loqui rarius, quis orare crebrius; quem minus deti­ <lb/>
+						neret lectus, quem magis lectio; quem minus move­ <lb/> ret h injuria, quem magis
+						misericordia; quis daret <lb/> promptius quod sibi detraxisset; quis libentius ho­ <lb/>
+						spiti stratum cilicii et cervical illud consueti lapidis <lb/> offerret;quis peregrinum
+						promptius ante eleemosynae <lb/> dispensationem lacrymis foveret, et affectu prius <lb/>
+						Christum quam advenam convivio pasceret; cui in <lb/> ore rarior mundus, cui frequentior
+						Christus; quis in <lb/> illa sublimitate virtutum sibimet ip3i minor videre­ <lb/> tur,
+						et quo magis merito ascenderet, eo magis com­ <lb/> punctione decresceret. Privatus
+						quidam i; tunc in <lb/> conversatione eorum episcopatus gerebatur. Mentior, <milestone unit="PLSection" n="B"/><lb/> nisi plurimi episcoporum didicere ab illis, dum ex­
+						<lb/> cipiuntur, excipere: nam si qui rigorem illum pro­ <lb/> positi non expaverunt,
+						plus illinc humanitatis j in <lb/> animo quam refectionis in corpore secum tulerunt.
+						<lb/> Ornabant itaque omnem simul patriam, et quantum <lb/> apud animos multorum manet,
+						custodiebantur alio­ <lb/> rum ab illis corpora, aliorurn spiritus, prout quisque <lb/>
+						indigens erat, aut vestimentis, aut doctrina, aut sum­ <lb/> ptibus, vestiebantur,
+						alebantur, instruebantur. Nul- <lb/> Ius illuc peregrinationis labore defessus, non tam­
+						<lb/> quam ad patriam et patrimonii sui rura pervenit; <lb/> nullus illinc ad ulteriora
+						discedens, non tamquam ite­ <lb/> rumk a domo sua pedem movit, et iterum sibi relin­
+						<lb/> quere cives suos visus est, iterum propinquos.</p>
+					<p>10. Interea amor in illos omnium crescebat, mul­ <milestone unit="PLSection" n="c"/><lb/> tiplicabatur, disseminabatur, et fama in ulteriora <lb/> quaeque ferebatur,
+						totaque jam erga illos patria ob­ <lb/> sequiis et amore et honore certabat. Pervenire
+						illis <lb/> ad ignobilitatem et paupertatem non licebat : quanto <lb/> magis eorum vita
+						abscondebatur, tanto magis fama <lb/> emicabat, et alter alterum laudi objicere et
+						gloriae <lb/> exponere, et ad unum communem l virtutem referre. <lb/> Sed dum
+						unusquisque sub umbra alterius obscurari <lb/> volebat, tamquam repercussa claritas m
+						utrumque ir­ <lb/> radiabat. Jam quae illorum gravitas, quam senilis <lb/> maturitas,
+						quam rara feminarum visitatio etiam pro <lb/> ximarum, et quae inter tot virtutes totius
+						vanitatis <lb/> fuga; quam blanda consolatio, et quam sollicita <lb/> custodia erga
+						eorum salutem qui se doctrinae eorum <lb/> mancipaverant! Angelica ab illis vita in
+						terra duce- <milestone unit="PLSection" n="D"/><lb/> batur, in multa patientia, in
+						vigiliis, in jejuniis, in <lb/> castitate, in scientia, in longanimitate, in suavitate,
+						in <lb/> Spiritu sancto, in charitate non ficta, in verbo veritatis, <lb/> in virtute
+						Dei. Pavebant interea illi gloriam suam, et <lb/> odorem bonæ conversalionis longe
+						lateque diffusum, <note type="footnote"> . Botl., mala conversationis istius. Ita etiam
+							unus <lb/> cod. Vat. Reg. et editi ante Qnesn., excepto Surio. </note><note type="footnote"> b Sic Inelius ex ms. '.at. Reg. 1025, et ex Boll., <lb/> Jo. Adam, et
+							Jo. Salinas. Qnesn., tJoluntas. </note><note type="footnote"> ' Idem cod. Vat. cum
+							Boll., se proripuit. </note><note type="footnote">d lia Arel. cod. et unus Vat. Reg.
+							Alius cum Boll., <lb/> gravitatem; Lir., severitatem. </note><note type="footnote"> 6
+							Boll, fuci. </note><note type="footnote">f Sa huas, tonve,.satione. </note><note type="footnote"> I idein Saliu. addit, esset; et mox post, crebriul. <lb/> addit,
+							posset. </note><note type="footnote"> 11 Surius, invidia. </note><note type="footnote">i Siiin., jam tunc: </note><note type="footnote">i Vat. Reg. 1025, anime, et postea,
+							corpora. </note><note type="footnote">k Qucsn. edit. per saltum omisit septem voces
+							se­ <lb/> quenies. </note><note type="footnote"> I Edit. Qnesn., virtutum apicem,
+							minus bene. </note><note type="footnote">m .fss. Vat. Reg., utrumque radiabat. Boll.
+							et Jo. <lb/> Adam, utrinqne radiabat. </note>
+						<pb n="1255"/>
+						<milestone unit="PLSection" n="A"/><lb/> licet ad Dei laudem referrent, sibi tamen
+						vanitatis <lb/> periculum inferre Inctuebant; percepisse se in vita <lb/> sua mercedem
+						sunm reputabunt, humanam conver­ <lb/> sationem ct gratiam fastidientes eremi amore
+						flagra­ <lb/> bant.</p>
+					<p>ii. Inito itaque consilio, et quodammodo passi <lb/> honoris sui persecutionem, ad
+						peregrina contendunt. <lb/> Iterum patria consurgit, iterum propinqui reluctan­ <lb/>
+						tur. a Spoliari se, sed nunc sanius, lumine suo me­ <lb/> tuunt. Quod illic, Jesu bone,
+						certamen fidei atque <lb/> amoris fuit ? Qui tunc consiliorum, qui precum, qui <lb/>
+						lacrymnrum ambitus ? Quis non illic sibi officium <lb/> propinqui vindicavit, aut cujus
+						lacrymae non cum <lb/> lacrymis patris certaverunl? Amittere enim se omnis <lb/> patria
+						in juvenibus illis pacres sentiebat. Et vere <milestone unit="PLSection" n="B"/><lb/>
+						erat illis senectus non annis cana, sed graliis ; non <lb/> cariosa artubus, sed moribus
+						b venusta. 0 quanta, <lb/> Domine, dispensatio procurationis tuæ ! qui lampa­ <lb/> des
+						tuas fidei igne fulgentes, non loco fixas stare <lb/> pateris, sed c præfers eas
+						illuminationi diversorum <lb/> locorum, inspirans migrandi voluntatem et fugiendi <lb/>
+						gloriam ; quae utique multiplicanda erat, ipso per <lb/> susceptam peregrinationem
+						virtutis augmento. Diri­ <lb/> pitur dudum quidem vario misericordiarum opere <lb/>
+						velata, adhuc tamen larga substantia ; et xqualiter <lb/> ad patrimonium d propinquus
+						atque extraneus au­ <lb/> ctionator admittitur.. Ita nullus in lucris dumtaxat <lb/>
+						parentum respectus est, ac si rem non suam ven­ <lb/> dant. Possessio quae pauperibus ,
+						ex quo ab ipsis <lb/> fuerat possessa, servierat, pauperibus nunc distri­ <milestone unit="PLSection" n="c"/><lb/> buenda distrahitur. Excipit patria effusam miseri­ <lb/>
+						cordiam, et fletibus effusis repensat.</p>
+					<p>12. Exeunt de terra sua et de domo et de cogna­ <lb/> tione sua, et exemplo e pari veri
+						Abrahae filii de­ <lb/> monstrantur. Ne quid tamen juvenili ausu temere ab <lb/> ipsis
+						incœptum putaretur, assumunt senem perfectae <lb/> consummatæque f gravitatis, quem
+						semper in Christo <lb/> patrem nominarunt, sanctum Caprasium, angelica <lb/> adhuc in
+						insulis conversatione degentem : cujus <lb/> quamquam dilectio vestra nomen hactenus
+						ignora­ <lb/> verit, et adhuc nesciat vitam, amicis eum suis Chri­ <lb/> stus annumerat.
+						Hunc tamquam ordinatorem in Do­ <lb/> mito atque custodem suae ætatis assumunt, quos jam
+						<lb/> custodes sibi plurima juventus elegerat. Quaeritur <lb/> ergo peregrinationis
+						lalebra , fama fugitur virtutis ; <milestone unit="PLSection" n="D"/><lb/> at ubicumque
+						itur, ibi alia, velint nolint, fama parie- <milestone unit="PLSection" n="A"/><lb/>
+						batur. Felices terræ, et portus beati, quos cœlestem <lb/> patriam sitiens peregrinus
+						illustrat! Alii Orientis <lb/> oras, et quæcumque alia plena sanctis loca accipiendi
+						<lb/> exempli gratia, accedunt; hi quidquid adeunt exem­ <lb/> plis bonis suscitant.
+						Spargitur ubique substantia, et <lb/> in omni accessu eorum bonus Christi odor
+						flagrat.</p>
+					<p>13. Hunc g ipsum jam tunc cujus hodie memoria <lb/> pascimur, urbi huic Massilienis
+						Ecclesia pene prae­ <lb/> ripuit, hortantc illius urbis antistite, et tali eo gau­ <lb/>
+						dente collegio. Sed quid non ille fervor lacrymarum <lb/> certamine et blandimentorum
+						ambitione evinceret <lb/> Alacrius ergo, h novo admoniti periculo, maria <lb/> i
+						transmittunt, expetunt littora quibus barbara esset <lb/> i illa, quæ plurima in ipsis
+						erat, Romana eloquentia. <lb/> Longum est percurrere quem ab illis profectum unus-
+							<milestone unit="PLSection" n="B"/><lb/> quisque locus traxerit, quam salubritatem
+						Ecclesiis <lb/> sine ullo clericatus actu invexerint, quot magistris <lb/> magistri in
+						silentio fuerint.</p>
+					<p>14. Illud commemorasse sufficiat, intrepide ab illis <lb/> pro Christi desiderio maris
+						rheuma toleratum, squa­ <lb/> lorem ac sterilitatem Achaici littoris expetitam ; et
+						<lb/> tam delicate, tam k molliter educatos contra tantas <lb/> aquarum et aurarum
+						varietates decertasse : quod <lb/> quam grave, quam intolerabile illi teneritndini
+						fuerit, <lb/> excessus illic Germani sui beatissimi in Christo viri <lb/> Venantii, et
+						infirmitates suæ ac suorum protestaban­ <lb/> tur. Jam quid in illo funere 1 Methona aut
+						extulisse <lb/> se, aut percepisse crediderit, multiplicibus psallen­ <lb/> tium
+						indicavit agminibus. Hinc Hebræus, hinc Græ­ <lb/> cus , hinc Latinus exsultat, Judseus
+						ipse Christum <milestone unit="PLSection" n="c"/><lb/> respuens fidclem Christi servum
+						admiratur. Astra <lb/> ipsa fervenles chori pulsant, et ut credimus cum hu­ <lb/> manis
+						vocibus angelici chori concinunt, fideli famulo <lb/> suo Christus occurrit. Euge,
+						Venanti, serve bone et <lb/> fidelis ; et dum audis, Intra in gaudium Domini tui <lb/>
+						(Matth. xxv, 21), memento nostri quos adhuc sæculi <lb/> gaudia impugnant. Accipiunt
+						finem carnis animæ­ <lb/> que certamina ; sumit principium vita perennis et <lb/> gloria
+						In.</p>
+					<ab>
+						<title type="sub">CAPUT III.</title>
+					</ab>
+					<ab>
+						<title type="sub">Honoratus, fratre mortua, venit in Italiam, et apud episcopos
+							hospitatur. — Leontius episcopus Foroju­ tiensis. — Lirinam insulam
+							ingreditur.</title>
+					</ab>
+					<p>15. Hinc jam vobis Honoratum vestrum Christus <lb/> reducit, et occulta manu n
+						salubritatem regressu sui <milestone unit="PLSection" n="D"/><lb/> temperat. Nam
+						quidquid præterfluens tangit, illumi­ <note type="footnote"> ■ 113 lit r:que cocl,),
+							Vat. Rpg.. Roll. et alii. Quesn. <lb/> 'Vel"S., Spolluri tese laDe bitnul lumine
+							o",ICe. metuunt, <lb/> At luelinr lex iis leel in, cum iudicet nunc saniorom <lb/>
+							esse meium, quippe qui non ut antea et siCculi. sed <lb/> ex virtutum qtlæ III
+							Uonurato et fratre ejus lucebant <lb/> amore orifha.ur. </note><note type="footnote">
+							b lia mirique COtlt1. Val. Rpg., cum Arel. et Ripat., <lb/> apud Boll. Al., vetusta,
+							Boll. et Sur. </note><note type="footnote"> c Co.l. Ripat. apud Boll., profers eas ad
+							illumina­ <lb/> tiollem. </note><note type="footnote">a Al., proximus. </note><note type="footnote">e CanI. llipiu., patris; fat mox, vere pro veri. BOL­ <lb/> LANDUS.
+							</note><note type="footnote"> f Quesn.. If!lali.. Correctionem ex Vat. Reg. 1025 <lb/>
+							induciam conhimaiJo. S ,lilHS CI Eucherio de Laude <lb/> eremi, ubi venerabilem
+							gru,itate Caprasium appellat, </note>
+						<note type="footnote"> I Voces ab Hunc ipsum usque ad littora desunt in <lb/> codd.
+							Arel. ei Lirin. Reddidit eas Boll. ex mss. <lb/> Absunt etiain in Vat. Reg. 645, sed
+							in alio 1015 le­ <lb/> guniur. </note><note type="footnote"> h Salinas addit, tamquim.
+							</note><note type="footnote">i At., transmeant. QUESN. </note><note type="footnote"> i
+							Salinas addit, etiam.- </note><note type="footnote">k Cn.1. HipaL., nobiliter.
+							</note><note type="footnote"> I Plures sunt huj II.. nominis civi I ates. Ilic ca
+							vidc­ <lb/> tur intelligeiida quæ in ore Messeniæ in Peloponiieso <lb/> Sita csl.
+							lioLLANDIJS. </note><note type="footnote">m Quesn. addit, Amen. Deest in Boll. et n
+							stris <lb/> codd. </note><note type="footnote"> II Ita cum Bull. codex Vat. Reg. ł025.
+							Quesn., ..a-. <lb/> lubri regressu sui, </note>
+						<pb n="1257"/>
+						<milestone unit="PLSection" n="A"/><lb/> nat. Hujus Italia benedici gaudet introitu.
+						HuncTuscia <lb/> venerat complectitur, et błandissimas per sacerdo­ <lb/> tes suos moras
+						nectit. Porro Dei providentia nobis <lb/> prospiciens cuncta disrupit, et quem e patria
+						eremi <lb/> desideria provocarant, hunc in cremum huic urbi <lb/> propinquam Christus
+						invitat. Vacantem itaque insu­ <lb/> lam ob nimietatem squatoris, et inaccessani venena­
+						<lb/> torum animalium metu, Alpino haud longe jugo sub­ <lb/> dit m petit. Præter
+						secreti opportunitatem, sancti <lb/> ac beatissimi in Christo viri Leontii episcopi
+						oblecta­ <lb/> tus vicinia ct charitate constrictus, a plurimis etiam <lb/> novo ausu
+						retrahere illum conantibus. Nam circum­ <lb/> jecti accolæ &amp;ttrribilclla illam
+						vastitatem ferebant, et <lb/> suis occupare illum finibus fidei ambitione certabant.
+						<lb/> Verum ille humanæ conversationis impatiens, et cir- <milestone unit="PLSection" n="B"/><lb/> cumcidi a mundo vel objectu freti cuncupiscens, <lb/> illud corde, ct oCc
+						gestabat, nunc sibi, nunc suis pro­ <lb/> ferens : Super aspidem et basiliscum
+						ambulabis, et con­ <lb/> culcabis leonem et draconem (Ps. ac, 13); et in Evan­ <lb/>
+						geliis Christi ad discipulos suos factam promissio­ <lb/> nem : Ecce dedi vobis
+						polestatem calcandi supra ser­ <lb/> pentes et scorpiones (Luc. X, 19). Ingreditur
+						itaque <lb/> impavidus, et pavorem suorum securitate sua discu­ <lb/> tit. Fugit horror
+						solitudinis, cedit turba serpentium. <lb/> At quæ non tenebræ illud lumen refugerunt ?
+						Quæ <lb/> non illi medicamento venena cesserunt ? Inaudium <lb/> vere illud et plane
+						inter miracula ac merita illius <lb/> b deputandum reor, quod tam frequens, ut vidimus,
+						in <lb/> illis aridiatibus serpentium occursus, marinis præ­ <lb/> lertim æstibus
+						excitatus, nulli umquam non solum <milestone unit="PLSection" n="c"/><lb/> periculo, sed
+						nec pavori fuit.</p>
+					<p>16. Quid longius morer, cooperante, ut ita dicam, <lb/> Christo, omni, quæ prius
+						delerruerat, adversitate <lb/> superata, Honoratus c vester castra illic quædam Dei
+						<lb/> collocat; et qui locus dudum homines a sua commo­ <lb/> ratione repulerat,
+						angelicis illustratur officiis. Illu­ <lb/> minatur latibulum, dum lumen occulitur.
+						Cedit ignoti <lb/> prius exsilii obscuritas voluntarii exsulis clariiati. <lb/> Quid
+						ergo accessio , quid emendatio illa conferat ? <lb/> Ouocumque Honoratus accesserit,
+						adesse illic d ho­ <lb/> norem necesse est. IIic primum illigatur diu evitati <lb/>
+						clericatus officio ; hic refugam suum sacerdotalis in­ <lb/> fula innectit; et qui e ire
+						ad dignitatem detrectave­ <lb/> rat, ad ipsum dignitas venit. Apparuit illic presbyier
+						<lb/> non duplici tantum, sed multiplici honore dignissi- <milestone unit="PLSection" n="D"/><lb/> mus, coram quo milam sacerdotii distantiam, nullum <lb/> nominis
+						privilegium episcopatus agnosceret. Nemo <lb/> umquam episcoporum sibi tantum usurpavit,
+						ut se <lb/> presbyteri illius collegam f computaret. Verum ille <milestone unit="PLSection" n="A"/><lb/> tam integram in sacerdotio monachi humilitatem con­
+						<lb/> servabat, quam plene monachus sacerdotii menta <lb/> possederat.</p>
+					<p>17. Industria illic sua sufficiens electis Dei Ecclesiæ <lb/> templum excitatur, apta
+						monachorum habitaculis <lb/> tecta consurgunt : g negatæ a sæculis aquæ largi­ <lb/> tcr
+						fluunt, in uno ortu suo duo veteris Testamenti <lb/> miracula proferentes. Nam cum de
+						saxo erumpe­ <lb/> rent, in media maris amaritudine dulces proflue <lb/> bant. h
+						Certatim jam Illuc omnis regio quærentes Deum <lb/> dirigebat. Honoratum expetiit,
+						quisquis Christum <lb/> desideravit, et plane Christum, quisquis Honora­ <lb/> tum
+						expetiit, invenit. Illic enim ille totus vigebat , <lb/> pectus ejus quasi præcelsam
+						arcem et splendidis­ <lb/> simum templum insederat. Illic castitas , quæ est <milestone unit="PLSection" n="B"/><lb/> sanctitas, fides, sapientia et virtus habitavit ; ibi
+						<lb/> justitia fulsit et veritas. Itaque velut i ulnis effusis <lb/> patentibusque
+						brachiis in amplexum suum, hoc est <lb/> in amorem Christi, invitabat omnes undique ad
+						illum <lb/> certatim confluebant. Etenim quæ adhuc terra, quæ <lb/> natio in monacterio
+						illius cives suos non habet ? Quam <lb/> ille harbaricm non mitigavit? Quoties de
+						immanibus <lb/> belluis j quasi mites fecit columbas? Quam amaros <lb/> interdum mores
+						Christi dulcedine aspersit? Et quo­ <lb/> rum. pravitas sibimetipsis prius pœnalis,
+						fuerat, eorum <lb/> postmodum gratia oblectamento omnibus erat; de­ <lb/> gustata deinde
+						boni suavitete, non poterant non ma­ <lb/> gis et magis odisse quod fuerant. Nam vclut
+						adducti <lb/> in novam lucem, antiquum illum k diu insidentium <lb/> errorum carcerem
+						detestabantur. Pulsa per exhorta­ <milestone unit="PLSection" n="c"/><lb/> tionem illius
+						est varia pestis animorum. Amaritudo, <lb/> asperitas , et rabies locum dabant
+						libertati, quam <lb/> Christus obtulerat, et l delectabat requies post lon­ <lb/> gam et
+						gravem Pharaonicam servitutem. Stupenda et <lb/> admirabilis permutatio, non Circeo, ut
+						aiunt, pocula <lb/> ex hominibus feras, sed ex feris homines Christi <lb/> verbum
+						tamquam dulcissimum poculum, Honorato- <lb/> ministrante, faciebat. Quid enim non m
+						extunderet <lb/> illa instantia cum alacritate conjuncta aut qui la­ <lb/> pides non in
+						Abrahæ filios verterentur ? ubi lania in <lb/> expoliendis mentibus n erat officina
+						virtutum, ut si <lb/> minus hominem ad salutem suam vivis exhortationi­ <lb/> bus
+						promoveret, Deum oratione constringeret. Om­ <lb/> nium ille passiones suas credidit et
+						tamquam suas <lb/> flevit ; profectus laboresque omnium suos computa- <milestone unit="PLSection" n="D"/><lb/> vit; sciens gaudere cum gaudentibus, flere cum flen­
+						<lb/> tibus, simul et vitia et virtutes omnium in meriti suis <lb/> cumulum
+						transferebat. Sicut enim virtus ad virtutem <lb/> ° excitat, ita miseratio miseris
+						impensa fructificat. <note type="footnote"> • Iia codd. et editi, excepto Q iesn., apud
+							quem, <lb/> pl,.r;nl;. Ii;;,,, novo haustu prolral."re conantibus. </note><note type="footnote"> ° Sic ex ii deui IUSS. V at. Reg , Salinas., Qlleso.. <lb/> cuin
+							aliis e.lil ii, nlir'II,durJI. </note><note type="footnote"> c Ita Salinas, uti etiam
+							supra : HOllorat"", vestrum. <lb/> Qup.sn.. noster. </note><note type="footnote"> a
+							Salinas atl.lit etium. </note><note type="footnote"> • M s. Vai. Reg. ei Unll.,
+							venire. </note><note type="footnote"> I Arel. cod., copularet. Mox pro in sacerdotio,
+							<lb/> Quesii. iii 'n:n'gm&lt;! : Forte, hi ,ncerdol;um. </note><note type="footnote">
+							I ha Satin'ls, s, qui codd. Vat. Reg. adhibuit. Quesn., <lb/> negalæ sæculis nqtue
+							fluunt. </note><note type="footnote">» Sic ex codciu Salinas. Quesn., Certatim se jam
+							<lb/> illuc omnia regio quærens Deum, etc. </note><note type="footnote">i Quesn.,
+							venis effusis protensisque brachiis. Pr:rIUr i.. <lb/> mus lectionem cæler:.rum
+							editionum, eL V a r. Res. 1025, </note><note type="footnote"> i UIis cod., quam miles.
+							</note><note type="footnote">k Quesn., diu in se densorum errorum. CaMeriwum <lb/>
+							edit. et codd. lectionem secuti sumus. </note><note type="footnote"> I Apud Quesn.,
+							delectabatur. </note><note type="footnote"> ID Vat. Reg. 1025, obtineret. </note><note type="footnote"> II Vat. Reg. 645, erant olficia. Mox apud Salin: s, <lb/> quod si
+							minus. </note><note type="footnote"> ° Ita Vat. Reg. codd., cum editis, excepto Quesn
+							<lb/> qui in text.. pra?fert. excitans... impellde".). et I n •v - <lb/> line,
+							excitat.., impensu </note>
+						<note type="footnote"> PATaOL. L. </note>
+						<note type="footnote"> 40 </note>
+						<pb n="1259"/>
+						<milestone unit="PLSection" n="A"/><lb/> a Metet enim singulis plusquam sibi sipguli.
+						Singu­ <lb/> lorum enim salus b unam illi gloriam instruit. Im­ <lb/> piger, festinus,
+						infatigabilis perseverat, prout cujus­ <lb/> que naturam moresque perspexerat. Hunc
+						secreto, <lb/> &lt; illuDi palam ; huic severus, illum blandus aggre­ <lb/> ditur ; et
+						ad castigandi immutationem, ipsam plerum­ <lb/> que faciem castigationes immutat. Inde
+						illud erat qtwd <lb/> non facil quemquam tantum vel amari vidimus vel <lb/> timeri: ita
+						enim duos bos affectus sui in unoquoque <lb/> suorum collocabat, ut et amor suus delecti
+						metum, et <lb/> timor disciplinæ amorem introduceret.</p>
+					<ab>
+						<title type="sub">CAPUT IV.</title>
+					</ab>
+					<ab>
+						<title type="sub">Præclara Lirinensium institutio. — Honorati virtutes. — Honoratus
+							benignus et liberalis in hospiles. — Honorato scripsit Eucherius.</title>
+					</ab>
+					<p>
+						<milestone unit="PLSection" n="B"/>18. Incredibile est quantae illi curæ fuerit ne quem
+						<lb/> tristitia affligeret, ne cogitatio sæcularis urgeret. Quam <lb/> facile
+						perspexerit quid quemque vexaret, d tam­ <lb/> quam singulorum utentes mente gestaret.
+						Quanta <lb/> praeterea pietatis dispensatione providt, ue quem <lb/> nimius labor
+						gravaret, ne quis nimia quiete torpe­ <lb/> sceret. Ipsos, si dici potest, singulorum e
+						fratrum <lb/> somnos pio pensavit affectu. Valentes corpore ande­ <lb/> sidia semper
+						excutiens, ferventes spiritu cogebat ad <lb/> requiem. Omnium vires, omnium animos,
+						omnium <lb/> stomachos instinctu, ctedo, Dei noverat, vere servus <lb/> omnium factus
+						propter Jesum Christum. Mirandum <lb/> est quomodo unus tot simul officia compleverit,
+						tam <lb/> varia præsertim infirmitate vexatus. Fortissimus <lb/> quosque, et recenti
+						adbuc conversatione prævelidos <milestone unit="PLSection" n="c"/><lb/> in jejuniis
+						vigiliisque, impar viribus, pari lege comi­ <lb/> tatus est. Infirmos ipse infirmior
+						visitavit; refrigeria <lb/> animarum simul providit et corporum ; et ne qnid cui­ <lb/>
+						quam minus luisset impensum, animo semper recur­ <lb/> rebat : hic alget, hic i cogitat
+						: illi labor gravis est; <lb/> huic hæc esca nqn convenit : ille ab alio læsus est ;
+						<lb/> grave est quod hic intulit, nec minus grave quod iste <lb/> sensit g. Grandi
+						instantia opus est ut offensa gratiam <lb/> consequatur, et hic sibi illatas contumelias
+						aut leves <lb/> aut nullas computet ; hic autem se gravissimas intu­ <lb/> lisse
+						suspiret. Hæc illi jugis opera, jugis intentio <lb/> erat, levigare omnibus jugum
+						Christi, et quidquid <lb/> diabolus injecisset, avertere, discusso culparum nu­ <lb/>
+						bilo, gratiarum serena revocare, amorem Christi et <lb/> proximorum amando inserere, et
+						mentes omnium <milestone unit="PLSection" n="A"/><lb/> tamquam suum pectus excolere ;
+						innovare gaudia, <lb/> et ad Christi semper desiderium tamquam primo con­ <lb/>
+						versionis die inardescere.</p>
+					<p>19. Hinc illud erat quod .. omnia congregatio illa <lb/> divinæ cupida servitutis, ad
+						nomen ipsius ex diversa <lb/> terrarum parte collecta, tam moribus quam linguis <lb/>
+						dissona, ip illius amorem conspirabat. Omnes domi­ <lb/> num, omnes patrem vocdbant, in
+						illo sibi patriam, <lb/> i propinquos, et omnia simul reddita computantes. <lb/>
+						Didicerant omnes, ipso sibi compatiente. dolores il­ <lb/> lius suos computare, ut non
+						immerito egregius et in <lb/> Christo beatissimus vir Salvianus presbyter charo­ <lb/>
+						rum suorum unus in scriptis suis dixerit, quod j <lb/> cut coeli faciem pro sua sol aut
+						obscuritate, aut sere­ <lb/> nitate mutaret, ita congregatio illa cœlum sitiens et
+							<milestone unit="PLSection" n="B"/><lb/> cœlestibus studiis mancipata ab ipso vel
+						nubila, vel <lb/> serenitatem mentium, quasi peculiari in Christo Sole, <lb/>
+						susciperet, k ipsoque et afficto afflictaretur, et re­ <lb/> spirante revalesceret. Hinc
+						illa erat, et adhuc oratio­ <lb/> nibus suis 1 permanet diffusa in monasterio suo san­
+						<lb/> cti Spiritus gratia, tanti doctoris et exemplo et ad­ <lb/> monitione firmata in
+						variis charismatum donis , in <lb/> humilitate et mansuetudine, in charitate non ficta,
+						<lb/> et una capitis gloria m in diversitate membrorum.</p>
+					<p>20. Magna illi inter haec in advenas et hospites <lb/> cura. Quis enim illum aliquando
+						praeteriret? Quis non <lb/> quamlibet prosperam navigationem, n quoslibet suaves <lb/>
+						ventos mox per tanti viri desiderium, commodi sui <lb/> contemptor abrupit ? aut si
+						insulam tenere non licuit, <lb/> violentum secundæ navigationis obsequium, acerbis-
+							<milestone unit="PLSection" n="c"/><lb/> simam tempestatem computavit. Nemo illuc non
+						fe­ <lb/> stinus accessit; nemo illic moras suas sensit; nemo <lb/> illinc non
+						securissimus solvit, prosequente ipso amo­ <lb/> re, sumptibus, votis. et tunc primum
+						agnitos tam­ <lb/> quam dudum suos emittente. In squalore eremi deli­ <lb/> cias 0
+						conspectu suo ministrabat, cum tanto omnes <lb/> gaudio et amore suscipiens, tamquam
+						exspectasset : <lb/> aderat praeterea munificentiæ animo par substantia <lb/> pari fide
+						ministrata. Nam qui libenter audierat : Ven­ <lb/> de omnia tua, et da pauperibus, et
+						veni, sequere ms <lb/> (Mtth. XIX, 21); huic libentissime unusquisque, si <lb/> quid
+						misericordiæ animo devoverat, dispensandum <lb/> ingercbat; securus illi sua cuncta
+						committens, cujus <lb/> in relinquendis omnibus secutus fuerat exemplum. <lb/> Hinc ad
+						eum frequens ille ei diversarum regionum <milestone unit="PLSection" n="n"/><note type="footnote"> • Quesn., ex ros. Arel., JI,detur enim singulis plus, <lb/> quam sibi
+							singulo. Magis placuit lectio aliorum edif,().. <lb/> rum, quae item est codd. Va,t.,
+							Reg., et vidftur ex­ <lb/> plicare verbum fructificat, quatenus Honuralus ex <lb/>
+							luiseralinoA pluribus impensa metet plusgloris, quam <lb/> singuli, qui ejus opere
+							salutent cow"eqllenlur.' </note><note type="footnote">b Cod. Val. Reg., 1025, unam
+							illius ploriam struit. </note><note type="footnote"> « ita Salinas. Quesn., hunc
+							palam, illum severus, <lb/> hunc blandus. </note><note type="footnote">a lIelior haec
+							lectio Salinas, qui mss. Vatt. Reg., <lb/> usus est. QueM., quam singulorum mentes
+							menie ge­ <lb/> .,aret: quanta prcetere* pietalis dispensatione provir <lb/> derit.
+							</note><note type="footnote"> • Quesn., patrum. </note><note type="footnote"> i Ita
+							Arel. et alii codd. ac Bolt. In Surio et Bar­ <lb/> rali, mqrotat, minus bene. </note>
+						<note type="footnote"> </note>
+						<milestone unit="PLSection" n="D"/><note type="footnote"> I Salinis addit, m;.r;am; et
+							mox præfert singulari <lb/> numero, illatam conmmeliam, et sic deinceps alif.
+							</note><note type="footnote"> h Ex eodem adjecimus, omnis. </note><note type="footnote"> i Quesn. addit, vel. </note><note type="footnote">i Salinas, sicut
+							sol coeli faciem pro sua sola aut fb­ <lb/> scuritaie, etc. </note><note type="footnote"> k Boll., ipsoque congruo congrueret, infpirante reva­ <lb/> lesceret.
+							</note><note type="footnote"> 1 iia cum Boll. utrique codd. Val. Relt. Apud Ques-
+							<lb/> vero : Permanet in monasterio suo Spiritus sancti9 etC. </note><note type="footnote"> ® Sic Vat. Res. 1025, et plerique editi. Quesliv <lb/> in divisione.
+							</note><note type="footnote"> Ii Salinas ex eodem Vat. Reg., et quamlibet <lb/> dos
+							ventos haud pro tanti viri desiderio, commodi mk <lb/> con,emplor, abnuit ? Boll. pro
+							haud habet aut. ~1 </note><note type="footnote"> • In Out'sn. omissae voces, conspectu
+							suo. <lb/> . </note>
+						<pb n="1261"/>
+						<milestone unit="PLSection" n="A"/><lb/> a vastitate concursus. Et vere is ille erat
+						qui, non <lb/> ut parcus dispensator aut timidus, b respectu sibi <lb/> creditæ et
+						crescentis quotidie congregationis aliqua <lb/> tribueret, plura servaret. c Sed quid
+						quotidie in ahe­ <lb/> no non faceret, quod in suo. semel fecerat? Hoc est, <lb/> nihil
+						sibi. niHil suis preter præsentium dierum vi­ <lb/> ctum et d vestitum reservabat.</p>
+					<p>2i. Exhausta est aliquando dispensationis substan­ <lb/> tia, fides numquam. Quadam
+						enim vice cum unum <lb/> jam ex multis millibus aureum nummum e proflua <lb/> ad
+						munificentiam arca retineret, hunc ipsum, etiam <lb/> in multarum rerum defectu,
+						constantissime præter <lb/> eunti pauperi dedi!, et f me atque aliis astantibus <lb/>
+						dixit: Certum est jam appropinquare g qui deferat, si <lb/> non habet munificentia
+						nostra quod proferat. Vix trium <milestone unit="PLSection" n="B"/><lb/> aut quatuor
+						horarum spatium, die fluente, transierat, <lb/> et continuo qui h verbis suis fidem
+						faceret, occurrit. <lb/> O felix munificentia , cui fides ministravit! O felix <lb/>
+						fides, cui munificentia numquam moram fecit! Et <lb/> vere quantum fides sua i
+						suppeditabat, dispensare <lb/> sua tantum manu non occurrit. Plurimos multis locis <lb/>
+						probatissimos viros habuit, quorum semper manibus, <lb/> quod sibi deferebatur,
+						expenderet. Sic unius dispen­ <lb/> satoris gratia, dispensatores multos habebat, et
+						fides <lb/> sua, quasi communis quidun fons , cl dantibus et <lb/> accipientibus
+						plurimis profluebat. Nullius i angustiæ <lb/> ad ipsum pervenerunt, quæ ultra ipsum
+						prolende­ <lb/> rentur, aut non in ipso metam reperirent.</p>
+					<p>22. Hinc jam ad illum certatim , ut putabat, aut <lb/> certe ut optabat, latentem
+						undique litterarum officia <milestone unit="PLSection" n="0"/><lb/> perlata sunt, quibus
+						ille quam novis affectibus va <lb/> riala reddebat, quam gravia , quam blanda , quam
+						<lb/> dulcia, Unde pulcherrime splendidus mundo, splen­ <lb/> didior Christo. aemulus
+						virtutis suæ bcatus Euche­ <lb/> rius cum ab eremo in tabulis, ut assolet, cera illitis.
+						<lb/> in proxima ab ipso degens insula, litteras ejus susce­ <lb/> pisset: Mel, inquit,
+						suum ceris reddidisti. Quis itaque <lb/> non beatum se, beatam domum , beata scrinia sua
+						<lb/> credidit, in parvo ex ore ipsius munere magna bene­ <lb/> dictione ditatus? Et
+						sane tantum in scriptis illius <lb/> salis, tantum dulcedinis erat, ut nn scriHiis aut
+						ar­ <lb/> mariis, sed area pectoris condi mererentur. lude est <lb/> quod plurimi ea
+						inscripta sensibus ferunt, et liben­ <lb/> tissime ad testimonium amoris sui k
+						proferunt, De­ <lb/> nique quis umquam tantum sibi amicorum præsen- <milestone unit="PLSection" n="A"/><lb/> tibus illigavit officiis, quantos ille, qui se diligere
+						i <lb/> et avidissime desiderarent, habuit ignotos?</p>
+					<ab>
+						<title type="sub">CAPUT V.</title>
+					</ab>
+					<ab>
+						<title type="sub">S. Hilarius Honorati adhortationibus convertitur Gratiæ Christi
+							efficacia in Hilario.</title>
+					</ab>
+					<p>23. Interea ego dum 1 multam ejus in omnes gua- <lb/> tiam memoro, in me infinitam
+						euram prætermitto: <lb/> cum ipsius utique mibi cura non imous in Christa <lb/> salutis
+						attulerit. quam amor inter vos ernamenti et <lb/> m amoris reliquit. Mei enim gratia,
+						quod ad meritum <lb/> suum et judicium meum pertinet, patriam quam <lb/> fastidierat non
+						dediguatur accedere; nec refugit labo <lb/> rem n tam longi itineris, suis præcipue
+						multis jam­ <lb/> dudum infirmitatibus gravem; ° meque illic jam in <lb/> illis annis
+						limis amicum sæculo et contumacem Deo, <milestone unit="PLSection" n="B"/><lb/> ut
+						seductor. et verax ad amorem Cbristi blanda <lb/> manu tentat. Longum est intromittere
+						iliam in exhor­ <lb/> tationibus ingenii sui violentiam, in quibus cum jam <lb/> ante
+						propositum acerrimos sibimetipsi P ad conver­ <lb/> sionem stimulos admovere potuisset,
+						haustis d u sa­ <lb/> pientiæ fontibus muUipliciter diffundebatur. Sed cum <lb/> parum
+						in aures mqas pietatis illius verba descende­ <lb/> rent, ad solita orationis praesidia
+						convertitur q et <lb/> affectus sui clamor repulsus duritia mea piissimas <lb/> Dei r
+						uque ad misericordiam puJsavit ac penetravit <lb/> aures. Et vere obluctanti mihi, et
+						per sæcularem <lb/> illam nimis periculosam consuetudinem obstinatio­ <lb/> nem interdum
+						meam sacramento obstringenti, pro. <lb/> phetico, ut ita dicam, spiritu ante s
+						promiserat: Hoc. <lb/> inquiens, quod mihi tu non prœstas , Deus prœstat. <milestone unit="PLSection" n="0"/><lb/> Et o quamdiu ernollire duritiam meam nisus est im­ <lb/>
+						bre lacrymarum! quam piis mecum pro salute mea <lb/> osculis amplexibus que certavit! ad
+						praesens tamen , <lb/> ut ille ait, vici t pessima victoria. Exagitandum me <lb/> illinc
+						et edomandum dextera Dei suscepit; illi enim me <lb/> oratione tradiderat. Qui tunc in
+						corde meo fluctus! Quae <lb/> tempestates diversarum et inter se compugnantium <lb/>
+						voluntatum excitatæ sunt! Quotiens sibi in animo meo <lb/> velle et nolle successit ! Et
+						quid plura? Absente illo <lb/> partes in me suas Christus exsequitur : u post bidum
+						<lb/> orationibus suis per miserationem Dei mea con­ <lb/> tumacia subjugatur. Fugaverat
+						enim somnum cogi­ <lb/> tatio, et invitante me pio Domino, totus eminus cum <lb/>
+						voluptatibus suis mundus astabat. Quid expetendum, <lb/> quid relinquendum v suaderetur,
+						animus mecum <milestone unit="PLSection" n="D"/><note type="footnote"> a Apud eumdem,
+							captiwilate, miiris bene. </note><note type="footnote"> b Salin &gt;s, respector.
+							</note><note type="footnote">e Ita Boll. et Salinas. Quesn., sed qui quotidie.
+							</note><note type="footnote"> • Quidam editi. veslimenlum reserL1nret. </note><note type="footnote"> ' Lirin. cod., prona. </note><note type="footnote">f At., mihi.
+							</note><note type="footnote"> I h Qnesn. addit, Christum. </note><note type="footnote"> Cum Salinas acijccimus verbis ex utrisque mss. <lb/> Vat. Reg. </note><note type="footnote">i AI.. suppetebat. </note><note type="footnote"> i S:llinas addit,
+							pene. </note><note type="footnote">k Qlle5in., perferunt. Postea Salinas, tanto. sibi
+							<lb/> amicos. </note><note type="footnote"> 1 Salinas, multimodam. </note><note type="footnote"> m Idem, hoNoris. </note><note type="footnote"> n Idem, tanti i
+							tiller;.. </note><note type="footnote"> • Quesn., praemisso puncto, inseruit r ,nil,
+							et omi­ <lb/> _. <lb/> . </note>
+						<milestone unit="PLSection" n="D"/><note type="footnote"> sit illic. Codicum et aliorum
+							edit. lectionem secuti <lb/> sumus. </note><note type="footnote"> P Quesn., ad
+							converlat;onem suam Bt;mulo. arnOI'6.. </note><note type="footnote">q Vat. Reg. 1025,
+							et ita de fructu sui laboris pulsu. <lb/> duritia mea. </note><note type="footnote"> r
+							Ita cum quibusdam editis codd. Yat. Reg ,Quesn.t <lb/> usque ad mi,ericorde..
+							</note><note type="footnote"> s Salinas addit jam. </note><note type="footnote"> %
+							Qnesu., pessimam victoriam. Mox, pro Exagitan­ <lb/> dum, Salinas, Sed agitandum.
+							</note><note type="footnote">tt Sic cum Quesn. codex Vat. Rrg. 645. Salinas et <lb/>
+							Boll. cum alio Vat., Reg., post triduum. </note><note type="footnote"> T In Vita S.
+							Hilarii. c. 4, ubi hoc testimonium <lb/> profertur, legimus, videretur. Salinas
+							omittit, quid <lb/> expetendum, pro quibus in Vita laudata, quid appe­ <lb/> tendum. </note>
+						<pb n="1263"/>
+						<milestone unit="PLSection" n="A"/><lb/> metis, tamquam collatis apud amicum
+						tractatibus, <lb/> ventilabat. Gratias tibi. Jesu bone, gratias, qui diru­ <lb/> pisti
+						vincula mea, famuli tui Honorati pia supplica­ <lb/> tione permotus, et injecisti mihi
+						vincula amoris trui, <lb/> quibus si tenear, numquam peccati vincula revale­ <lb/>
+						scent. Occurro itaque subditus, qui superbus absces­ <lb/> seram, et omni contradictione
+						deposita novus pre­ <lb/> calor accedo. Sic, sic sancli oratio fugitivos suos <lb/>
+						reducit, sic contumaces subjugat, sic expugnat re­ <lb/> belles.</p>
+					<p>24. Jam quibus illc tunc lacrymis ariditatem <lb/> meam a irroravit, quam pio fletu me
+						quoque traxit <lb/> in lacrymas Tali me humilitate et blandimento, <lb/> tamquam si ipse
+						a me exciperetur, excepit. Ablata <lb/> est illico causa remorandi. Tunc primum illam
+							<milestone unit="PLSection" n="B"/><lb/> . patriam, quam fugiendam dudum crediderat,
+						agno­ <lb/> vit. Educit me secum, suam prædam; gaudet, trium­ <lb/> phat, exsultat.
+						Eremo me jam tamen exemplo suo <lb/> secreti cupidum festinat includere. Alit primum
+						<lb/> lacte, et postmodum cibo. Potat etiam profluo illo, <lb/> qui in se erat,
+						coelestis fonte sapientiæ. Atque utinam <lb/> tantum angustiæ spiritus mei recepissent,
+						quantum <lb/> ille c studuit infundere! Præparasset me profecto <lb/> vobis, et
+						desiderio vestro dignum dedisset; d et <lb/> successorem sibi idoneum nesciens
+						erudisset. e Jam <lb/> vero illam sui in omnIs profluam charitatem, quod <lb/> sine
+						invidia dixerim, quantum in me adjecerat, et <lb/> leve illud Christi jugum quantum mihi
+						levius blan­ <lb/> dimentis suis fecerat! i Quoties me mentem suam, <lb/> quoties
+						animam, quoties lingulam suam nominabat! <milestone unit="PLSection" n="c"/><lb/> Quam
+						impatiens absentiæ, quam semper indignissimi <lb/> conspectus mci cupidus erat! Quid de
+						his omnibus <lb/> dicam, nisi illud propheticum, quod Dominus ei re­ <lb/> tribuit pro
+						me?</p>
+					<ab>
+						<title type="sub">CAPUT VI.</title>
+					</ab>
+					<ab>
+						<title type="sub">Honoratus fit episcopus et episcopaliter vivit. — Eleemosynœ mortuorum
+							refrigeria.</title>
+					</ab>
+					<p>25. Interea, dilectissimi, strictum contingens potius <lb/> functa quam refereris, de
+						solertissimo pastore ves­ <lb/> tro ea quæ aliis potius quam vobis erant nota g re­
+						<lb/> plicavi. Sacerdolium quippe suum in Ecclesia hac <lb/> nomine auctum vidimus;
+						sanctimonia vero et actibus <lb/> jam prius summum. Sed unde illud, quæso, quod <lb/>
+						tam e longinquo tam ignotus expetatur? Quis illam <lb/> absentis nec prius visi gratiam
+						vestris pectoribus <milestone unit="PLSection" n="A"/><lb/> affixit? Quis illud
+						desiderium suscitavit, ut orbatis <lb/> his quibus a Domnino apud eremum induhus erat,
+						<lb/> vobis nasceretur? Ille utique qui cuncta dispensat; <lb/> ille qui eum et patriæ
+						suæ, quamdiu congruum vi I <lb/> debat, indulsit , et per maria et per terras ad utili­
+						<lb/> tatem videntium hanc tantali cultoris sui gratiam <lb/> circumegit. <lb/> 26. In
+						summa ex illo brevi quo vobis inductus est <lb/> tempore, facile metiri datur, quid plus
+						de illo in his, <lb/> quid minus dixero. Vidistis enim, dilectissimi, illam <lb/>
+						sollicitudinis vigilantiam, illud disciplinae studium, <lb/> illas pietatis lacrymas,
+						illam jugem ac perpetuam <lb/> mentis serenitatem, cujus h testimonium vultus im­ <lb/>
+						mutabilis erat. Audistis quoque os illud congruens <lb/> vitæ, i in quo erat consentanea
+						puritas pectoris, <milestone unit="PLSection" n="B"/><lb/> sermonis luculentia. Vidistis
+						illam latitudinem chari­ <lb/> tatis, quæ tanta in illo fuit, ut non immerito de illo
+						<lb/> sanctus idem, cujus proximam sententiam protuli , <lb/> dixerit : quod si arbitrio
+						suo charitas ipsa i expri­ <lb/> menda esset, in vultum Honorati potissimum pingi <lb/>
+						debere videretur. Quis itaque illum umquam suffi­ <lb/> cienter vidisse sibi visus est?
+						Cui non loco omnium <lb/> affectuum fuit? Quis ita blandimentum cum severitate <lb/>
+						conjunxit? Quis ita mixtam k hilaritate disciplinam <lb/> propinavit? Qucin non cum
+						ipsius gaudio, quicorri­ <lb/> gebatur, correxit? Quando lætitia illius quidquam <lb/>
+						lasciviæ redolens? Quaudo tristitia non salubris ? <lb/> Quando gemitus, nisi de peccati
+						alieni mœrore de­ <lb/> scendens? Quis eum non auctiorem invenit quam prius <lb/>
+						viderat? Semper in summitate virtutum positus , <milestone unit="PLSection" n="c"/><lb/>
+						semper quo crescere posset invenit.</p>
+					<p>27. Jam vcro tuh exhortatione ipsius, quis anxius <lb/> non dolorem suum strevit? Quis
+						feris moribus non <lb/> insaniam suam exsecratus est? Quis arrogans non <lb/> plusquam
+						omnes superbiam ipse suam abominatus <lb/> est? Quis lascivus luxuriam non detestatus
+						est? Et <lb/> quid plura ? Omnibut omnia, ut Apostolus ail, factus <lb/> (1 Cor. II,
+						22), communis omnium medicina erat. <lb/> Nullam pene gratiam non in sc tam ,tenant
+						habuit, <lb/> ut ipsam specialiter excolere et possidere tamquam <lb/> unicam putaretur.
+						In nullo vitæ ordiuc non ita viguit, <lb/> ut i ipsi speci liter aptus videretur.</p>
+					<p>23. Denique ut primum m Ecclesiae hujus Arela­ <lb/> tensis reginen accepit, prima ei
+						cura concordiae fuit, <lb/> et præcipuus labor u fraternitatem calentibus adhuc
+							<milestone unit="PLSection" n="D"/><note type="footnote"> a Ita Boll., Salin. et
+							utrique codd. Vat. Reg. <lb/> Quesnellus, irrigavil. </note><note type="footnote"> b
+							Salinas addit, esse. Honoratus et Hilarius ejus­ <lb/> dem erant patri;r. </note><note type="footnote">• S.ilinas, studebat. </note><note type="footnote">d.ln Quean. sex
+							voces sequentes dcsunt . quas ex <lb/> aliis edit. et mss. supplevimus. </note><note type="footnote"> ł- Salinas sic : Jam vero prop",a illius in omnes clla­ <lb/> riias,
+							quod sine invidia, ctc. Paulo post ;HJjecianus <lb/> illud ex codem Salinas.
+							</note><note type="footnote"> f Ita idem Salinas. Quesnellus vero : Quoties men­ <lb/>
+							lem meemf quoties animum, quoties lin!luam nomina­ <lb/> bat! </note><note type="footnote"> « Qnesn., rerricD'.;; for'te typographorum lapsu, <lb/> pro
+							refr.cat". </note><note type="footnote"> h Quesn. legit, propemodumvultus immurabilis
+							erat, <lb/> lenitenlibus exteri, editis, ac Val. Reg codicibus. </note>
+						<milestone unit="PLSection" n="D"/><note type="footnote"> i Ita cum Quesn. et Salinas
+							cod. Val. Reg. 645. </note><note type="footnote"> Doll. cum aliis, i" quo erat
+							conscicntia aurificati pec­ <lb/> loris. </note><note type="footnote">i Sa in..
+							exprimenda efset in f.Iltu,,,, Honorati po­ <lb/> liu;nlUU. pingt debere 1,,,1,,£
+							videretur. </note><note type="footnote">k ita inclinis Salin. cumplerisque editis et
+							uno Vat. <lb/> Reg. Quesnellus, lœtitiœ. Pauln post idem SJlio.. <lb/> cum ipsius, qui
+							corrigebatur, voluptate correxit. </note><note type="footnote"> 1 Quesl.O) ipsis.
+							</note><note type="footnote">m Salinas addit sanctæ. et nnliuit Arelutensis , <lb/>
+							quam tamen vocem in uuo ms. VaL. Rec. reperiri <lb/> nolavit. </note><note type="footnote"> D Salinas, fraternitatis et post pauca, dissidentes. <lb/> Postea, de
+							assumendo (pi,copa,.. erat aputl Qnesn. <lb/> Magis placuit leciio Salmas, cimi studia
+							dissidentium <lb/> de ,)uilJus hic sermo est, excitati fuirint occasione <lb/>
+							eligiudi epiticopalu successorem p..trocli, qui anno </note>
+						<pb n="1265"/>
+						<milestone unit="PLSection" n="A"/><lb/> de assumendo episcopo studiis dissidentem mutuo
+						<lb/> amore connectere. Tamquam probatus Israelis agi­ <lb/> tator, probe noverat non
+						facile quidquam discordan­ <lb/> tibus imperari. Studcbat praeterea amore potius re­
+						<lb/> gere quam terrore dominari : ut voluntaria magis <lb/> quam coacia correctio hunc
+						quoque subditis adjiceret <lb/> ornatum, ne ad officium suum coinpulsi * vidcrentur.
+						<lb/> Confestim itaque exclusa discordia illi, quæ est om­ <lb/> nium virtutum mater,
+						charitati locum præbuit. Flo­ <lb/> ruit igitur b sub ipso Chiristi Ecclesia, sicuti
+						monas­ <lb/> terium ante floruerat. Crevit gratiis, decrevit metallis; <lb/> ingressa
+						videlicct disciplina, e domo sua tamquam <lb/> domo Dominica mammona iniquitatis
+						exclusit; et <lb/> quæ otiosæ diu congestae fuerant, dignis tandem usi­ <lb/> bus
+						dcputavit; dudum defunctis thesaurus suos misit: <milestone unit="PLSection" n="B"/><lb/> iterumque, qui obtulerant, oblationum suarum refri­ <lb/> geria senserunt. Hoc
+						solum quod ministerio suo sui­ <lb/> ficens erat reservavit. Sed si exegisset usus, nec
+						<lb/> ministerio. ut reor, pepercisset. Alieni temporis vota <lb/> dispensationem suam
+						fecit.</p>
+					<ab>
+						<title type="sub">CAPUT VII.</title>
+					</ab>
+					<ab>
+						<title type="sub">Honorati morbus obitus. sepultura. — Sancti in caelo pro mortalibus
+							orant.</title>
+					</ab>
+					<p>29. Operari etiam inter extrema non destitit. Mul­ <lb/> tns in lectulo suo verbi
+						dispensationa ditavit. Sed <lb/> quamdiu illum lectus tenuit, cui superare etiam vi­
+						<lb/> cinas a morti lassitudines jam in consuctudinem ve­ <lb/> nerat? Ultimum,
+						doloribus jam reluctatibus. Epi­ <lb/> phaniorum die in ecclesia sermonem habuit : ne­
+						<lb/> sciens umquam colluctante cum infirmitatibus fide, <milestone unit="PLSection" n="c"/><lb/> dolori magis corporis quam spiritus fervori acquies­ <lb/> cere, servivit
+						desideriis vestris supra suas vires. Non <lb/> illum siquidemaliqua extrinsecus
+						superveniens æpgri­ <lb/> tudo, non subitus febrium aestus absorbuit; sed diu <lb/>
+						dilala infirmitas, nimio dudum propositi rigore con­ <lb/> tracta, et adhuc remissioni
+						parum acquiescendo in­ <lb/> gravescens, ociavo eum vel nono die e a solemnitate <lb/>
+						prædeta, paulatim attemnando confecit. Vix quatri­ <lb/> duo tamen nobis suam in
+						officiis charitatis deditis <lb/> præsentiam denegavit, limen! utique ne suos vicinia
+						<lb/> transitus sui contristaret. Nulli umquam gravis inter <lb/> gravissimas
+						ægritudines fuit. Nulli, ut assolet, ullum <lb/> infirmitates sua; horrorem intulerunt.
+						Et quidem hoc <lb/> ordine illud sancti Spiritus f habitaculum conquievit.</p>
+					<p>30. Caeterum impollutæ illius mentis vigorem in- <milestone unit="PLSection" n="A"/><lb/> credibile est quam integrum usque in extrema scr­ <lb/> vaverit. I Ac primum
+						semper uberrime consolatus <lb/> est suos, ac nihil magis timuit quam ne diutina de­
+						<lb/> speratione conficerentur; intelligens pene facilius <lb/> ferri extrema quam
+						dubia. Abstersit semper sermone <lb/> condito circumstantium lacrymas, quas tamen quo
+						<lb/> magis Ii abstersit irritavit. Inde graviorem suo dolore <lb/> nostrum computabat.
+						Non facile quisquam tam forti <lb/> pectore inter qualibet aspera et dura f loleratu,
+						nec <lb/> optavit aliquando mortem nec expavit. Nam is quem <lb/> vivere inter quælibet
+						gravia in Cbristi servitute non <lb/> piguitt ad novam vitam per communem illam novæ
+						<lb/> vitæ januam transire non timuit. Præmeditata euim <lb/> illi ultima hominum
+						necessitas, non repentina adve­ <lb/> nerat. Itaque sub ipso jam finis aspectu, tamquam
+							<milestone unit="PLSection" n="B"/><lb/> emigraret, tamquam valediceret, ne quid
+						imper- <lb/> rectum derelinqueret, ne quid minus plenc quam <lb/> proposuerat ordinaret,
+						interrogare singulos nostrum, <lb/> et ad suggerendum, si quid memoriam suam subter­
+						<lb/> fugisset, hortari. Omnia interim subscriptione fir­ <lb/> mare, et parcentes nos
+						fatigationi suae ad omnia qua <lb/> agenda erant cogerc; cogere autem blando illo, sicut
+						<lb/> semper, imperio.</p>
+					<p>31. Quadam autem vice cum comprimere lacry­ <lb/> marum mearum tempestatem et abrumpere
+						rivos <lb/> fletuum laborarem : Quid, inquit, fles ? inevitabilem <lb/> humani generis
+						necetsitatem ? Imparatum ergo te in­ <lb/> venire meus transitu. debuit, cum me non
+						invenerit im­ <lb/> paratum? Cumque ego i impedita singultibus uteum­ <lb/> que poteram
+						verbis ipsius verba subnecterem, quod <milestone unit="PLSection" n="c"/><lb/> jam non
+						destitutionem k meam dolerem, quippe qui <lb/> mihi orationum suarum patrocinia numquam
+						defu­ <lb/> tura confiderem, quin et post transitum suum vali­ <lb/> diora præsumerem,
+						uno me dolorum suorum vulnere <lb/> et difficilium inter extrema luctaminum graviter aC­
+						<lb/> fligi. Et quid ego, inquit, minimus omnium fero ad ea <lb/> quœ sanctorum plurimi
+						in supremis suis ocerbissimaJ <lb/> pertulerunt? Et commemoratis aliquot, adjecit, quod
+						<lb/> credo alicubi legerat: Magni, inquit, viri multa pa­ <lb/> tiuntur, et ut alios
+						pati doceant, nati sunt in exemptum.</p>
+					<p>32. Confluentibus autem ad se potestatibus, præ­ <lb/> ferto et præfectoriis viris,
+						quam ferventia sub mor­ <lb/> tali jam frigore mandata deprompsit, ab ipso exitu <lb/>
+						suo sumens acerrimum exhortationis exordium. Et <lb/> dignum plane erat ut qui vitæ
+						semper exempla prae- <milestone unit="PLSection" n="D"/><note type="footnote">
+							426occisus fuerat, aut potius F:uladii, qui in vetusto ' <lb/> dipiyrho Arelatensi
+							apud Mabillonium in Analectis <lb/> inter Patroclum et Iloimramni recensetur. Cum vrro
+							<lb/> certum sit llouoratuin electum foi&gt;se epi-copum la­ <lb/> bente an. 4i6 vel
+							ineunte nil. 427, F:uladius paucis <lb/> mensibus episcop:uu potitus aguuscilur.
+							</note><note type="footnote"> * Salinns, putarentur. </note><note type="footnote">b
+							lia S;tlinas, Qnes"., sub illo. </note><note type="footnote"> « Quillque seqnemes
+							voces a Qnesnello omissas <lb/> ex aliis editis et 8USS. Val. Reg. revocavimus. Mam­
+							<lb/> ..ona iniquitatis liic notata respicit pccuni:.s qtias <lb/> Patroclus, Honorati
+							prædecessor, qui paulo ante <lb/> f"f'la' orcisifs, i,,(ami mercatn sacerdotia
+							rendi'ando, <lb/> ut ait Prosper Tiro in Chronico, congesserat. </note><note type="footnote">d Salinas, mortis; et post pauca, conflictante pro <lb/> eolluctante.
+							</note><note type="footnote"> • Uno igitur, tei ,toro tli, prlu. obiitt quam I* </note>
+						<milestone unit="PLSection" n="D"/><note type="footnote"> martyrologio Romano notatur,
+							inquit Quesnellus in <lb/> margine. Sed dies depositi uiis pro die obitus in Mar.
+							<lb/> tyrulngiis nouniimqtiam signatur. </note><note type="footnote">f Silinns,
+							receptaculum. </note><note type="footnote"> I Oucsn.. Au' prim",),. Dein Salin:.s,
+							nediutina nos <lb/> df.pfraliollt conficeret. </note><note type="footnote"> h Iti
+							Ineliui ex Salinas. Quesnellus, ab"trgil, irri­ <lb/> tat. Graviorem sui dolorem.
+							nostrum computubat. </note><note type="footnote">i Ita Vat. Iteg 645 cum Salinas.
+							Editi antiquiores. <lb/> diu tolerala Quesn., dura toleravit. p..ule. post npiivi
+							<lb/> Salinas : Nam quem vit'tre inler quamlibet yrarin. </note><note type="footnote">
+							i Cnd.'. inqoil Bollandus, indita, sicnl ei in Vat. <lb/> Reg. 1025. Mox cum editis et
+							ints. adjecimus vocem <lb/> iP5ius a Quesn. ullliss:u... </note><note type="footnote">k Ita luclius Vat. Ut't;. 645 cum edit., exceptu , <lb/> Quesnp.llo, qui tj",
+							prætulit,, </note>
+						<pb n="1267"/>
+						<milestone unit="PLSection" n="A"/><lb/> buerat, etiam mortem suam in exemplum
+						advocaret. <lb/> Videtis, inquit, quam fragile Habitemus hospitium. <lb/> Quolibet
+						vivendo ascenderimus, illinc morte detrahe­ <lb/> mur. Ab has necessitate nemimem
+						honores, a nullum <lb/> thesauri redimunt. Hæc justiset injustis, hæc poten <lb/> ibus
+						et humilibus communis est. Magnas Christo da- <lb/> bemus gratias, qui morte et
+						resurrectione propria mor­ <lb/> tem nostram spe resurrectionis animavit, æternam <lb/>
+						vitam offerens, b discusso æternæmortis horrore, Sic <lb/> ergo vtiam agitos, ne vitæ
+						extrem timeatis; et hoc quod <lb/> mortem appellamus, quasi commigrationem exspectate.
+						<lb/> Mors pæna non est, si non ad supplicia deducit. Dura <lb/> quidem est carnis
+						animæque divulsio; sed multo durius <lb/> in gehennæ flammis erit carnis animæque
+						consortium ; <lb/> nisi in omni vita generositatem suam spiritus recogno- <milestone unit="PLSection" n="B"/><lb/> scens, bellum corpori, et corporalibus vitiis certamen
+						<lb/> indixeril, et felici discretus c a carnis colluvione di­ <lb/> vortio, æternæ paci
+						impollutam serret utramque sub­ <lb/> stantiam, illic feliciter copulandam, ubi
+						exultabunt <lb/> sancti in gloria et lætabuntur in cubilibus suis, d hoc <lb/> est in
+						corporibus tamquam in receptaculis suis; cum <lb/> ea quæ justitiæ dedicaverant membra
+						socialia, tam­ <lb/> quam consueta hoapitia e recognoscent. Hoc itaque <lb/> agite. hanc
+						vobis Honoratus vester hæreditatem relin­ <lb/> quit: supremo halitu suo ad hæreditatem
+						vos regni cæ­ <lb/> lestis invitat Nullus nimium mundi hujus amore te­ <lb/> neatur.
+						Optimum est ut voluntate fastidias, quo te vides <lb/> necessitate cariturum. Nemo
+						opibus diffluat, nullus pe­ <lb/> cuniæ inserviat, neminem vana divitiarum pompa cor­
+						<lb/> rumpat. Scelus est pretium salutis in materiam perdi­ <milestone unit="PLSection" n="c"/><lb/> tionis assumere, et illo capi quemquam , quo redimi <lb/> potest. Plus
+						interea vultu, plus oculis, plus emicante <lb/> in coelum sensu monebat. Impar est
+						quidem ignito <lb/> sermoni suo sermo referentis; sed non minus im­ <lb/> paria spiritui
+						suo verba erant monentis. Tali itaque <lb/> exhortatione et insolito quodam g motu
+						oratione <lb/> profusa, inusitatum quoddam munus benedictionis <lb/> impendit.</p>
+					<p>33. Deficiente membrorum ministerio, nova sem­ <lb/> per mentis gratia pullulabat.
+						Ordinatis itaque omni­ <lb/> bus (neque enim multa in actibus suis minus plena <lb/>
+						restabant), cum omnes charos h suos mente percurre­ <lb/> ret, quantos nominatim
+						proferre lassitudo non ve­ <lb/> luit, missa per eos qui astabant salutatione ditavit.
+						<lb/> Mihi vero in aurem, i Excusa, inquit, sancto illi <milestone unit="PLSection" n="A"/><lb/> fieri non potuisse quod voluit. Magna et admiranda <lb/> Solertia, inter
+						graves illas mortis angustias provi­ <lb/> disse, ne cujus tristitiam non, quantum in se
+						erat, <lb/> absiergeret : ne quid certe inexcusatum relinqueret, <lb/> Quid illud,
+						quæso, quod cum omnes suos qUos ad <lb/> hunc urbem amor suus traxerat, utique inter
+						pere- <lb/> grma desereret, nullum ulli reditum, nullani socie­ <lb/> tatem commendavit,
+						non loca vivendi certa distri­ <lb/> buit: tamquam vere præscius nullam suorum disper­
+						<lb/> sionem fururam, nisi eorum qui jam et se superstite <lb/> animi definitione
+						migrassent ? et vere ndn facile <lb/> quemquam a societate nostra abesse novimus, nisi
+						<lb/> quem j abfuturum ipse præmonuit, qui aut chariorem <lb/> conspectu suo patriam,
+						aut graviorem senserat di­ <lb/> sciplinam. Interea gravior illum somnus urgebat;
+							<milestone unit="PLSection" n="B"/><lb/> quem cum interdum pavidi interpellaremus :
+						Miror, <lb/> inquit, in tam gravi mea lassitudine, post tam longa <lb/> insomnia quæ
+						prætesietunt, gravem vobis meum <lb/> somnum videri. Et cum, suspectis omnibus, sedere
+						<lb/> eum in ultimo diutius k perhiberemus, joculari, ut <lb/> erat solitus, blandimento
+						et consuetudinaria metis <lb/> serenitaie respondit: quod molestos nos in hac sol­ <lb/>
+						licitudinis parte pateretur. Ita pene ante vita l ejus <lb/> quam dulcedo consumpta
+						est.</p>
+					<p>34. Somno deinde ultimo exceptus, in mortis quie­ <lb/> le n dormiens transiit sine
+						ullo, m ut se habent su­ <lb/> prema, luctamine. Nullas difficiles obitus moras sen­
+						<lb/> sit. Angelicis choris anima illa sancta, generosa, <lb/> sincera, et ab omni
+						contactu mundi incontaminata <lb/> suscipitur. Multorum interea variis visionibus somnus
+							<milestone unit="PLSection" n="c"/><lb/> incutitur, quarum tamen una omnium facies
+						etat, <lb/> quod scilicet sancto illi occurrerent officia sancto­ <lb/> rum. Et vere
+						illico in eodem mediæ noctis puncto <lb/> ecclesiam in occursum sancti corporis
+						conventus im­ <lb/> plevit, ut nonnisi angelicis nunliis suscitatus pota­ <lb/> retur.
+						Relinquitur vegetatum semper spiritu, plenum <lb/> gratiæ. corpus exanirne: integrum
+						siquidem vuftus <lb/> decorem facies omnibus grata n servabat. Probe vos <lb/> ista
+						nostis, et multo plenius vobis quam sermo suf­ <lb/> licit animorum meditatione
+						describitis.</p>
+					<p>55. Neque ultus non magno sibi damno affici visus <lb/> est, si conspectu corporis o
+						ejus caruit, si non, ut <lb/> quemque aut reverentia aut amor suaserat, osculum <lb/>
+						aut ori aut quibuscumque membris P ipsius impres- <milestone unit="PLSection" n="D"/><note type="footnote"> • lta Cum Quesn. idem cod. Vat. Rpg. Alii editi <lb/> cum
+							ałio Vat. Kfg.,1025. nemtnem divitiai Libera"l. </note><note type="footnote"> b
+							QualUcJr subsequentes voces desunt in editis <lb/> ante Quesvi.. sed reperiuntur in
+							utrisque Val. Keg. </note><note type="footnote"> * Ita editi cutn msa. Solus Onesn., a
+							carnaLi. </note><note type="footnote"> d Deerarft in Qnesn. voces, hoc est in
+							corporibus, <lb/> quas ex caeteris editis et mss. revocavimus. </note><note type="footnote">e Qnesd., cognoscent. </note><note type="footnote"> 1 f Idem Ouesn..
+							in illo. </note><note type="footnote"> « lia Arel., Lirin., SlIr., Onesn. et Salinas
+							cum uno <lb/> .V ill. Reg. Apud Boll. et in alio Vat. Reg., nutu. </note><note type="footnote"> h Q....sn. omnisit suos. </note><note type="footnote"> i Quesn. sic:
+							Exclusa, inquit, sunt; sic sanctoilli <lb/> rferi non licuisset. Quod voluit cognovi.
+							Magna, etc.; <lb/> acnotavit it.i legi in mss. Arel. et Lirin., nisi qwod <lb/> in hoc
+							postremo una serie, quasi verba Hilarii sint, <lb/> habetur: Sic sancto illi fip,ri
+							non licuisset rjuod voluitt </note>
+						<milestone unit="PLSection" n="D"/><note type="footnote"> cognovi. Prætulimus lectionem
+							Bon. et Salinas utris­ <lb/> flue n1SS. Vat. Reg. confirmatain, quippe quæ sequen­
+							<lb/> tibus magis videtur conj-ruere. Sancto ill. scrihtan­ <lb/> diim fuertt, ubi
+							ill. loco proprii nominis pUSI r urn <lb/> fuit ab lIilari... cum proprium nomen sibt
+							ab Hono­ <lb/> rato significatum reticendum credidit. </note><note type="footnote"> i
+							Quesn., fuiurum. </note><note type="footnote"> It It&lt; Qucsri. cum linrt Arel. et
+							alio Val. Reg. AI., <lb/> prohiberemus. </note><note type="footnote"> 1 Quesn., sua.
+							</note><note type="footnote">d Ita Salinas. Quesn., ut sese habent utr.muJ t.­ <lb/>
+							ctamine. </note><note type="footnote"> * Salin'., servavit. Mhx ista reposuinlits ex
+							Salihas <lb/> JYro ito, quod Qucsn. præluliL. </note><note type="footnote"> o Quesn.,
+							aut. </note><note type="footnote">p Qiiesn. omittit ipsius. Post pauca, Roll. * t
+							Sali­ <lb/> nas cum duobus mss. ValL, Reg., omissis in quo, sic <lb/> . </note>
+						<pb n="1269"/>
+						<figure type="illegible">
+							<graphic url="PL50_2_fig24.jpg"/></figure><figure type="illegible">
+							<graphic url="PL50_2_fig25.jpg"/></figure>
+						<lb/> meam. PaviStis me tam effusa in ipsum animi cliati­ <lb/> ante. Quem enim illo die
+						sua tecta (enuerunt? Aut <lb/> quem non tamquam peculiari luctu obrutum basi­ <lb/> æ
+						fluic mœnia hujus urbis dederunt? Pro magno <lb/> onere liabitum est lecticæ b manum
+						admovisse, aut <lb/> rvicem subjecisse. Vidistis non sine vestra gloria <lb/> oraim suam
+						: nam et illa exsequiarum religio, fidei <milestone unit="PLSection" n="B"/><lb/>
+						revotio erat, et tam laetum erat habuisse talem, quam <lb/> rave talem amisisse. Nec
+						parum fiduciae dat sepul­ <lb/> ri sui gratia : nam cujus hic ossa condidimus, in <lb/>
+						œlo utique patrocinia præsumimus. Prælata tunc <lb/> nte feretrum ipsius aromata et
+						incensum vidimus ; <lb/> ed majora de vestris mentibus Deus, in tanto erga <lb/> antum
+						pastorem affectu vestro, odoramenta susce­ <lb/> sit. Præsultavit in gloria sua Dei
+						gloria, et in disso­ <lb/> nis c diversarum linguarum choris amor consonus.</p>
+					<ab>
+						<title type="sub">CAPUT VIII.</title>
+					</ab>
+					<ab>
+						<title type="sub">Hilarius successor Honorati, ejus consanguineus.— Invocatur Honoratus
+							uti patronus.</title>
+					</ab>
+					<p>56. Piu, Dominus, qui stimulando animos vestros <lb/> ad electionem parvitatis meæ,
+						dedit ne a sepulcro <lb/> illius longius abessem, illud etiam vobis orantibus <milestone unit="PLSection" n="c"/><lb/> 'dabit ne a viis ejus longe d recedam : sed ut quid­ <lb/>
+						<lb/> quid illum egisse cognovero, id sine exploratione <lb/> aliqua, aut disceptatione
+						factorum agere festinem. <lb/> Vobis enim me, ut video, jam tunc per illum Deus <lb/>
+						genuit. e Vobislicet indignum præparavit. Volis ille <lb/> me nesciens tanto labore
+						quaesivit. Vobis tam pro­ <lb/> , pensa sollicitudine et cura utrumque erudivit, quae­
+						<lb/> "tens in me fidei, sicut sanguinis sui venam. Vobis <lb/> me tanto labore per
+						litteras, tanto per excursum <lb/> num ambitu, ab insula, cui me f derelictis episco­
+						<lb/> patus sui principii; secreti amore reddideram ( non <lb/> audeo dicere, nesciens)
+						fortasse præcius, g amovere <lb/> satagebat, uti juxta sepulcri sui sedem in amore ve­
+						<lb/> stro patriam collocaret. Sed quid agimus, quod im­ <lb/> maturum me maturo excessu
+						tradidit ? Non est <milestone unit="PLSection" n="D"/><lb/> nostrum secretum aeterni
+						Regis in ullo vel leviter <milestone unit="PLSection" n="A"/><figure type="illegible">
+							<graphic url="PL50_2_fig26.jpg"/></figure><figure type="illegible">
+							<graphic url="PL50_2_fig27.jpg"/></figure>
+						<milestone unit="PLSection" n="B"/><lb/> enixissimis preeibus impetratum putem ne
+						virtutem <lb/> hiam signa clamarent. Habet et pax martyres suos; <lb/> Christi enim tu
+						perpetuus, quamdiu in corpore mo­ <lb/> ratus es, testis fuisti. Illud etiam stupendum
+						quod <lb/> adolescentiae tuae robur perpetuo abstinentiæ rigore <lb/> tenuatum, et in
+						illam quam vidimus aspectus, licet <lb/> decore servato , exilitatem redactum crux
+						utique- <lb/> quotidiana consumpsit : quam tamen sempersine ula <lb/> notabili
+						superstitione servasti, omnes semper ni- <lb/> mietates, et cognatum nimietaiibus
+						gloriae fugiens <lb/> appetitum. Numquam in tuo ore niti pax, nisi cas­ <lb/> titas,
+						nisi pietas, nisi charitas. Numquam iri corde <lb/> nisi horum omnium fons Christus
+						habitavit, qui tibi <lb/> et per te plurimis charitatis, gaudii, pacis, longani­ <lb/>
+						mitatis, bonitatis, benignitatis, fidei, modestiæ, con­ <milestone unit="PLSection" n="c"/><lb/> tinentiæ fructus ministravit, f exuberantes in multi­ <lb/> plicem copiam
+						in multorum Salutem et gaudia, ut <lb/> non immerito illi cantaveris : Qui timent te,
+						videbunt <lb/> me, et lætabuntur (Psal. CXVIII, 74); cui omne sem­ <lb/> per
+						conversationis tuæ bonum ascripsisti : illud as­ <lb/> sidue tibi ac tuis ingerens :
+						Quid enim habes quod <lb/> non accepisti ? aut, si accepisti, quid gloriaris, quasi
+						<lb/> non acceperis (II Cor. IV, 7)? Sed eo magis tuum erat <lb/> vitæ tua bonum, quo
+						magis tuum negabas.</p>
+					<p>38. In te commune omnium Dominum desideran­ <lb/> tium solamen fuit. k Quidam
+						gloriantur in hujus vi­ <lb/> tæ prosperis; tu econtra in Deo exsultare suadebas, <lb/>
+						resonante l affectum tuum voce blandae modulatio­ <lb/> nis immurmurans : Latetur cor
+						quærentium Dominum <lb/> (Ps. CIV, 3). Nulla tibi umquam major quam in ora- <milestone unit="PLSection" n="D"/><lb/> tionibus et psalmis In voluptas. TuiS in tantum me­
+							<note type="footnote"> hahpot : Sanctum illud corpus magna fidei ambitione <lb/>
+							ttt,'i'Km est; majore fide poalmudum, dum .epulcro <lb/> admoveur. pene "udalll''',
+							</note><note type="footnote"> a Salina.., de velaminibus. </note><note type="footnote"> b Ita ex I'odelll Salin., melius quam apud Quesn., <lb/> aut humerum. </note><note type="footnote">c In exsequiis V f'nalltii Methonae, Hebraei, Græci et <lb/> Latini
+							sua iq&gt;e Ilnl(u:' ps dllans cecinisse traduntur <lb/> in hoc ip...o sfimone n. I',
+							et similiter in esst'quiis <lb/> S. Hilarii Arelateusis allCior Vitæ rjus, quam supra
+							<lb/> edidimus, c. 2'2, prodidit: H ebrrilm concinentium <lb/> linguam in esaequ;i,
+							honorandi. audisse me recolo. </note><note type="footnote">a Apud QueslI., minius
+							recte, ni fallimur, recedam. <lb/> Sed e, quitlquid illum egisse cognovero, id siue
+							exemplo, <lb/> vel ratione aliqua, aut disceptatione. Aliorum edit. <lb/> lectionem
+							secuti sumus. </note>
+						<note type="footnote"> « Qfuatuor sequentes voces fort'6 per saltum in <lb/> Quesnelli
+							editione omissas, ex aliis editis et mss. re- <lb/> Slituimns. </note><note type="footnote"> t BoU., direct;'. Quesnelli lectionem ex codd. Lir. <lb/> et Arel.
+							etiam Salinas cum mss. Vat. Reg. COli­ <lb/> firmat. </note><note type="footnote"> I
+							Boll., admovere; Arel., admovebat, uticollo­ <lb/> cart"'. </note><note type="footnote">h Salinas, quantum. </note><note type="footnote"> * Salinas addit
+							signorum .pecie. </note><note type="footnote"> i Ita Lir., Bol. et Salin. Ai Quef'n.,
+							exuberans .. <lb/> mullorll'n. </note><note type="footnote">x Sex voces sequentes
+							desiderat Bollandus. </note><note type="footnote"> 1 Ita Salinas cum suis codd.
+							Quesn., affectuum , <lb/> voce. </note><note type="footnote"> 1ft At.. voluntas. </note>
+						<pb n="1267"/>
+						<milestone unit="PLSection" n="A"/><lb/> buerat, etiam mortem suam in exemplum
+						advocaret. <lb/> Videtis, inquit, quam fragile habitemus hospitium. <lb/> Quolibet
+						vivendo ascenderimus, illinc morte detrahe­ <lb/> mur. Ab has necessitate neminem
+						honores, * nullum <lb/> thesauri redimunt. Hæc justiset injustis, hæv poten­ <lb/> ibus
+						et humilibus communis est. Magnas Christo de­ <lb/> bemus gratias, qui morte et
+						resurrectione propria mor­ <lb/> tem nostram spe resurrectionis animavit , æternam <lb/>
+						vitam offerens, b discusso æternæ mortis horrere, Sic <lb/> ergo vitam agitet, ne vitæ
+						extrem limeatis; et hoc quod <lb/> mortem appellamus, quasi commigrationem exepectate.
+						<lb/> Mors pœna non est, si non ad supplicia deducit. Dura <lb/> quidem est carnis
+						animæque divulsio; sed multo durius <lb/> in gehennæ flammis erit carnis animaque
+						consortium ; <lb/> nisi in omni vita generositatem suam spiritus recogno- <milestone unit="PLSection" n="B"/><lb/> suns, bellum corpori. et corporalibus vitiis certamen
+						<lb/> indixerit, et felici discretus e a carnis colluvione di­ <lb/> nortio, æternæ paci
+						impollutam servet utramque sub­ <lb/> stantiam, illic feliciter copulandam, ubi
+						exultabunt <lb/> sancti in gloria et lætabuntur in cubilihus suis, d hoc <lb/> est in
+						corporibus tamquam in receptaculi. suis; cum <lb/> ea quæ justitiæ dedicaverant membra
+						socialia, tam­ <lb/> quam consueta hospitia e recognoscent. Hoc itaque <lb/> agite: hanc
+						vobis Honoratus vester hæreditatem relin­ <lb/> quit: supremo halitu suo ad hæreditatem
+						vos regni eÆ­ <lb/> lestis invitat .Nullus nimium mundi hujus amore te­ <lb/> neatur.
+						Optimum est ut voluntate fastidias, quo te vides <lb/> necessitate cariturum. Nemo
+						opibus diffluat, nullus pe­ <lb/> cuniæ inserviat, neminem vana divitiarum pompa cor­
+						<lb/> rumpat. Scelus est pretium salutis in materiam perdi­ <milestone unit="PLSection" n="c"/><lb/> tionis assumere, et I illo capi quemquam , quo redimi <lb/> . potest.
+						Plus interea vultu, plus oculis, plus cmicanle <lb/> in coelum sensu monebat Impar est
+						quidem ignito <lb/> sermoni suo sermo referentis; sed non minus im­ <lb/> paria spiritui
+						suo verba erant monentis. Tali itaque <lb/> exhortatione et insolito quodam I motu
+						oratione <lb/> profusa, inusitatum quoddam munus benedictionis <lb/> impendit.</p>
+					<p>53. Deficiente membrorum ministerio, nova sem­ <lb/> per mentis gratia pullulabat.
+						Ordinatis itaque omni­ <lb/> bus (neque enim multa in actibus suis minus plena <lb/>
+						restabant), cum omnes charos h suos mente percurre­ <lb/> ret, quantos nominatim
+						proferre lassitudo non ve­ <lb/> luit, missa per eos qui astabant salutatione ditavit.
+						<lb/> Mihi vero in aurem, i Excusa, inquit, sancto illi <milestone unit="PLSection" n="A"/><lb/> fieri non potuisse quod volut. Magna et admiranda <lb/> selertia, inter
+						graves illas mortis angustias provi­ <lb/> disse, ne cujus tristitiam non, quantum in se
+						erat, <lb/> abstergeret: ne quid certe inexcusatum relinqueret. <lb/> Quid illud, quæso,
+						quod cum omnes suos qUos ad <lb/> hanc urbem amor suus traxerat, utique inter pere­
+						<lb/> grina deserere, nullum ulli reditum, nullamsocie­ <lb/> autem dommendavit, non
+						loca vivendi certa distri­ <lb/> buit : tamquam vere praescios nullam suorum disper­
+						<lb/> sionem futuram, nisi eorum qui jam et se superstite <lb/> animi definitione
+						migrassent ? et vere nonfacile <lb/> quemquam a societate nostra abesse novimus, nisi
+						<lb/> quem i abfuturum ipse præmonuit, qui aut chariorem <lb/> conspectu suO patriaM,
+						aut graviorem senserat di­ <lb/> sciplinam. Interea gravior illumsummus urgebat;
+							<milestone unit="PLSection" n="B"/><lb/> quem cum interdum pavidi interpellaremus :
+						Miror, <lb/> inquit, in tam gravi mea lassitudine, post tam longa <lb/> insomnia quæ
+						præcesserunt, gravem vobis meum <lb/> somnum videri. Et cum, suspectis omnibus, sedere
+						<lb/> eum in ultimo diutius II perhiberemus, joculari, ut <lb/> erat solitus,
+						blandiniento et consuetudinaria mentis <lb/> serenitate respondit: quod molestos nos in
+						hac sol­ <lb/> licitudinis parte pateretur. Ita pene ante vita l ejus <lb/> quam dulcedo
+						consumpta est.</p>
+					<p>34. Somno deinde ultimo exceptus, in mortis quie­ <lb/> ten dormiens transiit sine
+						ullo, m ut se habent su­ <lb/> prema, luctamine. Nullas difficiles obitus mor' sen­
+						<lb/> sit. Angelicis choris anima illa sancta, generosa, <lb/> sincera, et ab omni
+						contactu mundi incontaminta <lb/> suscipitur. Multorum interea variis visionibus somnus
+							<milestone unit="PLSection" n="c"/><lb/> mentitur, quarum tamen una omnium facies
+						erat, <lb/> quod scilicet sancto illi occurrerent officia sancto­ <lb/> rum. Et vere
+						illico in eodem mediæ noctis puncto <lb/> ecclesiam in occursum sancii corporis
+						conventus im­ <lb/> plevit, ut nonnisi angelicis nuntiis suscitatus puta­ <lb/> retur.
+						Relinquitur vegetatum semper spiritu, plenum <lb/> gratiæ corpus exanime: integrum
+						siquidem vultus <lb/> decorem facies omnibus grata n servabat. Probe vos <lb/> ista
+						nostis, et multo plenius vobis quam sermo suf­ <lb/> licit animorum meditatione
+						describitis.</p>
+					<p>35. Neque ullus non magno sibi damno affici visus <lb/> est, si conspectu corporis e
+						ejus caruit, si non, ut <lb/> quemque aut reverentia aut amor suaserat, osnulum <lb/>
+						aut ori aut quibuscumque membris P ipsius impres- <milestone unit="PLSection" n="D"/><note type="footnote"> • Ita Cnm Quefcn. idem cod. Vat. Rfg. Alii efliti <lb/> cum a
+							lio Vat. Reg., 1025. neminem divitia* liberant. </note><note type="footnote"> b
+							Quatuor subsequentes voces desunt in editis <lb/> ante Que...., sed reperionmr in
+							utrisque Val. HeB. </note><note type="footnote"> • lia editi cum InS8. Solus Onesn., a
+							carllali. </note><note type="footnote"> d Deeraift in Qnesn. voces, hoc est in
+							corporibus, <lb/> quas ex caeteris editis et mss. revocavi,nus. </note><note type="footnote">a Qnes..., cognoscent. </note><note type="footnote"> t t Idem QueSII.,
+							in illo. </note><note type="footnote"> i lia Arel., Lirin., Sur. , Qnesn. et Salinas
+							cum uno <lb/> Vat. Reg. Apud Boll. et in alio Vat. Beg., nutu. </note><note type="footnote"> b QIlt*80. oniisit suot. </note><note type="footnote"> i Quesn. sic:
+							Exclusa, inquit, sunt; sic lanclo illi <lb/> -fieri non ticuisset. Quod voluit
+							cognovi. Magna, etc.; <lb/> If: notayit ita legi in mss. Arel. et Lirin.. nisi qwod
+							<lb/> .- in hoc po,;.lremo una serie, quasi verba Hilarii sint, <lb/> babetar: Sic
+							sancto illi fieri non licuisset rjuod voluit, </note>
+						<milestone unit="PLSection" n="D"/><note type="footnote"> cognovi. Prætulimus lectionem
+							Boll. et Salinas utris­ <lb/> que mss. Vat. Res. coofirinniain, quippequ;*' sequen­
+							<lb/> tibus magis videtur conjiruere. Sanclo ill. scriben­ <lb/> dum fuer.;, t, ubi
+							ill. loco proprii no"nini&lt; pnsitum <lb/> fuit ab lIilarin, ciun proprium nomen sibt
+							ab Hono­ <lb/> rato significatum reticendum credidit. </note><note type="footnote"> i
+							Quesn., futurum. </note><note type="footnote"> k Ita Quesn. cum iino Arel. et alio
+							'al. fteg. A!.. <lb/> prohiberemus. </note><note type="footnote"> 1 Qnesn., stia.
+							</note><note type="footnote"> It. Ita Salinas. Quesn., ut sese habent extremo lu*
+							<lb/> ctamh,e. </note><note type="footnote"> u Salin'., servavit. Mhx ista reposuimus
+							ex- ,Salinas <lb/> pro ita, quod Quesn. praelulit., </note><note type="footnote"> o
+							Qucsn., aut. </note><note type="footnote">v Qiicsn. omittit ipsius. Pu!';' pauca,
+							Boll. I t Sali­ <lb/> nas cum duobus mss. Vall, Reg.. oinissis in quut stic <lb/> , </note>
+						<pb n="1269"/>
+						<milestone unit="PLSection" n="A"/><lb/> sit, aut fenetro in quo sanctum illud corpus
+						magna <lb/> fidei ambitione vestitum erat, majore postmodum, <lb/> dum sepulcro
+						admoveretur, petre nudatum. Nec <lb/> enim pepercit sanctificatis amictu suo patliis
+						ftdes, <lb/> quæ pretiosissimi muneris locd habuit aliquam a ve­ <lb/> laminum illius
+						fimbriam decerpsisse. Certavit in <lb/> exsequiis illius vester affectus. Refecistis iri
+						funere <lb/> suo latentem adhuc inter vos peregrinationem <lb/> meam. Pavistis me tam
+						effusa in ipsum animi chari­ <lb/> tate. Quem enim illo die sua tecta tenuerunt? Aut
+						<lb/> quem non tamquam peculiari luctu obrutum basi­ <lb/> licæ Huic mœnia hujus urbis
+						dederunt ? Pro magno <lb/> monere habitum est lecticae b manum admovisse, aut <lb/>
+						cervicem subjecisse. Vidistis non sine vestra gloria <lb/> gloriam suam : nam et illa
+						exsequiarum religio, fidei <milestone unit="PLSection" n="B"/><lb/> devotio erat, et tam
+						lætum erat habuisSe talem, quam <lb/> grave talem amisisse. Nec parum fiduciae dat
+						sepul­ <lb/> cri sui gratia : nam cujus Iiic ossa condidimus, in <lb/> coelo utique
+						patrocinia præsumimus. Prælata tunc <lb/> ante feretrum ipsius aromata et incensum
+						vidimus ; <lb/> sed majora de vestris mentibus Deus, in tanto erga <lb/> tatum pastorem
+						affectu vestro, odoramenta susre­ <lb/> pit. Præsultavit in gloria sua Dei gloria, et in
+						disso­ <lb/> nis e diversarum linguarum choris amor consonus.</p>
+					<ab>
+						<title type="sub">CAPUT VIII.</title>
+					</ab>
+					<ab>
+						<title type="sub">Hilarius successor Honorati, ejus consanguineus.— Invocatur Honoratus
+							uti patronus.</title>
+					</ab>
+					<p>36. Piu. Dominus, qui stimulando animos vestros <lb/> ad electionem parvitatis meæ,
+						dedit ne a sepulcro <lb/> illius longius abessem, illud etiam vobis orantibus <milestone unit="PLSection" n="c"/><lb/> dabit ne a viis ejus longe a recedam : sed ut quid- I
+						<lb/> quid illum egisse cognovero, id sine exploratione <lb/> aliqua, aut disceputatione
+						factorum :'gere festinem. <lb/> Vobis enim me, ut video, jam tunc per illum Deus <lb/>
+						genuit. a Vobis licet indignum præparavit. Vohis ille <lb/> me nesciens tanto labore
+						quaesivit. Volis tam pro­ <lb/> pensa sollicitudine ei cura utcumque erudivit, quae­
+						<lb/> rens in me fidei, sicut sanguinis sui venam. Vobis <lb/> me tanto lahore per
+						litteras, tanto per excursum <lb/> suum ambitn. ab insula, cui me f derelictis episco­
+						<lb/> patus sui principiis secreti amore reddideram ( non <lb/> audeo dicere, nesciens)
+						fortasse præscius, I amovere <lb/>
+						<lb/> satagebat, uti juxta sepulcri sui sedem in amnre ve­ <lb/> stro patriam
+						collocaret. Sed quid agimus, quod im­ <lb/> maturum me maturo excessu tradidit ? Non est
+							<milestone unit="PLSection" n="D"/><lb/> nostrum secretum aeterni Regis in ullo vel
+						leviter <milestone unit="PLSection" n="A"/><lb/> culpare judicium : non facile
+						senseratis h quid ami­ <lb/> sissetis boni, ii redintegratum vobis bonum vestrum <lb/>
+						luisset.</p>
+					<p>37. O magna et inclyta, Honorate, tua gloria <lb/> Non indiguit meritum tuum signis
+						probart ; ipsa enim <lb/> conversatio tua plena virtutibus et admirationis no­ <lb/>
+						vitate præcelsa, perpetuum quoddam signum mini­ <lb/> stravit. Multa quidem tibi
+						divinitus i indulta novi­ <lb/> mus quicumque propius assistebamus ; sed in his tu <lb/>
+						minimam partem computabas, majusque tibi gan­ <lb/> dium erat quod merita et virtutes
+						tuas Christus scri­ <lb/> beret, quam quod signa homines notarent. Et tamen <lb/> quod
+						esse majus signum virtutis potest, quam signa- <lb/> fugere et occultare virtutes ? Et
+						gere tam familiaris <lb/> quodammodo oratio tua Christi auribus erat, ut <milestone unit="PLSection" n="B"/><lb/> eriixissimis precibus impetratum putem ne virtutem <lb/>
+						itam signa clamarent. Habet et pax martyrcs suos; <lb/> Christi enim tu perpetuus,
+						quamdiu in corpore mo­ <lb/> ratus es, testis fuisti. Illud etiam stupendum quod <lb/>
+						adolescentiae tuae robur perpetuo abstinentiæ rigore <lb/> tenuatum, et in illam quam
+						vidimus aspectus, licet <lb/> decore servato , exilitatem redactum crux utique <lb/>
+						quotidiana consumpsit : quam tamen semper sine ulla <lb/> notabili superstitione
+						servasti, omnes semper ni­ <lb/> mietates, et cognatum nimietatibus gloriae fugiens
+						<lb/> appetitum. Numquam in tuo ore nisi pax, nisi cas­ <lb/> titas, nisi pietas, nisi
+						cbaritas. Numquam in corde <lb/> nisi horum omnium fons Cbristus habitavit, qui tibi
+						<lb/> et per te plurimis charitatis, gaudii, pacis, longani­ <lb/> mitatis, bnnitatis,
+						benignitatis, fidei, modestiæ, con­ <milestone unit="PLSection" n="c"/><lb/> tinentiæ
+						fructus ministravit, exuberantes in multi­ <lb/> plicem copiam in multorum salutem et
+						gaudia, ut <lb/> non immerito illi cantaveris : Qui timent te, videbunt <lb/> me, et
+						lætabuntur (Psal. CXVIII, 74); cui omne sem­ <lb/> per conversationis tuae bonum
+						ascripsisti : illud as­ <lb/> sidue tibi ac tuis ingerens : Quid enim habes quod <lb/>
+						non accepisti ? aut, si accepisti, quid gloriaris, quasi <lb/> non acceperis (II Cor.
+						IV, 7)? Sed eo magis tuum erat <lb/> vitæ tuae bonum, quo magis tuum negabas.</p>
+					<p>38. In te commune omnium Dominum desideran­ <lb/> tium solamen fuit. k Quidam
+						gloriantur in hujus vi­ <lb/> tæ prosperis ; tu e contra in Deo exsultare suadebas,
+						<lb/> resonante i affectum tuum voce blandæ modulatio­ <lb/> nis immurmurans : Lætetur
+						cor quærentium Dominum <lb/> (Ps. CIV, 3). Nulla tibi umquam major quam in ora-
+							<milestone unit="PLSection" n="D"/><lb/> tionibus et psalmis In voluptas. Tuis in
+						tantum me­ <note type="footnote"> hahpot : Sanctum illud corpus magna fidei ambitione
+							<lb/> vestitum est; majore fide pOllmudum, dum sepulcro <lb/> admove ur. pene nudatum,
+							</note><note type="footnote">a Salina..., de velaminibus. </note><note type="footnote"> b Ita ex eodem Salin., melius quam apud Quesn., <lb/> aut humerum. </note><note type="footnote">c In .'xse.,uii.. V.tnautii Methonae, Hebræi, Grseci et <lb/> Latini
+							sua quiq ie lingua ps d IItnS cf'cin i-.se traduntur <lb/> in hoc ip"o sernione n. 14,
+							et siniiliter in eJsequiis <lb/> S. Hilarii Arelaiensis aucior Vitæ ...jus, quam supra
+							<lb/> edidimus, c. 22, prodidit: Hebrotam conc;nl'nlium <lb/> linguam in exsequiis
+							honorandi, audisse me rtcolo. </note><note type="footnote">a Apud Quesn., miuus recte,
+							ni fallimur, recedam. <lb/> Sed et quidquid illum egisse cognovero, id sine exemplo,
+							<lb/> vel ratione aliqua, aut di.cep,Q,ion,. Aliorum edit. <lb/> lectionem secuti
+							stimus. ' </note>
+						<note type="footnote"> ® Quatuor sequentes voces .1for' per saltum in <lb/> Quesnelli
+							editione omissas, ex aliis editis et IUS!. re­ <lb/> stituimus. </note><note type="footnote"> i Boll., di,ec,is. Quesnelli lectionem ex codd. Lir. <lb/> et Arel.
+							etiam Salinas cum mss. Vat. Reg. COli­ <lb/> firmat. </note><note type="footnote"> I
+							Boll., admovere; Arel., admovebat, uticollo­ <lb/> car,,,,. </note><note type="footnote"> * Salinas, quantum. </note><note type="footnote">i Salinas addit
+							signorum specie. </note><note type="footnote"> i 118 Lir., Bol. et Salin. AL Que!'n.,
+							exuberans .. <lb/> multo,II'n. </note><note type="footnote">k Sex voces sequentes
+							desiderat Bollandus. </note><note type="footnote">1 Ita Salinas cum suis eodd. Quesn.,
+							affectuum ' <lb/> voce. </note><note type="footnote"> 1ft AI.. voluntas. </note>
+						<pb n="1271"/>
+						<milestone unit="PLSection" n="A"/><lb/> dullis Christus insederat, ut interdum, quod.
+						exper­ <lb/> tus loquor, membris tuis placido sopore devinctis, <lb/> illum etiam in
+						somnis officio solito tua lingua reso­ <lb/> naret. Sæpe dormiens sanissimæ
+						exhortationis, saepe <lb/> orationis affectuosissimæ verba refudisti. Agebatur <lb/>
+						quippe in lectulo corporis requies, mentis in Christo. <lb/> Et quidem hæc, prout a
+						quique adfuimus, experti <lb/> sumus. Tu vero unica semper omnium requies, <lb/> quain
+						alacer, quam saepe referebas somnia, non ali­ <lb/> quid præsagientia, neque aliqua in
+						futUrum anxietate <lb/> sollicita , sed b irrequietis animæ desideriis exci­ <lb/> tata,
+						martyrium scilicet, quod semper meditatione <lb/> gestabas, credo, alludente interdum,
+						et provocante <lb/> cupiditatem tuam Domino, tamquam excitata in fidem <lb/> tuam
+						persecutione peragebas. Et vere puto neminem <milestone unit="PLSection" n="B"/><lb/>
+						diffiteri, tibi ad martyrium c tortorcs, non animum, <lb/> defuisse. Quotidianus
+						siquidem in sincerissimis tra­ <lb/> ctatibus, a confessionis Patris, ac Filii, ac
+						Spiritus <milestone unit="PLSection" n="A"/><lb/> sancti testis fuisti. Nec facile tam
+						exerte, tam Incide <lb/> quisquam de Divinitatis Trinitate disseruit, cum eam <lb/>
+						personis distingueres, et * gloriæ æternitate ac ma­ <lb/> jestate sociares.</p>
+					<p>39. Memento itaque, amice Dei, memento jugiter <lb/> nostri, Deo incoinquinatus
+						assistens, canens illud <lb/> canticum novum, et sequens Agnum quocumque va­ <lb/> dit.
+						Tu illi pedissequus; tunobis patronus, oratio­ <lb/> num nostrarum interpres
+						acceptabilis, et fortis as­ <lb/> sertor, perfusas ad sepulcrum tuum alumni gregis <lb/>
+						preces i perfer; impetra ut conspiratione communi <lb/> omnes simul sacerdos et populus,
+						quæ jussisti, quæ <lb/> docuisti, aliquatenus obtinere mereamur. g Per Do­ <lb/> minum
+						nostrum Jesum Christum, qui te in gloriam <lb/> suam assumpsit, atque cum Patre suo et
+						cum Spiritu <milestone unit="PLSection" n="B"/><lb/> sancto vivit ct regnat Deus per
+						omnia sæcula sæcu­ <lb/> lorum. AIDCn. <note type="footnote"> a Quesn., quisque.
+							</note><note type="footnote">b Boll. ei Sur., inquietis animi. Cr.d Vat. Rcg. <lb/>
+							i0i5 : Sed inquie i* (tnimi niarty ii srilicel gestabas. At <lb/> alius VaL. Uejs.
+							L('Xlus leriionemi lunh.,I. </note><note type="footnote"> « Ita cum Quesn. ct Salmas
+							Yat. Reg. 645. Alias, <lb/> le,n pili. </note><note type="footnote">d Bol.,
+							confessione, Arel., confessionum. </note><note type="footnote"> e UuU.. gloriam.
+							</note><note type="footnote"> { Quesn., profcr. Sa linal lectionem pratvilimus.
+							</note><note type="footnote"> I Hæc clausula dec?t in utrisque mss. Valt. Rec. </note>
+					</p>
+					</div>
+				</body>
+  </text>
+</TEI>

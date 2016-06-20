@@ -1,0 +1,1504 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title>Patrologiae Cursus Completus. Series Latina (PL)</title>
+        <sponsor>University of Leipzig</sponsor>
+        <funder>European Social Fund Saxony</funder>
+        <principal>Gregory Crane</principal>
+        <respStmt>
+          <persName xml:id="Jouve">Jouve</persName>
+          <resp>OCR-ed, corrected and encoded the text</resp>
+        </respStmt>
+        <respStmt>
+          <persName>Greta Franzini</persName>
+          <resp>Project Manager (University of Leipzig)</resp>
+        </respStmt>
+        <respStmt>
+          <persName>Simona Stoyanova</persName>
+          <resp>Project Assistant (University of Leipzig)</resp>
+        </respStmt>
+        <respStmt>
+          <persName>Bruce Robertson</persName>
+          <resp>Technical Advisor (Mount Allison University)</resp>
+        </respStmt>
+      </titleStmt>
+
+      <publicationStmt>
+        <authority>University of Leipzig</authority>
+        <idno type="filename">PL83.xml</idno>
+        <availability>
+          <licence target="https://creativecommons.org/licenses/by-sa/4.0/">Available under a
+            Creative Commons Attribution-ShareAlike 4.0 International License</licence>
+        </availability>
+        <date>2014</date>
+        <publisher>University of Leipzig</publisher>
+        <pubPlace>Germany</pubPlace>
+      </publicationStmt>
+
+      <sourceDesc>
+        <listBibl xml:lang="la">
+          <biblStruct>
+            <monogr>
+              <editor>
+                <persName>
+                  <name xml:lang="fr">Jacques Paul Migne</name>
+                </persName>
+              </editor>
+              <author ref="urn:cite:perseus:author.771">Isidorus Hispalensis</author>
+              <title>Differentiarum Sive De Proprietate Sermonum Libri Duo</title>
+              <title>Allegoriae Quaedam Sacrae Scripturae</title>
+              <title>De Ortu Et Obitu Patrum Qui In Scriptura Laudibus Efferuntur</title>
+              <title>In Libros Veteris Ac Novi Testamenti Proemia</title>
+              <title>Liber Numerorum Qui In Sanctis Scripturis Occurrunt</title>
+              <title>De Veteri Et Novo Testamento Quaestiones</title>
+              <title>Mysticorum Expositiones Sacramentorum Seu Quaestiones In Vetus
+                Testamentum</title>
+              <title>Appendix Ad Libros Regum</title>
+              <title>De Fide Catholica Ex Veteri Et Novo Testamento Contra Judeos</title>
+              <title>Sententiarum Libri Tres</title>
+              <title>De Ecclesiasticis Officiis</title>
+              <title>Synonyma De Lamentatione Animae Peccatricis</title>
+              <title>Regula Monachorum</title>
+              <title>Epistolae</title>
+              <title>De Ordine Creaturarum Liber</title>
+              <title>De Natura Rerum Ad Sisebestum Regem Liber</title>
+              <title>Chronicon</title>
+              <title>Historia De Regibus Gothorum. Wandalorum Et Suevorum</title>
+              <title>De Viris Illustribus Liber</title>
+              <title>Carmina [Ascripta]</title>
+              <title>Chronica Regum Visigothorum (Incertus)</title>
+              <title>Expositio In Canticum Canticorum Salomonis [Incertus]</title>
+              <title>De Conflictu Vitiorum Et Virtutum (Incertus)</title>
+              <title>Expositio In Missa (Incertus)</title>
+              <title>Sententiarum Liber Quartus (Incertus)</title>
+              <title>Exhortatio Humilitatis (Incertus)</title>
+              <title>Testimonia Divinae Scripturae Et Patrum (Incertus)</title>
+              <title>Sermones (Incertus)</title>
+              <title>De Ecclesiasticis Dogmatibus (Incertus)</title>
+              <title>Sentantiae Differentiarum De Activa Vita Atque Contemplativa [Incertus]</title>
+              <title>Exhortatio Poenitendi Cum Consolatione Et Misericordia Dei [Incertus]</title>
+              <title>Lamentum Poenitantiae (Incertus)</title>
+              <title>Oratio Contra Insidias Diaboli (Incertus)</title>
+              <title>Liber De Ortu Et Obitu Patrum Incertus</title>
+              <title>Liber De Numeris (Incertus)</title>
+              <title>Glossae in Sacram Scripturam</title>
+              <title>Differentiarum, sive de Proprietate Sermonum, Liber</title>
+              <title>Liber Glossarum</title>
+              <imprint>
+                <publisher>Garnier</publisher>
+                <pubPlace>Paris</pubPlace>
+                <date>1850</date>
+              </imprint>
+              <biblScope unit="volume">83</biblScope>
+            </monogr>
+            <monogr>
+              <author>Auctor Incertus</author>
+              <title>Archiepiscopi Toletani Veteres</title>
+              <title>Chronologia Gothicorum Regum (Ex Codice Regio Vaticano)</title>
+              <imprint>
+                <publisher>Garnier</publisher>
+                <pubPlace>Paris</pubPlace>
+                <date>1850</date>
+              </imprint>
+              <biblScope unit="volume">83</biblScope>
+            </monogr>
+            <ref target="http://hdl.handle.net/2027/pst.000020950231">HathiTrust</ref>
+
+          </biblStruct>
+        </listBibl>
+      </sourceDesc>
+
+    </fileDesc>
+    <encodingDesc>
+      <p>The following text is encoded in accordance with EpiDoc standards and with the CTS/CITE
+        Architecture.</p>
+        <refsDecl n="CTS">
+        <cRefPattern n="paragraph" matchPattern="(.+).(.+).(.+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div/tei:div[@n='$1']/tei:div[@n='$2']/tei:p[@n='$3'])"/>
+        <cRefPattern n="section" matchPattern="(.+).(.+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div/tei:div[@n='$1']/tei:div[@n='$2'])"/>
+        <cRefPattern n="chapter" matchPattern="(.+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div/tei:div[@n='$1'])"/>
+      </refsDecl>
+    </encodingDesc>
+
+    <profileDesc>
+      <langUsage>
+        <language ident="la">Latin</language>
+      </langUsage>
+    </profileDesc>
+
+</teiHeader>
+<text>
+    <body>
+      <div type="edition" n="urn:cts:latinLit:tmp1406.tmp1406.opp-lat1">
+        <head>
+          <title type="main">SANCTI ISIDORI HISPALENSIS EPISCOPI IN LIBROS VETERIS AC NOTI
+            TESTAMENTI PHOŒMIA.</title>
+        </head>
+
+        <div n="pr" subtype="chapter" type="textpart">
+          <div n="1" subtype="section" type="textpart">
+            <ab>
+              <title type="sub">190 Prologus.</title>
+            </ab>
+            <p n="1">
+              <milestone unit="PLSection" n="C"/>1. Plenitudo Novi et Veteris Testamenti, quam in
+              <lb/> canone catholica recipit Ecclesia, juxta vetustam <lb/> priorum traditionem ista
+              est.</p>
+            <p n="2">2. In principio videlicet, quinque libri Moysi, Ge­ <lb/> nesis, Exodus,
+              Leviticus, Numeri, Deuteronomium, <milestone unit="PLSection" n="C"/><lb/> id cst,
+              recapitulatio legis et quasi secunda lex.</p>
+            <p n="3">3. Huic succedunt libri Jesu Nave, Judicum, et li­ <lb/> bellus cujus 191 est
+              titulus Ruth, qui non ad histo­ <lb/> riam Judicum, ut Hebræi asserunt, sed magis ad
+              <lb/> jrincipium Regum pertinere videtur. <note type="footnote"> i. Quam in canone,
+                Hoc libro castigando septem <lb/> exemplaribus ul,..bamur: tria llispali adjecta
+                erant, <lb/> duo chartacea, tertiugi in membranis. In duohus <lb/> ; chartaceis
+                legitur : Quam in canone sacro. Veruni <lb/> dictio sacro redundare visa est, et
+                Hieronymus uhi­ <lb/> que in canone tantum :,j!, ut imprologo (;aleaLo. his <lb/>
+                verbis : Igilur Sapientia, qu&lt;v vulyo Salomonis inscri- <lb/> Dilur, et Jesu
+                lilii S irlicll liber, et J udilll, et Tobias, et <lb/> Paslor t non sunt in canoic.
+                Augustinus, lih. II do <lb/> Doctrina Christ., c. 8 : Totus autem can n Scriptura­
+                <lb/> rum, in quo istam considcrationem versandam dicimus, <lb/> his libri,
+                continetur. Erat enim moribus receptum , <lb/> ut fere in conciitis canon ederetur,
+                omnes divinas <lb/> Scripturas comprehendens. Ab eo canone libri cano­ <lb/> nici
+                vocabantur. (Juemadmodnm c contrario apocry-</note>
+              <milestone unit="PLSection" n="D"/><note type="footnote"> phi (Iuri, id est,
+                ahsconllili dicti sunt, quoniatn eo­ <lb/> ruin lectione, cum prohibiti cs&gt;ent,
+                occultc t:1I:11J11). <lb/> et iu latehris utebantur, et in divinis libris
+                ahscontlili <lb/> vox aliquando in veiiti sigllifiralloJlc sumitur, ut in <lb/> ps.
+                xv, vers. 14: De ab.condilis Illis lldimplelus est <lb/> venter corum, id est: Quae
+                lege erant IJrol,itJita c une­ <lb/> ilerunt. Sic sane locum in lelligi l A pull
+                iuari us in <lb/> Psalmorum Alctaphrasi, his veibis : </note>
+              <figure type="illustration">
+                <graphic url="PL83_fig10.jpg"/>
+              </figure><note type="footnote"> Jbid. Eruditis notis hic liber in Editione Grinlii
+                <lb/> illustratus fuit, ut facile Marianam agnoscC're possis, <lb/> cujus nomine
+                expresso aut iiulicaio l)roferclI' UI'. F.... <lb/> sius de hoc opere disserui in
+                Isidnrianis, cap. 62, <lb/> uUi præfationem quoquc a Zaccaria in hos I brus <lb/>
+                pr:ep:u'al3In descripsi. In editione lIagollocusi post <lb/> ecclesia additur quæ
+                Isidorus senior exposuit, quasi <lb/> lisque ad verba isti esl sit li ulus operis.
+                AREVALUS. </note><note type="footnote"> 2. Id est, Gene.i., etc... Numeri, a!.,
+                ISumerus. <lb/> MAR. </note><note type="footnote"> 3. Qui non ad historiam Judicum,
+                III Hebræi assc­ <lb/> ,ollUl, sed magis ad principium Recjum penillere videtur.
+                <lb/> Hieronymus, in prologo Galeato Hebræorum, cano­ <lb/> nem refcren*, ait:
+                lJt'i"de subtexunt Sophetim, id est, <lb/> J ,ulicum librum, et in eumdem cmu
+                pingunl liutli, nuia </note>
+              <milestone unit="PLSection" n="D"/><note type="footnote"> in diebus Judicum facta
+                ejusnarratnr historia. Nimi­ <lb/> rum Hehra;i Abcsan, qui post Jephten Judæoru.n
+                <lb/> populo pra-fuit, Booz Itn h maritum fuisse, persua­ <lb/> sum habent. Hanc
+                Hebræorum opinione n Isidorus <lb/> refellit, sequiturque Augustini sententiam, II
+                de Ouc.. <lb/> trina Christian., c. 8, uhi ait : Totus autem canon <lb/>
+                Scripturarum, in quo istam considerationem versan­ <lb/> dam dicimus, his libris
+                continetur; quinque Moyseos, <lb/> id est, Genesi, Exo.do, LeJ);lico, Numeris,
+                Deuterono­ <lb/> mio, et tino libro Jesu Nave, uno Judicum, uno libello <lb/> qui
+                appeliatur Ruth, aui magis ad Regnorum principia <lb/> videlur periin ff.. Quo loco
+                suspicor Angustini lec.io-</note></p>
+            <pb n="157"/>
+
+            <p n="4">
+              <milestone unit="PLSection" n="A"/>4. nos sequuntur quatuor libri Regum. Quorum <lb/>
+              quidem Paralipomenon libri duo e latere annectun­ <lb/> tnr, quia earumdem gestarum
+              rernm continent cau­ <lb/> sas quæ in libris Regum esse noscuntur,</p>
+            <p n="5">5. Quanquam et alia sunt volumina quae In conse­ <lb/> quentibus diversorum
+              inter se temporum texunt hi3- <lb/> torias, ut Job Iber, et Tobiæ, et Esther, et
+              Juditb, <lb/> et Esdrae, et Machbæorum libri duo.</p>
+            <p n="6">192 6 Sed hi omnes, præter librum Job, Regum <lb/> sequuntur historiam,
+              deinceps Judæorum annales suis <lb/> quibusque temporibus persequuntur, continentes
+              tri­ <lb/> stia, sive læcta, quæ post excidium Jerusalem judaico <lb/>
+              <lb/> populo acciderunt.</p>
+            <p n="7">7. Ex quibus quidem Tobiae, Judith, et Macha- <milestone unit="PLSection" n="A"/><lb/> bæorum Hebræi non recipiunt. Ecclesia tamen eos­ <lb/> dem ner canonicas
+              scripturas enumerat.</p>
+            <p n="8">8. Occurrunt dehinc Prophetæ, in quibus est Psal­ <lb/> morum liber unus, et
+              Salomonis libri tres, Prover­ <lb/> biorum scilicet, Ecclesiastes, et Cantica
+              canticorum. <lb/> Duo quoque illi egregii, et sanctae institutionis libelli, <lb/> 193
+              Sapientiam dico, et alium qui vocatur Eccle­ <lb/> siasticus; qui dum dicantur a Jesu
+              filio Sirach editi, <lb/> tamen propter quamdam eloquii similitudinem Salo­ <lb/>
+              monis titulo sunt praenotati. Qui tamen in Ecclesia <lb/> parem cum reliquis canonicis
+              libris tenere noscuntur <lb/> auctoritatem.</p>
+            <p n="9">9. Supersunt libri sedecim prophetarum, ex qui- <milestone unit="PLSection" n="B"/><note type="footnote"> jietn esse vitiatam, et eastigandam ex hoc loco Isi­
+                <lb/> dori. Alioqui coinparaTjo magis inepte poui videretur. <lb/> Favet opinioni
+                Augustini Josephus, lib. v Antiquit. <lb/> t. ii, ciim lleli sacerdotis aetate Kiiib
+                historiam ac­ <lb/> cidisse ait. Isidorus ipse eam tantum dicli rationem <lb/>
+                inferius affert, quod in eo libello genus regis David <lb/> nferatur. MAR.
+                </note><note type="footnote"> 4. Quia earumdem gestarum rerum co"'ine,,, ea",o,.
+                <lb/> Causæ nomen varie htimilur; inter alia argumentum <lb/> signiljcat. (Jnde
+                rhetoribus triplex causarum genus. <lb/> Hoc loco negotium, eventum, successumque
+                bignifi­ <lb/> čne mihi videtur; Hispanorum more, quibus cau-ae <lb/> IJOlnen. hoc
+                est, COla. latissime patet linguae verna­ <lb/> culae u,u el propritate, ac lern
+                omnem significat, a <lb/> qua significatione airiet vox non multum differt. J'i-
+                <lb/> lianus cerie imperator latissima ejus vocis significa­ <lb/> lione usus est,
+                cum Proirresiuin ad historiau. scri­ <lb/> beudain hortatur, scque, si id
+                suscipi:&gt;t, pollicetur de <lb/> actiofjibus suis comiuerii:trios ad eum
+                curaturuin : </note>
+              <figure type="illustration">
+                <graphic url="PL83_fig11.jpg"/>
+              </figure>
+              <milestone unit="PLSection" n="c"/><lb/> 7iaa*&gt; 0'01. Utilur unus eadem vcce
+              Isidorus in <lb/> eadcui significatione, cum dicil : LJeuteronoQz;u,n <lb/> autem
+              repetitionem eorumdem librorum, el quasi quod­ <lb/> dam legis meditatorium dicunl; ea
+              duntaxat ratione, <lb/> pro eo quod illi quatuor proprias rerum gesturum con­ <lb/>
+              iineqt causas, isie vero qnu,;um. Locus ex Hipronymo <lb/> . desumptus est, Hi i
+              glossæ ordniarcu auctor fallit <lb/> initio Deui' rom.mii : Sicut I ber, inquiens,
+              Deulero­ <lb/> nOIJ.ii repelit'io est quatuor ,;b,.or,,11I legis; illi enint <lb/>
+              proprias conli"elu in te causas, iste replicat uni: ersa. <lb/> Ca&gt;bian., lib. iii
+              do in t. cqenol) , f. 5, ei coi. 21, <lb/> c. 1 -i, causam pro ic, mmi conditione posu
+              t. MAR. <note type="footnote"> 5. Esdræ ct Machabæorum t bri duo. Mallem lege­ <lb/>
+                remur Esdræ duo, et Machabæorum libri duo, ut Aug., <lb/> unde haec desumpta sunt,
+                (Iixil II de Docir. Chri&gt;l., <lb/> c. 8, lus verbis : Job, et Tobills, et
+                Ealllel', et Judith, <lb/> et Machabæorum tibri duo, et Esdræ duo. Vox cefte <lb/>
+                duo ad uinimipte relcratur necesse est , alioqui <lb/> su:ima lihrol'UIlI
+                quadr;:ginta quinque Veteris Testa-</note>
+              <milestone unit="PLSection" n="D"/><note type="footnote"> meuli i idoro non
+                (,(Hblahil. INeijue movere debet <lb/> quod in Etymologiis, lib. vi, cap. 2, hæc
+                verba legun­ <lb/> tur : Nec quemquam moveat quod unus Esdræ dicitur <lb/> liber,
+                quia secundus, tertius et quartus non habentur <lb/> apud Uebrwos, teU inter
+                apocryphos delJutalltur. Qu;c <lb/> yerbu nian fe'tc cOfrupta *unt. Nam quamvis
+                Hebraei <lb/> Esdræ et Nehemiae serinones uno libro comprehen­ <lb/> dani, quod
+                forte hidonis in Etymologiis secuius es'v <lb/> apperyphitamen Esdrae non tres
+                libri, hed duo Uulutii <lb/> suiit. Mar. </note><note type="footnote">lbid. In
+                nonnullis mss. deest duo post Machabao­ <lb/> rumlibri. De verbis Etymologiarum,
+                (juo) corrupta <lb/> cei:s&lt;I Mariana, nonnihil suo luca aUl10Lavi ad lih. vi,
+                <lb/> cap. 2, num. 28. Cum eo capiie Isiiori ac uoti!t.ini­ <lb/> tiuin hoc
+                Prooemiorum conferri debet. De numero <lb/> vero et auctoribus librofulu sacra;
+                Scripiur.e passam <lb/> interpretes. AREV. </note><note type="footnote"> 6. Sed hi
+                omnes, prætel' librum Job9 Regum sequun­ <lb/> tur historiam. Augusimus, loco
+                citato, sic ait: Sicut </note>
+              <milestone unit="PLSection" n="B"/><note type="footnote"> est Job. et Tobia.. et
+                E,ther, et Judit', et Machabæo­ <lb/> rum libri duo, et Esdræ duo, qui magis
+                subsequi viden­ <lb/> tur ordinatam illam historiam usque ad Reqnorum <lb/> vel
+                Parali,Jomenon terminatam. Quod Augustinus de <lb/> Esdrac libris iutellexit,
+                adnecti tyeguin et Paralipo­ <lb/> menon libris, Isidorus ad Tobialn, Esther,
+                .Judith, <lb/> Esdrae, et Machabæorum lihros extendit ; unde locus <lb/>
+                suhobscurusredditpr, quod,uL alii libri omiUalllur, de <lb/> Tobia praesertim nescio
+                quomodo possit intelligi. cum <lb/> constet tempore Salmanasar et Senacherib ejus
+                filii, <lb/> anie eversam Jerosolymam, in Assyria vixissp. Nisi ' <lb/> forte
+                Isidorus liegum sequi historiam eos omnes <lb/> libros credidit, quod post omnes,
+                aut post aliquot <lb/> reges, res in iis libris explicatae cpuligerint. Porro <lb/>
+                JutJæoru,n aunalcs, Jo..ephi hisLori:un, aliosque Hae­ <lb/> braeorum de rehus suis
+                libros intelligit, unde Seder­ <lb/> holam, hoc est, Hebraeorum Chronicon ante
+                qnaclrin­ <lb/> gento! amplius annos conflatum est. — Ibid. Perse­ <lb/> quuntur.
+                Al., prosequuntur. — Acciderunt. A!.. acces­ </note>
+              <milestone unit="PLSection" n="c"/><note type="footnote"> .erunt. MiR." </note><note type="footnote"> 8. Qui dum dicautur a Jesu filio Sirach edili. <lb/> Codex divi
+                Laurenlii prp dum dicantur legit, dum <lb/> linf. Juxta utramque lectionem (quod
+                frequens in <lb/> bidoro est) particula dum pro cum accipitur, quod <lb/> veteribus
+                etiam usitatum fuit, ut in illa verba Ænei- <lb/> dos I. <lb/> Cum venit, aulæis jam
+                se Regina superbl' <lb/> Aurea composuit sponda, mediam(iue locavit. <lb/> Ser,ins
+                ait: Sane sciendum, CUM, et dum malo errore <lb/> a Romanis esse confusa. Qupd vero
+                Sapientiam et <lb/> Ecclesiasticum Jesu filio Sirach tribuit, et idem <lb/> inferius
+                repetit, ex Augustino desumpsit, ude Doctor. <lb/> Christian., ca p. 8, ubi ait: Nam
+                illi duo libri, unus, <lb/> qui Sapientia, et alius, qui Ecclesiasticus inscribitur.
+                <lb/> de quadam similitudine Salomon;, esse dicuntur. Nam <lb/> Jesus filius Sirach
+                eos sciipsisse constantissime perla;- <lb/> beiur; unde et ex ejusdem August.
+                verbis, lib. I VII <lb/> de Civit. D -i, c. 20, intelligitur proximis verbis
+                te-</note>
+              <milestone unit="PLSection" n="D"/><lb/> geltdun1, propter quamdam eloquii
+              similudinem, non <lb/> auteui propter grandem .eloquii simiUtudinem9 ut duo <lb/>
+              chartacei nisp:denses legeoanl. verum non animad­ <lb/> vertit bidorus, Augustinum II
+              Retract., c. 4, eam <lb/> opinionem, quod spectat ad Sapientiae librum, retra­ <lb/>
+              ctasse. Sane et Hieronymus praefatione in libros <lb/> Salolnonis de Sapientiae libro
+              ait: A'onnulli scripto­ <lb/> rum veterum IHIIIC esse Philonis affirmant, quod !-i-
+              <lb/> dorus ipse se ipso prudentior secutus est, vi Eiymol., <lb/> c. 2, Philonis, ut
+              ego suspicor, non Alexandrini, sed <lb/> Bihlici, de quo frequens in Eusebio inenlio,
+              libns de <lb/> Præparat. cvang. MAR. <note type="footnote"> 9. Ex quibus quatuor sunt,
+                qui majora volumina <lb/> condiderunt. Sequitur hoc loco Graccorum et LauIH). <lb/>
+                ruin opinionem , qui libros onines prophetarum a.1) <lb/> eisdem prophetis quorum
+                nomina præfel'ulIlur, com­ <lb/> positos esse credunt, cum, vi Etymolog., c. i, Eze­
+                <lb/> chielis ct Danielis libros affirmet a qu.busdam vjris <lb/> sapieritibus
+                scriptos esse, quae est constans Hebrseo-</note>
+              <pb n="159"/>
+              <milestone unit="PLSection" n="A"/><lb/> bus quatuor sunt, qui majora volumina
+              condiderunt, <lb/> Id est, Isaias, Jeremias, Ezechiel ct Daniel.</p>
+            <p n="10">10. Reliqui vero duodecim breves sunt, et contigui, <lb/> et ob hoc uno
+              volumine coarctati, quorum nomina <lb/> hæc sunt : Osee, Joel, Amos, Abdias, Jonas,
+              Michæas, <lb/> Nahum, Habacuc, Sophonias, Aggacus, Zacharias <lb/> Ct Malachias.
+              Quidam autem Jeremiæ Lamenta se­ <lb/> gregantes, de volumine ejus resecuerunt, sicque
+              qua­ <lb/> draginta quinque libros Veleris Testamenti susci­ <lb/> piunt.</p>
+            <p n="11">11. Hinc occurrit Testamentum Novum, cujus pri­ <lb/> mum Evangeliorum libri
+              sunt quatuor, scilicet, Mat­ <lb/> thæus, Marcus, Lucas et Joannes. Sequuntur deinde
+              <lb/> Epistolæ Pauli aposloli quatuordecim, id est, ad Ro­ <lb/> manos, ad Corinthios
+              duæ , ad Galatas, ad Ephesios, <milestone unit="PLSection" n="B"/><lb/> ad
+              Philippenses, ad Thessalonicenses duae, ad Co­ <lb/> lossenses, ad Timotheum duae, ad
+              Titum vero, et <lb/> ad Philemonem, et ad Hebraeos singulæ.</p>
+            <p n="12">12. Epistolae quoque Joannis apostoli tres , Petri <lb/> duae, Judae, et
+              Jacobi singulae.</p>
+            <p n="13">
+              <milestone unit="PLSection" n="A"/>194 13. Actus etiam apostolorum, et Apoca­ <lb/>
+              lypsis Joannis. Fiunt ergo in ordine utriusque Tes­ <lb/> tamenti libri septuaginla et
+              duo.</p>
+            <p n="14">14. Haec sunt enim nova et vetera, quæ de the­ <lb/> sauro Domtni proferuntur,
+              e quibus cuncta sacra­ <lb/> mentorum mysteria revelantur. Hi sunt duo Sera­ <lb/>
+              phim, qui in confessione sanctæ Trinitatis jugiter <lb/> decantantes Tpl; <foreign xml:lang="grc">α̂γιος</foreign> hymnum erumpunt.</p>
+            <p n="15">15. Hæc [Fortehæ] etiam duae olivae in Za­ <lb/> charia, quae a dextris, et
+              sinistris lampadis astant, <lb/> atque pinguedine et splendore Spiritus sancti totum
+              <lb/> orbem doctrinae claritate illuminant.</p>
+            <p n="16">16. Hæ litteræ sacrae, hi libri integri numero et <lb/> auctoritate ; aliud
+              cum istis nibil est comparandum. <lb/> Quidquid extra hos fuerit, inter haec sancta et
+              divina <milestone unit="PLSection" n="B"/><lb/> nullatenus est recipiendum.</p>
+            <p n="17">17. Disposito igiiur Veteris ac Novi Testamenti <lb/> ordine librorum et
+              numero, nunc cursim breviterque <lb/> in eos parva prooemia narrationum
+              subjiciamus.</p>
+          </div>
+        </div>
+        <div n="1" subtype="chapter" type="textpart">
+          <ab>
+            <title type="sub">INCIPIUNT PROOEMIA.</title>
+          </ab>
+
+
+          <div n="1" subtype="section" type="textpart">
+            <ab>
+              <title type="sub">De Genesi.</title>
+            </ab>
+            <p n="18">18. Genesis, juxta fidem historiae, describit fabri­ <lb/> cam mundi, et
+              hominis conditionem, cataclysmum, <lb/> et divisionem terrae, confusionem quoque
+              linguarum, <lb/> gestaque omnium patriarcharum, usque ad ingressio­ <lb/> nem Israel
+              in Ægyptum.</p>
+          </div>
+
+          <div n="2" subtype="section" type="textpart">
+            <ab>
+              <title type="sub">De Exodi.</title>
+            </ab>
+            <p n="19">19. Exodus continet Hebræorum servitutem, ac <lb/> decem plagas 185 Ægypti,
+              egressum populi, et nu- <milestone unit="PLSection" n="C"/><lb/> bem protegentem,
+              transitum etiam Rubri maris, <lb/> mersumque cum curribus Pharaonen, ct gloriæ de­
+              <lb/> cantationem, ingressum quoque eremi, cibum Inau­ <lb/> næ, -f quo aliti sunt,
+              percussionem quoque rupis, <lb/> et fluenta in dulcedinem versa, pugnam Amalec, <lb/>
+              mandata etiam Decalogi, et arcam Testamenti, dedi­ <lb/> cationem ;ue tabernaculi et
+              oblationem.</p>
+          </div>
+
+          <div n="3" subtype="section" type="textpart">
+            <ab>
+              <title type="sub">De Levitico.</title>
+            </ab>
+            <p n="20">20. In Levitico autem lex sacrificiorum, hostia­ <lb/> rumque diversitas,
+              indumenta pontificum, et levita­ <lb/> rum ministeria describuntur : ciborum etiam
+              dia­ <lb/> cretio , et diversae peccatorum purgationes, vel <lb/> hostiæ ordina
+              tur.</p>
+          </div>
+
+          <div n="4" subtype="section" type="textpart">
+            <ab>
+              <title type="sub">De Numeris.</title>
+            </ab>
+            <p n="21">21. In Numeris vero egressæ de Ægypto tribus <lb/> enumerantur,
+              profectionesque eorum, perfectorum <lb/> aetate virorum, qui egressi sunt de
+              Ægypto,com­ <lb/> putatio tenetur inserta, Prophetia Balaam, quadra- <milestone unit="PLSection" n="C"/><lb/> ginta quoque duarum per eremum mansionem <lb/>
+              sacramenta signantur.</p>
+          </div>
+
+          <div n="5" subtype="section" type="textpart">
+            <ab>
+              <title type="sub">De Deuteronomio.</title>
+            </ab>
+            <p n="22">22. In Deuteronomio autem, quæ est secunda lex, <lb/> narrantur ea quæinter
+              Pbarnn, et Tophel, et Laban, <lb/> et Naseroth, usque ad Cades Barne fuerunt populo
+              <lb/> dicta a Moyse : mandata , videlicet, atque promissa, <lb/> maledictiones
+              peccatorum, et promissiones beatitu­ <lb/> dinis. Ibi canit canticum Moyses. Ibi dat
+              benedictio­ <note type="footnote">rnm sententa. Rahbi lsaac Harama, praefatione in
+                <lb/> Can,ica , et Itabbi Moyses K ioahi, lib. de Auctoribus <lb/> sacrorum I brorum
+                viros congregationis magna: li­ <lb/> brum Ezechiel, dnodecim prophetarum, Daniclis,
+                et </note>
+              <milestone unit="PLSection" n="D"/><note type="footnote"> E",ther scrip,issc aiunt.
+                Quo magis miror ex hoc nu­ <lb/> mero Dinielcm solum in er Chelhuhifn, id est, ha­
+                <lb/> giographa ab llehnvis poni. Hieronymus, prologo in <lb/> UanielelJl. et
+                præfatione COIHnlent. ad euindcin pro­ <lb/> phetam, Porphyrium ait occasionem
+                arripuisse calalln­ <lb/> niandi religionem nostram, quod negaret, D.,nielis <lb/>
+                prupheliaul a propheta ipso C,llt3ln fuisse, sed a quo. <lb/> d:lllI, qui in JudaM
+                vixit lcr.ipoic Alltiuchi Epiphanis, <lb/> affilnarel scriptain. )1 "R. </note><note type="footnote"> 10. AI. Lamelllaliouc" pro Lamellta ; et secerllunt, <lb/> pro
+                resecuerunt. MAR. </note><note type="footnote"> -I,. Maula. xiii, 5&lt;, Isai. vi,
+                3. Trishaqios hymnum <lb/> erumpunt. Sic legit Hispalensis in InCII' IJran' s.
+                Septi­ <lb/> maiicensis : Ter hutjios hymnum crumpunt. Duo char­ <lb/> tace!
+                Hispalenses, eL Tal raCODen ..is: : llugios, II agio., <lb/> II agios dicentes
+                hymnum erump""'. A 1lallliL :'UrCIII ad <lb/> illa verl.a. lsai. v, i, ubi de duobus
+                Scraphillis ait : <lb/> Clan,aba:,t alter ad alterum, et dicebant : Sanctus, <lb/>
+                Sunctus, Sanctus, Dominus Deus exercituum. Porro <lb/> J'1Imnu,,, erumpunt dixit pro
+                in hymnum erumpunt, qUa <lb/> locutionis forma Virgilius est usus, cum, HI Æneid.,
+                <lb/> ait: </note><note type="footnote"> Interdumque atram prorumpit ad aethera
+                nubem. <lb/> MAR. </note>
+              <milestone unit="PLSection" n="D"/><note type="footnote"> it). Hæc eliam ducc olivæ.
+                Haec olivarum compa­ <lb/> ratio in uno t;iiitum Laurenliano Codice crai, et in
+                <lb/> altero lIisp;llcusi ad Inarginelll, neque utriusque Ie. <lb/> ctio
+                consentichat. Nos lacum expungere omnino ausi <lb/> non sutnus , obclo notasse
+                contenti argumento sus­ <lb/> pecioc Icctiunis. MAR. </note><note type="footnote"> I
+                G. A!.. computandum, pro comparandum. MAR. </note><note type="footnote"> 18.
+                Conditio pro creatione, et rnlacly,mus pro di­ <lb/> luvio verba sunt srrir"or"ln
+                ecclesiast. corum , ca'a- <lb/> clysmus etiam Varrnuis et Hygini. AREV. </note><note type="footnote"> 10. Indicat Mariana deesse in nonnullis Mis. <lb/> verba , quo atli
+                sutit, percustionem quoque rupis. <lb/> A I": v. </note><note type="footnote"> 2tt
+                A!. : Et diversitas peccatorum, purgationesque. <lb/> MAR. </note><note type="footnote"> 21. A!., farta sis, earum pro eorum. MAR. </note><note type="footnote"> 22. Poputo dicta. Septimancensis et Tarnaconensis <lb/> It"guul
+                pnpulo tuta. Et alioqui dare dicere cst, "I <lb/> apud Virgilium, da Tityre nobis,
+                et day noti incl. hila <lb/> posco. Et conlr uiccpere pro audire sumitur, itlneid,
+                l: </note>
+              <pb n="161"/>
+              <milestone unit="PLSection" n="A"/><lb/> nem filiis Israel; ibique, terra
+              repromissionis cons­ <lb/> pecta, mortur atque sepelitur.</p>
+            <p n="23">23. Nonnulli autem Hebræorum quatuor tantum <lb/> libros computant legis, id
+              est, Genesim, Exodum, <lb/> Leviticum, Numeros. 196Deuteronomium autem <lb/>
+              repetitionem eorumdem librorum, ct quasi quoddam <lb/> legis meditatorium dicunt. Ea
+              duntaxat ratione, pro eo <lb/> quod illi quatuor proprias rerum gestarum continent
+              <lb/> causas, iste vero omnium.</p>
+          </div>
+
+          <div n="6" subtype="section" type="textpart">
+            <ab>
+              <title type="sub">De Josue.</title>
+            </ab>
+            <p n="24">24. In Jesu Nave libro filii lsrael, duce Jesu, Jor­ <lb/> danem transeunt, ac
+              secundo circumciduntur, sub­ <lb/> versisque dehinc Cbananaeorum gentibus , divisione
+              <lb/> terræ eorum hæreditatis sortes suscipiunt.</p>
+            <p>
+              <milestone unit="PLSection" n="B"/></p>
+          </div>
+
+          <div n="7" subtype="section" type="textpart">
+            <ab>
+              <title type="sub">De libro Judicum.</title>
+            </ab>
+            <p n="25">25. In libro Judicum continentur peccata et ser­ <lb/> vitutes Israel.
+              exclamationesque populi, et misera­ <lb/> tiones Dei. Describuntur prospera, atque
+              adversa <lb/> bellorum</p>
+          </div>
+
+          <div n="8" subtype="section" type="textpart">
+            <ab>
+              <title type="sub">De lioro Ruth.</title>
+            </ab>
+            <p n="26">26. Liber Ruth ejusdem Moabitidis texit historiam, <lb/> de cujus stirpe
+              familia David descendit. Hunc Hebrxi <lb/> libellum ad Judicum librum subjungunt, pro
+              eo quod <lb/> in diebus Judicum gesta esse commemorant quæ in <lb/> eo scripta sunt ;
+              at contra Latini, pro co quod genus <lb/> regis David retexat, ortum ex eadem
+              Moabitide Ruth, <lb/> ad corpus libri Regnorum veracius euin pertinere <lb/>
+              contendunt.</p>
+          </div>
+
+          <div n="9" subtype="section" type="textpart">
+            <ab>
+              <title type="sub">De libro Regum.</title>
+            </ab>
+            <p n="27">
+              <milestone unit="PLSection" n="C"/>27. Regum liber, quanquam apud Latinos plopter
+                <milestone unit="PLSection" n="A"/><lb/> prolixitatem sui 197 in quatuor partibus
+              sit desec­ <lb/> tus, apud Hebræos tamen in duobus divisus est vo­ <lb/> luminibus.
+              Quorum primus Samucl scribit, arcam <lb/> Domini a Judaeis transisse ad gentes, Heli
+              quoque <lb/> sacerdotium in Samuel mystice fuisse translatum. et <lb/> in David Saulis
+              regis imperium.</p>
+            <p n="28">28. Malachim vero reges Judææ, et Israeliticæ <lb/> gentis, gestaque eorum per
+              ordinem digerit tempo­ <lb/> rum, ipsum quoque Israel ob errorem idololatriæ <lb/>
+              narrat in Assyrios transmigratum ; adextremum edo­ <lb/> cet vcnisse Nabuchodonosor
+              i.. Jerusalem, capti­ <lb/> vumque duxisse principem, ac populum, et subver­ <lb/>
+              tisse urbem et templum.</p>
+          </div>
+
+          <div n="10" subtype="section" type="textpart">
+            <ab>
+              <title type="sub">De Paralipomenon.</title>
+            </ab>
+            <p n="29">29. Paralipopomenonapud Hebræos sub unius lilari <milestone unit="PLSection" n="B"/><lb/> volumine continctur, appellaturque ab ei; Dibre­ <lb/> haiamin, id est,
+              Verba dierum, apud nos autem pro­ <lb/> rter prolixitatem sui in duabus decisus est
+              parti us. <lb/> Hæc est autem historia ordinem generationum et <lb/> temporum
+              continens. In qua scilicet non parva san­ <lb/> ctarum Scripturarum eruditio
+              continetur.</p>
+            <p n="30">30. Namque in historia Veteris Testamenti in locis <lb/> suis aut omnino 198
+              omissa suut, aut fortasse non <lb/> plene digesta, in isto summatim ac breviter expli­
+              <lb/> cata sunt, cujus quidem series e latere legis, sive <lb/> Uegnornm adjuncta
+              procedit, perveniens ad illud <lb/> usque tempus quo et legnorum textus finitur.<lb/>
+              Namque ab exordio fabricae mundi incipiens, pro- <lb/> tenditur per ordinem rerum
+              gestarum usque ad rui­ <lb/> nam Jerusalem in annis tribus mille septuaginta duo-
+                <milestone unit="PLSection" n="C"/><lb/> bus per generationes septuaginta duas.
+                <note type="footnote"> Qua farere id possis, nostram nunc accipe mentem.
+                </note><note type="footnote">13. Notniulli aulem Hebrceorum qualuor tantum <lb/>
+                libros computant legis. Fuisse qui negarent Deutero­ <lb/> nomium a M ysc
+                conscriptum e"tle, Nicolaus de <lb/> Lyra, ad primum Deuteronomii cap., initio ,
+                docet, <lb/> his argumentis : quod initio libri dicat,., : Hæc tunt <lb/> verba qua
+                loculus est Moyses, non scripsit; quod dicat <lb/> quae lucutus est irans Jord.tnenl
+                quem fluvium nun­ <lb/> quain Moyses transmisit; quod in fine Moysis des­ <lb/>
+                cribatur mors. Quæ argumenta rerellere opus non <lb/> est, et ea n tamen opinionem
+                ab antiquis lIebræil <lb/> derivatam arbitror. Nam recentiores judaei quinque <lb/>
+                libros legis et omnes a Moyse conscriptos esse con­ <lb/> stanter affirmant. Nam
+                Deuteron. xxxi, 9, dicitur : <lb/> Scripsit itaque Iloyse. legem hanc, et tradidit
+                eam <lb/> tacerdotibus filiit Levi, et rursus vers. 24 : Postquam <lb/> ergo
+                scripsit Moyses verba tegis hujus in volumillt, <lb/> aMne complerii, præcepi'
+                Levilis, etc. MAR. </note>
+              <milestone unit="PLSection" n="D"/><note type="footnote"> 24. AI., divisionem terrce
+                eorum hcereditatis sorte. <lb/> MAR. </note><note type="footnote"> 25. Notantur
+                tanquam dubia a Mariana verba des­ <lb/> cribantur proapera atque adversa bellorum.
+                AREV. </note><note type="footnote"> 2ti. AI., commemorantur pro commemorant. MAn.
+                </note><note type="footnote"> 27. AI., partes, pro partibus. — Primus, etc., a!.,
+                <lb/> primum Samuel scripsit. — Heli quoque sucerdotium <lb/> in Samuel ",y.tice
+                fuisse translatum. Hæc est Augus­ <lb/> tini sententia, I b. xvn de Civit. De!, cap.
+                4, ubi at: <lb/> Nam Ileli sacerdote re"robalo, substitutus est in Dei <lb/>
+                ministerium Samuel, simul officio functus sacerdotis et <lb/> judicis, et Saule
+                abjeelo, rex David fuudatusin regnumf <lb/> leoe, quod dico, figuraverunt: nempe
+                Veteris Testa­ <lb/> menti in Novum commutationem, quod IshJeu us illo <lb/>
+                adverbio 'ny.,;ce significare voluit. lIicronYluus, I <lb/> contra Joviniam., ex
+                illis verbis psal. ICVIII, ij : <lb/> JI uy.t. et Aaron in sicerdotibus ejus, et
+                Samuel inter <lb/> eos 'ui invocant nomen ejus, colligit Samuelcai non <lb/>
+                sacerdotem, sed Levitam tantum fuissc. Quæ sen­ <lb/> tentia eluditis magis
+                probatur. Qui enim esset sa­ <lb/> cerdos, præsertim summus, cum non esset de
+                po&gt;te­ <lb/> ritate Aaroflis? Idem, epist. ad Paulinum, quac instar <lb/> est
+                generalis præfationisit! sacros lihros, sa. cnlolii <lb/> mutationem non ab Heli in
+                Sami;e crn, *cd alt Abia­ <lb/> tar in S docli factam esse, competenter ail, eallue
+                re <lb/> legis veteris in novam transitionem significati aflir­ <lb/> inat. MAR.
+                </note><note type="footnote"> 28. AI., ab errore, pro ob errorem. </note><note type="footnote"> 2!'. Paralipomenon apud Hebræos sub unius libri <lb/> volumine
+                continetur. Haec ex Hieronymo sumpta sunt <lb/> praufatione altera in libros
+                Paralipomenon. lllud de <lb/> suo auctor addidit, in duabus decisus est partibus ;
+                <lb/> casuum permutatione, ut s.epe consuevit. Paulo in­ <lb/> rerius, ubi nos
+                legimus explicata sunt, duo chartacei <lb/> expleta sunt. Yerum nostram lectionem
+                veriorem </note>
+              <milestone unit="PLSection" n="D"/><note type="footnote"> esse, tum ex plurium Louicum
+                lide, luin ex ea Ilie­ <lb/> rouymi præfatione intelligitur, larnelsi senteutia lion
+                <lb/> discrepat, utrovis modo Icatur. MAR. </note>
+              <note type="footnote"> 50. Namque ab exordio munili incipiens, etc. Locum <lb/> obelo
+                conlixilnus, quamvis trium C..dicu'D lectione <lb/> subnixum, qui neque in annorum
+                numero, ncque in <lb/> generationum conveniebant. Nos de annorum ratione <lb/> non
+                magnopere laboramus, cum in ea re, ut in qua <lb/> maxime, scriptores var;elll.
+                Eusebius , ab initio <lb/> mundi usque ad JerosolYIII:e excidium sui Nabucho­ <lb/>
+                douosor annos numerat "610. Ilebrari in Seder­ <lb/> bolaui 5:&gt;58. Nos, cum in ea
+                re nonnihil ope­ <lb/> rae esset consumptum, annos inveniebillnu8 5590. <lb/> Atque
+                haec de :lIllIorUID ratione. Quod vero septua- <lb/> Giu.a dti;e gcner .tiones, seu
+                progtmies ab exordio <lb/> luumli usque ad excidium Jerosolymae fuisse ait, su­
+                <lb/> sp:cor lectionem esse vitiatam, et quinquaginta duas <lb/> griKT.it.o:ic&gt;
+                p):.i debere, ncinpe quot tu Luca, quot-</note></p>
+            <pb n="163"/>
+
+            <p>
+              <milestone unit="PLSection" n="A"/></p>
+          </div>
+
+          <div n="11" subtype="section" type="textpart">
+            <ab>
+              <title type="sub">De libro Jib.</title>
+            </ab>
+            <p n="31">31. Job liber continet ejusdem sancti viri damna, <lb/> funera, vel flagella,
+              et contumeliosa consolantium <lb/> dicta, lamenta quoque ejus, in quibus totius mundi
+              <lb/> deplorat miseriam; consolationes eliam Dei ad eum <lb/> per turbinem, ejusque
+              duplicem bonorum in line re­ <lb/> munerationem. Hic autem ex suis passionibus et ver­
+              <lb/> bis Christi expressit imaginem; conjux vero ejus <lb/> carnalium typum designat,
+              qui, intra Ecclesiam po­ <lb/> siti, vitam spiritualium moribus suis scandalizant.</p>
+            <p n="32">32. Amici vero ejus speciem praebuerunt hæreti­ <lb/> corum, figuramque
+              dogmatum perversorum. Porro <lb/> Eliu, qui adversus Job gravi exprobratione
+              innititur, <lb/> significat eos qui intra sanctam Ecclesiam arroganter <lb/>
+              praedicant, et per tumorem cordis ac scientiæ fas- <milestone unit="PLSection" n="B"/><lb/> tum, quidquid proferunt superbiae exemplis osten­ <lb/> tant.</p>
+          </div>
+
+          <div n="12" subtype="section" type="textpart">
+            <ab>
+              <title type="sub">De Psalterio.</title>
+            </ab>
+            <p n="33">33. Liber Psalmorum, quanquam uno concludatur <lb/> volumine, 198 non est
+              tamen editus uno eodemque <lb/> auctore. Decem enim prophetæ sunt qui eos diverso
+              <lb/> tempore scripserunt, id est, Moyses, David, Salo­ <lb/> mon, Asaph, Eman, Ethan,
+              Idithun, et filii Core <lb/> Asir, Elcana, Abiasaph, sive Esdras. Nonnulli etiam <lb/>
+              Aggæi et Zacbariæ esse existimantur.</p>
+            <p n="34">34. De iis autem qui sine titulis sunt, traditio vete­ <lb/> rum talis est, ut
+              cujus auctoris præscriptio præces­ <lb/> serit, cæteri, qui sine titulo sequuntur,
+              ipsius esse <lb/> credantur. Est autem hic liber allegoricis ac typicis <lb/>
+              sacramenlis signatus; specialiter autem, quod na- <milestone unit="PLSection" n="C"/><lb/> tus, quod passus, quod resurrexit Christus, pene <lb/> hoc omnium psalmorum
+              resonat organum.</p>
+            <p n="35">35. Sciendum autem quod apud Hebræos omnes <milestone unit="PLSection" n="A"/><lb/> psalmi permisti fuerunt, etinordinati, quos tamen <lb/> pnus Esdras in unum
+              volumen coegit, et in ordi­ <lb/> nem, namerumque disposuit, ac perocculto mysterii
+              <lb/> sacramento aliis alios prætulit ordine, dum poste­ <lb/> riores videantur in
+              tempore. Nam secundum historiae <lb/> cursum tertius psalmus quinquagesimo posterior
+              <lb/> est, sed propter myslerium in 200 ordine prior <lb/> est. Sic enim habentur et
+              cleri, quia Spiritus san <lb/> ctus eos præordinavit, ut voMuit.</p>
+          </div>
+
+          <div n="13" subtype="section" type="textpart">
+            <ab>
+              <title type="sub">De libris Salomonis.</title>
+            </ab>
+            <p n="36">36. Salomon tria volumina edidit : primus ex bis <lb/> Proverbiorum liber est;
+              secundus, qui appellatur <lb/> Ecclesiastes; teiius, cujus titulus est Cantica can­
+              <lb/> ticorum. Iri quibus quidem tribus libris trium gene­ <lb/> rum disciplinas
+              composuit, quibus ad rerum scieu- <milestone unit="PLSection" n="B"/><lb/> tiam
+              pervenitur. Ih primis namque ethicam, id est, <lb/> moralem ; post haec physicam, quæ
+              qualitatem tia­ <lb/> turae comprebendit; ad ultimum theoricam, id est, <lb/>
+              contemplativam. In Proverbiis enim moralia docens, <lb/> per communem quemdam loquendi
+              usum altiorem <lb/> intelligentiam edidit, conservationemque mandato­ <lb/> rum et
+              doctrinæ coelestis institutionem succinttis <lb/> versibus brevibusque sententiis
+              coaptavit.</p>
+            <p n="37">37. Sunt autem provtrbia sub verbis aliis res alias <lb/> explicantia, vel
+              significantia, quae aliter quam di­ <lb/> cuntur Intelliguntur, plus in virtute
+              sententiarum <lb/> quam in sono verborum, quæ Graeci parœmias vo­ <lb/> cant. In
+              Ecclesiaste vero rerum naturam discutiens, <lb/> cuncta in mundo caduca et vana esse
+              reprehendit <lb/> Forte deprehendit] ; rerumque omnium fragilitate <milestone unit="PLSection" n="C"/><lb/> perspecta, renuntiare mundo admonuit.</p>
+            <p n="38">38. In Canticis autem canticorum supergressus <lb/> visibilia, atque
+              contemplans ea quæ sunt cOelestia, <note type="footnote">que ab Hebraeis ex vet&lt;ri
+                Testamento ab Adamo ad <lb/> illud tempus IIUlneranL.Uf. MAR. </note><note type="footnote"> 32. Al., pJ"ælulerunt, pro pJ'æbuel'uut, et oSlendunt, <lb/> pro
+                ostentant. MAR. </note><note type="footnote"> Ibid. Amicos Job speciem hæreticorUnl
+                praebuisse, <lb/> in Allegoriis quoque notatur, num. 5;). In quo opere <lb/> multa
+                sunt cum Prooemiis cummunia, quod semel <lb/> uvouisse salis sit. AREV. </note><note type="footnote"> 33. Decem enn" prophetae sunt, qui eos diverso tcm. <lb/> pore
+                scripserunt. Seiitentia est Hieronymi, non omnes <lb/> psalmos a Davide fuisse
+                editos, epistola ad Cypria­ <lb/> mim, et epistola ad Sophronium, et prima contra
+                Hur. <lb/> linum. t:um Hieronymo omnes Hebræi conveniunt. <lb/> A ugusLinus varius
+                est initio commentar. in Psalmos, <lb/> ct xvii de Civjlale Dei, cap. 14. Caeteri
+                ferrne GI'æci <lb/> et Latini expositores, orolles ps.tlmos a Davide fuisse <lb/>
+                editos tuentur. De re hac nihil in praesentia statuo. <lb/> Nomina sane propheLarum,
+                a quibus Isidorus psal-</note>
+              <milestone unit="PLSection" n="D"/><note type="footnote"> IIHS esse compositos ait, in
+                omiubus exemplaribus <lb/> corruptissime posita erant. Nos veram It.(.tionem re­
+                <lb/> sttuimus, tum ex Codicum inter se collatione, tum <lb/> ex priln. Patalip. vi,
+                22. I.. Iillis Core denarius pro­ <lb/> phetaium uUlnerus completur. Esdras, Aggaeus
+                et <lb/> Z icliari.is siib dubio ab Isidoro inter auctores psal­ <lb/> morum
+                IlUluerallL III', conjectura tum verborum, tum <lb/> M Etymologiarum, cap. 2, uni
+                cum de re eademaga­ <lb/> tur, eorum tiomiua prætermittuntur. HabUi Isaac <lb/>
+                lIara,ua, in CanLic. præfatione, decem quidem psal­ <lb/> morum auctores numerat,
+                longe tamen aliter quam <lb/> hidorus : nempe, Ad &gt;m, Melchisedech, Abraham ,
+                <lb/> Muys' n, Heman, et Idilhun, et tres filios Core, quae <lb/> ad Judicoruni
+                labulas ableHalnus. Porro praecipua au­ <lb/> cionute et erudiLiune vih, Esdram non
+                tauLUID, ut <lb/> ..,.... <lb/> Hieronymus, epist. ad Sophronium, ait, pealmOl <lb/>
+                omnes in unum volumen collegisse affirmant, sed <lb/> etiam pro certo ponunt, ab
+                eodem primum psalanum <lb/> fuisse compositum, ut esset instar praelationis in <lb/>
+                universum opus, provocaretque lectorem ad divinae <lb/> legis lectionem. MAR.
+                </note><note type="footnote"> 34. De ii. autem qui sine titulis sunt. SeutenLia est
+                <lb/> cum lIebr,porum, lum Hieronymi, epistola ad Cy­ <lb/> prianuln, eo argumento
+                contendentis, undecim oin­ <lb/> nino psaliqps Moysen auctorem habere, a psahno
+                <lb/> octuagesimo nono, ubi ejus nomen praefertur, cum <lb/> decem psalmi sequentes
+                sine titulo sint apud He... <lb/> br;eos. MAR. </note><note type="footnote"> 55.
+                AI., collegit, pro coegit. Mas. </note><note type="footnote">lbid. Coegit, etc. Alii
+                : Collegit; de inde septuaginta <lb/> seniores quodum spiritualis intetligenlice
+                my,'erio. dum <lb/> eos ex Hebrceo in Græcum transferunt, et in ordinem <lb/>
+                numerumque disponunt. AREV. </note>
+              <milestone unit="PLSection" n="D"/><note type="footnote"> 36. Trium generum
+                dilciplina. compo.u;t. Sic scn <lb/> tit lIit-rouyuluS vvinitio commentariorum in
+                Ecclesiast. <lb/> et epistola ad Paulam Urbicam, nisi quod pro ineo. <lb/> rice,
+                quam ponit Isidorus, Hieronymus priori loco <lb/> tlieologiam, posteriori logicaln
+                posuit. Utramque <lb/> lectionem conjunxisse videtur Isidorns ipse, II Ety­ <lb/>
+                molog. cap. it cuin ait: In Ilia quippe iribus gene­ <lb/> ribus pfiiosophiæ etiam
+                eloquia divina consi,"'R'. <lb/> Nam aut de natura disputare .altn'. xl in Genu; et
+                <lb/> EctLesia,,'e, aut de moribus, ut in Proverbiis, et in <lb/> onu.ibu. passim
+                libris, aut in logica, pro qua nostri <lb/> theologiam uibi vendicant, ut in Cantic.
+                canticor. et in <lb/> Evangeli;.. — Ibid. Institutionem ; al., imitationem. <lb/>
+                MAR. </note><note type="footnote"> 58. AI., perveniendum pro prevehendam. — Apud </note>
+              <pb n="165"/>
+              <milestone unit="PLSection" n="A"/><lb/> vel divana, sub specie sponsi et sponsae,
+              Christi Ec­ <lb/> clesiae unitatem declarat, atque animam ad 201 <lb/> amorem
+              cælestium excitans provehendam ad con­ <lb/> sortium Dei provocat. Illud etiam non est
+              omitten­ <lb/> dum, quod a doctoribus nostris traditur, apud He­ <lb/> braeos hanc
+              fuisse observationem, ne cuiquam li­ <lb/> brum hunc legere permitterent, nisi viro
+              jam per­ <lb/> fectæ scientiae, et laboratæ fidei, ne forte per im­ <lb/> becillitatem
+              infantiae, et fidei imperitiam, non tam <lb/> erudiret cognitio lubricas mentes, quam
+              potius ad <lb/> concupiscentias corporales converteret.</p>
+            <p n="39">39. Omnes enim Scripturas a doctoribus eorum <lb/> tradi pueris solitum est,
+              etiam eas quas deuteroseis <lb/> vocant. Quatuor tantum ista ad ultimum reservari,
+              <lb/> idest, principium Genesis de mundi creatione, Eze- <milestone unit="PLSection" n="B"/><lb/> cbielis quoque principia, in quibus de cherubim <lb/> scripsit, et
+              finem ejus, in quo templi descriptio con­ <lb/> tinetur, et Cantica Conticorum.</p>
+          </div>
+
+          <div n="14" subtype="section" type="textpart">
+            <ab>
+              <title type="sub">De libro Sapientiæ.</title>
+            </ab>
+            <p n="40">40. Liber Sapientiae, qui vocntur Panarelon, Christi <lb/> adventum, qui est
+              sapientia Dei Patris, passionem­ <lb/> que ejus aperta manifestatione denuntial. Hunc
+              <lb/> edidit Jesus, filius Sirach, in quo etiam nonnulla <lb/> vivendi præcepta
+              composuii.</p>
+          </div>
+
+          <div n="15" subtype="section" type="textpart">
+            <ab>
+              <title type="sub">202 De Ecclesiastico.</title>
+            </ab>
+            <p n="41">41. Ecclesiasticus vero morum pene omnium dis­ <lb/> ciplinam, et sanctae
+              religionis conversationem affa­ <lb/> tim copioseque conscripsit. Dictus est autem
+              Eccle­ <lb/> siasticus, pro eo quod in medio coetu populi, id est, <lb/> coram
+              ecclesia fuerit habitus. Hic enim propter <milestone unit="PLSection" n="C"/><lb/>
+              nimiam sensus similitudinem et eloquii parilitatnm <milestone unit="PLSection" n="A"/><lb/> Salomonis titulo prænotatur. Constat autem et hunc <lb/> librum a Jesu filio
+              Sirach editum fuisse, et inter <lb/> reliquos sacrarum Scripturarum libros pari
+              habitum <lb/> veneratione.</p>
+          </div>
+
+          <div n="16" subtype="section" type="textpart">
+            <ab>
+              <title type="sub">De Isaia.</title>
+            </ab>
+            <p n="42">42. Isaias propheta, qui interpretatur' salus Domini, <lb/> hic, postquam de
+              altari misus calculus labia ejus <lb/> purgavit, dignus efficitur Spiritus sancti
+              prophetia. <lb/> Speculaturque duo seraphim in aenigmate duorum <lb/> Testamentorum,
+              cum duodecim alis, id est, apostolis, <lb/> qui prædicatione sua totuin mundum volucri
+              cele­ <lb/> ritate discurrunt, tegentes faciem et pedes sedentis <lb/> in throno Dei,
+              id est, occultantes ea, sive quæ ante <lb/> saeculi fuerunt exordia, sive quæ post
+              transactam <lb/> hujus mundi figuram futura sunt.</p>
+            <p n="43">
+              <milestone unit="PLSection" n="B"/>43. Hic tamen post visionem Judae et Jerusalem
+              <lb/> adversus cæteras gentes, qu.c in cicuitu ejus sunt, <lb/> prophetiæ convertit
+              sermonem, et Juxta qualitatem <lb/> locorum, et vitae diversitatem, quæ essent eis
+              mala <lb/> ventura denuntiat. Post captivitatem enim Jerusalem <lb/> ruinam Babyloniae
+              comminatur.</p>
+            <p n="44">203 44. Deinde necem Philisthiim, vastitatem <lb/> Moab, exterminium Damasci,
+              et Ægypti commotio­ <lb/> nem, et solitudinem maris deserti, obsidionem quo­ <lb/> que
+              Edom, fugam et interitum Arabiæ, excidium <lb/> vallis Sion, subversionem etiam Tyri,
+              sive quadru­ <lb/> pedum. Sed figuraliter in visione Judæ Synagoga <lb/> projicitur,
+              et Ecclesia Domino copulatur. In ruina <lb/> Babyloniæ confusio totius mundi
+              superbiaque argui­ <lb/> tur, et finis ejus monstratur. In vastitate Moab error
+                <milestone unit="PLSection" n="C"/><lb/> scientiae sxcularis in silentium luctumque
+              mutatur. <note type="footnote"> Hebræo. hanc fuisse observationem. Sic Hieronymus,
+                <lb/> ad Paulinum, de Gencsi, et principio atque fine Eze­ <lb/> chielis, et
+                Origenes, bOn1i1. 1 in Cantica, totidem <lb/> ferme verbis, quos Isidorus in hunc
+                modtim r Aiunt <lb/> enim ob,en,ari eliam apud II ebl'æus, quod nisi quis <lb/> ad
+                cetatem perfectam maturamque pervenerit, libellum <lb/> hunc ne quidem iri manibus
+                tenere permittatur. Sed et <lb/> illud ab eis accepimus custodiri, quandoquidem
+                moris <lb/> est apud eos omnes Scripturas a docioribm ct sapien- <lb/> libus tradi
+                pueris, simul et eas quas <foreign xml:lang="grc">δευτερώσεις</foreign> appel­ <lb/>
+                lant. Ad ultimum quatuor ista Joeserl'ari, id est, pr;"ci- <lb/> pium Gent.is, in
+                quo mundi creatura describitur, et <lb/> E:..ethielis. etc. Porro aetas perfecta xxx
+                snnoruln <lb/> erat, ut ait Hieronymus loco citato, et <foreign xml:lang="grc">δευτερώσεις</foreign>, <lb/> ut ipse Hieronymus docet epistola ad Algasiam ,
+                <lb/> q. to et in Ezeeh. cap. XXXVI, Judaicae traditiones, et <lb/> fahulx erant.
+                Primo Institut. apost., c. 7, Glemens <lb/> traditiones seniorum vocat <foreign xml:lang="grc">δευτερώσεις</foreign>. Eas Epipha-</note>
+              <milestone unit="PLSection" n="D"/><note type="footnote"> nius hæres. 33, contra
+                Ploletnanas, apud llebraos <lb/> quatuor libris cumpreheusas esse ait. Nostra netaie
+                <lb/> Tbalmud babylonicurn in ilisna, et Chemara distri­ <lb/> butum est, auclore
+                Elia in Tlii&gt;bi. Misua autem et <lb/> deuterosis, quod vis utriusque nominis
+                declarat, re­ <lb/> petitionem significamus, idem sunt, ac proprie signi­ <lb/>
+                ficant praecepta vel expositiones leg..;, qu:c post <lb/> Moysen ab Hebrais inventa
+                sunt, qua ratione inter <lb/> Moysis libros Ueuteronomiunl hoc imineii habet, <lb/>
+                quod sit velut repetitio prsecedentium librorum, et <lb/> quasi secunda lex, ut
+                ipsis Isidori verbis utamur. MAR. </note><note type="footnote"> lbid. Animadverendum
+                etiam lIebræos existi­ <lb/> tuasse non oportere ut sacra; Scripturae libri omnes
+                <lb/> vromiscue omnibus legendi traderentur. Et illo <lb/> quidem tempore quo
+                librorum copia non ita facilis <lb/> erat, quippe cum manu omnes scriberentur,
+                fortasse <lb/> non ita magnum periculum imminebat; at nostro <lb/> iemporei quo
+                typographiæ ,beueticio innumera It! ro­ <lb/> # <lb/> rum exemplaria facillime in
+                vulgus prodeunt, quis <lb/> neget sanctissime ab Ecclesia constitutum fuisse ne
+                <lb/> vulgaris sacrorum bibliorum lectio cuivis sine delectu <lb/> permitteretur?
+                AREV. </note><note type="footnote"> 3!'. Omnes, etc. Alii : Quandoquidem mons est
+                <lb/> apud eos, omnes Scripturas a docloribus et sayientibus <lb/> tradi pueris,
+                sinH' l ct eas quas deuteroseis appellant, <lb/> ad ,tlli", una quatuor ista
+                reservari. AREV. <lb/> k0, Liber Sapienti(etqui vocatur Pll1larelon. Sic legit
+                </note><note type="footnote"> Tarraconensi". In aliis Godicibtis vox Panareton cor­
+                <lb/> rupta erat, nLsi quod in 011 omnes terminabant. Ea <lb/> verba ex lIiernu)"mo,
+                prol go in Salomonis opera, <lb/> errore quodam sumpta ab Isidoro sunt. Fertur, in­
+                <lb/> quit Hieronymus, et Panairetos Jcsu filii Sirach liber t <lb/> et alius
+                pseudepi[Jrap""s, qui Sapientia SlI[omouls in­ <lb/> scribilur. Quod ergo Ilier n
+                Ynlus de Ecclesiastico <lb/> diiit, Isidorus ad Sapiejitiae librum Iralls(ulil, non
+                <lb/> eadem irorsus voce. Nim Panceretos, qua voce lIic-</note>
+              <milestone unit="PLSection" n="D"/><note type="footnote"> ronyniusest usus, eximium ac
+                praetipuum significai, <lb/> ab <foreign xml:lang="grc">ἁρέομαι</foreign>,
+                l'allarelon aulcm uno -r.q; <foreign xml:lang="grc">ἀρετη̃ς</foreign> qua si <lb/>
+                virt,iulI"n omnium apothecam. HaballUs, prolog. in <lb/> Ecclesiast., Isitlori
+                etymon secutus, non gignendi <lb/> casu, ut ipse, sed nominandi, neque de Sapiellliæ
+                <lb/> libro, sed Erclesiaslico, propter excellentiam, inquit, <lb/> virtutum suarum
+                Panarclos, id est, omnium virtutum <lb/> capa x appellatur. MAR. </note><note type="footnote"> lbid. Verha Hunc... composuit obelo a Mariana <lb/> tanquam dub a
+                notantur. AREV. </note><note type="footnote">42. Torum mundum volucri celeritate
+                discurrunt. <lb/> Hispanismus eat, pro Per totum mundum. MAR. </note><note type="footnote"> 44. Excidium vallis Sion. Sac constanler legebant <lb/> omnia
+                exemplari.i praeterunum Laureminum, cui, <lb/> quod recens esset descriptum, non
+                tnultuin fldei tri. <lb/> buebamus, in qud exciditHn vallis visionis legebatur.
+                <lb/> Isai. xxir, 1. lIieronYlllus et Vulgata Onusvaltisvisionis <lb/> legunt.
+                Septuaginta interpretes piip.fI. <foreign xml:lang="grc">τη̃ς ϕάραγγος</foreign>
+              </note></p>
+            <pb n="167"/>
+
+            <p n="45">
+              <milestone unit="PLSection" n="A"/>45. In eversione AEgypti totius mundi idololatrix
+              <lb/> destruuntur, templique Domini ædificatio prædicatur. <lb/> In contritione
+              Philisthiim luctus eorum monstratur, <lb/> qui abijciunt jugum Christi, et elevant se
+              contra <lb/> scientiam Dei. Porro per Damascum prædicatio gen­ <lb/> tium , et ruina
+              ostenditur populi Judæorum. Per <lb/> onus maris deserti bujus saeculi tentatio
+              declaratur, <lb/> et quæ illi ventura sunt ostenduntur.</p>
+            <p n="46">46. Per Idumæam oritur sol justitiæ gentium, et <lb/> tenebræ veniunt populo
+              Judxorum. Per Arabiam <lb/> praedicatur aqua baptismatis præbenda iis qui fuge­ <lb/>
+              runt gentium errores, vel eorum blasphemias. Per <lb/> vallem Sion perditio
+              praedicatur Jerusalem, et hæ­ <lb/> reticorum, qui de sublimitate Ecclesiae
+              ceciderunt. <lb/> Per Tyrum gentibus praedicatur, ut, sæculi errore <milestone unit="PLSection" n="B"/><lb/> deposito, ad Christum Dominum convertantur.</p>
+            <p n="47">47. Reliqua vero ejus vel de Christo, vel de Ec. <lb/> clesia gentium sunt,
+              sive de consummatione mundi. <lb/> Prophetavit autem annis ferme LXX , sub regibus
+              <lb/> quatuor Judæ, ordine atque genere sibimet 204 <lb/> succedentibus, id est, Ozia,
+              Joalhan, Achaz, ad <lb/> ultimum Ezechia : sub quo pars magna voluminis <lb/> ejus
+              usque ad calcem tcxitur prophetiæ.</p>
+          </div>
+
+          <div n="17" subtype="section" type="textpart">
+            <ab>
+              <title type="sub">De Jeremia</title>
+            </ab>
+            <p n="48">48. Jeremias propheta, qui interpretatur excelsus <lb/> Domini, simplex in
+              loquendo, et ad intelligendum <lb/> facilis; qui in omnibus dictis et passionibus suis
+              <lb/> Redemptoris nostri imaginem praetulit. IIic, post­ <lb/> quam in typo Cbristi
+              regna destruxit diaboli , justi­ <lb/> tiæque vel fidei aedificavit imperium, jubetur
+              pro- <milestone unit="PLSection" n="C"/><lb/> phetare super omnes gentes, Ægyptum
+              videlicet et <lb/> Palaestinos, Moab et Ammon, Edom et Damascum, <lb/> et Cedar, et
+              super regna Assur, necnon super Helan, <lb/> et Babyloniam</p>
+            <p n="49">49. Inter hæc autem videt virgam vigilantem di­ <lb/> vinæ correptionis et
+              potestatis. Ullam :quoque suc­ <lb/> censam, id est, Judaicam plebem igne carnalium
+              <lb/> desideriorum ardentem. Aspicit et duos cophinos <lb/> ficorum in praefiguratione
+              duorum populorum.</p>
+            <p n="50">50. Descendit et in domum figuli, et videt dimi­ <lb/> nutionem vasis prioris,
+              et novi instaurationem ad <lb/> designandum defectum prioris populi, et successio­
+              <lb/> nem futuri. Sumit etiam calicem supplicii, atque <lb/> universis gentibus
+              porrigit. Accipit et lumbare sub <lb/> exemplo populi Judaeorum, atque putrefactum
+              proji- <milestone unit="PLSection" n="D"/><lb/> cit illud in dispersionem trans
+              flumina gentium. <lb/> Ostendit et calicem aureum Babylonis, per quem <milestone unit="PLSection" n="A"/><lb/> inebraius est mundus lethifero idololatriæ haustu.</p>
+            <p n="51">51. Jubetur ct projicere in Euphratem vulumen <lb/> lapidi alligatum, ad
+              demonstrandum interitum Ba­ <lb/> bylonis, vel figuraliter totius mundi. Increpat
+              etiam <lb/> delinquentes, et ad conversionem provocat.</p>
+            <p n="52">52. Ad ultimum plangit ruinam Jerusalem , tcin­ <lb/> piique excidium, et
+              dispersionem gentis; quæque <lb/> non tantum prænuntiavit, sed etiam praesentia vidit.
+              <lb/> Exorsus est amem duodecimo anno Josiæ regis Judæ <lb/> co tempore quo et Olda
+              mulier prophetiaque cjus <lb/> per quatuor reges extensa es!, sub Josia, et Eliacim,
+              <lb/> et Joacim, et 205 Scdecia, sub quo eversa est Je­ <lb/> rusalem. Annis LXXII et
+              tribus mensibus propheta­ <lb/> vit, excepto illo tempore quo post eversam Jerusa­
+              <lb/> lem in Ægypto cum populo fuit.</p>
+            <p>
+              <milestone unit="PLSection" n="B"/></p>
+          </div>
+
+          <div n="18" subtype="section" type="textpart">
+            <ab>
+              <title type="sub">De Ezechiele.</title>
+            </ab>
+            <p n="53">53. Ezechiel, qui in Latinum vertitur fortitudo Dei; <lb/> hic figurans typice
+              Christum, stat juxta fluvium sæ­ <lb/> culi, et præclara contuetur mysteria.</p>
+            <p n="54">54. Cernit similitudinem gloriæ Dei, et quatuor <lb/> animalia in
+              similitudinem evangeliorum, ct rotas se <lb/> invicem continentes in typo
+              tesamentorum. Videt et <lb/> aucigam, iJ est, Christum, deorsum igne judicii, <lb/>
+              sursum electri, id est, divnitatis fulgore rutilantem. <lb/> Comedit quoque librum
+              divinæ legis, in quo scriptum <lb/> est lamentum poenitentium, et carmen justorum, et
+              <lb/> væ corum qui post peccatum pœnitentiam non ege­ <lb/> runt.</p>
+            <p n="55">55. Dehinc accipit laterem, in quo obsessa Jeru­ <lb/> salem pictura
+              describitur, vel in quo sub typo Chri- <milestone unit="PLSection" n="C"/><lb/> sti
+              ejusdem Jerusalem, id est, tutius Ecclesiæ, quæ <lb/> est c latere Christi formata,
+              mysteria describuntur. <lb/> Capit et hic propheta somnium sinistri lateris, iu <lb/>
+              typo mortis peccatorum, qui ad lævam po ii æterna <lb/> supplicia sustinebunt : ac
+              demum a sinistro in dextro <lb/> latcre dormire jubetur propter spein eorum qui pcr
+              <lb/> mutatationem morum resurrectionis gloriam obtine­ <lb/> bunt. Aspicit interea et
+              duas virgas sibimet copula­ <lb/> tas, in similitudinem circumcisionis, ct gentiam,
+              <lb/> sive aquilam sub Nabuchodonosor, velut Anlichrisii <lb/> figura, magnis alis, et
+              volucri celeritate torius mundi <lb/> imperia occupantem.</p>
+            <p n="56">56. Plangit praeterea sub specie principis Tyni <lb/> beatitudinem diaboli,
+              quam amisit, et ruinam ejus <lb/> magnam [Forte, magna ] cum lamentatione deplorat.
+                <milestone unit="PLSection" n="D"/><lb/> Ad ultimum, arundinem vel funiculum ges:ans
+              me­ <lb/> titur sub specie sanctoruin mystice Jerusalem. <note type="footnote"> Icwv,
+                id est, verbum vallis Sion, quo loco suspicor, <lb/> lIeuraicanJ lectionem, ut in
+                plerisque aliis locis, ab <lb/> antiquo esse mutatam, et pro T"1n N'J ut habent
+                <lb/> Codices lIebraici hoc tempore, et Hieronymus, Se­ <lb/> ptuaginta legisse NU
+                facili inter se litterarum <lb/> permutatione, lectio commutari potuit; sententia
+                <lb/> non dissimilis est, cum Rabbi Salomo et Itabbi Da­ <lb/> vid Kimhi,
+                commentariis ad eum locum, contendant <lb/> "alena de valle Sion, atque Jerosolyma
+                esse lo­ <lb/> cutum. MAR. </note><note type="footnote"> 45. Jain alibi monui in
+                texto Grialii fere semper <lb/> idolatria scribi pro idololalria. AREV. </note><note type="footnote"> 47. Prophetavit autcm annis ferme LII. Quul :1nllis <lb/> singuli
+                prophetae vaticinati sinl, haud promptum est <lb/> explicare. lu Eusebii CbroDico,
+                nisi locus est vitia­ <lb/> tus, ab initio vaticinii Isaiaj usque ad cjus
+                inler:",ln, <lb/> centum ferme anni elabuntur. Meque minor mi tlir­ <lb/> ficultas
+                in Jeremia, quem IsiJorus ann s i.xxu 111 i <lb/> bus IIICIISibus prophetasse ail,
+                ct suspicor vch ..IC.I- <lb/> ter locuui esse cOlru plunl. Naill llieroii)iuus,
+                COI,,­ <lb/> ment. ad i ejus propl.eiæ cap., uno et quadraginta <lb/> asmis
+                vaticinatum esse ait, pra:tcr illud l"IUPUS, <lb/> quando ductus est in pliiin; cx
+                Eubchii CIII"'­ <lb/> uko, ab initio Jeremiæ I)rophc,iæ usjuc ad ever­ <lb/> sam
+                Jerusalem, colliguntur :tiiin xi.v. AlAM. </note><note type="footnote"> !&gt;O.
+                LJilnill'Alwpe". t'IU;' prioris. Diminutionem pro <lb/> comminutione dixit, juxta
+                illud Terentii : LJi".ilulllII' <lb/> ego caput tuum hodie, "isi abia. MAn.
+                </note><note type="footnote">fJ:;. At., tyvum mortis ; ct .ti"ti,"r;,'; figuram.
+                Mar. </note></p>
+            <pb n="169"/>
+
+            <p n="57">
+              <milestone unit="PLSection" n="A"/>57. Inter haec mystica subjicit quaedam moralia,
+              <lb/> falsos criminatur prophetas, atque speculatoribus <lb/> praecipit ne reticeant
+              malitiam. Quatuor etiam ultio­ <lb/> num poenas peccatoribus praedicat, animasque rc­
+              <lb/> dire ad corpora sua prophetat. Ostendit quoque unum­ <lb/> quemque 206 pro se
+              rationem Domino redditurum, <lb/> nec in progeniem posse ultra diffundi labem paterni
+              <lb/> I delicti.</p>
+            <p n="58">58. Objurgat inter haec sub Oolla et Oolliba om­ <lb/> nem lurpitudinem
+              Samariae et Jerusalem ; nativita­ <lb/> temque objicit contumeliosam. Saepe etiam ad
+              pœ­ <lb/> nitentiam captivos provocat populos, et post praeva­ <lb/> ricationem
+              admonet populum redire conversum. Hic <lb/> autem aetatis suae anno 35, et
+              captivitatis quinto in <lb/> Chaldæa exsulans propbetavit : ibique vaticinium
+                <milestone unit="PLSection" n="B"/><lb/> consummavit.</p>
+          </div>
+
+          <div n="19" subtype="section" type="textpart">
+            <ab>
+              <title type="sub">De Daniele.</title>
+            </ab>
+            <p n="59">59. Daniel, qui interpretatur judicium Dei, quique <lb/> etiam de Christo
+              cunctorum manifestior prophetarum <lb/> est. Denique iste non solum venturum
+              praedicavit, <lb/> ut caeteri, sed etiam et tempus incarnationis et pas­ <lb/> sionis
+              per ordinem regum et numerum definivit an. <lb/> norum, ita ut potius non videatur
+              futurum praedi­ <lb/> cere, sed quasi transacta narrare. Hic autem quatuor <lb/>
+              regnorum cernit frequentius visiones, eorumque dif­ <lb/> ferentias sub diversis
+              imaginibus intromittit.</p>
+            <p n="60">60. De Antichristo quoque ostendit quod ipse sit <lb/> cornu pusillum, id est,
+              parvo tempore regnaturus, <lb/> et, decem regibus subjugatis, solus postremis <lb/>
+              temporibus regnaturus. J De consummatione Jeru- <milestone unit="PLSection" n="C"/><lb/> salem vel mundi plura scribit, sive de die judicii, <lb/> et regno sanctorum.
+              In fine autem voluminis pro­ <lb/> phetiæ suae Susannæ historiam et Belis draconis­
+              <lb/> que fabulas ponit.</p>
+            <p n="61">61. liic autem liber apud Hebraeos Hebraicis qui­ <lb/> dem litteris, 207 sed
+              Cbaldaica lingua scriptus est. <lb/> Prophetavit autem in Dabylone, quando et Eze­
+              <lb/> chiel.</p>
+          </div>
+
+          <div n="20" subtype="section" type="textpart">
+            <ab>
+              <title type="sub">De Osee.</title>
+            </ab>
+            <p n="62">62. Osee propheta, qui intelligitur salvant, in duo­ <lb/> decim prophetis
+              primus, profundior reliquis in sen- <milestone unit="PLSection" n="A"/><lb/> tentiis,
+              et operosior intellectu. Iste ad eas tribusque <lb/> vocantur Ephraim et Samaria,
+              domum Joseph et <lb/> Israel, loquitur, sed per Ephrain haereticos arguit, <lb/> qui
+              recedentes ab Eeclesiæ unitate, participes facti <lb/> sunt idolorum.</p>
+            <p n="63">63. Per Samariam autern corumdem haereticorum <lb/> demonstrai figuram, qui
+              praeceptorum Dei custodes <lb/> esse mentiuntur, ct sub praetextu veritatis menda­
+              <lb/> ciumcolunt. Hic historialiter Judaeos in Christo ulti- <lb/> IllO tempore
+              credituros pronuntiavit. Tertium quoque <lb/> resurreetionis dominicæ diem praedixit.
+              Prophetavit <lb/> autem in diebus Oziae regis Juda, sive Jeroboam re­ <lb/> gis
+              Israel, quando et Isaias.</p>
+          </div>
+
+          <div n="21" subtype="section" type="textpart">
+            <ab>
+              <title type="sub">De Joele.</title>
+            </ab>
+            <p n="64">64. Joel propheta, qui interpretatur incipiens. Iste, <milestone unit="PLSection" n="B"/><lb/> ad Judam tantum et Jerusalem vaticinium proferens,
+              <lb/> in principio sui voluminis, post voluptuosa conviviaad <lb/> luctum provocat
+              Jerusalem, excidiumque ejus pro­ <lb/> nuntiat. Praedicat quoque vocationem gentium,
+              et <lb/> super congregatos credentes superventurum Spiritum <lb/> sanctum. Prophetavit
+              autem sub Joatham rege Juda, <lb/> quando et Michæas.</p>
+          </div>
+
+          <div n="22" subtype="section" type="textpart">
+            <ab>
+              <title type="sub">De Amos.</title>
+            </ab>
+            <p n="65">65. Amos, qui interpretatur onus, vaticinavit in <lb/> Samariam et Jerusalem,
+              tria et quatuor scelera gen­ <lb/> tium sub totius mundi figura describens. Primum
+              <lb/> itaque scelus, quia omnes in Adam peccaverunt. Se­ <lb/> cundum, quia insitam
+              naturae legem immemores <lb/> rationis 208 non intellexerunt. Tertium quoque
+                <milestone unit="PLSection" n="C"/><lb/> eorum qui datæ legi non obedierunt. Quartum
+              inex­ <lb/> piabile eorum qui in Christo non crediderunt, pro <lb/> quibus sceleribus
+              intonat Dominus ignem, id est, <lb/> sententiam æterni judicii illaturum.</p>
+            <p n="66">66. Hic autem adventum Christi sub dominica <lb/> voce ita praedicat : Ego
+              firmans tonitruum, et creans <lb/> spiritum, et annuntians in hominibus Christum.
+              Rcli­ <lb/> qua autem, quae de Amasia et Jeroboam, sive Israel <lb/> loquitur,
+              tropologice ad hæreticos sunt referenda. <lb/> Prophetavit autem sub rege Ozia, eo
+              tempore quo <lb/> Osee et Isaias. <note type="footnote"> 57. A!., comminatur pro
+                criminalur. MAR. </note>
+              <milestone unit="PLSection" n="D"/><note type="footnote"> 58. AI., valitinium suum
+                consummavit. MAR. </note><note type="footnote"> 60. Et Belis draconisque (abulas
+                ponit. Plerique <lb/> Codices pro tabulis fabulam legebant. Hieronymus <lb/> tamen
+                prologo iu Danielem, unde haec Isidorus est <lb/> mutuatus, Susannx historiam negat,
+                hymnum trium <lb/> puerorum, Belis et draconis fabulas in Hebraeo esse. <lb/> Eodem
+                modo loquitur procemio commentariorum ad <lb/> eumdem prophetam, neque vocis
+                insoleniia moveri <lb/> quis debet, ut credat Hieronymi et Isidori testimo­ <lb/>
+                nio Danielis vaticinium ea parte falsi accusari. Nam <lb/> fabula, quae a fando
+                dicitur, ut ait Varro v de Lin­ <lb/> gua Latina, est res passim vulgata, sive vera,
+                sive <lb/> falsa sit. Itaque passim ca vox in utramque partem <lb/> accipitur.
+                Origenes, homil. 5 in Genes.: Hic jam (in­ <lb/> quit) refertur famo.i.rima illa
+                fabula Loth. Eusebius, <lb/> III Hist. Ecclesiast., cap. 23: Audi fabulam, et non
+                <lb/> fabulam, sed rem gestam de Joanne apostolo. Hiero­ <lb/> nymus, ad Philipp. II
+                : Longum est, inquit, si vel­ <lb/> lem Samsonis fabulam ad Chruti trahere
+                sacramentum. <lb/> MAa. </note><note type="footnote">lbid. In nota Marianae erat ut
+                sit Varro, quod mu­ <lb/> tavi in ut ait Varro, quia ita ab co scriptum puto. </note>
+              <milestone unit="PLSection" n="D"/><note type="footnote"> AREV. </note><note type="footnote"> 62. AI., peritior pro Optros;or. MAR. </note>
+              <note type="footnote"> 63. AI., eorum pro eorumdem. — Ibid., Præcepto­ <lb/> rum, a!.,
+                præceptorum Dei legem custodisse se tI,en.. <lb/> tiuntur. In Christo ultimo tempore
+                credituros. Archai­ <lb/> smus est, pro in CIlristum, ut Æneid. II, Talis in <lb/>
+                hoste fuit Priamo. Simili libertate dicendi superius <lb/> dixit, transmigratum pro
+                transmigrasse, invisi sunt <lb/> pro inviderunt, et alia, quorum inire rationem lon­
+                <lb/> gum esset. MAR. </note><note type="footnote"> 65. AI., Samaria. MAR.
+                </note><note type="footnote"> 66. A!., formans pro firmans. Anllunlians in ho• <lb/>
+                minibus Chriltum. Sic quatuor Codices correctiores; <lb/> tres alii legebant
+                annuntians in hominibus Clari.tu,. <lb/> suum, ut est in ipso contextu SepLnaginta
+                interpre­ <lb/> tum, et ut legit Augustinus, XVIII de Civit. Dei, cap. <lb/> 28.
+                Totus locus ex Amos IV, i5, desumptus est, <lb/> ubi Vulgata Editio habet : Quia
+                ecce formans montes, <lb/> et creans ventum, et anllunliam homini eloquium suum,
+                <lb/> nimirum, ut docet Hieronymus, comment. ad eum <lb/> locum ubi ejus et nostro
+                tempore Hebrsei legunt </note>
+              <note type="footnote"> PATROL. LXXXIII. </note>
+              <note type="footnote"> 6 </note></p>
+            <pb n="171"/>
+
+            <p>
+              <milestone unit="PLSection" n="A"/></p>
+          </div>
+
+          <div n="23" subtype="section" type="textpart">
+            <ab>
+              <title type="sub">De Abdia.</title>
+            </ab>
+            <p n="67">67. Abdias, qui interpretatur servus Demini, inter <lb/> omnes prophetas
+              brevior numero verborum, sed <lb/> gratia mysteriorum aequalis. Iste contra Idumæam
+              <lb/> loquens increpat mystice superbiam Edom, prioris <lb/> videlicet populi
+              audaciam, quod Jacob fratrem suum, <lb/> id est, Christum ex Hebraeorum stirpe creatum
+              oc­ <lb/> ciderit. In monte autem 209 Sion, quæ est Jerusa­ <lb/> lem, futuram salutem
+              et Sanctum, qui est Christus, <lb/> annuntiat, atque in monte Esau, per quem figuratur
+              <lb/> ecclesia gentium, futurum intonat Domino regnum. <lb/> Prophetavit sub Josia
+              rege Juda, quando et Michæas.</p>
+          </div>
+
+          <div n="24" subtype="section" type="textpart">
+            <ab>
+              <title type="sub">De Jona.</title>
+            </ab>
+            <p n="68">68. Jonas, qui interpretatur columba, tam sermone <lb/> quam naufragio suo
+              passionem Christi mortemque, <milestone unit="PLSection" n="B"/><lb/> et
+              resurrectionem, figurat, sive quod de navi in <lb/> mare, tanquam de cruce in terram,
+              projectus est, <lb/> sive quod, in ventre ceti exceptus, tanquam in se­ <lb/> pultura
+              terræ tribus diebus ac noctibus reconditus <lb/> est, vel quod in figura Ninive
+              pœnitentiam mundo <lb/> prædixerit. II sequentibus autem typum gerit Ju­ <lb/> dæorum,
+              qui salutem geniium, non tantum advenire <lb/> noluerunt, sed dum venit, i.nvisi [Al.,
+              invidi] sunt. <lb/> Ninive quoque gentium significat speciem, Jonas <lb/> vero in hoc
+              loco Judæorum.</p>
+            <p n="69">69. Nam quemadmodum Ninivitarum salus ad <lb/> aemulationem provocavit Jonam,
+              ita redemptio gen­ <lb/> tium scandalum exstitit Judæorum. Merito et contra <lb/>
+              Orientem civitatis sedisse legitur sub umbra he­ <lb/> derae, quia eadem plebs
+              separans se a salute Eccle- <milestone unit="PLSection" n="C"/><lb/> siae, dolore
+              tabida, contra Christum, id est, Urien­ <lb/> tem Ecclesiae, linguam suam movere
+              nititur, sedens <milestone unit="PLSection" n="A"/><lb/> sub umbra legis, quæ umbra a
+              verme arefacta est, <lb/> quia, adveniente Christo, vetera transierunt, et ecce <lb/>
+              facta sunt omnia nova. Prophetavit autem sub Ozia <lb/> rege Juda, quando et Osee, et
+              Amos, et Isaias pro­ <lb/> phetaverunt.</p>
+          </div>
+
+          <div n="25" subtype="section" type="textpart">
+            <ab>
+              <title type="sub">De Michæa.</title>
+            </ab>
+            <p n="70">70. Michæas propheta interpretatur quit iste? <lb/> Comminatur Samariae iram
+              Domini ob e3usam simu* <lb/> lacrorum, interitumque populo Israel 210 ventu­ <lb/> rum
+              denuntiat. Locum etiam in quo naseeretur Chri­ <lb/> stus demonstrat. Prophetavit
+              autem sub Josia, <lb/> quando et Sophonias.</p>
+          </div>
+
+          <div n="26" subtype="section" type="textpart">
+            <ab>
+              <title type="sub">De Nahum.</title>
+            </ab>
+            <p n="71">71. Nabum, qui est consolator, simulacra gentium <lb/> exterminanda
+              pronuntiat, necnon urbem sanguinum <milestone unit="PLSection" n="B"/><lb/> Jerusalem,
+              post cujus interitum pedes annuntiantis <lb/> pacem, id est, Salvatoris adventum
+              proclamat.</p>
+          </div>
+
+          <div n="27" subtype="section" type="textpart">
+            <ab>
+              <title type="sub">De Habacuc.</title>
+            </ab>
+            <p n="72">72. Habacuc, amplexans, sive luctator fortis, in <lb/> principio voluminis sui
+              describit diabolum cum <lb/> membris ac moribus suis; in fine vero prænuntiat <lb/>
+              adventum passionemque Salvatoris.</p>
+          </div>
+
+          <div n="28" subtype="section" type="textpart">
+            <ab>
+              <title type="sub">De Sophonia.</title>
+            </ab>
+            <p n="73">73. Sophonias, speculator mysteriorum Domini, et <lb/> abscondens, cernit
+              captivitatem urbis Jerusalem a <lb/> Romanis futuram, per vocem clamoris a porta pis­
+              <lb/> cium, et per collium contritionem, id est, montis <lb/> Sion, qui est collis
+              Jerusalem; necnon et aliarum <lb/> gentium eversionem praedicat, terroremque divini
+              <lb/> judicii intonat.</p>
+            <p n="74">
+              <milestone unit="PLSection" n="C"/>74. Loquitur etiam contra Moab et Ammon, sed <lb/>
+              per ipsos tanquam finitimi populo Dei, et proximi <figure type="illustration">
+                <graphic url="PL83_fig12.jpg"/>
+              </figure><note type="footnote"> Septuaginta legerunt TWJ, atque ea fuit <lb/> variae
+                interpretationis occasio MAR. </note><note type="footnote"> Ibid. In altero ex meis
+                exemplaribus Hebrææ voces <lb/> notae incipiunt a </note><figure type="illustration">
+                <graphic url="PL83_fig13.jpg"/>
+              </figure><note type="footnote">. AREV. </note><note type="footnote"> 67. A!., ewum
+                stirpe creatum. Prophetavit autem <lb/> sub Jotia. Locus est implicatissimus.
+                Hebraei, ut <lb/> Hieronymus ait, initio in eumdem prophetam, sen­ <lb/> tiunt hunc
+                esse Abdiam illum qui Achab tempore <lb/> prophetas pavit in specubus. Dorotheus in
+                Synopsi <lb/> eumdem tertium ducem quinquageoarium ad Eliam <lb/> missum ait.
+                Utrumque isidorus ipse sequitur, de Vita <lb/> et morte sanctor. Haec si vera sunt,
+                non Oziæ tem­ <lb/> pore vaticinatus est, sed Josaphat, ut habent Codi­ <lb/> ces
+                Seplimancensis, Laurentianns, et Hispalensis ii <lb/> membranis. Hieronymo, in Osee
+                i, Oseas, Isaias, <lb/> Joel, Amos, Abdias, Jonas, Michaeas <foreign xml:lang="grc">σύγχρονοι</foreign> lue­ <lb/> runt. Cum hac opinione convenit lectio quæ est in
+                <lb/> duobus chartaceis Hispalensibus, nempe sub Ozia </note>
+              <milestone unit="PLSection" n="D"/><note type="footnote"> esse ,aticioaLum. lsidorus
+                ipse Abdiam Michææ <lb/> coaetaneum, Michaeam Soplioniae facit. Sopbonias <lb/> sub
+                Josia vaticinatus est, quo tempore Jeremias. <lb/> Itaque Codices Tarraconensis et
+                ()arisienais prophe­ <lb/> tam hunc sub Josia vaticinatum esse aiunt. Hanc <lb/> nos
+                lectionem secuti sumus, tametsi de Joele ait <lb/> paulo superius : Prophetavit
+                autem sub Joalhanl rege <lb/> Juda, quando et Michæas. Nisi hoc etiam fortassis
+                <lb/> loco Joalham legendum sit Josia. MAa. </note><note type="footnote"> lbid.
+                Arbitror Marianam scripsisse J oathatn legen­ <lb/> dum sit pro Jotia, vel certe hoc
+                voluisse. Vide var. <lb/> lect. ARBV. </note><note type="footnote"> 68. Ał., indicat
+                pro figurat. MAR. </note><note type="footnote"> 69. Quia adveniente, etc. II Cor. v,
+                i7. Prophetavit <lb/> autemsub Osia, I V Res. iv, i5. Jeroboam filii Joas <lb/>
+                regis lsrael, qui fuit aequalis Oziac, aetate Jonam <lb/> vixisse constat. Falluntur
+                enim qui Jonam eum pue­ <lb/> rum fuisse aiunt quem Elias ad vitam revocaviL, IV
+                <lb/> Reg. iv. Tametsi Dorothei, Hieronymi magnorum­ <lb/> que aliorum viro'tum
+                auctoritate nitantur. MAR. </note><note type="footnote"> 70. AI.., populi Israel.
+                Prophetavit autemsub Josia, <lb/> quando et Sophonias. Alii Codices legunt sub O.ia.
+                <lb/> Neutrum placet, mallem sub Ezechia, propter locum <lb/> Jerem. xxvi, i8 :
+                Michæas de JloJ.asthi fuit propheta <lb/> in diebus Ezechice regia Juda. Ipse inilio
+                slIæ.prophe­ <lb/> tiae ait : Verbum, quod factum est ad Michceam Mo­ <lb/>
+                ra.thilem, in diebus Joatham, Achaz et Ezechiæ, re­ <lb/> gum Judu. Fortassis ad
+                Josiae regnum pervenit, <lb/> quando Sophoniam vaticinatum esse constat. quem <lb/>
+                4sidorus Michææ aequaleni facit, Michaeam Jocli et <lb/> Abdiae. MAR. </note><note type="footnote"> 7i. Nahum, qui estconsolator. Sic Septimancensis; <lb/> at
+                Tarraconensis et Hispalensis, in membranis, con­ <lb/> solalu" quae lectio haud
+                contemnenda est. Porro in </note>
+              <milestone unit="PLSection" n="D"/><note type="footnote"> Seder-ho-Iam Hebraei
+                asserunt Joel, Nahum et Haba­ <lb/> cuc vaticinatos esse Manassis tempore, et
+                quoniam <lb/> imgrobus erat, subiicuisse ejus nomen. Uieruiiymus <lb/> prologo in
+                duodecim prophetas : In quibus autem, <lb/> ait, tempus non prazfertur in titulo,
+                sub illis eos regibus <lb/> prophetasse, tub quibus et hi qui ante eos habent
+                titulos <lb/> prophetaverunt. Quam opimonem unde desumpsit <lb/> lIieronymul non
+                invenio. Isidorus sane vaticunis <lb/> Nahum et Habacuc nulla tempora designavit.
+                MAR. </note><note type="footnote">lbid. E duobus meis exemplaribus EdiLionis <lb/>
+                Grialianai in altero erat jejunio, in altero recte in­ <lb/> venio in nota Marianae;
+                quod observatum a me alibi <lb/> etiam est, ut constet, inter exemplaria ea formis
+                <lb/> excudenda nonnullas correctiones additas fuisse. <lb/> AREV. </note><note type="footnote"> 72. A!., pronuntiat adventum. MAR. </note>
+              <pb n="173"/>
+              <milestone unit="PLSection" n="A"/><lb/> catholicis sacramentis, 211 hæretici
+              arguuntur. <lb/> Hic tertium diem resurrectionis Christi prophetat, <lb/> atque in
+              adventu Christi totum orbem sub uno jugo <lb/> Domino serviturum annuntiat.
+              Propbetavit autem <lb/> sub Josia, quando et Jeremias.</p>
+          </div>
+
+          <div n="29" subtype="section" type="textpart">
+            <ab>
+              <title type="sub">De Aggæo.</title>
+            </ab>
+            <p n="75">75. Aggæus, qui interpretatur solemnis. Hic in va­ <lb/> ticinii sui textu
+              templum Domini restaurandum prae. <lb/> cepit, contritionem praedicat gentium , vel
+              commo­ <lb/> tionem totius mundi praedicit, ac sub figura Zorobabel <lb/> Christi
+              vaticinatur adventum. Septuagesimo autem <lb/> anno captivitatis populi prophetavit,
+              duobus tantum <lb/> mensibus Zachariam vaticinio suo præcedens.</p>
+          </div>
+
+          <div n="30" subtype="section" type="textpart">
+            <ab>
+              <title type="sub">De Zacharia.</title>
+            </ab>
+            <p n="76">
+              <milestone unit="PLSection" n="B"/>76. Zacharias , qui nominatur memoria Domini, <lb/>
+              postquam jam Domini patribus prophetavit, vidit <lb/> virum sedentem super equum
+              rufum, in figura cor­ <lb/> poris Christi, roseum sanguine passionis , sive myr­ <lb/>
+              tela, gentium populum significantia; aspicit et cornua <lb/> quatuor, sive fabros in
+              figura gentium, quae Judam <lb/> et Israel dispergentes, gravi pondere
+              depresserunt.</p>
+            <p n="77">77. Intuetur similiter et Jesum , sordibus carnis <lb/> et mortalitate
+              vestitum, quibus ablatis, indutum im­ <lb/> mortalitate et gloria . Cernit et lapidem,
+              qui est <lb/> Christus, septem habentem oculos, id est, septifor­ <lb/> mis spiritus
+              pleuitudinem. inter hæc intuetur torrem <lb/> et titionem exstinctum , id est,
+              diabolum. Candela­ <lb/> brum videt in figura Christi cum lucernis septem, <lb/> quæ
+              sunt Ecclesiæ; necnon et duas olivas , ad dex- <milestone unit="PLSection" n="C"/><lb/> teram et ad sinistram candelabri positas , duorum <lb/> Testamenlorum typum
+              significantes.</p>
+            <p n="78">78. Assumit quoque idem duas virgas funiculi et <lb/> decoris in typo
+              Judaeorum et gentium. Aspicit deinde <lb/> duas mulieres, id est, hæreticorum plebes,
+              sive Ju­ <lb/> daeorum, in alis suis levantes amphoram, id est, <lb/> diabolicam
+              doctrinam, massamque plumbi, quod est <lb/> 212 pondus peccati gravissimum, sive
+              volumen <lb/> volaus, in quo peccata hominum et supplicia descri­ <lb/> buntor.</p>
+            <p n="79">79. Videt et quadrigas quatuor, uno prædicationis <lb/> evangelicæ jugo
+              currentes. Post hoc aspicit equos <lb/> missos ad prædicationem mundi : primum rufum ,
+              <lb/> passione martyrii. Secundum nigrum, squalore poe­ <lb/> nitentiæ. Tertium album,
+              candore baptismatis. Quar- <milestone unit="PLSection" n="D"/><lb/> tum varium ,
+              expositione et doctrina fidei. Cernit <lb/> quoque et tubas, sanctorum gestantes
+              figuram , per <lb/> quas Dominus mundo canit, atque angulum, in quo <lb/> duo ex
+              adverso populi conjunguntur, sive paxillum, <lb/> figuraliter Christum, infixum in
+              cordibus populorum, <milestone unit="PLSection" n="A"/><lb/> describit et pastorem,
+              Antichristum, opus et inten­ <lb/> tionem in sinistro habentem.</p>
+            <p n="80">80. Equum quoque in figura plebis hæreticorum, <lb/> et ascensorem ejus
+              diabolum. Praedicat etiam fontem <lb/> in domo veri David, patentem in lavacro
+              regenera­ <lb/> tionis. Alia quæcunque scribit, aut de adventu Do­ <lb/> mini, aut de
+              ejus passione sunt, aut de sæculi fine , <lb/> sivc judicio. Prophetavit autem secundo
+              anno Darii <lb/> regis Medorum, iisdem temporibus quibus et Ag­ <lb/> gæus, anno
+              septuagesimo desolationis templi et ca­ <lb/> ptivitatis populi.</p>
+          </div>
+
+          <div n="31" subtype="section" type="textpart">
+            <ab>
+              <title type="sub">De Malachia.</title>
+            </ab>
+            <p n="81">81. Malachias, qui interpretatur angelus Domini, <lb/> in principio vaticinii
+              sui demonstrat odium Judaeo­ <lb/> rum in Esau, et dilectionem junioris populi in
+              Jacob. <milestone unit="PLSection" n="B"/><lb/> In sequentibus autem veteres Judæorum
+              victimas <lb/> reprobat. Et sacrificium transferri ad gentes annun­ <lb/> tiat. In
+              fine vero adventum Domini, diem quoque <lb/> juditii justorumqoe præmia , et impiorum
+              pcenas. <lb/> Joannem etiam prædicat ante primum adventum <lb/> Domini missum, et
+              Eliam ante secundum adventum <lb/> annuntiat esse mittendum.</p>
+            <p n="82">82. Inter baec nonnulla moralia et disciplinis <lb/> congruentia explicat, in
+              quibus corripit populum , <lb/> sive sacerdotes dcspicientes nomen Domini, atque <lb/>
+              ejus sacramenta pollutis oblationibus et sacrificiis <lb/> 213 violantes. Praemonet
+              etiam episcopos doctos, <lb/> et sine macula esse debere, et citra personarum ac­
+              <lb/> ceptionem populos veritatem instruere; discordes <lb/> quoque arguit, decimas et
+              primitias reddendas in <milestone unit="PLSection" n="c"/><lb/> praedicatoribus a
+              populis Ecclesiae praecipit.</p>
+            <p n="83">83. Ohjurgat et eos qui conjuges suas despiciunt, <lb/> et aliarum amore
+              nectuntur. Similiter et illos qui, <lb/> miseriam suam dolentes, felicitatem laudant
+              eorum <lb/> qui hujus mundi prosperis perfruuntur. Prophetavit <lb/> autem novissimus
+              in Babylone , quando Aggaeus et <lb/> Zacharias.</p>
+          </div>
+
+          <div n="32" subtype="section" type="textpart">
+            <ab>
+              <title type="sub">De Esdra.</title>
+            </ab>
+            <p n="84">84. Esdras scribit populum, expleto captivitatis <lb/> tempore, imperante Cyro
+              rege Persarum , in Jeru­ <lb/> salem fuisse reversum; ac sub Zorobabel et Jesu <lb/>
+              filio Josedech, sacerdote magno, sive Nehemia, mu­ <lb/> ros Jerusalem templumque et
+              altare renovatum, jus <lb/> queque sacerdotum restitutum , et sanctæ religionis <lb/>
+              cultum , multisque opibus gentium principumque <milestone unit="PLSection" n="D"/><lb/> Persarum muneribus perornatum.</p>
+          </div>
+
+          <div n="33" subtype="section" type="textpart">
+            <ab>
+              <title type="sub">De Machabæris.</title>
+            </ab>
+            <p n="85">85. Machabæorum libri, licet non habeantur in <lb/> canone Hebræorum, tamen ab
+              Ecclesia inter divi­ <lb/> noram voluminum annumerantur historias. Praeno- <note type="footnote"> 76. A!., in patribus. LR. </note><note type="footnote"> 17. Inter
+                torrem et titionem nullum discrimen <lb/> reperiri puto. AREV. </note><note type="footnote"> 78. Al., Diabolum, massamque pro diabolicam doc­ <lb/> trinam,
+                massamque. MAR. </note><note type="footnote"> 79. In textu Grialii erat infixio pro
+                infixunt, quod <lb/> ex aliis et sensu ipso correxi. AREV. </note><note type="footnote"> 81. AI., Angelus Dei.-l"ine. AI., finem aRnunt;"'. <lb/> A!.,
+                denuntiat. MAB. </note><note type="footnote"> 8t. AL, bonos9etsine crimine esae d.-
+                Reddendas9 <lb/> etc. Al., reddendaa vopulis præcipit. AlAR. </note>
+              <note type="footnote"> 83. Suas deapiciunt, et aliarum amore nectuntur. Duo <lb/>
+                Hispalenses post haec verba addunt: Hunc autem Ma­ <lb/> lachiam liebrcei Esdram
+                intelligunt .acerdolem. Nam <lb/> et complura quce in hnc prophe ia scribuntur in
+                ejus <lb/> volumine continentur. Qnæ verba tametsi Hieronymi, <lb/> præfat. in hunc
+                prophetam , et Augustini xx de Ci­ <lb/> vit., c. 'i5, auctoritate defendi poterant,
+                tanquam <lb/> maie assuia loco movimus , rejeciulusque in hune <lb/> locum. MAR.
+                </note><note type="footnote"> 8'. AL., scripsit, populum. MAR. </note>
+              <pb n="175"/>
+              <milestone unit="PLSection" n="A"/><lb/> tant autem prælia inter Hebrxorum duces
+              gentesque <lb/> Persarum, pugnam quoque Sabbatorum , et nobiles <lb/> Machabaei
+              triumphos, foedus quoque amicitiarum <lb/> cum Romanorum ducibus, actaque
+              legationum.</p>
+          </div>
+
+          <div n="34" subtype="section" type="textpart">
+            <ab>
+              <title type="sub">De quatuor Evangeliis.</title>
+            </ab>
+            <p n="86">86. Evangeliorum prædicatio , quamvis quadrifa­ <lb/> ria sit, una est tamen,
+              214 quia ex uno eodemque <lb/> ore Divinitatis processit. Hæc sunt enim quatuor <lb/>
+              flumina, de uno paradisi fonte manantia , quæ qua­ <lb/> drupli unione decurrunt, ac
+              per lolum mundum <lb/> cœlestis prædicationis ministrant fluenta , gratiæ ac <lb/>
+              fidei virorem infundunt.</p>
+            <p n="87">87. Haec est illa in Zacharia quadriga Domini, in <lb/> qua per omnem orbem
+              evectus leni jugo colla sibi <milestone unit="PLSection" n="B"/><lb/> cunctarum
+              gentium subjicit. Hi sunt etiam, et quos <lb/> sub quatuor animalium specie visio
+              prophetalis de­ <lb/> scripsit, id est, hominis, leonis, bovis et aquilæ.</p>
+            <p n="88">88. Namque primus, scilicet Matthæus, ut homo, <lb/> ordinem humanæ
+              nativitatis designat. Secundus, <lb/> scilicet Marcus, ad instar rugientis leonis
+              statim in <lb/> principio sui divinae potestatis fortitudinem intonat. <lb/> Terlius ,
+              scilicet Lucas , victimam sacerdotis prae­ <lb/> mittens, quasi viluli mortem
+              insinuat. Quartus, sci­ <lb/> licet Joannes, more aquilae aspectans coetum, ter­ <lb/>
+              ram avidus transvolat, atque nativitatem verbi oc­ <lb/> culta mysterii intelligentia
+              penetrat; sed ex his tria <lb/> illa animalia, quæ in terra gradiuntur, actualem vi­
+              <lb/> tam sequentes, ea tantummodo persecuti sunt quae <lb/> homo Christus in terris
+              temporaliter gessit. Quar- <milestone unit="PLSection" n="C"/><lb/> tum autem animat
+              contemplationis acie coelestia in­ <lb/> spicit, et pauca operum, plurima divinitatis
+              sacra­ <lb/> menta digessit.</p>
+            <p n="89">89. Matthaeus itaque in principio regalem Ghristi <lb/> sequens prosapiam , et
+              moralem, tamen deinceps <lb/> potius disciplinam secutus, pauca signorum et plura
+              <lb/> vivendi praecepta composuit. Item Marcus abbrevia­ <lb/> tor Matthæi, ea quae in
+              itinere ad rationem vitæ <lb/> regendae docebat Petrus , veloci stylo retexuit, gra­
+              <lb/> diens pariter 215 inter Lucam atque Matthaeum , <milestone unit="PLSection" n="A"/><lb/> plura tamen ex Matthaeo commemorat, non tantum <lb/> rerum, sed et
+              verborum ordinem servans.</p>
+            <p n="90">90. Lucas vero Historiae magis ordinem tenens, <lb/> copiosius cæteris
+              gestorum Christi virtutes enuntiat. <lb/> Ad ultimum Joannes, naturalia explicans,
+              transvo­ <lb/> lavit coelos, et angelos, Verbumque Dei reperit, et <lb/> in principio
+              fuisse annuntiavit.</p>
+            <p n="91">91. Ex his primus et ultimus ea prædicaverunt <lb/> quæ ex ore Christi
+              audierunt, vel quae ab illo facta <lb/> vel gesta audierunL. Heliqui medii duo ea
+              tantum­ <lb/> modo quae ab aposlolis cognoverunt: quorum quidem <lb/> Matthæus
+              Evangelium in Judaea primus scripsit, <lb/> deinde Marcus in Italia, tertius Lucas in
+              Achaia, ulti­ <lb/> mus Joannes in Asia. Ex quibus solus tantum Mat­ <lb/> thaeus
+              praedicationis suae historiam Hebraico perstrin- <milestone unit="PLSection" n="B"/><lb/> xit stylo. Reliqui vero Græci sermonis eloquio edide­ <lb/> runt.</p>
+          </div>
+
+          <div n="35" subtype="section" type="textpart">
+            <ab>
+              <title type="sub">De Epistolis Pauli.</title>
+            </ab>
+            <p n="92">92. Paulus apostolus quatuordecim Epistolis prædica.. <lb/> tionis suæ
+              perstrinxit stylum.Exquibus aliquas propter <lb/> typum septiformis Ecclesiae septem
+              scripsit Ecclesiis, <lb/> conservans potius nec excedens numerum sacramenti <lb/>
+              propter septiformem sancti Spiritus efficaciam. Scrip. <lb/> sit autem ad Romanos, ad
+              Corinthios, ad Galatas, <lb/> ad Ephesios, ad Philippenses, ad Colossenses, ad <lb/>
+              Thessalonicenses, ad Hebræos, reliquas vero post­ <lb/> modum singularibus edidit
+              personis, ut rursus ipsum <lb/> illum septenarium numerum ad sacramentum unita­ <lb/>
+              lis converteret.</p>
+            <p n="93">93. Argumenta autem earumdem Epistolarum haec <milestone unit="PLSection" n="C"/><lb/> sunt: imprimis Romanæ plebis fidem collaudat; Co­ <lb/> rinthios gemina
+              doctrina 216 castigat, apud Galatas <lb/> per gratiam fidei excludit opera legis,
+              Ephesios ma- <lb/> gnificat in fide, quam acceperunt; laudat Colossen­ <lb/> ses pro
+              eo quod in fide perstiterunt; Philippenses <lb/> Evangelium custodisse gratulatur;
+              Thessalonicenses , <lb/> in prima Epistola, fide crevisse et operibus, in se­ <lb/>
+              cunda, persecutiones tolerasse fortiter gloriatur.</p>
+            <p n="94">94. Instruit quoque per Timotheum et Titum Eccle­ <lb/> sias. Philemonem de
+              emendato servo Onesimo rogat. <note type="footnote"> 86. At, Quadrifariam sil.
+                Virorem. AI., rorem. <lb/> Al., vigorem. MAR. </note><note type="footnote"> Ibid.
+                Nonnulli Edili titulum praemittunt : p,.æfa­ <lb/> tiones librorum N ovi T
+                ellamenti. Comparationem qua. <lb/> tuor fluminum paradisi adhibuit Isidorus, lib.
+                VI <lb/> Etymol. , cap. i6 : Inter cætera- autem concilia qua-</note>
+              <milestone unit="PLSection" n="D"/><note type="footnote"> tuor esse scimus venerabiles
+                synodos, quæ totam ,ir;n- <lb/> tipalilet fidem complectuntur, quasi quatuor
+                Et'arzge­ <lb/> lia, vel totidem paradisi flumina. Vide etiam Sedu­ <lb/> lium, lib.
+                III, vers. ł73. Pro virorem melius fortasse <lb/> est "igorem. AREV. </note><note type="footnote"> 87. At., Subegil, vel aubjugavit pro subjicit, et de­ <lb/> scribit
+                pro descripsit. MAR. </note><note type="footnote"> 88. AI., Vitulum pro vituti
+                mortem. MAR. </note><note type="footnote"> Ibid. Insignia evangelistarum eodem modo
+                relata <lb/> sunt in Allegoriis, n. 130 et seqq. AREV. </note><note type="footnote">
+                89. Matthæus itaque. Haec verba , usque ad illud : <lb/> Et in principio fuisse
+                annuntiavit, in duobus Hispa­ <lb/> leusibus tantum erant, et suspeclae fidei esse
+                visa <lb/> .. uUl, quocirca obelo sunt jugulata , quemadmodum <lb/> totus ille locus
+                de Epistolis beati Petri, cui initium <lb/> est: In prima autem Epistola, usque ad
+                extremum. <lb/> Praeterea nonnulla alia verba toto opere obelo no­ <lb/> tata sunt,
+                de quibus ut propria mentio lieref, el sin­ <lb/> gulornm ratio redderetur, non
+                judicavimus fore ne­ <lb/> cessarium. MAR. </note><note type="footnote"> Ibid.
+                Mendum irrepsit in utroque meo exemplari <lb/> Editionis Grialianae verum pro rerum.
+                AREV. </note><note type="footnote"> 9!. Reliqui vero Græci sermonis eloqllio
+                ediderunt. <lb/> Hxc multo commodior opinio est, omnes evaugelis-</note>
+              <milestone unit="PLSection" n="D"/><note type="footnote"> tas, praeter Matthaeum,
+                Graece scripsisse, quam quas <lb/> nuper prodiil, Marcum Latine scripsisse, nullo
+                satis <lb/> idoneo argumento fundata. MAR. </note><note type="footnote"> Ibid.
+                Marcum Latine scripsisse tenent nonnulli, <lb/> qui putant autographum Evangelii
+                sancti Marci as­ <lb/> servari Venetiis. Verum somnium est quidquid de <lb/>
+                autographo hoc dicitur, de quo videri potest P.Blan­ <lb/> chinii Evangeliarium
+                quadruplex, et Zaccariae His­ <lb/> toria litteraria Italiae, tom. I, pag. 14 et
+                seq. Non <lb/> solum Marcum, sed alios quoque evangelistas Latine <lb/> scripsisse
+                magis absurda opinio est. AREV. </note><note type="footnote"> 92. Ad
+                Theasalonicellse., ad llebrceos. Hebraeos non <lb/> ponit in numero Ecclesiarum,
+                quoniam ad eos scri­ <lb/> bit, ut paulo inferius ait, qui a lide recesserunt. Re­
+                <lb/> liquas. Al., reliquas v.ero quatuor. MAR. </note><note type="footnote"> 93.
+                A!., Slet,runt pro perstiterunt, et gratulatur <lb/> pro gloriatur. MAR. </note>
+              <pb n="177"/>
+              <milestone unit="PLSection" n="A"/><lb/> Ad ultimum Hebraeos, qui in Christo
+              crediderunt, et <lb/> postmodum persecutionibus Judaicis territi a fide <lb/>
+              recesserunt, confortat, atque ad gratiam Evangelii <lb/> revocat.</p>
+          </div>
+
+          <div n="36" subtype="section" type="textpart">
+            <ab>
+              <title type="sub">De Epistolis beati Petri.</title>
+            </ab>
+            <p n="95">95. Petrus apostolus scripsit duas Epistolas, quæ <lb/> canonicae nominantur.
+              Scripsit autem iis qui, ex cir­ <lb/> cumcisione eredentes, in dispersione gentium
+              erant, <lb/> quae quidem videntur quibusdam esse planiores; <lb/> dum tam profundis
+              repletae sint sensibus, ut per eas <lb/> qui possunt perscrutari divinae scientiae
+              sensum. qua­ <lb/> si per breve quoddam receptaculum, magnas sen­ <lb/> tentias et
+              magna sibi mysteria revelari contueantur.</p>
+            <p n="96">96. In prima autem Epistola scribit regenera­ <lb/> tionis potentiam, et
+              prophetas, qui prænuntiave- <milestone unit="PLSection" n="B"/><lb/> runt futuram
+              Ecclesiæ in passionibus tolerantiam. <lb/> Admonet deinde pontifices in castitate
+              vivere, et,ut <lb/> parvulos, sine dolo manere. Demonstrat etiam sanc­ <lb/> tos
+              lapides esse vivos, et populum acquisitionis, et <lb/> regale sacerdotium. Inter haec
+              popularibus bene vi­ <lb/> vendi ordinem instituit; hortatur mulieres subditas <lb/>
+              esse, cultuque pretioso non incedere , viros quoque <lb/> ad modicum uxoribus
+              adhaerere, orationem frequen­ <lb/> tare, et cum omnibus unanimiter vivere. Praeterea
+              <lb/> scribit arcæ mysterium, sive baptismi sacramentum, <lb/> per quod homo a mundi
+              actibus liberatur.</p>
+            <p n="97">97. Imperatque fidelibus solius divinae voluntatis <lb/> obedire praeceptis ,
+              nec ultra carnis inservire desi­ <lb/> deriis. Docet etiam clerum ac populum sibi
+              minis­ <milestone unit="PLSection" n="c"/><lb/> trare vicissim, passionesque Christi
+              nullum paves­ <lb/> cere; et de domo Dei inchoare judicium, et corona­ <lb/> ri
+              sanctos, 217 mansuetudinem quoque et humili­ <lb/> tatem alternam invicem admonet
+              observare, insidias­ <lb/> que diaboli omni sollicitudine præcavere, adjiciens <lb/>
+              omne opus bonum incipientis per Deum ad consum­ <lb/> mationem perduci.</p>
+            <p n="98">98. In secunda autem Epistola alloquitur fideles, <lb/> in hoc mundo quasi
+              interfectos, atque exhortatur <lb/> omnes de pejoribus ad meliora transire. Scribit
+              etiam <lb/> justorum memorias refovendas , memoratque pseu­ <lb/> doprophetas
+              utriusque Testamenti, qui sunt magis­ <lb/> tri mendacii. Deinde infert diluvii
+              exemplum ad sig­ <lb/> nandum interitum impiorum, et eorum qui, volupta­ <lb/> tibus,
+              peccatorum injecti, servi corruptionis effecti <milestone unit="PLSection" n="D"/><lb/> sunt.</p>
+            <p n="99">99. Scribit etiam abundare novissimis temporibus <lb/> derisores, et apud Deum
+              mille annos unum diem ha­ <lb/> beri praedicat. Inter haec resurrectionem elemento­
+              <lb/> rum, novitatemque cœli et terrae. Ad extremum de <lb/> Epistolis Pauli loquitur,
+              quas cum quidam indocti <lb/> non intelligunt, pravo eas sensu evertunt.</p>
+            <p>
+              <milestone unit="PLSection" n="A"/></p>
+          </div>
+
+          <div n="37" subtype="section" type="textpart">
+            <ab>
+              <title type="sub">De Epistola beati Jacobi.</title>
+            </ab>
+            <p n="100">100. Jacobus frater Domini scripsit unam Episto­ <lb/> lam , ad
+              aedificationem Ecclesiae pertinentem , cujus <lb/> sententiae immensam scientiae
+              claritatem legentibus <lb/> videntur infundere.</p>
+          </div>
+
+          <div n="38" subtype="section" type="textpart">
+            <ab>
+              <title type="sub">De Epistolis beati Joannis.</title>
+            </ab>
+            <p n="101">101. Joannes apostolus tres scripsit Epistolas, qua­ <lb/> rum prima,
+              officium charitatis commendans, tota in <lb/> amore Dei et fraterna dilectione
+              versatur.</p>
+            <p n="102">102. Secunda quoque, quam Electae dominae scrip­ <lb/> sit, dilectionis
+              hortatur studium ; denotat etiam se­ <lb/> ductores, et ab haereticis admonet
+              declinandum.</p>
+            <p n="103">218 103. Tertiam autem Caio scribit, in qua col­ <lb/> laudat eum in studio
+              veritatis et opere misericordiæ ; <lb/> deinde denotat proterviam cujusdam Diotrepis,
+              et De- <milestone unit="PLSection" n="B"/><lb/> metrio testimonium perhibet
+              veritatis.</p>
+          </div>
+
+          <div n="39" subtype="section" type="textpart">
+            <ab>
+              <title type="sub">De Epistola sancti Judæe apostoli.</title>
+            </ab>
+            <p n="104">104. Judae Epistola increpat blasphemantes in Chri. <lb/> sto, et quosdam
+              impudicos sub exemplo impiorum, <lb/> qui per superbiam et luxuriam sempiternis
+              ardoribus <lb/> traditi sunt, pro quibus admonet Ecclesiam ut cos <lb/> arguat, et ad
+              pœnitentiam cohortetur.</p>
+          </div>
+
+          <div n="40" subtype="section" type="textpart">
+            <ab>
+              <title type="sub">De Actibus apostolorum.</title>
+            </ab>
+            <p n="105">105. A; ostolorum historia nascentis Ecclesiae fi­ <lb/> dem opusque
+              describit, cujus quidem scriptor Lucas <lb/> evangelista monstratur. Continet autem ea
+              quæ in <lb/> Judæa vel gentibus per gratiam Spiritus sancti, tam <lb/> a Petro quam ab
+              aliis apostolis, et specialiier a Pau­ <lb/> lo, operata vel gesta sunt.</p>
+          </div>
+
+          <div n="41" subtype="section" type="textpart">
+            <ab>
+              <title type="sub">De Apocalypsi.</title>
+            </ab>
+            <p n="106">
+              <milestone unit="PLSection" n="c"/>106. Joannes, postquam scribere septem jubetur
+              <lb/> Ecclesiis, aspicit filium hominis sedentem in throno, <lb/> et viginti quatuor
+              seniores, et quatuor animalia pro­ <lb/> cedentia ante thronum, in dextera quoque
+              sedentis <lb/> librurn septem sigillis signatum, in quo bellum, ege­ <lb/> stas, mors,
+              clamor interfectorum, finis quoque mun­ <lb/> di notatur et saeculi.</p>
+            <p n="107">107. Describit deinde duodena millia servorum <lb/> Dei, qui signantur in
+              frontibus ; ibi septem angeli <lb/> tubis canunt sequenti grandine et ignc cum
+              sanguine <lb/> in terra. Tertia quoque pars terræ ibi comburitur, et <lb/> tertia pars
+              maris sanguis efficitur ; astraque ipsa ru­ <lb/> tilantia tertiam fulgoris partem
+              amittunt ; ibi de <lb/> fumo putei locustæ producuntur dæmoniorum, acci­ <lb/> pientes
+              potestatem lædendi qui non sunt agni cruore <milestone unit="PLSection" n="D"/><lb/>
+              signati.</p>
+            <p n="108">108. Praeterea comedit Evangelista librum Testa­ <lb/> menli oris
+              prædicatione suavissimum, et operis diffi­ <lb/> cultate amarum. Metiturque cœleste
+              templum, descri­ <lb/> bitque verba viginti quatuor seniorum, set et arcam <lb/>
+              Testamenti, ac mulierem amictam sole, pugnamque <lb/> in coelis Michaelis cum dracone,
+              ruinamque draconis. <note type="footnote"> 96. De verbis quae hoc numero et tribus
+                seqq. <lb/> continentur, paulo ante Mariana, ad num, 89. Quod <lb/> dicitur, sanctos
+                esse lapides vivos, etc. , alluditur ad <lb/> verba sancti Pauli: Dilectis Dei
+                ,vocal;. sanctis. AREV. </note><note type="footnote"> 98. Forte, voluptatibus peccat
+                rum illecti. MAR. </note><note type="footnote"> 102. Secunda quoque, quam Electæ
+                domince scripsit. <lb/> Primam Joannis Epistolam ad Parthos scriptam esse, <lb/>
+                Jlysinus in sua epistola decretali, et Augustinus, II <lb/> Quaest. evang., q. 39,
+                affirmant. Cassiodorus, lib. de <lb/> Divin. lect. , cap. 44, ait : Epistola Petti
+                ad gentes .; <lb/> Judw, Jacobi et Joanni. ad Parthos. MAR. </note><note type="footnote"> Ibid. In Haganoensi Editione : secunda quoque, que <lb/> electis
+                scribitur. Sed inscriptio eit : Electæ dominae <lb/> et natis ejus. De qua sancta
+                femina Electa sermo ali-. <lb/> cubi fit in Actis Inartyrum. AREV. </note><note type="footnote"> ł06. AI. , procidentia pro proc&gt; dentia. MAS. </note>
+              <pb n="179"/>
+              <milestone unit="PLSection" n="A"/><lb/> Conspicit praeterea et Antichristi figuram,
+              habentem <lb/> capita regni septem, et cornua potestatis, et nume­ <lb/> rum
+              nominis.</p>
+            <p n="109">109. Narrat inter haec et canticum Testamenti no­ <lb/> vum, speculaturque
+              angelos gestantes pateras, cer­ <lb/> nitque similiter interitum bestiæ, et
+              beatitudinem <lb/> eorum qui corporis sui vestimenta absque carnis vo- <milestone unit="PLSection" n="A"/><lb/> luptate munda servaverunt. Exsequitur deinde inte­
+              <lb/> ritum meretricis Babyloniæ, et nuptias Agni, adven­ <lb/> tum judicii,
+              interitumque Antichristi, et sempiternam <lb/> punitionem diaboli. Ad ultimum memorat
+              resurrec­ <lb/> tionem mortuorum, cœlique novitatem, et terrae, <lb/> descriptionemque
+              Jerusalcm, flumen etiam baptismi <lb/> mundum , lignumque vitae Dominum Jesum
+              Christum. <note type="footnote"> ł09. A!., phiala.; alii, citharas pro palera,. MAR.
+                <lb/> Ibid. Nonnulli Editi addunt: Jesum Christum, cui <lb/> est honor, gloria et
+                imperium in scecula sæculorum. <lb/> Amen. Quae verba in melioribus desunt. AREV.
+              </note>
+            </p>
+          </div>
+        </div>
+      </div>
+    </body>
+  </text>
+</TEI>

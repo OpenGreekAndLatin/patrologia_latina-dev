@@ -1,0 +1,2003 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title>Patrologiae Cursus Completus. Series Latina (PL)</title> 
+        <sponsor>University of Leipzig</sponsor>
+        <funder>European Social Fund Saxony</funder>
+        <principal>Gregory Crane</principal>
+        <respStmt>
+          <persName xml:id="Jouve">Jouve</persName>
+          <resp>OCR-ed, corrected and encoded the text</resp>
+        </respStmt>
+        <respStmt>
+          <persName>Greta Franzini</persName>
+          <resp>Project Manager (University of Leipzig)</resp>
+        </respStmt>
+        <respStmt>
+          <persName>Simona Stoyanova</persName>
+          <resp>Project Assistant (University of Leipzig)</resp>
+        </respStmt>
+        <respStmt>
+          <persName>Bruce Robertson</persName>
+          <resp>Technical Advisor (Mount Allison University)</resp>
+        </respStmt>
+      </titleStmt>
+      
+      <publicationStmt>
+        <authority>University of Leipzig</authority>
+        <idno type="filename">PL83.xml</idno>
+        <availability>
+          <licence target="https://creativecommons.org/licenses/by-sa/4.0/">Available under a Creative Commons Attribution-ShareAlike 4.0 International License</licence>
+        </availability>
+        <date>2014</date>
+        <publisher>University of Leipzig</publisher>
+        <pubPlace>Germany</pubPlace>
+      </publicationStmt>
+      
+      <sourceDesc>
+        <listBibl xml:lang="la">
+          <biblStruct>
+            <monogr>
+              <editor>
+                <persName>
+                  <name xml:lang="fr">Jacques Paul Migne</name>
+                </persName>
+              </editor> 
+              <author ref="urn:cite:perseus:author.771">Isidorus Hispalensis</author>
+              <title>Differentiarum Sive De Proprietate Sermonum Libri Duo</title>
+              <title>Allegoriae Quaedam Sacrae Scripturae</title>
+              <title>De Ortu Et Obitu Patrum Qui In Scriptura Laudibus Efferuntur</title>
+              <title>In Libros Veteris Ac Novi Testamenti Proemia</title>
+              <title>Liber Numerorum Qui In Sanctis Scripturis Occurrunt</title>
+              <title>De Veteri Et Novo Testamento Quaestiones</title>
+              <title>Mysticorum Expositiones Sacramentorum Seu Quaestiones In Vetus Testamentum</title>
+              <title>Appendix Ad Libros Regum</title>
+              <title>De Fide Catholica Ex Veteri Et Novo Testamento Contra Judeos</title>
+              <title>Sententiarum Libri Tres</title>
+              <title>De Ecclesiasticis Officiis</title>
+              <title>Synonyma De Lamentatione Animae Peccatricis</title>
+              <title>Regula Monachorum</title>
+              <title>Epistolae</title>
+              <title>De Ordine Creaturarum Liber</title>
+              <title>De Natura Rerum Ad Sisebestum Regem Liber</title>
+              <title>Chronicon</title>
+              <title>Historia De Regibus Gothorum. Wandalorum Et Suevorum</title>
+              <title>De Viris Illustribus Liber</title>
+              <title>Carmina [Ascripta]</title>
+              <title>Chronica Regum Visigothorum (Incertus)</title>
+              <title>Expositio In Canticum Canticorum Salomonis [Incertus]</title>
+              <title>De Conflictu Vitiorum Et Virtutum (Incertus)</title>
+              <title>Expositio In Missa (Incertus)</title>
+              <title>Sententiarum Liber Quartus (Incertus)</title>
+              <title>Exhortatio Humilitatis (Incertus)</title>
+              <title>Testimonia Divinae Scripturae Et Patrum (Incertus)</title>
+              <title>Sermones (Incertus)</title>
+              <title>De Ecclesiasticis Dogmatibus (Incertus)</title>
+              <title>Sentantiae Differentiarum De Activa Vita Atque Contemplativa [Incertus]</title>
+              <title>Exhortatio Poenitendi Cum Consolatione Et Misericordia Dei [Incertus]</title>
+              <title>Lamentum Poenitantiae (Incertus)</title>
+              <title>Oratio Contra Insidias Diaboli (Incertus)</title>
+              <title>Liber De Ortu Et Obitu Patrum Incertus</title>
+              <title>Liber De Numeris (Incertus)</title>
+              <title>Glossae in Sacram Scripturam</title>
+              <title>Differentiarum, sive de Proprietate Sermonum, Liber</title>
+              <title>Liber Glossarum</title>
+              <imprint>
+                <publisher>Garnier</publisher>
+                <pubPlace>Paris</pubPlace>
+                <date>1850</date>
+              </imprint>
+              <biblScope unit="volume">83</biblScope>
+            </monogr>
+            <monogr>
+              <author>Auctor Incertus</author>
+              <title>Archiepiscopi Toletani Veteres</title>
+              <title>Chronologia Gothicorum Regum (Ex Codice Regio Vaticano)</title>
+              <imprint>
+                <publisher>Garnier</publisher>
+                <pubPlace>Paris</pubPlace>
+                <date>1850</date>
+              </imprint>
+              <biblScope unit="volume">83</biblScope>
+            </monogr>
+            <ref target="http://hdl.handle.net/2027/pst.000020950231">HathiTrust</ref>
+            
+          </biblStruct>
+        </listBibl>
+      </sourceDesc>
+      
+    </fileDesc>
+    <encodingDesc>
+      <p>The following text is encoded in accordance with EpiDoc standards and with the
+        CTS/CITE Architecture.</p>
+      <refsDecl n="CTS">
+        <cRefPattern n="paragraph" matchPattern="(.+).(.+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div/tei:div[@n='$1']/tei:p[@n='$2'])"/>
+        <cRefPattern n="chapter" matchPattern="(.+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div/tei:div[@n='$1'])"/>
+      </refsDecl>
+    </encodingDesc>
+    
+    <profileDesc>
+      <langUsage>
+        <language ident="la">Latin</language>
+      </langUsage>
+    </profileDesc>
+    
+</teiHeader><text><body>
+
+<div type="edition" n="urn:cts:latinLit:tmp1425.tmp1425.opp-lat1">
+          <head>
+            <title type="main">138 SANCTI ISIDORI HISPALENSIS EPISCOPI DE VIRIS ILLUSTRIBUS.</title>
+          </head>
+  
+<ab>
+            <title type="sub">LIBER.</title>
+          </ab>
+  
+<div n="pr" subtype="chapter" type="textpart">
+<ab>
+            <title type="sub">Praefatio.</title>
+          </ab>
+          <p n="1">1. Quamvia superius plurimi veterum tractatorum inter Græcos et Latinos scriptores doctissimi annotentur <lb/>
+            tamen reor ipse etiam paucorum memoriam facere, quorum lectionem recolo me attigisse.</p>
+          <p>I. 138 Xystus, papa Romanus.</p>
+          <p>II. Macrobios, diaconus.</p>
+          <p>III. Philastrius, ep. Brixiensis.</p>
+          <p>IV. Theodorus, ep. Mopsuestenus.</p>
+          <p>V. Osius, episc. Cordubensis.</p>
+          <p>VI. Toranius Rufinus, presbyter Aquileiensis.</p>
+          <p>VII. Verecundus, ep. Africanus.</p>
+          <p>VIII. Victorinus, episcopus.
+            <milestone unit="PLSection" n="D"/><note type="footnote"> i. Superius, id est,inHieronvmoelGeunadio. PEREZ. <lb/>
+            Ibid. In Isidorianis caput 80 sic inscripsi : Liber </note> 
+            <milestone unit="PLSection" n="D"/><note type="footnote"> l,;dor; de Virit illu.tribu.. Editiones hujut libri, mi'. <lb/>
+            exemplaria. Prcefatio Zace.rite. Harduini delinacontra </note> <pb n="1083"/>
+            </p>
+          <p>
+            <milestone unit="PLSection" n="A"/>IX. Itatius, episcopus Gallociæ.</p>
+          <p>X. Eusebius, ep. Dorolitanus.</p>
+          <p>XI. Cerealis, ep. Castellanens. in Africa.</p>
+          <p>XII. Ferrandus, diaconus Cartbag.</p>
+          <p>XIII. Petrus, episcop. Herden.</p>
+          <p>XIV. Marcellinus. presbyter.</p>
+          <p>XV. Itatus Clarus, ep. Hispanus.</p>
+          <p>XVI. Siricius, pont. Romanus.</p>
+          <p>XVII. Paulinus, presbyter Mediolan., postea ep.</p>
+
+<ab>
+            <title type="sub">Nolanus.</title>
+          </ab>
+          <p>XVIII. Proba, uxor Adelphii.</p>
+          <p>XIX. Joannes Chrysostomus, episc. Constan­ <lb/>
+            tinop.</p>
+          <p>XX. Sedulius, presbyter.</p>
+          <p>XXI. Possidius, ep. Africanus.</p>
+          <p>
+            <milestone unit="PLSection" n="B"/>XXII. Primasius, ep. Africanus.</p>
+          <p>XXIII. Proterius, ep. Alexandrinus.</p>
+          <p>XXIV. Paschasinus, ep. Siciliensis.</p>
+          <p>XXV. Julianus Pomerius.</p>
+          <p>XXVI. Eugipius, abbas Lucullanensis.</p>
+          <p>XXVII. Fulgentius, ep. Ruspensis in Africa.</p>
+          <p>XXVIII. Eucberius, ep. Lugdunensis Franciæ.</p>
+          <p>XXIX. Hilarius, ep. Arelatensis.</p>
+          <p>Apringius, ep. Pacensis, in Hisp.</p>
+          <p>XXXI. Jutinianus, imperator.</p>
+          <p>XXXII. Facundus, ep. Hermianensis.</p>
+          <p>XXXIII. Justinianus, ep. Valentinus.</p>
+          <p>XXXIV. Justus, ep. Urgellitanus.</p>
+          <p>XXXV Martinus, ep. Domiensis.</p>
+          <p>XXXVI. Avitus, ep. Viennensis.</p>
+          <p>
+            <milestone unit="PLSection" n="c"/>XXXVII. Dracontius.</p>
+          <p>XXXVIII. Victor, ep. Tunnensis.</p>
+          <p>XXXIX. Joannes, ep. Constantinop.</p>
+          <p>XL.Gregorius, papa Romanus.</p>
+          <p>XLI. Leander, ep. Hispal.</p>
+          <p>XLII. Lucinianus, ep. Carthagin.</p>
+          <p>XLIII. Severus, ep. Malacitanus.</p>
+          <p>XLIV. Joanues, ep. Gerundens.</p>
+          <p>XLV. Eutropius, ep. Valentinus.</p>
+          <p>
+            <milestone unit="PLSection" n="A"/>XLVI. Maximus, ep. Cæsaraugustan. <lb/>
+            Hactenus Isidorus. <lb/>
+            Hinc Braulio, ep. Cæsaraug.</p>
+          <p>XLVII. Isidorus, ep. Ilispal.</p>
+      
+      </div>
+
+
+
+<div n="1" subtype="chapter" type="textpart">
+<ab>
+            <title type="sub">CAPUT PRIMUM.</title>
+          </ab>
+          <p n="2">2. Xystus episcopus Romanae urbis, et martyr, com­ <lb/>
+            posuit ad instar Salomonis librum Proverbiorum, tam <lb/>
+            brevi eloqnio, ut 140 in singnlis versiculis singalæ <lb/>
+            explicentur sententiae. Cui quidem opusculo hæretici <lb/>
+            quædam contra ecclesiasticam flem inseruerunt, <lb/>
+            quo facilius, sub nomine tanti martyris, perversorum <lb/>
+            dogmatum reciperetur assertio. Sed is qui catholicum <lb/>
+            sese meminit, probando legat, et ea quæ veritati <lb/>
+            contraria non sunt recipiat. Quidam autem putant <lb/>
+            eumdem librum ab hæreticis, non a Xysto, fuisse
+            <milestone unit="PLSection" n="B"/><lb/>
+            dicatum. Refellit autem hanc opinionem beatissimus <lb/>
+            Augustinus , qui in quodam opere suo ab eodeM <lb/>
+            martyre boc opus compositum esse fatetur.</p>
+        
+        </div>
+
+
+
+<div n="2" subtype="chapter" type="textpart">
+<ab>
+            <title type="sub">CAPUT II.</title>
+          </ab>
+          <p n="3">3. Macrobius diaconus studium sancti Cypriani in­ <lb/>
+            geniumque secutus, complexus est congrua ex utro­ <lb/>
+            que Teslamento adversus versutias haereticorum ca­ <lb/>
+            pilula, de scilicet Dei Patris majestate, et Filii Dei <lb/>
+            adventa, ejus incanatione, sive passione, resurre­ <lb/>
+            ctione, et ascensione in coelos, parique modo, et de <lb/>
+            electione gentium, et reprobatione Judæorum. Deinde <lb/>
+            subjecit etiam cætera ad utilitatem vitne et disciplinæ <lb/>
+            religionis pertinentia, omnia haec in centum distincta <lb/>
+            capitulis.</p>
+          </div>
+
+<div n="3" subtype="chapter" type="textpart">
+<ab>
+            <title type="sub">CAPUT III.</title>
+          </ab>
+          <p n="4">
+            <milestone unit="PLSection" n="c"/>4. Philastrius, Brixieusis episcopus. Hic longe ante <lb/>
+            beatissimum Augustinum edidit librum de Hæresibus, <lb/>
+            singulas quasque demonstrans, sive quae in popule <lb/>
+            Judaeorum ante incarnationem Christi furunt, quas <lb/>
+            viginti octo enumerat, sive quae post Domini adven­ <lb/>
+            tum Salvaloris, adversus catholicam fidem exortae <lb/>
+            sunt, quas idem centum viginti octo esse describit, <lb/>
+            sicut de eo idem vir magnae gloriae Augustinus, et <lb/>
+            docto, clarissimus, meminit. <note type="footnote"> pleraque veterum scripta perstringuntur. Nolas Joannis <lb/>
+            Baptistae Perez, expresso eju8 nomine, proferam. <lb/>
+            Aliarum notarum suminam colligam, laudatis nomi­ <lb/>
+            nibus auctorum , Mirai, Scbotti, Fahricii, Aguirrii, <lb/>
+            Florezii, Editoris operum Piitrum Toletanorum, et <lb/>
+            Zaccariae; qui postremus, ut in lsidorianis observavi, <lb/>
+            hunc solum librum ex omnibtis lsitJori operibus no-</note> 
+            <milestone unit="PLSection" n="D"/><note type="footnote"> talionibns illustroverat, quia bibliotbecam ecclesias­ <lb/>
+            ticam Fabricii, in qua liber bic Isidori continetnr, <lb/>
+            excudere festinabat, quamvis ne id quidem perfecerit. <lb/>
+            In indice virorum illustrium quem Perezius præmi­ <lb/>
+            sit, num. i7, notabatur : Pa tlmut præsbyter Medio­ <lb/>
+            lanen.i., postea episcopus Nolanus. Huc postremum <lb/>
+            praetermisi. Confer notam ad cap. i7, num. 2i. <lb/>
+            Quod Isidorus ait, quam,,;. luperiu. t recte Perezius <lb/>
+            explicuit de libris ejusdem- argumenti a Hieronymo <lb/>
+            et Gennadio conscriptis. Niliilominus Miraeus, qui <lb/>
+            hanc praefatiunculam appendici de duodecirn scriplo­ <lb/>
+            ribus ecclesiasticis praefixam videbat, haec duodecim <lb/>
+            capita non esse Isidori ex ea colligebat. Zaccorias <lb/>
+            etiam nonnnullus scrupulus restabat, quia scilicet <lb/>
+            Honorius Augustodnnensis exemplar IsidoriallUIl) <lb/>
+            nactus fuerat, cujus initiuin esset ab Osio. Verum de <lb/>
+            hac diversitate exeinplarium dixi jam in Isidorianis, <lb/>
+            lee. cit. Lisi autem Isidorus ait se eorum scriptorum <lb/>
+            mtosopiam faeere, quorum lectionem recolebat se <lb/>
+            -"lille, tanwn hi non ita intelligendum est, ut <lb/>
+            omnes, quos nominat, scriptores legerit; sed satis <lb/>
+            est quod plerosque aut aliqua singulorum opera evol.. <lb/>
+            ,eriL. AREV. </note><note type="footnote"> 2. X ystru. Vel primus annoCIiristi 117, vel secundus <lb/>
+            anno 257. Hic, et qui sequuntur tredecim, usque ad <lb/>
+            MarcellilnHw, ex unico exemplati Foitis sancti, apud </note> 
+            <milestone unit="PLSection" n="D"/><note type="footnote"> Galistaeum Canrlensis dioecesis desCripti sunt. In reli­ <lb/>
+            quis lib is desiderabantur, qui ab Osio incipiebant, <lb/>
+            ei et ipso et Marcellino unum fecerant caput. PEREZ. </note><note type="footnote"> Ibid. composuit, etc. Sententias esse Xysti philoso­ <lb/>
+            phi, non martyris, ait Hieronym. ad Ctesiphontem, et <lb/>
+            xvtii fcierb., et 1 lib. in Jovinianum, quo deceptus <lb/>
+            RuflIlUS, et retractat Augustinus. PEREZ. </note><note type="footnote"> lbid. Ab h:ereticis, ait Gelasius, t 5 distinel. PEREZ. </note><note type="footnote">Ibid. Qniil Sfniiendum Sit de Proverbii Xysti nOlni... <lb/>
+            nevulgatis, docetMiraens, ad Cn,). 17Cennadii. AREV. </note><note type="footnote"> 5. Al acrobius. Apud Gennadium dicilur presbyter <lb/>
+            ACer, hæreticus, Donatianus, sive Montt'usis. PEREZ. </note><note type="footnote"> Ibid. Miraeus, hoc loco, ac sæpe atibi, notas Perezii <lb/>
+            per errorem Loaisae ascribit. An :lutenl idein sit <lb/>
+            )Iacrobius, de quo Gennadius, c p. 5, non ita explo­ <lb/>
+            ratum videtur. AftEV. </note><note type="footnote"> .4. Hic longe. Anno Christi 580. PEREZ. </note><note type="footnote"> lbid. A.guII., ad Qaodvuh.deum, de Haeresibas. <lb/>
+            PEREZ. </note> <pb n="1085"/>
+            </p>
+          <p>
+            <milestone unit="PLSection" n="A"/></p>
+          </div>
+
+<div n="4" subtype="chapter" type="textpart">
+<ab>
+            <title type="sub">141 CAPUT IV.</title>
+          </ab>
+          <p n="5">5. Theodorus, Mopsuestenæ urbis episcopus, ita <lb/>
+            clare, copioseque scientiae doctrina refulsisse refer­ <lb/>
+            tur, ut prædicaretur (si referre fas est) mille volumi­ <lb/>
+            num summam in Græco conscripsisse, adversus om­ <lb/>
+            nium hæreticorum errores. Hunc Acephalorum epi­ <lb/>
+            scopi in præjudicio Chalcedonensis concilii, Justiniano <lb/>
+            142 principe compellente, damnare post mortem <lb/>
+            cum lba et Theodoreto episcopis censuerunt. Dum <lb/>
+            constet eum laudabilium virorum testimoniis claris-
+            <milestone unit="PLSection" n="A"/><lb/>
+            simae Ecclesiæ doctorem fuisse. Vixit usque ad im­ <lb/>
+            perium senioris Leonis.</p>
+          </div>
+
+<div n="5" subtype="chapter" type="textpart">
+<ab>
+            <title type="sub">CAPUT V.</title>
+          </ab>
+          <p n="6">6. Usius, Corduoensis ecclesiae civitatis Hispania­ <lb/>
+            rum episcopus, eloquentiae viribus exercitatus. Seri- <lb/>
+            psit ad sororem suam de laude virginitatis epistolam <lb/>
+            pulchro ac diserto comptam eloquio ; omposuitque <lb/>
+            et aliud opus de| interpretatione vestium sacerdota­ <lb/>
+            lium quæ sunt in Veteri Testamento, egregio qui­ <lb/>
+            dem sensu et ingenio elaboratum. In Sardicensi <note type="footnote"> Jbid. De Philastrio multa Mirseus ex sancto Au­ <lb/>
+            gustino, Gaudentio, Bellarmino, Baronio et aliis ; <lb/>
+            plura Fahricius in Bibl. med., qui librum Philastrii <lb/>
+            de Hoeresibus in lucem emiserat. Prodiit etiain in </note> 
+            <milestone unit="PLSection" n="B"/><note type="footnote"> Bibliotheca Patrum Gallandiana liber idem Philastrii <lb/>
+            recognitus, præmissa docta præfatione in prolego­ <lb/>
+            menis. Quod idem in accuratissima hac Bibliotheca <lb/>
+            fieri solet, cum aliorum opera inserunlur. AREV. </note><note type="footnote"> 5. Theodorus. Etiam laudatur a Tlieodoreto Sozo­ <lb/>
+            rueno, et Evagrio, sed damnatur a synodo Constan­ <lb/>
+            tinop. v, et a Gregorio, lib. vi, epist. ł 95. Isidorus <lb/>
+            aliquot locis hnjus libri, nempe agens de Theo­ <lb/>
+            doro, Justiniano ilnperatore, Facundo, et Victore <lb/>
+            Tonnensi, quin, et lib. vni Ktymolog., cap. 5, et in <lb/>
+            Chronico, loquens de Justiniano, aliquibus videri po. <lb/>
+            test non satis fuisse aequus concilio quinto lCCUflJe­ <lb/>
+            nico Constantinopolitano. Res tota sic gesta est : <lb/>
+            Theodoretus Cyrensis episcopus, cujus multa habe­ <lb/>
+            mns doctissima opera, et Ibas episcopus Edessenus, <lb/>
+            anno Cbristi 448 , in concilio haerelico Ephesino se­ <lb/>
+            cundo (factione Dioscori episcopi Alexandrini, qui <lb/>
+            fait hsereticas Eutychianista) absentes damnati sunt, <lb/>
+            suisque ecclesiis pulsi. Vide Evagrium, lib. i Hist. <lb/>
+            Ecetes., cap. to. Causa est addita, quod Theodoretus </note> 
+            <milestone unit="PLSection" n="C"/><note type="footnote"> adversus daodecim anathemata CyrilH scripsisset; <lb/>
+            Ibas vero ad Marin Persam epistolam haud catholi­ <lb/>
+            eam misisset. Deinde anno 451, in ChalcedoueRsi <lb/>
+            synodo generali sub Leone papa Romano illa secunda <lb/>
+            Epbesina synodus abrogata, et rrheodorelus atque <lb/>
+            Ibas episcopi ecclesiis SUIS restituti sunt. Ev:ig., lib. I, <lb/>
+            cap. 4,et lib. n, cap. ult. ludeinagnai tragoedi;c ortae, <lb/>
+            provinciis, et iluperaloriulIs ipsis diversa sentientibus <lb/>
+            de recipienda synod » Chalcedonensi, quae in hoc ipso <lb/>
+            Evagrlo et Liberato Carthaginiensi atque Paulo Dia­ <lb/>
+            cono, leges. Donec tandem in (juinla syno-io generali <lb/>
+            Constantinopoli habita sub Vigilio papa et Justiniano <lb/>
+            imperatore, ;inno 553, damnata sunt scripta Theodo­ <lb/>
+            reti adversus (:yrillulII. et Ibje Edesseni epistola ad <lb/>
+            Marin , Thcod&lt;m que Mopsuesteni episcopi opera, <lb/>
+            quæ in ea cp stola valde laudalJanlur. II;ec quidem <lb/>
+            gravjrer a multis accepta sunt, quasi in eo Cha'cedo­ <lb/>
+            nensis synodi auctoritas improbaretur. Evag., lib. iv, <lb/>
+            cap. 37. Legentes enim in Chalcedoitensi synodo illos </note>
+            <milestone unit="PLSection" n="D"/><note type="footnote"> ecclesiis suis restitutos , sinuI illorum opera appro­ <lb/>
+            b.ila fuisse existimarunt. At distinguere auctores ab <lb/>
+            operibus valde oportuerat, ut docei Jus inianas im­ <lb/>
+            perat. in fider suæ professione, et Proclus t:ofl5Ianri­ <lb/>
+            nopoliianus in epistola quæ in isti synodo Constanti­ <lb/>
+            nopoirtaii;t recitatur. inde postea diutinae coutelltiones <lb/>
+            in Ecclesia viguerunt, de recipienda hac synodo <lb/>
+            Constantinopolitana. Cujus defensores ab adversa <lb/>
+            parte per calumniam vocabantur hseretici acephali <lb/>
+            et impugnatores trium capiluloruln synodi Chalcedo­ <lb/>
+            lIenSIS. Itaque ifigyptus et Africa, ut Liberatus et <lb/>
+            Victor Tuunensis, nondum edilus, testantur, Illyri­ <lb/>
+            cum qooque, ut est apud Paulum Diaconum Aqui­ <lb/>
+            leien., lib. XVIII, Romanis pontificibus hoc concilium <lb/>
+            Coiistantinopolitauum probantibus alitlua ndiu resti­ <lb/>
+            terunt. Ausi etiam sunt hi duo auclorcs A fr'icani, Li- <lb/>
+            Leratus Carthaginiensis et Vicior lunnensis, Vigilio <lb/>
+            papae imponere, illum opera Theodotae Augustæ eo.. <lb/>
+            rum trium capitulorum defensorem exstitisse. Quæ <lb/>
+            caKumnia ex tribus Vigilii epistolis, quae in quinta <lb/>
+            synodo recitantur, facile convincitur, et ex iis quae <lb/>
+            Patres in sexta synodo falso de Vigilio conficta que­ <lb/>
+            ruratur. llispaniam porro in Africanorum aliquando <lb/>
+            fuisse sententia suspicor ex tam multis verbis Isidori </note> 
+            <milestone unit="PLSection" n="B"/><note type="footnote"> ad delensionem trium capitulorum iuclinaluibn.s. Nisi <lb/>
+            fortasse Isidorus haec verba ex sui Vicloris Tunnen­ <lb/>
+            sis Chronico hausil, quo auctore libens utitur, vel <lb/>
+            certe -sero ad Isidorum et Hispanos pervenire potuit <lb/>
+            Constantinopolitanæ synodi approbatio I Romanis <lb/>
+            pontilicibus Vigilio, Pelagio et Gregorio in primis <lb/>
+            facta. Praesertim cum ignorasse aliquanro tempore <lb/>
+            Ilispania ejus synodi auctoritatem potuerit, in qua <lb/>
+            noluissc atlesse Vigilitim papain Romnum audivisset. <lb/>
+            Hinc factum puto III Isidorus , sexto lib. Elymolog., <lb/>
+            cap. 16, post quatuor synodos generales hujus quintæ <lb/>
+            Constantiuopoiitanae jam pridem habiue non memi­ <lb/>
+            nerit, quam tamen papa Gregorius ejus aqualis cae­ <lb/>
+            teris quatuor prioribus parem esse auctoritate defi­ <lb/>
+            nivit. Plura leges in ipso Gregorio de hujusmodi de­ <lb/>
+            fensoribus trium capitulorum, nempe II lib. RegisLri. <lb/>
+            epist. 5C, et indictione ii, epist. to, et lib. III epist. <lb/>
+            4. Nam vitiatum fuisse exemplar synodi Chalcedo­ <lb/>
+            nensis a Conslantinopolitanis ait Grt'gorius v, lib. <lb/>
+            Regist., epist. ft, et lib. vii, epist. 521 indictione 2. </note> 
+            <milestone unit="PLSection" n="c"/><note type="footnote"> PEREZ. </note><note type="footnote"> Ibid. Senior;, Leonis. Ann. Christi 457. At Theo­ <lb/>
+            doretus ait sub Theodosio juniore. PEREZ. </note><note type="footnote"> 1 bid. Judiciurn t; ria Iii de controversia trium capi­ <lb/>
+            tolorum ab Isidoro narrata habes in fSidorianis, cap. <lb/>
+            56, It. '!6. De e .deln agit Miræns in not. ad sancti <lb/>
+            Isitlori cap. 33. Exstat egregia Joannis eisbert dis­ <lb/>
+            sertatio theolojica, siVe defensio Ecclesiae in negotio <lb/>
+            trium capitulorum, praemissis verbis sancti Gregorii <lb/>
+            Magni, De personis lanlummodo v non de fide aliquid <lb/>
+            yesium est. Sirmondus quoque, in sua prafatione ad <lb/>
+            Facundi de quo ('ap. 3*2, n. i2, opera in eodem ar­ <lb/>
+            guruento versamur : Nec vero fraudi esse potest, inquit, <lb/>
+            'rium capilrliorum causa, quam i'acundus defendit; in <lb/>
+            qua, si verum loqui placet, honeslius fuerat Cum V iyilio <lb/>
+            Caderet quam vmcere cuni Justiniano. Ac concludit : <lb/>
+            cujus ipsius pacis studio Vigilii succcssores, cum pau­ <lb/>
+            cos jam conlrel niti viderenty ut una omnium in Ecclesia <lb/>
+            mens et vox esset, assenserunt et iPsi tandem el sunodo </note> 
+            <milestone unit="PLSection" n="D"/><note type="footnote"> (Constantmopolitanæ) incerlæ ud id tempus auctorita­ <lb/>
+            tis, concilii generalis vim, nomenque sua confutnalione <lb/>
+            præbuerUItI. Ad Isidori certe notitiam nou venerat <lb/>
+            qnod jam Romani pontifices certam auctoritatem <lb/>
+            synodo Constantimopolitanæ asseruissent, dum scri­ <lb/>
+            p[ores laudabat, qui tria capiLula cuui concilio Chat­ <lb/>
+            cedonensi defendebant. AREV. </note><note type="footnote"> 6. In Sardicensi. Anno Christi 347. PEREZ. </note><note type="footnote"> Ibid. Florezius, tom. X Hisp. sacr. tract. 55, cap. </note><note type="footnote"> 5, probat Osium non Cordubae, sed in Oriente deces­ <lb/>
+            sisse anno 557. De Osio accuratissime scripsi t Michael <lb/>
+            Josephus Maceda in opere sic inscriplo : Osius vere <lb/>
+            O,;u", hoc est, Osius vere innocens, vere sanctus. Dis­ <lb/>
+            seriationl's duce. I. De connnentitio Osii lapsu. II. De <lb/>
+            sanctitate et cultu lergitimo rjuidem. Bononiae 1790, <lb/>
+            iu-".. In codice Theodosii, itemque J uSliniani exstat <lb/>
+            ad Osiurn lex Constantini de iis qui in Ecclesia ma­ <lb/>
+            numittuntur. Epistola Osii ad Constantium Augustum <lb/>
+            inserta est ill Biblioth. Patrum, Galland'. L. V, p. 81". <lb/>
+            Epistola de laude virginitatis non exstat. AREV. <lb/>
+            \ </note> <pb n="1087"/>
+            
+            <milestone unit="PLSection" n="A"/><lb/>
+            etiam concilio quamplurimis edidit ipse sententias.</p>
+          <p n="7">7. Hic autem post longum senium vetustatis, id est, <lb/>
+            post 143 centesimum primum annum in ipso jam <lb/>
+            limine vitae afidei limitibus subruens, serpentis Jaculo <lb/>
+            concidit. Nam accersitus a Constantio principe, minis­ <lb/>
+            que perterritus, metuens ne senex et dives damna re­ <lb/>
+            rum vel exsilium pateretur, illico Arianae impietati <lb/>
+            consensit, et vocabulum homousion, quod simul cum <lb/>
+            Patribus sanctis cæteris Ecclesiis sequendum tradide­ <lb/>
+            rat, arreptus impietatis furore, damnavit: cujus qui­ <lb/>
+            dem vitam, ut meruit, confestim exitus crudelis finivit.</p>
+          </div>
+
+<div n="6" subtype="chapter" type="textpart">
+<ab>
+            <title type="sub">CAPUT VI.</title>
+          </ab>
+          <p n="8">8. Toranius Ruffinus scripsit ad quemdam Pauli­ <lb/>
+            num presbyterum de Benedictionibus patriarcharum <lb/>
+            triplici intelligentia librum salis succinctum, et clara
+            <milestone unit="PLSection" n="B"/><lb/>
+            brevitate compositum. Hic autem juxta mysticum <lb/>
+            sensum, ea quæ de Dan, filio Jacob, scripta sunt, non <lb/>
+            recte de Domino nostro interpretntur, dum procul <lb/>
+            dubio ad Antichristum eadem pertinere sanctorum <lb/>
+            Patrum probet assertio.</p>
+          <p>
+            <milestone unit="PLSection" n="A"/></p>
+          </div>
+
+<div n="7" subtype="chapter" type="textpart">
+<ab>
+            <title type="sub">CAPUT VII.</title>
+          </ab>
+          <p n="9">9. Verecundus, Africanus episcopus, studiis libe­ <lb/>
+            ralium litterarum disertus, edidit carmine dactylico <lb/>
+            duos modicos brevesque libellos, quorum primuin <lb/>
+            de Resurrectione et Judicio scripsit, alterum vero de <lb/>
+            Poenitentia, in quo lamentabili carmine propria de­ <lb/>
+            licta deplorat.</p>
+          </div>
+
+<div n="8" subtype="chapter" type="textpart">
+<ab>
+            <title type="sub">CAPUT VIII.</title>
+          </ab>
+          <p n="10">10. Victorinus episcopus composuit et ipse versibus <lb/>
+            duo opuscula 144 admodum brevia : unum adversus <lb/>
+            Manichæos reprobantes Veteris Testamenli Deum, <lb/>
+            veramque incarnationem Christi contradicentes; <lb/>
+            alium autem adversus Marcionistas, qui duo prin­ <lb/>
+            cipia, id est, duos deos fingunt : unum malum, ju­ <lb/>
+            stum creaturarum conditorem et retributorem facto-
+            <milestone unit="PLSection" n="B"/><lb/>
+            rum; alterum bonum, animarum susceptorem et <lb/>
+            indultorem criminum.</p>
+          </div>
+
+<div n="9" subtype="chapter" type="textpart">
+<ab>
+            <title type="sub">CAPUT IX.</title>
+          </ab>
+          <p n="11">11. ltacius, provinciae Gallæciæ episcopus, secutus <lb/>
+            chronicam Eusebii Gæsariensis episcopi, sive Hiero- <note type="footnote"> 7. C..jus quidem, etc. VideinfrainMarcellino. PERIZ. <lb/>
+            Ibid. Miraeus, in favorem Osiit praeter Baronium, <lb/>
+            allegat Alderetum, lib. i, cap. 3, de Antiquil. Hisp. <lb/>
+            AREV. </note><note type="footnote"> 8. Meminit Gennadius. Vide Gelas., dist. ł 5. PERES. </note><note type="footnote">Ibid. Toranius. AI.: Tyrannius, vel Toranni,... Cap. <lb/>
+            i7, num. 21, dicitur Paulinus presbyter composuisse <lb/>
+            librum de benedictionibus patriarcharum triplici intel­ <lb/>
+            ligentiae genere, diversum tamen a libro Kufini tut ad <lb/>
+            eum locum dicam. Rufini pro se apologia ad Anasta­ </note> 
+            <milestone unit="PLSection" n="c"/><note type="footnote">sium papam legitur in Bibliolh. Galland. I. VIII. AREV. </note><note type="footnote"> . 9. Anno Christi 552,Verecundus quidam, Junensis <lb/>
+            episcopus ;in provincia Africae Bizacena, defensor <lb/>
+            trium capitulorum, anno ante habitam synodum <lb/>
+            Conltantinopolit. quintam generalem, jussu Justi­ <lb/>
+            niani imperaLoris, exsul Chalcedone moritur. Haec <lb/>
+            Victor Tunnensis narrat. Puto autem omnino hunc <lb/>
+            fuilse de quo loquitur Isidorus. Vidi porro bujus Ve­ <lb/>
+            recundi ipsum libellum de Poenitentia hexametris <lb/>
+            scriptum, cujus hoc est initium : <lb/>
+            Quis mihi moesta dabit lacrymosis imbribus ora ? <lb/>
+            Is liber Gothicis litteris descriptus fuit olim Eccle­ <lb/>
+            siae Ovetensis, postea apud Michaelem Ruyzium Aza­ <lb/>
+            grium amicum meum, Rodolphi imperatoris secre­ <lb/>
+            tarium. PIREZ. </note><note type="footnote">lbid. Codex de quo Perezius , hodiedum asserva­ <lb/>
+            tur in bibliotheca sanctae Ecclesiae Toletanae; et ejus <lb/>
+            fit mentio in Editione operum sancti Eugenii. AREV. </note><note type="footnote">iO. Victorini duo referunturaHieronymo, unusepi­ <lb/>
+            scopus Pitabionensis martyr; alter rhetor Afer. Alii </note> 
+            <milestone unit="PLSection" n="D"/><note type="footnote"> quoque duo a Gennadio, unus rhetor et poeta Mas. <lb/>
+            siliensis, qui commentaria in Genesin versibus scri­ <lb/>
+            pserit , quae ad nos usque pervenerunt, et postremus <lb/>
+            Aquitanus. Ego opus Victorini adversus Manichaeos <lb/>
+            et Marcionistas, quod ab lsidoro refertur, non vidi, <lb/>
+            neque usquam scio exstare, sed puto fuisse illius <lb/>
+            Massiliensis poetae, nam episcopum fuisse non memi­ <lb/>
+            nit Gennadius. PERtZ. </note><note type="footnote"> Ibid. Adversus Marcionistas. Vide Augustin., de <lb/>
+            Hceres. lib. i, cap. 21. et irenxum, lib. i, cap. is. <lb/>
+            PEREZ. </note><note type="footnote"> Ibid. Libelli duo recensiti Victorini editi fuerunt <lb/>
+            a Sirmondo Lutetiae, 1630. Alia ejus opera exstant <lb/>
+            in b'ibliotheca Patrum; quae omnia Miraeus putat esse <lb/>
+            VicLorini rhetoris Afri.Neque bunc Hieronymus epis­ <lb/>
+            copum dicit. Viclorinus Aquitanus fuit calculator. <lb/>
+            Mir;tus putat libellos qui hic recensentur esse Victo­ <lb/>
+            rini Afri rhetoris. Eos edidit Sirn1undus; post alii. <lb/>
+            De Victorinis consuleudus Gallandius in proleso­ <lb/>
+            menis tom. IV Bibliothecae Patrum, ubi exhibet, pag. <lb/>
+            49 et seqq., Victorini episcopi Petavionensis et mar- <lb/>
+            Lyris tractatum de fabrica mundi, et scholia in Apo­ <lb/>
+            calypsin; item, t. VIII, ubi, pag. 133 et seqq. recen­ <lb/>
+            set Fab. Mar. Victorini Afri opera, quae eSltanl. <lb/>
+            omnia, notisque illustrat; inter quae est liber unus <lb/>
+            contra Manichaeos, sed prosa, 'non versibus conscri­ <lb/>
+            ptus. AREV. </note><note type="footnote"> ii. Anno Christi 48iJ Idacios, sive I tacios, duos ponit <lb/>
+            Isidorul, quos quia falso in unum multi etiam nostrates </note> 
+            <milestone unit="PLSection" n="c"/><note type="footnote"> confundunt, facturus rem gratam videbor, si IdaciOl <lb/>
+            omnes distinguam. Reperio enim quinque hoc nomine <lb/>
+            Hispanos, qui ad tres redigi posse videntur. (Vide <lb/>
+            acbolion de Idaciis tribus.) Primus est Itacius (sic <lb/>
+            enim hic scribitur in vetustis omnibus CodicibUl) <lb/>
+            cognomento Clarus, episcopus Ossonobensis, relega­ <lb/>
+            tus ob caedem Priscilliani cum Ursacio, anno fere <lb/>
+            Christi 390, de quo Sulpicius Severus in Historia <lb/>
+            Ecclesiastica, Hieronymus, et Isidorus. Is scripsit <lb/>
+            contra Priscillianum, ut ait Isidorul, sed non elstat. <lb/>
+            Secundus Idacius episcopus Emeritensis iisdem tem­ <lb/>
+            poribus cum superiore, persecutor quoque Priscil­ <lb/>
+            liani, ex eodem Sulpicio Severo. Uterque vero sub­ <lb/>
+            scribit in synodo Caesaraugustana. Tertius Idaciusr <lb/>
+            sive itacius (nam utroque modo scriptum reperio) <lb/>
+            episcopus Lamecensis in Gallaecia, auctor Chronici <lb/>
+            nondum editi, quod manu scriptum habeo. Is se <lb/>
+            conversum ait anno Christi 417, scripsisse vero us­ <lb/>
+            que ad octavum annum Leonis, ait Isidorus, nempe <lb/>
+            annum 481. Sigebertus ait usque ad annum 490. <lb/>
+            Trithemius primum cum terlio confundit. Poterat </note> 
+            <milestone unit="PLSection" n="D"/><note type="footnote"> et videri quartus Idacius Clarus, cujus opus exstat <lb/>
+            adversus Varidamum Arianum. Sed is, ut puto, ideni <lb/>
+            est cum primo Ossonobensi exsule. Potuit enim dum <lb/>
+            peregrinatur, opus Varidami videre Neapoli urbe <lb/>
+            Campanise,quoddese ipse narrate Quartum (quintum) <lb/>
+            etiam adderet aliquis illum Idacium episcopum, qui <lb/>
+            cum Turibio Asturicensi conciliuo) celebravit adversus <lb/>
+            Priscillianislas, jussu Leonis papae anno 447, ut est <lb/>
+            in epistola Leonis ad Turibium, et in altera epistola <lb/>
+            ipsius Turibii ad Idaciulo et Ceponium, quam habeo <lb/>
+            manusrriplam. Sed hic Idacins ex comparatione <lb/>
+            temporis, et Gallaeciae provinciae potuit esse idem cum <lb/>
+            tertio illo Lamecensi chronographo. PERES. </note><note type="footnote"> Ibid. Idacii Chronicon emendatissimum edidit <lb/>
+            Floreziu3, tom. IV Hisp. sacr, qui de Idaciis plura <lb/>
+            disputat, et contra communem opinionem probat <lb/>
+            auclorcm Chronici non esse Idaciufn episcopum La­ <lb/>
+            mecensem , ac videri potius eum fuisse episcopuM <lb/>
+            Aquiflaviensem, in Gallaecia. Quod ldacius, accusa-</note> <pb n="1089"/>
+            
+            <milestone unit="PLSection" n="A"/><lb/>
+            nymi presbyteri, 145 quæ usque hodie in Valentis <lb/>
+            Augusti imperium edita declaratur. dehinc ab anno <lb/>
+            primo Theodosii Augusti usque in annum imperii <lb/>
+            Leonis octavum subjunctam sequitur historiam, in <lb/>
+            qua magis Barbararum gentium bella crndelia <lb/>
+            narrat, quae premebant Hispaniam. Decessit sub <lb/>
+            Leone principe, ultima jam pene senectute, sicut <lb/>
+            etiam præfationis suae demonstratur indicio.</p>
+          </div>
+
+<div n="10" subtype="chapter" type="textpart">
+<ab>
+            <title type="sub">CAPUT X.</title>
+          </ab>
+          <p n="12">12. Eusebius, Dorolitanæ urbis episcopus. Hic in <lb/>
+            coetu Chalcedonensis concilii contra Dioscorum hae­ <lb/>
+            reticum Alexandrinæ urbis episcopum librum obtulit, <lb/>
+            ac praesenti synodo omnes Dioscori errores et bla­ <lb/>
+            sphemias recitavit. Hunc enim ac sanctum Flavia­ <lb/>
+            num Constantinopolitanum episcopum idem Diosco-
+            <milestone unit="PLSection" n="B"/><lb/>
+            rus in Epbesina secunda synodo excommunicatio­ <lb/>
+            nis sententia dejecerat, eo quod pro orthodoxa fide <lb/>
+            contra hæresin repugnarent. Unde postea idem Eu­ <lb/>
+            sebius in Chalcedonensi synodo innumerabilium <lb/>
+            malorum ejus crimina, vel blasphemias detegens, <lb/>
+            damnationis ejus sententiam super eum a sancto <lb/>
+            concilio imprecatur, scilicet, ut quod juste ille aliis <lb/>
+            intulerat, in eo juste retorqueretur.</p>
+          </div>
+
+<div n="11" subtype="chapter" type="textpart">
+<ab>
+            <title type="sub">CAPUT XI.</title>
+          </ab>
+          <p n="13">13. Cerealis, Castellanensis Ecclesiae episcopus. Hic, <lb/>
+            dum apud Carthaginiensem Africæ provinciae urbem <lb/>
+            venisset, de fide sanctae Trinitatis cum Maximiano, <lb/>
+            Ammonitarum episcopo, concertatus est, respondens <lb/>
+            propositionibus ejus, non eloquiorum argumentis,
+            <milestone unit="PLSection" n="C"/><lb/>
+            sed de testimoniis sanctarum Scripturarum. Ex­ <lb/>
+            stat hoc ipsum ejusdem opusculum novem et decem <lb/>
+            responsionum capitulis praesignatum.</p>
+          </div>
+
+<div n="12" subtype="chapter" type="textpart">
+<ab>
+            <title type="sub">CAPUT XII.</title>
+          </ab>
+          <p n="14">14. r'errandus, Carthaginiensis Ecclesiae diaconus, <lb/>
+            146 multum in sacris Scripturis floruisse asseritur,
+            <milestone unit="PLSection" n="A"/><lb/>
+            multasque cum beato Fulgentio propositiones at. <lb/>
+            ternis epistolis habuisse narratur. Iste ad Pelagium <lb/>
+            et Anatolium Romanos diaconos consulentes eum, <lb/>
+            utrum liceat quemquam damnare post mortem, edidit <lb/>
+            rescriptum, ubi inter alia sic locutus est, dicens : <lb/>
+            « Quid prodest dormientibus Ecclesiam perturbare? <lb/>
+            Si quis adhuc in corpore mortis hujus accusatus et <lb/>
+            damnatus, antequam mereretur absolvi, de Ecclesia <lb/>
+            raptus est, absolvi non potest humano judicio. Si <lb/>
+            quis accusatus et absolutus in pace catholicae Ec­ <lb/>
+            clesiae transivit ad Deum, condemnari non potest <lb/>
+            ulterius humano judicio. Si quis accusatus ante <lb/>
+            diem sacri examinis repentina vocatione praeventus <lb/>
+            est, intra sinum matris Ecclesiæ constitutus, divino <lb/>
+            intelligendus est judicio reservari, et de hoc nullus
+            <milestone unit="PLSection" n="B"/><lb/>
+            homo potest manifestam proferre sententiam, cui si <lb/>
+            Deus indulgentiam dedit, nihil nocet nostra severi­ <lb/>
+            tas; sed si supplicium præparavit, nihil prodest <lb/>
+            nostra benignitas.</p>
+          </div>
+
+<div n="13" subtype="chapter" type="textpart">
+<ab>
+            <title type="sub">CAPUT XIII.</title>
+          </ab>
+          <p n="15">15. Petrus, Herdensis Hispaniarum Ecclesiæ episco­ <lb/>
+            pus, edidit diversis solemnitatibus congruentes ora­ <lb/>
+            tiones, et missas eleganti sensu, et aperto sermone.</p>
+          </div>
+
+<div n="14" subtype="chapter" type="textpart">
+<ab>
+            <title type="sub">CAPUT XIV.</title>
+          </ab>
+          <p n="16">16. Marcellinus, Italiæ presbyter, scripsit Theodosio <lb/>
+            Minori, Arcadioque imperatoribus, opusculum unum, <lb/>
+            in quo retexit gesta episcoporum qui ad destructio­ <lb/>
+            nem homousion Arimini convenerunt; quique ita <lb/>
+            totum mundum perfidia impii dogmatis turbaverunt, <lb/>
+            ut vix pauci antistites existerent qui in inviolabili
+            <milestone unit="PLSection" n="C"/><lb/>
+            fidei cultu perseverarent. Exponit quoque de Ario, <lb/>
+            dum ad synodum pergeret cum Alexandro disputa­ <lb/>
+            turus, qualiter conversus in via ad necessariam cau. <lb/>
+            sam, viscera ejus fuissent diffusa. De fine quoque <lb/>
+            Osii Cordubensis urbis episcopi, qui, metu impera­ <lb/>
+            toris, fidem prevaricatus, perfidiae assertor et impie­ <note type="footnote"> tor Priscilliani, fuerit episcopus Lamecensis, asseruit <lb/>
+            quidem Quesnellius, sed hoc etiam incertum esse, <lb/>
+            idem Florezius ostendit. Idacii Chronicon et Fastos <lb/>
+            habes in cit. Bihl. Galland., tom. X, p. 3:l3. AREV. </note><note type="footnote">i2. In ccetu, etc. Actione 3 Coneil. Chalced. — <lb/>
+            Ibid. Ephesina. Anno Christi 448. — lbid. Ctialcedo­ <lb/>
+            nena;. Anno 451. P.:REZ. </note><note type="footnote"> Ibid. De Eusebio Dorikei episcopo, et de sancto <lb/>
+            Flaviano Baronius fuse agit in Annalibus, et in not. <lb/>
+            ad Martyrologium Rom.,dieJ8 februarii. In Edi-</note> 
+            <milestone unit="PLSection" n="D"/><note type="footnote"> tone Grialii, mendoe, Borolxtanm urbis. AREV. </note><note type="footnote">i5. Ex.tat, etc. cum aliis in Hæreseologia. PEREZ. </note><note type="footnote">lbid. Gennadius Cerealcm Caslulenseln, seu Cata­ <lb/>
+            laneusenl episcopum recenset, cap. 96, quo loco <lb/>
+            videndus Miraeus. Pro concertatus est, melius esset <lb/>
+            concertavit; sed illud gen"iuun) videtur. Pro Ammo­ <lb/>
+            nilarum, alicubi legitur Arianorum, seu Africanorum, <lb/>
+            sed legendum videtur Ariomanitarum. Notat Flore­ <lb/>
+            zius, in exemplari Marianae deesse de ante testimoniis. <lb/>
+            ARE v . </note><note type="footnote"> 14.Rescriptum. Editus est Romae ab Achille Statio. <lb/>
+            ibid. Quid prodest. idem scripsit POnlianus epi­ <lb/>
+            scopus A fer ad J ustinianunl imp. — lbid. Si quis. <lb/>
+            Contra delinit concil. v Conslantinopo)., act. 5 ; de <lb/>
+            Theodoro Mopsuesleuo, vide 24., quaest. 2. PEHEZ. </note><note type="footnote"> lbid. Ferrandus diaconus floruit anno 507. Ejus <lb/>
+            opera edita exstanl, Pancneticus ad Reginum COll1i- <lb/>
+            tem, epistolae, breviatio canonum, etc. Eidein a non. <lb/>
+            nullis ascribitur Vita sancti Fulgentii Ruspeosis epi­ <lb/>
+            scopi. A RF.V. </note><note type="footnote"> 15. Missa in officio Gothieo est quaedam oratio, de <lb/>
+            qua vide not. lib. i Offic. eccles., cap. 15, num. i. <lb/>
+            AREV. </note><note type="footnote"> i6. Marcellinus. Hujus meminit Gennadius in Fau­ <lb/>
+            stino presbytero. — Ibid. Convenerunt. Anno 559. <lb/>
+            PEREZ. </note><note type="footnote"> Ibid. Marcellini Historia de Osii Cordubensis morte <lb/>
+            iisdem verbis, sed paulo fusior exstat in Codice Go­ <lb/>
+            thico bib iothecae Complulensis ad linem Isidori de </note> 
+            <milestone unit="PLSection" n="D"/><note type="footnote"> Viris illustribus, sine nornine auctoris Marcellini. <lb/>
+            Porro Osius nobilissimus olim confessor, et doctissi­ <lb/>
+            nius, ab Augustiuo et Athanasio laudatus, Constan­ <lb/>
+            lino inperatori etiam per litteras familiaris (ut est in <lb/>
+            Cod. Tbeodos , titul. de Sacrosanctis Ecclesiis), qui­ <lb/>
+            que in concitus Eliberitano, Nicajno et Sardicensi, <lb/>
+            cum magna sui laude fuerat CaLhoJicorurn propugna­ <lb/>
+            tor, tandem senio delirans, in Syrruicnsi synodo ad <lb/>
+            Arianos defecit. De quo vide etiam Hilarium, lib. de <lb/>
+            Synodis ; A thanasiun., lib. de Unitate Trinitatis ; <lb/>
+            Sulpicii Severi Historiam, et Honorium Augustodu- <lb/>
+            Dens., lib. de Scriptoribus Eccles. PEREZ. </note><note type="footnote">lbid. Homousion. A!., homousii. De sancto Grego­ <lb/>
+            rio Elibcritano Martyrologiulu Rom., die24 Aprilis. <lb/>
+            In Editione Patrum TolcLan. ad hunc lucum erudita <lb/>
+            nota subjiciLur, qua ostenditur comnientitia esse quae <lb/>
+            Marcellinus narrat de fine Osii; quo in argumento <lb/>
+            Natalis Alexander, Floreziui, aliique versati sunt <lb/>
+            AREV,. </note> <pb n="1091"/>
+            
+            <milestone unit="PLSection" n="A"/><lb/>
+            tatis effectus fuerat 147 assecutor, sic talia profert. <lb/>
+            NaiM post impiam, inquit,Osii prævaricationem, dum <lb/>
+            sanclus Gregorius, Eliberitanus episcopus, in Cordu­ <lb/>
+            bensi urbe juxta imperiale decretum fuisset adductus, <lb/>
+            ac minime velletillicommunicare, commotusOsiusdi­ <lb/>
+            cit Clementino Constantii præfecto vicario, ut mitteret <lb/>
+            cum in exsilium. At ille inquit: Non audeo episcopum in <lb/>
+            exsilium mittere, nisi prius eum ab episcopatu dajeceris.</p>
+          <p n="17">17. Ut autem vidit sanctus Gregorius quod Osius <lb/>
+            vellet ferre sententiam , appellat Christum totis <lb/>
+            fidei suæ visceribus, exclamans ita : Christe Deus, <lb/>
+            qui venturus es judicare vivos et mortuos, ne pII­ <lb/>
+            tiaris hodie humanam proferri sententiam adversus <lb/>
+            me minimum servum tuum, qui pro fide nominis tui, <lb/>
+            ut reus assiatens, spectaculum factus sum; sed tu ipse,
+            <milestone unit="PLSection" n="B"/><lb/>
+            quæso, in causa tua hodie judica, ipse sententiam pro­ <lb/>
+            ferre dignare per ultionem, Non ego, quasi metuens <lb/>
+            exsilium, fugere cupio, cum mihi pro tuo nomine nul­ <lb/>
+            lum supplicium grave sit, sed ut multi prævaricationis <lb/>
+            errore liberentur, cum præsentem viderint ultionem. <lb/>
+            His dictis, ecce repente Osius residens fastu quasi <lb/>
+            regalis imperii, cum sententiam conaretur exprime- <lb/>
+            Te, os vertit, distorquens pariter et cervicem, ac de <lb/>
+            sessa in terram eliditur, atque illico expiravit.</p>
+          <p n="18">18. Tunc, admirantibus cunctis, etiam Clementinus <lb/>
+            ille gentilis expavit, et licet esset judex, tamen timens <lb/>
+            De in se simili supplicio judicaretur, prostravit se ad <lb/>
+            pedessancti viri, obsecrans ut sibi parceret, qui in <lb/>
+            eumdivinae legis ignorantia peccasset, et non tam pro­ <lb/>
+            prio arbitrio quam mandantis imperio. Inde est quod
+            <milestone unit="PLSection" n="c"/><lb/>
+            solus Gregorius ex numero vindicantium integram <lb/>
+            fidem, nec infulam versus est, nec passus est exsilium, <lb/>
+            unusquisque enim timuit de illo ulterius judicare.</p>
+          <p>
+            <milestone unit="PLSection" n="A"/></p>
+          </div>
+
+<div n="15" subtype="chapter" type="textpart">
+<ab>
+            <title type="sub">148 CAPUT XV.</title>
+          </ab>
+          <p n="19">19. Itacius, Hispaniarum episcopus, oognomento <lb/>
+            et eloquio clarus I scripsit quemdam librum sub <lb/>
+            Apologetici specie, in quo detestanda Priscilliani <lb/>
+            dogmata, et maleficiorum ejus artes, libidinumque <lb/>
+            ejus probra demonstrat, ostendens Marcum quen­ <lb/>
+            dam Memphiticum magicæ artis scientissimum. di­ <lb/>
+            scipulum fuisse Manis et Priscilliani magistrum. <lb/>
+            Hic autem cum Ursacio episcopo ob Decem ejusdem <lb/>
+            Priscilliani, cujus accusatores exstiterant, Ecclesiæ <lb/>
+            communione privatus, exsilio condemnatur, ibique die <lb/>
+            ultimo fungitur, Theodosio Majore et Valentiniano <lb/>
+            regnantibus.</p>
+          </div>
+
+<div n="16" subtype="chapter" type="textpart">
+<ab>
+            <title type="sub">CAPUT XVI.</title>
+          </ab>
+          <p n="20">20. Siricius, clarissimus pontifex, et Romanae sedis
+            <milestone unit="PLSection" n="B"/><lb/>
+            antistes, scripsit decreule opusculum directum ad <lb/>
+            Eumerium Tarraconensem episcopum. In quo, in­ <lb/>
+            ter alias ecclesiasticas disciplinas, constituit haereti­ <lb/>
+            corum baptisma nequaquam ab Ecclesia rescinden­ <lb/>
+            dum. Reperimus et aliam ejus epistolam ad diversos <lb/>
+            episcopos missam , in qua condemnat Jovinianum <lb/>
+            haereticum, atque Auxentium, caeterosque eorumdem <lb/>
+            sequaces. Præfuit Romæ annos quatuordecim. Obiit <lb/>
+            Theodosio et Valentiniano regnantibus.</p>
+          </div>
+
+<div n="17" subtype="chapter" type="textpart">
+<ab>
+            <title type="sub">CAPUT XVII.</title>
+          </ab>
+          <p n="21">21, Paulinus, presbyter, explicuit in Benedicti onibus <lb/>
+            patriarcharum triplici intelligentiae genere librum <lb/>
+            satis succincta brevitate 149 compositum. Idem <lb/>
+            etiam, petente Augustino, conscripsit Ambrosii vitaun <lb/>
+            signis florentem, atque doctrinis et meritis apostolo­
+            <milestone unit="PLSection" n="c"/><lb/>
+            rum non imparem. Siquidem et Constantius episco­ <lb/>
+            pus Germani vitam contexuit , obitumque Paulini <lb/>
+            Oranius edidit. <note type="footnote"> t8. Vindicantium. Vindicat martyrea apud Optatum, <lb/>
+            lib. I. PEREZ. </note><note type="footnote">i9. Priscilliani. Vide Epiphan., lib. I, cap. 31, et <lb/>
+            Iren., lib. i, cap. 8 et 9. — lbid. De Mane Cyrillus, <lb/>
+            C'aleches. 60, et Epiphan.t lib. n, cap. 6Gt. PEREZ. </note><note type="footnote"> Ibid. Marcum istum e Gallia in Hispaniam conces­ <lb/>
+            sisse, ubi feminam nobilem Agapen, et Helpidium <lb/>
+            Mieriorem seduxit, ostendit tlorezius tom. XV. Hisp. <lb/>
+            sacr. pag. 13, ex Sulpicio , et S. Hieronymo. Inde <lb/>
+            nata est Priscilliani hæresis. Idem Florezius de Itacio <lb/>
+            I'giL tOln. XIII, pag. i50, et lom. XIV, pag. ilo. AREV. </note><note type="footnote"> 20. Siricius. Anno ;j85. — Decretale, etc. Exstant <lb/>
+            epistolae. —Eumerium. Eumerius semper VoCatur in <lb/>
+            veL. Cod., non Uimerius. — Et alium. De qua vide <lb/>
+            Ambros., epist. 8et81. PEREZ. </note> 
+            <milestone unit="PLSection" n="D"/><note type="footnote"> lbid. Schottus oloneL legendum Siricius, non Siri- <lb/>
+            CUI. Zaccaria miram dissensionem inter chronologos <lb/>
+            notarat esse, quod attinet ad epoch.un pontificatus a <lb/>
+            Siricio suscepti, de qua videri possunt Papebruchius, <lb/>
+            uterque Pagius, Blanchinius et alii. Epistolae Siricii, <lb/>
+            uti aliae genuinae aliorum pontificum, accurate typis <lb/>
+            commissae sunt a Couilanlio; post quetn Siricii epi­ <lb/>
+            stolas et decreta Galtandius recudiL, lOin. VII biblio­ <lb/>
+            thecae Patrum, pag. 555. Pro Eumtriu., alii malunt <lb/>
+            Himerium quin obstei auctoritas Codicis a Perezio <lb/>
+            aJlegaLi. Epigraphae basilicæ sancii Pauli Romae , a <lb/>
+            Marangonio divulgatae, annos pontiftcatus tribuunt <lb/>
+            Siricioquindecim, menses undecim, dies viginti quin­ <lb/>
+            que. AREV.. </note><note type="footnote"> 2i. Anno 410 fuit episcopusNolanus. Paulinus hic, <lb/>
+            de quo multa meutioapud Hieronymum, Augustinum, <lb/>
+            Ambrosium, GrelJoriuln, et Gennadium. frustra enim <lb/>
+            mulii nostra aetate Hono..i Un1 Augusioduneusem se­ <lb/>
+            cuti, Paulinos duos faciunt, unum Nolauuln episco­ <lb/>
+            pam, alterum presbyterum Mediolanensem, aucto­ <lb/>
+            rem Vim sancti Ambrosii, cum ipse Paulinul, in <lb/>
+            epistola ad Alypium, scribat se, licet in Hispania <lb/>
+            ordinatus fuerii presbyter, a Lampio episcopo Barci­ <lb/>
+            nonensi, tamen benelicio sancti Ambrosii assecu­ <lb/>
+            tum esse ut ubicunque terrarum degeret, Ambrosii <lb/>
+            presbyter diceretur. Porro hujusmodi Vile, quæ ab <lb/>
+            Isidoro commemorantur, nempe Ambrosii Mediola­ <lb/>
+            nensis, Germani Antisiodorensis, et Paulini Nolani, <lb/>
+            episeoporum, editae a Paulino Conslantio et Oranio, <lb/>
+            exsiaut in vetustissimo exemplari Ecclesiae Toletanae, <lb/>
+            et feruntur impressae apud Laureutium Suriuin.pERFX. </note><note type="footnote"> . Jbid. Fallitur Perezius cuti multis aliis, quod <lb/>
+            Paulinum ab Isidoro laudatum crediderit fuisse epi­ <lb/>
+            sconum Nolanu'D, uliam notarunt Miraeus et edit &lt;r </note> 
+            <milestone unit="PLSection" n="D"/><note type="footnote"> operum Patrum Toletanorum, qui observai dubitari <lb/>
+            posse an Paulinus, sancti Ambrosn diaconus, un­ <lb/>
+            quam ad presbyteratus ordinem ascenderit, cum <lb/>
+            solum id apud ISldorum legatur. Zaccaria addit Pau­ <lb/>
+            linum presbyteruin Mediolanensem, scriptoreln Vitae <lb/>
+            sancti Ambrosii, disLiuguendum etiam e"se a Pau­ <lb/>
+            lino Dilerrensi, etsi duos hos Paulinos Dupinius <lb/>
+            confuderit. Putarant Cavcus et Uudious Isidnruui <lb/>
+            per oscitantiain Hutini opus de eodem argumento, <lb/>
+            de quo supra I num. 8, Paulino aflinxissc ; sl.d opus <lb/>
+            Paulini diversum est, cujus fragmentum Martianæus <lb/>
+            edidit inter Hieronyiniana , et integrum libellum <lb/>
+            Miogarellios, in Anecdotis veterum Patrum Latino­ <lb/>
+            rum, Bononiæ, 1751. Putat Mingarellius Isidorum <lb/>
+            scripsisse duplici inuilujenlix genere , qina id magis <lb/>
+            operi congruit. Constantium, quem episcopum Isi­ <lb/>
+            dorus nominat, ZaccarIa vult esse l.resLJyterunl a <lb/>
+            Sidonio celebi atum , de quo Oudinus ; et ita oppor­ <lb/>
+            tunior est comparatio inter Constantium et Uranium </note> <pb n="1093"/>
+            </p>
+          <p>
+            <milestone unit="PLSection" n="A"/></p>
+          </div>
+
+<div n="18" subtype="chapter" type="textpart">
+<ab>
+            <title type="sub">CAPUT XVIII.</title>
+          </ab>
+          <p n="22">22. Proba, uxor Adelphii proconsulis, femina, id­ <lb/>
+            circo inter viros ecclesiasticos posita sola, pro eo <lb/>
+            quod in laude Christi versata est, componens cen. <lb/>
+            tonem de Christo, Virgilianis coaptatum versiculis. <lb/>
+            Cujus quidem non miramur studium, sed laudamus <lb/>
+            ingenium. Quod tamen opusculum inter apocryphas <lb/>
+            Scripturas inseritur.</p>
+          </div>
+
+<div n="19" subtype="chapter" type="textpart">
+<ab>
+            <title type="sub">150 CAPUT XIX.</title>
+          </ab>
+          <p n="23">23. Joannes, sanctissimus Constantinopolitanæ sedis <lb/>
+            episcopus, cognomento Chrysostomus; cujus oratio, <lb/>
+            et plurimam cordis compunctionem, et magnam sua­ <lb/>
+            viloquentiam tribuit, condidit Græco eloquio multa et <lb/>
+            præclara opuscula. E quibus utitur Latinitas, duobus
+            <milestone unit="PLSection" n="B"/><lb/>
+            ejus de lapsis libellis, scriptis ad quemdam Theodo­ <lb/>
+            rum, lamentis et exhortationibus plenis, utpote <lb/>
+            illum a bona conversatione dejectum. Et quia mo­ <lb/>
+            nachi vitam cum eo in uno eodemque monasterio <lb/>
+            exercuerat, ideo conversationis ibi factæ eum in libris <lb/>
+            ipsis admonuit, provocans eum ad propositum, atque <lb/>
+            OStendens, nulli peccatori, vel impio, si ad poeniten­ <lb/>
+            tiam redeat, desperandum.</p>
+          <p n="24">24. Legimus ejusdem et librum alium, cujus prae­ <lb/>
+            notatio, est Neminem posse lœdi ab alio, nisi a semet­ <lb/>
+            ipsa. Ad personam quoque cujusdam nobilissimae na­ <lb/>
+            tronæ Gregoriæ reperitur opus ejus insigne de conver-
+            <milestone unit="PLSection" n="A"/><lb/>
+            satione vitæne, et institutione morum, sive de compu­ <lb/>
+            gnantia virtutum et vitiorum. Est etiam et alius liber <lb/>
+            ejusdem apud Latinos de compunctione cordis. Alter <lb/>
+            quoque scriptus ad quemdam Eutropium, cum palatio <lb/>
+            pulsus ad altarium confugisset.</p>
+          <p n="25">25. Multos præterea composuit diversosque tracta­ <lb/>
+            tus, quos enumerare perlongum est. Cujus quidem stu­ <lb/>
+            dii, etsi non omnia, tamen quam plurima eloquentiæ <lb/>
+            ejus fluenta de Græco in Latinum sermonem 151 <lb/>
+            translata sunt. Hic autem, decimo tertio anno episco­ <lb/>
+            patus sui, discordia Theopbili Alexandrini episcopi, <lb/>
+            oppressus. Faventes episcopi nostri Arcadio impera­ <lb/>
+            tori damnaverunt eum innocentem, atque ab episco­ <lb/>
+            patu dejectum, Pontum in exsilium retruserunt.Gor­ <lb/>
+            pus trigesimo quinto anno, die functionis ab exsilio
+            <milestone unit="PLSection" n="B"/><lb/>
+            Constantinopolim revocatur, etiam in Apostolorum <lb/>
+            ecclesia sepelitur.</p>
+          </div>
+
+<div n="20" subtype="chapter" type="textpart">
+<ab>
+            <title type="sub">CAPUT XX.</title>
+          </ab>
+          <p n="26">26. Sedulius, presbyter, edidi: tres libros, dacty­ <lb/>
+            lico heroico metro compositos, quorum primus signa <lb/>
+            et virtutes Veteris Testamenti potentissime resonat, <lb/>
+            reliqui vero gestorum Christi sacramenta vel mira­ <lb/>
+            cula inlonant.</p>
+          </div>
+
+<div n="21" subtype="chapter" type="textpart">
+<ab>
+            <title type="sub">CAPUT XXI.</title>
+          </ab>
+          <p n="27">27. Possidius, Africanæ provinciae episcopus. Hic <lb/>
+            stylo persecutus est vitam sancti Augustini, cui <lb/>
+            etiam operi subjecit indiculum scriptorum ejus, enu­ <note type="footnote"> preshyteros, et Paulinum eliam presbyterum. Schot. <lb/>
+            tus putabat Uranium esse cognomen Forlunati poc­ <lb/>
+            ... </note> 
+            <milestone unit="PLSection" n="C"/><note type="footnote"> tae, qui post Severum Sull)iciulII de Pontio Paulino, <lb/>
+            fortasse eo qui fuit Nolanus episcopus, concripsit <lb/>
+            versibus. Gallandius, loru. VIII Biblioth., pag. 21 I, <lb/>
+            edidit Paulini Nohni episcopi carmina quædam au­ <lb/>
+            ciiora ei emendaliura, ex Mingarellii rect'usione; et <lb/>
+            tom. iX, pag. 25, Paulini Mediolanensis tria opu­ <lb/>
+            scula, scilicet Vitam sancti Ambrosii, Libellum ad­ <lb/>
+            versus CoeJeslium, et alimn de Benedictionibus pa­ <lb/>
+            triarcharum, et in prolegomenis ad IIUHC tomum IX <lb/>
+            contra Tillemontium et Fontaninum cum Fabricio <lb/>
+            et laudato Mingarellio caput hoc Isidori tuemur. Inter <lb/>
+            opera I.'aulini Motam exstat ejus Vita ah Uranio, <lb/>
+            sive Oranio conscripta. Aiu.v. </note><note type="footnote"> i2. Proba. Anno t.;hristi 410, exstat cognomine <lb/>
+            Falconia Valeria.— Centonem. Meminit lIieroN. ad Pau­ <lb/>
+            linuin. Apocryphum vocat Gelasius , dist. i5 PEREZ. </note><note type="footnote"> 'bid. In AIs. Aguirriano : Proba, qtuv cognomento <lb/>
+            Falconia dicitur, uxor, etc. Miræus putat Isidorum <lb/>
+            decepluin, quod Probam uxorem Adelpliii dixent; </note> 
+            <milestone unit="PLSection" n="D"/><note type="footnote"> sed potius ipse dedpilur, quod poetriam Probam <lb/>
+            crediderit fuisse Aniciam Falioniam Probam , con­ <lb/>
+            suluin matrem, tilian. et uxorem, ut observat FOIl­ <lb/>
+            tauinius, de antiquit. Hort.c, lib. II. De Nobilissima <lb/>
+            fanulia Aniciurunl, vide commentar. ad Prudentum, <lb/>
+            lib. i Contra Synnnachuln, verso 573 ei seq'). Gx <lb/>
+            eadein familia tuit Proba uxor Adelphii, qn.imvis <lb/>
+            bic in catalogis proconsulum, qui aliunde nobis non <lb/>
+            sunt, non reperiatur. Pro in laude, alii in laudem. <lb/>
+            Be hoc centone, vide notas ad Decretum Gelasii <lb/>
+            post Sedulium, num. 5i, pag. 425 et se(I'I. Confer <lb/>
+            etiam Didacum Covarruviam, lib. iv varia!'. Heso­ <lb/>
+            lut., cap. 14, in distinct. i5. AREV. </note><note type="footnote"> 23. Joannes, etc. Anno 3! 8. PEREZ. </note><note type="footnote"> Jbid. De sancto Joanne Chrysostomo videri pos­ <lb/>
+            sunt lUonlt'auconins in Editione operum sancti Docto­ <lb/>
+            ris, Fabricius in Bibl. Græca, tom. VII, pag. 560 et <lb/>
+            seqq., et Bollandiani, tum. IV septembris. Zaccaria <lb/>
+            notat contra Juan. Georgium Walchium , in llist. ec­ <lb/>
+            clesiast. Movi Testamenti, pag. 1574, Chrysostomi <lb/>
+            cognomentum jam sexto sæculo, et ante sextam sy­ <lb/>
+            nodum, anno ...680 habilanl, obtinuisse. In ver-</note> 
+            <milestone unit="PLSection" n="C"/><note type="footnote"> sihus etiam qui ab Isidoro editi pro sua bibliotheca <lb/>
+            dicuntur, Joannes Chrysostomus vocatur, et ratio <lb/>
+            nominis redditur. Quisnaiu interpres Laliuus fueril <lb/>
+            duorum libellorum , quibus Isidori sevo utebatur La. <lb/>
+            tinitas, non constat. Anianum, vel Mutianum scboJ <lb/>
+            lasticunl, nonnulli indicant. AREV. </note><note type="footnote"> 24. De compugnanlia. AI., de cOnlpugnatione. Vide <lb/>
+            Isidoriana, cap. 84, num. 20, ubi de Conflictu vir­ <lb/>
+            tutum et vitiorum, qui Isidoro ascribitur, disserui. <lb/>
+            Opuscula quaedam sancti Joannis Chrysostom, recens <lb/>
+            edita legulIlur in Biblioth. Gailand. lOIll. VIII, pag. <lb/>
+            25*), et tom. XIV, in append. pag. 136. AREV. </note><note type="footnote"> 25. Decimo tertioanno. Forte anno 7 ; nam annos 6 <lb/>
+            sedisse constat ex Marcellinoet Niceph. Conslanlin. <lb/>
+            — Dejectus anno Christi 40"1., ex Marcelliuo ; mor­ <lb/>
+            tuus exsul, anno 407, ex Paulo Diac.— Corpus. Hæc <lb/>
+            adduntur in uno exemplari. PEREZ. </note><note type="footnote"> Ibid. Ex historia pro certo pone:duin Chrysosto­ <lb/>
+            mum anno 7 fuis--e oppressum. Advertit Scliotlus, </note> 
+            <milestone unit="PLSection" n="D"/><note type="footnote"> in uno Ms. Tolet. pro episcopi nostri legi episcopi <lb/>
+            novem. Alii omiUunt nostri et novem, quod melio­ <lb/>
+            rem el veriorem sensum reddit. Quod Pontum <lb/>
+            Chrysostoluus in exsilium reo.usus dicitur, ita est <lb/>
+            inielligendum , ut Cumanis ad Ponlum Euxinum obio <lb/>
+            ril, ttufn ex variis aliis locis ad PilYUIHCII1 deporta­ <lb/>
+            retur, Kx aliis Editionibus reposui anno a die fun­ <lb/>
+            elionis; nain in Editione Grialii a omittitur. AREV. </note><note type="footnote"> 2t&gt;. Sedulius. Anno 430. — Tres cibros. Laudat Ge­ <lb/>
+            lasius, eJisl. 15. I)EREl. </note><note type="footnote"> Ibid. .In prolegomenis ad Sedulium vitamejus expo­ <lb/>
+            sui, et de operibus disserui. Videri etiam potest Zac­ <lb/>
+            cariai lIistoria litteraria lialiie tom. IV, pag. 2UO. An­ <lb/>
+            notationes in Epislolas Pauli, &lt;]use alteri:ls Scdulii <lb/>
+            sunt, Sedu!io poetæ Miræus affiflgit, in quibusverba <lb/>
+            qu.cdam Pelagri t seu alicujus Pelagiani notantur, <lb/>
+            sive ab aliis intrusa, sive ab auctore adoptata. AREV. </note><note type="footnote"> 27. Po"sidius. Ita vel. Cod. non Possidonius. Fuit <lb/>
+            episcopus Calamensis in Numidia, in vn concil. <lb/>
+            CarLhag., anno 418 — ritam, etc., exstat. PEREZ. </note> <pb n="1095"/>
+            
+            <milestone unit="PLSection" n="A"/><lb/>
+            merans quanta idem beatissimus doctor scripsit, ubi I <lb/>
+            plusquam quadringentorum librorum volumina sup­ <lb/>
+            putantur. Homiliarum vero et epistolarum quæstio­ <lb/>
+            numque infinitus modus est, ut pene vix possit <lb/>
+            quisquam articulo suo aliena tanta scribere, quanta <lb/>
+            ille proprio labore composuit.</p>
+          </div>
+
+<div n="22" subtype="chapter" type="textpart">
+<ab>
+            <title type="sub">CAPUT XXII.</title>
+          </ab>
+          <p n="28">28. Primasius, Africanus episcopus, composuit ser­ <lb/>
+            mone scholastico de Haeresibus tres libros directos ad <lb/>
+            Fortunatum episcopum, explicans in eis quod olim <lb/>
+            beatissimus Augustinus in libro Haereseon imperfe­ <lb/>
+            ctum, morte interveniente, reliquerat : in primo <lb/>
+            152 namque ostendens quid hæreticum faciat, in se­ <lb/>
+            cundo et tertio digerens quid haereticum demonstret.</p>
+          </div>
+
+<div n="23" subtype="chapter" type="textpart">
+<ab>
+            <title type="sub">CAPUT XXIII.</title>
+          </ab>
+          <p n="29">
+            <milestone unit="PLSection" n="B"/>29. Proterius, Alexandrinæ Ecclesiae antistes, scri­ <lb/>
+            psit epistolas ad Leonem Romanæ sedis episcopum <lb/>
+            de festivitate paschali. Hunc autem Leonis Augu­ <lb/>
+            sti temporibus Dioscori hæretici successores, au­ <lb/>
+            ctore Timotheo, seditione facta, crudelissime pere­ <lb/>
+            merunt, ipsumque Timotheum sibi pro Alexandrino <lb/>
+            episcopo statuerunt.</p>
+          </div>
+
+<div n="24" subtype="chapter" type="textpart">
+<ab>
+            <title type="sub">CAPUT XXIV.</title>
+          </ab>
+          <p n="30">30. Paschasinus, Siciliensis episcopus, edidit unam <lb/>
+            epistolam paschalem, ad Leonem supradictum pa­ <lb/>
+            pam directam, in qua refert paschalis mysterii mira­ <lb/>
+            culum his verbis : Est, inquit, possessio, quæ oppel­ <lb/>
+            latur Meltinas, in montibus arduis, ac silvis densissi­ <lb/>
+            mis constituta , illic perparva atque viii opere con­
+            <milestone unit="PLSection" n="c"/><lb/>
+            structa Ecclesia est, in cujus baptisterio nocte sacro-
+            <milestone unit="PLSection" n="A"/><lb/>
+            saucta paschali, baptizandi hora, cum nullus canalis sit, <lb/>
+            vel fistula nec aqua omnino vicina, fons ex sese repletur; <lb/>
+            paucisquequi fuerint corisecratia, cumdeductorium 153 <lb/>
+            nullum sit, ut venerat aqua, ex sese discedit. Claruit <lb/>
+            sub Theodosio Juniore, Arcadii imperatoris filio.</p>
+          </div>
+
+<div n="25" subtype="chapter" type="textpart">
+<ab>
+            <title type="sub">CAPUT XXV.</title>
+          </ab>
+          <p n="31">31. JuHanus quidam , Gallus, cognomento Pome­ <lb/>
+            rius. Hic octo libros de animae Natura in dialogi mo­ <lb/>
+            rem conscripsit. Horum primus continet quid sit <lb/>
+            anima, vel qualiter credatur ad Dei imaginem facta. <lb/>
+            hi secundo loquitur utrum anima corporea, an in­ <lb/>
+            corporea sit. In tertio disserit primo homini unde <lb/>
+            anima sit facta. In quarto utrum nova anima sine <lb/>
+            peccato fiat, an peccatum primi hominis ex illo pro­ <lb/>
+            pagata originaliter trahat.</p>
+          <p n="32">
+            <milestone unit="PLSection" n="B"/>32. In quinto describit quae sit facultas animae. <lb/>
+            In sexto eloquitur unde sit illa discordia qua carni <lb/>
+            spiritus, vel caro spiritui adversatur. In septimo <lb/>
+            autem scribit de differentia vitarum et mortium, vel <lb/>
+            resurrectione carnis et animae, sive de morte car­ <lb/>
+            nis, ac de ejus resurrectione. In octavo loquitur <lb/>
+            de his quae in fine mundi futura sunt, vel de <lb/>
+            quaestionibus quae solent de resurrectione proponi, <lb/>
+            sive de finibus bonorum atque malorum.</p>
+          <p n="33">33. Hic tamen, in secundo ejusdem operis libro, Ter­ <lb/>
+            tulliani erroribus consentiens, animam corpoream esse <lb/>
+            dixit, quibusdam hoc fallacibus argumentis astruere <lb/>
+            contendens. Edidit etiam unum libellum de Virgini­ <lb/>
+            bus instituendis, alios quoque tres de futurae vitæ <lb/>
+            contemplatione, vel actuali conversatione, necnon de
+            <milestone unit="PLSection" n="C"/><lb/>
+            vitiis atque virtutibus. <note type="footnote"> Ibid. Notae in , Editione Grialii confusae erant. <lb/>
+            Joannes Salinas Possidii indiculum et Vitam anno <lb/>
+            413i Romae typis edidit, ejusque iidem tuetur con­ <lb/>
+            tra Joannem Clericunl. sive Phereponum, in anim­ <lb/>
+            adversionibus ad sancti Augustini opera. Vitam Pos­ <lb/>
+            sidii, ab oculalo teste conscriptam, habes etiam <lb/>
+            apud Bollandistas ad diem i7 Maii. AREV. </note><note type="footnote"> 28. Pr;,na,;u,. Anno !,j53. Ibid. Fortunatum, Pro­ <lb/>
+            vinciae Byzncenae dicitur in v cunei!. Constantinop., <lb/>
+            collal. 2. Ibid. Demonstret. Exstant ejus Comment. <lb/>
+            in Apocalyps. PEREZ. </note><note type="footnote"> Ibid. Post demonstret in nonnullis Editionibus <lb/>
+            additur: Claruit Justiniano regnall,e; pro J ud;n;ano. <lb/>
+            mendose, Juliano. Miraeus ait Primasium obiisse, <lb/>
+            non anno 440, ut Xystus Senensis refert, sed 503. <lb/>
+            Perezius indicat annum 553. AREV. </note><note type="footnote"> 29. Proter;,u. Anno 457. Ibid. Hunc autem, etc. <lb/>
+            Nicephorus, lib. xv,cap. i5; Liberatus, cap. t.6. PEREZ. </note> 
+            <milestone unit="PLSection" n="D"/><note type="footnote"> lbid. Epistola Proteri de paschale edita fuit ab Ægi­ <lb/>
+            dio Bucherio, cap. 2 commentarii ad Viclorii Aquitani <lb/>
+            canonem. Pro successores Zaccaria conjiciebat su(­ <lb/>
+            fragalores. Mors Proterii contigit anno 457 , quarto, <lb/>
+            vel, ut alii malunt, quinto Kal. Aprilis. AREV. </note><note type="footnote"> 30. Epistolam. Anno 445 scripta est epistola. ExsLat <lb/>
+            cum epistolis Leonis, lom. I Concil. Pascliasinus hic <lb/>
+            Lilybetanus (in Sicilia) episcopus fuit, legatus Leonis <lb/>
+            papae in concil. Chalcedonens. anno 45ł. Ibid. Bapti­ <lb/>
+            zandi hora. Contigit anno 417. Simile miraculum in <lb/>
+            Hispania, anno 585, ex Gregor. Turonens., lib. x, <lb/>
+            ca p. 22, et Sigeberto. PEREZ. </note><note type="footnote">lbid. Notas Editionis Grialii hoc quoque loco <lb/>
+            confusas in ordinem redegi. Paacha.inus; at., Pa­ <lb/>
+            schasius. Pro M ellitlas, a!., Al illillas; at., Menti­ <lb/>
+            na; et pro discedit; at., minus bene, descendit. <lb/>
+            Quod refert sanctus Gregor;us Turonensis simile <lb/>
+            uiiraculum in Hispania accidisse, mirum, inquit <lb/>
+            Scbouus, id ab Isidoro non recenseri, neque hoc <lb/>
+            loco, neque in libris Etymologiarum, ubi de cereo <lb/>
+            paschali agit. Alia miracula huic affinia narrat Joan­ <lb/>
+            nes Moschus, in Prato spirituali, cap. 21. et 215, <lb/>
+            alia alii, ut videri potest in not. ad librum sancti <lb/>
+            ildefonsi, de Cognitione baptismi, tom. 11 Patrum <lb/>
+            Toletanorum, cap. ł05, pag. 210, ubi erudhissi­ <lb/>
+            mus auctor ostendere conatur simile mir:lculum, <lb/>
+            quod Ildefonsus commemorat, esse illud ipsum quod <lb/>
+            Gregorius Turonensis Hispaniae ascripsit, quamvis <lb/>
+            IIderonsus locum miraculi non expresserit. Semper <lb/>
+            tamen mirum videri debet quod neque Isidorus, n.­ <lb/>
+            que Ildefonsus in Hispania hujusmodi miraculum <lb/>
+            contigisse indicaverint. Epistola Pascbasini a Miraeo <lb/>
+            scripta dicitur anno 443. Quod Perezius ait, Contigit <lb/>
+            anno '" 7, ad miraculum referri videtur. AREV. </note><note type="footnote"> 31. Julianus. Anno 450. PEREZ.' </note><note type="footnote"> Ibid. Gallus. Maurum ait fuisse Gennadius. Falso </note> 
+            <milestone unit="PLSection" n="D"/><note type="footnote"> ergo confundunt quidam Pomerium cum Juliano epi­ <lb/>
+            scopo Toletano, qui obiit anno 690. PEREZ. I </note><note type="footnote"> Ibid. Antiquissimus est hic error, quo Julianus <lb/>
+            Toletanus cum Juliano Pomerio confunditur, ut ex <lb/>
+            veteribus Codicibus liquet. Alioquin J ulianus Tole­ <lb/>
+            tanus saepe Pomerium laudat, sequiturque. Vide <lb/>
+            Hispaniam sacram, tom. V, pag. 300, et. Vitam san­ <lb/>
+            cti Juliani Toletani episcopi, tum. II Patrum Toleta­ <lb/>
+            norum. Observandum quod Gennadius, etsi Maurum <lb/>
+            nationc dicit POlllerium, in Gailia tamen ordinatum <lb/>
+            presbyterum asserit; quo forte alludit Isidorus, dum <lb/>
+            Gallum vocat; vel omittendum est Gallus cum non.. <lb/>
+            nuliis Editionibus. AREV. ; </note><note type="footnote"> 32. Suspicatur Scliotlus octavum librum de his <lb/>
+            quae in iine mundi futura sunt, esse Prognosticon <lb/>
+            illud, quod Duaci Boetius Epo edidit. At hoc Pro-. <lb/>
+            gnosticon certo est opus Juliani Toletani, in quo <lb/>
+            identidem verba Pomerii re(eruDLur. AREV. </note> <pb n="1097"/>
+            </p>
+          <p>
+            <milestone unit="PLSection" n="A"/></p>
+          </div>
+
+<div n="26" subtype="chapter" type="textpart">
+<ab>
+            <title type="sub">CAPUT XXVI.</title>
+          </ab>
+          <p n="34">34. Eugipius, abbas Lucullanensis oppidi, Neapoli <lb/>
+            Campaniæ. Hic ad quemdam Paschasiurn diaconum <lb/>
+            libellum de Vita sancti 154 monachi Severini trans- <lb/>
+            missum brevi stylo composuit. Scripsit ct regulam <lb/>
+            monacbis consistentibus in monasterio sancti Seve­ <lb/>
+            fini, quam eisdem moriens quasi testamentario jure <lb/>
+            reliquit. Claruit post consulatum Importuni Junio­ <lb/>
+            ris, Anastasio imperatore regnantc.</p>
+          </div>
+
+<div n="27" subtype="chapter" type="textpart">
+<ab>
+            <title type="sub">CAPUT XXVII.</title>
+          </ab>
+          <p n="35">35. Fulgentius, Afer, ecclesiæ Ruspensis episcopus, <lb/>
+            in confessione fidei clarus, in Scripturis divinis co­ <lb/>
+            piosissime eruditus, in loquendo quoque dulcis, in <lb/>
+            docendo ac disserendo subtilis, scripsit multa. E <lb/>
+            quibus legimus, de gratia Dei et libero arbitrio Ii-
+            <milestone unit="PLSection" n="B"/><lb/>
+            bros Responsionum septem, in quibus Fausto, <lb/>
+            Gallix Regiensis urbis episcopo, Pelagianæ pravitati <lb/>
+            consentienti, respondens, obnitimur ejus profundam <lb/>
+            destruere calliditatem.</p>
+          <p n="36">36. Legimus cl ejusdem librum de sancta Tri­ <lb/>
+            nitate ad Felicem directum notarium ; librum <lb/>
+            quoque Regulæ veræ fidei, et alium de Sacra­ <lb/>
+            mento Incarnationis Domini nostri Jcsu Christi. <lb/>
+            Exstant, et duo ejusdem libri de Veritate prædesti­ <lb/>
+            nationis, ad episcopos missi, in quibus demonstratur <lb/>
+            quod gratia Dei in bonis voluntatem humanam præ­ <lb/>
+            venit, et quod Deus quosdam prædestinationis suæ <lb/>
+            munere justificans præeligit, quosdam vero in suis <lb/>
+            reprobis moribus occulto quodam judicio dereliuquit.</p>
+          <p n="37">37. Est et liber altercationis ejus, quo de fide cum
+            <milestone unit="PLSection" n="A"/><lb/>
+            Thrasamundo rege idem beatus Fulgentius disputa­ <lb/>
+            vit. Ad Ferrandum quoque, ecclesiæ Carthaginien­ <lb/>
+            sis diaconum, unum de interrogatis Quæstionibus <lb/>
+            scripsit ibellum. Inter haec composuit multos tracta­ <lb/>
+            tus 155, quibus sacerdotes in ecclesiis uterentur. <lb/>
+            Plurrma quoque feruntur ingenii ejus monumenta. <lb/>
+            Hæc tantum ex pretiosis doctrinae ejus floribus car­ <lb/>
+            psimus. Sors melior, cui delicias omnium librorum <lb/>
+            ejus praestiterit Dominus. Claruit sub Thrasamundo <lb/>
+            rege Vandalorum, Anastasio imperatore regnante.</p>
+          </div>
+
+<div n="28" subtype="chapter" type="textpart">
+<ab>
+            <title type="sub">CAPUT XXVIII.</title>
+          </ab>
+          <p n="38">38. Eucherius, Franciæ episcopus, elegans senten- <lb/>
+            Iii!, ornatus in verbis, edidit ad Hilarium Arela­ <lb/>
+            tensem antistitem eremi deserta petentem unum <lb/>
+            opusculum de Laude ejusdem eremi luculentissi-
+            <milestone unit="PLSection" n="B"/><lb/>
+            mum , et dulci sermone dictatum, in quo opere lau. <lb/>
+            damus doctorem, et si pauca, tamen pulchra dicen­ <lb/>
+            tem. Brevitas, ut ait quidam, taus est interdum in aliqua <lb/>
+            parle dicendi, in universa eloquentia laudem non habet.</p>
+          </div>
+
+<div n="29" subtype="chapter" type="textpart">
+<ab>
+            <title type="sub">CAPUT XXIX.</title>
+          </ab>
+          <p n="39">39. Hilarius, Arelatensis episcopus, scripsit Vitam <lb/>
+            parentis et prædecessoris sui, sanctissimi ac venera­ <lb/>
+            bilis Honorati episcopi, suavi ac praeclaro prædicta- <lb/>
+            tam eloquio.</p>
+          </div>
+
+<div n="30" subtype="chapter" type="textpart">
+<ab>
+            <title type="sub">CAPUT XXX.</title>
+          </ab>
+          <p n="40">40. Apringius, ecclesiæ Pacensis Hispaniarum epi­ <lb/>
+            scopus, disertus lingua, et scientia eruditus, inter­ <lb/>
+            pretatus est Apocalypsin Joannis apostoli subtili <lb/>
+            sensu atque illustri sermone melius pene 156 <lb/>
+            quam veteres ecclesiastici viri exposuisse videntur.
+            <milestone unit="PLSection" n="c"/><note type="footnote"> 34. Exstat Vita apud Surium. De Severino Cregor., <lb/>
+            lih. VII, ('pi:'!.. 8i. Paul. Diac., lih. i, cap. 12. </note><note type="footnote"> Irnporlunus consul anno Chrisli o09. Ad Eugipiurn <lb/>
+            exstat epist. Fulgenlii Ruspensis. Eugipinm se vi­ <lb/>
+            disse ait Cassiodor., lib. I Divin. Inst. PJl:Rr:Z. </note><note type="footnote"> Ibid. Eugipium, quem Cassiodorus se v disse ait, <lb/>
+            alium juniorem Eiigipimn esse, Fabriiins cum aliis <lb/>
+            observat. Conjoctura Loaisre et Schoui. legentium <lb/>
+            post consulalum Importuni ct Dedi juniur;., non pla­ <lb/>
+            cet Zaccariae, nam linportuniis consul solus fuit; et <lb/>
+            potuit liuportunus junior dici ratione alicujus fratris <lb/>
+            lui, aut alterius ex farnilia viri ea seiate celebris, <lb/>
+            nec tamen consulis; aut Juwor agnoineii fortasse <lb/>
+            erat. Quod si muiare quidquain placeat, censet Zac­ <lb/>
+            caria Junioris ab imperito librario positum pro iUrum, <lb/>
+            aut pro ill",'rii. AnEV. </note><note type="footnote"> 55. Fulgentiu. Anno 500. PERCZ. </note> 
+            <milestone unit="PLSection" n="D"/><note type="footnote"> Ibid. Joannes Molanus eruditam praefationem ad­ <lb/>
+            jecit Kditioni operum FulgerHli, a Joanne Olimmerio <lb/>
+            typis Plantinianis procuiatx. In biblioth. Galland., <lb/>
+            tOIU. XI, Ilag. 230 et seqq., legere licet librum Pe­ <lb/>
+            tri diaconi et aliorum ad Fulgentium et alios epi­ <lb/>
+            scopos Africx*, de lncarnationt' et gratia Je..u Chrisli, <lb/>
+            et iibruin Fulgentii, et aliorum episcoporum de eo­ <lb/>
+            jcm arguminto ad eumdeui Petrum diaconuln; iuler <lb/>
+            opera vero Fulgelltii Ferrandi diacnui eodem tomo, <lb/>
+            pag. 5i9 et seqq. recensita, vitam sancti Fu gentii <lb/>
+            Ruspensis episcopi a Ferrando, ut videtur, cunscri­ <lb/>
+            plana. Codex Hegiovalic. ł25, paK. 6J, exhibet ser­ <lb/>
+            tnonem Fulgentii episcopi de Natali DOln.ini, Cu­ <lb/>
+            p;entt. aliquid, etc., ct pag. 82, sermonem Ful­ <lb/>
+            gentii Carthaginensis episcopi de sancto Stephano. <lb/>
+            AREV. </note><note type="footnote"> 37. Trasamundus scribi etiam solet Thrasamundus9 <lb/>
+            Transamundus, et Tra.;mulldul; ac similis varietas <lb/>
+            ocrurril in Historia GOLhorurn, n. HI. AREa. </note><note type="footnote"> 38. Eucberius. Anno 4&lt;N0. Lugdunensis episcopus </note> 
+            <milestone unit="PLSection" n="c"/><note type="footnote">tuit apud Gennadium et Marcellinum. Brevitas, elc. <lb/>
+            Ciceronis sunt verba.(in Oratorc ad Brutum.) PE REI. </note> <note type="footnote"> Ibid. rrancice episcopus; al., trancias pres6yltr ; <lb/>
+            fortasse quia nonnunquam etiam cpiscopi presbyicri <lb/>
+            dicebantur, atque ita aliqumdo sanctus Joannes <lb/>
+            Chrysostomus loquitur. De Eucherio v:dcri potest <lb/>
+            P. De Colonia, in historia lilteraria urb's Lugclu­ <lb/>
+            nensis. Fahricius, tom. II Biblioth. Hletl. xvi, de <lb/>
+            Encheriis agens, observat quod Dionysius Fauche­ <lb/>
+            rius quaedam veluti Isidori verba ex hoc opere an.ere, <lb/>
+            quae in nullo Codice veteri, in nulla Editione legun­ <lb/>
+            tur, scilicet: Scripsit alia in multos sacros libro. <lb/>
+            eomme,,'ar;a non minus necessaria quam utilia, præ­ <lb/>
+            cipue vero in Genesin, et libro. Regum, ad Salonium <lb/>
+            et Veranium fratres episcopus, opus prolixum et do- <lb/>
+            eli.,illlum. AREV. </note><note type="footnote"> '59. Anno .132. De hoc Gennadius. PP.:REZ. </note> 
+            <milestone unit="PLSection" n="D"/><note type="footnote"> 40. Aprirzgiu.. Anno Christi 540. Apringii nomine <lb/>
+            multorum manibus circumfertur opus ingens manuscri­ <lb/>
+            .. <lb/>
+            ptumin Apocalypsin. Sed ego, cum viuerem Loaicem <lb/>
+            ipsum Gothicum Legionenseln scriptum aera millesima <lb/>
+            octava, animadverti inde auctoris nomen non consta. <lb/>
+            re, sed editum opus in gratiam cujusdam Eterii. Quin <lb/>
+            et in præfatione ille auctor ait se collegisse sua ex <lb/>
+            libris Victorini, Isiduri, et Apringii, ut manifesto <lb/>
+            constet nOli esse illum Apringium cujus Isidorus <lb/>
+            rnelniniL. PEREZ. </note><note type="footnote"> Ibid. Florelills, tom. XIV Hisp. sacr., ubi agit de <lb/>
+            episcopis Pacensibus, ait Apringium floruisse ab <lb/>
+            anno 53ł. Suspicatur opus ms. de quo Perezius lo­ <lb/>
+            quitur esse Beati, cui cum Etherio errores Elipandi <lb/>
+            confulavil : quod ex nonnullis Mss. confirmat Baye­ <lb/>
+            rius in not. ad Biblioth. veter. Hispan. Nic. Anto­ <lb/>
+            nii. Prodiit hoc commentarium beati, ut creditur, <lb/>
+            Matriti, ł 770. Antiquioris commentari Apringii me­ <lb/>
+            minit lJraulio epist. :5, tom. XXX Hisp. sacr. AREV. </note> <note type="footnote"> PATItOL, LXXXIII. </note> <note type="footnote"> 3o </note> <pb n="1099"/>
+            
+            <milestone unit="PLSection" n="A"/><lb/>
+            Scripsit et nonnulla quæ tamen ad notitiam nostræ <lb/>
+            lectionis minime pervenerunt. Claruit temporibus <lb/>
+            Theudis principis Gothorum.</p>
+          
+          </div>
+
+
+
+<div n="31" subtype="chapter" type="textpart">
+<ab>
+            <title type="sub">CAPUT XXXI.</title>
+          </ab>
+          <p n="41">41. Justinianus imperator, quosdam libros de In­ <lb/>
+            camatione Domini edidit, quos etiam per diverSas <lb/>
+            provincias misit. Condidit quoque et rescriptum <lb/>
+            contra Illyr icianam synodum , et adversus Africa­ <lb/>
+            nos episcopoS Chalcedonensis synodi defensorc3 per­ <lb/>
+            verso studio : in quo tria capitula damnare conten­ <lb/>
+            dit, id est, Thendori Mopsuesteni episcopi dicta, <lb/>
+            sive rescripa Theodoreti, et epistolam, quæ di­ <lb/>
+            citUr Ibae Ede-seni episcopi.</p>
+          
+          </div>
+
+
+
+<div n="32" subtype="chapter" type="textpart">
+<ab>
+            <title type="sub">CAPUT XXXII.</title>
+          </ab>
+          <p n="42">42. Facundus, Afer, Hermianensis ecclesiæ episco-
+            <milestone unit="PLSection" n="B"/><lb/>
+            pus, duodecim libros pro defensione trium capitu­ <lb/>
+            loruin scripsit, quorum stylo clicuit præfata tria <lb/>
+            capitula in præscriptione apostoticæ fidei, ct Chal­ <lb/>
+            cedonensis synodi impugnatione, fuisse damnata, <lb/>
+            id est, epistolam Ibæ Edesseni episcopi ad Marim <lb/>
+            Persam directam, et Theodorum Mopsuestenum epi­ <lb/>
+            scopum, et Theodoreti Cyri episcopi dicta. Cla­ <lb/>
+            ruit post consulatum Basilii, anno decimo regnarite <lb/>
+            Justiniano imperatore.</p>
+          
+          </div>
+
+
+
+<div n="33" subtype="chapter" type="textpart">
+<ab>
+            <title type="sub">CAPUT XXXIII.</title>
+          </ab>
+          <p n="43">43. Justinianus, de Hispania, ecclesiæ Valentinæ <lb/>
+            episcopus, ex quatuor fratribus episcopis, eadem <lb/>
+            matre progenitis unus, scripsit librum Responsio­ <lb/>
+            num ad quemdam Rusticum de interrogatis QuaeStio­ <lb/>
+            nibus : quarum prima responsioest de Spiritu san-
+            <milestone unit="PLSection" n="C"/><lb/>
+            cto ; secunda est contra Bonosianos, qui Christum
+            <milestone unit="PLSection" n="A"/><lb/>
+            adoptivum Filium, et non proprium , dicunt; terna <lb/>
+            responsio est de bapiismo Christi, quod Iterare non <lb/>
+            licet ; quarta resporisio est de distinctionc baptismi <lb/>
+            Joannis et Christi ; quinta responsio est quia Filius <lb/>
+            sicut Patcr 157 invisibilis sit. Floruit in Hispaniis <lb/>
+            temporibus Theudis principis Gothorum.</p>
+          
+          </div>
+
+
+
+<div n="34" subtype="chapter" type="textpart">
+<ab>
+            <title type="sub">CAPUT XXXIV.</title>
+          </ab>
+          <p n="44">44. Justus, Urgellitanæ ecclesiæ Hispaniarum epi­ <lb/>
+            scopus, et frater praedicti Justiniani, edidit libellum <lb/>
+            expositionis in Cantica canticorum , totum valde <lb/>
+            breviter atque aperte per allegoriam sensum discu­ <lb/>
+            tiens. Hujus quoque fratres Nebridius et Elpidius <lb/>
+            quædam scripsisse feruntur, quibus quia incogniti <lb/>
+            sunUS, magis reliconda fatemur.</p>
+          
+          </div>
+
+
+
+<div n="35" subtype="chapter" type="textpart">
+<ab>
+            <title type="sub">CAPUT XXXV.</title>
+          </ab>
+          <p n="45"><milestone unit="PLSection" n="B"/>45. Marlinus, Dumiensis monasterii sanctissimus <lb/>
+            pontifex, ex Orientis partibus navigans, in Gal­ <lb/>
+            læciam venit, ibique conversis ab Ariana impietate <lb/>
+            ad fidem catholicam Suevorum populiS regulam fi­ <lb/>
+            dei et sanctæ religionis constituit, ecclesias confir­ <lb/>
+            mavit, monasteria condidit, copiosaque præcepta <lb/>
+            piæ instilulionis composuit.</p>
+          <p n="46">46. Cujus quidem ego ipse legi librum de Diffe­ <lb/>
+            rentiis quatuor virtutum, et aliud volumen Epi­ <lb/>
+            stolarum in quibus hortatur vitæ 158 emenda­ <lb/>
+            tionem et conversationem fidei, orationis instau­ <lb/>
+            tiam et elemosynarum distributionem , et super om­ <lb/>
+            nia cultum virtutum omnium et pietatem. Floruit, <lb/>
+            regnante Theodemiro rege Suevorum , temporibus <lb/>
+            illis quibus Justinianus in republica et Athanagildus
+            <milestone unit="PLSection" n="c"/><lb/>
+            in Ilispaniis imperium tenuerunt. <note type="footnote"> '4i. Anno 553. Sumpta hæc ex Liberalo et Victore <lb/>
+            Tunnensi. </note><note type="footnote"> Synodus IlIyriciana, anno 549. Damnat etiam Ju*ti­ <lb/>
+            nianiis in fidei suæ professionc , qn;c exstat I tom. <lb/>
+            Concil. Vide sclioliondeTlieoJoro Mopsue*&gt;leno, supra <lb/>
+            ad tap. 4. PKIIEZ. </note><note type="footnote"> Ibid. Negoliuin trium capitulorum, quantum satis <lb/>
+            cst, supra, num. 5, explicui. ABEV. </note><note type="footnote"> 42. Sumpta ex 'Ticlorc Tuuneusi Claruit , etc. <lb/>
+            Anno Chrisii 551. PEREZ. </note><note type="footnote"> Ibid. In præscripriont aposloliccc fidei; al., in pro­ <lb/>
+            :.criplione apostolicce fidei, hoc csl. in his (jux pio­ <lb/>
+            seribebat ct condemnabat apostolica lidcs, ut e"&lt;fli.. <lb/>
+            eat SchollUS, sicutapud Livium, lib. x, dec. 4. Per­ <lb/>
+            tei criniina sunt criinina quæ Perseus objiciebat. <lb/>
+            Gallantlius, tom. Xl suæ nibliolheca:, p.ig. Gli' et <lb/>
+            seqq., libros duodecim Facündi pro defensione <lb/>
+            trium capilu(urum nolis .Sil'lIloudi illustratos, et a </note> 
+            <milestone unit="PLSection" n="D"/><note type="footnote"> Josepho Blanchino emundatos ac suppletos inseruit. <lb/>
+            AREV. </note><note type="footnote"> 43. Anno 5:5 ł. PEHEZ. </note><note type="footnote"> Jbid. Justinianus hic videtur iile ipse qui V alen. <lb/>
+            , tino concilio temporibus Theudis subscripsit secundo <lb/>
+            luco, et a nonnullis dictus csL Juslinus; sed ex Mss. <lb/>
+            lqorezius, tom. VKII lIisp. sacr., Ilag. ICO restituit <lb/>
+            nOlueu Jusiiniani, quem ab anno 551 cpisiopuin or­ <lb/>
+            dillaluui fuisse . colligit, et saltem usque ad annuum <lb/>
+            S40 vixisse. ApKv. </note><note type="footnote"> 44" Libdlulll, etc. Exstat. NebriJius episcopus <lb/>
+            Egarensis subscribit in n concH. Tolet.v anno Christi <lb/>
+            527; et in concil. Tarac., anno 516. PEREZ. </note><note type="footnote"> Ibid. Pro Urgellitanæ, alii Orgilitanæ, vel Urgelli­ <lb/>
+            tance. Postea, pro quibus, etc., alii de quibus, quia no­ <lb/>
+            bis incogniti sunt, magis reticenduin fatentur. Vera <lb/>
+            lectio est quam apposui, quamvis vitiosa fortasse vi­ <lb/>
+            duatur. Ea exstat etiam apud LUljlam et GrialiuID, <lb/>
+            nisi quod apud hos legitur e quibus, pro quibus. At­ <lb/>
+            quc ila fere explicat Nic. Antonius, lib. v liibliotli. <lb/>
+            vera Ilisp., cap. 5, n. 235. Sensus est quce quia non <lb/>
+            cognoscimus. Vide not. ad cpislolam 3 Isidori, nium. <lb/>
+            i. I.. Spicilegio Uachel'ii, 10m. III, imer epistolas <lb/>
+            miscellaneas, pag. 110, epistola ser.unda C,)l Justi <lb/>
+            epiuupi Oryelilllui ad Sirgam papam : Sciens te, elc. <lb/>
+            Des nit, iti Domino fove. OiTerl traclatum libri in (;UIl­ <lb/>
+            tica canticorullI. AREV. , </note><note type="footnote"> 4j. Martinus, episcopus Dumiensis, natione Panuo­ <lb/>
+            nius fuit , ut ex Gl'egorii i 'urononsis Ilistoi ia consiai, <lb/>
+            et ex ipsius Marti II i epitaphio a se composito, qupd <lb/>
+            ex veLu;)lO libro descriptum habemus. i':jus hoc est <lb/>
+            initium :. <lb/>
+            Pannoniis genitus transcenilen-i aeij iura vasta <lb/>
+            GalleciaE in grl'mium divius nuiibus actus. </note><note type="footnote"> Fundavit monasterium Dumiense iu Cvl(:i;i: ia , ut <lb/>
+            dicitur in decimo concil. Tolet.; itaque subscribit </note> 
+            <milestone unit="PLSection" n="D"/><note type="footnote"> Martinus episcopus in concil. prim) Urac.u'" amju <lb/>
+            CllI bli 561. Indc faclus archicpisropus Bracarens., <lb/>
+            subscribit in secundo concil. Bracar., anno 562. <lb/>
+            Priiifuit vero his ecclesiis annos u iginla ex (;1't.1gol'io <lb/>
+            Turonens., in Citron., et lib. primo dc Milaculis <lb/>
+            Martini Turonensis, cap. II, eL Aimuillo, lib. I,ll, <lb/>
+            cap. 39. Ejus aliqua opuscula feruntur impressa, <lb/>
+            plura nos habemus IUHH!iJUl edita. PEREZ. </note><note type="footnote"> Ibid. Sanctus Manimis episcopus luil ab anno 572 <lb/>
+            ad annum :&gt;60. Ejus Vitani ac res gestas describit <lb/>
+            Fiorezius, tom. XV Hisp. sacr., et incr appluhces <lb/>
+            cjusdiin opera collocal, quorum nonnulla tunc pri­ <lb/>
+            ii)vi111 lurCUl ':iderulll" G;dlauduls. tin. XII suæ hi­ <lb/>
+            blioihei x1, !'.tg. 213 et seqq., opuscula septem sancti <lb/>
+            M.iriini Damieusis collegit, ct recensuit; ignarus ta? <lb/>
+            lnen Editionis a Fiorezio adornatæ. Proin Gallæciam, <lb/>
+            mendos •, uonnulli Ediii in Gallias. Scr!lJiLur eliaw <lb/>
+            Galled". Anev. </note> <pb n="1101"/>
+            </p>
+          <p>
+            <milestone unit="PLSection" n="A"/></p>
+          
+          </div>
+
+
+
+<div n="36" subtype="chapter" type="textpart">
+<ab>
+            <title type="sub">CAPUT XXXVI.</title>
+          </ab>
+          <p n="47">47. Aditus, Viennensis episcopus, scentia sæcula­ <lb/>
+            rium litterarum doclissimus edidit quinque libellos <lb/>
+            heroico metro compositos, quorum primus est de <lb/>
+            Origine mundi, secundus de Originali peccato, ter­ <lb/>
+            rus de Essentia Dei, quartus de Diluvio mundi, <lb/>
+            quintus de transitu maris Rubri. Scripsit et ad Fus­ <lb/>
+            cinam sororem de Laude Virginitatis librum unum <lb/>
+            pulcherrimo compositum carmine, et eleganti epi­ <lb/>
+            grammate coaptatum.</p>
+          
+          </div>
+
+
+
+<div n="37" subtype="chapter" type="textpart">
+<ab>
+            <title type="sub">CAPUT XXXVII.</title>
+          </ab>
+          <p n="48">48. Dracontius composuit heroicis versibus Hexa- <lb/>
+            meron creationis mundi; et luculenter quidem cum­ <lb/>
+            posuit et scripsit.</p>
+          
+          </div>
+
+
+
+<div n="38" subtype="chapter" type="textpart">
+<ab>
+            <title type="sub">CAPUT XXXVIII.</title>
+          </ab>
+          <p>
+            <milestone unit="PLSection" n="B"/></p>
+          <p n="49">49. Victor, Tunnensis ecclesiæ Africanus episco­ <lb/>
+            pus. Hic a principio mundi usque ad primum Justini <lb/>
+            Junioris imperii armum brevem per consules annuos <lb/>
+            bellicarum ecclesiasticarumque rerum nobilissimam <lb/>
+            promulgavit Historiam, laude et notatione illustrem, <lb/>
+            159 ac memoria dignissimam. Hic, pro defensione <lb/>
+            iriam capitulorum a Justinidno Augusto Ecclesia <lb/>
+            sua pulsus, exsilio in Æġyptum transportatur.</p>
+          <p n="50">50. Inde rursum Constantinopolin vocatus, dum <lb/>
+            Justiniano imperatori, et Eutychio, Constantinopoli­ <lb/>
+            tanæ urbis episcopo, obtrectatoribus eorumdem trium <lb/>
+            capitulorum resisteret, rursus in monasterio ejusdem <lb/>
+            civitatis custodiendusMittitur, atque in eadem dam­ <lb/>
+            natione atdicunt) permanens moritur.</p>
+          
+          </div>
+
+
+
+<div n="39" subtype="chapter" type="textpart">
+<ab>
+            <title type="sub">CAPUT XXXIX.</title>
+          </ab>
+          <p>
+            <milestone unit="PLSection" n="c"/></p>
+          <p n="51">51. Joannes, sanctæ merioriæ Constantinopoli­ <lb/>
+            tanus episcopus, natione Cappadox, ad quem beatus <lb/>
+            Gregorius librum Regulae pastoralis scripait, vir inae-
+            <milestone unit="PLSection" n="A"/><lb/>
+            stimabils abstinentiæ, et eleemosynis tantum largissi­ <lb/>
+            tius, ut zelo avaritiæ adversus eum imperator. Mau­ <lb/>
+            ricius permotus , urbe pauperes pellendos ediceret.</p>
+          <p n="52">52. Hic Græcoeloquio edidit de sacramento ba­ <lb/>
+            ptismatis rescriptum ad bonæ recordationis domi­ <lb/>
+            num nostrum et prædecessorem Leandrum episco­ <lb/>
+            pum, in quo nihil proprium ponit, sed tantummodo <lb/>
+            antiquorum Patrum replicat de trina mersione sen­ <lb/>
+            tentias. Claruit temporibus Mauricii principis, de­ <lb/>
+            functusque est Augusto eodem reguante</p>
+          
+          </div>
+
+
+
+<div n="40" subtype="chapter" type="textpart">
+<ab>
+            <title type="sub">CAPUT XL.</title>
+          </ab>
+          <p n="53">53. Gregorius papa Romanae sedis apostolicæ prae­ <lb/>
+            sul, compunctione timoris Dei plenus et humanitate <lb/>
+            sUmmus, tantoque pergratiam Spiritus sanctis cientiæ <lb/>
+            himine præditus , ut non modo illi in praesentibus
+            <milestone unit="PLSection" n="B"/><lb/>
+            temporibus quisquam doctorum, sed nec in præteritis <lb/>
+            quidem par fuerit unquam. Hic in exordio episcopatus <lb/>
+            edidit librum Regulae pastoralis, directum ad Joannem <lb/>
+            Constantinopolitanæ sedis episcopum. In quo docet qua­ <lb/>
+            lis quisque 160 ad officium regiminis veniat, vel qua­ <lb/>
+            liter, dum venerit, vivere, vel docere subjectos studeat.</p>
+          <p n="54">54. Idem etiam, efflagitante Leandro episcopo, <lb/>
+            librum beati Job mystico ac morali sensu disse­ <lb/>
+            ruit, totamque ejus propheticam historiam tri­ <lb/>
+            ginta quinque voluminibus largo eloquentiæ fonte <lb/>
+            explicuit. In quibus quidem quanta mysteria sacra­ <lb/>
+            mentorum aperiantur, quantaquE sint in amorem <lb/>
+            vitæ æternæ praecepta, vel quanta clareantorna­ <lb/>
+            menta verborum , nemo sapiens explicare valebit, <lb/>
+            etiamsi omnes artus ejus vertantur in linguas.</p>
+          <p n="55"><milestone unit="PLSection" n="C"/>55. Scripsit etiam, et quasdam epistolas ad prædi­ <lb/>
+            ctum Leandrum,e quibus una in eisdem librisJob ti­ <lb/>
+            tulo præfationis annectitur ; altera eloquitur de Mer. <note type="footnote"> F '» <lb/>
+            , 47. Anno Christi 490. Vide Gregor. Turonens., <lb/>
+            iSigebertum et Adonem. — Libettos, etc. Exstant <lb/>
+            .impressa. PEREZ. </note><note type="footnote"> s -.ibid. Aviti epistolae exstabant apud Sirmondum, <lb/>
+            qui nonnullas publicavit, tom. I conciliorum Galliae. <lb/>
+            X5allandinst tom. X suæ Biblioth., pag. 697 et seqq., <lb/>
+            'præler pOI'mala quaelsidoruslaudat, .collegit epislolas, <lb/>
+            .homilias et aliorum opusculorum fragmenta. ARF.V. </note><note type="footnote"> •48. Exstat impress.Vide mfra in Eugenio III. PEREZ. </note><note type="footnote"> . Ibid. Dracontii Carmina duplo auctinra quam an- <lb/>
+            4ea prodierant ex Mss. Vaticanis edidi Romæ, ł'191', <lb/>
+            -notisque recensui. In prolegomenis fuse de auctore <lb/>
+            -disserni, quem llispanum fuisse coniiciebam. An </note> 
+            <milestone unit="PLSection" n="B"/><note type="footnote"> -presbyterfuerit, non constat. ARKV. </note><note type="footnote"> . 49. Victoris Tunnensis episcopi habeo Chronicon <lb/>
+            manuscriplum, in quo, post Eusebium, Hieronymum <lb/>
+            .et Prosperum, tempora prosequitur a consultu XVIII <lb/>
+            Theodosii Junioris , id est, anno Christi 444, usque <lb/>
+            ad annum prmium Justini Junioris, id est, Christi <lb/>
+            567. Ibi suuM deplorat exsilium, quo mihi valde <lb/>
+            dignus fuisse videtur. Restitit enim Vigilii papae <lb/>
+            .Justiniani imp. et synodi Constanlinopol. decretis, <lb/>
+            cdum tria capitula, dequibns supra diximus, mordi­ <lb/>
+            tcus defend,'. llic apud Isidorum, lib. v Etymolog., <lb/>
+            cap. 58, falso Turonensis scribitur, ab aliis Tunu­ <lb/>
+            aiensis, Trilheulio Cummenensis. sed ipse se in ve- <lb/>
+            JUSIO Codice Tunnensem vocat. Puto esse oppidum <lb/>
+            .Africæ proconsularis, quod Tunis Polybio et Strabo­ <lb/>
+            cfti vocalur, Tuni ense Plinio, Livio autem Tunes, <lb/>
+            Tunetis, inflectitur. Nobile his temporibus ob expe­ <lb/>
+            adiUonetn Caroli Quum Caesaris. ilujus Victwis ne­ <lb/>
+            aptoerunt etiam Ado Viennensia, et Oiho l'risingen:. <lb/>
+            ais, iib. 5, cap. 4. PEREZ, , .; </note> <note type="footnote"> Ibid. Victor a Grialio Tununensis vocatur lih. v <lb/>
+            Etymolog., cap. 38, num. 7. Schotlus, ex Hs. Ingol­ <lb/>
+            stadiensi. malebat Tunmuemis. Nonnulli comminis­ <lb/>
+            cuntur Tmuensis, quæ iEgypli est urbs. Ejusdem <lb/>
+            Victoris meminit Isidorus III præfatione ad Chroni­ <lb/>
+            con. Observandum quod Victor post Prosperum, ut <lb/>
+            ait Peretius, tempora prosecutus est, atque adeo <lb/>
+            continuavit historiam quam ab origine mundi Euse­ <lb/>
+            bius auspicatus !"uit. Ejus Chronicon pluribns in loci. <lb/>
+            restitutum, norisque illustratum, tom. XII sua bi­ <lb/>
+            bliotii. -Gallaudius edidit. AREV. </note><note type="footnote"> .Jejunator vocatura Niceph. Constantinop.PEREZ. </note><note type="footnote"> Ibid. Joannes Jejullalor di,crsus est ab alio Juanno </note> 
+            <milestone unit="PLSection" n="B"/><note type="footnote"> Cappadoce Constantinopolitano episcopo, qui obiit <lb/>
+            anno538 de quo F:lbricius, toin. XI Biblioth. Graecae, <lb/>
+            pag. Hi.H. In Isidori textu fortasse ab alio adjectum <lb/>
+            est, natione Cappadox. Memoria Joannis Jejunaloris <lb/>
+            a Graecis ceiehratur quarto nonas Septembris. Obiit <lb/>
+            anno 595. Vide P. Le-Quien , tum. I Orient. <lb/>
+            Christ.. col. 226rAREV. </note><note type="footnote"> 53. Constalllinopolitanæ. Ita i lib. Hegislr., epist. 4* <lb/>
+            Non ergo ad Joannem Ravennatem , ut iii Impress. <lb/>
+            PEREZ. </note><note type="footnote"> Ibid. Non sohrm in Impressis, ut ait Perezius, sed <lb/>
+            etiam in multis Mss. antiquis, liber Regulae pastora- <lb/>
+            Jis directus apparet ad Joannem HavenDall'm. Sed <lb/>
+            prsefeienda videtur aucioritas IsiLlori, et Registri, <lb/>
+            qu:e, capite 1 libri IIdefonsi de Vir. illustr.compro­ <lb/>
+            batur, nisi dicamus ad utrumque luisse eum librUlB <lb/>
+            directum. AREV. </note><note type="footnote"> 55. Epistolas ad Leandrum, etc. Et aliae, lib. IV <lb/>
+            Registr., epist. 46. cap. 90, et lib. vn, epist. ł25. <lb/>
+            .Vt.Ma,1'iimo lib. Registr., epist.41. PEREZ*-</note> <pb n="1103"/>
+            
+            <milestone unit="PLSection" n="A"/><lb/>
+            sione baptismatis , In qua inter caetera ita scriptum , <lb/>
+            est: Reprehensibile, inquit, esse nullatenus polest in­ <lb/>
+            fantem in baptismate mergere, vel semel, vel ter, quan­ <lb/>
+            do in tribus menionibus personarum Trinitas , et in <lb/>
+            una potest Divinitatis singularitas designari.</p>
+          <p n="56">56..Fertur tamen idem sanctissimus vir, et alios Ii­ <lb/>
+            bros morales scripsisse, totumque textum quatuor <lb/>
+            Evangeliorum sermocinando in populis exposuisse, in­ <lb/>
+            cognitum scilicet nobis opus. Felix tamen, et nimium <lb/>
+            felix , qui omnia studiorum ejus potuit cognoscere. <lb/>
+            Floruit autem Mauricio Augusto imperatore. Obiit <lb/>
+            in ipse exordio Phocatis Romani principis.</p>
+          
+          </div>
+
+
+
+<div n="41" subtype="chapter" type="textpart">
+<ab>
+            <title type="sub">CAPUT XLI.</title>
+          </ab>
+          <p n="57">57.Leander, genitus patre Severiano, Carthaginien­ <lb/>
+            sis provinciæ, professione monachus, et ex monacbo
+            <milestone unit="PLSection" n="B"/><lb/>
+            Hispalensis Ecclesiae provinciæ Betthicæ constitutus <lb/>
+            episcopus, vir suavis eloquio, 161 ingenio praestan­ <lb/>
+            tissimus, vita quoque etiam atque doctrina clarissi­ <lb/>
+            mus, ut, et fide ejus atque industria populi gentis <lb/>
+            Gothorum ab Ariana insania ad fidem catholicam <lb/>
+            reverterentur. Hic namque in exsilii sui peregri­ <lb/>
+            natione composuit duos adversus haereticorum dog­ <lb/>
+            mata libros, eruditione sacrarum Scripturarum di­ <lb/>
+            tissimos, in quibus vehementi stylo Arianæ impietatis <lb/>
+            confodit atque detegit pravitalem, ostendens, scilicet, <lb/>
+            quid contra eosdem habeat catholica Ecclesia, vel <lb/>
+            quantum distat ab eis religione, vel fidei sacramentis.</p>
+          <p n="58">58. Exstat et aliud laudabile ejus opusculum ad-
+            <milestone unit="PLSection" n="A"/><lb/>
+            versus institutaArianorum, m quo, propositis <lb/>
+            eorum dictis, suas responsiones opponit. Practer­ <lb/>
+            ea edidit unum ad Florentinam sororem de In­ <lb/>
+            stitutione virginum et contemptu mundi libellum, <lb/>
+            titulorum distinctionibus praenotatum. Siquidem, <lb/>
+            et in Ecclesiasticis Officiis idem non parvo la­ <lb/>
+            boravit studio; in toto enim Psalterio duplici edi­ <lb/>
+            tione orationes conscripsit; in sacrificio quoque, <lb/>
+            laudibus atque psalmis, multa dulci sono composuit.</p>
+          <p n="59">59. Scripsit et epistolas multas : ad papam Grego­ <lb/>
+            rium de baptismo unam, alteram ad fratrem, in qua <lb/>
+            præmonet cuique mortem non esse timendam. Ad <lb/>
+            caeteros quoque episcopos plurimas promulgavit fami­ <lb/>
+            liares epistolas , et si non satis splendidas verbis, <lb/>
+            acutas tamen sententiis. 162 Floruit sub Recaredo
+            <milestone unit="PLSection" n="B"/><lb/>
+            viro religioso, ac principe glorioso, cujus etiam tem­ <lb/>
+            porus mirabili obitu vitæ terminum clausit.</p>
+          
+          </div>
+
+
+
+<div n="42" subtype="chapter" type="textpart">
+<ab>
+            <title type="sub">CAPUT XLII.</title>
+          </ab>
+          <p n="60">60. Lucinianus, Cartbaginis Spartariæ episcopus, <lb/>
+            in Scripturis doctus : cujus quidem multas epistulas <lb/>
+            legimus, de sacramento denique baptismatis unam, et <lb/>
+            ad Eutropium abbatem, qui postea Valenliae episco­ <lb/>
+            pus fuit, plurimas. Reliqua vero industriae et laboris <lb/>
+            ejus ad nostram notitiam minime venerunt. Claruit <lb/>
+            temporibus Mauricii Augusti. Occubuit Constantino­ <lb/>
+            poli, veneno (ut ferunt) exstinctus ab æmulis, sed, ut <lb/>
+            scriptum est.: Justus quacunque morte præoccupatus <lb/>
+            fuerit, anima ejus in refrigerio erit. <note type="footnote"> Ibid. Post designari nonnulli Editi sic pergunt : </note> 
+            <milestone unit="PLSection" n="C"/><note type="footnote"> tælerea edidit *, quod lotum mysticum ejus ;ntellee­ <lb/>
+            "fa in XXII homiliis disseruit; homilias autem Evan­ <lb/>
+            geliorum ;item dialogi more cum Petro habitos de <lb/>
+            virtutibus Patrum libros quatuor. in quorum disatrla­ <lb/>
+            tione et verborum flores et sensuum depromit venusta­ <lb/>
+            tes. Fertur, etc. Post edidit aliquid deesse Loaisa et <lb/>
+            Fabricius animadvertunt. Miraeus observat Dialogos <lb/>
+            sancti Gregnrii a Melcbioris Cani calumniis Baronium <lb/>
+            egregie viudicare in notis ad Martyrol. Rom., die 23 <lb/>
+            Decembris. AREV. </note><note type="footnote"> 56. Evangeliorum, etc. Exstant lIomil. XL in Evan­ <lb/>
+            gelia. — Obiit. Anno Christi 60.1. PEREZ. </note><note type="footnote"> Ibid. f;"angeliorum, etc. Hoc arguit intrusa esse <lb/>
+            qua: de honliliis, num. præc., in nonnullis Editionibus <lb/>
+            adjunguntur. AREV. </note><note type="footnote">bl.Provincicc, etc. Falso Lucas Tudensis eL alii ad­ <lb/>
+            dunt duce.-Ab Ariana, etc. In concil. III Tolet., ann. <lb/>
+            589, Greg. III Dialog., cap. 3t, et Gregor. Turon. PEREZ. </note><note type="footnote"> 58. ad Florentinam , etc. Lib. de Virgin. exstat </note> 
+            <milestone unit="PLSection" n="D"/><note type="footnote"> Uv."i (jam impressus. PEREZ. </note><note type="footnote"> Ibid. In toto psalterio, etc. Innuuntur oratiolles pro <lb/>
+            ofliiiis ecclesiasticis excerpta: ex psalmis juxla pri­ <lb/>
+            maui et secundam Editionem sancti Hieronymi, ut <lb/>
+            fusius explicui in Jsidorianis, cap. 87, n. 20 et seqq. <lb/>
+            AREV. </note><note type="footnote"> 59. Florutt. -Anno Christi 600. — Vitai terminum. <lb/>
+            Leander Hispalensis quo anno fuerit mortuus, am­ <lb/>
+            bigunt nostii historici. Itaque lihet iu gratian nostri <lb/>
+            Isitlori , qui et illius germauus et successor in Eccle­ <lb/>
+            Sta Hispalensi fuii, aunulo mortis Leandri certo cun­ <lb/>
+            stilllere. Ego Leandrurn anno Christi 600 nioriuum, <lb/>
+            colligo ex his conjecturis. PrimulII quod illum ait <lb/>
+            Isidorus frater vita functum tempore Recaredi regis, <lb/>
+            quein regem constat obiisse anno Christi 600. Nam <lb/>
+            successisse Recaredo Livuau, regem. aera 659, id <lb/>
+            est, Christi 601, tradit isidorus libro de GOLhis. Non <lb/>
+            vero mortuumLeandrum ante istum annum 600, et <lb/>
+            eo liquet, quod Gregorius papn ad Leandrum Hispa- <lb/>
+            Jensciu scribit, VJI lib. Registr., epist. 125, iudi­ <lb/>
+            cirone i. anno nono sui ponlific.tus, nempe anno </note> 
+            <milestone unit="PLSection" n="C"/><note type="footnote"> Cbrisli 599. Ita constabit summa annorum episcopa. <lb/>
+            tus Isidori, qui fratri Leandro successit, ut diximus. <lb/>
+            Praefuit enim Isodorus suae Ecclesiae Hispalensi prope <lb/>
+            quadraginta annos, auctore sancto IIdefonso. Cum <lb/>
+            vero certissimum sil Isidorum IHorlnUln.anDO Christi <lb/>
+            636, id quod paulo post in Isidoro cotifirmahimus, <lb/>
+            si quis retrocedat, facile, et mortem Leandri, et ini­ <lb/>
+            tiuin Jsidori reperiat, vereque illud de quadraginl' <lb/>
+            prope annis ab Ildefonso dictum cognoscet. PEREZ. </note><note type="footnote"> Ibid. Vitae. A!., vitce actualis, vel vitce mortalis. <lb/>
+            AREV. </note><note type="footnote"> 60. Lucinianum, sive Licinianum (utroque enim <lb/>
+            mOtloscriptum reperio),quidam ex nostris nuper tra­ <lb/>
+            didel UIU CarLhaBine translatum fuisse ad episcop:.'U'D <lb/>
+            Valentmuin, nun satis intellectis verhis Isidori, qui <lb/>
+            non Lucllaianll,n, sed I::ulrop:um ait fuisse episcopum <lb/>
+            Valentinum ad quem scripserit Lucinianus multas <lb/>
+            epistolas. Hujns Luciniani epistola ad papam Grego­ <lb/>
+            rium edita est cum ipsis Moralibus. Ego vero pra'te-</note> 
+            <milestone unit="PLSection" n="D"/><note type="footnote"> rea hat'eo et hujus Lucimani atque Severi ejus col­ <lb/>
+            tega* doctissimam epi&gt;tolani manuscriptam ad Epi­ <lb/>
+            phaniun. diaconuln, ubi angelos probat esse iucorpo­ <lb/>
+            rens, et aherana ad Vicentium, non Cæsaraugustanum, <lb/>
+            sed Ebusiianae insulæ episcopum, credentem episto­ <lb/>
+            las quasdam de coelo cecidisse. PEREt. </note><note type="footnote"> Ibid. Claruit. Circa ann. 5i10. PEREZ. </note><note type="footnote"> Ibid. In Vulgata legitur : Justus autem si morte <lb/>
+            prceoccupaius fuerit, in refrigerio erit. Sanctus Eulo­ <lb/>
+            gius (;ordubensil in Apolugellco, paragrapho Quid <lb/>
+            enim, legit eodem modo ac sanctus Isidorus. sanctus <lb/>
+            Ambrosius, de Obitu V alent., exhibe' parher qua­ <lb/>
+            cunque morte. Quod attinet ad epistolas quas de coelo <lb/>
+            cecidisse V incentius Ebusitanus episcopus credebat, <lb/>
+            de quibus Perezius in nota, observandum, etiam Lu. <lb/>
+            Calli Tudenseul contra Albig&lt; ns., lib. III, cap. i8, <lb/>
+            mentionem facere de quibusdain epistolis, quas AI. <lb/>
+            bigeuses spargebant, fingentes, a Filio Dei fuisse <lb/>
+            scriptas, et per angelorum manus bomioibua u.aUl­ <lb/>
+            missas. AREV. , </note> <pb n="1105"/>
+            </p>
+          <p>
+            <milestone unit="PLSection" n="A"/></p>
+          
+          </div>
+
+
+
+<div n="43" subtype="chapter" type="textpart">
+<ab>
+            <title type="sub">CAPUT XLIII</title>
+          </ab>
+          <p n="61">61. Severus, Malacitanae sedis antistes, collega et <lb/>
+            socius Luciniani episcopi, edidit libellum unum ad­ <lb/>
+            versus Vincentium Cæsaraugustanæurbis episcopum, <lb/>
+            qui ex catholico ad Arianam pravitatem fuerat devo­ <lb/>
+            lulus. Est, et alius ejusdem de Virginitate ad sororem <lb/>
+            libellus, qui dicitur annulus: cujus quidem fatemur <lb/>
+            cognovisse titulum, ignorare eloquium. Claruit tem­ <lb/>
+            poribus prædicti imperatoris, quo etiam regnante vi­ <lb/>
+            tam finivit.</p>
+          
+          </div>
+
+
+
+<div n="44" subtype="chapter" type="textpart">
+<ab>
+            <title type="sub">CAPUT XLIV.</title>
+          </ab>
+          <p n="62">62. Joannes, Gerundensis ecclesiæ episcopus, nativi­ <lb/>
+            late Gothus, 163 provinciae Lusitaniæ Scalabi natus. <lb/>
+            Hic, cum esset adolescens, Constantinopolin perre-
+            <milestone unit="PLSection" n="B"/><lb/>
+            xit, ibique Graeca et Latina eruditione mullus, post <lb/>
+            decem et septem annos in Hispanias reversus est, eo. <lb/>
+            dem tempore quo incitante Leovigildo rege, Ariana <lb/>
+            fervebat insania. Hunc supradictus rex, cum ad ne­ <lb/>
+            fandæ hæresis crudelitatem compelleret, et hic om­ <lb/>
+            nino resisterct, exsilio trusus, et Barcinonem relega­ <lb/>
+            tus, per decem annos mulias insidias, et persecutio­ <lb/>
+            nes ab Arianis perpessus est.</p>
+          <p n="63">63. Qui postea condidit monasterium quod no­ <lb/>
+            mine Biclaro dicitur, ubi congregata monacho­ <lb/>
+            rum societate, scripsit regulam ipsi monasterio
+            <milestone unit="PLSection" n="A"/><lb/>
+            profuturam, sed et cunctis Deum timentibus satis <lb/>
+            necessariam. Addidit in libro Chronicorum ab <lb/>
+            anno primo Justini Junioris principatus, usque ad <lb/>
+            annum octavum Mauricii principis Romanorum, et <lb/>
+            quartum Recaredi regis annum , historico composi­ <lb/>
+            toqne sermone valde utilem Historiam : et una alia <lb/>
+            scribere dicitur, quae ad nostram notitiam non per­ <lb/>
+            venerunt.</p>
+          
+          </div>
+
+
+
+<div n="45" subtype="chapter" type="textpart">
+<ab>
+            <title type="sub">CAPUT XLV.</title>
+          </ab>
+          <p n="64">64. Eutropius, ecclesiae Valentinæ episcopus, dum <lb/>
+            adhuc in monasterio Servitano degeret, et pater es­ <lb/>
+            set monachorum, scripsit ad papam Lucinianum, cu­ <lb/>
+            jus supra fecimus mentionem, valde utilem. episto­ <lb/>
+            lam, in qna petit ab eodem quare baptizatis infanti. <lb/>
+            bus chrisma, post haec unctio tribuatur. Scripsit et ad
+            <milestone unit="PLSection" n="B"/><lb/>
+            Petrum 164 episcopum Ircavicensem de districtione <lb/>
+            monachorum salubrisermone compositamepistolam, <lb/>
+            et valde monachis necessariam.</p>
+          
+          </div>
+
+<div n="46" subtype="chapter" type="textpart">
+<ab>
+            <title type="sub">CAPUT XLVI.</title>
+          </ab>
+          <p n="65">65. Maximos, Cæsaraugustanæ civiiatis episcopus, <lb/>
+            multa versu prosaque componere dicitur. Scripsit et <lb/>
+            brevi stylo historiolam de iis quae temporibus Gotho­ <lb/>
+            rum in Hispaniis acta sunt, historico et composito <lb/>
+            sermone, sed et multa alia scribere dicitur, quae nec­ <lb/>
+            dum legi. <note type="footnote"> 61. De Vincentio Isidorus, lib. de GOlbis in Leo­ <lb/>
+            vigildo. PEREZ. </note><note type="footnote"> J bid. Claruit. Anno 590. PEREZ. </note><note type="footnote"> Ibid. Collega et socius. Scilicet, in aliquo monas­ <lb/>
+            terio. Vide Florezium, tom. XII, pag. 303. Severus <lb/>
+            fuit episcopus ..Malacitanus ab anno 578 ad 601, cir-</note> 
+            <milestone unit="PLSection" n="C"/><note type="footnote"> eiter. Pro ex catholko. a!., ex catholica ; a!., ex ca­ <lb/>
+            tholica fide. Pro annulus, Schottus, ex vestigiis ve­ <lb/>
+            teris scripturae, colligebat legi posse aureolll'. AREV. </note><note type="footnote"> 6i. Pro Scalabi natus, alii, Scalabitanus ; et credu­ <lb/>
+            litalem. quod fortasse melius pro crudelita!em. De <lb/>
+            Joanne Gerundensi, seu Diclarensi, Florezius, t. VI, <lb/>
+            Append. 9, ubi Chronicon ejus illustratum producit. <lb/>
+            Idem Chronicon, pluribus in locis, restitutum prodiit <lb/>
+            in biblioth. Gallandii, qui, quamvis Florezii Editio­ <lb/>
+            nem ignoraverit, tamen plura addit lectu digna etiam <lb/>
+            in Prolegomenis tom. XII. AREV. </note><note type="footnote"> 63. Joannis Biclarensis abbatis Chronicon, cujus <lb/>
+            hidorus meminit, habeo descriptum ex vetustissimo <lb/>
+            libro Gothico. Hic auclor, ut de se ipse ait, Vicforis <lb/>
+            Tunnensis Chronicon ulterius perduxit ab anno Chri­ <lb/>
+            Sti 566 usque ad 590, ubi nostroruin regum Leovi­ <lb/>
+            gildi et Recaredi historiam per singulos imperatorum <lb/>
+            annos doctissime persequitur. PEREZ. </note><note type="footnote"> Ibia. Scribere. Alii, scripsisse, quod notandum; </note> 
+            <milestone unit="PLSection" n="D"/><note type="footnote"> nam ex verbo scribere colligunt multi Joannem Bi­ <lb/>
+            elarensem adhuc in vivis fuisse, cum Isidorus haec <lb/>
+            scriberet. Joannem hunc ex Orientali ecclesia non­ <lb/>
+            nullos ritus in liturgiam Gothicam invexisse Pinius <lb/>
+            in disserl. de Ii I urge Gotli., cap. 2, § 3. colligit, et <lb/>
+            cuin Nlc. Antonio apud lsidorum, n. 62, legit post <lb/>
+            decem et septem annos, pro teptimo demum anno, quod <lb/>
+            B;gnreus edidit. Sedapudhunc corrigi potest septimo <lb/>
+            decimo anno. AREV. </note><note type="footnote"> 64. Penes Eutropium abbatem Servilanum el Lean­ <lb/>
+            drum episcopum fuit summa concilii tertii Tole!.. :tit <lb/>
+            Joann. Biclar., anno 589. De monasterio Servitanu <lb/>
+            Ildefonsus in Donato. Ircavicensem. Forte El'eavi-</note> 
+            <milestone unit="PLSection" n="C"/><note type="footnote"> cense. PEREZ.... </note><note type="footnote"> Jbid. Lucinianum; de quo num. GO. Alii. 1.J;ri1(ia­ <lb/>
+            num, vel Ljci"iurn. Pro lrcavicensem, alii 1 ,,'abicl!u- <lb/>
+            ,tm. Schottus conjiciebat Ercavieruetll. Pro diau'i- <lb/>
+            ctione, alii, institutione, alii, distinctione. Florezilu. <lb/>
+            tom. VII, pag. 70, asserit Gothos dixisse .4.rcal,iet!n- <lb/>
+            semf Romanos lrcavice,uem; Petrum autem episcupll1l1 <lb/>
+            Ircavicenseni fuisse ait ab anno circiter 5tS9 ad an­ <lb/>
+            num circiLer 600. Haec postrema epistola eis at in <lb/>
+            append. Culleclionis regularum Holstenii; eadem cum <lb/>
+            alia de octo vitiis in Bibliotheca Patrum Lugtlun. nsi, <lb/>
+            tum. XXVII; Florezius, tom. VIII Hisp. sacr., imer <lb/>
+            episcopos Valentinus, ex lsidoro, Eutropium rectu­ <lb/>
+            set. AREV. </note><note type="footnote"> 65. Subscribit in tribus concil. ms., Barcinon.. To­ <lb/>
+            let. et Egaren., anno 59J, 6i0 , 6t4. — Isidorus <lb/>
+            scribit hunc librum usque ad annum 610. PER X. </note><note type="footnote"> Ibid. Maximo huic aflingilnr supposititium t:hru­ <lb/>
+            nicon. de QUO plura Nlc. Antonius. Pro scriberet alii. </note> 
+            <milestone unit="PLSection" n="D"/><note type="footnote"> scripsisse. Post hoc cap. "6 in libro .sidori sequimur . <lb/>
+            Praenotatio librorum sancti Jsidori a Braulione et In, <lb/>
+            quae in Isidorianis. cap. 3, num. 1 et seqq. desin <lb/>
+            pta et illustrata fuit. Continuatio sancti Ildefonsi, qu.-u <lb/>
+            ab aliis etiam adjungi solet, inter appendices exhibe­ <lb/>
+            tur. AREV. </note></p>
+        </div>
+</div>
+        </body></text></TEI>

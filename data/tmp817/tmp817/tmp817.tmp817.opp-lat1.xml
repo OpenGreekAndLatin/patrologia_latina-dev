@@ -1,0 +1,611 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+    <fileDesc>
+			<titleStmt>
+				<title>Patrologiae Cursus Completus. Series Latina (PL)</title>
+				<sponsor>University of Leipzig</sponsor>
+				<funder>European Social Fund Saxony</funder>
+				<principal>Gregory Crane</principal>
+				<respStmt>
+					<persName xml:id="Jouve">Jouve</persName>
+					<resp>OCR-ed, corrected and encoded the text</resp>
+				</respStmt>
+				<respStmt>
+					<persName>Greta Franzini</persName>
+					<resp>Project Manager (University of Leipzig)</resp>
+				</respStmt>
+				<respStmt>
+					<persName>Simona Stoyanova</persName>
+					<resp>Project Assistant (University of Leipzig)</resp>
+				</respStmt>
+				<respStmt>
+					<persName>Bruce Robertson</persName>
+					<resp>Technical Advisor (Mount Allison University)</resp>
+				</respStmt>
+			</titleStmt>
+
+			<publicationStmt>
+				<authority>University of Leipzig</authority>
+				<idno type="filename">PL50.xml</idno>
+				<availability>
+					<licence target="https://creativecommons.org/licenses/by-sa/4.0/">Available under a
+						Creative Commons Attribution-ShareAlike 4.0 International License</licence>
+				</availability>
+				<date>2014</date>
+				<publisher>University of Leipzig</publisher>
+				<pubPlace>Germany</pubPlace>
+			</publicationStmt>
+
+			<sourceDesc>
+				<listBibl xml:lang="la">
+					<biblStruct>
+						<monogr>
+							<editor>
+								<persName>
+									<name xml:lang="fr">Jacques Paul Migne</name>
+								</persName>
+							</editor>
+							<author ref="http://data.perseus.org/catalog/urn:cts:latinLit:stoa0076c">Cassianus
+								Ioannes</author>
+							<title>Paucae Quaedam Sententiae Piam Interpretationem Desiderantes</title>
+							<imprint>
+								<publisher>Garnier</publisher>
+								<pubPlace>Paris</pubPlace>
+								<date>1846</date>
+							</imprint>
+							<biblScope unit="volume">50</biblScope>
+						</monogr>
+						<monogr>
+							<author>Vigilius Diachonus</author>
+							<title>Regula Monachorum</title>
+							<imprint>
+								<publisher>Garnier</publisher>
+								<pubPlace>Paris</pubPlace>
+								<date>1846</date>
+							</imprint>
+							<biblScope unit="volume">50</biblScope>
+						</monogr>
+						<monogr>
+							<author>Fastidius Episcopus</author>
+							<title>De Vita Christiana Liber Unus</title>
+							<imprint>
+								<publisher>Garnier</publisher>
+								<pubPlace>Paris</pubPlace>
+								<date>1846</date>
+							</imprint>
+							<biblScope unit="volume">50</biblScope>
+						</monogr>
+						<monogr>
+							<author>Antoninus Honoratus Episcopus</author>
+							<title>Epistola Consolatoria Ad Arcadium</title>
+							<imprint>
+								<publisher>Garnier</publisher>
+								<pubPlace>Paris</pubPlace>
+								<date>1846</date>
+							</imprint>
+							<biblScope unit="volume">50</biblScope>
+						</monogr>
+						<monogr>
+							<author>Sixtus III</author>
+							<title>Epistolae Ed Decreta</title>
+							<imprint>
+								<publisher>Garnier</publisher>
+								<pubPlace>Paris</pubPlace>
+								<date>1846</date>
+							</imprint>
+							<biblScope unit="volume">50</biblScope>
+						</monogr>
+						<monogr>
+							<author>Vincentius Lirinensis</author>
+							<title>Commonitorium Primum</title>
+							<title>Commonitorium Secundum</title>
+							<imprint>
+								<publisher>Garnier</publisher>
+								<pubPlace>Paris</pubPlace>
+								<date>1846</date>
+							</imprint>
+							<biblScope unit="volume">50</biblScope>
+						</monogr>
+						<monogr>
+							<author ref="http://data.perseus.org/catalog/urn:cts:latinLit:stoa0117">Eucherius Lugdonensis Episcopus</author>
+							<title>Epistola Paraenetica Ad Valerianum Cognatum</title>
+							<title>Homiliae Quaedam</title>
+							<title>Exhortatio Ad Monachos</title>
+							<title>Epitomes Operum Cassiani Ad Castorem Aptensem Libri Duo</title>
+							<title>Epistola Ad Philonem Presbyterum Suum [Incertus]</title>
+							<imprint>
+								<publisher>Garnier</publisher>
+								<pubPlace>Paris</pubPlace>
+								<date>1846</date>
+							</imprint>
+							<biblScope unit="volume">50</biblScope>
+						</monogr>
+						<monogr>
+							<author ref="http://data.perseus.org/catalog/urn:cts:latinLit:phi2434">Hilarius
+								Arelatensis Episcopus</author>
+							<title>Sermo De Vita Sancti Honorati Episcopi Arelatensis</title>
+							<title>Epistola Ad Sanctum Eucherium Episcopum Lugdunensem</title>
+							<title>Sermo De Miraculo Sancti Genesii Martyris Arelatensis</title>
+							<title>Versus In Natali Machabeorum Martyrium</title>
+							<title>Metrum In Genesim Ad Leonem Papam</title>
+							<imprint>
+								<publisher>Garnier</publisher>
+								<pubPlace>Paris</pubPlace>
+								<date>1846</date>
+							</imprint>
+							<biblScope unit="volume">50</biblScope>
+						</monogr>
+						<ref target="https://archive.org/details/patrologiaecursu50hammuoft">Internet
+							Archive</ref>
+
+					</biblStruct>
+				</listBibl>
+			</sourceDesc>
+
+		</fileDesc>
+		<encodingDesc>
+			<p>The following text is encoded in accordance with EpiDoc standards and with the CTS/CITE
+				Architecture.</p>
+		  <refsDecl n="CTS">
+        <cRefPattern n="no citable units founds" matchPattern="(.+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div/tei:div[@n='$1'])"/>
+      </refsDecl>
+    </encodingDesc>
+
+		<profileDesc>
+			<langUsage>
+				<language ident="la">Latin</language>
+			</langUsage>
+		</profileDesc>
+
+	</teiHeader>
+  <text>
+    <body><div type="edition" n="urn:cts:latinLit:tmp817.tmp817.opp-lat1">
+					<ab>
+						<title type="sub">a VERSUS IN NATALI MACHABÆORUM MARTYRUM,</title>
+					</ab>
+					<p>
+						<milestone unit="PLSection" n="B"/>Rex fuit Antiochus Syriæ ditissimus olim, <lb/> In
+						cujus regno mater b natique fuerunt <lb/> Septem, ut fama refert, de sancta gente
+						creati; <lb/> Quos cura c egregii generis meminisse jubebat, <lb/> Etlegi servire datæ :
+						sic namque volentes <lb/> De populo meliore Dei sua jura tenebant. <lb/> Rex avidus
+						mutare fidem, mutare timorem <lb/> d Justorum voluit, populo ut misceret iniquo <lb/>
+						Praemia promittit matri, promittit e et aurum, <lb/> Etquidquid posset toto conquirere
+						regno, <lb/> Si modo mutaret mores sensusque priores, <lb/> Cogeret et natos alios sibi
+						fingere mores. <lb/> Illa negat, tacitumque premit sub corde dolorem. <lb/> Hanc
+						postquam i nullis potuit corrumpere verbis, <lb/> Tentavit primum tormentis vincere
+						sævis. <milestone unit="PLSection" n="C"/><lb/> Pertulit iifi' tamengemitns, et tristia
+						regis <lb/> Verbera non timuit. h Victum se vidit ut ille : <lb/> Heu! quid agam ?
+						dixit. i Vincis qnod femina regem! <lb/> Nontamen effugies : plus est quod j dura
+						dolebis. <lb/> In natos sævibo tuos, licet improba es : <lb/> Hac certe ratione meum k
+						sanabo dolorem. <lb/> Sustulit illa manus, cœlumque 1 aspexit in altum, <lb/> Emisit
+						gemitus, et talia verba locuta est : <lb/> Tu licet et gazas frads et regna, tyranne,
+						<lb/> Non capimur regum donis, nec munera sanctis <milestone unit="PLSection" n="B"/><lb/> Eripient promissa Dei. Spes certior illa est <lb/> Quæ vitam nobis promittit
+						tempore hmgo. <lb/> Hanc sequor, hanc didici.m Nam lubrica tangere dom, <lb/> Sumere
+						divinas facile est, et perdere tritam. <lb/> Sed licet et flammas n post verbera sæva
+						mineris, <lb/> Nil mutare potes, 0 quod primis coepimus annis. <lb/> Virtute id curti
+						lege data mihi vincere certum est. <lb/> Quid nunc, saeve, jubes ? natis quid dure
+						minaris ? <lb/> Hoc solo poteris matrem turbare dolore. <lb/> Est mihi namque Deus spes,
+						est mihi P cura meorum, <lb/> Per quam spero equidem te nullum vincere posse. <lb/>
+						qCœli tu faveas Numen, quia justa rogamus. <lb/> Rex furit Antiochus r turbatus corda
+						tumultu. <lb/> Non tulit, et sævos testatur lumine vultus, <lb/> Miraturque diu possit
+						quod femina tantum. <milestone unit="PLSection" n="C"/><lb/> Pare age, miles, ait; regi
+						quoque pare, minister. <lb/> Vos famuli, parete mihi, date t digna furenti <lb/> femineo
+						tormenta malo ; sævire furentem <lb/> Femina me cogit : quod plus est, femina vincit
+						<lb/> Regis jussa sui : sed non impune locuta est. <lb/> Membratim u perdam septem quos
+						perfida natos <lb/> Intra se retinet: quorum qui primus habetur, <lb/> Hic primus
+						pereat: T perdam sic ordine cunctos. <lb/> x C rat bns impositos subjectis urere flammis
+						<lb/> Ceernat ut ipsa suos, sic cernat ut aspera natos. <note type="footnote"> a Тitulum
+							ms. Floriacensis erhihemuq; </note><note type="footnote"> b ka ex eodem cod. Alias
+							perperam, fuisse. </note><note type="footnote"> cVuljeati. a.aidui. Prætulimus hic
+							lecl ion.'," lau­ <lb/> dati ms., in quo mox pro jubebal legitur videbat. </note><note type="footnote">d Sic idem rod. Male in vulg., Voluit, et ut pojMlo <lb/> natiler
+							misceret iniquo. </note>
+						<milestone unit="PLSection" n="D"/><note type="footnote"> • YO..,., el :» et postea,
+							totum perquirere re­ <lb/> gl""", Si demutaret menes. tjxiex Floiiac. melius.
+							</note><note type="footnote"> r Ita fdem cod. Volo., nulla potuit competier, <lb/>
+							præda. </note><note type="footnote"> c Cod. Flor., graves gemi,u.. </note><note type="footnote"> Idem cod., Victum ut se vidit at ille. </note><note type="footnote">
+							I Vulg.t fi,ICO', quid plura ? dolendo. Melior mi. <lb/> lectio. </note><note type="footnote">i lidein vulg., plura. </note><note type="footnote">t Cod. Flor,,
+							satiabo. </note><note type="footnote"> * Vufg., inspexit in altum, trtiitt;,u gemitus.
+							</note><note type="footnote"> -m' Vulg., fton lubrica tangere regna. </note><note type="footnote"> n Supplevimus post ex Ins. ""IIIr., in quo est l'"l"e- <lb/> re pro
+							verbera. </note>
+						<note type="footnote"> o Secuti sumus cod. Flor. In vulg. oimllilurquod <lb/> et aliter
+							sic legitur : <lb/> Primis accepimus annis <lb/> Ytrtutp.m cum lege datam : mibi
+							liiiquere certum est <lb/> Quidquid, sseve, jubes. Nall.quOd dura miuaris, <lb/> Hoc
+							solum poteris matrem turbare timore. </note>
+						<milestone unit="PLSection" n="D"/><note type="footnote"> p Vulg., certa meorum; Per
+							quee jamsperem $$ <lb/> nuiltim.. </note><note type="footnote">q lidem vulg., Fave
+							ceetique parensjusta 1.09""'''.. <lb/> In cod. Flor. In nus male ; licet ex vulg tlis
+							supplen­ <lb/> da fuerit vox justa. Ex fave exigente versu correxi­ <lb/> mus (atitas.
+							</note><note type="footnote"> T Vulg., turbataque oorda '"metanl. to,,""'. et <lb/>
+							SWOS. K, </note><note type="footnote"> ■ Ibid. Miles, ait, pare regi, pareque,
+							saitlfes. </note><note type="footnote">f Ib., regna. </note><note type="footnote">
+							'mg., pereat, septem namperfida "'o. Inlt a <lb/> regna tenet. </note><note type="footnote"> T Ibill. t pereant sic ordine cuncti. </note><note type="footnote"> x
+							Duo sequentes versus desunt in mI. Flor. </note>
+						<pb n="1277"/>
+						<milestone unit="PLSection" n="A"/><lb/> a Pœna autem manet hæc : celeres decet esse
+						mini­ <lb/> sirosi. <lb/> Interea facunda parens, jamcrine soluto, nudo <lb/> b Stabat,
+						et hotanti similis jam pectore <lb/> Uberaprotendens, natorum alimenta suorum <lb/> Nori
+						confesu c aperit ; natumque ut vidit ad ignem, <lb/> d Constantique gradu fortem
+						procedere, dixit : <lb/> Tu; mensprogentes, tu primusrespice matrem : <lb/> e Tu verte
+						meus es; nunc nostri, nate, memenio. <lb/> Te primam peperi, f tu nunc invitare
+						parentem: <lb/> Suam nuos mores, et regem vitice tacendo. <lb/> Tu poteris durare diu,
+						si tempora vinces <lb/> Perfidu, ne superet sanctos violentia regis. <lb/> Utere
+						consilioh matris, nec damna timebis, <lb/> Fortior i esto æresaxoque potentiOr ipso.
+							<milestone unit="PLSection" n="B"/><lb/> Ingredere ut juvenis, patienter vince dulces.
+						<lb/> Ille modo ad matrem vultus, modo tollit in allum : <lb/> Dumque tacet tacitusque
+						roget quem debet, i ti­ <lb/> metque, <lb/> Conscendit rapidos subjeCtos cratibus ignes.
+						<lb/> Corpus inane k fluit : mater gravis ipsa resultat, <lb/> Et dixit : Vici; l vincam
+						si saepius orem, <lb/> Duret natorum virtus incognita regi, <lb/> Sed jam nota Deo,
+						populi qui pectora novit. <lb/> Finierat primi partus fecunda dolorem, <lb/> Sed
+						remanente metu pro pluribus anxia mater; <lb/> Dissimulatque tamen, ne regem gaudia
+						tangant. <lb/> Rex stupet Antinchus. In nec credit posse sequentes <lb/> Poenæ tale
+						genus similipervincere sensu. <lb/> Cœpta jubet peragi. Mater non territa mansit:
+							<milestone unit="PLSection" n="C"/><lb/> Sed tamen ut vidit pallentem assistere natum,
+						<lb/> Hæc secum volvens, aliqua jarn parte n levatur. <lb/> Ecce secunda mihi partus
+						producitur ætas. <lb/> Quam similis o fratris formæ si pectore duras, <lb/> Et sequeris
+						primi partus vestigia nostri! <lb/> Esse meus poteris, P poteris reperire salutem, <lb/>
+						Quam jam. frater habet, matris præcepta secutas. <milestone unit="PLSection" n="A"/><lb/> Pone metus, regisque minas contemne furentis, <lb/> Regnaque, q queis cursim
+						labentia tempora dantur <lb/> Non poterit post ista tibi rex iste nocere; <lb/> rSed
+						poteris post hac tu regi, nate, nocere <lb/> Temporis ecce levis s conscendere cogeris
+						ignes, <lb/> Sed virtute opus est, languentem pone timorem. <lb/> t Esto memor nostri
+						generis, si sensus in hæret. <lb/> Hic qui sceptra ,tenet, regno qui sævit in isto,
+						<lb/> Tempus inane u putat, regno vitaque carebit, <lb/> Damnatusque nocens aeternos sen
+						iet ignes. <lb/> Tu secutus eris, turba comitante piorum. <lb/> Aspice, nate, meos
+						vultus, et suspice coelum, <lb/> Auctoremque Deum, per quem tibi vita paratur <lb/> Hac
+						melior, fratrisque tui vestigia calca. <lb/> f Neve quod iste jubet, sed quod Deus
+						imperat audi <milestone unit="PLSection" n="B"/><lb/> Sicut erat monitus, matrem
+						cœlumque videre <lb/> Constitit, atque hilari vultu contemnere regem <lb/> Coepit, et ut
+						ridens ardentes irruit ignes, <lb/> Collapsusque jacens anima superante quievit. <lb/>
+						Mater ut hoc vidit, rigido sic ore locuta est: <lb/> Felix parte aliqua y jam sum, jam
+						non potis omnes <lb/> Sæve tyranne, meos z trucidando vincere natos. <lb/> Te gravior aa
+						mox poena manet, crudelis inique, <lb/> Quam patiere brevi : Deus bb haec namque omnia
+						<lb/> cernit.» <lb/> Jim duo securi, contempto rege, manebant. <lb/> Spes melior jam
+						matris erat : jam tertius instat, <lb/> Ecce locus pœnæ, si pœna est vincere regem :
+						<lb/> Et servire Deo laus est, non poena furentis. <lb/> Tertius attrahitur juvenis cc
+						frendente tyranno, <milestone unit="PLSection" n="C"/><lb/> Qui nondum satiatus erat.
+						Furor intus et ira <lb/> Sæviebant pariter, quod fortia pectora fratrum <lb/> Viderat
+						impavide regis superasse furorem. <lb/> Constitit ante pedes juvenis florentibus annis,
+						<lb/> Egregius forma, dd dignus qui regna teneret, <lb/> Dignior Antiocho, eo verum
+						meliora secutus <lb/> Regna, f fvocante Deo; mater cui talia fatur : <note type="footnote"> * Vri Jg., Pæna aut quem maneat. </note><note type="footnote">b
+							Ibid., Atiitit horla"t;. </note><note type="footnote">c Iidem vulg., stetit, etdein.
+							ad ignes. </note><note type="footnote"> a Contrario e1 falso sensii in vulg ,
+							Incohstante <lb/> gradu timjdum procedere. </note><note type="footnote"> * lb., Tu
+							nunc certe meus, matris tu nate. </note><note type="footnote"> I Secuti sumnus vulg.
+							I.. cod. Flor., nunc nunc imi­ <lb/> tare. </note><note type="footnote"> I VlIlg.,
+							iictempora. . </note><note type="footnote">h U.idem.. Regis ne damnuJ: timeto:
+							</note><note type="footnote"> i Melius in vulgatis quoad metrum, esi isio;
+							saxo-</note>
+						<milestone unit="PLSection" n="D"/><note type="footnote"> gue. Sitfd quod seu'Ien.iatu
+							melior cois fmlo', Ii­ <lb/> cet versus errorem aiiquem indicet-In voce iert. M- <lb/>
+							snnek a Boeco in n)argirre : Forte, armis. </note><note type="footnote">i Vulg.. et
+							orat . Non sensit rapidos. Melior hic <lb/> quoqt.e codicis lectio, uhi ibrte prima
+							auctoris manu <lb/> ob quantitatem versus servandan. scriptum It'tit( Aebe <lb/>
+							'inletq,"" omissa in verbo debet littera t, ob concur­ <lb/> sum ejusdem litteras
+							ihitio focis sequertlis, quod an­ <lb/> tiquis usitatum fuit. </note><note type="footnote">k Vuit., fuit, fnater gabisa dolere esi. </note><note type="footnote">
+							i PrastalimuftleciioneiB vulgatam. Codt Ftor.iM­ <lb/> victa nc stemm OrO.
+							</note><note type="footnote">m Cod. Flor., ipse sequentes. Melius posse es' vul­ <lb/>
+							gatis in quTbusdein, similes pervincere natos. </note><note type="footnote"> II Editi,
+							levata. </note><note type="footnote"> • Vulg., fratri formoso pectore dura. </note>
+						<note type="footnote"> P Ibid., et sic reparare salutem. </note><note type="footnote">q
+							Edit., qnce parvo labitantia tempore dantur. </note><note type="footnote"> * Hic
+							versus e ('od. Flor. suppetit; in ,'nlg. deest. </note><note type="footnote"> s In
+							vulg., accensus cogitur ignl', Virtutis loell;: eat, <lb/> languentem. </note><note type="footnote">t ibidem <lb/> Sume animos, nostri generis si sensus inbl!i'et.
+							</note><note type="footnote"> u Editit regit: regnum vitamque cremari, Damnari-</note>
+						<milestone unit="PLSection" n="D"/><note type="footnote"> que nocens. </note><note type="footnote">v Cod. Flor» melius. Editorum leetiomagis placuit. </note><note type="footnote">x Vulg., Non quod rex jussit, ,sed. </note><note type="footnote">7
+							lidem editi, cum jam vist nec potes omnes. </note><note type="footnote"> * Sic ex
+							ynlg. eMjjeme versu. Cod. Fmr., cre­ <lb/> mando, ftetlus tlrendo, ut iii Inarsine
+							mtavit Jo. a <lb/> Bosco. </note><note type="footnote"> .8 Vulg., nunc paena, et paulo
+							post, it igne, pro <lb/> inique.. </note><note type="footnote">bb C04 Flor., namque
+							hæc, errone metri. V alg;., hie <lb/> namque. Ex utraque lectitee ""8M expressimus.
+							</note><note type="footnote"> •• Vult., ".."clan'e. </note><note type="footnote"> 44
+							Ibid.j dffo qni. </note><note type="footnote">ee Ibidl, it sic melflirti. </note><note type="footnote"> f f Ms. Flor., nolente Deo. Vulgatorum leftionem <lb/> praetulimus. </note>
+						<pb n="1279"/>
+						<milestone unit="PLSection" n="A"/><lb/> Accipe, nate, tuæ securus dicta parentis, <lb/>
+						" Accipe, ne segnis perdas virtutis honorem. <lb/> Sunt tibi jam fratres pietatis sede
+						manentes <lb/> II Inque loco meliori quam labentia regna; <lb/> Quorum b si proprios
+						attingis pectore sensus, <lb/> Victtnr apud populos regem .operasse fereris, <lb/> Sicut
+						fama tuos jam misit in ardua fratres. <lb/> e llis accede, precor; sunt hæc aptissima
+						dona, <lb/> Contempsisse nefas, et jura relinquere regis v <lb/> Indomiti, quem nulla
+						manetpost ista voluptas. <lb/> At juvenis tacito mittebat murmure voces <lb/> Oranti
+						similis, palmas tendebat in altum, <lb/> Subnixoque genu matris d pendebat ab ore, <lb/>
+						Cui licet aspectus, corpus non ipsa premebat. <lb/> Qui simul admonitus cratem
+						conscendit, e in igne <milestone unit="PLSection" n="B"/><lb/> Intrepidus certaque fide
+						sua membra locavit. <lb/> I Conduntur flammæ, lepida remanente favilla, <lb/> Corpusque
+						illaesum tellus adaperta recepit: <lb/> Sancta quoque ad superos anima inviolata
+						recessit. <lb/> At mater dubitans, gemitus an gaudia sumat, <lb/> Hæsitat, et querulo
+						sic est sermone locuta : <lb/> Quid nunc, dire, paras? Jussis g parebimus omnes? <lb/>
+						Sed numero partus, custos ne subtrahat ullum, <lb/> Ac licet ipse velis, non sum
+						passura, tyranne, <lb/> h Ut non isto omnes percant certamine nati. <lb/> Temporis ista
+						tui, mutes licct, horrida poena est, <lb/> Duraque damnatis eadem sententia natis. <lb/>
+						Si graviora putas, si sunt graviora, minare; <lb/> Quodque meos cernis vultua, horrore
+						tegeris. i <lb/> Gaudemus pariter, quoties desævis In istos. <milestone unit="PLSection" n="C"/><lb/> Ardet at ipse magis i rabida rex concitus ira, <lb/> j Tentarique putat,
+						ne sicut cætera fratrum <lb/> Turba ferant pœnas, k matremque hoc quærere sentit.
+							<milestone unit="PLSection" n="A"/><lb/> Durat in exitium, quartumque addicere natum
+						<lb/> Pœnæ mox voluit; lassati namque ministri <lb/> Nec regis furias, nec regem ferre
+						valebant. <lb/> Proh pudor! erubuit vultus ostendere matri <lb/> Natus, et l attonitam
+						mentem confundere cœpit. <lb/> Hunc postquam stantem submisso Inmine vidit, <lb/>
+						Talibus aggreditur dictis monitura timentem : <lb/> m Quartus es a trino partus, mihi
+						quartus et infans. <lb/> Quæ nunc verba tibi, quæ possum dicere, nate? <lb/> Hoc nisi
+						quod n coeli durata potentia tecum <lb/> Sit simul et virtus; o sanctæcque propaginis
+						ortum <lb/> Illi debemus regi, quodcumque negamus. <lb/> Ille dedit nobis Abraham cum
+						semine sancto, <lb/> Per quem nobilitas, per quem genus omne probatur. <lb/> Quod manet
+						in Domino; p sanctus cui nascitur Isac, <milestone unit="PLSection" n="B'"/><lb/> Tunc
+						cum jam nullum natum sperare senectus <lb/> Sponte sua poterat, sterilis quia Sarra
+						manebat; <lb/> Illaque cum peperit, generisque propagine q cœpta, <lb/> Ex insperato
+						remanent tibi Sarra nepotes, <lb/> Esau r et patria deductus origine Jacob, <lb/> Quos
+						scimus partu geminos peperisse Rebeccam. <lb/> Hinc sumus, hinc g orimur : genus hoc
+						tibi, nate, <lb/> petendum est : <lb/> Tu tibi pande viam, genitori accede priorum.
+						<lb/> Quorum progenies totum dispersa per orbem <lb/> Invidiam patitur: Dominum quia
+						sola potentem <lb/> Mente colit, turbæ nec mixta accedit iniquæ. <lb/> Quid tibi cum
+						tristi vultu, quid lumina terrae <lb/> Fixa tenes? Coelum potius coelique Parentem <lb/>
+						Conspice, ne dubites, mater tibi prospera monstrat, <milestone unit="PLSection" n="C"/><lb/> x Quidquid inest, patiens porta, ac comitare valenter <lb/> Turbam, nate, meam,
+						numerumque hortare sequen­ <lb/> tem. <note type="footnote"> • Vulg., <lb/> Jam locus
+							est melior quam regna labentia rcgis. </note><note type="footnote"> b Cnd. Flor., tu
+							proprios. et versu sequenti ftrel,I,. <lb/> pro fereris, ac dem. in omnia pro iu
+							ardua. Alagispla­ <lb/> cuit lectio editoruui. </note><note type="footnote"> ' Vulg.,.
+							<lb/> Huc accede, precor: sunt haec, suot afila dolenti. </note><note type="footnote">
+							a Ibid. t <lb/> Figebat in ore, <lb/> Qua licet aspectum corpus, qua turba tenebat.
+							</note><note type="footnote"> e r..dil., in ignemque. </note><note type="footnote"> f
+							Tres scqueutes versus sic in vulgatis exhi­ <lb/> bentur : <lb/> Sanctaque quae
+							superest anima indolala recessit. </note>
+						<milestone unit="PLSection" n="D"/><note type="footnote">Conciderant flammæ, Itepida
+							remanente favilla : <lb/> lllae5uni corpus lellus adaperta recepit. </note><note type="footnote">« Vulg., <lb/> Paremus, et omnes. <lb/> Monera sed partus custos De
+							subtrahat ulla. <lb/> Sed licet. </note><note type="footnote"> b lidem editi : <lb/>
+							Omnes nam pariter pereant certamine tanto, <lb/> Temporis ipse tui mutes licet borride
+							pœnam, <lb/> Duraque que ..nctil eadem sententia natis : <lb/> Sed graviora paras, si
+							sunt graviora, minaris, <lb/> Quoque meos cernis vulius borrore tener!, <lb/> Gauderes
+							pertem quoties decernis in ItUro. </note><note type="footnote"> a Vall.. rapida* </note>
+						<note type="footnote">i Ibid., Contemnique putat. </note><note type="footnote"> * Ibid..
+							<lb/> Matrem hoc quoque quærere senUI,' <lb/> Duraque in exitium qUilfLum producere
+							natum <lb/> Pene manu voluit. <lb/> Post panca volebant pro valebant in iisdem
+							tulgatis </note><note type="footnote"> 1 Jo. a HOICH, aUonita mente, tnale.
+							</note><note type="footnote">m Editi, <lb/> A primo quartus partus mihi, quartus ab
+							uno. </note><note type="footnote"> B Sic ex vulg. Cod. Flor., solum durata.
+							</note><note type="footnote"> ° Edit., <lb/> Et Slnelos originis Inrtor. <lb/> Ilti
+							debemus Regi quodcumque rogau.ur. <lb/> LOCI' utraque lectione diflicilis, et, ut
+							videtur, <lb/> corruptos. </note><note type="footnote">p tod. Flor., ,anel."1 cum
+							nascitur illi. Magis ar-</note>
+						<note type="footnote"> </note>
+						<milestone unit="PLSection" n="D"/><note type="footnote"> risit lectio editorll'n.
+							</note><note type="footnote"> i Jo. a Bosco, septa. Corresimul el vulg. uhisie: <lb/>
+							Attamen haec peperit, generique propagine cœpta. </note><note type="footnote"> r
+							Vulg., <lb/> Et patriam deductus Jacob in unam, <lb/> Quos certum est partu.
+							</note><note type="footnote"> 9 Sic ex vulg. male apud JIt. a Bnseo, morimur. <lb/>
+							Post pauca in vulg., pande viam generis, quis ia arcs <lb/> piorum; et dein, mixtm nec
+							turbm au"';'.. </note><note type="footnote"> * Edit. : <lb/> Quidquidid est, patlenter
+							adl. consensibus cufe <lb/> Turbaro nate, meam... sequentum. </note>
+						<pb n="1281"/>
+						<milestone unit="PLSection" n="A"/><lb/> Sic dilecta parens luctus et gaudia miscens
+						<lb/> Finierat claros monitus, cum luminis orbes <lb/> Ipse levat, matremque oculis b
+						intendere coepit, <lb/> Nil j am triste gerens, halitu vultuque fatetur <lb/> Se
+						timnisse nihil nisi tristia vulnera matris <lb/> Per partus divisa suos : c sic ipse
+						tenentum <lb/> Elapsus manihus, cursu contendit in ignes. <lb/> Mita loquar, d flamma
+						illius non contigit ora, <lb/> * Exanime ut corpus flamman superarat et ignes, <lb/> Ore
+						patente, tamen tacito, qua spiritus iret, <lb/> Unde acceptus erat, pariter cum sanguine
+						fugit. <lb/> Hoc ipso gavisa parens, quod qui mndo tristi <lb/> Constiterat vultu, f
+						fretus mox pectore tOtO <lb/> Paruerit monitis, et regit tempserit iras : <lb/> Sic est
+						6rsa tamen, cum rcx dubitaret in iilos <milestone unit="PLSection" n="B"/><lb/> Qui
+						superanl. gemitusque daret pia turba, ministri <lb/> Regem exsecrantes, tacito sermone
+						requirunt. <lb/> Protrahe, quid dubitas ? nulli jam parcere debes, <lb/> Nec potes, ut
+						cupias, decretum rumpere noli, <lb/> Appello Regem, totum qui temperai orbem, <lb/> Cui
+						mare, cui cœlum, coeli cui sidera parent: <lb/> Quod nisi producis, timor est : g jam
+						segnius instas, <lb/> Jain sentis quæ regna petant, quæ gloria nobis <lb/> Jam parte cx
+						utraque manet, si parcere nolis. <lb/> Nam quoscumque tuo jussisti excedere regno <lb/>
+						h Seu vitio comitante tuum vicere furorem, <lb/> Nempe tuum, lætique manent in sede
+						piorum. <lb/> Forsitan hoc mortem credas, furiose tyranne ? <lb/> Vita est longa magis,
+						regnoque potentior isto <lb/> Quod regis, i extrema cujus jam parte moraris. <milestone unit="PLSection" n="C"/><lb/> Mortalis tamen es, nec in ævum regna tenebis. <lb/> Sed
+						perge imperium, nec partus divide nostros : <lb/> Hos quoque funestus, superant qui
+						ætate minores, <lb/> Hos quuquc da flammis, et juribus utere regni. <milestone unit="PLSection" n="A"/><lb/> Hi contempta eliam vincent tua regna, superbe. <lb/>
+						Concipit Antiochus furias, sævusque tyrannus <lb/> Æstuat, et gemitus inter sua pectora
+						volvit. <lb/> Consentit cum mente i color, tritisque gravatos <lb/> Attollit vultiS, et
+						talia verba profatur : <lb/> Haec tua libertas et k dura potentia linguæ, <lb/> Atque
+						hic, quem tumida portas service rigorem, <lb/> Sentiet irati regis quid 1 verbera
+						possint, <lb/> Si nondum cs satiata malis, et fingere tentas <lb/> Lætitiam, luctusque
+						tuos in gaudia vertis. <lb/> ID Non mutabo necem: gaude, lætare, triumpha; <lb/> Dummodo
+						sic vincas, ut sis suprema tuorum. <lb/> a Sic furiosa animis natorum funere gaudet.
+						<lb/> Hos quoque do flammis, hoc nec mutare potestas <lb/> Ulla potest; o decreta
+						manent, lætare superstes <milestone unit="PLSection" n="B"/><lb/> Natis orba tuis, et ne
+						mea jassa morentur, <lb/> Ordo suos peragat cursus : P producite natos, <lb/> Ne vani
+						pereant ignes. Dubius nc videri <lb/> Rex possit, certe 1imor est mihi, femina, nullus.
+						<lb/> Præcipuus dc gente tua produceris, q ore <lb/> Et specie, mirande puer, cui
+						pectore virtus <lb/> Firma manet : r tamque binc poteras vel vincere <lb/> regem. <lb/>
+						Ad quem sic placido mater sermone locuta est: <lb/> Si d are complexus matri tibi, nate,
+						liceret, <lb/> Confiteor soli, post vulnera, nate, dedissem. <lb/> Sed lue dura vetat,
+						tristisque potentia regis. <lb/> s Deneget amplexus, dum sit vox libera nobis, <lb/> Et
+						liceat meminisse Dei, lcgemque tenere <lb/> Non a rege datam, sed quam Deus arbiter
+						orbis <milestone unit="PLSection" n="C"/><lb/> Tradidit, et mundi rector, Moysesque
+						petitam <lb/> Accepi I, populoque dedit, t cui maxima laus est <lb/> Nosse Deum, meritum
+						cui nos debcmus honorem. <lb/> Tu modo ne dubites monitis parere parentis: <note type="footnote"> * Itt disdem edit., <lb/> Nec decreta parens luctus et gaudia mixta.
+							</note><note type="footnote"> L Ibidem, attendere; et post pauca, habitus vuUusque
+							<lb/> (atentur.- </note><note type="footnote"> c Ib., <lb/> Sed ct ipse citato, <lb/>
+							Elapsus manibus, cursu cousccudil in igues. </note><note type="footnote"> i lb., non
+							flamma COnlO', non contigit ora. </note><note type="footnote"> * Cud. Flor., Corpus ut
+							examme. E ilicuda ,'imus ex <lb/> editis, iii quibus lauJe.. tres sequentes versus sic
+							<lb/> proferuntur: <lb/> Exanime ut corpus flammæ superaverat ignis: <lb/> Ore patente
+							unneii laci: n qua spiritus Ir,.l <lb/> Uluh: acceptus erat, pariter cum sanguine
+							fudit. </note><note type="footnote"> ' Vulg.. </note>
+						<milestone unit="PLSection" n="D"/><note type="footnote"> Fretus quod pectore tuto.
+							<lb/> Paruerit monilia regis contemptor et irae <lb/> Sic exorsa pareM, cum rex. <lb/>
+							Et post pauca : <lb/> • Regem eXlecrantur, tanto sermone querentes. </note><note type="footnote">s Coi Flor., jam sequitur herr.... Meliusin vulgatis, <lb/> iu quibus
+							poste:, : <lb/> JJIII seutis quem pcena petat, jan1 GloriA nobis <lb/> Pa"Le in
+							utraque manet, liceat producere nuilis; <lb/> El dein, <lb/> Tuum Jussisti excedere
+							regnum. </note><note type="footnote">k Desunt in vulgatis duo sequentes versus. Num
+							<lb/> pro, seu viio comi:a"te, legendum sit, sævitia tom;. <lb/> tante, alii judicent.
+							</note><note type="footnote">i Cod. Flor., ct cujus extrema in parte. Vulg., ex­ <lb/>
+							trema I'''jus jam pnte. Kx utra'lue vitiosa lectione <lb/> veriorcm expressimus. Tum
+							in vulgatis sequentes <lb/> versus sic exhibentur : <lb/> Ho&lt; quoque si metuis, sup
+							rant relate minorfii, <lb/> Omtviinpiiinie siinnl ,'incuru tua regna. superbe. <lb/>
+							Sed peiage im....rium. n. c partus cJixide nostros . <lb/> Hos quoqtie da flimmis,
+							&lt;&gt;i viribus uifie regni. <lb/> Ilortalis tamen es, nec iu aivum regua teuebis.
+							</note><note type="footnote">i Sic ex vulg. Cod. Flor., dolor. </note><note type="footnote">k Kdili, dira. </note><note type="footnote">1 Iidem rd., vulnera.
+							</note><note type="footnote">® Cod. Flor. errore librarii: t.' on tnuta bene ,..e,
+							<lb/> gandc. </note>
+						<milestone unit="PLSection" n="D"/><note type="footnote"> II Vulg., <lb/> Sic furiosa
+							nimis natorum funere gaudes. </note><note type="footnote"> ° Ihitl., decreta, modo tu
+							vive superstes </note><note type="footnote"> * Editi., <lb/> Producite natum, <lb/>
+							Ulli nre parcant ig.ies, fiuhlumne videre <lb/> Jtex pi&gt;stiSia reor, timor est.
+							</note><note type="footnote"> q Vulg., index, Quam -p,rie. </note><note type="footnote"> r Ibi.I" Jam quæ poterat. </note><note type="footnote"> • C;..d.
+							II...." denegat. Volg.. Fcd negel. Ex utra­ <lb/> que lecli&lt; ne veriorem exli I u
+							uns. </note><note type="footnote">x "ul,:.. quam; ci poat pa c.i : Merito cui nos tri
+							• <lb/> bu"",,,. honorem. </note>
+						<pb n="1283"/>
+						<milestone unit="PLSection" n="A"/><lb/> a Sit vigor et virtus, penitusque in pectore
+						toto <lb/> Mens maneat jam plena Deo; sit fortior aetas, <lb/> Quam b regem sperare fuit
+						superare jubentem. <lb/> 0 quanta est virtus, quanta est fiducia fortis! <lb/> c Sed jam
+						ne dubites medias pervincere flammas. <lb/> Victor eris, mi crede, puer, victorque
+						redibis. <lb/> Ossibus et validis miscebunt corpora nervi, <lb/> Servatasque animas
+						iterum in nova viscera reddent. <lb/> Sed ne forte tamen rapidus te terreat ignis, <lb/>
+						Fratrum sume animos, d æternumque inspice Numen. <lb/> Jussa facit, tacitusque Deum
+						testatur et orat <lb/> Murmure quo poterat: puerum non impedit ætas, <lb/> e Non timuit
+						cratem expositam, matrique volenti <lb/> Paruit, et dicto citius super irruit ignes.
+						<lb/> Cesserunt flammæ, cessit dolor omnis, et una <milestone unit="PLSection" n="B"/><lb/> Corpus et ignis erat, corpus superaverat ignem, <lb/> Spiritus ante tamen
+						placidas superaverat auras. <lb/> Læta dolet tacite mater, f pressoque dolore <lb/>
+						Tristitiam luctusque suos in gaudia vertit. <lb/> g Interea trepidat, et curas corde
+						volutat <lb/> Non de præteritis, sed de puerilibus annis <lb/> Qui superant; ne forte
+						negent, ne forte timorem <lb/> Concipiant h animis, regique accedere malint. <lb/> Et
+						quo quis minor est, major metus, anxia secum <lb/> i Ducit, heu ! curas; etiam spes ac
+						timor una <lb/> Luctantur, matrisque piae per viscera currunt. <lb/> Spes tamen est i
+						melior. Natum ut procedere vidit, <lb/> Et procul, exsultans, Video quid possit in isto
+						<lb/> Spes conferre mini, vultus agnoscere nostros <lb/> Debet et hic, fratrum k et
+						numero parere suorum. <milestone unit="PLSection" n="c"/><lb/> Forsitan hunc solum
+						puerilia pectora 1 tangent, <lb/> Indigneque feret, quod sic velut hostia demur. <lb/>
+						Alloquar, et paucis conabor dicere verbis, <lb/> Sit memor ut potius generis quam
+						temporis hujus. <lb/> Si te nobilitas generis, si tangit origo, <lb/> Respice, nate,
+						tuos, m et nos quoque respice, nate: <lb/> Noli annus numerare tuos, puer: incipe n
+						forti <milestone unit="PLSection" n="A"/><lb/> Pectore ferre Deum, tradent hoc saecula
+						sæclis <lb/> o Quod tu forte petis, des nunc exempla futuris <lb/> Temporibus; mundo
+						quod ames, nil amplius hoc esj <lb/> Respice quae fugias, et qaum meliora petantur.
+						<lb/> Non te sollicitet f stolili falacia regis. <lb/> Sic crescens iste nunc in
+						contraria victor <lb/> Spiritus exstinxit flammas; sic deinde vocatum <lb/> Quod dederat
+						corpus tellus adaperta recepit, <lb/> Sanctaque quae superest anima inviolata recessit.
+						<lb/> Quamvis lassa parens, q per tot sua vulnera victrix <lb/> Procidit in faciem,
+						pariter manibusque supinis <lb/> Has habuit voces et talia verba locuta est: <lb/> QuiT
+						regis imperium coeli, terraeque, marisque, <lb/> Sidera qui cœlo, qui das animalia
+						terris, <lb/> Æquoribus pisces, s avibus qui temporis auras, <milestone unit="PLSection" n="B"/><lb/> Ad te, magne, meæ mentis fiducia surgit; <lb/> Qui chaos t immensum caeca
+						caligine mixtum <lb/> Dividis in partes, et das noctemque diemque, <lb/> Lunamque a ac
+						solent, vario quos tempore semper <lb/> Nocte dieque jubes lumen præbere per orbem.
+						<lb/> Post hæc das hominem, cujus de semine v mundi <lb/> Completur mortale genus, cui
+						lingua loquescit <lb/> Dissona per gentes, sapor est tamen omnibus wIs. <lb/> Sed x quid
+						mutarit meritumque hominumque loquelas <lb/> Longa referre mora esi, cœptis insistere
+						certum est. <lb/> Te mare divisum y virga tenuisse fatemur, <lb/> Dum pede per siccum
+						populus transcenderet aequor, <lb/> Ægypti fugiens z mortem regemque Pharaon, <lb/> Qui
+						sibi sanctorum numerum servire jubebat, <lb/> Quem tua majestas Moses duce transtulit aa
+						omnem, <milestone unit="PLSection" n="c"/><lb/> Servatumque tua tutum virtute diremit.
+						<lb/> Terra dab t fructus, quos te c ogente ferebat, <lb/> bb Et sitis ad requiem
+						quæsita est lympha latebris. <lb/> Humor erat nullus, cuncti clamore quærentes <lb/>
+						Poscebant Moysem, daret ut sitientibus undas ; <lb/> Ad quos ille brevi sic est sermone
+						locutus : <lb/> Crediie posse Deum quidquid cc petetis ab illo , <note type="footnote">
+							a Idem edit., Se4 vigor. </note><note type="footnote">b Ibidem, <lb/> Quam regi
+							sperare fuit, sperare jubenti, </note><note type="footnote">e tull., Sedtuquid dubitas
+							medias evincere; et <lb/> dein, rpiAi crede; et postea, miscebit corpora nervys, <lb/>
+							Servatasque. _ </note><note type="footnote"> d Cod. Flor., wieruumque inwca nootea.
+							Melius in <lb/> ,ullalis. quorum lectionem secuti siunus. </note><note type="footnote"> a Yulg., Amplius haud timei ille necem, matrique. </note><note type="footnote">f
+							Ib., pre..;,que dolorem Lcelilia, luctusque. </note><note type="footnote"> I Hie
+							versus ex cod. Flor. slIppeah. </note>
+						<milestone unit="PLSection" n="D"/><note type="footnote"> h Sic ex vulg. Cod. Flor.,
+							animo. Mox in vulg., <lb/> Qu. mintr est ætas, erronee. </note><note type="footnote">
+							i Ed i I., Dividit ei cura., et Bpe't et sic timor una. </note><note type="footnote">I
+							Vocem melior supplevimus ex vulgatis, in qui­ <lb/> bus, producere ,id;', et procul
+							intrantem : Videam. </note><note type="footnote">k In cod. Flor. deest et.
+							</note><note type="footnote"> 1 Sic ex vulg. In ms. Flor., tangunt, et mox, ferat.
+							</note><note type="footnote"> 0 c:od. Flor., I arae! quoque. Melius in vulg. -
+							</note><note type="footnote">Ii V..II., verum Pectore ferre Deum. </note><note type="footnote"> ° Cod. Flor., <lb/> Quod tua det fortis .Las exempla futuris <lb/>
+							Temporibus. Dona te precorque quod amplius hoc est. <lb/> Cogita quae fugias. '
+							</note><note type="footnote"> t Vulg., miseri fattacia regis; Sed crescas ipsi nunc.
+							<lb/> El m., Spirtits exstinctus fitwm m ..м. *e <lb/> cessit. </note><note type="footnote"> q Cod. Flor., perquttei sUa. Vulg., i <lb/> Per tot sna vulnera,
+							regem <lb/> Pertulit, ast alrirno partter.- </note><note type="footnote"> r Cod.
+							Flor., ferra, ",ale.. </note><note type="footnote">• Vulg., <lb/> Ventum qui verberat
+							auras, <lb/> Ad te prima mei cupide diducta surgiu </note><note type="footnote">t
+							Ibid., implicitum cmca caUgine misceus. </note>
+						<milestone unit="PLSection" n="D"/><note type="footnote"> u Ibidem, II raptdum soltm,
+							qni tempora servent; <lb/> Et posi hmc ,....ineM; ubi intermedius versus omit­ <lb/>
+							titur. </note><note type="footnote"> T Vulg., mundus; et postea. tum lingua liguescit.
+							</note><note type="footnote"> x Vulg., qui mutarit meritis hominu i.que. </note><note type="footnote"> J Ibid., vivga volvisque tenesque. </note><note type="footnote"> *
+							Sic ex vul;!. Cod. Flor., montes. </note><note type="footnote"> a. Ms. Flor., amne.
+							Prætulimus leciionevn edito­ <lb/> rum, in quibus postea, W'"'" wutbt redmV.
+							</note><note type="footnote">bb Vulg. : <lb/> Occupat et totis quaesitam lympha
+							latebris. </note><note type="footnote"> cc Forte poscetit legendum pro pMifa qAOd fer­
+							<lb/> bum 011. Flor. praefort. I. vulgatis, <lb/> Petieritis illum, <lb/> Sed tamen
+							hanc vi6 WttH. <lb/> . </note>
+						<pb n="1285"/>
+						<milestone unit="PLSection" n="A"/><lb/> Qui potis est virga hac amnem diffundere saxo ,
+						<lb/> Ut veniant fontes tota regione a negati, <lb/> Percussitque simul, dicto velocius
+						omni <lb/> Emisit saxum fontes dulcedine prima. <lb/> Confiteor, totus cum sit tibi
+						debitor orbis, <lb/> Tu quidquid possunt gentes, potes omnia solus , <lb/> b Et quod non
+						capiunt gentes, capis omnia solus. <lb/> Tu mortale genus curis onerasque levasque,
+						<lb/> Te precor c attonita cum firma mente timentem, <lb/> Ne desit fratrum numero meus
+						infimus infans , <lb/> Ignarusque sui, quem jam procul ecce teneri <lb/> Conspicio,
+						turba circum vemente frequenti <lb/> Hunc propter solum lacrymas d mihi commovet ætas :
+						<lb/> Unus enim superest, de quo mihi maxima cura est, <lb/> Ne tener ignoret qua sii de
+						gente creatus. <milestone unit="PLSection" n="B"/><lb/> Hunc ego si possem secreto
+						apprendere solum, <lb/> Blandirer, patriumque genus, patriamque docerem : <lb/> Sed
+						quaecumque tamen potero solatia mittam. <lb/> Parve puer, tenerisque luis mihi charior
+						annis , <lb/> Charior es regno, vita quoque charior ipsa, <lb/> Tu potes in totum
+						victricem icddere matrem , <lb/> Tu finis e partus, finisque future malorum; <lb/> Si te
+						cura mei tangit, si matris honorem <lb/> Mente pia retines, quamvis i siset infans ;
+						<lb/> Hoc magis aure avida dictis attende parentis. <lb/>
+						<lb/> Primum disce, puer, quid sis post ista futurus , <lb/> Si patiens fueris; g quid
+						te mihi, chare futurum <lb/> Facta docent. Fratrum sanctorum in parte h ma­ <lb/> nebis,
+						<lb/> Et requie securus eris, dum saecula cursus <milestone unit="PLSection" n="C"/><lb/> Sæva suos peragunt, finito tempore i longo , <lb/> Hanc lucem repetes,
+						aeternaque regna videbis <lb/> Non maculata malis, i nusquam contraria sanctis : <lb/>
+						Nec morti locus ullus erit, nec bella citatis <lb/> II: Committentur equis, sed pax
+						aeterna manebit.</p>
+					<p>
+						<milestone unit="PLSection" n="A"/>1 Matri crede tuæ, salvum quæ te cupit esse. <lb/>
+						Heu ! mihi cur tristi vultu mea dicta repellis? <lb/> Quid refugis? Miserere mei,
+						miserere turque. <lb/> Si liceat, m prior ire vehit, vetor ecce; sed ibo , <lb/> Tunc
+						cum vi&lt; torem D te videro, nale, matorum. <lb/> Qud sperare jubes? s&lt; lus mea
+						dicta moratis ? <lb/> Solus adhuc o t tiam revocas, mi nate, dolorem? <lb/> Annuis, au
+						damnas p et me fratresque genusque ? <lb/> Quod ne forte velis, oro te, et deprecor,
+						audi- <lb/> His ego te parvula nutrivi, nate, papillis, <lb/> q H s etiam lacrymas te
+						propter, nile, profundo. <lb/> Ne remanere velis, remanebis solus et orbus. <lb/> Non
+						tibi jam frater superest : solatia vitæ <lb/> Quis dabit? Ileu I solus matrem confundere
+						tentas <lb/> Et genus, et patriam! si talia dicta recusas. <lb/> r 0 quanto melius vitam
+						servabis in ævum, <lb/> Si facis ante Deum quidquid fecere priores. <lb/> Audenter
+						depone metus, depone timorem : <lb/> Concipe mente Deum, vires dabit ille viriles. <lb/>
+						HIrc dum mater agit, puer ad praecepta parentis <lb/> Hespicit, et solutu s cum se videt
+						esse relictum , <lb/> Sustulit in coelum vulnus palmasque supinas , <lb/> Et sic voce
+						potens, æternum Numen adorat, <lb/> t Quem secum sensu pariter nutuque rogabat, <lb/>
+						Vinceret ut regem, sævos ut vinceret ignes. <lb/> Atque ita non segnis nec pro pueri
+						:ibus annis <lb/> Prosilit intrepidus medios delapsus in ignes, <lb/> u Expugnat, victor
+						d nec remearet in altum <lb/> Spiritus, et fratrum peteret secreta priorum. <lb/> Dum
+						puer ista gerit, T solverunt gaudia matrem <milestone unit="PLSection" n="C"/><lb/>
+						Jamque ut erat lassata malis, jam voce negata <lb/> x Spirat ovans, iuterque manus
+						collapsa suorum <lb/> Concidit exanimis , resolutaque membra quierunt. <lb/> y Sic ipsa,
+						ut nati, sanctorum in parte recepta est <note type="footnote"> * Edit., morati.
+							</note><note type="footnote"> * Hic verhus deest in iisdem editis. </note><note type="footnote"> * Ms. Flor., attonita menie confirma timentem, per­ <lb/> peram.
+							Lectionem vulg. retinuimus. </note><note type="footnote"> d Edit., qua. commovet.
+							</note><note type="footnote"> 9 lb., parvus; et postea, si matris odorem AI elite
+							<lb/> create tenes. </note><note type="footnote"> I Vulg., et charu. et in(aIlB. III
+							COlt. Flor., ubi la­ <lb/> cuna est, supplendum cinis placeret, parvus. Mux in <lb/>
+							vulg., aure pia. </note><note type="footnote"> 6 Vulg., tunc te. </note>
+						<milestone unit="PLSection" n="D"/><note type="footnote"> D Ih., locaMus. </note><note type="footnote">i Ibidem, certo. </note><note type="footnote"> i Edh., sed erit
+							concordin sanctis. </note><note type="footnote"> It Ih., Exercentur. Cud. Flor ,
+							Commiscentur : futu­ <lb/> rum tempus requisivit contextus. </note><note type="footnote"> 1 Vulg. : </note><note type="footnote"> Matrem crede tuae semper
+							cupidam esse salutis. </note><note type="footnote">m lb., priore velim, vetor ecce,
+							qua.. postremas <lb/> voces retinuimus, cum minus recte in coli. Flor. , <lb/> tetat
+							ecce. </note><note type="footnote"> D y"1? ., cernam te. </note><note type="footnote">
+							0 Ihld., cequum renovas mihi. </note><note type="footnote"> . Vd., quoque me. <lb/> Te
+							per ogo oas precor et fletus lacrymasque rneonma, <lb/> 'remeare veli?; remeabis
+							solus, el hujus <lb/> Non tibi jam fratr. s dederint solatia vitae : <lb/> Dedecoras
+							t'ralrum sanaissima Domina, matrem, <lb/> Et genus. </note><note type="footnote">r
+							Ihiclem, Heu ! quando; et paulo post, Si famm <lb/> tandem quidquid. </note><note type="footnote">s II) , solum se vidit III esse relictum. </note><note type="footnote">t lb., <lb/> Sensu et sic pariter secum, nutuque rogabat. </note><note type="footnote"> u Yulg. : </note>
+						<milestone unit="PLSection" n="D"/><note type="footnote"> Vicit quhJq'lid erat, sic
+							vitam at iret in altam. </note><note type="footnote"> T Lihro II Machab., c. VII,
+							verSe 41, id tantum de <lb/> malri" Iuuflt- diciiur : Novissimf autem post filiof efc
+							<lb/> mater consumpta est. Qua amem murte obierit, alu <lb/> aliter tradunt. J-seplnis
+							in libro de Machabaeis eam, <lb/> ne qo&lt;* ah h &gt;mine tangeretur, in rogum sese
+							jojer <lb/> ciste srrihit. Quidam post veterem Lal illDIU Josephi <lb/> ih't'! pn'h')n
+							dnriss:mum mariyriurn eamdem sublisse <lb/> sentiunt. SOl i&lt; nides et Arabs ferunl
+							eam post filip­ <lb/> rnm f),'('em Demn supplic sse ut St' ex hac vita edu­ <lb/> ce,
+							el, fAl lapsam supter liberos exspirasse. Alii tandem <lb/> insp ca omnium filiorum
+							constantia gaudio exagi­ <lb/> maiam rui"se, inter quos noster auctor recerisgn­ <lb/>
+							dus est. </note><note type="footnote"> * ,." Ig., Suspirans , in terque. </note><note type="footnote">y (;fHI. Flor., Sic ipsas nati. VI,lg.. SiC ipsa -'I <lb/> nati. Hoc
+							loco sensu exigenie emen0avimu6. </note></p>
+					<pb n="1287"/>
+
+					</div>
+				</body>
+  </text>
+</TEI>

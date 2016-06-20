@@ -1,0 +1,785 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title>Patrologiae Cursus Completus. Series Latina (PL)</title> 
+        <sponsor>University of Leipzig</sponsor>
+        <funder>European Social Fund Saxony</funder>
+        <principal>Gregory Crane</principal>
+        <respStmt>
+          <persName xml:id="Jouve">Jouve</persName>
+          <resp>OCR-ed, corrected and encoded the text</resp>
+        </respStmt>
+        <respStmt>
+          <persName>Greta Franzini</persName>
+          <resp>Project Manager (University of Leipzig)</resp>
+        </respStmt>
+        <respStmt>
+          <persName>Simona Stoyanova</persName>
+          <resp>Project Assistant (University of Leipzig)</resp>
+        </respStmt>
+        <respStmt>
+          <persName>Bruce Robertson</persName>
+          <resp>Technical Advisor (Mount Allison University)</resp>
+        </respStmt>
+      </titleStmt>
+      
+      <publicationStmt>
+        <authority>University of Leipzig</authority>
+        <idno type="filename">PL83.xml</idno>
+        <availability>
+          <licence target="https://creativecommons.org/licenses/by-sa/4.0/">Available under a Creative Commons Attribution-ShareAlike 4.0 International License</licence>
+        </availability>
+        <date>2014</date>
+        <publisher>University of Leipzig</publisher>
+        <pubPlace>Germany</pubPlace>
+      </publicationStmt>
+      
+      <sourceDesc>
+        <listBibl xml:lang="la">
+          <biblStruct>
+            <monogr>
+              <editor>
+                <persName>
+                  <name xml:lang="fr">Jacques Paul Migne</name>
+                </persName>
+              </editor> 
+              <author ref="urn:cite:perseus:author.771">Isidorus Hispalensis</author>
+              <title>Differentiarum Sive De Proprietate Sermonum Libri Duo</title>
+              <title>Allegoriae Quaedam Sacrae Scripturae</title>
+              <title>De Ortu Et Obitu Patrum Qui In Scriptura Laudibus Efferuntur</title>
+              <title>In Libros Veteris Ac Novi Testamenti Proemia</title>
+              <title>Liber Numerorum Qui In Sanctis Scripturis Occurrunt</title>
+              <title>De Veteri Et Novo Testamento Quaestiones</title>
+              <title>Mysticorum Expositiones Sacramentorum Seu Quaestiones In Vetus Testamentum</title>
+              <title>Appendix Ad Libros Regum</title>
+              <title>De Fide Catholica Ex Veteri Et Novo Testamento Contra Judeos</title>
+              <title>Sententiarum Libri Tres</title>
+              <title>De Ecclesiasticis Officiis</title>
+              <title>Synonyma De Lamentatione Animae Peccatricis</title>
+              <title>Regula Monachorum</title>
+              <title>Epistolae</title>
+              <title>De Ordine Creaturarum Liber</title>
+              <title>De Natura Rerum Ad Sisebestum Regem Liber</title>
+              <title>Chronicon</title>
+              <title>Historia De Regibus Gothorum. Wandalorum Et Suevorum</title>
+              <title>De Viris Illustribus Liber</title>
+              <title>Carmina [Ascripta]</title>
+              <title>Chronica Regum Visigothorum (Incertus)</title>
+              <title>Expositio In Canticum Canticorum Salomonis [Incertus]</title>
+              <title>De Conflictu Vitiorum Et Virtutum (Incertus)</title>
+              <title>Expositio In Missa (Incertus)</title>
+              <title>Sententiarum Liber Quartus (Incertus)</title>
+              <title>Exhortatio Humilitatis (Incertus)</title>
+              <title>Testimonia Divinae Scripturae Et Patrum (Incertus)</title>
+              <title>Sermones (Incertus)</title>
+              <title>De Ecclesiasticis Dogmatibus (Incertus)</title>
+              <title>Sentantiae Differentiarum De Activa Vita Atque Contemplativa [Incertus]</title>
+              <title>Exhortatio Poenitendi Cum Consolatione Et Misericordia Dei [Incertus]</title>
+              <title>Lamentum Poenitantiae (Incertus)</title>
+              <title>Oratio Contra Insidias Diaboli (Incertus)</title>
+              <title>Liber De Ortu Et Obitu Patrum Incertus</title>
+              <title>Liber De Numeris (Incertus)</title>
+              <title>Glossae in Sacram Scripturam</title>
+              <title>Differentiarum, sive de Proprietate Sermonum, Liber</title>
+              <title>Liber Glossarum</title>
+              <imprint>
+                <publisher>Garnier</publisher>
+                <pubPlace>Paris</pubPlace>
+                <date>1850</date>
+              </imprint>
+              <biblScope unit="volume">83</biblScope>
+            </monogr>
+            <monogr>
+              <author>Auctor Incertus</author>
+              <title>Archiepiscopi Toletani Veteres</title>
+              <title>Chronologia Gothicorum Regum (Ex Codice Regio Vaticano)</title>
+              <imprint>
+                <publisher>Garnier</publisher>
+                <pubPlace>Paris</pubPlace>
+                <date>1850</date>
+              </imprint>
+              <biblScope unit="volume">83</biblScope>
+            </monogr>
+            <ref target="http://hdl.handle.net/2027/pst.000020950231">HathiTrust</ref>
+            
+          </biblStruct>
+        </listBibl>
+      </sourceDesc>
+      
+    </fileDesc>
+    <encodingDesc>
+      <p>The following text is encoded in accordance with EpiDoc standards and with the
+        CTS/CITE Architecture.</p>
+      <refsDecl n="CTS">
+        <cRefPattern n="no citable units founds" matchPattern="(.+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div/tei:div[@n='$1'])"/>
+      </refsDecl>
+    </encodingDesc>
+    
+    <profileDesc>
+      <langUsage>
+        <language ident="la">Latin</language>
+      </langUsage>
+    </profileDesc>
+    
+</teiHeader>
+  <text>
+    <body><div type="edition" n="urn:cts:latinLit:tmp1445.tmp1445.opp-lat1">
+          <ab>
+            <title type="sub">APPENDIX XXI.</title>
+          </ab>
+          <ab>
+            <title type="sub">LIBER DE NUMERIS,</title>
+          </ab>
+          <ab>
+            <title type="sub">De quo in Isidorianis, cap. 63, n. 10 et seqq.</title>
+          </ab>
+          <p>I. Domino nostro altissimo adjuvante, et Salvatore <lb/>
+            nostro Jesu Chrislo clementissimo concedente, de <lb/>
+            numero et ejus mystico mysterio pauca breviter,
+            <milestone unit="PLSection" n="D"/><lb/>
+            tamen utiliter, volo scribere. Quid I, quid II et III <lb/>
+            dicunt, quid IV, quid v et VI asserunt, quid VII, quid <lb/>
+            VIII, quid IX et x referunt, et usque ad XXIV, si possu­ <lb/>
+            mus pervenire, dicere volumus quid ostendunt.</p>
+          <p>2. Unum itaque tantum Deo pertinet, quia in om­ <lb/>
+            nibus, et ante omnia, et super omnia, in omnipo­ <lb/>
+            tentia; et magnificentia, et inconiprehensibilitate sua <lb/>
+            unus est, sicut et in capite, et in principio sacræ Scri­ <lb/>
+            pturæ vox divina spiritualiter affirmat, dicens : Audi, <lb/>
+            Israel, Dominus Deus unus est. Quis enim in coelo <lb/>
+            aut in terra, aut subtus terram in æternitate, in po­ <lb/>
+            testate , in trinitate, in unitate , in divinitate, in <lb/>
+            humanitate Deo soli similis esse potest ? Ideo itaque <lb/>
+            unus idem solus Deus dicitur, quia nec antea, nec <lb/>
+            postea, nec tunc [nec] nunc ei alter esse similis in <lb/>
+            coelo, aut in terra invenitur, aut legitur, quia qui <lb/>
+            ei superbiendo in coelo similis esse voluit, nox <lb/>
+            lassus et lapsus periit , et dæmon, ef Satan , et dæ­ <lb/>
+            monum in inferno princeps esse meruit. Multa ita­ <lb/>
+            que in Dei creaturis, et in sacris Scripturis, quæ <lb/>
+            multipliciter esse videntur, tamen uno nomine unum <lb/>
+            appellanLur; ut homo, anima, fides, 398 baptisma, <lb/>
+            charitas, spes, pax, panis, Ecclesia catholica, et
+            <milestone unit="PLSection" n="D"/><lb/>
+            alia multa, quæ modo causa brevitatis prætermitto. <lb/>
+            in his tamen, quæ praediximus, id est, Immine, et <lb/>
+            anima, et cæteris quae sequuntur, etsi non est secun­ <lb/>
+            dum ordinem, tamen in suis locis, ut donaverit <lb/>
+            Deus, narrabimus.</p>
+          <p>3. Unde factus sit homo? Unum iLaque hominem a <lb/>
+            Deo factum in principio invenimus. De cujus costa <lb/>
+            unam feminam factam legimus, unam linguam lo­ <lb/>
+            quendam, id est, Hehræam usqpe ad aedificationem <lb/>
+            turris Nembroth fuisse testatur. Quae turris in campo <lb/>
+            Diram ædificabatur. Unus Abraham fuisse testatur , <lb/>
+            qui et caput fidei fuisse dicitur, quia ab Adam usque <lb/>
+            ad nativitatem Christi ullum hominem Ahraham <lb/>
+            vocatum non invenitur; de quo Abraham dicitur: <lb/>
+            Credidit Abraham Deo, et repulatum est ei ad justi­ <lb/>
+            tiam. Nonne Abel credidit, et coronari primus mar­ <lb/>
+            tyrio meruit? Nonne Enoch credidit, qui adhuc in <lb/>
+            corpore vivit? Nonne Noe justificatus credidit, quem <lb/>
+            Dominus cum area et omnibus quæ in ea fuerunt Ii­ <lb/>
+            beravit? ct nec Abel, uec Henoch, nec Noe caput <pb n="1295"/>
+            
+            <milestone unit="PLSection" n="A"/><lb/>
+            fidei vocati sunt. Quare hoe? id est, etsi in istorum <lb/>
+            tempore justorum fides apparuit, tamen rara et semper <lb/>
+            defuit. Abraham autem usque adhuc, et usque in <lb/>
+            finem fides nec defnit, nec deest, nec deerit. Ideo <lb/>
+            caput fidei Abraham appellatus est. Unus Noc fuit, <lb/>
+            qui arcam fabricavit, et si alius inde, Scriptura la­ <lb/>
+            cuit. Idem vero Noe primus post diluvium in montibus <lb/>
+            Armeniae altare Domino construxit, quia ibi inter <lb/>
+            montes aqua diluvii arcam dereliquit. Unam femi­ <lb/>
+            nam, id est, Lot uxorem in statuam salis littera <lb/>
+            tradunt conversam. Quæ statua usque hodie stat, ut <lb/>
+            omnis qui eim videat, Deum timeat, et omnipoten­ <lb/>
+            tem eum credat. Una femina in mundo apparuit, <lb/>
+            cui altera talis nunquam nata fuit, quæ solem et <lb/>
+            ignem novem mensibus in vulva portavit, nec ei <lb/>
+            aliquatenus ullo modo nocuit. Unam virginem legi <lb/>
+            leonom lactare , credere non dubito , et non cesso <lb/>
+            mirari. Unus mediator maximus inter homines, et <lb/>
+            Deum, qui ex parte hominum verus factus est homo.
+            <milestone unit="PLSection" n="B"/><lb/>
+            Ideo veraciter mediator dici potest. et spotuit, quia <lb/>
+            nec divinitas humanitati nocuit, nec humanitas divi­ <lb/>
+            nitati contraria fuit. Una civitas in cœlo, qu.c est <lb/>
+            omnium sanctorum mater, quae Jerusalem appellatur, <lb/>
+            el visio pacis interpretatur. In quam civitatem nullus <lb/>
+            iUravit, nec intrat, nec intraturus omnis qui est <lb/>
+            indignus , et superbus, et impurus. Hucusque de <lb/>
+            uno diximus, modo de duobus dicturi sumus.</p>
+          <p>4. Quot substantiis constat homo? Duabus substan­ <lb/>
+            tiis constat homo, imagine et similitudine Dei factus, <lb/>
+            id csi, anima tantum et corpore, sed in his duabus <lb/>
+            substantiis in unum inter se conjunctis, multæ viden­ <lb/>
+            tur c se species. In corpore etenim humano novem <lb/>
+            sunt mensuræ sine dubio compositæ : id est quatuor <lb/>
+            principales, quæ sunt terra, aqua, aer, ignis, et <lb/>
+            aliæquinque subsequenter species, id est, sal, fe­ <lb/>
+            num. flores, lapides, nubes, et ul in melius de his <lb/>
+            omnibus intelligas, lege sic : terra in homine est <lb/>
+            crassitudo, et gravites carnis, aqua autem sudor, et
+            <milestone unit="PLSection" n="c"/><lb/>
+            salivæ. Aer vcro ipsa anhelatio humida, frigida, at­ <lb/>
+            que calida, spirans per os et nares. Ignis in homine, <lb/>
+            qui in stomacho coquit cibos, et in calore 399 <lb/>
+            sanguinis, sat in salsitate sanguinis, et sudoris, et <lb/>
+            lacrymarum, et urinæ, quia hæc omnia in homine <lb/>
+            salsa sunt. Fenum autem in capillis et pilis, flores <lb/>
+            in varietate oculorum , lapides in gravitate et duri­ <lb/>
+            na, quia lapides ossa terræ dicuntur. Nubes instabi­ <lb/>
+            litas mentis et cogitationum. Et de his novem men­ <lb/>
+            suris compositum corpus, ct compaginatum ossibus <lb/>
+            majoribus et minoribus constitutum, conjuncturis <lb/>
+            principalibus numero CCCLXV. Aliis vero minoribus <lb/>
+            vix inivenitur numerus. Similiter et venis principali­ <lb/>
+            hus CCCLXV , minores vero venæ innumerabiles sunt. <lb/>
+            Nervis quoque et sanguine, carne et cute, medullus, <lb/>
+            cartilaginibus, capite et cerebris tribus, primum vo­ <lb/>
+            catur memoria, secundum sensus, tertium appellatur <lb/>
+            motus. Sensibus v, id est, visus, auditus, odoratus, <lb/>
+            gustus, tactus. AEtatibus vero VI, id est, infantia, <lb/>
+            pueritia, adolescentia, juventus, senium , senectus :
+            <milestone unit="PLSection" n="D"/><lb/>
+            infantia , quæ VII annis finitur; pueritia , quæ xiv <lb/>
+            aunis terminatur; adolescentia , quæ XXVIII annis <lb/>
+            protenditur; juventus, quæ L annis finitur, senium, <lb/>
+            quæ septuagesimo anno concluditur; senectus vcro, <lb/>
+            quæ annorum temporibus et numero non expletur, <lb/>
+            sed labore, et dolore, et morte. In homine itaque <lb/>
+            x sunt fenestrae fabrefactae. In prima fenestra verba <lb/>
+            profert, aerem suscipit et spirat, cibos sumit et gu­ <lb/>
+            stat. In duabus fenestris videt procul et prope, in <lb/>
+            duabus aliis odorat et spirat. In duabus aliis inferio­ <lb/>
+            ribus necessaria corporis foris ministrat. In decima <lb/>
+            fenestra umbilicus nominata ventrem ornat. Homo <lb/>
+            vero habet in corde intellectum et cogitatum, con­ <lb/>
+            silium et timore, in splene risum , in felle iram, <lb/>
+            in jecore amorem, et flatum, et I,vitatem in cursu, <lb/>
+            ct natando. Naturaliter his ominibus, et aliis multis, <lb/>
+            quæ causa brevitatis prætermitto, hominis corpus <lb/>
+            constat. Natura vero ejusdem corporis IV in se gerit <lb/>
+            diversitates. Id est, esurit, sitit, concupiscit, sopo­
+            <milestone unit="PLSection" n="A"/><lb/>
+            rat. Usus ergo hujus nataræ IV rebus expletur, id <lb/>
+            est, manducando, bibendo, generando, dormiendo. <lb/>
+            Haec corporis ratio breviter dicta; nunc autem <lb/>
+            animæ origo dicatur.</p>
+          <p>5. Anima quid est ? et sies' aliqua res, unde animæ <lb/>
+            fiant ? Quid ipsa est, quod nomen ejus, quem usum <lb/>
+            in rebus conditis. Vivit, an non ? si vivit, quid con­ <lb/>
+            fert universitatis affectibus ? beatamne vitam ducit, ad <lb/>
+            miseram? Quid ergo anima est? Cælum non est, ne­ <lb/>
+            que terra, neque acr, neque ignis, non aqua. non <lb/>
+            Deus, non sidera, non de anima patris neque matris <lb/>
+            venit, ut multi æstimant. Non visus, nOn auditus, non <lb/>
+            odoratus, non gustus, vel alia cætera, quæ memora­ <lb/>
+            re longum est, quæ sunt in cœlo, sive in terra, quod <lb/>
+            anima non est. Unde ergo anima ex Deo data est, ex <lb/>
+            nihilo facta, et a Deo creata, ut ipse Dominus per <lb/>
+            Isaiam dicit : Omnem flatum ego feci, id est, omnem <lb/>
+            animam; et in Psalmo simililer ait: Qui finxit sigilla­ <lb/>
+            tim corda corum, id est, animas, quia corda bominum
+            <milestone unit="PLSection" n="B"/><lb/>
+            candelabra animarum sunt. Quid itaque est anima, <lb/>
+            breviter dicendum est, quod Deus lacuitin suis Scri­ <lb/>
+            pturis. Anima vero est vita rationabilis, et sensibilis, <lb/>
+            vivificans spiritualiter, et invisibiliter, et mirabiliter <lb/>
+            omnia viscera ac membra totius corporis intus et fo­ <lb/>
+            ris, jussu sui Creatoris, et miro modo ministrans <lb/>
+            quinque coiporis sensibus, quia 400 per oculos vi­ <lb/>
+            det, pcr aures audit, per nares odurat, per gustum dis­ <lb/>
+            cernit sapores, per tactum tota membra regit; quae <lb/>
+            quadrimoda ratione spiritualiter subsistit, id est, seu <lb/>
+            su, sapientia, cogitatione, voluntate. Sensus pertinet <lb/>
+            ad vitam, sapientia ad intelligendum, cogitatio ad <lb/>
+            consilium, voluntas ad defensionem. Anima etenim <lb/>
+            dum una res est, multas species et ornamenta ita in <lb/>
+            se habet. Quae dum spirat spiritus est, dum sentit <lb/>
+            sensus est, dum sapit animus est, dum intelligit <lb/>
+            mens est, dum recte discernit ratio est, dum consen­ <lb/>
+            tit voluntas cst, dum recordatur memoria e?t, dum <lb/>
+            membra vegetat anima est, dum bene vivit imaginem
+            <milestone unit="PLSection" n="c"/><lb/>
+            Dei habet, duum bene ornata Deo et angelis placita, <lb/>
+            dum virtutibus bunis plena Trinitatis est cathedra. <lb/>
+            Ornamenta vero animae hæc aunt. Per auditum credit, <lb/>
+            per desiderium quærit, per sapientiam invenit, per <lb/>
+            orationem pctit, pcr gratiam accipit, per humiltatem <lb/>
+            custodit, pcr misericordiam occurrit, per benignitatem <lb/>
+            indulget, per doctrinam acquirit, per pœnitentiam <lb/>
+            componit, per exemplum pulchra, per scientiam lu­ <lb/>
+            cida, per zelum bonum libera, per mansuetudinem <lb/>
+            plana, pcr prudentiam cauta, et clara, per simplici­ <lb/>
+            tatem sincera, per stabilitatem sobria, per justitiam <lb/>
+            recta, per patientiam longanima, per obedientiam <lb/>
+            parata, per actionem munda, per spem lensa, per abs­ <lb/>
+            tinentiam temperata, per castitatem sancta, per gau­ <lb/>
+            dium spirituale Iulia, per confessionem aperta, per <lb/>
+            martyrium ornata, per unitatem catholica, per con­ <lb/>
+            cordiam pacifica, per dilectionem proximi larga, per <lb/>
+            charitatem Dei perfecta. Hæc sunt ornamenta animæ. <lb/>
+            Necessitates corporis istæ sunt : in fame cibus, in siti <lb/>
+            POlus, in labore requies, in fatigatione suminus, inde-
+            <milestone unit="PLSection" n="D"/><lb/>
+            lectatione, et lædio carmen, in dolore salus, in imbe­ <lb/>
+            cillitate virtus, in timore refugium, in tenebris lumen, <lb/>
+            in bello pax, et alia multa, quæ modo causa brevita­ <lb/>
+            tis longum est dicere. Sicut sine his itaque necessita­ <lb/>
+            tibus caro humana non potest feliciter vivere, ita ani­ <lb/>
+            ma sine suo necessario non potest in corpore perfecte <lb/>
+            stare. Cibus namque animæ est præceptum divinum, <lb/>
+            pOLUS ejus oratio pura, balueum ejus jejunium legiti­ <lb/>
+            mum, vestimentum ejus elcemosyna de propria sub­ <lb/>
+            stantia, organum ejus laudatio Dei assidua, requies <lb/>
+            cjus perfecta paupertas, salus ejus corporis infirmi­ <lb/>
+            tas, refugium cjus pura pœnitentia, pax ejus charitas <lb/>
+            plena. O homo, quicunque cs, his duabus subsantiis, <lb/>
+            ut prædiximus, constitutus, id est, corpore et anima, <lb/>
+            imitare Christum et sanctos Patres, qui te præcesse­ <lb/>
+            runt; disce humilitatem a Christo, devotionem ex <lb/>
+            Petro, charitatem ex Joanne, obedientiam de Abra­ <lb/>
+            ham, hospitalitatem de Lot, longanimitatem de Isaac, <unclear/><lb/>
+            tolentiam de Jacob, patientiam de Job, castimoniam <pb n="1297"/>
+            
+            <milestone unit="PLSection" n="A"/><lb/>
+            de Joseph, mansuetudinem de Moyse, constantiam <lb/>
+            de Josue, benignitatem de Samuel, misericordiam <lb/>
+            de David, abstinentiam de Daniel, eleemosynam de <lb/>
+            Tobia, theoricam ex Heli, actualem ex Paulo, pœni­ <lb/>
+            tentiam lacrymosam ex Maria Magdalene, puram <lb/>
+            confessionem ex latrone, martyrium de Stephano, <lb/>
+            largitatem de Laurentio.</p>
+          <p>6. De superbia et invidia. Duas esse radices pesti­ <lb/>
+            feras et mortiferas omnibus viventibus, dubium non <lb/>
+            est. A quibus omnis iniquitas, et 401 omnis impie­ <lb/>
+            tas, et omnis calamitas, et omnis crudelitas, et om­ <lb/>
+            nis tempestas, et omnis dolor, et omnis plaga, et <lb/>
+            omnis plEna, et omnis morbus, et omnis mortalitas, <lb/>
+            et omnis tribulatio, et omne malum, quodcunque et <lb/>
+            in cœlo, et in terra, et in inferno inveniris, et sentiri <lb/>
+            potest, ortae sunt, una radix vocatur superbia, altera <lb/>
+            appellatur invidia. Quis enim de sapientibus et Scri­ <lb/>
+            pluras intelligentibus ignorat superbiam esse radicem <lb/>
+            et reginam omnium malorum, Scriptura attestante,
+            <milestone unit="PLSection" n="B"/><lb/>
+            et dicente : Initium omnis peccati superbia ? Per ipsam <lb/>
+            enim primitus angelorum princeps per Deum, qui Lu­ <lb/>
+            cifer tunc vocabatur, et quasi signaculum Dei vivi vi­ <lb/>
+            dehalur, de throno Altissimi, et de altitudine coeli, et <lb/>
+            de illa magna et sancta civitate, quae vocatur visio pa­ <lb/>
+            cis, in qua sunt novem ordines angelorum, ipse cum <lb/>
+            decima angelorum parte in inferni tartara profectus <lb/>
+            est. O tam crudele et tam malum incredibile! ipse <lb/>
+            durissimus draco sui deceptor, et mortis inventor, <lb/>
+            in ipsa sua invenit projectione mortis omnium secun­ <lb/>
+            dam radicem, quæ appellatur invidia. Sic enim sacra <lb/>
+            Scriptura ait : Invidia diaboli mors intravit in orbem <lb/>
+            teTrarum. Hoc ergo modo perinvidiam primum intra­ <lb/>
+            vit peccatum, et per peccatum mors originem traxit, <lb/>
+            id est, suggestione iniqua crudelissimi inimici orta <lb/>
+            fuit. Ex iniqua suggestione prava cogitatio intus eru­ <lb/>
+            pit, p ava autem cogitatio delectationem peperit, de­ <lb/>
+            lectatio consensionem, consensio actionem, actio con­ <lb/>
+            suetudinem, consuetudo necessitatem, necessitas ma­
+            <milestone unit="PLSection" n="c"/><lb/>
+            lam mortem, mala mors perditionem. Suggestione <lb/>
+            itaque diaboli per serpentem Eva seducta est, et sic <lb/>
+            primus homoAdam per Evam seductus præceptum <lb/>
+            Creatoris sui transgressus est, et in ipsa transgressione <lb/>
+            laborem et mortem invenit, et semini suo post se <lb/>
+            ipsa dereliquit, Ite quo labore et morte s c Deus ad <lb/>
+            Adam dixit: In sudore tullus tui manducabis panem <lb/>
+            tuum; et iterum ait : Terra es, et in terram ibis. Et <lb/>
+            Scriptura hoc affirmans ait : Sicut mors in Adam <lb/>
+            data est, ita dominabitur in omnibus filiis ejus. Labore <lb/>
+            ergo, et morte, et miseria, et corruptione, et male­ <lb/>
+            dictione inventis, et aliis innumerabilibus progeniei <lb/>
+            suæ derelictis, ipse cum semine in tenebris et crucia­ <lb/>
+            tibus a die mortis suæ in prima ætate mundi usque ad <lb/>
+            resurrectionem Christi detentus est.</p>
+          <p>7. Du s vias vitæ et mortis in hoc sacculo esse du­ <lb/>
+            bium non est, una per quam feliciter pergunt sancti, <lb/>
+            altera per quam peccatores se ipsos perdunt, de qui­ <lb/>
+            bus viis in primo psalmo Spiritus sanctus sic ait : <lb/>
+            Novit Dominus viam justorum, et iter impiorum peribit. <lb/>
+             
+            <milestone unit="PLSection" n="D"/><lb/>
+            Via sanctorum Dominus ipse, sicut i; se dixit: Ego sum <lb/>
+            via, et veritas, et vita; via autem peccatorum tenebræ <lb/>
+            mortis, ut in Psalmo legitur : Fiat via illorum, id est, <lb/>
+            peccatorum. tenebræ, et lubricum. Via sanctorum fides <lb/>
+            catholica, via peccatorum infidelitas prava ; via sancto­ <lb/>
+            rum spes recta, via peccaturum arida desperat o; via <lb/>
+            sanctorum charitas perfecta, via pecca orum iniqui­ <lb/>
+            tas odiosa; via sanctorum diligentia utentis, via pec­ <lb/>
+            catorum negligentia cordis; via sanctornm timor Dei, <lb/>
+            viapeccatorum transgressio mandati ; via sanctorum <lb/>
+            voluntas bona, via peccatorum cupiditas mala ; via <lb/>
+            sanctorum oratio assidua, via peccatorum verbositas <lb/>
+            mala; via sanctorum 402 confessio fragilitatis, via <lb/>
+            peccatorum excusatio iniquitatis ; via sanctorum sim­ <lb/>
+            plicitas pura, via peccatorum obscuritas tenebrosa; <lb/>
+            via sanctorum patientia stabilis, via peccatorum in­ <lb/>
+            stabilitas temporalis ; via sanctorum humilitas vera, <lb/>
+            via peccatorum elatio inquinata ; via sanctorum abs­ <lb/>
+            tinentia temperata, via peccatorum nimietas dissola-
+            <milestone unit="PLSection" n="A"/><lb/>
+            ta; via sanctorum castitas sancta, via peccatorum <lb/>
+            luxuria immunda; via sanctorum sohriclas formosa, <lb/>
+            vii peccatorum ebrietas crapulosa ; via sanctorum lar­ <lb/>
+            gitas dandi, via peccatorum avaritia servandi; via <lb/>
+            sanctorum taciturnitas silendi, via peccatorum lo­ <lb/>
+            quacitas vapulandi (sic); via sanctorum commemora­ <lb/>
+            lio boni, via peccatorum oblivio Dei; via sanclorum <lb/>
+            lectio sancta, via pecca orum murmuratio præsum­ <lb/>
+            ptiosa (sic); via sanctorum justitia et veritas, via pec­ <lb/>
+            catorum mendacium et pravitas ; via sanctorum con­ <lb/>
+            cordia pacis, via peccatorum discordia dissensionis, <lb/>
+            via sanctorum in omnibus gratias agere, via pecca­ <lb/>
+            torum semper despicere ; via sanctorum zelus bonus <lb/>
+            in amore Dei, via peccatorum zelus malus et amor <lb/>
+            mundi; via sanitorum monstratio bona, via peccato­ <lb/>
+            rum ostensio mala; via sanctorum thesaurizare in <lb/>
+            cœlo, via peccatorum absconsio in imo; via sancto­ <lb/>
+            rum humilitas Christi, via peccatorum superbia Jia­ <lb/>
+            boli; via sanctorum amor vitæ futuræ, via peccaturum
+            <milestone unit="PLSection" n="B"/><lb/>
+            amor vitæ perituræ; in una tollitur quod hic diligi­ <lb/>
+            tur, in altera quod amatur semper habetur.</p>
+          <p>8. Duos etiam infernos in Scripturis legimus : unus <lb/>
+            in terra, in quo probantur sancti, alius sub terra, <lb/>
+            in quo damnantur dæmones et impri : etsi uno nomine <lb/>
+            nominati sunt, multum inter se distant; in uno nam­ <lb/>
+            que lahor et requies, in altero semper miseria, cui <lb/>
+            non est finis. In inferno sanctorum compunctio salu­ <lb/>
+            laris, in inferno peccatorum cruciatus pœnalis ; in <lb/>
+            inferno sanctorum poenitentia vera, in inferno pec­ <lb/>
+            calorum poenitentia sera; in inferno sanctorum abre­ <lb/>
+            missio pia, in inferno peccatorum damnatio justa ; <lb/>
+            in inferno sanctorum probatio cum consolatione, in <lb/>
+            inferno peccatorum poena sine intermissione ; in in­ <lb/>
+            ferno sanctorum afflictio, et refectio, in inferno pec­ <lb/>
+            catorum semper cruciatio ; in inferno sanctorum spes <lb/>
+            muneris accipiendi, in inferno peccatorum desperatio <lb/>
+            pœnæ finiendæ ; in inferno sanctorum suavitas jugis, <lb/>
+            in inferno peccatorum gravitas sustinendi; in inferno
+            <milestone unit="PLSection" n="c"/><lb/>
+            sanctorum timor offensionis, in inferno peccatorum <lb/>
+            vindicta transgressionis; in inferno sanctorum labor, <lb/>
+            et requies, in inferno peccatorum injuria semper <lb/>
+            pœnalis ; in inferno sanctorum visitatio infirmi, in <lb/>
+            inferno peccatorum ohlivio visitationis ; in inferno <lb/>
+            sanctorum fletus poenitentium , in inferno peccato­ <lb/>
+            rum lacrymæ et stridor dentium ; in inferno sancto. <lb/>
+            rum nox et dies, in inferno peccatorum tenebræ ex­ <lb/>
+            teriores; in inferno sanctorum probantur boni , in <lb/>
+            inferno peccatorum puniuntur pravi; in inferno <lb/>
+            sanctorum ignis videtur et ministrat, in inferno pec­ <lb/>
+            catorum habetur et cruciat; in inferno sanctorum <lb/>
+            custodiunt angeli, in inferno peccatorum cruciantur <lb/>
+            adversarii; in inferno sanctorum gratia , benignitas <lb/>
+            el misericordia, in inferno peccatoruin amariludo <lb/>
+            ira et indignatio, in inferno sanctorum adjuvantur <lb/>
+            sancti, in inferno peccatorum damnantur dæmones <lb/>
+            et impii ; in inferno sanctorum 403 boni et mali <lb/>
+            (sic), in inferno peccalorum nihil habetur boni; in <lb/>
+            inferno pravorum non est finis malorum, in inferno
+            <milestone unit="PLSection" n="D"/><lb/>
+            sanctorum spes est regni coelorum.</p>
+          <p>9. De ebrietate. Duas res reperi, et eas multum <lb/>
+            novi in humana misera vita multum sibi contrarias : <lb/>
+            una vocatur cbrietas, altera appellatur sobrietas, de <lb/>
+            quarum contrarietate pauca breviter dicam : cbriela3 <lb/>
+            satis inutilis est, indigna res in viris, impudica in fe­ <lb/>
+            minis, contumeliosa in servis, reprehensibilis in sa­ <lb/>
+            cerdotibus , dignitatem perdit in regibus, veritatem <lb/>
+            obliviscitur in judicibus, misericordiam delet in di­ <lb/>
+            vitihus, malos mores molat, hominem totum contur­ <lb/>
+            bat, inimicitias memorat, cædes et clades concitat , <lb/>
+            patricidia inter parentes præparat, rixas suscnat, <lb/>
+            sanos amentes facit, sapiemus stultos facit, sobrios <lb/>
+            insensatos reddit, abluit memoriam, desecat sensum, <lb/>
+            negligit mentem, confundit intellectum , concitat Ii­ <lb/>
+            bidinem, implicai sermonem, corrumpit sanguinem, <lb/>
+            violat visum, obdurat aures, strepiiat risum, turbat <lb/>
+            viscera, clamat inhoneste, non loquitur recte, humi­ <lb/>
+            dat [Vel humectat] cerebrum, flagitat somnum, dehi- <pb n="1299"/>
+            
+            <milestone unit="PLSection" n="A"/><lb/>
+            ritat membra, impedit mysteria, siccat gulam, dissi­ <lb/>
+            pat medullam, promittit vespere, et mentitur mane, <unclear/><lb/>
+            ascaiat corpus et animam, ct omnem exterminat <lb/>
+            salutem.</p>
+          <p>10. De sobrietate. Sobrietas Tero in omnibus utilis <lb/>
+            est; bona est in coelo et in terra, bona est in via si­ <lb/>
+            mul et in patria , continet juvenem, honorat senem, <lb/>
+            longevit (sic) vitam, dilat hæredem, fecundat pro­ <lb/>
+            lem, auget honorem, dignitas est in viris, pudici­ <lb/>
+            tia in feminis, gratia in servis, decor et laus in sa­ <lb/>
+            cerdotibus, gloria et victoria in regibus ; veritatem <lb/>
+            ostendit in judice, patientiam in paupere, largitatem <lb/>
+            in divite, bonos mores admovet, hominem totum <lb/>
+            conservat, amicitias innovat, rixas miligat, discor­ <lb/>
+            dantes concordat, sanos serenat, sapientes ornat, <lb/>
+            stultum erudit, sobrium custodit, retinet memoriam, <lb/>
+            illuminat corda. sincerat mentem, acutat intelle­ <lb/>
+            ctum, hilarat.faciem, continet vultum, contemnit Ii. <lb/>
+            bidinem, superat vitium, aures aperit, exonerat ce-
+            <milestone unit="PLSection" n="B"/><lb/>
+            rebrum, tacet tempore, loquimur recte , curat venas, <lb/>
+            confirmat sanguinem, irrigat ossa, nutrit medullam, <lb/>
+            roborat membra, fruilur somno, aperit visum, repti­ <lb/>
+            mit risum, ostendit mysteria per pauca verba, rarus <lb/>
+            sermone, fidelis opere; mundat corpus simul ctaui­ <lb/>
+            mam, et omnem custodit salutem.</p>
+          <p>ii. De pace et discordia. Duas alias vidi veraciter, <lb/>
+            quæ multum inter sc distant sibi, quarum una si sola <lb/>
+            regnasset, et alia opportune non venisset, nullus ho­ <lb/>
+            minum feliciter vixisset; de quibus pauca dicere volo, <lb/>
+            quia ad alia festino modo. Discordia vocatur una, et <lb/>
+            pax vocatur altera, Discordia multum timenda, et <lb/>
+            omni Chrisliano va!de fugienda, quæ hæc facit : de <lb/>
+            filiis Dei filios diaboli, de amicis inimicos, de fratri­ <lb/>
+            bus adversarios; ex qua susurratio, querela, furor <lb/>
+            et ira, controversia, et mendacium, juramentum, et <lb/>
+            perjurium, læsio, ct scandalum, dolus et invidia, <lb/>
+            livor et homicidium. Nihil aliud cst discordia, nisi <lb/>
+            separatio pacis, et disruptio unitatis, disciplina dia­ <lb/>
+            boli, via mortis, perditio vitæ, confractio mandato­
+            <milestone unit="PLSection" n="c"/><lb/>
+            rum, mutatio sensus , dispersio intellectus, domus <lb/>
+            diaboli, 404 semita inferni, exspectatio pœnæ, <lb/>
+            expulsio indulgentiæ, subversio disciplinæ, despectio <lb/>
+            charitatis , suppressio humilitatis, motatio animi, <lb/>
+            conturbatio membrorum , malum lethale, venerium <lb/>
+            serpentis, morsus viperæ, flatus basilisci, vomitus <lb/>
+            reguli, conclusio regni, apertio inferni, inimica Dei, <lb/>
+            arnica diaboli :</p>
+          <p>12. Pax vero non sic agit, quia Deum homini et <lb/>
+            hominem Deo proximum facit ; ideo pax vera te­ <lb/>
+            nenda est, et omnibus Christianis corde et corpore <lb/>
+            conservanda est. Dulcis namque et nimis valde dili­ <lb/>
+            genda talis magistra, quæ facit miracula multa, et <lb/>
+            miranda est quæ Cadi de filiis diaboli filios Dei, et de <lb/>
+            inimicis amicos, de adversariis fratres, de extraneis <lb/>
+            propinquos, de alienis domesticos ; ex qua sinceritas <lb/>
+            et simplicitas, mitigatio et lenitas, mansuetudo et <lb/>
+            indulgentia, planities et veritas , tacitu' nitas et jus­ <lb/>
+            titia, stabilitas et patientia, dilectio et tutio (sic),
+            <milestone unit="PLSection" n="D"/><lb/>
+            auxit nm et curatio. Nihil aliud est pax, nisi domus <lb/>
+            Dei; sic enim ipse Deus dixit discipalis suis : Pacem <lb/>
+            meam do vobis, pacem relinquo vobis. Quid aliud pax, <lb/>
+            nisi propinquitas Dei, gratia Dei, et conjunctio Dei, <lb/>
+            valetudo sensus , acics intellectus, domus Dei, se­ <lb/>
+            mita regni, præmiorum exspectatio, diligentiæ col­ <lb/>
+            lectatio, rigor disciplinae, prefectio charitatis, circu- <lb/>
+            Ius humilitatis, clypens tranquillitatis, continentia <lb/>
+            principatus, membrorum serenitas ? 0 si me licuisset <lb/>
+            plene et plane pacem pronuntiare I multas lineas de­ <lb/>
+            bui digitis scribere; superat enim omnem sensum. <lb/>
+            Cujus vitalis dulcedo melliflua apertio regni, conclu­ <lb/>
+            sio inferni, amica Dei, inimica diaboli, felicitas est <lb/>
+            in vita præsenti, gaudium et laetitia in vita perenni.</p>
+          <p>13. Duobus modis vera pœnitentia dignoscitur : <lb/>
+            primus modus cst commissa devoiissime et largissi­ <lb/>
+            mis lacrymis deflere , et poenitere. Secundus modus <lb/>
+            est deflenda et poenitenda iterum non admittere. <lb/>
+            Poenitentia dicta est quasi punitentia, quia homo in
+            <milestone unit="PLSection" n="A"/><lb/>
+            se punit quod male cotnmisit. Servo Dei tanta rcror­ <lb/>
+            datio esse debet peccati, ut ea quae gessit semper la­ <lb/>
+            crymis defleat. Nihil autem pejus quam culpam co­ <lb/>
+            gnoscere, nec deflere; duplicem enim habere debet <lb/>
+            fletum in poenitentia omnis peccator, sive quia per <lb/>
+            negligentiam bonum non facerit, seu quia malum per <lb/>
+            audaciam perpetraverit. Quod enim oportuit non fe­ <lb/>
+            cit : et quod agere nen oportuit, id gessit. Ile pœni­ <lb/>
+            tentiam digne agit, qui reatum suam satisfactione <lb/>
+            legitima plangit, condemnando scilicet ac deflendo <lb/>
+            quæ gessit, tanto profundius, quanto exstitit in nec­ <lb/>
+            cando proclivior. Magna enimest virtus lacrymarum, <lb/>
+            quae sine voce et verborUm sonitu impetrant veniam, <lb/>
+            quam pro culpis postulant. Petrus namque lacrymas <lb/>
+            prorupit, nihil voce precatus est. In venio enim quod <lb/>
+            fleverit, non invenio quid dixerit; lacrymas Pjus <lb/>
+            lego, satisfactionem ejus non lego. Recte plane Pe­ <lb/>
+            trus flevit, quia quod deneri solet potest excusari; <lb/>
+            quod defendi non potest, ablui potest. Lavant enim
+            <milestone unit="PLSection" n="B"/><lb/>
+            lacrmæ delictum quod pudor est voce confiteri ; <lb/>
+            lacrymæ ergo verecundiæ consulunt in flendo et sa­ <lb/>
+            luti, non eruhescunt impetrando, et impetrant quod <lb/>
+            recte postulant in rogando.</p>
+          <p>14. Lacrymae, inquiam, tacite qnodammodo pro­ <lb/>
+            cedunt, veniam postulant 405 et merentur; causam <lb/>
+            non dicunt, et misericordiam sequnntur : lacryma­ <lb/>
+            rum utique utiliores sunt preces quam sermonum, <lb/>
+            quia sermo in precando fortasse fallit, lacrymæ om­ <lb/>
+            nino non falluut. Sermo enim interdum non totum <lb/>
+            profert negotium, lacrymæ semper produnt affectum. <lb/>
+            O lacrymæ, quam dulces, quam fortes, quam pretio­ <lb/>
+            sæ, quam suaves estis in uberibus matris pœnitentiæ? <lb/>
+            Sicut enim pia mater ministrat de pectore lac in­ <lb/>
+            fanti, sic pia pœnitentia de cordis compunctione la­ <lb/>
+            crymas porrigit pœnitenti. Mater lactat infantem, ut <lb/>
+            cnscat, pœnitentia lacrymat poenitentem, ut revivis­ <lb/>
+            cat ; mater optat infanti ut vita veterescat, [pœni­ <lb/>
+            tentia] poenitenti, ut nullo malo senescat. Mater non <lb/>
+            omnibus optat vitam , poenitentia omnibus optat sa­
+            <milestone unit="PLSection" n="c"/><lb/>
+            lutem. O pœnitentia, magna sunt ubera tua, vino <lb/>
+            compunctionis plena, quibus reos recreas, lapsos re­ <lb/>
+            levas, fugientes revocas, confractos confirmas, mor­ <lb/>
+            bidos mundas, leprosos lavas, infirmos roboras, <lb/>
+            tristes laetificas, desperantes confortas , vulneratos <lb/>
+            sanas, laceratos ligas, perditos reparas, in peccatis <lb/>
+            mortuos suscitas. 0 pœnitentia ! quid dicam de te ? <lb/>
+            laudare enim non valeo ut volo, quia pretiosior es <lb/>
+            auro obryzo. Per te enim mors destruitur, et dia­ <lb/>
+            bolus fugatur; per te vita invenitur, et Deus reperi­ <lb/>
+            tur ; per te infernus clauditur, et regnum invenitur, <lb/>
+            Ille itaque pœnitentiam dignam agit, qui sic præte­ <lb/>
+            riia deplorat, ut futura iterum non admittat; vulnus <lb/>
+            enim iteratum tardius sanatur. Iteratio peccati grave <lb/>
+            malum, sicut morbus super morbum veniat, sicut <lb/>
+            imber super imbrem occurrat; nam qui plangit pec­ <lb/>
+            catum, et iterum admittit peccatum, quasi si quis <lb/>
+            lavet laterem crudum, quem quando magis laverint, <lb/>
+            tanto amplius lutum facit. Nullus itaque de Dei bo-
+            <milestone unit="PLSection" n="D"/><lb/>
+            nitate dubitet, nullus de Dei misericordia desperet, <lb/>
+            veniam corde quaerat, et recipiet. Corpore et mente <lb/>
+            pœniteat, et Deum ad misericordiam provocet. David <lb/>
+            post culpam psalmum cantavit, et regnum non per­ <lb/>
+            didit, et veniam invenit. Manasses rex impius curatU <lb/>
+            Domino flevit, et sibi et populo pacem acquisivit. <lb/>
+            Zachæus in arborem ascendit, el salutem invenit. <lb/>
+            Maria lacrymavit, et veniam meruit; Petrus amare <lb/>
+            nevit, et gratiam non perdidit, et veniam impetravit. <lb/>
+            Lalro in uno sermone cum Christo paradisum intra. <lb/>
+            vit. Longinus lancea latus Salvatoris aperuit, et non <lb/>
+            tantum veniam invenit, sed episcopatus honorem et <lb/>
+            martyrii gloriam et coronam habere meruit.</p>
+          <p>15. Duobus mandatis tota lex pendet, et pro­ <lb/>
+            phetæ, id est, dilectio Dei tot s viribus corporis et <lb/>
+            animæ, et dilectio proximi sicut semetipsum. Duo <lb/>
+            bus modis creditur, id est, perfecta fide et perfecta <lb/>
+            operatione. Duobus modis crux portatur, id est, <lb/>
+            cum per abstinentiam afficitur corpus aut per com- <pb n="1301"/>
+            
+            <milestone unit="PLSection" n="A"/><lb/>
+            passionem proximi afnigitur animus. Duobus modis <lb/>
+            locutio divinadistinguitur, id cst, aut per semel­ <lb/>
+            ipsum Dominus loquitur, aut per creaturam angeli­ <lb/>
+            cam verba formantur.</p>
+          <p>16. Duo in hac vita sunt genera justorum : unum <lb/>
+            videlicet bene viventium, sed nulla docentium ; aliud <lb/>
+            vero recte viventium, et eadem recta docentium. <lb/>
+            Duobus modis percussio divina intelligitur, id cst, in <lb/>
+            bonam 406 partem , qua percutimur carne, ut <lb/>
+            emendemur anima et mente ; altera, qua vulnera­ <lb/>
+            mur conscientia ex charitate, ut Deum ardentius <lb/>
+            diligamus. Duobus modis Deus respicit in homines, <lb/>
+            id est, vel ad veniam, vel ad vindictam : ad veniam, <lb/>
+            sicut respexit Petrum ; ad vindictam, sicut in Sodo­ <lb/>
+            mam et Gomorrham.</p>
+          <p>17. Duo latrones cum Christo crucifixi sunt, id <lb/>
+            est, Dismas a dextris, Gestas a sinistris. Alia no­ <lb/>
+            mina latronum Chacham et Chamna. Duas filias Lot <lb/>
+            habuit, filius fratris Abrahæ, quarum una vocabatur <lb/>
+             
+            <milestone unit="PLSection" n="B"/><lb/>
+            Adach, quæ pep eritpatri filium nomine Moab, de <lb/>
+            quo Moabitæ orti sunt. Altera vero, quæ vocabatur <lb/>
+            Moach, quæet similiter patri suo peperit filium no­ <lb/>
+            mine Ammon, de quo Ammonitæ exierunt. IIi duo <lb/>
+            filii non sine culpa nati sunt, quia pater 'ilias uxores <lb/>
+            habuit, et hoc non voluntas, sed chrietas fecit; et <lb/>
+            ita culpa miro modo est facta, ut pater filias uxores <lb/>
+            haberet, et sorores matres fratribus factæ sunt, et <lb/>
+            filii matribus fratres fuerunt, quia dc semine patris <lb/>
+            filiæ natæ sunt, ct de semine iterum patris in filia. <lb/>
+            bus filii sunt procreato ; et ideo hæc progenies ma­ <lb/>
+            gnam maledictionem meruit, quæ usque ad decimam <lb/>
+            generationem in Ecclesiam Dei non intravit. Et ta­ <lb/>
+            men Uult Moabitida bona femina fuit, quæ in genc­ <lb/>
+            rationcm Christi partem habere meruit. Ipsa enim <lb/>
+            mater avi David fuit ; David namque filius Jesse, <lb/>
+            Jesse filius Obeth, Obeth filius Booz, ct mater ejus <lb/>
+            Ruth. Avus enim pater patris est.</p>
+          <p>18. Duos filios Isaac habuit, unus Deo reprobus,
+            <milestone unit="PLSection" n="c"/><lb/>
+            et alter electus fuit. Sic enim Scriptura ait : Jacob <lb/>
+            dilexi, et Esau odio habui ; et hoc non sine causa, <lb/>
+            quia ambo filii boni patris, et anno uterini In utero <lb/>
+            bonae matris, et tamen electus supplantavit repro­ <lb/>
+            bum in utero matris, ct primogenita ei rapuit, et <lb/>
+            benedictionem patris; sed ideo hoc voluit Deus ita, <lb/>
+            quia omnes electi de Jacob sunt orti, et de semine <lb/>
+            cjus, et tamen reprobum non dereliquit Deus, quia <lb/>
+            Job ct Dei servus, et rex ortus est ex genere ejus. <lb/>
+            Et ideo hoc breviter memoravi, quia mali dc bonis,
+            <milestone unit="PLSection" n="A"/><lb/>
+            et boni de malis oriuntur. Mali de bonis, dæmones <lb/>
+            de angelis ; boni de malis, sancti de gentibus. Mali <lb/>
+            de bonis, Ismael de Abraham, Moab et Ammon do <lb/>
+            Lot ; boni de malis, Abraham de Chaldæis.Mali de <lb/>
+            bonis, Datan et Abiron de Levi, Ophni et Phinees <lb/>
+            de Heli. Boni de malis, Ruth ac Moab et Raab de <lb/>
+            Chanaan. Mali de bonis, quod ante debui dicere, <lb/>
+            Cain de Adam, et de Noe Cham. Bonus de malo, <lb/>
+            Jonathan de Saul. Malus dc bono, Ahsalon de David. <lb/>
+            Quid phura dicam ? Sic enim erit usque in finem, et <lb/>
+            de bonis mali, ct de malis boni ; cum autem vene­ <lb/>
+            rit, qui solus bonus est bonos a malis segregabit. <lb/>
+            iD. Duos viros adhuc vivos legimus ; sed ubi sunt <lb/>
+            vivi et absconditi, nescimus. Unus ab Adam septi­ <lb/>
+            mus, et Enoch nominatus, alter vero Elias, qui <lb/>
+            usque ad cœlum in curru igneo est raptus; de duo­ <lb/>
+            bus breviter diximus, tamen satis, quia ad tres fe­ <lb/>
+            stinamus.</p>
+          <p>21). Tres persona Trinitatis, in una potestate et
+            <milestone unit="PLSection" n="B"/><lb/>
+            majestate, Pater, Filius et Spiritus sanctus, quæ <lb/>
+            tres personæ apud Hebræos sic vocantur Abba, Ben, <lb/>
+            Ruba. Apud vero Græcos Pater, Bar, quomodo au­ <lb/>
+            tem Græce 407 Spiritus dicilur, adhuc non inveni- <lb/>
+            Illi tamen d.cunt ageos quod Latine sonat sanctus. <lb/>
+            Abba patcr, Ben filius, Ruba Spiritus sanctus. Pater <lb/>
+            tamen Græcum est, ct Latine sonat genitor. Bar <lb/>
+            Græce, filius Latinc. Trinitas itaque dicitur propter <lb/>
+            personarum diversitatem, unitas vero propter inse­ <lb/>
+            parabilem deitatis substantiam. Pater dicitur, eo <lb/>
+            quod habeat Filium, et omnis paternias, quæ in <lb/>
+            cœlo, ct in terra est, in eo et ex co nominatur. Fi­ <lb/>
+            lius dicitur, eo quod habeat Patrem, Spiritus vero <lb/>
+            sanctus, eo quod a Patre et Filio procedit. Deus di­ <lb/>
+            citur propter potestatem, et dilectionem ; Dominus <lb/>
+            dicitur pruper dominationem ; omnipotens dicitur, <lb/>
+            quia omnia potest, cui nihil impossibile est. Et si Deus <lb/>
+            omnipotens est, quid est quod nonpotest? Id est, <lb/>
+            non potest falli, non potest mori, non potest pcc­
+            <milestone unit="PLSection" n="c"/><lb/>
+            care. rcr Patrem vivimus, movemur et sumus ; per <lb/>
+            Filium rationem, et scientiam, et intellectum habe­ <lb/>
+            mus ; per Spiritum sanctum donis bonis omnibus <lb/>
+            illustramur. Tribus modis Deus dicitur, id est, <lb/>
+            essentialiter, ut Paulus dicit : Qui est benedictus in <lb/>
+            sæcula. Nuncupative, ut Dominus Moysi dicit : Con­ <lb/>
+            stitui te in Deum Pharaonis. False, ut dicitur : Dii <lb/>
+            qui non fecerunt cælum et terram pereant. Tres res in <lb/>
+            principio cie avit Deus, id cst, angelos, et... et in­ <lb/>
+            formem materiam. (Desunt alia.)</p>
+        </div>
+        
+        </body>
+  </text>
+</TEI>

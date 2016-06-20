@@ -1,0 +1,1672 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title>Patrologiae Cursus Completus. Series Latina (PL)</title> 
+        <sponsor>University of Leipzig</sponsor>
+        <funder>European Social Fund Saxony</funder>
+        <principal>Gregory Crane</principal>
+        <respStmt>
+          <persName xml:id="Jouve">Jouve</persName>
+          <resp>OCR-ed, corrected and encoded the text</resp>
+        </respStmt>
+        <respStmt>
+          <persName>Greta Franzini</persName>
+          <resp>Project Manager (University of Leipzig)</resp>
+        </respStmt>
+        <respStmt>
+          <persName>Simona Stoyanova</persName>
+          <resp>Project Assistant (University of Leipzig)</resp>
+        </respStmt>
+        <respStmt>
+          <persName>Bruce Robertson</persName>
+          <resp>Technical Advisor (Mount Allison University)</resp>
+        </respStmt>
+      </titleStmt>
+      
+      <publicationStmt>
+        <authority>University of Leipzig</authority>
+        <idno type="filename">PL83.xml</idno>
+        <availability>
+          <licence target="https://creativecommons.org/licenses/by-sa/4.0/">Available under a Creative Commons Attribution-ShareAlike 4.0 International License</licence>
+        </availability>
+        <date>2014</date>
+        <publisher>University of Leipzig</publisher>
+        <pubPlace>Germany</pubPlace>
+      </publicationStmt>
+      
+      <sourceDesc>
+        <listBibl xml:lang="la">
+          <biblStruct>
+            <monogr>
+              <editor>
+                <persName>
+                  <name xml:lang="fr">Jacques Paul Migne</name>
+                </persName>
+              </editor> 
+              <author ref="urn:cite:perseus:author.771">Isidorus Hispalensis</author>
+              <title>Differentiarum Sive De Proprietate Sermonum Libri Duo</title>
+              <title>Allegoriae Quaedam Sacrae Scripturae</title>
+              <title>De Ortu Et Obitu Patrum Qui In Scriptura Laudibus Efferuntur</title>
+              <title>In Libros Veteris Ac Novi Testamenti Proemia</title>
+              <title>Liber Numerorum Qui In Sanctis Scripturis Occurrunt</title>
+              <title>De Veteri Et Novo Testamento Quaestiones</title>
+              <title>Mysticorum Expositiones Sacramentorum Seu Quaestiones In Vetus Testamentum</title>
+              <title>Appendix Ad Libros Regum</title>
+              <title>De Fide Catholica Ex Veteri Et Novo Testamento Contra Judeos</title>
+              <title>Sententiarum Libri Tres</title>
+              <title>De Ecclesiasticis Officiis</title>
+              <title>Synonyma De Lamentatione Animae Peccatricis</title>
+              <title>Regula Monachorum</title>
+              <title>Epistolae</title>
+              <title>De Ordine Creaturarum Liber</title>
+              <title>De Natura Rerum Ad Sisebestum Regem Liber</title>
+              <title>Chronicon</title>
+              <title>Historia De Regibus Gothorum. Wandalorum Et Suevorum</title>
+              <title>De Viris Illustribus Liber</title>
+              <title>Carmina [Ascripta]</title>
+              <title>Chronica Regum Visigothorum (Incertus)</title>
+              <title>Expositio In Canticum Canticorum Salomonis [Incertus]</title>
+              <title>De Conflictu Vitiorum Et Virtutum (Incertus)</title>
+              <title>Expositio In Missa (Incertus)</title>
+              <title>Sententiarum Liber Quartus (Incertus)</title>
+              <title>Exhortatio Humilitatis (Incertus)</title>
+              <title>Testimonia Divinae Scripturae Et Patrum (Incertus)</title>
+              <title>Sermones (Incertus)</title>
+              <title>De Ecclesiasticis Dogmatibus (Incertus)</title>
+              <title>Sentantiae Differentiarum De Activa Vita Atque Contemplativa [Incertus]</title>
+              <title>Exhortatio Poenitendi Cum Consolatione Et Misericordia Dei [Incertus]</title>
+              <title>Lamentum Poenitantiae (Incertus)</title>
+              <title>Oratio Contra Insidias Diaboli (Incertus)</title>
+              <title>Liber De Ortu Et Obitu Patrum Incertus</title>
+              <title>Liber De Numeris (Incertus)</title>
+              <title>Glossae in Sacram Scripturam</title>
+              <title>Differentiarum, sive de Proprietate Sermonum, Liber</title>
+              <title>Liber Glossarum</title>
+              <imprint>
+                <publisher>Garnier</publisher>
+                <pubPlace>Paris</pubPlace>
+                <date>1850</date>
+              </imprint>
+              <biblScope unit="volume">83</biblScope>
+            </monogr>
+            <monogr>
+              <author>Auctor Incertus</author>
+              <title>Archiepiscopi Toletani Veteres</title>
+              <title>Chronologia Gothicorum Regum (Ex Codice Regio Vaticano)</title>
+              <imprint>
+                <publisher>Garnier</publisher>
+                <pubPlace>Paris</pubPlace>
+                <date>1850</date>
+              </imprint>
+              <biblScope unit="volume">83</biblScope>
+            </monogr>
+            <ref target="http://hdl.handle.net/2027/pst.000020950231">HathiTrust</ref>
+            
+          </biblStruct>
+        </listBibl>
+      </sourceDesc>
+      
+    </fileDesc>
+    <encodingDesc>
+      <p>The following text is encoded in accordance with EpiDoc standards and with the
+        CTS/CITE Architecture.</p>
+      <refsDecl n="CTS">
+        <cRefPattern n="no citable units founds" matchPattern="(.+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div/tei:div[@n='$1'])"/>
+      </refsDecl>
+    </encodingDesc>
+    
+    <profileDesc>
+      <langUsage>
+        <language ident="la">Latin</language>
+      </langUsage>
+    </profileDesc>
+    
+</teiHeader>
+  <text>
+    <body><div type="edition" n="urn:cts:latinLit:tmp1444.tmp1444.opp-lat1">
+          <ab>
+            <title type="sub">APPENDIX XX.</title>
+          </ab>
+          <ab>
+            <title type="sub">LIBER DE UHTU ET OBITU PATRUM, De quo in Isidorianis, cap. 61, IT. 48.</title>
+          </ab>
+          <ab>
+            <title type="sub">Dt sancto Abraham, qui fuit prima via credendi.</title>
+          </ab>
+          <p>
+            <milestone unit="PLSection" n="B"/>1. ABRAHAM, filius Thare, filii Nachor, frater <lb/>
+            Aran , patris Lot, pater Ismael, et avns Jacob. Un­ <lb/>
+            decitnus a Noe, vigesimus ab Adam , Deum corde <lb/>
+            credidit, Trinitatem hospitio suscepit. Cum Deo lo­ <lb/>
+            quitur, a Melchisedech post victoriam benedicitur. <lb/>
+            Filium in senectutis tempore meruit, quem Deo Dei <lb/>
+            amore obtulit; Chald;ea ortus, in Chanaan peregri­ <lb/>
+            natur; dives valde, placuit DPO. Plenus dierum , <lb/>
+            CLXXV aunorum deficiens, mortuus, a fili s suis <lb/>
+            Ismael et Isaac sepultus in spelunca duplici, quæ <lb/>
+            est in agro Ephron Cæthæi jutta civitatem Caria­ <lb/>
+            . tharbe, quæ et Hebron alio nomine vocatur.</p>
+          <p>X. ISAAC, filius Abraham, in senectute parentum <lb/>
+            natus, id est, matre nonagenaria et patre centena­ <lb/>
+            rio in Geraris inter Cades et Sur ortus, a Deo nomi­ <lb/>
+            ratus, antequam natus esset, die octavo circumci­ <lb/>
+            sus, obediens patri, Deo immolatus in figura Jesu <lb/>
+            Christi, qui oblatus est Deo Patri. Uxor Isaac Ite­ <lb/>
+            becca, Bathuelis filia, filii Nachor, fratris Abraham,
+            <milestone unit="PLSection" n=""/><lb/>
+            mater Jacob et Esau. Isaac plenus dierum, et senex <lb/>
+            CLXXX annorum, morilur justus, a filiis suis sepultus. I</p>
+          <p>3. JACOB, filius Isaac, frater Esau, fratris sup­ <lb/>
+            plantator. Benedictus a patre, nolens pater. Bene­ <lb/>
+            dictus a Deo, volens Deus, simul et mater. Ortus in <lb/>
+            Bethsabee, factus pater tredecim filiorum , scalam <lb/>
+            vidit in Bethel dormiens, angelos in scala, et Deum <lb/>
+            in visu cofispiciens, luctavit cum Deo, ben edictus <lb/>
+            ab eo. Nomen mutat, Israel illum appellavit. Valde <lb/>
+            dives, in Ægyptum pergit causa famis , ibi moritur <lb/>
+            plenus dierum CXLVII annorum ; aromatibus &lt; ondi­ <lb/>
+            tus, inde translatus a Juseph, sepultus in <unclear>spelunca</unclear> <lb/>
+            duplici in terra Chanaan , ubi Abraham et Sara, <lb/>
+            Isaac et Rebecca, simul et Lia , jacent sepulli.</p>
+          <p>4. JOSEPH , filius Jacob et Rachel, frater Benja­ <lb/>
+            min, in Mesopotamia Syriæ odiosus fratribus, ama <lb/>
+            bilis patri, semniator veridicus, in Ægyptum a fra­ <lb/>
+            tribus venditur in figura Christi, qui venundatus est <lb/>
+            pretio argenti. Missus in carcerem sine culpa, vere <lb/>
+            sub doto et mendacio Putipharis feminae. Fuit Domi-
+            <milestone unit="PLSection" n="D"/><lb/>
+            nus eum Joseph in carcere. Somnia regis Pharaonis <lb/>
+            revelavit, quæ nemo interpretari potuit; propter <lb/>
+            hoc a rege est honoratus, princeps Ægypti factus, <lb/>
+            et a Pharaone Sara tofane nominatus, quod Ægy­ <lb/>
+            ptiace sonat mundi Salvator. Nutritor fratrum, simul <lb/>
+            et patris, in tempore dirae ei gravis famis. Vixit <lb/>
+            longævus multis diebus CXX annis. In Ægypto mor­ <lb/>
+            tuus, aromatibus conditus in loco Bresith in Ægypto <lb/>
+            375 repositus, curru ossa, ut ipse rogavit, Moy­ <lb/>
+            ses de Ægypto secum portavit, et in tempore Josue <lb/>
+            ministri regis populus in Sichen sepelivit ossa ejus.</p>
+          <p>5. JOB, qui et Jobab, cujus pater Zara, et mater <lb/>
+            Dosra. Zara autem filius Ragnel, filii Esau, filii <lb/>
+            Isaac, quintus ab Abraham rex inclytus in terra <lb/>
+            Edom. Vir simplex et rectus Domini servus. Dives <lb/>
+            ac praeclarus in filiis, et filiabus, in possessione, <lb/>
+            ovium septem millia, juga boum quinquaginta, at <lb/>
+            mulia familia. A Deo probatus, a Satun tentatus, . <lb/>
+            substantia privatus, lepra percussus, filiis orbatus, <lb/>
+            valde maledictus, a falsis amicis false consolatus,
+            <milestone unit="PLSection" n="B"/><lb/>
+            et eorum verbis corde contristatus, loquitur cum <lb/>
+            Domino , interrogatus ab ipso seipsum reprehendit. <lb/>
+            In favilla et cinere poenitentiam egit; liberatus a <lb/>
+            plaga , additur substantia. Benedictus a Domino <lb/>
+            accepit duplicia in vita, et fllios Dei beneficio. <lb/>
+            Vixit post plagam diebus multis CXX annis ; mori­ <lb/>
+            tur senex et plenus dierum.</p>
+          <p>6. MOYSES, filius Ambre, filii Chath, filii Levi, <lb/>
+            filii Jacob. Septimus ab Abraham, Aaron, et Mariæ <lb/>
+            frater, quorum mater Jochabet, filia Levi, filii Ja­ <lb/>
+            Cob. Moyses in Ægypto natus, tribus mensibus abs­ <lb/>
+            conditus, inde in fiscellam stirpeam positus, et in <lb/>
+            ripam fluminis dimissus, a filia Pharaonis ibi est <lb/>
+            inventus, et ab ea Moyses nominatus ; eum nutrire <lb/>
+            precepit, et in filiurn adoplavit. Ut vir factus est, <lb/>
+            fratres visitavit. Occiso Ægyptio, in Madian fugit, <lb/>
+            et ibi pastor ovium fuit. Ubi Dominum in rubo ar­ <lb/>
+            denti vidit, quem Dominus e rubo vocavit, et prin­ <lb/>
+            cipem populi sui constituit. Virtutes multas in Ægy­
+            <milestone unit="PLSection" n="C"/><lb/>
+            pto per ipsum in mari et in eremo Dominus fecit; <lb/>
+            facie ad faciem Dominum vidit ; tegern in Sinai ei <lb/>
+            tradidit, quam ipse Dominus digito scripsit, de qua <lb/>
+            [Forte, et quam | populum semper docuit. terram pro­ <lb/>
+            missionis vidit, sed minime intravit. Jussu Dei ver­ <lb/>
+            ticem Pharga ascendit, et ibi moriens ad patres per­ <lb/>
+            git plenus dierum CXX annorum. Cujus oculi non sunt <lb/>
+            caligati, nec dentes mutati, cujns sepulcrum nemo <lb/>
+            vidit , vel novit, quia ipse Dominus illum sepelivit <lb/>
+            et planxit cum populus xxx diebus.</p>
+          <p>7. AARON, filius Ambre, frater Moysi, prior na­ <lb/>
+            scendo in tribus annis, minor honore in multis si­ <lb/>
+            gnis. Sacerdos Dei, propheta fratris, unctus oleo <lb/>
+            sancto, indutus veste præclara, intrabat semel in <lb/>
+            sancta in anno orans pro seipso, et pro populo, or­ <lb/>
+            tus in Ægypto, defessus in eremo, peccat in vitulo. <lb/>
+            Orans frater pro eo, postea complacuit Deo; priva­ <lb/>
+            tus sorte hæreditatis in terra promissionis, quia <lb/>
+            non credidit verbo veritatis, percussa petra in Ca­ <lb/>
+            desbarne cum aqua contradictionis. Pro tali culpa
+            <milestone unit="PLSection" n="D"/><lb/>
+            iratus Dominus dixit ad Moysen : Tolle Aaron, et <lb/>
+            filium ejus, et duces eos in montem Nor, qui cum <lb/>
+            nudaveris patrem veste sua, indues ex eis Eleaza­ <lb/>
+            rum filium ejus manu tua. Ita Moyses fecit, ut Do­ <lb/>
+            minus imperavit, patrem spoliavit, filium vestivit. <lb/>
+            Aarou in monte Hor moritur coram omni populo <lb/>
+            anno quadragesimo egresssionis populi ex Ægypto <lb/>
+            mense quinto prima die mensis, cum esset anno­ <lb/>
+            rum ex XIII, et ibi sepelitur, et xxx diebus a populo <lb/>
+            plangitur; et pro eo Eleazarus sacerdos ponitur. <unclear/> <lb/>
+            Soror ejus Maria in Cades cadit mortua, et ibi <lb/>
+            jacet a populo sepulta.</p>
+          <p>376 8 JESU, lilius Nun, qui a parentibus Auses * <lb/>
+            [ Corrige, Osee J primo appellatus est, e tribu <lb/>
+            Ephraim, famulus Domini, et minister Moysis , <lb/>
+            natus in Ægypto, confortatus in Domino, et post <lb/>
+            mortem magistri factus esi princeps præcipuus po­ <lb/>
+            puli. Mittit exploratores in urbem Jericho : loquitur <lb/>
+            cum Domino. et audivit a Domino, Exaltubo te hodie <pb n="1277"/>
+            
+            <milestone unit="PLSection" n="A"/><lb/>
+            coram populo meo. Pergit sicco pede fluenta Jorda­ <lb/>
+            nis cum Dei, in campo Galgalis subvertit <lb/>
+            urbes, tyrannos, et reges gentium. Imperat soli el <lb/>
+            lunae; steterunt in cœlo et terra leges naturæ. <lb/>
+            Præponit urbes simnl, et viros, disponit in sortes <lb/>
+            divisas. Prædicabat semper populo Domini legem, <lb/>
+            judicavit Israel in pacis semper sede. Vixit !on­ <lb/>
+            lævus plenus dierum c simul et x annorum. Se­ <lb/>
+            pultus in Thamnathsare, possessionis suæ parte, <lb/>
+            in monte Ephraim.</p>
+          <p>9. SAMUEL, qui interpretatur positus aDeo. Alius <lb/>
+            Elcana, filii Jeroboam, filii Eliu, ortus in monte <lb/>
+            Ephraim , natus in Ramatha, princeps et propheta, <lb/>
+            Nazaraeus ab infantia, famulus Dei, et minister sa­ <lb/>
+            cerdotis Heli, cujus mater sterilis, quae vocatur <lb/>
+            Anna, oravit Dominum in templo, et facta est fe­ <lb/>
+            cunda. Quae cantavit canticum, Exsultavit cor meum <lb/>
+            in Domino. Samuel fidelis vixit. Saulem, et David <lb/>
+            super sedes regni posuit, postulavit pluviam, et
+            <milestone unit="PLSection" n="B"/><lb/>
+            pluit e coelo, orabat semper ad Dominum pro po­ <lb/>
+            pulo suo, multis diebns populum rexit. Grandævus, <lb/>
+            et senex ad patres perrexit. Quem populus Israel <lb/>
+            planxit, et in domo sua Ramatha terræ eum ron­ <lb/>
+            didit.</p>
+          <p>10. DAVID filius Jesse, filii Obeth, filii Buzi, <lb/>
+            ortus e tribu Juda, natus in Ephrata, præclarus <lb/>
+            forma, rex et propheta, reges superavit, psalmos <lb/>
+            cantavit ; bestias prostravit, Goliam interfecit, Do­ <lb/>
+            minum semper timuit, robuste regnavit, Christi <lb/>
+            nativitatem et baptismum prænuntiavit. Passionem <lb/>
+            et resurrectionem ejus demonstravit, Ascensionem <lb/>
+            et ejus adventum in fine mundum judicare propheta­ <lb/>
+            vii, electus Dei, quem Deus amavit, humilis et <lb/>
+            ,mitis oves patris pavit, XL annos in Israel regnavit, <lb/>
+            vii annos in Ebron, in Jerusalem XXXIII annos. Vixit <lb/>
+            longævus. Dormivit cum patribus in civitate David , <lb/>
+            et in Bethleem est sepultus.</p>
+          <p>- ii. ELIAS Thesbites, qui interpretatur Dominus,
+            <milestone unit="PLSection" n="C"/><lb/>
+            Dei propheta magnus, adhuc vivus, Domini servus, <lb/>
+            prædicator futurus, cum Antichristo in fine mundi <lb/>
+            pugnaturus, XL dies jejunavit. Jonam mortuum su­ <lb/>
+            scilavit, vi nonses et tres annos pluviam prohibuit, <lb/>
+            ignem e cœlo super quos voluit et aquam venire fe­ <lb/>
+            cit. Qui bovem, et lapides, et aquam comsumpsit. <lb/>
+            Centum et duos viros vorax flamma interfecit. Idem <lb/>
+            Elias , corvis ministrantibus , in spelunca vixit ; <lb/>
+            oleum et farinam viduæ benedixit. Sacerdotes Baal <lb/>
+            omnes interfecit. In curru igneo usque ad cœlum <lb/>
+            ascendit. E terra Arabon et tr hu Aaron ortus fuit.</p>
+          <p>12. ELlSEUS, qui interpretatur Domini mei salus, <lb/>
+            propheta altissimi, discipulus Eliæ, et magister <lb/>
+            Jezi, gratiam magistri suscepit; fluenta Jordanis <lb/>
+            divisit, et sicco pede per fluvium perrexit ; aqnas <lb/>
+            arnaras in aquæ naturam convertit; ullam ut fel <lb/>
+            ferventem dulcoravit. Securem e fluminis profundo <lb/>
+            vocavit. Naaman principem Syriæ, lepra percussum, <lb/>
+            377 purgavit ; discipulum cupidum lepræ plaga <lb/>
+            percussit; ulei paululum viduæ benedixit. Oleum per
+            <milestone unit="PLSection" n="a"/><lb/>
+            vasa pauca benedictum non pauca replevit, vidua <lb/>
+            Creditori debitum reddit, et de oleo filios lib ros red­ <lb/>
+            dit, et reliquo ipsa cum filiis vixit. Eliseus vivens mor­ <lb/>
+            tuum suscitavit ; Eliseus moituus mortuum vivificavit. <lb/>
+            Eliseus ex Abdelam a terra Ruben ortus fuit, quem <lb/>
+            cum mater ejus peperit, vitula aurea cum magno <lb/>
+            boatu in Galgalis clamavit, ita ut populus in Jeru­ <lb/>
+            salem boatum audiret. Tunc dixit sacerdos praesens <lb/>
+            audiens miraculum : Hodie, inquit, nascitur pro­ <lb/>
+            phetafuturorum, qui civitatis simulacra distribuit <lb/>
+            (destruit) idolorum. Eliseus in Samaria mortuus, et <lb/>
+            ibi sepultus.</p>
+          <p>13. ISAIAS, filius Amos, satus Domini interpretatur, <lb/>
+            in Jerusalem propheta egregius, et martyr justus, <lb/>
+            nobilis genere, nobilior sermone. Sub quatuor regi­ <lb/>
+            bus Ozia, Joathan, Achaz, Ezechia, prophetavit. Do­ <lb/>
+            minum sedentem solio excelso contemplavit. Sera­ <lb/>
+            pbin XII alas cłaro et celebri carmine Dominum col­ <lb/>
+            laudantes audivit Sancius, Sauclus, Sanctus Dominus
+            <milestone unit="PLSection" n="A"/><lb/>
+            Deus Sab oth, ex quibus unus ad illum volavit, et <lb/>
+            fahia ejus igne cœlesti purgavit. Gentibus in tenebris <lb/>
+            mortis Sedentibus salutem et lucem annuntiavit.Par­ <lb/>
+            vulum natmn de Virgine Deum, et hominem, et prin­ <lb/>
+            cipem, patremque futuri saeculi prænuntiavit, virgam <lb/>
+            e radice Jesse egredientem, septiformi spiritu floren­ <lb/>
+            tem, et fructificantem prophetavit, subversionem et <lb/>
+            vastationem Babylonis praedixit. Nudus et discalcea­ <lb/>
+            tus tribus annis, jubente Domino, ambulavit ; lapi­ <lb/>
+            dem summum et angularem in Sion ponendum præ­ <lb/>
+            dixit. Salvatorem, et regnatorem, et justissimum <lb/>
+            judicem in Jerusalem regnantem annuntiavit, cru­ <lb/>
+            cem et passionem, sepulcrum et resurrectionem Do­ <lb/>
+            mini declaravit, judicium venturum et mortuos re­ <lb/>
+            surrecturos prophetavit. In Jerusalem praedicavit sub <lb/>
+            Manasse rege, serra sectus in duas partes occuhuit, <lb/>
+            sepultus est sub quercu Ragel juxta transitum aqua­ <lb/>
+            rum, quas olim Ezechias rex obstruxerat pulvere.</p>
+          <p>14. JEREMIAS, qui interpretatur excelsus Domini,
+            <milestone unit="PLSection" n="B"/><lb/>
+            propheta et sacerdos, quem Dominus in utero matris <lb/>
+            suæ sanctificavit ; puer admodum et Benjamin pro­ <lb/>
+            phetavit imperio Domini virgam vigilantem, et ollam <lb/>
+            succensam a facie Aquilonis vidit. Ruinam suae civi­ <lb/>
+            tatis quadruplici alphabeto plauxit, qui lumbare jus­ <lb/>
+            su Domini portavit, qui lagunculam testeam in con­ <lb/>
+            spectu Domini fregit, quem Fadassur sacerdos in ner­ <lb/>
+            vurn misil, cui Dominus duos calathos Cecis plenos <lb/>
+            ostendit. Calicem plenum iræ Dei gentibus et regibus <lb/>
+            miscuit, catenam in collo portavit, in amo carceris <lb/>
+            clausus fuit, inde liberatus ad patriam pergere vo­ <lb/>
+            luit. Tunc iterum illum custos civitatis tenuit, et <lb/>
+            principibus eum tradidit, principes vero irati flagel­ <lb/>
+            latum iterum in carcerem miserunt. Rex vero ad il­ <lb/>
+            lum misit, et de carcere traxit. Principes iterum te. <lb/>
+            nuerunt, et volentes cum occidere, in lacum profun­ <lb/>
+            dissimum et siccum funibus iusserunt. Dominus au­ <lb/>
+            tem per manus Abdemelech Æthiopis Jeremiam e <lb/>
+            lacu et morte liberavit, et in vestibulo carceris usque
+            <milestone unit="PLSection" n="C"/><lb/>
+            in diem qua civitas capta est, permansit. Nabucho­ <lb/>
+            donosor rex Babylonis Jeremiam a carcere et a ca­ <lb/>
+            tenis liberavit. Jeremias ergo ortus a vico Anathois­ <lb/>
+            des, qui viculus tribus a 378 Jerosolymis distans <lb/>
+            millibus, captivus in Ægyptum ductus a populo apud <lb/>
+            Taphnas lapidibus obrutus obiit. Jacet vero in eodem <lb/>
+            loco sepultus, quem Pharao rex habitaverat,quia per <lb/>
+            postulationem suam defugatis ab eodem loco serpen­ <lb/>
+            tibus, Ægyptios fecit esse securos a tactu aspidum ; <lb/>
+            quem etiam magna cum religione iidem Ægyptii ve­ <lb/>
+            n rantur.</p>
+          <p>15. EZECHIEL, unus Buzi, qui interpretatur fortitu­ <lb/>
+            do Dei, prop seta, et sacerdos Altissimi, cum Joa­ <lb/>
+            chim rege captivus ductus in Babylonem, tricesimo <lb/>
+            suæ ætatis anno, ei captivitatis quinto, prophetare et <lb/>
+            loqui ad captivos exo rsus est. Cui cœli aperti sunt, <lb/>
+            et Dei visiones obscuras et mirabiles vidit. Ad quem <lb/>
+            factum est verbum Domini, super quem facta est ma­ <lb/>
+            nus D mini in visione magna, et mirabili, in vento <lb/>
+            et nube fulgenti, in igne et splendore splendenti, in
+            <milestone unit="PLSection" n="a"/><lb/>
+            clectro clarescenti, inter quos conspexit quatuor ani­ <lb/>
+            malia cum pennis, et pedibus, et nanibus, homo et <lb/>
+            leo, vitulus et aquila. Quatuor conspicit notas juxta <lb/>
+            animalia ex omni parte oculis plIna, et cum anima­ <lb/>
+            libus simul discurrentibus audivit sonum alarum ip­ <lb/>
+            sarum, ut bonum castrorum et aquarum multarum, <lb/>
+            portabant capitibus quasi firmamentum, et super lir­ <lb/>
+            memento quasi thronum positum, et in throno aspi­ <lb/>
+            cit quasi vultum hominis, ut eleclrutn fulgens in me­ <lb/>
+            dio ignis, haec omnia videns cecidit in faciem,et au­ <lb/>
+            divit vocem ad eum loquentem, et super pedes suos <lb/>
+            illum erigentem, ostendit ei librum, quem manu te­ <lb/>
+            nebat, et expandit volumen, et ad eum diceb at : Ape­ <lb/>
+            ri os tuum, et comede hunc librum ; et ipse hunc sta­ <lb/>
+            tim comedit, et ut mel gustavit, et viscera replevit, <lb/>
+            et plebi prædicavit, visiones alias multiformes vidit ; <lb/>
+            in quibus urbibus, regibus, gentibus, insulis, popu­ <lb/>
+            lis, plagas venturas verbo Domini prædicavit, cam­ <lb/>
+            pum plenum ossibus siccis super quae nervos et vis- <lb/>
+             <pb n="1279"/>
+            
+            <milestone unit="PLSection" n="A"/><lb/>
+            cera venire vidit, et ipso prophetante in ossa omnia <lb/>
+            spiritus vitæ inlravit, civitatem spiritualem, ei mira­ <lb/>
+            bilem vergentem ad austrum, cum portis, plateis et <lb/>
+            multis ædificiis vidit, quæ carnaliter aliquatenus stare <lb/>
+            non p otuit.</p>
+          <p>16. EZECHIEL fortitudo Dei interpretatur, terra Sa­ <lb/>
+            rira ortus, et in Chaldæam, ut prediximus, caplivus <lb/>
+            ductus, ihique populus Israel eum occidi praecepit, <lb/>
+            quon am ah eodem propheta arguehantur, ne idolis <lb/>
+            servirent. Hunc ergo sepelivit populus in auri [Lege <lb/>
+            Maurim] agro sepulcro Arphaxat.</p>
+          <p>17. DANIEL. filius Abda, judicium. Dei interpreta­ <lb/>
+            tur, ex trihu Juda ortus, in Betheron superiore na­ <lb/>
+            tus, puer admodum captivus in Babylonem ductus, <lb/>
+            propheta præcipuus, cum quo Dominus fuit. Princi­ <lb/>
+            pem namque super principem sibi posuit. Somnia <lb/>
+            namque regs Nabuchodonosor : in grandi im agine et <lb/>
+            in magna arbore revel avit. Visiones magnas et ini­ <lb/>
+            rabiles ipse conspexit, qnaluor ventos cœli magnos
+            <milestone unit="PLSection" n="B"/><lb/>
+            in mari pugnane, et quatuor hestias terribiles de <lb/>
+            mari surgentes aspicit, thronos positos et Vetustum <lb/>
+            dierum in throno igneo sedentem conspexit ; cui mil­ <lb/>
+            Ii:. millium angelorum ministrabant, et decies centena <lb/>
+            millia assistebant, judicium positum, et libros apertos <lb/>
+            vidit, Filium hominis venientem ac Vetustum dierum <lb/>
+            aspicit, arietem grandem cornibus quatuor partem <lb/>
+            379 ventilantem, ct hircum caprarum terribilem, et <lb/>
+            magnum cum ariete pugnantem, et arietem præstantem <lb/>
+            prospexit, faciem suani ad Dominum Deum suum po­ <lb/>
+            suit. In jejuniis, sacco et cinere Dominum adoravit, mi­ <lb/>
+            rabili confessione et pura obsecratione pro se et po­ <lb/>
+            pulo suo Dominum obsecravit. Tres hebdomadas po­ <lb/>
+            pulum planxit, panpm desiderii, et carnem, et vinum <lb/>
+            in jejunio non con edit. Gabriel arc tangelus in his <lb/>
+            omnibus D anielem confortavit, omnes visiones, quas <lb/>
+            vidit et demonstravit, Christum nasciturum et regna­ <lb/>
+            turum, passurum et resurrecturum ei annuntiavit. <lb/>
+            Regna mundi inter se pugnatura praedixit, Antichri-
+            <milestone unit="PLSection" n="C"/><lb/>
+            stum ventorum cum sanctis pæliaturum affirmavit. <lb/>
+            Iste Daniel Balthasar regi tres terribiles sermones in <lb/>
+            pariete scriptos demonstravit. Susannam ex falso <lb/>
+            crimine liheravit. Senes pravos morti damnavit. Bel, <lb/>
+            idolum Babylonis, destruxit, draconem terribilem <lb/>
+            pice et pilis interfecit, sacerdotes Bel LXX interire <lb/>
+            fecit. Cui Habacuc per angelum ex Judæa in Chal­ <lb/>
+            dæam in momento raptus prandium portavit, quem <lb/>
+            Dominus duahus vicibus ex lacu leonum liberavit. In <lb/>
+            Babylone Dent omnipotentem prædicans requievit, <lb/>
+            solusque omnium Hebræorum...sepultus est regione.</p>
+          <p>18. OSEE, filius Beeri, Salvator interpretatur, pro­ <lb/>
+            pheta Domini sub quinque regibus verbum Domini <lb/>
+            prædicavit. Crebro nominat Ephraim, Samariam, <lb/>
+            Joseph, Jezrahel, Israel, et uxorem fornicariam et <lb/>
+            fornicationis lilias, et adulteram cubiculo clausam <lb/>
+            mariti multo tempore sedere viduam. et sub veste <lb/>
+            lugubri viri ad se reditum præstolari. Populo verhum <lb/>
+            Dei prædicat, et scelera eorum dure et terribiliter
+            <milestone unit="PLSection" n="n"/><lb/>
+            increpat, et fugere, et venire ad Dominum omnes <lb/>
+            confortat, quia sanat, percutit, et curat, et mortificat, <lb/>
+            et vivificat, et misericordiam magis quam sacrificium <lb/>
+            diligit, et scientiam Dei plusquam holocausta quærit, <lb/>
+            et Christum Filium Dei ab Ægypto vocaturum pro­ <lb/>
+            phetavit. Hic ergo Osee propheta ex tribu Isachar <lb/>
+            ortus, in Belemoth natus, ibique placida morte dor­ <lb/>
+            mivit sepultus.</p>
+          <p>19. JOEL, filius Phathuel, incipiente Domino inter­ <lb/>
+            pretatur. Describit terram XII tribuum eruca, hru­ <lb/>
+            cho, locusta. rubigine vastandam et consumendam. <lb/>
+            A facie Donnini terram tremere et cælos movere affir­ <lb/>
+            mat, solem, et lunam, et stet as suum splendorem <lb/>
+            abscondere designat. Magnum diem Domini et valde <lb/>
+            terribilem advenire prædix it. Dominum Deum beui­ <lb/>
+            gnum et misericordem, pattentem et pium, et præ­ <lb/>
+            stabilem super malitias hominum affirmat. Populum <lb/>
+            ad ecclesiam sacrilicure jejunium convocat. Senes, <lb/>
+            juvenes, parvulos, laetantes sponsos, sponsas, sacer­ <lb/>
+            dotes ministres Domini Dominum prædicare, populo
+            <milestone unit="PLSection" n="A"/><lb/>
+            parcere, et pacem donare praedicat; abundantiam <lb/>
+            frumenti, vini et olci, et pacem Domini donare sibi <lb/>
+            servientibus promisit. Spiritum summ sanctum super <lb/>
+            servoset ancillas suas Dominum effundere prædixit, <lb/>
+            seniores somnia somniare, et juvenes visiones videre <lb/>
+            in Domino prophetavit. Joel vero propheta ex tribn <lb/>
+            Ruhen ortus,in agro Betheron natus, et ibidem obiit, <lb/>
+            et pausat sepultus.</p>
+          <p>20. Alios thesbites potens, vel fortis, aut populum <lb/>
+            divellens interpretatur, propheta, et pastor, et rusti­ <lb/>
+            cus, et ruborum mora distringens, 380 paucis ver­ <lb/>
+            bis explicari non potest. Qnis enim digne exprimet <lb/>
+            tria et quatuor scelera Damasci, Gaze, Turi, Idumeæ, <lb/>
+            filios Ammon, et Moab, ei in septimo octavoque <lb/>
+            gradu Juda et Israel? hic loquitur ad vaccas pingues, <lb/>
+            quæ sunt in monte Samanæ, ruituram domum ma­ <lb/>
+            jorem minoremque testatur. Ipse cernit fictorem lo­ <lb/>
+            custæ, et stantem Dominum super murum litum, vel <lb/>
+            adamantiunum, et onychinum pomerium, et trahen-
+            <milestone unit="PLSection" n="B"/><lb/>
+            lem supplicia peccatoribus, et famem in terra, non <lb/>
+            f amem panis, neque silim aquæ, sed audiendi ver­ <lb/>
+            bum Dei. Ipse est Amos quem Amasi as rex sape cae­ <lb/>
+            ciderat: Ozias vero, lilius ejus, transfixum per tem­ <lb/>
+            pora ejus palam eumdem propheta laetali vulnere <lb/>
+            affecit. Hic ergo vales post biduum postquam in <lb/>
+            suam advectus est patriam, spiravit, ibique sepul­ <lb/>
+            tus est.</p>
+          <p>21. ABDIAS propheta servus Domini interpretatur, <lb/>
+            pertonans contra Edom fratris quoque Jacob sem­ <lb/>
+            per æmulum astra perculit..... superbiam et elatio­ <lb/>
+            nem superhorum increpat, sapientes et prudentes <lb/>
+            mundi, et tyrannos, et fortes ejus a Domino peritu­ <lb/>
+            ros et percussos prædicat. De monte Sion salutem, <lb/>
+            et Salvatorem venturum, et Dominum in sempiter­ <lb/>
+            num regnaturum prophetat. Hic ergo in agro Betha­ <lb/>
+            caran natus, et de terra Sichem est ortus, et Eliæ <lb/>
+            prophetas discipulus, et tertius quinqnagenarius cum <lb/>
+            L militibus ab Ochozia ad Eliam missus, cui ct pe­
+            <milestone unit="PLSection" n="c"/><lb/>
+            tenti pepercit Elias, ne eum ignis sicut duos ante se <lb/>
+            quinquagenarios missos consumeret. Hic ergo Ab­ <lb/>
+            dias, Ochoziæ relicto ministerio, prophetavit. Mur­ <lb/>
+            tuus est et sepultus cum patribus suis.</p>
+          <p>22. JONAS propheta, filius Amathi, qui interpreta­ <lb/>
+            tur columba vel dolens, filius viduæ Saraptanæ, quem <lb/>
+            Elias mortuum suscitavit. Quem Dominus misit prae­ <lb/>
+            dicare in N nivem. Ipse vero navim quierit, et fugit <lb/>
+            in Joppem. Deus vero ventum magnum in mari sus­ <lb/>
+            citat, mare erga magno motu fluctuat. Nautæ autem <lb/>
+            vento mari laborant. Jonam soporantem dormientem <lb/>
+            suscitant. Vasa sua mittunt in mare, Deum suun <lb/>
+            adorant,mittunt sortes, cujus culpa esset huc peri­ <lb/>
+            culum. Sors emissa mox cecidit super Jon m He­ <lb/>
+            bræum. Tunc dixerunt, Unde venis? quid fecisti? a <lb/>
+            qua gente genitus es? Tunc respondit : Ego sum ser­ <lb/>
+            vus Dei coeli, et genere Hebræus. Magno metu con­ <lb/>
+            trementes, non potentes tacere, dixerunt: QUid de­ <lb/>
+            bemus de te, homo, facere? Dixit illis Dei servus
+            <milestone unit="PLSection" n="n"/><lb/>
+            qUId debuissent agere. Tollite me ex hac navi, et <lb/>
+            mittite in mare. Illi illum tunc miserunt in mare, ut <lb/>
+            jusserat. Piscem grandem Deus misit, ut prophetari <lb/>
+            glutiret ; piscis ipsum glutivit, ut Deus imperavit, <lb/>
+            tribus diebus ac noctibus piscis eum portavit, et de <lb/>
+            ventre piscis ad Dominum clamavit, quem D minus <lb/>
+            audivit, simul et liberavit. Piscis eum evomuit in <lb/>
+            terram, quam ipse noluit, in civitatem Ninivem ipse <lb/>
+            perrexit, regi et populo pœnitentiam prædicavit. Et <lb/>
+            ut rex et populi audierunt, a minimo usque ad maxi­ <lb/>
+            mum in Deum crediderunt, et in sacco et cinere non <lb/>
+            tantum homines, sed ei jumenta poenituerunt, tribus <lb/>
+            diebus, et tribus noctibus clamantes ad Dominum <lb/>
+            jejunaverunt, et liberavit eos Deus ex plaga quam <lb/>
+            timuerunt. Jonas vero pulcherrime suo nautragio <lb/>
+            passionem Domini 381 præfiguravit, mundum ad <lb/>
+            pœnitentiam revocat, et sub nomine Ninive salutem <lb/>
+            gentibus nuntiat. Euntibus ilaque Tiberiadem non <lb/>
+            grandis est viculus, ubi et sepulcrum ejusdem pro­ <lb/>
+            phetæ Jonæ ostenditur.</p><pb n="1281"/>
+            
+          <p>
+            <milestone unit="PLSection" n="A"/>23. MICHÆAS propheta, Quis iste? vel humilitas <lb/>
+            interpretatur, e tribu Ephrain ortus, in Morasthin <lb/>
+            natus, hæredem sonat, ad quem factum est verbum <lb/>
+            Domini in diebus Joathan, Achaz, Ezechiæ regum <lb/>
+            Juda, super Samariam, et Jerusalem. Omnes populos <lb/>
+            ad audiendum Domiuum provocat, ruinam Judae et <lb/>
+            Jerusalem plangit, judices injustos et potentes im­ <lb/>
+            pios, et pseudoprophetas increpat, duos latrones <lb/>
+            templi, et Jerusalem annuntiat, montem excelsum <lb/>
+            super omnes montes et colles præparatum annuntiat. <lb/>
+            Omnes populos et gentes multas ad eumdem montem <lb/>
+            ascendere designat, legem Dei et Sion, et Verbum <lb/>
+            Domnini, et Jerusalem exire designat, judicium re­ <lb/>
+            ctum inter populos et populos designat, gladios in <lb/>
+            vomeres, et hasias in ligones prae magnitudine pacis <lb/>
+            fabricatos confirmat. Ducem natum ex civitate David <lb/>
+            exiturum, et in Israel regnaturum prophetat, ma­ <lb/>
+            xillam judicis Israel percussam præsignat. Quid sit <lb/>
+            bonum homini indicat, et quid Deus ab eo quærit <lb/>
+            annuntiat. Utique judicium rectum facere, et cum Deo
+            <milestone unit="PLSection" n="B"/><lb/>
+            suo sollicitc ambulare,et misericordiam diligere, <lb/>
+            persecutionem futuram non pigravit praedicere, pro­ <lb/>
+            priæ uxori neminem credere, filios patres, et lilias <lb/>
+            matres persequi, nurum adversus socrum contendere, <lb/>
+            et inimicos homini domesticos fieri, magnitudinem <lb/>
+            et longanimitatem, misericordiam et pietatem Do­ <lb/>
+            mini, ut potuit, prophetavit, peccata pœnitentum <lb/>
+            in profundum oblivionis Dominum ptojicere aflirma­ <lb/>
+            vit. Hic itaque propheta, quoniam peccantem Achaz <lb/>
+            saepius arguebat, sub Jurat. lilio ejus ex praecipitio <lb/>
+            valde porrecto jactus occubuit. Sepultus est au­ <lb/>
+            tem in terra sua juxta Polyandreum, qui eat prope <lb/>
+            Naim.</p>
+          <p>it. HABACUC propheta amplexans interpretatur, de <lb/>
+            tribu Simeon ortus, in agro Bethsachar natus. Do­ <lb/>
+            minum a longe venturum et nasciturum prophetavit. <lb/>
+            Incredulum castigavit, justum in fide sua vivere af­ <lb/>
+            firmavit, cupidos, avaros, homicidas, ebriosos, ido­
+            <milestone unit="PLSection" n="c"/><lb/>
+            lorum cultores terribiliter increpat. Idem ipse Haba­ <lb/>
+            cuc luctator fortis et rigidus stat super munitionem, <lb/>
+            ut Christum in cruce a longe contempletur, et dicat: <lb/>
+            Operuit cœlos gloria ejus, et laude eius plena est <lb/>
+            terra. Splendor ejus ut lux erit, cornua in manibus <lb/>
+            ejus, ibi abscondita est fortitudo ejus. Hic autem <lb/>
+            propheta ante biennium reversionis filiorum Israel a <lb/>
+            captivitate in agro Sabarith vita discessU.</p>
+          <p>25. SOPHONIAS propheta, qui inter pretatur abscon­ <lb/>
+            dens eam, filius Chusi, filii Godoliæ, libi Amariæ, <lb/>
+            filii Ezechiæ, de tribu Simeon, qui prophetavit in <lb/>
+            diebus Josiae, filii Amon regis Juda. Ipse est specula­ <lb/>
+            tor et cognitor arcanorum Donin. Ipse audit cla­ <lb/>
+            morem a porta piscium, et ululatum a Secunda, et <lb/>
+            contritionem a collibus. Indicat quoque utulatum habi­ <lb/>
+            tatoribus Silæ, quia conticuit omnis pupulus Chanaan, <lb/>
+            disperierunt universi qui involuti erant argento. Ipse <lb/>
+            est qui diem Domini mirabiliter et terribiliter venturum <lb/>
+            prophetavit, dicens :Juxta eat dies Domini 382 ma­ <lb/>
+            gnus, juxta, et velox nimis. Vox diei Domini amara,
+            <milestone unit="PLSection" n="D"/><lb/>
+            tribulabitur ibi fortis, dies iræ, dies illa, dies tribula­ <lb/>
+            tionis et anus ice, dies calamitatis et miseriæ, dies <lb/>
+            tenebrarum et caliginis, dies nebutæ, et turbinis, dies <lb/>
+            tubæ, et clangoris super civitates munitas, et super <lb/>
+            angulos excusos, et tribulabo homines, et ambulabunt, <lb/>
+            ut cœci, quia Domino peccaverunt. Idem vero Sopho­ <lb/>
+            mas in agello Sabare (Al., Sarabath) obiit, et terræ <lb/>
+            humalus jacet.</p>
+          <p>26. AGGÆUS propheta,qui interpretatur solemnitas; <lb/>
+            prophetavit autem In anno secundo Darii regis redi­ <lb/>
+            tum populi ex captivitate Babylonis, et restauratio­ <lb/>
+            nem templi sub Zorobabel sacerdote magno. Promi­ <lb/>
+            sii itaque in verbo Dei omnia bona Deum lunare <lb/>
+            populo suo. Confortavit principem, populum ct sa­ <lb/>
+            cerdotem magnum in maguo Dei adjutorio restaura- <lb/>
+            re, et ædificare templum Dei, dicens : Hæc dicit <lb/>
+            Dominus exercituum : Ponile corda vestra super vias <lb/>
+            vestras, ascendite in montem porture lignum, et ædifi­ <lb/>
+            cale domum, et acceptabilis mihi erit, et glorificabor,
+            <milestone unit="PLSection" n="A"/><lb/>
+            dicit Dominus. Ipse prophetavit, coeli et terrae ste­ <lb/>
+            rilitatem, et arborum fieri pro peccatis hominum. <lb/>
+            Ipse prophetavit abundantiam frumenti, et vini, et <lb/>
+            olei, et abundantiam pacis, et sanitatis populo, et <lb/>
+            servis Dei, et servientibus sibi. Ipse prophetavit, <lb/>
+            Deum patrem et Spiritum ejus sanctum in populo <lb/>
+            suo semper esse. Et ne timeat dicens : Confortare, <lb/>
+            omnis populus terræ, dicit Dominus exercituum, et <lb/>
+            facite, quoniam ego vobiscum sum, dicit Dominus, <lb/>
+            et Spiritus meus erit in medio vestri, nolite timere. <lb/>
+            Ipse prophelavit Deum semetipsum movere cœlum, <lb/>
+            et terram, et mare, et aridam, et gentes, et solta <lb/>
+            regnorum, et Unigenitum patris venturum dicens : <lb/>
+            Adhuc unum modicum est, et ego commovebo creMum, <lb/>
+            et terram, et mare, et aridam, et movebo omnes gentes, <lb/>
+            et solia regnorum, et veniet desideratus cunctis genti­ <lb/>
+            bus, Hic vero Aggæus ex Babylone admodum juve­ <lb/>
+            nis Jerusalem adventi. Ibique exhalavit, et juxta <lb/>
+            sacerdorum sepulcra humo conditus jacet.</p>
+          <p>27. ZACHARIAS propheta , qui interpretatur memor
+            <milestone unit="PLSection" n="B"/><lb/>
+            Domini, filius Barachiæ, uno eodemque anno , sub <lb/>
+            uno eodemque rege Dario prophetaverunt. Zacharias <lb/>
+            vero i n sua prophetia multiplex et mysticus. Ver­ <lb/>
+            tiones enim varias et obscuras videns, prophetavit <lb/>
+            mystice, quia in eo augelus Domini loquebatur. Ipse <lb/>
+            enim vidii nocte asceudentem super equum rulum <lb/>
+            stantem inter myrteta quæ erant in profundo, et <lb/>
+            post eum equi ruli varii et atbi. Ipse audivit angelum <lb/>
+            interrogantem de tempore misericordiæ super Je­ <lb/>
+            rusalem. Ipse audivit Dominum angelo loquentem <lb/>
+            verba boua, verba consolatoria de Jerusalem, et <lb/>
+            Sion, de civitatibus Juda. Ipse vidit quatuor cornua <lb/>
+            vemilantia Judam, ct Israel, et Jerusalem. Ipse vi­ <lb/>
+            dit virum, funiculum in manu tenentem, et Jerusa­ <lb/>
+            lem in longitudinem et latitudinem mensurantem, <lb/>
+            et dicentem : Absque muro habitabitur Jerusa em. <lb/>
+            Dominus enim erit murus ejus igneus. Ipse vidit la­ <lb/>
+            pidem scriptum, VII oculos habentem, et candelabrum
+            <milestone unit="PLSection" n="c"/><lb/>
+            aureum, septem lucernas Sustinentem, et infusorias, <lb/>
+            lucernis pendentes VII, et duas olivas juxta candelabrum <lb/>
+            stantes, nn uma dextris, et unam a sinistris. Ipse vidit <lb/>
+            volumen 383 volans longitudine xx cubitorum et lati­ <lb/>
+            ludine x cubitorum. Ipse vidii talentum plumbi, quod <lb/>
+            portabatur,et mulierem sedentem in medio amphoræ, <lb/>
+            quae impietas est, cui massa plumbea in os missa est. <lb/>
+            Vidit et duas mulieres alas habentes, quasi at as mil­ <lb/>
+            vi, quæ levabant amphoram inter cœlum et terram. <lb/>
+            Vidit et quatuor quadiigas egredientes de medio <lb/>
+            duorum montium aureorum. In quadriga prima equi <lb/>
+            ruli, in quadriga secunda equi nigri, in quadriga <lb/>
+            tertia equi albi, in quadraga quarta equi varii lentes, <lb/>
+            et alia multa obscura et mystica vidit. Prophetavit <lb/>
+            autem reditum populi, et restaurationem Jerusalem <lb/>
+            et templi ; prophetavit regem pauperem et humilem <lb/>
+            venturum dicens : Exsulla satis, filia Sion, jubila, <lb/>
+            filia Jerusalem, ecce rex tuus veniet tibi justus, et <lb/>
+            sata or, pauper ascendens tuper pullum, filium asmæ ; <lb/>
+            prophetavit eumdem regem traditum, et venditum
+            <milestone unit="PLSection" n="D"/><lb/>
+            pro argento, dicens de persona sua : Appenderunt <lb/>
+            mercedem meam triginta argenteos, et reliqua. Passio­ <lb/>
+            nem ejusdemque [sic) regis, id est, Salvaturis nostri <lb/>
+            per omnia, sicut factum est, mirabiliter prophetavit. <lb/>
+            Ait namque : Percutiam pastorem , et dispergentur <lb/>
+            oves gregis. Et iteruin: Quid sunt plagæ istæ in medio <lb/>
+            manuum tuarum ? Plagatus sum in domo dorum, qui <lb/>
+            diligebant me. Et iterum : Aspiciunt ad me, quem <unclear/> <lb/>
+            offiterunt. De norne ejus sic prædicavit : Et plan. <lb/>
+            gent eum planctu quast super unigenitum, et dolebunt <lb/>
+            super eum,ut doleri solet super unigenitum. Baptismum <lb/>
+            futurum praedIxit, dicens : In die illa erit fons patens <lb/>
+            domus David, et habitantibus Jerusalem in ablutione <lb/>
+            veccatoris et menstruatæ.</p>
+          <p>A morte naque ejusdem Zachariæ prophetae tes­ <lb/>
+            tem fidelem, qui nec tallit, nec fallitur, habeo, id <lb/>
+            esi, Jesum Salvat orem aostrum in Evangelio secun <lb/>
+            dum Matthæum, Judæos incredutos merepantem, et <lb/>
+            sic dicentem : Veniat super vos omnis sanguis justu a <pb n="1283"/>
+            
+            <milestone unit="PLSection" n="A"/><lb/>
+            qui effusus est super terram, a unguine justi Abel <lb/>
+            usque ad sanguinem Zachariæ, filii Barochiæ, quem <lb/>
+            accidistis ini r templum et altare. Zacharias ergo ex <lb/>
+            regione ChaJdærum valde senex in terram suam <lb/>
+            reversus, et, sicut diximus, occisus, junia Aggæum in <lb/>
+            Jer usalem humatus jacet.</p>
+          <p>28. <unclear>MALACHIAS</unclear> propheta Angelus Domini iterpre­ <lb/>
+            tatur. Mystica et Dei mysteria admonet, honorem <lb/>
+            adhibiendum parentibus et dominis dicens : Filius <lb/>
+            honoret patrem, et servus Dominum suum. Interrogat <lb/>
+            ex persona Dei Patris omnes viventes, dicens : Si <lb/>
+            ergo Pater ego sum, ubi est honor meus, et si Dominus <lb/>
+            ego sum, ubi est limor meus? Increpat autem sacer­ <lb/>
+            doles indignos, et culpabiles, indigne et culpabiliter <lb/>
+            miristrantes Deo. Laudat vero sacerdotem dignum, <lb/>
+            et angelum vocal illiun, dicens : Labia sacerdotum <lb/>
+            custodiant scientiam, et legem requirant de ore ejus. <lb/>
+            quia angelus Domini exercituum est. Maledictum au­ <lb/>
+            tem vocat eum, qui munera maculosa Deo suo de
+            <milestone unit="PLSection" n="B"/><lb/>
+            rebus suis offert, dicens : Maledictus homo dulosus, <lb/>
+            qui habet in grege suo musculum, et volum faciens <lb/>
+            immolavit debile Domino. Unum patrem omnium esse <lb/>
+            et unum Deum ad randuui demonstravit. Ait nam­ <lb/>
+            que : Nunquid non Deus unus creavit nos? Quare ergo <lb/>
+            despicit unusquisque fratrem suum? Adventum Joannis <lb/>
+            præcursoris Domini 384 prædixit dicendo : Ecce <lb/>
+            mitto angelum meum ante faciem tuam, et reliqua. <lb/>
+            Adventum Eliæ prophetæ et prædicatoris ante ju­ <lb/>
+            dicium prædicare prophetavit , dicens : Ecce ego <lb/>
+            Nobis mittam Etiam prophetam, antequam veniat dies <lb/>
+            Domini magnus, et terribilis, et convertel corda patrum <lb/>
+            in filios, et orda filiorum ad patre. eorum. Aperte au­ <lb/>
+            tem Malachias in fine omnium prophetarum de ab­ <lb/>
+            jectione Israel, et vocatione gentium prophetavit, <lb/>
+            dicens : Non est mihi volunta in vobis, dicit Dominus <lb/>
+            exercituum, et munus uon suscipiam de manu vestra. <lb/>
+            Ab ortu solis usque ad occasum magnuom est nomen <lb/>
+            meum in gentibus et in omni loco sacrificatur, et offer­ <lb/>
+            tur nomini meo oblatio muuda. Post reversionem vere
+            <milestone unit="PLSection" n="c"/><lb/>
+            populi Israel a Babylone in Supha natus est Mala­ <lb/>
+            chias itique admodum juvenis moritur, habetque <lb/>
+            tumulum Gabaonitis, suoque sepulcro conditus jucet.</p>
+          <p>29. ACUIs. Silonites ex civitate Eliæ Salomoni regi <lb/>
+            prædixit, quod per mulieres a mandatis Domini de­ <lb/>
+            clianaret. Mortuus est ergo Ozias, et sepultus est juxta <lb/>
+            quercum in Silo.</p>
+          <p>30. ABDO in Samaria natus est, qui Roboam illicite <lb/>
+            immolantem admonuit. Hunc ad propria revertentem <lb/>
+            leo in via strangelavit. Sepultus est in Bethel in se­ <lb/>
+            pulcro prophetæ, qui eum fefellerat.</p>
+          <p>31. AZARIAS auxilium Domini interpretatur. In <lb/>
+            terra orilur Sabatha ; mortuusque est atque sepultus <lb/>
+            est in agelio suo.</p>
+          <p>31. ZACHARIAS memor Domini interpretatur; lilius <lb/>
+            Joiadæ sacerdotis, cum xxx annos vixisset, congre­ <lb/>
+            gatus iu atrio domus Domini populus juxta regis <lb/>
+            Joas impertum, missis in cum lapidibus, prophetam <lb/>
+            sanctum exstinxit. Hunc sublevatum ide continuo
+            <milestone unit="PLSection" n="D"/><lb/>
+            sacerdotes sepelierunt eum juxta patrem suum.</p>
+          <p>33. HOBIAS propheta sanctus, Dei summi servus, <lb/>
+            ex tribu et CIv laxe Nephthali ortus, in diebus Sal­ <lb/>
+            manasar regis Assymorum in civitatem Nunivem <lb/>
+            captivus ductus inter suos captivos juvenis aLlate, <lb/>
+            sed senex, et s apiens consilio, et mende. Omnia bona <lb/>
+            quæ habuit cum charitate concaptivis condonavit. <lb/>
+            Puerulus tunc ætate, perfectus tamen in Dei tunore, <lb/>
+            idola vana ingrebat, legem Dei semper tenebat. Pro­ <lb/>
+            selytis et advenis misericorditer ministrabat. Dignas <lb/>
+            Deo decimas donabat, uxorem nomine Annam de <lb/>
+            tribu sua accepit, quæ filium genuit, cui pater nomen <lb/>
+            suum imposuit, et eum de Dei lege et Dei timore <lb/>
+            docuit. A cibis gentilium se semper abstinuit. Am­ <lb/>
+            mam suam incontam nat<unclear>III</unclear> costodivit, III corde suo <lb/>
+            semper Domim sui memor <unclear>int</unclear> Cum D antuus in con­ <lb/>
+            spectu Salmanasar regis gratiam deant, factebat quod <lb/>
+            volebat, pergebat ubi desiderabat. Pauperes generis <lb/>
+            sui de moneribus regis duavit. Gabelo pauperi de
+            <milestone unit="PLSection" n="A"/><lb/>
+            sua gente decem talenta argenti sub chirographo <lb/>
+            donavit, esurientes alebat, nudos vestiebat, mortuos <lb/>
+            sepeliebat, quem rex Sennacherib, Dei inimicus, oc­ <lb/>
+            cidere voluit. Sed illum cum uxore, et filio Dominus <lb/>
+            custodivit. Postea vero convivas suos relioquebat, <lb/>
+            et jugulatos mortuos generis sui abscondebat, et in <lb/>
+            noctibus eos sepeliebat. In his omnibus Deo placuit. <lb/>
+            et proximis sus displicuit, quia hæc omnia propter <lb/>
+            Deum fecit. 385 Inde vero illum probavit, substan­ <lb/>
+            tias et divitias abstulit. Mendicitate et paupertate <lb/>
+            percussit. Opprobria et illusiones a paren ibus, et <lb/>
+            uxore, et cognatis sustinuit. Sicut et Job, a regibus et <lb/>
+            a falsis amicis contumebas sustulit. Sed in his omnibus <lb/>
+            Tobias vir sanctus in Dei timore immobilis perman­ <lb/>
+            sit, Deum semper benedixit, cum gemitu et lacryinis <lb/>
+            elementiam Dei postulavit, quem Dominus exaudivit, <lb/>
+            et de omnibus tribulationibus suis liberavit. Angelum <lb/>
+            suum santum namque Raphaelem de celo transmi­ <lb/>
+            sit, qui eum tu omnibus consilis suis confortavit;
+            <milestone unit="PLSection" n="B"/><lb/>
+            quem hominem æstimavit, eum filio suo in viam <lb/>
+            pergere rogavit. Ita Raphael angelus fuil, ut pater <lb/>
+            sani us illum postulavit. In viam cum filio perrexit, <lb/>
+            et sanum eum usque in Rages civitatem Medorum <lb/>
+            adduxit. Cum quo quasi eum conservo, et fratre fa- <lb/>
+            bolavit, quem a morsu piscis eripoit, el Saram filiam <lb/>
+            Raguel uxorem habere fecit, a qua Raphael dæmo­ <lb/>
+            nium nomine Asm deon compescuit, et in uperioris <lb/>
+            Agypto deserto alligavit, et gaudium magnum pa­ <lb/>
+            rentibus puellæ fecit, et pecuniam sancti patris a <lb/>
+            Gabelo suscepit, sanum et incolumen cum magna <lb/>
+            substantia, cum uxore et multa familia Tobiam ad <lb/>
+            patrem reduxit. Sancto seni lumen oculorum resti­ <lb/>
+            tuil; et filium suum, et familiam gaudens vidit <lb/>
+            Tunc ostendit eis angelus omnia mysteria itineris <lb/>
+            sui, et Saræ orationum, et sanitatis; et dixit eis in. <lb/>
+            gelus Raphael quia angelus Dei esset, et a Deo esset <lb/>
+            missus. Tuuc timuerunt, et in terram prostrati ceci­ <lb/>
+            derunt, ei dixit eis angelus : Nolite timere ; pax vo­ <lb/>
+            biscum, Deum benedicite, illum laudete, et narrate om­
+            <milestone unit="PLSection" n="c"/><lb/>
+            nic mirabilia ejus. Et cum hæc dixisset, ab aspectu <lb/>
+            eorum ablatus est; et per tres Horas in terram se <lb/>
+            prostraverunt, et Deum benedixerunt, et exsurgentes, <lb/>
+            omnia mirabilia ejus narraverunt. Tunc senex os <lb/>
+            suum aperuit, et Deum benedixit, et restaurationem <lb/>
+            Jerusalem, et templi prophetavit, et subversionem <lb/>
+            magna: civitatis Ninive prædixit. Dives valde, ei <lb/>
+            praclarus multis annis vixit cum benedictionibus. <lb/>
+            Quanquaginta et sex anuoruw erat, quando amisit <lb/>
+            lumen oculorum. Quatuor annis cæcus, et pauper <lb/>
+            fuit. Sexagenarius lumen oculorum , et divitias du­ <lb/>
+            plicatas recepit, et postea quam illuminatus est, <lb/>
+            vixit amnis XL duobus, et vidit filios nepotum suo­ <lb/>
+            lum. Completis itaque annis CXII, cuDi Dei timore <lb/>
+            perrexit iu pace, sepultus honorifice in Ninive civi­ <lb/>
+            tate, simul et Anna sua uxore.</p>
+          <p>34. JOANNES BAPTISTA , qui interpretatur gratia <lb/>
+            Dei, filius Zachariæ sacerdotis, ex tribu Levi, in <lb/>
+            Israel ortus, angelo annuntiante conceptus, ab an-
+            <milestone unit="PLSection" n="D"/><lb/>
+            gelo nominatus, antequam esset generatus, in sene­ <lb/>
+            ctute parentum natus, præcuosor Salvatoris miro <lb/>
+            modo iactus nascendo, prædicando, baptizando, mo­ <lb/>
+            riendo, ad interos descendendo ; sex etenim mensi­ <lb/>
+            bus aute Salvatorem natus, et ante passionem Do­ <lb/>
+            nimi capite plexus, et ad inferos descendit prænun­ <lb/>
+            tius prianus Christi, servus Domini, propheta altis­ <lb/>
+            simi, vox Verbi, amicus sponbi, tsns DoMnini, præco <lb/>
+            judicis, lucerna luminis, miles regis, terminus pro­ <lb/>
+            phetarum, baptisimatis intium. Cujus pater uovem <lb/>
+            menses mutus tacut, quia angelo prophetali non <lb/>
+            credidit, qui prænuntiatus patris vocem abstulit, <lb/>
+            genitus officium linguæ 386 resolvit, qui necdum <lb/>
+            editus Christum prohetavit, ex utero salutavit ; <lb/>
+            inter natos mulierum non surrexit major, quem Do­ <lb/>
+            minus laudavit, et illum angelum nominavit, ei pro­ <lb/>
+            phetam et plus quam prophetamillum appellavit, quia <lb/>
+            de quo prophetavit, digito demonstravit. Spiritu et vir <lb/>
+            tute Eliæ plenus fuit, qui cum natus apparuit, gaudium <pb n="1285"/>
+            
+            <milestone unit="PLSection" n="A"/><lb/>
+            magnum multis praebuit. In columba agnovit,in deserto <lb/>
+            montravit, Salvatorem baptizavit, poenitentiam <lb/>
+            prædicavit, cujus vestis camelorum lanugo, eremus <lb/>
+            ejus habitatio, victus ejus mel silvestre, simul el <lb/>
+            locustæ. Hic dum Herodem prohiberet, ne frater­ <lb/>
+            num connubium violaret, carceralibus tenebris <lb/>
+            mancipari præcpit.Cujns caput Herodis regis filia <lb/>
+            fudens praemium postulavit. At ille deseclum male <lb/>
+            poscenti filiæ ebrius inter pocula dedit. VIII Kalend. <lb/>
+            Dei. conceptus, VIII K. Junii natus, IV Kal. Sept. <lb/>
+            passus, in Sebastia oppido Palæstinæ sepultus, quæ <lb/>
+            olim Samaria vocabatur quam Herodes rex Judæ <lb/>
+            Antipatris filius ob honorem Cæsaris Augusti Græco <lb/>
+            sermone Angustam. vocavit. Caput vero Joannis <lb/>
+            Baptistæ in Emiza in d olio vitreo reconditum est in <lb/>
+            honorem, præstante Domino nostro.</p>
+          <p>35. JOSEPH, qui interpretatur augmentum, filius <lb/>
+            Jacobi, filii Mathan ex tribu Juda, et de familia Da­ <lb/>
+            vid ortus, in civitate sua Nazareth natus, faber arte,
+            <milestone unit="PLSection" n="B"/><lb/>
+            frater Cleophæ, vir Mariu adjutorio, non carne, <lb/>
+            Cleophas vero pater apostoli Simonis Chananæi, <lb/>
+            Joseph autem pater Jacobi, fratris Domnini, qualiter <lb/>
+            dicitur Jacobus Alphæi, Maria Cleophæ, id est, uxor <lb/>
+            Cleophæ, soror est matris, et virginis Mariæ ; sed de <lb/>
+            eodem viro Mariæ Josephi in genealogiis Evangelio­ <lb/>
+            rium, hoc est, secundum Matthæum, et Lucam quæ... <lb/>
+            stiuncula satis obscura oritur, quia secundum Mat­ <lb/>
+            thæum filius Jacuhi dicimur, hoc modo : Mathan ge­ <lb/>
+            nuit Jacob, Jacob genuit Joseph ; secundum vero <lb/>
+            Lucam filius Heli nominatur bis verbis : Joseph, qui <lb/>
+            fuit Heli, qui fuit Melchi. Sed in his verbis bene <lb/>
+            Scripturas intelligentibus nihil contrarium est, qua <lb/>
+            Matthæus eum secundum carnem Jacobi filium af­ <lb/>
+            firmat, Lueas vero secundum legis mandatum illum <lb/>
+            Heli filium annuntiat. Jacob enim et Heli fratres <lb/>
+            nterini ex una matre nomine Estha nati, et non ex <lb/>
+            uno patre geniti. Pater enim Jacobi Mathan, quem <lb/>
+            peperit ei Estha, pater vero Heli Melchi. Defuucto
+            <milestone unit="PLSection" n="C"/><lb/>
+            aUtem Mathan, relicto uno filio Jacobi tonine, su­ <lb/>
+            scepit Melchi eamdem Estham matrem Jacobi, quæ <lb/>
+            peperit ei filium nomine Heli, Sine liberis frater <lb/>
+            suus Jacob suscepit uxorem ejus, et suscitavit fratri <lb/>
+            defuncto filium secundum legis mandatum notine <lb/>
+            Joseph, secundum vero naturam suum proprium <lb/>
+            filium, id est, ipsum Joseph, qui vir Mariæ dicitur, <lb/>
+            et quasi pater Chrisli annuntiatur.</p>
+          <p>36. MARIA, quæ interpretatur domina, vel illumi­ <lb/>
+            natrix, aut stella maris, sive stella, stirpe clara, Da­ <lb/>
+            vid regis filia, Jesse virga, rosa sine spina, oliva <lb/>
+            alma, collina aurea, solis aurora, leminarum regi­ <lb/>
+            na, Salvatoris sponsa, Dei vivi filia, principis ancilla <lb/>
+            alti, hortus conclusus, fons signatus, Trinitatis tha­ <lb/>
+            lamus, mater Domini omnipotentis, mater solis et <lb/>
+            floris, mater agni ei leonis, mater vitæ et vitis, <lb/>
+            mater lucis et pacis, mater viae et veritatis, mater <lb/>
+            servi et regis, mater Dei et hominis, 387 mater <lb/>
+            pastoris et panis, templum Dei, sacrarium Spiritus <lb/>
+            sancti, Virgo sancta, virgo fecta, virgo ante partum,
+            <milestone unit="PLSection" n="D"/><lb/>
+            virgo in partu, virgo post partum, filium quem ge­ <lb/>
+            nuit creatorem credidit, ei patrem hahuit, et Domi­ <lb/>
+            num adoravit, salutationem ab angelo suscepit, et <lb/>
+            mysterium conceptionis agnoscit, partus qualitatem <lb/>
+            inquirit, et cou1ra legem naturæ obsequii iidem non <lb/>
+            renuit. Facia est mater viri sine copulatione mariti, <lb/>
+            mater infantem lactavit, et virga incorrupta perman­ <lb/>
+            sit. Hanc quidam vitam finiri (sic) martyrio asse­ <lb/>
+            runt. Sic enim Simeon sanctus Christum propriis <lb/>
+            brachiis suis portans prophetavit, dicens : Et tuam <lb/>
+            ipsius animam pertransiet gladius. Non tamen ex <lb/>
+            gladio earMaii, sed ex gladio spirituali prophetatum <lb/>
+            est, hoc est verbum Dei, quot validius et acutius <lb/>
+            omni gladio acutissimo, penetrans usque ad divi­ <lb/>
+            sionem animæ, et spiritus, quia uec litteræ, Dee hi­ <lb/>
+            storia docet ex hac vita Mariam migrasse martyrii <lb/>
+            corporalis passione. Hoc tamencertum est, quia <lb/>
+            nemo obitum ejus scit, aut quomodo ex hac luce <lb/>
+            migravit, dum tamen in Jerusalem ejus sepulcrum
+            <milestone unit="PLSection" n="A"/><lb/>
+            certe positum sit. Nativitas itaque sanctae Mariæ <lb/>
+            Matris Domini vi Id. Sept. Assumptio vero ejusdem <lb/>
+            XVIII Kal. Septemb. celebratur.</p>
+          <p>37. JESUS CHRISTUS, quod interpretatur salvator <lb/>
+            unctus, Jesus namque Hebraicum nomen est, quod <lb/>
+            Græce soter dicitur, Latine vero salvator appellatur. <lb/>
+            Christus amem Græcum est, quod Hebraice messias <lb/>
+            vocatur, Latine vero unctus dicitur. Hic est Filius <lb/>
+            David, filii Abraham, ut sancta Scriptura in santis <lb/>
+            sermonibus sancti evangelistæ et apostoli Matthæi <lb/>
+            scribentis et dicentis in principio Evangelii sui : Li. <lb/>
+            ber generationis Jesu Christi filii David, filii Abraham, <lb/>
+            Abraham autem genuit Isaac, et reliqua, qu:e se­ <lb/>
+            quuntur usque ad illum locum , ubi dicitur : Cum <lb/>
+            natus esset Jesus in Bethleem Juda in diebus Herodis <lb/>
+            regis Judææ. Hæc omnia affirmant quo ordine ex <lb/>
+            cœlo per archangelum Gabrielem Virgini est annun­ <lb/>
+            tiatus, et quomodo in Virginis utero conceptus, <lb/>
+            et in quo loco, et in quo tempore, et sub quo rege,
+            <milestone unit="PLSection" n="B"/><lb/>
+            et iii qua plebe est natus, et quomodo ab angelo est <lb/>
+            nominatus, ante breviter dictum est. Magnitudinem <lb/>
+            et altitudinem ejus, et profunditatem, latitudinem, <lb/>
+            et obscuritatem hujus mysterii nullus naturaliter <lb/>
+            vivens non dico enarrare, vel scrutari, sed nec æsti­ <lb/>
+            mare potest, nisi ille solus. Sed huc mysterium, ut <lb/>
+            voluit, et constituit, et consecravit, sicul per Isaiam <lb/>
+            Spiritus sanctus affirmat, dicens : Generationem ejus <lb/>
+            quis enarrabit ? et per Paulum apostolum idem Spi­ <lb/>
+            ritus sanctus clamat, et ait: O altitudo divitiarum <lb/>
+            sapientiæ, et scientiæ Dei, quam inscratabilia sunt ju­ <lb/>
+            dicia ejus, et investigabiles viæ ejus Quis enim eo- <lb/>
+            gnovit sensum Domini, aut quis consiliarius ejus fuit? <lb/>
+            Et iterum ait : Ex ipso, et per ipsum, ea in ipso sunt <lb/>
+            omnia. Quis enim angelorum aut mortalium homi­ <lb/>
+            num verum Deum et Dei unigenitum, qui incom­ <lb/>
+            prehensibilis est, et inæstimabilem ante sæcula sine <lb/>
+            matre genitum, et verum hominem, carne, anima, <lb/>
+            natura ex vera Yirgine matre sine peccato ; sine pa­
+            <milestone unit="PLSection" n="c"/><lb/>
+            tre terreno in iine sæculorum conceptum et natum <lb/>
+            valeat scrutati, aut cogitare, aut nuntiare? aut quo­ <lb/>
+            modo eum humana fragilitas poteSt [comprehende­ <lb/>
+            re ] ? Ipse est enim Deus 388 a semetipso, et in se­ <lb/>
+            metipso, Deus excelsus, Deus in Deo, Deus cum <lb/>
+            Deo, Deus in homine, et homo in Deo. Verus homo <lb/>
+            natura, et Immanitate, verus Deus potentia et ma­ <lb/>
+            jestate. Præcepit Dominus Jesus Christus Ecclesiae <lb/>
+            suæ facere quæ ipse fecit, credere quod docuit, <lb/>
+            sperare quod promisit. Qui dignatus est ad nos hu­ <lb/>
+            militer venire, et inter nos XXXIII annos et vi menses <lb/>
+            carnaliter et clementer habitare. Cujus conceptio et <lb/>
+            passio iu æquinoctio vernali; et cujus nativitas in <lb/>
+            sobstitio hiemali; Kalend. Jan. ejus circumcisio, et <lb/>
+            ejus baptismus in Januario ; die VI Kalend. April. <lb/>
+            ejus resurrectio; III Nonas Maii ej us in cœlum <lb/>
+            Ascensio, ubi regnat cum Patre, et Spiritu sancto in <lb/>
+            sæcula.</p>
+          <p>38. Omnes APOSTOLI discipuli, non omnes disci­ <lb/>
+            puli aposioli ; apostoli enim Græce, missi Latine di-
+            <milestone unit="PLSection" n="D"/><lb/>
+            cuntur. Discipuli, qui discunt plene.</p>
+          <p>39. SIMON PETRUS tribus nominibus appellatur. <lb/>
+            Primo a parentius Cephas, deinde Simon, tertio <lb/>
+            Penus. His autem duobus nominibus nominavit il­ <lb/>
+            lum Deus: Simon, qui interpretatur obediens; Petrus, <lb/>
+            agnoscens. Prius piscator piscium, postea piscator <lb/>
+            factus est hominum, quem Christus ut piscem in <lb/>
+            rete electionis tenuit, quando, ut post se veniret, <lb/>
+            illum vocavit. Ipse est agnitor Christi, clavicularius <lb/>
+            regni, Ecclesiæ fundamentum, princeps apostolo­ <lb/>
+            rum , filius Joanna, frater Andreæ , ortus vico <lb/>
+            Beihsaida provincia Galilææ, quæ est juxta stagnum <lb/>
+            Genesareth. Tertius in ordine secundum Joannem, <lb/>
+            primus secundum Matthæum, confessor primus Filii <lb/>
+            Dei, discipulus amatur Domini, et negator. Confi­ <lb/>
+            tendo laudatus, præsumendo elatus, negando lapsus, <lb/>
+            lacrymando purificatus, confusione probatus, pas­ <lb/>
+            sione coronamus. Cui nomen ex opere datur, titulus <lb/>
+            ex merito potestatis imponitur. Virtutibus et signis <lb/>
+             <lb/>
+             <pb n="1287"/>
+            
+            <milestone unit="PLSection" n="A"/><lb/>
+            sæculo craruit, pedum gressu fervidum mare calcavit. <lb/>
+            Præteriens umbra morbidos sanavit, potestate vivos <lb/>
+            morti tradidit, mortuos virtute in vitam suscitavit. <lb/>
+            Claudis clementia gressus redintegravit. Paralyticis <lb/>
+            flaccida membra in proprium statum reparavit. Si­ <lb/>
+            monem Magum, et maleficum, cœlum conscenden­ <lb/>
+            tem, ad terram elisit, sub Claudio Cæsare Antio­ <lb/>
+            chenam fundavit Ecclesiam. Sub Nerone vero rexit <lb/>
+            Romani; predicavit Pontum, Galatiam, Bithyniam, <lb/>
+            Cappadociam, cæterasque confines provincias. Ju­ <lb/>
+            dæis duntaxat prædicans circuisse deprehenditur, <lb/>
+            qui ad ultimum propter Simonem Magum licet Dei <lb/>
+            occulto nutu, Romam pervenit, ibique prædicans <lb/>
+            Evangelium xxv annorum ejusdem urbis tenuit ponti­ <lb/>
+            ficatum. Sexto autem et tricesimo anno post passio­ <lb/>
+            nem Domini sub Nerone Caesare , ut voluit, cruci <lb/>
+            suspensus est. Cujus natalitium III Kal. Jul. celebra­ <lb/>
+            tur, sepultus in Vaticano ab urbe Roma ad Orien­ <lb/>
+            tem [Forte, Occidentem] tertio milliario.</p>
+          <p>
+            <milestone unit="PLSection" n="B"/>40. PAULUS apostolus, qui et primum nominatus <lb/>
+            est Saulus; Paulus, quod interpretatur mirabilis, vel <lb/>
+            pius. Saulus autem interpretatur impius . Saulus ita­ <lb/>
+            que, id est, impius Christianos persequens. Paulus <lb/>
+            autem, id et, pius populis Christum praedicare (sic). <lb/>
+            Pradicans pastor, præclarus prædicator, egregius <lb/>
+            doclor gentium, advocatus Judæorum. A Christo <lb/>
+            electus, de cœlo vocatus, feliciter increpatus, in ter­ <lb/>
+            ram prostratus, oculatus cecidit, cæcatus surrexit, <lb/>
+            persecutor saevus, claritate plenus, 389 vas ele­ <lb/>
+            ctionis, ex lupo ovis. Vocatione novissimus, prædica­ <lb/>
+            tione primus, in lege Gamalielis discipulus, in evange­ <lb/>
+            lio Christi servus. In Judæa genitus, de tribu Benjamin <lb/>
+            ortus, plus omnibus laborans, multo lanius de cæte­ <lb/>
+            ris praedicans, a Jerusalem usque ad Illyricum in <lb/>
+            circuitu Evangelium Dei docens, cujus miracula re­ <lb/>
+            fulgent clara. Raptus in terlium coelum conscendit. <lb/>
+            Pythonis spiritum imperando damnavit. Adolescen­ <lb/>
+            tem mortuum susciiavit. Cæcitate magum perculit, <lb/>
+            claudo proprium incessum reformavit. Diræ serpen-
+            <milestone unit="PLSection" n="c"/><lb/>
+            tis morsum non sensit, sed igni arsuram dedit. Pa­ <lb/>
+            trem Publii a febribus orando sanavit, passiones in­ <lb/>
+            credibiies pro Christo sustinuit. A Judæis et genu­ <lb/>
+            bus plagas pertulit, miseriam et laborem, sitim et fa­ <lb/>
+            mem, frigus et nuditatem, ter virgis cæsus , semel <lb/>
+            lapidatus, tres vices naufrag tus, die ac nocte in <lb/>
+            prolundo maris dimersus, mille periculis et plagis <lb/>
+            percussus, in carceres trusus, catenis ligatus, a Ju­ <lb/>
+            da is gentibus traditus In sporta per murum evasit <lb/>
+            dimissus. Poenis arctatus ferarum rabiem patitur, in <lb/>
+            canere vinctus terrae motu facto absolvitur. Hic se­ <lb/>
+            cundo post passionem Domini anno ab Anania in <lb/>
+            Damasco baptizatur, et post ba'c omnia Romæ bien­ <lb/>
+            nio in custodia fuit; XVIII deinceps anuis nationes oc­ <lb/>
+            ciduas perfecte edocendo explens, et sub Nerone <lb/>
+            eodem die quo Pelrus crucifixus. Idem iu via Us­ <lb/>
+            tiensi u uncatus, ibique cum honore sepultus.</p>
+          <p>41. ANDREAS apostolus Domini, frater Simonis Pe­ <lb/>
+            tri, in nativitate 1 elro primus, in ordine pontificatus
+            <milestone unit="PLSection" n="D"/><lb/>
+            tertius. Gente Galilæus de Bethsaida civitate ortus, <lb/>
+            qui fuit piscator ptius, postea laclus est Christi di­ <lb/>
+            scipulus. Cum rete ei navi pisces de mare trahebat, <lb/>
+            ipse, ut piscis, rele retentus magno piscatori adhaere <lb/>
+            bai. Relinquens rete simul et navem, secutus est fe­ <lb/>
+            lix mundi Redemptorem. Seculus et Salvatorem Do­ <lb/>
+            minum, ct factus esi piscator et prædicator hominum : <lb/>
+            secutus est Christum usque ad crucis exaltationem, <lb/>
+            cujus vestigia ipse viriliter ter ui usque ad crucis pas­ <lb/>
+            stonem. Andreas enim virilia, vel decorus, interpre­ <lb/>
+            tatur: vere virilis, et viriliter fecit, quia Christum <lb/>
+            crucifixum barbaris popuus prædicavit, et crucem <lb/>
+            ejus mirabiliter laudavit, et mirabiliter credidit et ro­ <lb/>
+            gavit. Hic itaque evangelizavit juxta maie Caspium, <lb/>
+            bcy hiam, Macedomam, et At haiam, in quibus po­ <lb/>
+            pulos multos Christo acquisivit. Anlore summæ <lb/>
+            charitatis in Christum, et in Christi crucem reple­ <lb/>
+            tus fui I, justitia, et sanctitate, et pietate fere omnes <lb/>
+            pi æcellit Paratam namque sibi crucem ut vidit, inenar-
+            <milestone unit="PLSection" n="A"/><lb/>
+            rabili et inæstimabili gaudio et exsultatione repletu, <lb/>
+            ait: 0 bona crux, o præclara, o pretiosa, o crux sancta <lb/>
+            o sanguine Chriili, velut margaritis, ornata, o tandiu <lb/>
+            quæsita, et desiderata, suscipe me, rogo, et rede me <lb/>
+            magistro meo Christo. Crucem niortis ministram non <lb/>
+            timuit, sed nimio amore eam adamavit, et amplexit. <lb/>
+            Magistrum namque incomprehensibili charitate con­ <lb/>
+            spexit, ideo patibulum non timuit, etsi sensit. Tunc <lb/>
+            alacer crucem ascendit, quia usque ad mortem ma­ <lb/>
+            gistro obedivit. Beatus biduo patibulo pendens, et <lb/>
+            vultu ang lio clare re plendens, populis prædicando <lb/>
+            non cessavit; populus hæc mirab liter et vidit, et <lb/>
+            audivit, a cruce eum solvere cum magno 390 co- <lb/>
+            natu voluit, sed nullus hominum natus ipsum attin­ <lb/>
+            gere potuit, quia Dominus militem summ secum du­ <lb/>
+            cere voluit; tunc populos, et in Christo fratres salu­ <lb/>
+            lavit, et cum magistro et angelis in requiem regni <lb/>
+            laetus perrexit. Hæc gesta sunt sub Ægea proconsule <lb/>
+            in civitate Patras, prid. K. Decembris, cujus corpus-
+            <milestone unit="PLSection" n="B"/><lb/>
+            culum beata Maximilla inde cum honore adduxi, et <lb/>
+            aromatibus sanctum corpus condidl (sic), cujus re­ <lb/>
+            liquiæ, id est, brachium ejus, vicesimo Constantini <lb/>
+            imperatoris anno ad Romani translatae sunt, et in <lb/>
+            ecclesia sancti Petri apostoli fratris ejus honorifice <lb/>
+            collocatæ sunt.</p>
+          <p>42. JACOBUS, qui interpretatur supplantator, fi­ <lb/>
+            lius Zebedæi, frater Joannis apostoli, arte prius pis­ <lb/>
+            calor, postea factus est Christi secutor, relinquens <lb/>
+            rete et navenr, secutus est Salvatorem, relicto patre <lb/>
+            Zebedæo. Obedivit omnipotenti Deo. Relinquens <lb/>
+            mare et pisces, factus est in muri, id est, in mundo <lb/>
+            piscator coelestis. Hispanis, et occidentalibus locis <lb/>
+            praedicator, et sub Herode gladio cæsus occubuit, <lb/>
+            sepultusque est in Achaia marmarica VIII Kal. Au­ <lb/>
+            gusti.</p>
+          <p>43. JOANNES apostolus, et evangelista, qui inter­ <lb/>
+            pretatur gratia Dei, filius Zebedæi, frater Jacobi. <lb/>
+            Sanctæ Mariae filius in adoptione, et Christi frater in <lb/>
+            virginitate. A Domino electus in tantum, et dilectus,
+            <milestone unit="PLSection" n="c"/><lb/>
+            ut iu cœna recumberet super pectus Domini. Ipse <lb/>
+            Joannes ad crucem Christi stetit, cui lunc soli Sal­ <lb/>
+            vator pendens matrem suam Mariam commendavit. <lb/>
+            Iste enim Juannes in Cana Galilææ uxorem ducere <lb/>
+            voluit, quando Dominus Jesus aquam in vinum fe­ <lb/>
+            cit. Sed Domimis Jesus ad virginitatis exemplum il­ <lb/>
+            lum traxit, ut virgo virginem adjuvaret, et mater II­ <lb/>
+            lium proprium haberet. Dum enim suscepit mater <lb/>
+            magistri discipulum, etiam ipse pro Christo alter <lb/>
+            quodammodo relictus est lilius. Joanne8 Domini di­ <lb/>
+            scipulus, Joannes Abiæ archiepiscopus, Joannes cha­ <lb/>
+            ritate Dei plenus, Joannes in mystertis Evangelii ulei <lb/>
+            fluvius, Joannes aquila visus in visione Ezechiclis <lb/>
+            quatuor animalibus. Evangelium Christi prædicans in <lb/>
+            Abia, a Domitiano Caesare ligatus est catena, ibi <lb/>
+            Apocalypsim, id est, revelationem conspicit, ubi <lb/>
+            Dei mysteria et dixit, et scripsit. interfecto auLem <lb/>
+            Domitiano a senatu, solutus est Joanues ab exilio, <lb/>
+            felix recessit in Ephesum. Ibi rogatus ab Asiæ epi-
+            <milestone unit="PLSection" n="D"/><lb/>
+            scopis, scripsit Evangelum, in quo alios sermone <lb/>
+            pra cellit, sicut alios amore præcedit, cujus quidem <lb/>
+            inter alias virtutes magnitudo signorum fuit. Martyr <lb/>
+            veraciter voluntate exstitit. Missus namque in ferven­ <lb/>
+            tis olei dolium, illæsus inde evasit. Veneni poculum <lb/>
+            potavit, et ei nihil nocuit. Duos viras de veneno mor­ <lb/>
+            tuos suscitavit, silvestres frondium virgas in aurum <lb/>
+            mutavit, littoreaque saxa in geminas formavit, et <lb/>
+            gemmarum fragmina in propriam naturam reforma- <lb/>
+            VII. Viduam quoque praecepto populi suscitavit, et <lb/>
+            redivivum cujusdam juven.s corpus in vitæ statum <lb/>
+            reparavit, et quod dictu magis est, Christi genera­ <lb/>
+            tionem saeculo monstravit. Hic autem post passionem <lb/>
+            Salvatoris anno sexagesimo octavo sub Trajano prin <lb/>
+            cipe longaevo vetustatis fessus senio, cum sibi diem <lb/>
+            transmigrationis suæ sentiret imminere, iussisse fer­ <lb/>
+            tur sibi sepulcrum effodi, et valedicens fratribus, <lb/>
+            oravit: facta oratone, videns tumulum 391 iuravit <lb/>
+            Unde accidit ut quidam asserant vivere, nec mor <pb n="1289"/>
+            
+            <milestone unit="PLSection" n="A"/><lb/>
+            tuum eum in sepu.cro, sed dormientem jacere con. <lb/>
+            tendant, maxime pro eo quod illic terra sensim ab <lb/>
+            mo scaturiat, et ad supereficiem sepulcri conscendat ; <lb/>
+            et quasi flatum quiescentis deorsum ad superiora <lb/>
+            ebulliat. Sed hanc contentionem et anstimationem ex <lb/>
+            Christianis cordibus vir Spiritu sancto plenus Leo <lb/>
+            papa et apostolicus indubitanter abstraxit quia Joan­ <lb/>
+            nes apostolus in suo sepulcro nec vivus jacet, nec <lb/>
+            mortuus ; disputans enim de eodem Joanne, et de <lb/>
+            resurrectione sanc torum, sic ait : Verum etiam for­ <lb/>
+            tasse plurimi ex eisdem beatis martyribus cum Domino <lb/>
+            resurrectionem corporaliter vel consequenter (sic) fue­ <lb/>
+            rint consecuti; nam sic legimus in prima resurrectio­ <lb/>
+            nis festivitate, suscitante se Domino, multa sancto­ <lb/>
+            rum corpora suscitata vixisse, et in sanctam civita­ <lb/>
+            tem introisse. Sed fortasse aliquis dicct: Sepulcra <lb/>
+            clausa sunt monumenta constructa : quemadmodum <lb/>
+            procedere exinde potuerunt? Ut taceamus quia om­ <lb/>
+            nia possibilia sunt Deo, et quod clausis tumuli pene-
+            <milestone unit="PLSection" n="B"/><lb/>
+            tralibus possit spirituale corpus educere, ut hæc om­ <lb/>
+            nia prætermittam, apostoli habemus exemplum, quem <lb/>
+            tumulus susceptum claudere potuit, custodire non <lb/>
+            potuit, nam depositum corpus perdidit quod assum­ <lb/>
+            psit. IIic enin' tumuli foribus gratia resurrectionis <lb/>
+            ablatus est, ut staret sepultura, nec inveniretur Se­ <lb/>
+            pultus. Denique sacerdotes cum honorandi causa <lb/>
+            corpus inquirerent, reserato aditu, tumulus non po­ <lb/>
+            tuit reddere quem suscepit. Ejusdem naque Joannis <lb/>
+            natale in Epheso VI Kal. Januar. colitur. Alii dor­ <lb/>
+            mitionem ejus VIII Kal. Julii dicunt, quando nativitas <lb/>
+            Joannis Baptistae celebratur.</p>
+          <p>44. THOMAS, qui interpretatur abyssus, et alio no­ <lb/>
+            mine Didymus, hoc est, Christi similis, vultu enim <lb/>
+            carnali simillimus factus est Salvatori ; unde et Judas <lb/>
+            Judæis dixit, tradens magistrum suum : Quemcun­ <lb/>
+            que osculatus fuero, ipse est, tenete eum. Cui Dominus <lb/>
+            dignatus est post resurrectionem suam vulnera pas­ <lb/>
+            sionis suæ ostendere, quia affirmantibus ei apostolis <lb/>
+            Christum resurrexisse, noluit credere dicens: Nisi vi­
+            <milestone unit="PLSection" n="c"/><lb/>
+            dero in manibus ejus fixuram clavorum et mittam ma­ <lb/>
+            num meam in latus ejus, non credam. Veniens iterum <lb/>
+            Jesus, jannis clausis, ad discipulos suos, inventus <lb/>
+            est tunc Thomas inter eos; deinde Jesus dicit Tho­ <lb/>
+            mæ : Defer digitum tuum huc, et mitte in loca clavo­ <lb/>
+            rum, et in latus meum mitte munum tuam, et noli <unclear>p</unclear>.r- <lb/>
+            dere fidem tuam. Tunc Thomas timuit, et credidit, et <lb/>
+            Dominum Deum suum agnovit dicens: Dominus <lb/>
+            meus, et Deus meus. Multa itaque mirabilia per hunc <lb/>
+            apostolum Indiæ partibus fecit, quæ vobisnunc nun. <lb/>
+            tiare longum esi, volentibus ea tamen scire in sua <lb/>
+            passione mirabiliter possunt invenire (sic). Unum ta­ <lb/>
+            men a miraculis ejus, ne videar totum præteriisse, <lb/>
+            conabor breviter enarrare. Fuit Tlunas aliquando in <lb/>
+            regis Indiæ convivio, ubi omnes habebant quod uni­ <lb/>
+            versi edere et. bibere volebant; ille vcro manducare <lb/>
+            et tu bere noluit, sed oculos cordis ct corporis ad <lb/>
+            coelum erexit; et hoc pincerna ngis vidit, ad apo­ <lb/>
+            stolum tratus venit, et alapam ei in faciem dedit, et <lb/>
+             
+            <milestone unit="PLSection" n="D"/><lb/>
+            ait : Quare non manducas, et bibis. ae epulis, et V, no in <lb/>
+            convivio regia ? Tunc Thomas, Hebraice respondens, <lb/>
+            dixit ei: De hoc convivio non excedam, donce 392 <lb/>
+            canis niger dexteram tuam deponat in mediu. Hos ser­ <lb/>
+            mones nemo in convivio intellexit, nisi una puella <lb/>
+            Hebræa, quæ cum cithara convivis citharizavit. Fac­ <lb/>
+            tum est ut humo Dei dixit : pincerna foris aquam ad­ <lb/>
+            ducere perrexit, leo in via obvravit, qui eum usque ad <lb/>
+            mortem strangulavit, et omnia ossa ejus minutatim <lb/>
+            confregit. Calles ex palatio regis ad cadaver conve­ <lb/>
+            munt, maledicti membra inter se dividunt. E quibus <lb/>
+            canis unus mger pincernæ dexteram adduxit in me­ <lb/>
+            dio convivio, sicut prædixerat Dei homo Thomas; ut <lb/>
+            hoc puella Hebraico vidit, ad apostolum cum cithara <lb/>
+            modulans venit, et coram eo cithiaræ carmina sonans <lb/>
+            stetit, et repleta fide, et charitatis Dei ardore, spiri­ <lb/>
+            tuale carMen cithara coepit cautane, et omnipotentem <lb/>
+            universorum Deum mirabiliter laudare, dicens: Unus <lb/>
+            Deus Hebræorum, qui creavit omnia, ipse fecit cælum
+            <milestone unit="PLSection" n="A"/><lb/>
+            et terram, et fundavit maria. Ut hoc iterum jussu <lb/>
+            apostoli decantavit, ad pedes ejus cum magna fide <lb/>
+            inclinavit, et Salvatorem omnium devota Christum <lb/>
+            credidit. Cuncti populi, ut hæc viderunt, et audie­ <lb/>
+            runt, valde admirati suut, et timucrunt, et multi ex <lb/>
+            eis Christo crediderunt. Hic itaque Thomas Parthis <lb/>
+            et Medis prædicavit, et intimam orientalem plagam, <lb/>
+            ibique Evangelium evangelizavit, et martyrium sus­ <lb/>
+            tulit. Lancea coi,,, ibi transfixus, occubuit i n Cala­ <lb/>
+            minica Indiæ civitate, et xn Kalend. Jan. ibi sepultus <lb/>
+            est in honore.</p>
+          <p>45. PHILIPPUS, qui interpretatur os lampadis, a <lb/>
+            Bethsaida civitate Andreæ et Petri ortus, cujus me­ <lb/>
+            moria legitur in Acubus apostolorum ; hic fuit unus <lb/>
+            ex VII diaconis, qui cum sancto Stephano ab aposto­ <lb/>
+            lis ordinati sunt, et eorum nomina hæc sunt: Ste­ <lb/>
+            phanus, Philippus, Procorus, et Nicanor, Timotheus, <lb/>
+            et Parmenas, et Nicolaus advena Antiochenus. Hic <lb/>
+            vera Philippus conjugem habuit, et quatuor filias
+            <milestone unit="PLSection" n="B"/><lb/>
+            prophetissas ex ea genuit, et postea apostolus Do­ <lb/>
+            mnini fuit. Samariam perrexit virtute Domini repletus; <lb/>
+            ibi primus verbum Domini Samaritanis prædicavit, <lb/>
+            iu quo crat tanta virtus divinæ gratiae, ut etiam Si­ <lb/>
+            monem Magum praedicatione consternaret, qui per <lb/>
+            idcm tempus celebris famre apud Samariæ populos <lb/>
+            habebatur, ita ut virtus Dei rnagna esse putaretur. <lb/>
+            Sed is cum vidisset signa et miracula quæ a Phil ppo <lb/>
+            per divinæ gratiæ potestatem ficbant, obstupet ctus <lb/>
+            et territus cessit, et credere se in Christum, usque <lb/>
+            quo etiam baptismum accepit, simulavit. Deinde Phi­ <lb/>
+            lippus Gallis prædicavit Christum , postea in Hiera­ <lb/>
+            poli Phrygiæ provinciæ, ubi crucifixus, et lapidatus <lb/>
+            obiit, ubique cum filiabus suis quiescit. Cujus natali <lb/>
+            tium Kalend. Maii, celebratur,</p>
+          <p>46. JACOBUS, qui interpretatur supplantator, filius <lb/>
+            Joseph Cleophæ, cujus memoria in Evangelio legitur. <lb/>
+            Hic Jacobus frater Thaddæi apostoli legitur, qui <lb/>
+            Thaddæus alio nomine Judas dicitur, et ambo fratres
+            <milestone unit="PLSection" n="c"/><lb/>
+            dicuntur Christi. Idem ipse Jacobus Jerosolymorum <lb/>
+            primus episcopus fuit ; qui cognominatus est Justus ct <lb/>
+            apostolorum episcopus. Multi fuerunt Jacobi, sed i lem <lb/>
+            Jacohus Alphæi qui, ut praediximus, cognominatus <lb/>
+            est Justus, alios præcellit Jacobos, quia ex utero ma­ <lb/>
+            tris suæ semper sanctus fnil: vinum ct siceram non <lb/>
+            bibit, et carnem non manducavit ; ferrum 393 in <lb/>
+            caput ejus nunquam ascendit, oleo non fuit unctus, <lb/>
+            balnco non fuit totus, neque laneo indutus, sed tan­ <lb/>
+            tum sindonc linea vestitu Huic soli licebat introire <lb/>
+            Sancta sanctorum, solus ingrediebatur templum, et <lb/>
+            ita jacebat super genua sua orans pro populi induf­ <lb/>
+            gentia, ut orando callos faceret in genibus ad mo­ <lb/>
+            dum cameli, semper genua nectendo, neque unquam <lb/>
+            ab oratione cessando. Itaque pro incredibili hac con­ <lb/>
+            tinentia, et summa justitia appellatus esl Justus, et <lb/>
+            Oblias, quod interpretatur munimentum populi. Hic <lb/>
+            dum in Jerusalem Christum Dei Filium prædicaret, <lb/>
+            de pinna templi dejectus, et fullonis vecte in caput <lb/>
+            percussus a Judæis lapidibus opprimitur, ibique
+            <milestone unit="PLSection" n="D"/><lb/>
+            juxta templum humatur, cujus natalitium et ordina­ <lb/>
+            tio vi Kal. Jan. creditur.</p>
+          <p>47. BARTHOLOMÆUS apostolus, qui nomen ex Sy­ <lb/>
+            ra lingua suscepit, ct interpretatur filius suspenden­ <lb/>
+            tis aquas. Hic forma bene factus, facie et oculis de­ <lb/>
+            curus, veste præclara , et gemmis, nec per hoc <lb/>
+            elatus, nec superbus cui potestatem talem super <lb/>
+            dæmones dedit Dominus, quia, quatido volebat, dæ­ <lb/>
+            mones in simulacris tacebam , et quando volebat, <lb/>
+            dæmones de simulacris nolentes turpitudines et Ini­ <lb/>
+            serias suas demonstrabant, et prædicabant. Contigit <lb/>
+            amem aliquando ut Bartholomæus tale miraculum <lb/>
+            ostenderet in populo, quando populum ante simula­ <lb/>
+            crum stare præcepit, ct in virtute Dei dæmonem a <lb/>
+            simulacro jussit exire, et in sua magna miseria et <lb/>
+            deformitate se populo ostendere, et praedicare. Tunc <lb/>
+            niiser invitus, cum gemitu et ululatu exorsus est <lb/>
+            dicere : O stulti, videte qualem Deum me infelicem <lb/>
+            coluistis ! O insensati, considerate me miserum, et effor- <note type="footnote"> PATROL. LXXXIII. </note> <note type="footnote"> 41 </note> <pb n="1291"/>
+            
+            <milestone unit="PLSection" n="A"/><lb/>
+            mam, atque omnibus modis despectum, quem vos adju­ <lb/>
+            torem rogastis. O seducti, conspicite qualem dominum <lb/>
+            stultissimo el cœco corde credidistis. O decepti, inten­ <lb/>
+            dite, quia non sum Deus, sed dæmon miserrimus, in <lb/>
+            superbia deceptus, et de cœlo lapsus ; fui aliquando <lb/>
+            angelus in gloria, modo factus sum diabolus in Dei ira. <lb/>
+            Perdidi gloriam, et angelicam vitam in cœlo, et inveni <lb/>
+            pœnas infinitas, et innumerabiles in inferno, et sic pr­ <lb/>
+            didi gloriam meam, ut nullo modo possim invenire <lb/>
+            veniam, aut DNi gratiam, quia non habeo carnem, nec <lb/>
+            pœnitentiæ materiam. Nam si ego miser potuissem ha­ <lb/>
+            iere unum digitum cum ungula de hominis carne, <lb/>
+            potuissem (ne ) a mea miseria et crudelitate redimere. <lb/>
+            Vos insensati cum omnibus creati, et ad duas Dei <lb/>
+            imagines facti, quid vos ipsos seducitis et perditis ? quid <lb/>
+            a creature erratis, cum ipse vobis dedit pedes ad stan­ <lb/>
+            qum et ambulandum, manus ad palpandum ct labo­ <lb/>
+            randum, oculo. ad videndum et cognoscendum, aures <lb/>
+            ad audiendum, linquam ad loquendum, et Deum
+            <milestone unit="PLSection" n="B"/><lb/>
+            laudandum, cor ad credendum, et intelligendum? <lb/>
+            Tunc apostolus ei respondit : Quomodo tu miser <lb/>
+            cum uno hominis digito ungulato le de tua calamitate <lb/>
+            potuisses redimere? Cui cum ululatu iterum respon­ <lb/>
+            dit : Cum uno illo digilo et ungula uni mundassem <lb/>
+            nares, alteri aures, tercio oculos, et omnibus membra, <lb/>
+            ut voluissent, scalpassem, et hæc sedulo fecissem. unus <lb/>
+            nihil forsitan dixisset : Deus te benedicat ; alius : <lb/>
+            Deus te adjuvet ; tertius ; Deus te de malo no liberet, <lb/>
+            et in his multis et magnis benedictionibus lassus liber <lb/>
+            venissem. Et cum 394 hæc omnia Dei jussione, et <lb/>
+            sine sua voluntate dixisset, luiser ab oculis omnium <lb/>
+            evanuit. Tunc omnis populus, uL hæc vidit et aa­ <lb/>
+            divit. valde limuit miratus ; et derelinquens vanum <lb/>
+            (cultum) idolorum, credidit, et benedixit omnipo­ <lb/>
+            tentem Dcum. Hic itaque Bartholomæus Lycaoniam <lb/>
+            prædicavit. Ad ultimum in Albano majore Armeniæ <lb/>
+            urbis vivens a Barbaris decoriatus, atque per jus­ <lb/>
+            sum regis Astragis decoHatus, sicquc terrae conditus
+            <milestone unit="PLSection" n="c"/><lb/>
+            IX Kalend. Septembr.</p>
+          <p>48. MATTHÆUS apostolus et evangelista a Matthea <lb/>
+            civitate nomen accepit, et intepretatur donatus, <lb/>
+            primo publicanus, postea Domini discipulus. In te­ <lb/>
+            loneo sedebat, thesauros regebat, pubLice peccabat, <lb/>
+            intus obscuratus, saeculi cura cxcatus. Aliquando, <lb/>
+            Deo vo ente, vidit solem justitiæ, audivit aure cordis <lb/>
+            verba veritatis; secutus est solem, quem vidit, veri­ <lb/>
+            tatein, quain audivit, credidit et adoravit: relin­ <lb/>
+            quens teloneum , secutus cst omnium Domimim; <lb/>
+            relinquens thesaurum periturum, secutus est regem <lb/>
+            semper mansurum ; relinquens mendacium et vani­ <lb/>
+            tatem, secutus cst viam et veritatem; reliquens <lb/>
+            mortem et. mundum, secutus est vitam et regnum; <lb/>
+            obliviscens stultiloquium, scribit et prædicat Evan­ <lb/>
+            gelium. Qui tribus nominibus fu t nominatus, id est, <lb/>
+            Matthæus, Levi, Publicanus. Matthæus de civitate <lb/>
+            sua Matthea, ut ante diximus, nominatus; Levi de <lb/>
+            tribu Levi, unde fuit ortus; inde cognominatus Pu­ <lb/>
+            blicanus, quia publica servabat. Matthæus interpre
+            <milestone unit="PLSection" n="D"/><lb/>
+            tatur donatus; Levi minister ; publicanus, quia pu­ <lb/>
+            blic e peccat. Primum quidem in Judæa in tempure <lb/>
+            Cai regis Romæ Evangelium conscripsit, et prædi­ <lb/>
+            cavit, et postea in Macedonia, et xi Kalend. Octobr. <lb/>
+            pasSis in Persida, in montibus Portorum requiescit <lb/>
+            in gloria.</p>
+          <p>49. SIMON ZELOTES, qui interpretatur zelus. Hic <lb/>
+            primus dictus est Cananæus a vico Cana, quod in­ <lb/>
+            terpretatur possidens, qui et Simon terno nomine <lb/>
+            appellatus est, zelo Dei fervens. Par Petri in coguo­ <lb/>
+            mento, ct similis in honore. Apostolus Domini, et <lb/>
+            consobrinus, Cleophæ et Mariæ filius, quæ Maria <lb/>
+            Cleophæ in Evangelio dicitur, Cleophas pater ejus, <lb/>
+            et Joseph, qui quasi pater dicitur, Christi fratres <lb/>
+            fuerunt, et mater ejus, quæ Maria Cleophæ dicitur, <lb/>
+            soror Mariæ matris Domini fuit. Ita et miro modo <lb/>
+            duo fratres duas sorores habuerunt uxores. Sed <lb/>
+            Cleophas carnaliter, Joseph vero spiritualiter. Hic <lb/>
+            itaque Simon accepit in prædicatione Ægypti prin.
+            <milestone unit="PLSection" n="A"/><lb/>
+            cipatum, et post Jacobum Justum cathedram dicitur <lb/>
+            tenuisse Jerosolymorum, et post annos CXX meruit <lb/>
+            sub Adriano imperatore per crucem sustinere mar­ <lb/>
+            tyrium passionis. Jacet in Posphoro, cujus natale v <lb/>
+            Kalend. novembr.</p>
+          <p>50. JUDAS LEBRÆUS, id est, corculus, hoc est, a <lb/>
+            corde, ipse est et Thadæus, ipse est Jutlas Jacobi, <lb/>
+            filii Josephi fratris Cleophe, et interpretatur con­ <lb/>
+            fessor, in Mesopotamia, atque interioribus Ponti <lb/>
+            prædicavit. Sepultus est in Crito Armeniæ urbe, <lb/>
+            cujus festivitas vi Kalend. Novembris celebratur.</p>
+          <p>51. MATTHIAS , vel MATTHIAN , de septuaginta <lb/>
+            discipulis unus fuit, et pro Juda Iscarioth III roter <lb/>
+            apostolos subrogatus. Electus sorte, et 395 solus sine <lb/>
+            cognomento, coi datur Evangelii prædicatio in Ju­ <lb/>
+            dæa.</p>
+          <p>52. APOSTOLI sancti hi fuerunt Christi discipuli, lu­ <lb/>
+            miuaria mundi, lapides pretiosi, Salvatoris amici, præ­ <lb/>
+            dicatores fidei, paranymphi sponsi, principes mundi,
+            <milestone unit="PLSection" n="B"/><lb/>
+            claviculares regni, sal terrae, palmites in vera vite, se­ <lb/>
+            minatores justitiæ, messores in patrisfamilias segete, <lb/>
+            veritatis amatores, gentium doctores, dæmonum et <lb/>
+            tyrannorum superatores, paradisi exploratores, ovium <lb/>
+            Christi boni pastores, in magno juditio Judæorum <lb/>
+            judices sedentes cum judiee super XII sedes. Qui <lb/>
+            dum omnes unum sint, singuli tamen eorum propriis <lb/>
+            certisque locis in mundo ad prædicandum sortes <lb/>
+            proprias acceperunt. Petrus vero Romam , Paulus <lb/>
+            a Jerusalem usque ad Illyricum, Andreas Achaiam , <lb/>
+            Jacobus Zebedæi Hispaniam , Joannes frater ejus <lb/>
+            Asiam, Thomas Indiam, Jacobus frater Jud;e Jerusa­ <lb/>
+            lem, Matthæus Macedoniam, Philippus Gallias, Bar­ <lb/>
+            tholomæus Lycaoniam, Simon Zelotes Ægyptum , <lb/>
+            Judas Mesopotamiam , Matthias Judæam.</p>
+          <p>53. DE: APOSTOLIS, qui sine dubio uxores habuerunt, <lb/>
+            audivi sanctum Clementem ita dicentem, qui eorum <lb/>
+            comes et cornu. discipulus fuir, et tertius a Petro p apa <lb/>
+            in Roma exstitit; sic enim ait: Petrus vero uc Phi­
+            <milestone unit="PLSection" n="c"/><lb/>
+            lippus et uxores habuerunt, et eas etiam vitis nuptas <lb/>
+            dederunt; sed et Paulum apostolum non lædet in <lb/>
+            quadam Epistola sua mentionem et salutationem facere <lb/>
+            comparis suæ, quam se ideo tamen negat circumducere, <lb/>
+            ut ad prædicationem Evangelii expeditior fiat. Sic et <lb/>
+            de Petro dicitur. Aiunt, inquit, beatum Petrum, cum <lb/>
+            vidisset uxorem suam duci ad passionem suam, gavi­ <lb/>
+            sum esse electionis gratiam ac regressionis ad propriam <lb/>
+            domum , et exclamasse post eam, cum duceretur, ac <lb/>
+            proprio nomine appellantem dixisse : O conjux, me­ <lb/>
+            mentc Domini. Talia sanctorum conjugia, tam perfecta <lb/>
+            fuit affectio beatorum.</p>
+          <p>54. MARCUS, qui interpretatur excelsus, evangelista <lb/>
+            Dei et Petri in baptismate filius, atque in divino ser­ <lb/>
+            mone discipulus. Sacerdotium in Israet agens, se­ <lb/>
+            cundum carnem Levita. Conversus ad fidem Christi, <lb/>
+            Evangelium in Italia scribit in temporeClaudii Cæ­ <lb/>
+            saris. Qui post fidem pollicem dicitur amputasse, ut <lb/>
+            sacerdotio reprobus haberetur, sed secundum dispen­ <lb/>
+            sationem Dei ei fidei ejus meritam, et vitan, postea
+            <milestone unit="PLSection" n="D"/><lb/>
+            episcopus factus est. Hunc enim Marcum tradunt <lb/>
+            primum ad Ægyptum perrexisse, atque inibi Evan­ <lb/>
+            gelium , quod ipse conscripserat, prædicasse; quod <lb/>
+            et furtum laudabile dicitur, quia quæ Petrus verbo <lb/>
+            prædicaverat, ipse in occulto rogatus a fratribus scri. <lb/>
+            Icebat. Ipse enim primus ecclesiam apud Alexan­ <lb/>
+            driam construxit, et in ea civitate primus prædicator <lb/>
+            et episcopus fuit. Qui et alio nomine idem Joannes <lb/>
+            nominatus fuit. Quem alii asserunt martyrio corona­ <lb/>
+            tum. Hieronymus autem eum affirmat in pace Eccle­ <lb/>
+            siæ migrasse ad cœlum. Cujus depositio VII Kalend. <lb/>
+            Maii celebratur.</p>
+          <p>55. LUCAS, qui interpretatur elevans, sive consur­ <lb/>
+            gens, evangelista tertius, natione Syrus, Antiochen­ <lb/>
+            sis, cujus laus in Evangelio canitur, arto scriba et <lb/>
+            medicus, apostolorum discipulus, postea Paulum <lb/>
+            usque ad confessionem ejus secutus, serviens Do­ <lb/>
+            mnino sine crimine. Nam ueque uxorem unquam ha­ <lb/>
+            bens, neque filios; medicus corporum et animarum <pb n="1293"/>
+            
+            <milestone unit="PLSection" n="A"/><lb/>
+            Duos 396 etenim libros de spirituali medicina ani­ <lb/>
+            scripsit, iJ est, Evangelium in Achaix par­ <lb/>
+            tibus tempore Pauli, quod Evangelium Paulus apo­ <lb/>
+            stolus (ait) esse suum: ait enim secundum Evangelium <lb/>
+            meum. Alium vero librum, qui Actus apostolorum <lb/>
+            dicitur, quem sancto Theophilo episeopo Antio­ <lb/>
+            cheno conscripsit. LXXIV annorum obiit in Bethania <lb/>
+            plenus Spiritu sancto; qui postea Constantinopolim <lb/>
+            Constantini imporatoris anno 20 cum rel.quiis beati <lb/>
+            apostoli Andreae translatus est; cujus deposilio xv <lb/>
+            Kal. Novemb. celebratur.</p>
+          <p>56. BARNABAS , qui et Joseph, natione Cypriæ <lb/>
+            civitatis a Cyro Persarum rege conditæ, cum Paulo <lb/>
+            apostolo in gentibus apostolatum adeptus. Deinde <lb/>
+            propter Joannem discipulum, qui etiam cognomento <lb/>
+            Marcus appellatur, sejunctus a Paulo, apostolus <lb/>
+            nihilominus evangelicae prædicationis injunctum sibi <lb/>
+            opus exercuit.</p>
+          <p>57. TIMOTHEUS, Ephesiorum episcopus, de civitate
+            <milestone unit="PLSection" n="B"/><lb/>
+            Trientium patre Graeco, id est, ethnico, matre autem <lb/>
+            Judæa, id est, Eunice, ut refert Paulus apostulus, <lb/>
+            dicens ; Quia habitavit fides in ovia tua Loide, et ma- <lb/>
+            Ire tua Eunice, certum est autem quod et in te. Ilic <lb/>
+            autem discipulos fuit Pauli apostoli, ejusque filius <lb/>
+            spiritualis, quem puerum proprie secum idem Paulus <lb/>
+            apostolus assumpsit; qui pudicus et virgo permansit, <lb/>
+            quique apud Ephesum in monte qui vocatur Pion, <lb/>
+            cum magno quiescit littore.</p>
+          <p>58. TITUS Pauli apostoli discipulus et in baptismo <lb/>
+            filius, natione Graecus , et ex gentibus solus a Paulo <lb/>
+            apostolo post Evangelium circumcisus; quem ad ex­ <lb/>
+            struendas Cretæ ecclesias praefatus reliquit apostolus, <lb/>
+            ibique in pace defunctus, atque sepultus quicscit.</p>
+          <p>59. STEPHANUS sanctus, gratia plenus, dignus dia­ <lb/>
+            conus, et post Christum martyr primus, Zacchæi <lb/>
+            nepos, et Simonis filius. Miles magnus StEphanus <lb/>
+            erat, clarus genere, et forma fulgebat; clarior tamen <lb/>
+            lide et signi, sæcurlo radiabat. Evangelium legebat,
+            <milestone unit="PLSection" n="c"/><lb/>
+            Evangelium intelligebat, Evangelium praedicabat, <lb/>
+            Evangelium implebat, populis perfecte Christum an­ <lb/>
+            nuntiabat, Synagogas sapientia superabat, sigua ma­ <lb/>
+            gna in populo faciebat. Spiritu sancto repletus, canes <lb/>
+            latrantes adversum se vincebat, coelos apertos vide­ <lb/>
+            bat, et Jesum stantem a dextris virtutis Dei aspiciebat. <lb/>
+            Scripturas sanctas in Jerusalem sapienter psallebat, <lb/>
+            et de Dei lege fratres hidæos diligenter docebat,
+            <milestone unit="PLSection" n="A"/><lb/>
+            duros corde et incredulos cum fiducia increpabat, <lb/>
+            charitate repletus non credentes clementer castiga- <lb/>
+            bai. Inimici Dei hæc videntes, dentibus iti cum stri <lb/>
+            debant ; inimici Dei hæc audientes, quomodo eum <lb/>
+            interficere potuissent quærebant; phrenetici furentes, <lb/>
+            furore repleti, ut canes, contra sanctum latrabant, <lb/>
+            falsi testes mentientes clamabant, Christi militem <lb/>
+            miseri morte damnabant, duri cervice, et corde <lb/>
+            crudeles, lapides colligebant, et sanctum Stepha­ <lb/>
+            num trahentes foras extra civitatem lapidabant; illi la­ <lb/>
+            pidabant, ille orabar ; illi saxorum grandines super eum <lb/>
+            jactabant, ille genua factori suo feliciter flectebat; <lb/>
+            tlli cum maledictis manibus mactabant, ille vero <lb/>
+            charitatis ardore plenus coruscabat; illi stulti Satanæ <lb/>
+            sodales in sanctum saeviebant, ille sanctus instanter <lb/>
+            Salvatori sumino psallebat; illi furore fuscati denti­ <lb/>
+            bns fremebant, ille vultu angelico 397 et clara <lb/>
+            facte fulgebat ; illi carnilices certatim lapides duce­ <lb/>
+            bant, ille veraciler veniam persecutoribus precaba-
+            <milestone unit="PLSection" n="B"/><lb/>
+            tur; illi crudeliter caput et corpus sancti saxis fran­ <lb/>
+            gebant, ille Sanctum in cœlo aspiciens, alebat : Ne <lb/>
+            statuas illis hoc peccatum, Domine; illi sanguinem <lb/>
+            sancti Stephani in terram fundebant, ille sanctus <lb/>
+            Stephanus cælos apertos et Jesum stantem videbat; <lb/>
+            illi latera sancti Stephani silicibus scindebant, ille <lb/>
+            constanter Christo gratias agebat; illi furendo, ira­ <lb/>
+            scendo, clamando currebant, ille prædicando, orando, <lb/>
+            psallendo ad Christum clamabat; illi membra ma­ <lb/>
+            ximi militis lapidibus lacerabant, ille magnus miles <lb/>
+            spiritum Christo commendabat. Sanctus itaque Ste­ <lb/>
+            phanus, positis gembus, orans, in Christo obdormi­ <lb/>
+            vit. Sanctus Stephanus, ut prædiximus, vidit cœlos <lb/>
+            apertos, et introivit. Cujus oratio Saulum Ecclesiæ <lb/>
+            Christianum reddidit, et praecipuum, et pium Paulum <lb/>
+            prædicatorem prostravit, quia si tunc Stephanus <lb/>
+            non orasset, Ecclesia postea Paulum non habuisset. <lb/>
+            Post hæc itaque vere timorati a civitate venerunt, ct <lb/>
+            sanctum Stephanum cum magno planctu planxerunt,
+            <milestone unit="PLSection" n="c"/><lb/>
+            et cum magno honore corpus ejus sepelierunt. Ubi, <lb/>
+            praestante Domino, magna miracula et modo appa­ <lb/>
+            rent, ei tunc apparuerunt. Cujus martyrium a mundo <lb/>
+            honoratur, et VII Kalend. Jan. semper celebratur. <lb/>
+            Cujus corpus post tempus in Non. August. ibidem <lb/>
+            quæsitum invenitur, ubi a nullis millibus Christus <lb/>
+            creditur et adoratur.</p>
+        </div>
+        
+        </body>
+  </text>
+</TEI>

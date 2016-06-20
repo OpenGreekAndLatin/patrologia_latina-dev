@@ -1,0 +1,873 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+    <fileDesc>
+			<titleStmt>
+				<title>Patrologiae Cursus Completus. Series Latina (PL)</title>
+				<sponsor>University of Leipzig</sponsor>
+				<funder>European Social Fund Saxony</funder>
+				<principal>Gregory Crane</principal>
+				<respStmt>
+					<persName xml:id="Jouve">Jouve</persName>
+					<resp>OCR-ed, corrected and encoded the text</resp>
+				</respStmt>
+				<respStmt>
+					<persName>Greta Franzini</persName>
+					<resp>Project Manager (University of Leipzig)</resp>
+				</respStmt>
+				<respStmt>
+					<persName>Simona Stoyanova</persName>
+					<resp>Project Assistant (University of Leipzig)</resp>
+				</respStmt>
+				<respStmt>
+					<persName>Bruce Robertson</persName>
+					<resp>Technical Advisor (Mount Allison University)</resp>
+				</respStmt>
+			</titleStmt>
+
+			<publicationStmt>
+				<authority>University of Leipzig</authority>
+				<idno type="filename">PL64.xml</idno>
+				<availability>
+					<licence target="https://creativecommons.org/licenses/by-sa/4.0/">Available under a
+						Creative Commons Attribution-ShareAlike 4.0 International License</licence>
+				</availability>
+				<date>2014</date>
+				<publisher>University of Leipzig</publisher>
+				<pubPlace>Germany</pubPlace>
+			</publicationStmt>
+
+			<sourceDesc>
+				<listBibl xml:lang="la">
+					<biblStruct>
+						<monogr>
+							<editor>
+								<persName>
+									<name xml:lang="fr">Jacques Paul Migne</name>
+								</persName>
+							</editor>
+							<author ref="http://data.perseus.org/catalog/urn:cts:latinLit:stoa0058">Boethius</author>
+							<title>In Prophyrium Dialogi A Victorino Translati</title>
+							<title ref="http://data.perseus.org/catalog/urn:cts:latinLit:stoa0058.stoa007">Commentarii In Porphyrium A Se Translatum</title>
+							<title>In Categorias Aristotelis Libri Quatuor</title>
+							<title ref="http://data.perseus.org/catalog/urn:cts:latinLit:stoa0058.stoa022">In
+								Librum Aristotelis De Interpretatione Libri Duo</title>
+							<title>Priorum Analyticorum Aristotelis Libri Duo</title>
+							<title>Posteriorum Analyticorum Aristotelis Libri Duo</title>
+							<title>De Syllogismo Categorico</title>
+							<title>De Syllogismo Hypothetico Libri Duo</title>
+							<title>De Divisione</title>
+							<title>Liber De Diffinitione</title>
+							<title>Topicorum Aristotelis Libri Octo Severino Boethio Interprete</title>
+							<title>Elencorum Sophisticorum Aristotelis Libri Duo Severino Boetio
+								Interprete</title>
+							<title>In Topica Ciceronis Commentariorum Libri Sex</title>
+							<title>De Differentiis Topicis Libri Quatuor</title>
+							<title>Speculatio De Rhethoricae Cognatione</title>
+							<title>Locorum Rhethoricorum Distinctio</title>
+							<title>De Disciplina Scholarum</title>
+							<title ref="http://data.perseus.org/catalog/urn:cts:latinLit:stoa0058.stoa025">Quomodo
+								Trinitas Unus Deus Ac Non Tres Dii</title>
+							<title ref="http://data.perseus.org/catalog/urn:cts:latinLit:stoa0058.stoa028">Utrum
+								Pater Et Filus Ac Spiritus Sanctus De Divinitate Substantialiter Praedicentur
+								Liber</title>
+							<title ref="http://data.perseus.org/catalog/urn:cts:latinLit:stoa0058.stoa003">Quomodo
+								Substantiae In Eo Quod Sint Bonae Sint Cum Non Sint Substantialia Bona</title>
+							<title ref="http://data.perseus.org/catalog/urn:cts:latinLit:stoa0058.stoa006">Brevis
+								Fidei Christianae Complexio</title>
+							<title ref="http://data.perseus.org/catalog/urn:cts:latinLit:stoa0058.stoa023">Liber
+								De Persona Et Duabus Naturis Contra Eutychen Et Nestorium</title>
+							<imprint>
+								<publisher>Garnier</publisher>
+								<pubPlace>Paris</pubPlace>
+								<date>1847</date>
+							</imprint>
+							<biblScope unit="volume">64</biblScope>
+						</monogr>
+						<ref target="https://archive.org/details/patrologiaecur64mign">Internet Archive</ref>
+
+					</biblStruct>
+				</listBibl>
+			</sourceDesc>
+
+		</fileDesc>
+		<encodingDesc>
+			<p>The following text is encoded in accordance with EpiDoc standards and with the CTS/CITE
+				Architecture.</p>
+		  <refsDecl n="CTS">
+        <cRefPattern n="no citable units founds" matchPattern="(.+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div/tei:div[@n='$1'])"/>
+      </refsDecl>
+    </encodingDesc>
+
+		<profileDesc>
+			<langUsage>
+				<language ident="la">Latin</language>
+			</langUsage>
+		</profileDesc>
+
+	</teiHeader>
+  <text>
+    <body><div type="edition" n="urn:cts:latinLit:stoa0058.stoa023.opp-lat3">
+					<head>
+						<title type="main"><hi rend="italic">M.</hi> MANL. SEV. BOETII LIBER DE PERSONA ET
+							DUABUS NATURIS CONTRA EUTYCHEN ET NESTORIUM, AD JOANNEM DIACONUM ECCLESIÆ
+							ROMANÆ.</title>
+					</head>
+					<p>
+						<milestone unit="PLSection" n="D"/>
+					</p>
+					<ab>
+						<title type="sub">PROOEMIUM.</title>
+					</ab>
+					<p>Anxie te quidem diuque sustioni, ut de ea quae in <lb/> conventu mota est quaestione
+						loqueremur. Sed quo­ <lb/> niam et tu,quominus venires,occupatione distractus <milestone unit="PLSection" n="D"/><lb/> es, et ego in crastinum constitutis negotiis implica­
+						<lb/> bor, mando litteris quæ coram loquen da servaveram. <lb/> Meministi enim,cum in
+						concilio legeretur(a) epistola, <lb/> recitatum Eutychianos ex duabus naturis Christum
+							<note type="footnote"> (a) Naec quod non est somniat Martianus Rota, qui <lb/> in Vita
+							Boetii asserit Leonem pontificem Romanum <lb/> interfuisse concilio Chalcedonensi,
+							cumtantum per <lb/> legatos ei praefuerit. Deinde qui hic agi de ejusdem <lb/>
+							epistola ChalcedoneRomam missa existimat, cum <lb/> econtrario Roma Constantinopolim
+							ad Flavianum </note><pb n="1339"/>
+						<milestone unit="PLSection" n="A"/>consistere confiteri, in duabus negare ; Catholicos
+						<lb/> vero utrique dicto fidem praebere; nam et ex dua­ <lb/> bus eum naturis
+						consistere, et in duabus apud veræ <lb/> fidei sectatores sequaliter credi. Cujus dicti
+						novitate <lb/> percussus, harum conjunctionum, quae ex duabus <lb/> naturis vel in
+						duabus consisterent, differentias in­ <lb/> quirebam, multum scilicet referre ratus, nec
+						puto <lb/> inerti negligentia praetereundum, quod episcopus <lb/> scriptor epistolæ,
+						tanquam valde necessarium, prae­ <lb/> terire noluisset. Hic omnes, apertam esse
+						difIeren­ <lb/> tiam, nec quidquam in eo esse caliginis, inconditum <lb/> confusumque
+						strepere ; nec ullus in tanto tumultu, <lb/> qui leviter attingeret quaestionem, nedum
+						qui expe­ <lb/> diret, inventus est. (a) Assederam ego ab eo quem <lb/> maxime intueri
+						cupiebam, longius, atque adeo, <milestone unit="PLSection" n="B"/><lb/> si situm
+						sedentium recorderis,aversus pluribusque <lb/> oppositis, ne si aegerrime quidemcuperem,
+						vultum <lb/> nutumque ejus ascipere poteram, ex quo mihi ali­ <lb/> qua ejus darentur
+						signa judicii. Atque ego quidem <lb/> nihil caeteris amplius afferebam, imo vero aliquid
+							<milestone unit="PLSection" n="A"/><lb/> etiam minus ; ram do re proposita, æque nihil
+						<lb/> cum caeteris sentiebam : minus vero quam caeteri <lb/> afferebam, falsae scilicet
+						scientiae præsumptionem. <lb/> Tuli æge rrime, fateor, compressusque indoctorum <lb/>
+						grege co nticui, metuens ne jure vidererinsanus, si <lb/> sanus inter furiosos haberi
+						contenderem. Meditabar <lb/> igitur dehinc omnes animo quaestiones, nec deglu­ <lb/>
+						tiebam quod acceperam, sed frequentis consilii itera­ <lb/> tione ruminabam. Tandem
+						igitur patuere pulsanti <lb/> animo fores, et veritas inventa quaerenti, omnes <lb/>
+						nebulas Eutychiani reclusit erroris. Undemihi ma­ <lb/> xime subiit admirari,quaenam
+						haec indoctorum ho­ <lb/> minum esset audacia,qui inscientiæ vitium praesum­ <lb/>
+						ptionis atque impudentias nube conantur obducere, <lb/> cum non modo saepe id quod
+						proponitur ignorent, <milestone unit="PLSection" n="B"/><lb/> verum in hujusmodi
+						contentionibus ne id quidem <lb/> quod ipsi loquuntur intelligant ; quasi deterior fiat
+						<lb/> inscientiæ causa dum tegitur. Seb ab illisadtetrans­ <lb/> eo, cui hoc,
+						quantulumcunque est, examinandum <lb/> prius perpendumque transmitto.Quod si recte se
+							<note type="footnote"> missa, postea ab universo concilio Chalced onensi <lb/>
+							approbata laudataque sit. Postremo qui hoc loco <lb/> de eo concilio loqui Boetium
+							credat, quod in urbe <lb/> tumultuantibus Acephalis convocatum est: cui si <lb/> quod
+							fuit (aullum autem fuit), Boetium non inter­ <lb/> fuisse ex eo constat, quod eum tunc
+							vix natum pu­ <lb/> tamus, cum ea haeresis anno praecipue 482, non in <lb/>
+							Occidentali, sed Orientali Ecclesia, recruduit. Cum <lb/> igitur aliter se res habeat,
+							tractatum de Duabus <lb/> Naturis et una Persona Christi anno ejusdem 512 <lb/>
+							scripsisse, ejusque occasionem hanc fuisse, proba­ <lb/> bilis conjectura est.
+							Anastasius imp. Arianus in <lb/> Orientales episcopos catholicos depositione, carce­ </note>
+						<milestone unit="PLSection" n="c"/><note type="footnote"> re, exsilio sæviebat. lIIi ubi
+							se religionemque ca- I <lb/> tholicam perdi perditumque iri vident, ab Sym­ <lb/>
+							macho papa opem auxiliumque scripta epistola <lb/> longe doctissima, quai apud
+							Baronium est, petunt. <lb/> Eam acceptam Symmachus habito Romae conventu <lb/> seu
+							concilio episcoporum, qui tum in Urbe erant, <lb/> virorumque aliorum religionis
+							amantium, inter <lb/> quos Symmachus et Boetius fuere. legit. Dum exa­ <lb/> minatur
+							et ad ea verba ventum : <hi rend="italic">Nos enim, o sanc­</hi>
+							<lb/> tissime <hi rend="italic">et beatissime Symmache, eumdem esse exis­</hi>
+							<lb/> timamus <hi rend="italic">ex duabus naturis ei in duabus naturis ; et non <lb/>
+								(sicutilli dicunt) ex duabus naturis unam naturam post <lb/> adunationemjn duabus
+								autem</hi> subsistentibus <hi rend="italic">naturis <lb/> cnmunitalenon pati
+								conjiten ;utseArianorum doceant <lb/> esse imitatores dicentium per Filium
+								glorificari Patrem, <lb/> cum Filio autem non pati se eum glorificari. Sed, sicut
+								<lb/> contra illos docuerunt fratres lui sanctissimi</hi> Patres, <lb/>
+							<hi rend="italic">Per quem et Cum quo æqualiter pati dicere nos quia<lb/> Perquem,
+								humanitatem ; Cum quo, divinitatem sigm-</hi></note>
+						<milestone unit="PLSection" n="D"/><note type="footnote">
+							<hi rend="italic">ficantes magni Dei et Salvatoris nostri Jesu Christi; <lb/> si nunc
+								illis Exduabus quidem naturis dicentibus, In <lb/> duabus autem non confitentibus;
+								nos Ex duabus et In <lb/> duabus pariter dicimus. Ex duabus enim dicentes, ex <lb/>
+								quibussubsistit unitas;In duabus autem, inquibus visus,<lb/> visus est et palpatus
+								et assumptus post passionem et<lb/> resurrectionem confitemur, et in quibus veniet
+								judica­</hi>
+							<lb/> turus <hi rend="italic">vivos et</hi> morluo.f.P!urimi ex iis, haud satis in
+							<lb/> rebus theologicis eruditi,deea re cum disseruissent, <lb/> neque eam vel leviter
+							attigissent, quid de ea quae­ <lb/> stione sentiret Boetius ad Joannem Romanae Eccle­
+							<lb/> sifc tunc diaconum, postea ejusdem pootificem.con­ <lb/> tra Nestorium,qui
+							duabus naturis personas totidem <lb/> adjungebat ; et Eutychetem. qui naturam ac
+							perso­ <lb/> nam unicam tuebatur, perscripsit. Ejusmodi vero <lb/> conventus seu
+							concilia in Urbefieri solita(ubi ade­ <lb/> rant episcopi eminentesque e elero,scd et
+							senatores <lb/> plerique ac alii viri graves, qui ob pietatem singu­ <lb/> larem <hi rend="italic">religiosi</hi> dicebantur, quorum in conspectu si <lb/> quid in
+							religione difficultatis se per id tempus of­ <lb/> feret, aut si quod pium scriptum ab
+							eruditis eden. <lb/> dum esset recitaretur), cum multa probare pos­ <lb/> sunt, tum ea
+							operum Aratoris subscriptio; cujus <lb/> partem D. Sirmondus jam olim ad Ennodium pu­
+							<lb/> blicavcrat, quam integram ex veteri nostro codice <lb/> descripsimus. Beato <hi rend="italic">Petro adjuvante oblatus est</hi> hu­ <lb/> jusmodi <hi rend="italic">codex ab Aratore inl. ex com. domesticor. ex<lb/> com. privatar, subdiacono sanctæ
+								Ecclesiæ Romanæ, <lb/> apostolico viro papæ Vigilio, et susceptus ab eo</hi> VII <lb/>
+							<hi rend="italic">idus Aprilis in preshyterio ante Confessionem beati<lb/> Petri, cum
+								ibidem plures episcopi, presbyteri, diaconi <lb/> et clerici pars maxima
+								interessent. Quem cum ibidem</hi>
+						</note>
+						<milestone unit="PLSection" n="c"/><note type="footnote">
+							<hi rend="italic">legi pro ahqua parte fecisset</hi> :surgentius <hi rend="italic">vir
+								venera­ <lb/> bilis primicerius schotde notariorum, in scriniis de­ <lb/> dit
+								eccleside collocandum. Cujus beatitudinem iitte­ <lb/> rati omnes doctissimi
+								continuo rogaverunt uteumju­ <lb/> beret publice recitari. Quod cum fieri</hi>
+							præcepisset <hi rend="italic">in <lb/> ecclesia beati Petri quæ vocatur ad Vincula,
+								religio­<lb/> sorum turba- convenit, atque eodem Aratore recitante<lb/> disjunctis
+								diebus ambo libri</hi> VII <hi rend="italic">vicibus sunt auditi :<lb/> cum unius
+								medietas libri tantummodo teyerdur;prop­ <lb/> ter repetitiones assiduas, quas cum
+								favore multiplici <lb/> postulabant. Eadem hsec repetitio facta est his die­ <lb/>
+								bus: Prima id. Apritis; secunda xv' cai Maii; quar­ <lb/> ta vero</hi> III <hi rend="italic">cat. Junias, tertio anno post</hi> consulatum <lb/>
+							<hi rend="italic">Basilisci</hi> V. C., <hi rend="italic">indictione</hi> VII, seu
+							potius <hi rend="italic">Basilii :</hi>
+							<lb/> boc est nimirum anno 544. </note><note type="footnote"> (a) Symmacho nimirum
+							socero suo, quem utra­ <lb/> que lingua eruditum, saeculares sacrasque omnes <lb/>
+							disciplinas scientiasque calJentem,scriptarnm suo­ <lb/> rum passim censorem
+							constituit Boetius. Gravita-</note>
+						<milestone unit="PLSection" n="D"/><note type="footnote"> tis sapientiasque summae
+							testatur Ennodius Parae­ <lb/> nasi didascalica, ubi elogium ejus hoc reperias : <lb/>
+							<hi rend="italic">Patricii Festus et Symrnachus,omnium disciplinarum <lb/> materia et
+								conslantes forma sapientiæ, ab urbe</hi> sa­ <lb/> cratissima <hi rend="italic">non
+								recedunt. In ipsis est nobilis curiS! <lb/> principatus; quos vidisse, erudiri est.
+								Non apud eos <lb/> sermo de</hi> ludicris, <hi rend="italic">nec pantomimorum vix
+								ignoscenda <lb/> commemoratio. Illi auram popularem per pudoris<lb/> detrimenta non
+								capiunt : contenti rectis magis pla­<lb/> cere, quum plurimis, sortiuntur de
+								innocenti actione <lb/> testimonium. Istorum quamvis in omnibus jussa se­</hi>
+							<lb/> quenda <hi rend="italic">sint, est tamen in itlis et magistra taciturni­ <lb/>
+								las. et eruditi forma silentii.</hi> Pietatem ejus defensus <lb/> ab eo contra
+							Laurentium schismaticum Symma­ <lb/> chus papa sensit; qua de re ad eum Avitus Vien­
+							<lb/> nensis scribit. Quare non mirum si <hi rend="italic">sanctus</hi> ab ipso <lb/>
+							ejus genero, <hi rend="italic">vir</hi> etiam <hi rend="italic">totus ex sapientia
+								virtutibus­<lb/> que factus,</hi> denique <hi rend="italic">pretiosissimum generis
+								humani<lb/> decus</hi> vocatur. </note>
+						<pb n="1341"/>
+						<milestone unit="PLSection" n="A"/><lb/> habere pronuntiaveris,peto ut mei nominis hoc
+						quo­ <lb/> que inseras chartis ; sin vero vel minuendum aliquid, <lb/> vel addendum, vel
+						aliqua mutatione variandum est, <lb/> id quoque postulo remitti meis exemplaribus, ita
+						ut <lb/> a te revertatur transcribendum, quae ubi ad calcem <lb/> ducta constiterint,tum
+						demum ejus cujus soleojudi­ <lb/> cio censenda transmittam. Sed quoniam semel res a
+						<lb/> collocutione transfertur ad stylum, prius extremi <lb/> sibit contrarii Nestorii
+						atque Eutychis submo­ <lb/> veantur errores; post vero, adjuvante Deo, Chri­ <lb/>
+						stianae medietatem fidei temperabo. Quoniam vero <lb/> in tota quaestione contrariarum
+						sibimet haereseon <lb/> de personis atque naturis debitatur, haec primitus <lb/>
+						definienda sunt et propriis differentiis segreganda.</p>
+					<ab>
+						<title type="sub">CAPUT I.</title>
+					</ab>
+					<p>
+						<milestone unit="PLSection" n="B"/>
+					</p>
+					<ab>
+						<title type="sub">
+							<hi rend="italic">Natura quid sit.</hi>
+						</title>
+					</ab>
+					<p>Natura igitur aut de solis corporibus dici potest, <lb/> aut de solis substantiis, id
+						est corporeis atque in­ <lb/> c orporeis, aut de omnibus rebus quae quaecunque <lb/>
+						modo esse dicuntur. Cum igitur tribus modis natura <lb/> dicit possit, tribus modis sine
+						dubio definienda est. <lb/> Nam si de omnibus rebus naturam dici placet, talis <lb/>
+						definitio dabitur quae res omnes quoe sunt possit in­ <lb/> cludere. Erit ergo hujusmodi
+						: Natura, est earum <lb/> rerum quae, cum sint, quoquomodo intellectu capi <lb/>
+						possent. In hac igitur definitione et accidentia et <lb/> substantiae definiuntur ; haec
+						enim omnia intellectu <lb/> capi possunt. Additum vero est quoquomodo, quo. <lb/> niam
+						(a) Deus et materia integro perfectoque intellectu <lb/> intelligi non possunt, sed,
+						aliquo tamen modo cae­ <milestone unit="PLSection" n="C"/><lb/> terarum rerum privatione
+						capiuntur. Idcirco vero <lb/> adjunximus, quae cum sint, quoniam etiam ipsum <lb/> nihil
+						significat aliquid, sed non naturam.Neque enim <lb/> quod sit aliquid,sed potius non
+						essesignificat: omnis <lb/> vero natura est; et side omnibus quidemrebus na­ <lb/> turam
+						dici placet, hæc sit naturae definitio, quam <lb/> superius posuimus; sin vero de solis
+						substantiis na­ <lb/> tura dicitur, quoniam substantiae omnes aut corpo­ <lb/> " reae
+						sunt aut incorporeae, dabimus definitionem na­ <lb/> turæ substantias significantis
+						hujus modi : Natura est <lb/> vel quod facere, vel quod pati possit: pati quidem <lb/>
+						ac facere, ut omnia corporea atque corporeorum <lb/> anima; haec enim in corpore et a
+						corpore, et facit <lb/> et patitur ; facere vero tantum, ut Deus cæteraque <lb/> divina.
+						Habes igitur definitionem ejus quoque signi­ <lb/> ficationis naturæ, quæ tantum
+						substantiis applicatur. <milestone unit="PLSection" n="A"/><lb/> L Qua in re substantiæ
+						quoque est reddita definitio: <lb/> nam si nomen naturæ substantiam monstrat, cum <lb/>
+						naturam descripsimus, substantiae quoque est assi­ <lb/> gnata descriptio. Quod si
+						naturae nomen, relictis in. <lb/> corporeis substantiis, ad corporales usque, ut cor.
+						<lb/> poreaetantum _substantisenaturamhaberevideantur. <lb/> sicut Aristoteles
+						caeterique ejusmodi et multimodae <lb/> philosophiae sectatores putant,definiemus eam ut
+						hi <lb/> etiam qui naturam non nisi in corporibus esse po­ <lb/> suerunt. Est autem ejus
+						definitio hoc modo : Natura <lb/> est motus principium, secundum se, non per acci­ <lb/>
+						dens. Quod motus principium dixi, hoc est,quoniam <lb/> corpus omne habet proprium
+						motum, ut ignis sur­ <lb/> sum, terra deorsum. Item, quod per se principium <lb/> motus
+						naturam esse proposui et non per accidens, <milestone unit="PLSection" n="B"/><lb/> tale
+						est, quoniam lectum quoque ligneum deorsum <lb/> ferri necesse est, sed non deorsum per
+						accidens fer­ <lb/> tur. Idcirco enim quia lignum est, quod est terra, <lb/> pondere et
+						gravitate deducitur; non enim quia <lb/> lectus est deorsam cadit, sed quia terra est,
+						id est <lb/> quiateiraecontingit utlectusesset.Undefit utlignum <lb/> naturaliter esse
+						dicamus, lectum vero artificialiter. <lb/> Estetiam alia significatio naturæ,per quam
+						diversam <lb/> dicimus esse naturam auri atque argenti, in hoc <lb/> proprietatem rerum
+						monstrare cupientes ; quae si­ <lb/> gnificalio naturas definietur hoc modo : Natura est
+						<lb/> unamquamque rem inforioans specifica differentia. <lb/> Cum igitur tot modis vel
+						dicatur vel definiatur na­ <lb/> tura, tam Catholici quam Nestorius, secundum ulti.
+						<lb/> mam definitionem, duas in Christo naturas esse <lb/> constituunt, neque enim
+						easdem in Deum atque <milestone unit="PLSection" n="c"/><lb/> hominem differentias
+						convenire.</p>
+					<ab>
+						<title type="sub">CAPUT II.</title>
+					</ab>
+					<ab>
+						<title type="sub">
+							<hi rend="italic">Persona quid sit.</hi>
+						</title>
+					</ab>
+					<p>Sed de persona maxime dubitari potest, quaenam <lb/> ei definitio aptari possit. Si
+						enim omnis habet na­ <lb/> tura personam, indissolubilis nodus est, quaenam <lb/> inter
+						naturam personamque possit esse discretio ; <lb/> aut si non aequatur persona naturae
+						sed infra ter­ <lb/> minum spatiumque naturæ persona subsistit,difficile <lb/> dictu est
+						ad quas usque naturas persona perveniat, <lb/> id est quas naturas conveniat babere
+						personam, <lb/> quas a personae vocabulo segregari; nam illud qui­ <lb/> dem manifestum
+						est, personam subjectam esse na­ <lb/> turae, nec praeter naturam personam posse prædi­
+						<lb/> cari. Investiganda igitur sunt haec inquirentibus hoc <milestone unit="PLSection" n="D"/><note type="footnote">
+							<hi rend="italic">(a)</hi> Ita omnes libri vett. mss., non <hi rend="italic">Deus et
+								natu­</hi>
+							<lb/> ra. Deum enim perfecto iotellectu cognosci minime <lb/> posse nostra faLelur
+							cognoscendi eum imbecillitas: <lb/> verumque est illud Joannis, 0sov <foreign xml:lang="grc">οὐδεὶς</foreign>ç <foreign xml:lang="grc">πώποτε</foreign> TE- <lb/>
+							0£axat, <hi rend="italic">Deum nemo vidit unquam.</hi> D. quoque Paulus <lb/> decernit
+							nos quidem Deum nunc videre seu cogno­ <lb/> scere, sed Ol' saoirxpou ev aivLYp.xtc,
+								<hi rend="italic">per speculum in</hi>
+							<lb/> ænigmate : <foreign xml:lang="grc">Τὰϒὰρ</foreign>
+								i6paTaauxouTot?7rotr5fxac7t<foreign xml:lang="grc">νοούμενα</foreign>
+							<lb/> xaQoparat, rj ts atStoi; auTOu <foreign xml:lang="grc">δύναμις</foreign>; xat
+								<foreign xml:lang="grc">θειότης</foreign>, <hi rend="italic">In­ <lb/> visibilia
+								enim ipsius,</hi> inquit idem, <hi rend="italic">per ea quae facta <lb/> sunt
+								intellecta conspiciuntur; sempiterna quoque ejus <lb/> virlus et divinitas.</hi>
+							Deum etiam Platoni s6petv ou <lb/> p4otoV, <hi rend="italic">invenire ditficile.</hi>
+							Qui vero sit materia nemo <lb/> quoque mortalium perfecte novit ; fateturque omnis
+							<lb/> philosophia eam nullo posse aut sensu aut intel-</note>
+						<milestone unit="PLSection" n="D1"/><note type="footnote"> lectu percipi. Ea Platoni et
+							Aristoteli non awf-tIX,sed <lb/> awN.atcxii ; Zenoni aiStot; vocatur, quod ouxenXetwv
+							<lb/> TLYVOJJLEVRJ, OUTSSXATTCOV, <hi rend="italic">neque crescat, neque decl'es­
+								<lb/> cat.</hi> Cujus a Platone in Timaeo (quoniam non scitur <lb/> nisi quatenus
+							est formarum subjectum ac locus ; <lb/> ideoque non per se, sed per aliud cognoscitur)
+							di­ <lb/> citur non haberi scientia nisi <foreign xml:lang="grc">λογισμῲ
+								τινι</foreign> vogw, <lb/>
+							<hi rend="italic">ratione quadam adulterina.</hi> Et Aristoteli similiter <lb/>
+							scibilis est, sed xTt-u' avaXoyiav, <hi rend="italic">secundum proportio­<lb/> nem seu
+								comparationem.</hi> D. quoque Au!!:ustinus lib. <lb/> XIII Cont'ess. affirmat <hi rend="italic">humanam cogitationem,</hi> post­ <lb/> quam in materias investiganda
+							cognitionc diu mul­ <lb/> tumque versata fuerit, hoc tantum proficere, <hi rend="italic">ut <lb/> conetur eam vel nosse ignorando, vel ignorare nos­</hi>
+							<lb/> cendo. </note>
+						<pb n="1343"/>
+						<milestone unit="PLSection" n="A"/><lb/> modo : quoniam praeter naturam non potest esse
+						<lb/> persona, quoniam quae naturae dicuntur, aliæ sub­ <lb/> stantiap sunt, aliæ
+						accidentes, et videmus personam <lb/> in acc.identibusnonposseconstitui; quis enim dicat
+						<lb/> ullam albedinis, vel nigredinis,vel magnitudinisesse <lb/> personam ? relinquitur
+						ergo ut personam in sub­ <lb/> stantiis dici conveniat. Sed substantiarum aliae sunt
+						<lb/> corporeae, alix incorporeae ; corporearum vero alias <lb/> sunt viventes, aliae
+						minime. Viventium aliae sunt <lb/> sensibiles, aliae minime sensibilium aliae
+						rationales, <lb/> aliæ irrationales; rationalium vero alia immutabilis <lb/> atque
+						impassibilis per naturam, ut Deus ; alia per <lb/> creationem mutabilis atque
+						passibilis, nisi impassi­ <lb/> bilis gratia substantiae ad impassibilitatis firmitu­
+						<lb/> dinem permutetur, ut angelorum atque animæ ratio- <milestone unit="PLSection" n="B"/><lb/> nalis. Ex quibus omnibus, neque in non viventibus <lb/> corporibus
+						personam dici posse manifestum est, <lb/> nullus enim lapidis ullam dicit esse personam
+						; ne­ <lb/> que rursus eorum viventium quae sensu carent, ne­ <lb/> que enim ulla
+						persona est arboris ; neque veroejus <lb/> quæ intellectu
+						acrationedeseritur,nullaestenim per­ <lb/> sona equivelbovis,ceeterorumque animalium,
+						quae <lb/> mutaacsineratione vitam solis sensibus degunt. At <lb/> hominis dicimus esse
+						personam, dicimus Dei, dici­ <lb/> musangeli. Rursus substantiarum aliae sunt univer­
+						<lb/> sales, aliae particulares. Universales sunt quae de <lb/> singulis praedicantur,
+						ut homo, animal, lapis,lignum <lb/> caeteraque hujusmodi quae vel genera vel species
+						<lb/> sunt: nam ethomo desingulishominibus, et animal <lb/> de singulis animalibus,
+						lapisque ac lignum de sin­ <lb/> ulis lapidibus ac lignis dicuntur. Particularia vero
+							<milestone unit="PLSection" n="c"/><lb/> sunt quae de aliis minime praedicantur, ut
+						Cicero, <lb/> Plato, lapis hic unde hæc Achillis statua facta est ; <lb/> lignum hoc
+						unde haec mensa composita est. Sed in <lb/> his omnibus nusquam in universalibus persona
+						dici <lb/> potest, sed in singularibus tantum atque in indivi­ <lb/> duis : animalis
+						enim vel generalis hominis nulla per­ <lb/> sona est, sed vel Ciceronis vel Platonis vel
+						singu­ <lb/> lorum individuorum personæ singulae nuncupantur.</p>
+					<ab>
+						<title type="sub">CAPUT III.</title>
+					</ab>
+					<ab>
+						<title type="sub">
+							<hi rend="italic">Differencia naturæ et personae.</hi>
+						</title>
+					</ab>
+					<p>Quocirca si persona in solis substantiis est, atque <lb/> in his rationalibus,
+						substantiaque omnis natura est, <lb/> nec in universalibus, sed in individuis constat,
+						re­ <lb/> perta personæ est igitur definitio : Periona est na­ <lb/> turae rationalis
+						individua substantia. Sed nos hac <milestone unit="PLSection" n="D"/><lb/>
+						definitioneeamquam(iraeci <foreign xml:lang="grc">ὐπόστασιν</foreign> dicunttermi­ <lb/>
+						navimus. Nomen enim personae videtur aliundetra­ <lb/> ductum ; es his scilioet personis
+						quae in comoediis <lb/> tragœdiis que eos quorum interest homines repraesen­ <lb/>
+						tabant. Persona vero dictaesta personando, circum­ <lb/> flexa penultima. Quod si
+						acuatur antepennltima, aperte <lb/> a sono dicta videbitur. Idcircoautem asono, quia in
+						<lb/> concavitate ipsa'major necesse est volvatur sonus. <lb/> Graeci quoque has
+						personas <foreign xml:lang="grc">πρόσωπα</foreign> vocant, abeo <lb/> quod ponantur in
+						facie atque ante oculos obtegant <lb/> vultum, <foreign xml:lang="grc">παρά τού πρὸς
+							τούς</foreign> iras <foreign xml:lang="grc">τίθεθαι</foreign>. Sed quo­ <lb/>
+						niam,personis inductis,histriones,individuos homi­ <lb/> nes, quorum intererat, in
+						tragcedia vel comoedia ut <milestone unit="PLSection" n="A"/><lb/> dictum est, repraest
+						ntabant: id est, Hecubam, vel <lb/> Medeam, vel Simonem, vel Chremetem , idcirco <lb/>
+						caeteros quoque homines, quorum certa pro sui <lb/> forma esset agnitio, et Latini
+						personam, et Graeci <lb/>
+						<foreign xml:lang="grc">πρόσωπα</foreign> nuncupaverunl. Longe vero illi signatius <lb/>
+						naturas rationalis individuam subsistentiam <foreign xml:lang="grc">ύποστά­ <lb/>
+							σεως</foreign> numine vocaverunt; nos vero, per inopiam si­ <lb/> gnificantium vocum,
+						translatitiam retinuimus nun­ <lb/> cupationem ,eamque quam illi <foreign xml:lang="grc">ὐπόστασιν</foreign> dicunt, per­ <lb/> sonam vocantes. Sed peritior GraCia sermonum, <lb/>
+						<foreign xml:lang="grc">ύπόστασιν</foreign> vecatindividuam subsistentiam ; atque,ut
+						<lb/> Grxca utar oratione, in rebus quae a Graecis agitatae <lb/> Latina interpretatione
+						translatae sunt, At <foreign xml:lang="grc">οὐσίαι έν <lb/> μέν τοίς</foreign> x<foreign xml:lang="grc">αθ δλουείναι δύνανται</foreign>, a v SE <foreign xml:lang="grc">τοίς</foreign> x<foreign xml:lang="grc">ατά μ</foreign>Ė<foreign xml:lang="grc">ρος
+							<lb/> μόνοις ύϕίστανται</foreign> : id est, Essentiae in universalibus <milestone unit="PLSection" n="B"/><lb/> quidem esse possunt, in solis vero individuis et <lb/>
+						particularibus substant. Intellectus enim universa­ <lb/> lium rerum ex particularibus
+						sumptus est. Quocirca <lb/> cum ipsae subsistentiæ in universalibus quidem sint, <lb/>
+						in particularibus verocapiantsubstantiam,jure sub­ <lb/> sistentias particulariter
+						substantes <foreign xml:lang="grc">ὐποστάσεις</foreign> ap­ <lb/> pellaverunt. Neque
+						enim pensiussubtiliusqueintuen­ <lb/> ti idem videbitur esse subsistentia quod
+						substantia; <lb/> nam quod Graeci <foreign xml:lang="grc">οὐσίωσιν</foreign> vel
+							<foreign xml:lang="grc">οὐσιώσθαι</foreign> dicunt, id <lb/> nos subsLentiam vel
+						subsistere appellamus ; quod <lb/> vero illi <foreign xml:lang="grc">ὐπόσθαιν</foreign>
+						vel <foreign xml:lang="grc">ὐϕίσασθαι</foreign>, id nos substantiam <lb/> vel substare
+						interpretamur. Subsistit enim, quod <lb/> ipsum accidentibus, utpossit esse, nun
+						indiget: sub­ <lb/> stat autem id quod aliis accidentibus subjectum quod <lb/> dam, ut
+						esse valeant, subministrat; sub illis enim <lb/> stat, dum subjectum estaccidentibus.
+						Itaque genera <milestone unit="PLSection" n="c"/><lb/> vel species subsistunt tantum,
+						neque enim accidentia <lb/> generibus speciebusve contingunt. Individua vero, <lb/> non
+						modo subsistunt, verum etiam substant: nam <lb/> nequeipsa indigentaccidentibus, ut
+						sint; informata <lb/> enim sunt jam propriis et specificis differentiis et <lb/>
+						accidentibus, uteese possint ministrant, dum sunt <lb/> sci licet subjecta. Quocirca
+							<foreign xml:lang="grc">είναι</foreign> atque <foreign xml:lang="grc">οὐσιωαι</foreign>, esse <lb/> atque subsistere ; <foreign xml:lang="grc">ὐϕίστασθαι</foreign> vero, substare intelligi­ <lb/> tur. Nequeenim verborum inops
+						Græcia est, ut Mar­ <lb/> cus Tullius alludit; sed essentiam, subsistentiam, <lb/>
+						substantiam, personam totidem nominibus reddit: <lb/> essentismquidem ouatav,
+						subsistentiamvero oua£<foreign xml:lang="grc">ω­ <lb/> οιν</foreign>, substantiam
+							<foreign xml:lang="grc">ὐπόστασιν</foreign>, personam <foreign xml:lang="grc">πρόσωπον</foreign>
+						<lb/> appellans. Ideo autem <foreign xml:lang="grc">ὐποστάσις</foreign> Graeci
+						individuas <lb/> substantias vocaverunt, quoniam caeteris subsunt, <milestone unit="PLSection" n="D"/><lb/> etquibusdam quasi accidentibus suppositae subjec­ <lb/>
+						tæ que sunt; atque ideirco nos quoque eas substantias <lb/> nuncupamus, quasi
+						suppositas,quas illi <foreign xml:lang="grc">ὐποστάσεις</foreign>, <lb/> cumque etiam
+							<foreign xml:lang="grc">πρόσωπα</foreign> nuncupent easdem substan­ <lb/> tias,
+						possumus nos quoque nuncupare personas. <lb/> Idem est igitur <foreign xml:lang="grc">οὐσίαν</foreign>esse quod essentiam, idem <lb/>
+						<foreign xml:lang="grc">οὐσίωσιν</foreign> quod subsistentiam, idem <foreign xml:lang="grc">ὐπότασιν</foreign> quod <lb/> substantiam, idem est <foreign xml:lang="grc">πρόσωπον</foreign> quod personam. <lb/> Quare autem de irrationalibus
+						animalibus Graecus <lb/>
+						<foreign xml:lang="grc">ὑπόστασιν</foreign> non dicat, sicut nos de eisdem nomen <lb/>
+						substantiae praedicamus, haec ratio est, quoniam <lb/> nomen hoc melioribus applicatum
+						est, utaliqua,id <lb/> quod est excellentius,tametsi non descriptione na- <pb n="1345"/>
+						<milestone unit="PLSection" n="A"/><lb/> turae et secundum id quod subsistere, <foreign xml:lang="grc">ὑϕίστασθαι</foreign>, <lb/> atque substare est; at certe <foreign xml:lang="grc">ὑποστάσεως</foreign>; vel substan­ <lb/> tiæ vocabulis discerneretur.
+						Est igitur et bomiuis <lb/> quidem essentia, id est ousia, et subsistentia, id <lb/> est
+							<foreign xml:lang="grc">οὑσίωσις</foreign>, et <foreign xml:lang="grc">ὑπόστασις</foreign>, id est substantia, et <lb/>
+						<foreign xml:lang="grc">πρόσωπον</foreign>, id est persona: <foreign xml:lang="grc">οὑσίσ</foreign> quidem atque es­ <lb/> sentia, quoniam est; <foreign xml:lang="grc">οὐσίωσις</foreign> vero atque subsisten­ <lb/> tia, quoniam in nullo subjecto est;
+							<foreign xml:lang="grc">ὑπόσασις</foreign> vero <lb/> atque substantia, quoniam subest
+						cæteris, quæ sub­ <lb/> sistentiae non sunt, id est <foreign xml:lang="grc">οὐσιώσεις</foreign> : est <foreign xml:lang="grc">πρόσωπον</foreign>
+						<lb/> atque persona, quoniam est rationabile individuum. <lb/> Deus quoque et <foreign xml:lang="grc">οὐσία</foreign> est et essentia ; est enim, et <lb/>
+						maximeipseest,aquoomniumesseproficiscitur. Est <lb/>
+						<foreign xml:lang="grc">οὐσίωσις</foreign>, id est subsistentia ; subsistit enim nullo
+						<lb/> indigens, et <foreign xml:lang="grc">ὐϕίστασθαι</foreign>, substat enim. Unde
+						etiam <milestone unit="PLSection" n="B"/><lb/> dicimus unam esse <foreign xml:lang="grc">οὐσίαν</foreign> vei <foreign xml:lang="grc">οὐσίωσιν</foreign>, id est essen- j
+						<lb/> tiam vel subsistentiani deitatis; sed tres <foreign xml:lang="grc">ὐποστάσεις</foreign>, <lb/> id est tres substantias. Et quidem, secundum hunc <lb/>
+						modum, dixere unam Trinitatis essentiam,tressub­ <lb/> stantias, tresque personas. Nisi
+						enim tres in Deo <lb/> substantias ecclesiasticus loquendi usus excluderet, <lb/>
+						videretur idcirco de Deo dici substantia, non quod <lb/> ipse caeteris rebus quasi
+						subjectum supponeretur, <lb/> sed quod idem omnibus uti præesset, ita etiam qua­ <lb/>
+						si principium subesset rebus, dum eis omnibus <lb/>
+						<foreign xml:lang="grc">οὐσιώσθαι</foreign>, vel subsistere subministrat.</p>
+					<ab>
+						<title type="sub">CAPUT IV.</title>
+					</ab>
+					<ab>
+						<title type="sub">
+							<hi rend="italic">Contra nestorium, unam esse personam.</hi>
+						</title>
+					</ab>
+					<p>Sed hæc omnia idcirco sint dicta, ut differentiam <lb/> naturae atque personae, id est
+							<foreign xml:lang="grc">οὐσίας</foreign> atque <foreign xml:lang="grc">ὐποστά</foreign>­ <milestone unit="PLSection" n="c"/><lb/>
+						<foreign xml:lang="grc">σεως</foreign> monstraremus : quo vero nomine unumquodque <lb/>
+						oporteat appellari, ecclesiasticae sit locutiunis arbi­ <lb/> trium. Hoc interim
+						constet, quod inter naturam per­ <lb/> sonamquedijferre priediximus, quoniam Naturaest
+						<lb/> cujuslibetsubstantiaB specificata proprietas;Persona <lb/> vero, rationabilis
+						naturæ individua substantia.Hanc <lb/> in Christo Nestorius duplicem esse constituit, eo
+						<lb/> scilicet traductus errore, quod putaverit in omnibus <lb/> naturis possedici
+						personam. Hoc enim praesumpto, <lb/> quoniam in Christo duplicem naturam esse censebat,
+						<lb/> duplicem quoque personam esse confessus est. Qua <lb/> in re eum falsum esse, cum
+						definitio superius dicta <lb/> convincat,tum hæc argumentatio evidenter ejus de­ <lb/>
+						clarabit errorem. Si enim non est Christi una per­ <lb/> sona,duasque naturas esse
+						manifestum est,hominis <lb/> scilicetatque Dei (nec lam insipiens quisquam, ut
+							<milestone unit="PLSection" n="D"/><lb/> utramlibet earum rationesejungaL),
+						consequitur ut <lb/> duae videantur esse personæ : est enim persona, ut di­ <lb/> ctume
+						est, naturæ rationabilis individua subsistentia. <lb/> Quaest igitur facta hominis
+						Deique conjunctio ? Num <lb/> ita quasi cum duo corpora sibimet apponuntur, ut <lb/>
+						tantum locis juncta sint, et nihil in alterum ex alte­ <lb/> rius qualitate perveniat
+						quem conjunctionis modum <lb/> Græci <foreign xml:lang="grc">ϰατὰ παράθεσιν</foreign>
+						vocant. Sed si ita humanitas <lb/> divinitati conjuncta est, nihil horum ex utrisque
+						<lb/> confectum est, ac per hoc nihil est Christus. At si, <lb/> duabus personis
+						manentibus, ea conjunctio, qualem <lb/> superius diximus, facta est naturarum, unum ex
+						<lb/> duobus effici nihil potuit: omnino enim ex duabus <milestone unit="PLSection" n="A"/><lb/> personis nihil unquam fieri potest. Nihil igitur unum <lb/> secundum
+						Nestorium Christus est, ac per hoc om­ <lb/> nino nihil: quod enim non est unum, nec
+						esse om­ <lb/> nino potest; esse enim atque unum convertitur,et <lb/> quodcunque est,
+						unum est; etiam ea quæ ex plu­ <lb/> ribusconjunguntur,ut acervus,chorus,unum tamen
+						<lb/> sunt. Sed esse Christum manifeste et veraciter <lb/> confitemur : unum igitur esse
+						dicimus Christum. <lb/> Quod si ita est, unam quoque Christi sine dubita­ <lb/> tione
+						personam esse necesse est: nam si duae per­ <lb/> sonae essent, unus esse non posset;
+						duos vero esse <lb/> dicere Christus, nihil est aliud, nisi præcipitatæ <lb/> mentis
+						insania : cur enim omnino duos audeat Chri­ <lb/> stos vocare, hominem unum, alium Deum
+						? vel cur <lb/> eum qui Deus est Christum vocat, si eum quoque <milestone unit="PLSection" n="B"/><lb/> qui homo est Christum est appellaturus, cum nihil si­
+						<lb/> mile, nihilhabeantexcopulatione conjunctum? Cur <lb/> simili nomine diversissimis
+						abutatur naturis, cum si <lb/> Christum definire cogitur utrisque (ut ipse dicit) <lb/>
+						Christis, non possit unam definitionis adhibere sub­ <lb/> stantiam?Si enim Dei atque
+						bominis diversa sub­ <lb/> slantiaest, unumque in utrisque Christi nomeu, nec <lb/>
+						diversarum cor.junctio substantia rum, unam creditur <lb/> fecisse personam, aequivocum
+						nomen est Christi, et <lb/> nulla potest definitione concludi. Quibusautem nu­ <lb/>
+						quam Scripturis nomen Christi geminatur?Quid vero <lb/> novi, per adventum Salvatoris,
+						effectum est? nam <lb/> catholicis et fidei veritas et raritas miraculi constat. <lb/>
+						Quam enim magnum est, quamque novum,quod se­ <lb/> mel nec ullo alio saeculo possit
+						evenire, ut ejus, qui <milestone unit="PLSection" n="c"/><lb/> solus est natura Deus,
+						cum humana, quae abeo erat <lb/> diversissima, conveniret; atque ita,ex distantibus
+						<lb/> naturis, una fieret copulatione persona. Secundum <lb/> Nestorii vero sententiam,
+						quid contigit novi ? Ser­ <lb/> vant,inquit,proprias humanitas divinitasque perso­ <lb/>
+						nas. Quando enim non fuit divinitatis propria huma­ <lb/> nitatisque persona? quando
+						vero non erit? vel quid <lb/> amplius in Jesu generatione contigit, quam in cujus­ <lb/>
+						]ibetalterius, si,discrelis utrisque personis,discretae <lb/> etiam fuere naturæ? Ita
+						enim, personis manentibus, <lb/> illic nulla naturarum potuit esse conjunclio, ut in
+						<lb/> quolibet homine, cujus cum propria persona subsi­ <lb/> stat, nulla est ei,
+						excellentissimae substantiae, con­ <lb/> juncta divinitas. Esto vero, Deum ipsum Christi
+						<lb/> appellatione cur vocet, cur vero non elementa quo­ <lb/> que, ipsa simili audeat
+						appellare vocabulo, per quæ <milestone unit="PLSection" n="D"/><lb/> Deus mira quaedam
+						quotidianis motibus operatur? <lb/> An quia irrationabiles substantiæ non possunt habere
+						<lb/> personam, quae Christi vocabulum excipere possit? <lb/> Nonne in sanctis hominibus
+						ac pietate conspicuis <lb/> apertus Divinitatis actus cognoscitur?Nihil enim in­ <lb/>
+						tererit cur non sanctos quoque viros eadem appella­ <lb/> tione dignetur, si, in
+						assumptione humanitatis, non <lb/> estunain conjunctione persona. Sed dicat forsitan,
+						<lb/> illos quoque Christos vocari : fateor, sed ad imaginem <lb/>
+						veriChristi.Quodsinullaex homine atque Deo una <lb/> persona conjuncta est, omnes ita
+						veros Christos ar­ <lb/> bitrabimur,ut hunc qui ex Virginegenitus creditur: <lb/> nulla
+						quippe in hoc adunata persona est, ex Dei at- <pb n="1347"/>
+						<milestone unit="PLSection" n="A"/><lb/> que hominis copulatione ; sicut nec in eis qui
+						De i <lb/> Spiritude venturoChristopr xedicebant,propterquod <lb/> etiam ipsi quoque
+						appellati sunt Christi. Jam vero <lb/> sequitur, ut personis manentibus nullo modo a
+						divi­ <lb/> nitate humanitas credatur assumpta: omninoenim <lb/> disjuncta sunt, quae
+						æque personis naturisque se­ <lb/> parantur ; prorsus, inquam, disjuncta sunt; nec <lb/>
+						magis inter se homines bovesque disjuncti, quam <lb/> divinitas in Christo numanitasque
+						discreta est, si <lb/> permansere personae. Homines quippe ac boves una <lb/> animalis
+						communitate junguntur : est enim illis <lb/> secundum genus communis substantia,
+						eademque <lb/> in universalitatis collectionenatura. Deo veroatque <lb/> homini quid non
+						erit diversa ratione disjunctum, <lb/> si, sub diversitate naturae,personarum quoque
+						cre­ <lb/> datur mansisse discretio ? Non est igitur salvatum <milestone unit="PLSection" n="B"/><lb/> humanum genus, nulla in nos salus Christi gene­ <lb/>
+						ratione processit, tot prophetarum Scripturae po­ <lb/> pulum illusere credentem ; omnis
+						Veteris Testa­ <lb/> menti spernatur auctoritas,perquam salus mundo <lb/> Christi
+						generatione promittitur. Non autem prove­ <lb/> nisse manifestum est, si eadem in
+						persona est quas <lb/> in natura diversitas : eumdem quippe salvam fecit, <lb/> quem
+						creditur assumpisse; nulla verointelligi po. <lb/> test assumptio, si manet seque
+						naturae personæ­ <lb/> que discretio. Igitur qui assumi manente persona <lb/> non
+						potuit, jure non videbitur per Christi genera­ <lb/> tionem potuisse salvari. Non est
+						igitur, per gene­ <lb/> rationem Christi, hominum salvata natura; quod <lb/> credi nefas
+						est. Sed quanquam permultæ sint quae <lb/> hunc sensum impugnare valeant atque
+						perfringere, <milestone unit="PLSection" n="c"/><lb/> de argumentorum tamen copia hæc
+						interim libasse <lb/> sufficiat.</p>
+					<ab>
+						<title type="sub">CAPUT V.</title>
+					</ab>
+					<ab>
+						<title type="sub">
+							<hi rend="italic">Contra Eutychen, corpus Christi ex Maria vere assumptum.</hi>
+						</title>
+					</ab>
+					<p>Transeundum quippe est ad Eutychen, qui cum <lb/> a veterum orbitis esset evagatus, in
+						contrarium <lb/> cucurrit errorem ; asserens, tantum abesse ut in <lb/> Christo gemina
+						persona credatur, ut ne naturam <lb/> quidem in eo duplicem oporteatconfiteri;itaquip­
+						<lb/> pe esse assumptum hominem, ut ea sit adu­ <lb/> natio facta cum Deo, ut natura
+						humana non man­ <lb/> serit. Hujus error ex. eodem quo Nestorii fonte pro­ <lb/> labitur
+						: nam sicut Nestorius arbitratur non posse <lb/> esse naturam duplicem, quin persona
+						fieret duplex, <milestone unit="PLSection" n="D"/><lb/> atque ideo, cum in Christo
+						uaturam duplicem confi­ <lb/> teretur, duplicem credidit esse personam, ita quo­ <lb/>
+						que Eutyches non putavitnaturamduplicemesse sine <lb/> duplicatione personae ; et cum
+						non confiteretur du­ <lb/> plicemesse personam,arbitratus estconsequensesse <lb/> ut una
+						videretur esse natura. Itaque Nestorius recte <lb/> tenens duplicem in Christo esse
+						naturam, sacrilege <lb/> confitetur duas esse naturas, Eutyches vero recte <lb/> credens
+						unam esse personam, impie credit unam <lb/> quoqueessenaturam.Quiconvictusevidentia
+						rerum, <lb/> quandoquidem manifestum est aliam naturam esse <lb/> hominis, aliam Dei,
+						ait duas se confiteri in Christo <lb/> naturas ante adunationem, unam vero post aduna-
+							<milestone unit="PLSection" n="A"/><lb/> tionem. Quae sententia non aperte quod vult
+						eloqui­ <lb/> tur. Ut tamen ejus dementiam perscrutemur,aduna­ <lb/> tio haec aut
+						tempore generationis facta est, aut tem­ <lb/> pore resurrectionis. Sed si tempore
+						generationis <lb/> facta est, videtur putare et ante generationem fuisse <lb/> humanam
+						carnem,non a Mariasumptam,sed aliquo <lb/> modo alio praeparatam ;Mariam vero Virginem
+						appo­ <lb/> sitam, ex qua caro nasceretur quae ab ea sumpta non <lb/>
+						essetjillamverocarnem, quæ ante fuerit, esse divi­ <lb/> sam atque a divinitatis
+						substantia separatam; cum <lb/> ex Virgine natus est, adunatam esse Deo,ut una vi­ <lb/>
+						deretur facta esse natura. Vel si haec ejus sententia <lb/> non est, illa esse poterit
+						dicentis, duas ante aduna­ <lb/> tionem, una post adunationem, si adunatio gene­ <lb/>
+						ratione perfecta est, ut corpus quidem a Mariasum­ <lb/> pserit, sed, antequam sumeret
+						diversam deitatis hu- <milestone unit="PLSection" n="B"/><lb/> manitatisque fuisse
+						naturam : sumptam verounam <lb/> factam, atque in divinitatis cessisse substantiam.
+						<lb/> Quod si hanc adunationem non putat generatione, <lb/> sed resurrectione factam .
+						rursus id duobus fieri ar­ <lb/> bilrabiturmodis:autenim genitoChristo etnon as­ <lb/>
+						sumente de Maria corpus, aut assumpta ab eadem <lb/> carne, usque dum resurgeret, duas
+						quidem fuisse <lb/> naturas,postresurrecLionem unam factam : de qui­ <lb/> bus illud
+						disjunctum nascitur, quod interrogabimus <lb/> hoc modo: Natus ex Maria Christus aut ab
+						ea car­ <lb/> nem humanam traxit, aut minime. Si non confitetur <lb/> ex ea traxisse,
+						dicat quo homine indutus advenerit; <lb/> utrumne eo qui diciderat praevaricatione
+						peccati,an <lb/> alio? Si eo de cujus semine ductus est homo, quem <lb/> vestita
+						divinitas est ? Nam si ex semine Abrahae at­ <milestone unit="PLSection" n="c"/><lb/>
+						que David et postremo Mariæ, non fuit caro illo qua <lb/> natus est, ostendat ex cujus
+						hominis sit carne deri­ <lb/> vatua: quoniam,post primum hominem,caro omnis <lb/> humana
+						ex humana carne deducitur. Sed si quem <lb/> dixerit hominem,a quogeneratio sumpta sit
+						Salva­ <lb/> toris, praeter Mariam Virginem, et ipse errore con­ <lb/> funditur, et
+						ascribere mendacii notam summaeDivi­ <lb/> nitati, illusus ipse, videbitur ; quando quod
+						Abrahaa <lb/> atque David promittiturin sanctis divinationibus, u <lb/> ex eorum semine
+						toti mundo salus oriatur, aliis dis­ <lb/> tribuit;cumpraeserlim si humana caro sumpta
+						est, <lb/> nonab aliosumipotueritnisi unde etiam procreaba­ <lb/> tur. Si igitur a Maria
+						non est sumptum corpus hu­ <lb/> manum, sed a quolibet alio, per Mariam tamen es <lb/>
+						procreatum,quod fuerat prasvaricatione corruptum, <milestone unit="PLSection" n="D"/><lb/> superius dicto repellitur argumento. Quod si non eo <lb/> homine Christus
+						indutus est qui pro peccati poena <lb/> sustinueratmortem,iIlud eveniet,ex nullius
+						hominis <lb/> seminetalem potuisse nasci,qui fuerit sine originalis <lb/> pcena peccati.
+						Ex nullo igitur talis sumpta est caro, <lb/> unde fit ut noviter videatur esse formata.
+						Sed hæc <lb/> autitahominum visaestoculis,uthumanum putare­ <lb/>
+						turcorpus,quodreveranon essethumanum, quippe <lb/> quod nulli originali subjaceret pœnæ;
+						aut nova quae­ <lb/> dam vera, nec poenae peccati subjacens originalis ad <lb/> tempus
+						hominis natura formataest.Si verumhominis <lb/> corpus non fuit, aperte arguitur mentita
+						divinitas, <lb/> quae ostenderet hominibus corpus, quod cum verum <pb n="1349"/>
+						<milestone unit="PLSection" n="A"/><lb/> non esset, tum fallerentur hi qui verum esse
+						arbitra­ <lb/> rentur. At si nova veraque non ex homine sumpta <lb/> caro format.a est,
+						quo tanta tragcediagenerationis? <lb/> ubi ambitus passionis ? Ergo quippe, ne in homine
+						<lb/> quidem, non stulte fieri puto,quod inutiliter factum <lb/> est. Ad quam vera
+						utilitatem factaprocreabitur tanta <lb/> humilitas Divinitatis, si homo, qui periit,
+						genera­ <lb/> tione ac passione Christi salvatus non est, quoniam <lb/> negatur
+						assumptus ? Rursus igitur, sicutab eodem <lb/> Nestorii
+						fonteEutychiserrorprincipiumsumpsit, ita <lb/> ad eumdem finem relabitur, utsecundum
+						Eutychen <lb/> quoque non sitsalvatum genushumanum :quoniam <lb/> non is qui aeger
+						esset, et salvatione curaque egeret, <lb/> assumptus est. Traxisse autem hanc sententiam
+						vi­ <lb/> detur, si tamen hujus erroris fuit, ut cruderet non <milestone unit="PLSection" n="B"/><lb/> fuisse corpus Christi vere ex homine, sed extra atque
+						<lb/> aDeo in caelo formatum; quoniam cum eo in coelum <lb/> creditur ascendisse, quod
+						exemplum continet tale, <lb/> non ascendit in coelum, nisi qui de cælo descendit.</p>
+					<ab>
+						<title type="sub">CAPUT VI.</title>
+					</ab>
+					<ab>
+						<title type="sub"><hi rend="italic">Quod nec divinitas in humanitatem, nec humanitas in
+								divinitatem</hi> translata <hi rend="italic">est, nec ulraque permixta.</hi>
+						</title>
+					</ab>
+					<p>Sed satis de ea parte dictum videtur, si corpus <lb/> quod Christusexcepit,ex Maria non
+						credaturassum­ <lb/> ptum. Si vero assumptum est ex Maria neque per­ <lb/> mansit
+						perfectahumanadivinaquenatura, id tribus <lb/> effici potuit modis : aut enim divinitas
+						in humanita­ <lb/> temtranslataest, aut humanitas in divinitatem, aut <lb/> utræque in
+						se ita temperatæ sunt atque commixtæ, ut <lb/> neu tra substantia propriam formam
+						teneret. Sed in <milestone unit="PLSection" n="c"/><lb/> dvinitas In humanitatem
+						translata est, tactum est, <lb/> quod credi nefas est,utin humanitatem,non immu­ <lb/>
+						tabili substantia permanente,divinitas verteretur ;et <lb/> quod passibile atque
+						mutabile naturaiiter existeret, <lb/> id immutabile permaneret: quod vero immutabile
+						<lb/> atque impassibile naturaliter creditur, id in rem mu <lb/> tabilem verteretur. Hoc
+						igitur fieri nulla rationecon­ <lb/> tingit; sed humana forsitan naturain deitatem
+						videa­ <lb/> tur esse conversa. Hocvero qui fieri potest, si divi­ <lb/> nitas in
+						generatione Christi et humanam animam <lb/> suscepit et corpus ?Non enim omnis res in
+						rem om­ <lb/> nem verti ac transmutari potest: nam cum substan­ <lb/> tiariumaliae sint
+						corporeae, aliae incorporæ, ueque <lb/> corporeainincorpoream,neque incorporea in eam
+						<lb/> quae corpus est, mutarit potest. Necvero incorporea <lb/> in se invicem formas
+						proprias mutant: sola enim <milestone unit="PLSection" n="D"/><lb/> mutari
+						transformarique in se possunt, quæ habent <lb/> unius materiae commune subjectum; neque
+						haec om­ <lb/> nia, sed ea quae in se et facere et pati possunt. Id <lb/>
+						veroprobaturhoc modo: nequeenimpotest æs in la­ <lb/> pidem permutari, nec vero idem aes
+						in herbam, nec <lb/> quodlibet aliud corpus in quodlibet aliud trausfigu­ <lb/> rari
+						potest, nisi et eadem sit materia rerum in se <lb/> transeuntium, et a se et facere et
+						pati possint : ut <lb/> cum vinum atque aqua miscentur,utraquesunt talia, <lb/> quae
+						actum sibi passionemque communicent. Potest <lb/> enim aquae qualitas a vini qualitate
+						aliquid pati, at­ <lb/> que idcirco si multum quidem fuerit aquae, vini vero <lb/>
+						paululum, non dicunturimmista, sedalterum alte- <milestone unit="PLSection" n="A"/><lb/>
+						rius qualitate corrumpitur.Si quis enim vinum fun­ <lb/> dat in mare,nonmistumest mari
+						vinum, sed in mare <lb/> corruptum,idcirco quoniam qualitas aquæ, multita­ <lb/> dine
+						sui corporis, nihil passa est a qualitate vini, <lb/> sed potius in seipsam
+						viniqualitatem propria mul­ <lb/> titudine commutavit. Si vero sint mediocres sibi­
+						<lb/> que aequales, vel paulo inæquales naturæ, quae a se <lb/> facere et pati possint,
+						illae miscentur et mediocri­ <lb/> bus inter se qualitatibus temperantur. Atque hseo
+						<lb/> quidem in corporibus, neque his omnibus, sed <lb/> tantum quae a se (ut dictum
+						est) el facere et pati <lb/> possunt, communi atque eadem materia subjecta. <lb/> Omne
+						enim corpus quod in generatione et corrup­ <lb/> tionesubsistit,communem videtur habere
+						materiam; <lb/> sed non omne ab omni, vel in omni, vel facere aliquid <milestone unit="PLSection" n="B"/><lb/> vel pati potest. Corporea vero in incorporea nulla <lb/>
+						rationepoteruntpermutari,quoniam nulla communi <lb/> materia subjecta participant, quae
+						susceptis quali­ <lb/> tatibus in alterutram permutetur: omnis enim na, <lb/> tura
+						incorporae substantiae nullo materiae nititur <lb/> fundamento ; nullum vero corpus est,
+						cui non sit <lb/> materia subjecta- Quod cum ita sit, cumque ne ea <lb/> quidem quae
+						communem materiam naturaliter ha­ <lb/> bent, in se transeant, uisi illis adsit potestas
+						in se <lb/> et a se faciendi et patiendi, multo magis in se non <lb/> permutabuntur,
+						quibus non modo communis ma­ <lb/> teria non est, sed cum alia res materiae fundamen­
+						<lb/> to nititur, ut corpus, alia omnino materiae subjecto <lb/> non egeat, ut
+						incorporeum. Non igitur fieri potest ut <lb/> corpus incorporalem speciem permutetur i
+						nec vero <lb/> fieri potest ut incorporalia in sese commistione ali­ <milestone unit="PLSection" n="c"/><lb/> qua permutentur.Quorum enim communis nullama­ <lb/>
+						teria est, nec in se verti acpermutari queunt. Nulla <lb/> autem est incorporalibus
+						materia rebus : non pote­ <lb/> runt in se igitur invicem permutari. Sed anima et <lb/>
+						Deus incorporeae substantiae recte creduntur : non <lb/> est igitur humana anima in
+						divinitatem, a qua as­ <lb/> sumptaest permutata. Quod si nequecorpus, neque <lb/> anima
+						in divinitatem potuit verti, nullo modo fieri <lb/> potuit ut humanitas converteretur in
+						Deum. Multo <lb/> minus vero credi potest ut utraque in sese confun. <lb/> deretur,
+						quoniam neque incorporalitas transire ad <lb/> corpus potest, neque rursus e converso
+						corpus ad <lb/> incorporalitatem : quandoquidem nulla his materia <lb/> subjecta
+						communis est, quae alterutris substantia­ <lb/> rum qualitatibus permutetur.At hi ita
+						aiunt :Exdua- <milestone unit="PLSection" n="D"/><lb/> bus quidem naturis Christum
+						consistere, in duabus <lb/> vero minime. Hoc scilicet intendentes, quoniam <lb/> quod ex
+						duabus consistit ita unum fieri potest, ut <lb/> illa ex quibus diciturconstare non
+						maneant; veluti <lb/> cum mel aquæ confunditur, neutrum manet, sed al­ <lb/> terum,
+						alterius copulatione corruptum, quiddam ter­ <lb/> tium fecit: ita illud quidem quod ex
+						melle atque <lb/> aqua tertium fit, constare ex utrisque dicitur, in <lb/> utrisque vero
+						negatur : nonenim poterit in utrisque <lb/> constare,quando utrorumque natura non
+						permanet. <lb/> Ex utrisque euim constare potest, licetea ex quibus <lb/> conjungitur,
+						alterutra qualitate corrupta sint. Ex <lb/> utrisque vero hujusmodi constare non
+						poterit, quo- <pb n="1351"/>
+						<milestone unit="PLSection" n="A"/><lb/> niam ea quæ in se transfusa sunt, non manent,
+						ac <lb/> non sunt utraque quibus constare videatur, cum ex <lb/> utrisque constent in se
+						invicem qualitatum mutatione <lb/> transfusis. Catholici vero utrumque rationabiliter
+						<lb/> confitentur ; nam et ex utrisque naturis Christum et <lb/> in utrisque consistere
+						; sed id qua ratione dicatur, <lb/> paulo posterius explicabo: nunc illid manifestum
+						<lb/> est convictam esse Eutychis sententiam eo nomine <lb/> quod, cum tribus modis
+						fieri possit ex duabus na­ <lb/> turis una subsistat, ut aut divinitas in humanita­
+						<lb/> tem translatasit, authumanitasin divinitatem, aut <lb/> utraque permista sint,
+						nullum horum modum fieri <lb/> potuisse superius dicta argumentatione declaratur.</p>
+					<ab>
+						<title type="sub">CAPUT VII.</title>
+					</ab>
+					<ab>
+						<title type="sub">
+							<hi rend="italic">Christum in utrisque et ex utrisque naturis consistere.</hi>
+						</title>
+					</ab>
+					<p>
+						<milestone unit="PLSection" n="B"/>Restat ut, quemadmodum catholica fides di­ <lb/> cat,
+						et in utrisque naturis Christum et ex utris­ <lb/> que consistere, doceamus. Ex utrisque
+						naturis ali­ <lb/> quid consistere, duo significat: unum quidem, <lb/> cum ita dicimus
+						aliquid ex duabus naturis jungi, <lb/> sicut ex melle atque aqua. Id autem est ut ex
+						quo­ <lb/> libet modo confusis, vel si una vertatur in alteram, <lb/> vel si utræque in
+						se misceantur invicem, nullo ta­ <lb/> men modo utraque permaneant : secundum huno <lb/>
+						modum Eutyches ait ex utrisque naturis Christum <lb/> consistere. Alter vero modus est
+						ex utrisque consi­ <lb/> stendi, quod ita ex duabus junctum est, ut illa ta­ <lb/> men,
+						ex quibus junctum esse dicitur, maneant, nec <lb/> in alterutra vertantur, et cum
+						dicimus coronam ex <lb/> auro gemmisque compositam. Hic neque aurum in <milestone unit="PLSection" n="c"/><lb/> gemmas translatum est, neque in aurum gemmacon­ <lb/>
+						versa, sed utraque permanent, nec formam propriam <lb/> derelinquunt. Taliaergo,ex
+						aliquibus constantia, in <lb/> his constare dicimus,ex quibus consistere prædican­ <lb/>
+						tur: tunc enim possumus dicere coronam gemmis <lb/> auroque consistere : sunt enim gemmæ
+						atque aurum, <lb/> quibus corona consistat; nam in priore modo, non <lb/> est mel atque
+						aqua in quibus illud, quod ex utris­ <lb/> que jungitur, constet. Cum igitur utrasque
+						manere <lb/> naturasin Christo fides catholica confiteatur, perfe­ <lb/> ctasque easdem
+						persistere, uec alteram in alteram <lb/> transmutari, jure dicit et in utrisque naturis
+						Chri­ <lb/> stumset ex utrisque consistere: in utrisque quidem, <lb/> quia manent
+						utrasque ; ex utrisque vero, quia utra­ <lb/> rumque adunatione manentium una persona
+						fit Chri­ <milestone unit="PLSection" n="D"/><lb/> sti. Non autem secundum eam
+						significationem ex <lb/> utrisque naturis Christum junctum esse fides catha­ <lb/> lica
+						tenet, secundum quamEutychespronuntiat. Na <lb/> ille talem significationem
+						conjunctionis ex utraque <lb/> natura, snmit, ut non confiteaturin utrisque consi­ <lb/>
+						stere, neque utrasque manere : catholicus vero eam <lb/> significationem ex utrisque
+						consistendi sumit, quæ <lb/> illi sit proxima, eamque conservet, quæ in utrisque <lb/>
+						consistere confitetur. Æquivocum igitur est, ex <lb/> utrisque consislere,ac potius
+						amphibolum et gemina <lb/> significatione diversa designans :una quidem signi­ <lb/>
+						ficatione, non manere substantias, ex quibus illud <lb/> quod copulatem est dicatur esse
+						conjunctum; alio <lb/> modo significans ita exutrisqueconjunctum,ututra­ <milestone unit="PLSection" n="A"/><lb/> que permaneant. Hocigiturexpedito aequivocationis <lb/>
+						atque ambiguitatis nodo, nihil est ultra quod possit <lb/> opponi,quin id sit quod firma
+						veraque.fides catho­ <lb/> licacontinet :Eumdem Christum hominem esse per­ <lb/> fectum,
+						eumdem Deum, eumdemque, qui homo sit <lb/> perfectus atque Deus, unum esse Deum ac Dei
+						Fi­ <lb/> lium ; nec quaternitatem trinitatis astrui,dum homo <lb/> additur
+						supraperfectum Deum, sed unam eamdem­ <lb/> que personam numerum trinitatis explere: ut
+						cum <lb/> humanitas passa sit,Deus tamen passus esse dica­ <lb/> tur; non quod ipsa
+						deitas humanitas facta sit, sed <lb/> quod a deitate fuerit assumpta. Item qui homo est,
+						<lb/> Dei filius appellatur, non substantia divinitatis, sed <lb/> humanitatis, quae
+						tamen divinitati naturali uninate <lb/> conjuncta est. Et cum haec ita intelligentia
+						dicer- <milestone unit="PLSection" n="B"/><lb/> dantur permisceanturque, tamen unus
+						idemque et <lb/> homo sit perfectus et Deus : Deus quidem, quod <lb/> ipse sit ex Patris
+						substantia genitus; homo vero, <lb/> quod ex Maria sit Virgine procreatus. Itemque qui
+						<lb/> homo, Deus,eo quod a Deo fuerit assumptus ; et qui <lb/> Deus, homo, quoniam
+						vestitus homine sit: cum in <lb/> eadem persona aliud sit divinitas quæ suscepit, <lb/>
+						aliud, quam suscepit,humanitas ; idem tamen Deus <lb/> atque homo est. Nam si hominem
+						Christum intel­ <lb/> ligas,idem homo est atque Deus ; quoniam homo ex <lb/> natura,
+						Deus assumplione.Si vero Deum intelligas, <lb/> idem Deus est atque homo, quoniam natura
+						Deus <lb/> est, homo assumptione. Fitque in eo gemina <lb/> natura geminaque substantia,
+						quoniam homo Deus: <lb/> unaque personas, quoniam idem homo atque Deus. <milestone unit="PLSection" n="c"/><lb/> Mediaque haec est inter duas haereses via,sicut vir­
+						<lb/> tutes quoque medium tenent. Omnis enim virtus <lb/> in medio rerum decore locata
+						consistit, siquidem <lb/> vel ultra, vel infra, quam opotuerit, fiat, a virtute <lb/>
+						disceditur : medietatem igitur virtus tenet. Quo­ <lb/> circa si quatuor haec neque
+						ultra esse possunt, ut <lb/> in Christo ; aut duae naturae sint duaeque personae, <lb/>
+						utNestoriusait; aut una persona unaque natura, ut <lb/> Eutyches ait; aut duae naturae,
+						sed una persona, <lb/> ut catholica fides credit; aut una natura duaeque <lb/> personæ.
+						Cumque duas quidem naturas duasque per. <lb/> sonas in ea quae contra Nestorium dicta
+						esl respon­ <lb/> sione convicerimus, unam vero personam unamque <lb/> naturam esse non
+						posse, Eutyche proponente,mons- <lb/> Iraverimus, neque tam amens quisquam hucusque
+							<milestone unit="PLSection" n="D"/><lb/> exstiterit, ut unam in eo naturam crederet,
+						sed <lb/> gemina esse personas ; resta ut ea sit vera, quam <lb/> fides catholica
+						pronuntiat, geminam substantiam, <lb/> sed unam esse personam. Qui vero paulo ante <lb/>
+						diximus Eutychen confiteri duas quidem in Christo <lb/> ante adnationem naturas, unam
+						vero post aduna­ <lb/> tionem, cumque hunc errorem duplicem interpre­ <lb/> taremur
+						celare sententiam, ut hæc adunatio aut <lb/> generatione fieret, cum ex Maria corpus
+						hominis <lb/> minime sumeretur, aut sumpto quidem ex Maria <lb/> per resurrectionem
+						fieret adunatio,de utrisque qui­ <lb/> dem partibus idonee, utarbitror, disputatum est.
+						<lb/> Nunc quaerendum est quomodo fieri potuerit ut duae <lb/> naturae in unam
+						substantiam miscerentur.</p>
+					<pb n="1353"/>
+
+					<p>
+						<milestone unit="PLSection" n="A"/>
+					</p>
+					<ab>
+						<title type="sub">CAPUT VIII.</title>
+					</ab>
+					<ab>
+						<title type="sub">
+							<hi rend="italic">Quis fuerit slatus vitae Christi.</hi>
+						</title>
+					</ab>
+					<p>Verumtamen est etiam nunc et alia quaestio quae <lb/> ab his inferri potest, qui corpus
+						humanum ex Maria <lb/> sumpturn esse non credunt, sed alias fuisse seque­ <lb/> stratum,
+						præparatumque quod in adunatione ex Ma­ <lb/> riæ utero gigniatque proferri
+						videretur.Aiunt enim, <lb/> si ex homine sumptum est corpus,homo vero omnis <lb/> ex
+						prima prævaricatione non solum peccato et morte <lb/> tenebatur, verum etiam affectibus
+						peccatorum erat <lb/> implicitus, eaque illi fuit poena peccati, ut cum <lb/> morte
+						teneretur obstrictus, tamen esset reus etiam <lb/> voluntate peccandi; cur in Christo
+						neque peccatum <lb/> fuit, nequevoluntas ulla peccandi? Et omnino habet <lb/>
+						animadvertendam dubitationem talis quæstio. Si e- <milestone unit="PLSection" n="B"/><lb/> nim ex carne humana Christi corpus assumptum est, <lb/> dubitari potest quænam
+						haec caro quae assumpta sit <lb/> esse videatur: eum quippe salvavit quem etiam as­
+						<lb/> sumpsit. Sin verotalem hominemassumpsit qualis <lb/> Adam fuit ante peccatum,
+						integram videtur huma­ <lb/> nam assumpsisse naturam, sed tamen quæ medicina <lb/>
+						penitusnonegebat.Quomodoautem fieri potestutta­ <lb/> lemassumpserithominem qualis Adam
+						fuit, cum in <lb/> Adam potueritessepeccandi voluntas atque affectio ? <lb/>
+						undefactumestutetiam prætergressis divinis prae­ <lb/> ceptis inobedientiæ delictis
+						teneretur astrictus. In <lb/> Christovcro ne voluntas quidem ulla ereditur fuisse <lb/>
+						peccandi: cum praesertim si talecorpus hominis as­ <lb/> sumpsit quale Adæ ante peccatum
+						fuit,non debuerit <lb/> esse mortalis,quoniam Adam, si non peccasset,mor­ <lb/> tem
+						nulla ratione sensisset.Cum igitur Christus non <milestone unit="PLSection" n="c"/><lb/>
+						peccaverit, quaerendum est cur senserit mortem, si <lb/> Adæ corpus antequam peccaret
+						assumpsit. Quod si <lb/> talem statum suscepit hominis3qualis Adas post pec. <lb/> catum
+						fuit,videtur etiam in Christo non defuisse ne­ <lb/> cessitasutetdelictis
+						subjicereturetpassionibuscon­ <lb/> funderetur,obductisque judicii regulis bonum a ma­
+						<lb/> lo non sincera integritate discerneret, quoniam has <lb/> omnes poenas Adam
+						delicti prævaricatione suscepit. <lb/> Contra quos respondendum est, tres intelligi
+						homi­ <lb/> num posse status.Unum quidem Adaeantedelictum, <lb/> in quo tametsi ab eo
+						mors aberat; nec adhuc ullo se <lb/> delicto polluerat, poterat tamen in eo voluntas
+						esse <lb/> peccandi; alter vero est.in quo mutari potuisset, si <lb/> firmiter in Dei
+						præceptis manere voluisset: tunc e- <lb/> nim addendum foret ut non modo non peccaret,
+						aut <milestone unit="PLSection" n="D"/><lb/> peccare vellet,sed nec possetquidem
+						autpeccare,aut <lb/> velle delinquere.Tertius status est post delictum, in <lb/> quo
+						mors illum necessario secuta est, et peccatum <lb/> ipsum voluntasque peccati.Quarum
+						summitatum at­ <lb/> que contrariorum haec loca sunt, is ille status qui <milestone unit="PLSection" n="A"/><lb/> praemium esset, si in praeceptis Dei Adam manere <lb/>
+						voluisset; et is qui pcenae fuit, quoniam manere no­ <lb/> luit: in illo enim nec mors
+						esset, nee peccatum,nec <lb/> voluntas ulla peccandi; in hoc vero,et mors et pec­ <lb/>
+						catum, et delinquendi omnis affectio, omniaque in <lb/> perniciem prona, nec quidquam in
+						se opis habentia, <lb/> utpost lapsum posset assurgere. Ille vero medius sta­ <lb/> tus,
+						in quo praesentia quidem mortis vel peccatiabe­ <lb/> rat, potestas vero utriusque
+						constabat,inter utrum­ <lb/> que statum est colIocatus.Ex his igitur tribus stati­ <lb/>
+						bus Christus corporeæ naturæ suæ singulas quodam­ <lb/> modo indidit causas : nam quod
+						mortale corpus as­ <lb/> sumpsit, ut mortem a genere humano fugaret,in eo <lb/> statu
+						ponendum est quod post Adæ prævaricationem <lb/> poenaliter inflictum est. Quod vero non
+						fuit in eo vo- <milestone unit="PLSection" n="B"/><lb/> luntas ulla peccati, ex eo
+						sumptum est statu,qui es­ <lb/> se potuisset,nisi voluntatem insidiantis fraudibus ap­
+						<lb/> plicasset. Restat igitur tertius status,id est medius : <lb/> ille scilicet qui eo
+						tempore fuit cum nec mors ade­ <lb/> rat,et adesse poterat delinquendi voluntas. In hoc
+						<lb/> igitnr Adam talis fuit,ut manducaret ac biberet, ut <lb/> accepta digereret, ut
+						laberetur in somnum, et alia <lb/> quæ ei non defuerunt,humanaquidem sed concessa, <lb/>
+						et qUa:! nullam poenam mortis inferrent. Quae omnia <lb/> habuisse Christum dubium non
+						est: nam et man­ <lb/> ducavitet bibit et humani corporis officio functus <lb/>
+						est.Neque enim tanta indigentia inAdam fuisse cre­ <lb/> denda est, ut, nisi
+						manducasset, vivere non potuis­ <lb/> set ; sed si ex omni quidem ligno escam sumeret,
+						<lb/> semper vivero potuisset, hisque non mori: idcirco <lb/> Paradisi fructibus
+						indigentiamexplebat.Quam indi­ <milestone unit="PLSection" n="c"/><lb/> gentiam fuisse
+						in Christo nullus ignorat, sed potes­ <lb/> tate, non necessitate. Et ipsa indigentia
+						ante resur­ <lb/> rectionem in eo fuit; post resurrectionem vero talis <lb/> exstitit,
+						ut ita illud corpus immutaretur humanum, <lb/> sicut Adae, præter praevaricationis
+						vinculum,mutari <lb/> potuisset; quodque nos ipse Dominus Jesus Chris­ <lb/> tus votis
+						docuit optare, ut fiat voluntas ejus sicut in <lb/> coelo et in terra, ut adveniat ejus
+						regnum et nos li­ <lb/> beret a malo. Hæc enim omnia illa beatissima huma­ <lb/> ni
+						generis fideliter credentium immutatio depreca­ <lb/> tur.</p>
+					<p>Hæc sunt quae ad te fidei meae credulitate scrip­ <lb/> psi. Qua in re si quid perperam
+						dictum est, non ita <lb/> sum amator mei, ut ea quae semel effuderim, meli­ <lb/> ori
+						sententiae anteferre contendam. Si enim nihil est <milestone unit="PLSection" n="D"/><lb/> ex nobis boni, nihil est quod in nostris sententiis <lb/> amare debeamus. Quod
+						si ex illo cuncta sun! bona, <lb/> qui solus bonus est, illud potius bonum esse cre­
+						<lb/> dendum est, quod illa incommutabilis bonitas at­ <lb/> que omnium bonorum causa
+						perscribit.</p>
+				</div>
+				</body>
+  </text>
+</TEI>

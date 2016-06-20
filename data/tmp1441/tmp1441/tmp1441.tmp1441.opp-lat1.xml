@@ -1,0 +1,807 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title>Patrologiae Cursus Completus. Series Latina (PL)</title> 
+        <sponsor>University of Leipzig</sponsor>
+        <funder>European Social Fund Saxony</funder>
+        <principal>Gregory Crane</principal>
+        <respStmt>
+          <persName xml:id="Jouve">Jouve</persName>
+          <resp>OCR-ed, corrected and encoded the text</resp>
+        </respStmt>
+        <respStmt>
+          <persName>Greta Franzini</persName>
+          <resp>Project Manager (University of Leipzig)</resp>
+        </respStmt>
+        <respStmt>
+          <persName>Simona Stoyanova</persName>
+          <resp>Project Assistant (University of Leipzig)</resp>
+        </respStmt>
+        <respStmt>
+          <persName>Bruce Robertson</persName>
+          <resp>Technical Advisor (Mount Allison University)</resp>
+        </respStmt>
+      </titleStmt>
+      
+      <publicationStmt>
+        <authority>University of Leipzig</authority>
+        <idno type="filename">PL83.xml</idno>
+        <availability>
+          <licence target="https://creativecommons.org/licenses/by-sa/4.0/">Available under a Creative Commons Attribution-ShareAlike 4.0 International License</licence>
+        </availability>
+        <date>2014</date>
+        <publisher>University of Leipzig</publisher>
+        <pubPlace>Germany</pubPlace>
+      </publicationStmt>
+      
+      <sourceDesc>
+        <listBibl xml:lang="la">
+          <biblStruct>
+            <monogr>
+              <editor>
+                <persName>
+                  <name xml:lang="fr">Jacques Paul Migne</name>
+                </persName>
+              </editor> 
+              <author ref="urn:cite:perseus:author.771">Isidorus Hispalensis</author>
+              <title>Differentiarum Sive De Proprietate Sermonum Libri Duo</title>
+              <title>Allegoriae Quaedam Sacrae Scripturae</title>
+              <title>De Ortu Et Obitu Patrum Qui In Scriptura Laudibus Efferuntur</title>
+              <title>In Libros Veteris Ac Novi Testamenti Proemia</title>
+              <title>Liber Numerorum Qui In Sanctis Scripturis Occurrunt</title>
+              <title>De Veteri Et Novo Testamento Quaestiones</title>
+              <title>Mysticorum Expositiones Sacramentorum Seu Quaestiones In Vetus Testamentum</title>
+              <title>Appendix Ad Libros Regum</title>
+              <title>De Fide Catholica Ex Veteri Et Novo Testamento Contra Judeos</title>
+              <title>Sententiarum Libri Tres</title>
+              <title>De Ecclesiasticis Officiis</title>
+              <title>Synonyma De Lamentatione Animae Peccatricis</title>
+              <title>Regula Monachorum</title>
+              <title>Epistolae</title>
+              <title>De Ordine Creaturarum Liber</title>
+              <title>De Natura Rerum Ad Sisebestum Regem Liber</title>
+              <title>Chronicon</title>
+              <title>Historia De Regibus Gothorum. Wandalorum Et Suevorum</title>
+              <title>De Viris Illustribus Liber</title>
+              <title>Carmina [Ascripta]</title>
+              <title>Chronica Regum Visigothorum (Incertus)</title>
+              <title>Expositio In Canticum Canticorum Salomonis [Incertus]</title>
+              <title>De Conflictu Vitiorum Et Virtutum (Incertus)</title>
+              <title>Expositio In Missa (Incertus)</title>
+              <title>Sententiarum Liber Quartus (Incertus)</title>
+              <title>Exhortatio Humilitatis (Incertus)</title>
+              <title>Testimonia Divinae Scripturae Et Patrum (Incertus)</title>
+              <title>Sermones (Incertus)</title>
+              <title>De Ecclesiasticis Dogmatibus (Incertus)</title>
+              <title>Sentantiae Differentiarum De Activa Vita Atque Contemplativa [Incertus]</title>
+              <title>Exhortatio Poenitendi Cum Consolatione Et Misericordia Dei [Incertus]</title>
+              <title>Lamentum Poenitantiae (Incertus)</title>
+              <title>Oratio Contra Insidias Diaboli (Incertus)</title>
+              <title>Liber De Ortu Et Obitu Patrum Incertus</title>
+              <title>Liber De Numeris (Incertus)</title>
+              <title>Glossae in Sacram Scripturam</title>
+              <title>Differentiarum, sive de Proprietate Sermonum, Liber</title>
+              <title>Liber Glossarum</title>
+              <imprint>
+                <publisher>Garnier</publisher>
+                <pubPlace>Paris</pubPlace>
+                <date>1850</date>
+              </imprint>
+              <biblScope unit="volume">83</biblScope>
+            </monogr>
+            <monogr>
+              <author>Auctor Incertus</author>
+              <title>Archiepiscopi Toletani Veteres</title>
+              <title>Chronologia Gothicorum Regum (Ex Codice Regio Vaticano)</title>
+              <imprint>
+                <publisher>Garnier</publisher>
+                <pubPlace>Paris</pubPlace>
+                <date>1850</date>
+              </imprint>
+              <biblScope unit="volume">83</biblScope>
+            </monogr>
+            <ref target="http://hdl.handle.net/2027/pst.000020950231">HathiTrust</ref>
+            
+          </biblStruct>
+        </listBibl>
+      </sourceDesc>
+      
+    </fileDesc>
+    <encodingDesc>
+      <p>The following text is encoded in accordance with EpiDoc standards and with the
+        CTS/CITE Architecture.</p>
+      <refsDecl n="CTS">
+        <cRefPattern n="no citable units founds" matchPattern="(.+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div/tei:div[@n='$1'])"/>
+      </refsDecl>
+    </encodingDesc>
+    
+    <profileDesc>
+      <langUsage>
+        <language ident="la">Latin</language>
+      </langUsage>
+    </profileDesc>
+    
+</teiHeader>
+  <text>
+    <body><div type="edition" n="urn:cts:latinLit:tmp1441.tmp1441.opp-lat1">
+          <ab>
+            <title type="sub">APPENDIX XVII.</title>
+          </ab>
+          <ab>
+            <title type="sub">LAMENTUM PŒNITENTIÆ (a).</title>
+          </ab>
+          <p>Audi, Chrite, tristem fletum, <lb/>
+            Amaruntque canticum, <lb/>
+            Quod perculsus et contritus <lb/>
+            Modulatur spiritus ; <lb/>
+            Cerne lacrymarum fluxus, <lb/>
+            Et ausculta gemitus.</p>
+          <p>Ad te multum vulneratus <lb/>
+            Vocem fletus elevans <lb/>
+             Alia de profundo cordia <lb n="5"/>
+            Emitto suspiria , <lb/>
+            Precibus si forte velis <lb/>
+            Placatus ignoscere.</p>
+          <p>Alleva calamitatis <lb/>
+            Importunae pondera, <lb/>
+            Quae me diutius premit, <lb/>
+            Et elidit impie, <lb/>
+            Nec discedit, ut resumam <lb/>
+            Vitæ respiraculum.</p>
+          <p>Ablato consolatore , <lb n="10"/>
+            Quadro clausus lapide , <lb/>
+            351 Gemo lugens, et suspiro, <lb/>
+            Miserere, clamitans, <lb/>
+            Pulso rogans tota die, <lb/>
+            Sed tu semper dilatas.</p>
+          <p>Ad juventutis delictum, <lb/>
+            Et ad ignorantiæ, <lb/>
+            Non me teneas, exoro : <lb/>
+            Sed misericorditer <lb/>
+             Prætermissum hoc dispone <lb n="15"/>
+            Jam indigno parcere.</p>
+          <p>Ab antiqua pietate <lb/>
+            Ne declines, obsecro ; <lb/>
+            Nam justitiæ rigorem <lb/>
+            Si me sequi jubeas, <lb/>
+            Mille sum debitor poenis, <lb/>
+            Mille dignus mortibus.</p>
+          <p>Aspice jam, Deus clemens, <lb/>
+            Ærumnas quas tolero, <lb/>
+             Remove contritiones, <lb n="20"/>
+            Et flagella prohibe : <lb/>
+            Ne me, precor, indignatus <lb/>
+            Opprimas, et conteras.</p>
+          <p>Annos meos in dolore, <lb/>
+            Vitam in gemitibus <lb/>
+            Vilis factus consummavi: <lb/>
+            Parce mihi, deprecor, <lb/>
+            Jam non possum sustinere <lb/>
+            Da dextram, et eripe.</p>
+          <p>Aggravasti manum plaga <lb n="25"/>
+            Super me validius, <lb/>
+            Carnem dira flagellorum. <lb/>
+            Ultione conterens, <lb/>
+            Caede, ferro, sorde, peste, <lb/>
+            Tenebrarum carcere.</p>
+          <p>Auges tempora pressurae, <lb/>
+            Luctus addis onera , <lb/>
+            Differens afflicto valde <lb/>
+            Dare mihi requiem, <lb/>
+            Contra quod grates rependo, <lb n="30"/>
+            Non resultans murmuro.</p>
+          <p>Abes (b), dico, veritatem, <lb/>
+            Ut occidas impium; <lb/>
+            Sed rogo, post disciplinam <lb/>
+            Da placatus veniam, <lb/>
+            Quia non mortem iniqui, <lb/>
+            Sed vitam desideras.</p>
+          <p>Accuso me, non excuso, <lb/>
+            Laudans te, quod mitis es, <lb/>
+             Juxta modum delictorum <lb n="35"/>
+            Parva datur ultio, <lb/>
+            Haec, et ampliora, clamo , <lb/>
+            Dignus sum excipere.</p>
+          <p>Ad remedium malorum <lb/>
+            Æterni judicii, <lb/>
+            Satius nunc [est] flagello <lb/>
+            Temporali percuti, <lb/>
+            Quam perennibus futuro <lb/>
+            Dari cruciatibus.</p>
+          <p>Adhibe, si placet, adhuc <lb n="40"/>
+            Tormentorum stimulos , <lb/>
+            Quibus defluant veterna , <lb/>
+            Putridaque crimina : <lb/>
+            Salus tantum, vita demum <lb/>
+            Subsequatur morbidum.</p>
+          <p>Adhibe, sed non tratus , <lb/>
+            Ut sit tolerabile, <lb/>
+            Quod me propter mea jubes <lb/>
+            Perpeti facinora ; <lb/>
+             Quatenus correpto rursum <lb n="45"/>
+            Sis mitis post verbera.</p>
+          <p>Amarum hoc est, et leve, <lb/>
+            Quia pertransibile , <lb/>
+            Sed amarius, et grave, <lb/>
+            Quod irrevocabile, <lb/>
+            Quo poenarum non est finis, <lb/>
+            Nec dolori requies.</p>
+          <p>Ardens illic urit flamma <lb/>
+            Damnatorum corpora, <lb/>
+             Ultra reditum non sperat, <lb n="50"/>
+            Quem illa susceperit, <lb/>
+            Cujus pavore tabesco <lb/>
+            Liqucsco formidine.</p>
+          <p>Arbiter, et testis aequus <lb/>
+            Ipse dum adveneris <lb/>
+            Justam reddere mercedem <lb/>
+            Singulorum meritis, <lb/>
+            Quo me salvare decernas, <lb/>
+            Opus non invenies.</p>
+          <p>A Deo districtum cernens <lb n="55"/>
+            Examen judicii , <lb/>
+            352 Duco vitam in mœrore <lb/>
+            Jugiter et gemitu , <lb/>
+            Justum judicem visurus <lb/>
+            Jam pavesco territus.</p>
+          <p>Amarus et pavidus tunc <lb/>
+            Vultus tuus impiis, <lb/>
+            Per quem nullus impunitus <lb/>
+            Erit habens crimina <lb/>
+             Nisi qui lacrymis illa <lb n="60"/>
+            Nunc vivens absterserit.</p>
+          <p>A tranquillitate tua <lb/>
+            Tu nunquam mutaberis, <lb/>
+            Sed mitis parebis justis, <lb/>
+            Terribilis impiis, <lb/>
+            Quos habuerit de culpa <lb/>
+            Reos conscientia. <note type="footnote"> a Vide isidoriana, c. 81, u. 25 et seq </note> <note type="footnote"> b AOes pro habe.. </note> <pb n="1257"/>
+            </p>
+          <p>Ab iniquis justos omnes <lb/>
+            Segregans velociter, <lb/>
+             Pones hxdos ad sinistram, <lb n="65"/>
+            Ei agnos ad dexteram, <lb/>
+            Hos æternæ luci dabis, <lb/>
+            Illos autem tenebris.</p>
+          <p>Ab ira furoris tui <lb/>
+            Quis non conturbabitur ? <lb/>
+            Quæ a nulla creatura <lb/>
+            Cohiberi poterit, <lb/>
+            Cum peremeris iniquos <lb/>
+            Oris tui gladio.</p>
+          <p>Amputans verbo, non ferro, <lb n="70"/>
+            Cervices peccantium , <lb/>
+            Tu perdes in tempestate <lb/>
+            Festinantes impios , <lb/>
+            Vitæ sempiternæ justis <lb/>
+            Collaturus praemia.</p>
+          <p>Accipite, dicet illis, <lb/>
+            Regnum paratum est vobis <lb/>
+            Pro fructibus justitiæ, <lb/>
+            Et misericordiæ, <lb/>
+            His, et illis, quæ fecistis, <lb n="75"/>
+            Cuncta tu testificans.</p>
+          <p>Asiabunt ante tribunal <lb/>
+            Tuum omnes animæ, <lb/>
+            Quidquid gesserint in carne a <lb/>
+            Narrantes ad singula , <lb/>
+            Quid tam pro nefandis miser <lb/>
+            Criminibus respondeam i</p>
+          <p>Assertio phalerata <lb/>
+            Justum nullum faciet ; <lb/>
+            Actus boni tantum facta, <lb n="80"/>
+            Non verba, recipies, <lb/>
+            Data singulis taleuta <lb/>
+            Cum usuris expetens.</p>
+          <p>Abactis et refutatis <lb/>
+            Escusationibus, <lb/>
+            En homo tantum dicetur , <lb/>
+            Et opera illius , <lb/>
+            Quæ praecellens, ut meretur, <lb/>
+            Confestim recipiet.</p>
+          <p>Arcana tunc secretorum <lb n="85"/>
+            Omnis conscientiæ <lb/>
+            Sic lustrabis, velut vultus <lb/>
+            Cernitur in speculo, <lb/>
+            Heu mihi! qui parebo , <lb/>
+            Pejor omui pessimo ?</p>
+          <p>Ad personam non convertes <lb/>
+            Visum, sed ad merita; <lb/>
+            Nec natalibus insignem, <lb/>
+            Sublimem prudentia <lb/>
+            Facies tibi consortem , <lb n="90"/>
+            Sed insontem opere.</p>
+          <p>Abominabilis erit <lb/>
+            Coram te iniquitas, <lb/>
+            Nullus enim immundorum <lb/>
+            Tibi suciabitur, <lb/>
+            Quomodo tunc fetens hircus <lb/>
+            Mundis jungar ovibus ?</p>
+          <p>Ante te justi nec erit <lb/>
+            Secura justitia , <lb/>
+            Quam si districte perquiras, <lb n="95"/>
+            Et ipsa peccatum est, <lb/>
+            Qui si justo b nisi parcas, <lb/>
+            Væ periclitabitur.</p>
+          <p>Arguens in veritate <lb/>
+            Decernes judicium, <lb/>
+            Et in æquitate tua <lb/>
+            Justus vix salvabitur. <lb/>
+            Ubi tunc ego parebo <lb/>
+            Peccator et impius i</p>
+          <p>Annalibus reseratis, <lb n="100"/>
+            Nudabuntur publice <lb/>
+            2530mnium hominum facta, <lb/>
+            Cogitatus impii, <lb/>
+            In statera tu librabis <lb/>
+            Omnia in pondere.</p>
+          <p>Appenso bono, vel malo , <lb/>
+            Pars hæc operarium <lb/>
+            Vindicabit, quam momenti <lb/>
+            Lance declinaverit, <lb/>
+             Quid agam, si pondus mali <lb n="105"/>
+            Me laeva jactaverit?</p>
+          <p>A justitia diverti <lb/>
+            Nulln modo poteris, <lb/>
+            Nec personam acceptabis, <lb/>
+            Nec ullins munera; <lb/>
+            Sed reddes unicuique <lb/>
+            Juxta sua opera.</p>
+          <p>Aspicient mali justos, <lb/>
+            Cum beatitudinem <lb/>
+            Gloriae promeruerint c, <lb n="110"/>
+            Et dolebunt acriter, <lb/>
+            Quod non vixerint sic juste, <lb/>
+            Ut sic essent liberi.</p>
+          <p>A dolore in dolorem <lb/>
+            Nequiorem transient, <lb/>
+            Cum AlLe, maledicti, <lb/>
+            Illis ipse dixerit <lb/>
+             In ignem qui est paratus <lb n="115"/>
+            Vobi" ei diabulo,</p>
+          <p>A requie beatorum <lb/>
+            Vita, vel consortio, <lb/>
+            Se sublatos iniuentes, <lb/>
+            Junctosque diabolo, <lb/>
+            Ut aeternis cum eodem <lb/>
+            Dentur cruciatibus.</p>
+          <p>Allevabunt ululatum , <lb/>
+            El rugitum immanem, <lb/>
+            Planctum magnum facientes <lb n="120"/>
+            Amarum, et validum, <lb/>
+            Quale nunquam fuit factum, <lb/>
+            Neque dictum, vel visum.</p>
+          <p>Ad gentem gens, vir ad virum <lb/>
+            Pectora percutient, <lb/>
+            Tribus ad tribum, et regnum <lb/>
+            Contra regnum ferient, <lb/>
+            Viri denique seorsum, <lb/>
+            Et seorsum feminæ.</p>
+          <p>Angeli tunc copulabunt <lb n="125"/>
+            Scelere consimiles, <lb/>
+            Quos cursim præcipitantes <lb/>
+            Dabunt flammis inferi, <lb/>
+            Ut par poena semper urat <lb/>
+            Quos par culpa sociat.</p>
+          <p>Habebunt vitæ praecisi, <lb/>
+            Sublatique gaudio, <lb/>
+            Quo perennis erit luctus , <lb/>
+            D dorque perseverans, <lb/>
+             Et consulatio nulla, <lb n="130"/>
+            Nec unquam reversio.</p>
+          <p>A te quisquam non revolvet <lb/>
+            Prolatum judicium, <lb/>
+            Nec ab illo quem tu ipse <lb/>
+            Judicans perdideris, <lb/>
+            Ultione sempiterna <lb/>
+            Pravos omnes puniens.</p>
+          <p>A Deo prærogativa <lb/>
+            Mitto precum commoda <lb/>
+             Fundens lacrymas, dum vivo, <lb n="135"/>
+            Rogatis, dum intelligo, <lb/>
+            Ne me juxta mala ntes <lb/>
+            Condemnandum censeas.</p>
+          <p>Aspera sun., quae peregi, <lb/>
+            Aeerba, et gravia; <lb/>
+            Propter quae si persequi <lb/>
+            Me juste decreveris, <lb/>
+            Morti debitor d, et poenae <lb/>
+            Novi, quod reperies.</p>
+          <p>Ad iniquitatem meam <lb n="140"/>
+            Si convertas oculos, <lb/>
+            Facto, poena quæ condignum c <lb/>
+            Neminem reperies, <lb/>
+            Cum quo me cremandum putes, <lb/>
+            Comburendum censeas.</p>
+          <p>Ad delictorum mensuram, <lb/>
+            Criminumque copiam, <lb/>
+            Ipsæ poenae Tartarorum <lb/>
+            Vix credo sufficient, <lb/>
+            Dum nec talia, nec tanta <lb n="145"/>
+            Quis iniquus fecerit.</p>
+          <p>Anxius ob hoc suspiro, <lb/>
+            Quod impie gesserim, <lb/>
+            354 Pessimorum peccatorum <lb/>
+            Sanctus sum vulnere, <lb/>
+            Difficile tantis malis <lb/>
+            Esse salvus arbitror.</p>
+          <p>Arctor undique pressuris, <lb/>
+            Comprimor angustiis, <lb/>
+            Fluctuat mens in mœrore, <lb n="150"/>
+            Cor natat in lacrymis, <lb/>
+            Nec ulla timore multo <lb/>
+            Requies est animi.</p>
+          <p>Arvi, polique, marisque <lb/>
+            Non turbabor f sinibus, <lb/>
+            Quin et hæc ignis ardore <lb/>
+            Resoluta defluent. <lb/>
+            Ubi me miser abscondam ? <lb/>
+            Quo ante te fugiam ?</p>
+          <p>Ab inmensitate tua <lb n="155"/>
+            Mundi gyrus clauditur? <lb/>
+            Cœlum terramque tu reptes g, <lb/>
+            Et sine te nihil esr; <lb/>
+            Qui pl acatum te non habet, <lb/>
+            Iratum quo fugiet ?</p>
+          <p>Agitur mens ægra passim, <lb/>
+            Diversa cousideraus, <lb/>
+            Nec elucet evadendi <lb/>
+            Uspiam effugium , <lb/>
+             Sed abs te, Domine, iuga, <lb n="160"/>
+            Et ad te reversio.</p>
+          <p>Arma sumens poenitentis <lb/>
+            Saccum, et cilicium, <lb/>
+            Pulso pietalis aures <lb/>
+            Viscera clementiæ, <lb/>
+            Verba fletus et doloris <lb/>
+            Ingerens cum lacrymis.</p>
+          <p>Audi preces, et placare, <lb/>
+            Mens quas aegra parturit, <lb/>
+            Consideransque dolores <lb n="165"/>
+            Impende malagmata, <lb/>
+            Quia tua sum factura <lb/>
+            Tuaque plasmatio.</p>
+          <p>Adhibe, precor, medelam, <lb/>
+            Pessimis vulneribus, <lb/>
+            Profluentia præstringens <lb/>
+            Viliorum ulcera, <lb/>
+            Corrupta redintegrando <lb/>
+            Sanitate perpeti.</p>
+          <p>Aufer me de tuto fæcis <lb n="170"/>
+            Peccatorum omnium; <lb/>
+            Emundare non contemnas, <lb/>
+            Antequam discutias; <lb/>
+            Et non ero tunc immundus, <lb/>
+            Si me nunc piaveris. <note type="footnote">a Editio, ge..eril in carne. </note><note type="footnote"> b Furtt., titti justu.. </note><note type="footnote"> e Furle, meruerint. </note><note type="footnote"> d b orte, si persequi me juste tu decreverit, II orti <lb/>
+            debitum </note><note type="footnote">e Forte, pcenaque condignum. </note><note type="footnote"> { Forte. non tutabor. </note><note type="footnote"> g Forte, tu regis </note> <note type="footnote"> PATROL. LXX.XIII. </note> <note type="footnote"> 40 </note> <pb n="1259"/>
+             </p>
+          <p>Accipis et peccatores, <lb/>
+            Sed quos nunc justificas, <lb/>
+            Respieis multos, ut Petrum, <lb/>
+            Si deflentes poenitent, <lb/>
+             Sicque lapsos ad inferna, <lb n="175"/>
+            Revehis ad ælhera.</p>
+          <p>Apud te redemptio est, <lb/>
+            Et misericordia ; <lb/>
+            Quam nisi propitiatus <lb/>
+            Parcere decreveris, <lb/>
+            Vae mihi ! quod malos omnes <lb/>
+            Præcedam ad viciniam.</p>
+          <p>Ac per hoc opto misellus , <lb/>
+            Ne fuissem gellius : <lb/>
+             Quia et lux ipsa præsens <lb n="180"/>
+            Jam mihi tenebræ sunt, <lb/>
+            Æternæ damnationis <lb/>
+            Pavendo * perniciem.</p>
+          <p>Boni nihil habiturus, <lb/>
+            Quod malis objiciam, <lb/>
+            Pœnarum metu quassata <lb/>
+            Tremit conscientia, <lb/>
+            Dum formidat intinita <lb/>
+            Subire discrimina.</p>
+          <p>Bone Dens, perituro <lb n="185"/>
+            Nunc sybveni, exoro, <lb/>
+            Nunc et ab ira perenni, <lb/>
+            Et a morte libera , <lb/>
+            Ut quem justitia punit <lb/>
+            Tu salves clementia.</p>
+          <p>Benigne Pater, ignosce, <lb/>
+            Quod agnoscent fateor, <lb/>
+            Pronuntio malum meum, <lb/>
+            Non vindex o erio, <lb/>
+             Excipe professionem, <lb n="190"/>
+            Et da indulgentiam.</p>
+          <p>Bonitati. pietatem <lb/>
+            Mulis non merentibus, <lb/>
+            355 Gratis peccata dimittens <lb/>
+            Induisisti veniam; <lb/>
+            Non defraudes uui qued tu <lb/>
+            Dedisti quamplurimis.</p>
+          <p>, Blanditus confessione <lb/>
+            Placaris humilium, <lb/>
+             Ad ignoscendum citius <lb n="195"/>
+            Flentis voce flecteris, <lb/>
+            Pænitentis assuetus <lb/>
+            Consulere lacrymis.</p>
+          <p>Brevis non est manus tua, <lb/>
+            Ut praestare nequeas, <lb/>
+            Multus es ad ignoscendum, <lb/>
+            Hunc indulge, clamito, <lb/>
+             Miserere, ne disperdas; <lb n="200"/>
+            Parce, ne interimas.</p>
+          <p>Biplici, quaeso, flagello <lb/>
+            Noli me percuti re, <lb/>
+            Suspende paululum iram, <lb/>
+            Habe patientiam, <lb/>
+            Quia multum ego miser, <lb/>
+            Sed tu plus misericors.</p>
+          <p>Conversus ad pietatem, <lb/>
+            Restitue gratiam, <lb/>
+             Vitam cum peccato simul <lb n="205"/>
+            Ne velis exstinguere, <lb/>
+            Serva benedictionem <lb/>
+            Receptandæ veniæ.</p>
+          <p>Carnem pro peccato suo, <lb/>
+            Quantum placet, attere, <lb/>
+            Plagas enim temporales <lb/>
+            Libenter excipiam, <lb/>
+            Precor tantum, ne pereNnes <lb/>
+            ludignatus inferas.</p>
+          <p>Doloribus hic afllige, <lb n="210"/>
+            Mœroribus affice, <lb/>
+            Per flagella modo purga, <lb/>
+            Ne in futuro punias, <lb/>
+            Carnis poena, quæ deliquit, <lb/>
+            Redimamur anima.</p>
+          <p>Decerne elementer pie <lb/>
+            Perditum requirere, <lb/>
+            Mira qui benignitate <lb/>
+            Abject s recoltigis. <lb/>
+            Et aversos reconvertis ; <lb n="215"/>
+            Oberrantes corrgis.</p>
+          <p>Errasse me dudum plango, <lb/>
+            Pollutus, et prodigus <lb/>
+            Meretricio amore, <lb/>
+            Bona perdens patria, <lb/>
+            Hiuc ad te vitis, egenus, <lb/>
+            Et percussus remeo.</p>
+          <p>Ego me indignum loco <lb/>
+            Filiorum clamito, <lb/>
+             Quod paternitatis tua <lb n="220"/>
+            Renuens admonita, <lb/>
+            Vagus per quaequam defluxi, <lb/>
+            Cucurri per avia.</p>
+          <p>Feci malum miser ego <lb/>
+            In insipientia, <lb/>
+            Provucavi te ad iram <lb/>
+            Duris facinoribus, <lb/>
+            Quit us digne consternatus, <lb/>
+            Magno luctu conteror.</p>
+          <p>Fletibus tamen revertor <lb n="225"/>
+            Confitendo pœnitens, <lb/>
+            Aufer indignationem <lb/>
+            Culpæ factus immemor, <lb/>
+            Et paterna pietate <lb/>
+            Sume, precor, erroneum b.</p>
+          <p>Punire si tamen adhuc <lb/>
+            Plagis me dijudicas, <lb/>
+            Fer me sicut quos diligis, <lb/>
+            Castiga, et argue, <lb/>
+            Sed clementer, ut emendes, <lb n="230"/>
+            Mon ut interficias.</p>
+          <p>Graves ut culpe merentur, <lb/>
+            Non ita desaevias, <lb/>
+            Tempera severitatem, <lb/>
+            Desine percutere, <lb/>
+            Usque ne plaga contritus <lb/>
+            Desperem, et peream.</p>
+          <p>Hoc interdum te deposco, <lb/>
+            Ne tentationibus, <lb/>
+            Quibus subinde pervertor, <lb n="235"/>
+            Violenter obruar, <lb/>
+            Victus ne miser succumbam <lb/>
+            Da, precor, auxilium.</p>
+          <p>Heu ! dire me tandem, pre- <lb/>
+            [cor, <lb/>
+            Ne permittas decipi, <lb/>
+            356 Nam sufferre tentamenta <lb/>
+            Dæmonum non potero, <lb/>
+            Desiderii eorum <lb/>
+            Malitiam refrena.</p>
+          <p>Inde te, benigne Deus, <lb n="240"/>
+            Acclivis efflagito, <lb/>
+            Quantulumcunque placare, <lb/>
+            Ut et hic indulgeas, <lb/>
+            Ne longa pœna subactus <lb/>
+            Miser valde factus sim.</p>
+          <p>in dolore sempiterno <lb/>
+            Carnem ne constituas. <lb/>
+            Ne crudeliter exire <lb/>
+            Compellatur anima. <lb/>
+            Da crucatibus finem, <lb n="245"/>
+            Requiescat spiritus.</p>
+          <p>Carpe mores, visita me, <lb/>
+            Imo veni, libera, <lb/>
+            Surge, dicite captivo : <lb/>
+            Prodi foras, misero. <lb/>
+            Releva carcere trusum, <lb/>
+            Pande jam absconditum.</p>
+          <p>Caput et reliquos artus <lb/>
+            Aqua munda di:ue, <lb/>
+            Atque internos squalores <lb n="250"/>
+            Purifica gratia, <lb/>
+            Cunctis ut abjre sinas <lb/>
+            Defectum feracibus.</p>
+          <p>Lugeo confusus mala <lb/>
+            Quæ gessisse memoror, <lb/>
+            Fundo preces, et lamenta, <lb/>
+            Contristatus animo; <lb/>
+            Precor, oblatam ne neges <lb/>
+            Pœnitenti veniam.</p>
+          <p>Lacrymæ contra peccatum <lb n="255"/>
+            Non quidem sufficiunt ; <lb/>
+            Sed quod non valeo parvis <lb/>
+            Explare fletibus, <lb/>
+            Oro, pietate demas, <lb/>
+            Abluas clementia.</p>
+          <p>Miseratione tua <lb/>
+            Fac justum ex in'pio, <lb/>
+            Fulgidum de tenebroso, <lb/>
+            Nitentem ex horrido, <lb/>
+            Innocentem ex iuiquo, <lb n="260"/>
+            Viventem ex mortuo.</p>
+          <p>Miseratus jam omitte <lb/>
+            Noxas mihi criminis, <lb/>
+            Eripiens plasma tuum <lb/>
+            De manu diaboli, <lb/>
+            Memento figmenti tui, <lb/>
+            Et esto placabilis.</p>
+          <p>Manus tuæ me fecerunt, <lb/>
+            Formaverunt digiti, <lb/>
+            Corpus in ventre materne <lb n="265"/>
+            Per meatura de meas, <lb/>
+            Tua virtute creatam <lb/>
+            Quo clausisti animam.</p>
+          <p>Ne des in ruinam mortis <lb/>
+            Opus tuum, Domine, <lb/>
+            Propter caroale peccatum, <lb/>
+            Quud lamentis elui, <lb/>
+            Possibile prædixisti, <lb/>
+            Atque væ mirabile.</p>
+          <p>Nullum perire protestans, <lb n="270"/>
+            Quamvis gravi crimme <lb/>
+            Carnaliter polluatur, <lb/>
+            Si redeat poenitens, <lb/>
+            Et non hæsitet in fide, <lb/>
+            Sumi posse veniam.</p>
+          <p>Nuntians pro te, et tuis <lb/>
+            Missis, et discipulis : <lb/>
+            Pœnitemini, cœlorum <lb/>
+            Prope regnum factum est, <lb/>
+            Et omni peccati datur <lb n="275"/>
+            In Christo remissio.</p>
+          <p>Non in multis justis ita <lb/>
+            Te gaudere perhibes, <lb/>
+            Ut in uno erroneo <lb/>
+            Peccatis turpissmo : <lb/>
+            Veni quærere, et salvare, <lb/>
+            Dolens, quod perierat.</p>
+          <p>Nulla tam grandis est culpa, <lb/>
+            Cui non sit venia, <lb/>
+            Omne facinus peccati <lb n="280"/>
+            Delet pœnitentia, <lb/>
+            Si, rejectis malis, quisquam <lb/>
+            Sanus hanc peregerit.</p>
+          <p>Nullum esi malum quod ne- <lb/>
+            [quit <lb/>
+            Aboleri lacrymis, <lb/>
+            357 Omne peccatum dixist <lb/>
+            Dilui hUmilibus, <note type="footnote"> a Forte, paveo. </note> <note type="footnote"> b Forte, errulum. </note> <lb/>
+             <pb n="1261"/>
+            Spiritus tantum sancti a <lb/>
+            Excepta blasphemia.</p>
+          <p>Nunquid fixum verbi lui <lb n="285"/>
+            Solveiur proposilum? <lb/>
+            Absit hoc , Domine Deus, <lb/>
+            Et repellas quempiam, <lb/>
+            Qui post malum resipiscens <lb/>
+            Te conversus sequitur.</p>
+          <p>Objice honitatem, <lb/>
+            Et vince malitiam, <lb/>
+            Præbe moram pœnitendi, <lb/>
+            Tempus mortis dilata, <lb/>
+            Fac ut salus subsequatur, <lb n="290"/>
+            Ne tollat interitus.</p>
+          <p>Omnino confidens credo, <lb/>
+            Quod nolens perire me, <lb/>
+            Subjecisti flagellis, <lb/>
+            Quibus resipiscerem, <lb/>
+            Ut, abominando culpam, <lb/>
+            Redirem ad gratiam.</p>
+          <p>Placeat, Christe, damnatum <lb/>
+            Reparare naufragum, <lb/>
+            De interitus errore; <lb n="295"/>
+            'i e quærente, redeam, <lb/>
+            Atque de maligue dignus <lb/>
+            Efficiar famulus.</p>
+          <p>Peccavi uhi, peccavi, <lb/>
+            Et deliqui nequiter, <lb/>
+            Sed conversum nolo perdas, <lb/>
+            Et quæ posco tribuas, <lb/>
+            Ut me mundes ante mortem, <lb/>
+            Et, dum vivo, redimas.</p>
+          <p>Quis fuerim ne requiras, <lb n="300"/>
+            Sed quis esse cupio, <lb/>
+            Veteri culpa ne quæso <lb/>
+            Reputes damnabilem, <lb/>
+            Cerne corrigendi votum, <lb/>
+            EI rrlaxa debitum.</p>
+          <p>Quanquam de reatu facti <lb/>
+            Sit mihi confusio, <lb/>
+            Novi quod de fine quemquam, <lb/>
+            At non de principio, <lb/>
+            Aut pro bono tu corones, <lb n="305"/>
+            Aut pro malo judices.</p>
+          <p>Recipe, domine pater, <lb/>
+            Fuga lapsum famulum, <lb/>
+            Tolle mortem pœnitenti, <lb/>
+            Te precantem libera, <lb/>
+            Et cum eleciis ad vitam <lb/>
+            Agni libro revoca.</p>
+          <p>Reprobari me ne sinas, <lb/>
+            Quem pro meis meritis <lb/>
+            Ingenti pressura polis, <lb n="310"/>
+            Et lilas drutius, <lb/>
+            Sed quem viventem fatigas, <lb/>
+            Recipe post obitum.</p>
+          <p>Suive, Christe, vincla pe- <lb/>
+            [ dum, <lb/>
+            Ligamenta criminum ; <lb/>
+            Resera limen obscurum <lb/>
+            Tenebrosi carceris ; <lb/>
+            Heddc jati luci sepultum, <lb/>
+            Peregrinum patriae.</p>
+          <p>Tolle furorem perennem <lb n="315"/>
+            Ab annuo principis; <lb/>
+            Te propitiante, fiant <lb/>
+            Jam mihi placabiles, <lb/>
+            Quos adversos diuturna <lb/>
+            Miser ira tolero.</p>
+          <p>Veni, Jesu, ne tarderis. <lb/>
+            Mors antequam rapiat, <lb/>
+            Fessum de pulvere leva, <lb/>
+            Et me reconcilia, <lb/>
+            Lacrymas juges absterge, <lb n="320"/>
+            Cur triste lætifica.</p>
+          <p>Christe, qui diversitate <lb/>
+            Gratiarum dives es, <lb/>
+            Fructum et meritum precor, <lb/>
+            Viventi contribuas, <lb/>
+            Ne, me sterilem procernens, <lb/>
+            Succidas in posterum.</p>
+          <p>Macerari me post mala <lb/>
+            Ne permittas, obseero ; <lb/>
+            Habeam muuere tuo <lb n="325"/>
+            Collata quæ offeram, <lb/>
+            Quibus a Ixva sublatus <lb/>
+            Transeam ad dexteram.</p>
+          <p>Zabulo me non coujungas <lb/>
+            Ad mortem cum impiis, <lb/>
+            358 Nec III Tartari barathro <lb/>
+            Panaris obrui, <lb/>
+            Qui venisti te credentes <lb/>
+            De morte redimere.</p>
+          <p>Gloriam jam vigil canam <lb n="330"/>
+            Alphabetum finiens, <lb/>
+            Tibi Patri, Filloque, <lb/>
+            Inclyto Paraclito, <lb/>
+            Cui <unclear>laus</unclear> erit et potestas <lb/>
+            Per æterna sæcula. Amen. <note type="footnote"> « FolLe, In Spirilum tantam sanctum. </note> </p>
+        </div>
+        
+        </body>
+  </text>
+</TEI>

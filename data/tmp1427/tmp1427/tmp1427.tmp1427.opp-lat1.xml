@@ -1,0 +1,470 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title>Patrologiae Cursus Completus. Series Latina (PL)</title> 
+        <sponsor>University of Leipzig</sponsor>
+        <funder>European Social Fund Saxony</funder>
+        <principal>Gregory Crane</principal>
+        <respStmt>
+          <persName xml:id="Jouve">Jouve</persName>
+          <resp>OCR-ed, corrected and encoded the text</resp>
+        </respStmt>
+        <respStmt>
+          <persName>Greta Franzini</persName>
+          <resp>Project Manager (University of Leipzig)</resp>
+        </respStmt>
+        <respStmt>
+          <persName>Simona Stoyanova</persName>
+          <resp>Project Assistant (University of Leipzig)</resp>
+        </respStmt>
+        <respStmt>
+          <persName>Bruce Robertson</persName>
+          <resp>Technical Advisor (Mount Allison University)</resp>
+        </respStmt>
+      </titleStmt>
+      
+      <publicationStmt>
+        <authority>University of Leipzig</authority>
+        <idno type="filename">PL83.xml</idno>
+        <availability>
+          <licence target="https://creativecommons.org/licenses/by-sa/4.0/">Available under a Creative Commons Attribution-ShareAlike 4.0 International License</licence>
+        </availability>
+        <date>2014</date>
+        <publisher>University of Leipzig</publisher>
+        <pubPlace>Germany</pubPlace>
+      </publicationStmt>
+      
+      <sourceDesc>
+        <listBibl xml:lang="la">
+          <biblStruct>
+            <monogr>
+              <editor>
+                <persName>
+                  <name xml:lang="fr">Jacques Paul Migne</name>
+                </persName>
+              </editor> 
+              <author ref="urn:cite:perseus:author.771">Isidorus Hispalensis</author>
+              <title>Differentiarum Sive De Proprietate Sermonum Libri Duo</title>
+              <title>Allegoriae Quaedam Sacrae Scripturae</title>
+              <title>De Ortu Et Obitu Patrum Qui In Scriptura Laudibus Efferuntur</title>
+              <title>In Libros Veteris Ac Novi Testamenti Proemia</title>
+              <title>Liber Numerorum Qui In Sanctis Scripturis Occurrunt</title>
+              <title>De Veteri Et Novo Testamento Quaestiones</title>
+              <title>Mysticorum Expositiones Sacramentorum Seu Quaestiones In Vetus Testamentum</title>
+              <title>Appendix Ad Libros Regum</title>
+              <title>De Fide Catholica Ex Veteri Et Novo Testamento Contra Judeos</title>
+              <title>Sententiarum Libri Tres</title>
+              <title>De Ecclesiasticis Officiis</title>
+              <title>Synonyma De Lamentatione Animae Peccatricis</title>
+              <title>Regula Monachorum</title>
+              <title>Epistolae</title>
+              <title>De Ordine Creaturarum Liber</title>
+              <title>De Natura Rerum Ad Sisebestum Regem Liber</title>
+              <title>Chronicon</title>
+              <title>Historia De Regibus Gothorum. Wandalorum Et Suevorum</title>
+              <title>De Viris Illustribus Liber</title>
+              <title>Carmina [Ascripta]</title>
+              <title>Chronica Regum Visigothorum (Incertus)</title>
+              <title>Expositio In Canticum Canticorum Salomonis [Incertus]</title>
+              <title>De Conflictu Vitiorum Et Virtutum (Incertus)</title>
+              <title>Expositio In Missa (Incertus)</title>
+              <title>Sententiarum Liber Quartus (Incertus)</title>
+              <title>Exhortatio Humilitatis (Incertus)</title>
+              <title>Testimonia Divinae Scripturae Et Patrum (Incertus)</title>
+              <title>Sermones (Incertus)</title>
+              <title>De Ecclesiasticis Dogmatibus (Incertus)</title>
+              <title>Sentantiae Differentiarum De Activa Vita Atque Contemplativa [Incertus]</title>
+              <title>Exhortatio Poenitendi Cum Consolatione Et Misericordia Dei [Incertus]</title>
+              <title>Lamentum Poenitantiae (Incertus)</title>
+              <title>Oratio Contra Insidias Diaboli (Incertus)</title>
+              <title>Liber De Ortu Et Obitu Patrum Incertus</title>
+              <title>Liber De Numeris (Incertus)</title>
+              <title>Glossae in Sacram Scripturam</title>
+              <title>Differentiarum, sive de Proprietate Sermonum, Liber</title>
+              <title>Liber Glossarum</title>
+              <imprint>
+                <publisher>Garnier</publisher>
+                <pubPlace>Paris</pubPlace>
+                <date>1850</date>
+              </imprint>
+              <biblScope unit="volume">83</biblScope>
+            </monogr>
+            <monogr>
+              <author>Auctor Incertus</author>
+              <title>Archiepiscopi Toletani Veteres</title>
+              <title>Chronologia Gothicorum Regum (Ex Codice Regio Vaticano)</title>
+              <imprint>
+                <publisher>Garnier</publisher>
+                <pubPlace>Paris</pubPlace>
+                <date>1850</date>
+              </imprint>
+              <biblScope unit="volume">83</biblScope>
+            </monogr>
+            <ref target="http://hdl.handle.net/2027/pst.000020950231">HathiTrust</ref>
+            
+          </biblStruct>
+        </listBibl>
+      </sourceDesc>
+      
+    </fileDesc>
+    <encodingDesc>
+      <p>The following text is encoded in accordance with EpiDoc standards and with the
+        CTS/CITE Architecture.</p>
+      <refsDecl n="CTS">
+        <cRefPattern n="section" matchPattern="(.+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div/tei:div[@n='$1'])"/>
+      </refsDecl>
+    </encodingDesc>
+    
+    <profileDesc>
+      <langUsage>
+        <language ident="la">Latin</language>
+      </langUsage>
+    </profileDesc>
+    
+</teiHeader><text><body><div type="edition" n="urn:cts:latinLit:tmp1427.tmp1427.opp-lat1">
+        <ab>
+            <title type="sub">APPENDIX III.</title>
+          </ab>
+    <div n="1" subtype="section" type="textpart">      
+    <ab>
+            <title type="sub">CARMINA S. ISIDQRO ASCRlPTA.</title>
+          </ab>
+          <p>Versus qui in Bibliotheca sancti Isidori episcopi Hispalensis legebantur, et alii sancto Isidoro ascript.</p>
+          <p>
+            <milestone unit="PLSection" n="a"/>I. Sunt hic plura sacra, sunt hic mundalia <lb/>
+            [ plura : <lb/>
+            180 Ex his si qua placent carmna, tot- <lb/>
+            [ le, lege. <lb/>
+            Prata vides plena spinis, et copia florum.
+            <milestone unit="PLSection" n="C"/><lb/>
+            Si non vis spinas sumere, sume rosas. <lb/>
+            Hic geminae radiant veneranda volumina <lb/>
+            [ legis, <lb/>
+            Condita sunt pariter hic nova cum veteri.</p>
+          <p>II. Ille Origenes ego, doctor verissimus olim, <note type="footnote"> I. Quid in liis versibus peculiari animadversione <lb/>
+            dignum sit , accurate esposilulII fuit in Isidorianis, <lb/>
+            cap. 81. Nunc tautum repetendum eos ad exactas <lb/>
+            metri ac Latiuitatis leges non esse compositos. In <lb/>
+            titulo i, vers. i, alii mundialia, pro mundalla j vers. </note><note type="footnote"> 3. floris. pro florum; vers. 5. qemmm Editi, mendose, <lb/>
+            pro gemina;; verso Ii; posset legi hie nova cum vetera, <lb/>
+            ut in silllilibns versibus Alvari Cordubensis observa­ <lb/>
+            tum fuit in Isidorianis, cap. cil., num. 9. </note><note type="footnote"> II. Alii, Ille ego Origenes; alii Itte Vriyenes ego, <lb/>
+            vel Ille ergo Origenes. In Codice Matritensi, et in <lb/>
+            Vaticano palatino, post i versum sequitur ; </note> <pb n="1109"/>
+            
+            <milestone unit="PLSection" n="A"/><lb/>
+             <lb/>
+            Præreptus subito lingua nocente fui. <lb/>
+            Condere, si credis, studui tot millia libros, <unclear/> <lb/>
+            uot lcgio missos ducit in arma viros. <lb/>
+            Nulla meos unquam tetigit blasphemia <lb/>
+            [sensus. <lb/>
+            Sed vigil et prudens, tutus ab hoste fui. <lb/>
+            Sola mihi casum Periarchon dicta dederunt, <lb/>
+            Nis me conjectum impia tela premunt.</p>
+          <p>III. Gallia me genitum, Ine Pictavis ore tonanti <lb/>
+            Dortorem Hilarium misit alumna suum.</p>
+          <p>IV. Ambrosius doctor, signis insignis, et hymnis, <lb/>
+            Enitet hic titulis, enitet eloquiis.</p>
+          <p>V. Mentitur, qui te totum legisse fatetur. <lb/>
+            An quis cuncta tua lector habere potest? <lb/>
+            Namque volominibus mille, Augustine, re- <lb/>
+            [ fulges. <lb/>
+            Testantur libri quod loquor ipse lui. <lb/>
+            Quamvis multorum placeat prudentia libris. <lb/>
+            Si Angustinus adest, sufficit ipe tihi.</p>
+          <p>VI. Hieronyme interpres, variis doctissimc lin-
+            <milestone unit="PLSection" n="B"/><lb/>
+            [ gnis. <lb/>
+            Te Bethlehem celebrat, totus te personat <lb/>
+            [ orbis. <lb/>
+            Te quoque nostra tuis promit bibliotheca Ii- <lb/>
+            [bris.</p>
+          <p>VII. Nomine Joannes Chrysostomus inde vocatus, <lb/>
+            Aurea quod nostrum lingua coruscat opus. <lb/>
+            181 Constantinopolis mc præceptore reful­ <lb/>
+            f get, <lb/>
+            Et celebror libris doctor ubique meis. <lb/>
+            Composui mores, virtutum praelia dixi, <lb/>
+            Et docui miseros crimina flere reos.</p>
+          <p>VIII. Clarior eloquio cunctis, Cypriane, refulges. <lb/>
+            Tu modo doctorcras, tu modo rnartyr ades.</p>
+          <p>IX. Si Maro, si flaccus, si Naso, et Persius hor- <lb/>
+            [ret, <lb/>
+            Lucanus si te, Papininsquc ledet, <lb/>
+            Par erat eximio dulcis Prudentius ore, <lb/>
+            Carminibus variis nobilis ille satis.</p>
+          <p>
+            <milestone unit="PLSection" n="A"/><lb/>
+            X. Perlege facundi studiosum carmen Aviti, <lb/>
+            Ecce JuvenCis adest, Seduliusque tibi. <lb/>
+            Ambo lingua pares, florentes versibus ambo, <lb/>
+            Fonte evangelico pocula larga ferunt. <lb/>
+            Desine gentilibus ergo inservire poetis, <lb/>
+            Dum bona tanta potes, quid tihi Calliroen ?</p>
+          <p>X!. Historias rerum et transacli tempora secli, <lb/>
+            Condita membranis hæc simul area gerit.</p>
+          <p>XII. Quantum Augustino clares tu, Hippone, ma- <lb/>
+            [ gistro, <lb/>
+            Tantum Roma suo præsule Gregorio.</p>
+          <p>XIII. Non satis antiquis doctoribus impar haberis, <lb/>
+            Leander vates. Hoc tua dicta docent.</p>
+          <p>XIV. Conditur hic juris serics amplissima legum, <lb/>
+            Veridico Lalium quæ regit ore forum. <lb/>
+            Non fucos libros gestant. haec scrinia nostra. <lb/>
+            Qui cupis, ecce lege, si tua vota libent. <lb/>
+            Tolle hic segnitiem, pone fastidia mentis. <lb/>
+            Crede mihi, trater, doctior inde redis.
+            <milestone unit="PLSection" n="B"/><lb/>
+            An dicis forte : Quid jam mihi ista neces- <lb/>
+            [ se est? <lb/>
+            Quod mediter studii non superesse mihi. <lb/>
+            Explicui bistorias, percurrique omnia legis, <lb/>
+            182 Vere hoc si dicis, jam nihil ipse sa. <lb/>
+            l pis,</p>
+          <p>XV. Quos claros orbe celebrat medicina magi- <lb/>
+            [ stros, <lb/>
+            Hos præsens pictos signat imago viros. <lb/>
+            Sunt medico dona, quandiu quisque laborat. <lb/>
+            Æger jam surgit, nulla lagena venit. <lb/>
+            Quod debes medico, redde æger, nc mala rur- <lb/>
+            [ sus <lb/>
+            Occurrant, curret dcnuo nemo tibi. <lb/>
+            Pauperis attendat medicus censum, atque <lb/>
+            | potentis : <lb/>
+            Dispar conditio dispari habenda modo cst. <lb/>
+            Si fuerit dives, sit justa occasio lucri; <lb/>
+            Si pauper, merces sufficit una tibi.
+            <milestone unit="PLSection" n="c"/><note type="footnote"> Quem primum fidci Græcia clara deJit. <lb/>
+            Celsus eram meriiis, et clarus copia fandi , <lb/>
+            Praereptus subito... <lb/>
+            Pro Græcia, Vat., !Jfatia; et pro clarus, Malr , men­ <lb/>
+            dose, ctarius.- <lb/>
+            •'III. Fortasse : <lb/>
+            Gallia me genuit, uie rict.avis ora tonantem... <lb/>
+            Pro Ql14m'n4 alii alilqua. </note><note type="footnote"> IV; Enitet; al., eminet. </note><note type="footnote"> V. Corrupte apud Florezium, Augmtiae,,. <lb/>
+            Mentitur qui te totam legisse fatemur. <lb/>
+            Pro nn qnis nlii nut qttis. De re ipca vidc ElymOiO*. <lb/>
+            lib. vi, Cnp. 7, n. i. Versu 4, alii, quæ (n"lllo,.. Pro <lb/>
+            ipse, alir ipsi, quod metro non congniit. Pro jmi-den* <lb/>
+            ';n, alii vofiimmdy quod fortasse præferendum, quam­ <lb/>
+            vis metro repugnet. </note><note type="footnote"> VI. Alii pc,.pcranl, le tolus ro.llce!cb)"fll orbis. Non-</note> 
+            <milestone unit="PLSection" n="D"/><note type="footnote"> bulfi Editi indicant post hunc versum alium penta­ <lb/>
+            metrimi desiderari; scd videntur potius esse tres <lb/>
+            hexametri sine ullo pentametro. De tertio versu di­ <lb/>
+            ciuni in Isitloriallis, loc. cit. </note><note type="footnote"> VII. Vocatus; al., roraris, vel t'ncal"'". Codex Vat. <lb/>
+            f'HI, Itabcl vocatus; vcl hoc, vel vocabar tenendum. <lb/>
+            'Versusi sic -In Ms. Matr., mendose : <lb/>
+            Aurea quod nostris promere lingua tuis.' <lb/>
+            Pro nostrum, alii nostra. Mox vers. 5, mendose, Cod. <lb/>
+            Matrit;: </note><note type="footnote"> Cop)posHi mores hominuiQ, virtutum praemia dixi. <lb/>
+            Vide librurn I-sidori de Vir. iJlustr., ubi de sancto <lb/>
+            Joanne Chrysoslomo agit, ejusque opus de compu­ <lb/>
+            gnantia virtuliim et vitiorum laudat. </note><note type="footnote"> . ViI. lUfulqes; at., re(ulgens. </note><note type="footnote"> IX. 1'edt!l: Ita scribendum pro tadet, ut prima <lb/>
+            corripi possit. Pro par erat, alii, ,UlI' eat. <lb/>
+            x... Gentilibus. Al., iniuus benc, gen,ibu,. De lioc </note> 
+            <milestone unit="PLSection" n="C"/><note type="footnote"> titulo vide prolegomena ad J il venClIln, num. 92, et <lb/>
+            ad Sedulium num. ł67. Ex niendo Ms. i archivii <lb/>
+            vat., quam in Galiope, conjici posset qu;ct twi Callio­ <lb/>
+            pe ? pro quid tibi Caltiroen ? Alii, Callirrhoem; alii <lb/>
+            alia. </note><note type="footnote"> X I, XII. Eusebius, Orosius, Gregorius. </note><note type="footnote"> XIII. Leander vates. AI. Isidore antistes, ut dixi in <lb/>
+            Isi(torianis, loc. cit. </note><note type="footnote"> XIV. Theodosius, Paulus, Gaius </note><note type="footnote">lbid. Alii, Non parvos libros gestant, etc., vcl Per­ <lb/>
+            multos libros gestant, etc. Hoc, et tria sequentia dis­ <lb/>
+            ticha constituunt primum litulum Bibliotlieca: a domno <lb/>
+            lsidoro editum in Ms. Matritensi, quein subsequitur <lb/>
+            alius titulus : sunt hic plura, etc., usque ad sume r1- <lb/>
+            .as, ut supra in primo titulo. Pro pone, nnle alii de­ <lb/>
+            pone. Pro frater, alii lector. Subinde : <lb/>
+            quid jam mihi tanta necesse est </note>
+            <milestone unit="PLSection" n="D"/><note type="footnote"> Quo mediter studio, nil superesse niei <lb/>
+            Alii : <lb/>
+            Quod mcdilem studii, nil superesse mihi, <lb/>
+            vel : <lb/>
+            Quod meditem studiis, nil superesse meis. <lb/>
+            Fortasse, nil super ecce, pro superesse. Mox : <lb/>
+            Explicui historias, et percurri omnia legis, <lb/>
+            ' Verba, luec si dicis... <lb/>
+            Alii: <lb/>
+            Explicui historias, percurri crimina legis. </note><note type="footnote"> XV. Cosmas, Damianus, Hippocrate, Galenus. </note><note type="footnote">Ibid. Sunt medico. Corrupte Editi, Sunt medio. In <lb/>
+            nonnullis Mss., antc versum Quod debes legitur ltem9 <lb/>
+            et ita etiam ante versum, Pauper;, attende : quod in­ <lb/>
+            dicat, duos diversos esse hos titulos, quamvis pro <lb/>
+            medico omnes compositi sint. Pro curret denuo alii <lb/>
+            occurret denuo. </note> <pb n="1111"/>
+            </p>
+          <p>
+            <milestone unit="PLSection" n="A"/>X VI. Quidquid Arabs aris, quidquid fert Indus odo- <lb/>
+            [ris, <lb/>
+            Quidquid et Ionii pervehit unda maris. <lb/>
+            Cinnamomum, myrrham, folium, casiamque <lb/>
+            [ nitentem, <lb/>
+            Balsama, thus, calamum, coryciumque ero­ <lb/>
+            f cum, <lb/>
+            Hæc possunt magnorum pigmentaria regum, <lb/>
+            Et domus immensis proflua divitiis. <lb/>
+            Nos viles fruimur pratorum germinis herbas, <lb/>
+            Quas humiles valles et juga ce'sa ferunt. <lb/>
+            Ergo sacri Hesperidum montes, et rura va­ <lb/>
+            Nam multis curis munera nostra valent. <lb/>
+            Hicodorata jacent, hic spirant cinnama, thura, <lb/>
+            Quæque opulentus Arabs, quæque Sabaea <lb/>
+            [ feret. <lb/>
+            Unguenti genera dum sint gratissima plura, <lb/>
+            Nil rosa, nil viola gratius esse potest. <lb/>
+            Cedet Elinus, cedet Amaracinus illis,
+            <milestone unit="PLSection" n="B"/><lb/>
+            Cedet et hic Cypro quæ regione venit. <lb/>
+            Unguenta hic cernis varia, quæ Græcia misit, <lb/>
+            Plurima et Hesperia de regione sumus. <lb/>
+            Yascula concreta fragilis de pulvere terrae <lb/>
+            Pigmenta gerimus, pocula nulla damus.</p>
+          <p>XVII. Qui calamo certare novit cum mortua pelle, <lb/>
+            183 Si placet, hic veniat; hic sua bella <lb/>
+            gerat. <lb/>
+            Quisque vagus fueri media librarius hora, <lb/>
+            Suspensus binis feriatur terga Oagellis.</p>
+          <p>XVIII. Si plus, bis, terque, quaterque fieri quod vult <lb/>
+            Scriba magis nosset, eo oportet, amice. <lb/>
+            Si sapis, et semis, hoc tibi dico, tace. <lb/>
+            Non patitur quemquam coram se scriba lo- <lb/>
+            [ quentem, <lb/>
+            Non est hic, quod agas, garrule, perge <lb/>
+            [ foras.</p>
+          <p>XIX. Hunc cecinit Salomon mira dulcedine librum <lb/>
+            Qui tenet rgregias Sponsi, Sponsæque ca-
+            <milestone unit="PLSection" n="C"/><lb/>
+            [mœnas, <lb/>
+            Ecclesiæ et Christi laudes hinc inde canentes. <lb/>
+            Et thalami memorat socios sociasque fideles. <lb/>
+            Has, rogo, mente tua,juvenis, mandare me­ <lb/>
+            r mento. <lb/>
+            Cantica sunt nimium falsi hæc meliora Ma- <lb/>
+            [ 'onis. <lb/>
+            Hæc tibi vera canunt vitae præcepta perennis. <lb/>
+            Auribus ille tuis male frivola falsa sonabit.</p>
+          <p>
+            <milestone unit="PLSection" n="A"/></p></div>
+          <div n="2" subtype="section" type="textpart"><ab>
+            <title type="sub">Carmen de eclipsi luna.</title>
+          </ab>
+          <p>Tu frte in luco lentus vaga carmina gignis, <lb/>
+            Argutosque inter latices et musica flabra <lb/>
+            Pierio liquidam perfundis nectare mentem. <lb/>
+            At nos congeries obnubit turbida reruin, <lb/>
+             Ferratæque premunt In Heno milite curae. <lb n="5"/>
+            Legicrepi tundunt, latrant fora. classica turbant. <lb/>
+            Et trans Oceanum ferimur porro usque, nivosus <lb/>
+            Cum teneat Vasco, nec parcat Cantaber horrens. <lb/>
+            En quibus indicas ut crinem frondea Phœbi <lb/>
+             Succingant, hederæve comas augustius umbrent. <lb n="10"/>
+            En quos flammantem jubeAs volitare per æthram. <lb/>
+            Quin mage pernices aquilas vis pigra elephantum. <lb/>
+            Praecurret, volucremque pigens testudo mo-<lb/>
+            [lossum<lb/>
+            184 Quam nos rorifluam sectemur carmine lu-<lb/>
+            [nam.<lb/>
+             Sed tamen incurvus per pondera terrea nitens, <lb n="15"/>
+            Picam, cur fesso livescat circulus orbe.
+            <milestone unit="PLSection" n="B"/><lb/>
+            Purpureumque jubar nivei cur tabeat oris. <lb/>
+            Non illam, ut populi credunt, nigrantibus antris <lb/>
+            Infernas ululans mulier prædira sub umbras <lb/>
+             Detrahit altivago e speculo; Dee carmine victa <lb n="20"/>
+            Vel rore Stygias ** <lb/>
+            Vincibilemque petitclamorem; quippe peræthram, <lb/>
+            Qua citimus limes dispescit turbida puris, <lb/>
+            Inviolata meat; sed vasto corpore tellus, <lb/>
+             Quae medium tenet ima polum, dum lumina fratris <lb n="25"/>
+            Detinet umbriferis metis tum sidere crasso <lb/>
+            Pallescit teres umbra rotæ, dum transeat axem <lb/>
+            Aggerei volox tumuli, speculoque rosanti <lb/>
+            Fraternas reparet per cælum libera flammas. <lb/>
+             Sed quia mira putas, cur, cum vis maxima solia <lb n="30"/>
+            Bis novies major clueat, quam terreus orbis, <lb/>
+            Nunc circumcingat terrestres lumine metas, <lb/>
+            --me ratum rationis opus; namque aspice Phæ-<lb/>
+            [bum,<lb/>
+            Quam sublimis eat convexa per aurea mundi, <lb/>
+             Quamque humilem terram collustret curribus altis :
+            <milestone unit="PLSection" n="C"/><lb n="35"/>
+            Hic ingens utcunque libet vel desuper ignes <lb/>
+            Sparserit, obliquo vel cum radiaverit axe <lb/>
+            In terram radii franguntur; cætera solis <lb/>
+            Lumina, qua major jaculis radiantibus exit <lb/>
+             Nil obstante globo, tendunt per inania vasta, <lb n="40"/>
+            Donec pyramidis peragat victa umbra cacumen: <lb/>
+            Per quam cum Phoebe validos agit uda jugales. <lb/>
+            Infima vicinis nonnunquam decolor umbris <lb/>
+            Fratre caret, vacuoque exsanguis deficit ore. <note type="footnote"> XVI. Versu 2, alii : <lb/>
+            Quidquid Idumaei pervehitunda maris. <lb/>
+            Pro pervehit, fortasse provenit. Versu 6. Al. : <lb/>
+            Et domus , immensa proflua deliciis. <lb/>
+            Versu 7. Al.: <lb/>
+            Nos vilibus rruimur pralorum germinis herbis. <lb/>
+            Versu 9. Al. : </note> 
+            <milestone unit="PLSection" n="D"/><note type="footnote"> Ergo Pieridum sacri montes, el rura valete. <lb/>
+            Sic abundat sacri. Versu ii. AI. : <lb/>
+            Hic odorata jacent spirantia cinnama tliura, <lb/>
+            Quaeque serent seres, quæque Sabaea feret. <lb/>
+            Ungueoli genera dum comtent florida plura <lb/>
+            Nil rosa, vel violis gratius esse potest. <lb/>
+            Melius esset cedet ethis, pro Cedet et hic. Pro Cupro9 <lb/>
+            Qln Cyprium, et qui, pro quæ. </note><note type="footnote"> XVII. Novit. Al.. cupit. Haec omnia usque ad finem <lb/>
+            perge foras, de"ulIL in Muratorio. Versu 3, scripsi <lb/>
+            quisque, quod accipi solet pro quisquis. In Ediiis et <lb/>
+            Mss., q";'qu;a vagus, aut qui vagus hic. Foriasse hi <lb/>
+            duo versus 'ael31l1etri alium titulum de eadein re <lb/>
+            elItist it.. eba n t.. </note><note type="footnote"> X V III. Ad ;nterventorem. Florezius, mendo-e, ut <lb/>
+            arbitror, ad interventiorem. In duobus primis versi­ <lb/>
+            !i'.''s,."!)scurn, e?.' SeuslIs. Pro bis, alii d", Ul imum <lb/>
+            aistichun ad alium titulum de eodem interventore <lb/>
+            videtur XIX. pertinere. </note><note type="footnote"> Ue his versibus dixi in Isidorianis, cap. 65. <lb/>
+            num. 46, et cap. 8i, n. i2. Eos aliis Bibliothecae <lb/>
+            versibus annecto, quia ad idem genus pertinent. <lb/>
+            Editio Matrinensis Ulloae in 2 vere. exhibel egregius, <lb/>
+            pro egregius, et in vers. 7 omitiit prcecepta pro quo. <lb/>
+            lii nota conjicitur simulacra. Nos sequimur Codicem <lb/>
+            "alicanuf.. Ii;;U. </note> 
+            <milestone unit="PLSection" n="D"/><note type="footnote"> VERS. 1. Quid de hoc carmine sentiendum, babes <lb/>
+            in Jsidorianis, cap. 76. n. ti et senlL Ad mce Co­ <lb/>
+            dices et Editiones correctius quam hactenus illud nunc <lb/>
+            producimus. Pro in luco, alii in lucis. </note><note type="footnote"> 8. Cum teneat. Forte, cum tentet. </note><note type="footnote"> Ii. Pernice,. lia recte Cod. Regiovatic. 255. Editio <lb/>
+            Pisauri præLle";en,, Ulloæ permisces; ex quo cuuOr. <lb/>
+            matur lcgendum pernices. </note><note type="footnote">i I. Editio Ullose ita, corrupte : <lb/>
+            Vel rore Stygis IUlbere terra matri crepantem. <lb/>
+            Ex quo veram scripturam expiscari aliquis possit. </note><note type="footnote"> ui' Di,peicit '; At.. dispexit, vel despexit. </note><note type="footnote"> X5. Lumitia. AI., cIIlnailla. </note><note type="footnote"> 26. Detinet. At.. deserit; al., desinet. </note><note type="footnote"> 28. Pro aggere;, a ii aggere9 alti mendose ageret. </note><note type="footnote"> 31. Clueat. AI.. luceat. </note><note type="footnote"> 35. Curribus altis. AI.. curibus altis. </note><note type="footnote"> 36. V el de.up'''. Al., ut tie.uper; ale, cum de""".. </note> <pb n="1113"/>
+            
+            <milestone unit="PLSection" n="A"/><lb/>
+             Cur Mutem sola spolietur lumine luna, <lb n="45"/>
+            Nil vero mirum est; quippe illam lucis egentem <lb/>
+            Lux aliena fovet, quam cum pars proxima metæ <lb/>
+            Invidet, exspertat radios male cærula fratris. <lb/>
+            At chorus astrorum reliquus non tangitur umbris. <lb/>
+             Et proprium cunctis jubar est, nec sole rubescunt. <lb n="50"/>
+            Sed sudum *** <lb/>
+            185 Porro ultra solem rapitur cum vertice coelL <lb/>
+            Jam cur semestri non semper palleat orbe,
+            <milestone unit="PLSection" n="A"/><lb/>
+            Inflexi praestant obliquo tramite cursus. <lb/>
+             Namque vagans errore rato cum devia tortos <lb n="55"/>
+            Colligit anfractui. metam sol eminus exit, <lb/>
+            Intorquetque peplum noctis, radiatque sororem. <lb/>
+            Hæc eadem ratio esi, subitis cur frangitur umbris <lb/>
+            Augusti solis rutilum jubar, indiga lucis <lb/>
+             Quando inter terram et solem rota corporis almi <lb n="60"/>
+            Luna meat, fratrem rectia objectibus arcens. <note type="footnote"> 51. Sed sudum. Editio Ulloae. <lb/>
+            Sed sudum adiens atralibus impete celso. <lb/>
+            Quid inde erni possit, alii videant. </note><note type="footnote"> 55. Devia tortos. Sic Editio Pisaurensis ex cor­ <lb/>
+            rectione, ut videtur, Petri Pithoei. Editio Ulloæ, de­ <lb/>
+            viat ortos. </note>
+            <milestone unit="PLSection" n="B"/><note type="footnote">56. Colligit anfractus. Editio Ulloæ, et Ms. Vatic., <lb/>
+            Dum legit amfractus. </note><note type="footnote">58. Cur. Al., ubi, Al., ibi. </note><note type="footnote"> 59. Editio Ulloæ huic versui praeponit Quando <lb/>
+            inter terram, etc. </note><note type="footnote"> 60. Almi. Sic Editio Ulloæ; alii, almæ, forte, pro <lb/>
+            alma. </note> 
+            <milestone unit="PLSection" n="B"/><note type="footnote"> 61. Vide Isidoriana, loc. cit. </note> </p></div>
+          </div>
+        
+        </body></text></TEI>

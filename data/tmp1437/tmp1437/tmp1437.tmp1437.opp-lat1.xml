@@ -1,0 +1,1462 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title>Patrologiae Cursus Completus. Series Latina (PL)</title> 
+        <sponsor>University of Leipzig</sponsor>
+        <funder>European Social Fund Saxony</funder>
+        <principal>Gregory Crane</principal>
+        <respStmt>
+          <persName xml:id="Jouve">Jouve</persName>
+          <resp>OCR-ed, corrected and encoded the text</resp>
+        </respStmt>
+        <respStmt>
+          <persName>Greta Franzini</persName>
+          <resp>Project Manager (University of Leipzig)</resp>
+        </respStmt>
+        <respStmt>
+          <persName>Simona Stoyanova</persName>
+          <resp>Project Assistant (University of Leipzig)</resp>
+        </respStmt>
+        <respStmt>
+          <persName>Bruce Robertson</persName>
+          <resp>Technical Advisor (Mount Allison University)</resp>
+        </respStmt>
+      </titleStmt>
+      
+      <publicationStmt>
+        <authority>University of Leipzig</authority>
+        <idno type="filename">PL83.xml</idno>
+        <availability>
+          <licence target="https://creativecommons.org/licenses/by-sa/4.0/">Available under a Creative Commons Attribution-ShareAlike 4.0 International License</licence>
+        </availability>
+        <date>2014</date>
+        <publisher>University of Leipzig</publisher>
+        <pubPlace>Germany</pubPlace>
+      </publicationStmt>
+      
+      <sourceDesc>
+        <listBibl xml:lang="la">
+          <biblStruct>
+            <monogr>
+              <editor>
+                <persName>
+                  <name xml:lang="fr">Jacques Paul Migne</name>
+                </persName>
+              </editor> 
+              <author ref="urn:cite:perseus:author.771">Isidorus Hispalensis</author>
+              <title>Differentiarum Sive De Proprietate Sermonum Libri Duo</title>
+              <title>Allegoriae Quaedam Sacrae Scripturae</title>
+              <title>De Ortu Et Obitu Patrum Qui In Scriptura Laudibus Efferuntur</title>
+              <title>In Libros Veteris Ac Novi Testamenti Proemia</title>
+              <title>Liber Numerorum Qui In Sanctis Scripturis Occurrunt</title>
+              <title>De Veteri Et Novo Testamento Quaestiones</title>
+              <title>Mysticorum Expositiones Sacramentorum Seu Quaestiones In Vetus Testamentum</title>
+              <title>Appendix Ad Libros Regum</title>
+              <title>De Fide Catholica Ex Veteri Et Novo Testamento Contra Judeos</title>
+              <title>Sententiarum Libri Tres</title>
+              <title>De Ecclesiasticis Officiis</title>
+              <title>Synonyma De Lamentatione Animae Peccatricis</title>
+              <title>Regula Monachorum</title>
+              <title>Epistolae</title>
+              <title>De Ordine Creaturarum Liber</title>
+              <title>De Natura Rerum Ad Sisebestum Regem Liber</title>
+              <title>Chronicon</title>
+              <title>Historia De Regibus Gothorum. Wandalorum Et Suevorum</title>
+              <title>De Viris Illustribus Liber</title>
+              <title>Carmina [Ascripta]</title>
+              <title>Chronica Regum Visigothorum (Incertus)</title>
+              <title>Expositio In Canticum Canticorum Salomonis [Incertus]</title>
+              <title>De Conflictu Vitiorum Et Virtutum (Incertus)</title>
+              <title>Expositio In Missa (Incertus)</title>
+              <title>Sententiarum Liber Quartus (Incertus)</title>
+              <title>Exhortatio Humilitatis (Incertus)</title>
+              <title>Testimonia Divinae Scripturae Et Patrum (Incertus)</title>
+              <title>Sermones (Incertus)</title>
+              <title>De Ecclesiasticis Dogmatibus (Incertus)</title>
+              <title>Sentantiae Differentiarum De Activa Vita Atque Contemplativa [Incertus]</title>
+              <title>Exhortatio Poenitendi Cum Consolatione Et Misericordia Dei [Incertus]</title>
+              <title>Lamentum Poenitantiae (Incertus)</title>
+              <title>Oratio Contra Insidias Diaboli (Incertus)</title>
+              <title>Liber De Ortu Et Obitu Patrum Incertus</title>
+              <title>Liber De Numeris (Incertus)</title>
+              <title>Glossae in Sacram Scripturam</title>
+              <title>Differentiarum, sive de Proprietate Sermonum, Liber</title>
+              <title>Liber Glossarum</title>
+              <imprint>
+                <publisher>Garnier</publisher>
+                <pubPlace>Paris</pubPlace>
+                <date>1850</date>
+              </imprint>
+              <biblScope unit="volume">83</biblScope>
+            </monogr>
+            <monogr>
+              <author>Auctor Incertus</author>
+              <title>Archiepiscopi Toletani Veteres</title>
+              <title>Chronologia Gothicorum Regum (Ex Codice Regio Vaticano)</title>
+              <imprint>
+                <publisher>Garnier</publisher>
+                <pubPlace>Paris</pubPlace>
+                <date>1850</date>
+              </imprint>
+              <biblScope unit="volume">83</biblScope>
+            </monogr>
+            <ref target="http://hdl.handle.net/2027/pst.000020950231">HathiTrust</ref>
+            
+          </biblStruct>
+        </listBibl>
+      </sourceDesc>
+      
+    </fileDesc>
+    <encodingDesc>
+      <p>The following text is encoded in accordance with EpiDoc standards and with the
+        CTS/CITE Architecture.</p>
+      <refsDecl n="CTS">
+        <cRefPattern n="no citable units founds" matchPattern="(.+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div/tei:div[@n='$1'])"/>
+      </refsDecl>
+    </encodingDesc>
+    
+    <profileDesc>
+      <langUsage>
+        <language ident="la">Latin</language>
+      </langUsage>
+    </profileDesc>
+    
+</teiHeader>
+  <text>
+    <body><div type="edition" n="urn:cts:latinLit:tmp1437.tmp1437.opp-lat1">
+          <ab>
+            <title type="sub">APPENDIX XIII.</title>
+          </ab>
+          <ab>
+            <title type="sub">DE ECCLESIASTICIS DOGMATIBUS.</title>
+          </ab>
+          <p>
+            <milestone unit="PLSection" n="D"/></p>
+          <ab>
+            <title type="sub">CAPUT PRIMUM. — De fide Trinitatis.</title>
+          </ab>
+          <p>Credimus unum esse Deum Patrem, et Filium, et <lb/>
+            Spirtum sanctum. Patrem, eo quod Filium habeat ; <lb/>
+            Filium, eo quod Tatrem habeat ; Spiritum sanctum, <lb/>
+            eo quod sit ex Patre et Filio procedens, Patii et Filio <lb/>
+            coæternus. Pater ergo principium deitatis ; qui sicut <lb/>
+            nunquam fuit non Deus, ita nunquam fuit non Pater, <lb/>
+            a quo Filius natus, a quo Spiritus sanctus non natus, <lb/>
+            quia non est Filius; ueque ingenitus, quia non est <lb/>
+            Pater ; neque factus, quia non est ex nihilo, sed ex Deo <lb/>
+            Patre, et Deo Filio Deus procedens. Pater aeternus eo <lb/>
+            quod æternum habeat Filium, cujus a'ternus sit Pater.
+            <milestone unit="PLSection" n="D"/><lb/>
+            Filius æternus, eo quod sit Patri coæternus. Spiritus <lb/>
+            sanctus aeternus, eo quod sit Patri et Filio coæternus. <lb/>
+            Non confusa in uta persona Trinitas, ut Sabellius dicit, <lb/>
+            neque separata, aut divisa in natura Divinitas, ut <lb/>
+            Artus blasphemat ; sed alter io persona Pater, alter <lb/>
+            in persona Filius, alter in persona Spiritus saiu tus. <lb/>
+            Unus natura in sancta Trinitate Deus Pater, et Filius, <lb/>
+            et Spiritus sanctus.</p>
+          <ab>
+            <title type="sub">CAP. II. — De incarnatione Christi.</title>
+          </ab>
+          <p>Non Patercarnem assumpsit, neque Spiritus sanctus, <lb/>
+            sed Filius tantum ; ut qui erat in divinitate Dei PaLris <note type="footnote"> Cap. I. De hoc opusculo confer Isidoriana , cap. 85, <lb/>
+            ubi pra:latioriem Vezzosii adjeci, et llernandezii ob­ <lb/>
+            brivalio es de Brachal in episcopo llispal.'ii&gt;i auctore <lb/>
+            ejusdem (ipustuli. E notis Vezzosii quic Inagis oppor­ <lb/>
+            tsuia vidcbuntur geligain. De argumentis primorum <lb/>
+            capitmn multis in locis agit lsidorus. Vide Jib. u, de <lb/>
+            Offic. eccles. cnp. 25. Bign.cus exhibet: Patcr ergo <lb/>
+            principium, principale nomen deilalls, quia sicutt etc., <lb/>
+            et post ptincipale notat ad inarg. , forte, totius. </note><note type="footnote"> Cap. II. Codex Mausli, ul qui erat in divinitate Patris <lb/>
+            Filias, ipse fieret in ;'ulIline hominis filius. Paulo post <lb/>
+            Bignæus, qui non erat 1lulil'itale Dei Filius. Dei ergo </note> <pb n="1229"/>
+            
+            <milestone unit="PLSection" n="A"/><lb/>
+            Filius, ipse fieret in homine hominis matris filius,ne <lb/>
+            ' filii nomen ad alterum transiret, qui non esset æter­ <lb/>
+            pa nativitateFilius.Dei ergo Filius factus est hom­ <lb/>
+            ais filius, natus secundum veritatem naturæ ex Deo <lb/>
+            Dei Filius et secundum veritatem naturæ ex homine <lb/>
+            hominis filius, ut veritas geniti non adoptione, non <lb/>
+            appellatione, sed in utraque nativitate Filii nomen <lb/>
+            nascende haberet, et esset verus Deus, et verus <lb/>
+            homo usus Filius. Non ergo duos Christos neque duos <lb/>
+            Filios fatemur, sed DeuM et hominem unum Filium ; <lb/>
+            quem propterea et unigenitum dicimus, manentem <lb/>
+            in duabus substantiis, sicut ei naturæ veritas contu­ <lb/>
+            lit, non confusis naturis, neque immistis, sicut Ti­ <lb/>
+            motheani volunt, 6ed secietate unitis. Deu. ergo <lb/>
+            hominem assumpsit, homo in Deum transivit ; non <lb/>
+            naturæversibilitate, sicut Apollinaristæ dicunt, sed <lb/>
+            Dei dignatione, ut nec Deus mutaretur 321 in <lb/>
+            humanam substantiam assumendo hominem, nec <lb/>
+            homo in divinam glorificatus in Deum, quia mutatio
+            <milestone unit="PLSection" n="B"/><lb/>
+            vel versibilitas naturæ et diminutionem et abolitio­ <lb/>
+            nem substantiae facit. Creditur a nobis sine confu­ <lb/>
+            sione eonjuncta sancta Trinitas, sine separatione <lb/>
+            distincta. Naius est ergo Dei Filius ex homine, et <lb/>
+            non per hominem, id est, non ex viri coitu, sicut <lb/>
+            Ebion dicit ; sed carnem ex Virginis corpore trahens, <lb/>
+            et non de cœlo secum alTerens, sicut Marcion, Origenes <lb/>
+            et Eutyches affirmant. Neque in phantasia, id est, <lb/>
+            absque carne, sicut Valeniinus asserit, id est, neque <lb/>
+            putative imaginatum, sed corpus veram. Non tantum <lb/>
+            carnem ex carne, sicut Marcianus, sed verus Deus <lb/>
+            ex divinitate et verus bomo ex carne, unus Filius ; <lb/>
+            in divinitate Verbum Patris et Deus, in homine ani­ <lb/>
+            ma et caro. Anima non absque sensu et ratione, ut <lb/>
+            Apollinaris, neque caro absque anima, ut Eunomius ; <lb/>
+            sect anima cum ratione sua, et corpus cum sensibus <lb/>
+            suis, per quos sensus veros in passione et ante pas­ <lb/>
+            sionem suae carnis dolores sustinuit.</p>
+          <ab>
+            <title type="sub">CAP. III, —Quod æternus Deus ex Virgine natus sit.</title>
+          </ab>
+          <p>
+            <milestone unit="PLSection" n="c"/>Neque ii. est natus ex Virgine, et ut divinitatis <lb/>
+            initium homo nascendo acceperit, quasi autequam <lb/>
+            nasceretur ex Virgine Deus non fuerit, sicut Artemon, <lb/>
+            et Berillus, et Marcellus docuerunt ; sed æternus <lb/>
+            Deus et homo ex Virgae natus est.</p>
+          <ab>
+            <title type="sub">CAP. IV. — De Trinitate perfecta.</title>
+          </ab>
+          <p>Nihil creatum aut serviens In Trinitate credamus, <lb/>
+            ut vult Dionysius, fons Arii ; nihil inæquale, ut vult <lb/>
+            Eunomius, ut Arius; nihil inæquale gratiæ,ut vult <lb/>
+            Aetius; nibil auterius posteriusve, aut minus, ut <lb/>
+            Arius; nihil extraneum, aut ofliciale alteri, ut Mace­ <lb/>
+            donius; nihil persuasione aut subreptione insertum, <lb/>
+            ut Manichæus ; nihil corporeum, ut Melito et Ter­ <lb/>
+            tullianus ; nihil corporaliter effigiatum, ut Anthropo­ <lb/>
+            morphus, et Vadianus ; nihil sibi invisibile a creatu­ <lb/>
+            ris, ut Origenes; nihil creaturis visibile, ut Fortuna­ <lb/>
+            tus; nihil moribus vel voluntate diversum, ut Alar­ <lb/>
+            cion; nihil ex Trinitatis essentia ad creaturarum na­ <lb/>
+            turam deduetum, ut Plato et Tertultianus ; nihil
+            <milestone unit="PLSection" n="D"/><lb/>
+            efficio singulave, nec alteri commuuicabile, ut Ori­ <lb/>
+            genes ; nitri confusum, ut Sabellius ; sed totum per­ <lb/>
+            fectum, quia totum ex imo, et unum ex toto ; non <lb/>
+            tamen solitarium, ut præsumunt Praxeas et Salvanus, <lb/>
+            Pentapolitana damnabilis illa doctrina.</p>
+          <ab>
+            <title type="sub">CAP. V. — De homousio.</title>
+          </ab>
+          <p>Homousios ergo, id est, coessentialis in divinitate <lb/>
+            Patri Filius, homousios Patri et Filio Spiritus san­ <lb/>
+            ctus, homousios Deo et homini unus Filius manens
+            <milestone unit="PLSection" n="A"/><lb/>
+            Deus in homine suo in gloria Patris, desiderabilis <lb/>
+            videri ab angelis; sicut Pater, et Spiritus sanctus <lb/>
+            adoratur ab angelis, et ab omni creatura; non homo <lb/>
+            factus præter Deum, vel Christus eum Deo, sicut <lb/>
+            blasphemat Nestorius, sed homo in Deo, et Deus in <lb/>
+            homine.</p>
+          <ab>
+            <title type="sub">CAi. VI. — De resurrectione.</title>
+          </ab>
+          <p>322 Erit resurrectio mortuorum omnium homi­ <lb/>
+            num, sed una et insimul, et semel. Non prima jus­ <lb/>
+            torum, et secunda peccatorum, ut fabula est somnia- <lb/>
+            torum, sed una omnium. Et si id resurgere dicitur <lb/>
+            quod cadit, caro ergo nostra in veritate resurget, <lb/>
+            sicut in veritate cadit. Et non sucundum Origenem <lb/>
+            immutatio corporum erit, id est, aliud novum cor­ <lb/>
+            pus pro cerne ; sed eadem caro corruptibilis, quæ <lb/>
+            cadit, tam justorum quam injustorum, incorruptibilis <lb/>
+            reaurget, quae vel poenam sufferre possit pro pecca­ <lb/>
+            tis, vel in gloria æterna manere pro meritis.</p>
+          <p>
+            <milestone unit="PLSection" n="B"/></p>
+          <ab>
+            <title type="sub">CAP. VII. Resurrectio omnium communis.</title>
+          </ab>
+          <p>Omnium eun hominum erit resurrectio : si om­ <lb/>
+            nium erit, ergo omnes moriuntur, ut mors ab Adam <lb/>
+            ducta omnibus filiis ejus dominetur, et maneat illud <lb/>
+            privilegium in Domnino, quod de eo specialiter dici­ <lb/>
+            tur : Non dabis sanctum tuum videre corruptionem <lb/>
+            (Psal. xv, 10). Ejus enim caro non vidit corruptio­ <lb/>
+            nem. Hanc rationem maxima Patrum turba tradente <lb/>
+            suscepimus. Verum quia sunt et alii æque catholici, <lb/>
+            et eruditi viri, qui credunt, anima in corpore ma- .Dente, <lb/>
+            nente, immutandos ad incorruptionem et immortali- <lb/>
+            talem eos qui in adventu Domini vivi inveniendi sunt, <lb/>
+            et hoc eis reputari pro resurrectione ex mortuis, <lb/>
+            quod mortalitatem immutatione deponant, non mor­ <lb/>
+            te; quolibet quis acquiescat modo, non est haereticus, <lb/>
+            nisi ex contentione hæreticus fiat. Sufficit enim in <lb/>
+            Ecclesiæ lege carnis resurrectionem credere futaram <lb/>
+            de morte.</p>
+          <ab>
+            <title type="sub">CAP. VIII. — De judicio vivorum et mortuorum.</title>
+          </ab>
+          <p>
+            <milestone unit="PLSection" n="c"/>Quod autem dicimus in Symbolo, in adventu Do­ <lb/>
+            mini vivos ac rnortuos judicandos, non solum justos <lb/>
+            et peccatores signilicari, sicut Diodorus putat, sed <lb/>
+            et vivos eos qui in carne inveniendi sunt, credimus, <lb/>
+            qui adhuc morituri creduntur, vel immutandi sunt, <lb/>
+            ut alii volunt, ut suscitati continuo, vel reformati, <lb/>
+            cum ante mortuis judicentur.</p>
+          <ab>
+            <title type="sub">CAP. IX. — Peracto judicio non exspectanda re­ stitutio.</title>
+          </ab>
+          <p>Post resurrectionem et judicium non credamus <lb/>
+            restitutionem futuram, quam Origenesdelirat, utdae­ <lb/>
+            mones vel impii homines post tormenta, quasi sup­ <lb/>
+            pliciis expurgati, vel illi in angelicam, qua creati <lb/>
+            sunt, redeant dignitatem, vel isti justorum societate <lb/>
+            donentur, eo quod hoc divinae conveniat pietati ne <lb/>
+            quid ex rationalibus poreat creaturis, sed quolibet <lb/>
+            modo salvetur. Sed nos credamus ipsi judiciom­ <lb/>
+            nium et retributori justo, qui dixit : Ibunt impii in
+            <milestone unit="PLSection" n="D"/><lb/>
+            supplicium æternum, justi autem in vitam æternam <lb/>
+            (Matth. xxv, 46), ut percipiant fructum operum suo­ <lb/>
+            rum.</p>
+          <ab>
+            <title type="sub">CAP. X. — Creatio mundi. Angelorum creatio.</title>
+          </ab>
+          <p>In principio creavit Deus cœlum et terram, et <lb/>
+            aquam, ex nihilo. Et cum adhuc tenebræ ipsam aquari <lb/>
+            occultarent, et aqua terram absconderet, facti sunt <lb/>
+            angeli et omnes cœlestes virtutes, ut non esset <lb/>
+            otiosa Dei bonitas, sed haberet iu quibus per multa <lb/>
+            ante spatia bonitatem suam ostenderet ; et ita hic <note type="footnote"> Filius, etc. Postea, ,,'editur... aeparat;one distincta <lb/>
+            omittitur a fiignaeo, uti nonnulla alia ; cum Bignaeo <lb/>
+            fere faciunt Maurini inter appendjees ad Opera sancti <lb/>
+            Augustini. </note><note type="footnote"> CAP. ut. At., ex vir ine, ut et divinitati, initium... <lb/>
+            ut vult Ennon.iuB, nihil æquale gratia, utvultuihil <lb/>
+            persuasione, aut subrep'iolle..... ut Anthropomorphitæ, <lb/>
+            nihil sibi, etc. Animadvertit Vezzosius incertum aut <lb/>
+            falsum esse quod Melito Deum corporeum esse do­ <lb/>
+            cneril, et Tertullianum excusari, quod corporeum <lb/>
+            dixerit, quidquid nihilo opponitur. </note><note type="footnote"> CAP. v. Vezzosius, et Filius,el Spiritus sanctus. </note><note type="footnote"> CAP. VI. Reaurget; Vezzosius, ire veritate resurgit. </note><note type="footnote"> CAP. VII.. Imu,ulando,; al.. fJudando.s,. quod pe­ <lb/>
+            rinde est. </note> <pb n="1231"/>
+            
+            <milestone unit="PLSection" n="A"/><lb/>
+            visibilis mundus ex materia quae a Deo facta fuerat, <lb/>
+            factus est et ornatus.</p>
+          <ab>
+            <title type="sub">CAP. XI. — Solus Deus incorporeM.</title>
+          </ab>
+          <p>Nihil incorporeum et invisibile natura credendum, <lb/>
+            nisi solum Deum, id est, Patrem, et Filium, et Spi­ <lb/>
+            ritum sanctum. Qui ideo recte incorporeus creditur, <lb/>
+            quia ubique est, et omnia implet atque constringit ; <lb/>
+            ideo et invisibilis omnibus creaturis, quia incorpo­ <lb/>
+            reus est.</p>
+          <ab>
+            <title type="sub">CAP. XII. — Omnis creatura corporea.</title>
+          </ab>
+          <p>323 Creatura omnis corporea est; angeli et om­ <lb/>
+            nes coelestes virtutes corporeae, licet non carne sub­ <lb/>
+            sistant. Exeo autem corporeas esse credimus intel­ <lb/>
+            lectuales creaturas, quod localiter circumscribuntur ; <lb/>
+            sicut et anima bumana, quæ carne clauditur, et dae­ <lb/>
+            mones, qui per substantiam angelicae naturæ sunt.</p>
+          <ab>
+            <title type="sub">CAP. XIII. —Intellectuales naturæ immortales.</title>
+          </ab>
+          <p>
+            <milestone unit="PLSection" n="B"/>Immortales esse credimus intellectuales natu­ <lb/>
+            ns, quia carne carent, nec habent quo cadant, <lb/>
+            ut resurrectione egeant post ruinam necessaria.</p>
+          <ab>
+            <title type="sub">CAP. XIV. — Anima hominis quomodo creatur.</title>
+          </ab>
+          <p>Animas hominum non esse ab initio inter caeteras <lb/>
+            intellectuales naturas, nec insimul creatas, sicut Ori­ <lb/>
+            genes fingit; neque cum corporibus per coitum semi­ <lb/>
+            nantur, sicut Luciferiani, Cyrillus et aliqui Latino­ <lb/>
+            rum praesumptores affirmant, quasi naturae conse­ <lb/>
+            quentiam servantes. Sed dicimus creationem animae <lb/>
+            solum Creatorem omnium nosse, et corpus tantum <lb/>
+            per conjugii copulam seminari, Dei vero judicio coa­ <lb/>
+            gulari in vulva, et compingi, atque forrnari, ac for­ <lb/>
+            mato jam corpore animam creari, et infundi, ut vi­ <lb/>
+            vat in utero homo ex anima constans et corpore, <lb/>
+            et egrediatur vivus ex utero plenus humana sub­ <lb/>
+            stantia.</p>
+          <ab>
+            <title type="sub">CAP. XV. — Quod duce animæ non sunt in homine.</title>
+          </ab>
+          <p>
+            <milestone unit="PLSection" n="c"/>Neque duas animas esse dicimus in uno homine, <lb/>
+            sicut Jacobus et alii Syrorum scribunt, unam anima­ <lb/>
+            lem, qua animetur corpus, et immista sit sanguini, <lb/>
+            et alteram spiritualem, quæ rationem ministret ; sed <lb/>
+            dicimus unam esse eamdemque animam in homine, <lb/>
+            quæ et corpus sua societate vivificet, et semetipsam <lb/>
+            sua ratione disponat, habens in sese libertatem arbi­ <lb/>
+            trii, ut in suæ substantiae eligat cogitatione quod <lb/>
+            vult.</p>
+          <ab>
+            <title type="sub">CAP. XVI. — Anima hominis immortalis.</title>
+          </ab>
+          <p>Solum hominem credimus habere animam substan­ <lb/>
+            tivam, quae exula corpore vivit, et sensus suos atque <lb/>
+            ingenia vivaciter tenet. Non cum corpore moritur, <lb/>
+            sicut Aratus asserit, neque post modicum interval­ <lb/>
+            lum, sicut Zenon dicit, quia substantialiter vivit.</p>
+          <ab>
+            <title type="sub">CAP. XVII. — Animæ brutorum.</title>
+          </ab>
+          <p>Animalium vero animae non sunt substantivae, sed <lb/>
+            cum carne ipsa carnis vivacitate nascuntur, et cum
+            <milestone unit="PLSection" n="D"/><lb/>
+            earuis morte finiuntur, et moriuntur; et ideo nec <lb/>
+            ratione reguntur, sicut Plato et Alexander putant, <lb/>
+            sed ad omnia naturae incitamenta ducuntur.</p>
+          <ab>
+            <title type="sub">CAP. XVIII. — Infunditur anima.</title>
+          </ab>
+          <p>Anima humana non cum carne moritur, quia non
+            <milestone unit="PLSection" n="A"/><lb/>
+            cum carne, ut superius diximus, seminatur; sed for­ <lb/>
+            mato in ventre matris corpore, Dci judicio creatur, <lb/>
+            et infunditur, ut vivat homo intus in utero, et sic <lb/>
+            procedat nativitate in mundum.</p>
+          <ab>
+            <title type="sub">CAP. XIX. — Duæ substantiæ hominis.</title>
+          </ab>
+          <p>Duabus substantiis tantum constat homo, anima <lb/>
+            et corpore. Anima cum ratione sua, et corpore cum <lb/>
+            sensibus suis. Quos tamen sensus absque 324 ani­ <lb/>
+            mæ societate non movet corpus. Anima vero et sine <lb/>
+            corpore rationale suum tenet.</p>
+          <ab>
+            <title type="sub">CAP. XX. — Anima et spiritus idem.</title>
+          </ab>
+          <p>Non est tertius in substantia hominis spiritus, sic­ <lb/>
+            ut Didymus contendit, sed spiritus ipsa est anima ; <lb/>
+            pro spirituali natura, vel pro eo quod spiret in cor­ <lb/>
+            pore, spiritus appellatur. Anima vero ex eo vocatur, <lb/>
+            quod ad viveudum, vel ad vivificandum animet cor­ <lb/>
+            pus. Tertium vero, qui ab Apostolo cum anima et <lb/>
+            corpore inducitur, spiritum gratiam sancti Spiritus
+            <milestone unit="PLSection" n="B"/><lb/>
+            esse intelligamus, quam orat Apostolus, ut integra <lb/>
+            perseveret in nobis (1 Thess. v, 23), ne nostro vitio <lb/>
+            aut minuatur aut fugetur a nobis, quia Spiritus san­ <lb/>
+            ctus effugiet fictum (Sap. i, 5).</p>
+          <ab>
+            <title type="sub">CAP. XXI. — De libero arbitrio.</title>
+          </ab>
+          <p>Libertati arbitrii sui commissus est homo statim <lb/>
+            in prima conditione, ut, sola vigilanlia mentis adni­ <lb/>
+            tente, etiam in praecepti custodia perseveraret, si <lb/>
+            vellet in eo quod creatus fuerat permanere. Postquam <lb/>
+            vero seductione serpentis per Evam cecidit, naturae <lb/>
+            bonum perdidit, pariter et vigorem arbitrii; non ta­ <lb/>
+            mea electionem, ne non esset suum quod evitaret <lb/>
+            peccatum, nec merito indulgeretur quod non arbitrio <lb/>
+            diluisset. Manet itaque ad quaerendam salutem arbi­ <lb/>
+            trii libertas, id est, rationalis voluntas, sed admo­ <lb/>
+            nente prius Deo, et invitante ad salutem, ut vel eli­ <lb/>
+            gat, vel sequatur, vel agat occasione salutis, hoc <lb/>
+            est, inspiratione Dei. Ut autem consequatur quod
+            <milestone unit="PLSection" n="C"/><lb/>
+            eligit, vel quod sequitur, vel quod occasione agit, <lb/>
+            Dei esse libere confitemur. Initium ergo salutis no­ <lb/>
+            stræ Deo miserante habemus; ut acquiescamus salu­ <lb/>
+            tiferæ inspirationi, nostrae potestatis est; ut adipis­ <lb/>
+            camur quod acquiescendo admonitioni cupimus, di­ <lb/>
+            vini est muneris ; ut non labamur in adepto salutis <lb/>
+            munere, sollicitudinis nostræ est, et coelestis pariter <lb/>
+            adjutorii; ut labamur, potestatis nostrae est, et <lb/>
+            ignaviæ. Non tamen ad obtinendam sine illo, qui <lb/>
+            quaerentes facit invenire, qui pulsantibus aperit, qui <lb/>
+            petentibus donat. Sicut ergo initium salutis nostræ, <lb/>
+            Deomiserante et iuspirante, habere nos credimus, <lb/>
+            ita arbitrium naturae nostrae sequax esse divinae in­ <lb/>
+            spirationis libere confitemur. Igitur ut non labamur a <lb/>
+            bono vel naturæ, vel meriti, sollicitudinis nostræ <lb/>
+            est, et coelestis pariter adjutorii; ut labamur, po­ <lb/>
+            testatis nostrae et ignaviae.</p>
+          <ab>
+            <title type="sub">CAP. XXII. — Gratia,</title>
+          </ab>
+          <p>Firmissime credendum est in prævaricatione Adæ
+            <milestone unit="PLSection" n="D"/><lb/>
+            omnes homines naturalem possibilitatem et innocen­ <lb/>
+            tiam perdidisse; et neminem de profundo illius rui­ <lb/>
+            næ per liberum arbitrium posse consurgere, nisi eum <lb/>
+            gratia Dei miserantis erexerit ; « liberum enim ar­ <lb/>
+            bitrium ille perpessus, dum 325 suis inconsultius <note type="footnote"> CAP. III. Auctor hujus operis corporeum videtur <lb/>
+            vocare quidquid creatum est. Vide lib. II de OJfic. <lb/>
+            eccles., cap. i4, et lib. Different. rerum, num. tOO <lb/>
+            et seq. </note><note type="footnote"> CAP. xiv. Hoc caput a Joanne Hispalensi exscri­ <lb/>
+            ptum fuit, ut dixi in lsidorianis, cap. 83, num. 18 <lb/>
+            et seqq. Apud eum legitur, nec in semelCyrillus, <lb/>
+            et multi Lalinorunl..... naturae consequentia serviente. <lb/>
+            Et alia hujusmodi, quae ad Bignaei magis quam ad <lb/>
+            Vezzosii Editionem accedunt. </note><note type="footnote">CAP. XVII. lncitamenla; al., incitamento. </note><note type="footnote"> CAP. XIX. Corpore; at. carne, semel et iterum. </note><note type="footnote"> CAP. XXI. Emendaret; al., evilarel. Putat Vexzo­ <lb/>
+            sius, Semipelagianismum sapere videri quod dicitur, <lb/>
+            ut acquiescamus salutiferce inspirationi, nostræ potesta- <lb/>
+            Ii. est. Verba, Non tamen ad obtinendum, etc., et se­ <lb/>
+            quentia triginta capita desunt in Maurinoruin exem­ <lb/>
+            pia, et in plerisque aliis Mss., et at aliquo inserta <lb/>
+            sunt ex Coelestini epistola ad episcopos Galliæ,ex <lb/>
+            concilio Carthaginiensi contra Pelagianos, et ex <lb/>
+            Arausicano secundo. Haec tamen additamenta ne­ <lb/>
+            cessaria putavit Tbomasius, ut Vezzosius advertit. </note><note type="footnote"> CAP. XXII. llle; a!., olim ille. Haec verba Libera,," <lb/>
+            enim arbitrium, etc., quæ virgulis distinguuutur, sunt <lb/>
+            lnuocentii I, relata etiam a (;celesLino I. </note> <pb n="1233"/>
+            
+            <milestone unit="PLSection" n="A"/><lb/>
+            utitur bonis, cadens in prævaricationis profunda de­ <lb/>
+            mersus est; et nihil quemadmodum exinde surgere <lb/>
+            posset invenit; suaque in aeternum libertate dece­ <lb/>
+            ptus, hujus ruinæ latuisset oppressu, nisi eum post <lb/>
+            Christi pro sua gratia relevasset adventus, qui per <lb/>
+            novæ regenerationispurificationem omne praeteritum <lb/>
+            vitium sui baptismatis lavacro purgavit. »</p>
+          <ab>
+            <title type="sub">CAP. XXIII.- Nemo bonus per se.</title>
+          </ab>
+          <p>Neminem esse per semetipsum bonum, nisi parti­ <lb/>
+            cipationem sui ille donaverit, qui solus est bonus.</p>
+          <ab>
+            <title type="sub">CAP. XXIV. — Perseverantia in bonis a Deo.</title>
+          </ab>
+          <p>Neminem etiam baptismatis gratia renovatum ido­ <lb/>
+            neum esse ad superandas diaboli insidias, et ad vin­ <lb/>
+            cendas carnis concupiscentias, nisi per quotidianum <lb/>
+            adjutorium Dei perseverantiam bonæconversationis <lb/>
+            acceperit.</p>
+          <ab>
+            <title type="sub">CAP. XXV. — Liberum arbilrium.</title>
+          </ab>
+          <p>
+            <milestone unit="PLSection" n="B"/>Quod nemo nisi per Christum libero bene utatur <lb/>
+            arbitrio, idem magister in epistola ad Milevitanum <lb/>
+            concilium data prædicat, dicens : &lt; Adverle tandem, <lb/>
+            o pravissimarum mentium doctrina, quod primum <lb/>
+            hominem ita libertas ipsa decepit, ut dum indulgen­ <lb/>
+            tius frenis ejus utitur in prævaricationem praesum­ <lb/>
+            ptione incideret. Nec ex hac potuit erui, nisi ei <lb/>
+            providentia regenerationis statum pristinæ liberta­ <lb/>
+            lis Christi Domini reformasset adventus. »</p>
+          <ab>
+            <title type="sub">CAP. XXVI. — Merita.</title>
+          </ab>
+          <p>Quod omnia studia, et omnia opera, ac merita <lb/>
+            sanctorum ad Dei gloriam laudemque referenda sint, <lb/>
+            quia nemo aliunde ei placeat, nisi ex eo quod ipse <lb/>
+            donaverit; in quam nos sententiam dirigit beatae re­ <lb/>
+            'cordationis papae Zosimi regularis auctoritas cum <lb/>
+            scribens ad totius orbis episcopos ait: &lt; Nos autem <lb/>
+            instinctu Dei (omnia enim bona ad auctorem suum <lb/>
+            referenda sunt, unde nascuntur ad fratrum et co-
+            <milestone unit="PLSection" n="C"/><lb/>
+            episcoporum nostrorum conscientiam universa retn­ <lb/>
+            limus. » Hunc autem sermonem sincerissimae veri­ <lb/>
+            tatis luce radiantem tanto Afri episcopi honore ve­ <lb/>
+            nerati sunt, ut ita ad eumdem virum scriberent: <lb/>
+            &lt; Illud vero, quod in litteris, quas ad universas pro­ <lb/>
+            vincias curasti esse mittendas, posuisti, dicens : <lb/>
+            Nos tamen instinctu Dei, etc. Sic accipimus dictum, <lb/>
+            ut illos qui contra Dei adjutorium extollunt humani <lb/>
+            arbitrii libertatem, districto gladio veritatis velut <lb/>
+            cursim transiens amputares. Quid enim tam libero <lb/>
+            fecisti arhitrio, quam quod universa in nostræ hu­ <lb/>
+            militatis conscientiam retulisti? et tamen instinctu <lb/>
+            Dei factum esse fideliter sapienterque vidisti, vera­ <lb/>
+            citer fidenterque dixisti. Ideo utique, quia præpara­ <lb/>
+            tur voluntas a Domino, et ut boni aliquid agant, pa­ <lb/>
+            ternis inspirationibus suorum ipse tangit corda fi­ <lb/>
+            liorum (Proverb. VIII, 25, sec. LXX). Quotquot enim <lb/>
+            Spiritu Dei aguntur, hi filii Dei sunt (Rom. VIII, 14) ; <lb/>
+            ut nec nostrum deesse sentiamus arbitrium, et in <lb/>
+            bonis quibusque voluntatis humanae singulis moti-
+            <milestone unit="PLSection" n="D"/><lb/>
+            bus magis illius valere non dubitemus auxilium. »</p>
+          <ab>
+            <title type="sub">CAP. XXVII. — Quidquid boni ex Deo.</title>
+          </ab>
+          <p>Ita Deus ex cordibus hominum atque in ipso libe­ <lb/>
+            ro operatur arbitrio, ut sancta cogitatio, pium con­ <lb/>
+            silium, omnisque motus bonae voluntatis ex Deo sit, <lb/>
+            quia per illum aliquid boni possumus, sine quo nihil <lb/>
+            possumus.</p>
+          <ab>
+            <title type="sub">CAP. XXVIII. - Gratiæ vis.</title>
+          </ab>
+          <p>326 Quicunque dixerit gratiam Dei, qua juslifi­ <lb/>
+            camur per Jesum Christum Dominum nostrum, ad <lb/>
+            solam remissionem peccatorum valere quæ jam <lb/>
+            commissa sunt, non etiam ad adjutorium gratie, ut <lb/>
+            nou committantur, anathema sit.</p>
+          <p>
+            <milestone unit="PLSection" n="A"/></p>
+          <ab>
+            <title type="sub">CAr. XXIX.— Intelligentia ex gratia.</title>
+          </ab>
+          <p>Quisquis dixerit gratiam Dei per Jesum Christum <lb/>
+            propter hoc tantum nos adjuvare ad non peccandum, <lb/>
+            quia per ipsum nobis revelatur, et aperitur intelli­ <lb/>
+            gentia mandatorum, ut sciamus quid appetere et <lb/>
+            quid vitare debeamus, non autem per illam nobis <lb/>
+            praestari ut quod faciendum cognovimus etiam fa­ <lb/>
+            cere diligamus atque valeamus, anathema sit.</p>
+          <ab>
+            <title type="sub">CAP. XXX. — Preces sacerdotum.</title>
+          </ab>
+          <p>Obsecrationum quoque sacerdotalium sacramenta <lb/>
+            respiciamus, quae ab apostolis tradita in toto mundo, <lb/>
+            atque in omni catbolica Ecclesia uniformiter cele­ <lb/>
+            brantur, ut legem credendi lex statuat supplicandi. <lb/>
+            Cum enim sanctarum plebium praesules mandata si­ <lb/>
+            bimet legatione fungantur, apud divinam clementiam <lb/>
+            humani generis agunt causam, et, tota secum Ec­ <lb/>
+            clesia congemiscente, postulant, et precantur, ut in­ <lb/>
+            fidelibus donetur fides, ut idololatraeab impietatis suae
+            <milestone unit="PLSection" n="B"/><lb/>
+            liberentur erroribus, ut Judaeis, ablato cordis vela­ <lb/>
+            mine, lux veritatis appareat, ut hæretici catholicae <lb/>
+            fide! perceptione resipiscant, ut schismatici spiritum <lb/>
+            redivivae charitatis accipiant, ut lapsis pœnitentiæ <lb/>
+            remedia conferantur, ut denique catechumenis ad <lb/>
+            regenerationis sacramenta perductis, coelestis mise­ <lb/>
+            ricordiae aula reseretur. Haec autem non perfuncto­ <lb/>
+            rie, neque inaniter a Domino peti, rerum ipsarum <lb/>
+            monstrat effectus, quandoquidem ex omni errorum <lb/>
+            genere plurimos Deus dignatur attrahere, quos eru­ <lb/>
+            tos de potestate tenebrarum transferat in regnum fi­ <lb/>
+            lii charitatis suae, et ex vasis irae faciat vasa miseri­ <lb/>
+            cordiae. Quod adeo totum divini operis esse senti­ <lb/>
+            tur, ut haec efficienti Deo gratiarum semper actio, <lb/>
+            laudisque confessio pro illuminatione talium vel cor­ <lb/>
+            rectione referatur.</p>
+          <ab>
+            <title type="sub">CAP. XXXI. — Exorcismus et sufflatio.</title>
+          </ab>
+          <p>Illud etiam, quod circa baptizandos in universo
+            <milestone unit="PLSection" n="C"/><lb/>
+            mundo sancta Ecclesia uniformiter agit, non otioso <lb/>
+            contemplamur intuitu. Cum sive parvuli, sive juve­ <lb/>
+            nes ad regenerationis veniunt sacramentum, non <lb/>
+            prius fontem vitae adeant quam exorcismis et exsuf­ <lb/>
+            flationibus clericorum spiritus ab eis immundus abi­ <lb/>
+            gatur, ut tunc vere appareat quando princeps mundi <lb/>
+            hujus mittatur foras (Joan. XII, 31), et quomodo <lb/>
+            prius alligetur fortis, et deinceps vasa ejus diripian­ <lb/>
+            tur (Marc. III, 27), in possessionem translata victo­ <lb/>
+            ris, qui captivam ducit captivitatem, et dat dona ho­ <lb/>
+            minibus (Psal. LiVII, 19).</p>
+          <ab>
+            <title type="sub">CAP. XXXII. — Gratia et liberum arbitrium.</title>
+          </ab>
+          <p>Omnium bonorum affectuum, atque operum, et <lb/>
+            omnium studiorum, omniumque virtutum, quibus ab <lb/>
+            initio fidei ad Deum tenditur, Deum profitemur au­ <lb/>
+            ctorem. Et non dubitamus ab ipsius gratia omnia <lb/>
+            hominis merita praeveniri, per quem fit ut aliquid <lb/>
+            boni et velle incipiamus, et facere. Quo utique auxi­ <lb/>
+            lio et munere Dei, non aufertur liberum arbitrium,
+            <milestone unit="PLSection" n="D"/><lb/>
+            sed liberatur, ut de tenebroso lucidum, de pravo <lb/>
+            rectum, de languido sanum, de imprudente sit pro­ <lb/>
+            vidum (Philipp. II, 13). Tanta enim est erga omnes <lb/>
+            homines boniias Dei ut nostra velit esse merita quae <lb/>
+            sunt ipsius dona, 327 et pro his quæ largitus est <lb/>
+            aeterna praemia sit donaturus. Agit quippe in nobis <lb/>
+            ut quod vult et velimus et agamus; nec otiosa esse <lb/>
+            in nobis patitur quae exercenda, non negligenda, <lb/>
+            donavit, ut et nos cooperatores simus gratiae Dei. <lb/>
+            Ac si quid in nobis ex nostra viderimus remissione <lb/>
+            languescere, ad illum sollicite recurramus, qui sa­ <lb/>
+            nat omnes languores nostros, et redimit de interitu <lb/>
+            vitam nostram, et cui quotidie dicimus : Ne inducas <lb/>
+            nos in tentationem, sed libera nos a malo (Matth. <lb/>
+            VI, 13). <note type="footnote"> CAP. XXVI. Placeat; a!., placet; et accepimus, pro <lb/>
+            accipimus. Et infra plurium numero retuitslis, vidi.­ <lb/>
+            tis, dixistis. </note> <note type="footnote"> CAP. XXIX. Per ipsum: a!., per ipsam. </note><note type="footnote"> CAP. XXXII. Sanctus Coelestinus, profiteamur au <lb/>
+            ctorem. Et non dubitemus ab ipsius gratia. </note> <pb n="1235"/>
+            </p>
+          <p>
+            <milestone unit="PLSection" n="A"/></p>
+          <ab>
+            <title type="sub">CAP. XXXIII.— Adam primo fimmortalis.</title>
+          </ab>
+          <p>Quicunque dicit Adam primum hominem morta­ <lb/>
+            lem factum, ita ut sive peccaret, sive non peccaret, <lb/>
+            moreretur in corpore, hoc est, de corpore exiret , <lb/>
+            non peccati merito, sed necessitate naturæ, ana­ <lb/>
+            thema sit.</p>
+          <ab>
+            <title type="sub">CAP. XXXIV. — De baptizandis infantulis.</title>
+          </ab>
+          <p>Qnicunque parvulos recentes ab uteris matrum <lb/>
+            baptizamlos negat, aut dicit in remissionem quidem <lb/>
+            peccatorum eos baptizari, sed nihil ex Adam trahere <lb/>
+            originalis peccati, quod lavatro regenerationis ex­ <lb/>
+            pietur; unde flt consequens ut in eis forma bapti­ <lb/>
+            smatis in remissionem peccatorum non vera, sed falsi <lb/>
+            intelligatur, anathema sit. Quoniam non aliter intel­ <lb/>
+            ligendum est quod ait Apostolus: Per unum hominem <lb/>
+            peccalum intravit in mundum, et per peccatum mors, <lb/>
+            et ita in omnes homines pertranasiit, in quo omnes pec­ <lb/>
+            caverunt Rom. V, 12), nisi quemadmodum Ecclesia
+            <milestone unit="PLSection" n="B"/><lb/>
+            catholica ubiqne diffusa semper intellexit. Propter <lb/>
+            hanc enim fidei regulam etiam parvuli, qui nihil <lb/>
+            peccatorum in seipsis adhuc committere potuerunt, <lb/>
+            Ideo in peccatorum remissionem veraciter baptizan­ <lb/>
+            tur, ut in eis regeneratione mundetur quod genera­ <lb/>
+            tione traxerunt.</p>
+          <ab>
+            <title type="sub">CAP. XXXV. — Omnes vere sumus peccatores.</title>
+          </ab>
+          <p>Quod ait sanctis Joannes apostolus : Si dixerimus <lb/>
+            quia peccalum non habemus, no. ipsos seducimus, et <lb/>
+            veritas in nobis non est, quisquis sic accipiendum pu­ <lb/>
+            taverit, ut dicat propter humilitatem non oportere <lb/>
+            dici nos non habere peccatum , non quia veritas est, <lb/>
+            anathema sit. Sequitur enim apostolus, et adjungit: <lb/>
+            Si autem confessi fuerimus peccata nostra, fidelis est, <lb/>
+            et justus, qui remittat nobis peccata, et mundet nos ab <lb/>
+            omni iniquitate (I Joan. I, U). Ubi satis apparet hoc non <lb/>
+            tanturn humilicer, sed etiam veraciter dici Poterat <lb/>
+            enim apostolus dicere : Si dixerimus : Non habemus <lb/>
+            peccatum, nos ipsos extollimus , et humilitas in nobis
+            <milestone unit="PLSection" n="c"/><lb/>
+            non est; sed cum ait : Nes ipsos decipimus, et veritas <lb/>
+            in nobis non est. satis ostendit eum qui dixerit se non <lb/>
+            habere peccatum, non verum loqui, sed falsum.</p>
+          <ab>
+            <title type="sub">CAP. XXXVI. — Omnibus orandum pro dimittendis peccatis.</title>
+          </ab>
+          <p>Quicunque dixerit in oratione Dominica ideo di­ <lb/>
+            cere sanctos Dimitte nobis debita nostra (Matth. VI. <lb/>
+            12), ut non pro seipsis hoc dicant, quia non est eis <lb/>
+            jam necessai ia ista petitio, sed pro aliis qui sunt in <lb/>
+            suo populo peccatores; et ideo non dicere unumquem­ <lb/>
+            que sanctorum Dimitte mihi debita mea, sed Dimitte nobis <lb/>
+            debita nostra, ut hoc pro aliis potiusquam pro se justus <lb/>
+            petere intelligatur, anathema sit. Sanctus enitu et ju­ <lb/>
+            stus erat apostolus Jacobus, cum dicebat: In multis <lb/>
+            enim offendimus omnes (Jac. III, 2). Nam quare ad- <lb/>
+            ditnm est omnes , nisi ut ista sententia conveniret <lb/>
+            psalmo. ubi legitur: Non intres in judicium cum servo <lb/>
+            tuo, quia non justificabitur in conspectu tuo omnis vi-
+            <milestone unit="PLSection" n="D"/><lb/>
+            rens (Psal. CXLII, 2)? Et in oratione sapientissimi Sa­ <lb/>
+            lomonis: Non est homo qui non peccet (Eccle. VII, 21). <lb/>
+            I t in libro sancti Job : In mum omnis hominis si­ <lb/>
+            gnat, ut sciat omnis homo infirmitatem suam (Job <lb/>
+            XXXVII, 7), Unde etiam Daniel 328 sanctus et justus, <lb/>
+            um in orattone pluraliter diceret: Peccavimus, iniqui­ <lb/>
+            tatem fecimus (Dan. ix, 5), et cætera quæ ibi veraciter <lb/>
+            et humditer confitetur, ne putaretur, quemadmodum <lb/>
+            quidam sentiunt, hoc non de suis, sed de populi sui <lb/>
+            dixisse peccatis, postea dixit : Cum orarem, et confi- <lb/>
+            terer r peccata mea, et peccata populi mei Domino Deo meo. <lb/>
+            Noluit dicere, peccata nostra, sed et populi sui dixit, <lb/>
+            et sua, quoniam futuros istos qui tam male intellige­ <lb/>
+            rent tanquam propheta prævidit.</p>
+          <ab>
+            <title type="sub">CAP. XXXVII. — Dimittuntur debita etiam sanctis.</title>
+          </ab>
+          <p>Quicum ine ipsa verba Dominicæ orationis, ubi di- <lb/>
+            I imus Dimitte nobis debita nostra (Matth. vi, 12), ita
+            <milestone unit="PLSection" n="A"/><lb/>
+            volunt a sanctis dici, ut humiliter, non veraciter hoc <lb/>
+            dicatur, anathema sit. Quis enim ferat orantem, et <lb/>
+            non hominibus, sed ipsi Domino mentientem , qui <lb/>
+            labiis sit'i dicit dimitti velle, et corde dicit quæ sibi <lb/>
+            dimittantur debita non habcre?</p>
+          <ab>
+            <title type="sub">CAP. XXX VIII. — Lapsus Adæ.</title>
+          </ab>
+          <p>Si quis per offensam prævaricationis Adæ non to­ <lb/>
+            tum, id est, secundum corpus et animam in dete­ <lb/>
+            rius dicit hominem commutatum, sed animæ liber­ <lb/>
+            tale illæsa durante, corpus tantummodo corruptioni <lb/>
+            credit obnoxium, Pelagii errore deceptus adversatur <lb/>
+            Scripturæ dicenti : Anima quœ peccaverit, ipsa mo­ <lb/>
+            rietur (Ezech. XVIII, 4); et : Nescitis quoniam cui obe. <lb/>
+            ditis, et a qao quis superatur, ejus servus adjicitur <lb/>
+            (Rom. V!. 16; II Petre II, 19)?</p>
+          <ab>
+            <title type="sub">CAP. XX XIX.- Peccatum Adæ in postero.</title>
+          </ab>
+          <p>Si quis soli Adæ prævaricationem suam , non <lb/>
+            etiam ejus propagini asserit nocuisse, aut certe mor-
+            <milestone unit="PLSection" n="B"/><lb/>
+            lem tantum corporis, quæ pœna peccati est, non au­ <lb/>
+            tem et peccatum, quod mors est animæ, per unum <lb/>
+            hominem in omne genus humanum transisse testa­ <lb/>
+            tur, injustitiam Deo dabit, contradicens Apostolo di­ <lb/>
+            centi : Per unam hominem peccalum intravit in mun­ <lb/>
+            dum, et per peccatum mors, et ita in omnes homines <lb/>
+            pertransiit, in quo omnes homines peccaverunt (Rom. <lb/>
+            v, 18).</p>
+          <ab>
+            <title type="sub">CAP. XL. — Gratia.</title>
+          </ab>
+          <p>Si quis invocatione humana gratiam Dei dicit posse <lb/>
+            conferri, non autem ipsam gratiam facere ut invo­ <lb/>
+            cetur a nobis, contradicit Isaiæ prophetæ, vel Apo­ <lb/>
+            stolo idem dicenti: Inventus sum a non quærentibus <lb/>
+            me; palam apparui his qui me non interrogubant (Isai. <lb/>
+            LXV, 1; Rom. X. 20).</p>
+          <ab>
+            <title type="sub">CAP. XL!. — Voluntas bona a Deo.</title>
+          </ab>
+          <p>Si quis, ut a peccato purgemur, voluntatem no­ <lb/>
+            stram Deum exspectare contendit, non autem ut
+            <milestone unit="PLSection" n="C"/><lb/>
+            etiam purgari velimus, per sancti Spiritus infusionem, <lb/>
+            et operationem in nobis fieri conlitetur, resistit ipsi <lb/>
+            Spiritui sancto per Salomonem dicenti: Prœparatur <lb/>
+            voluntas a Domino (Proverb. xix, 14, Sec. LXX). Et <lb/>
+            Apostolo saluoriler prædicanti: DeuS est qui operA­ <lb/>
+            tur in nobis et velle, et perficere pro bona voluntate <lb/>
+            (Philipp. II, 15).</p>
+          <ab>
+            <title type="sub">CAP. XLII. - Gratia operatur onmia.</title>
+          </ab>
+          <p>Si quis sicut augmentum, ita etiam initinm fidei, <lb/>
+            ipsumque credulitatis affectum, quo in eum credimini <lb/>
+            qui j ustificat. impium, et ad regenerationem sacri ba­ <lb/>
+            ptimatis pervenimus, non per gratiae donum, id est, <lb/>
+            per inspirationem Spiritus sancti, corrigentem vd­ <lb/>
+            luntatem nostram ab infidelitate ad fidem , ab impie­ <lb/>
+            tale ad pietatem, sed naturaliter nobis messe dicit, <lb/>
+            apostolicis dogmatibus adversarius approbatur, beato <lb/>
+            apostolo Paulo dicente: Confidimus quia qui cæpit in vo­ <lb/>
+            bis bonum opus, per ficiet usque in diem Christi Jesu (Phi­ <lb/>
+             
+            <milestone unit="PLSection" n="D"/><lb/>
+            lipp. I, 0). Et illud : Vobis dalum est pro Christo <lb/>
+            non solum ut in eum credatis , verum etiam ut pro illo <lb/>
+            patiamini (Philipp. I, 28). Et: Gratia salvi j'acri estis <lb/>
+            per fidem, et hoc non ex vobis, Dei enim donum est <lb/>
+            (Ephes. II, 8). Qui enim fidem qua in Deum credi­ <lb/>
+            tuus dicunt esse naturalem , omnes eos qui ab EC­ <lb/>
+            clesia Cnristi alieni sunt quodammodo fideles esse <lb/>
+            definiunt.</p>
+          <ab>
+            <title type="sub">CAP. XLIII. — Gratiæ omnia deberi.</title>
+          </ab>
+          <p>Si quis sine gratia Dei credentibus, volentibus, de­ <lb/>
+            sideranubus , conantibus, sludentibus , petentibus <lb/>
+            quærentibus, pulsantibus nobis misericordiam dicit <lb/>
+            conferri divinitus ; non autem ut credamus, velmus, <lb/>
+            vel hæc omnia , sicut oportet, agere valeamus, per <lb/>
+            inlusionem et inspirationem sancti Spiritus in nobis <lb/>
+            fieri confitetur; et aut humilitati, aut obedientiæ hu­ <lb/>
+            manæ subjungit gratiæ adjutorium, nec ut obedientes <note type="footnote"> CAP. XL. AI.: Si quis ad invocationem humanam, etc. </note> <pb n="1237"/>
+            
+            <milestone unit="PLSection" n="A"/><lb/>
+            et humiles simus, gratiæ donum esse conseh- . <lb/>
+            tit, resistit Apostolo dicent : Quid enim habes quod <lb/>
+            non accepisti (t Cor. IV, 7)? Et: Cratia Dei sum id <lb/>
+            quod sum (Ibid., XV, 10).</p>
+          <ab>
+            <title type="sub">CAP. XLIV. — Hominem nihil posse sine Deo.</title>
+          </ab>
+          <p>Si qnis per naturæ vigorem bonum aliquid quod <lb/>
+            ad salutem pertinet vitæ æternæ cogitare, ul expedit, <lb/>
+            aut eligere, sive salutart, id est, evangelicæ prædica­ <lb/>
+            tioni consentire po se confirmat, absque illumina­ <lb/>
+            tione et inspiratione Spiritus sancti, qui dat omnibus <lb/>
+            suavitatem in consentiendo, et in credendo verita­ <lb/>
+            tem, hæretco lallitur Spiritu , non intelligens vocem <lb/>
+            Dei in Evangelio dicentis: Sine me nihil potestis fa­ <lb/>
+            cere (Joan. xv, 5); et illud Apostoli: Non quidem <lb/>
+            idonei sumus cogitare aliquid a nobis quasi ex nobis , <lb/>
+            sed sufficientia nostra ex Deo est (II Cor. III, 5).</p>
+          <ab>
+            <title type="sub">CAP. XLV. — Solus Deus trahit hominem.</title>
+          </ab>
+          <p>Si quis alios per misericordiam , alios vero per li-
+            <milestone unit="PLSection" n="B"/><lb/>
+            berun arbitrium, quod in omnibus qui de prævarica­ <lb/>
+            tione primi hominis nati sunt constat esse vitiatum, <lb/>
+            ad gratiam baptismi posse venire contendit, a recta <lb/>
+            fide probatur alienus. Ille enim non omnium liberum <lb/>
+            arbitrium per peccatum primi hominis asserit infir­ <lb/>
+            matum: aut certe ita læsum putat, ut tamen qui­ <lb/>
+            dam valeant sine reveltione Dei ministerium salutis <lb/>
+            aeternae per semetipsos posse conquirere. Quod <lb/>
+            quam sit contrarium ipse Dominus probat, qui non <lb/>
+            aliquos, sed neminem ad se posse venire testatur , <lb/>
+            nisi quem Pater atlraxerit (Joan. VI, 44). Sicut et <lb/>
+            Petro dicit: Beat.,. es, Simon BarJona, quia caro <lb/>
+            et sanguis non revelavit tibi, sed Pater mens, qui in <lb/>
+            cælis est (Matth. XVI, 17); et Apostolus : Nemo po­ <lb/>
+            test dicere Dominus Jesus, nisi in Spiritu sancto (/ <lb/>
+            Cor. XII, 3).</p>
+          <ab>
+            <title type="sub">CAP. XLVI. — Liberum arbitrium.</title>
+          </ab>
+          <p>Arbitrium voluntatis in primo homine infirmatum,
+            <milestone unit="PLSection" n="c"/><lb/>
+            nisi per gratiam baptismi non potest reparari; quod <lb/>
+            amissum, nisi a quo potuit dari non potest reddi. <lb/>
+            Unde Veritas dicit; Si vos Filius liberuverit, tunc vere <lb/>
+            liberi eritis (Joan. VIII, 36).</p>
+          <ab>
+            <title type="sub">GAP. XL VII. — Gratia.</title>
+          </ab>
+          <p>Matura humana, etiamsi in illa integritate in qua <lb/>
+            est condita permaneret, nullo modo seipsam, Crea­ <lb/>
+            tore suo non adjuvante, servaret. Unde cum sine <lb/>
+            Dei gratia salutem non possit custodire, quam acce­ <lb/>
+            pit, quomodo sine Dei gratia poterit reparate quod <lb/>
+            perdidit?</p>
+          <ab>
+            <title type="sub">CAP. XL VIII,. — An gratia sit natura.</title>
+          </ab>
+          <p>Sicut eis qui volentes in lege justificari , et a gra­ <lb/>
+            tia exciderunt, verissime 330 dicit Apostolus : Si <lb/>
+            in lege justitia est, ergo Chritus gratis mortuus est (Ga­ <lb/>
+            lar. II, 21); sic eis qui gratiam quam commendat et <lb/>
+            percipit fides Christi, putant esse naturam verissime <lb/>
+            dicitur : Si per naturam justitia est, ergo gratis
+            <milestone unit="PLSection" n="D"/><lb/>
+            Christus mortuus est. Jam hic enim erat lex, et non <lb/>
+            justificabat; jam hic erat et natura, et non justifica­ <lb/>
+            bat. Ideo Christus non gratis mortuus est, ut et lex <lb/>
+            per illum impleretur qui dixit: Non veni solvere le­ <lb/>
+            gem, sed implere (Matth. v, 17); et natura per Adam <lb/>
+            perdita per illum repararetur qui dixit venisse se <lb/>
+            quærere et salvare quod perierat.</p>
+          <ab>
+            <title type="sub">CAP, XLIX. —Repetitio superiorum.</title>
+          </ab>
+          <p>Secundum suprascriptas sanctarum Scripturarum <lb/>
+            sEntentias, vel antiquorum Patrum definitiones, hOc, <lb/>
+            Deo propitiante, et prædicare debemus, et credere , <lb/>
+            quod per peccatum primi hominis ita genus huma­ <lb/>
+            num sit inclinatunt, ut nullus postea aut diligere <lb/>
+            Deum sicut oportuit, aut credere in Deum, aut ope­ <lb/>
+            rari propter Deum quod bonum est possit nisi cum
+            <milestone unit="PLSection" n="A"/><lb/>
+            gratia misericordiæ divinæ prævenerit. Unde et <lb/>
+            Abel justo, et Noe, et Abrahæ , ct Isaac, et Jacob, <lb/>
+            omnique antiquorum sanctorum multitudini illam <lb/>
+            præclaram fidem , quam in ipsorum laude prædicat <lb/>
+            apostolus Paulus (Hebr. xi seqq.), non per boniTi <lb/>
+            naturæ, quod prius in Adam datum fuerat, sed per <lb/>
+            gratiam Dei credimus fuisse collatam. Quam gratiam, <lb/>
+            etiam post adventum Domini , omnibus qui baptizari <lb/>
+            desiderant, non in libero arbitrio haberi, sed Chri­ <lb/>
+            sii novimus simul et credimus largitate conferri, se­ <lb/>
+            cundum illud quod jam saepe dictum est, et prædicat <lb/>
+            Paulus apostolus : Vobis donatum esi pro Christo, <lb/>
+            non solum ut in eum credatis, sed etiam ut pro eo pa­ <lb/>
+            tiamini (Philipp. i, 29); et illud : Deus qui cœpit <lb/>
+            in vobis bonum opus, perficiet usque in diem Domini <lb/>
+            nostri (Ibid, G); et illud : Gratia salvi facti estis per <lb/>
+            fidem, et hoc non ex vobis, Dei enim donum est (Ephes. <lb/>
+            11, 8). Et quod de seipso ait Apostolus : Misericor­ <lb/>
+            diam consecutus sum, ut fidelis essem (1 Cor. Vit, 25).
+            <milestone unit="PLSection" n="B"/><lb/>
+            Non dixit: Quia eram, sed ut essem: et illud : Quid <lb/>
+            habes quod non accepisti ? et illud : Omne datum bonum, <lb/>
+            et omne donum perfectum desursum est, descendens a <lb/>
+            Patre luminum (Jac. 1, 17); et illud : Nemo habet <lb/>
+            quidquam, nisi illi datum fuerit desuper (Joan. at, 27).</p>
+          <ab>
+            <title type="sub">CAP. L. — Voluntas hominis post baptismum.</title>
+          </ab>
+          <p>Hoc etiam secundum fidem catholicam credimus, <lb/>
+            quod post acceptam baptismi gratiam, omnes bapti­ <lb/>
+            zati , Christo anxiliante et cooperante, quæ ad sa­ <lb/>
+            lutem animae pertinent, possunt, et debeant, si fide­ <lb/>
+            liter laborare voluerint, adimplere. Aliquos vero ad <lb/>
+            malum divina potestate prædestinatos esse, non so­ <lb/>
+            lum non credimus, sed etiam si sunt qui tantum <lb/>
+            mali credere velint, Cum omni deteslalionc illis ana­ <lb/>
+            thema dicimus.</p>
+          <ab>
+            <title type="sub">CAP. HI. — Initium meritorum unde.</title>
+          </ab>
+          <p>In omni opere bono non nos incipimus, et postea <lb/>
+            per Dei misericordiam adjuvamur, sed ipse nobis,
+            <milestone unit="PLSection" n="c"/><lb/>
+            ullis præcedentibus bonis meritis, et fidem et amo­ <lb/>
+            rem sui prius inspirat, ut et baptismi sacramenta <lb/>
+            fideliter requiramus, et post baptismam cum ipsius <lb/>
+            adjutorio ea quæ sibi sunt placita implere possimus. <lb/>
+            Unde manifestissime credendum cst quod et illius <lb/>
+            latronis quem Dominus ad paradisi patriam revoca­ <lb/>
+            vit (Luc. XXIII, 45), et Cornelii centurionis, ad quem <lb/>
+            angelus Domini missus est (Act. x, 1), Zachaeique , <lb/>
+            qui ipsum Dominum suscipere meruit (Luc. xix, 6), <lb/>
+            illa tam admirabilis fides non fuerit de natura , sed <lb/>
+            divinæ gratiæ largitalc donata.</p>
+          <ab>
+            <title type="sub">CAP. XLII. — Qui sint habendi pro baptizatis.</title>
+          </ab>
+          <p>331 Baptisma unum est, sed in Ecclesia, ubi <lb/>
+            una fides est, ubi in nomine Patris, et Filii, et <lb/>
+            Spiritus sancti, datur. Et ideo si qui apud illos <lb/>
+            hæreticos baptizati sunt, qui in sanctæ Trinitatis <lb/>
+            confessione baptizant, et veniunt ad nos, recipiantur <lb/>
+            quidem ut baptizati, ne sanctæ Trinitatis invocatio <lb/>
+            vel confessio annuletur; sed doceantur integre, et
+            <milestone unit="PLSection" n="D"/><lb/>
+            instruantur, quo sensu sanctæ Trinitatis mysterium <lb/>
+            in Ecclesia tencatur; et si consentiunt credere, vel <lb/>
+            acquiescunt confiteri, purgati jam fidei integritate <lb/>
+            confirmeniur manus impositione. Si vero parvuli <lb/>
+            simt, vel hebetes, qui doctrinam non rapiant, re­ <lb/>
+            spondeant pro illis qui eos offerunt juxta morem <lb/>
+            baptizandi; et sic, manus impositione et chrismate <lb/>
+            communiti, Eucharistiæ mysteriis admittantur. Illos <lb/>
+            autern qui non sanctæ Trinitatis invocalione apud <lb/>
+            hæreticos baptizati sunt, et veniunt ad nos, baptizari <lb/>
+            debere pronuntiamus, non rebaptizari. Neque enim <lb/>
+            credendum est eos fuisse baptizatos, qui non in <lb/>
+            nomine Patris, et Filii, et Spiritus sancti, juxta re­ <lb/>
+            gulam a Domino positam, tincti sunt, ut Paulini <lb/>
+            Procliani, Borboritæ, Siphori, qui nunc vocantur <note type="footnote"> CAP. XLV. Acta cdiicilii Arausicani: ls enim om­ <lb/>
+            nUltn liberum aJ'bitrium, etc, omisso non. </note><note type="footnote"> CAP. LII. Hoc est caput 22 Maurinæ Editionis, in <lb/>
+            qua omittuutur, ut dixi, praecedentia. Pro Paulini <lb/>
+            alii Paulianistæ, ct Jlonlallilæ pro Montani, et Theo <lb/>
+            dorus, stu Theudotus pro Theodosius. </note> <pb n="1239"/>
+            
+            <milestone unit="PLSection" n="A"/><lb/>
+            Bonostani, Photiniani, Montani, et Manichæi, varia­ <lb/>
+            que impietatis germina, vel caeterae istorum originis, <lb/>
+            sive ordinis pestes, quae duo principia sibi ignota <lb/>
+            introducunt, ut Cerdon et Marcion; vel contraria, <lb/>
+            ut Manichæus; vel tria, et barbara, ut Sethianus, et <lb/>
+            Theodosius; vel multa, ut Valentinus; vel Christum <lb/>
+            hominem fuisse absque Deo, ut Cerinthus, Hebion, <lb/>
+            Artemon, et Photinus. Ex istis, inquam, si qui ad <lb/>
+            nos venerint, non requirendum ab eis utrum bapti­ <lb/>
+            zati sint, an non; sed hoc tandem : si credant Eccle­ <lb/>
+            siae fidem, et baptizentur ecclesiastico baptismate.</p>
+          <ab>
+            <title type="sub">CAP. LIII. — De Eucharistia.</title>
+          </ab>
+          <p>Quotidie Eucharistiae communionem percipere nec <lb/>
+            laudo, nec reprehendo. Omnibus tamen Dominicis <lb/>
+            diebus communicandum suadeo, et hortor, si tamen <lb/>
+            mens sine affectu peccandi sit. Nam habentem adhuc <lb/>
+            voluntatem peccandi, gravari magis dico Eucharistiae <lb/>
+            perceptione, quam purificari. Et ideo quamvis quis
+            <milestone unit="PLSection" n="B"/><lb/>
+            peccato mordeatur, peccandi non habeat de caetero <lb/>
+            voluntatem, et communicaturus satisfaciat lacrymis, <lb/>
+            et orationibus, et confidens de Domini miseratione, <lb/>
+            qui peccata piae confessioni donare consuevit, acce­ <lb/>
+            dat ad Eucharistiam intrepidus et securus. Sed hoc <lb/>
+            de illo dico quem capitalia et mortalia peccata non <lb/>
+            gravant; nam quem mortalia crimina post baptismum <lb/>
+            commissa premunt, hortor prius publica poenitentia <lb/>
+            satisfacere, et ita sacerdotis judicio reconciliatum <lb/>
+            communioni sociari, si vult non ad judicium et con­ <lb/>
+            demnationem sui Eucharistiam percipere. Sed et <lb/>
+            secreta satisfactione solvi mortalia crimina non ne­ <lb/>
+            gamus; sed mutato prius saeculari habitu, et con­ <lb/>
+            lesso religionis studio per vitæ correctionem, et jugi, <lb/>
+            imo perpetuo luctu, miserante Deo, ita duntaxat, ut <lb/>
+            contraria pro iis quae poenitet agat, et Eucharistiam <lb/>
+            332 omnibus Dominicis diebus supplex et submis- <lb/>
+            IUS usque ad mortem percipiat.</p>
+          <ab>
+            <title type="sub">CAP. LIV. — De paenitentia.</title>
+          </ab>
+          <p>
+            <milestone unit="PLSection" n="c"/>Poenitentia vera est poenitenda non admittere, et <lb/>
+            admissa deflere. Satisfactio pœnitentiæ est causas <lb/>
+            peccatorum excidere, nec earum suggestionibus adi­ <lb/>
+            tum indulgere.</p>
+          <ab>
+            <title type="sub">CAP. LV. — De divinis promissionibus.</title>
+          </ab>
+          <p>In divinis promissionibus nibil terrenum vel trans­ <lb/>
+            itorium exspectemus , sicut Meletiani sperant; non <lb/>
+            nuptiarum copulam, sicut Cerinthius et Marcion <lb/>
+            delirant; non quod ad cibum vel ad potum pertinet, <lb/>
+            sicut Papiae, auctore Irenæo, et Tertullianus et <lb/>
+            Lactantius acquiescunt. Neque per mille annos post <lb/>
+            resurrectionem regnum Christi in terra iuturum, et <lb/>
+            sanctos cum illo in deliciis regnaturos speremus, <lb/>
+            sicut Nepos docuit, primam justorum resurrectionem <lb/>
+            et secundam impiorum qui confinxit; et inter has <lb/>
+            duas mortuorum resurrectiones gentes ignorantes <lb/>
+            Deum in angulis terrarum in carne servandas; quae <lb/>
+            post mille annos regni in terra justorum , instigante <lb/>
+            diabolo, movendæ sunt ad unam contra justos
+            <milestone unit="PLSection" n="D"/><lb/>
+            regnantes, et, Domino pro justis pugnante. imbre <lb/>
+            igneo compescendas; atque ita mortuas cum cæteris <lb/>
+            in impietate ante mortuis ad aeterna supplicia in <lb/>
+            incorruptibili carne resuscitandas.</p>
+          <ab>
+            <title type="sub">CAP. LVI. — Quod nullus salvetur, nisi Deo auctore.</title>
+          </ab>
+          <p>Nullum credimus ad salutem nisi Deo invitante <lb/>
+            venire; nullum invitatum salutem suam nisi Deo
+            <milestone unit="PLSection" n="A"/><lb/>
+            auxiliante operari; nullum nisi orantem auxilium <lb/>
+            promereri; nullum Dei voluntate perire, sed per­ <lb/>
+            missu, pro electione arbitrii, ne ingenuitas potestatis <lb/>
+            semel hominibus attributae ad servilem cogatur ne­ <lb/>
+            cessitatem.</p>
+          <ab>
+            <title type="sub">CAP. LVII. — Quod malum non sit a Deo.</title>
+          </ab>
+          <p>Malum vel malitia non est a Deo creata, sed a <lb/>
+            diabolo inventa, qui et ipse bonus a Deo creatus est. <lb/>
+            Sed quia libero arbitrio, utpote rationalis creatura , <lb/>
+            a Deo commissus est, et cogitandi acceperat faculta­ <lb/>
+            tem, scientiam boni vertit ad malum, et multa cogi­ <lb/>
+            tando factus est inventor mali ; et quod in se perdi. <lb/>
+            derat invidit in aliis; nec contentus solus perire, <lb/>
+            suasit aliis ut qui esset suae malitiae inventor fieret <lb/>
+            et aliorum auctor, et ex eo malum vel malitia per­ <lb/>
+            currit in caeteras rationales creaturas.</p>
+          <ab>
+            <title type="sub">CAP. LVIII. — Nihil non mutabile præter Deum.</title>
+          </ab>
+          <p>Unde cognoscimus nihil esse natura immuLabile,
+            <milestone unit="PLSection" n="B"/><lb/>
+            nisi solum Deum, Patrem, et Filium , et Spiritum <lb/>
+            sanctum, qui mutari non potest a bono, quia natura <lb/>
+            possidet bonum, nec potest aliud quid esse quam <lb/>
+            bonum.</p>
+          <ab>
+            <title type="sub">CAP. L1X. — Stabilitas in angelis.</title>
+          </ab>
+          <p>Angeli vero, qui in illa qua creati sunt beatitudine <lb/>
+            perseverant, non natura possident bonum, ut non <lb/>
+            mutarentur cum caeteris, sed arbitrii 333 servantes <lb/>
+            bonam voluntatem, et bonum conditionis et fidem <lb/>
+            suo Domino. Propter quod et merito ab ipso Domino <lb/>
+            sancti angeli vocantur, quod tenuerunt atbitrii san­ <lb/>
+            ctitatem, nec sociorum exemplo deviaverunt a bono.</p>
+          <ab>
+            <title type="sub">CAP. LX. — Natura nihil eat malum.</title>
+          </ab>
+          <p>Fides vera, quae est catholica, omnium creatura­ <lb/>
+            rum, sive spiritualium , sive corporalium, bonam <lb/>
+            confitetur substantiam, et mali nullam esse naturam, <lb/>
+            quia Deus, qui universitatis est conditor, nihil non <lb/>
+            bonum fecit. Unde et diabolus bonus esset, si in eo
+            <milestone unit="PLSection" n="c"/><lb/>
+            quod factus est permaneret. Sed qui naturali excel­ <lb/>
+            lentia male usus est, et in veritate non stetit, non <lb/>
+            in contrariam substantiam transiit, sed a summo <lb/>
+            bono, cui debuit adhærere, discessit.</p>
+          <ab>
+            <title type="sub">CAP. LXI. — Felicitas angetorum.</title>
+          </ab>
+          <p>Virtutes angelicae, quae in divino amore fixae per­ <lb/>
+            stiterunt, lapsis superbientibus angelis, hoc munere <lb/>
+            retributionis acceperunt, ut nulla jam rubigine sub­ <lb/>
+            ripientis culpae mordeantur; ut et in contemplatione <lb/>
+            conditoris sine felicitatis fine permaneant, et in hoc <lb/>
+            sic conditæ aeterna stabilitate subsistant</p>
+          <ab>
+            <title type="sub">CAP. LXII. — Libera voluntas angelorum.</title>
+          </ab>
+          <p>Tales creati sunt angeli, ut, si vellent, in beatitudi­ <lb/>
+            nis luce persisterent. Si autem vellent, etiam labi <lb/>
+            potuissent. Unde et Satan cum sequentibus legionibus <lb/>
+            cecidit. Sed post ejus lapsum ita confirmati sunt <lb/>
+            angeli|qui perstiterunt, ut cadere omnino non possent, <lb/>
+            quia ne omnino jam caderent virtutem incommuta­
+            <milestone unit="PLSection" n="D"/><lb/>
+            bilitatis acceperunt.</p>
+          <ab>
+            <title type="sub">CAP. LXIII. — Nuptiæ.</title>
+          </ab>
+          <p>Bonae sunt nuptiæ, sed causa filiorum , et com­ <lb/>
+            pescendae fornicationis obtentu.</p>
+          <ab>
+            <title type="sub">CAP. LXIV. — Continentia.</title>
+          </ab>
+          <p>Melior est continentia, sed non sibi sufficit ad <lb/>
+            beatitudinem, si pro solo amore pudicitiae retinetur, <note type="footnote"> CAP. LIII. Quotidie, etc. Confercap. 18 Iii,. I de <lb/>
+            Offie. eccl., cum notis. Maurini, si tamen mens in <lb/>
+            affectu peccandi non sit. </note><note type="footnote"> CAP. LV. Sicut Papia&gt;, etc. Maurini, sicut Papia <lb/>
+            auctore, lrenceus,Teriutlianus,elc. Utrumque textum <lb/>
+            viliatum esse colligit Vezzosius ex Hieronymo, de <lb/>
+            Vir. illustr., cap. de Papia. Biguseus sic refert : <lb/>
+            Sicit PapinSj aut Cerinthus, et Tertullianus, et Lac­ <lb/>
+            tantius arquie.cunt. Vezzosius, in lexlu, post mille; <lb/>
+            sed i'i nota melius dicit per mille cum aliis. Addit <lb/>
+            antiquiorem Nepote esse opinionem; illam de duplici <lb/>
+            resurrectione. </note><note type="footnote"> CAP. LVII. Alii : Malum vel malitiam non esse a <lb/>
+            Deo creatam, sed a diabolo inventam, qui, etc., subin­ <lb/>
+            tellecto constat, more Isidoriano.• </note><note type="footnote"> CAP. LII. Maurini, suo Domino servaverunt. Vnde <lb/>
+            et merito. Quod rectum putat Vezzosius. Sed fortasse <lb/>
+            mutandum servantes in servaverunt. </note><note type="footnote"> CAP. LX. Hoc caputet duo seqq. desunt in Editio <lb/>
+            nibus Bignaeana ct Maurinorum. </note> <pb n="1241"/>
+            
+            <milestone unit="PLSection" n="A"/><lb/>
+            sed si et cum affectu causa vacandi Domino eligatur ; <lb/>
+            alioquin divortium magis conjugii videtur esse quam <lb/>
+            appetitio castitatis.</p>
+          <ab>
+            <title type="sub">CAP. LXV. — Virginitas.</title>
+          </ab>
+          <p>Virginitas utroque bono praecelsior est, quia et <lb/>
+            naturam vincit, et pugnam : naturam, corporis in­ <lb/>
+            tegritate ; pugnam, pace castimoniæ, quae pro solo <lb/>
+            amore pudicitiæ in pace est.</p>
+          <ab>
+            <title type="sub">CAP. LXVI. — Ciborum delectus.</title>
+          </ab>
+          <p>Bonum est cibum cum gratiarum actione sumere, <lb/>
+            etquidquid Deus praecepit edendum. Abstinere autem <lb/>
+            ab aliquibus, non quasi a malis, sed quasi non ne­ <lb/>
+            cessariis, non est malum. Moderari vero eorum usum <lb/>
+            pro necessitate ettempore, proprieChristianorum est.</p>
+          <ab>
+            <title type="sub">CAP. LX VII. — Nuptiæ et cibus.</title>
+          </ab>
+          <p>Malas dicere nuptias, vel fornicationi comparandas, <lb/>
+            aut stupro; cibos quoque credere malos, vel malitias
+            <milestone unit="PLSection" n="B"/><lb/>
+            causare percipientibus, non est Christianorum, sed <lb/>
+            proprie Hierachilarum et Manichæorum.</p>
+          <ab>
+            <title type="sub">CAP. LXVIII. — Merita et abstinentia.</title>
+          </ab>
+          <p>Sacratæ Deo virginitati nuptias coaequare, aut pro <lb/>
+            amore castigandi corporis abstinentibus a vino vel <lb/>
+            carnibus nil credere meriti accrescere, non hoc <lb/>
+            Christiani, sed Joviniani est.</p>
+          <ab>
+            <title type="sub">CAP. LXIX. — Beatam Virginem semper fuisse vir­ ginem.</title>
+          </ab>
+          <p>Integra fide credendum est beatam Mariam Dei <lb/>
+            Christi matrem, et virginem concepisse. et virginem <lb/>
+            genuisse, et post partum virginem permansisse. 334 <lb/>
+            Nec est blasphemix Helvidii acquiescendum , qui <lb/>
+            dixit: Fuit Virgo ante partum , non virgo post par­ <lb/>
+            tum.</p>
+          <ab>
+            <title type="sub">CAP. LXX. — De elementis mundi.</title>
+          </ab>
+          <p>Elementa, id est, cœlum et terram non credamus
+            <milestone unit="PLSection" n="C"/><lb/>
+            abolenda per ignem, sed in melius commutanda; <lb/>
+            figuram quoque mundi, id est, imaginem, non sub­ <lb/>
+            stantiam transituram.</p>
+          <ab>
+            <title type="sub">CAP. LXXI. — De facultatibus erogandis.</title>
+          </ab>
+          <p>Bonum est facultates cum dispensatione pauperibus <lb/>
+            erogare. Melius est pro intentione sequendi Domi­ <lb/>
+            num insimul donare, et absolutum sollicitudine cum <lb/>
+            Christo egere.</p>
+          <ab>
+            <title type="sub">CAP. LXXII. — lmpedimenta clericatus.</title>
+          </ab>
+          <p>Maritum duarum post baptismum matronarum cle­ <lb/>
+            ricum non ordinandum. Neque eum qui unam qui­ <lb/>
+            dem, sed concubinam, non matronam habuit. Nec <lb/>
+            illum qui viduam, aut repudiatam , vel meretricem <lb/>
+            in matrimonio sumpsit. Neque eum qui semetipsum <lb/>
+            quolibet corporis sui membro indignatione aliqua, <lb/>
+            vel justo, injustove timore superatus, truncaverit. <lb/>
+            Neque illum qui usuras accepisse convincitur, aut in <lb/>
+            scena lusisse dignoscitur. Neque eum qui publica
+            <milestone unit="PLSection" n="D"/><lb/>
+            pœnitentia mortalia crimina deflet. Neque illum qui <lb/>
+            aliquando in luriam versus insanivit, vel afflictione <lb/>
+            diaboli vexatus est. Nec eum qui per ambitionem ad <lb/>
+            imitationem Simonis Magi pecuniam offert.</p>
+          <ab>
+            <title type="sub">CAP. LXXIII. — De reliquiis sanctorum.</title>
+          </ab>
+          <p>Sanctorum corpora, et præcipue beatorum mar­ <lb/>
+            tyrum reliquias, ac si Christi membra, sincerissime <lb/>
+            honoranda, et basilicas, eorum notninibus appellatas, <lb/>
+            vclut loca sancta divino cultui rnancipata , affectu <lb/>
+            piissimo et devotione fidelissima adeundas credimus. <lb/>
+            Si quis contra hanc sententiam venerit, non Chri­ <lb/>
+            stianus, sed Eunomianus et Vigilantius creditur.</p>
+          <p>
+            <milestone unit="PLSection" n="A"/></p>
+          <ab>
+            <title type="sub">CAP. LXXIV. — De catechumems defunctis, et mar­ tyribus non baptizatis.</title>
+          </ab>
+          <p>Baptizatis tantum iter esse salutis credimus. Nul­ <lb/>
+            tum catechumenum, quamvis in bonis operibus de­ <lb/>
+            functum, vitam aeternam habere credimus, excepto <lb/>
+            martyrio, ubi tota baptismi sacramenta complentur. <lb/>
+            Baptizandus confitetur fidem suam coram sacerdote, <lb/>
+            et interrogatus respondet; hoc et martyr coram <lb/>
+            persecutore facit qui et confitetur fidem suam , et <lb/>
+            interrogatus respondet. Ille post confessionem vel <lb/>
+            aspergitur aqua, vel intingitur; et hic vel aspergitur <lb/>
+            sanguine, vel contingitur igne. Ille manus imposi <lb/>
+            tione pontificis accipit Spiritum sanctum; hic habita­ <lb/>
+            culum efficitur Spiritus sancti, dum non est ipse qui <lb/>
+            loquitur, sed Spiritus Patris qui loquitur in illo. Ille <lb/>
+            communicat Eucharistiae in commemoratione mortis <lb/>
+            Domini; hic ipsi Christo commoritur. me confitetur <lb/>
+            se mundi aclibus renuntiaturum; hic ipsi renuntiat <lb/>
+            vitæ. Illi peccata omnia dimittuntur; in isto exstin-
+            <milestone unit="PLSection" n="B"/><lb/>
+            guuntur.</p>
+          <ab>
+            <title type="sub">CAP. LXXV. — Qualiter Eucharistia offeratur.</title>
+          </ab>
+          <p>In Eucharistia non debet pura aqua offerri, ut <lb/>
+            quidam sobrietatis falluntur imagine; sed vinum <lb/>
+            cum aqua mistum, quia et vinum fuit in redemptio­ <lb/>
+            nis nostræ mysterio, cum dixit : Non bibam amodo <lb/>
+            de hoc genimine vitis (Matth. XXVI, ; et aqua mis­ <lb/>
+            tum, non quod post cœnam dabatur, sed 335 quod <lb/>
+            de latere ejus lancea perfosso aqua cum sanguine <lb/>
+            egressa, vinum de vera ejus carnis vitae cum aqua <lb/>
+            expressum ostenditur.</p>
+          <ab>
+            <title type="sub">CAP. LXXVI. — De humana carne.</title>
+          </ab>
+          <p>Bona est caro nostra, et valde bona, ut pote a <lb/>
+            bono solo Deo condila, et non est mala, ut volunt <lb/>
+            Sethianus, et Ophianus, et Patricianus; nec mali <lb/>
+            causa, ut docuit Florianus; nec ex malo et bono <lb/>
+            compacta, ut Manichæus blasphemat. Sed cum sit <lb/>
+            creatione bona, arbitrio animae efficitur nobis vel
+            <milestone unit="PLSection" n="C"/><lb/>
+            bona, vel mala, non immutatione substantiae, sed <lb/>
+            exsecutionis mercede. Ipsa enim est quae slabit ante <lb/>
+            tribunal Christi, in quo perferat anima propria cor­ <lb/>
+            poris, prout gessit, sive bonum, sive malum,</p>
+          <ab>
+            <title type="sub">CAP. LXXVII. — Resurrectio. I</title>
+          </ab>
+          <p>In resurrectione ex mortuis sexus forma non mu­ <lb/>
+            tabitur; sed vir mortuus resurget in forma viri et <lb/>
+            femina in forma feminae, carens tamen sexuum in <lb/>
+            hac vita conditione, non specie naturali, ne non sit <lb/>
+            vera resurrectio, si non id resurget quod cadit.</p>
+          <ab>
+            <title type="sub">CAP. LXXVIII. — Animæ sanctorum ante passionem Domini.</title>
+          </ab>
+          <p>Ante passionem Domini omnes animæ sanctorum <lb/>
+            in inferno sub debito praevaricationis Adae teneban­ <lb/>
+            tur, donec auctoritate Domini per indebitam ejus <lb/>
+            mortem a servili conditione liberarentur.</p>
+          <ab>
+            <title type="sub">CAP. LXXIX. — Animæ sanctorum post ascensionem.</title>
+          </ab>
+          <p>
+            <milestone unit="PLSection" n="D"/>Post ascensionem Domini ad cœlos omnium san­ <lb/>
+            ctorum animae cum Christo sunt, et exeuntes de <lb/>
+            corpore ad Christum vadunt, exspectantes resurre­ <lb/>
+            ctionem corporis sui, ut ad integram et perpetuam <lb/>
+            beatitudinem cum ipso pariter immutentur, sicut et <lb/>
+            peccatorum animae in inferno sub timore positae ex­ <lb/>
+            spectant resurrectionem sui corporis, ut cum ioso <lb/>
+            ad poenam detrudantur aeternam.</p>
+          <ab>
+            <title type="sub">CAP. LXXX. — De peccatorum venia.</title>
+          </ab>
+          <p>Pœnitentia aboleri peccata indubitanter credimus, <lb/>
+            etiarn si in ultimo vitae spiritu admissorum pœni­ <lb/>
+            teat, et publica lamentatione peccata prodantur, <note type="footnote"> CAP. LXVII. Alii, vel mali causas percipientibus; et <lb/>
+            Encraticarum pro H ierachitarum. </note><note type="footnote"> CAP. LXIII. Afflicl;one; at., afflatione. </note><note type="footnote"> LAP. LXXIV. Contingitur; ai., ling;tu,-; et loculor;u,,, <lb/>
+            pro habitaculum. </note><note type="footnote"> CAP. iixxv. Alii, aqua mistum, quod post ceenam da­ <lb/>
+            batur; sed et de latere ejus, quod lancea perfossum est, <lb/>
+            aqua egressa vinuna de vera.,., expressum ostendit. </note><note type="footnote"> CAP. LXXVI. Floria"uB; a!., Florinus; et in qua <lb/>
+            pro in quo. </note><note type="footnote"> CAP. LXXVII. Alii, carent texus tamen hujut vitce <lb/>
+            tantum conditione. </note> <pb n="1243"/>
+            
+            <milestone unit="PLSection" n="A"/><lb/>
+            quia propositum Del, quo decrevit salvare quod pe­ <lb/>
+            rierat, stat hnmobUe ; et ideo quia voluntas ejus non <lb/>
+            mutatur, sive emendatione vilae, si tempus concedi­ <lb/>
+            tur, sive supplicii confessione, si continuo vita exce­ <lb/>
+            ditur. venia peccatorum fideliter procsumatur ab <lb/>
+            illo qui non vult mortem peccatoris, sed ut cunver­ <lb/>
+            tatur a perditione pœnitendo, et salvatus misera­ <lb/>
+            tione Domini vivat (Ezech. XVIII, 32; XXXIII, 11). Si <lb/>
+            quis aliter de justissima Dei pietate sentit, non Chri­ <lb/>
+            stianus, sed Novatianus est.</p>
+          <ab>
+            <title type="sub">CAP. LXXXI. — Quod diabolum lateant cogitationes.</title>
+          </ab>
+          <p>Internas animæ cogitationes diabolum non videre <lb/>
+            certi sumus; sed motibus eas corporis ab illo et <lb/>
+            affectionum iudiciis colligi, experimento didicimus. <lb/>
+            SecretA Autem cordis solus ille novit ad quem dici­ <lb/>
+            tur : Tu solus MOt'i corda filiorum hominum (III Reg- <lb/>
+            VIII, 39).</p>
+          <ab>
+            <title type="sub">CAP. LXXXII. — Cogitationes.</title>
+          </ab>
+          <p>
+            <milestone unit="PLSection" n="B"/>Non omnes malæ cogitationes nostræ semper dia­ <lb/>
+            boii instinctu excitantur, sed aliquoties ex nostri <lb/>
+            arbitrii motu emergunt, Bonæ autem cognationes <lb/>
+            semper a Deo sunt.</p>
+          <ab>
+            <title type="sub">CAP. LXXXIII. — Dæmones quomodo occupent homines.</title>
+          </ab>
+          <p>Dæmones pėr energicam operationem non credi­ <lb/>
+            mus substantialiter illabi animæ, sed applicatione, <lb/>
+            et oppressione unIri. Illabi autem menti illi suHi pos­ <lb/>
+            sibile est qui creavit, qui, natura subsistens incor­ <lb/>
+            poreus, capabilis est suæ facturæ.</p>
+          <ab>
+            <title type="sub">338 CAP. LXXXIV. — De signis et virtutibus.</title>
+          </ab>
+          <p>Signa, et prodigia, et sanitates etiam peccatores
+            <milestone unit="PLSection" n="A"/><lb/>
+            in nomine Domini facere ab ipso Deo didicrmus ; et <lb/>
+            cum alios hac præsumptione juvent, sibi per ambi­ <lb/>
+            tionem humanæ gloriæ nocent, quia gloriantur io <lb/>
+            dato falso, non meriti debito.</p>
+          <ab>
+            <title type="sub">CAP. LXXXV. — Quod nullus signis sanctus fit</title>
+          </ab>
+          <p>Signis et prodigiis clarum posse fieri ChristianUm, <lb/>
+            non tamen sanctum, si intemperatis et asperis mo* <lb/>
+            ribus agat; temperatis autem et placidis moribus <lb/>
+            etiam absque signoruin efficacia et sanctum, et per­ <lb/>
+            rectum, et Dei hominem fieri, recte credimus.</p>
+          <ab>
+            <title type="sub">CAP. LXXXVI. — Sancti quoque peccatores.</title>
+          </ab>
+          <p>Nullus sanctus et justus caret peccato; nec tamen <lb/>
+            ex hoc desinit esse justus, vel sanctus, cum affectu <lb/>
+            teneat sanctitatem. Non enim naturæ humanæ viri­ <lb/>
+            bus, sed propositi adjumento per Dei gratiam ac­ <lb/>
+            quirimus sanctitatem. Et ideo veraciter ee omnes <lb/>
+            sancti pronuntiant peccatores, quia in veritate ha­ <lb/>
+            bent quod plangant, etsi non reprehensione cen.
+            <milestone unit="PLSection" n="B"/><lb/>
+            scientiæ, certe mobilitate et mutabilitate prævarica­ <lb/>
+            tricis naturae.</p>
+          <ab>
+            <title type="sub">CAP. LXXXVII. — Pascha.</title>
+          </ab>
+          <p>Pascha, id est, dominicae Resurrectionis solemni­ <lb/>
+            tas, ante transgressum vernalis aequinoctii et quarta <lb/>
+            decimæ lunæ perfectionem non potest celebrari, in <lb/>
+            eodem mense natæ.</p>
+          <ab>
+            <title type="sub">CAP. LXXXVIII. — Imago Dei anima.</title>
+          </ab>
+          <p>Propter novellos legislatores, qui ideo animam <lb/>
+            tantum ad imaginem Dei creatam dicunt, ut quia <lb/>
+            Deus incorporeus recte creditur, eliam. iucorporea <lb/>
+            anima esse credatur, libere confitemur imaginem <lb/>
+            in æternitate, similitudinem in moribus inveniri. <note type="footnote"> CAP. tlIXVIII. Corpoream animam auclor dicit, ut supra, cap. 12. </note> </p>
+        </div>
+        
+        </body>
+  </text>
+</TEI>

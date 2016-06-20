@@ -1,0 +1,788 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title>Patrologiae Cursus Completus. Series Latina (PL)</title> 
+        <sponsor>University of Leipzig</sponsor>
+        <funder>European Social Fund Saxony</funder>
+        <principal>Gregory Crane</principal>
+        <respStmt>
+          <persName xml:id="Jouve">Jouve</persName>
+          <resp>OCR-ed, corrected and encoded the text</resp>
+        </respStmt>
+        <respStmt>
+          <persName>Greta Franzini</persName>
+          <resp>Project Manager (University of Leipzig)</resp>
+        </respStmt>
+        <respStmt>
+          <persName>Simona Stoyanova</persName>
+          <resp>Project Assistant (University of Leipzig)</resp>
+        </respStmt>
+        <respStmt>
+          <persName>Bruce Robertson</persName>
+          <resp>Technical Advisor (Mount Allison University)</resp>
+        </respStmt>
+      </titleStmt>
+      
+      <publicationStmt>
+        <authority>University of Leipzig</authority>
+        <idno type="filename">PL83.xml</idno>
+        <availability>
+          <licence target="https://creativecommons.org/licenses/by-sa/4.0/">Available under a Creative Commons Attribution-ShareAlike 4.0 International License</licence>
+        </availability>
+        <date>2014</date>
+        <publisher>University of Leipzig</publisher>
+        <pubPlace>Germany</pubPlace>
+      </publicationStmt>
+      
+      <sourceDesc>
+        <listBibl xml:lang="la">
+          <biblStruct>
+            <monogr>
+              <editor>
+                <persName>
+                  <name xml:lang="fr">Jacques Paul Migne</name>
+                </persName>
+              </editor> 
+              <author ref="urn:cite:perseus:author.771">Isidorus Hispalensis</author>
+              <title>Differentiarum Sive De Proprietate Sermonum Libri Duo</title>
+              <title>Allegoriae Quaedam Sacrae Scripturae</title>
+              <title>De Ortu Et Obitu Patrum Qui In Scriptura Laudibus Efferuntur</title>
+              <title>In Libros Veteris Ac Novi Testamenti Proemia</title>
+              <title>Liber Numerorum Qui In Sanctis Scripturis Occurrunt</title>
+              <title>De Veteri Et Novo Testamento Quaestiones</title>
+              <title>Mysticorum Expositiones Sacramentorum Seu Quaestiones In Vetus Testamentum</title>
+              <title>Appendix Ad Libros Regum</title>
+              <title>De Fide Catholica Ex Veteri Et Novo Testamento Contra Judeos</title>
+              <title>Sententiarum Libri Tres</title>
+              <title>De Ecclesiasticis Officiis</title>
+              <title>Synonyma De Lamentatione Animae Peccatricis</title>
+              <title>Regula Monachorum</title>
+              <title>Epistolae</title>
+              <title>De Ordine Creaturarum Liber</title>
+              <title>De Natura Rerum Ad Sisebestum Regem Liber</title>
+              <title>Chronicon</title>
+              <title>Historia De Regibus Gothorum. Wandalorum Et Suevorum</title>
+              <title>De Viris Illustribus Liber</title>
+              <title>Carmina [Ascripta]</title>
+              <title>Chronica Regum Visigothorum (Incertus)</title>
+              <title>Expositio In Canticum Canticorum Salomonis [Incertus]</title>
+              <title>De Conflictu Vitiorum Et Virtutum (Incertus)</title>
+              <title>Expositio In Missa (Incertus)</title>
+              <title>Sententiarum Liber Quartus (Incertus)</title>
+              <title>Exhortatio Humilitatis (Incertus)</title>
+              <title>Testimonia Divinae Scripturae Et Patrum (Incertus)</title>
+              <title>Sermones (Incertus)</title>
+              <title>De Ecclesiasticis Dogmatibus (Incertus)</title>
+              <title>Sentantiae Differentiarum De Activa Vita Atque Contemplativa [Incertus]</title>
+              <title>Exhortatio Poenitendi Cum Consolatione Et Misericordia Dei [Incertus]</title>
+              <title>Lamentum Poenitantiae (Incertus)</title>
+              <title>Oratio Contra Insidias Diaboli (Incertus)</title>
+              <title>Liber De Ortu Et Obitu Patrum Incertus</title>
+              <title>Liber De Numeris (Incertus)</title>
+              <title>Glossae in Sacram Scripturam</title>
+              <title>Differentiarum, sive de Proprietate Sermonum, Liber</title>
+              <title>Liber Glossarum</title>
+              <imprint>
+                <publisher>Garnier</publisher>
+                <pubPlace>Paris</pubPlace>
+                <date>1850</date>
+              </imprint>
+              <biblScope unit="volume">83</biblScope>
+            </monogr>
+            <monogr>
+              <author>Auctor Incertus</author>
+              <title>Archiepiscopi Toletani Veteres</title>
+              <title>Chronologia Gothicorum Regum (Ex Codice Regio Vaticano)</title>
+              <imprint>
+                <publisher>Garnier</publisher>
+                <pubPlace>Paris</pubPlace>
+                <date>1850</date>
+              </imprint>
+              <biblScope unit="volume">83</biblScope>
+            </monogr>
+            <ref target="http://hdl.handle.net/2027/pst.000020950231">HathiTrust</ref>
+            
+          </biblStruct>
+        </listBibl>
+      </sourceDesc>
+      
+    </fileDesc>
+    <encodingDesc>
+      <p>The following text is encoded in accordance with EpiDoc standards and with the
+        CTS/CITE Architecture.</p>
+      <refsDecl n="CTS">
+        <cRefPattern n="no citable units founds" matchPattern="(.+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div/tei:div[@n='$1'])"/>
+      </refsDecl>
+    </encodingDesc>
+    
+    <profileDesc>
+      <langUsage>
+        <language ident="la">Latin</language>
+      </langUsage>
+    </profileDesc>
+    
+</teiHeader>
+  <text>
+    <body><div type="edition" n="urn:cts:latinLit:tmp1432.tmp1432.opp-lat1">
+        <ab>
+            <title type="sub">APPENDiX VIII.</title>
+          </ab>
+          <ab>
+            <title type="sub">EXPESITIO IN MISSA.</title>
+          </ab>
+          <p>
+            <milestone unit="PLSection" n="A"/>i. Dominus vobiscum (Vitl. Isidoriana, c. 84). Sa­ <lb/>
+            lutat populum et orat, ut sit Dominus cum illo. EI <lb/>
+            cum spiritu tuo Responsio populi, atque oratio, ut <lb/>
+            sicut sacerdos oravit ut Dominus esset cum populo, <lb/>
+            ita et populus orat ut Dominis 222 sit cum spi­ <lb/>
+            ritu sacerdotis. Dum dicit sacerdos Oremus. rogat <lb/>
+            omnes orare, ut oratio ejus a D. mino exaudiatur. Et <lb/>
+            quando dicit Per. Dominum nostrum Jesum Christum <lb/>
+            Filium tuum, ad Dominum Patrem orat sarerdos, ut <lb/>
+            per suum Filium, qui noster Dominus est æqualiter, <lb/>
+            sicut Pater, oratio perficiatur. Cum dicit Qui tecum <lb/>
+            vivit, et regnat Deus in unitate Spiritus sancti, vult <lb/>
+            populum credere et intelligere quod Filius cum Pa­ <lb/>
+            tre sine initio ac sine fine vivit. et regnal. et Deus <lb/>
+            est, sicut Pater Deus est; et una potestas est Spiri­ <lb/>
+            tus sancti cum Patre, et Filio, atque una substantia, <lb/>
+            atque in omnibus uniias deitatis.</p>
+          <p>2. Per omnia sæcula sœculorum. Idem Filius cum <lb/>
+            Patre in unitaite Spiritus sancti sicut ante omnia sæ-
+            <milestone unit="PLSection" n="B"/><lb/>
+            cula in deitate fuit, et vixit, ita et in præsenti sæ­ <lb/>
+            culo, et in futuro, ubi justi cum angelis sanctis per­ <lb/>
+            manebunt, et injusti cum diabolo cruciabuntur, cre­ <lb/>
+            datur æqualiter vivere cum Patre, et Spiritu sancto. <lb/>
+            et nullo fine concludi. Amen confirmatio orationis <lb/>
+            est a populo, et in nostra lingua intelligi putest, <lb/>
+            quasi omnes dicanl: Ut ita fiat, sicut sacerdos ora­ <lb/>
+            vit; sed propria cjus interpretatio est: Vere, sive <lb/>
+            fideliter.</p>
+          <p>3. Sursum corda. Admonet sacerdos populum ut <lb/>
+            sursum, id est, supra semetipsum, ad Dominum om­ <lb/>
+            nipotentem corda levent et fideliter orent, quod de­ <lb/>
+            sursum eis veniat auxilium a Domino cœlesti, a quo <lb/>
+            (omnia) creata sunt. Habemus ad Dominum. Ite­ <lb/>
+            sponsio populi, quod sicut sacerdos jussit cos cur­ <lb/>
+            sunt corda tenere, sic relinere profitentur. Cratias <lb/>
+            agamus Domino Deo nos ro. Sacerdos gratias agit <lb/>
+            Deo juxta professionem populi. quia confessus est ad <lb/>
+            Dominum se esse intentum. Dignum et justum est.
+            <milestone unit="PLSection" n="c"/><lb/>
+            Populus cum sacerdote simul gratias <unclear>ait</unclear> Deo, quem <lb/>
+            justa et digna oratione Deo gratias referre, qUia ab <lb/>
+            ipso omnia bona suscepimus in noluine Domini. <lb/>
+            Amen.</p>
+          <p>4. Vere dignum et justum est, æquum et salutare. <lb/>
+            Confirmat sacerdos professionem populi, et dicit <lb/>
+            quod vere digitum et justum est Deo gratias pro om­ <lb/>
+            nibus referre; et quod æquum est, hoc est rectum, <lb/>
+            sive æquale; ac salutare, hoc est. salute plenum, ut <lb/>
+            ei gratias referamus qui nobis saltem dedit æter­ <lb/>
+            nam. Nos tibi semper et ubique gratias ugere. Con­ <lb/>
+            versus sacerdos ad Dominum post professionem po­ <lb/>
+            puli, quasi ad præsentem loquitur, quia in præsentia <lb/>
+            Domini semper sumus, ut ipse videt cogitationes no­ <lb/>
+            stras, et dicit sacerdos, tam de se quam de populo <lb/>
+            gratias agere. Domine, quia dominator ent omnium, <lb/>
+            et suh ejus dominatone omnia sunt. Sancte, quia <lb/>
+            sanctus est, et. per quem omnia sancta sunt, quia <lb/>
+            omnia sancta et bona creasti. Pater Græce dicimur <lb/>
+            pater, Latine genitor, quia ipse genuit Filium sine ulla
+            <milestone unit="PLSection" n="D"/><lb/>
+            coinquinatione, seu corruptione.</p>
+          <p>5. Pater Latine a patrando dicitur, hoc est, a per­ <lb/>
+            petrando, quod est a perficiendo, vel adjuvando, <lb/>
+            quia ipse fecit omnia quæ facta sunt. Et adjuvat <lb/>
+            omnia quæ adjuvata sunt, et voluit nos iUtos suos <lb/>
+            fieri adoptivos per sanctificationem, qua ille sancti­ <lb/>
+            ficavit nos. Omnipotens; quoniam omnia potest, <lb/>
+            ideo omnipotens dicitur, et non est impossibile apud <lb/>
+            Deum omne verbum. Æterne Deus; hoc est inter <lb/>
+            æternum et perpetuum 223 et temporale. Æter­ <lb/>
+            num est quod initium non habet, nec finem habe­ <lb/>
+            bit, sed semper fuit, et est, et erit. Perpetuum est <lb/>
+            quod esse coepit, et finem non habebit. Temporale <lb/>
+            est quod initium habuit, et finem habebit.</p>
+          <p>
+            <milestone unit="PLSection" n="A"/>ti. Et ideo hic dicitur Æterne Deus, quia nec cœpit <lb/>
+            esse , nec desinit esse, sed semper est. Deus a <lb/>
+            diligendo dicitur, quia omnia diligit, et gubernat, et <lb/>
+            creavit. Et aliter Deus a divinitate dictus est, quia <lb/>
+            divinus est, et omnia scit, et omnia dividit, prout <lb/>
+            vult.</p>
+          <p>7. Per Christum Dominum nostrum. Christus Græce, <lb/>
+            Latine unctus dicitur. Hic Christus ante omnia initia <lb/>
+            a Patre inenarrabliter genitus est, quod placuit ei : <lb/>
+            Spiritus sanctus venit in Mariam virginem, et unxit <lb/>
+            unctione divina ejus uterum, et conceptus est de <lb/>
+            Spiri u sancto, et natus et Maria virgine.</p>
+          <p>8. Nam et in Veieri Testamento sacerdotes et <lb/>
+            reges ungebantur, et ideo christi dicebantur, quia <lb/>
+            uncti erant unctione temporali. Iste Christus, per <lb/>
+            quem Pairi gratias agimus, æternaliter Chritus est, <lb/>
+            et cum Patre æternus dictus est ; et per ipsum <lb/>
+            redempti sumus, per quem Patri gratias agimus; et <lb/>
+            ipse Dominus Deus noster est quia dominatur nobis.
+            <milestone unit="PLSection" n="B"/><lb/>
+            Per quem majestatem tuam laudant angeli. Per ipsum <lb/>
+            Christum, per quem gratias agimus Patri, majestatem <lb/>
+            Patris laudant Angeli, quia ipse æqualis es: Patri in <lb/>
+            divinitate. Majestas , quia major est potestas Dei <lb/>
+            quam hominum. Dei majestatem per Christum <lb/>
+            laudant angeli, quia Christus simul cum Patre creavit <lb/>
+            angelos.</p>
+          <p>9. Angelus enim Græce, Latine nuntius interpretatur. <lb/>
+            Angelus nomen est officii. nn naturæ, quæ annuntiat, <lb/>
+            sed naturaliter spiritus sunt. Adorant dominationes. <lb/>
+            Majestatem Dei Pair.s per Filium laudant et adorant <lb/>
+            dominationes. Dominationes ordo est angelorum. <lb/>
+            Decem fuerunt ordines angelorum. Decimus ordo <lb/>
+            cecidit et versus est per superbiam in diabolum. <lb/>
+            Novem autem permanserunt in sanctitate sua. Hæc <lb/>
+            sunt nomina eorum, angeli, archangeli, virtutes , <lb/>
+            principatus , potestates , throni dominationes <lb/>
+            cherubim , seraphim. Istorum duorum nomina non <lb/>
+            sum Latina. Cherabim plenitudo scientiæ interpre­
+            <milestone unit="PLSection" n="c"/><lb/>
+            tatur. Seraphim incendium dicitur. Cætera nomina <lb/>
+            supradictorum ordinum sunt Latina, nisi angelorum <lb/>
+            et archangelorum. Angeli nuntii, archangeli excelsi <lb/>
+            nuntii denominantur.</p>
+          <p>10. Gregorius autem papa Romanus in homilia <lb/>
+            sua super evangelicam lectionem : Erant appropin­ <lb/>
+            quantes ad Jesum Publicani et peccatores, ut audirent <lb/>
+            il um; plenissime de his ordinibus exposuit. Nos vero <lb/>
+            ad propositum redeamus. Tremunt potestates. De <lb/>
+            supradictis ordinibus dicitur : non ideo dicit, quod <lb/>
+            supradicti ordiues curporales sint, sed nostro more <lb/>
+            dicit, quia nos tremere ac timere ante dominos nostros <lb/>
+            solemus. Sed ideo dicit tremere, ut nos intelligamus <lb/>
+            omnia cœlestia, et terrestria, et infernalia, ante <lb/>
+            conspectum divinæ Majestatis tremere ac timere.</p>
+          <p>ii. Cœli cœlorumque virtutes. Ipsi cæli visioni <lb/>
+            divinæ obendiunt, quia se ostendere screnos vel <lb/>
+            nebulosos non habent potestatem. Cœlorum 224 <lb/>
+            virtutes sunt supradicti ordines angelorum , sicut <lb/>
+            Gregorius testatur in homilia sua super evangelicam
+            <milestone unit="PLSection" n="D"/><lb/>
+            lectionem : Erunt signa in sole, luna et stellis. Ac <lb/>
+            beatu seraphim. De seraphim namque supradictum <lb/>
+            est. Socia exsultatione concelebrant. Omnes prædica <lb/>
+            tores majestatem Dei Patris per Christum unita <lb/>
+            exsultatione æqualiter concelebrant. Cum quibus. <lb/>
+            Hæc est supplicatio nostra , ut ipse cælestis Pater <lb/>
+            per Christum Filium suum, per quem nos de omnibus <lb/>
+            ei gratias agimus, dignetur admittere voces nostras, <lb/>
+            et jungere vocibus prætdictorum ordinum angelorum.</p>
+          <p>12. Supplici confessione dicentes. Hoc est, humili <lb/>
+            confessione. Quid humilius confiteri quam nosmet­ <lb/>
+            ipsos æterno Patri per Filium æternum commendare, <lb/>
+            et de nostra conscientia vel bonitate nihil præsu­ <lb/>
+            mere, et juxta voces angelicas eum semper sanctum <pb n="1147"/>
+            
+            <milestone unit="PLSection" n="A"/><lb/>
+            essentialiter credere et prædicare? Sanctus, Sanctus, <lb/>
+            Sanctus. Joannes evangelista in Apocalypsis libro <lb/>
+            scripsit se videre ante thronum Dei et agni XXIV <lb/>
+            animalia astantia, et incessanter dicentia : Sanctus, <lb/>
+            Sanctus, Sanctus, Dominus Deus Sabaoth, etc. Ideo <lb/>
+            enim tribus vicibus dicitur Sanctus, ut significetur <lb/>
+            Pater sanctus, Filius sanctus, Spiritus Patris et Filii <lb/>
+            sanctus. Sed quamvis tripliciter dicatur sanctus, non <lb/>
+            tamen dicimUr plurali numero sancti, sed singulari <lb/>
+            sanctus, ut una sanctitas in his tribus personis et <lb/>
+            una æternitas intelligatur.</p>
+          <p>! i. Dominus Deus Sabaoth. Sabaoth a mullis <lb/>
+            interpretari solet omnipotens, a multis vero exerci­ <lb/>
+            tuum. Ut ipse sit Dominus Deus, et ipse omnes <lb/>
+            exercitus angelorum atque hominum disponat. Pleni <lb/>
+            sunt cœli et terra gloria tua. Idem ut ejus gloria cœli <lb/>
+            ac terræ gubernentur, el qui in coelis sunt, et qui in <lb/>
+            terra glorificent, et honorent nomen ejus. Osanna in <lb/>
+            excelsis. Quomodo nunc dicitur corrupte Osanna?
+            <milestone unit="PLSection" n="B"/><lb/>
+            antea dicebatur Osiana. Osi interjectio est laudantis, <lb/>
+            sive causa magnificantis. Anna salvifica. Sed cur­ <lb/>
+            rupte dicitur Osanna, el intelligi potest: salvilica, vel <lb/>
+            salum fac. In excelsis, id est, in altis. Benedictus qui <lb/>
+            venit in nomine Domini. Osanna in excelsis. Quando <lb/>
+            Chrislus venit ad Jerusalem, ct descendit de monte <lb/>
+            Vii veri, tunc filii Israel clamaverint , dicentes : <lb/>
+            Benedictus qui venit in nomine Domini ; sed quid <lb/>
+            significavit ille Christi adventus ad Jerusalem, nisi <lb/>
+            futuram resurrectionem, quando venturus erit judi­ <lb/>
+            care vivos et mortuos, et apparuerit nobis in eadem <lb/>
+            carne qua pro nobis passus est? el tunc in nomine <lb/>
+            Jesu omne genu flectemur cœlestium, terrestrium, et <lb/>
+            ' infernorum, etc., quæ Apostolus dixil.</p>
+          <p>14. Te igitur , clementissime Pater. Te igitur; hoc <lb/>
+            est, te cette, clementissime Pater. Clemens dcitur, <lb/>
+            quasi clara mens, sive abundans, et clementissime, <lb/>
+            quasi clarissima mente, sive abundantissime, quia <lb/>
+            ipse clarissimus est mente, et misericordussime
+            <milestone unit="PLSection" n="c"/><lb/>
+            Pater. Non ideo eum dicimus clementem, et miseri­ <lb/>
+            cordem , quod membris corporeis, vel cordc, aut <lb/>
+            mente sit compositus, sicut homo ; sed ideo clemen­ <lb/>
+            tem ct misericordem clamamus. ut illam clementiam <lb/>
+            et misericordiam super nos ab ipso seutiamus. et <lb/>
+            intelligamus, unde salvari debeamus.</p>
+          <p>225 15. Per Jesum Christum. Jesus Græce, Latine <lb/>
+            Salvator. sivc salutaris dicitur. Salvator eo quod <lb/>
+            salvat populum suum a peccatis corum. Ideo salvat <lb/>
+            a peccatis, quia potestatem habet dimittendi peccata, <lb/>
+            sicut ipse dixit: Ut autem scialis quia Filius hominis <lb/>
+            habet in terra potestatem dimittendi peccata (Matth., <lb/>
+            IX, 6). Salutaris ideo dicilur, quia salutem nobis <lb/>
+            de lit, ut, si præcepta ejus servemus, vitam æternam <lb/>
+            capere val amus. Filium tuum, scilicet Filium tuum <lb/>
+            unigneitum, quia ipse est unigenitus ex substantia <lb/>
+            Patris, nos autem filii adoptivi sumus per ipsum qui <lb/>
+            unigenitus est, a Patre procedens, Patri coæternus; et <lb/>
+            ideo per eum Patrem postulamus humiliter dicentes :</p>
+          <p>16. Supplices te rogamus et petimus. Supplices, id
+            <milestone unit="PLSection" n="D"/><lb/>
+            est, humiles. Uti accepta habeas et benedicas. Uti, <lb/>
+            id est, accipias ct benedicas. Hæc dona, hæc munera, <lb/>
+            hæc sancta sacrificia illibata. Bona sunt, qu;e volun­ <lb/>
+            lude donantur. Munera sunt, quæ pro aliquo tnu­ <lb/>
+            nere et mercede offeruntur, sicut nos offerimus Deo, <lb/>
+            ut peccata nostra dimittantur. Sacrificia sti, quæ <lb/>
+            jam cum orationibus consen rantur. Illibata idem est <lb/>
+            aC immaculata, et ab omni livore malitiæ aliena. <lb/>
+            Tunc sunt dona et sacrilicia illibata, quando absque <lb/>
+            scandalorum maculis sunt oblata, et justo sum labore <lb/>
+            acquisita. Non, ut multi errant, qui dicunt illibata <lb/>
+            esse non dedicata. Lege septem collationes Patrum, <lb/>
+            et in secunda collatione Theonæ in nUllo capite <lb/>
+            invenies quæ sint illibata.</p>
+          <p>17. In primis quæ tibi offerimus. Hoc est, quæ tibi <lb/>
+            offerimus, pro quibus offeruntur indiCant: in primis of­ <lb/>
+            ferri debent pro Ecclesia tua sancta catholica. Ecclesia <lb/>
+            Græce, Latine congregatio dicitur. Catholica univer­ <lb/>
+            salis dicitur, quia universi qui in Dominum credunt
+            <milestone unit="PLSection" n="A"/><lb/>
+            in una debent esse congregatione. Quam pacificare, <lb/>
+            custodire, adunare et regere digneris toto orbe terrarum. <lb/>
+            Per totum orbem terrarum pacificatam et adunatam <lb/>
+            custodire digneris. Una cum famulo tuo illo. Hoc est <lb/>
+            simul cum illo qui sedem apostoli Petri tenet, quia Ec­ <lb/>
+            clesia, in qua Petrus apostolorum princeps sedit, caput <lb/>
+            est omnium Ecclesiarum catholicarum. Ideo, quia Pe­ <lb/>
+            tro dicit Christus : Tu es Petrus, et super hanc petram, <lb/>
+            et reliqua (Matth. XVI, 18). Et propter hanc sententiam <lb/>
+            debemus omnes pro eo orare, qui in eadem est <lb/>
+            Ecclesia.</p>
+          <p>18. Et antistite nostro illo, id est, pro episcopo; ipse est <lb/>
+            pastor et prædicator noster. Memento, Domitte, famu­ <lb/>
+            lorum, famularumque tuarum, et omnium circumstanT <lb/>
+            tium. Sacerdos antea oravit pro apostolico et episcopo <lb/>
+            suo. Si episcopus missam celebrat, pro antistite nostro <lb/>
+            dicere non debet, quia ipse antistes est. Si presbyter <lb/>
+            celebrat missam, ille debet dicere pro antistite nostro. <lb/>
+            Jam oratum est pro senioribus ; postea orandum est
+            <milestone unit="PLSection" n="B"/><lb/>
+            pro populo. Quando sacerdos dicit Memento, Domine, <lb/>
+            famulorum famularumque tuarum, deprecatnr Domi­ <lb/>
+            num Patrem, ut memorare dignetur omnium ad offi­ <lb/>
+            cium missæ, sive masculorum, sive feminarum, ad­ <lb/>
+            venientium. Et quod dicit circumastantium , ipsi <lb/>
+            masculi et feminæ (intelliguntur), quicunque astant.</p>
+          <p>19. Jam sacerdos oravit pro omnibus qui ad <lb/>
+            audiendam missam venerunt, tunc denium <lb/>
+            orat pro his qui oblationes suas afferunt (Forie, <lb/>
+            offerunt]. Qui tibi offerunt hoc sacrificium laudis. <lb/>
+            Laudis dicitur , quod pro laude Dei hi primis <lb/>
+            offerunt, et postea pro se, suisque omnibus, pro <lb/>
+            redemptione animarum suarum, pro spe salutis et <lb/>
+            incolumitatis suæ ; tibique reddunt vota sua , æterno <lb/>
+            Deo, vivo et vero. Ideo offerunt, quia vivo et vero <lb/>
+            Deo omnium fides circumstantium, offerentium et <lb/>
+            non offerentium, cognita est et nota devotio. Omnes <lb/>
+            reddunt vota sua. Vota dicuntur, quia volenter pro­ <lb/>
+            mittuntur, quia volenter et libenter devovere debe­
+            <milestone unit="PLSection" n="c"/><lb/>
+            mus. Communicantes , et memoriam venerantes, in <lb/>
+            primis gloriosæ semper virginis Mariæ genitricis Dei, <lb/>
+            et Domini nostri Jesu Christi, sed et beatorum aposto­ <lb/>
+            lorum ac martyrum tuorum.</p>
+          <p>20. Communicare, hoc est, participare memoriam; <lb/>
+            venerari, hoc est, in memoria honorabiliter tenere <lb/>
+            quod sancta Maria virgo per adventum Spiritus sancti <lb/>
+            genitrix facta est Filii Dei Jesu Christi, qui Deus <lb/>
+            et homo est, per quem Patrem supplicamus, et <lb/>
+            fidem communicare debemus, et credere quod, <lb/>
+            Spiritu sancto veniente, Filius Dei natus est ex ea, <lb/>
+            et virginitas ejus non est violata. Sed et beatorum <lb/>
+            apostolorum ac martyrum tuorum. Apostolus dicitur in <lb/>
+            nostra lingua missus. Martyr dicimur testis. Apostoli <lb/>
+            ideo dicuntur, quia a Christo missi sunt. Martyres <lb/>
+            dicuntUr, quin testes sunt quod Christus passus est <lb/>
+            pro nobis, et ipsi pro Christo.</p>
+          <p>21. Hanc igitur oblationem servitutis nostræ, sed et <lb/>
+            cunctæ familiæ l uæ quæsumus, Domine, placatus ac­ <lb/>
+            cipias. Sacerdos oblationem suam, atque cunctorutn
+            <milestone unit="PLSection" n="D"/><lb/>
+            qui Deo famulantur, idem qui Domino serviunt, <lb/>
+            commendat, ut Domino placeat [Forte, placeant], et <lb/>
+            ipse nobis propitius sit. Diesqne nostros in tua pace <lb/>
+            disponas, atque ab æterna damnatione nos eripi et in <lb/>
+            electorum tuorum jubeas grege numerari ; per Christum <lb/>
+            Dominum nostrum. Pro eo quo (sic) sacerdOs offert, <lb/>
+            debet orare, ut sacerdos exaudiatur, et omnium dies <lb/>
+            in pace disponantur, et ab æterna damnatione eri­ <lb/>
+            piamur. De qua Dominus noster Jesus Christus di­ <lb/>
+            cturus est impiis in fine mundi : Ite, maledici, in <lb/>
+            ignem æternum, etc. Et ad illum gregem electorum <lb/>
+            suorum per angeos sanctos numerari Inereatnur. <lb/>
+            cui dicturus erit : Venite, benedicti Patris mei (Matth. <lb/>
+            xxv. 54), et reliqua.</p>
+          <p>22. Quam oblationem tu, Deus, in omnibus, quæsu­ <lb/>
+            mus, benedictam, ascriptam, rutam, rationabilem, ac- <lb/>
+            ceptabilemque facere digneris. Supplicat sacerdos ut <lb/>
+            illam oblationem, quam ille pro se offert, et pro <lb/>
+            populo, omnipotens Pater diguetur accipere bene- <pb n="1149"/>
+            
+            <milestone unit="PLSection" n="A"/><lb/>
+            dictam , et habere aseriptam, hoc est, assignatam , <lb/>
+            ut sibi placeat. Ratam, hoc est, judicalam, ut dl­ <lb/>
+            gnam illam judicet in conspectu suo offerri. Ralfo­ <lb/>
+            nabilem, justa ratione plenam facere dignetur, quia <lb/>
+            tunc illi est acceptabilis, si recta credentes pro justa <lb/>
+            ratione offerimus; justum est postulare ut illa obla­ <lb/>
+            tione, quam nos rationabiliter offerimus, ut Pater <lb/>
+            omnipotens sanctificando faciat. Ut nobis corpus et <lb/>
+            sanguis fiat dilectissimi Filii lui Domini nostri Jesu <lb/>
+            Christi. Patri dilectus est Filius , sicut ipse Pater <lb/>
+            testatus est de cœlo, dicens : Hic est Filius meus <lb/>
+            dilectus, etc. (Matth,. III, 17). Et nos cum diligere <lb/>
+            debemus, quia ipse prior dilexit nos, et passUs est <lb/>
+            pro nobis.</p>
+          <p>227 25. Qui, pridie quam pateretur, accepit pa­ <lb/>
+            nem in sanctas ac venerabiles manus suas : elevatis <lb/>
+            oculis in cælum ad te Deum Patrem suum omnipoten­ <lb/>
+            tem, tibi gratias agens benedixit, fregit, dedit discipu­ <lb/>
+            lis suis, dicens: Accipite, et manducate ex hoc omnes :
+            <milestone unit="PLSection" n=" B"/><lb/>
+            Hoc est enim corpus meum. Simili modo, posteaquam <lb/>
+            cænatum est, accepit et hunc praclarum calicem in <lb/>
+            .auctas ac venerabiles manus suas: item tibi gratius <lb/>
+            agens, benedixit, dedit discipulis suis, dicens; Accipite, <lb/>
+            et bibite ex eo omnes. Hic est enim calix sanguinis <lb/>
+            mei novi et æterni Testamenti, mysterium fidei, qui <lb/>
+            pro vobis et pro multis effundetur in remissionem pec­ <lb/>
+            catorum. Hæc quotiescunque feceritis , in mei memo­ <lb/>
+            riam facietis.</p>
+          <p>24. Quod intermisimus, qui pridie quam patere­ <lb/>
+            tur, hoc est pridie quam ipse passus esset pro no­ <lb/>
+            bis, voluit tradere discipulis suis corpus et sangui­ <lb/>
+            nem sui , mysterium , ut illi traderent nobis. Quis <lb/>
+            unquam crederet quod panis in carnem potuisset <lb/>
+            converti, in sanguinem vinum; nisi ipse Salvatur di­ <lb/>
+            ceret, qui panem et vinum creavit, et omnia ex ni­ <lb/>
+            hilo fecit? Facilius est aliquid ex aliquo facere, <lb/>
+            quam omnia ex nihilo crearo. Ipse Salvatur voluit <lb/>
+            corpus humanum suscipere , et hominem Deo con­
+            <milestone unit="PLSection" n="c"/><lb/>
+            jungere, ut unus fieret mediator Dei et hominum <lb/>
+            homo Christus Jesus; ipse voluit per nos panem et <lb/>
+            vinum alTerni sibi, et ab ipso divinitus consecrari, et <lb/>
+            fidelem populum credere verum esse mysterium, <lb/>
+            quod et ipse tradidit discipulis suis, dicens : Accipi­ <lb/>
+            te et manducate ex hoc omnes. Et quando oculos ad <lb/>
+            coelum levavit, et Patri gratias egit, nos docuit quod <lb/>
+            DOS Patri semper supplicare debemus , ut ille tam <lb/>
+            magnum sacramentum per manus nostrus perficere <lb/>
+            dignetur.</p>
+          <p>25. Et cum diceret: Hæc quotiescunque feceritis, <lb/>
+            in mei memoriam facietis, jussit nos illius passionis <lb/>
+            memores esse; quantaque pro nobis sustinuit, omni <lb/>
+            tempore memores esse debemus, quando hoc sacra­ <lb/>
+            mentum celebramus, et ejus misericordix , non no­ <lb/>
+            stri bonitate fiduciam dare. Unde et memores sumus, <lb/>
+            Domine, nos tui servi, sed et plebs tua sancta Christi <lb/>
+            Filii tui Domini nostri. Memores nos este sncerdotes <lb/>
+            profitemur , atque plebem memores esse testamur <lb/>
+            Christi Filii tui Domini nostri. Ideo sacerdotes fide-
+            <milestone unit="PLSection" n="D"/><lb/>
+            liter memores esse debent, quia ipsi missam cele­ <lb/>
+            brant, quia stulta postulatio est, si postulans nescit <lb/>
+            quod postulat. Plebs sancta ideo meminisci [Forte, <lb/>
+            meminisse] debet, quia Christus non solum pro sa­ <lb/>
+            cerdotibus passus est, sed et pro plebe sancia ; ideo <lb/>
+            dicitur quia fide ac baptismo Christi percepto sancti­ <lb/>
+            ficata esi.</p>
+          <p>26. Modo indicant unde meminisci debent, id est, <lb/>
+            tam beatæ passionis, necnon et ab inferis resurrectio­ <lb/>
+            nis, necnon et in calos gloriosæ ascensionis. Christi <lb/>
+            Filii tui passionis memores esse debemus , quia pali <lb/>
+            dignatus est pro nobis. Resurrectionis ab inferis, per <lb/>
+            resurrectionem ejus liberatæ [Forte, liberatæ animæ] <lb/>
+            sunt. Gloriosæ ascens onis ejus memorare debemus, <lb/>
+            quia corpus humanum , quod assumpserat, junctum <lb/>
+            divinitati sine ullius adjutorio propria majestate por­ <lb/>
+            tavit in coelum. Ideo diximus, sine ullius adjutorio, <lb/>
+            ut intelligatur quod non hominum, nec angelorum, <lb/>
+            nec ullius creaturae vehiculo eum ascendisse in coe-
+            <milestone unit="PLSection" n="A"/><lb/>
+            lum , sed a Patre majestatis elevatus est, 228 de <lb/>
+            quo ipse dixit in Evangelio : Ego et Pater unum su­ <lb/>
+            mus.</p>
+          <p>27. Offerimus præclaræ Majestati tuæ de tuis donis <lb/>
+            ac datis hostiam puram, hostiam sanctam, hostiam im­ <lb/>
+            maculatam , panem sanctum vitæ æternæ , et calicem <lb/>
+            salutis perpetuæ. Domine , omnium memores supra­ <lb/>
+            dictarum bonitatum tuarum, offerimus tuæ Majestati <lb/>
+            hostiam puram , hoc est, de corpore puro, quia pu­ <lb/>
+            rum est corpus tuum , quod de hoc pame fieri credi­ <lb/>
+            mus. Hostiam sanctam, cilia In sanctificasti corpus <lb/>
+            tuum , quando hominem in Deum assumpsisti, et <lb/>
+            nunc sanctifica hunc panem , ut corpus tuum fiat. <lb/>
+            Hostiam immaculatam , quia tu sine macula peccati <lb/>
+            passus es pro nobis.</p>
+          <p>28. Panem sanctum vitæ æternæ, quia tu panis <lb/>
+            vivus es, qui de cœlo descendisti, et corpus tuum <lb/>
+            in hoc pane a te sanctificato nos accipere voluisti, <lb/>
+            et per calicem passionis tuae noS sanguinem tuum
+            <milestone unit="PLSection" n="B"/><lb/>
+            sumere voluisti , tu sanctifica hanc hostiam , ut no­ <lb/>
+            bis corpus tuum et sanguis tuus fiat. Supra quæ pro­ <lb/>
+            pitio ac sereno vultu respicere digneris. Hoc depreca­ <lb/>
+            mur, ut Pater sanctus supra bona a nobis oblata pio <lb/>
+            et blando vultu et claro dignetur respicere. id est, <lb/>
+            videre et accepta habere. Sicut accepta habere di­ <lb/>
+            gnatus es munera pueri tui Abel, et sacrificium pa­ <lb/>
+            triarchæ nostri Abrahæ, et quod tibi obtulit summus <lb/>
+            sacerdos tuus Melchisedech, sanctum sacrificium, im­ <lb/>
+            maculatam hostiam. Accepta habuit Dominus munera <lb/>
+            Abel, quia quidquid optimum invenit, obtulit Domi­ <lb/>
+            no; et nos justa munera et. munda Deo mundo cur­ <lb/>
+            de offerre debemus. Abrabam proprio filio suo Isaac <lb/>
+            non pepercit, sed obediens jussioni Domini offerre <lb/>
+            eum voluit.</p>
+          <p>29. Melchisedech primus sacerdos Domino panem <lb/>
+            et vinum obtulit, et ideo scriptum est in Psalmo : <lb/>
+            Tu es sacerdos in æternum secundum ordinem Melchi­ <lb/>
+            sedech (Psalm. CIX, 4). Quia sicut MelchisEdech pa­
+            <milestone unit="PLSection" n="c"/><lb/>
+            nem et vinum, ita et Christus in passione sua corpus <lb/>
+            et sanguinem suum obtulit Deo Patri pro nobis, et <lb/>
+            in panc , et vino passionis suæ mysterium nos imi­ <lb/>
+            tari viduit, quando discipulis suis dans panem ac <lb/>
+            calicem, dixit : Hoc est corpus meum, et hic est calix <lb/>
+            sanguinis mei. Et nos supplicare debemus, ut sicut <lb/>
+            supradictorum Patrum accepta Deo fuerunt munera, <lb/>
+            ita fiant et nostra.</p>
+          <p>30. Supplices te rogamus , omnipotens Deus, jube <lb/>
+            hæc perferri per manus sancti angeli tui in sublime <lb/>
+            altare tuum in conspectu divinæ Majestatis tuæ. Humi­ <lb/>
+            liter postulamus ut munera nostra super hoc altare, <lb/>
+            quod videri potest, oblata, pater cœlestis juheat per <lb/>
+            manus sancti angeli sui perferri in illud altum alta­ <lb/>
+            re ante divinam Majestatem suam , quod oculis no­ <lb/>
+            stris videre non possumus, quia corporate non est, <lb/>
+            sed spirituale. Et sicut nos divinam Majestalem <lb/>
+            Patris investigare non possumus, ita nec ea quæ in <lb/>
+            conspectu ejus sunt debemus investigare, sed potius <lb/>
+            credere : ut quotquot ex hac altaris participatione sa-
+            <milestone unit="PLSection" n="D"/><lb/>
+            crosanctum Filii tui corpus et sanguinem sumpseri­ <lb/>
+            mus, omni benedictione coelesti et gratia repleamur per <lb/>
+            Christum Dominum nostrum. Orare debemus Patrem <lb/>
+            coelestem, ut omnis qui ex ipsius altaris [Forte, om­ <lb/>
+            nes qui ex ipso altari] , supra quod nos offerimus <lb/>
+            Deo Patri in commemorationem Filii sui Domini no­ <lb/>
+            stri Jesu Christi, (corpus) 229 et sanguinem præ­ <lb/>
+            dicti Filii sumpserimus, omnem benedictionem cue­ <lb/>
+            lestem accipere mereamur per Christum Dominum <lb/>
+            nostrum.</p>
+          <p>31. Nobis quoque peccatoribus, famulis tuis, de <lb/>
+            multitudine miserationum tuarum sperantibus , partem <lb/>
+            aliquam et societatem donare digneris cum sanctis <lb/>
+            apostolis, et martyribus, et omnibus sanctis. Hæc om­ <lb/>
+            nia sacrificia ideo sunt oblata, tam a sacerdote quam <lb/>
+            a populo, ut omnipotens Deus peccata nostra non <lb/>
+            reputet, sed cum sanctis suis nobis portionem tri­ <lb/>
+            buat. Intra quorum nos consortium non æstimator <lb/>
+            merisi, sed veniæ, quæsumus, largitor admitte. Hoc <pb n="1151"/>
+            
+            <milestone unit="PLSection" n="A"/><lb/>
+            rogamus, ut ipse qui dixit : In quacunque die pecca-<lb/>
+            tor conversus fuerit, et pænitentiam egerit, omnia <lb/>
+            peccata ejus in oblivione erunt coram me. Non retri­ <lb/>
+            butionem peccatorum æstimet, sed ipse (sit) veniæ <lb/>
+            largitor, ut intra sanctorum societatem nos mittat <lb/>
+            per Christum Dominum nostrum.</p>
+          <p>32. Per quem omnia hæc dona ille creavit, ipse <lb/>
+            sanctificet, et benedicat, et prosit nobis, ut per Chri­ <lb/>
+            stum, perquem facta sum et in Christo, in quo facta <lb/>
+            sunt omnia et cum quo facta sunt omnia, qui coæternus <lb/>
+            est Patri, semper gratias referamus Patri per omnia <lb/>
+            sæcula sæculorum. Amen. Præceptis salutaribus mo­ <lb/>
+            niti et divina, etc. Christi praeceptis, quæ salute <lb/>
+            sunt plena, quia ipse est salus alterni, sumus admo­ <lb/>
+            niti , et jussi, el divina institutione formati; idem <lb/>
+            formam et exemplum a Christo Domino nostro ac­ <lb/>
+            cepimus, et ausi sumus orare, sicut ille docui' disci­ <lb/>
+            pulos suos; et Patrem nostrum credimus, qui nos <lb/>
+            creavit, et dicimus :</p>
+          <p>
+            <milestone unit="PLSection" n="B"/>33. Pater noster, qui es in coelis. Christus dixit <lb/>
+            post re urrectionem suam : Ascendo ad Patrem <lb/>
+            meum et Patrem vestrum. Aliter dixit Patre n suam, <lb/>
+            aliter Patrem nostrum. Patrem suum, quia proprius <lb/>
+            Filius est Patris ex substantia Patris ante omnia <lb/>
+            sæcula genitus , Patri coalternus. Pater noster ideo <lb/>
+            est, quia nos creavit in tempore, et nos filii sumus <lb/>
+            adoptivi, et hæreditatem coelestem Patris mosti cœ­ <lb/>
+            lestis possidere debemus, si opeibus implemus qma <lb/>
+            perceptionem lidei spopondimus. Coelum a celando <lb/>
+            dicitur, eo quod celat divina secreta. Aliicr cœlum <lb/>
+            a celsitudine dicitur, eo quod altius est rebus terre­ <lb/>
+            nis. Nos autem ideo dicimus Pater noster, qui es in <lb/>
+            cœlis, ut credere ostendamus in Panem cœlestem; <lb/>
+            et sicut filii praecepta Patris sui implere cupiunt, <lb/>
+            ita et nos ipsius præcepta implere, et ad coelum <lb/>
+            semper tendere desideremus.</p>
+          <p>34: Sanctificetur nomen tuum, hoc est, ut nos di­ <lb/>
+            gni simus nomen sanctum ejus tenere in cordibus
+            <milestone unit="PLSection" n="c"/><lb/>
+            nostris , ut sicut sancti angeli, qui in coelo sunl, <lb/>
+            sciunt et intelligunt sanctitatem nominis sui, ita et <lb/>
+            nos, qui in lerra sumus, ipso adjuvante, mereamur <lb/>
+            sauctitatem ejus cognoscere; ut sicut in cœlo, ita et <lb/>
+            in terra sit nomen ejus sanctificatum. Adveniat re­ <lb/>
+            gnum tuum , hoc esi . ut nos regnum et potentiam <lb/>
+            ejus mereamur cognoscere, et ut jam propter nostra <lb/>
+            p ccala diaholus non regnet super nos, sed ipsius <lb/>
+            regnum adveniat, sicut iu Evangelio scriptum cst: <lb/>
+            Regnum Dei intra vos est.</p>
+          <p>35. Fiat voluntas tua , sicut in cœlo, et in terra: <lb/>
+            hoc est, ut ejus voluntatem sicut iI: i qui in coelo sunt <lb/>
+            faciunt, ita nos, qui in lerra sumus. 230 faciamus. <lb/>
+            Terra a terendo dicitur, eo quod pedibus teritur. <lb/>
+            Panem nostrum quotidianum da nobis hodie. Panis <lb/>
+            apud Græcos iu nostra lingua omnis interpretatur. <lb/>
+            Et nos oramus ut omnipotens Pater omnes vicus, <lb/>
+            spiritualem ac corporalem, nobis largiri dignetur <lb/>
+            omni tempore. Et dimitte nobis debita nostra, sicut et nos <lb/>
+            dimittimus debitoribus nostris. Nihil enim injustum
+            <milestone unit="PLSection" n="D"/><lb/>
+            facit, qui sibi debenti debitum requirit, sed si omni­ <lb/>
+            potens Deus a m bis omnia debita nostra requirit, <lb/>
+            nullus sine dubio invenitur liber; et ideo nos debe­ <lb/>
+            mus debitoribus nostris debita dimittere, ut nobis <lb/>
+            Omnipotens nostra dimittat, quia ipse dixit : Si non <lb/>
+            remiseritis unusquisque fratri suo de cordibus vestris, <lb/>
+            nec Pater vester coelestis remittet vobis peccata vestra <lb/>
+            (Matth. XVIII, 35). Et alibi : Auferuntur de regno ejus <lb/>
+            omnia scandala (Matth. XIII, 41); et item sacrificium <lb/>
+            non recipitur, si illud scandalo offertur; sed ame <lb/>
+            ahare dimtti jubetur, usque dum reconcilietur fra­ <lb/>
+            tri suo, et tunc offerri mundo corde.</p>
+          <p>36. Et ne nos inducas in tentationem. Hoc esi, ne <lb/>
+            intremus in illam tentationem, in qua diabolus nos <lb/>
+            tentat, ct ei consentiamus; sed Dominus ipse nos <lb/>
+            defendat, ne inducamur in tentationem diabol cam, <lb/>
+            quia si Domnus nos dimittit, statim imr ducimur <lb/>
+            in laqueum diaboli, et ideo postulamus ut ipse nos <lb/>
+            liberet a maio , hoc est, ab omni impugnatione dia-
+            <milestone unit="PLSection" n="A"/><lb/>
+            bolica. Libera nos, quæsumus, Domine. ab omnibus <lb/>
+            malis præteritis, præsentibus et futuris. Hoc postula­ <lb/>
+            mus, ut ipse nos ab omnibus malis liberet, qui nos <lb/>
+            mundos et bonos creavit, in quo nullum est malum, <lb/>
+            Praterita sunt, quæ jam ante peccantes commisi­ <lb/>
+            mus, et ideo flage la sustinemus. Futura sunt, quae <lb/>
+            adhuc, diabolo suggerente, venire possunt; et ideo <lb/>
+            oramus ut ab omnibus liberemur, quia ante conspe­ <lb/>
+            ctum Dei nulla sunt præterita, ncc futura, sed <lb/>
+            omnia sunt præsentia.</p>
+          <p>37. Intercedente pro nobis beata et gloriosa semper <lb/>
+            virgine Dei Genitrice Maria, et beatis apostolis Petro <lb/>
+            et Paulo atque Andrea. Invocantis nobis in adjutOr <lb/>
+            rium Genitricem Dei , quæ virgo fuit ante partum, <lb/>
+            virgo in partu, virgo post partum. Kt beatos aposto- <lb/>
+            Ius, qui nobis mysteria celebranda tradiderunt, ut <lb/>
+            intercedant pro nobis, quia nos ipsi digni non sumus <lb/>
+            de præteritis ac præsentibus veniam promereri, nec <lb/>
+            de fu uris cautelam, nisi nobis eorum oratione do-
+            <milestone unit="PLSection" n="B"/><lb/>
+            nemur. Jam oravimus ut liberemur a malis, nunc <lb/>
+            orem s ut prædictis sanctis intervenientibus, ipse <lb/>
+            donet pacem propitius in diebus nostris, qui potens <lb/>
+            est a malo liberare.</p>
+          <p>38. Pacem a tentatione diaboli, ne induceremur <lb/>
+            in eam; pacem a malis homnibus, ne patiamur na­ <lb/>
+            gella eorum. Ut ope misericordiæ tuæ adjuti. Hoc <lb/>
+            est, ut Dei adjutorio adjuti : A peccato simus semper <lb/>
+            liberi, et ab omni perturbatione securi. Hoc est a <lb/>
+            peccatis nostris dimissis in præsenti sæculo non per­ <lb/>
+            turbemur iterum peccantes, nec iu die judicii æter­ <lb/>
+            nam perturbationem patiamur. Pax Domini sit sem­ <lb/>
+            per vobiscum. Christus est pax æterna, qui nos re­ <lb/>
+            conciliavit Patri per passionem suam , ne propter <lb/>
+            peccanti primi hominis in inferno detineremur : <lb/>
+            hoc orat sacerdos, ut illa pax cum populo perma­ <lb/>
+            neat et omnes concordes faciat, ut pacifice cuin <lb/>
+            Christo mereamur III cœlo regnare</p>
+          <p>231 39. Et ideo tunc facimus pacem , antequam
+            <milestone unit="PLSection" n="c"/><lb/>
+            corpus et sangui em Domini nostri Jesu Christi in <lb/>
+            corpora nostra suscipiamus, quia sine concordia di­ <lb/>
+            gni non sumus sanctam communionem accipere. <lb/>
+            Quia munera, si discordiam habemus cum proximis <lb/>
+            nostris, antequam reconciliemur, a D 'mino non re­ <lb/>
+            cipiuntor. Tunc orat clerus, cantando : Agnus Dei, <lb/>
+            qui tollis peccata mundi, miserere nobis. Agnus dicitur <lb/>
+            propter innocentiam, quia nulli hominum, vel bes­ <lb/>
+            tiarum nocet; et dum ad victimam ducitur, occiden­ <lb/>
+            tem se non lædit, sed occisorem suum post occisio­ <lb/>
+            nem suam reficit. Ita et Christus nullum læsit, sicut <lb/>
+            Apostolus dicit : Qui peccatum non fecit, nec inven­ <lb/>
+            tus est dolus in ore ejus (I Petr. II, 22). Sed post pas­ <lb/>
+            sionem suam conversos persecutores suos multos <lb/>
+            per sanctam communionem corporis et sanguinis sui <lb/>
+            reficit, et credentes facit. Ipse tulit peccatum mun­ <lb/>
+            di, quando veniam peccatorum nobis dedit.</p>
+          <p>4u. Quia ante passionem ejus justi et peccatnres <lb/>
+            in infernum descendirunt, et tu Veteri Testamento <lb/>
+            remissionem peccatorum nusquam legimus. Christus
+            <milestone unit="PLSection" n="D"/><lb/>
+            vero per pœnitentiam non solum remissionem pec­ <lb/>
+            catonum, sed etiam gaudium nobis promissit angeli­ <lb/>
+            cum, dicens : Gaudium erit coram angelis Dei super <lb/>
+            uno peccatore pænitentiam agente (Lur. xv, 7). Ipsum <lb/>
+            Christum, qui est Agnus Dei innocens , qui passus <lb/>
+            est pro salute mundi petimus ut misereatur nostri, <lb/>
+            dicemes : Miserere nobis. Nam et agnus in Veteri <lb/>
+            Testamento pro peccatis populi offerebatur; et in <lb/>
+            Novo Testamento Christus semetipsum obtulit Deo <lb/>
+            Patri, ut genus humanum per passionem suam libe­ <lb/>
+            rare a peccato; et ideo Agnus Dei tunc cantatur, <lb/>
+            quando corpus et .anguis Christi percipitur, ut om­ <lb/>
+            ncs credamus quia ipsius Agni corpus et sanguiS <lb/>
+            tunc sumitur, qui peccata mundi tulit moriendo, et <lb/>
+            vitam æternam nobis donavit resurgendo Jesus <lb/>
+            Christus Dommus noster, qui cum Patre in unitate <lb/>
+            Spiritus sancti vivit et regnat per omnia sæcula sæ­ <lb/>
+            culorum. Amen.</p>
+          <p>41. Et post missam finitam dicit diaconus : Ite, <pb n="1153"/>
+            
+            <milestone unit="PLSection" n="A"/><lb/>
+            missa est. Diaconus Græce , minister Latine dicitur. <lb/>
+            III v muntiat populo, quod finitæ sunt preces, quia nul-
+            <milestone unit="PLSection" n="A"/><lb/>
+            lus :mea exire debet de ecclesia quam nuntiatum sit <lb/>
+            de ministro, et omnes respondeant : Deo gratias.</p>
+          </div>
+        
+        </body>
+  </text>
+</TEI>
