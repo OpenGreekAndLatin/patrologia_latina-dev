@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><TEI xmlns="http://www.tei-c.org/ns/1.0"><teiHeader>
-    
+<?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+	<teiHeader>
+
 		<fileDesc>
 			<titleStmt>
 				<title>Patrologiae Cursus Completus. Series Latina (PL)</title>
@@ -29,8 +31,9 @@
 				<authority>University of Leipzig</authority>
 				<idno type="filename">PL61.xml</idno>
 				<availability>
-					<licence target="https://creativecommons.org/licenses/by-sa/4.0/">Available under a
-						Creative Commons Attribution-ShareAlike 4.0 International License</licence>
+					<licence target="https://creativecommons.org/licenses/by-sa/4.0/">Available
+						under a Creative Commons Attribution-ShareAlike 4.0 International
+						License</licence>
 				</availability>
 				<date>2014</date>
 				<publisher>University of Leipzig</publisher>
@@ -76,7 +79,8 @@
 							<biblScope unit="volume">61</biblScope>
 						</monogr>
 						<monogr>
-							<author ref="http://data.perseus.org/catalog/urn:cts:latinLit:stoa0224b">Paulinus Petricordiensis</author>
+							<author ref="http://data.perseus.org/catalog/urn:cts:latinLit:stoa0224b"
+								>Paulinus Petricordiensis</author>
 							<title>Epistola Ad Perpetuum Episcopum</title>
 							<title>De Visitatione Nepotuli Sui</title>
 							<imprint>
@@ -89,8 +93,10 @@
 						<monogr>
 							<author>Amoenus</author>
 							<title>Enchiridion Veteris Et Novi Testamenti</title>
-							<title>Aegyptius Deum Martini Invocans. Tempestatis Periculum Effugit</title>
-							<title>In Leontium Episcopum Redditum Burdegalensi Ecclesiae Acrostichis</title>
+							<title>Aegyptius Deum Martini Invocans. Tempestatis Periculum
+								Effugit</title>
+							<title>In Leontium Episcopum Redditum Burdegalensi Ecclesiae
+								Acrostichis</title>
 							<imprint>
 								<publisher>Garnier</publisher>
 								<pubPlace>Paris</pubPlace>
@@ -126,14 +132,16 @@
 
 		</fileDesc>
 		<encodingDesc>
-			<p>The following text is encoded in accordance with EpiDoc standards and with the CTS/CITE
-				Architecture.</p>
-		<refsDecl>
-        <cRefPattern n="" matchPattern="(.+).(.+).(.+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@type='edition']/tei:div[@n='$1']/tei:div[@n='$2']/tei:div[@n='$3'])"/>
-        <cRefPattern n="" matchPattern="(.+).(.+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@type='edition']/tei:div[@n='$1']/tei:div[@n='$2'])"/>
-        <cRefPattern n="" matchPattern="(.+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@type='edition']/tei:div[@n='$1'])"/>
-      </refsDecl>
-    </encodingDesc>
+			<p>The following text is encoded in accordance with EpiDoc standards and with the
+				CTS/CITE Architecture.</p>
+			<refsDecl>
+				<cRefPattern n="l" matchPattern="(.+).(.+)"
+					replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@type='edition']/tei:p[@n='$1']/tei:l[@n='$2'])"/>
+				<cRefPattern n="p" matchPattern="(.+)"
+					replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@type='edition']/tei:p[@n='$1'])"
+				/>
+			</refsDecl>
+		</encodingDesc>
 
 		<profileDesc>
 			<langUsage>
@@ -142,104 +150,183 @@
 		</profileDesc>
 
 	</teiHeader>
-	<text><body><div type="edition" n="">
-					<head>
-						<title type="main">AUCTOR INCERTUS.</title>
-					</head>
-					<ab>
-						<title type="sub">CARMEN DE LAUDIBUS DOMINI.</title>
-					</ab>
-					<p>
-						<milestone unit="PLSection" n="A"/>Quis querimur sera virtutis dote juvari ? <lb/> Ouis
-						Dromissa Dei lento procedere passu? <lb/> Quis fine humano metitur judicis urnam <lb/>
-						Perpetui, tardumque putat quod sæcula debent <lb/> Accelerare diem meritis qui præmia
-						reddat i <lb/> Nobilis ingenti testatur gloria facto. <lb/> Nam qua stagnanti prælabitur
-						agmine ripas <lb/> Tardus Arar, pigrumque Diuvix explicat amnem <lb/> Qua fratrum Rheno
-						progignitur Hedua pubes. <lb/> Conjugium memini summa pietate tideque <lb/> Lex divina
-						tamen meritum cumulabat amoris. <lb/> Et votum ambobus, socium praecedere morte, <lb/>
-						Moerorique pio curam mandare sepulcri, <lb/> Sed prior uxorem decreti pagina legit.</p>
-					<p>Tunc vir sollicitus largo jubet ore cavari, <milestone unit="PLSection" n="B"/><lb/>
-						Post mortem fiunt quæ membris bospita saxa : <lb/> Suscipere veniens, aeternaque fœdera
-						jungis (sic), <lb/> Ut quos viventes tenuisset lectulus idem, <lb/> Post praecepta Dei,
-						bustum commune levaret. <lb/> Sensit vola sui conjunx præsaga mariti, <lb/> Magnaque
-						temporibus tribuit miracula castis. <lb/> Nam cum defunctis jungantur brachia membris,
-						<lb/> Et repetita manus constringat vincula trunco, <lb/> Ne quibus humanae complentur
-						munera vitæ, <lb/> Accidat informis iluitatio dissociatis. <lb/> Immensum dictu, quo
-						tempore vita peracta est, <lb/> Jungendus sociæ prospecta sede maritus.</p>
-					<p>Postquam morte viri reserata est janua læti, <lb/> Horrendumque larem jam lux ingrata
-						retexit: <lb/> Deprensa est lævam protendens femina palmam, <milestone unit="PLSection" n="c"/><lb/> Invitans socium gestu viventis amoris. <lb/> Quis dedit affectum tumulo?
-						quis vincula solvit? <lb/> Unde sepulta videt venture conjugi3 umbram? <lb/> Tu facis
-						hæc, tu Christe Deus, tua signa moventur, <lb/> Paulatimque doces sopita resurgere
-						membra: <lb/> Tu quem venturum sancti cecinere prophetæ. <lb/> Incorrupta Dei soboles,
-						rectorque regentis, <lb/> Quo sine nil magnum, genitor deliberat ingens. <lb/> Cujus ad
-						imperium certis mare constitit oris, <lb/> Nec licet immenso terris excurrere ponto,
-						<lb/> Planaque montanos includunt littora fluctus, <lb/> Qui vario stabilem dotasti
-						munere terram, <lb/> In nostros usus, largus pietate paterna : <lb/> Te vale mortales
-						committunt semina sulcis (sic), <lb/> Et novus arenti procedit cespite partus;
-							<milestone unit="PLSection" n="D"/><lb/> Tu manare jubes fecundo nettare vites, <lb/>
-						Tu gratos epulis hominum, medicosque saluti <lb/> Arboribus succos, tu trudis dulcia
-						mella. <lb/> Tu servire jubes homini genus omne animantum, <lb/> Insuper et gravibus
-						lucos curvescere pomis, <lb/> Atque novos reditus nullo de semine nasci; <milestone unit="PLSection" n="A"/><lb/> Tu varios amnes nostro prodesse labori, <lb/> Et
-						renovare sacris benedictum fontibus aevum. <lb/> Te duce "elivolis patuerunt æquora
-						rostris, <lb/> Divisosque fretis lustravit navita portus. <lb/> Tu postquam certis sunt
-						acta elemeuta figuris, <lb/> Ne torpere rudi cœlestis machina vultu <lb/> Inciperet,
-						vario signasti munere mundum : <lb/> Et quidquid coelo radiat, tua dextera finxit. <lb/>
-						His aulam Domini placuit contexere signis. <lb/> Jam freta ne nuUis agerentur inhospita
-						terris, <lb/> Assiduumque alacer muneraret navita portum: <lb/> Crebra satis tumido
-						defigitur insula ponto, <lb/> Nec tamen insano metuit circumdata fluctu, <lb/> Exiguoque
-						fretis innitens orbe resistit, <lb/> Te duce confidens, cujus venerabile pactum
-							<milestone unit="PLSection" n="B"/><lb/> Nexum lege pari summumque imumque peræquat ,
-						<lb/> Nec sinit impositos quoquam transcendere fines. <lb/> Ac ne plana nimis tellus vel
-						nuda jaceret, <lb/> Vitibus aptandos jussisti assurgere colles <lb/> Grandibus, et
-						largos umbracula texere lucos. <lb/> Tum ne vastus agat silvis torpentibus horror, <lb/>
-						Innumeros fœtus proceris tu saltibus addis : <lb/> Incola ne nemori, oeu desit praeda
-						petenti, <lb/> Tam volucres multas, tum mille examina vocum <lb/> Mortali harmonia lucis
-						resonare canoris : <lb/> Sic annum placuit variis intexere formis, <lb/> Et vice jucunda
-						mortalibus addere fructum : <lb/> Neu semper prolixa dies nimis ureret orbem, <lb/> Neu
-						brevis inustum raperet nascentibus igneo, <lb/> Ac ne perpetuo quateret labor omnia
-						nisu, <milestone unit="PLSection" n="c"/><lb/> Dat requiem fessis hominum nox roscida
-						curis : <lb/> Utque humana salus securum duceret ævum, <lb/> Sponte salutares de cespite
-						surgitis herbae, <lb/> Has Pater ipse serit nutu, non vomere dives.</p>
-					<p>Non ego ferrato tegerer si viscera muro <lb/> Ferrea vox linguaeque forent mihi mille
-						canenti, <lb/> Munera cuncta queam vestræ pietatis obire. <lb/> Sed pater ille tuus
-						secreta in sede locatus, <lb/> Nec cuiquam visa facilis, cunctisque tremendus, <lb/> Te
-						misit dominum terris vitaeque magistrum. <lb/> Et quisquis natum justo veneraLur honore,
-						<lb/> Ambobus sua voLa dicat vitamque perennem <lb/> Tu casti rectique tenax, et
-						flectere leges <lb/> Post crimen facilis, si quem vecordia preceps <lb/> Depulit a vobis
-						præscripto limite vitae. <milestone unit="PLSection" n="D"/><lb/> Te genitor nostra,
-						paterentur ut ora tueri, <lb/> Induit humana facte membrisque caducis. <lb/> Quis
-						tentaret enim fragiles attollere visus, <lb/> Si talem trepidis voluisset sistere
-						terris, <lb/> Qualis es ingenti cum torques fulmina dextra, <lb/> Præsertimque jubes
-						directa pavescere pœnam : <pb n="1093"/>
-						<milestone unit="PLSection" n="A"/><lb/> Vel cum placatus, campis sitientibus imbres
-						<lb/> Dividis, et dubias sulcis producis aristas.</p>
-					<p>Ne tamen insignem res nulla ostenderet ortum, <lb/> Virgine conciperis, non sufficit
-						esse pudicam. <lb/> Nec quæ nupta queat Domino conjungere fratrem <lb/> Ne procul ex
-						utero contagio turpis abesset. <lb/> Mox ubi processu felix maturuit ætas, <lb/>
-						Indociles animos monitis servare paternis <lb/> Aggrederis, rectamque viam labentibus
-						offers, <lb/> Atque ut missa Deo penitus praecepta paterent, <lb/> Imperium tu morti
-						adimis, morboque soluto <lb/> Desperata jubes apprendere munia vitae, <lb/> Restituisque
-						diem cæcis, et ne quid inausum <lb/> Restaret penitus, quo perfidus error obiret, <lb/>
-						Indicis sensum tumulis, et condita pridem <milestone unit="PLSection" n="B"/><lb/>
-						Membra jubes iterum superasconsurgere in auras, <lb/> Agnoscuntque suum dilecta cadavera
-						nomen.</p>
-					<p>At postquam legem sectator idoneus hausit, <lb/> Ut se mortali coelestis spiritus aula
-						<lb/> Exueret, legi intentum quo cuncta doceres <lb/> Pro summo toleranda Deo, recteque
-						perennem <lb/> Contemptu mortis sibi quemque assumere vitam: <lb/> Sic completa ferens
-						genitoris jussa, redisti <milestone unit="PLSection" n="A"/><lb/> Ad summi secreta poli,
-						qua lucidus aether <lb/> Pigra vetat proprio succendere nubila coelo ; <lb/> Atque ut
-						certa foret pereuntis copia turbæ, <lb/> Quae præcepta Dei miserantis auribus arcet,
-						<lb/> Nec nova defunctos jampridem jura tenerent: <lb/> Carceris inferni feralia, libera
-						nobis, <lb/> Innumeramque jubes tenebris emergere plebein, <lb/> His tantum clausis,
-						quos impia vita notarit: <lb/> Et loca poenarum venturis dividis umbris, <lb/> Quæ tibi
-						non credant vel quæ se credere fingant.</p>
-					<p>Sancte Deus summique Dei venerabile pignus, <lb/> Ad cujus nomen violenta morte fugatæ,
-						<lb/> Pectoribus propriis alienaque pectora nactae, <lb/> Exclamant pallentque animæ,
-						jussaeque recedunt, <lb/> Sicut multa prius de te miracula produnt, <milestone unit="PLSection" n="B"/><lb/> Cum terram coelumque inter suspensa tenentur, <lb/>
-						Obstricto per te quia nil permittitur hosti.</p>
-					<p>At nunc tu Dominum meritis, pietate parentem, <lb/> Imperio facilem, vivendi lege
-						magistrum, <lb/> Edictisque parem, quæ lex tibi condita sancit: <lb/> Victorem lætumque
-						pares mihi Constantinum, <lb/> Hoc melius foetu, terris nihil ante dedisti , <lb/> Nec
-						dabis: exaequent utinam Sua pignora patrem.</p>
-				</div>
-				</body></text></TEI>
+	<text>
+		<body>
+			<div type="edition" n="">
+				<head>
+					<title type="main">AUCTOR INCERTUS.</title>
+				</head>
+				<ab>
+					<title type="sub">CARMEN DE LAUDIBUS DOMINI.</title>
+				</ab>
+				<p n="1">
+					<l n="1"><milestone unit="PLSection" n="A"/>Quis querimur sera virtutis dote juvari ? </l>
+					<l n="2"> Ouis Dromissa Dei lento procedere passu? </l>
+					<l n="3"> Quis fine humano metitur judicis urnam </l>
+					<l n="4"> Perpetui, tardumque putat quod sæcula debent </l>
+					<l n="5"> Accelerare diem meritis qui præmia reddat i </l>
+					<l n="6"> Nobilis ingenti testatur gloria facto. </l>
+					<l n="7"> Nam qua stagnanti prælabitur agmine ripas </l>
+					<l n="8"> Tardus Arar, pigrumque Diuvix explicat amnem </l>
+					<l n="9"> Qua fratrum Rheno progignitur Hedua pubes. </l>
+					<l n="10"> Conjugium memini summa pietate tideque </l>
+					<l n="11"> Lex divina tamen meritum cumulabat amoris. </l>
+					<l n="12"> Et votum ambobus, socium praecedere morte, </l>
+					<l n="13"> Moerorique pio curam mandare sepulcri, </l>
+					<l n="14"> Sed prior uxorem decreti pagina legit.</l></p>
+				<p n="2">
+					<l n="15">Tunc vir sollicitus largo jubet ore cavari, <milestone unit="PLSection" n="B"
+						/></l>
+					<l n="16"> Post mortem fiunt quæ membris bospita saxa : </l>
+					<l n="17"> Suscipere veniens, aeternaque fœdera jungis (sic), </l>
+					<l n="18"> Ut quos viventes tenuisset lectulus idem, </l>
+					<l n="19"> Post praecepta Dei, bustum commune levaret. </l>
+					<l n="20"> Sensit vola sui conjunx præsaga mariti, </l>
+					<l n="21"> Magnaque temporibus tribuit miracula castis. </l>
+					<l n="22"> Nam cum defunctis jungantur brachia membris, </l>
+					<l n="23"> Et repetita manus constringat vincula trunco, </l>
+					<l n="24"> Ne quibus humanae complentur munera vitæ, </l>
+					<l n="25"> Accidat informis iluitatio dissociatis. </l>
+					<l n="26"> Immensum dictu, quo tempore vita peracta est, </l>
+					<l n="27"> Jungendus sociæ prospecta sede maritus.</l></p>
+				<p n="3">
+					<l n="28">Postquam morte viri reserata est janua læti, </l>
+					<l n="29"> Horrendumque larem jam lux ingrata retexit: </l>
+					<l n="30"> Deprensa est lævam protendens femina palmam, <milestone unit="PLSection"
+							n="c"/></l>
+					<l n="31"> Invitans socium gestu viventis amoris. </l>
+					<l n="32"> Quis dedit affectum tumulo? quis vincula solvit? </l>
+					<l n="33"> Unde sepulta videt venture conjugi3 umbram? </l>
+					<l n="34"> Tu facis hæc, tu Christe Deus, tua signa moventur, </l>
+					<l n="35"> Paulatimque doces sopita resurgere membra: </l>
+					<l n="36"> Tu quem venturum sancti cecinere prophetæ. </l>
+					<l n="37"> Incorrupta Dei soboles, rectorque regentis, </l>
+					<l n="38"> Quo sine nil magnum, genitor deliberat ingens. </l>
+					<l n="39"> Cujus ad imperium certis mare constitit oris, </l>
+					<l n="40"> Nec licet immenso terris excurrere ponto, </l>
+					<l n="41"> Planaque montanos includunt littora fluctus, </l>
+					<l n="42"> Qui vario stabilem dotasti munere terram, </l>
+					<l n="43"> In nostros usus, largus pietate paterna : </l>
+					<l n="44"> Te vale mortales committunt semina sulcis (sic), </l>
+					<l n="45"> Et novus arenti procedit cespite partus; <milestone unit="PLSection" n="D"
+						/></l>
+					<l n="46"> Tu manare jubes fecundo nettare vites, </l>
+					<l n="47"> Tu gratos epulis hominum, medicosque saluti </l>
+					<l n="48"> Arboribus succos, tu trudis dulcia mella. </l>
+					<l n="49"> Tu servire jubes homini genus omne animantum, </l>
+					<l n="50"> Insuper et gravibus lucos curvescere pomis, </l>
+					<l n="51"> Atque novos reditus nullo de semine nasci; <milestone unit="PLSection" n="A"
+						/></l>
+					<l n="52"> Tu varios amnes nostro prodesse labori, </l>
+					<l n="53"> Et renovare sacris benedictum fontibus aevum. </l>
+					<l n="54"> Te duce "elivolis patuerunt æquora rostris, </l>
+					<l n="55"> Divisosque fretis lustravit navita portus. </l>
+					<l n="56"> Tu postquam certis sunt acta elemeuta figuris, </l>
+					<l n="57"> Ne torpere rudi cœlestis machina vultu </l>
+					<l n="58"> Inciperet, vario signasti munere mundum : </l>
+					<l n="59"> Et quidquid coelo radiat, tua dextera finxit. </l>
+					<l n="60"> His aulam Domini placuit contexere signis. </l>
+					<l n="61"> Jam freta ne nuUis agerentur inhospita terris, </l>
+					<l n="62"> Assiduumque alacer muneraret navita portum: </l>
+					<l n="63"> Crebra satis tumido defigitur insula ponto, </l>
+					<l n="64"> Nec tamen insano metuit circumdata fluctu, </l>
+					<l n="65"> Exiguoque fretis innitens orbe resistit, </l>
+					<l n="66"> Te duce confidens, cujus venerabile pactum <milestone unit="PLSection" n="B"
+						/></l>
+					<l n="67"> Nexum lege pari summumque imumque peræquat , </l>
+					<l n="68"> Nec sinit impositos quoquam transcendere fines. </l>
+					<l n="69"> Ac ne plana nimis tellus vel nuda jaceret, </l>
+					<l n="70"> Vitibus aptandos jussisti assurgere colles </l>
+					<l n="71"> Grandibus, et largos umbracula texere lucos. </l>
+					<l n="72"> Tum ne vastus agat silvis torpentibus horror, </l>
+					<l n="73"> Innumeros fœtus proceris tu saltibus addis : </l>
+					<l n="74"> Incola ne nemori, oeu desit praeda petenti, </l>
+					<l n="75"> Tam volucres multas, tum mille examina vocum </l>
+					<l n="76"> Mortali harmonia lucis resonare canoris : </l>
+					<l n="77"> Sic annum placuit variis intexere formis, </l>
+					<l n="78"> Et vice jucunda mortalibus addere fructum : </l>
+					<l n="79"> Neu semper prolixa dies nimis ureret orbem, </l>
+					<l n="80"> Neu brevis inustum raperet nascentibus igneo, </l>
+					<l n="81"> Ac ne perpetuo quateret labor omnia nisu, <milestone unit="PLSection" n="c"
+						/></l>
+					<l n="82"> Dat requiem fessis hominum nox roscida curis : </l>
+					<l n="83"> Utque humana salus securum duceret ævum, </l>
+					<l n="84"> Sponte salutares de cespite surgitis herbae, </l>
+					<l n="85"> Has Pater ipse serit nutu, non vomere dives.</l></p>
+				<p n="4">
+					<l n="86">Non ego ferrato tegerer si viscera muro </l>
+					<l n="87"> Ferrea vox linguaeque forent mihi mille canenti, </l>
+					<l n="88"> Munera cuncta queam vestræ pietatis obire. </l>
+					<l n="89"> Sed pater ille tuus secreta in sede locatus, </l>
+					<l n="90"> Nec cuiquam visa facilis, cunctisque tremendus, </l>
+					<l n="91"> Te misit dominum terris vitaeque magistrum. </l>
+					<l n="92"> Et quisquis natum justo veneraLur honore, </l>
+					<l n="93"> Ambobus sua voLa dicat vitamque perennem </l>
+					<l n="94"> Tu casti rectique tenax, et flectere leges </l>
+					<l n="95"> Post crimen facilis, si quem vecordia preceps </l>
+					<l n="96"> Depulit a vobis præscripto limite vitae. <milestone unit="PLSection" n="D"
+						/></l>
+					<l n="97"> Te genitor nostra, paterentur ut ora tueri, </l>
+					<l n="98"> Induit humana facte membrisque caducis. </l>
+					<l n="99"> Quis tentaret enim fragiles attollere visus, </l>
+					<l n="100"> Si talem trepidis voluisset sistere terris, </l>
+					<l n="101"> Qualis es ingenti cum torques fulmina dextra, </l>
+					<l n="102"> Præsertimque jubes directa pavescere pœnam : <pb n="1093"/>
+						<milestone unit="PLSection" n="A"/></l>
+					<l n="103"> Vel cum placatus, campis sitientibus imbres </l>
+					<l n="104"> Dividis, et dubias sulcis producis aristas.</l></p>
+				<p n="5">
+					<l n="105">Ne tamen insignem res nulla ostenderet ortum, </l>
+					<l n="106"> Virgine conciperis, non sufficit esse pudicam. </l>
+					<l n="107"> Nec quæ nupta queat Domino conjungere fratrem </l>
+					<l n="108"> Ne procul ex utero contagio turpis abesset. </l>
+					<l n="109"> Mox ubi processu felix maturuit ætas, </l>
+					<l n="110"> Indociles animos monitis servare paternis </l>
+					<l n="111"> Aggrederis, rectamque viam labentibus offers, </l>
+					<l n="112"> Atque ut missa Deo penitus praecepta paterent, </l>
+					<l n="113"> Imperium tu morti adimis, morboque soluto </l>
+					<l n="114"> Desperata jubes apprendere munia vitae, </l>
+					<l n="115"> Restituisque diem cæcis, et ne quid inausum </l>
+					<l n="116"> Restaret penitus, quo perfidus error obiret, </l>
+					<l n="117"> Indicis sensum tumulis, et condita pridem <milestone unit="PLSection" n="B"
+						/></l>
+					<l n="118"> Membra jubes iterum superasconsurgere in auras, </l>
+					<l n="119"> Agnoscuntque suum dilecta cadavera nomen.</l></p>
+				<p n="6">
+					<l n="120">At postquam legem sectator idoneus hausit, </l>
+					<l n="121"> Ut se mortali coelestis spiritus aula </l>
+					<l n="122"> Exueret, legi intentum quo cuncta doceres </l>
+					<l n="123"> Pro summo toleranda Deo, recteque perennem </l>
+					<l n="124"> Contemptu mortis sibi quemque assumere vitam: </l>
+					<l n="125"> Sic completa ferens genitoris jussa, redisti <milestone unit="PLSection"
+							n="A"/></l>
+					<l n="126"> Ad summi secreta poli, qua lucidus aether </l>
+					<l n="127"> Pigra vetat proprio succendere nubila coelo ; </l>
+					<l n="128"> Atque ut certa foret pereuntis copia turbæ, </l>
+					<l n="129"> Quae præcepta Dei miserantis auribus arcet, </l>
+					<l n="130"> Nec nova defunctos jampridem jura tenerent: </l>
+					<l n="131"> Carceris inferni feralia, libera nobis, </l>
+					<l n="132"> Innumeramque jubes tenebris emergere plebein, </l>
+					<l n="133"> His tantum clausis, quos impia vita notarit: </l>
+					<l n="134"> Et loca poenarum venturis dividis umbris, </l>
+					<l n="135"> Quæ tibi non credant vel quæ se credere fingant.</l></p>
+				<p n="7">
+					<l n="136">Sancte Deus summique Dei venerabile pignus, </l>
+					<l n="137"> Ad cujus nomen violenta morte fugatæ, </l>
+					<l n="138"> Pectoribus propriis alienaque pectora nactae, </l>
+					<l n="139"> Exclamant pallentque animæ, jussaeque recedunt, </l>
+					<l n="140"> Sicut multa prius de te miracula produnt, <milestone unit="PLSection" n="B"
+						/></l>
+					<l n="141"> Cum terram coelumque inter suspensa tenentur, </l>
+					<l n="142"> Obstricto per te quia nil permittitur hosti.</l></p>
+				<p n="8">
+					<l n="143">At nunc tu Dominum meritis, pietate parentem, </l>
+					<l n="144"> Imperio facilem, vivendi lege magistrum, </l>
+					<l n="145"> Edictisque parem, quæ lex tibi condita sancit: </l>
+					<l n="146"> Victorem lætumque pares mihi Constantinum, </l>
+					<l n="147"> Hoc melius foetu, terris nihil ante dedisti , </l>
+					<l n="148"> Nec dabis: exaequent utinam Sua pignora patrem.</l></p>
+			</div>
+		</body>
+	</text>
+</TEI>
