@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
-  <teiHeader>
-    <fileDesc>
+	<teiHeader>
+		<fileDesc>
 			<titleStmt>
 				<title>Patrologiae Cursus Completus. Series Latina (PL)</title>
 				<sponsor>University of Leipzig</sponsor>
@@ -28,7 +28,7 @@
 
 			<publicationStmt>
 				<authority>University of Leipzig</authority>
-				<idno type="filename">PL62.xml</idno>
+				<idno type="filename">tmp999.tmp999.opp-lat1.xml</idno>
 				<availability>
 					<licence target="https://creativecommons.org/licenses/by-sa/4.0/">Available under a
 						Creative Commons Attribution-ShareAlike 4.0 International License</licence>
@@ -114,8 +114,9 @@
 		<encodingDesc>
 			<p>The following text is encoded in accordance with EpiDoc standards and with the CTS/CITE
 				Architecture.</p>
-		  <refsDecl n="CTS">
-        <cRefPattern n="no citable units founds" matchPattern="(.+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div/tei:div[@n='$1'])"/>
+		<refsDecl n="CTS">
+        <cRefPattern n="chapter" matchPattern="(.+).(.+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div/tei:div[@n='$1']/tei:div[@n='$2'])"/>
+        <cRefPattern n="letter" matchPattern="(.+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div/tei:div[@n='$1'])"/>
       </refsDecl>
     </encodingDesc>
 
@@ -126,14 +127,14 @@
 		</profileDesc>
 
 	</teiHeader>
-  <text>
-    <body><div type="edition" n="urn:cts:latinLit:tmp999.tmp999.opp-lat1">
+	<text><body><div type="edition" n="urn:cts:latinLit:tmp999.tmp999.opp-lat1">
 					<head>
-						<title type="main">SYMMACHIPAPÆ</title>
+						<title type="main">SYMMACHI PAPÆ</title>
 					</head>
 					<ab>
 						<title type="sub">EPISTOLÆ ET DECRETA.</title>
 					</ab>
+		<div n="1" subtype="letter" type="textpart">
 					<ab>
 						<title type="sub">EPISTOLA PRIMA (OLIM II).</title>
 					</ab>
@@ -165,6 +166,8 @@
 						videtur <milestone unit="PLSection" n="D"/><lb/> digit deploratione sancire. Dominus te
 						incolumem <lb/> custodit, frater carissime. Data sub die III calendas <lb/> Novembris,
 						post consulatum Paulini viri clarissimi <lb/> (Anno Chr. 499).</p>
+		</div>
+		<div n="2" subtype="letter" type="textpart">
 					<ab>
 						<title type="sub">EPISTOLA II (OLIM III).</title>
 					</ab>
@@ -200,7 +203,9 @@
 						cœ­ <lb/> lestis gratia desideriis jungat, et dum cupitis datur effe­ <lb/> etus, aut
 						veniat bonum pontificatus,aut faciat. Data <milestone unit="PLSection" n="D"/><lb/>
 						XVIII calendarum Novembrium die, indictione octa­ <lb/> va (Anno Chr. 499).</p>
-					<ab>
+		</div>
+		<div n="3" subtype="letter" type="textpart">		
+			<ab>
 						<title type="sub">EPISTOLA III (OLIM I).</title>
 					</ab>
 					<ab>
@@ -235,6 +240,8 @@
 						<lb/> bris, iterum post consulatum Paulini I junioris viri <lb/> clarissimi (Anno Chr.
 						500).</p>
 					<p>Dominicum pascha VIII calendasAprilis (x cal. Maii <lb/> anno 501).</p>
+		</div>
+		<div n="4" subtype="letter" type="textpart">
 					<ab>
 						<title type="sub">EPISTOLA IV (OLIM XII).</title>
 					</ab>
@@ -268,6 +275,8 @@
 						Anastasium nihil fecisse <lb/> retractandum. Deus te incolumem servet, frater di­ <lb/>
 						lectissime. Data III idus Octobres, Avieno et Pompeio <lb/> consulibus (Anno Christi
 						501).</p>
+		</div>
+		<div n="5" subtype="letter" type="textpart">
 					<ab>
 						<title type="sub">EPISTOLA V (OLIM IV).</title>
 					</ab>
@@ -360,6 +369,9 @@
 						præsumant. Hæc omnia ullione districtionis ve­ <lb/> stræ fieri prohibete ; quatenus et
 						in Ecclesia vestra, <lb/> et in supradicta provincia, disciplina bonis actibus <lb/>
 						amica servetur.</p>
+		</div>
+		<div n="6" subtype="letter" type="textpart">
+			<div n="pr" subtype="chapter" type="textpart">
 					<ab>
 						<title type="sub">EPISTOLA VI (OLIM V).</title>
 					</ab>
@@ -376,14 +388,15 @@
 						<milestone unit="PLSection" n="C"/>IV. VI raplores viduarum, vel virginum, ab Ecclesiæ
 						<lb/> communione pellantur.</p>
 					<p>V. Ut viduæ vel virgines continentiam professas non <lb/> nubant.</p>
-					<p>V I. Ut nullus per ambitum ad episcopatum accedat. <lb/> Dilectissimo fratri Cæsario
+					<p>VI. Ut nullus per ambitum ad episcopatum accedat. <lb/> Dilectissimo fratri Cæsario
 						Symmachus.</p>
 					<p>Hortatur nos æquitas postulationis, desiderio fra­ <lb/> ternitatis tuæ gratanter
 						annuere de singulis qu;e ab <lb/> apostolica sede concedi supplicas (al. postulas),
 						<lb/> quod a Patrumn cautela et provisionc non discrepat. <lb/> Et qu amvis
 						ecclesiasticæ regulæ pene omina com­ <lb/> prehendant, tamen superfluum esse non
-						credimus <lb/> denuo (al., nunc) quæ sunt saepius interdicta repe­ <lb/> tere.</p>
-					<ab>
+						credimus <lb/> denuo (al., nunc) quæ sunt saepius interdicta repe­ <lb/> tere.</p></div>
+			<div n="1" subtype="chapter" type="textpart">		
+			<ab>
 						<title type="sub">I.</title>
 					</ab>
 					<p>
@@ -405,7 +418,9 @@
 						<pb n="55"/>
 						<milestone unit="PLSection" n="A"/><lb/> largiri suaserit : sic limen ut hæc ipsa non
 						perpetuo, <lb/> sed temporaliter donec vixerint perfruantur.</p>
-					<ab>
+			</div>
+				<div n="2" subtype="chapter" type="textpart">	
+				<ab>
 						<title type="sub">II.</title>
 					</ab>
 					<p>Illud magnopere commonentes, ut hi qui non Dei <lb/> gratia, sed promissione rerum
@@ -414,6 +429,8 @@
 						hujusmodi se intentione <lb/> cohibeant, aut vindictis ( al. Qui autem se a. h. in.
 						<lb/> non cohibent, vindictis. etc. canonum sciant se sine <lb/> dubitatione
 						subdeudos.</p>
+				</div>
+			<div n="3" subtype="chapter" type="textpart">
 					<ab>
 						<title type="sub">III.</title>
 					</ab>
@@ -422,6 +439,8 @@
 							<milestone unit="PLSection" n="B"/><lb/> debeant adspirare: quia quicunque sine
 						instituto <lb/> promovetur, non facite caret offensa, et sine experi­ <lb/> mento non
 						potest quis electionis obtinere sententiam.</p>
+			</div>
+			<div n="4" subtype="chapter" type="textpart">
 					<ab>
 						<title type="sub">IV.</title>
 					</ab>
@@ -429,12 +448,16 @@
 						detestamur, illos vehementius <lb/> persequendo, qui Deo sacratas virgines, vel
 						volentes, <lb/> vel invitas, matrimonio suo sociare tentaverint: quos <lb/> pro tam
 						nefandi criniinis atrocitate a communione <lb/> suspendi præcipimus.</p>
+			</div>
+			<div n="5" subtype="chapter" type="textpart">
 					<ab>
 						<title type="sub">V.</title>
 					</ab>
 					<p>Neque viduas ad nuptias transire patimur, qu;e in <lb/> religioso proposito diuturna
 						observatione permanse­ <lb/> runt. Similiter virgines nubere prohibemus, quas <milestone unit="PLSection" n="C"/><lb/> aunis plurimis in monasteriis ætatem peregisse con­
 						<lb/> tigerit.</p>
+			</div>
+			<div n="6" subtype="chapter" type="textpart">
 					<ab>
 						<title type="sub">VI.</title>
 					</ab>
@@ -452,6 +475,8 @@
 						jacturam. Hæc tamen <lb/> ad omnium episcoporum volumus perlerri notitiam. <lb/> Deus te
 						incolumem custodial, frater carissime. Data <milestone unit="PLSection" n="A"/><lb/>
 						VIII idus Novembris, Probo viro clarissimo consuta <lb/> ( Anno Chr. 502 ) a.</p>
+			</div></div>
+			<div n="6b" subtype="letter" type="textpart">
 					<ab>
 						<title type="sub">EPISTOLA</title>
 					</ab>
@@ -703,7 +728,9 @@
 						audientes <lb/> suavissimam vocem ejus dicentis : Venite9 benedicti <lb/> Patris mei,
 						hœreditate paratum vobis regnum ab initio <lb/> mundi (Matth. xxv). Cujus beatae vocis
 						cum tua <lb/> beatitudine et nos indignos dignetur Christus Domi­ <lb/> nus noster, per
-						omnia, sanctissime pater.</p>
+						omnia, sanctissime pater.</p></div>
+
+		<div n="7" subtype="letter" type="textpart">
 					<ab>
 						<title type="sub">EPISTOLA VII (OLIM VIIIj.</title>
 					</ab>
@@ -823,6 +850,8 @@
 						vos incolumes <milestone unit="PLSection" n="C"/><lb/> custodiat, fratres carissin.i.
 						Data octavo idus Octo­ <lb/> bris (Anno Chr. 512) post consulatum Felicis viri <lb/>
 						clarissimi.</p>
+		</div>
+		<div n="8" subtype="letter" type="textpart">
 					<ab>
 						<title type="sub">EPISTOLA VIII (OLIM IX).</title>
 					</ab>
@@ -897,6 +926,8 @@
 					<p>
 						<milestone unit="PLSection" n="A"/>
 					</p>
+		</div>
+		<div n="9" subtype="letter" type="textpart">
 					<ab>
 						<title type="sub">EPISTOLA IX (OLIM X), AD CÆSARIUM ARELATENSEM.</title>
 					</ab>
@@ -931,6 +962,8 @@
 						a nobis animo securo in communionis <lb/> gratiam possit admitti. Deus te incolumem
 						custodiat, <lb/> frater carissime. Data III idus Junias, Flavio sena­ <lb/> tore viro
 						clarissimo consule (Anno Chr. 514).</p>
+		</div>
+		<div n="10" subtype="letter" type="textpart">
 					<ab>
 						<title type="sub">EPISTOLA X (OLIM VI.</title>
 					</ab>
@@ -1119,6 +1152,8 @@
 						cognosce, qui persequeris quo profi­ <lb/> teris errore (al. quo convinceris errore).
 						Sed pravi­ <lb/> tatis complex non potest nisi eum persequi, qui est <lb/> pravitatis
 						inimicus.</p>
+		</div>
+		<div n="11" subtype="letter" type="textpart">
 					<ab>
 						<title type="sub">EPISTOLA XI (OLIM VII).</title>
 					</ab>
@@ -1159,6 +1194,8 @@
 						coosummate. Dabit) <lb/> Deus, eum ipsi placuerit reducere Ecclesiis quietem ; <lb/> et
 						ut moerorem, quem induxit (al., indixit) adversi­ <lb/> tas, pacis dulcedine
 						consoletur.</p>
+		</div>
+		<div n="12" subtype="letter" type="textpart">
 					<ab>
 						<title type="sub">EPISTOLA XII (OLIM XI;</title>
 					</ab>
@@ -1227,6 +1264,8 @@
 						et Chrysogono, Tinulo xel Maximo <lb/> ( at. Maximino ), Fortunato : adstantibus quo­
 						<lb/> que diaconibus Anastasio, Hormisda, Joanne, et Aga­ <lb/> peto, Symmachus
 						episcopus Ecclesiae catholicæ urbis <lb/> Romæ dixit :</p>
+
+		<div n="1" subtype="chapter" type="textpart">
 					<ab>
 						<title type="sub">I.</title>
 					</ab>
@@ -1246,6 +1285,8 @@
 						deseratur) <lb/> in medium ut lectione agnoscatis, cujusmodi possit <lb/> habere
 						substantiam. Sancta synodus respondit : Ut­ <lb/> feratur in medium, ut cujusmodi sit,
 						possit agnosci. <lb/> Et dum diceret, Hormisda diaconus recitavit.</p>
+		</div>
+			<div n="2" subtype="chapter" type="textpart">
 					<ab>
 						<title type="sub">II.</title>
 					</ab>
@@ -1324,6 +1365,8 @@
 						tentaverit, id cum fructibus restituat, qui illud fuerit <lb/> consecutus. Et cum
 						legeret, Stephanus episcopus <lb/> Venusinæ Ecclesiae surgens e consessu dixit: Perle­
 						<lb/> gatur. Hormisda diaconus legit.</p>
+			</div>
+			<div n="3" subtype="chapter" type="textpart">
 					<ab>
 						<title type="sub">III.</title>
 					</ab>
@@ -1399,6 +1442,8 @@
 						contingat, si hi qui possunt <lb/> statutis debere innocentiam, præsumentes de liber­
 						<lb/> tate, de! querint, cum religiosa possint et nostra <lb/> successoris nostri
 						potestate fulciri, legibus ecclesia­ <lb/> sticis servientes.</p>
+			</div>
+			<div n="4" subtype="chapter" type="textpart">
 					<ab>
 						<title type="sub">IV.</title>
 					</ab>
@@ -1414,6 +1459,8 @@
 						liceat, nec data retinere, praeter clericos, et <lb/> captivos, atque peregrinos : ne
 						malae tractationis mi­ <lb/> nistretur occasio, cum liberalitati illi alia (b) itinera
 						<lb/> reserventur.</p>
+			</div>
+			<div n="5" subtype="chapter" type="textpart">
 					<p>
 						<milestone unit="PLSection" n="C"/>
 					</p>
@@ -1424,6 +1471,8 @@
 						expensa non modica <lb/> sustentari, acceptis (si offerri contigerit) sub justa <lb/>
 						(c) existimatione reditibus, et divini timore judicii, <lb/> (d) commutentur (al.
 						commodentur).</p>
+			</div>
+			<div n="6" subtype="chapter" type="textpart">
 					<ab>
 						<title type="sub">VI.</title>
 					</ab>
@@ -1438,6 +1487,8 @@
 						quoque, si sunt, vel si accesserint <lb/> aliqua mobilia, ad ornamenta divina minime
 						perti­ <lb/> nentia, perpetuo jure, exceptis duntaxat sub præ- <milestone unit="PLSection" n="A"/><lb/> fata conditione domibus, ali nare tentaverit, dona­
 						<lb/> tor, alienatur ac venditor, honoris sui amissione <lb/> muletetur.</p>
+			</div>
+			<div n="7" subtype="chapter" type="textpart">
 					<ab>
 						<title type="sub">VII.</title>
 					</ab>
@@ -1448,6 +1499,8 @@
 						contuberna­ <lb/> lium servata), quam præmisimus in alienatore vin­ <lb/> dicta. Nisi
 						forte et alienator sibi, dum repetit, et qui <lb/> acceperit, celeri restitutione
 						prospexerii.</p>
+			</div>
+			<div n="8" subtype="chapter" type="textpart">
 					<ab>
 						<title type="sub">VIII.</title>
 					</ab>
@@ -1463,6 +1516,8 @@
 						sede servari, in universis Ecclesiis per provincias <lb/> secundum animarum
 						considerationem, quem, pro­ <lb/> posito religionis convenire rectores earum viderint,
 							<milestone unit="PLSection" n="C"/><lb/> more servato.</p>
+			</div>
+			<div n="subscrp" subtype="chapter" type="textpart">
 					<ab>
 						<title type="sub">SUBSCRIPTIONES.</title>
 					</ab>
@@ -1555,6 +1610,8 @@
 					<p>Propinquus Trebias.</p>
 					<p>Eusebius Fanestris.</p>
 					<p>Romanus Nomentanus.</p>
+			</div>
+			<div n="decr" subtype="chapter" type="textpart">
 					<ab>
 						<title type="sub">DECRETUM</title>
 					</ab>
@@ -1580,8 +1637,6 @@
 							Tiberinorum. HARD. </note>
 					</p>
 				</div>
-
-
-				</body>
-  </text>
-</TEI>
+	</div>
+	</div>
+				</body></text></TEI>
