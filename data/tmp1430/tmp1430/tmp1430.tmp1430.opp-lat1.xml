@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
-  <teiHeader>
+  <teiHeader>  
     <fileDesc>
       <titleStmt>
         <title>Patrologiae Cursus Completus. Series Latina (PL)</title> 
@@ -28,7 +28,7 @@
       
       <publicationStmt>
         <authority>University of Leipzig</authority>
-        <idno type="filename">PL83.xml</idno>
+        <idno type="filename">tmp1430.tmp1430.opp-lat1.xml</idno>
         <availability>
           <licence target="https://creativecommons.org/licenses/by-sa/4.0/">Available under a Creative Commons Attribution-ShareAlike 4.0 International License</licence>
         </availability>
@@ -113,8 +113,9 @@
     <encodingDesc>
       <p>The following text is encoded in accordance with EpiDoc standards and with the
         CTS/CITE Architecture.</p>
-      <refsDecl n="CTS">
-        <cRefPattern n="no citable units founds" matchPattern="(.+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div/tei:div[@n='$1'])"/>
+    <refsDecl n="CTS">
+        <cRefPattern n="p" matchPattern="(.+).(.+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div/tei:div[@n='$1']/tei:p[@n='$2'])"/>
+        <cRefPattern n="chapter" matchPattern="(.+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div/tei:div[@n='$1'])"/>
       </refsDecl>
     </encodingDesc>
     
@@ -125,15 +126,16 @@
     </profileDesc>
     
 </teiHeader>
-  <text>
-    <body><div type="edition" n="urn:cts:latinLit:tmp1430.tmp1430.opp-lat1">
+
+  <text><body><div type="edition" n="urn:cts:latinLit:tmp1430.tmp1430.opp-lat1">
           <ab>
             <title type="sub">APPENDIX VI.</title>
           </ab>
           <ab>
             <title type="sub">EXPOSITIO IN CANTICUM CANTICORUM SALOMONIS.</title>
           </ab>
-          <p>
+    <div n="1" subtype="chapter" type="textpart">
+      <p n="1">
             <milestone unit="PLSection" n="A"/>CAP. I. — 1. Osculetur me osculo oris sui. Tangat <lb/>
             me dulcedine præsentiæ suae, quem saepius a pro­ <lb/>
             phetis promissum audivi. Quia meliora sunt ubera <lb/>
@@ -144,7 +146,7 @@
             ritus in baptismo effunditur in omnes lideles. Ideo <lb/>
             adolescentulæ dilexerunt te. Electorum animæ gratia <lb/>
             baptismatis renovatae.</p>
-          <p>2. Trahe me post te. Ut ascendentem in coelos se­ <lb/>
+          <p n="2">2. Trahe me post te. Ut ascendentem in coelos se­ <lb/>
             quar. introduxit me rex in cellaria sua. Fide in gau­ <lb/>
             dia cœlestis patriae interna. Exsultabimus, et lætabi­ <lb/>
             mur in te memores uberum tuorum super vinum. In te, <lb/>
@@ -154,8 +156,8 @@
             git. Nigra sum, sed formosa, filiæ Jerusalem. Vox Ec­ <lb/>
             clesiae de suis pressuris. Nigra in pressuris persecu­ <lb/>
             lionum, sed formosa in decore virtutum</p>
-          <p>
-            <milestone unit="PLSection" n="B"/>3. Sicut tabernacula Cedar, sicut pelles Salomonis. <lb/>
+          <p n="3">
+<milestone unit="PLSection" n="B"/>3. Sicut tabernacula Cedar, sicut pelles Salomonis. <lb/>
             In tentatione obscurata daemonum, formosa in mor­ <lb/>
             tificando desideria carnalia. Nolite me considerare, <lb/>
             quod fuscu sim, quia decoloravit me sol. Nolite mi­ <lb/>
@@ -171,7 +173,7 @@
             meute diligo, et in quibus pascua et requiem habeat, <lb/>
             ne, æstu tentationum turbata, per sodalium, id est, <lb/>
             hæreticorum conventicula eum quærere incipiam.</p>
-          <p>4. Si ignoras te, o pulchra inter mulieres, egre­ <lb/>
+          <p n="4">4. Si ignoras te, o pulchra inter mulieres, egre­ <lb/>
             dere, et abi post vestigia gregum tuorum. Si ignoras, <lb/>
             te sub hujusmodi tentationum conditione mihi esse
             <milestone unit="PLSection" n="c"/><lb/>
@@ -183,7 +185,7 @@
             amica mea. Sicut priorem populum de Ægyptio Ii­ <lb/>
             beravi timore, sic te, sponsa mea, si in me confide­ <lb/>
             ris, liberabo inanibus minis.</p>
-          <p>5. Pulchræ sunt genæ luce, sicut turturis. Tanta te <lb/>
+          <p n="5">5. Pulchræ sunt genæ luce, sicut turturis. Tanta te <lb/>
             verecundiae salutaris virtute decoravi, ut castitatem <lb/>
             promissæ mihi fidei nulla doctorum pravorum se­ <lb/>
             ductione corrumpas. Collum tuum, sicut monilia; mu­ <lb/>
@@ -193,7 +195,7 @@
             ostendunt. In murenulis Scriptura sacra ostenditur, <lb/>
             quæ auro spiritualium sensuum fulget interius, et <lb/>
             argento cœlestis eloquii nitet exterius.</p>
-          <p>6. Dum esset rex in accubitu suo, nardus mea dedit <lb/>
+          <p n="6">6. Dum esset rex in accubitu suo, nardus mea dedit <lb/>
             adorem suum. Hee Christo in beatitudine cœlestis
             <milestone unit="PLSection" n="D"/><lb/>
             secreti quiescente, sanctorum virtus magnæ nobis <lb/>
@@ -209,11 +211,11 @@
             charismata divina, quæ post resurrectionem largi <lb/>
             tus est in baptismo suis participibus. Engaddi9 lons <lb/>
             hœdi, baptismum significat.</p>
-          <p>i. Ecce tu pulchra es, amica mea, ecce tu pulchra <lb/>
+          <p n="7">7. Ecce tu pulchra es, amica mea, ecce tu pulchra <lb/>
             es. Pulchra in simplicitate cordis et munditia ope­ <lb/>
             rum. Oculi tui columbarum. Quia sensus tui spiri­ <lb/>
             tuali sum intelligentia præditi.</p>
-          <p>8. Ecce tu pulcher es% dilecte mi, ecce tu pulcher <lb/>
+          <p n="8">8. Ecce tu pulcher es% dilecte mi, ecce tu pulcher <lb/>
             es. Tu solus naturaliter pulcher, ego ex te pulchra. <lb/>
             Lectulus noster floridus. Pax sanctae Ecclesiæ et vir­ <lb/>
             tutibus sanctis florescit, et spirituali prole multipli­ <lb/>
@@ -223,13 +225,14 @@
             Cedrina et cypressina propter eximias virtutes eo.
             <milestone unit="PLSection" n="B"/><lb/>
             rum et odorem bonae vitæ.</p>
-          <p>CAP. II. — I. Ego flos campi, et lilium conrallium <lb/>
+    </div><div n="2" subtype="chapter" type="textpart">
+          <p n="1">CAP. II. — I. Ego flos campi, et lilium conrallium <lb/>
             Ego decus mundi, et gloria humilium. Sicut lilium <lb/>
             inter spinas, sic amica mea inter filias. Tu requiem <lb/>
             quaeris , et laudas lectuli; recordare quod candidior <lb/>
             tribulationum aculets efficeris, et major est fructus <lb/>
             prædicationis, quam quietis.</p>
-          <p>2. Sicut malus inter ligna silvarum, sic dilectus <lb/>
+          <p n="2">2. Sicut malus inter ligna silvarum, sic dilectus <lb/>
             meus inter fIlis. Sicut malus visu, odore, gustu, an­ <lb/>
             tecellit ligna silvestria, sic Christus antecellit omnes <lb/>
             sanctos, qui filii Dei dicuntur, sed gratia, ille solus <lb/>
@@ -238,7 +241,7 @@
             quiesco, et secura permaneo. Et fructus ejus dulcis <lb/>
             gutturi meo. Quia gratiæ suæ coelestis dulcedine me <lb/>
             refecit.</p>
-          <p>3. Introduxit me in cellam vinariam, ordinavi' in <lb/>
+          <p n="3">3. Introduxit me in cellam vinariam, ordinavi' in <lb/>
             me charitatem. Cella 193 vinaria Ecclesia debet in­ <lb/>
             telligi, in cujus unitate solummodo Spiritus sanctus
             <milestone unit="PLSection" n="c"/><lb/>
@@ -254,7 +257,7 @@
             bona, in dextera perpetuæ vitæ beatitudo designa­ <lb/>
             tur. Quia hic per spem mentem roborat, et illic per <lb/>
             remunerationem glorificat.</p>
-          <p>A. Adjuro vos, filiæ Jerusalem, per capreas, cervosque <lb/>
+          <p n="4">4. Adjuro vos, filiæ Jerusalem, per capreas, cervosque <lb/>
             camporum ne suscitetis, nec evigilare faciatis di­ <lb/>
             lectam , quoadusque ipsa velit. Contestor pacificas <lb/>
             fidelium animas, per suas quamque virtutes, quae <lb/>
@@ -263,7 +266,7 @@
             sed sic quisque de proximi profectu, sicut de suo
             <milestone unit="PLSection" n="D"/><lb/>
             gaudeat.</p>
-          <p>5. Vox dilecti mei. Subauditur, hæc est; quem au. <lb/>
+          <p n="5">5. Vox dilecti mei. Subauditur, hæc est; quem au. <lb/>
             divi adjurantem filias Jerusalem, ne me in ejus am­ <lb/>
             plexu quiescentem suscitarent. Ecce iste venit saliens <lb/>
             in montibus, transiliens colles. Tales enim saltus fecit <note type="footnote"> CAP. I. — N. d. Quid de hac Expositione sentien­ <lb/>
@@ -284,7 +287,7 @@
             sepulcrum, de sepulcro rediit in cælum. Iste, qui <lb/>
             elevatus est super omnes montes, et colles , id est, <lb/>
             sanctorum altitudines.</p>
-          <p>6. Similis est dilectus meus capreæ, hinnuloque <lb/>
+          <p n="6">6. Similis est dilectus meus capreæ, hinnuloque <lb/>
             cervorum, In assumptione carnis et humilitate ca­ <lb/>
             prex; in varietate virtutum et innocentia hinnulo <lb/>
             cervorum Christus comparatur, id est, patriarcha­ <lb/>
@@ -295,7 +298,7 @@
             miraculis appareret Deus, qui ex passionibus lanii. <lb/>
             En dilectus meus loquitur mihi. Ad prædicandum me <lb/>
             hortatur, dicens;</p>
-          <p>7. Surge, propera, amica mea, formosa mea, et veni. <lb/>
+          <p n="7">7. Surge, propera, amica mea, formosa mea, et veni. <lb/>
             Surge de stratu quietis, in quo tuimet solius curam <lb/>
             agere quæris; propera tu, et veni ad impendendam
             <milestone unit="PLSection" n="B"/><lb/>
@@ -306,7 +309,7 @@
             pus Dominicae incarnationis tegcbant. Flores appa­ <lb/>
             ruerunt in terra nostra. Id est, initia fidei et justi­ <lb/>
             tiæ floruerunt in mundo, crescente Ecclesia.</p>
-          <p>8. Tempus putationis advenit. hi est, ut, amputatis <lb/>
+          <p n="8">8. Tempus putationis advenit. hi est, ut, amputatis <lb/>
             inutilibus vanæ religionis sarmentis, futuro lidei <lb/>
             fructui praeparentur corda hominum. Vox turturis <lb/>
             audita est in terra nostra. Id est, Christi Salvatoris <lb/>
@@ -316,7 +319,7 @@
             194 dederunt odorem. Id est, evangelicus populus, <lb/>
             seu vites florentes sanctae conversationis odorem <lb/>
             longe lateque dederunt.</p>
-          <p>9. Surge, propera , amica, mea, speciosa mea, et <lb/>
+          <p n="9">9. Surge, propera , amica, mea, speciosa mea, et <lb/>
             veni; columba mea in foraminibus petræ in caverna <lb/>
             maceriæ. 0 sponsa, et amica, cui laUta obtuli bona,
             <milestone unit="PLSection" n="c"/><lb/>
@@ -332,13 +335,13 @@
             bum Domini annuntiare, vel ipsi Domino laudes reso­ <lb/>
             nare. Et illa Uides decora est, quæ, ex operibus or­ <lb/>
             nata, adversa pati non metuit.</p>
-          <p>10. Capite nobis vulpes parvulas, quæ demoliuntur <lb/>
+          <p n="10">10. Capite nobis vulpes parvulas, quæ demoliuntur <lb/>
             vineas. Id est, vincite hæreticos , et schismaticos, <lb/>
             pravos fide, et dulosos verbo, qui dente pravæ <lb/>
             doctrinae rudes fidelium mentes lacerare solent. Nam <lb/>
             vinea nostra fluruit. Id est, late electurum plebes <lb/>
             germinant.</p>
-          <p>ii. Dilectus meus mihi, et ego illi. Id est, solus
+          <p n="11">11. Dilectus meus mihi, et ego illi. Id est, solus
             <milestone unit="PLSection" n="D"/><lb/>
             mihi dilectus, et solus adjutor mihi est. Et ego illi <lb/>
             sola sum dilecta, quia nullus alius recte diligit Chri­ <lb/>
@@ -354,7 +357,8 @@
             super omnes altitudins coelestium montium ascen­ <lb/>
             disti, ut laborem peregrinationis meæ speculatione <lb/>
             aeternaepatriae releves.</p>
-          <p>C AP. III.— 1. In lectulo meo per noctes quæsivi quem <lb/>
+    </div><div n="3" subtype="chapter" type="textpart">
+          <p n="1">CAP. III.— 1. In lectulo meo per noctes quæsivi quem <lb/>
             diligit anima mea; quaesivi, et non inv ni. Jam du­ <lb/>
             dum, inquit, multo studio quaesivi Dominum ; sed <lb/>
             quia adhuc illecebris carnis meæ subdita fui, et te­ <lb/>
@@ -367,7 +371,7 @@
             surgere de lectulo carnalium voluptatum, terras ac <lb/>
             maria circuire, et philosophorum audire magisteria ; <lb/>
             sed nec sic inveni illum.</p>
-          <p>2. Invenerunt me vigiles, qui custodiunt civitatem. <lb/>
+          <p n="2">2. Invenerunt me vigiles, qui custodiunt civitatem. <lb/>
             Num quem diligit anima mea, vidistis? Vigiles sunt <lb/>
             qui custodiunt Ecclesiam apostoli, et doctores, qui <lb/>
             gentilitatem veritatis indagine sollicita invenerunt. <lb/>
@@ -380,13 +384,13 @@
             cationis introducam illum in domum , et in cubile <lb/>
             195 Synagogæ, quae me genuit in Domnino, et sit <lb/>
             unum ovile. et unus pastor.</p>
-          <p>
-            <milestone unit="PLSection" n="B"/>3. Adjuro vos, filiæ Je rusalem, etc. Ideo hunc ver­ <lb/>
+          <p n="3">
+<milestone unit="PLSection" n="B"/>3. Adjuro vos, filiæ Je rusalem, etc. Ideo hunc ver­ <lb/>
             sum repetit sponsus, ne minorem Ecclesiae degenti­ <lb/>
             bus congregatæ, quam de Judæis habere sollicitudi­ <lb/>
             nem putaretur, sed ut sit de utrisque una sponsa, et <lb/>
             illa dilectissima.</p>
-          <p>4. Quæ est ista quæ ascendit per desertum ? Miratur <lb/>
+          <p n="4">4. Quæ est ista quæ ascendit per desertum ? Miratur <lb/>
             Synagoga quomodo gentium populus, nullo circum­ <lb/>
             cisionis mysterio emendatus, nulla prophetarum ad. <lb/>
             monitione eruditus, subito ab infimis voluptatibus per <lb/>
@@ -394,7 +398,7 @@
             culmina, et sponsi amplexus ascendisset. Sicut virgula <lb/>
             fumi ex aromatibus. Igne amoris accensa omni nisu <lb/>
             virtutum ad coelestia tendit.</p>
-          <p>5. Myrrhæ et thuris, et universi pulveris, pigmen­ <lb/>
+          <p n="5">5. Myrrhæ et thuris, et universi pulveris, pigmen­ <lb/>
             larii. Ex mortificatione carnalium voluptatum, et <lb/>
             puritate orationum , et omnium virtutum odore. En <lb/>
             lectulum Salomonis sexaginta fortes ambiunt ex fortis­ <lb/>
@@ -403,7 +407,7 @@
             fortissimi bellatores, qui mundo corde digni sunt Do­
             <milestone unit="PLSection" n="c"/><lb/>
             minum videre.</p>
-          <p>6. Omnes tenentes gladios, et ad bella doctissimi. <lb/>
+          <p n="6">6. Omnes tenentes gladios, et ad bella doctissimi. <lb/>
             Tenent enim gladium spiritus, quod est verbum Dei, <lb/>
             qui quod ore docent opere complent. Uniuscujusque <lb/>
             ensis super femur suum propter timores nocturnos. No­ <lb/>
@@ -411,7 +415,7 @@
             prædicatoris est cuslodia vigilans, carnis concupi­ <lb/>
             scentias premens, ne verbum prædicationis immundi­ <lb/>
             tia vitæ maculet.</p>
-          <p>i. Ferculumfecit sibi rex Salomon de lignis Libani. <lb/>
+          <p n="7">7. Ferculumfecit sibi rex Salomon de lignis Libani. <lb/>
             Ferculum Salomonis est sancta Ecclesia, quæ credeu­ <lb/>
             tes ad æternæ bealitudinis epulas levat, quæ de lor­ <lb/>
             tibus animo, quasi de lignis imputribilibus, cunstru­ <lb/>
@@ -419,7 +423,7 @@
             aureum. Columnæ argenteæ sunt doctores eloquii luce <lb/>
             fulgentes. Reclinatorum aureum est spes perpetua: <lb/>
             quietis fidelibus promissa.</p>
-          <p>8. Ascensum purpureum. Quid est ascensus pur­ <lb/>
+          <p n="8">8. Ascensum purpureum. Quid est ascensus pur­ <lb/>
             pureus, nisi martyrum sanguis, et passio Redempto-
             <milestone unit="PLSection" n="D"/><lb/>
             ns nostI ? quia nOli ascenditur 2d epulas vitæ, nisi <lb/>
@@ -430,7 +434,7 @@
             menta Ecclesiae præstitu Christus ob nimiam charita­ <lb/>
             tem, qua dilexit nos, et tradidit semectipsum pro no­ <lb/>
             bis.</p>
-          <p>9. Egredimini, et videte, filiæ Sion, regem Salomo­ <lb/>
+          <p n="9">9. Egredimini, et videte, filiæ Sion, regem Salomo­ <lb/>
             nem. Egredimini mente, et actu de turbulenti mundi <lb/>
             c nversatione, ut regem pacis valeatis videre. In <lb/>
             diademate, quo corona vit cum mater sua. Videte Domi­ <lb/>
@@ -441,8 +445,8 @@
             sponsam ex virginali uteio proccessit. In die lætitiæ <lb/>
             cordis ejus. Id est, redeluptionis humani generis, quae <lb/>
             fuit dies lætitiæ Christi.</p><pb n="1123"/>
-            
-          <p>
+    </div><div n="4" subtype="chapter" type="textpart">
+          <p n="1">
             <milestone unit="PLSection" n="A"/>196 Cap. iv. — i. Quam pulchra es, amica mea; <lb/>
             quam pulchra es? Pulchram licii Ecclesiam, et pul­ <lb/>
             chram repetit, quia hanc et actione et pradicatione <lb/>
@@ -452,7 +456,7 @@
             Magna est gloria quippe aperti operis, sed longe in­ <lb/>
             comparabilior æternæ retribationis, quæ necdum vi­ <lb/>
             deri potest.</p>
-          <p>2. Capilli tui, sicut greges caprarum. Possunt in <lb/>
+          <p n="2">2. Capilli tui, sicut greges caprarum. Possunt in <lb/>
             eapillis populi fideles accipi, qui maximum decus sua <lb/>
             numerositate præbent Ecclesiæ. Quæ ascenderunt de <lb/>
             monte Galaad. Galaad acervus testimomi interpretatur, <lb/>
@@ -460,7 +464,7 @@
             Dentes tui sicut gregestonsarum. In capillis fragiliores, <lb/>
             in dentibus vero perfectiores quique ad regendam <lb/>
             Ecclesiam apti designamur.</p>
-          <p>3. Quæ ascenderunt de lavacro. Id est, fonte sacri <lb/>
+          <p n="3">3. Quæ ascenderunt de lavacro. Id est, fonte sacri <lb/>
             baptismatis qui ut tonsi, et loti sunt, hoc est, nudati
             <milestone unit="PLSection" n="B"/><lb/>
             renuntiando saeculo, et vitælavacro mundati. Omnes <lb/>
@@ -471,7 +475,7 @@
             assimilantur, quia dominici sanguinis quo redempta <lb/>
             est, pretium pradicare non cessat Ecclesia, vel quia <lb/>
             prædicatio sancta ardore charitatis flammescit.</p>
-          <p>4. Sicut cortex mali Punici, genæ tuæ. In genis <lb/>
+          <p n="4">4. Sicut cortex mali Punici, genæ tuæ. In genis <lb/>
             verecundia, in malo Punico passio Christi exprimi­ <lb/>
             tur. Habet ergo ruborem in gcuis spuma mali Pumci, <lb/>
             cum sacramentum dominicæ crucis verbis latetur, <lb/>
@@ -481,7 +485,7 @@
             inexpugnabilis. Quæ ædificata est cum propugnaculis. <lb/>
             Propugnacula autemejus civitatis Scriptuiarum sanc­ <lb/>
             tarum mun mina sunt, vel Patrum præce lentium.</p>
-          <p>. 5. Mille clypei pendent ex ea. Quia, quot in divinis <lb/>
+          <p n="5">5. Mille clypei pendent ex ea. Quia, quot in divinis <lb/>
             libris præcepta sunt, tot sunt pectoris nostri muni­
             <milestone unit="PLSection" n="c"/><lb/>
             mina, quibus contra insidias omnes defendimur. Om­ <lb/>
@@ -497,21 +501,21 @@
             candidissimis sanctorum Patrum exemplis, donec <lb/>
             præsentis moitaittatis umbras æterno die aspirante <lb/>
             transeamnus.</p>
-          <p>6. Vadam ad montem myrrhæ, et ud collem thuris. <lb/>
+          <p n="6">6. Vadam ad montem myrrhæ, et ud collem thuris. <lb/>
             In mytria mortificatio carnis, in thure devotio ora­ <lb/>
             tionis exprimitur; quasidiceret sponsus ; Frequentabo <lb/>
             . eos, et pia propitius illustratione glorificabo, quos in <lb/>
             . passinis, sive orationis virtute sublimes essc per­ <lb/>
             splcio.</p>
-          <p>
-            <milestone unit="PLSection" n="D"/>i. Veni de Libauo, sponsa mea, veni de Libano. Li­ <lb/>
+          <p n="7">
+<milestone unit="PLSection" n="D"/>7. Veni de Libauo, sponsa mea, veni de Libano. Li­ <lb/>
             banus candor interpretatur, id est, aaima bonis ac­ <lb/>
             i tibus candidata, quam tertio hortatur 197 sponsus <lb/>
             ut veniat. Primo vivens in carne per bona opera ; se­ <lb/>
             cundo, absoluta carne ad percipiendam vitam beatam; <lb/>
             tertio, recepto corpore ad fruenda post resurrectionem <lb/>
             gaudia perfecta.</p>
-          <p>8. Coronaberis de capite Amana, de vertice Sanir, <lb/>
+          <p n="8">8. Coronaberis de capite Amana, de vertice Sanir, <lb/>
             et llermon, de cubilibus leonum, de montibus pardo­ <lb/>
              rum. Leones propter superbiam, pardi propter cru­ <lb/>
             . delitateim maligni sunt spiritus ; montes vero Amana <lb/>
@@ -522,7 +526,7 @@
             <milestone unit="PLSection" n="A"/><lb/>
             boruin, quia de labore certaminis crescit Corona glo­ <lb/>
             riæ.</p>
-          <p>9. Vulnerasti cor meum, soror mea sponsa, vulne­ <lb/>
+          <p n="9">9. Vulnerasti cor meum, soror mea sponsa, vulne­ <lb/>
             rasti cor meum. In vulneratione cordis hignitudo <lb/>
             amoris Christi in Ecclesia intelligitur. In uno oculo­ <lb/>
             rum tuorum, el in lIno crine colli tui. In ullitate san­ <lb/>
@@ -537,7 +541,7 @@
             Fama suavissima diffusae per totum orbem fidei latiot <lb/>
             est quain veteris legis et patrum in ea, quæ in sola <lb/>
             Judæa coangustabatur.</p>
-          <p>10. Favus distillans labia foa, sponsa. Favus niel <lb/>
+          <p n="10">10. Favus distillans labia foa, sponsa. Favus niel <lb/>
             in cera cst. Mel autem in cera spiritualis est divino-
             <milestone unit="PLSection" n="B"/><lb/>
             rum sensus, it littera mel stillans, quia mutiplices <lb/>
@@ -547,7 +551,7 @@
             Jacte cruditio parvuloruin , in nielle perfectior do­ <lb/>
             ctrina lortiorum siguatur; sub lingua, id est, in medi­ <lb/>
             tatione cordis.</p>
-          <p>11. Et odor vestimentorum tuorum , sicut odor thu­ <lb/>
+          <p n="11">11. Et odor vestimentorum tuorum , sicut odor thu­ <lb/>
             na. Vestimenta Ecclesiæ opera sunt ejus, quæ odori <lb/>
             thuris comparantur, quia cuncta, quæ sancta pro <lb/>
             Domino agit Ecclesia, orationum pro ea viceni red­ <lb/>
@@ -557,7 +561,7 @@
             fonsest, quia doctrima salutari redundat; conclusus, <lb/>
             quia Domnum protectione munita persistit : signatus, <lb/>
             sermone fidei.</p>
-          <p>12. Emissionestucc paradisus malorum Punicorum, cum <lb/>
+          <p n="12">12. Emissionestucc paradisus malorum Punicorum, cum <lb/>
             pomorum fiuctibus. Per irrigationem sacri baptisma.
             <milestone unit="PLSection" n="C"/><lb/>
             tis sancta Ecclesia paradisum ex se emisit matorum Pu­ <lb/>
@@ -570,7 +574,7 @@
             divina gratia conlortat nos 193 pro Christo pati: <lb/>
             Item nardus croco conjongitur, cum charitate Chri­ <lb/>
             sti mortem libenter suscipimus.</p>
-          <p>13. Fistula et cinnamonum cum universis lignis <lb/>
+          <p n="13">13. Fistula et cinnamonum cum universis lignis <lb/>
             Libani. Fistula, quæ et casia, orbor aromatica est, <lb/>
             sed modica , et ideo spiritu humiles designat. Item <lb/>
             cinnamonum qui seipsos despiciunt signat. Quæ et <lb/>
@@ -582,7 +586,7 @@
             <milestone unit="PLSection" n="D"/><lb/>
             demonstrant. Myrrha et aloc arbores sum aromaticæ, <lb/>
             quæ continentiam carnis exprimunt.</p>
-          <p>i.. Cum omnibus primis unguentis. Id est, chari­ <lb/>
+          <p n="14">14. Cum omnibus primis unguentis. Id est, chari­ <lb/>
             smatibus virtutum excellentioribus, et pulchra est <lb/>
             conjunctio harum arborum, quia dum carnem a <lb/>
             lascivia refrenamus, consequens cst ut majora spi­ <lb/>
@@ -604,19 +608,20 @@
             <milestone unit="PLSection" n="A"/><lb/>
             candida cst per munditiam fidei, et alta per virtutem <lb/>
             gloriæ.</p>
-          <p>15. Surge, Aquilo, et veni, Auster, perfla hortum <lb/>
+          <p n="15">15. Surge, Aquilo, et veni, Auster, perfla hortum <lb/>
             meum. In Aquilone enim adversa mundi, in Austro <lb/>
             blandimenta designantur, qua gemina impugnatione <lb/>
             probatur Ecclesia. Consurge permittentis vox, non <lb/>
             imperantis. Et fluant aromata illius. Id est virtutum <lb/>
             constantiam miro odore dispergat.</p>
-          <p>CAP. V. — I. Venial dilectus meus in horlum suum. <lb/>
+    </div><div n="5" subtype="chapter" type="textpart">
+          <p n="1">CAP. V. — I. Venial dilectus meus in horlum suum. <lb/>
             Veniat Dominus in Ecclesiam suam, ut enm ipse con­ <lb/>
             servet immaculatam ubique, et fidei fruge fecundet. <lb/>
             Et comedat fructum pomorum suorum. Et libenter <lb/>
             accipiat, gratanterque inspiciat opera servorum suo­ <lb/>
             rum.</p>
-          <p>2. Veni in hortum meum, soror mea sponsa. Veni <lb/>
+          <p n="2">2. Veni in hortum meum, soror mea sponsa. Veni <lb/>
             (inquit) sæpissime in Ecclesiam meam, et venio. <lb/>
             ut corrigam , adjuvem, et confirmem. Messui tnyr­ <lb/>
             'rham meam cum aromatibus meis. Per myrrham <lb/>
@@ -625,14 +630,14 @@
             exprimuntur. Metit myrrham cum aromatibus, <lb/>
             quando martyres cum tuleris electis ad maturitatem <lb/>
             præmiorum perducit.</p>
-          <p>5. Comedi favum cum melle meo, bibi vinum cum <lb/>
+          <p n="3">3. Comedi favum cum melle meo, bibi vinum cum <lb/>
             lacte meo. In <unclear>favo</unclear> et viho prædicatores, in melle et <lb/>
             lacte auditores intelliguntur, et utrosque internus ju­ <lb/>
             dex approbat et remunerat. Comedite, amici, et bibite, <lb/>
             et inebriamini, charissimi. Amici, Iaciendo quae <lb/>
             præcipio, obsecro, ita factis sanctorum, quasi <lb/>
             epulis præcipuis, præcordia vestra replete.</p>
-          <p>4. Ego dormio. Donante grati Dei, in pace præ­ <lb/>
+          <p n="4">4. Ego dormio. Donante grati Dei, in pace præ­ <lb/>
             sentis vitæ cum colo. El cor meum vigilat. Quo tran­ <lb/>
             quillius sub incursibUs externis quiesco, eo altius <lb/>
             iutus video quam bonus est Dens. Vox dilecti mei <lb/>
@@ -642,8 +647,8 @@
             arcanorum meorum conscia. Columba mea , quia <lb/>
             spiritus mei dono illustrata. Immaculata mea, quia <lb/>
             sola aspectu meo digna.</p>
-          <p>
-            <milestone unit="PLSection" n="c"/>5. Quia caput meum plenum est tore, et cincinni <lb/>
+          <p n="5">
+<milestone unit="PLSection" n="c"/>5. Quia caput meum plenum est tore, et cincinni <lb/>
             mei guttis noctium. Caput Christi Deus. Cincinni <lb/>
             sunt fidelium collectiones. In rore et guttis noctium <lb/>
             frigens claritas in multis ostenditur quam in Domino <lb/>
@@ -651,14 +656,14 @@
             tat Dominus lidelcs quosque ad prædicationis slu­ <lb/>
             dium, quo provocata ad laborem docendi respondet <lb/>
             Ecclesia.</p>
-          <p>6. Exspoliari me tunica mea, <unclear>quom</unclear> do induar illa? <lb/>
+          <p n="6">6. Exspoliari me tunica mea, <unclear>quom</unclear> do induar illa? <lb/>
             Ac si aperte dicat, deserui negotia sæcularia lui <lb/>
             causa, quomodo reveLant illa? Lavi pedes meos, quo­ <lb/>
             modo inquinabo illos? Jam se retæ compunctionis <lb/>
             fletibus ablui cogitationes terrenas; quomodo mundi <lb/>
             sordibus iterum polluar? quia prædicationis effi­ <lb/>
             cium sine occupatione sæculari vix esse potest.</p>
-          <p>i. Dilectus meus misit manum suam per foramen. <lb/>
+          <p n="7">7. Dilectus meus misit manum suam per foramen. <lb/>
             Manum quippe suam dilectus per foramen misit, <lb/>
             cum nos Dominus occulta invisibiliter compunctione <lb/>
             ad opus virtutum accendit; nobisque in memoriam
@@ -669,14 +674,14 @@
             sponsa, tota expavescit; et pigritiam quiehs accu. <lb/>
             sans, ad laborem prædicationis festinat; unde sequi­ <lb/>
             lur.</p>
-          <p>8. Surrexi, ut aperirem dilecto meo. hi cst, verbum <lb/>
+          <p n="8">8. Surrexi, ut aperirem dilecto meo. hi cst, verbum <lb/>
             Domini prædicarem. Manus meæ stillaverunt myr­ <lb/>
             rham, et digiti me; pteni myrrha probatissima. In ma­ <lb/>
             nibus enim opera, in digitis disCretio signatur. In <lb/>
             myrrha continentia et passiones : quæ tunc proba­ <lb/>
             tissima est, cum solummodu pro charitate Dei ct <lb/>
             proximi vel continentia fit, vel passiones fiunt.</p>
-          <p>9. Pessulum ostii mei aperui dilecto meo. Pessulum <lb/>
+          <p n="9">9. Pessulum ostii mei aperui dilecto meo. Pessulum <lb/>
             dilecto aperit, qui templum sui pectoris divina visi­ <lb/>
             tatione et inhabitatione dignum fecerit. Ille declina-
             <milestone unit="PLSection" n="A"/><lb/>
@@ -684,7 +689,7 @@
             visio Dei, sicut in futuro conceditur, ideo transire <lb/>
             dicitur dilectus, idest, in futurum se videndum et <lb/>
             perfruendum plenius ostendit.</p>
-          <p>10. Anima mea liquefacta est, ut dilectus locutus <lb/>
+          <p n="10">10. Anima mea liquefacta est, ut dilectus locutus <lb/>
             est. Quanto suavius, inquit, vocem atque viciniam <lb/>
             dilecti mei accepi, tanto sublimius quidquid in me <lb/>
             frigidum erat, charitate incaluit; et quidquid rigi­ <lb/>
@@ -694,7 +699,7 @@
             donantis, ideo non semper habent illum æqualiter, <lb/>
             quia non ita se offert Deus in exsilio laborantibus <lb/>
             quomodo in patria regnantibus.</p>
-          <p>11. Invenerunt me vigiles, qui circumeunt civitatem, <lb/>
+          <p n="11">11. Invenerunt me vigiles, qui circumeunt civitatem, <lb/>
             percusserunt me, vulneraverunt me, tulerunt pallium <lb/>
             meum mihi custodes murorum. Custodes civitatis, id <lb/>
             est, Ecclesiæ, sancti sunt doctores, qui seddla præ­ <lb/>
@@ -703,14 +708,14 @@
             coelestis amoris vulner.tnt, 200 et, ut magis ar- <lb/>
             deant, inflammescunt, et vetustæ conversationis tula­ <lb/>
             men eis subtrahunt.</p>
-          <p>12. Adjuro vos, filiæ Jerusalem, si inveneritis dile­ <lb/>
+          <p n="12">12. Adjuro vos, filiæ Jerusalem, si inveneritis dile­ <lb/>
             ctum meum, ut nuntielis ei quia amore langueo. Merito <lb/>
             languet sponsa, cum gladio verbi Dei percussa, terre­ <lb/>
             nuni <unclear>exuit</unclear> amictum ; et filias Jerusalem, id est, Dco <lb/>
             dignas animas adjurat, ut sui amori magnitudinem <lb/>
             ad Dominum referant; et pro ejUs videnda gloria <lb/>
             supernum sibi poscant auxilium.</p>
-          <p>13. Qualis est dilectus tuus ex dilecto, o pulcher­ <lb/>
+          <p n="13">13. Qualis est dilectus tuus ex dilecto, o pulcher­ <lb/>
             rima mulierum ? qualis est dilectus tuus ex dilecto- <lb/>
             quia sic adjurasti nos? Obsecro te, quMa sic adjurasti <lb/>
             me, ut amore quo te languescere dicis me quoque <lb/>
@@ -718,7 +723,7 @@
             ostendas qualis sit dilectus tuus ex ea parte qua pos­ <lb/>
             sit diligi, non timeri, quia perfecta charitas foras <lb/>
             mittit timorem.</p>
-          <p>14. Dilectus meus candidus, et rubicundus , electus <lb/>
+          <p n="14">14. Dilectus meus candidus, et rubicundus , electus <lb/>
             ex millibus. Candidus. quia sine peccato; rubicun­
             <milestone unit="PLSection" n="c"/><lb/>
             dus sanguine passionis Christus, qui solus mediator <lb/>
@@ -728,7 +733,7 @@
             tervæ sunt sanctorum, quæ Deo fideli famulatu ad­ <lb/>
             hærent. Elatæ, vel electas <unclear>paluræ</unclear> propter caput <lb/>
             Christi, nigræ ob pressuras.</p>
-          <p>13. Oculi ejus quasi columbæ super rivulos aquarum. <lb/>
+          <p n="15">15. Oculi ejus quasi columbæ super rivulos aquarum. <lb/>
             Oculi ejus doctores sunt, per quos Ecclesia vitiet <lb/>
             quæ recta sunt; qui bene columbæ propter simplici­ <lb/>
             tatem, et rivulis aquarum propter charismata divina <lb/>
@@ -740,8 +745,8 @@
             ditio, et per fluenta plenissima perfectio evangelicæ <lb/>
             doctrinæ signari, quia sancti prædicatores de <unclear>the­</unclear> <lb/>
             sauris suis proferunt nova ct vetera.</p>
-          <p>
-            <milestone unit="PLSection" n="D"/>16. Genæ illius, sicut areolæ aromatum consilæ a <lb/>
+          <p n="16">
+<milestone unit="PLSection" n="D"/>16. Genæ illius, sicut areolæ aromatum consilæ a <lb/>
             pigmentariis; labia ejus lilia distillantia myrrliam pri­ <lb/>
             mam. in genis Salvatoris nostri ct modesta pietas <lb/>
             simul et severitas exprimitur. Areolis <unclear>aroniatum</unclear> <lb/>
@@ -752,7 +757,7 @@
             tatem cœlestis rcgui promittunt. Distillamia myr <lb/>
             rham primam, quia per contemplum <unclear>voluptatum</unclear> <lb/>
             præsentium ad hanc perveniendum esse pra dicant.</p>
-          <p>i7. Manus illius tornatiles, aureæ, plenæ hyacinthis. <lb/>
+          <p n="17">17. Manus illius tornatiles, aureæ, plenæ hyacinthis. <lb/>
             Manus, id est, opera, quia quæ verbis docuii, lacUs <lb/>
             implevit. Tornatiles, quia in se omnem regulam ju­ <lb/>
             stitiæ tenent. Uude dicit: Oportet me omnem justi­ <lb/>
@@ -763,21 +768,21 @@
             quae in homine gessit, divitias gloriæ perfecit. Plenae <lb/>
             hyacinthis, quia ad spem nos cælestium atque amcrem <lb/>
             excitant, quia hyacinthus aurei coloris gemma est.</p>
-          <p>18. Venter ejus eburneus, distinctus sapphiris. Ven­ <lb/>
+          <p n="18">18. Venter ejus eburneus, distinctus sapphiris. Ven­ <lb/>
             ter dilecti fragilitatem humanitatis ejus designat, <lb/>
             eburneus decorem castitatis. Sapphirus 201 sublimi­ <lb/>
             tas est coelestium virtutum. Distinctus sapphiris, quia <lb/>
             partim humana fragilitas esurie, tentatione, fatiga­ <lb/>
             tione, morte, partim divina celsitudo miraculis, re­ <lb/>
             surrectione et ascensione gloriæ intelligitur.</p>
-          <p>19. Crura illius columnæ marmoreæ, quæ fundatæ <lb/>
+          <p n="19">19. Crura illius columnæ marmoreæ, quæ fundatæ <lb/>
             sunt super bases aureas. Crurum vocabulo itinera in­ <lb/>
             carnationis Christi insinuantur, quae columnis mar­ <lb/>
             moreis propter firmitatem et rectitudinern compa­ <lb/>
             rantur. Fundatæ super bases aureas, quia quidquid <lb/>
             de eo vel per eum gestum est, omnia divinæ provi­ <lb/>
             sionis consilio ante tempora sxcularia disposita sunt.</p>
-          <p>20. Species ejus, ut Libani, electus, ut cedri. Ut <lb/>
+          <p n="20">20. Species ejus, ut Libani, electus, ut cedri. Ut <lb/>
             Libanus celsitudine et gratia arborum alios montes,
             <milestone unit="PLSection" n="B"/><lb/>
             sic Dominus Christus omnes sanctos meritorum cel­ <lb/>
@@ -786,14 +791,14 @@
             cedri superant dignitate sua ; ita Christus omnes <lb/>
             qui in Ecclesia ad vitam nascuntur sua transceudit <lb/>
             gloria.</p>
-          <p>21. Guttur illius suavissimum. In gutture interna <lb/>
+          <p n="21">21. Guttur illius suavissimum. In gutture interna <lb/>
             dulcedo verborum illius memoratur, quam qui sa­ <lb/>
             pit, non esurit. Et totus desiderabilia. Quid amplius <lb/>
             quaeris ? Totus desiderabilis est, quia totus Deus, <lb/>
             et totus homo, in quem desiderant et angeli pro­ <lb/>
             spicere. Deus in majestate Patris, homo in virgini­ <lb/>
             tate matris. In illo creator, in hac salvator.</p>
-          <p>22. Tatis est dilectus meus, et ipse est amicus meus. <lb/>
+          <p n="22">22. Tatis est dilectus meus, et ipse est amicus meus. <lb/>
             Quanto devotius quisque diligit Dominum, tanto fa­ <lb/>
             miliarius habet amicum Dominum. Et talem necesse <lb/>
             est ut intellagas eum, si vis eum amicum habere. Quo <lb/>
@@ -808,7 +813,8 @@
             tuus, et quæremus eum tecum? Qui aliquando in <lb/>
             terra corporali specie versatus est, die , quo decli­ <lb/>
             navit ille, ut sequamur illum tecum ?</p>
-          <p>CAP. VI. — i. Dilectus meus descendit in hortum <lb/>
+    </div><div n="6" subtype="chapter" type="textpart">
+          <p n="1">CAP. VI. — i. Dilectus meus descendit in hortum <lb/>
             suum ad areolam aromatum. Quasi dixisset, illuc des­ <lb/>
             cendit in horum, id est, Ecclesiam suam, ut eam <lb/>
             fonte gloriæ suæ, quasi aream aromatum, irriga­ <lb/>
@@ -819,7 +825,7 @@
             pascitur. Hactenus sanctæ Ecclesæ vox est quæ­ <lb/>
             rentis ac laudantis ; nunc, quid quaesitus respon­ <lb/>
             deat, subinfertur.</p>
-          <p>2. Pulchra es, amica mea, suavis et decora, sicut
+          <p n="2">2. Pulchra es, amica mea, suavis et decora, sicut
             <milestone unit="PLSection" n="D"/><lb/>
             Jerusalem. Sauctam Ecclesiam suam amicam dicit, <lb/>
             quia ejus vitæ desiderium visioni jam pacis intimae <lb/>
@@ -827,7 +833,7 @@
             est, charitate unita, et compacta, ut nullus locus <lb/>
             hosti per malum discordiæ aperiatur, quia solum­ <lb/>
             modo III unitate pacis terribiles sumus hosti.</p>
-          <p>3. Averte oculos tuos a me, quia ipsi me avolare <lb/>
+          <p n="3">3. Averte oculos tuos a me, quia ipsi me avolare <lb/>
             fecerunt. Id est, oculis mentis tuae noli quærere in <lb/>
             tuæ peregrinationis itinere perfecte me cognoscere, <lb/>
             quia fieri non potest ; quia quo intentius agnoscere <lb/>
@@ -839,14 +845,14 @@
             <milestone unit="PLSection" n="A"/><lb/>
             doctores, in gemellis fetibus præcepta charitatis <lb/>
             intelliguntur.</p>
-          <p>4. Sicut cortex mali Punici, sic genæ tuæ absque <lb/>
+          <p n="4">4. Sicut cortex mali Punici, sic genæ tuæ absque <lb/>
             occultis tuis. Gena. sanctae Ecclesiæ spirituales sunt <lb/>
             Patres, qui virtutibus sunt mirabiles, et moribus <lb/>
             venerabiles. et in Christi cruce gloriari non erube­ <lb/>
             scentes. Et haec magna sunt valde, quae videntur in <lb/>
             ea ; sed multo majora quæ non videntur, et in fu­ <lb/>
             turo reservantur.</p>
-          <p>5. Sexaginta sunt reginae, et octoginta concavinæ, <lb/>
+          <p n="5">5. Sexaginta sunt reginae, et octoginta concavinæ, <lb/>
             et adolescentularum non est numerus. Reginae sunt, <lb/>
             qUa! amore sponsi et coelestis præmii intuitu per præ­ <lb/>
             dicationem veritatis et sacri baptismatis fontem so­ <lb/>
@@ -858,7 +864,7 @@
             nuper Christo renatæ, quarum summa propter mul-
             <milestone unit="PLSection" n="B"/><lb/>
             titudinem civium coelestium numerum transcendit.</p>
-          <p>6. Una est columba mea, perfecta mea. Sancta vi­ <lb/>
+          <p n="6">6. Una est columba mea, perfecta mea. Sancta vi­ <lb/>
             delicet et universalis per totum orbem Ecclesia. Una <lb/>
             est matri suæ, electa genitrici suæ. Matri suæ, id est, <lb/>
             cælesti Jerusalem, quæ est mater omnium nostrum. <lb/>
@@ -867,7 +873,7 @@
             simam prædicaverunt. Quas prius dixit adolescentu­ <lb/>
             las, nunc filias nominat; antiqui omnes calholicam <lb/>
             laudant Ecclesiam.</p>
-          <p>7. Quæ est ista quæ progreditur, quasi aurora con­ <lb/>
+          <p n="7">7. Quæ est ista quæ progreditur, quasi aurora con­ <lb/>
             surgens? Progreditur Ecdesia, quasi aurora, quia <lb/>
             jaina ortus veri luminis mundo post tenebras longæ <lb/>
             ignorantiæ monstratur. Pulchra ut luna. Quia sole <lb/>
@@ -876,7 +882,7 @@
             sanctitate et veritate portat. Terribilis ut costrorum <lb/>
             acies ordinata. Terribilis aeris potestatibus in unitate <lb/>
             charitatis, fidei, et spei.</p>
-          <p>8. Descendi in hortum nucum, ul viderem poma
+          <p n="8">8. Descendi in hortum nucum, ul viderem poma
             <milestone unit="PLSection" n="c"/><lb/>
             convallium. Hortus etenim nucum est Ecclesia prae­ <lb/>
             sens. ubi nostras conscientias alterutrum minime <lb/>
@@ -889,7 +895,7 @@
             Inspicerem si virtutum studia floruissent, et si qui <lb/>
             ad exemplum dominicæ passionis præparati essent <lb/>
             suum fundere sanguinem.</p>
-          <p>9. Nescivi, anima mea conturbavit me, propter qua­ <lb/>
+          <p n="9">9. Nescivi, anima mea conturbavit me, propter qua­ <lb/>
             drigas Aminadab. 203 Nescivi dona gratiæ spiri­ <lb/>
             tualis in te, sponsa : sed anima mea conturbavit me <lb/>
             propter introductionem evangelicæ quadrigæ, qua <lb/>
@@ -904,7 +910,8 @@
             tere operum perfectione, o Sulamitis, id est, cap­ <lb/>
             uva, jam a vinculis infidelitatis revertere ad tuum <lb/>
             Redemptorem , ut salveris.</p>
-          <p>CAP. VII. — 1. Quid videbis in Sulamite, nisi cho­ <lb/>
+    </div><div n="7" subtype="chapter" type="textpart">
+          <p n="1">CAP. VII. — 1. Quid videbis in Sulamite, nisi cho­ <lb/>
             ros castrorum ? Tu doles synagogam obduratam: <lb/>
             prope est tempus, quod churus bellantium adversus <lb/>
             malignus spiritus et laudantium Dominum videbis <lb/>
@@ -920,14 +927,14 @@
             .. <lb/>
             .. <pb n="1129"/>
             </p>
-          <p>
-            <milestone unit="PLSection" n="A"/>2. Juncturæ femorum tuorum sicut monilia, quæ <lb/>
+          <p n="2">
+<milestone unit="PLSection" n="A"/>2. Juncturæ femorum tuorum sicut monilia, quæ <lb/>
             fabricata sunt manu artificis. Duorum concordia po­ <lb/>
             pulorum spirituali prope fecundorum in junctura <lb/>
             femorum designatur, quia sicut monile fabricatur <lb/>
             manu artificis , sic esi ineffabili largitate condotoris <lb/>
             nostri firmata. In monili bona opera exprimuntur.</p>
-          <p>3. Umbilicus tuus crater tornatilis , nunquam indi­ <lb/>
+          <p n="3">3. Umbilicus tuus crater tornatilis , nunquam indi­ <lb/>
             gens poculis. Umbilicus, id est, tragilitas infirmitatis <lb/>
             nostræ, crater, cum, conscientia mortalitatis atque <lb/>
             infirmitatis nostræ admoniti, calicem verbi salutaris <lb/>
@@ -938,7 +945,7 @@
             memoria ; in tritico muhiplicatio boni operis, in <lb/>
             liliis castitas exprimitur. Item in tritico panis, et in <lb/>
             cratere potus, quæ pauperibus dantur, exprimuntur.</p>
-          <p>A. Duo ubera, tua sicut duo hinnuli gemelli capreæ. <lb/>
+          <p n="4">4. Duo ubera, tua sicut duo hinnuli gemelli capreæ. <lb/>
             De duobus uberibus superius dictum est. Duo ubera
             <milestone unit="PLSection" n="B"/><lb/>
             doctores sunt utriusque populi. In gemellis duo Te­ <lb/>
@@ -947,7 +954,7 @@
             ctores designati sunt, qui turri eburneæ propter fir­ <lb/>
             mitatem et pulchritudinem comparantur. Qui civi­ <lb/>
             tati Dei et robur præstant, et decus.</p>
-          <p>5. Oculi tui sicut piscinæ in Hesebon, quæ sunt in <lb/>
+          <p n="5">5. Oculi tui sicut piscinæ in Hesebon, quæ sunt in <lb/>
             porta filiæ multitudinis. Item oculi Eclesiæ, doctores <lb/>
             propter nutrimentum. Et recte piscinæ comparan­ <lb/>
             tur, quia fluenta doctrinæ suis auditoribus præbere <lb/>
@@ -956,7 +963,7 @@
             stinentiæ constringuntur ; et bene in porta multitu­ <lb/>
             dinis, ob abundantiam populorum concurrentium <lb/>
             per portam fidei in Ecclesiam.</p>
-          <p>6. Nasus tuus sicut turris Libani. quæ respicit con­ <lb/>
+          <p n="6">6. Nasus tuus sicut turris Libani. quæ respicit con­ <lb/>
             tra Damascum. Item in naso verbi Dei dispensatores <lb/>
             causa discretionis designantur. Turris, quia eminen­ <lb/>
             lis! mum locum tenet in Ecclesia, quæ respicit con­ <lb/>
@@ -966,7 +973,7 @@
             tur ): significat carnales et crudeles, contra quos <lb/>
             sancti doctores, in turri Libani, id est, firmitate <lb/>
             Ecclesiæ semper vigilant.</p>
-          <p>7. Caput tuum ut Carmelus, et comæ capitis tui <lb/>
+          <p n="7">7. Caput tuum ut Carmelus, et comæ capitis tui <lb/>
             sicut purpura regis junctu canalibus. In capite mens <lb/>
             designatur, in comis cogitationes. Et sicut capite <lb/>
             membra, ita cogitationes niente reguntur. In Car­ <lb/>
@@ -974,7 +981,7 @@
             nomine purpuræ exprimitur, versantur. Canales , <lb/>
             præcordia sanctorum , in quibus alligamur tales co­ <lb/>
             gitationes.</p>
-          <p>8. Quam pulchra es , et quum decora , charissima, <lb/>
+          <p n="8">8. Quam pulchra es , et quum decora , charissima, <lb/>
             in deliciis. Pulchra lide, et opere decora, charissima <lb/>
             in deliciis, id est, spiritualibus virtutibus. Statura <lb/>
             tua assimilata est palmæ. Id est, rectitudo operat o- <lb/>
@@ -983,7 +990,7 @@
             eruditionis comparantur, et botris æquantur propter
             <milestone unit="PLSection" n="D"/><lb/>
             mysteria dulcissima æternitatis.</p>
-          <p>9. Dixi: Ascendam in palmam, et apprehendam <lb/>
+          <p n="9">9. Dixi: Ascendam in palmam, et apprehendam <lb/>
             fructus ejus, et erunt ubera tua sicut botri vineæ. Apte <lb/>
             enim victoriosissima crux palmæ comparatur, in quam <lb/>
             Christus ascendens apprehendit fructus ejus, id est, <lb/>
@@ -991,13 +998,13 @@
             tempore botros vineæ germinavit, id est, sanctos <lb/>
             doctores, qui majori sciemia et gratia propter cru­ <lb/>
             cem et resurrecti nem Salvatoris abundant.</p>
-          <p>10. Udor oris tui sicut malorum , guttur tuum sic­ <lb/>
+          <p n="10">10. Udor oris tui sicut malorum , guttur tuum sic­ <lb/>
             ut vinum optimum. In gutture vox præsentis doc ri­ <lb/>
             næ, in odore fama absentis demostratur. Et ideo <lb/>
             vino illa propter fragrantiam virtutum, hæc maiis <lb/>
             ob suavitatem absentis famæ comparatur.</p>
-          <p>
-            <milestone unit="PLSection" n="A"/>11. Dignum dilecto meo ad potandum, labiisque et <lb/>
+          <p n="11">
+<milestone unit="PLSection" n="A"/>11. Dignum dilecto meo ad potandum, labiisque et <lb/>
             dentibus illius ad ruminandum. Rapuit enim sponsa <lb/>
             verbum ex ore sponsi, qua ille vino optimo eam <lb/>
             comparavit et subjecit: Dignum dilecto meo, id est, <lb/>
@@ -1006,7 +1013,7 @@
             mundo iter cœleste aperuit. Labiisque et dentibus, <lb/>
             id est, apostolis praedicatoribusque maximis dedit <lb/>
             ad meditandum.</p>
-          <p>12. Ego dilecto meo. Et non alteri, cui totam cu­ <lb/>
+          <p n="12">12. Ego dilecto meo. Et non alteri, cui totam cu­ <lb/>
             ram servitutis et dilectionis impendo. Et ad me con­ <lb/>
             versio ejus. Me solam diligit et adjuvat, ne deficiam <lb/>
             in via. Egrediamur in agrum, commoremur in vil­ <lb/>
@@ -1024,7 +1031,7 @@
             tutes, in 205 malis Punic s martyrium designatur. <lb/>
             In his enim singulis sponsa dilecti sui præsentiam <lb/>
             quærit.</p>
-          <p>13. Ibi dabo tibi ubera mea. Id est, parvulorum <lb/>
+          <p n="13">13. Ibi dabo tibi ubera mea. Id est, parvulorum <lb/>
             meorum pædagogos : quia in his omnibus proficiunt <lb/>
             ductores sancti. Mandrugoræ dederunt odorem in <lb/>
             hortis nostris. Mandragora propter multimoda medi­ <lb/>
@@ -1036,7 +1043,8 @@
             servavi tibi. Poma nova, et vetera, præcepta sunt <lb/>
             sive promissa Noi Testamenti, et Veteris : quia <lb/>
             omnia ad ejus gratiam refert Ecclesia.</p>
-          <p>CAP. VIII.— 1.Quis mihi det te fratrem meum sugen­
+    </div><div n="8" subtype="chapter" type="textpart">
+          <p n="1">CAP. VIII.— 1.Quis mihi det te fratrem meum sugen­
             <milestone unit="PLSection" n="c"/><lb/>
             tem ubera matris meæ, ut inveniam te foris ? Vox ista <lb/>
             esi antiqua justorum optan lum adventum Christi <lb/>
@@ -1045,13 +1053,13 @@
             nis naturam. Et inveniam te foris. Intus erat dilectus, <lb/>
             dum in principio erat verbum; foris, dum Verbum <lb/>
             caro lactum est.</p>
-          <p>2. Ibi deosculer te. Id est, facie ad faciem videbo, <lb/>
+          <p n="2">2. Ibi deosculer te. Id est, facie ad faciem videbo, <lb/>
             et os ad os loquar. Et jam me nemo despiciat. Ante <lb/>
             adventum Christu itura angustias Judææ tantum fuit <lb/>
             Ecclesia; post Ascensionem in toto mundo dilatata <lb/>
             lunt, et venerabilis. Apprehendam te. Id est, prompta <lb/>
             ac fideli devotione excipiam venientem.</p>
-          <p>5. Et ducam in domum matris meæ, et in cubiculum <lb/>
+          <p n="3">3. Et ducam in domum matris meæ, et in cubiculum <lb/>
             genitricis mere, ibi me docebis. Peracta carnis dispen­ <lb/>
             sati ne, redeuntem lætis ducam in dolium matris <lb/>
             meæ luminibus. III domum matris meæ, ubi cœ­ <lb/>
@@ -1064,7 +1072,7 @@
             riorum sanctorum martyrum triumphum, qui ter­ <lb/>
             ventissima charitate perferunt flammas , per quas ad <lb/>
             te transire non dubitant.</p>
-          <p>A. Læva ejus sub capite meo, et dextera illius am­ <lb/>
+          <p n="4">4. Læva ejus sub capite meo, et dextera illius am­ <lb/>
             plexabitur me. Læva carnis Christi dona designat, et <lb/>
             dex erafutura sanctorum cum Christo gaudia expri­ <lb/>
             mit. Quæ est ista quæ ascendit de deserto, deliciis <lb/>
@@ -1082,7 +1090,7 @@
             lectum, omnia, quæ habet ad gratiam dilecti re­ <lb/>
             ferens. Suum, quem mihi soli mittendum puta­ <lb/>
             bam.</p>
-          <p>5. Sub arbore malo susitavi te. Sub arbore crucis a <lb/>
+          <p n="5">5. Sub arbore malo susitavi te. Sub arbore crucis a <lb/>
             perpetua morte revocavi te, ut apostolos ei cæteros <lb/>
             electes ex Judæa. Ibi corrupta est mater tua, ibi <lb/>
             violata est genitrix tua. Id est, major plebs, Christum <lb/>
@@ -1093,7 +1101,7 @@
             et per brachium designatur operatio. Si me velis <lb/>
             babere sponsum, intus charitas fide nou (icla sit, <lb/>
             et foris operatio devola.</p>
-          <p>6. Quia fortis est ut mors dilectio, dura sicut infer­ <lb/>
+          <p n="6">6. Quia fortis est ut mors dilectio, dura sicut infer­ <lb/>
             nus æmulatio. Furtis est usque ad niortem mea <lb/>
             dilectio in te, o Synagoga; sed tua semulatio dura in <lb/>
             me fuil sicut internus. Sed verte æmulationem in <lb/>
@@ -1102,7 +1110,7 @@
             lampades ignis atque flammarum. Dilectionis lampa­ <lb/>
             des corda sunt fidelium; ignis, propter fervoreul <lb/>
             cordis; flammarum , propter operationis efficaciam,</p>
-          <p>7. Aquæ mullæ non poterunt exstinguere charita­ <lb/>
+          <p n="7">7. Aquæ mullæ non poterunt exstinguere charita­ <lb/>
             tem, nec flumina obruent illam. Aquas multas et <lb/>
             flumima, tentationum dicit incursus quæ visibiliter, <lb/>
             seu invisibiliter, animas fidelium impugnare non de­ <lb/>
@@ -1111,7 +1119,7 @@
             nihil despiciet eam. Sancti vere totius domus suæ sub­ <lb/>
             Stantiam pro dilectionis magnitudine quasi nihil <lb/>
             despicichant.</p>
-          <p>8. Soror nostra parva est, et ubera non habet. <lb/>
+          <p n="8">8. Soror nostra parva est, et ubera non habet. <lb/>
             Prima nascentis Ecclesiæ de gentibus tempora de­ <lb/>
             signai, quando adhuc et parva fuit numero, et minus <lb/>
             idonea prædicare verbum Dei, quasi sponsus Syna­ <lb/>
@@ -1124,7 +1132,7 @@
             quando alloquenda est, id esi, per verbi ministerium <lb/>
             ducenda in fidem ? Synagoga tacente, ipse sponsus <lb/>
             quid fieri debent respondet.</p>
-          <p>9. Si murus est, ædificemus super eum propugna­ <lb/>
+          <p n="9">9. Si murus est, ædificemus super eum propugna­ <lb/>
             cula argentea. Acsi diceret : Si aliquos habet iu se <lb/>
             fortes fide, ingenio claros, vel philosophia in­ <lb/>
             structos, addamus illis propugnacula argentea, id <lb/>
@@ -1137,7 +1145,7 @@
             docendi opus implere possint. Cedri virtutes sancto­ <lb/>
             rum ei tabulas latitudinem cLaritatis designant. Ad <lb/>
             hæc ipsa respondet Ecclesia.</p>
-          <p>10. Ego murus, et ubera mea quasi 'urnis. Ex quo <lb/>
+          <p n="10">10. Ego murus, et ubera mea quasi 'urnis. Ex quo <lb/>
             facta sum coram eo quasi pacem reperiens, ego de <lb/>
             vivis compacta sum lapidibus, ct glutino charitatis <lb/>
             adunata , et super fundamentum immobile ædifi­ <lb/>
@@ -1146,14 +1154,14 @@
             pellere ; et hoc mihi accidit ex eo tempore quo <lb/>
             Christus me reconciliavit, et per eum pacem re-<lb/>
             peri.</p>
-          <p>11. Vinea fuit pacifico meo in ea quæ habet popu­ <lb/>
+          <p n="11">11. Vinea fuit pacifico meo in ea quæ habet popu­ <lb/>
             los. Vinea id est, catholica Ecclesia fructu abun­ <lb/>
             dans fidei fuit pacifico, id est, Christo, quia omnia <lb/>
             pacificavit in cœlis et in te ris, in ea congregatione <lb/>
             quæ multos populos possidet ex toto orbe, non Ju­ <lb/>
             da'a solum. Traditur ea custodibus prophetis, vel <lb/>
             apostolis, vel angelicis potestatibus et dignitatibus.</p>
-          <p>207 12. Vir autem p.o fructu. Id est, retribu-
+          <p n="12">207 12. Vir autem p.o fructu. Id est, retribu-
             <milestone unit="PLSection" n="B"/><lb/>
             tione æterna hujus vineæ. Affert mille argentes. Id <lb/>
             est, pro acquisitione regni cœlestis, qui est fructus <lb/>
@@ -1168,7 +1176,7 @@
             meo cuncta sua dimittit, in pace erit, quia omnem <lb/>
             substantiam suam, quæ millenario designatur, pro <lb/>
             charitate Dei amittit.</p>
-          <p>13. Et ducenti (id est) his qui custodiunt fructus <lb/>
+          <p n="13">13. Et ducenti (id est) his qui custodiunt fructus <lb/>
             ejus. Qui sunt doctores sancti, qui omnia mundi <lb/>
             dimittunt, et in verbo prædicationis laborare non <lb/>
             cessant, hi duplici remuneratione , quæ ducentena­ <lb/>
@@ -1181,7 +1189,7 @@
             te considerant, et tuo gaudent aspectu. Fac me au­ <lb/>
             dire vocem tuam. Id est, vex prædicationis tuæ, duin <lb/>
             vales, semper audiatur a me.</p>
-          <p>14. Fuge, dilecte mi. Acsi aperte dicat : Quoniam, <lb/>
+          <p n="14">14. Fuge, dilecte mi. Acsi aperte dicat : Quoniam, <lb/>
             in carne apparens præcepta mihi ac dona vitæ cœ­ <lb/>
             lestis conferre dignatus es, nunc his peractis, rever­ <lb/>
             tere in sinum Patris, omni dilecte. Assimilare ca­ <lb/>
@@ -1190,7 +1198,5 @@
             nequeo cernere, saltem crebra visitatione me con­ <lb/>
             solari memento.</p>
         </div>
-        
-        </body>
-  </text>
-</TEI>
+  </div>
+        </body></text></TEI>
