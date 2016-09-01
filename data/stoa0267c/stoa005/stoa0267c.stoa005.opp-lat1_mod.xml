@@ -1,0 +1,368 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+	<teiHeader>
+    <fileDesc>
+			<titleStmt>
+				<title/>
+				<editor/>
+				<sponsor>University of Leipzig</sponsor>
+				<funder>European Social Fund Saxony</funder>
+				<principal>Gregory Crane</principal>
+				<meeting/>
+				<respStmt>
+					<persName xml:id="DDD">Digital Divide Data</persName>
+					<resp>Corrected and encoded the text</resp>
+				</respStmt>
+				<respStmt>
+					<persName>Greta Franzini</persName>
+					<resp>Project Manager (University of Leipzig)</resp>
+				</respStmt>
+				<respStmt>
+					<persName>Frederik Baumgardt</persName>
+					<resp>Technical Manager (University of Leipzig)</resp>
+				</respStmt>
+				<respStmt>
+					<persName>Simona Stoyanova</persName>
+					<resp>Project Assistant (University of Leipzig)</resp>
+				</respStmt>
+				<respStmt>
+					<persName>Bruce Robertson</persName>
+					<resp>Technical Advisor</resp>
+				</respStmt>
+				<respStmt>
+					<persName>Tabea Selle</persName>
+					<resp>Student Assistant</resp>
+				</respStmt>
+			</titleStmt>
+			<publicationStmt>
+				<authority>University of Leipzig</authority>
+				<idno type="filename">PL3_15_NOT.xml
+</idno>
+				<availability>
+					<p>Available under a Creative Commons Attribution-ShareAlike 4.0 International
+						License</p>
+				</availability>
+				<date>2015</date>
+				<publisher>University of Leipzig</publisher>
+				<pubPlace>Germany</pubPlace>
+			</publicationStmt>
+			
+			<sourceDesc>
+				<listBibl xml:lang="la">
+					<biblStruct>
+						<monogr>
+							<title>Notitia epistolarum non exstantium quae ad Stephanum attinent</title>
+							<editor>
+								<persName>
+									<name xml:lang="la"/>
+									<name xml:lang="fr">Jaques Paul Migne</name>
+								</persName>
+							</editor>
+							<author ref="urn:tmp">Stephanus I</author>
+							<imprint>
+								<publisher/>
+								<pubPlace>Paris</pubPlace>
+								<date>1865</date>
+							</imprint>
+							<biblScope unit="volume">3</biblScope>
+						</monogr>
+					</biblStruct>
+				</listBibl>
+			</sourceDesc>
+			
+		</fileDesc>
+		<encodingDesc>
+			<p>Text encoded in accordance with the latest EpiDoc standards (January 2014)</p>
+			  <refsDecl n="CTS">
+        <cRefPattern n="paragraph" matchPattern="(.+).(.+).(.+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div/tei:div[@n='$1']/tei:div[@n='$2']/tei:p[@n='$3'])"/>
+        <cRefPattern n="section" matchPattern="(.+).(.+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div/tei:div[@n='$1']/tei:div[@n='$2'])"/>
+        <cRefPattern n="chapter" matchPattern="(.+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div/tei:div[@n='$1'])"/>
+      </refsDecl>
+    </encodingDesc>
+		<profileDesc>
+			<langUsage>
+				<language ident="grc">Greek</language>
+				<language ident="la">Latin</language>
+			</langUsage>
+		</profileDesc>
+		<revisionDesc>
+			<change when="2015-12-08" who="dwp"/>
+		</revisionDesc>
+	</teiHeader><text>
+		<body>
+			<div type="edition" n="urn:cts:latinLit:stoa0267c.stoa005.opp-lat1">
+				<head>
+					<title>NOTITIA EPISTOLARUM NON EXSTANTIUM QUAE AD STEPHANUM ATTINENT, <hi rend="italic">AUCTORE D. COUSTANTIO O. S. B.</hi></title>
+				</head>
+				<div type="textpart" subtype="chapter" n="1">
+					<head>
+						<title>I.</title>
+					</head>
+					<div type="textpart" subtype="section" n="1">
+					<p n="1">1. Faustini Lugdunensis episcopi ac ceterorum ejusdem provinciae
+						episcoporum ad Stephanum pa- pam litterae, quibus Marcianum Arclatensem epi-
+						scopum Novatiano sesc conjunxisse, ac durissimam haeresis illius tenere
+						pravitatem, atque ab episco- <pb n="1019"/>
+						<milestone unit="PLSection" n="A"/> porum consensione discessisse
+						nuntiabant. Eo au- tem audaciae proruperat Marcianus, ut de collegio
+						sacerdotum, qui lapsis, post debitam poenitentiam, pacem dandam censebant,
+						judicare eosque a se segregare non timeret, cum ab his ipse necdum abstentus
+						videretur. De eadem re Faustinus idem semel et iterum ad Cyprianum scripsit
+							(<hi rend="italic">Epist</hi>. I, <hi rend="italic">ad Steph., n.</hi> 1). Quod ideo factum suspicantur non-
+						nulli, ut cum Faustinus ac socii nihil a Stephano obtinuissent, ejus opera
+						vel monitis suppetias Ca- tholicis episcopis impetrarent. Nempe qui summis
+						rebus praesident, ubi nonnullas vel prae nimia occu- patione vel pro
+						prudentia differre compelluntur, saepe culpantur ut segaes, ubi vero
+						diligentiam adhibent, vix vitare queunt praecipitis animi suspi- <milestone unit="PLSection" n="Β"/> cionem. Ad Cyprianum quod attinet, adeo non du-
+						bitavit, quin Stephanus ipsius consilio et hortatu litteras ad provinciam et
+						plebem Arelatensem mit- teret, quibus et Marcianum abstineri, et alium
+						episcopum in ejus locum substitui praeciperet, ut et quis fuerit substitutus
+						sibi significari simul roget (<hi rend="italic">Ibid</hi>. n. 3 et 5).
+						Hujusmodi autem litteras a Ste- phano missas fuisse hoc indicio esi, quod in
+						Arela- tensibus diptychis, uti jam observavimus, Marciani nomen non
+						comparet. Quod in negotio Cyprianus suum ipse pro omnibus Ecclesiis studium
+						ac solli- citudinem comprobans, Romani pontificis tum ad dimovendum de sede
+						sua Arelatensem episcopum, tum ad alium ei subrogandum auctoritatem haud
+							<milestone unit="PLSection" n="C"/> dubio testimonio agnovit. Neque enim
+						audiendus videtur recens Annalium Cyprianicorum scriptor, cujus sententia
+						nihil « nihil a Stephano postulabat Cyprianus » (cum illi auctor erat ut
+						litteras ad pro- vinciam mitteret), « quod ipse praestare paratus non erat,
+						» nisi subaudiatur, « si in eadem sede ac loco fuisset. »</p>
+					</div>
+					<div type="textpart" subtype="section" n="2">
+					<p n="2">2. Faustini ad Stephanum litteras ad primum hujus pontificis annum
+						referri nihil vetat. Eas certe ante obortam de Baptismo haereticorum con-
+						troversiam scriptas esse liquet. Ambiguum enim non est quin haec ipsa
+						controversia posterior sit epistola, quam postmodum Cyprianus ad Stepha- num
+						de Marciani causa scripsit. Hanc autem cau- sam ad secundum Stephani annum
+						jam adultum per- <milestone unit="PLSection" n="D"/> tinere praedictus <hi rend="italic">Annalium Cyprianicorum</hi> scriptor probat. Unde sequitur
+						ut si quas suadebat Cypria- nus litteras Stephanus ad Arelatenses miserit,
+						hae non citius anno 254 excunte conscriptae sint.</p>
+					</div>
+				</div>
+				<div type="textpart" subtype="chapter" n="2">
+					<head>
+						<title>II.</title>
+					</head>
+					<div type="textpart" subtype="section" n="3">
+					<p n="3">3. Basilides, Legionis et Asturicae episcopus, cum ob idololatriae
+						scelus aliaque crimina ab episcopatu depulsus esset, ejusque loco Sabinus
+						fuisset suffe- ctus, sese Romam ad Stephanum contulit, a quo ut in sedem
+						suam restitueretur obtinuit. De hac re quid sentiret Cyprianus ita aperuit
+							(<hi rend="italic">Ex Cypriano, epist</hi>. 68) : « Nec rescindere
+						ordinationem jure perfectam (<hi rend="italic">id</hi>.) potest, quod
+						Basilides post crimina sua detecta, et conscientiam etiam propria confes <pb n="1020"/>
+						<milestone unit="PLSection" n="A"/> sione nudatam, Romam pergeus, Stephanum
+						colle- gam nostrum longe positum, et gestae rei ac tacitae veritatis ignarum
+						fefellit, ut exambiret reponi se injuste in episcopatum, de quo fuerat juste
+						depo- situs. Hoc eo pertinet, ut Basilidis non tam abolita sint, quam
+						cumulatu delicta, ut ad superiora pec- cata ejus, etiam fallaciae et
+						circumventionis scelus accesserit. Neque enim tam culpandus est ille cui
+						negligenter obreptum est, quam hic exsecrandus qui fraudulenter obrepsit : »
+						ut scilicet litteras ob- tineret, quibus et communio et sedes ipsi redde-
+						rentur. Neutrum enim ipsi sine litteris, quae et judicii Stephani, et sibi
+						ab eo indultae communionis testes essent, sperandum fuerat. Eum autem non
+						tantum Stephani communionem, sed et episcopa- <milestone unit="PLSection" n="B"/> tum, et eum quidem quo dejectus fuerat, exambiisse proxime
+						relata Cypriani ve(??)ba persuadent. Quorsum enim Sabini in ipsius locum
+						subrogati ordinationem rescindere, rei gestae tacita veritate, tentasset,
+						nisi ut ad eam sedem rediret, unde se injuste dejectum mentiebatur?</p>
+					</div>
+					<div type="textpart" subtype="chapter" n="4">
+					<p n="4">4. Observat Pamelius « hunc locum pro Romani pontificis auctoritate
+						facere, utpote quo constet, episcopos sede dejectos in Ilispaniis solere ad
+						il- lum recurrere. » Cui observationi novum pondus accederet, si et
+						Martialem Emeritensem episcopum eodem tempore ab episcopatu submotum, quem
+						Cy- prianus <hi rend="bold">987</hi> fallacia pariter usum esse notat, ut
+						ab- rogatam sibi dignitatem usurparet, hanc ipsius Ste- <milestone unit="PLSection" n="C"/> phani auctoritate vindicare sibi voluisse
+						constaret. Ilis praeiverat exemplum Privati Lambesitani epi- scopi, qui « ob
+						multa gravia delicta nonaginta epi- scoporum sententia condemnatus (<hi rend="italic">Cypr., Epist</hi>. XII
+						<hi rend="italic">n</hi>. 10), « Romam legatum miserat, ut, Sede va- cante,
+						vel a clero ejus furto et fraudulenter litteras elicere curaret. Unde
+						Ecclesiae hujus auctoritas ma- gis ac magis commendatur. Et hanc quidem
+						licet non neget Cyprianus, hujusmodi tamen provoca- tionum incommoda non
+						silet, dum Stephanum ve- lut longe positum et rui gestae ignarum, ideoque
+						deceptum repraesentat (<hi rend="italic">Cypr., Epist</hi>. XXX). Quo- circa superius, Epist. XII, n. 14, ad Cornelium scripsit, ab omnibus qui
+						secum sunt statutum esse. « ut uniuscujusque causa illic audiatur, ubi est
+							<milestone unit="PLSection" n="D"/> crimen admissum, ubi et accusatores
+						habere et testes criminis sui possint. » Sensit et postea aequissimus
+						pontifex Gregorius idem incommodum : ideoque Petri cujusdam episcopi
+						Numidae, qui dam- natus ad ipsum confugerat, ad ejusdem provinciae praesules
+						causam detulit. Sic ea de re ad Colum- bum Numidiae episcopum loquitur : «
+						Indicamus itaque Sanctitati Vestrae, venisse ad nos quemdam Petrum nomine,
+						qui se asserit fuisse, episcopum, atque causae suae a nobis remedium
+						postulasse. Et prius quidem retulit quae digna esse miseratione potuissent :
+						sed requirentes, postea multo aliter quam indicavit invenimus, et vehementer
+						ejus actio nos contristavit. Sed quia causae ipsius interna sub- tiliter
+						nequaquam addiscere, tam longo itineris in-. <pb n="1021"/>
+						<milestone unit="PLSection" n="A"/> tervallo disjuncti, potuimus : eam,
+						incerti quippe, definire nequivimus, etc. (<hi rend="italic">Lib</hi>. VI. <hi rend="italic">Ind</hi>. 14. <hi rend="italic">Epist</hi>. 37, <hi rend="italic">n</hi>. 2). » Alia
+						hujusmodi praetereo. Ad Basilidis autem negotium quod attinet, hanc in eo
+						toto prae se fert Cyprianus agendi rationem, ut sententiae corum, qui illud
+						celebrem de haereticorum Baptismo controversiam praecessisse censent, haud
+						illibenter accedam.</p>
+					</div>
+				</div>
+				<div type="textpart" subtype="chapter" n="3">
+					<head>
+						<title>III.</title>
+					</head>
+					<div type="textpart" subtype="section" n="5">
+					<p n="5">5. Nil etiam vetat, quominus ad id tempus, quod praedictam
+						controversiam praecessit, litteras illas re- feramus, quas a Stephano ad
+						Syrias et Arabiam scriptas esse Dionysius Alexandrinus in superiori
+						fragmento memorat. Ille quidem quid in eis tra- <milestone unit="PLSection" n="B"/> c(??)aretur silet : verum valde probabile est, Stephanum
+						provinciarum illarum penuriam, necessaria eis sup- peditando, sublevare non
+						contentum, etiam fide- lium animos benignis ac salubribus scriptis solari et
+						ad pietatem excitare studuisse. Praeterea loquendi et ampla erat materia ex
+						occasione schismatis No- vatiani, quod in provincias illas pervaserat, et
+						cujus labem in illis prorsus emaculatam esse postmodum Dionysius
+						nuntiavit.</p>
+					</div>
+				</div>
+				<div type="textpart" subtype="section" n="4">
+					<head>
+						<title>IV.</title>
+					</head>
+					<div type="textpart" subtype="section" n="6">
+					<p n="6">6. Vix Helenus Tarsi episcopus cum tota Cilicia, et Firmilianus cum
+						Cappadocia universa ac finiti- mis regionibus, Novatiani novitatem
+						deteslantes, ad unitatem Ecclesiae regressi erant, cum in novum <milestone unit="PLSection" n="C"/> dissidium abierunt, non enim ab ea altera
+						opinione divelli se sciverunt, quae haereticos ad Ecclesiam redeuntes
+						baptizari praefracte volebat. Quapropter Stephanus, inquit Eusebius, «
+						litteras scripsit de Heleno et de Firmiliano. de omnibus denique sa-
+						cerdotibus per Ciliciam, Cappadociam, cunctasque finitimas provincias
+						constitutis, quibus denuntiabat sese ob cam causam ab illorum communione
+						dis- cessurum, quod haereticos rebaptizarent » (<hi rend="italic">Euseb.
+							lib</hi>. VII, <hi rend="italic">Hist., c</hi>.
+						5). Quas litteras sugillans Firmi- lianus, de illis ad Cyprianum ita
+						loquitur : « Quid enim humilius aut lenius, quam cum tot episcopis per totum
+						mundum dissensisse, pacem cum singu- lis vario discordiae genere rumpentem,
+						modo <milestone unit="PLSection" n="D"/> cum Orientalibus, quod nec vos
+						latete confidimus, modo vobiscum, qui in meridie estis? » (<hi rend="italic">Apud Cypr. sub fin. Ep</hi>. LXXV.)</p>
+					</div>
+				</div>
+				<div type="textpart" subtype="section" n="5">
+					<head>
+						<title>V.</title>
+					</head>
+					<div type="textpart" subtype="section" n="7">
+					<p n="7">7. Similes re ipsa tunc Cyprianus ab codem Papa <hi rend="bold">988</hi> eadem de causa litteras acceperat, de quibus ille a Pompcio
+						Sabratensi episcopo interrogatus, istud inter alia exscribit : « Si quis
+						ergo a quacun- que haerosi venerit ad nos, nihil innovetur nisi quod
+						traditum est, ut manus illi imponatur in poe- nitentiam; cum ipsi haeretici
+						proprie alterutrum ad se venientes non baptizent, sed communicent tan- tum »
+							(<hi rend="italic">Cypr. Epist</hi>. LXXIV).
+						Haec autem verba non uni quaestioni occasionem dederunt. Verum ut con- <pb n="1022"/>
+						<milestone unit="PLSection" n="A"/> troversiae illae certius dirimantur,
+						operae pretium fuerit et alia collegisse quae sive in iisdem litteris, sive
+						in aliis ad Orientales, a Stephano scripta esse Firmilianus atque Cyprianus
+						commemorant.</p>
+					</div>
+					<div type="textpart" subtype="chapter" n="8">
+					<p n="8">8. Ad alterutrius epistolae exordium haud temere referatur quod
+						Firmilianus notat his verbis : « Ste- phanus de episcopatus sui loco
+						gloriatur, et se suc- cessionem Petri tenere contendit, super quem fun-
+						damenta Ecclesiae collata sunt. » Adeo ut Stephanus a sedis suae dignitate
+						commendanda, quod et in hu- jusmodi negotiis successores illius imitati
+						sunt, sermonis sui initium fecerit. At licet haec carpere videatur
+						Firmilianus, procul tamen abest ut Eccle- siam a Christo super Petrum
+						solidatam ac fundatam inficietur. Ipse etiam primum eidem Apostolo, ac
+							<milestone unit="PLSection" n="B"/> deinde caeteris, peccatorum
+						remittendorum potesta- tem datam esse agnoscit. Quo posito, exinde con-
+						cludit : « Potestas ergo peccatorum remittendorum apostolis data est,
+						ecclesiis quas illi a Christo missi constituerunt, et episcopis qui eis
+						ordinatione vica- ria successerunt; » adeoque privilegium Petri ad
+						successores ejus manasse profitetur.</p>
+					</div>
+					<div type="textpart" subtype="chapter" n="9">
+					<p n="9">9. Praeterea Stephanus, eodem Firmiliano teste, in litteris suis sic
+						loquebatur, « quasi apostoli eos, qui ab haeresi veniant, baptizari
+						prohibuerint, et hoc custodiendum posteris tradiderint. » Eidem Firmiliano
+						displicet, « quod Stephanus et qui illi consentiunt, contendunt dimissionem
+						peccatorum et secundam nativitatem in haereticorum Baptisma procedere, apud
+						quos etiam ipsi confitentur Spiri- <milestone unit="PLSection" n="C"/> tum
+						sanctum non esse; simulque unum nobis atque haereticis Baptisma esse <hi rend="italic">volunt : item</hi>, quod non putant quaerendum esse quis
+						sit ille qui baptizave- rit, co quod qui baptizaverit, gratiam consequi
+						potuerit invocata Trinitate nominum Patris el Filii et Spiritus sancti. »
+						Tum pluribus interjectis, Ste- phanum non pudere ait « hoc asserere, ut per
+						eos, qui cum ipsi in omnibus peccatis sint consti- tuti, dicat posse
+						remissionem peccatorum dari, » Notat et Stephanum cum sociis exemplo se
+						Pauli defendere, non prohibentis quominus « sive per oc- casionem, sive per
+						veritatem Christus annuntietur » (<hi rend="italic">Phil</hi>. I, 18); illudque rebaptizantibus objicere, « Quid
+						ergo fiet de his, qui ab haereticis venientes <milestone unit="PLSection" n="D"/> sine Ecclesiae Baptismo admissi sunt? » Et hoc Firmilianus
+						improbat, « quod vult Stephanus his, qui apud haereticos baptizantur, adesse
+						praesentiam et sanctimoniam Christi; » aut quod idem Papa lit- teris
+						mandarat : « Mulium proficit nomen Christi, ut quicunque et ubicunque in
+						nomine Christi bap- tizatus fuerit, consequatur statim gratiam Christi; »
+						necnom istud ejusdem pontificis effatum : « Haeresis quidem parit et
+						exponit, expositos autem Ecclesia suscipit. » Demum si praedicti
+						Caesariensis episcopi verbis haerendum, « non puduit Stephanum frater-
+						nitatem scindere; insuper et Cyprianum pseudo- christum et pseudoapostolum
+						et dolosum operarium dicere. » Hinc idem praesul illum inducit « rum- pentem
+						pacem modo cum Orientalibus, » per epi- <pb n="1023"/>
+						<milestone unit="PLSection" n="A"/> stolam videlicet quam in Orientem misit,
+						modo cum Afris, nimirum per epistolam quam Cypriano rescripsit. Qua de re
+						Cyprianus scribens ad Pom- peium ita loquitur : « Dat honorem Deo, qui
+						haere- ticorum amicus, et inimicus Christianorum, sacer- dotes Dei,
+						veritatem Christi et Ecclesiae unitatem tuentes ABSTINENDOS putat? (<hi rend="italic">Epist</hi>. LXXIV.) Augu- stinus quoque lib. <hi rend="italic">de Unico Capi. cont. Petil.</hi> ea- dem de re sermonem habens verbum
+							<hi rend="italic">abstinendos</hi> retinet.</p>
+					</div>
+					<div type="textpart" subtype="chapter" n="10">
+					<p n="10">10. Ea ipsa, quae Firmilianus perstringit, aut certe <hi rend="bold">989</hi> pleraque, in ea erant Epistola, quam Jubaianus ad Cyprianum
+						miserat, quamque iste praesul Epistola LXXIII ad
+						Jubaianum rescripta con- <milestone unit="PLSection" n="B"/> futare
+						aggreditur. In hac Cyprianus offendisse se testatur, quod quaerendum non sit
+						quis baptizaverit, quando is qui baptizatus sit, accipere remissam pec-
+						catorum potuerit secundum quod credidit. » Quod et supra Firmilianus
+						reprehendit. Addit Cyprianus et in eadem epistola : « Marcionis fieri
+						mentionem, ut nec ab ipso venientes dicat baptizari » quod jam in nomine
+						Jesu baptizati esse videantur. » Ac deinde tacito Stephani nomine plures
+						ejus senten- tias in hunc modum refert : « Frustra quidam, qui ratione
+						vincuntur, consuetudinem nobis oppo- nunt; » et mox, « Nec quisquam dicat,
+						Quod ac- cepimus ab apostolis, hoc sequimur; » et post pauca, « Quod enim
+						quidam dicunt, quasi ad hae- reticorum suffragium pertineat quod dixerit
+						apo- <milestone unit="PLSection" n="C"/> stolus Paulus : <hi rend="italic">Verumtamon omni modo, sive per occasionem sive per veritatem, Christus
+							annuntie- tur;</hi>» ac subinde, « Non est autem quod aliquis ad
+						circumveniendam Christianam veritatem Chri- sti, nomen opponat, ut dicat, In
+						nomine Jesu Chri- sti ubicunque et quomodocunque baptizati, gratiam Baptismi
+						sunt consecuti; » et sub fluem, « Sed, dicit aliquis, quid ergo fiet de his
+						qui in praeteri- tum de haeresi ad Ecclesiam venientes, sine Ba- ptismo
+						admissi sunt? »</p>
+					<pb n="1024"/>
+					<milestone unit="PLSection" n="A"/>
+					</div>
+					<div type="textpart" subtype="chapter" n="11">
+					<p n="11">11. Unde vero eorum, quae Stephano ac sociis ejus Firmilianus
+						Cyprianusque tribuunt, tanta con- sensio : nisi aut Stephanus ea quae ad
+						Orientales scripserat, in Epistola ad Cyprianum repetierit, aut easdem
+						litteras ambo penes se habuerint? Et vero <hi rend="bold">990</hi> non levia
+						sunt indicia, quibus epistolam a Jubaiano ad Cyprianum missam, eam ipsam
+						esse suspicemur, quae a Stephano ad Orientales destinata fuerat. Quod si ita
+						est, Stephani tum ad Orientales tum ad Cyprianum litteras concilio
+						Carthaginiensi III, sub Cypriano anteriores esse
+						conficitur : si- quidem in hoc concilio praelectae sunt « et litterae
+						Jubaiani ad Cyprianum factae, et Cypriani ad Ju· balanum, itemque ad
+						Stephanum rescriptae, quid· que postmodum Jubaianus idem Cypriano rescri-
+							<milestone unit="PLSection" n="B"/> pserit. » Praeterea Stephanum circa
+						idem tempus et ad Orientales et ad Cyprianum scripsisse id argu- mento est,
+						quod cum Cyprianus Epistolae, quam Stephano rescribebat, exemplum Firmiliano
+						trans- mitti curasset, ei Firmilianus litteras, quibus Ste- phanus
+						Orientales a se abstinendos esse denuntia- bat, ante accepisse se, quam
+						ipsius exemplum, si- gnificavit. Atqui mox memoratum Carthaginiense
+						concilium Kalendis Septembris consignatur, idque anno 256 habitum esse
+						plerique eruditi consentiunt. Unde et praedictas Stephani litteras ad
+						ejusdem anni 256 initium, aut circiter, referri nil vetat. Is enim ardor quo
+						Cyprianus hac in causa se gessit, multam inter scripta rescriptaque aut ea
+						quae tum gesta <milestone unit="PLSection" n="C"/> sunt, moram intermitti
+						non patitur. Ut ut est, quae a Firmiliano ac Cypriano scriptis mandatae suat
+						Stephani sententiae, sive ex ipsius ad Orientales, seu ex ejusdem ad
+						Cyprianum litteris, aut etiam ex utrisque excerptae fuerint, idoneae certe
+						sunt, qui- bus multae de Baptismo concertationumque plenae disputationes
+						finiantur. Hujus rei experimentum faciamus.</p>
+					</div>
+				</div>
+			</div>
+		</body>
+	</text>
+</TEI>

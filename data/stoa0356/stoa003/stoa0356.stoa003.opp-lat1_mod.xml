@@ -1,0 +1,858 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+	<teiHeader>
+    <fileDesc>
+			<titleStmt>
+				<title/>
+				<editor/>
+				<sponsor>University of Leipzig</sponsor>
+				<funder>European Social Fund Saxony</funder>
+				<principal>Gregory Crane</principal>
+				<meeting/>
+				<respStmt>
+					<persName xml:id="DDD">Digital Divide Data</persName>
+					<resp>Corrected and encoded the text</resp>
+				</respStmt>
+				<respStmt>
+					<persName>Greta Franzini</persName>
+					<resp>Project Manager (University of Leipzig)</resp>
+				</respStmt>
+				<respStmt>
+					<persName>Frederik Baumgardt</persName>
+					<resp>Technical Manager (University of Leipzig)</resp>
+				</respStmt>
+				<respStmt>
+					<persName>Simona Stoyanova</persName>
+					<resp>Project Assistant (University of Leipzig)</resp>
+				</respStmt>
+				<respStmt>
+					<persName>Bruce Robertson</persName>
+					<resp>Technical Advisor</resp>
+				</respStmt>
+				<respStmt>
+					<persName>Tabea Selle</persName>
+					<resp>Student Assistant</resp>
+				</respStmt>
+			</titleStmt>
+			<publicationStmt>
+				<authority>University of Leipzig</authority>
+				<idno type="filename">PL3_21_CAR.xml
+</idno>
+				<availability>
+					<p>Available under a Creative Commons Attribution-ShareAlike 4.0 International License</p>
+				</availability>
+				<date>2015</date>
+				<publisher>University of Leipzig</publisher>
+				<pubPlace>Germany</pubPlace>
+			</publicationStmt>
+
+			<sourceDesc>
+				<listBibl xml:lang="la">
+					<biblStruct>
+						<monogr>
+							<title>De Basilide et Martialle Hispaniae Episcopis Libellaticis</title>
+							<editor>
+								<persName>
+									<name xml:lang="la"/>
+									<name xml:lang="fr">Jaques Paul Migne</name>
+								</persName>
+							</editor>
+							<author ref="urn:tmp">Concilia Carthaginensia</author>
+							<imprint>
+								<publisher/>
+								<pubPlace>Paris</pubPlace>
+								<date>1865</date>
+							</imprint>
+							<biblScope unit="volume">3</biblScope>
+						</monogr>
+					</biblStruct>
+				</listBibl>
+			</sourceDesc>
+
+		</fileDesc>
+		<encodingDesc>
+			<p>Text encoded in accordance with the latest EpiDoc standards (January 2014)</p>
+			  <refsDecl n="CTS">
+        <cRefPattern n="paragraph" matchPattern="(.+).(.+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div/tei:div[@n='$1']/tei:p[@n='$2'])"/>
+        <cRefPattern n="section" matchPattern="(.+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div/tei:div[@n='$1'])"/>
+      </refsDecl>
+    </encodingDesc>
+		<profileDesc>
+			<langUsage>
+				<language ident="grc">Greek</language>
+				<language ident="la">Latin</language>
+			</langUsage>
+		</profileDesc>
+		<revisionDesc>
+			<change when="2015-12-08" who="dwp"/>
+		</revisionDesc>
+	</teiHeader><text>
+		<body>
+			<div type="edition" n="urn:cts:latinLit:stoa0356.stoa003.opp-lat1">
+				<head>
+					<title>CARTHAGINENSE CONCILIUM SUB CYPRIANO QUARTUM. ANNO POST CHRISTUM NATUM CCLIV
+						HABITUM. DE BASILIDE ET MARTIALE (31) HISPANIAE EPISCOPIS LIBELLATICIS.</title>
+				</head>
+				<p>(Erasm I, 4 Pamel. Rigal, Baluz. LXVIII, Paris, LXVII, Oxon., Lips. LXVII Routh Rell.
+					Scr, p. 77 et 122.)</p>
+				<div type="textpart" subtype="section" n="prooemium">
+					<head>
+						<title>PROOEMIUM.</title>
+					</head>
+					<p>Hoc concilium habitum est in Africa, anno Christi 258 ad instantiam Hispaniae
+						episcoporum, eo fine, ut de causa. Basilidis et Martialis, Africanae ecelesiae judicium
+						cognoscerent. Causa talis erat : Basilides Legionensis et Martialis Asturicensis
+						ecclesiae episcopi, eo quod in persecutione fuissent lapsi, libellatici, qui nimirum
+						privatim fidem abnegantes, publicum idolorum cultum pecunia redemissent, episcopali
+						honore ad denuntiationem fidelium Hispanorum spoliantur, et in eorum locum Sabinus ac
+						Felix substi- tuuntur. Cessante persecutione, illi, sicut antea Felicissimus <hi rend="bold">1020</hi> in Africa lapsus, absque ullo gradus et honoris dispendio ab
+						Ecclesia recipi temerario ausu contenderunt : quo conatu cum frustrarentur, Felicemque
+						cum Sabino in locum suum substitutos viderent, Basilides livore tabescens ad apostolicam
+						sedem Romam se contulit; ibique se injuste sede privatum conquerens, Stephano Romano
+						Pontifici sup- plicationem plurimis mendaciis refertam exhibet, ac per eam sedi ac
+						honori pristino restitui suppliciter <note type="footnote">Variae lectiones.</note>
+						<note type="footnote"><hi rend="superscript">13</hi> Accipiendum <hi rend="italic">Oxon</hi>.<hi rend="superscript">14</hi> Recenter natos <hi rend="italic">Bod</hi>.
+							2. <hi rend="italic">Lam</hi><hi rend="superscript">15</hi> Ortu flentes <hi rend="italic">Lam. Bod</hi>. 2. <hi rend="italic">Lin. NC</hi>. 1, 2.</note>
+						<note type="footnote">Variorum notae.</note>
+						<milestone unit="PLSection" n="B"/>
+						<note type="footnote">mus, lib. III <hi rend="italic">adv</hi>. Pelag., p. 545, et
+							pluribus locis Augustinus auctoritatem harum litterarum Pelagia- nis, ut notavit
+							Cellier, <hi rend="italic">Histoire générale</hi>, etc. vol. III, pag. 590,
+							objecerunt· Exstant autem praeter hunc aliosque Cypriani locos insignia quaedam de
+							peccato originis in libro <hi rend="italic">De Habitu Virginum</hi>, p. 180; atque
+							adjicio auctoribus illis veteribus, quos dogmatis hujus adduxit vindices eruditissimus
+							Vossius in <hi rend="italic">Hist. Pelagiana</hi>, lib. II, pag. 1, thes. 5, Theophi-
+							lum Antiochenum, Tertullianum, (cujus tamen testimonium quoddam commemoratur in <hi rend="italic">Thesibus Theol. et Histor</hi>. Disput. II ab eod. Vossio), Firmi-
+							lianum, Hippolytumque, vetustissimos scriptores; nec dubito, quin horum dictis addi
+							mereatur Cle- mentis Romani illud in <hi rend="italic">Epistola ad Corinthios</hi>,
+							cap. XXXVIII. Caeterum in <hi rend="italic">Epist</hi>. 66, pag. 593, tom. II ed.
+							Benedictinae, Augustinus haec scribit : <hi rend="italic">Beatus quidem Cyprianus non
+								aliquod decretum condens novum, sed Ecclesioe fidem firmissimam ser-</hi>
+							<milestone unit="PLSection" n="C"/>
+							<hi rend="italic">vans ad corrigendum eos, qui putabant ante octavum diem nativitatis
+								non esse parvulum baptizandum, non carnem, sed animam dixit esse non perdendam, et
+								mox natum rite baptizari posse, cnm suis quibus- dam coepiscopis censuit</hi>.
+							ROUTH.</note>
+						<note type="footnote">(30) <hi rend="italic">Nativitatis suoe ortu plorantes</hi>.
+							Scriptores Ethnici infantium modo natorum fletum, miseria- rum sequentis vitae omen
+							putabant : Cyprianus pietati ascribit, et ceu procum inarticulatam for- mulam
+							commendat. FELL.— Quidam ex patribus Antenicaenis, cujus tamen nomen mea excidit me-
+							moria, recens natorum vagitus ad deplorationem peccati poemaeque originis suae
+							detorquet. ROUTH.</note>
+						<note type="footnote">(31) DE BASILIDE ET MARTIALE. Haec epistola tot et tantas tamque
+							inter se dissimiles habet variantes <milestone unit="PLSection" n="B"/> lectiones in
+							antiquis exemplaribus et editionibus, ut mihi in illis colligendis et disponendis
+							recte ma- gnus labor insumendus fuerit, multum taedii devo- ratum. Annotandas enim
+							arbitratus sum ut etiam multa et magna exempla darem audaciae librario- rum veterum,
+							qui omnia licita et illicita ausi sunt in describendis sancti martyris operibus. Atque
+							ut inde initium sumam ubi sunt scripta nomina epi- scoporum, sunt aliqui codices
+							antiqui, sunt etiam aliquot editiones, in quibus ea desunt. In tribus antiquis
+							codicibus, in quibus illa praetermissa sunt, legitur : <hi rend="italic">Cyprianus et
+								coeteri episcopi presbyteris et diaconibus et plebibus in Hispania
+								consistentibus</hi>. In uno regio haec tantum : Cyprianus Coecilio et aliis
+							fratribus salutem. Vetustiores editiones habent no- mina episcoporum. Pamelio et
+							Rigaltio placuit ea omittere, quia existimabant haud dubie illa esse superflua.
+							Reinbartus et Angli reposuerunt.</note>
+						<note type="footnote">Certum est hanc epistolam esse responsionem ad <milestone unit="PLSection" n="C"/> episiolam quam episcopi Hispani scripserant ad Afros in
+							causa Basilidis et Martialis. Nulla illic mentio epistolae ab illis scriptae ad
+							Romanos. Et tamen Baro- mus, verisimili et vehementi se duci conjectura ait ut
+							existimet Felicem et Sabinum episcopos Hispanos, qui missi fuerant in Africam, ut sic
+							Cypriani quoque suffragio sua ipsorum electione probata, inde tum ipsius, tum aliorum
+							ipsius collegarum litteris pari- ter communiti Romam ad refellenda Basilidis men-
+							dacia adnavigarent, Sedisque apostolicae auctoritate compescerent contumaces qui
+							Hispaniae episcopos contempsissent. At quia levis conjectura. t Ci- cero ait, non
+							penditur, ista inter leves numerabi- tur. BALUZ.</note>
+						<pb n="1057"/> rogat. Quod cum episcopi Hispaniae audissent, ipsi duo suffecti episcopi,
+						Sabinus ac Felix, ad Africanam Ecclesiam ablegantur, et utrique litterae ad Cyprianum
+						reliquosque ejus ecclesiae episcopos scriptae com- municantur, ut scilicet iidem
+						episcopi libellaticorum duorum causam cognoscant ac dijudicent. Cyprianus igitur cum
+						legatos una cum litteris praedictis excepisset, collegas antistites convocat, et in
+						eorum sacro concessu litteras ad se suosque collegas scriptas legi ac recitari, et ab
+						iisdem legatis in concilium introductis suam ipsorum causam enarrari procurat. Quae cum
+						facta essent, hoc quod ab epi- scopis Hispaniae de Basilidis et Martialis libellaticorum
+						episcoporum depositione, et Sabini cum Felici suffectione constitutum fuerat, per
+						Africanae ecclesiae episcopos illos, qui huic concilio interfuerant, confirmatum est;
+						nimirum libellaticos omnes ad poenitentiam quidem agendam posse admitti, verum ab
+						ordinatione clericali, atque sacerdotali dignitate recte prohiberi : hosce duos etiam
+						sua episcopali dignitate recte spoliatos, Sabinum ac Felicem in locum ipsorum recte
+						suffectos esse. Qno testimonio habito, ipse Sabinus ac Felix, litteris Cypriani
+						aliorumque episcoporum ad Stephanum et episcopos Hispaniae scriptis communiti Romam
+						adnavigant. tum ut mendacia Basilidis <hi rend="bold">1021</hi> coram refellant, tum
+						etiam ut auctoritate sedis aposlolicae contumaces episcoporum Hispaniae contemptores
+						compescant. Vide Baron., anno 258, num. 1, 2, 3, 4, 5, 6, 7.</p>
+				</div>
+				<div type="textpart" subtype="section" n="1">
+					<p><milestone unit="PLSection" n="A"/> CYPRIANUS, CAECILIUS, PRIMUS, POLYCARPUS, NICOME-
+						DES (32), LUCILIANUS (33), SUCCESSUS SEDATUS, FORTUNATUS, JANUARIUS, SECUNDINUS,
+						POMPONIUS, HONORATUS, VICTOR, AURELIUS, SATIUS, PETRUS. ALIUS JANUARIUS, SATURNINUS,
+						ALIUS AURELIUS, VE- NANTIUS, QUIETUS, ROGATIANUS, TENAX, FELIX, FAUSTUS, QUINTUS, ALIUS
+						SATURNINUS, LUCIUS, VIN- CENTIUS, LIBOSUS, GEMINIUS, MARCELLUS, JAMBUS, ADELPHIUS,
+						VICTORICUS, ET PAULUS, FELICI PRES- BYTERO ET PLEBIBUS CONSISTENTIBUS AD LEGIO- NEM
+						(34), ET ASTURIGAE. ITEM LAELIO DIACONO ET PLE- BI EMERITAE CONSISTENTIBUS FRATRIBUS IN
+						DOMINO SALUTEM. conscientia vinctos episcopatum gerere ct sacerdo-</p>
+					<p n="1">I. Cum in unum convenissemus, legimus litteras vestras, fratres dilectissimi<hi rend="superscript">16</hi>, quas ad nos per Fe- licem et Sabinum coepiscopos (35)
+						nostros pro fi- <milestone unit="PLSection" n="B"/> dei vestrae integritate et pro Dei
+						timore fecistis, si- gnificantes Basilidem et Martialem libellis idololaniae
+						commaculatos (36) et nefandorum facinorum (37) <note type="footnote">Variae
+							lectiones.</note>
+						<note type="footnote"><hi rend="superscript">16</hi> Carissimi. <hi rend="italic">Ver</hi>.<hi rend="superscript">17</hi> Praedicta et mandata <hi rend="italic">Ver</hi>. Vel mandata <hi rend="italic">Foss</hi>.</note>
+						<note type="footnote">Variorum notae.</note>
+						<note type="footnote">(32) <hi rend="italic">Nicomedes</hi>, etc. In nonnullis libris
+							scriptis et in editi. Pamelii et Rigaltii omissa sunt nomina episcoporum, quae post
+								<hi rend="italic">Polycarpum</hi> hic sequuntur. Aliis autem mss. nultum praeter
+							Cypriani nomen adest, in plerisque tamen codicibus, cum scriptis, tum antiquius
+							impressis, omnia haec nomina si- gnantur. ROUTH.</note>
+						<note type="footnote">(33) <hi rend="italic">Luclianus</hi>. Ita undecim libri nostri
+							veteres <milestone unit="PLSection" n="D"/> et tres a Pamelio laudati. Alibi scriptum
+							et editum est <hi rend="italic">Lucius</hi> vel <hi rend="italic">Lucianus</hi>.
+							BALUZ.</note>
+						<note type="footnote">(34) <hi rend="italic">Legionem</hi>. Urbs est Hispaniae
+							Tarraconensis in finibus Asturum a Nerva imperatore conditu, qui et Asturicam
+							instauravit; unde ex vicinia non mi- nus quam querela recte hic conjunguntur civitates
+							istae ut et Emerita, urbs adjacens ab Augusto con- dita. Quibas additur Caesar-Augusta
+							(vid. pag 81). iisdem auspiciis structa, quibus pessimi exempli attentatum Martialis
+							et Basilidis grave periculum induxerat, FELL.— Quae urbes hodie <hi rend="italic">Leon, Astorga, Mcrida, Zaraqosa</hi>, appellantur. ROUTH.</note>
+						<note type="footnote">(35) Coepiscopos. Ita libri veteres et editiones. In Rigaltiana
+							tamen et in ea quam Reinhartus procu- ravit scriptum est <hi rend="italic">episcopos</hi>. Angli emendaverunt, Sic etiam apud Victorem Vitensem lib. I, cap.
+							13, surbendum est <hi rend="italic">coepiscopis</hi> pro eo quod ibi scriptum est <hi rend="italic">universis episcopis tuis</hi>. Nam et in capite se- quenti et alibi
+							scriptum est <hi rend="italic">coepiscopis</hi>. BALUZ.</note>
+						<pb n="1058"/>
+						<milestone unit="PLSection" n="A"/> tium Dei administrare non oportere; et desideras-
+						tis rescribi ad haec vobis, et justam pariter ac ne- cessariam sollicitudinem vestram
+						vel solatio vel auxilio nostrae sententiae sublevari. Sed enim desi- derio huic vestro
+						non tam nostra <hi rend="bold">1022</hi> consilia quam divina praecepta respondent,
+						quibus jampri- dem mandatur voce coelesti, et Dei lege praescribi- tur quos et quales
+						oporteat deservire altari et sa- crificia divina celebrare. In Exodo namque ad Moysem
+						Deus loquitur et monet dicens : <hi rend="italic">Sacerdotes qui accedunt ad Dominum
+							Deum sanctificentur, ne forte derelinquat illos Dominus</hi> (<hi rend="italic">Exod</hi>. XIX, 22). Et iterum : <hi rend="italic">Et cum accedunt ministrare ad
+							altare sancti, non adducent in se delictum, ne moriantur</hi> (<hi rend="italic">Exod</hi>. XXVIII, 43). Item in Levitico praecipit Domi- <milestone unit="PLSection" n="B"/> nus et dicit : <hi rend="italic">Homo in quo fuerit macula et vitium non
+							accedet offerre dona Deo</hi> (<hi rend="italic">Levit</hi>. XXI, 17).</p>
+				</div>
+				<div type="textpart" subtype="section" n="2">
+					<p n="2">II. Quae cum praedicta et manifesta<hi rend="superscript">17</hi> (38) sint <note type="footnote">(36) <hi rend="italic">Libellis idololatrioe commaculatos</hi>. De
+							libella- ticis, sive illis qui libellum seu judicis testimonium sibi comparabant, in
+							quo scriptum erat, ipsos legi- bus satisfecisse, id est, Diis sacrificasse, tametsi-
+							nihil ejusmodi fecissent, vide cl. Moshemium more <milestone unit="PLSection" n="D"/>
+							suo, hoc est et docte et fuse, in Opere <hi rend="italic">De Rebus Christianorum ante
+								Constant. M</hi>. disputantem. Saec. III, § 9, pag. 482—489. ROUTH.</note>
+						<note type="footnote">(37) <hi rend="italic">Nefandorum facinorum</hi>. Codex Eligianus,
+								<hi rend="italic">ob- nefandorum facinorum conscientiam vinctos</hi>. BALUZ.</note>
+						<note type="footnote">(38) <hi rend="italic">Proedicta et manifestata</hi>. Ita duodecim
+							libri nostri veteres et quinque laudati a Pamelio. Alii duo nostri habent <hi rend="italic">cum proedicta et mandata</hi>. Qua- tuor alii et veteres editiones<hi rend="italic">, proedicta vel mandata et manifesta</hi>, nisi quod <hi rend="italic">et manifesta</hi> deest in uno eorum. Addit Pamelius superflue additum fuisse in-
+							excusis <hi rend="italic">vel mandata</hi>, cum non extent in libris ma- nuscriptis.
+							Ego cum Pamelio sentio istud superflue additum fuisse. Est enim unum ex synonymis qui-
+							bus abundant vetera exemplaria operum sancti martyris. BALUZ. <hi rend="italic">Proedicta et manifesta</hi> edd. Pa- melii Rigalt. Fellique. Illud <hi rend="italic">vel mandata</hi> edd. ante Pamelium. ROUTH.</note>
+						<pb n="1059"/>
+						<milestone unit="PLSection" n="A"/> nobis, praeceptis divinis necesse est obsequia nos-
+						tra deserviant; nec personam in ejusmodi rebus accipere aut aliquid cuiquam largiri
+						potest humana indulgentia ubi intercedit et legem tribuit divina praescriptio. Neque
+						enim immemores esse debemus quid ad Judaeos per Esaiam prophetam loculus sit Dominus
+						increpans et indignans quod, contemptis divinis praeceptis, humanas doctrinas
+						sequerentur : <hi rend="italic">Populus iste</hi>, inquit, <hi rend="italic">labiis suis
+							honorificat</hi><hi rend="superscript">18</hi>
+						<hi rend="italic">me, cor vero eorum longe separatum est a me</hi><hi rend="superscript">19</hi>. <hi rend="italic">Sine causa</hi> (39) <hi rend="italic">autem colunt me,
+							mandata et doctrinas hominum docentes</hi> (<hi rend="italic">Isat</hi>. XXIX, 13).
+						Quod item Do- minus in Evangelio repetit et dicit : <hi rend="italic">Rejicitis man-
+							datum Dei ut traditionem vestram statuatis</hi> (<hi rend="italic">Marc</hi>. VII,
+						13). Quae ante oculos habentes et sollicite ac <milestone unit="PLSection" n="B"/>
+						religiose considerantes, in ordinationibus <hi rend="bold">1023</hi> sacerdotum non nisi
+						immaculatos et integros an- tistites eligere debemus, qui sancte et digne (40)
+						sacrificia Deo offerentes audiri in precibus (41) <note type="footnote">Variae
+							lectiones.</note>
+						<note type="footnote"><hi rend="superscript">18</hi> Sanctificant <hi rend="italic">Ver</hi><hi rend="superscript">19</hi> Longe est a me <hi rend="italic">Lam. Ebor.
+								Bod</hi>. 2 <hi rend="italic">NC</hi>. 1.<hi rend="superscript">20</hi> Peccatores
+								<hi rend="italic">Lam. Ebor. NC</hi>. 1. <hi rend="superscript">21</hi> Plena
+							diligentia Dei, et exploratione <hi rend="italic">Bod</hi> 1, 2. <hi rend="italic">Lin. Lam. Ebor. NC</hi>. 1.<hi rend="superscript">22</hi> Contagione <hi rend="italic">Lam. Lin</hi>. 23 Quique fuerint <hi rend="italic">Lam. Ebor. Lin.
+								NC</hi>. 1, 2.</note>
+						<note type="footnote">Variorum notae.</note>
+						<note type="footnote">(39) <hi rend="italic">Sine causa</hi>. Sic reddidit Cyprianus
+							quae Sep- tuaginta dixere, <foreign xml:lang="grc">μάτην σέβονταί με</foreign>. <hi rend="italic">Sine causa, vane, perperam</hi>. RIGALT.</note>
+						<note type="footnote">(40) <hi rend="italic">Sancte et digne</hi>. Multum variant in hoc
+							loco libri veteres et editiones. Quidam enim habent <milestone unit="PLSection" n="C"/>
+							<hi rend="italic">sancte et digne</hi>, alii <hi rend="italic">digne et sancte</hi>.
+							Duo veteres, <hi rend="italic">sancta et digna sacrificia</hi>. BALUZ.</note>
+						<note type="footnote">(41) <hi rend="italic">Audiri in precibus</hi>. Annotat Erasmus
+							videri Cyprianum sensisse sacrificio sacerdotis impii nihil eflici, immo magis
+							inquinari populum. Joannes Gerson in sermone de Coena Domini : <hi rend="italic">Dic
+								consequen- ter cur Cyprianus et alii doctores plurimi, quorum dicta recitantur in
+								decretis, posuerunt nihil fieri in sacramentis nihilque conferri a
+							schismaticis</hi>. Vide 1, q. 1, in decreto Gratiani. Apud Etherium et Beatum in libro
+							primo adversus Elipandum Toletanum scriptum est sacrificium altaris ofierri non posse
+							per quemlibet sacerdotem, sed per sacerdotem sanctum et justum. Albertus Stadensis
+							describens historiam quorumdam haereticorum qui anno 1248 coeperunt pullulare in
+							Ecclesia Dei, ait illos dixisse sacerdotes in peccatis mortalibus constitutos non
+							posse conficere eucharistiam. In articulis Wicleffi damnatis in concilio Constantiensi
+							legitur : <hi rend="italic">Si epis</hi>
+							<milestone unit="PLSection" n="D"/>
+							<hi rend="italic">copus vel sacerdos est in peccato mortali, non ordi- nat, non
+								conficit, non consecrat, non baptizat</hi>. Joanni de Vatennis pastori sancti Laeti
+							in dioecesi Remensi objectum est eadem tempestate quod <hi rend="italic">pu- blice
+								proedicavit quod presbyteri concubinarii non conficiebant corpus Christi</hi>, ut
+							videre est in tomo primo Operum Gersonii, p. 915 postremae editionis. Apud Odoricum
+							Raynaldum, anno 1420, § 17, exs- tat bulla Manini Papae V, adversus Nicolaum Se-
+							ruranum praedicatem quod orationes et preces missales presbyterorum publice
+							concubinariorum erant nullius valoris et presbyteros publice concu- binarios esse
+							pejores Juda. Vide Gregorium VII, lib. IV, Epist. 10, 11, 20, et notas nostras ad Ago-
+							bardum, pag. 66. Contra apud Gratianum 1, q. 1, cap. <hi rend="italic">Intra
+								catholicam</hi> relertur locus ex Augustino, in quo scriptum est intra catholicam
+							Ecclesiam in mysterio corporis et sanguinis Domini nihil a bono magis, nihil a malo
+							minus perlici sacerdote. Vide Hugonem archiepiscopum Rotbomagensem, lib. V.
+							Dialogorum, cap. II, et Epistolam ejus Apologeti- cam ad Matthaeum Albanensem. Vide
+							etiam M. Antonium Marsilium in tractatu de Aqua benedicta. p. 206. BALUZ. —De solis
+							sacerdotibus Cyprianus atque collegae loqui videntur, qui peccatis illis <milestone unit="PLSection" n="C"/> contaminantur, propter quae ex lege Ecclesiae sa- cerdotii
+							fungi officiis desinerent. Adde quod jam- <hi rend="italic">depositus de munere jure
+								fuerat</hi> Basilides. ROUTH.</note>
+						<pb n="1060"/>
+						<milestone unit="PLSection" n="A"/> possint quas faciunt pro plebis dominicae incolumi
+						tate. cum scriptum sit : <hi rend="italic">Deus peccatorem</hi><hi rend="superscript">20</hi> (42) <hi rend="italic">non audit; sed si quis Deum coluerit et voluntatem
+							ejus fecerit, illum audit</hi>(<hi rend="italic">Joan</hi>. IX, 51). Propter quod
+						plena diligentia et exploratione<hi rend="superscript">21</hi> (43) sincera opor- tet
+						cos ad sacerdotium Dei deligi quos a Deo constet audiri.</p>
+				</div>
+				<div type="textpart" subtype="section" n="3">
+					<p n="3">III. Nec sibi plebs blandiatur (44) quasi immu- nis esse a contagio<hi rend="superscript">23</hi> (45) delicti possit cum sacer- dote peccatore communicans
+						et ad injustum atque illicitum praepositi sui episcopatum consensum suum commodans, <hi rend="bold">1024</hi> quando per Òsee pro- phetam comminetur et dicat censura divina:
+							<hi rend="italic">Sacrificia eorum tanquam panis luctus, omnes qui manducant ea
+							contaminabuntur</hi> (<hi rend="italic">Osee</hi>. IX, 4), docens scilicet et
+						ostendens omnes omnino ad peccatum constringi qui fuerint<hi rend="superscript">23</hi>
+						profani et injusti sacerdo- tis sacrificio contaminati. Quot item in Numeris manifestari
+						invenimus, quando Chore et Dathan et <note type="footnote">(42) <hi rend="italic">Peccatorem</hi>. Codices aliquot recensuit Fel- lus, in quibus scriptum est <hi rend="italic">peccatores</hi>, quemadmo- dum legitur in <hi rend="italic">Evangelio</hi>, sed et istic <foreign xml:lang="grc">ἀμάρτωλον</foreign> co- dices
+							nonnulli. ROUTH.</note>
+						<note type="footnote">(43) <hi rend="italic">Diligentia et exploratione</hi>. Ita
+							reponendum esse arbitratus sum, quamvis conjunctio desit in octo libris veteribus et
+							in editione Manutii. Lectio- nem enim illam praeferunt veteres editiones et duo- decim
+							libri veteres. In Sorbonico legitur : <hi rend="italic">Propter quod et plena
+								indulgentia, exploratione sincera</hi>. Ubi nemo non videt transpositam esse
+							conjunctionem et legendum esse <hi rend="italic">plena indulgentia et
+								exploratione</hi>, eo modo quo posita est conjunctio in libris qui il- lam habent.
+							Codex Fuxensis : <hi rend="italic">Propter quod plena indulgentia et exemplo et
+								ratione</hi>. Hinc formata est vox <hi rend="italic">exploratione</hi>, ut in simili
+							loco notavimus supra <milestone unit="PLSection" n="D"/> ad Epistolam LII, pag. 442.
+							BALUZ.</note>
+						<note type="footnote">(44) <hi rend="italic">Nec sibi plebs blandiatur</hi>. Hunc locum
+							alicubi mutatum et interpolatum retulit Algerus scholasti- cus Leodiensis in libro <hi rend="italic">de Misericordia et Justitia</hi>, cap. 81, et post <hi rend="italic">sacrificio contaminati</hi> nonnulla ad- didit quae neque in vulgatis editionibus
+							extant ne- que in codicibus manuscriptis. Ea sic habent : <hi rend="italic">Nonne enim
+								quia Jonas cum inobedientia esset in navi, navis periclitabatur conteri, quia Achaz
+								cum anathemate taminoe aureoe erat in Israel, exercitus percussus et fugatus est ab
+								urbe Hai. Si ergo ita punitum est in culpoe ignaros, quid fiet in conscios et
+								consentientes?</hi> BALUZ.</note>
+						<note type="footnote">(45) <hi rend="italic">Contagio</hi>. Haec lectio bona est.
+							Admonendus est tamen lector aliam, quae habet <hi rend="italic">contagione</hi>, esse
+							etiam optimam, ut agnovit etiam Pamelius. Itaque cum alterutra earum lectionum
+							retinenda esset alia rejicienda, eam retinuimus quae recepta est. BALUZ.</note>
+						<pb n="1061"/>
+						<milestone unit="PLSection" n="A"/> Abiron contra Aaron sacerdotem sacrificandi sibi
+						licentiam (46) vindicaverunt (47). Illic quoque per Moysem praecepit Dominus ut ab eis
+						populus sepa- retur, ne facinorosis conjunctus codem facinore et ipse perstringatur. <hi rend="italic">Separamini</hi>, inquit, <hi rend="italic">a taberna- culis horum
+							hominum durissimorum</hi> (48), <hi rend="italic">et nolite tangere</hi>
+						<hi rend="bold">1025</hi> ea quoe ad eos pertinent<hi rend="superscript">24</hi> (49)
+							<hi rend="italic">ne simul pereatis in peccato eorum</hi> (<hi rend="italic">Num</hi>.
+						XVI, 26). Propter quod plebs obsequens (50) praeceptis domi- nicis et Deum metuens a
+						peccatore praaeposito (51) separare se debet, nec se ad sacrilegi sacerdotis sacrificia
+						miscere, quando ipsa maxime habeat po- testatem (52) vel eligendi dignos sacerdotes vel
+						in- dignos recusandi. <note type="footnote">Variae lectiones.</note>
+						<note type="footnote">2 <hi rend="superscript">4</hi> Quae sunt eis <hi rend="italic">Lam. Ebor. Bod</hi>. 1, 2. <hi rend="italic">Lin. NC</hi>. 2. <hi rend="italic">Thu. Foss. Corb. Mich. Vict</hi>.<hi rend="superscript">25</hi> Episcopus plebe
+							praesente <hi rend="italic">Benev</hi>.</note>
+						<note type="footnote">Variorum notae.</note>
+						<milestone unit="PLSection" n="B"/>
+						<note type="footnote">(46) <hi rend="italic">Licentiam</hi>. Id est jus, auctoritatem,
+							potesta- tem. Unde in uno codice regio scriptum est : <hi rend="italic">sacri- ficandi
+								sibi jus illicite vindicaverunt</hi>. Istic itaque li- centia usurpatur optime pro
+							audacia, ut apud Cice- ronem in Oratione pro Q. Ligario : <hi rend="italic">Vide quid
+								li- centioe Coesar nobis det, vel potius quid audacioe</hi>. Na- zarius in
+							panegyrico quem dixit Constantino Au- gusto : <hi rend="italic">quod qui tueri
+								nequeunt, faciunt licentiam de potestate</hi>. BALUZ.</note>
+						<note type="footnote">(47) <hi rend="italic">Vindicaverunt</hi>. In codice Fuxensi
+							legitur <hi rend="italic">usurpaverunt vel vindicaverunt</hi>. Haud dubie utraque
+							lectio extabat in libro vetustiore ex quo descriptus est Fuxensis, una in contextu,
+							alia supra lineam, ut olim saepe fieri solebat. BALUZ.</note>
+						<note type="footnote">(48) <hi rend="italic">Horum hominum durissimorum</hi>. <hi rend="italic">Horum ho- minum injustorum durissimorum</hi>. Ita coegit me auctoritas
+							sedecim veterum exemplarium et vetus- tissimarum editionum nt mutarem editionem jam
+							inde ab Erasmo reeeptam. Omnia enim vetera <milestone unit="PLSection" n="C"/>
+							exemplaria habent <hi rend="italic">horum hominum injustorum, durissimorum</hi>. Sane
+							in Fuxensi legitur tantum <hi rend="italic">hominum durissimorum</hi>, per incuriam
+							videlicet librarii, qui aliquid omisit. In capite XVI Nu- merorum. ex quo locus iste
+							descriptus est, le- gitur : <hi rend="italic">Recedite a tabernaculis hominum
+								impiorum</hi>. In Epistola tamen 76 (al. 77) pag. 155. ubi idem lo- cus refertur,
+							legitur <hi rend="italic">hominum istorum durissimorum</hi>. BALUSIUS. Exhibent in hoc
+							quoque loco de quo agimus, eamdem prorsus lectionem, <hi rend="italic">hominum isto-
+								rum durissimorum</hi> editiones penes me Manutiana et Pamelii, et Regaltii,
+							Fellinaque; ed. vero Romana anni 1471 voculam <hi rend="italic">istorum</hi> haud
+							agnoscit. Sed et Hieronymus <hi rend="italic">adv. Luciferianos</hi>, pag. 128 ed.
+							Froben. affert ex S. Scriptura, <hi rend="italic">istorum hominum durissimo- rum</hi>.
+							Itaque lectionem consimilem, <hi rend="italic">horum hominum durissimorum</hi>, quam
+							Harduinus in <hi rend="italic">Conciliorum</hi> edi- tione aliique praestant, reposui;
+							nam vocem <hi rend="italic">injusto- rum</hi> eo negligendam putavi, quod lectio
+							duplex tan- <milestone unit="PLSection" n="D"/> tum sit, cum <foreign xml:lang="grc">σκληρῶν</foreign> vocabulum <foreign xml:lang="grc">τῶν</foreign>. Ο, alii alio modo
+							vertunt. Multae porro apud <hi rend="italic">Cyprianum</hi> hujusmodi sunt lectiones.
+							Quod autem censent cum in notis suis Rigaltius tum Anglicus interpres, per vocem <hi rend="italic">durissimorum</hi> significari a Cypriano Novatia- nos, qui lapsis
+							poenitentiam negabant, id mihi mi- nus certum atque evidens videtur. ROUTH.</note>
+						<note type="footnote">(49) <hi rend="italic">Tangere ea quoe ad eos pertinent</hi>.
+							Veteres editiones et undecim libri veteres habent, <hi rend="italic">Nolite tangere ab
+								omnibus quoe sunt eis</hi>. Quod mutatum videtur a posterioribus librariis studio
+							revocandae lectionis quae exstat in editione vulgata sacrae Scrip- turae. BALUZ.— A
+							Fello adducti fuerunt undecim illi libri veteres quos memorat Baluziuppos; ii vero
+								<foreign xml:lang="grc"> o'</foreign> ad litteram exprimunt, ita enim Qraeca ho-
+								<milestone unit="PLSection" n="B"/> rum se habent, <foreign xml:lang="grc">Καὶ μὴ
+								ἅπτεσθε ἀπὸ πάντων ὅσα ἐστιν αὐτοῖ;</foreign> ROUTH.</note></p>
+					<pb n="1062"/>
+					<milestone unit="PLSection" n="A"/>
+				</div>
+				<div type="textpart" subtype="section" n="4">
+					<p n="4">IV. Quod et ipsum videmus de divina auctoritate descendere, ut sacerdos plebe
+							praesente<hi rend="superscript">25</hi> sub om nium oculis deligatur et dignus atque
+						idoneus pu- blico judicio ac testimonio comprobetur, sicut in Numeris Dominus Moysi
+						praecepit dicens : <hi rend="italic">Appre- hende Aaron fratrem tuum et Eleazarum filium
+							ejus et impones. eos in montem coram omni Syna- goga, et exue Aaron stolam ejus, et
+							indue Eleaza- rum filium ejus, et Aaron appositus</hi> (53) <hi rend="italic">moriatur
+							illic</hi> (<hi rend="italic">Num</hi>. XX, 25, 26). <hi rend="bold">1026</hi> Coram
+						omni Syna- goga jubet Deus constitui sacerdotem, id est, ins- truit et ostendit
+						ordinationes sacerdotales non (54) nisi sub populi assistentis conscientia fieri oporte-
+						re, ut plebe praesente vel detegantur malorum cri- <note type="footnote">(50) <hi rend="italic">Plebs obsequens</hi>. Sermo de vexatione Dona- tistarum editus in
+							appendice Oplati a viro doctissi- mo Ludovico Ellies du Pin pag. 299, § 3 : <hi rend="italic">Ante ple- bem nimis sibi semper obsecutam</hi>. BALUZ.</note>
+						<note type="footnote">(51) <hi rend="italic">A peccatore proeposito</hi>. Magna istic
+							auctoritas datur plebi, ut de vita et moribus episcopi sui ju- dicet, et si
+							constiterit illum errare in fide, ab ejus communione abstineat. <hi rend="italic">Nam
+								cum ideo episcopus</hi>, ut ait sanctus Hieronymus in Dialogo adversus Luci-
+							ferianos, <hi rend="italic">in Ecclesia constituatur ut populum coer- ceat ab errore,
+								qaantus error erit in populo cum errat ille qui docet</hi>. Item in epistola ad
+							Pammachium con- tra Joannem Hierosolymitanum. <hi rend="italic">Sanctiores enim sunt
+								aures populi quam sacerdotis animus</hi>. Vide no- tas nostras ad Agobardum pag. 61
+							et viri doctissi- mi nobisque amicissimi domni Bernardi de Mon- tefalcone praefationem
+							ad opuscula sancti Athanasii, <milestone unit="PLSection" n="C"/> § 6. Vide etiam
+							itinerarium Adriani Papae VI, edi- tum in libro tertio Miscellaneorum nostrorum, pag.
+							451. Exemplum plebis recedere volentis ab episco- po suo refert sanctus Augustinus in
+							epistola ad Nancilionem, quamvis non ageretur de fide, sed de nova translatione unius
+							vocabuli in capite quarto libri Jonae. Nos homines Romanae communionis pu- tamus
+							recedendum esse a Papa si sit haereticus. BALUZ. —At velim attendas nemini prorsus
+							licere sua ipsius auctoritate privata a legitimo pastore episcopo, quanto magis summo
+							Pontifice discedere, quamdiu nulla in eum lata sit canonica sententia. EDD.</note>
+						<note type="footnote">(52) <hi rend="italic">Ipsa maxime habeat potestatem</hi>, etc.
+							Non proprio motu impulsa, sed admonita per justam ac necessariam sollicitudinem
+							aliorum praepositorum, per aliarum ecclesiarum episcopos, quorum consilia divinis
+							praeceptis respondent. RIGALT.</note>
+						<note type="footnote">(53) <hi rend="italic">Et Aaron appositus</hi>. LXX <foreign xml:lang="grc">προστιθεὶς ἀποθᾳ(??)έτω ἐκεῖ</foreign>. Vulgata, <hi rend="italic">Colligetur et morietur ibi</hi>, h. c. <milestone unit="PLSection" n="D"/>
+							<hi rend="italic">colligetur</hi> ad patres suos. Ita codex Fuxensis a Ba- luzio
+							memoratus habet <hi rend="italic">et Aaron appositus ad patres suos moriatur</hi>.
+							Angliea Bibliorum versio, <hi rend="italic">ad popu- lum suum</hi>. ROUTH.</note>
+						<note type="footnote">(54) <hi rend="italic">Ordinationes sacerdotales non nisi</hi>,
+							etc. Hoc exemplo Christianorum Alexander Severus disposi- tiones suas publicabat, ubi
+							aliquos volebat vel rec- tores provinciis dare, vel praepositos facere, vel pro-
+							curatores, id est rationales, ordinare : nomina co- rum proponebat, dicebatque grave
+							esse cum id Christiani et Judaei facerent in ordinandis sacerdoti- bus, non fieri in
+							provinciarum rectoribus, etc., quae apud Lampridium. RIGALT.</note>
+						<pb n="1063"/>
+						<milestone unit="PLSection" n="A"/> mina vel bonorum merita praedicentur, et sit ordi-
+						natio justa et legitima quae omnium suffragio et judicio fuerit examinata. Quod postea
+						secundum divina magisteria observatur in Actis apostolorum, quando de ordinando in locum
+							Judae<hi rend="superscript">26</hi> apostolo (55) Petrus ad plebem loquitur. <hi rend="italic">Surrexit</hi>, inquit, <hi rend="italic">Petrus in medio discentium</hi>
+						(56), <hi rend="italic">fuit autem turba in</hi> (57) <hi rend="italic">uno</hi> (<hi rend="italic">Act</hi>. I, 15). Nec hoc in episcoporum tantum et sacerdotum, sed et
+							in<hi rend="superscript">27</hi> diaconorum<hi rend="superscript">28</hi> ordina-
+						tionibus observasse apostolos animadvertimus, de quo et ipso in Actis eorum scriptum est
+						: <hi rend="italic">Et convo- caverunt</hi>, inquit, <hi rend="italic">illi duodecim
+							totam plebem</hi> (58) <hi rend="italic">discipulorum et dixerunt eis</hi> (<hi rend="italic">Act</hi>., VI, 2). Quod uti- que idcirco tam diligenter et caute
+						convocata plebe tota gerebatur, ne quis ad altaris ministerium vel <milestone unit="PLSection" n="B"/> ad sacerdotalem locum indignus obreperet. Ordina- ri enim
+						nonnunquam indignos non secundum Dei voluntatem, sed secundum humanam praesumptio- nem,
+						et haec Deo displicere quae non veniant ex le- gitima et justa ordinatione, Deus ipse
+						manifestat per Osee prophetam dicens : <hi rend="italic">Sibimetipsis constitue- runt
+							regem, et non per me</hi> (59) (<hi rend="italic">Ose</hi>. VIII, 4). <note type="footnote">Variae lectiones.</note>
+						<note type="footnote"><hi rend="superscript">26</hi>
+							<hi rend="italic">Sic Bod</hi>. 2. <hi rend="italic">Lam. Ebor. NC</hi>. 1. Episcopo
+								<hi rend="italic">Rig</hi>.<hi rend="superscript">27</hi> Sed in <hi rend="italic">Oxon</hi>.<hi rend="superscript">28</hi> Etiam diaconorum <hi rend="italic">Lam.
+								Ebor. Bod</hi>. 2. <hi rend="italic">NC</hi>. 1.<hi rend="superscript">29</hi>
+							<hi rend="italic">Sic Lam. Bod</hi>. 1, 2. Observandum <hi rend="italic">Imp</hi>.<hi rend="superscript">30</hi> Et conscientiae etiam propriae confessione nudata <hi rend="italic">Bod</hi>. 1, 2. <hi rend="italic">Lam. Ebor. NC</hi>. 1, 2. Lin,
+								Corb,<hi rend="superscript">31</hi>
+							<hi rend="italic">Sic Lam. Bod</hi>. 1, 2. <hi rend="italic">Ebor. Lin. NC</hi>. 1, 2.
+								<hi rend="bold">Neap</hi>. Juste <hi rend="italic">Oxon</hi>.</note>
+						<note type="footnote">Variorum notae.</note>
+						<note type="footnote">(55) <hi rend="italic">Apostolo</hi>. Antea legebatur <hi rend="italic">episcopo</hi>. Veram lectionem nobis subministrarunt tria vetera exem-
+								<milestone unit="PLSection" n="C"/> plaria. BALUZ.— Sed prius restituta a Fello
+							fuerat vox <hi rend="italic">apostolo</hi> ex quatuor codicibus. ROUTH.</note>
+						<note type="footnote">(56) <hi rend="italic">In medio discentium</hi>. Ait, Act. I,
+								<foreign xml:lang="grc">ἐν μέσῳ τῶν μαθητῶν</foreign>. Vulg. discipulorum. RIGALT. a
+							Fello allatus.— Tres libri veteres, <hi rend="italic">discipulorum</hi>, eodem sensu.
+							Paulo post quoque scriptum est <hi rend="italic">discipulorum</hi>. Apud Tertullianum
+							in libro de Poenitentia, <hi rend="italic">Ad unius quidem discentis gladium</hi>.
+							Vide notas Pamelii. BA- LUZ.</note>
+						<note type="footnote">(57) <hi rend="italic">Fuit autem turba in uno</hi>, <foreign xml:lang="grc">ἐπὶ τὸ αὐτό</foreign>. Ipse Cyprianus principio hujus Epist. <hi rend="italic">Cum in unum convenissemus</hi>. Psal. CXXI : <foreign xml:lang="grc">Ἧς ἡ μετοχὴ αὐτῆς ἐπὶ τὸ αὐτό</foreign>. RIGALT. a Fello allatus. —(Vulgata habet,
+								<hi rend="italic">Erat autem hominum turba simul fere centum viginti</hi>. Atque
+							audi Baluzium, qui reposuit, <hi rend="italic">Fuit autem tur- ba hominum fere centum
+								viginti</hi>.) Antea ibi scriptum erat <hi rend="italic">turba tn uno</hi> vel <hi rend="italic">in unum</hi>. Nos emendavimus et supplevimus ex fide quatuor veterum
+							exemplarium. Recte sane. Nam in Actibus apostolorum, unde ac- <milestone unit="PLSection" n="D"/> ceptus est hic locus, legitur <hi rend="italic">fere centum
+								viginti</hi>. BA- LUZ. Sic vir el.; cum vero haec lectio ex Vulgata interp. Cypriano
+							post advecta esse mihi videretur, prout ipse quoque Baluzius de alio loco Cyprianico,
+							a librariis mutato ad pag. 79, judicaverat, veterem lectionem revocandam esse censui.
+							Confer et notam proxime sequentem. ROUTH.</note>
+						<note type="footnote">(58) <hi rend="italic">Totam plebem</hi>. Act. VI, 2, IΙ<foreign xml:lang="grc">ροσκ(??)λεσάμενοι δὲ οἱ δώρεκα τὸ πλῆθος τῶν μαθητῶν</foreign>,
+							et 6, <foreign xml:lang="grc">ἐνώπιον παντὸς τοῦ πλήθους</foreign>. Pacianus Epistola
+							III, <hi rend="italic">cujus partes in unum</hi>. RIGALT. a Fello allatus.— Duo libri
+							veteres, <hi rend="italic">totam multitudinem</hi>. BALUZ.— Vul- gata hoc loco habet,
+								<hi rend="italic">convocantes autem duodecim multitudinem discipulorum</hi>,
+							ROUTH.</note>
+						<note type="footnote">(59) <hi rend="italic">Et non per me.</hi>
+							<foreign xml:lang="grc">Καὶ οὐ δε' ἐμοῦ ἧρξαν</foreign>. Os. VIII. RIGALT. a
+							Fello allatus.— Mox in verbis, <hi rend="italic">et uniuscujusque actum de ejus
+								conversatione perspe- xit</hi>, praepositione <hi rend="italic">de ex</hi>
+							significatur. ROUTH.</note>
+						<note type="footnote">(60) <hi rend="italic">Nec rescindere...., quod Basilides Romam
+								pergens</hi> Etiam hic locus pro Romani Pontificis auc- toritate lacit; utpote quo
+							constet episcopos sede <milestone unit="PLSection" n="C"/> ejectos in Hispaniis,
+							solere ad illum excuirere : quamquam hoc factum Basilidis ideo non probet, quod
+							Stephanum papam fefellerit, et illi fraudulen- ter obrepserit. Idipsum fecere in
+							Oriente P. Atha- nasius Alexandrinus, Paulus Constantinopolitanus, Marcellus Ancyrae
+							et Asclepas Gazae Episcopi, ab Arianis expulsi, teste Sozomeno, apud Julium Pon-
+							tificem, ab eodem sedibus suis restituti, Hoc ipsum Stephanus, Carthaginensis
+							antistes, cum concilio Mauritaniae egit apud Damasum, dum conqueritur de sede ejectis
+							episcopis; et antiquis regulis sanci- tum esse dicit, tale quid tum prius tractandum
+							esse, priusquam ad notitiam Almae Sedis ductum esset, etc. Apud Innoc. primum D.
+							Chrysost. Coustan., apud Leonem Theodoretus Cyri, et Flavianus Cons- tant. Ignatius
+							denique Constantinop. Episcopus, apud Nicolaum primum. Eodem pertinet tragoedia
+							Anthemii etiam Constantinop. Episcopi qui ab Aga- pito sede dejectus est, et in locum
+							ejus substitutus <milestone unit="PLSection" n="D"/> Menas; ac preces et minae
+							Theodoretus Augustae apud Silverium et Virgilium Pontifices pro restitutione Anthemii.
+							Postremo Canon ille Nicaeni concilii, de quo tanta inter Africanos et Romanos
+							Episcopos fuit controversia; quem tamen genuinum esse constat ex epistolis Felicis,
+							Julii cl Zuzimi Romanorum Pontificum; et quae pene ad unum omnes primi illi Romani
+							Pontifices martyres habent, de appella- tione episcoporum ad Sedem Romanam.
+							BALUZ.</note></p>
+					<pb n="1064"/>
+					<milestone unit="PLSection" n="A"/>
+				</div>
+				<div type="textpart" subtype="section" n="5">
+					<p n="5">V. Propter quod diligenter oe traditione divina et apostolica observatione
+							servandum<hi rend="superscript">29</hi> est et tenendum quod apud nos quoque et fere
+						per provincias uni- versas tenetur, ut ad ordinationes rite celebrandas ad eam plebem
+						cui praepositus ordinatur, episcopi ejusdem provinciae proximi quique conveniant, et
+						episcopus deligatur plebe praesente, quae singulo- rum vitam plenissime novit et
+						uniuscujusque actum de ejus conversatione perspexit. Quod et apud vos factum videmus in
+						Sabini collegae nostri ordinatione, ut de universae fraternitatis suffragio et de
+						episco- porum qui in praesentia convenerant, quique de eo ad vos litteras fecerant,
+						judicio episcopatus ei de- ferretur et manus ei in locum Basilidis imponere- tur. Nec
+						rescindere ordinationem jure perfectam <milestone unit="PLSection" n="B"/> potest quod
+						Basilides <hi rend="bold">1027 8</hi> post crimina sua detecta et conscientiam etiam
+						propria confessione<hi rend="superscript">30</hi> nudatam Romam pergens (60) Stephanum
+						colle- gam nostrum longe positum et gestae rei ac veritatis ignarum fefellit, ut
+						exambiret reponi se injuste in episcopatum (61)de quo fuerat jure<hi rend="superscript">31</hi> depositus (62). Hoc eo pertinet ut Basilidis non tam abolita <note type="footnote">(61) <hi rend="italic">Reponi in episcopatum</hi>. Recte ex hoc loco
+							collegit Baronius, antiquissimum III Ecclesia usum esse, ut ex remotissimis orbis
+							partibus episcopi, qui se injusta perpessos esse a collegis suis crederent,
+							provocarent ad Romanum tanquam primarium Ecclesiae universalis antistitem. Vide Marcam
+							lib. I <hi rend="italic">de Concordia</hi>, cap. 10, et Pamelium in annotatio- nibus
+							ad hanc Cypriani Epistolam. Futilia sunt quae hic adversus Pamelium scripsit
+							Goularius. BALUZ.</note>
+						<note type="footnote">(62) <hi rend="italic">Jure depositus</hi>. Antea legebatur <hi rend="italic">juste</hi>. Quae <milestone unit="PLSection" n="B"/> sane lectio
+							optima est. Verum cum <hi rend="italic">jure</hi> scriptum sit in codice Veronensi, in
+							quindecim vetustis exem- plaribus nostris, et in septem Anglicanis, et Morel- lius ita
+							quoque posuerit, non credidi rejicere me debere lectionem quae tot auctoritatibus
+							nititur. Vi- detur autem differentia inter haec duo vocabula po- suisse auctor
+							panegyrici Flaviensium Constantino dicti. Ait enim : <hi rend="italic">Fecisti ut quod
+								poteramus jure pe- tere juste obtinuisse videamur</hi>. BALUZ.</note>
+						<pb n="1065"/>
+						<milestone unit="PLSection" n="A"/> sint quam cumulata delicta, ut ad superiora pecca-
+						ta ejus etiam fallaciae et circumventionis crimen ac- cesserit. Neque enim tam culpandus
+						est ille cui ne- gligenter obreptum est quam hic exsecrandus qui fraudulenter obrepsit.
+						Obrepere autem si hominibus Basilides potuit, Deo non potest, cum scriptum sit : <hi rend="italic">Deus non deridetur</hi> (<hi rend="italic">Gal</hi>. VI, 7). Sed nec
+						Martiali potest profuisse fallacia quo minus ipse quoque de- lictis gravibus involutus
+						(63) episcopatum tenere non debeat, quando et Apostolus moneat et dicat : <hi rend="italic">Epi- scopum oportet esse sine crimine, quasi Dei dispensa- torem</hi>
+							(<hi rend="italic">Tit</hi>. I, 7).</p>
+				</div>
+				<div type="textpart" subtype="section" n="6">
+					<p n="6">VI. Quapropter cum, sicut scripsistis, fratres dilectissimi, et ut Felix (64) et
+						Sabinus collegae <note type="footnote">Variae lectiones.</note>
+						<note type="footnote"><hi rend="superscript">32</hi> Caesarea Augusta <hi rend="italic">Lam. Lin</hi>.<hi rend="superscript">33</hi> Significant <hi rend="italic">Bod</hi>
+							2. Significavit <hi rend="italic">Lam. Ebor. Bod</hi>. I. <hi rend="italic">NC</hi>.
+							1. <hi rend="superscript">34</hi> Temulenta convivia <hi rend="italic">Lam. Ben. Ebor.
+								Bod</hi>. 2. <hi rend="italic">Lin. NC</hi>. 1.</note>
+						<note type="footnote">Variorum notae.</note>
+						<note type="footnote">(63) <hi rend="italic">Delictis gravibus involutus</hi>. Principio
+							Epistolae dixit : <hi rend="italic">Nefandorum facinorum conscientia vinctos</hi>. Mox
+							dicet, <hi rend="italic">Gravibus delictis implicatos</hi>. Et alibi, <hi rend="italic">Conscientiam multis delictorum laqueis vinctam</hi>. RI- GALT. a Fello
+							allatus.— Ita quatuordecim libri vete- res et editiones Erasmi et Morelli. At
+							antiquiores editiones et sex libri veteres habent <hi rend="italic">gravique invo-
+								lutus crimine</hi>. BALUZ.</note>
+						<note type="footnote">(64) <hi rend="italic">Et ut Felix</hi>. Non sane improbanda est
+							inter- pretis Anglici conjectura; existimat enim ille in lo- <milestone unit="PLSection" n="C"/> cum Martialis successorem fuisse hunc Felicem, qui missus
+							cum Sabino Basilidis successore episcopus hic dicitur. ROUTH.</note>
+						<note type="footnote">(65) <hi rend="italic">Felix de Coesaraugusta</hi>. Hinc Baronius
+							colle- git illum fuisse episcopum Caesaraugustanum; ejus- que sententiam amplexi sunt
+							scriptores rerum Ar- ragonensium. Sed illam graviter exagitat Franciscus Bivarius in
+							commentariis suis ad Chronicon Dextri, et contendit hunc Felicem non fuisse episcopum,
+							sed presbyterum Vallatae Urbicuae in Vaccaeis, ar- gumento sumpto ex eo Chronico. Sane
+							certum est Felicem non vocari episcopum a Cypriano. Sed ex modo scribendi Cyprianico
+							facile et proclive est existimare illum ea dignitate decoratum fuisse. Nam episcoporum
+							qui concilium cum Cypriano celebra- runt apud Cathaginem dignitates non recenset no-
+							tarius qui acta conscripsit, sed tantum nomina eo- rum et urbium quibus illi
+							praesidebant, hoc modo (pag. 92) : <hi rend="italic">Coecilius a Bilta, Primus a
+								Misgirpa</hi>, <milestone unit="PLSection" n="D"/>
+							<hi rend="italic">Polycarpus ab Adrumeto</hi>, et sic de caeteris. Itaque licet
+							Cyprianus scripserit tantum Felix de Coesarau- gusta, silentium ejus non probat
+							Felicem non fuis- se episcopum. Una res difficultatem mihi videtur habere, quomodo
+							episcopus Caesaraugustanus po- tuerit scribere ad Cyprianum de causa Basilidis et
+							Martialis, cum vicinus eorum non esset, quippe lon- go intervallo ab eis sejunctus,
+							neque probabile sit Sabinum et Felicem, qui brevi compendio poterant trajicere in
+							Africam, profectos esse ad ultimos His— paniarum fines, ut per montes Pyrenaeos irent
+							ad Cyprianum. Si verum esset quod in sermone de sancto Laurentio dixit sanctus
+							Vincentius Ferrarii sanctum Xystum Papam vadentem ad celebrandum <milestone unit="PLSection" n="B"/> concilium Toletanum, transisse per Caesaraugustam, istud
+							confirmare fortassis posset iter Sabini et Fe- licis per Caesaraugustam. Sed istud non
+							aliunde constat quam ex sermone sancti Vincentii. Jam quod de Vallata Urbicua istic ex
+							Dextro refert Bi- varius, id vero vanum est, uti et illud quod ait apud Cyprianum pro
+								<hi rend="italic">Coesaraugusta</hi> legi debere <hi rend="italic">Vallata
+								Urbicua</hi>, quam locat non longe ab Asturica. Nimia miseria est audacem esse
+							hominem nimis. BALUZ.</note>
+						<pb n="1066"/>
+						<milestone unit="PLSection" n="A"/> nostri asseverant, utque alius Felix de Caesarau-
+							gusta<hi rend="superscript">32</hi> (65) fidei cultor <hi rend="bold">1029</hi> ac
+						defensor veritatis litteris suis significat<hi rend="superscript">33</hi>, Basilides et
+						Martialis nefan- do idololatriae libello contaminati sint, Basilides ad- huc insuper,
+						praeter libelli maculam, cum in infir- mitate decumbereti, in Deum blasphemaverit et se
+						blasphemasse confessus sit, et episcopatum pro conscientiae suae vulnere sponte deponens
+						ad agen- dam poenitentiam conversus sit, <hi rend="bold">1030</hi> Deum de- precans, et
+						satis gratulans si sibi vel laico communi- care contingeret. Martialis quoque praeter
+						gentilium turpia et lutulenta convivia<hi rend="superscript">34</hi> (66) in collegio
+						(67) diu frequentata et filios in eodem collegio extera- rum gentium more apud profana
+						sepulera (68) de- <note type="footnote">(66) <hi rend="italic">Lutulenta convivia</hi>.
+							Ubi de Idolothytis vesci oportebat, nec sine libatione ad profana numina bibere
+							licuit. FELL. —Ex canone Ancyrani con- cilii septimo puniebantur etiam Christiani
+							illi, qui ejusmodi convivia publica obierint, quamvis cibos suos, quibus ipsi
+							vescerentur domi, attulissent. ROUTH.</note>
+						<note type="footnote">(67)<hi rend="italic">In collegio</hi>. Ita omnes libri veteres et
+							editio- nes omnes Pameliana antiquiores. Pamelius ergo mutavit ex unico codice
+							Anglicano et posuit <hi rend="italic">et</hi>
+							<milestone unit="PLSection" n="C"/>
+							<hi rend="italic">collegia</hi>. Quod miror retentum fuisse in posterio- ribus
+							editionibus. BALUZ. Praeter pontificum, Fratrum arvalium. Potitiorum, Augurum
+							collegia, et alia id genus, quae Ethnicam idololatriam pro- xime spectabant, plurima
+							fuerunt quae ad reipub. administrationem, ad negotiationes et artificia pertinuere,
+							quae quidem omnia sub tutela alicujus profani numinis collocabantur; et proinde. fieri
+							non potuit, ut quis illis interesset quin cultus istius fieret particeps. FELL.</note>
+						<note type="footnote">(68) <hi rend="italic">Apud profana sepulcra</hi>. Rigaltius ait :
+							« In iis vero sepulcris erant plurima quae ad ritus ethnicos pertinebant, quibus
+							communicare et con- taminari videbantur, qui mortuos suos illic depo- nebant : et hoc
+							solo participes idololatriae fuisse dicebantur. Sed et minime conveniebat christianae
+							charitati unitatique ecclesiasticae, fratrum defun- ctorum corpora sepulchris inferre
+							hostium nominis Christiani; quasi ipsi defuncti, tum maxime cum <milestone unit="PLSection" n="D"/> morerentur, extra Ecclesiam fuissent. Jure igitur
+							christiana fraternitas Ethnicorum collegia despue- bat, ut pestifera; eoruinque
+							sepulcra ut cunditoria mortuorum. Etenim fideles habuere sua <foreign xml:lang="grc">κοιμητήρια</foreign>, dormientium videlicet, in spem resurre- ctionis ac
+							beatitatis aeternae. Hujusce autem spei pignus illis fuit Christus, qui depositus in
+							sepulero revixit surrexitque. Ac mulieribus Dominum in sepulcro quaerentibus obviam
+							factus angelus dixit, <foreign xml:lang="grc">Οὐκ ἔστιν ὧδε</foreign>, <hi rend="italic">Non est hic</hi>. Qui sane titulus tanto magnificus et gloriosus,
+							quanto dispar vulga- tis illis tumulorum inscriptionibus, HIC SITUS EST. HIC JACET.»
+							Haec Rigaltius. Porro, quemadmodum a pluribus observatum, quod omnis fere gentium
+							reňgio, mortuorum fuit cultus, ita vix aliqua ex parte magis ethnica superstitio
+							se-exercebat, quam <milestone unit="PLSection" n="B"/> in cura pro mortuis, hinc
+							sacrificiis, iisque non raro humanis, dii inferi sollicitandi, et placandi manes, hinc
+							tonsi crines, quaesita calvities, et incisa corpora mortuorum causa, de quibus agitur
+							Deut. XIV, 1. FELL.— Verba illa <hi rend="italic">exterarum gentium more, et
+								alienigenis</hi>, de gentilibus vulgo ita nomi- natis, extra Ecclesiam positis,
+							alienisque a sacris Christianis, interpretanda videntur. ROUTH.</note>
+						<pb n="1067"/>
+						<milestone unit="PLSection" n="A"/> positos et alienigenis consepultos, actis etiam
+						publi- ce habitis apud procuratorem ducenarium (69) ob- temperasse se idololatriae <hi rend="bold">1031</hi> et Christum ne- gasse contestatus sit, cumque alia multa sint et
+						gra- via delicta quibus Basilides et Martialis implicati tenentur<hi rend="superscript">35</hi>, frustra tales episcopatum sibi usurpare cenantur, cum manifestum sit·<hi rend="superscript">36</hi> ejusmodi homi- nes nec Ecclesiae Christi posse praeesse nec
+						Deo <note type="footnote">Variae lectiones.</note>
+						<note type="footnote"><hi rend="superscript">35</hi> Implicati teneantur <hi rend="italic">Lam. Ebor. NC</hi>. 1.<hi rend="superscript">36</hi> Manifestius sit
+								<hi rend="italic">Bod</hi>. 1, 2. <hi rend="italic">Ebor. Lam. Lin. NC</hi>. 1,
+							2.</note>
+						<note type="footnote">Variorum notae.</note>
+						<note type="footnote">(69) <hi rend="italic">Apud procuratorem ducenarium</hi>. Extra
+							cu- ras exercitus et negotia belli, circa principem Ro- manum fuit militia duplex :
+							litterata, quae scriniis operam dabat; actuosa, quae rebus agendis erat occupatissima.
+							Hi magistriani dicebantur, et ex corum schola Ducenarii et Centenarii, sive Sexage-
+							narii, qui fiscales pecunias exigebant, a numero pecuniarum quas in stipendium
+							accipiebant, nun- cupati, Dio lib. LIII, ubi de procur. Caes. : <foreign xml:lang="grc">Καὶ τοῖς γε ἐπιτρόποις καὶ αὐτό τὸ ὅνομα ἀπὸ τοῦ ἀριθμοῦ τῶν
+								διδομένων αὐτοῖς χρημάτων</foreign>. Capitolinus <milestone unit="PLSection" n="C"/>
+							in Pertinace : <hi rend="italic">Ad ducenum sestertiorum stipendium translatus in
+								Daciam</hi>. Vetus inscriptio : PROCURA- TOR AUGUSTI PROVINCIAE BOETICAE AD DUCENA
+							ACCI- PIENDA. Apuleius, Milesiavii : <hi rend="italic">Procurator principis ducenaria
+								perfunctus</hi>. Natio valde infesta Christia- nis. Etenim per occasionem officii
+							sui omnia mini- ma maxima quae in provinciis agerentur renuntia- bant. Itaque ab iis
+							saepe vexati confessores Chri- stiani nominis, nisi pactione turpi vexationem
+							redimerent, sicut ab isto Martiali facium innuit Cyprianus. Titulus est lib. X Cod.,
+							de exactioni- bus tribulorum, ubi Constantinus Imp. vetat Du- cenarios aliquem ex
+							debitoribus convenire prius- quam a tabulario civitatis nominatim breves acci- piunt
+							debitorum, et l. seqq. <hi rend="italic">Nemo carcerem</hi>, inquit, <hi rend="italic">plumbatarumque verbera, aut pondera, aliaque ab insolentia judicum reperta
+								supplicia in debitorum solutionibus expavescat</hi>. Et apud Eusebium legitur
+							Epistola Synodi Antiochenae ad Dionysium Romae, et Maximum Alexandriae episcopos, qua
+							patres <milestone unit="PLSection" n="D"/> Antiochem tantam in Paulo Samosateno fuisse
+							superbiam notant, ut Ducenarius aliquis haberi debuerit magis quam episcopus, adeo
+							prave et insolenter circa omnem fraternitatem satagebat. Verba Synodi, Historiae
+							Ecclesiasticae lib. VII, cap. 30, sic habent : <foreign xml:lang="grc">Καὶ οὔτως
+								ὑψηλοφρονεῖ καί ὑπερῆρται κοσμικὰ ἀξιώματα ὑποδυόμενος, καὶ δουκηνάριος μᾶλλον ἣ
+								ἑπίσκοπος θέλων καλεῖσθαι, καὶ σοβῶν κατὰ τὰς ἀγορὰς καὶ ἐπιστολὰς ἀναγινώσκων καὶ
+								ὑπαγορεύων, ἄμα βαδίξων δημοσίᾳ, καὶ δορυφορούμενος</foreign>, etc. Hocce igitur
+							hominum genus valde molestum, adeoque odiosum passim et invisum plerisque, ut etiam
+							Circitorum et Cu- riosorum, sed praesertim Christianis, qui saepissime talium
+							officiorum crudelitate comprehensi ad po- testates rapiebantur. Eulogius
+							archiepiscopus Alexandrinus, libro <hi rend="italic">de Disciplina Ecclesiastica
+								adversus Nocatum</hi>, mentionem facit commentarii cujusdam Novatiani, cujus hanc
+							fuisse hypothestii refert, "<foreign xml:lang="grc">Ὅτι, βασιλεύοντος Ῥωμαίων Δεκίου
+								καὶ Οὐαλεριανοῦ, Περέννιος δουκηνάριος, πρόσταγμαλαβὼν παρ’ αὐτῶν, πάντας τοὺς ἀνά
+								τὴν ᾽Ρώμην</foreign>
+							<milestone unit="PLSection" n="B"/>
+							<foreign xml:lang="grc">καὶ τὰς πέριξ ἑπαρχίας χριστιανούς βαρυτάταις βασάνοις καὶ
+								πικραῖς τιμωρίαις εἰδολολατρεῖν ἐβιάζετο, καὶ πολλοὶ μὲν καὶ ἄλλοι ἐνεδίδουν τῇ
+								βίᾳ,</foreign> etc. Videantur quae de Beneficiariis et Curiosis ad Tertullianum
+							observavimus, et quae ad ultimam Cypriani Epistolam, de Frumentariis, sed imprimis
+							quae ad Capitolini Pertinacem, Salmasius. RIGALT. a Fello allatus.— Plura de
+							ducenariis crudite dicta reperies in observationibus Rigaltii. Vide etiam notam
+							marginalem Beati Rhenani ad episto- lam synodi Antiochenae apud Rufinum lib. VII, cap.
+							26, et Josephum Scaligerum ad Manilium. Joannes Calvinus in Lexico juridico, in verbo
+								<hi rend="italic">Ducenarii</hi>, citat epistolam quartam libri primi sancti
+							Cypriani, quae est haec nostra, in qua ait exstare haec verba : <hi rend="italic">Neque ut ille superbierit, sublatusque fuerit munda- nis dignitatibus, ducenarius
+								potius quam episcopus vocari volens</hi>. At ego ista neque in editionibus in- veni
+							neque in libris veteribus. BALUZ.— Verba <milestone unit="PLSection" n="C"/> spectant
+							ad locum modo adductum a Rigaltio ex <hi rend="italic">epistola Antiochenorum</hi> a
+							Baluzio item commemo- rata, et cujus pars exstat in vol. II supia ad pag. 479), ubi
+							notam videbis. ROUTH.</note>
+						<pb n="1068"/>
+						<milestone unit="PLSection" n="A"/> sacrificia offerre debere; maxime cum jampridem
+						nobiscum et cum omnibus omnino episcopis in toto mundo constitutis etiam Cornelius
+						collega noster sacerdos pacificus ac justus, et martyrio quoque dignatione Domini
+						honoratus (70), decreverit ejus- modi homines ad poenitentiam quidem agendam posse
+						admitti, ab ordinatione autem cleri atque sa- cerdotali honore prohiberi. <note type="footnote">(70) <hi rend="italic">Et martyrio quoque dignatione Domini hono-
+								ratus</hi>. Finge, sicca morte, non cruenta, affectum fuisse Cornelium, postquam
+							Dominum confessus esset, prout censet Pearsouius in <hi rend="italic">Annall.
+								Cypr</hi>. ad an. 252, § 13, vetustissimi <hi rend="italic">Catalogi</hi> auctore
+							allato, cujus verba sunt in <hi rend="italic">Cornelio : Post hoc Centumceltis
+								expulsus, ibi cum gloria dormitionem accepit</hi>; ta- men vir magnus minus recte
+							hoc quidem innuisse videtur, Cornelio mortem cruentam ascripsisse posteriores magis
+							quam Hieronymum, in libro <hi rend="italic">De Viris Ill</hi>. dicentem, <hi rend="italic">ob Christum martyrio coro- natum fuisse Cornelium</hi>; nam in <hi rend="italic">Vita Pauli Eremi- toe</hi> ab eodem Hieronymo conscripta haec verba
+							exstant ad pag. 240 ed. Froben. : <hi rend="italic">Cornelius Romoe, Cyprianus
+								Carthagine, felici cruore damnati sunt</hi>. <milestone unit="PLSection" n="D"/>
+							Porro, quanquam, ut verum proferam,in <hi rend="italic">Epist</hi>. sua LXVII vel
+							LXVIII Cyprianus Lucium Cornelii successorem, qui similiter in exsilium actus non in
+								<hi rend="italic">Martyrum Catalogo</hi>, sed in <hi rend="italic">Depositione</hi>
+							sen sepul- cra <hi rend="italic">Episcoporum</hi> invenitur, <hi rend="italic">beatum
+								martyrem</hi> commemorato simul Cornelio appellaverit, eorum tamen sententiam magis
+							amplectendam puto, propter Hieronymi testimonium, qui gladio impe- ratorio occisum
+							esse Cornelium statuerint. Cor- nelii itidem <hi rend="italic">venerandum cruorem</hi>
+							memorat Maxi- mus episcopus saeculo quinto Taurinensis, in <hi rend="italic">Ser-
+								monibus</hi> suis, quos primus edidit Muratorius. Vide Serm. 4 p. 46 tomi quarti <hi rend="italic">Anecdott. Ambrosianoe Bibliothecoe</hi>. Et <hi rend="italic">decollatus est Cornelius</hi>, ait quidem Anastasius Bibliothecarius in <hi rend="italic">Vitis Pontif. Rom</hi>.· p. 10, ed. Mogunt. sed, quod vetera fecerunt
+							Martyrologia, ex actis quae adulterina videntur. lioini.</note></p>
+					<pb n="1069"/>
+					<milestone unit="PLSection" n="A"/>
+				</div>
+				<div type="textpart" subtype="section" n="7">
+					<p n="7">VII. Nec vos moveat, fratres dilectissimi, si apud quosdam in novissimis
+						temporibus aut lubrica fides nutat, aut Dei timor irreligiosus<hi rend="superscript">37</hi> (71) va- cillat aut pacifica concordia non perseverat. Prae- nuntiata sunt
+						haec futura in saeculi fine, et Domini voce atque Apostolorum contestatione praedictum
+						est deficiente jam <hi rend="bold">1032</hi> mundo, atque appropin- quante antichristo,
+						bona quaeque deficere, mala vero et adversa proficere.</p>
+				</div>
+				<div type="textpart" subtype="section" n="8">
+					<p n="8">VIII. Non sic tamen, quamvis novissimis tempo- ribus, in Ecclesia Dei aut
+						evangelicus vigor cecidit, aut Christianae virtutis<hi rend="superscript">38</hi> aut
+						fidei robur elanguit<hi rend="superscript">39</hi>, ut non supersit portio sacerdotum
+						quae minime ad has rerum ruinas et fidei naufragia succumbat, sed fortis et stabilis
+						honorem divinae majestatis et <milestone unit="PLSection" n="B"/> sacerdotalem
+						dignitatem plena timoris observatione tueatur. Meminimus et tenemus, succumbentibus
+						licet et cedentibus caeteris Matathiam (<hi rend="italic">I Mach</hi>. II, 19, 20),
+						legem Dei vindicasse fortiter. Heliam (<hi rend="italic">III Reg</hi>. XIX, 10), Judaeis
+						deficientibus atque a religione divina recedentibus, stetisse<hi rend="superscript">40</hi> et cer- tasse sublimiter; Danielem (<hi rend="italic">Dan</hi>. VI, 10, 21,
+						22) nec solitudine<hi rend="superscript">41</hi> regionis alienae nec persecutionis
+						assiduae infestatione deterritum frequenter ac for- titer gloriosa<hi rend="superscript">42</hi> dedisse martyria; tres item pueros nec annis (72) nec minis fractos contra
+							<hi rend="bold">1033</hi> ignes Babylonios fideliter obstitisse et victorem<hi rend="superscript">44</hi> regem in <note type="footnote">Variae lectiones.</note>
+						<note type="footnote"><hi rend="superscript">37</hi>
+							<hi rend="italic">Sic Imp</hi>. Apud irreligiosos <hi rend="italic">Foss. Oxon</hi>.
+							38 Christiana virtus <hi rend="italic">Lin. NC</hi>. 2.<hi rend="superscript">39</hi>
+							Vigor languet <hi rend="italic">Ver</hi>. Ti- mor <hi rend="italic">Corb</hi>.<hi rend="superscript">40</hi> Deficientibus stetisse <hi rend="italic">Lam. Lin. Ebor.
+								Bod</hi>. 2. <hi rend="italic">NC</hi>. 1.<hi rend="superscript">41</hi> Solitudine
+								<hi rend="italic">Bod</hi>. 1, 2, <hi rend="italic">Lam. NC.</hi> 1. <hi rend="italic">Lin. Ebor</hi>.<hi rend="superscript">42</hi> Gloriose <hi rend="italic">Lam. Lin. Ebor. NC</hi>. 1, 2. <hi rend="italic">Foss, Vict.
+								Corb</hi>.<hi rend="superscript">43</hi> Victores <hi rend="italic">Lin. NC</hi>. 2.
+								<hi rend="superscript">44</hi> Qua in re <hi rend="italic">Lam. Ebor. NC</hi>. 1.<hi rend="superscript">45</hi> Si videris <hi rend="italic">Bod</hi>. 4. 46 Adulteris
+							partem <hi rend="italic">Lam. Ebor. Bod</hi>. 1, 2. <hi rend="italic">Lin. NC</hi>. 1,
+							2. <hi rend="italic">Thu</hi>. </note>
+						<note type="footnote">Variorum notae.</note>
+						<milestone unit="PLSection" n="C"/>
+						<note type="footnote">(71) <hi rend="italic">Dei timor irreligiosus</hi>. Ex uno tantum
+							codice scripto posuit Fellus, <hi rend="italic">Dei timor apud irreligiosos</hi>, dum
+							impressos habere ait, quod vides esse rece- ptum. Sed in <hi rend="italic">veteri</hi>
+							quoque <hi rend="italic">Romana</hi> atque Erasmi editionibus <hi rend="italic">apud
+								irreligiosos</hi> exstare invenio. Silet Baluzius altera lectione retenta. Cum vero
+							ad finem epistolae habeas, <hi rend="italic">religioso timore</hi>, qui locus huic
+							ipsi lucem affundit, nonne ergo legendum est : <hi rend="italic">Dei timor
+								religiosus?</hi> ROUTH.</note>
+						<note type="footnote">(72) <hi rend="italic">Nec annis</hi>. Duo libri veteres et
+							antiquae editiones praeferunt <hi rend="italic">armis</hi>. Sed hanc lectionem rejecit
+							Pamelius, quia ipsi constabat regem Nabu- chodonosorem nullis armis aggressum esse
+							tres pueros, et posuit <hi rend="italic">annis</hi> ex fide quinque veterum
+							exemplarium, quam lectionem ego quoque reperi in vigmti ex nostris. Unus meus vetus
+							habet <hi rend="italic">cami- nis</hi>, Atque ego eam lectionem facile credo esse
+							meliorem, cum dici non possit de pueris aut ado- lescentibus eos esse senio et annis
+							fractos, et quia <milestone unit="PLSection" n="D"/> vox <hi rend="italic">caminis</hi> melius congruit cum historia. Quippe certum est Nabuchodonosorem, ut
+							pueros istos commoveret et terreret, multiplicis poenae commi- natione, minas
+							jactasse, pericula intentasse, deni- que parari jussisse fornacem sive, ut Sulpitii
+							Severi verbo utar, caminum ignis ardentis in quem conji- cerentur. Confirmant hanc
+							meam opinionem verba Cypriani ex epistola LVI, pag. 91, in qua tres pueri non dicuntur
+							annis fracti, sed aetate territi, et mi- nis regis et flammis fortiores exstitisse.
+							Itaque retinui eam lectionem, quam puto esse meliorem. Commodius autem erectiusque de
+							hac mea emen- datione existimabit judiciumque faciet qui varias <milestone unit="PLSection" n="C"/> istas lectiones sine ullo praejudicio examinaverit. Ita
+							enim me sincerius exploratiusque vel corrigere poterit vel probare. Recte autem dixit
+							Cyprianus <hi rend="italic">pueros nec caminis nec minis, fractos</hi>. Nam Cicero in
+							libro primo Officiorum dixit frangi metu; et Statius, IX Thebaidos, minis frangi. Sunt
+							etiam alia exempla. BALUZIUS.— Ante Pamelium, refe- rente Pamelio ipso, exstabat illud
+								<hi rend="italic">nec annis</hi>, in <hi rend="italic">editione Manutii</hi>; imo in
+								<hi rend="italic">editione</hi> Cypriani vere principe, seu <hi rend="italic">Romana</hi>. Porro in <hi rend="italic">edit. Oxon</hi>. nulla memoratur lectionis
+							varietas. Baluzio tamen istud <hi rend="italic">nec caminis</hi> editioni suae
+							reponenti, quae quidem vox <hi rend="italic">caminus</hi> in <hi rend="italic">Oratione puerorum</hi> ad regem apud Danielem invenitur, forsitan consensissem,
+							nisi obstarent res duae, primum ordo praeposterus ver- borum, <hi rend="italic">nec
+								cominis nec minis fractos</hi>, deinde verba ipsa Cypriani, quae a viro cl. adducta
+							sunt : <hi rend="italic">Imi- temur pueros, Ananiam, Azarium, et Misahelem, qui nec
+								oetate territi, nec captivitate fracti, Judoea</hi>
+							<milestone unit="PLSection" n="D"/>
+							<hi rend="italic">devicta et Hierosolymis captis, in ipso regno suo regem fidei
+								virtute vicerunt, et minis regis et flammis fortiores exstiterunt</hi>. Et alibi
+							quoque, si bene memi- ni, apud Cyprianum ex tenera horum confessorum aetate ducitur ad
+							fortitudinem adhortativum argu- mentum. Itaque lectionem prius receptam <hi rend="italic">nec annis</hi>, h. e. juvenilibus annis, revocavi, quam quidem
+							lectionem nixus fide unius tantum codicis cum altera <hi rend="italic">nec
+								caminis</hi> idem Baluzius mutaverat. ROUTH.</note>
+						<pb n="1070"/>
+						<milestone unit="PLSection" n="A"/> ipsa sua captivitate vicisse. Viderit vel
+						praevarica- torum numeras vel proditorum qui nunc in Eccle- sia contra Ecclesiam surgere
+						et fidem pariter ac veritatem labefactare coeperunt. Permanet apud plurimos sincera mens
+						et religio integra, et non nisi Domino et Deo suo anima devota, nec chri- stianam fidem
+						aliena perfidia deprimit ad ruinam, sed magis excitat et exaltat ad gloriam, secundum
+						quod beatus apostolus Paulus hortatur et dicit (Rom. III, 3, 4) : <hi rend="italic">Quid
+							enim si exciderunt a fide quidam eorum, nunquid infidelitas illoram fidem Dei
+							evacuavit? Absit! Est enim Deus veras, omnis autem homo mendax</hi>. Si autem omnis
+						homo men- dax est et solus Deus verax, quid aliud servi, et maxime sacerdotes Dei,
+						facere debemus nisi ut <milestone unit="PLSection" n="B"/> humanos errores et mendacia
+						relinquamus, et praecepta dominica custodientes in Dei veritate maneamus?</p>
+				</div>
+				<div type="textpart" subtype="section" n="9">
+					<p n="9">IX. Quare<hi rend="superscript">44</hi> etsi aliqui de collegis nostris
+						exstiterint, fratres dilectissimi, qui deificam disci- plinam negligendam putant et cum
+						Basilide et Mar- tiale temere communicant, conturbare fidem no- stram res ista non
+						debet, cum Spiritus sanctus in psalmis talibus comminetur dicens (<hi rend="italic">Psal</hi>. XLIX, 17, 18) : <hi rend="italic">Tu autem odisti disciplinam, et
+							abjecisti sermones meos</hi>
+						<hi rend="bold">1034</hi> retro. Si videbas<hi rend="superscript">45</hi>
+						<hi rend="italic">furem, con- currebas ei, et cum adulteris portionem</hi><hi rend="superscript">46</hi> (73) <hi rend="italic">tuam</hi>
+						<note type="footnote">(73) <hi rend="italic">Adulteris portionem tuam</hi>. Codex
+							Fuxensis, <hi rend="italic">moechis</hi>. Supra, epist. LXIII, pag. 110 : <hi rend="italic">Et inter moechos particulam tuam ponebas</hi>, BALUZIUS. —<hi rend="italic">Par</hi>- <milestone unit="PLSection" n="B"/>
+							<hi rend="italic">ticulam</hi> hoc quoque loco <hi rend="italic">editio</hi> habet <hi rend="italic">Manutii</hi>. Par- tem pro portionem octo codd. scripti in <hi rend="italic">edit</hi>. Oxon. nominati. ROUTH.</note>
+						<pb n="1071"/>
+						<milestone unit="PLSection" n="A"/>
+						<hi rend="italic">ponebas</hi>. Consortes et participes ostendit eos alic- norum
+						dolictorum fieri qui fuerint delinquentibus copulati. Sed et hoc idem Paulus apostolus
+						scribit et dicit : <hi rend="italic">Susurratores, detractores, abhorrentes Deo,
+							injuriosi, superbi, jactantes sui, adinventores malo- rum, qui cum justitiam Dei
+							cognovissent, non intel- lexerunt</hi> (74) <hi rend="italic">quoniam qui talia agunt
+							morte sunt digni, non tantum qui faciunt ea</hi><hi rend="superscript">47</hi>
+						<hi rend="italic">sed et qui con- sentiunt eis qui hoec agunt : quoniam qui talia</hi>,
+						in- quit, <hi rend="italic">agunt, morte sunt digni</hi> (<hi rend="italic">Rom</hi>. I,
+						30, 31, 32). Manifestat et comprobat morte dignos esse et ad poenam venire, non tantum
+						illos qui mala faciunt, sed etiam eos qui talia agentibus consentiunt, qui <pb n="1072"/>
+						<milestone unit="PLSection" n="A"/> dum malis et peccatoribus et poenitentiam non
+						agentibus illicita communicatione miscentur, no· centium contractibus polluuntur (75),
+						et dum jun- guntur in culpa, sic nec in poena separantur. Pro- pter quod integritatis et
+						fidei vestrae religiosam solli- citudinem, fratres dilectissimi, et laudamus pariter et
+						probamus; et quantum possumus adhortamur litteris nostris, ne vos cum profanis et
+						maculatis sacerdotibus communicatione sacrilega misceatis, sed integram et sinceram
+						fidei vestrae firmitatem religioso timore servetis. Opto vos (76), fratres charissimi,
+						semper bone valere.</p>
+
+				</div>
+			</div>
+		</body>
+	</text>
+</TEI>

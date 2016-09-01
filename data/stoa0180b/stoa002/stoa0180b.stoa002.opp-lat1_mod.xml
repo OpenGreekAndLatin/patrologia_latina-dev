@@ -1,0 +1,411 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+	<teiHeader>
+    <fileDesc>
+			<titleStmt>
+				<title/>
+				<editor/>
+				<sponsor>University of Leipzig</sponsor>
+				<funder>European Social Fund Saxony</funder>
+				<principal>Gregory Crane</principal>
+				<meeting/>
+				<respStmt>
+					<persName xml:id="DDD">Digital Divide Data</persName>
+					<resp>Corrected and encoded the text</resp>
+				</respStmt>
+				<respStmt>
+					<persName>Greta Franzini</persName>
+					<resp>Project Manager (University of Leipzig)</resp>
+				</respStmt>
+				<respStmt>
+					<persName>Frederik Baumgardt</persName>
+					<resp>Technical Manager (University of Leipzig)</resp>
+				</respStmt>
+				<respStmt>
+					<persName>Simona Stoyanova</persName>
+					<resp>Project Assistant (University of Leipzig)</resp>
+				</respStmt>
+				<respStmt>
+					<persName>Bruce Robertson</persName>
+					<resp>Technical Advisor</resp>
+				</respStmt>
+				<respStmt>
+					<persName>Tabea Selle</persName>
+					<resp>Student Assistant</resp>
+				</respStmt>
+			</titleStmt>
+			<publicationStmt>
+				<authority>University of Leipzig</authority>
+				<idno type="filename">PL3_12_APP.xml
+</idno>
+				<availability>
+					<p>Available under a Creative Commons Attribution-ShareAlike 4.0 International License</p>
+				</availability>
+				<date>2015</date>
+				<publisher>University of Leipzig</publisher>
+				<pubPlace>Germany</pubPlace>
+			</publicationStmt>
+			
+			<sourceDesc>
+				<listBibl xml:lang="la">
+					<biblStruct>
+						<monogr>
+							<title>Epistola Ad Galliae Atque Hispaniae Episcopos</title>
+							<editor>
+								<persName>
+									<name xml:lang="la"/>
+									<name xml:lang="fr">Jaques Paul Migne</name>
+								</persName>
+							</editor>
+							<author ref="urn:tmp">Lucius I</author>
+							<imprint>
+								<publisher/>
+								<pubPlace>Paris</pubPlace>
+								<date>1865</date>
+							</imprint>
+							<biblScope unit="volume">3</biblScope>
+						</monogr>
+					</biblStruct>
+				</listBibl>
+			</sourceDesc>
+			
+		</fileDesc>
+		<encodingDesc>
+			<p>Text encoded in accordance with the latest EpiDoc standards (January 2014)</p>
+			  <refsDecl n="CTS">
+        <cRefPattern n="paragraph" matchPattern="(.+).(.+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div/tei:div[@n='$1']/tei:p[@n='$2'])"/>
+        <cRefPattern n="chapter" matchPattern="(.+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div/tei:div[@n='$1'])"/>
+      </refsDecl>
+    </encodingDesc>
+		<profileDesc>
+			<langUsage>
+				<language ident="grc">Greek</language>
+				<language ident="la">Latin</language>
+			</langUsage>
+		</profileDesc>
+		<revisionDesc>
+			<change when="2015-12-08" who="dwp"/>
+		</revisionDesc>
+	</teiHeader><text>
+		<body>
+			<div type="edition" n="urn:cts:latinLit:stoa0180b.stoa002.opp-lat1">
+				<head>
+					<title>APPENDIX. UNICA EPISTOLAE ET DECRETA S. LUCIO ASCRIPTA.</title>
+				</head>
+
+				<head>
+					<title>EPISTOLA LUCII PAPAE I (1)</title>
+				</head>
+				
+				<div type="textpart" subtype="chapter" n="argumentum">
+				<p>AD GALLIAE ATQUE HISPANIAE EPISCOPOS.</p>
+				<p>ARGUMENTUM.— <hi rend="italic">Ut duo presbyteri et tres diaconi
+						in omni loco episcopo adhoereant propter testimo</hi>- <milestone unit="PLSection" n="C"/>
+					<hi rend="italic">nium ecclesiasticum; et de accusatione episcopo- rum; et de unanimitatis
+						concordia inter metropo- litanum caeterosque episcopos, et ut raptores atque
+						ecclesiasticarum rerum ablatores, invasores, alie- natores, ut fures et sacrilegi
+						anathematizentur</hi>.</p>
+				<p n="1">I Ut episcopus semper testes secum presbyteros ac diaconos habeat.</p>
+				<p n="2">II. De criminationibus episcoporum, sive majo- rum natu, et ut audientia ad majores
+					personas ap- pellantibus non negetur.</p>
+				<p n="3">III. Ut metropolitanus sine consilio episcoporum nihil agat, nec ipsi sine illius,
+					nisi quod ad pro- prias ecclesias pertinet.</p>
+				<p n="4">IV. Ut metropolitanus sine episcopis causam eo- rum non audiat.</p>
+				<p n="5"><milestone unit="PLSection" n="D"/> V. Ne posteriores episcopi prioribus se
+					praeferant, nec cis inconsultis aliquid agant.</p>
+				<p n="6">VI. De iis qui res Ecclesiae vel oblationes fidelium auferunt, et qui cis
+					consentiunt.</p>
+				<p>D LECTISSIMIS FRATRIBUS OMNIBUS IN PARTIBUS OC CIDENTALIBUS, TAM IN GALLUS QUAM IN
+					HISPANIIS CON- SISTENTIBUS, LUCIUS EPISCOPUS, IN DOMINO SALU- TEM :</p>
+				<p>Litteras dilectionis vestrae (<hi rend="italic">S. Leo Epist.</hi>
+					xxviii), <note type="footnote">Variorum notae.</note>
+					<note type="footnote">(1) <hi rend="italic">Epistola</hi> suspecta eodem jure cum aliis
+						Isidori mercibus.— Epistola. Non unam hanc duntaxat, sed plures decretales epistolas
+						Lucium pontificem scripsisse, testis est Cyprianus epistola LXVII his verbis: <hi rend="italic">Illi enim</hi>, loquitur de Cornelio et
+						Lucio pontificibus, <hi rend="italic">plem Spiritu Dei, et in glorioso martyrio
+							constituti, dandam esse lapsis pacem censuerunt, et poenitentia acta fructum
+							communicationis et pacis negandum non esse, litteris suis signaverunt</hi>. Quas hac
+						de re Lucius scripsit epistolas non coustant. Quae apud Cyprianum LXX reperitur hoc nomine Lucii insignita, a quibusdam hujus pontificis esse
+						credi- tum fuit, sed ignorantes fuisse episcopum eo cam nomine appellatum, decepti sunt.
+						perperam cam, quae alterius est, Lucio pontifici ascribentes. Ba- ronius, anno 257, num.
+						4.</note> quas ad beati Petri apostoli Sedem pro vestra causa negotii misistis, libenter
+					suscepimus; sed de vestris afflictionibus non modice contristati sumus. Signi ficastis
+					enim vos tam a quibusdam, non rectam fi <milestone unit="PLSection" n="C"/> dem
+					tenentibus, sed erroribus implicitis, quam et ab aliis eos imitantibus, persequi et
+					infamari, at- que vestras ecclesias suis dotibus et fidelium obla- tionibus spoliari,
+					vestrosque ministros nimis vexari; et ideo multos a vobis et a recta fide discedere,
+					quoniam eis non potestis defensionem impendere, neo ea quae necessaria sunt ministrare.
+					Nolite mi- rari, fratres, si vos malevoli et impii persequun- tur, cum ipsum Christum,
+					caput nostrum, sint persecuti. Unde et consolaticom ipsam habetis Veritatem, quae ait :
+						<hi rend="italic">Si patremfamilias Beelzebub vocaverant, quanto magis domesticos
+						ejus?</hi> (<hi rend="italic">Matth</hi>. X.) Ipsa iterum
+					consolans nos loquitur, dicens : <hi rend="italic">Si de mundo fuissetis, mundus quod suum
+						erat diligeret; <milestone unit="PLSection" n="D"/> sed quia non estis de mundo, sed ego
+						elegi vos de mundo, propterea odit vos mundus</hi> (<hi rend="italic">Joan</hi>. XVI).</p>
+				</div>
+				<div type="textpart" subtype="chapter" n="1">
+					<p>I. Propter tales, fratres, hortamur vos, sicut et <hi rend="bold">977</hi> in hac
+					sancta Ecclesia constitutum habemus (<hi rend="italic">De consec. dist. I. Jubemus apostolica auctoritate</hi>), ut semper testes
+					vobiscum sacerdotes et diaconos habeatis. Et licet conscientia sufficere possit pro- pria,
+					tamen propter malevolus, juxta Apostolum, etiam testimonium vos oportet habere bonum ab
+					his <pb n="1009"/>
+					<milestone unit="PLSection" n="A"/> qui foris sunt (<hi rend="italic">I Tim</hi>. III). Quoniam et in hac san- cta Sede constitutum habemus, ut duo
+					presbyteri vel tres diaconi in omni loco episcopum non de- serant (2), propter testimonium
+					ecclesiasticum.</p>
+				</div>
+				<div type="textpart" subtype="chapter" n="2">
+				<p>II. Episcopi ergo non sunt leviter accusandi vel detrahendi, quia injuria eorum
+						(<hi rend="italic">Greg. Epist</hi>. 32, <hi rend="underline">lib</hi>. XII) ad Christum pertinet, cujus vice et le- gatione funguntur in
+					Ecclesia. Unde nobis et om- nibus qui nobiscum sunt in nostro solatio, sicut et olim
+					factum invenimus, constitui placuit ut criminationes majorum natu per alios non fiant (2,
+						<hi rend="italic">q</hi>. 7), nisi per ipsos qui crimina intendunt (<hi rend="italic">Anianus</hi>, 25, <hi rend="italic">tit</hi>. I
+					<hi rend="italic">libri</hi>
+					IX, <hi rend="italic">Cod. Theod</hi>.), si tamen ipsi digni et
+					irreprehensibiles apparuerint, et actis docuerint publicis (<hi rend="italic">Conc.
+						Arelat. c</hi>. 13) omni se ca- <milestone unit="PLSection" n="B"/> rere suspicione
+					atque inimicitia, et irreprehensibi- lem fidem ac conversationem ducere (<hi rend="italic">Hard. Coll. cap</hi>. 9). Unde placuit ut a quibuscunque judicibus ecclesiasticis (<hi rend="italic">Conc. Carthag</hi>. III, <hi rend="italic">cap</hi>. 10) ad alios judices ecclesiasticos, ubi est major auctoritas, si fuerit
+					provocatum, aud(??)entia non negetur.</p>
+				</div>
+				<div type="textpart" subtype="chapter" n="3">
+				<p>III. Item constituimus (3, <hi rend="italic">q</hi>. 3; <hi rend="italic">nullus
+						autem primas sub nomine Callisti ponitur ibi</hi>), sicut et a sanctis Apostolis
+					eorumque successoribus decretum reperimus, si quis metropolitanus episcopus, nisi quod
+					solummodo ad propriam pertinet parochiam, sine consilio et voluntate oronium comprovincia-
+					lium episcoporum (<hi rend="italic">Hard. colt</hi>. c. 46), extra aliquid agere
+					tentaverit, gradus sui periculo subjacebit : et quod egerit irritum habeatur et vacuum.
+					Sed quid- <milestone unit="PLSection" n="C"/> quid de comprovineialium coepiscoporum
+					causis, eorumque ecclesiarum et clericorum atque saecula- rium necessitatibus, aut de
+					quibuscunque commu- nibus causis agere aut disponere necesse fuerit, hoc eum omnium
+					consensu comprovincialium aga- tur pontificum, non aliquo dominationis fastu, sed concordi
+					et humillima administratione, sicut Domi- nus ait : <hi rend="italic">Non veni ministrari,
+						sed ministrare (Matth</hi>. XX; <hi rend="italic">Marc</hi>.
+						X); et alibi : <hi rend="italic">Qui major est vestrum, erit m
+						nister rester (Matth</hi>. XXIII), et reliqua. Similiter ipsi
+					comprovinciales episcopi cuncta cum ejus con- silio, nisi quantum ad proprias pertinet
+					parochias, agant, juxta sanctorum constituta Patrum, ut uno animo, uno ore concorditer
+					sancta glorilicetur Tri- <milestone unit="PLSection" n="D"/> nitas in saecula.</p>
+				</div>
+				<div type="textpart" subtype="chapter" n="4">
+				<p><hi rend="bold">978</hi> IV. Similiter (<hi rend="italic">Hard. coll. c</hi>. 14),
+					auctori- tate fulti apostolica, praecipimus ut nullus metro- politanus episcopus, absque
+					caeterorum omnium comprovincialium episcoporum instantia, aliquo- rum audiat causas eorum;
+					quia irrita erunt, et ipse causam pro facto dabit. <note type="footnote">Variae
+						lectiones.</note>
+					<note type="footnote"><hi rend="superscript">1</hi>
+						<hi rend="italic">Alias</hi> Servos. <hi rend="superscript">2</hi>
+						<hi rend="italic">Alias</hi> Sacerdotes. <hi rend="superscript">3</hi>
+						<hi rend="italic">Alias</hi> Opere tuo <hi rend="italic">vel</hi> opus tuom.</note>
+					<note type="footnote">Variorum notae</note>
+					<note type="footnote">(2) <hi rend="italic">Duo presbyteri vel tres diaconi in omni loco
+							episcopum non deserant</hi>. Decernitur ut ad evitanda detractionis et infamiae
+						pericula propter testimo- nium Ecclesiae nusquam eant, nisi duorum presby- terorum et
+						trium diaconorum comitatu stipati. De- creti hujus sanciendi calumniae in Cornelium a
+						Novatiano confictae, de quibus supra, causam de disse videntur. Baronius, anno 257, num.
+						5.</note></p>
+				</div>
+				<div type="textpart" subtype="chapter" n="5">
+				<pb n="1010"/>
+				<milestone unit="PLSection" n="A"/>
+				<p>V. Episcopi vero per singulas provincias obser- vent ne posteriores se prioribus
+					suis praeferant; nec eis inconsultis (<hi rend="italic">Concil. Milev. cap</hi>. 13; <hi rend="italic">Codex Afric. cap</hi>. 86), nisi quantum ad propriam pertinct parochiam,
+					aliquid agant : sed omnes de commu- nibus eorum causis consonam sententiam profe- rant et
+					determinent, quoniam aliter acta nullas vires habebunt, nec ecclesiastica reputabuntur
+						(<hi rend="italic">Hard. Coll. cap</hi>. 3). Bonum esset, fratres, et valde Deum
+					timentibus et pie vivere volentibus necessa- rium, si intra catholicam Ecclesiam nullius
+					mali, aut infestationis alicujus, erga Domini sacerdotes, aut juste et pie volentes
+					vivere, germen exsurgeret. Sed quia, praevalente invidia, quod deterius est surgit et
+					crescit, atque nimis se in omnes partes <milestone unit="PLSection" n="B"/> extendit,
+					idcirco neccsse est illud ecclesiastico et apostolico abscindi mucrone, ne<hi rend="superscript">1</hi> servis Dei ac Domini<hi rend="superscript">2</hi> sacerdotibus
+					valeat nocere aut perdere. <hi rend="italic">Exhonoravit enim Dominus</hi>, ut in
+					Ecclesiastico le- gitur libro, <hi rend="italic">conventus malorum, et destruxit Deus eos
+						usque in finem. Sedes ducum superborum destru- xit Deus, et sedere fecit mites pro eis.
+						Radices gen- tium superbarum arefecit Deus, et bantavit humiles ex ipsis gentibus.
+						Terras gentium evertit Dominus, et perdidit eas usque ad fundamentum. Arefecit ex ipsis,
+						et disperdidit eos, et cessare fecit memoriam eorum de terra. Perdidit Deus memoriam
+						superbo- rum, et reliquit memoriam humilium sensu. Non est creata hominibus superbia,
+						neque iracundia nationi mulierum. Semen hominum honorabitur hoc quod</hi>
+					<milestone unit="PLSection" n="C"/>
+					<hi rend="italic">timet Deum; semen autem hoc exhonorabitur ho- minum quod praeterit
+						mandata Domini. In medio fratrum, rector illorum in honore : et qui timent Do- minum,
+						erunt in oculis illius. Gloria divitum, hono- ratorum et pauperum, timor Dei est. Noli
+						despicere hominem justum pauperem, et noli magnificare vi- rum peccatorem divitem.
+						Magnus, et judex, et po- tens est in honore : et non est major illo qui timet Deum.
+						Servo sensato liberi servient, et vir prudens et disciplinatus non murmurabit correptus,
+						et in- scius non honorabitur. Noli te extollere in faciendo</hi>
+					<hi rend="superscript">3</hi>
+					<hi rend="italic">opera tua, et noli cunctari in tempore angustioe. Me- lior est qui
+						operatur et abundat in omnibus quam qui gloriatur et eget pane. Fili, in mansuetudine
+						serva <milestone unit="PLSection" n="D"/> animam tuam, et da illi honorem secundum meri-
+						tum suum, Peccantem in animam suam quis justi- ficabit? Et quis honorificabit
+						exhonorantem animam suam? Pauper gloriatur per disciplinam et timorem suum : et est homo
+						qui honorificatur propter substan- tiam suam. Qui autem gloriatur in paupertate, quanto
+						magis in substantia? Et qui gloriatur in sub-</hi>
+					<pb n="1011"/>
+					<milestone unit="PLSection" n="A"/>
+					<hi rend="italic">stantia, paupertatem vereatur. Sapientia humiliati exaltabit caput
+						illius, et in medio magnatorum con- sidere illum faciet. Non laudes virum in specie sua,
+						neque spernas hominem in visu suo. Brevis in volati libus</hi>
+					<hi rend="bold">979</hi>
+					<hi rend="italic">apis, et initium dulcoris habet fructus illius. In vestituine glorieris
+						unquam, nec ia die honors tui extollaris; quoniam mirabilia opera Al- tissimi solius, et
+						gloriosa, et absconsa, et invita opera illius. Multi tyranni sederunt in throno, et in-
+						suspicabilis portavit diadema. Multi potentes op- pressi sunt valde, et gloriosi traditi
+						sunt in manus alterorum. Priusquam interroges, ne vituperes quem- quam : et cum
+						interrogaveris, corripe juste· Prius- quam audias, ne respondeas verbum, et in medio
+						seniorum ne adjicias loqui. De ea re quoe te non mo-</hi>
+					<milestone unit="PLSection" n="B"/>
+					<hi rend="italic">lestat, ne certeris, et in judicio peccantium ne con- sistas, Fili mi,
+						ne in multis sint actus tui, et si di- ves fueris, non eris immunis a delicto. Si enim
+						secu- tus fueris, non apprehendes; et non effugies, si proecurreris. Est homo laborans
+						et festinans, et dolens impietate; et tanto magis non abundabit. Est homo marcidus,
+						egens recuperatione, plus deficiens virtute, et abundans paupertate; et oculus Dei
+						respexit il- lum in bona, et erexit eum ab humilitate ipsius, et exaliabit caput ejus :
+						et mirati sunt in illo multi, et honoraverunt Deum. Bona et mala, vita et mors,
+						paupertas et honestas a Deo sunt. Datio Dei per- manet justis; et profectus illius
+						successus habebit in oeternum. Est qui locupletatur parce agendo, et hoec</hi>
+					<milestone unit="PLSection" n="C"/>
+					<hi rend="italic">pars mercedis illius in eo quod dicit : Inveni re- quiem mihi, et, Nunc
+						manducabo de bonis meis so- lus. Et nescit quod tempus proetereal illum, et relinquet
+						omnia aliis, et morietur, Sta in testamento tuo, et in illo colloquere, et in opera<hi rend="superscript">4</hi> mandatorum tuorum veterasce. Ne manseris in operibus
+						peccatorum. Con- fide autem in Deo, et mane in loco tuo. Facile est enim in oculis Dei
+						subito honestari</hi><hi rend="superscript">5</hi>
+					<hi rend="italic">paupertatem. Benedictio Dei in mercedem justi festinat, et in ho- nore
+						veloci processus illius justificat<hi rend="superscript">6</hi>. Ne dicus : Quid est
+						mihi opus? et quoe erunt mihi ex hoc bona? Ne dicas : Sufficiens mihi sum, et quid ex
+						hoc pessimabor? In die bonorum, ne immemor sis malorum, et in die malorum, ne immemor
+						sis conorum; quoniam facile est coram Deo in die obi-</hi>
+					<milestone unit="PLSection" n="D"/>
+					<hi rend="italic">tus retribuere unicuique secundum vias suas.Malitia horoe oblivionem.
+						facit luxurioe magi(??)e : et in fine hominis, denudatio operum illius. Ante mortem ne
+						laudis hominem quemquam. quoniam in filiis suis egnoscitur vir. Non omnem hominem
+						inducas in domum tuam; multioe enim insidioe sunt dolosi. Si- cut enim eructant
+						proecordia fetantium</hi><hi rend="superscript">7</hi>, <hi rend="italic">et sicut
+						perdix inducitur in caveam, et ut caprea in la- queum; sic et cor superborum, et sicut
+						perspector videns casum proximi sui. Bona in malum conver- tit insidiator</hi><hi rend="superscript">8</hi>, <hi rend="italic">et in electis ponet maculam. A scin-</hi>
+					<note type="footnote">Variae lectiones.</note>
+					<note type="footnote"><hi rend="superscript">4</hi>
+						<hi rend="italic">Alias</hi> Opere. <hi rend="superscript">5</hi>
+						<hi rend="italic">Alias</hi> Honestare. <hi rend="superscript">6</hi>
+						<hi rend="italic">Alias</hi> Fructificat. <hi rend="superscript">7</hi>
+						<hi rend="italic">Alias</hi> Factantium. <hi rend="superscript">8</hi>
+						<hi rend="italic">Alias</hi> Mola convertens insidiatur. <hi rend="italic">Ms. collegii
+							Paris. Socielatis Jesu, teste Harduino</hi>, Bona enim in malum. <hi rend="superscript">9</hi>
+						<hi rend="italic">Alias</hi> Viis. <hi rend="superscript">10</hi>
+						<hi rend="italic">Alias</hi> Excidit. <hi rend="superscript">11</hi>
+						<hi rend="italic">Id. ms.</hi> Dispergamus. <hi rend="superscript">12</hi>
+						<hi rend="italic">Id. ms</hi>. Contra cos. <hi rend="superscript">13</hi>
+						<hi rend="italic">Id. ms</hi>. Habitantibus. <hi rend="superscript">14</hi>
+						<hi rend="italic">Alias</hi> Cison.</note>
+					<pb n="1012"/>
+					<milestone unit="PLSection" n="A"/>
+					<hi rend="italic">tilla una augetur ignis, et ab uno doloso augetur sanguis. Homo vero
+						peccator sanguini insidiatur, Attende tibi a pestifero, fabricat enim mala, ne forte
+						inducat super te subsannationem in perpe- tuum. Admitte ad te alienigenam, et subvertet
+						in tur- bine, et abalienabit te a tuis propriis</hi><hi rend="superscript">9</hi> (<hi rend="italic">Eccli</hi>. X, XI).
+					Tales, charissimi, valde sunt cavendi, usque- dum aut convertantur aut <hi rend="bold">980</hi> abscindantur verbo divino. <hi rend="italic">Beatus autem est ille qui non est
+						la- psus in verbo ex ore suo, et non est stimulatus in tristitia delicti. Felix qui non
+						habet animi sui tristi- tiam, et non abscedit</hi><hi rend="superscript">10</hi>
+					<hi rend="italic">a spe sua</hi> (<hi rend="italic">Eccli</hi>. XIV). Scriptum <hi rend="italic">est enim : Melior est unus timens Deum, quam
+						mille impii</hi> (<hi rend="italic">Ib</hi>. XVI). Sapiens vero
+					non (<hi rend="italic">Sixti Sent</hi>. 292; 6, <hi rend="italic">q</hi>. 1, <hi rend="italic">Sapiens non est; et supra in</hi>
+					<milestone unit="PLSection" n="B"/>
+					<hi rend="italic">Decret. Cornelii</hi> 6) est omnis qui nocet.</p>
+				</div>
+				<div type="textpart" subtype="chapter" n="6">
+				<p>VI. Res quoque Ecclesiarum vestrarum (Sixti Sent. 292) et oblationem fidelium, quas
+					significa- stis a quibusdam irruentibus vexari, vobisque et ecclesiis vestris auferri,
+					indubitanter maximum est peccatum : testante (<hi rend="italic">S. Bonif. Epist</hi>. 19)
+					ipsa Scripturi, quae ait : <hi rend="italic">Qui abstulerit</hi> (12, <hi rend="italic">q</hi>. 2, <hi rend="italic">Qui abstulerit</hi>) <hi rend="italic">aliquid patri vel
+						matri, et dicit hoc non esse peccatum, homicidoe particeps est</hi> (<hi rend="italic">Prov</hi>. XXVIII). Pater ergo noster sine dubio Deus est, qui
+					nos creavit; et mater nostra Ecclesia, quae nos in Baptismo spiritualiter generavit. Et
+					ideo, qui Christi pecunias et Ecclesiae aufert, fraudat et rapit (17, <hi rend="italic">q</hi>. 4, <hi rend="italic">Qui rapit</hi>), homicida in conspectu (<hi rend="italic">S. Greg. epist</hi>. 36, lib. II) justi Judicis esse
+					deputabitur. <milestone unit="PLSection" n="C"/> Unde scriptum est : <hi rend="italic">Qui
+						rapit pecuniam proximi sui, iniquitatem facit</hi> (<hi rend="italic">Joan</hi>. XII); qui autem pecunias vel res Ecclesiae abstulerit, sacrilegium
+					facit (<hi rend="italic">Hier, epist</hi>. 2). Unde et Judas, qui pecuniam fraudavit, quae
+					usibus Ecclesiae, id est pauperibus, quos Ecclesia pascere debet, distribuebatur jussu
+					Salva- toris (cujus vicem episcopi tenent), non solum fur, sed fur et (<hi rend="italic">S. Aug. Tract</hi>. L, <hi rend="italic">in Joannem</hi>)
+					sacrilegus factus est. De talibus enim, id est qui ta- cultates Ecclesiae rapiunt,
+					fraudant vel auferunt, Dominus, comuminans omnibus, per Prophetam lo- quitus, dicens : <hi rend="italic">Deus, ne taceas tibi, ne sileas, et non quiescas, Deus : Quia ecce inimici
+						tui tumultuati sunt, et qui oderunt te levaverunt caput. Contra popu- <milestone unit="PLSection" n="D"/> lum tuum nequiter traclaverunt, et inierunt consi- lium
+						adversum arcanum tuum. Dixerunt : Venite et conteramus</hi><hi rend="superscript">11</hi>
+					<hi rend="italic">eos de gente, et non sit memoria nominis Israel ultra : quoniam
+						tacuerunt corde, pariter contra te</hi><hi rend="superscript">12</hi>
+					<hi rend="italic">foedus pepigerunt tabernacula Idumoeoe et Ismaelitarum, Moab et Agareni,
+						Gebat et Ammon, et Amalec. Paloestina cum habitatoribus</hi><hi rend="superscript">13</hi>
+					<hi rend="italic">Tyri. Sed et Assur junxit se cum eis, facti sunt brachium filiorum Lot.
+						Fac illis sicut Madian, si- cut Sisuroe, sicut Jabin in torrente Cisson</hi><hi rend="superscript">14</hi>. <hi rend="italic">Contriti sunt in Endor, fuerunt quasi
+						sterquilinium terroe. Pone</hi>
+					<pb n="1013"/>
+					<milestone unit="PLSection" n="A"/>
+					<hi rend="italic">duces eorum sicut Oreb et Zeb, sicut Zebee et Sal- mana. Omnes principes
+						eorum qui dixerunt : Possi- deamus nobis pulchritudinem Dei : Deus meus, pone illos ut
+						rotam, quasi stipulam ante faciem venti. Quomodo ignis comburit silvam et sicut flamma
+						de- vorat montes, sic persequeris eos in tempestate tua et in tuo turbine turbabis eos.
+						Imple facies eorum igno- minia, et quoerent nomen tuum, Domine Confundan- tur</hi>, <hi rend="bold">981</hi>
+					<hi rend="italic">et conturbentur usque in oeternum, et eru- bescant et pereant; et sciant
+						quia nomen tuum Do- minus : solus tu excelsus super omnem terram</hi> (<hi rend="italic">Psal</hi>. lxxxii, <hi rend="italic">ex interpr. S. Hieronymi
+						diversa a Vulgata</hi>). Haec fieri Prophetae, haec Apostoli, haec successores eorum et
+					omnium catholicorum Patrum <milestone unit="PLSection" n="B"/> vetant decreta : et tales
+					praesumptiones, sacri- legium esse dijudicant<hi rend="superscript">15</hi>. Quorum nos
+					sequentes exempla, omnes tales praesumptores, et Ecclesiae (17, <hi rend="italic">q</hi>.
+					4. <hi rend="italic">Omnes ruptores</hi>) raptores (<hi rend="italic">Hinc(??).
+					epist</hi>. VIII, <hi rend="italic">editt. Mog. Concil.
+						Carisiacense in epist. ad episcopos Gallioe</hi>), atque suarum facultatum aliena-
+					tores, una vobiscum a liminibus sanctae matris Ec- clesiae anathematizatos, apostolica
+					auctoritate pel- limus, et damnamus, atque sacrilegos esse judica- mus. Et non solum eos,
+					sed omnes consentientes eis : <hi rend="italic">Quia non solum qui faciunt rei judicantur,
+						sed etiam qui consentiunt facientibus</hi> (<hi rend="italic">Rom.</hi>
+					I). Par enim poena et agentes et consentientes comprehendit. <hi rend="italic">Vos ergo, fratres, vigilate et orate. Viriliter agite, et confortamini in
+						Domino, et omnia vestra</hi>, juxta <milestone unit="PLSection" n="C"/> Apostolum, <hi rend="italic">in charitate fiant</hi> (<hi rend="italic">I Cor</hi>. XVI). A recta ergo (14, <hi rend="italic">q</hi>. 1, <hi rend="italic">A recta
+						ergo; et in decret. Felicis papoe</hi>) fide et apostolico tramite ptopier ullam per-
+					secutionem nolite recedere, scientes quia, juxta Salvatoris sententiam, <hi rend="italic">beati sunt qui persecutio- nem</hi><hi rend="superscript">16</hi> patiuntur propter
+					justitiam (<hi rend="italic">Matth</hi>. V). Haec est Apostolorum
+					viva traditio (<hi rend="italic">Agatho ad imperat. Const. act. VI concilii CP. adversus Monothelitas</hi>), haec vera charitas quae praedicanda
+					est, et praeci- pue diligenda ac fovenda, atque fiducialiter ab om- nibus tenenda. Haec
+					sancta et apostolica mater om- nium ecclesiarum Christi Ecclesia, quae per Dei
+					omnipotentis gratiam a tramite apostolicoe tradi- tionis nunquam errasse probatur, nec
+					haereticis novitatibus depravando<hi rend="superscript">17</hi> succubuit : sed, ut in
+						<milestone unit="PLSection" n="D"/> exordio normam fidei apostolicx percepit ab aucto-
+					ribus suis, apostolorum Christi principibus, illi- bata fine tenus manet, secundum ipsius
+					Domini <note type="footnote">Variae lecliones</note>
+					<note type="footnote"><hi rend="superscript">15</hi>
+						<hi rend="italic">Alias</hi> Sacrilegium judicant. <hi rend="superscript">16</hi>
+						<hi rend="italic">Alias</hi> Perturbationem. <hi rend="superscript">17</hi>
+						<hi rend="italic">Alias</hi> Depravata.</note>
+					<pb n="1014"/>
+					<milestone unit="PLSection" n="A"/> Salvatoris divinam pollicitationem, qui discipulo- rum
+					suorum principi in suis fatus est Evangeliis : <hi rend="italic">Petre</hi>, inquiens, <hi rend="italic">ecce Satanas expetivit ut cribraret vos, sicut qui cribrat</hi>
+					<hi rend="bold">982</hi>
+					<hi rend="italic">trilicum. Ego autem pro te rogavi, ut non deficiat fides tua; et tu
+						aliquando conversus, confirma fratres tuos</hi> (<hi rend="italic">Luc</hi>. XXII). Consi- deret itaque vestra excellens prudentia quam bo- num
+					sit persistere in dispensatione vobis credita et in fide recta, atque haereticis et
+					aemulis Christi repugnare, et nunquam a veritatis tramite decli- nare; quoniam Dominus et
+					Salvator omnium, cu- jus fides est, qui pro nobis mori non dubitavit, et proprio nos suo
+					redemit sanguine, fidem beati Pe- tri non defecturam promisit, et confirmare eum fratres
+					suos admonuit : quod apostolicos pontifi- <milestone unit="PLSection" n="B"/> ces, meae
+					exiguitatis praedecessores, confidenter fe- cisse semper cunctis est cognitum. Quorum et
+					pu- sillitas mea, licet impar et minima, pro suscepto tamen, divina dignatione,
+					ministerio, pedissequa cupit exsistere. Vae enim erit nobis, qui hujus mini- sterii onus
+					susceptum habemus, si veritatem Sal- vatoris nostri Jesu Christi, quam apostoli praedi-
+					caverunt, praedicare neglexerimus (<hi rend="italic">I Cor</hi>. IX). Vae erit nobis, si silentio veritatem oppresserimus, quam erogare nummulariis
+					jubemur, id est Chri- stianos populos imbuere et docere (<hi rend="italic">Matth</hi>. XXV). Quid in ipsius Christi futuro dicturi sumus exa- mine, si
+					sermonem ejus veritatem confundimur praedicare? Quid erit de nobis cum de commissis
+						<milestone unit="PLSection" n="C"/> nobis animabus et de officio suscepto rationem ju-
+					stus judex Christus Dominus noster districtam exegerit (<hi rend="italic">Luc</hi>. XVI)? Ideo, fratres, hortor (<hi rend="italic">S. Leo, Epist</hi>.
+						I
+					<hi rend="italic">adversus Manich</hi>.) dilectionem vestram, ob- testor et moneo ut qua
+					debetis et potestis sollici- tudine, vigiletis ad investigandos haereticos et ini- micos
+					sanctae Dei Ecclesiae et a sanis mentibus, ne pestis haec latius divulgetur, severitate
+					qua potestis pro viribus exstirpetis; quoniam, ut habebit a Deo dignae renumerationis
+					praemium qui diligentias, quod ad salutem commissae sibi plebis proficiat, fue- rit
+					exsecutus, ita ante tribunal Domini de reatu ne- gligentiae se non poterit excusare
+					quicunque plebem suam contra sacrilegae persuasionis auctores nolue- rit custodire. Data
+					Kalendis Aprilis anno 252, adhuc <milestone unit="PLSection" n="D"/> vivente Cornelio,
+					Gallo et Volusiano viris claris- simis consulibus.</p>
+				</div>
+			</div>
+
+		</body>
+	</text>
+</TEI>

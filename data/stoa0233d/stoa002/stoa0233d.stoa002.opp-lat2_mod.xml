@@ -1,0 +1,461 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+	<teiHeader>
+    <fileDesc>
+			<titleStmt>
+				<title/>
+				<editor/>
+				<sponsor>University of Leipzig</sponsor>
+				<funder>European Social Fund Saxony</funder>
+				<principal>Gregory Crane</principal>
+				<meeting/>
+				<respStmt>
+					<persName xml:id="DDD">Digital Divide Data</persName>
+					<resp>Corrected and encoded the text</resp>
+				</respStmt>
+				<respStmt>
+					<persName>Greta Franzini</persName>
+					<resp>Project Manager (University of Leipzig)</resp>
+				</respStmt>
+				<respStmt>
+					<persName>Frederik Baumgardt</persName>
+					<resp>Technical Manager (University of Leipzig)</resp>
+				</respStmt>
+				<respStmt>
+					<persName>Simona Stoyanova</persName>
+					<resp>Project Assistant (University of Leipzig)</resp>
+				</respStmt>
+				<respStmt>
+					<persName>Bruce Robertson</persName>
+					<resp>Technical Advisor</resp>
+				</respStmt>
+				<respStmt>
+					<persName>Tabea Selle</persName>
+					<resp>Student Assistant</resp>
+				</respStmt>
+			</titleStmt>
+			<publicationStmt>
+				<authority>University of Leipzig</authority>
+				<idno type="filename">PL3_38_ACT.xml
+</idno>
+				<availability>
+					<p>Available under a Creative Commons Attribution-ShareAlike 4.0 International License</p>
+				</availability>
+				<date>2015</date>
+				<publisher>University of Leipzig</publisher>
+				<pubPlace>Germany</pubPlace>
+			</publicationStmt>
+			<sourceDesc>
+				<listBibl xml:lang="la">
+					<biblStruct>
+						<monogr>
+							<title>Acta proconsularia Sancti Cypriani</title>
+							<editor>
+								<persName>
+									<name xml:lang="la"/>
+									<name xml:lang="fr">Jaques Paul Migne</name>
+								</persName>
+							</editor>
+							<author ref="urn:tmp">Pontius Diaconus</author>
+							<imprint>
+								<publisher/>
+								<pubPlace>Paris</pubPlace>
+								<date>1865</date>
+							</imprint>
+							<biblScope unit="volume">3</biblScope>
+						</monogr>
+					</biblStruct>
+				</listBibl>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<p>Text encoded in accordance with the latest EpiDoc standards (January 2014)</p>
+			  <refsDecl n="CTS">
+        <cRefPattern n="paragraph" matchPattern="(.+).(.+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div/tei:div[@n='$1']/tei:p[@n='$2'])"/>
+        <cRefPattern n="section" matchPattern="(.+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div/tei:div[@n='$1'])"/>
+      </refsDecl>
+    </encodingDesc>
+		<profileDesc>
+			<langUsage>
+				<language ident="grc">Greek</language>
+				<language ident="la">Latin</language>
+			</langUsage>
+		</profileDesc>
+		<revisionDesc>
+			<change when="2015-12-08" who="dwp"/>
+		</revisionDesc>
+	</teiHeader><text>
+		<body>
+			<div type="edition" n="urn:cts:latinLit:stoa0233d.stoa002.opp-lat2">
+				<head>
+					<title>ACTA PROCONSULARIA SANCTI CYPRIANI EPISCOPI ET MARTYRIS.</title>
+				</head>
+				<div type="textpart" subtype="section" n="1">
+				<p n="1"><milestone unit="PLSection" n="C"/> I. <hi rend="italic">Prima S. Cypriani
+						confessio coram Paterno proconsule. Presbyteros prodere renuit</hi>.</p>
+				<p>Imperatore Valeriano (1) quartum et Gallieno tertium consulibus <hi rend="superscript">1</hi> tertio Kalendarum Septem- <milestone unit="PLSection" n="C"/> brium, <hi rend="bold">1499</hi> Carthagine in secretario (2), Pater- nus proconsul Cypriano
+					episcopo dixit : Sacratis- simi imperatores Valerianus et Gallienus litteras ad me dare
+					dignati sunt, quibus praeceperunt eos <note type="footnote">Variae lectiones.</note>
+					<note type="footnote"><hi rend="superscript">1</hi> Tusco et Basso coss. <hi rend="italic">Vet. Martyr. Saris. Gal. Foss</hi>. Nobilium imperatorum scripta ad me vene- runt, ut
+						hi qui caeremonias exsecrantur, diis immolare, et ad sacrificandum compellantur inviti.
+							<hi rend="italic">Act. Pass</hi>.</note>
+					<note type="footnote">Variorum notae.</note>
+					<milestone unit="PLSection" n="D"/>
+					<note type="footnote">(1) <hi rend="italic">Imperatore Valeriano</hi>. Actus passionis Cy-
+						priani secundum editiones Manutii et Morelii, egre- giam fabulam prologi loco
+						praemittit, quae saeculum in quo nata est satis profitetur, et sic se habet : <hi rend="italic">Cum gloriosum nomen Christi a gentilibus exosum, inten- tione maxima
+							conaretur auferri, et esset persecutio apud urbem Romam : beatissimus Cornelius
+							pontifi- catum praedictae urbis summis virtutibus praeditus tunc regebat;
+							comprehensusque a praeside, et diutur- nis tormentis afflictus, gladio finivit
+							temporalem vitam, percepturus a Deo sine fine perpetuam. Sed, cum hoc odium fuisset
+							etiam in Libycis terminis irrogatum, multi Christianorum populi, malentes transitoriam
+							vitam amittere, et illa quae a Deo promissa sunt adipisci, diversis tormentis afflicti
+							consummabantur</hi>. <milestone unit="PLSection" n="D"/>
+						<hi rend="italic">Ferunt etiam tunc a praeside clibanum calcis accen- sum, et in ore
+							illius prunas cum thure exhibitas, prae- sidem dicere Christianis : Eligite e duobus
+							unum, aut thura super his carbonibus offerte Jovi, aut in calcem demergimini. Tunc
+							trecenti viri fide armati, se ictu rapidissimo, Christum Dei Filium Deum fatentes.
+							jecerunt in ignem et inter vapores calcis pulverei sunt demersi; quos sibi Christus
+							consecravit. In his au- tem diebus cum talia gererentur, beatus antistes Cyprianus
+							Carthaginensem regebat ecclesiam; qui comprehensus</hi>
+						<milestone unit="PLSection" n="C"/>
+						<hi rend="italic">comprehensus a gentilibus, sedente Paterno pro- consule in civitate,
+							iniquis tribunalibus praesentatur</hi>. In Martyrologio veteri incipit, <hi rend="italic">Tusco et Basso Coss, in secretario</hi> : quem in modum legunt cod.
+						Saris. et Gal. Nimirum, cum in unum Actus exsilii et passionis, in usus Ecclesiae,
+						commemorationis anni- versariae ergo compingebantur, character temporum qui ad passionem
+						solummodo pertinebat, utrique praefigebatur. FELL.</note>
+					<note type="footnote">(2) <hi rend="italic">In secretario</hi>. Gloss. Graec. <foreign xml:lang="grc">σέχρζτον οἰκαστήριον, χαρτοφυλάκιον, σέκρετον συνέδρίον</foreign>. Hesych.
+							FELL.</note>
+					<pb n="1559"/>
+					<milestone unit="PLSection" n="A"/> qui Romanam religionem non colunt <hi rend="superscript">2</hi>, debere Ro- manas caeremonias recognoscere. Exquisivi <hi rend="superscript">3</hi> ergo de nomine tuo; quid mihi respondes <hi rend="superscript">4</hi>? Cyprianus episcopus dixit : <hi rend="italic">Christianus sum, et episcopus.
+						Nullos alios deos</hi>
+					<hi rend="superscript">5</hi>
+					<hi rend="italic">novi, nisi unam et verum Deum, qui fecit coelum et terram, mare et quae
+						in eis sunt omnia. Huic Deo nos Christiani deservimus : hunc deprecamur diebus ac
+						noctibus, pro nubis</hi>
+					<hi rend="superscript">6</hi>
+					<hi rend="italic">et pro omnibus hominibus, et pro incolumitate ipsorum im-
+						peratorum.</hi> Paternus proconsul dixit : In hac ergo, voluntate perseveras <hi rend="superscript">7</hi>? Cyprianus episcopus re- spondit : <hi rend="italic">Bona
+						voluntas quae Deum novit, immutari nun potest</hi>
+					<hi rend="superscript">8</hi>. Paternus proconsul dixit : Poteris ergo secundum praeceptum
+					Valeriani et Gallieni, exsul ad urbem Curubitanam proficisci? Cyprianus epi- <milestone unit="PLSection" n="B"/> scopus dixit: <hi rend="italic">Proficiscor</hi>. Paternus
+					proconsul dixit : Non solum de episcopis, verum etiam de presbyteris mihi describere
+					dignati sunt. Volo ergo scire ex te, qui sint presbyteri qui in hac civitate consistunt.
+					Cyprianus episcopus respondit : <hi rend="italic">Legibus vestris bene atque utiliter
+						consuistis delatores non esse</hi>
+					<hi rend="superscript">9</hi> (3). <hi rend="italic">Ita- que detegi et deferri</hi>
+					<hi rend="superscript">10</hi>
+					<hi rend="italic">a me non possunt. In civitati- bus</hi>
+					<hi rend="superscript">11</hi>
+					<hi rend="italic">autem suis invenientur</hi>. Paternus proconsul dixit : Ego hodie in hoc
+					loco <hi rend="bold">1500</hi> exquiro. Cy- prianus dixit : <hi rend="italic">Cum
+						disciplina prohibeat ut quis se</hi>
+					<note type="footnote">Variae lectiones.</note>
+					<note type="footnote"><hi rend="superscript">2</hi> Romanam religionem colunt, debere
+						caeremonias recognoscere. <hi rend="superscript">3</hi> Exquiro ergo <hi rend="italic">Gal. Saris</hi>. Exquiro tibi de nomine tuo, quod mihi respondeas <hi rend="italic">Cod. Conch</hi>. <hi rend="superscript">4</hi> Respondens <hi rend="italic">Gal.
+							Saris</hi>. <hi rend="superscript">5</hi> Nullos alios deos colo <hi rend="italic">Saris. Gal</hi>. <hi rend="superscript">6</hi> Pro nobis, et pro incolumitate <hi rend="italic">Saris. Gal</hi>. <hi rend="superscript">7</hi> Perseveras ut non
+						sacrifices <hi rend="italic">Act. Pass</hi>. <hi rend="superscript">8</hi> Mutari non
+						potest. Non solum de episcopis <hi rend="italic">Gal. Saris. Act. Pass</hi>. <hi rend="superscript">9</hi>
+						<hi rend="italic">Sic. Gal. Saris</hi>. Nos delatores non esse <hi rend="italic">Act.
+							Pass. Impr</hi>. <hi rend="superscript">10</hi> Itaque eos exhibere non possumus; sed
+						nec ipsi se ultro offe- runt, cum hoc Scriptura sancta prohibeat. A te enim quaesiti
+						invenientur. Proconsul dixit : Jussum est ut nulla conciliabula faciant <hi rend="italic">Act. Pass</hi>. <hi rend="superscript">11</hi> In civitatibus suis
+						invenientur. Paternus proconsul dixit : A me invenientur <hi rend="italic">Saris.
+							Gal</hi>. <hi rend="superscript">12</hi> Coemeteria ingrediantur, quod qui facere
+						deprehensus fuerit, capite plectatur. Sanctus Cyprianus respondit : Fac quod tibi
+						praeceptum est. Et post haec ductus est in exsilium B. Martyr per praeceptum Aspasii
+						proconsulis in civitatem Curubitanam. Post dies autem multos egressus <hi rend="italic">Act. Pass</hi>. <hi rend="superscript">13</hi> Fac quod tibi praeceptum est. Cumque
+						Cyprianus electus a Deo de civi- tate Curubitana <hi rend="italic">Saris. Gal</hi>. <hi rend="superscript">14</hi> Principes duo ex officio proconsulis Galerii Maximi; et
+						levantes <hi rend="italic">Act. Pass</hi>.</note>
+					<note type="footnote">Variorum notae.</note>
+					<note type="footnote">(3) <hi rend="italic">Delatores non esse</hi>. Illis per rescripta
+						princi- pum urbe exactis, et a tribunalibus depulsis. Exinde <hi rend="italic">Delator
+							habuit, quod dedit, exsilium</hi>. Unde recte Cyprianus ad leges provocat, et frigide
+						diceretur, <hi rend="italic">nos delatores non esse</hi>. FELL.</note>
+					<note type="footnote">(4) <hi rend="italic">Se ultro offerat</hi>. Epist. ult. Cypr. ait :
+							<hi rend="italic">Domi- nus nos confiteri magis voluit quam profiteri</hi>. FELL.</note>
+					<note type="footnote">(5) <hi rend="italic">Tuae quoque censurae hoc displiceat</hi>. Sic
+						Arrius Antonius Christianis, quasi manu facta mortem <milestone unit="PLSection" n="D"/>
+						deposcentibus, dixit : <foreign xml:lang="grc">῟Οδειλοὶ, εἰ θέλετε ἀποθνήσκειν,
+							κρημνούς ᾓ βράχους ἔχετε</foreign>. Tert. ad Scapul. FELL.</note>
+					<note type="footnote">(6) <hi rend="italic">Deportari</hi>. S. Augustin. : <hi rend="italic">Pro fide confessio- nis Christi in exsilium Curubim missus est</hi>,
+						etc. RUINART.</note>
+					<note type="footnote">(7) <hi rend="italic">Ostensum fuerat</hi>. Augustin. ibid., n. 2 :
+							<hi rend="italic">Re- gressus in hortis suis manebat, et inde quotidie sic</hi>-
+							<milestone unit="PLSection" n="C"/>
+						<hi rend="italic">rabat veniri ad se, sicut ostensum illi erat</hi>, etc. Vide supra
+						Vit. n. XII. RUINART.</note>
+					<pb n="1560"/>
+					<milestone unit="PLSection" n="A"/>
+					<hi rend="italic">ultro offerat</hi> (4), <hi rend="italic">et tuae quoque censurae hoc
+						displi- ceat</hi> (5); <hi rend="italic">nec offerre se ipsi possunt : sed a te exqui-
+						siti invenientur</hi>. Paternus proconsul dixit : A me in- venientur. Et adjecit :
+					Praeceperunt etiam ne in aliquibus locis conciliabula fiant, nec coemeteria ingrediantur
+						<hi rend="superscript">12</hi>. Si quis itaque hoc tam salubre praeceptum non
+					observaverit, capite plectetur. Cy- prianus episcopus respondit : <hi rend="italic">Fac
+						quod tibi praece- ptum est</hi>
+					<hi rend="superscript">13</hi>.</p>
+				</div>
+				<div type="textpart" subtype="section" n="2">
+				<p n="2">II. <hi rend="italic">In exsilium Curubim mittitur. Inde a Galerio revocatus
+						comprehenditur</hi>.</p>
+				<p>Tunc Paternus proconsul jussit beatum Cypria- num episcopum in exsilium deportari (6).
+					Cumque diu ibidem moraretur, successit Aspasio Paterno proconsuli Galerius Maximus
+					proconsul, qui san- <milestone unit="PLSection" n="B"/> ctum Cyprianum episcopum, ab
+					exsilio revocatur, sibi jussit praesentari. Cumque Cyprianus, sanctus martyr electus a
+					Deo, de civitate Curubitana, in qua exsilio praecepto Aspasii Paterni tunc procon- sulis
+					datus fuerat, regressus esset, ex sacro prae- cepto in suis hortis manebat. Inde quotidie
+					spera- bat veniri ad se, sicut illi ostensum fuerat (7) : et cum illic demoraretur,
+					repente Idibus Septembris, Tusco et Basso consulibus (8), venerunt ad eum principes duo
+						<hi rend="superscript">14</hi>, <hi rend="bold">1501</hi> unus strator officii (9) Ga-
+						<note type="footnote">(8) <hi rend="italic">Consulibus</hi>. Monet Baronius, ad annum
+						261, n. 25, legendum esse <hi rend="italic">Fusco</hi> ex Trebellio Pollione. RUINART.</note>
+					<note type="footnote">(9) <hi rend="italic">Strator officii</hi>. Perinde est sive
+						stratorem sive statorem dixeris; codices enim utrumque agnoscunt; altera vox Graecae
+						originis, altera Latinae. Illi fere videntur esse qui postea commentarienses dicti.
+						Egregia Constantini lex ad Flerentium Rationalem, litteris aureis scribenda, hominum
+						istorum indolem graphice depingit. Veniam dabit lector si locum integrum exhibeam,
+						siquidem mutilari minime de- beat. Cod. I. IX, tit. 4, <hi rend="italic">de Custodia reorum : In quacunque causa reo exhibito, sive accusator
+							exsistat, sive eum publicae sollicitudinis cura perduxerit, sta- tim debet quaestio
+							fieri, ut noxius puniatur, innocens absolvatur. Quod si accusator aberit ad tempus,
+							aut sociorum praesentia necessaria videatur, id quidem</hi>
+						<milestone unit="PLSection" n="D"/>
+						<hi rend="italic">debet quam celerrime procurari. Interea viro exhi- bito non ferreas
+							manicas et inhaerentes ossibus mitti oportet, sed prolixiores catenas, ut cruciatio
+							desit, et permaneat fida custodia. Nec vero sedis intimae tenebras pati debet
+							inclusus, sed usurpando lucem vegetari : et ubi nox geminaverit custodiam, vestibu-
+							lis carcerum, et salubribus locis recipi, ac rever- tente iterum die, ad primum solis
+							ortum, illico ad</hi>
+						<milestone unit="PLSection" n="C"/>
+						<hi rend="italic">publicum lumen educi, ne poenis carceris perimatur, quod innocentibus
+							miserum, noxiis non satis severum esse cognoscitur. Illud etiam observabitur, ut neque
+							his qui stratorum funguntur officio, neque ministris eorum, liceat crudelitatem suam
+							accusatoribus ven- dere, et innocentes intra carcerum septa letho dare, aut subtractos
+							audientiae longa tabe consumere. Non enim existimationis tantum, sed etiam periculi
+							metus judici imminebit, si aliquem ultra debitum tempus media, aut quocunque modo
+							aliquis stratorum exhauserit, et non statim eum penes quem officium custodiae est,
+							atque ejus ministros, capitali poenae subjecerit</hi>. FELL.
+						— De his vide Glossar. Cang. ubi <hi rend="italic">statores</hi> dicuntur, <hi rend="italic">quod starent ad jussa parati :</hi> stratores vero qui equorum principis
+						curam habe- bant. Stratores etiam dici possunt a sternendo, quod reos in carcere
+						condemnatos punirent, vel equos sternerent. RUINART.</note>
+					<pb n="1561"/>
+					<milestone unit="PLSection" n="A"/> lerii Maximi proconsulis, qui Aspasio Paterno succes-
+					serat; et alius equistrator <hi rend="superscript">15</hi> (10) a custodiis ejusdem
+					officii <hi rend="superscript">16</hi>, qui et in curriculum eum levaverunt (11), in
+					medioque posuerunt, et in Sexti perduxe- runt (12); ubi idem Galerius Maximus proconsul,
+					bonae valetudinis recuperandae gratia, secesserat. Et ita idem Galerius Maximus proconsul
+					in aliam diem Cyprianum sibi reservari praecepit. Et eo tem- pore beatus Cyprianus ductus,
+					ad principem et stratorem ejusdem officii Galerii Maximi proconsu- lis clarissimi viri
+					secessit, et in hospitio ejus cum eo, in vico qui dicitur Saturni, inter Veneream et
+					Salutariam <hi rend="superscript">17</hi> (13), mansit. Illuc universus populus fratrum
+					convenit. Et cum hoc sanctus Cyprianus comperisset, custodiri (14) puellas praecepit<hi rend="superscript">18</hi>, <milestone unit="PLSection" n="B"/> quoniam <hi rend="bold">1502</hi> omnes in vico, ante januam hospi- tii principis manserant.</p>
+				</div>
+				<div type="textpart" subtype="section" n="3">
+				<p n="3">III. <hi rend="italic">Coram proconsule sistitur. Ejus secunda confessio</hi>.</p>
+				<p>Et ita altera die octava decima Kalendarum Oc- <note type="footnote">Variae
+						lectiones.</note>
+					<note type="footnote"><hi rend="superscript">15</hi> Proconsularis equester <hi rend="italic">Gal</hi>. Sequestrator <hi rend="italic">Saris</hi>. AEquestrator <hi rend="italic">Ms. vet, a Gothóf laudat</hi>. <hi rend="superscript">16</hi> Sed et
+						custodes ejusdem officii, et ambo <hi rend="italic">Saris</hi>. <hi rend="superscript">17</hi> Inter venena et salutaria <hi rend="italic">Colb. Montbrit</hi>. Inter duas
+						plateas Veneriam et Salutariam <hi rend="italic">Germ</hi>. 1. Salariam. <hi rend="italic">Imp</hi>. Salutariam <hi rend="italic">alii ms</hi>. Regressus de
+						exsilio habitabat in hortis suis, cumque ibidem moraretur, venerunt ad eum duo principes
+						ex officio proconsulis Galerii Max., et levantes eum in curriculum suum, duxerunt ad
+						proconsulem, ad locum ubi pro reparanda sanitate degebat. Et collectus ab adstatore
+						officii, secessit ad hospitium ejus, in vicum qui dicebatur Saturni, et habitabat ibi;
+						convenit autem ad eum universus populus fratrum <hi rend="italic">Act. Pass</hi>. <hi rend="superscript">18</hi> Castigari puellas <hi rend="italic">Gal. Saris</hi>. In
+						vico orantes <hi rend="italic">Gal</hi>. Quae advenerant audire verbum Dei, quoniam anto
+						ostium principis manebant, ob amorem martyris gloriosi. <hi rend="superscript">19</hi>
+						Mane autem facto <hi rend="italic">Act. Pass</hi>. Mane multo <hi rend="italic">Gal</hi>. Mane autem facto, oblatus est B. Cyprianus proconsuli, quem intuitus, ait
+						illi : Es Thascius Cyprianus qui te papam sacrilegae mentis hominibus praebuisti?
+						Jusserunt te sacratissimi imperatores sacrificare. Consule tibi ne pereas. Tunc iratus
+						proconsul dixit : Diu. <hi rend="italic">Act. Pass</hi>.</note>
+					<note type="footnote">Variorum notae.</note>
+					<note type="footnote">(10) <hi rend="italic">Equistrator</hi>. <foreign xml:lang="grc">Ἀναβολεὺς</foreign>, marescalcus, apud <milestone unit="PLSection" n="D"/> scriptores
+						Latino-Barbaros : qui imperatorem aut ducem armatum in equum imponit. De horum ge-
+						nitura ait Manilius : Hic curru celsior ibit Aut onerabit equos armis, aut ducet in
+						arma. Ammianus Marcell. lib. XXX, cap, 5 : <hi rend="italic">Stratorem mi- litem</hi> appellat. FELL.</note>
+					<note type="footnote">(11) <hi rend="italic">Levaverunt</hi>. Aug., serm. laudato n. 3 :
+							<hi rend="italic">Duo missi sunt qui eum etiam in currum levaverunt.</hi> RUINART.</note>
+					<note type="footnote">(12) <hi rend="italic">Sexti perduxerunt</hi>. Hic locus sic videtur
+						appellatus quod sexto ab urbe lapide distaret. RUINART.</note>
+					<note type="footnote">(13) <hi rend="italic">Salutariam</hi>. Omnes fere mss. habent <hi rend="italic">Vene- riam</hi>. Colb. I, et Mombrit. : <hi rend="italic">Inter Venaria
+							et Salu- taria</hi>. German. 1 : <hi rend="italic">Inter duas plateas Veneriam et
+								<milestone unit="PLSection" n="C"/> Salutariam</hi>. RUINART.</note>
+					<pb n="1562"/>
+					<milestone unit="PLSection" n="A"/> tobrium, mane <hi rend="superscript">19</hi> multa
+					turba convenit ad Sexti, secundum praeceptum Galerii Maximi proconsulis. Et ita idem
+					Galerius Maximus proconsul eadem die Cyprianum sibi offerri praecepit in atrio Sauciolo
+					(15) sedenti. Cumque oblatus fuisset, Galerius Maxi- mus proconsul Cypriano episcopo dixit
+					: Tu es THASCIUS CYPRIANUS? Cyprianus
+					episcopus respondit : <hi rend="italic">Ego sum</hi>. Galerius Maximus proconsul dixit :
+					Tu papam (16) te sacrilegae mentis hominibus praebuisti? Cyprianus episcopus respondit :
+						<hi rend="italic">Ego</hi>. Galerius Maximus proconsul dixit : Jusserunt te sacratissimi
+					(17) imperatores <hi rend="bold">1503</hi> caeremoniari. Cyprianus episcopus dixit : <hi rend="italic">Non facio</hi>. Galerius Maximus ait : Consule tibi. Cyprianus episcopus
+					respondit : <hi rend="italic">Fac quod tibi praeceptum est. In re tam justa nulla</hi>
+					<milestone unit="PLSection" n="B"/>
+					<hi rend="italic">est consultatio</hi>.</p>
+				</div>
+				<div type="textpart" subtype="section" n="4">
+				<p n="4">IV. <hi rend="italic">Sententia in eum lata, capite plecti jubetur</hi>.</p>
+				<p>Galerius Maximus collocutus cum consilio (18) sententiam vix aegre dixit verbis hujusmodi
+					: Diu <note type="footnote">(14) <hi rend="italic">Custodiri</hi>. Omnes mss. praeter
+						Colb. 1, <hi rend="italic">casti- gari</hi>. Alia tamen lectio praeferenda. Sic enim
+						legit Augustinus, ut patet ex laudato serm. n. 4 : <hi rend="italic">Quid illud</hi>,
+						inquit, <hi rend="italic">quod cum in alium diem dilatus esset, atque illuc se multitudo
+							fratrum ac sororum congregans pro foribus pernoctaret, custodiri puellas
+							praecepit</hi>? Item S. Fulgentius, serm. 6 : <hi rend="italic">A principe detentus,
+							virginum pudicitiam.... custodivit</hi>. RUINART.</note>
+					<note type="footnote">(15) <hi rend="italic">Sauciolo</hi>. Vox obscura. Videtur esse
+						cogno- men atrii, quod hic rei interficerentur. Observat Oxon. editor sancitum esse in
+						concilio Matiscon. II, c. 19 : <hi rend="italic">Ut ad locum examinationis reorum nullus
+							clericus accedat, neque intersit atrio Sauciolo, ubi pro reatus sui qualitate quispiam
+							interficiendus est</hi>. Codd. Colb. et Germ. 1 habent, <hi rend="italic">atrio
+							Secutiolo</hi>. Conch. <hi rend="italic">Saloutio</hi>. RUINART.</note>
+					<note type="footnote">(16) <hi rend="italic">Papam</hi>. Forte <hi rend="italic">papatem</hi>, ut legendum esse censet noster Mabillonius in notis ad Acta SS.
+							<milestone unit="PLSection" n="D"/> Mammarii, etc. <hi rend="italic">Analect</hi>.
+						tom. IV. pag. 105. In Actis Graecis SS. Cononis et filii ejus, die 29 Maii Bollan- diani
+						n. 4, praeses martyrem interrogat an papas sit aut diaconus, <foreign xml:lang="grc">παππας ἣ διάκων</foreign>; respondet se laicum esse. Et in Actis SS. Modesti et Viti
+						editis et mss. Vitus puer Modestum suum <hi rend="italic">papatem</hi> non semel
+						compellat. RUINART.</note>
+					<note type="footnote">(17) <hi rend="italic">Sacratissimi</hi>. Aug. II. 5 : <hi rend="italic">Cum enim ejus im- mobilem mentem videret, quando ei
+							dixit : Jusserunt te principes caeremoniari; responditque ille : Non facto; adjecit et
+							ait : Consule tibi</hi>, etc. Deinde n. 6 : <hi rend="italic">Fac, inquit, quod tibi
+							praeceptum est. In re tam justa nulla est consultatio. Dixerat quippe illi : Consule
+							tibi. Ad hoc responsum est : In re tam justa</hi>, etc. Ruinart.</note>
+					<note type="footnote">(18) <hi rend="italic">Collocutus cum consilio</hi>. Ut mos erat
+						Roma- nis praesidibus, pane siparium consiliarios seden- tes, de sententia ferenda
+						consulere. Vid. Act. 25, 12. FELL.</note>
+					<pb n="1563"/>
+					<milestone unit="PLSection" n="A"/> sacrilega mente vixisti, et plurimos nefariae tibi
+					conspirationis homines aggregasti, et inimicum te diis Romanis et sacris legibus
+					constituisti, nec te pii et sacratissimi principes Valerianus et Gallie- nus Augusti, et
+					Valerianus nobilissimus Caesar (19), ad sectam caeremoniarum suarum revocare potue- runt.
+					Et ideo, cum sis nequissimorum criminum auctor et signifer deprehensus, eris ipse
+					documento his quos scelere tuo tecum aggregasti : sangui- ne tuo sancietur <hi rend="bold">1504</hi> disciplina. Et his dictis, decretum ex tabella recitavit : Thascium Cypria-
+					num gladio animadverti placet (20). Cyprianus <milestone unit="PLSection" n="B"/>
+					episcopus dixit : <hi rend="italic">Deo gratias</hi>
+					<hi rend="superscript">20</hi>. <note type="footnote">Variae lectiones.</note>
+					<note type="footnote"><hi rend="superscript">20</hi> Gratias ago Deo omnipotenti, qui me a
+						vinculis hujus corporis dignatur absolvere <hi rend="italic">Gal. Act. Pass</hi>. <hi rend="superscript">21</hi> Et cum duceretur, populus plangens et ejulans dicebat : Nos
+						cum ipso decollemur <hi rend="italic">Act. Pass</hi>. <hi rend="superscript">22</hi>
+						Productus autem gloriosus martyr, exuit se lacernum birrum, quem indutus erat,
+						complicans, et posuit ad genua sua, dein tunicam tulit et diaconibus tradidit <hi rend="italic">Act. Pass</hi>. Tunicam tulit <hi rend="italic">Saris</hi>. <hi rend="superscript">23</hi> Tunica <hi rend="italic">Foss. Colb. Conch. S. Genev</hi>.
+							<hi rend="superscript">24</hi> Ad lineam <hi rend="italic">Saris</hi>. Saris. Stans in
+						linea <hi rend="italic">Act. Pass</hi>. Lineis vestibus <hi rend="italic">Gal</hi>. <hi rend="superscript">25</hi> Dare praecepit <hi rend="italic">Saris</hi>. <hi rend="superscript">26</hi> Fratres vero flentes, linteamina et oraria ante eum
+						ponebant, ne sanctus cruor defluens absorberetur a terra <hi rend="italic">Act.
+							Pass</hi>.</note>
+					<note type="footnote">Variorum notae</note>
+					<note type="footnote">(19) <hi rend="italic">Valerianus nobilissimus Caesar</hi>. Quem
+						pater ejus in Persiam properans Caesarem renuntiavit, ubi infelicissimus senex, hanc
+						Christianorum persecutionem, miserrima captivitate, et miserio- re, si fieri potuit,
+						morte luebat. FELL.</note>
+					<milestone unit="PLSection" n="C"/>
+					<note type="footnote">(20) <hi rend="italic">Placet</hi>. Idem August., n. 6 : <hi rend="italic">In quid erumpat cor nostrum, nisi in ipsam venerabilis martyris ulti-
+							mam vocem? Cum enim Galerius Maximus decretum ex libello recitasset, Thascium
+							Cyprianum gladio animadverti placet. Respondit ille : Deo gratias. Habentes igitur de
+							re... dicamus et nos Deo gratias</hi>. Et sic des(??)it sermo. RUINART.</note>
+					<note type="footnote">(21) <hi rend="italic">In agrum Sexti</hi>. Martyrologium Rom. <hi rend="italic">Agrum Sexti</hi>, in <hi rend="italic">sextum milliare a Carthagine
+							juxta mare</hi>, permutabat. FELL.</note>
+					<note type="footnote">(22) Lacerna byrro. Lacerna sive birro;
+						altera ex duabus vocibus pro additamento habenda. Emi- nentissimus cardinalis Baronius,
+						multis agit ut hinc doceamur <hi rend="italic">qualis esset episcoporum habitus</hi> :
+						et qui- dem, lynceus ille nobis ostendit lineam ad quam stetit Cyprianus, <hi rend="italic">commune illud omnibus episcopis lineum indumentum quod ephod alii
+							dicunt, italice vero rochetto</hi> fuisse. Byrrum <hi rend="italic">vero esse rubri
+							coloris, et sericum habitum clericalem</hi>. Proinde exhiberi : <milestone unit="PLSection" n="D"/>
+						<hi rend="italic">Exploratum antiquum episcoporum habitum, ut post ve(??)tem
+							superinduerent lineam, et desuper eam so- tutam tunicam, ac denique humeros tantum
+							legens lacernum byrrum : quo genere indumenti hodie vide- mus uti sanctae Romanae
+							Ecclesiae cardinales, atque episcopos illos qui a Regularibustad eam dignitatem
+							provecti sunt</hi>. Ita jam porro discimus Cyprianum aut cardinalem Ecclesiae Romanae
+						fuisse, aut ex Regularibus ad dignitatem episcopalem? provectum. Nihil certe est, de quo
+						partium studio addicti sibi non possunt persuadere, et etiam sperare ut aliis
+						persuadeant. Itane veste sua spectabiles in publi- cum procedunt clerici Ecclesiae
+						Romanae, quando in regionibus agunt ubi sibi metuunt : gladiis cincti, et, ut Campiani
+						nostratis utar verbis : <hi rend="italic">Habitu dementissimo</hi> induti? Inepte
+						proconsul de episcopis et presbyteris detegendis fuisset sollicitus, si ex habitu essent
+						omnibus conspicui. Obesae prorsus est naris, qui in his quae sequuntur, librariorum
+						interpolationes, saeculis et ingeniis suis dignas, non deprehenderit. Illi quidem cum
+							<hi rend="italic">tunicam</hi> digni- tati episcopali non satis respondere
+						crediderant, officiosissimi homines, <hi rend="italic">dalmaticam</hi> subministrabant.
+							FELL. — Alterutram ex his vocibus pro addita- mento habendam
+						esse censet Oxon. editor. Certe <milestone unit="PLSection" n="C"/> in cod. 1 Germ.
+						habetur tantum <hi rend="italic">byrro</hi>. Porro no- tat ex Festo eruditus Cangius in
+						Glossario, <hi rend="italic">byrrum</hi>, antiquitus <hi rend="italic">rufum</hi>
+						significasse : quae vox si hoc loco sic intelligatur, praeferenda esset lectio aliquot
+						codd. qui sic habent, <hi rend="italic">lacerno byrro exspoliatus est</hi>. De byrro et
+						lacerna tanquam de duplici vestis specie loquitur Sulpicius Severus, lib. I
+						<hi rend="italic">Dialog</hi>., cap. 14, apud Baronium ad anuum 261. n. 41, ubi plura is
+						habet de hac re. At mirum est ab eo ho- diernas episcoporum vestes in his verbis
+						repertas fuisse. Talibus quippe ornamentis episcopos olim usos fuisse, prius esset
+						probandum : <hi rend="italic">Byrrum quo</hi> S. Odo Clumaci abbas <hi rend="italic">tegebatur more cappae per extremitatem fimbriae apprehendentes osculabantur</hi> Dei
+						famuli reverentiae causa. Ex ejus Vitae auctore Joanne, lib. II, num. 5, saec. V. SS. Ord. Bened. p. 167. RUINART.</note></p>
+				<pb n="1564"/>
+				</div>
+				<div type="textpart" subtype="section" n="5">
+				<p n="5"><milestone unit="PLSection" n="A"/> V. <hi rend="italic">Coram magna populi turba
+						decollatur. Ejus cor- pus a fidelibus noctu sublatum sepelitur</hi>.</p>
+				<p>Post hanc vero sententiam turba fratrum dicebat : Et nos cum ipso decollemur <hi rend="superscript">21</hi>. Propter hoc tumul- tus fratrum exortus est, et multa turba
+					eum pro- secuta est. Et ita idem Cyprianus in agrum Sexti (21) productus est <hi rend="superscript">22</hi>, et ibi se lacerna byrro (22) expo- liavit, et genu in terra
+					flexit, et in orationem se Domino prostravit. Et cum se dalmatica <hi rend="superscript">23</hi> (23) exspoliasset, et diaconibus tradidisset, in linea stetit <hi rend="superscript">24</hi> et coepit spiculatorem sustinere. Cum ve- nisset autem
+					spiculator, jussit suis ut eidem spi- culatori viginti quinque aureos darent <hi rend="superscript">25</hi> (24) Lin- <milestone unit="PLSection" n="B"/> teamina vero et
+					manualia <hi rend="bold">1505</hi> a fratribus <hi rend="superscript">26</hi> ante <note type="footnote">(23) <hi rend="italic">Dalmatica</hi>. Codd. Fossat. Colb. Conch. S.
+						Genovefae, etc., pro <hi rend="italic">dalmatica</hi>, habent <hi rend="italic">tunica</hi> : sed <milestone unit="PLSection" n="D"/> multo plures codd. <hi rend="italic">dalmatica</hi>. Caeterum dalmaticae nomen antiquis ignotum non fuit.
+						Commodus apud Lamprid. <hi rend="italic">dalmaticatus in publico</hi> processisse dici-
+						tur. De dalmatica plura collegit Baronius in notis ad Martyr. Rom. die 31 Maii, ubi de
+						Paschasio diacono. ID.</note>
+					<note type="footnote">(24) <hi rend="italic">Spiculatori</hi>
+						XXV
+						<hi rend="italic">aureos darent</hi>. Hanc largitio- nem librariis debitam innuit Oxon.
+						editor. Favet Augustin. loco laudato, ubi ait extrema martyris verba fuisse. <hi rend="italic">Deo gratias</hi>, quae statim post recita- tam sententiam pronuntiavit.
+						Omnes tamen mss. quos videre licuit, hanc Cypriani liberalitatem commemorant.
+						Maximilianus, cujus Acta ad an. 295 proferemus, vestem sibi paratam a patre, rogavit
+						dari spiculatori. RUINART. — Largitio haec videtur ex
+						librariorum munificentia facta. Sed si singuli aurei monetae nostrae quinque solidos
+						valeant, summula data conficiet sex libras et quinque soli- dos, pecuniarum quas
+						sterlingas vocamus. FELL.</note>
+					<pb n="1565"/>
+					<milestone unit="PLSection" n="A"/> eum mittebantur. Postea vero beatus Cyprianus manu sua
+					oculos sibi texit. Qui cum lacinias ma- nuales ligare sibi non potuisset, Julianus presby-
+					ter et Julianus subdiaconus ei ligaverunt. Ita beatus Cyprianus passus est; ejusque corpus
+					propter gentilium curiositatem in proximo positum est. Inde per noctem sublatum cum cereis
+					et schola- cibus (25), ad areas Macrobii Candidiani procura- toris, quae sunt in via
+					Mappaliensi juxta piscinas, cum voto et triumpho magno deductum est. <hi rend="bold">1506</hi>
+					<note type="footnote">Variorum notae.</note>
+					<note type="footnote">(25) <hi rend="italic">Cum cereis et scholacibus</hi>, Cardinalis
+						Baro- nius, ad ann. Chr. 261, num. 36, ait : <hi rend="italic">Pristinus hic mos
+							reseratur Christianos sepeliendi, praecedente clero diversarum classium atque
+							scholarum, accensas faces gestantibus singulis magna plane pompa</hi>. Ita Vale- riano
+						imperium obtinente, diversas classes et scho- las habuerunt Christiani; et martyrum
+						lunera pro- cedentes instructo agmine, ad hodiernum supplica- tionum ritum, celebrabant.
+						Desideramus hic, ut alibi passim, historiae ecclesiasticae fidem et digni- tatem.
+						Rigalt. ait : <hi rend="italic">In exemplaribus legitur : Ad</hi>
+						<milestone unit="PLSection" n="B"/>
+						<hi rend="italic">cereos et scholaces. Rectissime. Scholaces Graecae originis vocabulum,
+							sirpos aut funes intortos signifi- cat, ex quibus ceratis funalia, in usum nocturni
+							lu- minis. Funales et scholaces erant candelae, quae quoquoversus arcte vinciebant
+							thecam librorum Numae. Erant enim sequacis ad vincula lentitiae et sub terram
+							depositae non computrescebant, stipatae cedro ceraque</hi>. Intempesta nocte ad corpus
+						amoven- dum perrexerant fratres, ne id attentarent in Cy- prianum Afri, quod in
+						Polycarpum perpetrarunt gentiles Asiatici. De qua re vide Euseb. I. IV, c. 15. Judaei Joan. XVIII dicuntur venisse <foreign xml:lang="grc">μετά φανῶν καὶ λαμπάδων</foreign>. FELL. — <hi rend="italic">Scholacibus</hi>. Hunc locum ex compluribus mss. sic restituimus. In
+						editis et ali- quot mss. pro <hi rend="italic">Candidiani</hi> habetur <hi rend="italic">Candidi</hi>. Baronius <hi rend="italic">Scholacium</hi> nomine designari putat
+						scholas cleri cum cereis, etc. Rigaltius vero faces ad arcendas noctis tenebras,
+						ejusmodi funalia <hi rend="italic">scholaces</hi> a ple- <milestone unit="PLSection" n="B"/> risque appellata esse observat Cangius in Glossario. Coemeteria autem
+						Christianorum appellata fuisse <hi rend="italic">Arenarias</hi> seu <hi rend="italic">Areas</hi> patet ex Actis SS. Montani, etc., et ex Tertulliano, <hi rend="italic">ad
+							Scapulam</hi>, c. 3. Videsis Baronium ad diem 3 Januar., in notis ad Martyro- log.
+						Roman. RUINART.</note>
+					<pb n="1566"/>
+					<milestone unit="PLSection" n="A"/> Post paucos autem dies Galerius Maximus procon- sul
+					decessit.</p>
+				</div>
+				<div type="textpart" subtype="section" n="6">
+				<p n="6">VI. <hi rend="italic">Passus est</hi>
+					XVIII
+					<hi rend="italic">Kal. Octobr. sub Valeriano et Gallieno principibus</hi>.</p>
+				<p>Passus est autem beatissimus Cyprianus martyr die octava decima Kalendarum Octobrium, sub
+					Va- leriano et Gallieno imperatoribus; regnante vero Domino nostro Jesu Christo, cui est
+					honor et gloria in saecula saeculorum. Amen.</p>
+				</div>
+			</div>
+		</body>
+	</text>
+</TEI>

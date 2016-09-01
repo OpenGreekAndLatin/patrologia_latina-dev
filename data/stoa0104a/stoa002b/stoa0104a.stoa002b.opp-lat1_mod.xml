@@ -1,0 +1,1340 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+	<teiHeader>
+    <fileDesc>
+			<titleStmt>
+				<title/>
+				<editor/>
+				<sponsor>University of Leipzig</sponsor>
+				<funder>European Social Fund Saxony</funder>
+				<principal>Gregory Crane</principal>
+				<meeting/>
+				<respStmt>
+					<persName xml:id="DDD">Digital Divide Data</persName>
+					<resp>Corrected and encoded the text</resp>
+				</respStmt>
+				<respStmt>
+					<persName>Greta Franzini</persName>
+					<resp>Project Manager (University of Leipzig)</resp>
+				</respStmt>
+				<respStmt>
+					<persName>Frederik Baumgardt</persName>
+					<resp>Technical Manager (University of Leipzig)</resp>
+				</respStmt>
+				<respStmt>
+					<persName>Simona Stoyanova</persName>
+					<resp>Project Assistant (University of Leipzig)</resp>
+				</respStmt>
+				<respStmt>
+					<persName>Bruce Robertson</persName>
+					<resp>Technical Advisor</resp>
+				</respStmt>
+				<respStmt>
+					<persName>Tabea Selle</persName>
+					<resp>Student Assistant</resp>
+				</respStmt>
+			</titleStmt>
+			<publicationStmt>
+				<authority>University of Leipzig</authority>
+				<idno type="filename">PL3_33_CON.xml
+</idno>
+				<availability>
+					<p>Available under a Creative Commons Attribution-ShareAlike 4.0 International License</p>
+				</availability>
+				<date>2015</date>
+				<publisher>University of Leipzig</publisher>
+				<pubPlace>Germany</pubPlace>
+			</publicationStmt>
+			<sourceDesc>
+				<listBibl xml:lang="la">
+					<biblStruct>
+						<monogr>
+							<title>Concilium Iconiense contra Cataphrygas</title>
+							<editor>
+								<persName>
+									<name xml:lang="la"/>
+									<name xml:lang="fr">Jaques Paul Migne</name>
+								</persName>
+							</editor>
+							<author ref="urn:tmp">Cyprianus</author>
+							<imprint>
+								<publisher/>
+								<pubPlace>Paris</pubPlace>
+								<date>1865</date>
+							</imprint>
+							<biblScope unit="volume">3</biblScope>
+						</monogr>
+					</biblStruct>
+				</listBibl>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<p>Text encoded in accordance with the latest EpiDoc standards (January 2014)</p>
+			  <refsDecl n="CTS">
+        <cRefPattern n="paragraph" matchPattern="(.+).(.+).(.+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div/tei:div[@n='$1']/tei:div[@n='$2']/tei:p[@n='$3'])"/>
+        <cRefPattern n="section" matchPattern="(.+).(.+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div/tei:div[@n='$1']/tei:div[@n='$2'])"/>
+        <cRefPattern n="chapter" matchPattern="(.+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div/tei:div[@n='$1'])"/>
+      </refsDecl>
+    </encodingDesc>
+		<profileDesc>
+			<langUsage>
+				<language ident="he">Hebrew</language>
+				<language ident="grc">Greek</language>
+				<language ident="la">Latin</language>
+			</langUsage>
+		</profileDesc>
+		<revisionDesc>
+			<change when="2015-12-08" who="dwp"/>
+		</revisionDesc>
+	</teiHeader><text>
+		<body>
+			<div type="edition" n="urn:cts:latinLit:stoa0104a.stoa002b.opp-lat1">
+				<head>
+					<title>CONCILIUM ICONIENSE CONTRA CATAPHRYGAS</title>
+				</head>
+				<div type="textpart" subtype="chapter" n="introduction">
+				<p>CELEBRATUM ANNO 258 SUB STEPHANO PAPA I.</p>
+				<p>Concilium Iconiense habitum est anno 258, seu verius 256, Iconii in Phrygia, occasione
+					Cataphry- garum haereticorum, ut de ipsorum omniumque aliorum haereticorum baptismatis
+					valere, quid statuen- dum sit inquirerent. Ex Cappadocia, Cilicia, Galatia aliisque
+					proximis Orientalibus regionibus episcopi ad hanc synodum accesserunt : a quibus omnibus
+					constitutum ac decretum est nihil eorum quae ab hae- reticis facta sunt, ab Ecclesia
+					catholica recipiendum esse : ordinationes, baptismum, mannum impositio- nes, aliudve
+					sacrum quodvis ab haereticis administratum invalidum esse. Stephanus, pontifex Romanus,
+					episcopos Orientales haec constituentes excommunicat et apostolicae sedis communione
+					privat : ipsam vero synodum erraticam, contra apostolorum traditionem erroneum dogma
+					confirmantem, reprobat. Orientales ad Pontificem suos quidem legatos, qui de rebus in
+					synodo gestis coram pontifice rationem redderent, ablegarunt; verum Romam venientes, a
+					sancto Stephano pontifice neque recepti, neque auditi fuerunt. Ob quam causam Firmilianus,
+					Caesareae Cappadociae episcopus, ad Cyprianum eam quae acta hu- jus concilii enarrat, et
+					de legatis non auditis valde conqueritur; epistolam sequentem hanc conscripsit. BARON., ann. 258, 14, 15 et 16.</p>
+				<p>Certum est, inquit Pagius ad ann. Chr. 255, n. 15 et 16, concilium Iconiense. in quo
+					rebaptizatio hae- reticorum decreta, ante Stephani pontificatum celebratum. Id enim
+					diserte testatur Firmilianus in epis- tola ad Cyprianum, ubi de Iconiensi synodo ita
+					loquitur : <hi rend="italic">Quod totum nos jampridem in Iconio, qui Phry- giae locus est,
+						collecti, in unum convenientibus ex Gallia et Cilicia, et caeteris proximis regionibus
+						confir- mavimus</hi>. Ubi pronomen <hi rend="italic">nos</hi> non de ipsius Firmiliani
+					persona, sed potius de ejus decessoribus accipien- dum; cum Firmilianus eam synodum
+					jampridem collectam affirmet, et in fine ejusdem epistolae synodi hujus vetustatem
+					manifestissime indicet, ut observavit Valesius in <hi rend="italic">Notis Eusebianis
+					</hi>ad lib. VII, cap. 7. Nam, cum Stephanus papa, Cypriano
+					scribens, antiquam Ecclesiae consuetudinem in recipiendis haereti- cis adversus
+					assectatores novi dogmatis opposuisset, Firmilianus hoc argumentum adversus Afros fortasse
+						<hi rend="bold">1153</hi> valere dicit; et quomodo Afri id refutare possint, ibidem
+					docet. Contra Orientales nullam vim illud habere demonstrat, apud quos semper rebaptizati
+					fuerint haeretici, jam inde ab Iconiens synodo, quae ob Montanistas fuerat indicta. His
+					addit Valesius Dionysium Alexandrinum in epist. ad Philemonem Romanae urbis presbyterum,
+					quam scripsii sub initia pontificatus Xysti papae, ubi ait : <hi rend="italic">Illud
+						praeterea di- dici, non ab Afris solis hunc morem nunc primum invectum fuisse, sed et
+						multo antea superiorum episco- porum temporibus in ecclesiis popularissimis, et in
+						conciliis fratrum apud Iconium et Synnada, et apud alios plurimos idem sancitum
+						fuisse.</hi> Hinc, sub extrema Alexandri Severi tempora, quibus Firmilianus ad
+					Caesariensis ecclesiae sacerdotium recens promotus fuerat, ut docet Eusebius in lib. vi, synodum Iconien- sem collectam credit Valesius, ideoque ante
+					Cornelii papae pontificatum. Hactenus Pagius. Harduinus, in <hi rend="italic">Indice
+						Conciliorum,</hi> tom. I, Iconii et Synnadis concilia habita
+					esse anno circiter 255 affirmat. De his vide et Augustinum lib. III
+					<hi rend="italic">contra Crescon.,</hi> cap. 1, 3. <note type="footnote">Variorum
+						notae.</note>
+					<note type="footnote">(57) <hi rend="italic">Clinici an Peripatetici</hi>. Nisi constaret
+						nic agi de clinis, id est paralyticis, facile putarem le- gendum esse <hi rend="italic">Cynici</hi> propter haec verba Senecae ex epistola XXIX :
+							<hi rend="italic">Sed idem hoc omnes ex omni domo conclamabant, Peripatetici,
+							Academici, Stoici, Cymici</hi>.</note>
+					<note type="footnote">(58) <hi rend="italic">Fili charissime</hi>. Codex Sancti Arunlphi
+						ta- bet <hi rend="italic">frater</hi>,</note></p>
+				</div>
+				<div type="textpart" subtype="chapter" n="1">
+					<pb n="1201"/>
+					<milestone unit="PLSection" n="A"/>
+					<head>
+						<title>EPISTOLA FIRMILIANI (59)</title>
+					</head>
+					<div type="textpart" subtype="section" n="argumentum">
+					<p>EPISCOPI CAESAREAE CAPPADOCIAE, AD CYPRIANUM CONTRA EPISTOLAM STEPHANI.</p>
+					<p>ARGUMENTI
+						<hi rend="italic">prorsus ejusdem est cum praecedenti, sed paulo vehementius et acerbius
+							quam episcopum deceat scripta, ea potissimum, quantum suspicor, de causa, quod ad
+							Firmiliani, Helenum et caeteros illarum partium episcopos Stephanus aliam quoque
+							epistolam scripserat, se illis non communicaturum quandiu in ea sententia de
+							baptizandis haereticis persisterent; uti ex epistola Dionysii Alexandri ad Xistum,
+							Stephani successorem. docet Eusebius Hist. eccles. lib</hi>, VII, <hi rend="italic">c</hi>. 4. <hi rend="italic">Atque adeo fortassis
+							consultius foret, nunquam editam fuisse hanc epi- stolam, ita ut putem consulto</hi>
+						<hi rend="bold">1154</hi>
+						<hi rend="italic">illam omi- sisse Manutium. Verum, cum a Morellio evulgata sit,
+							praetermittere nolui, tum quod res quasdum memorandas contineat, tum quod antidoti
+							loco esse</hi>
+						<milestone unit="PLSection" n="B"/>
+						<hi rend="italic">queant verba epistolae dicti Dionysii ad Stepha- num, quam habet,
+							dicti libri c. 3. Eusebius, et repetit latius Nicephorus Hist. eccles, lib</hi>, VI, <hi rend="italic">c</hi>. 7; <hi rend="italic">ex quibus
+							palinodiam illum, quod aiunt, ce- cinisse constat. « Scito, inquit, frater, Orientales
+							atque etiam ulteriores Ecclesias quae antea disside- bant, ad unitatem esse reductas,
+							omnesque utique earum antistites unanimes et consentientes, supra modum de pace et
+							concordia quae praeter exspe- clationem accidit, laetari; Demetrianum in primis
+							Antiochenum, Theoctistum Caesariensem Mozabe-</hi>
+						<note type="footnote">Variae lectiones.</note>
+						<note type="footnote">·<hi rend="superscript">21</hi> Fratri autem <hi rend="italic">MR.
+								Mich. Coul</hi>. <hi rend="superscript">22</hi> Deo maximas <hi rend="italic">Ar</hi>. 23 Una atque eadem <hi rend="italic">Coul</hi>.</note>
+						<note type="footnote">Variorum notae.</note>
+						<note type="footnote">(59) Hanc epistolam. quam primus protulit Mo- rellias, habebant
+							etiam ii qui Romae praefuerunt editioni operum sancti Cypriani in officina Pauli
+							Manutii. Illi autem, ut ait Latinus Latinius, non <milestone unit="PLSection" n="C"/>
+							probaverunt ut e tenebris proferretur; hujusque consilii auctorem se et suasorem
+							fuisse ipse testa- tur ingenue. cum majorum exempla secutum, tum hominis, id est
+							Firmiliani, cujus ea epistola est, petulantiam detestatum. Postea Pamelius, qui illam
+							repererat in sex antiquis codicibus, eam recudit, innuens tamen, quo erat in
+							rempublicam christia- nam et ecclesiasticam affectu, se illam omissurum fuisse, quod
+							paulo vehementius et acerbius quam episcopum deceat scripta sit, nisi jam a Morellio
+							fuisset edita. Scilicet Romanos et Pamelium com- moverunt liber Firmiliani stylus et
+							excandescentia adversus papam Stephanum diverse ab eo sentien- tem. At, si attente
+							considerassent quanti et quam vehementes soleant esse affectus cum agitur de causa
+							religionis et fidei, considerassent etiam quam vehemens et acerbus fuerat Stephanus
+							scribens adversus Cyprianum, profecto hanc excandescen- tiam condonassent Firmiliano,
+							neque propterea <milestone unit="PLSection" n="D"/> tenebris damnandum esse putassent
+							illustre hoc antiquitatis ecclesiasticae monumentum, in quo sane bene multa sunt magni
+							momenti quibus hodie care- remus, cum grandi rerum nostrarum dispendio, ut in simili
+							argumento censuit Sirmondus edens in lucem libellum precum Marcellini et Faustini ad-
+							versus papam Damasum. Neque illa Romanorum aut Pamelii cura impedivisset in hac luce
+							litterarum quin epistola illa prodiret in publicum. Cum enim certum sit illam ex
+							veteri libro editam fuisse a Morellio, exstiterit etiam in sex codicibus Pamelio
+							visis, in iis in quibus inventa est a Latinio, in septem quibus usi sunt Angli in sua
+							editione, in decem cum quibus ego contuli opera sancti Cypria- ni, manifestum est
+							illam non potuisse semper la- tere, etiamsi Morellius non edidisset. Codices au- tem
+							cum quibus illam contuli sunt, unus Remigia- nus, quo Compendienses, duo Victortui,
+							unus Pi- thoeanus, unus monasterti (??), (??) Bigotianus et unus meus. Assentior autem
+							Pamelio- et Rigaltio, existimantibus illam Graece scriptam fuisse a Firmiliano, versam
+							autem Latine a sancto. Cypriano. Epistola ergo Firmiliani inventa est in <milestone unit="PLSection" n="C"/> viginti sex codicibus manuscriptis. BALUZ.</note>
+						<pb n="1202"/>
+						<milestone unit="PLSection" n="A"/>
+						<hi rend="italic">nem Eliensem, Alexandri defuncti successorem, Marinum Tyrium.
+							Heliodorum Laodicensem. qui in locum Thelymedris subrogatus est, Helenum Tarsensem, et
+							Ecclesias Ciliciae omnem</hi>. Firmilia- num, <hi rend="italic">et Cappadociam omnem.
+							Praecipuos enim episcoporum nominavi, ne epistola longior fiat, nere multis verbis sim
+							molestior. Sed et universae Syricae et Arabiae, Mesopotamia ipsa, Pontus, Bi- thynia :
+							et, ut semel dicam, exsultant ibique om- nes, concordia et fraterna charitate
+							glorificantes Deum. » Hactenus Dionysius, cui similia videre est apud D. Hieronymum
+							contra Luciferianos, el apud D. Aug. I</hi>. III
+						<hi rend="italic">Contra Cresc. Gramm. c</hi>. 1, 2 <hi rend="italic">et</hi> 3. <hi rend="italic">ubi, ex ipsa confessione Donatistarum, refert Orientales episcopos
+							rescidisse seu potius cor- rexisse suum judicium, quo eis placuerat, de ista Baptismi
+							quaestione Cypriano et Africano concilio consentire oportere</hi>. PAMELIUS.</p>
+					<milestone unit="PLSection" n="B"/>
+					</div>
+					<div type="textpart" subtype="section" n="1">
+					<p>FIRMILIANUS (60) CYPRIANO FRATRI
+						<hi rend="superscript">21</hi>, IN DOMINO
+							SALUTEM.</p>
+					<p>Accepimus per Rogatianum charissimum nostrum diaconum a vobis missum litteras quas ad
+						nos fecisti, frater dilectissime; et gratias propter hoc Domino maximas <hi rend="superscript">22</hi> egimus quod contigerit ut qui corpore ab <hi rend="bold">1155</hi> invicem separamur sic spiritu adunemur quasi non unam tantum regionem te-
+						nentes, sed in ipsa atque in eadem <hi rend="superscript">23</hi> domo (61) <note type="footnote">(60) <hi rend="italic">Firmilianus</hi>. Caesareae Cappadociae episco-
+							pus. Origenis auditor et admirator, ut docet Eu- sebius lib. VI, cap. 2 <hi rend="italic">Historiae ecclesiasticae</hi>, cujus et magnae
+							illius famae in Ecclesia Dei mentionem facit, cap. 46 et lib. VII, cap. 5 et 30. Vide etiam epistolam primam Basilii <hi rend="italic">ad
+								Amphilochium</hi>. Praese- dit priori synodo Antiochenae, ut ostendit Henricus
+							Valesius ad Eusebium. Obiit apud Tarsum in. Cilicia anno Christi 272. BALUZ.</note>
+						<note type="footnote">Scripsisse eam Firmilianum anno 256 ingrave- scente tempore
+							hiberno, ostendit Pearsonius in. <hi rend="italic">Annal. Cyprianicis</hi> ad ann.
+							256, sect. X. Obiit anno 272. Litem autem Stephanum inter et
+							ecclesias Orientales exortam de haereticis rebaptizandis me- moravit in epistola ad
+							Xystum Romanum S. Dio- nysius Alexandrinus his verbis : <foreign xml:lang="grc">Ἐπέσταλκεν μὲν οὖν</foreign> (Stephanus) <foreign xml:lang="grc">πρότερον xaὶ περὶ
+								Ἐλένου καὶ περὶ Φιρμιλιανοῦ, καὶ πάντων τῶν τε ἀπὸ τῆς Κιλικίας</foreign>
+							<milestone unit="PLSection" n="D"/>
+							<foreign xml:lang="grc">καὶ Καππαδοκίας, καὶ Γαλατίας, καὶ πάτων τῶν ἑξής
+								ὁμορούντων ἐθνών ὡς οὐδὲ έκείναι; κοινωνήσων, διὰ τὴν αὐτήν ταύτην αἰτίαν, ἐπειδή
+								τοὺς αἱρετικοὺς, φησὶν, ἀναβακτὶζουσι</foreign>. Apud Eusebium <hi rend="italic">Hist. Eccl</hi>, VII, 5. Porro unus de Firmiliani suc-
+							cessoribus in Caesariensi sede S. Basilius M. hujus atque Cypriani de rebaptizandis
+							haereticis senten- tiam commemoravit in Epistola sua Canonica <hi rend="italic">ad
+								Amphilochium</hi> in Beveregii <hi rend="italic">Synodico</hi> posita. Quid, quod
+							Cypriani et quorumdam Orientalium litteras, quae apud haereticos et schismaticos datum
+							bapti- smum improbant, suo superesse tempore significat S. Augustinus? Vid. lib. ejus
+								III
+							<hi rend="italic">Contra Cresconium</hi> cap. 1 et librum ejus <hi rend="italic">Contra Petilianum</hi>, cap. 14. Plura autem contra adversarios epistolae, quae in
+							e(??)tionem Conciliorum Florentinam nunc demum recepta est, infra annotabimus. ROUTH.</note>
+						<note type="footnote">(61) <hi rend="italic">In una atque in eadem domo</hi>. Sic vulgo,
+								<hi rend="italic">ipsa pro una</hi>, mutavi fide nixus codicis Simonis Gou-
+								<milestone unit="PLSection" n="C"/> lartii, qui Cyprianum edidit anno 1593, idemque
+							faciendum suasit. Graeca fuerant. ROUTH.</note>
+						<pb n="1203"/>
+						<milestone unit="PLSection" n="A"/> simul inhabitantes. Quod et decet dicere, quia et
+						spiritalis domus Dei una est. <hi rend="italic">Erit enim in novissi- mis,</hi> ait
+						propheta, <hi rend="italic">diebus manifestus mons Domini et domus Dei super vertices
+							montium</hi> (<hi rend="italic">Isa</hi>. II). In quam
+						convenientes <hi rend="superscript">24</hi> cum jucunditate adunantur, secundum quod et
+						in Psalmo hoc postulatur a Do- mino inhabitare in domo Dei per omnes dies vitae (<hi rend="italic">Psal</hi>. XXVI). Unde et in alio loco
+						manifestatum est esse apud sanctos magnam voluntatis charita- tem in unum convenire
+						(62). <hi rend="italic">Ecce</hi>, inquit, <hi rend="italic">quam bonum et voluptabile
+							est ut habitent fratres in unum!</hi></p>
+					</div>
+					<div type="textpart" subtype="section" n="2">
+					<p n="2">II. Adunatio enim et pax et concordia, non so- lum hominibus fidelibus et
+						cognoscentibus verita- <milestone unit="PLSection" n="B"/> tem, sed et angelis ipsis
+						coelestibus voluptatem maximam praestat, quibus dicit sermo divinus esse gaudium in uno
+						peccatore poenitentiam agente et ad unitatis vinculum revertente (<hi rend="italic">Luc</hi>. XV). Quod utique non diceretur de angelis
+						conversationem in coelis habentibus, nisi ipsi quoque essent nobis adunati, qui nostra
+						adunatione laetantur; sicut e contrario utique contristantur, quando vident di- versas
+						quorumdam mentes et scissas voluntates, quasi non tantum unum (63) et eumdem Deum <note type="footnote">Variae lectiones.</note>
+						<note type="footnote"><hi rend="superscript">24</hi> In qua convenientes <hi rend="italic">Ar. Bod</hi>. 2. <hi rend="superscript">25</hi>
+							<hi rend="italic">Sic Ar. Lam. Ebor. NC</hi>. 1. <hi rend="italic">Bod</hi>. 2. <hi rend="italic">Mich. Vict. Enim omitt. Oxon</hi>. <hi rend="superscript">26</hi>
+							<hi rend="italic">Sic Lam Ebor. NC</hi>. 1. <hi rend="italic">Ar. Bod</hi>. 3. <hi rend="italic">Mich. Morel. Coul</hi>. Passione Domini <hi rend="italic">omitt.
+								Oxon</hi>. <hi rend="superscript">27</hi> Hoc de quo nunc sequitur <hi rend="italic">Ar. Lam. Ebor. NC</hi>. 1. <hi rend="italic">MR. Bod</hi>. 2. <hi rend="superscript">28</hi> Veritatis unitatem <hi rend="italic">Lam. Ebor. Ar. N
+								C</hi>. 1. <hi rend="italic">MR</hi>.</note>
+						<note type="footnote">Variorum notae.</note>
+						<note type="footnote">(62) <hi rend="italic">Magnam voluntatis charitatem, in unum con-
+								venire</hi>. Haec verba mendo non carere videntur. Quid si pro isto, <hi rend="italic">voluntatis charitatem</hi>, reponamus <hi rend="italic">vo- luntatis
+								alacritatem?</hi> Exstat apud Apostolum in Epist. ejus posteriore ad <hi rend="italic">Corinthios</hi>
+							<foreign xml:lang="grc">ἡ προθυμία τοῦ θέ(??)ειν</foreign>, VII, 11; et in <hi rend="italic">Glossariis Vett</hi>, habes <foreign xml:lang="grc">ἡ προθυμία</foreign>, <hi rend="italic">alacritas</hi>. ROUTH.</note>
+						<note type="footnote">(63) <hi rend="italic">Quasi non tantum unum</hi>, etc. Afferenda
+							sunt quae de hoc loco scripsit vir eruditus Pruden- tius Maranus in Vita S. Cypriani
+							editioni Baluzia- nae. seu Benedictinae, praemissa. « Haec Firmiliani epistola quae
+							Latine reddi a exstat inter Cyprianicas septuagesima quinta, sic Cypriani stylum
+							redolet, ut non alium interpretem habuisse videatur. Fidus interpres Graecae linguae
+							ingenium nonnullis in locis retinuit. Paulo post initium, <hi rend="italic">Contristantur</hi> (angeli) <hi rend="italic">quando rident diversas quorumdam
+								mentes et scissas</hi>
+							<milestone unit="PLSection" n="D"/>
+							<hi rend="italic">voluntates. quasi non tantum unum et eumdem Deum simul invocent, sed
+								separatis et divisis ab invicem nec confabulatio jam possit esse, aut sermo
+								communis</hi>; id est, quasi non tantum unum et eum- dem Deum simul non invocent;
+							quae postrema ne- gatio nonnunquam omittitur apud Latinos, sed saepius apud Graecos. »
+							§ 31. pag. 118. Tum pergit vir cl. ad alios locos similes indicandos, de quibus ordine
+							suo posthac. ROUTH.</note>
+						<note type="footnote">(64) <hi rend="italic">Passione Domini</hi>. Nescio quomodo factum
+							est ut ista exciderint in editionibus quae emissae sunt post Morellianam, in qua
+							exstant. Habentur enim in omnibus antiquis codicibus, uno vetere Victorino excepto, et
+							in codice etiam episcopi Acconensis. Hujus omissionis auctor est Pamelius, qui ait
+							haec non habere codices manuscriptos et textum indicare illa esse superflua. Magis
+							miror Anglos, qui, cum ea haberent in quinque libris suis veteribus, sci- rent etiam
+							exstare in quibusdam nostris, et Rigal- tium monuisse in observationibus suis ea non
+							de- <milestone unit="PLSection" n="C"/> bere rejici, ea tamen in textum recipere
+							noluerunt, satis factum lectori putantes si monerent se ita in- venisse in antiquis
+							codicibus. BALUZ.</note>
+						<pb n="1204"/>
+						<milestone unit="PLSection" n="A"/>
+						<hi rend="bold">1156</hi> simul invocent, sed separatis et divisis ab invicem nec
+						confabulatio jam possit esse aut sermo communis. Nisi quod nos gratiam referre Stephano
+						in isto possumus quod per illius inhumanitatem nunc effectum sit ut fidei et sapientiae
+						vestrae expe- rimentum caperemus. Sed non enim <hi rend="superscript">25</hi> si nos
+						pro- pter Stephanum hanc beneficii gratiam cepimus, statim Stephanus beneficio gratia
+						digna commisit. Neque enim et Judas perfidia sua et proditione, qua scelerate circa
+						Salvatorem operatus est, dignus vi- deri potest quasi causam bonorum tantorum ipse
+						praestiterit ut per illum mundus et gentium popu- lus Passione Domini <hi rend="superscript">26</hi> liberaretur (64).</p>
+					<milestone unit="PLSection" n="B"/>
+					</div>
+					<div type="textpart" subtype="section" n="3">
+					<p n="3">III. Sed haec interim quae ab Stephano gesta sunt praetereantur; nedum audaciae
+						et insolentiae ejus meminimus, de rebus ab eo improbe gestis longio- rem moestitiam
+						nobis inferamus. De vobis autem cognoscentes quod secundum regulam veritatis et sa-
+						pientiam Christi, hoc de quo nunc quaeritur <hi rend="superscript">27</hi> dispo-
+						sueritis, cum magna laetitia exsultavimus et Deo gra- tias egimus, quia invenimus in
+						fratribus tam longe positis (65) tantam nobiscum fidei et veritatis unani- mitatem <hi rend="superscript">28</hi>. Potens est enim gratia Dei copulare et <note type="footnote">(65) <hi rend="italic">Invenimus in fratribus nostris tam longe
+								positis</hi>. Sententiae Cypriani super haereticorum ba- ptismo favebant non solum
+							per Africam, Numidiam et Mauritaniam Ecclesiae quamplurimae, verum etiam omnes fere
+							quae in Oriente magno numero Christia- nam pietatem profitebantur. In iis autem
+							episcopi nobilium civitatum celeberrimi innominatim indi- cati epistola ad Stephanum,
+							quae prima est de septem illis Dionysii Alexandrini <foreign xml:lang="grc">περί
+								βαπτίσμι- τος</foreign> ab Eusebio memoratis. Et in ea quidem epistola magnus ille
+							Dionysius Stephanum certiorem facie- bat sedatos esse motus quos in Oriente Novatiani
+							concitaverant, itaque omnes Ecclesias in eo con- sentire, ut lapsis poenitentia
+							daretur; verum adje- cerat aliquid de poenitentibus, qui ab haereticis re- dirent,
+							baptizandis, quod praetermisit Eusebius; <milestone unit="PLSection" n="D"/> unde
+							Baronius (hic addendus est Pamelius Baronium secutus in notis ad Cyprianum),
+							occasionem sum- psit affirmandi pro certo, sic omnes illas Ecclesias acquievisse
+							Stephano, ut in ejus decretum de non baptizandis haereticis, abdicata Cypriani
+							sententia, convenirent : quod adeo non est ab Dionysio traditum, ut, defuncto
+							postmodum Stephano, idem ille Dionysius Xystum Stephani successorem per alteram
+							epistolam diligenter ac serio monuerit; consideraret attentius quaestionis pondus et
+							causae difficultatem : Stephanum quidem Heleno et Firmi- liano, caeterisque per
+							Ciliciam et Cappadociam et finitimas Ecclesias episcopis nuntiasse per litteras minime
+							communicaturum se cum iis, eo quod hae- reticos rebaptizarent. Verumtamen esse magni
+							mo- menti negotium; <foreign xml:lang="grc">Ὄντως γὰρ δόγματα γέγονεν ἐν ταῖς
+								μεγίοταις τῶν ἐπισκοπών συνόδοις, ὡς πονθάνομαι, ὥστε τοὺς προσιόντας ἀπὸ
+								αἱρέσεως προκατηχηθέντας, εἴτε ἀπολούεσθαι καὶ ἀποκαθαίρεσθαι τὸν τῆς παλαιᾶς
+								καὶ ἀκαθάρτου ζύμης ρύτον</foreign>. Per <milestone unit="PLSection" n="D"/> git
+							Dionysius, atque hoc se ab Antiochiae, Caesareae, AEliae, Tyri, Laodiceae, Tarsi
+							episcopis rogatum scribere Xysto : quin et compresbyteris suis Dio- nysio et
+							Philemoni, qui fuerant ejusdem cum Ste- phano sententiae. scripsisse hac de re plenius
+							et uberius. RIGALTIUS.</note>
+						<pb n="1205"/>
+						<milestone unit="PLSection" n="A"/> conjungere charitatis atque unitatis vinculo etiam
+						ea quae videntur <hi rend="bold">1157</hi> longiore terrarum spatio esse divisa,
+						secundum·quod et olim intervallo tem- porum separatos ab Job et Noe, qui in primis fue-
+						rant, Ezechielem et Danielem posteriores aetate ad unanimitatis vinculum virtus divina
+						conjunxit, ut, quamvis temporibus longis discreti essent, eadem divina inspiratione
+						sentirent. Quod et nunc in vo- bis animadvertimus, ut qui longissimis regionibus a nobis
+						separati estis, sensu tamen et spiritu co- pulatos vos esse nobiscum probaretis. Quod
+						totum hoc fit divina unitate. Nam, cum Dominus unus atque idem sit qui habitat in nobis,
+						conjungit ubi- que et cop(??)lat suos vinculo unitatis. Unde in uni- versam terram
+						exivit sonus eorum qui a Domino <milestone unit="PLSection" n="B"/> missi sunt unitatis
+						spiritu velociter currentes; si- cut e contrario nihil prodest aliquos proximos et
+						junctos sibi esse corporibus, si animo et mente dissideant, quando adunari animae omnino
+						non pos- sint quae se a Dei unitate diviserint : <hi rend="italic">Ecce enim</hi>,
+						inquit, <hi rend="italic">qui longinquant se abs te peribunt</hi> (<hi rend="italic">Psal</hi>. LXXII, 27). Sed tales judicium Domini pro merito
+						suo subibunt, recedentes a verbis ejus qui Patrem pro unitate deprecatur et dicit : <hi rend="italic">Pater, da ut, quo- modo ego et tu unum sumus, sic et hi in nobis unum
+							sint</hi> (<hi rend="italic">Joan</hi>. XVII, 21).</p>
+					</div>
+					<div type="textpart" subtype="section" n="4">
+					<p n="4">IV. Nos vero ea, quae a vobis scripta sunt, quasi nostra propria suscepimus <hi rend="superscript">29</hi>, nec in transcursu legimus, sed saepe repetita memoriae
+						mandavi- mus <hi rend="superscript">30</hi> (66). Neque obest utilitati salutari, aut
+						ea- <milestone unit="PLSection" n="C"/> dem retexere ad confirmandam veritatem, aut et
+						quaedam addere ad cumulandam probationem. Si quid autem a nobis additum fuerit, non sic
+						additur quasi a vobis aliquid minus dictum sit, sed quo- niam sermo divinus humanam
+						naturam supergre- ditur, nec potest totum et perfectum anima conci- pere, idcirco et
+						tantus est numerus <hi rend="bold">1158</hi> prophe- tarum, ut multiplex et divina <hi rend="superscript">31</hi> sapientia per multos distribuatur. Unde et tacere
+						praecipitur primo in prophetia loquenti, si secundo fuerit revelatum <note type="footnote">Variae lectiones.</note>
+						<note type="footnote">29 <hi rend="italic">Sic Lam. Ebor. Ar. Mich. Vict</hi>.
+							Suscipimus <hi rend="italic">Oxon</hi>. 30 Mandamus <hi rend="italic">Mich. Vict.
+								Goul</hi>. 31 <hi rend="italic">Sic Mich. Vict. Ar. Lam. Ebor. NC</hi>. 1. Et <hi rend="italic">omittit Oxon</hi>.</note>
+						<note type="footnote">Variorum notae.</note>
+						<note type="footnote">(66) <hi rend="italic">Mandamus</hi>. Sic Routhius pro praeterio
+								<hi rend="italic">man- davimus</hi> ex quinque codd. scriptis, e quibus tres in
+							edit. Oxon. memorantur, quartus Bodleianus, quintus Novi Collegii est. ROUTH.</note>
+						<note type="footnote">(67)·<hi rend="italic">Hibernum tempus</hi>. Hinc collegit
+							Baronius hanc epistolam fuisse scriptam anno 257, aliquanto tempore ante hyemem. At
+							Pearsonius in <hi rend="italic">Annalibus Cyprianicis</hi> contendit ista accidisse
+							anno superiore. BALUZ.</note>
+						<note type="footnote">(68) <hi rend="italic">Postea exstitisse</hi>. Verum hoc est, si
+							modo sermo sit de haereticis illis, quorum causa tunc temporis agebatur, quosque hic
+							nominat Firmilia- nus, maxime quidem tempore ejus vigentibus; sed <milestone unit="PLSection" n="D"/> aeque verum est, haereses haud minus pestiferas in
+							apostolico aevo exstitisse. Dignus autem est, qui de hac re conferatur Tertullianus,
+							supra, in lib. <hi rend="italic">de Praescript. Haeret</hi>, cap. 33 et 34. ROUTH.</note>
+						<pb n="1206"/>
+						<milestone unit="PLSection" n="A"/> (<hi rend="italic">I Cor</hi>. XIV, 30). Qua ex causa necessario apud nos fit ut per singulos annos seniores et
+						praepositi in unum conveniamus ad disponenda ea quae curae nostrae commissa sunt, ut, si
+						qua graviora sunt, communi consilio dirigantur, lapsis quoque fratri- bus et post
+						lavacrum salutare a diabolo volueratis per poenitentiam medela quaeratur; non quasi a
+						nobis remissionem peccatorum consequantur, sed ut per nos ad intelligentiam delictorum
+						suorum convertantur et Domino plenius satisfacere co- gantur.</p>
+					</div>
+					<div type="textpart" subtype="section" n="5">
+					<p n="5">V. Quoniam vero legatus iste a vobis missus re- gredi ad vos festinabat, et
+						hibernum tempus (67) urgebat, quantum potuimus ad scripta vestra re- scripsimus. Et
+						quidem, quantum ad id pertineat <milestone unit="PLSection" n="B"/> quod Stephanus
+						dixit, quasi apostoli eos qui ab haeresi veniunt baptizari prohibuerint et hoc cu-
+						stodiendum posteris tradiderint, plenissime vos respondistis neminem tam stultum esse
+						qui hoc credat apostolos tradidisse, quando etiam ipsas haereses constet exsecrabiles ac
+						detestandas postea exstitisse (68), cum et Marcion, Cerdonis discipu- lus, inveniatur
+						sero post apostolos et post longa ab eis tempora sacrilegam adversus Deum traditionem
+						induxisse; Apelles quoque, blasphemiae ejus con- sentiens, multa alia nova, et graviora
+						fidei ac veritati inimica addiderit. Sed et Valentini et Ba- silidis tempus (69)
+						manifestum est, quod et ipsi, post apostolos et post longam aetatem, adversus <milestone unit="PLSection" n="C"/> Ecclesiam Dei sceleratis mendaciis suis rebella- verint.
+						Caeteros quoque haereticos constat pravas suas sectas et inventiones perversas, prout
+						quisque errore ductus est, <hi rend="bold">1159</hi> postea induxisse; quos omnes
+						manifestum est a semetipsis damnatos esse, et ante diem judicii inexcusabilem sententiam
+						ad- versus semetipsos dixisse : quorum baptisma qui confirmat, quid aliud quam cum ipsis
+						se adjudicat, et se ipse participem talibus faciendo condemnat?</p>
+					</div>
+					<div type="textpart" subtype="section" n="6">
+					<p n="6">VI. Eos autem qui Romae sunt non ea in omnibus observare quae sint ab origine
+						tradita : et frustra <note type="footnote">(69) <hi rend="italic">Basilidis tempus</hi>.
+							Variae sunt opiniones vi- rorum doctorum de tempore quo Basilidis dogma suum
+							disseminavit. Qua de controversia vide quae docte et erudite scripsit amicus olim
+							noster J. B. Cotelerius in epistolam Ignatii <hi rend="italic">ad Trallianos</hi>, ubi
+							tempus Basilidis revocat ad imperium Adriani. Vide etiam viri doctissimi Renati
+							Massueti observa- tiones ad Irenaeum pig. 59, § 112. Ineptos Basilidis errores, quos
+								<hi rend="italic">portenta</hi> vocat, graviter exagitat Hie- ronymus in epitaphio
+							Lucinii Baetici et in libro <hi rend="italic">ad- versus Vigilantium</hi>. Illum idem
+							Hieronymus lib. II, <hi rend="italic">adversus
+								Jovinianum</hi> vocat <hi rend="italic">magistrum luxuriae et turpissimorum
+								complexuum</hi>, et in epistola <hi rend="italic">ad Cle- siphontem</hi> adversus
+							Pelagianos, commemorat im- pietatem Basilidis.</note>
+						<pb n="1207"/>
+						<milestone unit="PLSection" n="A"/> apostolorum (70) auctoritatem praetendere scire quis
+						etiam inde potest, quod circa celebrandos dies Paschae et circa multa alia divinae rei
+						sacramenta videat esse apud illos aliquas diversitates, nec ob- servari illic omnia
+						aequaliter quae Hierosolymis observantur, secundum quod in caeteris quoque plurimis
+						provinciis multa pro locorum et nominum diversitate (71) variantur, nec tamen propter
+						hoc ab Ecclesiae catholicae pace atque unitate aliquando discessum est. Quod nunc
+						Stephanus ausus est facere, rumpens adversum vos pacem, quam sem- per antecessores ejus
+						vobiscum amore et honore mutuo custodierunt, adhuc etiam infamans <hi rend="superscript">32</hi> Pe- trum et Paulum beatos apostolos, quasi hoc ipsi tradiderint, qui in
+						epistolis suis haereticos exsecrati <milestone unit="PLSection" n="B"/> sunt et ut eos
+						evitemus monuerunt. Unde apparet traditionem hanc humanam esse quae haereticos asserit,
+						et baptisma, <hi rend="bold">1160</hi> quod non nisi solius Ecclesiae est (72), eos
+						habere defendit.</p>
+					</div>
+					<div type="textpart" subtype="section" n="7">
+					<p n="7">VII. Sed et ad illam partem bene a vobis re- sponsum est ubi Stephanus in
+						epistola sua dixit « haereticos quoque ipsos in baptismo convenire, et quod alterutrum
+							<hi rend="superscript">33</hi> ad se venientes (73) non baptizent, sed communicent
+						tantum, » quasi et nos hoc facere debeamus. Quo in loco, etsi vos <note type="footnote">Variae lectiones.</note>
+						<note type="footnote"><hi rend="superscript">32</hi> Infamat <hi rend="italic">Ar. Lam.
+								Ebor. NC</hi>. 1. <hi rend="italic">Bod</hi>. 2. <hi rend="superscript">33</hi> Quod
+							ad alterutrum <hi rend="italic">Oxon</hi>. <hi rend="superscript">34</hi> Probastis
+							ridiculum <hi rend="italic">Bod</hi>. 2. <hi rend="superscript">35</hi> Quod <hi rend="italic">Lam. Ebor. NC</hi>. 1. <hi rend="superscript">36</hi> Eo quod non
+							teneant <hi rend="italic">Lam. Ebor. NC</hi>. 1. <hi rend="superscript">37</hi> Quod
+							utique <hi rend="italic">Bod</hi>. 2. <hi rend="superscript">38</hi> Nec Filium;
+							quibus <hi rend="italic">Ar. N C</hi>. 1. <hi rend="italic">Ebor. Bod</hi>. 2. <hi rend="italic">Mich. Vict</hi>. <hi rend="superscript">39</hi>
+							<hi rend="italic">Sic Lam</hi>. Sanctum; quibus <hi rend="italic">Rig</hi>.</note>
+						<note type="footnote">Variorum notae.</note>
+						<milestone unit="PLSection" n="C"/>
+						<note type="footnote">(70) <hi rend="italic">Frustra apostolorum</hi>. Contra,
+							Vincentius (??)irinensis de hoc ipso negotio agens ait : <hi rend="italic">Ut omnes
+								luce clarius videant beatorum apostolorum beata successio quanta vi semper, quanto
+								studio, quanta contentione defenderit susceptae semel religionis inte-
+							gritatem</hi>. Et mox addit Stephanum papam dignum existimasse <hi rend="italic">si
+								reliquos omnes tantum fidei devotione vinceret quantum loci auctoritate
+								superabat</hi>. Per apostolos hic et alibi intelliguntur Petrus et Paulus, quos
+							Ecclesia considerat ut fundatores Ecclesiae Romanae. Magna animorum contentione
+							agitata est aevo nostro quaestio de duplici capite in Ecclesia. Nolo referre quae tunc
+							utrinque dicta et facta sunt. Illud tantum dicam legendam esse exer- citationem de
+							singulari primatu Petri quam ea occasione scripsit vir illustrissimus Petrus de Marca,
+							archiepiscopus Parisiensis.</note>
+						<note type="footnote">(71) <hi rend="italic">Nominum diversitate</hi>. Quamvis haec
+							lectio constans sit in omnibus antiquis exemplaribus, <milestone unit="PLSection" n="D"/> puto tamen legendum esse <hi rend="italic">hominum</hi>. BALUZ.</note>
+						<note type="footnote">(72) <hi rend="italic">Nec tamen propter hoc ab Ecclesiae
+								catholicae pace atque unitate aliquando discessum est</hi>. Ait. cl. Coustantius
+							Firmiliani verba afferens in nota ad S. Irenaei epistolam ad Romanum episcopum
+							Victorem, qui Asianos Pascham die 14 mensis celebrantes ab Ecclesia separare conatus
+							fuerat, « Celeritas, quippe qua, ut credere est, pax ad modicum interturbata, in
+							integrum restituta est, unitatis ruptae oblivio- nem ita peperit, ut ab ea aliquando
+							discessum esse Cypriani aetate ne recoleretur quidem. » <hi rend="italic">Rom. Pontif
+								Epistolae</hi>, p. 99. Quin etiam testatus est Anatolius Laodicenus, is qui ante
+							concilium floruit Nica(??)num, contentionem istam de Paschate exortam ab Irenaeo
+							pacatam esse, <hi rend="italic">utrisque partibus</hi>, inquit, <hi rend="italic">in
+								sua regula perseverantibus, nec a coepto antiqui- latis more declinantibus</hi>.
+							Vide Anatolii locum ibi- <milestone unit="PLSection" n="C"/> dem adductum. ROUTH.</note>
+						<pb n="1308"/>
+						<milestone unit="PLSection" n="A"/> jam probastis satis ridiculum <hi rend="superscript">34</hi> esse ut quis sequa- tur errantes, illud tamen ex abundanti addimus, non esse
+						mirum si sic haeretici agant, qui, etsi in quibusdam minoribus discrepant, in eo tamen,
+						quod est maximum, unum et eumdem consensum tenent ut blasphement Creatorem, quaedam
+						somnia sibi et phantasmata ignoti Dei confingentes; quos <hi rend="superscript">35</hi>
+						utique consequens est sic consentire in baptismi sui vanitate ut consentiunt in
+						repudianda divini- tatis veritate. De quibus, quoniam longum est (??) singula eorum vel
+						scelesta vel supervacua respon- dere, satis est breviter illud in compendio dicere, eos
+						qui non teneant <hi rend="superscript">36</hi> verum Dominum, Patrem, tenere non posse
+						nec Filii nec Spiritus sancti veri- tatem, secundum quod etiam <hi rend="superscript">37</hi> illi qui Cataphrygae <milestone unit="PLSection" n="B"/> appellantur, et
+						novas prophetias usurpare conan- tur, nec Patrem possunt habere nec Filium <hi rend="superscript">38</hi> nec [Spiritum sanctum <hi rend="superscript">39</hi> (74)];
+						a quibus si quaeramus quem Christum <hi rend="bold">1161</hi> praedicent, respondebunt
+						eum se praedicare qui miserit Spiritum per Mon- tanum et Priscam locutum. In quibus cum
+						anim- advertamus non veritatis Spiritum, sed erroris fuisse, cognoscimus eos qui falsam
+						illorum prophe- tiam contra Christi fidem vindicant Christum ha- bere non posse. Sed et
+						caeteri quique haeretici, si <note type="footnote">(73) <hi rend="italic">Alterutrum ad
+								se venientes</hi>. Ad Cypriani epi- stolam <hi rend="italic">ad Pompeium</hi>, ubi
+							Stephani verba adhuc plenius afferuntur, hoc adnotavit Rigaltius. « Rec- tissima est
+							haec scriptura. Hoc est, neque venien- tem a Marcione baptizat Montanus, neque venien-
+							tem a Montano baptizat Marcion. Non rebaptizant alterutrum ad se venientes. ROUTH.</note>
+						<note type="footnote">(74) <hi rend="italic">Spiritum sanctum</hi>. Certum est haec duo
+							vocabula non exstare in libris nostris nec in qua- tuor Anglicanis. Ita etiam de uno
+							suo testatur Pamelius, qui tamen illa addidit ex codice edito, in cujus marginibus
+							Joannes Cauchius, Ultrajectinus, apposuerat castigationes ex variis codicibus ma-
+							nuscriptis. Remanet tamen adhuc dubiam an haec duo vocabula addita fuerint ex libro
+							veteri, an vero ex conjectura Cauchii tantum. Nam, quia in veteribus libris post vocem
+								<hi rend="italic">Filium</hi> additur <hi rend="italic">nec</hi>, ita ut videantur
+							aliqua deesse, conjecerat Pamelius ad- <milestone unit="PLSection" n="D"/> denda esse
+							duo illa vocabula, et addidit videns conjecturam suam confirmatam auctoritate libri
+							Cauchiani. In codice porro Cauchii adnotatas fuisse, non solum varias lectiones
+							veterum librorum, sed etiam conjecturas ejus, monet ipse Pamelius in adnotationibus
+							suis. Itaque nos haec duo vocabula, quae posita sunt sine auctoritate, ex conjectura
+							tantum, uncis conclusimus. BALUZ.</note>
+						<note type="footnote">Indicant quidem Var. Lecit. apud edit. Oxon. collectae tria verba
+								<hi rend="italic">nec Spiritum sanctum</hi> in quatuor illis libris Anglicis deesse;
+							sed revera in duobus ex illis, hi sunt Bodleianus et Novi Collegii codex, apparet <hi rend="italic">nec</hi> post vocem <hi rend="italic">Filium</hi> cum sequentibus
+							conjunctum. In altero autem epistolarum Cypriani codice, qui penes est idem collegium,
+							haud exstat Firmiliani epistola. ROUTH.</note>
+						<pb n="1209"/>
+						<milestone unit="PLSection" n="A"/> se ab Ecclesia Dei sciderint, nihil habere
+						potestatis aut gratiae possunt, quando omnis potestas et gratia in Ecclesia constituta
+						sit, ubi praesident ma- jores natu (75), qui et baptizandi et manum impo- nendi et
+						ordinandi possident potestatem (76). Hae- retico enim, sicut ordinare non licet nec
+						manum imponere, ita nec baptizare nec quidquam sancte nec spiritaliter gerere (77),
+						quando alienus sit a spiritali et deifica sanctitate. Quod totum nos jam- pridem in
+						Iconio (78), qui Phrygiae locus est, col- lecti in unum convenientibus ex Galatia et
+						Cilicia et caeteris proximis regionibus, confirmavimus tenendum contra haereticos
+						firmiter et vindicandum, cum a quibusdam de ista re dubitaretur.</p>
+					</div>
+					<div type="textpart" subtype="section" n="8">
+					<p n="8">VIII· Et quoniam Stephanus et qui illi consen- <milestone unit="PLSection" n="B"/> tiunt contendunt dimissionem peccatorum et secun- dam nativitatem in haereticorum
+						baptisma posse pro- cedere, apud quos etiam ipsi confitentur Spiritum sanctum <hi rend="bold">1162</hi> non esse, considerent et intelligant spiritalem nativitatem sine
+						Spiritu esse non posse, secundum quod et beatus apostolus Paulus eos qui ab Joanne
+						baptizati fuerant, priusquam missus esset <note type="footnote">Variae lectiones.</note>
+						<note type="footnote"><hi rend="superscript">40</hi>
+							<hi rend="italic">Sic Ar. Lam. Ebor. N C</hi>. 1. <hi rend="italic">At Oxon</hi>. De
+							quibus. <hi rend="superscript">41</hi> Qui sunt nunc <hi rend="italic">conjic.
+								Routh</hi>. <hi rend="superscript">42</hi> At qui est in Ec- clesia perfectus et
+							sapiens, hoc <hi rend="italic">Ar. Lam. Ebor. Mich. Vict</hi>.</note>
+						<note type="footnote">Variorum notae.</note>
+						<note type="footnote">(75) <hi rend="italic">Ubi praesident majores natu</hi>. Graece,
+								<foreign xml:lang="grc">ὅπου προκάθηνται οἱ πρεσβύτεροι</foreign>. Sic et jam
+							supra Firmilia- nus, Mos <hi rend="italic">apud nos fuit</hi>, inquit, <hi rend="italic">ut per singulos an</hi>- <milestone unit="PLSection" n="C"/>
+							<hi rend="italic">nos</hi> seniores (<foreign xml:lang="grc">οἱ πρεσβύτεροι</foreign>) <hi rend="italic">et praepositi in unum conveniamus</hi>. Utroque loco designantur, ni
+							fallor, superioris ordinis, seu qui praesident, presbyteri. <hi rend="italic">Praesidentem</hi> nominat episcopum Tertullianus in lib. <hi rend="italic">de
+								Pudicitia</hi>, cap. 14, et illo quidem <hi rend="italic">presbyterorum</hi> nomine
+							episcopi a veteribus interdum appellantur; raro vicissim, idque accommodatione tantum
+							ad Vet. Test. locum, <hi rend="italic">episcoporum</hi> titulo donantur presbyteri.
+							Confer. Adnotatt. ad Concil. contra Noetum vol. II <hi rend="italic">Reliquiar.
+								Sacr</hi>. p. 377, ubi tamen minus recte du- bitasse me fateor, utrum plures
+							episcopi in unum, sive in provinciali concilio, collecti, <hi rend="italic">presbyteri</hi> ter- tio saeculo Ecclesiae nominarentur. Porro apud epi- scopum
+							sitam esse potestatem ritus omnes admi- nistrandi, baptizandi, offerendi, manum
+							imponendi, ordinandi, credebant antiqui; sed et presbyteris licere, ut muniti
+							auctoritate episcopi baptizarent at- que offerrent <hi rend="italic">Dandi quidem</hi>
+							(Baptismum) <hi rend="italic">habet jus summus sacerdos, qui est episcopus; dehinc
+								presby</hi>- <milestone unit="PLSection" n="D"/>
+							<hi rend="italic">teri et diaconi, non tamen sine episcopi auctoritate propter
+								Ecclesiae honorem. Quo salvo, salva pax est. Alioquin etiam laicis jus est</hi>,
+							etc. Haec Tertullianus in lib. <hi rend="italic">de Baptismo</hi>, c. 17, haud finito
+							saeculo Ecclesiae secundo docuit. Ad solos vero episcopos ordinandi jus pertinere,
+							consentit cum Hieronymo universa antiquitas. Adde quod idem hic Firmilianus, qui
+							episcoporum ordinem <hi rend="italic">presbyterorum</hi> nomine his lo- cis
+							appellavit, singulos episcopos, presbyteros, dia- conos, alibi in epistola sua titulis
+							suis distinxit. Porro ait infra, § 12, episcopos ordinatione vicaria successisse
+							apostolis. Routh.</note>
+						<note type="footnote">(76) <hi rend="italic">Potestatem</hi>. Codex Laetiensis, <hi rend="italic">facultatem</hi>. Sic etiam se legisse in codice Marchianensi testa-
+							tur Pamelius. BALUZ.</note>
+						<note type="footnote">(77) <hi rend="italic">Nec spiritaliter gerere</hi>. Edit.
+							princeps praestat <hi rend="italic">aut</hi> pro <hi rend="italic">nec</hi>,
+							firmantibus illud ms. Novi Collegii ac Bodleiano; qui et fortasse revocandum. ROUTH.</note>
+						<note type="footnote">(78) <hi rend="italic">In Iconio</hi>. Dionysius Alexandrinus hoc
+							Ico- niense idque in Synnada concilium sanxisse rursus tingendos esse haereticos, in
+							tertia epistola ad Phi- lemonem Romanum commemorat. Verba ejus apud <milestone unit="PLSection" n="C"/> Eusebium, <hi rend="italic">Hist. Eccles</hi>. VII, 7 haec sunt : <foreign xml:lang="grc">Μεμάθηκα κaὶ
+								τοῦτο, ὅτι μὴ νῦν οἱ ἐν Ἀφρικῇ μόνον τοῦτο παρεισήγαγον, ἀλλὰ καὶ πρὸ πολλοῦ κατὰ
+								τους πρὸ ἡμῶν ἐπισκόπους ἐν ταῖς πολυανθρωποτάταις ἐκκλησίαις παρὰ ταῖς συνόδοις
+								τῶν ἀδελφῶν, ἐν Ἰκονιῳ καὶ Συννόδοις χαὶ παρὰ πολλοῖς τοῦτο ἕδοςεν, ὧν</foreign>,
+							etc. Apud Iconium autem maxime oh Montani- starum baptismum motam esse quaestionem
+							istam. constat ex Firmiliani verbis infra, in cap. 13. ROUTH.—Ait Prudentius Maranus in Vita S. Cypriani editioni Baluzianae praemissa,
+							§ XXXI, p. CXVIII : <hi rend="italic">Nisi si his episcopis quibus nunc fuit Paulus</hi>; legen- dum putavit
+							Pamelius <hi rend="italic">de quibus nunc</hi>, sed manife- stus est hellenismus,
+								<foreign xml:lang="grc">τούτοις τοῖς ἐπισκόποις τοῖς νῦν</foreign>. his episcopis
+							nunc exsistentibus. Haec ille, quae quidem haud prohibent ne sentiam reponendum esse
+								<hi rend="italic">qui</hi> sunt <hi rend="italic">nunc</hi>, pro isto <hi rend="italic">quibus nunc</hi>, cum absit prae- positio <hi rend="italic">de</hi>
+							ante <hi rend="italic">quibus</hi> a codd. scriptis, quod sciam omnibus. ROUTH.</note>
+						<pb n="1210"/>
+						<milestone unit="PLSection" n="A"/> Spiritus sanctus a Domino, baptizavit denuo spiri-
+						tali baptismo, et sic eis manum imposuit ut accipe- rent Spiritum sanctum (<hi rend="italic">Act</hi>. XIX). Quale est autem ut cum Paulum
+						post Joannis baptisma iterato disci- pulos suos baptizasse videamus, nec eos qui ab hae-
+						resi ad Ecclesiam veniunt post illicitam et profa- nam eorum tinctionem baptizare
+						dubitemus? Nisi si his episcopis quibus <hi rend="superscript">40</hi> nunc <hi rend="superscript">41</hi> (79) minor fuit Paulus, ut hi quidem possint per solam
+						manus im- positionem venientibus haereticis dare Spiritum sanctum, Paulus autem idoneus
+						non fuerit qui ab Joanne baptizatis Spiritum sanctum per manus im- positionem daret,
+						nisi eos prius etiam Ecclesiae ba- ptismo baptizasset.</p>
+					<milestone unit="PLSection" n="B"/>
+					</div>
+					<div type="textpart" subtype="section" n="9">
+					<p n="9">IX. Illud quoque absurdum quod non putant quae- rendum esse quis sit ille qui
+						baptizaverit, eo quod qui baptizatus sit gratiam consequi poterit invo- cata trinitate
+						nominum Patris et Filii et Spiritus sancti. Deinde haec erit sapientia quam scribit Pau-
+						lus esse in his qui perfecti sunt. At quis est in Eccle- sia perfectus (80) <hi rend="bold">1163</hi> et sapiens <hi rend="superscript">42</hi> qui hoc aut defendat
+						aut credat quod invocatio haec nominum <milestone unit="PLSection" n="D"/>
+						<note type="footnote">(79) <hi rend="italic">Quibus nunc</hi>. Praepositio deest in
+							omnibus exemplaribus antiquis et in editione Morelliana. Il- lam Pamelius adjecit ex
+							conjectura, quia existimabat sensum absque ea non posse constare. BALUZ·</note>
+						<note type="footnote">(80) <hi rend="italic">At quis est in Ecclesia perfectus</hi>.
+							Optime No- vi Collegii codex, ut qui est <hi rend="italic">in Ecclesia perfectus et
+								sapiens hoc aut defendat aut credat</hi>. In tribus quo- que cod(??)i. scriptis in
+							edit. Oxon. nominatis <hi rend="italic">qui</hi> pro <hi rend="italic">quis</hi>
+							legitur, et <hi rend="italic">qui</hi> ante <hi rend="italic">hoc</hi> abest.
+							Quapropter posthabita Pamelii lectione, quae fortasse ex Cauchii conjectu- ra tantum
+							orta est, Morellianam istam revocavi; posito tamen ex fide codicis Novi Collegii <hi rend="italic">aut</hi> pro <hi rend="italic">autem</hi> ante verbum <hi rend="italic">defendat</hi>. Caeterum paulo ante pro <hi rend="italic">poterit</hi>
+							priorem lect. <hi rend="italic">potuerit</hi> revocavi. ROUTH. —At <hi rend="italic">quis est</hi>. Ita emendavit Pamelius ex libro Cau-
+							ch(??)i. Nam in editione Morelliana, quae prima est. legitur : <hi rend="italic">Perfecti sunt, ut qui est in Ecclesia perfectus et sapiens. Hoc autem defendat et
+								credat</hi>, etc. In tri- bus antiquis codicibus scriptum est : <hi rend="italic">Perfecti sunt, ut qui est in Ecclesia perfectus et sapien hoc autem defendat</hi>.
+							Sic etiam alii libri veteres, nisi quod pro <hi rend="italic">et sapiens</hi> habent
+								<hi rend="italic">aut sapiens</hi>. BALUZ.</note>
+						<pb n="1211"/>
+						<milestone unit="PLSection" n="A"/> nuda sufficiat ad remissionem peccatorum et ba-
+						ptismi sanctificationem, cum haec tunc unique profi- ciant quando et qui baptizat habet
+						Spiritum san- ctum et baptisma quoque ipsum non sit sine Spiritu <hi rend="superscript">43</hi> constitutum. Sed dicunt cum qui quomodocunque foris baptizatur mente et fide
+						sua baptismi gratia consequi posse. Quod et ipsum sine dubio ridicu- lum est quasi de
+						coelo adducere ad se possit aut mens prava justorum sanctificationem aut fides fal- sa
+						credentium veritatem. Non omnes autem qui no- men Christi invocant audiri et
+						invocationem <hi rend="superscript">44</hi> suam consequi aliquid gratiae posse Dominus
+						ipse mani- festat dicens : <hi rend="italic">Multi venient in nomine meo dicentes : Ego
+							sum Christus; et multos fallent</hi> (<hi rend="italic">Marc</hi>. XIII, 6). Nulla quippe differentia est inter pseudo-prophetam <milestone unit="PLSection" n="B"/> et haereticum. Nam ut ille in nomine Dei aut Chri- sti, ita
+						iste in sacramento <hi rend="superscript">45</hi> baptismi fallit : Menda- cio uterque
+						nititur ad decipiendas hominum vo- luntates.</p>
+					</div>
+					<div type="textpart" subtype="section" n="10">
+					<p n="10">X. Volo autem vobis et de historia <hi rend="superscript">46</hi> quae apud nos
+						facta est exponere ad hoc ipsum pertinente. Ante viginti enim et duos fere annos (81),
+						tempori- bus post Alexandrum imperatorem, multae istic conflictationes et pressurae
+						acciderunt, vel in com- mune omnibus hominibus, vel privatim Christianis, terrae etiam
+						motus plurimi et frequentes exstiterunt, ut et per <hi rend="superscript">47</hi>
+						Cappadociam et per Pontum multa sub- ruerent, quaedam etiam civitates, in profundum re-
+						ceptic, dirupti soli hiatu devorarentur, ut ex hoc persecutio quoque gravis adversum nos
+						Christiani <milestone unit="PLSection" n="C"/> nominis fieret, quae post longam retro
+						aetatis pacem repente oborta de inopinato et insueto malo <hi rend="superscript">48</hi>
+						ad turbandum populum nostrum <hi rend="bold">1164</hi> terribilior ef- <note type="footnote">Variae lectiones.</note>
+						<note type="footnote"><hi rend="superscript">43</hi> Sine Spiritu sancto <hi rend="italic">Lam. Ebor. Bod</hi>. 2. <hi rend="superscript">44</hi> Et per
+							invocationem <hi rend="italic">Ar</hi>. Invocatione sua <hi rend="italic">Routh</hi>.
+								<hi rend="superscript">45</hi> Iste sacramento <hi rend="italic">Bod</hi>. 2. <hi rend="superscript">46</hi> Rei <hi rend="italic">added. conj. Routh</hi>. <hi rend="superscript">47</hi> Ut et per <hi rend="italic">Lam. Ebor. N C</hi>. 1.<hi rend="superscript">48</hi> Inopinato malo <hi rend="italic">Bod</hi>. 2. <hi rend="superscript">49</hi> Relinquentibus : erat enim <hi rend="italic">Bod</hi>. 2.
+								<hi rend="superscript">50</hi>
+							<hi rend="italic">Sic Ar. Lam. Ebor. N C.</hi> 1. <hi rend="italic">Bod</hi>. 2. In
+							exstasi <hi rend="italic">Oxon</hi>. <hi rend="superscript">51</hi> Daemonum <hi rend="italic">Ar. Lam. Ebor. NC</hi>. 1 <hi rend="superscript">52</hi> Perficiens,
+							terram se movere <hi rend="italic">Lam. Ebor. N C</hi>. 1. <hi rend="italic">Bod</hi>.
+							2 <hi rend="superscript">53</hi> Di- ceret quocunque <hi rend="italic">Bod</hi>.
+							2.</note>
+						<note type="footnote">Variorum notae.</note>
+						<note type="footnote">(81) <hi rend="italic">Ante viginti annos</hi>. Vide <hi rend="italic">Annales Cyprianicos</hi> ad Annum 256. BALUZ
+							.</note>
+						<note type="footnote">(82) <hi rend="italic">Acerbus et dirus</hi>. Sic Lactantius, cap.
+							13, <milestone unit="PLSection" n="D"/>
+							<hi rend="italic">de Mortibus Persecutorum</hi>, Flaccillum vocat <hi rend="italic">non pu- s llum homicidam</hi>. BALUZ .</note>
+						<note type="footnote">83) <hi rend="italic">Quaedam mulier</hi>. Vide Reginonem lib. II, cap. 364, et notas nostras pag. 592. BALUZ.</note>
+						<note type="footnote">(84) <hi rend="italic">Terram movere</hi>. Duo libri veteres, <hi rend="italic">etiam mo- vere se terram polliceretur</hi>. Quatuor Anglicani, <hi rend="italic">per- ficiens terram se movere</hi>. BALUZ.</note>
+						<note type="footnote">(85) <hi rend="italic">Vi sua</hi>. Ita unus codex regius et
+							Beccensis; quae est vera lectio. Quatuor libri veteres habent <hi rend="italic">visu</hi>. Ita etiam Divionensis, nisi quod supra lineam habet scriptum <hi rend="italic">vel nisu</hi>. Morellius edidit <hi rend="italic">nisu</hi>, Pa-
+							melius et alii <hi rend="italic">jussu</hi>. BALUZ.</note>
+						<note type="footnote">(86) <hi rend="italic">Rusticum.</hi> Morellius edidit <hi rend="italic">rusticum</hi>. tan- quam non esset nomen hominis, sed vocabulum quo
+							simplex homo significaretur. Pamelius et post eum Rigaltius scripserunt <hi rend="italic">Rusticum,</hi>, putantes nomen esse presbyteri de quo istic loquitur
+							Firmilianus. Angli aliter censuerunt et reposuerunt lectionem quae est in editione
+							Morellii argumento ducto ex epistola Cornelii ad Fabium Antiochenum apud Eusebium, in
+							qua Cornelius ait Novatum accivisse ex Italia tres episcopos simplicissimos et omnium
+							ignaros, ut vertit Rufinus, a quibus fieret episcopos. Ego in ea opinionum
+							diversitate, cum viderem le- <milestone unit="PLSection" n="D"/> ctionem Pamelii et
+							Rigaltii posse esse bonam et ni- hil adversus eam confici ex comparatione horum
+							episcoporum Italorum. retinui quod magis placuisse videbam Pamelio et Rigaltio. De
+							Ursicino, qui se- dem apostolicam invasit post electionem Damasi, te- statur Rufinus,
+							lib. XI, cap. 10, illum episcopum fa- ctum fuisse a quodam
+								<hi rend="italic">satis imperito et agresti epi- scopo</hi>. BALUZ. — <hi rend="italic">Unum de presbyteris rusticum</hi>. Sic edidit in
+							hujus epistolae edit. principe Morellius, tanquam si <hi rend="italic">rusticus</hi>
+							nomen appellativum fuerit; sed quasi nomen proprium, Pamelius et Rigaltius. Ali— ter
+							Fellus. Dubitat Baluzius. Fortasse significat hoc loco vox <hi rend="italic">rusticus</hi>, non agrestem, ut opinatur Fellus, sed ruralem, <foreign xml:lang="grc">ἐπιχώριον. Ἐπιχώριοι πρεσβύτεροι</foreign>, <hi rend="italic">presbyteri ruris</hi>, in Canone decimo tertio <hi rend="italic">Concilii
+								Neocaesareae</hi> memorantur. Sed Graece scripsisse Fir- millianus <foreign xml:lang="grc">ἀγροικικόν</foreign> videtur, cum in decimo septimo Chalcedonensi
+								<foreign xml:lang="grc">ἀγροικικὰς παροικίας ἣ ἐγχωρίους</foreign> habeas. ROUTH.</note>
+						<pb n="1212"/>
+						<milestone unit="PLSection" n="A"/> fecta est. Serenianus tunc fuit in nostra provincia
+						praeses, acerbus et dirus (82) persecutor. In hac autem perturbatione constitutis
+						fidelibus, et huc at- que illuc persecutionis metu fugientibus, et patrias suas
+						relinquentibus, atque in alias partes regionum transeuntibus (erat enim <hi rend="superscript">49</hi> transeundi facultas, eo quod persecutio illa, non per totum
+						mundum, sed loca is fuisset), emersit istic subito quaedam mulier (83). quae in exstasim
+							<hi rend="superscript">50</hi> constituta propheten se praeferret et quasi sancto
+						Spiritu plena sic ageret. Ita autem principalium daemoniorum <hi rend="superscript">51</hi> impetu fere- batur, ut per longum tempus sollicitaret et decipe- ret
+						fraternitatem, admirabilia quaedam et porten- tosa perficiens, et facere se terram
+						moveri <hi rend="superscript">52</hi> (84) pol- liceretur. Non quod daemoni tanta esset
+						potestas ut <milestone unit="PLSection" n="B"/> terram movere aut elementum concutere vi
+						sua (85) valeret, sed quod nonnunquam Spiritus nequam, praesciens et intelligens terrae
+						motum futurum, id se facturum esse simularet quod futurum videret. Quibus mendaciis et
+						jactationibus subegerat mentes singulorum ut sibi obedirent, et quocunque <hi rend="superscript">53</hi> prae- ciperet et duceret sequerentur, faceret quoque mu-
+						lierum illam cruda hieme nudis pedibus per asperas nives ire nec vexari in aliquo aut
+						laedi illa discur- sione, diceret etiam se in Judaeam et Hierosolymam festinare, fingens
+						tanquam inde venisset. Hic et unum de presbyteris Rusticum (86), item et alium diaconum
+						fefellit, ut eidem mulleri commiscerentur, quod paulo post detectum est : nam subito
+						appa- ruit illi unus de exorcistis vir probatus et circa reli- <milestone unit="PLSection" n="C"/> giosam disciplinam bene semper conversatus, qui exhortatione
+						quoque fratrum plurimorum, qui et ipsi fortes ac laudabiles in fide aderant, excitatus,
+							<pb n="1213"/>
+						<milestone unit="PLSection" n="A"/> erexit se contra illum spiritum nequam revincen- dum
+							<hi rend="superscript">54</hi>; <hi rend="bold">1163</hi> qui subtili fallacia etiam
+						hoc paulo ante praedixerat, venturum quemdam adversum <hi rend="superscript">55</hi> et
+						tentatorem infidelem. Tamen ille exorcista, inspi- ratus, Dei gratia fortiter restitit,
+						et esse illum ne- quissimum spiritum qui prius sanctus putabatur (87), ostendit. Atque
+						illa mulier quae prius per prae- stigias et fallacias daemonis multa ad deceptionem
+						fidelium moliebatur, inter caetera quibus plurimos de- ceperat, etiam hoc frequenter
+						ausa est, ut et invocatio- ne non contemptibili sanctificare se panem <hi rend="superscript">56</hi> (88) et Eucharistiam facere simularet, et sacrificium
+						Domino sine <hi rend="superscript">57</hi> sacramento solitae praedicatio- nis (89)
+						offerret, baptizaret quoque (90) multos usi- tata et legitima verba interrogationis
+						usurpans, ut <milestone unit="PLSection" n="B"/> ril discrepare ab ecclesiastica regula
+						videretur <hi rend="superscript">58</hi>.</p>
+					</div>
+					<div type="textpart" subtype="section" n="11">
+					<p n="11">XI. Quid igitur de hujus baptismo dicemus, quo nequissimus daemon per mulierem
+						baptizavit? Nun- quid et hoc Stephanus et qui illi consentiunt com- probant, maxime cui
+						nec symbolum Trinitatis nec interrogatio legitima et ecclesiastica defuit? Potest credi
+						aut remissio peccatorum data aut lavacri sa- lutaris regeneratio rite perfecta, ubi
+						omnia, quam- <note type="footnote">Variae lectiones.</note>
+						<note type="footnote"><hi rend="superscript">54</hi> Ad revincendum <hi rend="italic">conj. Routh</hi>. <hi rend="superscript">55</hi> Adversum <hi rend="italic">Ar.
+								Lam</hi>. <hi rend="superscript">56</hi> Sanctificare se pacem <hi rend="italic">Lam. Ebor. NC</hi>. 1. <hi rend="italic">Bod</hi>. 2. <hi rend="italic">Mich.
+								Vict</hi>. <hi rend="superscript">57</hi> Non sine <hi rend="italic">Oxon</hi>. <hi rend="superscript">58</hi> Viderentur. <hi rend="italic">Ar. Lam. Ebor. NC</hi>. 1.
+								<hi rend="italic">Bod</hi>. 2. <hi rend="superscript">59</hi> Baptismata <hi rend="italic">Bod</hi>. 2. <hi rend="italic">Vict</hi>. <hi rend="superscript">60</hi> Sanctum <hi rend="italic">add. Ar. NC</hi>. 1. <hi rend="italic">Lam.
+								Ebor</hi>. <hi rend="superscript">61</hi> Non ducit <hi rend="italic">conjic.
+								Routh</hi>.</note>
+						<note type="footnote">Variorum notae.</note>
+						<milestone unit="PLSection" n="C"/>
+						<note type="footnote">(87) <hi rend="italic">Qui prius sanctus</hi>. Frequenter accidit
+							ut hy- pocritae imponerent Ecclesiae·, id est ut multi post mortem suam crederentur
+							esse sancti quorum mo- res non responderant tam bonae famae, uti pluribus exemplis
+							ostensum a nobis est in oratione quam Parisiis in collegio regio habuimus die 15
+							Aprilis 1692, cum illic interpretaremur titulum <hi rend="italic">Decretalium</hi> de
+							reliquiis et veneratione sanctorum. BALUZ.</note>
+						<note type="footnote">(88) <hi rend="italic">Panem</hi>. Quatuor libri nostri et quatuor
+							item Anglicani praeferunt <hi rend="italic">pacem</hi>. In Divionensi quoque scriptum
+							est <hi rend="italic">pacem</hi>, et supra lineam <hi rend="italic">vel panem</hi>.
+							Certum est hic agi de pane Eucharistiae. In comoedia Queroli legitur : <hi rend="italic">Solum hoc est quod sequuntur atque observant unice, panem Domini</hi>.
+							Ubi quidam vir eruditus, cujus manum non bene novi, sed puto esse Petri Danielis aut
+							Desiderii Heraldi, in suo exemplari edito scripsit in margine <hi rend="italic">panem
+								Deum, id est Eucharistiam</hi>. Examinabunt theologi an haec interpretatio sit bona.
+								BALUZ.</note>
+						<milestone unit="PLSection" n="D"/>
+						<note type="footnote">(89) <hi rend="italic">Sine sacramento. Non sine sacramento
+								solitae praedicationis</hi>. Fellus ait hanc esse veram lectio- nem (nam omissa est
+							particula <hi rend="italic">non</hi> in mss. et editt. omnibus praeter illam ab ipso
+							Fello adornatam) ex contextu satis est manifestum; subjungitur enim, <hi rend="italic">baptizaret quoque multos, usitata et legitima verba interrogationis usurpans, ut
+								nil discrepare ab eccle- siastica regula videretur</hi>. Et quidem vis argumenti
+							periret, si verba solemnia, Eucharistiae administra- tioni praestituta, non fuissent
+							retenta. Praedicatio solita videtur ista <foreign xml:lang="grc">ἀνάμνηαις</foreign>,
+							quam Dominus fieri mandabat, et de qua D. Paulus (<hi rend="italic">I Cor</hi>. II, 26) <foreign xml:lang="grc">καταγγέλλετε τὸν θάνατον τοῦ
+								Κυρίου</foreign> De <foreign xml:lang="he">הגרה</foreign> Paschali supra in Epist.
+							ad Caecil. dictum. Rem hanc exse- qui videtur Justinus Martyr <hi rend="italic">Apol</hi>. 2, ubi dicit : <foreign xml:lang="grc">ΙΙροσφέρεαθαι τῷ προεστώτι τὸν
+								ἄρτον καὶ ποτήριον ὕδατος καὶ, κράματος, καὶ οὗτος λαβών οἷνον καὶ δόξαν τῷ
+								Ιlατρὶ τῶν ὅλων διὰ τοῦ ὀνόματος τοῦ I'Ιοῦ καὶ τοῦ Πνεύματος τοῦ ἀγιου
+								ἀναπέμπει,</foreign> etc. <milestone unit="PLSection" n="C"/> Rigaltius ait :
+							Legendum videtur : <hi rend="italic">Sive sacramentum solitae precationis offerret.
+								Sacramentum precationis dicit, quemadmodum Tertullianus, sacramentum ora-
+								tionis</hi>. FELLUS. — Eruditissimum hunc vitum sequi par
+							fuit, cui et in hac re obtemperavit Tillemontius, <hi rend="italic">Mem. Eccl</hi>. in
+							Vita Firmiliani, tom. IV pag. 129, ed. Bruxel. Particulam igitur negativam, quae in
+							textu Baluziano perperam omissa est, verbis praemisi, cum in voce antecedente <hi rend="italic">Domino</hi> olim absorpta fuisse eadem videretur. Verumtamen cl.
+							Marano in Vit. sua Cypriani ex imitatione Graecorum orta locutio videtur. Is ibidem
+							opponens se Rigaltio, qui pro vocibus, <hi rend="italic">sine sacramento solitae
+								praedicationis</hi>, voluerat ponere <hi rend="italic">sive sacramentum solitae
+								precationis</hi>, ex Ba- silio M. monere pergit : Preces in sacrificio fieri solitae
+							vocantur apud Basil. epist. 210, <foreign xml:lang="grc">ἐκκλησιαστικὰ
+								κηρύγματα</foreign>, praedicationes ecclesiasticae, p. CXVIII. ROUTH.</note>
+						<pb n="1214"/>
+						<milestone unit="PLSection" n="A"/> vis ad imaginem veritatis, tamen per daemonem gesta
+						sunt? Nisi si et daemonem in nomine Patris et Filii et Spiritus sancti gratiam baptismi
+						dedisse contendunt qui haereticorum baptisma <hi rend="superscript">59</hi> defen- dunt
+						(91); apud quos sine <hi rend="bold">1166</hi> dubio idem error est, daemonum fallacia
+						ipsa est, quando apud illos omnino Spiritus sanctus non est.</p>
+					</div>
+					<div type="textpart" subtype="section" n="12">
+					<p n="12">XII. Illud etiam quale est quoti vult Stephanus, his qui apud haereticos
+						baptizantur adesse praesen- tiam et sanctimoniam Christi? Nam, si non menti- tur
+						Apostolus dicens : <hi rend="italic">Quotquot in Christo tincti estis, Christum
+							induistis</hi> (<hi rend="italic">Galat</hi>. III, 27),
+						utique qui illic in Christo baptizatus est induit Christum. Si autem induit Christum,
+						accipere potuit et Spiritum sanctum, qui a Christo missus est, et frustra illi
+							<milestone unit="PLSection" n="B"/> venienti ad accipiendum Spiritum manus imponitur;
+						nisi si a Christo Spiritum <hi rend="superscript">60</hi> induit <hi rend="superscript">61</hi> (92) ut apud haereticos sit quidem Christus, non sit autem illic Spiritus
+						sanctus.</p>
+					</div>
+					<div type="textpart" subtype="section" n="13">
+					<p n="13">XIII. Decurramus vero breviter et caetera quae a vobis copiose et plenissime
+						dicta sunt, festinante vel maxime ad vos Rogatiano, diacono charissimo nostro. Sequitur
+						enim illud quod interrogandi <note type="footnote">(90) <hi rend="italic">Baptizaret
+								quoque</hi>. Vide concilium Carthagi- <milestone unit="PLSection" n="D"/> nense IV, cap. 99 et 100. BALUZ.</note>
+						<note type="footnote">(91) <hi rend="italic">Defendunt</hi>. Multa variant in hoc loco
+							libri veteres. Quidam habent <hi rend="italic">defendunt</hi>, alii <hi rend="italic">asserunt</hi>, alii <hi rend="italic">deserunt</hi> vel <hi rend="italic">deferunt</hi>. Nos retinuimus lectionem quam putavimus esse meliorem; nam paulo
+							post legitur : <hi rend="italic">Interrogandi sunt a nobis qui haereticos de-
+								fendunt</hi>. BALUZ.</note>
+						<note type="footnote">(92) <hi rend="italic">Christo Spiritum induit</hi>. Haec scripsit
+							in loco plus semel memorato cl. Maranus : Cum existimaret Firmilianus adversarios suos
+							in baptismo foris ab adultis suscepto Christo gratiam agnoscere, sic eos refellit, <hi rend="italic">Nam si non mentitur. — Spiritus sanctus</hi>. Illud <hi rend="italic">nisi si a Christo Spiritum induit</hi>, idem valet ac post Christum : nec
+							probabilis est conjectura Canchii et Pamelii, qui legendum putant : <hi rend="italic">Nisi a Christo Spiritum non induit</hi>. Quae Marani mihi qui- dem haud
+							satisfaciunt. Quid si <hi rend="italic">non ducit</hi> lato in voce <hi rend="italic">induit?</hi> ROUTH.</note>
+						<pb n="1215"/>
+						<milestone unit="PLSection" n="A"/> sunt (93) a nobis qui haereticos defendunt, utrum
+						carnale sit eorum baptisma, an spiritale. Si enim carnale est, nihil differunt a
+						Judaeorum baptismo, quo sic illi utuntur, ut eo tanquam communi et vulgari lavacro
+						tantum sordes laventur : sin autem spiritale est, quomodo apud illos esse baptisma spi-
+						ritale potest, apud quos Spiritus sanctus non est! Ac per <hi rend="bold">1167</hi> hoc
+						aqua qua tinguntur lavacrum est illis carnale tantum, non baptismi sacramentum.</p>
+					</div>
+					<div type="textpart" subtype="section" n="14">
+					<p n="14">XIV. Quod si baptisma haereticorum habere potest regenerationem secundae
+						nativitatis, non haeretici, sed filii Dei computandi sunt <hi rend="superscript">62</hi>
+						(94) qui apud illos baptizantur; secunda enim nativitas quae est in baptismo filios Dei
+						generat. Si autem sponsa Christi una est, quae est Ecclesia catholica, ipsa est quae
+							<milestone unit="PLSection" n="B"/> sola generat Dei filios. Neque enim multae sponsae
+							<hi rend="superscript">63</hi> Christi, cum dicat Apostolus : <hi rend="italic">Despondi vos uni viro virginem castam</hi> (95) <hi rend="italic">assignare
+							Christo</hi> (<hi rend="italic">II Cor</hi>. XI, 2); et, <hi rend="italic">Audi filia, et vide, et inclina aurem tuam, et obliviscere populi
+							tui</hi>
+						<hi rend="superscript">64</hi>, <hi rend="italic">quia desideravit rex speciem tuam</hi>
+							(<hi rend="italic">Psal</hi>. XLIV, 21); et. <hi rend="italic">Veni, sponsa, de Libano, advenies et pertransibis a principio fidei</hi>
+							(<hi rend="italic">Cant</hi>. IV, 8); <hi rend="italic">et
+							Ingressus sum in hortum meum, soror mea, sponsa</hi> (<hi rend="italic">Cant</hi>. V, 1). Videmus unam personam ubique proponi, quia et sponsa est
+						una. Non est autem una nobiscum haereticorum synagoga, (??)quia nec sponsa est, adultera
+						et fornicaria; unde nec potest filios Dei parere : nisi si, secundum quod Stephano
+						videtur, haeresis quidem parit et exponit, expositos autem <milestone unit="PLSection" n="C"/> Ecclesia suscipit, et quos non ipsa pepererit pro suis nutrit, cum filiorum
+						alienorum mater esse non possit. Et ideo Christus Dominus noster, unam esse manifestans
+						sponsam suam et unitatis ejus sacra- mentum declarans, ait : <hi rend="italic">Qui non
+							est mecum, adversus me est</hi>
+						<hi rend="superscript">65</hi>; <hi rend="italic">et qui non mecum colligit,
+							spargit</hi> (<hi rend="italic">Luc</hi>. XI, 23). Si enim
+						nobiscum est Christus, haeretici autem non sunt nobiscum, pro certo adversus Christum
+						sunt haeretici. Et, si nos colligimus cum <note type="footnote">Variae lectiones.</note>
+						<note type="footnote"><hi rend="superscript">62</hi> Non haereticis, sed fidei
+							computandi sunt <hi rend="italic">Lam. Ebor. NC</hi>. 1. <hi rend="italic">Mich</hi>.
+								<hi rend="superscript">63</hi> Multae sunt sponsae <hi rend="italic">Mich. Ar. Lam.
+								Ebor. NC</hi>. 1. <hi rend="italic">Bod</hi>. 2. <hi rend="italic">Routh</hi>. <hi rend="superscript">64</hi> Populum tuum <hi rend="italic">Ar. Lam. Ebor. NC.
+								Bod</hi>. 2. <hi rend="superscript">65</hi> Contra me est <hi rend="italic">Ar</hi>.
+								<hi rend="superscript">66</hi> Intus clausus. <hi rend="italic">Ar. Lam. Ebor.
+								NC</hi>. 1. <hi rend="superscript">67</hi> Sic et nos similiter. <hi rend="italic">Ar. Lam. Ebor. NC</hi>. 1. <hi rend="italic">Bod</hi>. 2. <hi rend="superscript">68</hi> Quoniam quia <hi rend="italic">Lam. Ebor. NC</hi>. 1. <hi rend="superscript">69</hi>
+							<hi rend="italic">Sic Ar. Ebor. Lam NC.</hi> 1. Et salvati <hi rend="italic">omitt.
+								Oxon</hi>. <hi rend="superscript">70</hi> Conversi <hi rend="italic">Ar</hi>. <hi rend="superscript">71</hi> Evangelio in solo <hi rend="italic">Ar. Lam</hi>. <hi rend="superscript">72</hi> Sanctum : cujus <hi rend="italic">Ar</hi>.</note>
+						<note type="footnote">Variorum notae.</note>
+						<milestone unit="PLSection" n="D"/>
+						<note type="footnote">(93) <hi rend="italic">Interrogandi sunt</hi>. In quatuor
+							codicibus an- tiquis scriptum est : <hi rend="italic">Quid interrogandi</hi>. Ut hinc
+							colligi debeat aut possit ista respicere ad episto- lam quae a Cypriano missa erat ad
+							Firmilianum. BALUZ.</note>
+						<note type="footnote">(94) <hi rend="italic">Filius Dei</hi>. Ego non dubito quin haec
+							lectio bona sit. Et tamen in quinque libris veteribus le- gitur <hi rend="italic">fidei</hi> in meo, <hi rend="italic">sed fideles</hi>. BALUZ.</note>
+						<note type="footnote">(95) <hi rend="italic">Virginem castam</hi>. Morellius edidit <hi rend="italic">virginem sanctam castam</hi>. Pamelius expunxit vocem <hi rend="italic">sanctam</hi>, quia eam non inveniebat in manuscriptis, et quia non
+							reperitur apud Apostolum. Ego tamen illam in- veni in sex manuscriptis. Sed deest in
+							aliis quatuor. Tres vero qui habent vocem <hi rend="italic">sanctam</hi> non habent
+								<hi rend="italic">castam</hi>. Alterutram autem oportet auferri. Retinui- mus eam
+							quae est apud Apostolum. BALUZ.</note>
+						<note type="footnote">(96) <hi rend="italic">Fons signatus</hi>. Ista habentur etiam in
+							epistola <milestone unit="PLSection" n="D"/>
+							LXXIV, et in epistola LXXVI. BALUZ.</note>
+						<pb n="1216"/>
+						<milestone unit="PLSection" n="A"/> Christo, non colligunt autem nobiscum haeretici,
+						sine dubio spargunt.</p>
+					</div>
+					<div type="textpart" subtype="section" n="15">
+					<p n="15">XV. Sed nec illud praetereundum est a nobis quod a vobis necessario dictum est,
+						quod Ecclesia, se- cundum Canticum canticorum, <hi rend="italic">hortus</hi> sit <hi rend="italic">conclusus</hi> et <hi rend="bold">1168</hi>
+						<hi rend="italic">fons signatus</hi> (96), <hi rend="italic">paradisus cum fructu
+							pomorum</hi> (<hi rend="italic">Cant</hi>. IV, 12, 13). Qui
+						autem nunquam in hunc hortum introierunt, neque paradisum a Deo creatore plantatum
+						viderunt, quomodo de fonte qui intus inclusus <hi rend="superscript">66</hi> est et
+						divino sigillo signatus est, aquam vivam lavacri salutaris praebere alicui po- terunt?
+						Cum vero et arca Noe nihil aliud fuerit quam sacramentum Ecclesiae Christi, quae tunc,
+						omnibus foris pereuntibus, eos solos servavit qui intra ar- cam fuerunt, manifeste
+						instruimur ad Ecclesiae uni- <milestone unit="PLSection" n="B"/> tatem perspiciendam,
+						quemadmodum et apostolus Petrus posuit dicens : <hi rend="italic">Sic et vos
+							similiter</hi>
+						<hi rend="superscript">67</hi> (97) <hi rend="italic">salvos faciet baptisma</hi> (<hi rend="italic">I Petr</hi>. III, 21), ostendens quoniam,
+						quomodo qui <hi rend="superscript">68</hi> cum Noe in arca non fue- runt, non tantum
+						purgati et salvati <hi rend="superscript">69</hi> per aquam non sunt, sed statim diluvio
+						illo perierunt, sic et nunc quicunque in Ecclesia cum Christo non sunt, foris peribunt,
+						nisi ad unicum et salutare Ecclesiae lavacrum per poenitentiam convertantur <hi rend="superscript">70</hi> (98).</p>
+					</div>
+					<div type="textpart" subtype="section" n="16">
+					<p n="16">XVI. Qualis vero error sit et quanta sit caecitas ejus qui remissionem
+						peccatorum dicit apud syna- gogas haereticorum dari posse, nec permanet in fundamento
+						unius Ecclesiae, quae semel a Christo supra petram (99) solidata est, hinc intelligi
+						potest <milestone unit="PLSection" n="C"/> quod soli Petro Christus dixerit : <hi rend="italic">Quaecunque liga- veris super terram, erunt ligata et in coelis; et quae-
+							cunque solveris super terram, erunt soluta et in coelis</hi> (<hi rend="italic">Matth</hi>. XVI, 19); et iterum in Evangelio quando in solos
+							<hi rend="superscript">71</hi> apostolos insufflavit Christus di- cens : <hi rend="italic">Accipite Spiritum sanctum</hi>
+						<hi rend="superscript">72</hi>. <hi rend="italic">Si cujus remi- seritis peccata,
+							remittentur illi; et si cujus tenue- ritis, tenebuntur</hi> (<hi rend="italic">Joan</hi>. XX, 22, 23). Potestas ergo peccatorum
+						remittendorum apostolis data est et <note type="footnote">(97) <hi rend="italic">Sic et
+								nos similiter</hi>. Textum sacrum, Cypria- nique codices quinque in Var. Lectt.
+							edit. Oxon. commemoratos, secutus <hi rend="italic">nos</hi> pro <hi rend="italic">vos</hi> imprimendum curavi. ROUTH.</note>
+						<note type="footnote">(98) <hi rend="italic">Convertantur</hi>. De celebri quaestione
+							hoc unum monebo; exsistere argumenta ab altera parte tem- poribus illis allata, quibus
+							Firmiliani suorumque rationes convelluntur, et baptismus nomine S. Tri- nitatis a
+							quovis administro celebratus firmatur, cum alibi tum in adnotationibus S. Augustini ad
+							Cartha- ginense septimum concilium. Hae in libris ejusdem Patris <hi rend="italic">de
+								Baptismo</hi> legi possunt. ROUTH.</note>
+						<note type="footnote">(99) <hi rend="italic">Ecclesia... super petram</hi>. Paulo post
+							dicet fundamenta Ecclesiae super Petrum collocata fuisse. Vide librum <hi rend="italic">de Unitate Ecclesiae</hi>, ubi ista explican- tur. BALUZ.</note>
+						<pb n="1217"/>
+						<milestone unit="PLSection" n="A"/> Ecclesiis quas illi a Christo missi constituerunt,
+						et episcopis qui eis ordinatione vicaria (1) successe- runt. Hostes autem unius
+						catholicae Ecclesiae, in qua nos sumus, <hi rend="bold">1169</hi> et adversarii nostri,
+						qui apo- stolis successimus, sacerdotia sibi illicita contra nos vindicantes et altaria
+						profana ponentes, quid aliud sunt quam Chore et Dathan et Abiron, pari scelere
+						sacrilegi, et easdem quas et illi poenas da- turi cum his qui sibi consentiunt, secundum
+						quod etiam tunc illorum participes et fautores pari cum eis morte (2) perierunt.</p>
+					</div>
+					<div type="textpart" subtype="section" n="17">
+					<p n="17">XVII. Atque ego in hac parte juste indignor ad hanc tam apertam et manifestam
+						Stephani stulti- tiam, quod qui sic de episcopatus sui loco gloria- tur et se
+						successionem Petri tenere contendit, su- <milestone unit="PLSection" n="B"/> per quem
+						fundamenta Ecclesiae collocata sunt, multas alias petras inducat et ecclesiarum multarum
+						nova aedificia constituat, dum esse illic baptisma sua auctoritate defendit. Nam qui
+						baptizantur com- plent sine dubio Ecclesiae numerum. Qui autem baptisma eorum probat, de
+						baptizatis et Ecclesiam illic esse confirmat. Nec intelligit obfuscari a se et quodam
+						modo aboleri Christianae petrae veritatem qui sic prodit et deserit unitatem. Judaeos
+						tamen, quamvis ignorantia caecos et gravissimo facinore constrictos, zelum Dei Apostolus
+						habere profite- tur <hi rend="superscript">73</hi>. Stephanus, qui per successionem
+						cathedram Petri habere se praedicat, nullo adversus haereticos zelo excitatur, concedens
+						illis non modicam sed <milestone unit="PLSection" n="C"/> maximam gratiae potestatem, ut
+						dicat eos <hi rend="superscript">74</hi> et as- severet per baptismi sacramentum sordes
+						veteris hominis abluere, antiqua mortis peccata donare, regeneratione coelesti filios
+						Dei facere, ad aeternam vitam divini lavacri sanctificatione reparare. Qui sic magna et
+						coelestia Ecclesiae munera haereticis concedit et tribuit, quid aliud agit <hi rend="superscript">75</hi> (3) quam communicat eis quibus tantum gratiae defendit ac
+						vindicat. Et frustra jam dubitat in caeteris quoque consentire eis et particeps esse, ut
+						et simul cum <note type="footnote">Variae lectiones.</note>
+						<note type="footnote"><hi rend="superscript">73</hi> Habere confitetur. <hi rend="italic">Ar. Lam. Ebor. NC</hi>. 1. <hi rend="italic">Routh</hi>. <hi rend="superscript">74</hi> Dicat eis <hi rend="italic">Ar. Lam. Ebor. N C</hi>. 1.
+								<hi rend="italic">Bod</hi>. 2. <hi rend="superscript">75</hi> Quid aliud agit <hi rend="italic">Ar. Lam. Ebor. NC</hi>. 1. <hi rend="italic">Bod</hi>. 2. <hi rend="superscript">76</hi> Quicunque et ubicunque <hi rend="italic">Ar. Lam. Ebor.
+								NC</hi>. 1. <hi rend="italic">Bod</hi>. 2. <hi rend="superscript">77</hi> Caetera
+							quoque apud haereticos, justa <hi rend="italic">Ar. Lam. Ebor. NC</hi>. 1. <hi rend="italic">Bod</hi>. 2. <hi rend="superscript">78</hi> Rejecta <hi rend="italic">Forsan. Routh</hi>. <hi rend="superscript">79</hi> Apostolis. <hi rend="italic">Lam. N C</hi>. 1. <hi rend="italic">Ebor</hi>. <hi rend="superscript">80</hi>
+							Filium et Sp. sanctum <hi rend="italic">Ar. Lam. Ebor. N C</hi>. 1. <hi rend="italic">Bod</hi>. 2.</note>
+						<note type="footnote">Variorum notae.</note>
+						<milestone unit="PLSection" n="D"/>
+						<note type="footnote">(1) <hi rend="italic">Ordinatione vicaria</hi>. Vide notas nostras
+							ad epistolam LXXXIV, Lupi Ferrariensis. BALUZ.</note>
+						<note type="footnote">(2) <hi rend="italic">Pari cum eis morte</hi>. Ita restituimus ex
+							fide unius codicis antiqui bibliothecae Regiae. Hanc porro restitutionem esse
+							legitimam ostendere videntur etiam alia vetera exemplaria, quae habent <hi rend="italic">pari cum eis perierunt</hi>. Quinque et editiones praeferunt <hi rend="italic">pariter</hi>. BALUZ.</note>
+						<note type="footnote">(3) <hi rend="italic">Quid aliud agit</hi>. Et istum quoque locum
+							sup- plevimus ex fide quatuor veterum exemplarium. BALUZ.</note>
+						<note type="footnote">(4) <hi rend="italic">Et ubicunque</hi>. Miror ista excidisse in
+							edi- tione Rigaltii, cum exstent in Morelliana et in Pa- meliana et in omnibus
+							antiquis codicibus. Magis miror omissa esse ab Anglis, qui ignorare non po- terant
+							illa haberi in duabus editionibus a me com- memoratis et in quinque codicibus suis
+							antiquis. <milestone unit="PLSection" n="D"/> Vide quae notavi supra ad epistolam LXXIII. BALUZ.</note>
+						<pb n="1218"/>
+						<milestone unit="PLSection" n="A"/> eis conveniat, et orationes pariter cum iisdem mi-
+						sceat, et altare ac sacrificium commune consti- tuat.</p>
+					</div>
+					<div type="textpart" subtype="section" n="18">
+					<p n="18">XVIII. Sed in multum, inquit, proficit nomen Christi <hi rend="bold">1170</hi>
+						ad fidem et baptismi sanctificatio- nem, ut quicumque et ubicunque <hi rend="superscript">76</hi> (4) in nomine Christi baptizatus fuerit, consequatur statim
+						gra- tiam Christi, quando huic loco breviter occurri possit et dici quoniam, si in
+						nomine Christi valuit foris baptisma ad hominem purgandum in ejusdem Christi nomine
+						valere, illic potuit et manus imposi- tio ad accipiendum Spiritum sanctum. Et incipient
+						caetera <hi rend="superscript">77</hi> quoque quae apud haereticos aguntur justa et
+						legitima videri, quando in nomine Christi ge- <milestone unit="PLSection" n="B"/>
+						rantur, secundum quod vos in epistola vestra exse- cuti estis, non nisi in Ecclesia sola
+						valere posse nomen Christi, cui uni concesserit Christus coelestis gratiae
+						potestatem.</p>
+					</div>
+					<div type="textpart" subtype="section" n="19">
+					<p n="19">XIX. Quod autem pertinet ad consuetudinem re- futandam, quam videntur opponere
+						veritati, quis tam vanus sit ut veritati consuetudinem praeferat, aut qui, perspecta
+						luce, tenebras non derelinquat? Nisi si et Judaeos, Christo adventante, id est veri-
+						tate, adjuvat in aliquo antiquissima consuetudo, quod, relicta <hi rend="superscript">78</hi> nova veritatis via, in vetustate permanserint. Quod quidem adversus Stephanum
+						vos dicere, Afri, potestis, cognita veritate, errorem vos consuetudinis reliquisse.
+						Caeterum nos veritati <milestone unit="PLSection" n="C"/> et consuetudinem jungimus, et
+						consuetudini Roma- norum consuetudinem, sed veritatis opponimus, ab initio hoc tenentes
+						quod a Christo et ab apostolis <hi rend="superscript">79</hi> traditum est. Nec
+						meminimus hoc apud nos ali- quando coepisse, cum semper istic observatum sit ut nonnisi
+						unam Dei Ecclesiam nocemus, et san- ctum baptisma nonnisi sanctae Ecclesiae computa-
+						remus. Plane, quoniam quidam de eorum baptismo dubitabant qui, etsi non ut nos (5)
+						prophetas reci- piunt, eosdem tamen Patrem et Filium <hi rend="superscript">80</hi>
+						nosse <note type="footnote">(5) <hi rend="italic">Non ut nos</hi>. Hanc lectionem, quam
+							puto esse optimam, inveni in uno libro meo vetere. Morellius posuit <hi rend="italic">non vos</hi>; eamque lectionem ego reperi in quatuor codicibus antiquis. Pamelius
+							emendavit ex conjectura et scripsit <hi rend="italic">novos prophetas</hi>, tum quia
+							conjecturam suam confirmatam reperit auctorita e codicis Anglicani quo ipse utebatur,
+							tum quod an- tea Firmilianus novarum prophetiarum meminerit. Itaque ex editione
+							Pamelii emersit vulgaris. Vide- tur autem Firmilianus respexisse ad haeresim Mar-
+							cionitarum, quos Epiphanius ait repu(??)iasse legem ac prophetas. Monet praeterea
+							Pamelius in codice suo Anglicano legi <hi rend="italic">et Spiritum sanctum</hi> post
+								<hi rend="italic">Patrem et Filium</hi>. Quod ego in nullo eorum veterum exem
+							plarium reperi quibus usus sum in hac epistola re- <milestone unit="PLSection" n="C"/>
+							censenda. Rejecit autem Pamelius hoc additamen- tum, quia Cataphrygae non eumdem
+							Spiritum san- cium cum catholicis agnoscebant, utpote qui non illud sed Montanum esse
+							paracletum a Christo pro- missum dicerent. BALUZ.</note>
+						<pb n="1219"/>
+						<milestone unit="PLSection" n="A"/> nobiscum videntur, plurimi simul convenientes in
+						Iconio, diligentissime tractavimus et confirmavimus repudiandum esse omne omnino
+						baptisma quod sit extra Ecclesiam constitutum.</p>
+					</div>
+					<div type="textpart" subtype="section" n="20">
+					<p n="20">XX. Ad illud autem quod pro haereticis ponunt, et <hi rend="bold">1171</hi>
+						aiunt Apostolum dixisse : <hi rend="italic">Sive per occasio- nem, sive per veritatem,
+							Christus annuntietur</hi> (<hi rend="italic">Phil</hi>., I,
+						18), ut respondeamus, ineptum est, quando mani- festum sit Apostolum in epistola sua qua
+						hoc dixit, neque haereticorum neque baptismi eorum mentionem fecisse, sed locutum esse
+						de fratribus tantum, sive perfide (6) secum loquentibus, sive in fide sincera
+						perseverantibus, nec oporteat hoc longo tractatu excutere, sed ipsam satis sit epistolam
+						legere, et quid Apostolus dixerit, de ipso Apostolo recogno- <milestone unit="PLSection" n="B"/> scere.</p>
+					</div>
+					<div type="textpart" subtype="section" n="21">
+					<p n="21">XXI. Quid ergo, inquiunt, fiet de his qui ab hae- reticis venientes sine
+						Ecclesiae baptismo admissi sunt? Si de saeculo excesserunt, in eorum numero habentur (7)
+						qui apud nos catechizati quidem sunt, sed prius quam baptizarentur obierunt, non modo
+							<hi rend="superscript">81</hi> dicunt emolumentum veritatis et fidei, ad quam, relicto
+						errore, pervenerant, etsi consummationem gratiae consecuti nou sunt, morte praeventi.
+						Qui au- tem adhuc in saeculo permanent baptizentur Eccle- <note type="footnote">Variae
+							lectiones.</note>
+						<note type="footnote"><hi rend="superscript">81</hi> Non modicum <hi rend="italic">conjic. Routh. Vide not</hi>. <hi rend="superscript">82</hi> Ut non abluti,
+							communicatione continguant <hi rend="italic">Ar. Lam. Ebor. N C</hi>. 1. <hi rend="superscript">83</hi> Dominum Christum <hi rend="italic">Ar. N C</hi>.
+							1.</note>
+						<note type="footnote">Variorum notae.</note>
+						<note type="footnote">Statuenti hic Baluzio respexisse Firmilianum ad Marcionitas recte
+							opponas, veteres Patres id semper solitos esse pro certo statuere, alium ac diversum
+							Deum agnoscere Marcionitas, qui Christi Patrem negarent creavisse mundum. Audi
+							Tertullianum adhuc catholicum in hac ipsa de Baptismi quaestione idem suggerentem. <hi rend="italic">Non debeo</hi>, inquit, <hi rend="italic">in illis</hi> (haere- ticis)
+								<hi rend="italic">agnoscere quod mihi est praeceptum, quia non idem Deus est nobis
+								et illis, nec unus Christus, id est, idem</hi> : de baptismo, cap. 15. Itaque
+							veterem revocavi lectionem, quae cum melior apparet, tum exstat in codice Bodleiano
+							atque illo Novi Collegit, caeterisque fortasse mss., qui in editione Oxon. (??)fferri
+							solent, quippe cum nulla sit varietas lectio- <milestone unit="PLSection" n="D"/> nis
+							ibidem notata. Caeterum additamentum illud, <hi rend="italic">et Spiritum sanctum</hi>
+							in codd. quinque repertum fuisse novimus ex ead. editione. Ostendit vero hic ipse
+							Firmiliani locus recte sensisse de Patre Filioque hos quidem Montanistas. ROUTH.</note>
+						<note type="footnote">(6) <hi rend="italic">Perfide</hi>. Ita Morellius et quatuor libri
+							veteres : alii quatuor habent <hi rend="italic">per fidem</hi>. BALUZ.</note>
+						<note type="footnote">(7) <hi rend="italic">In eorum numero... habentur</hi>. Sic
+							restituimus hunc locum auctoritate vetusti codicis Compendien- sis et Michaelini, in
+							quibus vox <hi rend="italic">habentur</hi> est transpo- sita, sed tamen cum nota
+							veteri, quae ostedit ubi ponenda sit, nimirum post vocem <hi rend="italic">numero</hi>. Itaque cadit conjectura Rigaltii hunc locum emendantis. BALUZ. — E(??)d. omnes, <hi rend="italic">non modo dicunt</hi>.
+							Sed reci- p(??)a videbatur conjectura Prudentio Marano (<hi rend="italic">Vita
+								Cypr</hi>. § 31 <hi rend="italic">extr</hi>.) et Ro(??)thio communis (scilic. <hi rend="italic">non modicum dicunt</hi>). GOLDHORN. — Cum
+							post verbum <hi rend="italic">obierunt</hi> posita esset ante Baluzii mutationem vox
+								<hi rend="italic">habentur</hi>, Rigaltius locum sic emendandum voluit, habeant <hi rend="italic">non modo</hi> discunt <hi rend="italic">emolumentum</hi>. Affert vero
+								<milestone unit="PLSection" n="C"/> Fellus longam sed satis contortam
+							interpretationem verborum, <hi rend="italic">non modo dicunt emolumentum</hi>. Ausim
+							ergo reponere, <hi rend="italic">non</hi> modicum <hi rend="italic">emolumentum</hi>;
+							Graece, <foreign xml:lang="grc">Οὐ μέτριον κέρδος ἀλήθειας καὶ πίστεως</foreign>.
+							Exstant voces, <hi rend="italic">non modicam</hi> supra § 12. Et postquam haec
+							scripsi, visis Marani verbis gavisus sum, quod ante me eodem fere modo locum corrigere
+							voluisset, « Alium locum, inquit, longe difficiliorem emendare conabor. De iis qui
+							foris baptizati sine novo ba- ptismo in Ecclesia obierunt, sic statuit Firmilianus.
+								<hi rend="italic">Si de saeculo non sunt morte praeventi</hi>. Existimat Ri- galtius
+							verbum <hi rend="italic">habent</hi> reponendum post <hi rend="italic">habentur</hi>,
+							et sic emendat : habent <hi rend="italic">non modo</hi> discunt <hi rend="italic">emolu- mentum veritatis et fidei</hi> : sed multo aptius legi posset : <hi rend="italic">habent non modicum emolumentum, pro non modo dicunt aut non modo
+								discunt</hi>. » Haec Maranus in <hi rend="italic">Vit. S. Cypriani</hi>, § 31, p.
+							118. Sed haud necesso esse ut addatur <hi rend="italic">habent</hi>, opinor. ROUTH.</note>
+						<pb n="1220"/>
+						<milestone unit="PLSection" n="A"/> siae baptismo, ut remissionem peccatorum conse- qui
+						possint, ne, per alienam praesumptionem, in pristino errore manentes, sine gratiae
+						consumma- tione moriantur. Caeterum quale delictum est. vel illorum qui admittunt, vel
+						eorum <hi rend="bold">1172</hi> qui admit- tuntur, ut uon ablutis per Ecclesiae lavacrum
+						sor- dibus, nec peccatis expositis, usurpata temere communicatione contingant <hi rend="superscript">82</hi> (8) corpus et san- guinem Domini, cum scriptum sit : <hi rend="italic">Quicunque ede- rit panem aut biberit calicem Domini indigne, reus erit
+							corporis et sanguinis Domini</hi> (<hi rend="italic">I Cor</hi>. XI, 27).</p>
+					</div>
+					<div type="textpart" subtype="section" n="22">
+					<p n="22">XXII. Nos etiam illos quos hi qui prius in Ec- clesia catholica episcopi
+						fuerant, et postmodum sibi potestatem clericae ordinationis assumentes baptiza- verunt,
+						pro non baptizatis habendos judicavimus. <milestone unit="PLSection" n="B"/> Et hoc apud
+						nos observatur, ut quicunque ab illis tincti ad nos veniunt, tanquam alieni et nihil
+						con- secuti, unico et vero Ecclesiae catholicae baptismo apud nos baptizentur et lavacri
+						vitalis regenera- tionem consequantur. Et tamen multum interest inter eum qui Invitus et
+						necessitate persecutionis coactus succubuit (9), et illum qui sacrilega volun- tate
+						audax contra Ecclesiam rebellat, vel in Patrem et Deum Christi <hi rend="superscript">83</hi> (10) et totius mundi conditorem impia voce blasphemat. Et non pudet Stephanum
+							<note type="footnote">(8) <hi rend="italic">Contingant</hi>. In editione Pameliana
+							perperam, <milestone unit="PLSection" n="D"/> per errorem videlicet typographi, et
+							dein in Rigal- tiana et in Anglicana scriptum est <hi rend="italic">continguant</hi>,
+							sed non in editione Goulartii. Sane hanc pravam lectio- nem Angli scribunt se
+							invenisse in quatuor codici- bus antiquis. Sed istud non probat illam esse reti-
+							nendam, cum prava sit omnino et minime Latius. BALUZ.</note>
+						<note type="footnote">(9) <hi rend="italic">Necessitate persecutionis coactus
+								succubuit</hi>. Hic, quod constat ex superioribus, clericus desi- gnatur. Clericus
+							autem lapsus ordine sacro moveri solitus est, neque ei licuit ut baptizandi ritum ad-
+							ministrare. ROUTH.</note>
+						<note type="footnote">(10) <hi rend="italic">Deum Christi</hi>. Ista sic ponuntur
+							tanquam si Deus esset conditor Christi et totius mundi. Viden- dum igitur an lectio
+							veteris libri Remigiani et duo- rum Anglicanorum praeferenda sit, qui pro <hi rend="italic">Christi</hi> habent <hi rend="italic">Dominum nostrum</hi>. At si ea
+							lectio placet, tollenda est conjunctio. In uno meo legitur <hi rend="italic">Domini
+								Christi</hi>. BALUZ. — Ex edit. Oxon. constat exstare verba
+								<hi rend="italic">Dominum Christum</hi>, non, ut ait Baluzius, <hi rend="italic">Dominum nostrum</hi> in codd. et Novi Collegii. Ab hoc quidem ms., sicut a cod.
+							Bodleiano, haud male abest particula <hi rend="italic">et</hi> ante voces <hi rend="italic">totius mundi</hi>. Ad verba autem quod attinet, <hi rend="italic">Patrem et Deum Christi</hi>, simi- liter locutus est Dominus ipse ad Mariam
+							Magdale- nam in <hi rend="italic">S. Joannis Evangelio</hi>
+							XX, 17. Similiter scri- pserunt apostoli ejus. <hi rend="italic">Confer Rom</hi>. XV, 6; <hi rend="italic">II
+								Cor</hi>. XI. 3; <hi rend="italic">Ephes</hi>., I, 3, 17; <hi rend="italic">Coloss</hi>., I, 3; <hi rend="italic">Hebr</hi>., I, 9; <hi rend="italic">I Pet</hi>., I, 3. ROUTH.</note>
+						<pb n="1221"/>
+						<milestone unit="PLSection" n="A"/> hoc asserere, ut per eos qui <hi rend="superscript">84</hi>, cum ipsi in omnibus peccatis sini constituti (11), dicat posse remissio- nem
+						peccatorum dari, quasi possit esse in domo mortis lavacrum salutis!</p>
+					</div>
+					<div type="textpart" subtype="section" n="23">
+					<p n="23">XXIII. Ubi ergo erit quod scriptum est : <hi rend="italic">Ab aqua</hi>
+						<hi rend="bold">1173</hi>
+						<hi rend="italic">aliena</hi> (12) <hi rend="italic">abstine te, et a fonte alieno ne
+							biberis</hi> (<hi rend="italic">Prov</hi>. ix, 19, <hi rend="italic">juxt</hi>. LXX), si relicto Ec- clesiae fonte signato, alienam aquam pro
+						tua susci- pis et profanis fontibus Ecclesiam polluis? Quando enim baptismo haereticorum
+						communicas, quid aliud quam de voragine et coeno illorum bibis, et ipse Ecclesiae
+						sanctificatione purgatus, alienarum sordium contactibus inquinaris? Nec metuis judi-
+						cium Dei haereticis testimonium contra Ecclesiam perhibens, cum scriptum sit : <hi rend="italic">Falsus testis non erit</hi>
+						<milestone unit="PLSection" n="Β"/>
+						<hi rend="italic">impunitus</hi> (<hi rend="italic">Prov</hi>. XIX, 5). Quin imo, tu haereticis omnibus pejor es : nam, cum inde multi, cognito
+						errore suo, ad te veniant ut Ecclesiae verum lumen accipiant, tu venientium errores
+						adjuvas, et, obscu- rato lumine ecclesiasticae veritatis, tenebras haere- ticae noctis
+						accumulas. Cumque se illi in peccatis esse et nihil gratiae habere se, ac propterea ad
+						Ec- clesiam venire fateantur, tu eis remissionem pec- catorum subtrahis, quae in
+						baptismo datur, dum dicis eos jam baptizatos et extra Ecclesiam Eccle- siae gratiam
+						consecutos. Nec intelligis animas eo- rum de manu tua exquiri cum judicii dies venerit,
+							<milestone unit="PLSection" n="C"/> qui sitientibus Ecclesiae potum negasti, et
+						volenti- <note type="footnote">Variae lectiones.</note>
+						<note type="footnote"><hi rend="superscript">84</hi>
+							<hi rend="italic">Sic Ar. Lam. Ebor. NC</hi>. 1. <hi rend="italic">MR</hi>. Qui ipsi
+								<hi rend="italic">Rig</hi>. <hi rend="superscript">85</hi> Quia adversus nostes Dei
+							asserit <hi rend="italic">Lam</hi>. <hi rend="superscript">86</hi> Con- tendit <hi rend="italic">forte, Routh</hi>.</note>
+						<note type="footnote">Variorum notae.</note>
+						<note type="footnote">(11) <hi rend="italic">Qui cum ipsi. Qui ipsi in omnibus peccatis
+								sint constituti</hi>. Veterem lectionem restitui. Primus edidit Fellus post codices
+							scriptos <hi rend="italic">qui cum ipsi</hi> pro <hi rend="italic">qui ipsi</hi>, quod
+							quidem ex duplici lectione ortum vi- detur. Posuit autem Pamelius <hi rend="italic">sunt</hi> pro <hi rend="italic">sint</hi> ex Cau- chii vel codice vel conjectura
+							ejusdem. ROUTH.</note>
+						<milestone unit="PLSection" n="D"/>
+						<note type="footnote">(12) <hi rend="italic">Ab aqua aliena</hi>. Adnotat editio
+							Anglicana textum hunc frustra alibi requiri quam in versione Graeca, nimirum abesse a
+							codicibus Hebraeis et vul- gato Latino, haberi tamen in Syriaca, Arabica, et Armenica
+							interpretatione, et hinc confici posse eamdem versionem Graecam etiam illic ubi ab
+							Hebraeo disceditur, ubique terrarum invaluisse. Ter- tullianus, lib. I
+							<hi rend="italic">adversus Marcionem : Non putem impudentiorem quam qui in aliena aqua
+								alii deo lingitur</hi>. Vide notas ad epistolam LXXIII, <hi rend="italic">Ecclesia paradisi instar</hi>. BALUZ.</note>
+						<note type="footnote">(13) <hi rend="italic">Justius</hi>. Non possum omittere quin
+							admoneam septem vetera exemplaria praeferre <hi rend="italic">injustius.</hi> Sequi
+							tamen placuit editionem Morellii, quam confirmant tria vetera exemplaria. ID.</note>
+						<note type="footnote">(14) <hi rend="italic">Adversus eum qui</hi>. Ita Morellius et
+							tres libri veteres. Omnes allii omittunt <hi rend="italic">eum qui</hi>, etiam unus
+							Anglicanus. ID.</note>
+						<note type="footnote">(15) <hi rend="italic">Imperitos etiam animosos</hi>. Quintilianus
+							I. I, c. 1 : <hi rend="italic">Nihil enim pejus est iis qui
+								paulum ali- quid ultra primas litteras progressi, falsam sibi scien- tiae
+								persuasionem induerunt : nam et cedere praeci- piendi peritis indignantur, et velut
+								jure quodam potestatis, quo fere hoc hominum genus intumescit, imperiosi atque
+								interim saevientes stultitiam suam perdocent</hi>. Vide etiam lib. VI, cap. 4, et lib. VIII, cap. 2.
+							Joannes Saresberiensis, lib.·VII. <hi rend="italic">de Nugis
+								Curialium</hi>, cap. 9 : <hi rend="italic">Ille tamen contradicit citius et
+								pertinacius qui in paucitate rerum addiscenda consum- psit aetatem, et tanta
+								angustia premitur, ut, si ver- bum unam aut duo subduxeris, elinguis fiat et quavis
+								statuae taciturnior</hi>. Vitruvius in praefatione libri III : <hi rend="italic">Animadverto potius indoctos quam doctos gratia su-
+								perare</hi>. Hieronymus, in <hi rend="italic">Apologia</hi> adversus <hi rend="italic">Rufi</hi>- <milestone unit="PLSection" n="D"/>
+							<hi rend="italic">num : Animosus inhonestus est</hi>. Nonius Marcellus : <hi rend="italic">Animosi dicuntur iracundi</hi>. Augustinus sermone 164 de verbis
+							Apostoli : <hi rend="italic">Humanum fuit errare; diaboli- cum est per animositatem in
+								errore manere</hi>. Ago- bardus in libro <hi rend="italic">de Grandine et
+								Tonitruis,</hi> notat imperitos loqui confidenter. Animosus tamen apud Latinos
+							accipiebatur pro magno viro et forti animo praedito, animositas vero pro vehementia et
+							im- petu animi. ID.</note>
+						<pb n="1222"/>
+						<milestone unit="PLSection" n="A"/> bus vivere causa mortis fuisti. Et insuper indi-
+						gnaris.</p>
+					</div>
+					<div type="textpart" subtype="section" n="24">
+					<p n="24">XXIV. Vide qua imperitia reprehendere audeas eos qui contra mendacium pro
+						veritate nituntur. Quis enim justius (13) indignari contra alterum debuit? utrumne qui
+						hostes Dei asserit, an vero qui adversus eum qui (14) hostes Dei asserit <hi rend="superscript">85</hi> pro Ecclesiae veritate consentit <hi rend="superscript">86</hi>? Nisi quod imperi- tos etiam animosos (15) atque iracundos esse mani- festum
+						est, dum per inopiam consilii et sermonis (16) ad iracundiam <hi rend="bold">1174</hi>
+						facile vertuntur, ut de nullo alio magis quam de te dicat Scriptura divina : <hi rend="italic">Homo animosus parat lites</hi> (17), <hi rend="italic">et vir iracundus
+							exagge- rat peccata</hi> (<hi rend="italic">Prov</hi>. XXIX,
+						22). Lites enim et dissen- siones quantas parasti per Ecclesias totius mundi! <milestone unit="PLSection" n="B"/> Peccatum vero quam magnum tibi exaggerasti, quando te a tot
+						gregibus scidisti! Excidisti enim te ipsum. Noli te fallere; siquidem ille est vere
+						schi- smaticus qui se a communione ecclesiasticae unita- tis apostatam fecerit : dum
+						enim putas omnes a te abstineri posse, solum te ab omnibus abstinuisti. Nec te informare
+						ad regulam veritatis et pacis vel Apostoli praecepta potuerunt monentis et dicentis :
+							<hi rend="italic">Obsecro ergo vos ego vinctus in Domino, digne am- bulare vocatione
+							qua vocali estis, cum omni humi- litate sensus et lenitate, cum patientia sustinentes
+							invicem in dilectione, satis agentes servare unitatem</hi>
+						<milestone unit="PLSection" n="C"/>
+						<hi rend="italic">spiritus in conjunctione pacis; unum corpus, et unus</hi>
+						<note type="footnote">(16) <hi rend="italic">Consilii et sermonis</hi>. Forsitan
+							scripserat Fir- milianus, <foreign xml:lang="grc">συνέχως καὶ λόγου</foreign>. ROUTH.</note>
+						<note type="footnote">(17) <hi rend="italic">Parat lites</hi>. Ita scriptum est in sex
+							libris an- tiquis; tres alii habent <hi rend="italic">parit</hi>. Mihi autem prior
+							lectio videtur esse melior, quia in capite XXIX Pro-
+							verbiorum, ex quo sumptus est hic locus, legitur <hi rend="italic">vir iracundus
+								provocat rixas</hi>. Apud Cassianum, lib. VIII, cap. 1,
+							scriptum est : <hi rend="italic">Vir animosus parat rixas</hi>.</note>
+						<pb n="1223"/>
+						<milestone unit="PLSection" n="A"/>
+						<hi rend="italic">spiritus, sicut vocali estis in una spe vocationis ve- strae. Unus
+							Dominus, una fides, unum baptisma, unus Deus et Pater omnium, qui super omne</hi>
+						<hi rend="superscript">87</hi>, <hi rend="italic">et per omnia, et in omnibus nobis</hi>
+						( (<hi rend="italic">Ephes</hi>. IV, 1-6).</p>
+					</div>
+					<div type="textpart" subtype="section" n="25">
+					<p n="25">XXV. Haec Apostoli mandata et monita saluta- ria <hi rend="superscript">88</hi>
+						quam diligenter Stephanus implevit, humili- tatem sensu et lenitatem primo in loco
+						servans. Quid enim humilius (18) aut lenius quam cum tot episcopis per totum mundum
+						dissensisse, pacem cum singulis vario discordiae genere rumpentem, modo cum
+						Orientalibus, quod nec vos latere confi- dimus, modo vobiscum, qui in Meridie estis; a
+						qui- bus legatos episcopos (19) patienter satis et leniter suscepit, ut eos nec ad <hi rend="bold">1175</hi> sermonem saltem colloquii communis admitteret (20), adhuc
+						insuper, <milestone unit="PLSection" n="B"/> dilectionis et charitatis memor,
+						praeciperet frater- nitati universae ne quis eos in domum suam reci- peret, ut
+						venientibus, non solum pax et communio, sed et tectum et hospitium negaretur. Hoc est
+						ser- vasse unitatem spiritus in conjunctione pacis, ab- scindere se a charitatis
+						unitate, et alienum se per omnia fratribus facere, et contra sacramentum et fidem
+						contumacis furore discordiae rebellare. Apud talem potest esse unum corpus et unus
+						spiritus, apud quem fortasse ipsa anima (21) una non est <note type="footnote">Variae
+							lectiones.</note>
+						<note type="footnote"><hi rend="superscript">87</hi> Qui est super omnia <hi rend="italic">Lam. Ebor</hi>. <hi rend="superscript">88</hi> Salubria <hi rend="italic">Ar. Lam. Ebor. NC</hi>. 1.</note>
+						<note type="footnote">Variorum notae.</note>
+						<milestone unit="PLSection" n="C"/>
+						<note type="footnote">(18) <hi rend="italic">Quid enim humilius</hi>. Simili ironia La-
+							ctantius, cap. 23, <hi rend="italic">de Mortibus Persecutorum</hi>, usus est loquens
+							de crudelitate Maximiani adversus men- dicos, quos congregari omnes jussit et
+							exportatos naviculis in mare mergi. Ait ergo Lactantius : <hi rend="italic">Adeo
+								hominem misericordem, qui providerit ne quis illo imperante miser esset</hi>. BALUZ.</note>
+						<note type="footnote">(19) <hi rend="italic">A quibus legatos episcopos</hi>, etc. Haud
+							dubium videtur quin ab Afris, potius quam ab Orientali- bus, Romam missi sint legati.
+							Contrarium tamen affirmant Baronius in <hi rend="italic">Annalibus</hi>, et Natalis
+							Alexan- der <hi rend="italic">Hist. eccles</hi>. Sed hoc in Afros gestum a Ste- phano
+							fuisse, post Pearsonium retulerunt Pagius, Tillemontius, Basnagius. « Quid ex illorum
+							verbo- rum serie lucidius (inquit Pearsonius in <hi rend="italic">Annalibus
+								Cyprianicis</hi>, ad ann. LVI) quam legatos eos episco-
+							pali honore conspicuos, non ab Orientalibus, sed ab iis qui <hi rend="italic">in
+								Meridie</hi> erant, hoc est Afris, missos fuisse? Neque aliter haec Firmiliani verba
+							(quae ci- <milestone unit="PLSection" n="D"/> tata praecedunt), intelligenda esse
+							sentio. <hi rend="italic">Nisi quod non gratiam referre Stephano in isto possumus,
+								quod per illius inhumanitatem</hi> nunc eflectum sit, ut fidei et saptentiae vestrae
+							experimentum caperemus (supra, p. 222). Illa enim inhumanitas nihil aliud erat quam
+							legatorum rejectio, per quam <hi rend="italic">nec confabulatio jam posset esse, aut
+								sermo communis</hi>. Illi legati in synodo Carthaginensi secunda missi. » § VII. ROUTH.</note>
+						<note type="footnote">(20) <hi rend="italic">Nec ad sermonem admitteret</hi>. Id est, ne
+							in conspectum quidem suum venire permitteret. Eo- dem modo humanitatis el urbanitatis
+							usus est co- (??)es Flandriae erga legatos Clementis panae· VII, qui <hi rend="italic">tantum abfuit ut audirentur</hi>, inquit Radulphus de Rivo, <hi rend="italic">ut ne
+								admissi quidem fuerint, sed rejecti ac facessere jussi, nisi sibi vincula mallent
+								exspectare</hi>. Emendabo autem, data occasione, locum ex pane- gyrico quem Nazarius
+							dixit ad Constantinum post devictum Maxentium, cum modestia Caesaris erga illum
+							laudatur. Ubi sic inter alia legitur in omnibus antiquis codicibus et editionibus :
+								<hi rend="italic">Vocas ad societa</hi>- <milestone unit="PLSection" n="C"/>
+							<hi rend="italic">tem. Appetitum tuum refugit, aversatur, horrescit</hi>. Vox <hi rend="italic">appetitum</hi>, hic loco non suo posita, exercuit in- dustriam
+							criticorum; quorum nonnulli censuerunt reponendum esse <hi rend="italic">affectum</hi>, alii <hi rend="italic">amicum</hi>. Miror au- tem veram lectionem,
+							quae facilis et obvia est, ne- mini eorum in mentem venisse. Reponendum est itaque <hi rend="italic">aspectum</hi>, ut sit sensus : Vocabas Maxentium ad societatem
+							imperii. At ille, ut erat natura ferox et superbus, nedum id quod offerebas amplecti
+							vo- luit, sed etiam aspectum tuum refugit, aversatus est, horruit, sed etiam ultro
+							lacessivit quem ambire debuerat, ut legitur paulo post. BALUZ.</note>
+						<pb n="1224"/>
+						<milestone unit="PLSection" n="A"/> sic lubrica et mobilis et incerta? Sed quantum ad
+						illum pertinet, relinquamas. Excutiamus potius id de quo maxima quaestio est. Qui
+						contendunt ab haereticis baptizatos sic recipi oportere tanquam legitimi baptismi
+						gratiam consecutos, unum nobis atque illis baptisma (22) dicunt esse et in nullo
+						discrepare. Sed quid ait apostolus Paulus? <hi rend="italic">Unus Do- minus, una
+							fides</hi>, <hi rend="bold">1176</hi>
+						<hi rend="italic">unum baptisma, unus Deus</hi> (<hi rend="italic">Ephes</hi>. IV. 3). Si unum atque idem est cum nostro baptisma haereticorum,
+						sine dubio et fides una est. Si autem fides una est, utique et Dominus unus est. Si
+						Dominus unus est (22), consequens est di- cere quia unus est. Si autem haec unitas, quae
+						se- parari omnino et dividi non potest, etiam apud haereticos ipsa est, quid ultra
+						contendimus, ut <milestone unit="PLSection" n="B"/> quid illos haereticos et non
+						Christianos vocamus? Porro, cum nobis et haereticis nec Deus unus sit, nec Dominus unus,
+						nec una Ecclesia, nec fides una, sed nec unus spiritus, aut corpus unum, ma- nifestum
+						est nec baptisma nobis et haereticis com- mune esse posse, quibus nihil est omnino com-
+						mune. Et tamen non pudet Stephanum talibus ad- versus Ecclesiam patrocinium praestare et
+						propter haereticos asserendos fraternitatem scindere, insu- per et Cyprianum
+						pseudo-Christum (24) et pseudo- <note type="footnote">(21) <hi rend="italic">Fortasse
+								ipsa anima</hi>. Recentior Remigianus, <hi rend="italic">apud quem fortasse una
+								anima est sic lubrica</hi>. ID.</note>
+						<note type="footnote">(22) <hi rend="italic">Unum baptisma</hi>. Nescio quo modo factum
+							est ut ista, quae exstant in Epistola Pauli ad Ephe- sios, omissa sint istic ic octo
+							exemplaribus anti- quis. ID.</note>
+						<note type="footnote">(23) <hi rend="italic">Dominus unus est</hi>. Hoc membrum omissum
+								<milestone unit="PLSection" n="D"/> est in editione Rigaltii, restitutum in
+							Anglicana. Sed nescio quonam modo factum est ut Angli abs- que ullius libri veteris
+							auctoritate, contra fidem veterum exemplarium et editionis Morellianae scri- pserint
+								<hi rend="italic">consequens est qua unitas est</hi>; nisi si malue- runt amplecti
+							conjecturam Pamelii, qui monuerat in margine suae editionis legendum esse <hi rend="italic">unitas</hi>, vel auctoritatem Goulartii, qui eam vocem posuit in
+							contextu, nulla Pamelii mentione. Remhartus in sua editione reposuit <hi rend="italic">unus</hi>. ID. — Exstat in Novi Coll(??)conice <hi rend="italic">quia</hi> unus <hi rend="italic">est</hi>, quod edidit Baluzius. Le-
+							gerim, <hi rend="italic">quia</hi> Deus <hi rend="italic">unus</hi> est, id quod
+							sequentia verba suad ut. <hi rend="italic">Quia</hi> pro <hi rend="italic">quod</hi>
+							apud hos scriptores pon(??)so- let. ROUTH.</note>
+						<note type="footnote">(24) <hi rend="italic">Pseudo-Christum</hi>. Imitatum est istud ex
+							ca- p(??)e undecimo Epistolae II Pauli <hi rend="italic">ad Corinthios. Hinc
+								patet</hi>, inquit Pamelius, <hi rend="italic">vehementium epistolae Sic- phani
+								papae in causa fuisse cur tam vehementer etiam contra eum scriberent Cyprianus et
+								Firmilia- nus</hi>. Recte sane. Non enim aliud causae exsti(??)t, cur Firmilianus,
+							qui in tota epistola summum amo- rem unitatis declarat, sic tamen in Stephanum in-
+							vehatur, ut eum disputationis aestu abreptum fuisse pateat. Nihil lenius ac
+							placabilius Cypriano, ejus- que animi moderatio cum in omnibus aliis rebus, tum maxime
+							in hac de Baptismo controversia eni- tuit; sed tamen eum interdum a summa illa leni-
+							tate ad vehementiorem causae defensionem trans- iisse perspicitur ex epistola ad
+							Pompeium. Videtur <milestone unit="PLSection" n="B"/> autem Cyprianum et Firmilianum
+							illud in primis offendisse, quod Stephanus putaret abstinendos re- baptizantes.
+							Propter haec autem verba, quae putat non esse Stephani, dubitare se ait Christianus
+							Lu- pus in scholiis suis ad librum Tertulliani <hi rend="italic">de Prae-
+								scriptionibus adversus haereticos,</hi> an epistola Firmi- liani sit vera. Tamen
+							nemo hactenus ante Lupum id sibi sumpsit, ut dicere auderet eam esse falsam aut de
+							ejus auctoritate dubitaret. Et certe ista faci- litas accusandi falsitatis scripta
+							veterum valde te- meraria est et periculosa. Nam si cuique liceat inanes ejusmodi
+							conjecturas sequi : nullum erit an- tiquitatis monumentum, quod iniquas suspiciones
+							effugiat. BALUZ. — Ita Baluzius. Haud interea mihi visus est
+							voluisse hoc scribere Christianus Lupus, Firmiliani epistola an germana sit, se
+							dubitare; de appellationibus autem probrosis Cypriano a Ste- phano attributis, an hae
+							ab eo revera prolatae fue- rint, se haesitare. Vid. <hi rend="italic">Scholia</hi>
+							ejus ad Tertulliani c. 4, pag. 121. At cogitandum, quibus dicteriis ipsum, ut videtur,
+							Cyprianum lacessiverit vetus quidam Stephanianae de haereticorum baptismo sen- tentiae
+							stator, qui est auctor <hi rend="italic">de Rebaptismate</hi>, ad fin. op. S.
+							Cypriani. Conferas quae de Firmiliani epi- stola supra annotantur. ROUTH.</note>
+						<pb n="1225"/>
+						<milestone unit="PLSection" n="A"/> apostolum et dolosum operarium dicere. Qui om- nia.
+						(25) in se esse conscius <hi rend="bold">1177</hi> praevenit, ut alteri ea per mendacium
+						objiceret quae ipse (26) ex merito audire deberet. Bene te valere omnibus no- bis (27)
+						cum universis qui in Africa sunt episcopis <note type="footnote">Variorum notae.</note>
+						<pb n="1226"/>
+						<milestone unit="PLSection" n="A"/>
+						<hi rend="bold">1178</hi> et cunctis clericis et omni fraternitate uni- versi optamus,
+						ut perpetuo unanimes et unum sentientes habeamus nobiscum etiam de longinquo adunatos.
+							<note type="footnote">(25) <hi rend="italic">Qui omnia. Quae omnia</hi> legendum olim
+							duxi, prius quam sic se habere novissem editionem princi- pem, siquidem postea
+							Pamelius <hi rend="italic">qui</hi> pro <hi rend="italic">quae</hi>, ex ms. suo
+							edidit, aliis, fateor, libris scriptis consentienti- <milestone unit="PLSection" n="B"/> bus. Sed fortasse Graece scripserat Firmilianus vel <foreign xml:lang="grc">ἅ δὴ
+								πάντα,</foreign> vel <foreign xml:lang="grc">τάδε δὲ πάντα.</foreign> Id.</note>
+						<note type="footnote">(26) <hi rend="italic">Quae ipse</hi>. In recentiore codice
+							Remigiano et in Anglicano Pamelii legitur, <hi rend="italic">quae ei immerito objici
+								deberent.</hi> Sic etiam in quatuor antiquis in editione Anglicana laudatis.</note>
+						<note type="footnote">(27) <hi rend="italic">Omnibus nobis</hi>. Haec mihi videntur esse
+							lu- xata. Quid si legatur <hi rend="italic">charissime frater</hi>, errore irre- pente
+							ex ignorantia notarum, ut etiam adnotavit. Hieronymus in epistola <hi rend="italic">ad
+								Avitum</hi> de erroribus Origenis, ubi ait difficile esse notarum posse ser- vare
+							compendia. Simon Goulartius monuit in co- dice episcopi. Acconensis scriptum fuisse :
+								<hi rend="italic">Bene te valere cum universis qui in Africa sunt episcopis et
+								cunctis clericis et omni fraternitate optamus</hi>. Quam lectionem, ut meliorem,
+							posuit Reinhartus. Et ni- hilominus ego praefero conjecturam meam. Nihil tamen ausus
+							sum mutare, destitutus auctoritate ve- terum exemplarium.</note></p>
+					</div>
+				</div>
+			</div>
+
+		</body>
+	</text>
+</TEI>
