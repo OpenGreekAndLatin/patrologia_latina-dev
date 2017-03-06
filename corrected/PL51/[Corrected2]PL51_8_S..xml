@@ -1,0 +1,737 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><TEI xmlns="http://www.tei-c.org/ns/1.0"><teiHeader>
+    
+		<fileDesc>
+			<titleStmt>
+				<title>Patrologiae Cursus Completus. Series Latina (PL)</title>
+				<sponsor>University of Leipzig</sponsor>
+				<funder>European Social Fund Saxony</funder>
+				<principal>Gregory Crane</principal>
+				<respStmt>
+					<persName xml:id="Jouve">Jouve</persName>
+					<resp>OCR-ed, corrected and encoded the text</resp>
+				</respStmt>
+				<respStmt>
+					<persName>Greta Franzini</persName>
+					<resp>Project Manager (University of Leipzig)</resp>
+				</respStmt>
+				<respStmt>
+					<persName>Simona Stoyanova</persName>
+					<resp>Project Assistant (University of Leipzig)</resp>
+				</respStmt>
+				<respStmt>
+					<persName>Bruce Robertson</persName>
+					<resp>Technical Advisor (Mount Allison University)</resp>
+				</respStmt>
+			</titleStmt>
+
+			<publicationStmt>
+				<authority>University of Leipzig</authority>
+				<idno type="filename">PL51.xml</idno>
+				<availability>
+					<licence target="https://creativecommons.org/licenses/by-sa/4.0/">Available under a
+						Creative Commons Attribution-ShareAlike 4.0 International License</licence>
+				</availability>
+				<date>2014</date>
+				<publisher>University of Leipzig</publisher>
+				<pubPlace>Germany</pubPlace>
+			</publicationStmt>
+
+			<sourceDesc>
+				<listBibl xml:lang="la">
+					<biblStruct>
+						<monogr>
+							<editor>
+								<persName>
+									<name xml:lang="fr">Jacques Paul Migne</name>
+								</persName>
+							</editor>
+							<author>Prosperus Aquitanus</author>
+							<title>Epistola Ad Augustinum</title>
+							<title>Epistola Ad Rufinum 'De Gratia Et Libero Arbitrio'</title>
+							<title>Peri Axariston. Seu De Ingratis Carmen In Quatuor Partes Distributum</title>
+							<title>Epigrammata In Obtrectatorem Augustini</title>
+							<title>Epigrammata In Quempiam Augustini Obtrectatorem</title>
+							<title>Epitaphium Nestorianae Et Pelagianae Haereseon</title>
+							<title>Pro Augustino Responsiones Ad Capitula Gallorum</title>
+							<title>Responsiones Ad Capitula Objectionum Gallorum Calumniantium</title>
+							<title>Pro Augustino Responsiones Ad Capitula Objectionum Vincentianarum</title>
+							<title>Pro Augustino Responsiones Ad Excerpta Genuensium</title>
+							<title>Pro Defensione Augustini Contra Cassiani Presbyteri Librum</title>
+							<title>Expositio Psalmorum A Centesimo Usque Ad CL</title>
+							<title>Sententiarum Ex Operibus Augustini Delibatarum Liber Unus</title>
+							<title>Epigrammatum Ex Sententiis Sancti Augustini Liber Unus</title>
+							<title>Chronicum Integrum In Dua Partes Distributum</title>
+							<title>Chronicum Integrum In Dua Partes Distributum [Appendicula]</title>
+							<title>Confessio [Incertus]</title>
+							<title>Poema Conjugis Ad Uxorem [Incertus]</title>
+							<title>Carmen De Providentia Divina [Incertus]</title>
+							<title>Libri Duo De Vocatione Omnium Gentium [Incertus]</title>
+							<title>Liber De Promissionibus Et Praedictionibus Dei A Nonnullis [Incertus]</title>
+							<title>Chronicum Alterum Sive Pseudochronicum [Incertus]</title>
+							<imprint>
+								<publisher>Garnier</publisher>
+								<pubPlace>Paris</pubPlace>
+								<date>1846</date>
+							</imprint>
+							<biblScope unit="volume">51</biblScope>
+						</monogr>
+						<monogr>
+							<title>Concilium Arausicanum I</title>
+							<imprint>
+								<publisher>Garnier</publisher>
+								<pubPlace>Paris</pubPlace>
+								<date>1846</date>
+							</imprint>
+							<biblScope unit="volume">51</biblScope>
+						</monogr>
+						<monogr>
+							<author>Idatius Aquaeflaviensis Episcopus</author>
+							<title>Chronicum</title>
+							<title>Descriptio Consulum Ex Quo Primum Ordinati Sunt [Codex Parisiensis]</title>
+							<imprint>
+								<publisher>Garnier</publisher>
+								<pubPlace>Paris</pubPlace>
+								<date>1846</date>
+							</imprint>
+							<biblScope unit="volume">51</biblScope>
+						</monogr>
+						<monogr>
+							<author>Marcellinus Comes</author>
+							<title>Chronicum</title>
+							<imprint>
+								<publisher>Garnier</publisher>
+								<pubPlace>Paris</pubPlace>
+								<date>1846</date>
+							</imprint>
+							<biblScope unit="volume">51</biblScope>
+						</monogr>
+						<ref target="http://hdl.handle.net/2027/pst.000017928816">HathiTrust</ref>
+
+					</biblStruct>
+				</listBibl>
+			</sourceDesc>
+
+		</fileDesc>
+		<encodingDesc>
+			<p>The following text is encoded in accordance with EpiDoc standards and with the CTS/CITE
+				Architecture.</p>
+		<refsDecl>
+        <cRefPattern n="" matchPattern="(.+).(.+).(.+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@type='edition']/tei:div[@n='$1']/tei:div[@n='$2']/tei:div[@n='$3'])"/>
+        <cRefPattern n="" matchPattern="(.+).(.+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@type='edition']/tei:div[@n='$1']/tei:div[@n='$2'])"/>
+        <cRefPattern n="" matchPattern="(.+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@type='edition']/tei:div[@n='$1'])"/>
+      </refsDecl>
+    </encodingDesc>
+
+		<profileDesc>
+			<langUsage>
+				<language ident="la">Latin</language>
+			</langUsage>
+		</profileDesc>
+
+	</teiHeader>
+	<text><body><div type="edition" n="">
+					<head>
+						<title type="main">S. PROSPERI AQUITANI 
+							PRO AUGUSTINO RESPONSIONES AD CAPITULA
+							OBJECTIONUM VINCENTIANARUM.</title>
+					</head>
+					<ab>
+						<title type="sub">Praefatio.</title>
+					</ab>
+					<p>
+						<milestone unit="PLSection" n="A"/>227 Quidam Christianae  ac   fraternae  charitatis obliti   
+						,<lb/> in tantum existimationem nostram  quoquo   <lb/> modo student laedere, ut suam se
+						evertere nocendi <lb/> cupiditate non  videant . Contexunt enim et. qualibus <lb/> possunt
+						sententiis, comprehendunt ineptissimarum <lb/> quarumdam blasphemiarum prodigiosa
+						mendacia; <lb/> eaque ostendenda et ingerenda multis publice privatimque <lb/> 
+						circumferunt: asserentes  talia in  nostro sensu <lb/> esse qualia diabolico continentur
+						 indiculo  . Quae falso <lb/> in nos, ad excitandam invidiam, jactitari , facile et <lb/>
+						sufficienter subscriptione unius probaremus anathematis  ;<lb/> nisi malignitas eorum,
+						 qui se  gravari putant <lb/> si de nobis bene  sentiatur , ipsam subscriptionis nostrae <lb/>
+						 brevitatem suspectam esset habitura. Unde ne <lb/> hujus  querelae  inveniretur
+						occasio, 228 necessarium <milestone unit="PLSection" n="A"/><lb/>  conveniensque <note n="b"/>
+						credidimus, ut sive ad calumniantium <lb/>  animos  mitigandos  , sive ad  eos  quorum
+						<lb/> auribus tale  aliquid   insonuit instruendos, quantum <lb/> adjuvante Domino fieri
+						potuerit, plene lucideque <lb/> pandamus quid de perversis definitionibus judicemus,
+						<lb/> Propositis igitur singillatim sedecim capitulis, sub <lb/> unoquoque  eorum , sensus
+						nostri, et fidei quam  conI . . : .   .<lb/>.:. Pelagianos  ex  apostolicae    auctoritate defendimus
+						 .<lb/> verba <note n="c"/> ponemus : ut qui paululum se ad legenda <lb/>   haec   dignati
+						fuerint occupare, evidenter  agnoscant . <lb/>  impiarum profanarumque  opinionum nullum 
+						<lb/> cordibus nostris inhaesisse vestigium; et blasphemias <lb/> quas perspexerint
+						nostra professione damnari, in  carumdem reper toribuscenseant deberc  <lb/>     puniri.
+							<note type="footnote"> • MIc. Joliensis., fralernce veritatis. </note><note type="footnote"> b Als. Ul'luig., c,."dimu,. </note>
+						<note type="footnote"> c Ms. ncmig., "on;mu.. </note>
+					</p>
+					<ab>
+						<title type="sub"> LIBER  RESPONSIONUM.</title>
+					</ab>
+					<p>
+						<milestone unit="PLSection" n="B"/>
+					</p>
+					<ab>
+						<title type="sub">229 CAPITULUM PRIMUM.</title>
+					</ab>
+					<ab>
+						<title type="sub">OBJECTIO.</title>
+					</ab>
+					<ab>
+						<title type="sub"><note n="b"/> Quod Dominus noster Jesus Christus non pro  omnium   hominum  salute 
+							et redemptione sit passus.</title>
+					</ab>
+					<ab>
+						<title type="sub">RESPONSIO.</title>
+					</ab>
+					<p>Contra vulnus originalis peccati, . quo  in Adam <lb/> omnium hominum corrupta et
+						mortificata natura <lb/> est, et unde omnium  concupiscentiarum   morbus <lb/> inolevit,
+						verum et potens ac singulare remedium est <lb/> mors Filii Dei <note n="f"/> Domini nostri Jesu
+						Christi; qui liber <lb/>  a mortis debito et solus  absque  peccato , pro <lb/>
+						peccatoribus et debitoribus <note n="d"/> mortis est mortuus. <lb/> 230 Quod ergo ad magnitudinem et
+						potentiam <lb/> pretii, et quod ad  unam  pertinet causam generis <milestone unit="PLSection" n="B"/><lb/> humani, sanguis Christi redemptio est totius  mundi .  <lb/>
+						 Sed qui hoc saeculum sine fide  Christi  et sine <lb/> regenerationis  sacramento  
+						pertranseunt redemptionis <lb/>   alieni  sunt. Cum itaque propter unam  omnium  <lb/>
+						naturam, et unam omnium causam a Domino nostro <lb/> in veritate susceptam.  recte   omnes
+						dicantur redempti  ,<lb/>  et tamen non   omnes a captivitate sint eruti; <lb/>  redemptionis 
+						 proprietas  haud  dubie penes illos est, <lb/> de quibus princeps mundi  missus  
+						est foras, et jam <lb/> non vasa diaboli, sed  membra sunt Christi   .  Cujus   <lb/> mors non
+						ita impensa est humano generi, ut ad  redemptionem  <lb/>  ejus etiam qui regenerandi non
+						erant <lb/> pertinerint; <note n="e"/> sed ita, ut quod per 231 unicum <lb/> exemplum gestum est pro
+						universis, per singulare <milestone unit="PLSection" n="c"/><note type="footnote"> s
+							Scriptum forte paulo post superiores respon­ <lb/> Siones. </note><note type="footnote"> Reiniginfiiis codcx, ante annoss plus udiuis <lb/> octingentos
+							scriptus, habuit a prima .manu Vincen­<lb/> tiarum; a srcutidn vero jnm olim correctus
+							piaft-rt <lb/> (n. in fine libri ahsque correctione legitur) Vince"..  ,<lb/>;o""rU"I:
+							Lovanienses observant csse qui :lIhi.ren­ <lb/> lur objectionum scripiorem Vinrentium
+							Liriuenscin <lb/> illumrUls..e cujus exstat :..h'er:-us profanas lia re­ <lb/> sum
+							uovalatei l:oluu8onitol'iulu t scriptum circitcr </note>
+						<milestone unit="PLSection" n="c"/><note type="footnote"> nnnum Chri,ti 4:)ł, son,ut
+							ipse auctor in cap. '1 <lb/> testatur, post iriMihiuu letme a ceicbrato cClulra <lb/>
+							Nest riuin concil.o f (,IarSi I' o. </note><note type="footnote"> 11 .Mss. Itcinivr.
+							ct J"liensis liic et in capite ,eliqua­ <lb/> runt objectionum,Quia. IIhi (,.lllI Quod
+							liabciH. </note><note type="footnote"> c Editi,. DO"II,,; Jesu Chr;s';. on.is-n voce
+							nostri, <lb/> quam liabeni mss lleui^. et Jol. et edit.AngiMl. </note><note type="footnote"> d IIic mortis addimus ex ms. Kmigiano ei J()e <lb/> liensi. n&lt;'c
+							non ex edii. Augn.sl. Oper. </note><note type="footnote"> * Ms. Jol., scd ut, omisso
+							ita. </note><pb n="179"/>
+						<milestone unit="PLSection" n="A"/><lb/> sacramentum  celebraretur  in singulis. Poculum
+						<lb/> quippe immortalitatis, quod confectum est de infirmita <lb/>  e nostra et virtute
+						divina, habet quidem in se <lb/> ut omnibus prosit; sed si non bibitur, non medetur 
+						.<lb/></p>
+					<ab>
+						<title type="sub">CAPITULUM II.</title>
+					</ab>
+					<ab>
+						<title type="sub">OBJECTIO.</title>
+					</ab>
+					<ab>
+						<title type="sub">Quod Deus nolit omnes salvare, etiamsi omnes salvari velint.</title>
+					</ab>
+					<ab>
+						<title type="sub">RESPONSIO.</title>
+					</ab>
+					<p>Cum  Veritas  dicat ( Matth. VII,    ): Si vos cum <lb/> sitis mali. nostis bona data dare
+						filiis vestris, quanto <lb/> magis Pater vester coelestis dabit bona  petentibus  se ?
+						<lb/> qui fieri potest ut Deus, qui etiam illos salvat, de <lb/> quibus dici non potest
+						quod salvari velint, nolit aliquos <milestone unit="PLSection" n="B"/><lb/>  salvare
+						etiam si salvari velint, nisi aliquae <lb/> causae exsistant de quibus , quamvis sint
+						nobis ingnoscibiles  ,<lb/> <note n="a"/> ille tamen bene judicat , de quo dici <lb/> non potest,
+						aliter eum quidquam facere debuisse <lb/> quam fecerit ? Remota ergo hac discretione,
+						quam <lb/>  divina  scientia intra secretum  justitiae  suae continet  ,<lb/> sincerissime
+						credendum atque profitendum est <lb/> Deum velle ut omnes homines salvi fiant. Siquidem
+						<lb/> Apostolus, cujus ista sententia est   I Tim. II, 4), <lb/> sollicitissime
+						praecipit, quod in omnibus Ecclesiis <lb/> piissime custoditur, ut Deo pro omnibus
+						 hominibus  <lb/> supplicetur : ex quibus  quod  multi pereunt, pereuntium  .<lb/> est
+						meritum ; quod multi salvantur, salvantis <lb/> est donum. Ut enim  reus  damnetur,
+						inculpabilis <lb/> Dei justitia est; ut autem reus justificetur, ineffabilis <milestone unit="PLSection" n="c"/><lb/>  Dei gratia est.</p>
+					<ab>
+						<title type="sub">CAPITULUM III.</title>
+					</ab>
+					<ab>
+						<title type="sub"> OBJECTIO .</title>
+					</ab>
+					<ab>
+						<title type="sub">Quod Deus majorem partem generis humani ad hoc creet, ut illam perdat
+							in aeternum.</title>
+					</ab>
+					<ab>
+						<title type="sub">RESPONSIO.</title>
+					</ab>
+					<p>Omnium quidem hominum creator est Deus, sed <lb/>  nemo  ab eo ideo creatus est,  ut 
+						periret: quia alia <lb/> est causa nascendi, et <note n="b"/> alia est causa pereundi. Ut <lb/> enim
+						nascantur homines conditoris est beneficium; <lb/> ut autem pereant, praevaricatoris est
+						meritum. In <lb/> Adam quippe, in quo omnium hominum praeformata <lb/> natura est, omnes
+						peccaverunt (Rom. v, 12)  ,  eademque <lb/>  sententia quam ille excepit obstricti sunt.
+						<lb/>  Neque ab  hoc  vinculo , etiam si propriis peccatis <milestone unit="PLSection" n="D"/><lb/> careant, resolvuntur, nisi 232 in sacramento mortis <lb/>  et resurrectionis
+						Christi per Spiritum sanctum <lb/> renascantur. Nimis ergo impius et indoctus est qui
+						<lb/> vitium naturae; non  discernit  ab auctore naturae a <lb/> quo prorsus alienum est
+						quidquid in  unoquoque  <lb/>  damnandum est. Creat enim homines, ut sint homines <lb/> 
+						: nec multiplicandis  generationum successionibus  <lb/>  opificium suum subtrahit ,
+						secundum consilium <milestone unit="PLSection" n="A"/><lb/>  bonae  voluntatis  suae;
+						reparaturus in  multis  <lb/> quod ipse fecit, puniturus in multis quod ipse <lb/> non
+						fecit. Sicut <note n="d"/> enim per inobedientiam unius homines <lb/>  peccatores constituti sunt
+						multi, ita et per unius <lb/> hominis obedientiam justi constituuntur multi (Rom. <lb/>
+						v, 19).</p>
+					<ab>
+						<title type="sub">CAPITULUM IV.</title>
+					</ab>
+					<ab>
+						<title type="sub">OBJECTIO.</title>
+					</ab>
+					<ab>
+						<title type="sub">Quod major pars generis humani ad  hoc  creatur a Deo, ut non Dei, sed
+							diaboli  faciat  voluntatem.</title>
+					</ab>
+					<ab>
+						<title type="sub">RESPONSIO.</title>
+					</ab>
+					<p>Insanum omnino et contra rationem est dicere, <lb/> voluntatem Dei ex Dei voluntate non
+						fieri, et damnatorem <lb/>   diaboli  ejusque  famulorum  . velle  ut  diabolo <lb/>
+						serviatur. Sed hoc catholicis Pelagiani conseque-* <milestone unit="PLSection" n="B"/><lb/>  se objicere existimant, qui Adae peccatum transisse <lb/>  in  omnes 
+						diffitentur: quoniam si primam nativitatem <lb/>  originalis culpa non obliget, non  sint 
+						obnoxii <lb/>  diabolo parvuli, <note n="c"/> nec indigeant erui de  potestate  <lb/> tenebrarum qui
+						numquam a suo auctore discesserint  .<lb/> Nos autem qui  omnes  in Adam periisse profitemur
+						<lb/>  (Venit enim Filius  hominis . quaerere et salvare <lb/> quod perierat  [Luc . xix , 10 . 
+						,  ]), nec dicimus ideo <lb/> creari quemquam hominem, ut diaboli faciat voluntatem 
+						 ;<lb/> et agnoscimus omnem hominem non redemptum <lb/>  diabolo esse captivum
+						Praevaricatio enim <lb/> hominum dispositae a saeculis creationis ordinem <lb/> turbare non
+						potuit, et <note n="f"/> merito creatura peccatrix <lb/> poenalem dominationem illius patitur cui,
+						relicto <lb/> vero Domino, sponte se vendidit. Haec quippe  servitus  <milestone unit="PLSection" n="c"/><lb/>  non institutio est Dei, sed judicium; quo fraus
+						<lb/> deceptoris  diaboli  facta  est  decepto et male credulo <lb/> homini poena peccati. De
+						 quanemo ernitur ,  ,. nisi per <lb/> mediatorem Dei et hominum hominem Christum <lb/>  Jesum : cujus 
+						 gratuita gratia , et multorum malis <lb/> meritis non tribuitur,  et nullorum  bonis
+						meritis praevenitur  .<lb/></p>
+					<ab>
+						<title type="sub">233 CAPITULUM v.</title>
+					</ab>
+					<ab>
+						<title type="sub">OBJECTIO.</title>
+					</ab>
+					<ab>
+						<title type="sub">Quod peccatorum nostrorum auctor sit Deus : eo quod malam faciat
+							voluntatem hominum, plasmet substantiam  quae naturali motu <note n="g"/> nihil possit nisi
+							 peccare .</title>
+					</ab>
+					<ab>
+						<title type="sub">RESPONSIO.</title>
+					</ab>
+					<p>Hujus quoque objectionis vanitas de illa procedit <lb/> schola  inqua n  atura  n  humana
+						immunis a peccato <milestone unit="PLSection" n="D"/><lb/> Adae et illaesa defenditur;
+						ut quia omnes homines <lb/> praevaricationis reos  ct h damnationiobnoxios    nasci, <lb/>
+						periturosque nisi in Christo renascantur, asserimus, <lb/> eumdem videamur dicere
+						auctorem culpae, quem <lb/> profitemur conditorem esse naturae. Quod nos a <lb/>  sensu 
+						nostro  penitus  abdicamus, qui Deum justum <lb/> et bonum, sic humanae substantiae, <note n="i"/> et
+						interiorum <lb/> exteriorumque  sensuum  novimus  creature , , , , ,,,,. ut. pror­ <note type="footnote"> " Edili, ita tamen. Ms. Joliensis. ille tamen; melius, <lb/> ut
+							videtur. </note><note type="footnote">b M ..s. Remig. ei J..1. addunt hic, callsa.:
+							quae vox­ <lb/> desideraturin editis. </note><note type="footnote">r Ms Juliellsis.
+							dall4nalll'n est. </note><note type="footnote">d Additur enim in IUS. Remig. et edit.
+							Opere <lb/> AUG.; aberat a caeteris. </note>
+						<note type="footnote"> d Ms. Joliensis, ne indigeant. </note><note type="footnote"> f
+							Ms. Remig. nnn habet lianc vocem, mento', </note><note type="footnote"> I E.I,ei. non
+							possit ni,i-. AlSJ. Relnii. et Jot., ntau <lb/> '."SIC;' nrsi. </note><note type="footnote"> la, Ms. J..lipnsis. damnatwnis obnoxios. </note><note type="footnote"> i In ins. Jol. alu st IHarlit'uht et, b ginirrjue sic <lb/> humanae substantice
+							inlerio,.um exteriorumque, etc. </note><pb n="181"/>
+						<milestone unit="PLSection" n="A"/><lb/>    ab illo sit quidquid pertinet ad naturam,
+						et <lb/> prorsus <note n="a"/> ab illo non sit quidquid contra naturam <lb/> est. Peccatum autem
+						contra naturam est de quo <lb/> mors et omnia quae sunt  mortis  oriuntur. Quibus <lb/>
+						malis tunc se homo induit, quando illum fide  obedientiaque  <lb/>  privatam, in suas
+						promissiones diabolus <lb/> a Dei lege  traduxit  , omniaque  posteritatis   ejus germina
+						<lb/>  sibi per  conditionem '  depravatae stirpis obstrinxit. <lb/> Unde si qua in
+						Christo nova creatura  est  (II Cor. XVII), <lb/> <note n="b"/> libera fit diabolo, et subjicitur Deo,
+						reformata a <lb/> deformitate sua, ad imaginem ejus qui  creavit  eam <lb/> (Colos. III,
+						10). Quod nisi fiat, remanet in illo in quo <lb/> omnes moriuntur, non  habens  sortem in
+						eo in  quo  <lb/> omnes vivificantur. Non igitur cujusquam peccati <lb/>  auctor    Deus,
+						sed naturae creator  est . Quae cum <milestone unit="PLSection" n="B"/><lb/>  potestatem  
+						habuerit non delinquendi, sponte deliquit  ,<lb/> et deceptori suo propria  voluntate  se
+						subdidit. <lb/> Nec naturali, sed captivo motu versatur in vitio , <lb/> donec moriatur
+						peccato et vivat Deo ; quod sine <lb/> gratia Dei facere non potest; quia libertatem
+						quam <lb/>  libertate  perdidit, nisi Christo liberante non recipit. <lb/> Non est enim
+						aliud nomen sub coelo datum hominibus, <lb/> in quo oporteat  salvos . fieri (Act. IV,
+						12).</p>
+					<ab>
+						<title type="sub">CAPITULUM VI.</title>
+					</ab>
+					<ab>
+						<title type="sub">OBJECTIO.</title>
+					</ab>
+					<ab>
+						<title type="sub">Quod Deus tale in hominibus plasmet  arbitrium ,  quale  est daemonum, quod
+							proprio motu nihil aliud <note n="d"/> possit velle, nisi malum.</title>
+					</ab>
+					<ab>
+						<title type="sub"> RESPONSIO .</title>
+					</ab>
+					<p>Totus quidem mundus, sicut ait Joannes apostolus, <milestone unit="PLSection" n="c"/><lb/> in maligno positus est (I Joan. v, 19); et multorum <lb/> hominum talis est
+						malitia, qualis et 234 daemonum  .<lb/> Qualibus dicebat Dominus: Progenies viperarum,
+						<lb/> quomodo potestis bona loqui, cum sitis mali (Matth. <lb/> XII, 34) ? et, Vos de
+						diabolo patre nati estis, et  concupiscentias  <lb/>  patris vestri  facere  vultis (Joan.
+						VIII, 44). <lb/> Sed hoc inter malos  homines   distat et  daemones  § <lb/> quod hominibus
+						etiam valde malis superest,  si  Deus <lb/>  misereatur . reconciliatio; daemonibus autem
+						nulla <lb/> est in  aeternum  servata conversio. Sicut  ergo  praevaricatoribus <lb/>  angelis
+						non Deus indidit illam, quae in <lb/> veritate non stetit (Ibid.).  voluntatem ,  ita  nec hominibus
+						<lb/>  hunc affectum, quo diabolum imitarentur , <lb/> inseruit. Mendax enim de
+						proprio loquitur (Ibid.) ; <lb/> et  liber  a mendacio non erit, nisi eum  veritas  liberaverit
+							<milestone unit="PLSection" n="D"/>.</p>
+					<ab>
+						<title type="sub">CAPITULUM VI<note n="I"/>.</title>
+					</ab>
+					<ab>
+						<title type="sub">OBJECTIO.</title>
+					</ab>
+					<ab>
+						<title type="sub">Quod haec sit voluntas Dei.  ut  magna pars Christianorum salva esse nec
+							velit, nec possit.</title>
+					</ab>
+					<ab>
+						<title type="sub">RESPONSIO.</title>
+					</ab>
+					<p>Si de  his  hoc dicitur qui pietatem Christianae  conversationis  <lb/>  et fidei
+						deserentes, in profanos errores <milestone unit="PLSection" n="A"/><lb/> aut in
+						damnabiles mores irrevocabiliter transierunt, <lb/> non dubium est quod talem voluntatem
+						habentes <lb/> salvi esse nolunt; et  quamdiu  salvi esse nolunt  ,  <lb/> salvi esse non
+						possunt. Sed nullo modo credendum <lb/> est hujusmodi homines in hanc desperationem ex
+						<lb/> Dei voluntate cecidisse : cum potius allevet Dominus <lb/>  omnes qui corruunt,
+						et erigat omnes elisos <lb/> (Psal. CXLIV, 4). Nemo enim nisi illius gratia  erigitur  
+						,<lb/> nemo nisi illius gratia stabilitur. Dei ergo voluntas <lb/>  est, ut in bona
+						voluntate maneatur : qui et <lb/> prius quam deseratur, neminem deserit; et  multos  <lb/>
+						desertores saepe convertit.</p>
+					<ab>
+						<title type="sub">CAPITULUM VIII.</title>
+					</ab>
+					<ab>
+						<title type="sub">OBJECTIO.</title>
+					</ab>
+					<ab>
+						<title type="sub">* Quod nolit Deus, ut omnes catholici in fide  catholica </title>
+					</ab>
+					<p>
+						<milestone unit="PLSection" n="B"/>
+					</p>
+					<ab>
+						<title type="sub"> perseverent, sed velit ut magna  exinde pars   apostatet.</title>
+					</ab>
+					<ab>
+						<title type="sub">RESPONSIO</title>
+					</ab>
+					<p>Non est dissimilis blasphemiae hujus impietas , a <lb/> praecedente sententia; quod ergo
+						ad illam, hoc etiam <lb/> ad istam, quae in nullo est diversa, responsum sit.</p>
+					<ab>
+						<title type="sub">CAPITULUM IX.</title>
+					</ab>
+					<ab>
+						<title type="sub"> OBJECTIO .</title>
+					</ab>
+					<ab>
+						<title type="sub">Quod velit Deus ut magna pars sanctorum a sanctitatis  proposito
+							ruat.</title>
+					</ab>
+					<ab>
+						<title type="sub">RESPONSIO.</title>
+					</ab>
+					<p>Nec  hujus  definitionis insania aliud sonat quam <lb/> gemina objectio praelocuta est
+						235. Unde mirandum <lb/>  est objicientem tertio repetisse quod semel <lb/> <note n="C"/> dixisse
+						suffecerat : sed, ut res est, numerum criminationis <milestone unit="PLSection" n="c"/><lb/>
+						 augere voluit, quia sensum variare non <lb/> potuit.</p>
+					<ab>
+						<title type="sub">CAPITULUM X.</title>
+					</ab>
+					<ab>
+						<title type="sub">OBJECTIO.</title>
+					</ab>
+					<ab>
+						<title type="sub">Quod adulteria et corruptelae virginum sacrarum ideo  contingant , quia
+							illas Deus ad hoc praedestinavit ut caderent.</title>
+					</ab>
+					<ab>
+						<title type="sub">RESPONSIO.</title>
+					</ab>
+					<p>Detestanda et abominanda opinio, quae Deum cujusquam <lb/>   malae  voluntatis aut malae
+						actionis credit <lb/> auctorem : cujus praedestinatio numquam extra bonitatem  ,<lb/>
+						numquam extra justitiam est. Universae <lb/> enim viae Domini  misericordia  et veritas
+						(Psal. XXIV, <lb/> 10). Adulteria enim <note n="f"/> maritatarum, et corruptelas <lb/> virginum non
+						instituere novit sancta Divinitas , sed <milestone unit="PLSection" n="D"/><lb/>
+						damnare; nec disponere, sed punire. Quae mala hominibus <lb/>   admittant,suis
+						concupiscentiis et cupiditatibus <lb/>  serviunt, quas ab illa prima voluntariae <lb/>
+						praevaricationis labe traxerunt : cum autem declinant <lb/>  a malo et faciunt bonum, a
+						Domino gressus hominibus <lb/>  diriguntur, et viam ejus volet (Psal. XXXVI, <lb/> 23).
+						 Propter  quod dicit  Apostolus , Oramus autem <lb/> I ad Deum, ut nihil mali faciatis; non
+						ut nos probat <note type="footnote"> • Editi, non n6 illo sit. Corrigimus ex edit. Opere
+							<lb/> Aug. ad ms. Krmisr. exacta. </note><note type="footnote"> b lla ins. Juht usis
+							mm ms. Remig. ct edit. Opere <lb/> S. Aug. II t.i ad,1 ilur praepositio a diabolo.
+							Editi, tibera <lb/> iit di iMo 0t subjiciatur. Libera cJlabolo ; ut Hoin. '01, <lb/>
+							2l) : liber; just tia, dati"n casu, </note><note type="footnote"> c Yox ibta Dcus
+							aberat ab editis. Restitutur es <lb/> mss. Remig. et Joliensi ac edit. Oper. S.
+							Au,nst. </note><note type="footnote">d Sic Ins. ftentiil. et Jol. cum erit. Alii- At
+							editi <lb/> antea. possit vel velit. </note><note type="footnote"> c Ms. Joliensis,
+							Quia noluit. </note><note type="footnote">f Remigranus ms., mariturum. </note><note type="footnote"> a f:clili, ad Dominum. lielnil. et edit. August., <lb/> ad Deum, ut
+							apud Apostolum. </note><pb n="183"/>
+						<milestone unit="PLSection" n="A"/><lb/> appareamus, sed ut vos quod bonum est faciatis
+						(II Cor. <lb/> XIII, 7). Non ergo casus ruentium, nec  malignitatem  iniquorum    ,<lb/>
+						neque cupiditates peccantium praedestinatio <lb/>  Dei, aut  excitavit , aut suasit, aut
+						impulit : <lb/> sed plane  praedestinavit   judicium suum , quo unicuique <lb/> 
+						retributurus est prout gessit, sive bonum , <lb/> sive malum. Quod judicium futurum
+						omnino non <lb/> esset, si homines Dei voluntate peccarent. Erit autem <lb/>
+						manifestissime : et omnis homo quem discretio divinae <lb/>  scientiae in sinistra
+						constituerit parte, damnabitur  ;<lb/> quia non Dei, sed suam exsecutus est voluntatem 
+						.<lb/></p>
+					<ab>
+						<title type="sub">CAPITULUM XI.</title>
+					</ab>
+					<ab>
+						<title type="sub">OBJECTIO.</title>
+					</ab>
+					<ab>
+						<title type="sub">Quod quando incestant patres filias, et matres filios,</title>
+					</ab>
+					<p>
+						<milestone unit="PLSection" n="B"/>
+					</p>
+					<ab>
+						<title type="sub">vel quando servi  dominos , occidunt, ideo fiat, quia ita Deus
+							praedestinavit ut fieret.</title>
+					</ab>
+					<ab>
+						<title type="sub">RESPONSIO.</title>
+					</ab>
+					<p>Si diabolo objiceretur quod talium facinorum ipse <lb/> auctor, ipse esset incentor;
+						puto quod aliqua ratione <lb/> exonerare se hac posset invidia, et talium scelerum <lb/>
+						 <note n="A"/> patratores 236 de ipsorum voluntate convinceret  ;<lb/> quia etsi  delectatus   est
+						furore peccantum, <lb/> probaret tamen se non intulisse vim criminum. Qua <lb/> ergo
+						insipientia, quave dementia definitur ad Dei <lb/> referendum esse consilium, quod  nec 
+						diabolo in  totum . <lb/>  ascribi potest, qui in peccantum flagitiis illecebrarum <lb/> 
+						adjutor, non voluntatum credendus est esse <lb/> generator? Nihil ergo talium negotiorum
+						Deus  praedestinavit  <lb/>   ut fieret; <note n="b"/> nec ullam animam nequiter <milestone unit="PLSection" n="c"/><lb/> turpiterque victuram , ad hoc ut taliter viveret, <lb/>
+						praeparavit; sed talem futuram non ignoravit, et de <lb/> tali juste se judicaturum esse
+						praescivit. Atque ita ad <lb/>  praedestinationem  ejus nihil aliud referri potest, nisi
+						<lb/> quod aut ad debitam justitiae retributionem, aut ad <lb/> indebitam  pertinet gratiae 
+						; largitatem.</p>
+					<ab>
+						<title type="sub"> CAPITULUM  XII.</title>
+					</ab>
+					<ab>
+						<title type="sub">OBJECTIO.</title>
+					</ab>
+					<ab>
+						<title type="sub">Quod Dei praedestinatione efficiantur de filiis Dei filii diaboli, et
+							de templo sancti Spiritus templa  daemonum  , et de membris Christi membra
+							 meretricis .</title>
+					</ab>
+					<ab>
+						<title type="sub">RESPONSIO.</title>
+					</ab>
+					<p>Praedestinatio Dei etsi apud nos, dum in  praesentis  <lb/>  vitae  periculis   versamur,
+						incerta est ; apud illum <lb/>  tamen  qui fecit quae futura sunt incommutabilis  permanet  -
+							<milestone unit="PLSection" n="A D"/> .<lb/> Nec quae  illuminavit   obcaecat, nec
+						quae aedificavit<lb/>  destruit, nec quae plantavit evellit. Sine  poenitentia  <lb/> enim
+						sunt dona et vocatio Dei (Rom. XI, 29) ; et, firmum <lb/>  fundamentum  Dei stat, habens
+						signaculum hoc;  cognovit   ,<lb/> Dominus qui sunt ejus (II Tim. II, 19). Nullo igitur
+						<lb/> modo <note n="c"/> Dei praedestinatio facit ut aliqui ex filiis Dei <lb/> filii  sint  diaboli,
+						aut ex templo sancti Spiritus  templa   <lb/>  sint daemonum, aut ex membris Christi
+						fiant <lb/> membra meretricis : sed potius praedestinatio facit <lb/> ut ex  filiis  diaboli  
+						 fiant filii Dei, et ex templo daemonum <lb/>  <note n="e"/> templum sint Spiritus sancti, et
+						ex membris <lb/>  meretricis membra sint Christi. Quia ipse alligat <lb/>  fortem, et
+						vasa ejus rapit (Marc.  III , 27), eruens <lb/> ea de potestate tenebrarum, et transferens
+						de convinceret <lb/>  in gloriam (Colos. I, 13). Hi autem de quibus <lb/>  dicitur ; Ex
+						nobis exierunt, sed non fuerunt ex <lb/> nobis; si enim fuissent ex nobis, mansissent
+						utique <lb/>  nobiscum  (I  Joan . II, 19); voluntate exierunt, voluntatem <lb/>  ceciderunt.
+						Et quia praesciti sunt casuri, non <lb/> sunt praedestinati. Essent autem praedestinati, si
+						essent <lb/>  reversuri, et in sanctitate ac veritate mansuri. <lb/> Ac per hoc
+						praedestinatio Dei, multis est causa <lb/> standi, nemini est causa labendi.</p>
+					<ab>
+						<title type="sub">237 CAPITULUM XIII.</title>
+					</ab>
+					<p>
+						<milestone unit="PLSection" n="B"/>
+					</p>
+					<ab>
+						<title type="sub">OBJECTIO.</title>
+					</ab>
+					<ab>
+						<title type="sub">Quod omnes illi fideles et sancti, qui ad  aeternam  mortem 
+							praedestinati sunt, quando ad vomitum suum relabuntur, vitio quidem suo hoc facere
+							videntur, sed ipsius vitii causa  est  divina praedestinatio, quae illis latenter
+							subtrahit bonas voluntates.</title>
+					</ab>
+					<ab>
+						<title type="sub">RESPONSIO.</title>
+					</ab>
+					<p>Idem blasphemiarum spiritus perseverat, et a  praedestinavit  <lb/>  mendaciis subsequens
+						impietas non recedit <lb/>  : quam prorsus vera ratio reprobat, et incunctanter <lb/> 
+						sana doctrina  condemnat . Quia omnibus quidem <lb/> a fide ad infidelitatem, a sanctitate
+						ad turpitudinem <lb/> relapsis, et ante finem vitae nulla emendatione purgatis  ,<lb/>
+						nihil aliud quam mors  aeterna  debetur: sed <lb/>  nefas est  Deo ascribere causas  talium 
+						ruinarum ; qui <lb/> etsi ex aeterna scientia praecognitum  habet  , quid <milestone unit="PLSection" n="c"/><lb/>  uniuscujusque  meritis retributurus sit; nemini tamen
+						<lb/> per hoc quod falli  non  potest, aut necessitatem, aut <lb/> voluntatem  intulit 
+						delinquendi. Si ergo a justitia et <lb/> pietate quis deficit, suo in praeceps fertur
+						arbitrio, <lb/> sua concupiscentia trahitur, sua persuasione decipitur  .<lb/> Nihil
+						ibi Pater, nihil Filius. nihil agit Spiritus <lb/> sanctus : nec tali negotio quidquam
+						divinae  voluntatis  <lb/>  intervenit,  cujus  opere  multos  scimus ne laberentur <lb/> 
+						retentos, nullos autem ut laberentur impulsos  .<lb/></p>
+					<ab>
+						<title type="sub">CAPITULUM XIV.</title>
+					</ab>
+					<ab>
+						<title type="sub">OBJECTIO.</title>
+					</ab>
+					<ab>
+						<title type="sub">Quod magna pars illa Christianorum catholicorum fidelium  atque
+							sanctorum quae ad ruinam et  perditionem praedestinata    est, etiam si  petat  a Deo
+							sanctitatis    perseverantiam , non impetrabit : eo quod  mutari  non</title>
+					</ab>
+					<p>
+						<milestone unit="PLSection" n="D"/>
+					</p>
+					<ab>
+						<title type="sub">potest divina praedestinatio, quae  illos  praeordinavit, praeparavit,
+							praeaptavit ut caderent.</title>
+					</ab>
+					<ab>
+						<title type="sub">RESPONSIO.</title>
+					</ab>
+					<p>Ad praevaricationem legis, ad  neglectum  religionis  ,<lb/> ad corruptelam disciplinae,
+						ad desertionem  fidei !, <lb/> ad  perpetrationem   qualiscumque peccati , nulla <lb/> omnino
+						est praedestinatio Dei : nec fieri potest ut <lb/> per quem a talibus malis surgitur, per
+						 eum  in talia <lb/> decidatur. Si ergo  in                                                                                                   sanctitate                                   vivitur   ,  Quod  si in vir­ <note type="footnote"> • Correctus locus ex mannacriptn Rp.migiano et <lb/> Joliensi et
+							e,lil. s?ncii Augustini. Alias editi, talium <lb/> criiwnnm parralore,,,. de ipsorum
+							voluntate vinceret. </note><note type="footnote"> k "'oQ ms. Kemig. Alias clII (i, nec
+							itlam animam. </note><note type="footnote"> « ln ms. Remig. omiltitur hic vox Dei. </note>
+						<note type="footnote"> d Ms. Joliensis, templ'nH I;Ut. </note><note type="footnote"> e
+							Ante bae. editi, templum sit. </note><note type="footnote"> r prIUS editi, Ii in
+							virtalem. Mss. Remig. et Jol. <lb/> cum edit. Opere S. Aug., in virtute. </note><pb n="185"/>
+						<milestone unit="PLSection" n="A"/><lb/>    proncitur, si in bonis studiis permanetur;
+						 manifestum  , <lb/>  munus est  Dei , sine quo nullus boni operis <lb/>  fructus  acquiritur
+						: si autem ab his receditur, et ad <lb/> vitia ac peccata transitur, 238 nihil ibi Deus
+						malae <lb/> tentationis immittit, et recessurum non deserit ante <lb/>  quam  deseratur;
+						et facit plerumque ne deserat, aut <lb/> etiam, si discessit, ut redeat. Cur autem illum
+						retineat  , !<lb/> illum  non  retineat ; nec possibile est  comprehendere   ,<lb/> nec
+						licitum <note n="a"/> vestigare;  cum  scire sufficiat, <lb/> et ab illo esse quod statur, et non ab
+						illo esse quod <lb/> ruitur.</p>
+					<ab>
+						<title type="sub">CAPITULUM XV.</title>
+					</ab>
+					<ab>
+						<title type="sub">OBJECTIO.</title>
+					</ab>
+					<ab>
+						<title type="sub">Quod omnes illi fideles et sancti, qui ad aeternam  mortem  praedestinati
+							sunt, postea quam ceciderint,</title>
+					</ab>
+					<p>
+						<milestone unit="PLSection" n="B"/>
+					</p>
+					<ab>
+						<title type="sub">sic a Deo dispensentur, <note n="b"/> ut nec possint nec velint  per poenitentiam 
+							liberari.</title>
+					</ab>
+					<ab>
+						<title type="sub">RESPONSIO.</title>
+					</ab>
+					<p>Non veraciter, nec sapienter  hoc  dicitur. Qui enim <lb/> a fide et  sanctitate 
+						exciderunt, sicut voluntate prolapsi <lb/>  sunt, ita voluntate non surgunt, et
+						dominatum <lb/> concupiscentiarum, quibus succubuerunt, sponte patiuntur  .<lb/> Si qui
+						autem captivitatem suam gemunt, et <lb/> judicantes semetipsos. ad misericordiam Dei
+						mutato <lb/> corde confugiunt, non sine spiritu divinae visitationis <lb/> haec faciunt.
+						Haec <note n="c"/> enim mutatio dexterae Excelsi (Psal. <lb/> LXXVI, 11); qui innumeris lapsis dat
+						poenitentiam, ut <lb/> resipiscant a diaboli laqueis, a quo  captivi  tenebantur ad <lb/>
+						ipsius voluntatem (I Timot II, 2G).  Nemini  autem Deus <lb/> correctionis adimit viam,
+						nec quemquam  boni  possibilitate <lb/>  dispoliat.  Quia  qui se a Deo avertit, ipse et
+							<milestone unit="PLSection" n="c"/><lb/> velle quod bonum est, et posse sibi sustulit.
+						Non est <lb/> ergo consequens, sicut putant qui talia objiciunt, ut <lb/> Deus quibus
+						poenitentiam non dederit, resipiscentiam <lb/>  abstulerit et quos non levarit,
+						alliserit : cum <lb/> aliud sit insontem in  crimen  egisse, quod  alienum  <lb/> est a
+						Deo; aliud criminoso veniam non dedisse, quod <lb/> de peccatoris est  merito  .</p>
+					<ab>
+						<title type="sub">CAPITULUM XVI.</title>
+					</ab>
+					<ab>
+						<title type="sub"> OBJECTIO .</title>
+					</ab>
+					<ab>
+						<title type="sub">Quod magna pars illa fidelium atque sanctorum quae ad</title>
+					</ab>
+					<p>
+						<milestone unit="PLSection" n="A"/>
+					</p>
+					<ab>
+						<title type="sub">aeternam mortem praedestinata est, quando dicit Deo in oratione
+							Dominica,  Fiat   voluntas tua, nihil aliud quam  contra  se petat, id est, ut cadant et
+							 ruant : quia voluntas Dei haec est ut aeterna morte pereant.</title>
+					</ab>
+					<ab>
+						<title type="sub">RESPONSIO.</title>
+					</ab>
+					<p>Non hoc Veritas  dicit , quod haec sit voluntas Dei <lb/> ut fideles et sancti a fide
+						atque  innocentia  ruant, et <lb/>  pereant  in  aeternum   : sed Veritas dicit (Joan.  VI !, 39) :
+						<lb/> Haec  est  voluntas 239 ejus qui me misit Patris, ut <lb/> omne quod dedit mihi, non
+						perdam ex eo quidquam, <lb/> sed resuscitem illud in novissimo die. Quod ergo Pater
+						<lb/> Filio dedit, Filius omnino <note n="d"/> non perdit. Idem enim <lb/> dicit  (Joan . vi, 57) :
+						Omne quod dat mihi Pater, <note n="a"/> ad <lb/> me veniet, et eum qui venit ad me, non ejiciam
+						foras. <lb/> Quod si per generalitatem vocationis , et per abundantiam <milestone unit="PLSection" n="B"/><lb/>  bonitatis Dei, etiam non  perseveraturi  perseveraturis
+						<lb/>  admixti sunt; hi cum a pietate deficiunt, <lb/> non ex  Dei  opere, sed
+						ex sua voluntate deficiunt; <lb/> nec impelluntur ut cadant, nec ejiciuntur ut  deserant -
+						 ;<lb/> casuri tamen et recessuri ab eo qui  falli  non <lb/> potest praesciuntur.
+						Quamdiu itaque  in  oratione <lb/> Dominica dicunt: Fiat voluntas tua; non hoc contra
+						<lb/> se petunt, quod Deus nullo modo ulla ratione facturus <lb/>  est, id est, ut
+						cadant et  ruant ; <note n="f"/> ipsorum enim <lb/> hoc nequitia, ipsorum est consummatura libertas.
+						<lb/> Sed 240 plane illud contra se petunt, quod divinae <lb/> voluntatis esse non
+						dubium est; ut scilicet, cum venerit <lb/>  Filius hominis in majestate sua, et sederit
+						<lb/> super thronum gloriae suae, congregentur ante eum <lb/> omnes gentes, <note n="g"/> et separet
+						eos ab invicem, alios ad <lb/> dextram, alios  statuens  ad  sinistram  , et audiant
+							<milestone unit="PLSection" n="c"/><lb/> eum dextri dicentem: Venite , benedicti
+						Patris mei, <lb/> possidere praeparatum vobis  regnum   a constitutione <lb/>  mundi
+						(Matth. xxv, 34): audiant et sinistri, <lb/> Discedite a me, maledicti, in ignem
+						aeternum, quem <lb/> paravit Pater  meus  diabolo et angelis ejus ( Ibid., <lb/> 41).
+						Igitur qui facturi non sunt voluntatem Dei, et <lb/> petunt ut fiat voluntas Dei, in eo
+						quod Dei voluntate <lb/> faciendum est <note n="i"/> audiuntur, ut  imitatores  diaboli  cum  <lb/>
+						diabolo judicentur. QUI ENIM voluntatem Dei  spreverunt  <lb/>  invitantem , voluntatem
+						Dei sentient  vindicantem   .<lb/> <milestone unit="PLSection" n="D"/><note type="footnote"> * Mss. JoJicn!-is, inrestigare. </note><note type="footnote">h lia
+							ms. Jol .cubis. Alii omnes, ne possint vel <lb/> velint. </note><note type="footnote">a Verbum substantivum est, hic addii ms. Juliensis. </note><note type="footnote">d
+							Ms. Joliensis, non pe' del. </note><note type="footnote"> e ll.i c vt;rha, ad me
+							veniet, et eum qui, qu n abe­ <lb/> rant ab cduis omnibus, resiiininiu&gt; ancioriiate
+							mss. <lb/> Reulig. ei Juliensis. Antea editi. Omne quod dat mihi </note>
+						<milestone unit="PLSection" n="D"/><note type="footnote"> Pater, renit ad me, et non
+							,jic;nrn foras. </note><note type="footnote"> e Sic lcginir in uiss. Remig. et
+							Jolit'nsi. In pri"l <lb/> ednis vero, hoc enim psorutn neyuitiat etc. </note><note type="footnote"> s .AI.. JoheiMs, ut separet. </note><note type="footnote"> L Sic nis.
+							Jul. AIs. Kein&gt;g. et e't!!. S. Aug., para­ <lb/> tum vobis regnum : edili
+							auteriores, regnum pUled'"'' <lb/> vobis. </note><note type="footnote">i Ms.
+							Joliensis, audiunt. </note>
+					</p>
+					<ab>
+						<title type="sub">ADMONITIO IN PROSPERI PRO AUGUSTINO RESPONSIONES AD EXCERPTA
+							GENUENSIUM.</title>
+					</ab>
+					<p>Non ex eadem intentione, Augustini doctrinam scilicet elevandi aut infamandi, ex qua
+						anteriora prodierant, <lb/> nata etiam credimus inferius posita Genuensium presbyterorum
+						Excerpta, ad Prosperum nostrum eo tantum fine <lb/> directa, ut quas illi ex librorum
+						sancti  Augustini  de  Praedestinatione  sanctorum et de Dono  Perseverantiae  lectione <lb/>
+						dubitationes patiebantur, in quibus se insolita nonnulla et minus clara deprehendisse
+						 significabant  , sanctus Augustini <lb/>  discipulus, tamquam doctrinae illius
+						sublimioris et a communis intelligentiae finibus remotioris particeps, <lb/> pro sua erga
+						omnes humanitate, dissolveret : cum hoc solum rogarent, ut quo intellectu vel quo
+						judicio ista acca­ <lb/><pb n="187"/>  pisset  eis aperire dignaretur. Qua quidem agendi ratione virorum illorum
+						modestia in eo elucet, quod cum essent <lb/> sacerdotes in urbe non ignobili forte ex
+						primariis, virum ( ut  rerisimilus vi detur )    ) laicum de tantis rebus consulere <lb/> 
+						non reformident   In praefat. hujus operi). Quo fit ut sanctus Prosper humilitati adeo
+						laudandae vicem <lb/> rependens hoc  respondeat  : id quod a se postulabant  debuisse  illos
+						sibi  praestare  , sedula locorum  Augustini  meditatione  ,<lb/> et  COli fide , . : ;  ,.:; fusa
+						oratione ad Patrem luminum, a quo descendit omne datum optimum et omne  donum  <lb/>
+						perfectum  (Jac . I, 17), et a quo datur  Spiritus sapientiae   et intellectus  . Hinc  non quasi
+						 magister  discipulos <lb/> instituens, sed ut veritatis  discipulus ,  humilitatisque et
+						obedientiae sectator, superioris sibi ordinis viris obtemperare <lb/>  suscipit, ejus
+						auxilio confisus qui  sapientiam  praestat parvulis (Psal. XVIII, 8); et  Excerpta  ab ipsis
+						ex duobus <lb/>  supradictis sancti Augustini libr.s loca  fusiori   oratione exponere,
+						atque ad rectos sensus, ex  collatione  , quam <lb/> urget ubique, cum antecedentibus  et 
+						subsequentibus locorum unde  ducebantur  reducere, et a pravo in omnibus <lb/> intellectu
+						sarta et  lecta  ostendere aggreditur : humiliter petens, ne ubi erat in ipso simplicitas
+						obedientiae. ibi <lb/> praesumptionem putarent esse doctrinae. Quod quidem egregie conficit
+						tum Scripturae sacrae auctoritate in medium <lb/> adducta, tum maxime aliorum  sancti 
+						Augustini Operum locis, cum his qui  scrupulum fecerant  comparatis; <lb/> eodem  semper , ut
+						alias, tenore doctrinae praedicans, et gratuitam omnimodis  gratiam   Dei, et fidem, ipsam  ab 
+						<lb/> eadem Dei gratia et misericordia sumere principium : nec tantum boni  omnibus 
+						promiscue  conferri , nec ullum <lb/> omnino opus bonum, si divinum non affuerit  auxilium .
+						posse a quoquam praestari.</p>
+					<p>Civitatem autem ex qua illi libellum  hunc  suum ad Prosperum direxerant Vir eruditus
+						vult esse non Genuam <lb/> urbem Italiae primariam, quae ab  elegantioribus  aedificiis
+						Superbae cognonem accepit; sed Genevam, quae  et Gebenna   <lb/>  et Aurelia Aliobrogum
+						nominatur. Cui eo difficilius est ac in re assentiri, quod ubique presbyteri illi non
+						<lb/> Genevenses sed Genuenses legantur appellati.</p>
+					<p>De tempore  denique  quo haec contigerunt si quaeratur, conjicimus scriptum horum hujusque
+						rescriptum paulo <lb/> post superiora,  certe   autem post obitum sancti Augustini, in
+						lucem prodiisse.</p>
+				</div></body></text></TEI>

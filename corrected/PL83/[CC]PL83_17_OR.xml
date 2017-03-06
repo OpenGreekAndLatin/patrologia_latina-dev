@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><TEI xmlns="http://www.tei-c.org/ns/1.0"><teiHeader>
+    
+    <fileDesc>
+      <titleStmt>
+        <title>Patrologiae Cursus Completus. Series Latina (PL)</title> 
+        <sponsor>University of Leipzig</sponsor>
+        <funder>European Social Fund Saxony</funder>
+        <principal>Gregory Crane</principal>
+        <respStmt>
+          <persName xml:id="Jouve">Jouve</persName>
+          <resp>OCR-ed, corrected and encoded the text</resp>
+        </respStmt>
+        <respStmt>
+          <persName>Greta Franzini</persName>
+          <resp>Project Manager (University of Leipzig)</resp>
+        </respStmt>
+        <respStmt>
+          <persName>Simona Stoyanova</persName>
+          <resp>Project Assistant (University of Leipzig)</resp>
+        </respStmt>
+        <respStmt>
+          <persName>Bruce Robertson</persName>
+          <resp>Technical Advisor (Mount Allison University)</resp>
+        </respStmt>
+      </titleStmt>
+      
+      <publicationStmt>
+        <authority>University of Leipzig</authority>
+        <idno type="filename">PL83.xml</idno>
+        <availability>
+          <licence target="https://creativecommons.org/licenses/by-sa/4.0/">Available under a Creative Commons Attribution-ShareAlike 4.0 International License</licence>
+        </availability>
+        <date>2014</date>
+        <publisher>University of Leipzig</publisher>
+        <pubPlace>Germany</pubPlace>
+      </publicationStmt>
+      
+      <sourceDesc>
+        <listBibl xml:lang="la">
+          <biblStruct>
+            <monogr>
+              <editor>
+                <persName>
+                  <name xml:lang="fr">Jacques Paul Migne</name>
+                </persName>
+              </editor> 
+              <author ref="urn:cite:perseus:author.771">Isidorus Hispalensis</author>
+              <title>Differentiarum Sive De Proprietate Sermonum Libri Duo</title>
+              <title>Allegoriae Quaedam Sacrae Scripturae</title>
+              <title>De Ortu Et Obitu Patrum Qui In Scriptura Laudibus Efferuntur</title>
+              <title>In Libros Veteris Ac Novi Testamenti Proemia</title>
+              <title>Liber Numerorum Qui In Sanctis Scripturis Occurrunt</title>
+              <title>De Veteri Et Novo Testamento Quaestiones</title>
+              <title>Mysticorum Expositiones Sacramentorum Seu Quaestiones In Vetus Testamentum</title>
+              <title>Appendix Ad Libros Regum</title>
+              <title>De Fide Catholica Ex Veteri Et Novo Testamento Contra Judeos</title>
+              <title>Sententiarum Libri Tres</title>
+              <title>De Ecclesiasticis Officiis</title>
+              <title>Synonyma De Lamentatione Animae Peccatricis</title>
+              <title>Regula Monachorum</title>
+              <title>Epistolae</title>
+              <title>De Ordine Creaturarum Liber</title>
+              <title>De Natura Rerum Ad Sisebestum Regem Liber</title>
+              <title>Chronicon</title>
+              <title>Historia De Regibus Gothorum. Wandalorum Et Suevorum</title>
+              <title>De Viris Illustribus Liber</title>
+              <title>Carmina [Ascripta]</title>
+              <title>Chronica Regum Visigothorum (Incertus)</title>
+              <title>Expositio In Canticum Canticorum Salomonis [Incertus]</title>
+              <title>De Conflictu Vitiorum Et Virtutum (Incertus)</title>
+              <title>Expositio In Missa (Incertus)</title>
+              <title>Sententiarum Liber Quartus (Incertus)</title>
+              <title>Exhortatio Humilitatis (Incertus)</title>
+              <title>Testimonia Divinae Scripturae Et Patrum (Incertus)</title>
+              <title>Sermones (Incertus)</title>
+              <title>De Ecclesiasticis Dogmatibus (Incertus)</title>
+              <title>Sentantiae Differentiarum De Activa Vita Atque Contemplativa [Incertus]</title>
+              <title>Exhortatio Poenitendi Cum Consolatione Et Misericordia Dei [Incertus]</title>
+              <title>Lamentum Poenitantiae (Incertus)</title>
+              <title>Oratio Contra Insidias Diaboli (Incertus)</title>
+              <title>Liber De Ortu Et Obitu Patrum Incertus</title>
+              <title>Liber De Numeris (Incertus)</title>
+              <title>Glossae in Sacram Scripturam</title>
+              <title>Differentiarum, sive de Proprietate Sermonum, Liber</title>
+              <title>Liber Glossarum</title>
+              <imprint>
+                <publisher>Garnier</publisher>
+                <pubPlace>Paris</pubPlace>
+                <date>1850</date>
+              </imprint>
+              <biblScope unit="volume">83</biblScope>
+            </monogr>
+            <monogr>
+              <author>Auctor Incertus</author>
+              <title>Archiepiscopi Toletani Veteres</title>
+              <title>Chronologia Gothicorum Regum (Ex Codice Regio Vaticano)</title>
+              <imprint>
+                <publisher>Garnier</publisher>
+                <pubPlace>Paris</pubPlace>
+                <date>1850</date>
+              </imprint>
+              <biblScope unit="volume">83</biblScope>
+            </monogr>
+            <ref target="http://hdl.handle.net/2027/pst.000020950231">HathiTrust</ref>
+            
+          </biblStruct>
+        </listBibl>
+      </sourceDesc>
+      
+    </fileDesc>
+    <encodingDesc>
+      <p>The following text is encoded in accordance with EpiDoc standards and with the
+        CTS/CITE Architecture.</p>
+    <refsDecl>
+        <cRefPattern n="" matchPattern="(.+).(.+).(.+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@type='edition']/tei:div[@n='$1']/tei:div[@n='$2']/tei:div[@n='$3'])"/>
+        <cRefPattern n="" matchPattern="(.+).(.+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@type='edition']/tei:div[@n='$1']/tei:div[@n='$2'])"/>
+        <cRefPattern n="" matchPattern="(.+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@type='edition']/tei:div[@n='$1'])"/>
+      </refsDecl>
+    </encodingDesc>
+    
+    <profileDesc>
+      <langUsage>
+        <language ident="la">Latin</language>
+      </langUsage>
+    </profileDesc>
+    
+</teiHeader>
+
+  <text><body><div type="edition" n="">
+        <ab>
+            <title type="sub">ORDO RERUM QUÆ IN SEXTO TOMO CONTINENTUR.</title>
+          </ab>
+          <p>DE FIDE CATHOLICA LIBER PRIMUS, 449.—CAP. I. Quod Christus a Deo Patre genitus est, ibid. —II. Quod <lb/>
+            Christus ante saecula ineffabiliter a Patre genitus est, 452.—III. Quia Christus Deus et Dominus est, 454.—IV. De Trini­ <lb/>
+            tatis significantia, 457.—V. Quia Filius Dei, Deus homo factus est, 460.—VI. De nomine Jesu, 463.—VII. Christus ex <lb/>
+            semine Abrahæ secundinum carnem fuit, ibid.—VIII. De lribu Juda orlus est Christus, 464.—IX. Quia de stirpe David Da­ <lb/>
+            tus est Christus, 465.—X. Quia Christus de virgine sine virili coitu genitus est, 468.—XI. In Bethlehem natus est Cbri­ <lb/>
+            stus, 470.—XII. Stelle indicio Christi nativitas monstratur, 471.—XIII. Munera magi obtulerunt, ibid.—XIV. A Deo <lb/>
+            Patre unctus est, 472.—XV. Quod pauper et abjeclus primo adventu venit, ibid.—XVI. Quia signa et virtutes fecit, 474. <lb/>
+            —XVII. In corpore videndus erat, 475.—XVIII. Judaei non erant eum agnituri, 476.—XIX. Quia eum non agnoscentes <lb/>
+            Judaei, congregati sunt adversus eum, 477.—XX. Venundatus est, 478.—XXI. Quia a discipulo suo traditus est, ibid.- <lb/>
+            XXII. A semetipso traditus est, 479.—XXIII. Comprehensus est, ibid.—XXIV. Judicatus est, ibid.—XXV. In passione a <lb/>
+            discipulis deseritur, 480.—XXVI. A falsis testibus accusatus est, ibid.—XXVII. Clamaveruut Judæi ut crucifigeretur, <lb/>
+            481.—XXVIII. Judæi posteritatem suam damnaverunt, ibid.—XXIX. Flagellatus. et palmis cæsus est, ibid.—XXX. Arua­ <lb/>
+            dirre Christi caput percussum est, 482.—XXXI. Spinis coronatus est, ibid.—XXXII Veste coccinea indutus est, ibid.- <lb/>
+            XXXIII. Dum pateretur, tacuit, 483.—XXXIV. Crucem portavit, ibid.—XXXV. Cruci affixus est, 484.—XXXVI. Clavis <lb/>
+            manos ejus, et pedes affixi sunt, 485.—XXXVII. Inter duos latrones crucifixus est, 486.—XXXVIII. Quia divisa sunt ve­ <lb/>
+            stimenta ejus, ibid.—XXXIX. Felle et aceto potatus est, ibid.—XL. Quia hyssopo circumdederunt spongiam aceto ple­ <lb/>
+            nam, 487.—XLI. Quia titulus crucis ejns corruplus non est, ibid.—XLII. In cruce pendens, Pairem pro inimicis suis de­ <lb/>
+            precatus est, ibid.—XLIII. Pro nostris peccatis crucitixus est, ibid.—XLIV. Quia mortuus est, 488.—XLV. Quia in pas­ <lb/>
+            sione ejus tenebræ factae sunt, 489.—XLVI. Non fregerunt ejus crura, ibid.—XLVH. Lancea percussus est, 490.— <lb/>
+            XLVIII. De latere manavit sanguis et aqua, ibid.—XLIX. Sepultus est, 491.—L. Lapis ad ostium monumenti positusest, <lb/>
+            ibid.—LI. Descendit ad inferos, ibid.—LII. Descendens de morte quos voluit liberavit, ibid.—LIII. Corpus Christi in <lb/>
+            sepulcro non vidit corruptionem, 492.—LIV. Resurrexit ahi inferis, 493.—LV. Apostoli ad praedicandum missi, ibid.- <lb/>
+            LVI. In coelum ascendit, 494.—LVII. Sedet ad dexteram Patris, 493.—LVIII. Heguum Christi perpetuum erit, ibid.— <lb/>
+            LIX. Christus post ascensionem suam Spiritum sanctum super apostolos misit, 496.—LX. Apostoli variis linguis locuti <lb/>
+            sunt, ibid.—LXI. Venturus est adjudicandum, ibid.—LXII. Epilogus operis, 498.</p>
+          <p>DE FIDE CATHOLICA LIBER II, 499.—CAP. I. De gentium vocatione, ibid.—II. Cunctis gentibus in Christum cre­ <lb/>
+            dere jussum est, 503.—III. Judæi et gentes ad Christum vocantur, 505.— IV. De vocatione gentium ad fidem ante Ite­ <lb/>
+            bræos, 508.—V. Quia in line mundi in Christum credituri sunt Judæi, ibid.—VI. Plurimi ex Judaeorum populo non erant <lb/>
+            credituri, 510.—VII. Ob incredulitatem Judaeorum Chrislus ad gentes erat transiturus, 512.—VIII. Quia, projeclis Ju­ <lb/>
+            dæis, gentes iiitroierunt, 513.—IX. Judaei propter peccatum in Christum deuellati atque dispersi sunt, 514.—X. De rui­ <lb/>
+            na Jerusalem, 515—XI. De spretis Judaeis et Synagogæ reprobatione, 517.—XII. De perpetua ruina Jerusalem, ibid.- <lb/>
+            XIII. De irreparabili desolatione Judæorum, 519—XIV. Quod, Veteri Testamento evacuato, Novum futurum erat, 520. <lb/>
+            —XV. De cessatione Sabbati, 522.—XVI. De circumcisionis consummatione, 524.—XVII. De sacrificiis, 526.—XVIII. <lb/>
+            De escis, 527.—XIX. De sacramentis fidei Christianæ, 528.—XX. Scriptura non solum historialiter, sed etiam mystice <lb/>
+            intelligenda est, ibid.—XXI. Quia Testamentum legis Judæi non intelligunt, 529.—XXII. Quod Judæi, nisi credant in <lb/>
+            Christum, non intelligent Scripturas, ibid.—XXIII. Quod duo Testamenta aDeo sunt tradita, 530.—XXIV. Quod pecca­ <lb/>
+            torum remissio futura erat per baptismum, ibid.—XXV. Quod chrismale gentes sanctificari debeant, 533.—XXVI. Quia <lb/>
+            per signum crucis credentes salvarentur, 534.—XXVII. Quomodo sacramentum Eucharistiae præfiguratum est, 535.— <lb/>
+            XXVIII. Recapitulatio operis, 536.</p>
+          <p>SENTENTIARUM LIBER PRIMUS, 537.—CAP. I. Quod Deus summuset incommutabilis sit, ibid.—II. Quod immensus <lb/>
+            et omnipotens sit Deus, 541.—III. Quod invisibilis sit Deus, 542.—IV. Quo I ex creaturæ pulchritudine agnoscatur Crea. <lb/>
+            tor, 543.—V. Quod ex usu nostro quadam species ad Deum referantur, 544.—VI. Quod Deo nulla temporum succe-sic <lb/>
+             <pb n="955"/>
+            ascribitur, 847.—VII. De temporibus, 548.—VIII. Dc mundo, 549.—IX. Unde malum, 552.—X. De angelis, 554.—XI. <lb/>
+            De homine, 559. —XII. De anima cæterisque sensibus, 562.—XIII. De sensibus carnis, 563.—XIV. De Christo, 565.— <lb/>
+            XV. De sancto Spiritu, 568.—XVI. De Ecclesia et baeresibus, 571.—XVII. De gentibus, 575.—XVIII. De lege, 576.— <lb/>
+            XIX. De septem regulis, 581.—XX. De differentia Testamentorum, 586.—XXI. De symbolo et oratione, ibid.—XXII. <lb/>
+            De baptismo et communione, 587.—XXIII. De martyrio, 590—XXIV. De sanctorum miraculis, 591.—XXV. De Anli­ <lb/>
+            christo et ejus signis, 592.—XXVI. De resurrectione, 591.—XXVII. De judicio, 595.—XXVIII. De gehenna, 597.— <lb/>
+            XXIX. De ponis impiorum, 598.—XXX. De gloria sanctorum, 599.</p>
+          <p>SENTENTIARUM LIBER SECUNDUS, 59J — CAP. I. De sapientia, ibid.—II. De fide, 601.— III. De charitate, 602. <lb/>
+            — IV. De spe, 603. — V. De gratia, 604. — VI. De praedestinatione, 606. — VII. De conversis, ibid. — VIII. De pri­ <lb/>
+            mordiis conversorum, 60H. — IX. De conflictu conversorum, 609.—X. De remissa conversione, 610. — XI. De exemplis <lb/>
+            sanctorum, 611. — XII. De compunctione cordis, 613. — XIII. De confessione percatorum, et poenitentia, 614. — XIV. <lb/>
+            De desperatione peccantium, 617. — XV. De his qui a Deo deseruntur, 618. — XVI. De his qui ad delictum post lacry. <lb/>
+            mas revertuntur, 619. — XVII. De peccato, ibid. — XVIII. De levioribus peccatis , 620. — XIX. De gravioribus pecca- <lb/>
+            I tis, 621. — XX. De manifestis occultisque peccatis, 623. — XXI. De peccati amore, ibid. — XXII. De peccandi neces­ <lb/>
+            sitate, 624. — XXIII. De peccandi consuetudine, ibid. — XXIV. De peccati recordatione, 625. — XXV. De cogita­ <lb/>
+            tione, 626. — XXVI. De conscientia, 627. — XXVII. De intentione melis, 628. — XXVIII. De sensibus carnis, 628. <lb/>
+            — XXIX. De sermone, 629. — XXX. De mendacio, 632. — XXXI. In juramento, 633. — XXXII. De vitiis, 634. — <lb/>
+            XXXIII. Quod ex vitiis vitia, et ex virtutibus virtutes oriuntur, 633.—XXXIV. De male usis virtutibus, ibid. — XXXV. <lb/>
+            De simulatis virtutibus, 636. — XXXVI. De appetitu virtutum, 637. — XXXVII. De pugna virtutum adversus vitia, 638. <lb/>
+            — XXXVIII. De superbia, 639. — XXXIX. De fornicatione, 640. — XL. De continentia, 643. — XLI. De cupiditate <lb/>
+            645.— XLII De gula, 647. — XLIII. De ebrietate, 619. — XLIV. De abstinentia, 651.</p>
+          <p>SENTENTIARUM LIBER TERTIUS, 653. — CAP. I. De flagellis Dei, ibid. — II. De gemina percussione Dei. 655. <lb/>
+            —III. De infirmilate carnis, 638. — IV. De tolerantia divinæ correptionis, 659. — V. De tentationibus diaboli, 660. — <lb/>
+            VI. De tentamentis somniorum, 668. — VII. De oratione, 671. — VIII. De lectione, 679. —IX. De assiduitate legendi, <lb/>
+            680. — X. De doctrina sine gratia, 682. — XI. De superbis lectoribus, ibid. — XII. De carnalibus lectoribus et haereti­ <lb/>
+            cis, 683. — XIII. De libris gentilium, 685. — XIV. De collatione, 688. — XV. De contemplatione et acHone, 689. — <lb/>
+            XVI. De conlemploribus mundi, 691. — XVII. De sanctis qui se a consortio saeculi separant, 692. —XVIII. De præceptis <lb/>
+            altioribus monachorum, 693. — XIX. De humilitate monachi , vel opere, 694. — XX. De tepore monachorum, ibid. — <lb/>
+            XXI. De monachis qui curis sæculi occupantur, 695. — XXII. De his qui a Deo mundi amore praepediuntur, 696. — <lb/>
+            XXIII. De jactantia, 697.— XXIV. De hypocrisi, 699. — XXV. De invidia, 700. — XXVI. De simulatione, 701.—XXVII. <lb/>
+            De odio, ibid. — XXVIII. De dilectione, 702. — XXIX. De fictis amicitiis, ibid. — XXX. De amicitia ex munere orta, <lb/>
+            703. — XXXI. De malorum concordia, ibid. — XXXII. De correptu ne fraterna, 704. — XXXIII. De præpositis Eccle­ <lb/>
+            siae, 705. — XXXIV. De indignis præpositis, 70G. — XXXV. Do indoctis præpositis, 707. — XXXVI. De doctrina et <lb/>
+            exemplis praepositorum, ibid. — XXXVII. De his qui bene docent, et male vivunt, 708. — XXXVIII. De exemplis pra­ <lb/>
+            vorum sacerdotum, 709. — XXXIX. De præpositis carnalibus, ibid. — XL. De iracundis doctorihus, 710. — XLI. De <lb/>
+            superbis doctoribus, ibid. — XLII. De humilitate præpositum, 711.— XLIII. De doctrinae disrrelione, ibid. — XLIV. <lb/>
+            De silentio doctorum, 713. — XLV. De praebenda sacerdotali protectione in plebe, ibid. — XLVI. De disciplina sacer­ <lb/>
+            dotum in his qui delinquunt, 714. — XLVII. Do sublitis, 717. - XLVIII. De prælatis, 718. — XLIX. De justitia prin­ <lb/>
+            cipum, 720. — L. De patientia principam, 721.— LI. Quod principes legibus teneantur, 723. — LII. De judicibus, 724. <lb/>
+            — LIII. De acceptione personarum, 726. — LIV. De muneribus, ibid. — LV. De testibus, 727. — LVI. De causidicis, <lb/>
+            728. — LVII. De oppressoribus pauperum, ibid.— LVIII. De tribulatione justorum, 730. — LIX. De amatoribus mundi, <lb/>
+            731. — LX. De amaoribus misericordiæ, 732. — LXI. De brevitate vitae, 735. — LXII. De exitu, 736.</p>
+          <p>DE ECCESIASICIS OFFICIIS,737.</p>
+          <p>PRÆFATIO. LIBER PRIMUS. — DE ORIGINE OFFICIORUM, 737. — CAP. I. De Ecclesia et vocabulo Christianorum, 739. <lb/>
+            — II. De templis, 741. — III. De choris, ibid. — IV. De canticis, ibid.- V. De psalmis, 742.— VI. De hymnis, 743.— <lb/>
+            VII. De antiphonis, ibid, — VIII. De precibus, 744. — IX. De responsoriis, ibid. — X. De Icclionihns, ibid. — XI. De <lb/>
+            libris Testamentorum, 745. — XII. De scriptoribus sacrorum librorum , 747. —XIII. De Jaudibus, 750. — XIV. De of­ <lb/>
+            fertoriis, 751. — XV. De missa et orationibus, 752. —XVI. De Symbolo Nicaeno, 753. — XVII. De benedictionibus, <lb/>
+            754. — XVIII. De sacrificio, ibi I. — XIX. De tertiæ, sextae et nonne officiis, 757. — XX. De vesperis, 758. — XXI. <lb/>
+            De completis, ibid. — XXII. De vigiliarum antiquitate, 759. — XXIII. De matutinis, 760. — XXIV. De Dominico die, <lb/>
+            ibid. — XXV. De sabbato, 761. — XXVI. De Natali Domini, ibid. — XXVII. De Epiphania, 762. — XXVIII. De Palma­ <lb/>
+            rum die, 763. — XXIX. De Cœna Domini. 764. — XXX. De Parasceve, ibid. — XXXI. De Sabbato Paschæ, 766. — <lb/>
+            XXXII. De die sancto Paschæ, ibid. — XXXIII. De Ascensione Domini, 768. — XXXIV. De Pentecoste, ibid. — XXXV. <lb/>
+            De festivitatibus martyrum, 770. —XXXVI. De encæniis, 771. — XXXVII. De jejunio Quadragesimae, ibid. — XXXVIII. <lb/>
+            De jejunio Pentecostes, 773. - XXXIX. De jejunio septimi mens!!;, ibid.— XL. De jejunio Kalend. Novembr., 774. — <lb/>
+            XLI. De jejunio Kalendarum Januariarum, ibid.—XLII, De triduani jejunii consuetudioe, 775.—XLIII. De diversorum <lb/>
+            dierum ac temporum jejuniis, ibid.— XLIV. De vario usu Ecclesiarum, 776. — XLV. De carnium usu, vel piscium, 777.</p>
+          <p>LIBER SECUNDUS — DE ORIGINE MINISTRORUM, 777. — CAP. I. De clericis, ibid. — II. De regulis clericorum, ibid.— <lb/>
+            III. De generibus clericorum, 779. — IV. De tonsura, ibid. — V. De sacerdolio, 780. — VI. De chorepiscopis , 786 — <lb/>
+            VII. De presbyteris, 787. — VIII. De diaconibus, 788. — IX. De custodibus sacrorum, 790. — X. De subdiaconis, ibid. <lb/>
+            XI. De lectoribus, 791.—XII. De psalmistis, 792. — XIII. De exorcistis, ibid. - XIV. De acolythis, 793. — XV. De <lb/>
+            ostiariis, 794.— XVI. De monachis, ibid. — XVII. De pœnitentibus, 801. — XVIII. De virginibus 804. - XIX. De <lb/>
+            viduis, 807. — XX. De conjugatis, 809. — XXI. De , de exorcismo et sale, 814. — XXII. De competenti­ <lb/>
+            bus, 815. — XXIII. De symbolo, ibid. — XXIV. De regula fidei, 817. — XXV. De baptismo, 820.— XXVI. De chrismate, <lb/>
+            822. — XXVII. De manuum impositione vel confirmatione, 824.</p>
+          <p>SYNONYMA, 825. — Prologus prior, 823. — Prologus alter, 827.</p>
+          <p>LIBER PRIMUS, 827. — LIBER SECUNDUS, 845.</p>
+          <p>REGULA MONACHORUM, 867. — CAP. I. De monasterio, 869. — II. De eligendo abbate, 870. — III. De monachis, <lb/>
+            870. — IV. De conversis, 871. - V. De opere monachorum , 873. — VI. De officio. 875. — VII. De collatione, 877. — <lb/>
+            VIII. De codicibus, ibid. — IX. De mensis, 878. — X. De feriis, 880. — XI. he jejunio, 88t. — XII. De habitu mona­ <lb/>
+            chorum, ibid.— XIII. De stramentis, 883. — XIV. De delinquentibus, 884. — XV. De saepius peccante, ibid.—XVI. De <lb/>
+            culpa indulgenda, vel culpati correctione, ibid. — XVII. De delictis, 885. — XVIII. De excommunicatine, 886.— XIX. <lb/>
+            De familiari vita, 888. — XX. Quid ad quem pertineat, 889. — XXI. De infirmis, 891. — XXII. De hospitibus , 892. — <lb/>
+            XXIII. De profectione, 892. — XXIV. De defunctis, 893.</p>
+          <p>EPISTOLÆ. 893. EPIST. I. Isidori Leudefredo episcopo, ibid. — II. Isidori Braulioni archidiacono, 898. — III. Isidori <lb/>
+            Braulioni archidiacono, ibid. -IV. Isidori Massonne episcopo, 899. — V. Isidori Helladio aliisque episcopis 902. — VI. <lb/>
+            Isidori Claudio duci, ibid.— VII. Isidori Redempto archidiacono, 903. — VIII. Isidnri Eugenio episco; u , 908. — IX. Isi­ <lb/>
+            dori Braulioni episcopo, ibid.—X. Braulionis episcopi Isidoro, 909. — XI. Isidori Braulioni episcopo, 910.— XII. <lb/>
+            Braulionis episcopi Isidoro, ibid. - XIII. Isidori Braulioni episcopo-, 914.</p>
+          <p>DE ORDINE CREATURARUM, 913. — CAP. I. De fide Trinitatis, ibid.— II. De creatura spirituali, 916.—III. De <lb/>
+            aquis quæ super firmamento sunt, 920. — IV. De firmamento cœli, 921. — V. De sole et luna, 923. — VI. De spatio <lb/>
+            superiore, et paradiso cœli, 926. — VII. De spatio inferiori, et hemisphæriis diversis, 928.— VIII. De diabolo et natura <lb/>
+            dæmoniorum, 931. — IX. De natura aquarum et cursu Oceani, 933. — X. De paradiso, 938. — XI. De situ orbis terra­ <lb/>
+            rum, quem inhabitat genus humanum I 942. — XII. De natura hominum post peccatum, 943. — XIII. De diversitate <lb/>
+            peccantium, et loco poenarum, 944. — XIV. De igne purgatorio, 947. — XV. De futura vita, 950.</p>
+        </div></body></text></TEI>

@@ -1,0 +1,595 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><TEI xmlns="http://www.tei-c.org/ns/1.0"><teiHeader>
+    
+		<fileDesc>
+			<titleStmt>
+				<title>Patrologiae Cursus Completus. Series Latina (PL)</title>
+				<sponsor>University of Leipzig</sponsor>
+				<funder>European Social Fund Saxony</funder>
+				<principal>Gregory Crane</principal>
+				<respStmt>
+					<persName xml:id="Jouve">Jouve</persName>
+					<resp>OCR-ed, corrected and encoded the text</resp>
+				</respStmt>
+				<respStmt>
+					<persName>Greta Franzini</persName>
+					<resp>Project Manager (University of Leipzig)</resp>
+				</respStmt>
+				<respStmt>
+					<persName>Simona Stoyanova</persName>
+					<resp>Project Assistant (University of Leipzig)</resp>
+				</respStmt>
+				<respStmt>
+					<persName>Bruce Robertson</persName>
+					<resp>Technical Advisor (Mount Allison University)</resp>
+				</respStmt>
+			</titleStmt>
+
+			<publicationStmt>
+				<authority>University of Leipzig</authority>
+				<idno type="filename">PL17.xml</idno>
+				<availability>
+					<licence target="https://creativecommons.org/licenses/by-sa/4.0/">Available under a
+						Creative Commons Attribution-ShareAlike 4.0 International License</licence>
+				</availability>
+				<date>2014</date>
+				<publisher>University of Leipzig</publisher>
+				<pubPlace>Germany</pubPlace>
+			</publicationStmt>
+
+			<sourceDesc>
+				<listBibl xml:lang="la">
+					<biblStruct>
+						<monogr>
+							<editor>
+								<persName>
+									<name xml:lang="fr">Jacques Paul Migne</name>
+								</persName>
+							</editor>
+							<author ref="http://data.perseus.org/catalog/urn:cts:latinLit:stoa0022">Ambrosius</author>
+							<title>De XLII Mansionibus Filiorum Israel Tractatus</title>
+							<title>In Epistolam Beati Pauli Ad Romanos</title>
+							<title>In Epistolam Beati Pauli Ad Corinthios Primam</title>
+							<title>In Epistolam Beati Pauli Ad Corinthios Secundam</title>
+							<title>In Epistolam Beati Pauli Ad Galatas</title>
+							<title>In Epistolam Beati Pauli Ad Ephesios</title>
+							<title>In Epistolam Beati Pauli Ad Philippenses</title>
+							<title>In Epistolam Beati Pauli Ad Colossenses</title>
+							<title>In Epistolam Beati Pauli Ad Thessalonicenses Primam</title>
+							<title>In Epistolam Beati Pauli Ad Thessalonicenses Secundam</title>
+							<title>In Epistolam Beati Pauli Ad Timotheum Primam</title>
+							<title>In Epistolam Beati Pauli Ad Timotheum Secundam</title>
+							<title>In Epistolam Beati Pauli Ad Titum</title>
+							<title>In Epistolam Beati Pauli Ad Philemonem</title>
+							<title>De Trinitate. Alias In Symbolum Apostolorum Tractatus</title>
+							<title>De Fide Orthodoxa Contra Arianos</title>
+							<title>De Dignitate Sacerdotali</title>
+							<title>Ad Virginem Devotam</title>
+							<title>Sermones Sancto Ambrosio Hactenus Ascripti</title>
+							<title>Epistolae Ex Ambrosianarum Numero Segregatae</title>
+							<title>Precationes Duae Hactenius Ambrosio Attributae</title>
+							<title>Expositio Super Septem Visiones Libri Apocalypsis</title>
+							<title>De Poenitentia Liber Unus</title>
+							<title>De Spiritu Sancto Libellus Unus</title>
+							<title>De Concordia Matthaei Et Lucae In Genealogia Christi</title>
+							<title>De Dignitatate Conditionis Humanae Libellus</title>
+							<title>Exorcismus</title>
+							<title>Acta Sancti Sebastiani Martyris [Incertus]</title>
+							<title>Liber De Vitiorum Virtutumque Conflictu [Incertus]</title>
+							<title>Libri Duo de Vocatione Gentium [Incertus]</title>
+							<title>De Moribus Brachmanorum [Incertus]</title>
+							<title>Philosophorum Aliquot Epistolae [Incertus]</title>
+							<title>Epistolae Duae De Monacho Energumeno [Incertus]</title>
+							<title>Epistola De Fide Ad Beatum Hieronymum [Incertus]</title>
+							<title>Hymni Sancti Abrosio Attributi [Incertus]</title>
+							<imprint>
+								<publisher>Garnier</publisher>
+								<pubPlace>Paris</pubPlace>
+								<date>1879</date>
+							</imprint>
+							<biblScope unit="volume">17</biblScope>
+						</monogr>
+						<ref target="https://archive.org/details/patrologiaecurs131migngoog">Internet
+							Archive</ref>
+
+					</biblStruct>
+				</listBibl>
+			</sourceDesc>
+
+		</fileDesc>
+		<encodingDesc>
+			<p>The following text is encoded in accordance with EpiDoc standards and with the CTS/CITE
+				Architecture.</p>
+		<refsDecl>
+        <cRefPattern n="" matchPattern="(.+).(.+).(.+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@type='edition']/tei:div[@n='$1']/tei:div[@n='$2']/tei:div[@n='$3'])"/>
+        <cRefPattern n="" matchPattern="(.+).(.+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@type='edition']/tei:div[@n='$1']/tei:div[@n='$2'])"/>
+        <cRefPattern n="" matchPattern="(.+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@type='edition']/tei:div[@n='$1'])"/>
+      </refsDecl>
+    </encodingDesc>
+
+		<profileDesc>
+			<langUsage>
+				<language ident="la">Latin</language>
+			</langUsage>
+		</profileDesc>
+
+	</teiHeader>
+	<text><body><div type="edition" n="">
+					<head>
+						<title type="main">ADMONITIO IN HYMNOS SEQUENTES S. AMBROSIO ATTRIBUTOS.</title>
+					</head>
+					<p><hi rend="italic">Hos</hi>  hymnos . <hi rend="italic">reperimus in hymnario nuper
+							Halis</hi> recensito. <hi rend="italic">Clarissimus editor Germanicus, cui nomen</hi>
+						Adalbertus <lb/>
+						<hi rend="italic"> Daniel, nonnullis de sua</hi> Thesauri hymnologici <hi rend="italic">editione generatim expositis, sequentia subjicit : quae,<lb/> cum ad
+							intelligentiam annotationum hymnis Ambrosii subjectarum nonnihil conferre possint, hic
+							referre juvat.</hi>
+					</p>
+					<p> Jam  ut etiam de<unclear>annotationibus</unclear> tribus verbis dicamus  ,<lb/> pro
+						instituti nostri ratione exclusimus eas <lb/> quae ad  auctorem  et aetatem hymnorum
+						pertinent et  .<lb/>quae lexicographici, metrici vel etiam grammatici <milestone unit="PLSection" n="D"/><lb/> generis sunt, propterea quod illae res omnes in <lb/>
+						glossario tractantur. Hymnos ut annotationibus <lb/> asceticis illustraremus nobis
+						suasit vir summe reverendus <lb/>  Nickelius.  Et  illud quidem negotium libenter <lb/>
+						suscepissemus, si nobis licuisset. Sed nisi brevitati <lb/> usquequaque maxime studendum
+						fuisset, multa quae <lb/> ad historiam Ecclesiae et dogmata pertinent, copiosius <lb/> 
+						fusiusque explanavissemus. Quam eadem in re <lb/> rationem in sequenti volumine secuturi
+						simus, nondum <lb/>  nobis constat, cum quantum sibi gratiae opus <lb/> nostrum
+						 conciliaturum  sit nondum compertum habeamus  .<lb/></p>
+					<p>Jam non alienum erit narrare, quibus ex fontibus <lb/> hauserimus quibusque auxiliis
+						usi simus. Quicumque <milestone unit="PLSection" n="D"/><lb/>  harum rerum  periti  sunt,
+						ii facile intelligent <lb/> nobis exspectatione plurium fontium aditum esse <lb/>
+						 patefactum  : quod vix et ne vix quidem contigisset, <lb/> nisi multorum virorum
+						benignitate ac liberalitate <lb/> mirum in modum adjuti essemus. Non quidem dubito <lb/>
+						  quin <unclear></unclear> futuri sint, quibus numerus codicum manusc  .<lb/> non
+						satis magnus videatur, et ipse maxime <lb/> doleo quod in bibliothecis Vindobonensi et
+						Monacensi <lb/>  antiquissimas membranas inspicere et diligenti <lb/> manu versare
+						licuit. Sed, ni fallor, multi in hym- <note type="footnote"> PATROL. XVII. </note>
+						<note type="footnote"> 37 </note><pb n="1163"/>
+						<milestone unit="PLSection" n="A"/><lb/>    recte  constituendis  libris manuscriptis
+						nimium <lb/> tribuunt. Nam breviaria dioecesana, quae circa annum <lb/>  1500 typis
+						descripta sunt, e diligentissima eorum  ,<lb/> qui in dioecesi exstabant, codd.  manusc .
+						comparatione <lb/>  profecta sunt, ut hos ipsos auctoritate si <lb/> non superare,
+						certe aequare  mihi  videantur. Idem <lb/> valet de antiquis et recentioribus hymnorum
+						 collectionibus   ,<lb/> veluti Cassander multos codd. Germanos, <lb/> Clichtovaeus
+						Gallicos, Thomasius Italos inspexit. <lb/> I. CODICES.</p>
+					<p> 1 . Anni 1839 autumno cum Dresdae commorarer  ,<lb/> breviaria in bibliotheca Regia
+						asservata adii, cum <lb/> hujus rei exoptatissimae occasio mihi oblata esset. <lb/>
+						Primum adii breviarium illud, quod catalogus manusc  .<lb/> sub titulo A 147 habet, cum
+						id ex accurata <milestone unit="PLSection" n="B"/><lb/> narratione  Falckensteinii  mihi
+						antea innotuisset. <lb/> Sed est illud Horarium potius, cum horas de Beata <lb/>
+						Virgine, de Spiritu sancto, etc., contineat.  Aetas  <lb/> ejus sine dubio saeculum xv vel
+						xiv non superat, <lb/> origo autem si non ab ipsa dioecesi Metensi, certe <lb/> ab
+						affini aliqua repetenda videtur esse. Picturae <lb/> marginales quibus codex insignitus
+						est dignae sunt <lb/> ad quas, quicumque harum rerum periti sunt, animum <lb/> 
+						advertant. (D. 1.)</p>
+					<p>3. Eadem in bibliotheca alterum inveni breviarium  ,<lb/> in indice sub A 228  notatum ,
+						ex libris Crusii. <lb/> Hoc breviarium, quod ordini Dominicanorum in usu <lb/>  fuit , ex
+						commemoratione quorumdam sanctorum, <lb/> velut S. Athalae, apparet, ex regione Rhenana
+						 superiore  <lb/>  <lb/>  originem traxisse. Hunc tamen codicem <unclear>vix</unclear>
+						<lb/> initium saeculi xv transgredi persuasum habeo. <lb/> (D. 2.)</p>
+					<p>3. Eadem fere ratio est codicis chartacei, qui cum <lb/> quondam in bibliotheca
+						monasterii S. Petri Erfordiae <lb/>  asservaretur, nunc meus est. Inest in hoc codice <lb/>
+						<hi rend="italic">Glosa super Ymnos</hi> quae tamen ad  explicaudos bym - -nos 
+							<unclear></unclear>- <lb/> nos fere nihil confert. Huic glossae commentarius <lb/>
+						de summula Raymundi additus est. (E.)</p>
+					<p>4. Antiquissimum eorum quos inspeximus codicum <lb/>  debemus liberalitati Rambachii,
+						viri doctissimi, <lb/> qui  cum  primus (nam haec laus ejus semper propria <lb/> erit et
+						mansura) in hymnologia viam muniverit, tum <lb/> de nobis optime meritus est, cum nobis
+						 subsidia  et <lb/> rarissima et exoptatissima ad Thesaurum nostrum <lb/> suppeditaverit.
+						Est ille quem diximus codex ex  bibliotheca  <milestone unit="PLSection" n="D"/><lb/> 
+						civitatis illustrissimae Hamburgensis, quem <lb/> Staphorstius (Hamb.  Kirchengeschichte 
+						Thl. I. <lb/> S. 510 seqq.) decimo atque adeo nono saeculo  ascripsit   .<lb/> Contra
+						Rambachius Anth. I, p. 23 cum in codice <lb/>  S. Catharinae mentio facta sit,  suo  jure
+						saeculum <lb/> tertium decimum non egrediendum esse statuit. Sed <lb/> in ejusmodi
+						breviariis duplex pars distinguenda videtur <lb/>  : una primitiva, altera quae ex
+						posteriore tempore <lb/>  additamenta  habet . Eadem ratio videtur esse <lb/> hujus
+						codicis : hymni  enim  in festum S. Catharinae, <lb/> Conceptionis Mariae aliis litteris
+						aetatem posteriorem <lb/> indicantibus exscripti sunt; et cum hoc quoque <lb/> notabile
+						sit, hymnos in festum Corporis Christi  nondum  <lb/>  inveniri, haud scio an illud quod
+						commemoravimus <milestone unit="PLSection" n="A"/><lb/>  proprium de tempore duodecimo
+						atque adeo <lb/> undecimo saeculo vindicandum sit. (H.)</p>
+					<p>5. Breviarium dioecesanum chartaceum ex bibliotheca <lb/>  Rev. capituli cathedralis
+						Merseburgensis liberalitati <lb/>  Frejeri, viri ornatissimi, debeo; qui codex <lb/>
+						manu scriptus, etsi vix saeculum quartum decimum <lb/> egrediatur, multa tamen continet
+						propria. In his <lb/> hymnorum paucitas  et octavarum ; nam desunt adeo <lb/> octavae
+						Epiphaniae et Assumptionis. (M.)</p>
+					<p> 6 . In libris manu scriptis, quos Fr. Junius indefesso <lb/>  labore satis ille notus,
+						possedit, postea autem <lb/> bibliotheca Oxoniensis acquisivit, inest etiam vetusta
+						<lb/> interpretatio Germanica xxvi hymnorum. Nonnulli <lb/> viri docti in studiis ad
+						veterem linguam Germanicam <lb/> pertinentibus  hoc  codice usi sunt: primum,  quartum -
+							,<milestone unit="PLSection" n="B"/> <lb/> quintum et ultimum hymnum jam Hickesius
+						<lb/> vulgarat, reliqui omnes in lucem prodierunt  cura et   <lb/> studio Jac.  Grimmii ,
+						viri mira quadam doctrinae codice <lb/>   instructi , quo nunc patria nostra gaudet (Hymnorum <lb/>
+						<hi rend="italic"> Veteris Ecclesiae</hi> XXVI <hi rend="italic">Interpretatio
+							Theotisca, <lb/> nunc primum edita  Gottingae </hi> 1830). Cum et hymni <lb/> Latini et
+						versio Germanica, quae ille codex manusc. <lb/>  complectitur , in octavum  saeculum 
+						incidant, id quod <lb/> Prolegomenis vir doctissimus argumentis satis idoneis <lb/> 
+						confirmavit, nihil est quod exponamus, quanti <lb/> hic Grimmi liber a nobis aestimatus
+						sit.  (O .)</p>
+					<p>7. Cum audivissem in  bibliotheca  academiae Herbipolitanae <lb/>  breviaria antiquissima
+						asservari, confisus <lb/> liberalitate Ludwigii, viri doctissimi, cujus curae  ac 
+							<milestone unit="PLSection" n="c"/><lb/> tutelae bibliotheca illa commissa est, et
+						Reussii, viri <lb/>  ornatissimi , cujus humanitatem non possum satis <lb/> praedicare,
+						almum senatum academiae omni qua par <lb/> est observantia ausus sum rogare, ut codicum
+						 illorum  <lb/>  vetustissimum  mihi  mitti concederet. Qui cum <lb/> precibus meis
+						benevole annueret, factum est ut duo <lb/> antiquissima breviaria inspicere possem,
+						quorum <lb/> unum est ex celebratissimo monasterio Ebracensi, et, <lb/> nisi fallor,
+						saeculo tertio decimo scriptum est. (W. 1.)</p>
+					<p>8.  Alterum  est breviarium dioecesanum ex bibliotheca <lb/>  monasterii Benedictinorum,
+						quod S. Stephanum <lb/>  patronum colebat. In quo cum nonnulli festi <lb/> dies
+						seriores ad cultum Mariae pertinentes desint  et  <lb/> festum Corporis Christi unum modo
+						hymnum habeat  ,<lb/> non dubito quin codex sub finem saeculi XIII <lb/> scriptus sit.
+						(W. 2.)</p>
+					<p>
+						<milestone unit="PLSection" n="D"/>
+					</p>
+					<ab>
+						<title type="sub">II. BREVIARIA.</title>
+					</ab>
+					<ab>
+						<title type="sub">
+							<hi rend="italic">Breviaria  Dioecesana .</hi>
+						</title>
+					</ab>
+					<p><hi rend="italic"> 1 . Canonicarum horarum liber secundum</hi> ordinem <lb/>
+						<hi rend="italic"> Rubrice  Ecclesie Halberstadensis ordinatus studiosissime<lb/> </hi>
+						revisus. <hi rend="italic">correctus et emendatus. et ad instar correctissimorum <lb/> 
+							exemplarium collatus. Ac per Georgium <lb/> Stuchs  Nurnberge <unclear></unclear>
+							impressus. Anno virginei  partus  <lb/> Millesimo quingentesimo quintodecimo. Idibus
+							Novembris</hi>
+						<lb/>  <hi rend="italic">feliciter finit.</hi> Meum est. (III.)</p>
+					<p>2, Canonicarum <hi rend="italic">horarum liber secundum ordinem<lb/> rubrice sancte
+								 Ecclesie <unclear></unclear> Magdeburgensis.</hi> summo <hi rend="italic">studio
+							<lb/>  revisus <unclear></unclear> atque denuo correctus in officina Georgii  Stuchs 
+							<lb/> civis  Nurenbergensis <unclear></unclear></hi> impressus. <hi rend="italic">Anno
+							a</hi> partu <hi rend="italic">virginis<lb/> gloriosissime Millesimo quingentesimo
+							quatuor decimo</hi><pb n="1165"/>
+						<milestone unit="PLSection" n="A"/><lb/>
+						<hi rend="italic">mensis Octobris</hi> die <hi rend="italic">vigesimo primo finit.</hi>
+						Ex bibl. Orphanotrophei <lb/>  Halensis. (Mgd.)</p>
+					<p>3. Breviarium Misnense typis exscriptum circa annum <lb/>  1510. Ex bibliotheca
+						Academiae  Halensis .  (Msn .)</p>
+					<p>4. <hi rend="italic">Viatici</hi>  pars  <hi rend="italic">estivalis secundum rubricam
+							ecclesie<lb/> Merseburgensis.</hi> In calce libri : <hi rend="italic">Finita est  hec Pars 
+							 <lb/> estivalis viatici  Merseburgensis  atque .  impressum</hi>  pen . . gili .. <lb/>
+						<hi rend="italic"> cura. Arte et</hi> ingenio <hi rend="italic">industriosi
+							Melchioris Lotter</hi>
+						<lb/>  Ducalis . <hi rend="italic">opidi Liptzensis concivis</hi> Anno <hi rend="italic">salutifere</hi> incarnationis <lb/>
+						<hi rend="italic">  Millesimo <unclear></unclear> quingentesimo quarto. Die</hi>
+						<unclear/><hi rend="italic"> Iovis .<lb/> quinta decima mensis Augusti.</hi>  Ex 
+						bibliotheca S.  Mariae  <lb/>  Halensis. (M: (Msb .)</p>
+					<p><hi rend="italic">5. Breviarium  Pataviensis  Ecclesie mira formandi<lb/> arte
+							pervigilique cura sollertis</hi> viri <hi rend="italic">Petri Lichtenstein <lb/>
+							impensa vero Leonardi et Lucae Allantse</hi> fratrum <hi rend="italic"> bibliopolarum </hi>
+						<milestone unit="PLSection" n="B"/><lb/>
+						<hi rend="italic"> wienensium. Absolutum  est  Venetiis</hi> anno <lb/>
+						<hi rend="italic">Salutigero</hi> 1515 <hi rend="italic">die</hi> 25 <hi rend="italic"> Maii divo <unclear></unclear>  ac semper augusto <lb/> Maximiliano</hi>  primo  <hi rend="italic">imperiale</hi> sceptrum <hi rend="italic">fauste tenente.</hi>
+						<lb/> Hoc breviarium ex biblioth. gymnasii Zuiccaviensis <lb/>
+							 Hertelius <unclear></unclear> vir doct. benevole suppeditavit. (Pt.)</p>
+					<p>6. Breviarium Ecclesiae Salisburgensis,  quod meum  <lb/> est. Hoc vehementer doleo in
+						fronte et in calce esse <lb/>  mutilum  atque deesse nomen typographi atque annum 
+						.<lb/> Est sane splendide typis exscriptum. (Sl.)</p>
+					<p><hi rend="italic">7. Breviarium hoc juxta veras rubricas</hi> . Myndensis <lb/>
+						<hi rend="italic">  Ecclesie <unclear></unclear></hi> ordinatum <hi rend="italic">sollerti</hi> lucubratione  praevia  <lb/>
+						<hi rend="italic">opera ac</hi> vigilanti cura <hi rend="italic">industriosi</hi> viri
+							<hi rend="italic">Georgii Stachs <lb/> de Sulczpach. quod  splendide  exaratum</hi> anno
+							<hi rend="italic">nonagesimo <lb/>  supra</hi> millesimum <hi rend="italic">quadringentesimum, decimo <lb/> vero</hi> nono <hi rend="italic">calendarum Januarii
+							explicit.</hi> Id mihi aliosque <milestone unit="PLSection" n="C"/><lb/>  libros ex
+						bibliotheca academiae Gottingensis, cui <lb/> summa cum humanitate et liberalitate
+						praeest  Benekius   ,<lb/> vir. doct.,  Havemannus  et Rankius, viri doct., <lb/>  quos  summa
+						 colo  observantia, miserunt  benevole .  ;<lb/>Md.) .</p>
+					<p>8. <hi rend="italic">Breviarium secundum rubricam ecclesie Havelbergensis<lb/> 
+							diligenter recognitum.</hi> In calce : <hi rend="italic">Lipsie in  officina <lb/> 
+							Melchioris Lottheri longe quam ante accuratius et<lb/> emendatius Anno</hi> a <hi rend="italic">natali christiano Millesimo quingentesimo<lb/>  decimo octavo.</hi>
+						Meum est. (Hv.)</p>
+					<p><hi rend="italic">9. Breviarium dicendarum Canonicarum horarum ad</hi>
+						<lb/> morem <hi rend="italic">Severiani Collegii Erphordiensis.</hi> In  calce  : <hi rend="italic">Impressum<lb/>  et completum est praesens breviarium in nobili <lb/> 
+							famosaque urbe Moguntina Hujus artis impressorie <lb/>  inventrice prima : per
+							.</hi><hi rend="italic">honestum virum Joannem</hi>
+						<milestone unit="PLSection" n="D:"/><lb/>
+						<hi rend="italic">Schoeffer</hi>  civem Moguntinum  <hi rend="italic">. Anno dominice
+							 incarnationis  . <lb/>  Millesimo quingentesimo decimo octavo</hi> VIII <hi rend="italic">Idus <lb/> Februarias.</hi> Ipse librum possideo. (Ef.)</p>
+					<p>10. Meus est etiam libellus  rarissimus  in Gallia <lb/> typis exscriptus : <hi rend="italic">Heures  &#224 ;  l'usage de  Lengres . au long<lb/> sans rien</hi>  requerir . <hi rend="italic">Imprime a Troyes chez Jean  le Coq  .</hi>
+						<lb/> (sine anno et numeris foliorum), qui sub  finem solemnes   <lb/>  per  totum  annum
+						hymnos continet. Placuit <lb/> nobis librum litteris Lg. notare, cum illi hymni sine
+						<lb/> dubio in dioecesi Lingonensi in usu fuerint. (Lg.)</p>
+					<p><hi rend="italic"> 11 .  Hymni  Ecclesiae excerpti e</hi>  Breviariis , <hi rend="italic">Romano <lb/> Sarisburiensi  Eboracensi  et aliunde Oxonii</hi> Z. <hi rend="italic">H.<lb/> Parker</hi> 1838. Hymni e brev.  Romano  correcti a <lb/> nostro consilio
+						alieni erant,  exoptatissimi  tamen <milestone unit="PLSection" n="A"/><lb/> erant qui ex
+						brev. Sarisburiensi et Eboracensi  desumpti  <lb/>  sunt. Nam  uti ex  illo,  cujus  modo
+						mentionem <lb/> fecimus, libello cognosci poterat, qui apud Francogallos <lb/> 
+						usitatissimi fuissent hymni, sic ex hoc qui <lb/> apud Anglos. (Sb. Eb.)</p>
+					<ab>
+						<title type="sub">
+							<hi rend="italic">Breviaria  monastica .</hi>
+						</title>
+					</ab>
+					<p>12. Breviariorum quae ordinis  S . Francisci fuerunt <lb/>  multorum nobis patuit
+						aditus. Antiquissimum <lb/> est bibliothecae Halensis  S . Mariae a nobis litteris <lb/> Fr.
+						notatum; In calce legitur: <hi rend="italic">Explicit breviarium <lb/> secundum</hi>
+						morem <hi rend="italic"> romane  curie. Impressum Venetiis <lb/> per Franciscum</hi> Renner
+							<hi rend="italic"> de  Hailbrun. Anno Domini</hi>
+						<lb/> 1481. Alterum (Fr. 2) e mea est bibliotheca. Legitur <lb/>  in calce: <hi rend="italic">Explicit breviarium secundum ritum</hi>
+						<lb/> Romanum <hi rend="italic">Venetiis</hi> impressum <hi rend="italic">arte et</hi>
+						impensis <hi rend="italic">Andree</hi>
+						<milestone unit="PLSection" n="B"/><lb/>
+						<hi rend="italic"> de  Toresanis  de Asula  <unclear></unclear></hi> 1495 <hi rend="italic">die vero</hi> 14 <hi rend="italic">Martii, feliciter .<lb/></hi> Praeterea
+						comparavimus nonnulla alia ab illis <lb/> fere nihil discrepantia. Primum. <hi rend="italic">Explicit breviarium <lb/> secundum ordinem</hi> sancte Romane <hi rend="italic">Ecclesie</hi> magna cum <lb/>
+						<hi rend="italic">diligentia revisum et fideli studio emendatum. Idque <lb/> in alemonia
+							regali civitate  Nurembergk <unclear></unclear> multum</hi> famosa <unclear/>
+						<lb/>
+						<hi rend="italic"> impressum arte et</hi> impensis <hi rend="italic">Anthonii  Koberger praefatae 
+							 <lb/>  civitatis</hi> incolam. Anno <hi rend="italic">incarnatae deitatis
+							elapso</hi>
+						<lb/> 1486. IV idus <hi rend="italic">Decembris.</hi> Meum est.  Secundum . <hi rend="italic">Et <lb/>  sic <unclear></unclear> finitur</hi>  breviarium  secundum
+							<unclear/><hi rend="italic"> usum  Romane curie <lb/> arte et charactere honesti</hi>
+						viri <hi rend="italic">Jacobi de pforczen civis <lb/> Basiliensis ductu vero fratris
+							Nicolai  vincentii ordinis  </hi>
+						<lb/> minorum <hi rend="italic">elaboratum. Anno salutiferae. Incarnationis <lb/>
+							quadringentesimo</hi> nonagesimo <hi rend="italic">tertio.</hi> Ex bibliotheca <lb/>
+						S. Mariae Halensi. Inde etiam tertium aliud breviarium <milestone unit="PLSection" n="c"/><lb/>  fortasse antiquius. Sed desunt  annus  et nobili <lb/>  typographi. Paginae
+						numeris nondum notatae. <lb/> Denique etiam ad manus erat  recens  Minorum breviarium 
+						,<lb/> quod amicissimus nobis Diedrichius, magister <lb/>  scholae Latinae in
+						 Orphanotropheo  Halensi, <lb/> nobis largitus est: <hi rend="italic">Breviarium
+							Romano-Seraphicum  ,<lb/> etc.  Coloniae  Agrippinae</hi> 1734.</p>
+					<p>.    .<lb/> Ordinis  Dominicanorum  est Breviarium  bibliothecae   .<lb/> Gottingensis
+						vetustum, quod et  Norimbergae . <lb/>  anno 1582 editum est (Pd.). Breviarium ejusdem <lb/>
+						 ordinis recentius debemus bibliothecae Orphanotrophei  .<lb/> Prodiit illud Parisiis
+						a. 1643.</p>
+					<p> 14 . Bibl. S. Mariae  Halensis  nobis suppeditavit <lb/> vetustum ordinis S. Benedicti
+						breviarium : <hi rend="italic">Finit<lb/> pars hyemalis breviarii reverendorum patrum
+							ordinis</hi>
+						<milestone unit="PLSection" n="D"/><lb/>
+						<hi rend="italic"> divi  Benedicti de observantia per Germaniam unionis<lb/>
+							Bursfeldensis. Parrhisiis</hi> impressa <hi rend="italic">per Desiderium<lb/>
+							maheu</hi> in vico <hi rend="italic">sancti Jacobi commorantis sub intersignio<lb/> 
+							sancti Nicolai prope templum sancti Benedicti.</hi>
+						<lb/> Sumptibus <hi rend="italic">Godofridi Hectoris  honesti  bibliopole. Anno <lb/>
+							Dominice incarnationis</hi>  1518 . <hi rend="italic">De</hi>  15  <hi rend="italic">mensis Januarii</hi>
+						<lb/> (Bd.). Recens ejusdem ordinis Breviarium meum est : <lb/>
+						<hi rend="italic">Breviarium monastico.... Benedictinum</hi> quadripartitum <lb/>
+						<hi rend="italic">. Typis principalis monasterii Einsidlensis. anno</hi>
+						<lb/> 1743 <hi rend="italic">seqq.</hi>
+					</p>
+					<p>15. Ex breviariis Eremitarum S. Augustini duo <lb/> consuluimus: unum ex bibl. S. Mariae
+						Halensi, sine <lb/> anno et titulo, sed procul dubio pervetustum (Aug.), <lb/> alterum
+						ex nostra: <hi rend="italic">Breviarium secundum ritum sancte</hi><pb n="1167"/>
+						<milestone unit="PLSection" n="A"/><lb/>
+						<hi rend="italic">Romane Ecclesie  summa  cum diligentia emendatum et</hi>
+						<lb/> castigatum <hi rend="italic">in quo  etiam  multa superaddita sunt quae</hi>
+						<lb/> in <hi rend="italic">consimilibus breviariis numquam alias</hi> fuerunt <hi rend="italic">impressa <lb/>  feliciter explicit. In alma Venetiarum urbe per<lb/>
+							Jacobum de Leuco accuratissime impressum. Anno <lb/> salutifere Domini nostri Jesu
+							Christi incarnationis <lb/> </hi> quingentesimo <hi rend="italic">supra millesimum
+							nonis Octobris</hi>
+						<lb/> (Aug. 2).'</p>
+					<p>16. Ex eadem bibl. S. Mariae est pervetustum <lb/> Carthusianorum Breviarium: <hi rend="italic">Breviarium sacre</hi>  religionis   .<lb/> <hi rend="italic">Cartusie. Ab
+							exemplari correctissimo</hi> impressum <lb/>
+						<hi rend="italic"> Salutiis per magistrum Simonem bevelaqua</hi> Papiensem  .<lb/>
+							<hi rend="italic">Anno Domini</hi> 156 <hi rend="italic">die</hi> 22 <hi rend="italic">Aprilis</hi> (Ct.).</p>
+					<p>17. Ex breviariis ordinis Cisterciensis antiquis, <lb/> in quibus hymni more singulari
+						et insolito dispositi <milestone unit="PLSection" n="B"/><lb/> sunt, unum ex bibl.
+						Gottingensi inspeximus: <unclear>Brev</unclear>-; <lb/>
+						<hi rend="italic"> camerale  ad</hi> usum <hi rend="italic">Cisterciensis ordinis
+							anno</hi> currente <lb/> 1510 <hi rend="italic">ab eodem monacho qui praecedentia
+							ejusdem ordinis <lb/>  brev. correxerat diligenti cura castigatum et ad<lb/> hanc
+							satis amplam formam redactum , reverendissimi<lb/> patris domini Cistercii obedientia
+							punctis in eodem<lb/> ordine fieri solitis utiliter comunitum incipit feliciter.</hi>
+						<lb/> — <hi rend="italic">Venale reperitur Parisiis sub Leone Argenteo</hi> vici <lb/>
+						<hi rend="italic">sancti Jacobi</hi> (Cs.).</p>
+					<ab>
+						<title type="sub">III. SUBSIDIA LITTERARIA QUAE HYMNOS COLLECTOS ET  EXPLICATOS 
+							CONTINENT.</title>
+					</ab>
+					<p> 1 . Sub  finem  saeculi xv in Germania saepius typis <lb/> excusa est <hi rend="italic">Expositio hymnorum.</hi> Varias hujus operis <lb/> editiones novi hasce : <hi rend="italic">Expositio</hi> himnorum <hi rend="italic">cum notabili <lb/>  commento.
+							Coloniae apud Henricum Quentell</hi>
+						.<milestone unit="PLSection" n="C"/>   <lb/>— <hi rend="italic">Expositio, etc.
+							Hagenoviae</hi>   .— Expositio <lb/>
+						<hi rend="italic">Himnorum tum notabili commento</hi> implicat <hi rend="italic">historias <lb/> cum optimis  allegationibus  sacre Scripture illorum <lb/> sanctorum
+							vel sanctarum de quibus tales</hi> himni <hi rend="italic">decantantur  .<lb/>
+							Colon&lt; Coloniae </hi> . — <hi rend="italic">Expositio Himnorum <lb/> cum notabili
+							commento.</hi> In calce: <hi rend="italic">Basileae</hi> impressus <lb/>
+						<hi rend="italic">per Michaelem Furter.</hi> Anno <hi rend="italic">inc. Domin.</hi>
+						1504. — <lb/>
+						<hi rend="italic">Exp. H. cum familiari commento jam dudum in</hi> lucem <lb/>
+						<hi rend="italic"> edito.</hi> In calce: <hi rend="italic">Liber himnorum cum
+							textuali <lb/> interpretatiuncula jam dudum laboriose congestus iterato <lb/> 
+							repressus est in domo quondam Henrici Quentell<lb/> Coloniae</hi>  1506  <hi rend="italic">ad finem mensis Maii.</hi> Editio quam <lb/> ego possideo omnibus est
+						antiquior. Inscripta est <lb/>
+						<hi rend="italic">Expositio hymnorum perutilis omnibusque salubris:</hi>
+						<lb/>  deest  annus et nomen typographi, sed ex omnibus <milestone unit="PLSection" n="D"/><lb/> elucet in  officina Quentelliana   circa annum 1490 <lb/> typis esse descriptam. In
+						hac hymnorum collectione <lb/> memorabile mihi visum est initium libri:  &#171 ; Liber <lb/>
+						ste dicitur liber hymnorum. Hymnus dicitur laus <lb/> Dei cum cantico. Quatuor fuerunt
+						principales auctores <lb/>  qui hymnos composuerunt, Gregorius, Prudentius  ,<lb/>
+						Ambrosius, Sedulius. Sed quidam vir prudens <lb/> nomine Hilarius videns illos multos
+						hymnos composuisse ,<milestone unit="PLSection" n="A"/> <lb/> dignum duxit placuitque
+						quosdam in unum <lb/> colligere compendiose, in unum componere brevem <lb/> et utilem
+						tractatum, in quo omnes hymni fuerunt. <lb/> In  hoc  exordio vestigia vetustatis
+						singularis exstare <lb/> mihi videbantur. Itaque vel maxime gravisus sum <lb/> cum
+						Gersdorfius vir Doct. ea qua notus est  liberalitate . <lb/>  ex Bibl. Paulina Lipsiensi
+						codicem 720 in quo <lb/> etiam <hi rend="italic">Expositionem himnorum</hi> inesse
+						audiveram, <lb/> mihi mitteret. Mox enim intellexi hoc  in  codice <lb/> exhiberi Hilarii
+						nostri commentarium, quem certe <lb/> tertio decimo  saeculo  compositum esse ex aetate
+						codicis <lb/>  suspicari licet. Hilarius ille quando vixerit et <lb/> quis fuerit et
+						quae operis ejus ratio sit infra disputabimus <lb/>  (Hil.).</p>
+					<p>2. <hi rend="italic">Hymni de tempore et de sanctis in eam</hi> formam <milestone unit="PLSection" n="B"/><lb/>
+						<hi rend="italic">qua a suis autoribus scripti sunt denuo redacti et secundum <lb/> 
+							legem carminis diligenter emendati atque</hi>  interpretati  <lb/>
+						<hi rend="italic">. Anno Domini</hi> 1519. In calce libri legitur : <lb/>
+						<hi rend="italic">Hymnis per anni circulum occurrentibus Latina cum<lb/> enucleatione
+							adjunctis difficilium clausularum</hi> significatis <lb/>
+						<hi rend="italic">. Extrema apposita est manus. Argentoraco in<lb/> Joannis
+							Knoblouch calcographi edibus humane redemptionis</hi>
+						 ,<lb/> <hi rend="italic">etc.</hi> Auctorem se appellat in  prooemio  <lb/>
+						Jacobus Wimphelingus <unclear> Sletstatinus (&#8224 ; </unclear>  1528): verum <lb/> quod sciam
+						viri docti qui Wimpfelingii libros enumerant <lb/>  hujus operis non injiciunt
+						mentionem. Caeterum <lb/>  in hoc libro fere passim Hilarium  sequitur  <lb/> (Wimpf.
+						*).</p>
+					<p>5. <hi rend="italic">Liber Hymnorum</hi> in <hi rend="italic">metra noviter</hi>
+						redactorum. <lb/>
+						<hi rend="italic">Apologia et defensio  poeticae  ac  oratoriae </hi> i <hi rend="italic">majestatis.</hi>
+						<milestone unit="PLSection" n="c"/><lb/>
+						<hi rend="italic">Brevis expositio difficilium</hi> terminorum <hi rend="italic">in
+							hymnis ab<lb/> aliis  parum  probe et erudite forsan</hi> interpretatorum <lb/>
+						<hi rend="italic">per Henricum Bebelium Justingensem edita poeticam<lb/> et humaniores
+							litteras publice profitentem in</hi>  gymnasio  <lb/>
+						<hi rend="italic"> Tubengensi. Annotationes ejusdem in quasdam</hi> vocabulorum <lb/>
+						 <hi rend="italic">interpretationes Mammetracti<unclear/>". Thubingen</hi>
+						<lb/> 1501. Hunc librum Rambachius liberalissime mihi <lb/>  misit . (Beb.)</p>
+					<p>4. <hi rend="italic">Hymni et Sequentie cum diligenti difficillimorum <lb/> vocabulorum
+							 interpretatione   omnibus et scholasticis et<lb/> ecclesiasticis cognitu</hi>
+						necessaria <hi rend="italic">Hermanni Torrentini <lb/> de omnibus puritatis lingue
+							Latine studiosis quam</hi> optime <lb/>
+						<hi rend="italic"></hi> meritis. In fine  legitur : <hi rend="italic">Impressum
+							Colonie per<lb/> Martinum de werdena anno Domini</hi> 1513 in <hi rend="italic">profesto <lb/> Visitationis beate Marie</hi> virginis. Exstat hujus libri <milestone unit="PLSection" n="D"/><lb/> editio secunda. <hi rend="italic">Hymni et  Prosae 
+							ecclesiasticae vulgo<lb/>  sequentiae dictae   breviuscula quidem sed maxime commoda<lb/>
+							 Hermanni Torrentini explanatione illustrata.<lb/> Qui piis et Christianis
+							oblectantur canticis his se</hi> oblectent  .<lb/> <hi rend="italic"> Coloniae .
+							Excudebat Petrus Horst</hi> 1536. Utramque <lb/>  editionem inspexi; sed cum ille vir
+						doctus in <lb/> secunda Clichtovaeum plus minusve secutus sit, <note type="footnote"> *
+							Rarissimum librum ejusdem auctoris <hi rend="italic">De hym­ <lb/> tiorum et
+								seqnentiarum auctoribus</hi> generibusque' <hi rend="italic">carmi­<lb/> tintn quae
+								in hymnis inveniuntur,</hi> quem multum nos <lb/> adjuturum esse speramus, vir
+							prn'ct. Ullmannus ex <lb/> hiltliotheca Palatina nobis liberalissime misit.
+							</note><note type="footnote"> " <hi rend="italic">Ein vielfach beim Unterricht
+								eingefuhrtes Lehr­<lb/> buch, eine Art Grammatik mit dem sonderbaren Titel <lb/>
+								Mammetrachus od. Jlammotreples war zu tinem Anu-<lb/> hen und Einflusse gekommen.
+								die unvertilghar schie­<lb/> nen. Sie auszurotten, war Bebet mit</hi> aller <hi rend="italic">Kraft bedacht.</hi>
+							<lb/> Ersch. Gruber Encyclopaedie. s. v. Bebel. </note><pb n="1169"/>
+						<milestone unit="PLSection" n="A"/><lb/> prior editio nobis longe pluris videtur
+						aestimanda. , <lb/> Hanc mea bibliotheca suppeditavit (Torr.).</p>
+					<p><hi rend="italic">5. De tempore et sanctis per totum annum hymnarius <lb/>  in
+							metra</hi> ut <hi rend="italic">ab Ambrosio, Sedulio, Prudentio</hi> ceterisque <lb/>
+						<hi rend="italic"> doctoribus hymni sunt compositi. Groningen <lb/> phrisie jam
+							noviter redactus incipit</hi> feliciter. In fine : <lb/>
+						<hi rend="italic">Et sic est finis.</hi> Debeo Rambachio (Gron.).</p>
+					<p>6. Ex bibliotheca S. Mariae Halensis suppeditatus <lb/> est mihi liber, initio mutilus,
+						qui psalmos et hymnos <lb/>   continet . In fine legitur: Psalterium <hi rend="italic">Davidis <lb/> adjunctis hymnis  felicem  habet finem opera et</hi> impensis <lb/>
+						<hi rend="italic">Melchior Lotters ducalis opidi Liptzensis concivis <lb/> Anno Milesimo
+							quingentesimo undecimo</hi> 18 <hi rend="italic">die Aprilis</hi>
+						<lb/> Hoc opus litteris (Lps.) notavimus.</p>
+					<p>7. Jodoci Clichtovaei operis copia doctrinae utilissimi <milestone unit="PLSection" n="B"/><lb/>  et primam et secundam editionem Ven. Rambachio  ,<lb/> cujus insignem
+						liberalitatem non possumus <lb/> non praedicare, debemus. <hi rend="italic">Elucidatorium ecclesiasticum<lb/>  ad officium  ecclesiae  pertinentia planius
+							exponens<lb/> et quatuor libros complectens.</hi> — <hi rend="italic">Primus Hymnos de
+							<lb/> tempore et</hi>   , <hi rend="italic">per totum annum.</hi> — <hi rend="italic">Secundus non<lb/> nulla cantica</hi> ecclesiastica <hi rend="italic">antiphonas et responsoria. <lb/> — Tertius ea quae ad Missae pertinent officium,</hi>
+						praesertim <lb/>
+						<hi rend="italic"></hi> praefationes. — <hi rend="italic">Quartus prosas quae</hi>
+						in sancti <lb/>
+						<hi rend="italic">altaris sacrificio dicuntur continet.</hi> Primum prodiit <lb/> liber
+						Parisiis 4515, deinde Basileae 1517 et 1519. <lb/> Opus Clichtovaei abbreviatum, sed in
+						hymnis auctum <lb/>  prodiit <hi rend="italic">Venetiis in vico</hi> S. <hi rend="italic">Mariae formosae ad  signum </hi>
+						<lb/>  <hi rend="italic">spei</hi> 1555. Cl., cum breviariis Italis, Gallicis <lb/>
+						et  Hungaricis  usus sit, opus ejus summo loco est <milestone unit="PLSection" n="C"/><lb/> habendum. Multus  quidem est in   annotationibus, sed <lb/> non paucae earum utiles
+						sunt (Clicht.).</p>
+					<p>8. <hi rend="italic">Hymni ecclesiastici</hi> praesertim <hi rend="italic">qui
+							Ambrosiani<lb/> dicuntur multis in locis recogniti et multorum hymnos <lb/> 
+							accessione locupletati. Cum Scholiis opportunis <lb/> in locis adjectis et Hymnorum
+							indice Georgii</hi> Cassandri  .<lb/> <hi rend="italic">Beda de Metrorum generibus ex
+							primo libro de re<lb/> metrica.  Coloniae  anno</hi>  1556 . Iterum hymni excusi in <lb/>
+						operibus Cassandri quae prodierunt Parisiis  1616 . <lb/> Hymnorum textum, ut  ita  dicam,
+						optime recensuit <lb/> multis breviariis imprimis Germanicis apte collatis. <lb/> Notae
+						auctoris non magni aestimandae sunt ; nam <lb/> fere omnes sunt dogmatici vel polemici
+						generis. In <lb/> Romana Ecclesia liber est  vetitus  (Cass.).</p>
+					<p>9. Collectiones hymnorum quae quidem circa Lutheri <milestone unit="PLSection" n="D"/><lb/>
+						 tempora a Lutheranis institutae sunt, sed ad  recensendum   <lb/>  textum non
+						 multum  valent cum permulta <lb/>  in iis mutata deprehenderim. Ad manum <lb/> erant:
+							<hi rend="italic">Psalmodia,</hi>  etc ., <hi rend="italic">per Lucam Lossium Lunebergensem
+							<lb/>  cum</hi> praefatione <hi rend="italic">Phil.  Melanthonis . Witebergae <lb/>
+							 apud Haer  . Georgii Rhau</hi> 1561. (Loss.) <hi rend="italic">Cantica selecta <lb/> 
+							veteris novique Testamenti cum  hymnis . et  collectis <lb/>  seu orationibus purioribus
+							quae in orthodoxa atque<lb/> catholica Ecclesia cantari solent. Addita dispositione
+							<lb/> et familiari expositione Christophori  Corneri Lipsiae  <lb/> cum privilegio</hi>
+						1568.  (Corn .) <hi rend="italic">Cantica ex sacris</hi>  litteris  <lb/>
+						<hi rend="italic"> in Ecclesia cantari solita cum hymnis et collectis, <lb/> etc.,
+							recognita et aucta per D. Georg. Majorem anno</hi>
+						   .<lb/> — <hi rend="italic">Witebergae Laurentius Schwenck Eisfeldensis</hi>
+						<milestone unit="PLSection" n="A"/><lb/>
+						<hi rend="italic">excudebat sanctis —Psalte Davidis, etc.</hi> cum <hi rend="italic">lemmatibus<lb/> ac notis Adami Siberi. Accesserunt Hymni festorum<lb/> dierum
+							insignium.</hi> Lipsiae <hi rend="italic">Johannes Rhamba excudebat<lb/>  anno</hi>
+						 1577 . (Sib.) Palma ex mea sententia tribuenda <lb/>  est  Ludeci  operi: <hi rend="italic">Vesperale et</hi> Matutinale, <lb/>
+						<hi rend="italic">etc.</hi> 1589 (Lud.), quod idem eis qui cultum Luthc* <lb/> 
+						Ecclesiae veteris cognoscere student maximae <lb/> utilitati erit.</p>
+					<p>10. <hi rend="italic">Hymnorum Ecclesiasticorum ab Andrea Ellingero <lb/>  V. Cl.
+							emendatorum libri III, etc.</hi>  <hi rend="italic">,,­</hi>
+						<lb/>  Francofurti  <hi rend="italic">ad  Moenum .</hi> (Ell.)  Haec  collectio omnium <lb/> quas
+						vidi copiosissima, sed cum in duobus prioribus <lb/>  libris hymni propter metricas
+						rationes prorsus <lb/> mutati sint, tertio tantum libro uti licuit; in reliquis <lb/>
+						duobus Ellingeri auctoritas ibi tantum me movit, <milestone unit="PLSection" n="B"/><lb/> ubi lineola adjecta notavit veterem et genuinam <lb/> scriptionem exhiberi.</p>
+					<p>11. <hi rend="italic">Poetarum veterum ecclesiasticorum opera Christiana<lb/>  et
+							operum reliquiae atque fragmenta. Thesaurus<lb/> catholicae et  orthodoxae  Ecclesiae et
+							antiquitatis  religiosae  <lb/>  ad utilitatem juventutis scholasticae, collectus,<lb/>
+							emendatus, digestus et commentario quoque expositus <lb/> diligentia et studio Georgii
+							Fabricii Chemnicensis. <lb/> Basileae per Joannem Oporinum</hi> 1564. (Fabr.)</p>
+					<p>12. Ven. Thiloni debeo : <hi rend="italic">Divorum patrum et doctorum <lb/>  Ecclesiae
+							qui oratione ligata scripserunt Paraphrases<lb/>  et Meditationes in Evangelia
+							dominicalia</hi> (in <lb/> altera parte: in <hi rend="italic">hist. evangelicas quae
+							festis Sanctorum</hi>
+						<lb/>  <hi rend="italic">publicis conventibus</hi> explicantur) e <hi rend="italic">diversis  ipsorum </hi>
+						<lb/>  <hi rend="italic">scriptis  collectae  a. M, Joach. Zehnero Ecclesiae</hi>
+						<milestone unit="PLSection" n="c"/><lb/>
+						<hi rend="italic">Schleusingensis pastore et Superintendente.</hi> Lipsiae' <lb/> 1602
+							<hi rend="italic">sumptibus Thomae Schureri.</hi> Liber utilissimus, <lb/> cujus
+						auctorem in hymnis Ecclesiae Christianae veteris <lb/>  satis versatum esse non possumus
+						quin fateamur  ,<lb/> omninoque ex illo libro apparet illo quoque <lb/> tempore apud
+						Lutheranos studiosissimos fuisse <lb/> hymnorum veterum amatores. (Zehn.)</p>
+					<p>15. <hi rend="italic">Josephi  Mariae  Thomasii S. R.</hi> E. <hi rend="italic">cardinalis<lb/> opera</hi> omnia..... <hi rend="italic">Tomus secundus continens</hi>
+						Psalterium <lb/>
+						<hi rend="italic">rium, juxta duplicem  editionem ad mss  . codices recensuit <lb/> 
+							notisque auxit Ant. Franc. Vezzosi Cleric. Regularis <lb/>  Romae</hi> 1747. (Hymni
+						continentur p.  - 434.) <lb/> Hic liber in Germania satis rarus est, sed eo carere
+						<lb/> nullo pacto potest hymnorum sacrorum editor. <lb/> Comparavit Thomasius codices
+						Vaticanae antiquissimos <milestone unit="PLSection" n="D"/><lb/>  omninoque multos
+						Italicos; quare si quis hymnos <lb/>  Ecclesiae veteris usque ad saeculum VIII inveteris
+						<lb/>  constituerit, ei ex illo libro tamquam fonte <lb/> primario hauriendum
+						erit. (Thom.)</p>
+					<p> 14 . <hi rend="italic">Anthologie christlicher  Ges&#228 ; nge  aus allen  Jahrhunderten der  <lb/>
+							 Kirche. Nach der  Zeitfolge   geordnet und <lb/> mit gesch.
+							 Bemerkungen begleitet  von Aug. Jac. Rambachio <lb/>  Prediger bei St. Jacob in
+							Hamburg.</hi>  Erster ' <hi rend="italic">Band.<lb/> Die
+							vorz<unclear> ; glichsten </unclear>, griechischen lateinischen und altdeutschen <lb/> 
+							Kirchenlieder enthaltend. Altona</hi> u. <hi rend="italic">Leipzig  ,<lb/>
+							Hammerich</hi> 1817. Thesaurus noster ostendit <lb/> quoties quantumque studia
+						pra    in <lb/> usum nostrum converterimus. (Ramb.)</p>
+					<p>15. <hi rend="italic"> Corolla  Hymnorum sacrorum publicae devotioni</hi><pb n="1171"/>
+						<milestone unit="PLSection" n="A"/><lb/>  inservientium . <hi rend="italic"> Veteres                                 electi 
+							, sed  mendis                                   quibus           itera,                                                                                                                                                                                                                                                     tia    ,</hi>
+						<lb/>  in editionibus <hi rend="italic">scatebant detersi, Strophis</hi> adaucti. <lb/>
+						<hi rend="italic">Novi</hi> assumpti, <hi rend="italic">recentes</hi> primum  inserti .
+						 Coloniae Agrippinae  <lb/>
+						<hi rend="italic"></hi> 1806.  Typis  <hi rend="italic">Haeredum Schauberg.</hi>
+						 Hic  <lb/> Walraffii liber, quem Ven. Augusti, morte ille litteris <lb/>  nuper ereptus,
+						nobis donavit, plurimum prodest <lb/> iis, qui in hymnis,  quos  post Lutheri aetatem  protulit .
+						<lb/>  Ecclesia, cognoscendis studia posuerunt.</p>
+					<p>16. Liber Bjornii: <hi rend="italic">Hymni</hi> veterum poetarum <hi rend="italic">Christianorum <lb/>  Ecclesiae Latinae selecti. Hafniae</hi> 1818. In <lb/> paucis
+						tantum nos adjuvit.</p>
+					<p>17. <hi rend="italic">Lateinische  Anthologie aus den </hi>  <hi rend="italic">
+							christlichen<lb/> Dichtern  des  Mittelalters.</hi>  Fiir  <hi rend="italic">Gymnasien und
+							Lyceen<lb/> herausgegeben</hi> und mit <hi rend="italic">Anmerkungen begleitet von  Ioseph 
+							<lb/>  Kehrein,  Lehrer am   Gymnasium</hi> zu <hi rend="italic">Mainz. Erster</hi>
+						<milestone unit="PLSection" n="B"/><lb/>
+						<hi rend="italic">Theil.</hi> Die <hi rend="italic"> acht  ersten christlichen
+							Jahrhunderte. Frankfurt<lb/>  a. M. Sauerlander</hi> 1810. Auctor  hoc  consilium <lb/>
+						sequitur ut alumnos gymnasiorum catholicorum ad <lb/> hymnorum sacrorum cognitionem
+						adducat: quae res <lb/> si recte succederet,  vehementer  gauderemus.  Adnotationes  <lb/> 
+						Kehreinii ad discipulos pertinere  vix  est <lb/> quod moneamus,  quamquam  passim etiam
+						nobis <lb/> nonnulla in usum nostrum convertere licuit. (Kehr.)</p>
+					<p>Jam enumeratis  his  subsidiis nostris  nostrum  est <lb/> animo grato eos viros
+						commemorare qui consilio <lb/> nostro fautores, laboribus  adjutores  exstiterunt. In
+						<lb/> hoc numero primum locum obtinent Ven. Thilo, <lb/> cujus  mihi  auctoritas cum aliis
+						in rebus, tum hoc in <lb/> opere plurimum valuit; Ven.  Tholuckius ,  cujus  multum <milestone unit="PLSection" n="A"/><lb/>  intererat labores  nostros  prospere cedere; Hermannus <lb/>
+						 Dryander, vir hymnorum Latinorum non <lb/> minus quam Germanicorum peritus; F. A.
+						Ecksteinius  ,<lb/> collega litteratissimus qui ea qua solet humanitate <lb/>  haud
+						mediocriter me adjuvit. Denique non <lb/> possum quin gratias agam duobus viris qui a
+						primis <lb/> operis initiis per totum meum laborem consilio et <lb/> opera mihi
+						adfuerunt : Aug.  Voigtio  muneris scholastici <lb/>  societate  mihi  junctissimo et Chr.
+						Diedrich <lb/> quem et curriculi scholastici societas et veteris amicitiae <lb/> 
+						vinculum mecum intime conjunxit. Horum virorum <lb/>  opera atque industria in vitiis
+						exstirpandis et <lb/> emendandis maxime adjutus sum, quamquam et <unclear>me</unclear>
+						<lb/> et illos emendatores nonnulla fugerint menda.</p>
+					<p>Faxit autem Dominus Ecclesiae Christianae  O . M., <milestone unit="PLSection" n="B"/><lb/> cujus  honorem  omnes hymni celebrant, quem cantica <lb/>  praedicant et
+						sequentiae cum antiphonis laudibus <lb/> certatim extollunt, ut hic  etiam  studiorum
+						nostrorum <lb/>  fructus ad salutem Ecclesiae Christianae valeat. <lb/> Offerimus opus
+						nostrum tamquam donum omnibus <lb/> quicumque nomen Christi sancte colunt; offerimus
+						<lb/> sanctissimo Redemptori pro unitate atque amabili <lb/>  Ecclesiae  concordia
+						sacrificium; neque aliud quid ex <lb/> intimo animo precamur, nisi ut ipsi quoque
+						sentiamus <lb/>  illud quod de sanctissimo patriarcha  scriptum legimus  <lb/>  : <hi rend="italic">Respexit</hi>  Dominus  <hi rend="italic">ad munera ejus.</hi>
+						<lb/> Scribebam Halis in Paedagogio Regio <lb/> die 21 Mai 1841.</p>
+				</div></body></text></TEI>

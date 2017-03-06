@@ -1,0 +1,746 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><TEI xmlns="http://www.tei-c.org/ns/1.0"><teiHeader>
+    
+		<fileDesc>
+			<titleStmt>
+				<title>Patrologiae Cursus Completus. Series Latina (PL)</title>
+				<sponsor>University of Leipzig</sponsor>
+				<funder>European Social Fund Saxony</funder>
+				<principal>Gregory Crane</principal>
+				<respStmt>
+					<persName xml:id="Jouve">Jouve</persName>
+					<resp>OCR-ed, corrected and encoded the text</resp>
+				</respStmt>
+				<respStmt>
+					<persName>Greta Franzini</persName>
+					<resp>Project Manager (University of Leipzig)</resp>
+				</respStmt>
+				<respStmt>
+					<persName>Simona Stoyanova</persName>
+					<resp>Project Assistant (University of Leipzig)</resp>
+				</respStmt>
+				<respStmt>
+					<persName>Bruce Robertson</persName>
+					<resp>Technical Advisor (Mount Allison University)</resp>
+				</respStmt>
+			</titleStmt>
+
+			<publicationStmt>
+				<authority>University of Leipzig</authority>
+				<idno type="filename">PL50.xml</idno>
+				<availability>
+					<licence target="https://creativecommons.org/licenses/by-sa/4.0/">Available under a
+						Creative Commons Attribution-ShareAlike 4.0 International License</licence>
+				</availability>
+				<date>2014</date>
+				<publisher>University of Leipzig</publisher>
+				<pubPlace>Germany</pubPlace>
+			</publicationStmt>
+
+			<sourceDesc>
+				<listBibl xml:lang="la">
+					<biblStruct>
+						<monogr>
+							<editor>
+								<persName>
+									<name xml:lang="fr">Jacques Paul Migne</name>
+								</persName>
+							</editor>
+							<author ref="http://data.perseus.org/catalog/urn:cts:latinLit:stoa0076c">Cassianus
+								Ioannes</author>
+							<title>Paucae Quaedam Sententiae Piam Interpretationem Desiderantes</title>
+							<imprint>
+								<publisher>Garnier</publisher>
+								<pubPlace>Paris</pubPlace>
+								<date>1846</date>
+							</imprint>
+							<biblScope unit="volume">50</biblScope>
+						</monogr>
+						<monogr>
+							<author>Vigilius Diachonus</author>
+							<title>Regula Monachorum</title>
+							<imprint>
+								<publisher>Garnier</publisher>
+								<pubPlace>Paris</pubPlace>
+								<date>1846</date>
+							</imprint>
+							<biblScope unit="volume">50</biblScope>
+						</monogr>
+						<monogr>
+							<author>Fastidius Episcopus</author>
+							<title>De Vita Christiana Liber Unus</title>
+							<imprint>
+								<publisher>Garnier</publisher>
+								<pubPlace>Paris</pubPlace>
+								<date>1846</date>
+							</imprint>
+							<biblScope unit="volume">50</biblScope>
+						</monogr>
+						<monogr>
+							<author>Antoninus Honoratus Episcopus</author>
+							<title>Epistola Consolatoria Ad Arcadium</title>
+							<imprint>
+								<publisher>Garnier</publisher>
+								<pubPlace>Paris</pubPlace>
+								<date>1846</date>
+							</imprint>
+							<biblScope unit="volume">50</biblScope>
+						</monogr>
+						<monogr>
+							<author>Sixtus III</author>
+							<title>Epistolae Ed Decreta</title>
+							<imprint>
+								<publisher>Garnier</publisher>
+								<pubPlace>Paris</pubPlace>
+								<date>1846</date>
+							</imprint>
+							<biblScope unit="volume">50</biblScope>
+						</monogr>
+						<monogr>
+							<author>Vincentius Lirinensis</author>
+							<title>Commonitorium Primum</title>
+							<title>Commonitorium Secundum</title>
+							<imprint>
+								<publisher>Garnier</publisher>
+								<pubPlace>Paris</pubPlace>
+								<date>1846</date>
+							</imprint>
+							<biblScope unit="volume">50</biblScope>
+						</monogr>
+						<monogr>
+							<author ref="http://data.perseus.org/catalog/urn:cts:latinLit:stoa0117">Eucherius Lugdonensis Episcopus</author>
+							<title>Epistola Paraenetica Ad Valerianum Cognatum</title>
+							<title>Homiliae Quaedam</title>
+							<title>Exhortatio Ad Monachos</title>
+							<title>Epitomes Operum Cassiani Ad Castorem Aptensem Libri Duo</title>
+							<title>Epistola Ad Philonem Presbyterum Suum [Incertus]</title>
+							<imprint>
+								<publisher>Garnier</publisher>
+								<pubPlace>Paris</pubPlace>
+								<date>1846</date>
+							</imprint>
+							<biblScope unit="volume">50</biblScope>
+						</monogr>
+						<monogr>
+							<author ref="http://data.perseus.org/catalog/urn:cts:latinLit:phi2434">Hilarius
+								Arelatensis Episcopus</author>
+							<title>Sermo De Vita Sancti Honorati Episcopi Arelatensis</title>
+							<title>Epistola Ad Sanctum Eucherium Episcopum Lugdunensem</title>
+							<title>Sermo De Miraculo Sancti Genesii Martyris Arelatensis</title>
+							<title>Versus In Natali Machabeorum Martyrium</title>
+							<title>Metrum In Genesim Ad Leonem Papam</title>
+							<imprint>
+								<publisher>Garnier</publisher>
+								<pubPlace>Paris</pubPlace>
+								<date>1846</date>
+							</imprint>
+							<biblScope unit="volume">50</biblScope>
+						</monogr>
+						<ref target="https://archive.org/details/patrologiaecursu50hammuoft">Internet
+							Archive</ref>
+
+					</biblStruct>
+				</listBibl>
+			</sourceDesc>
+
+		</fileDesc>
+		<encodingDesc>
+			<p>The following text is encoded in accordance with EpiDoc standards and with the CTS/CITE
+				Architecture.</p>
+		<refsDecl>
+        <cRefPattern n="" matchPattern="(.+).(.+).(.+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@type='edition']/tei:div[@n='$1']/tei:div[@n='$2']/tei:div[@n='$3'])"/>
+        <cRefPattern n="" matchPattern="(.+).(.+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@type='edition']/tei:div[@n='$1']/tei:div[@n='$2'])"/>
+        <cRefPattern n="" matchPattern="(.+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@type='edition']/tei:div[@n='$1'])"/>
+      </refsDecl>
+    </encodingDesc>
+
+		<profileDesc>
+			<langUsage>
+				<language ident="la">Latin</language>
+			</langUsage>
+		</profileDesc>
+
+	</teiHeader>
+	<text><body><div type="edition" n="">
+					<pb n="711"/>
+					<head>
+						<title type="main">SANCTI EUCHERII LUGDUNENSIS EPISCOPI 
+							EPISTOLA PARAENETICA AD VALERIANUM COGNATUM 
+							DE CONTEMPTU MUNDI ET SAECULARIS PHILOSOPHIAE.</title>
+					</head>
+					<p>Bene alligantur vinculo sanguinis, qui vinculo <lb/> consociantur amoris. Sic et nobis
+						quoque admodum <lb/> gloriari, pro hoc ipso Dei munere licet, quos perinde <lb/> 
+						charitas ut propinquitas nectit, coarctantque in <lb/> unum affectum duae
+						necessitudines, quarum alteram <milestone unit="PLSection" n="D"/><lb/> a parentibus
+						carnis nostrae accepimus, alteram a nobis <lb/>  sumpsimus. Geminum hoc vinculum, quo
+						(confoederantibus <lb/>  nos hinc genere, hinc dilectione) connectimur  ,<lb/> haec me
+						paulo latius ad te exarare compulit  ,<lb/> ut commendarem animo tuo causam animae
+						<lb/> tuae, veramque illam beatitudinem, et aeternarum <lb/> rerum capacem, opus nostrae
+						professionis assererem  .<lb/> Nam cum te aeque ac me diligam, necesse est <lb/> ut
+						summum bonum assequi te, tamquam me alterum, <lb/> cupiam. Et quidem a professione vitae
+						sanctae, pio <lb/> etiam non abhorres ingenio, qui ea quae sacrae  institutiones . <lb/> 
+						docent praevenisti in plurimis praecoqua <lb/> morum felicitate, ut mihi videaris quaedam
+						religionis <lb/> officia quasi per providam occupasse naturam, Domini <lb/>  ac Dei
+						nostri jam in hoc erga te indulgentia: <lb/> cujus gratia est quod divina in te doctrina
+						bona sua <milestone unit="PLSection" n="D"/><lb/> pro parte invenire potest, pro parte
+						conferre. Quamvis <lb/>  autem in maximos saeculi apices patre soceroque <lb/> elatus,
+						illustribus ex utroque titulis ambiaris; ego <lb/> tamen longe superioris in te honoris
+						fastigia  concupisco   ;<lb/> teque non ad terrenarum, sed ad coelestium; <lb/> nec ad
+						saeculi, sed ad saeculorum dignitatem, voco. <lb/> Certa quippe et inoblitterabilis haec
+						gloria est, aeternitate <lb/>  gloriari. Loquar ergo apud te non sapientiam <lb/> hujus
+						saeculi, sed illam sapientiam arcanam, absconnectimur  ,<lb/> quam  praedestinavit   Deus
+						ante saecula in gloriam <lb/>   nostram  (I Cor. II). Loquar tecum multo studio,<pb n="713"/>
+						<milestone unit="PLSection" n="A"/><lb/> lui, mei admodum parum providus, qui plus in
+						te. <lb/> quid velim, quam in  me  quid possim, consideravi.</p>
+					<p>Primum instituti atque in lucem editi hominis officium <lb/>  est. mi Valeriane
+						charissime, proprium cognoscere <lb/>  auctorem, cognitumque suscipere ; vitamque 
+						,<lb/> id est, divinum donum, in divinum officium <lb/> cultumque conferre. Ut quod Dei
+						munere sumpsit, Dei <lb/> devotione consummetur, atque id quod ab eodem indignus <lb/> 
+						cepit, eidem subjectus impendat. Sana quippe <lb/> opinione agimur, ut eductos nos sicut
+						ab ipso, ita <lb/> ipsi arbitremur. Unde ille plane magnificeque perspicit <lb/> 
+						Creatoris nostri in  effingendo  homine sententiam  ,<lb/> quisquis ita intelligit, quod
+						nos et ipse et sibi <lb/> fecit. Optimum deinde est curam principalem animae <lb/>
+						impendere ut quae utilitate prior est, non sit consideratione <milestone unit="PLSection" n="B"/><lb/>  posterior. Primas apud nos curas, quae prima <lb/> habentur, obtineant,
+						summasque sibi sollicitudinis <lb/> partes salus, quae summa est, vendicet. Haec nos occupet
+						<lb/>  in praesidium ac tutelam sui, jam non plane <lb/> prima, sed sola.
+						 Omnia vincat  eo studio, quo praecedit <lb/>  omnia. Summam debemus observantiam Deo,
+						<lb/> animae deinde maximam : atque ita tamen istud est, <lb/> ut cum  utrumque 
+						praecipuum sit, observari alterum <lb/> sine altero nequaquam posse videatur. Ita
+						quisquis <lb/> Deo  satisfecerit , animae necesse est jam consuluerit; <lb/> et rursus,
+						qui animae consuluerit, necesse est Deo <lb/> jam satisfecerit. Sic de summo apud nos
+						utroque res <lb/> transigitur utili coacta compendio; ut si quis unum <lb/> sedulo
+						impleverit, utrumque contulerit, quia ineffabili <lb/> benignitate divina, ipsa utilitas
+						fit Dei  sacrificium . <milestone unit="PLSection" n="c"/><lb/> Multus corpori curationum
+						usus impenditur ; multum <lb/> huic operae  in spem medelae [Fort .    . in  spem  medelae] <lb/>
+						lae] datur. Numquid medicinam anima non meretur? <lb/> Et si varia corpori auxilia studio
+						tuendae sanitatis <lb/> adhibentur, fas non est tamen animam velut exclusam <lb/> 
+						jacere, et quasi neglectam morbis  suis intabescere   ,<lb/> atque unam a propriis
+						remediis exsulare, immo <lb/>  vere plura animae conferenda sunt, si corpori <lb/>
+						tanta praestantur.</p>
+					<p>Nam, si recte quidam carnem hanc famulam, animam <lb/>  vero dominam esse dixerunt;
+						non oportet posteriore <lb/>  loco nos dominam ponere, ac famulam iniquo <lb/>  jure
+						praeferre. Merito poscit studia majora pars <lb/> melior, quia omni nobis cura illuc
+						respiciendum est, <lb/> ubi substantiae nostrae abundantior dignitas constitit.
+							<milestone unit="PLSection" n="D"/><lb/> Congruum non est, in hoc honore  nostrae 
+						sollicitudinis <lb/> eam nos subjicere pejori. Caro siquidem proclivis in <lb/> vitia,
+						ad terram nos, tamquam in originem suam, revocat <lb/>  (Gen. VIII) : haec vero veniens
+						a patre luminum, <lb/> sicut ferri ignibus mos est, in superiora nititur. Haec <lb/> in
+						nobis imago Dei, hoc pretiosum est divini muneris <lb/>  pignus. Hanc omni ope, hanc
+						summis viribus <lb/> tueamur; hanc si regimus, et conservamus, Dei depositum <lb/> 
+						tuemur (II Tim. I). Quis exstruendi, nisi <lb/> cum fundamenta jeceris, locus est ?
+						Superaedificare <lb/> caeteras utilitates destinanti salus fundamentum est. <lb/>
+						Caeterum quomodo quispiam sequentia addat, si nec <lb/> prima possederit? Unde
+						succedentium augebitur indignus  ,<lb/> si anteriorum deficiatur exordiis?  Quomodo -
+							<milestone unit="PLSection" n="A"/><lb/>  interesse putet beatitudini, cum
+							desit<unclear>etiam</unclear>
+						<lb/> saluti? Indigens vitae. unde abundare felici vita posteriore <lb/>  Aut quid prodest,
+						si adjiciat cibis, non habens <lb/> unde consulendum est animae? De qua et Dominus <lb/>
+						noster Jesus Christus ait: Quid enim prodest homini, <lb/> si mundum universum lucretur,
+						animae vero suae  det , ; ­ mentum ,;­ <lb/>  patiatur (Matth. XVI)? Proinde non potest ulla <lb/>
+						compendii causa consistere, si constet animae intervenire <lb/>  dispendium. Ubi
+						salutis damnum  est , illic utique <lb/>  jam lucrum nullum est; quo  enim  lucrum capiatur
+						 ,<lb/> nisi capiendi sedes inconcussa servetur ? Atque <lb/> idcirco ad illud lucrum
+						verum, ad illud sanctum expetendumque <lb/>  commercium dum, tempus est, properemus <lb/>
+						 (Gal. vi).</p>
+					<p>Parere possunt aeternam vitam pauci dies; qui  tamen dies  ,<milestone unit="PLSection" n="B"/> <lb/> etiamsi illaesam atque incontaminatam vitae <lb/> beatitudinem
+						possiderent; tamen, quia pauci essent, <lb/> parvo  aestimandi erant . Nihil enim est magnum
+						re, <lb/> quod parvum tempore ; nec longis dilatatur gaudiis, <lb/> quidquid arcto fine
+						concluditur. Brevem utilitatem <lb/> saeculi istius brevia habent commoda. Recte ergo
+						<lb/> etiam bono brevis vitae perpetuae vitae commodum <lb/> praeponendum videretur;
+						quia illa esset temporalis, <lb/> haec aeterna felicitas ; quia fragile esset brevibus
+						 bonis  <lb/>  perfrui, tutum gaudere perpetuis. Nunc  vero aeterna  <lb/>  vita beatissima
+						est. Nam quid felicius aeterna <lb/> vita dici potest? Haec vero brevis, ita brevissima,
+						ut <lb/> aerumnosissima ;  quae  undique circumstantium dolorum <lb/>  urgetur incommodis;
+						et deficientibus fatigatur <lb/> malis, dum accidentium jactatur injuriis. Quid enim
+							<milestone unit="PLSection" n="c"/><lb/> tam infidum,tam varium,  tam  calamitosum,
+						quam <lb/> vitae istius cursus est? Quae plena laboris est, plena <lb/> sollicitudinis,
+						plena curarum, ipsorum quoque plena <lb/> discriminum; et per ancipites distracta casus,
+						fit corporis <lb/>  vexationibus inquieta, animi angoribus anxia, <lb/> periculorum
+						turbinibus incerta. Quae utique utilitas, <lb/> quae ratio,  non expeti  bona aeterna,
+						sequi temporalia  ,<lb/> etiam mala? Nonne vides, ut  etiam  in hac vita <lb/> quisque
+						providus, locum aut agrum, in quo diutius se <lb/> commoraturum putat, copiosis in usum
+						sarciat immo  ?<lb/> et ubi parvo quis erit tempore, parva properemus  ;<lb/> ubi
+						majore, majora procurat? Nobis quoque, <lb/> quia in praesentiarum brevissimum angustiis
+						coarctantibus <lb/>  tempus est, in futuro saecula erunt,  competentibus  <lb/>  copiis
+						vitam exaugeamus aeternam, competentibus <milestone unit="PLSection" n="D"/><lb/> 
+						instruamus exiguam , ne provisione perversa  ,<lb/> impendamus brevi tempori curam
+						maximam, et <lb/> maximo tempori curam brevem.</p>
+					<p>Atque haud scio ad hanc beatissimam vitam quod <lb/> compellere nos ocius aut
+						efficacius debeat; an ipsa <lb/> futurae vitae commoda, quae promittuntur; an praesentis
+						<lb/>   vitae incommoda , quae videantur. Inde nos illa <lb/> blandissime provocant,
+						hinc ista vehementer exturbant  .<lb/> Proinde, cum in meliorem partem etiam pessima <lb/>
+						 suffragentur. si bonis non illicimur, malis expetendumque  .<lb/> Ad incitamentum
+						meliorum, optima deterioribus <lb/>  concinunt, et in eamdem utilitatem diversa <lb/>
+						concurrunt. Nam, dum alia nos invitant, alia fugant, <lb/> in melius utraque nos
+						sollicitant. Nam si hominum <note type="footnote"> PAnOLe L-</note>
+						<note type="footnote"> 13 </note><pb n="715"/>
+						<milestone unit="PLSection" n="A"/><lb/> quispiam clarus ac locuples in locum liberorum
+						te <lb/>  adoptaturus  acciret, ires per oppositas rerum difficultates  ,<lb/> et per
+						quamvis longi recessus iter vectatus <lb/> accurreres ? Deus universitatis rerumque
+						Dominus, <lb/> te in adoptionem vocat, illud (si velis) tibi blandum <lb/> filii nomen
+						impartiens, quo Deum nostrum, unicum <lb/> suum nuncupat (Rom. VIII, Gal. IV, Eph. i),
+						et non <lb/> accensus raperis, non properus urgeris, ne  conditionem  <lb/>  tantam
+						celeri occursu mors festina praeripiat ? <lb/> Atque ad hanc obtinendam,tu non invias
+						terrae solitudines  ,<lb/> nec longinqui maris  incerta   penetrabis ? <lb/> Cum volueris,
+						haec adoptio tui tecum est. Numquidnam <lb/>  segnes ac desides nos res ista habebit,
+						idcirco, <lb/> quia tam prompta quam maxima? quo durius  conditionem  <lb/>  hanc
+						dissimulatores experientur. Tanto enim nolentibus <milestone unit="PLSection" n="B"/><lb/>
+						 perniciosior, quanto est volentibus promptior.</p>
+					<p>Certe cupiditas vitae est istud quod nos delectatione <lb/>  rei praesentis innexuit.
+						Ergo amantes vitam, <lb/> hortamur ad vitam. Vera ratio est persuadendi, cum <lb/> id
+						poscitur, ut impetremus a vobis quod concupiscitis  .<lb/> Pro vita, quam diligitis,
+						 legatione  apud vos fungimur <lb/>  (II Cor. v, 20; Eph. VI, 20) ; et hanc, quam <lb/>
+						omnes exiguam amatis insinuamus, ut ametis aeternam  .<lb/> Quam quo pacto amemus
+						nescio, si non hanc, <lb/> quam amamus, esse quam speciosissimam cupimus. <lb/> Itaque
+						istud, quod et cum arctum sit placet; placeat <lb/> magis, si potest esse perpetuum; et
+						quod apud nos <lb/> pretium habet, cum finem habeat, sit nobis supra <lb/> pretium, si
+						potest esse sine fine. Rectum sit proinde <lb/> minorem vitam prospexisse majori, ut ad
+						alteram <milestone unit="PLSection" n="c"/><lb/> nobis, sed per hanc, transitus
+						construatur: quam <lb/> utique non convenit sociae commodis obliquis intervenire <lb/> 
+						consiliis. Non se opponat, ut obsit, ut noceat. <lb/> Absurdum quippe atque contrarium
+						est ut vitae detrimentum <lb/>  afferat amor vitae. Igitur sive vitam hanc <lb/>
+						contemnendam putas, sive complectendam, in utroque <lb/>  facilis negotii mea causa
+						est. Nam, si spernitur, <lb/> una est spernendi ratio, ut melior appetatur. Et si <lb/>
+						diligitur,  tanto  magis est diligenda, quae major est. <lb/> Ego tamen desideraverim ut
+						hanc pro  experimentis  <lb/> sui habeas, ut molestissimam atque incertis fatigationibus <lb/>
+						 inquietam (sicuti est) judices, eamque cum <lb/> occupationibus spernas ac
+						respuas.</p>
+					<p>Abrumpatur illa interminabilis saecularium  negotiorum catena   ,<lb/> et ille de
+						necessitatibus multis unus <milestone unit="PLSection" n="D"/><lb/> per totam vitam
+						labor. Disrumpamus inanium curarum <lb/>  vincula, quorum succedentibus sibi nexibus
+						implicatis  ,<lb/> in quibus semper occupatio nostra quasi incipit  .<lb/> Removeantur
+						 illae tam  vacuae quam cohaerentes <lb/>  sibi causae, in quibus, quoad vivitur, studium
+						<lb/> mortalium, dum subinde negotiis inchoatur, numquam <lb/>  finitur Quarum rerum
+						infatigabilis intentio <lb/> jam brevem et arctam per se vitam, hanc etiam arctissimam <lb/>
+						 reddidit. Per quae etiam nunc vana gaudia, <lb/> nunc acerbi moerores, nunc
+						anxia vota, nunc suspecti <lb/> metus veniunt. Abjiciantur postremo illa omnia, <lb/>
+						quae  praesentem  hanc vitam faciunt brevem occupationi  ,<lb/> longam dolori. Repudiemus
+						mundi  parumfidi   vitamutrobique  <lb/>  suspectam,  apud quam perinde  alta <milestone unit="PLSection" n="A"/><lb/> atque humilia parum tuta sunt.  Obteruntur humilitate   <lb/>
+						 depressa, nutant celsa fastigio. Pone quem volueris <lb/>   statum , non apud infima
+						istic, non apud summa <lb/>  requiescitur : gravem turbinis sortem utraque <lb/>
+						conditio non effugit. Subjacet contumeliae minor, <lb/> major invidiae.</p>
+					<p>Duae res praecipuae sunt, ut arbitror, quae maxime <lb/> homines in  negotiis  saeculi
+						vinctos tenent, et  eblanditis sensibus  <lb/>  captos, illecebroso amore constrincipit <lb/>
+						 : opum voluptas, et honorum dignitas. Quarum <lb/> prior, non voluptas, sed  egestas 
+						: sequens, non dignitas  ,<lb/> sed  vanitas  nuncupanda est. Haec utraque, <lb/>
+						alternis nodis irretitis, gressu impedit, fallax complexa <lb/>  collegium. Haec
+						pestifere pectoribus humanis, <lb/> blanda desideriis vitia inspirant; defatigatasque
+						 mentes  <milestone unit="PLSection" n="B"/><lb/>  mortalium, facili jucunditate
+						sollicitant. Nam, <lb/> quid istis opibus (ut de his primum dicam) perniciosius  ,<lb/>
+						quae raro, nisi cum justitia congeruntur? Tali <lb/> administratore res ista capitur,
+						tali custode servatur  .<lb/> Radix enim, inquit, omnium malorum cupiditas <lb/> (I
+						Tim. vi, 10). Adeo quaedam societas est pene etiam <lb/> nominis, duabus his rebus,
+						 vitiis et divitiis . Numquidnam <lb/>  non opes istae, quaedam materia contumeliarum <lb/>
+						sunt? Unde etiam quidam nostrorum ait : Quid enim <lb/> aliud sunt divitiae. nisi pignora
+						injuriae?  Numquid   non, <lb/> velut exposita improbis praemia,  factiosorumoculos   animosqueprovocant  
+						,<lb/>  proscriptionesque  ipsas quodammodo <lb/>  ostentant, et  invitant ?
+						Sed fac, ut ista <lb/> non accidant, numquid quo post nos errantes, . <lb/>  fugientesque 
+						commigrent, certi esse possumus? Thesaurizat ,<milestone unit="PLSection" n="c"/> <lb/>
+						inquit, et ignorat, cui congreget ea (Ps. XXXVIII, <lb/> 7). Sed fac ut veniat haeres ex
+						 voto , numquid non <lb/> saepe censum haeres intercipit, opesque congestas aut <lb/>
+						filius male educatus, aut gener male electus absumit? <lb/> Quid divitiae istae in se
+						voluptatis habent, quarum <lb/> est et misera possessio, et incerta transmissio ?Quo
+						<lb/> devius ac praeceps hominum amor raperis? Scis ea, <lb/> quae tibi obveniunt
+						diligere, et ipsum te diligere nescis  ?<lb/> Foris est, quod amas : extra te est, quod
+						concupiscis  .<lb/> Revertere potius in te, ut sis tibi tu charior <lb/> quam tua.
+						Certe, si ad te quispiam rerum haud <lb/>  ignarus . accedat, malis ipsum te amet, quam
+						ista, <lb/> quae tecum sunt : idque eliges, ut ille vitae tuae potius  ,<lb/> quam
+						opibus tuis affectum suum conferat. Vis <lb/> hunc homini fidem servare, non rebus. Quod
+						tibi  tribuere  <milestone unit="PLSection" n="D"/><lb/>  velis alium, ipse hoc tibi, qui
+						es tibi fidissimus  ,<lb/> tribue. Nos potius nos amemus quam nostra. <lb/> Et haec
+						quidem adversus facultates dicta sint.</p>
+					<p>In honoribus vero hujus mundi, ut caetera taceam, <lb/> quae aestimari dignitas potest
+						rerum, cum ad hanc <lb/> promiscue cum bonis mali ambitione conscendant, <lb/> et non
+						unius meriti viros unus honor ambiat,  dignosque . <lb/>  et indignos non jam discernat
+						dignitas, sed <lb/> confundat? Ita, quae meliores deterioribus  praeferre  <lb/> debebat,
+						aequare coepit : novoque modo optimi ac <lb/> pessimi viri nusquam fere minus
+						 discrimen est , <lb/> quam in honore.  Nonne  honor major est, hujusmodi <lb/>  honore inhonorum 
+						 esse malle; ac suis magis moribus <lb/>  quam promiscuis honoribus aestimari
+						Atque<pb n="717"/>
+						<milestone unit="PLSection" n="A"/><lb/> haec ipsa (utcumque se habent) quam
+						transvolantia, <lb/> quam caduca sunt? Vidimus nuper viros  honore conspicuos   ,<lb/>
+						celsarum  dignitatum  insedisse fastigiis, et <lb/> diffuso usquequaque censu per orbem
+						patrimonia <lb/> tetendisse. Cupiditates successibus vicerant, rebus <lb/> vota
+						transcenderant. Sed privatas tantum felicitates <lb/> revolvo. Reges ipsi magno sublimes
+						imperio, gemmisque <lb/>  fulserunt horum tegmina ; mirum dictu, <lb/> textis
+						irradiabant metallis, diadema [Fort. irradiabat <lb/>  metallis diadema] distinctis
+						intermicabant  arboribus [Fort . domus    .<lb/>  arboribus], splendebat instructa <lb/>
+						palatinis aula cultibus, auratisque trabibus tecta rutilabant <lb/>  : eorum voluntates
+						jura hominum, eorum <lb/> verba leges appellabantur. Quis supra hominum verticem <lb/> 
+						potest temporaria felicitate confugere ? Ecce <milestone unit="PLSection" n="B"/><lb/>
+						eorum ille ambitus nusquam est,  affluentissimae quoque  <lb/>  opes abierunt, transierunt
+						ipsi tantarum opum <lb/> domini (Job. XIV, Sap. v).</p>
+					<p>Recentium inclytorumque regnorum apud nos jam <lb/> quaedam fabula est, Omnia illa, quae
+						hic erant magna, <lb/> modo jam nulla sunt. Nihil, ut puto, immo, ut certo <lb/> scio,
+						ex illis opibus, honoribus, regnis, secum abstulerunt  ,<lb/> nisi (si qua in his fuit)
+						fidei pietatisque substantiam  .<lb/> Sola haec illos, caeterarum rerum egenos, <lb/>
+						sola prosequitur : haec abeuntes inseparabilis et <lb/> quasi fida comitatur.  Illa  nunc
+						ope aluntur, in illis <lb/> nunc divitiis, in illis tantum honoribus acquiescunt. <lb/>
+						Haec bona nunc in beneficiis habent. Quapropter, si <lb/> honoribus opibusque capimur,
+						veris opibus, veris <lb/> honoribus excitemur. Optimus quisque in coelestes <milestone unit="PLSection" n="c"/><lb/> honores, in coelestes opes, terrenos honores, terrenas
+						<lb/>  opes transfert: illuc utique, ubi bonorum ac malorum <lb/>  summa et
+						inconfusa discretio est: ubi, quod <lb/> semel adipiscimur, semper tenemus: ubi si locus
+						<lb/> obtinendi ullus fuerit, amittendi nullus erit.</p>
+					<p>Sed quando, de fragili temporalium bonorum possessione <lb/>  diximus, aliquid etiam
+						nobis de ipsius brevis <lb/>   vitae  conditione dicendum est. Quid istud quaeso, <lb/>
+						quid  istud  est ? Nihil ita quotidie homines, ut mortem <lb/>  vident : nihil ita
+						obliviscuntur, ut mortem. Agitur <lb/>  humanum genus rapida in occasu mortalitate,
+						<lb/> omnisque posteritas  succedentium  saeculorum lege <lb/> decurrit. Patres nostri
+						praeteriarunt,nos abibimus, <lb/> posteri sequentur : velut ex alto undarum jactus, <lb/>
+						aliis atque aliis supervenientibus, in littoris extrema <milestone unit="PLSection" n="D"/><lb/>  franguntur ; ita in terminum mortis  succiduae alliduntur  <lb/>  aetates. Haec
+						nos consideratio diebus ac noctibus  ,<lb/> haec nos conditionis nostrae memoria circumstrepat
+						 .<lb/> Debitum  vitae  finem jam jamque affuturum <lb/> putemus; qui nobis tanto
+						magis  appropinquabit , <lb/> quanto magis distulit. Vicinum speremus diem,longinquum <lb/>
+						 esse nescimus. Praeparemus, ut scriptum <lb/> est, ad exitum vias nostras (Mal.
+						 III , 4). Si cogitamus <lb/>  ista, si ista meditamur, non timebimus mortem  ,<lb/>
+						timendo. Beati, qui vos jam reconciliastis Christo  .<lb/> Non magnus mortis istos
+						timor infestat, qui jam <lb/> dissolvi optan,et esse cum Christo (Phil., I) ; qui <lb/>
+						summum vitae istius diem, jam parati, jam quieti, <lb/> in silentio exspectant. Non enim
+						multum refert, <milestone unit="PLSection" n="A"/><lb/> quando finiant temporariam, qui
+						transeunt in aeternam  .<lb/></p>
+					<p>Ad negligentiam vitae, non nos negligentium turba <lb/> persuadeat, nec ad damnum
+						propriae salutis, alienis <lb/> ducamur  erroribus . Quid nobis in  illo  Dei judicio <lb/>
+						proderit multitudo; ubi singuli judicabuntur, ubi sola <lb/> examinatio meritorum, actus
+						quemque, non populus <lb/> absolvent? Cessent, cessent solatia malesuada discriminis 
+						.<lb/> Nimirum praestat vitam propagasse cum paucioribus <lb/>  quam perdidisse cum
+						pluribus. Atque adeo, <lb/> non nos ad incuriam peccatorum, sola peccantium <lb/>
+						numerositas pertrahat, neque hoc, quod sibi alii <lb/> parum consulunt, quaedam nobis
+						efficiatur auctoritas. <lb/> Obsecro te, delictum alienum semper ut opprobrium <lb/>
+						respice, numquam ut exemplum. Quod si libet oculos <milestone unit="PLSection" n="B"/><lb/>  ad exempla conferre, in illam potius intende partem <lb/>  qua, licet
+						pauciores sint, tamen sunt in sua parte <lb/> copiosi, Illam, inquam, respice, in qua
+						sunt, qui sapienter <lb/>  intelligunt,  quapropter   nati sint? et utique, <lb/> dum ad
+						   quoad] vivunt, vitae suae causam agunt. <lb/> Qui utili opere insignes, atque
+						egregia virtute praestantes  ,<lb/> praesentem vitam excolunt, futuram serunt. <lb/> Nec
+						solum copiosa horum exempla, verumetiam <lb/> magna non desunt. Nam quae mundi nobilitas,
+						qui <lb/> honores, quae dignitas, quae sapientia, quae facundia, <lb/> quae  litterae  non
+						se jam ad hanc coelestis regni militiam <lb/>  contulerunt (Matth. XI, 30)? Quae
+						sublimitas, <lb/> non jam se ad istud leve coeleste  jugum , cum deditione <lb/> 
+						submittit? Et sane supra omnem errorem atque <lb/> ignorantiam est, dissimulare quemque
+						negotium sapienter <milestone unit="PLSection" n="c"/><lb/>  suae. Possem etiam, nisi
+						longum esset, multos <lb/> ex innumeris nominatim retexere,quanti in saeculo <lb/>
+						illustrium  virorum hanc  arctiorem divini cultus observantiam  ,<lb/> vitamque sectati
+						sunt: quorum tamen <lb/> exempla, ne cuncta penitus omittam, cursim pauca <lb/>
+						subnectam.</p>
+					<p>Clemens vetusta prosapia senatorum, atque etiam <lb/> ex stirpe Caesarum, omni scientia
+						refertus, omniumque <lb/>  liberalium artium peritissimus, ad hanc justorum <lb/> 
+						viam transiit ; itaque etiam in ea excellenter <lb/> effloruit, ut principi quoque
+						apostolorum successor <lb/> exstiterit. Gregorius e Ponto sacerdos, philosophia <lb/>
+						primus apud mundum et eloquentia praestans; sed <lb/> postea major praestantiorque
+						virtutibus, adeo ut <lb/> (sicut de hoc historiae nostrae fides loquitur) inter
+							<milestone unit="PLSection" n="D"/><lb/> reliqua admirabilium signa meritorum,
+						precibus hujus <lb/>  atque orationibus mons referatur secessisse, lacus <lb/> 
+						exaruisse. Alius item sanctus, atque ejusdem noctibus <lb/>  Gregorius, aeque litteris ac
+						philosophiae deditione  ,<lb/>  coelestem  hanc philosophiam concupivit. Cujus <lb/> etiam,
+						quod ad  rem  pertinet, nequaquam silendum <lb/> videtur; quod Basilium studiis prius
+						saecularibus familiarem <lb/>  sibi, et rhetorices adhuc professioni  vacantem   ,<lb/>
+						auditorium ejus ingressus, manu hunc apprehensum <lb/>  schola abduxit, dicens: Omitte
+						ista et da <lb/> saluti operam. Et postea uterque memorabilis sacerdos <lb/>  reliquit
+						utique in Ecclesiae nostrae libris ingenii <lb/> sui praeclara monimenta. Paulinus quoque,
+						Nolanus <lb/> episcopus, peculiare et beatum Galliae nostrae exem<pb n="719"/>
+						<milestone unit="PLSection" n="A"/><lb/>  ingenti ,  quondam divitiarum censu uberrimo
+						   <lb/> eloquentiae fonte; ita in sententiam nostram propositumque <lb/>  migravit, ut
+						 etiam  cunctas admodum <lb/> mundi partes eloquio operibusque resperserit. Hilarius  <lb/>
+						 nuper, et in  Italia  nunc antistes Petronius, <lb/> ambo ex illa plenissima, ut
+						aiunt,  mundanae ; potestatis <lb/>  sede, unus in religionis, alius in sacerdotii nomen
+						<lb/> ascendit. Et quando clarissimos  facundia , Firmianum  ,<lb/> Minutium, Cyprianum,
+						 Hilarium  [Pro Hilario <lb/> reponendum  Erasm . censet Evagrium] Joannem [Sane <lb/>
+						Chrysosto], Ambrosium, ex illo volumine numerositatis <lb/>  evolvam? Dixerant,
+						credo, et hi sibi, quod <lb/> quidam nostrum ait, cum se a saeculo in hanc beatiorem <lb/>
+						 vitam, hoc velut stimulo concitaret: dixerant  ,<lb/> credo, Quid hoc est?
+						Surgunt indocti, et  coelum  <milestone unit="PLSection" n="B"/><lb/> rapiunt, et nos cum
+						doctrinis nostris, ecce ubi in carne <lb/> volutamur et sanguine (Matth. X<note n="I"/>)? Dixerant
+						istud ? <lb/> et idcirco ipsi postea vim intulerunt regno.</p>
+					<p>Prolatis ex parte, quos major  fidei  nostrae fervor <lb/> habuit, saeculi philosophia,
+						eloquentia, honoribusque <lb/> perfunctos, ad ipsos jam reges et illud caput mundi <lb/>
+						veniam. Neque nunc commemorandos putabo omnes <lb/>  superiores illos religioni
+						devotos, et regiae dignitatis <lb/>  viros: solum mihi insignes, David pietate, Josias
+						<lb/>  fide, Ezechias humilitate, ex memoria venerandorum <lb/>  promentur
+						annalium. Nonnulli quoque ex <lb/> recentioribus exstiterunt, atque hac nostra tempestate
+						<lb/>  principes, qui ad agnitionem veri regis propius <lb/> accesserunt, summumque
+						illum dominorum Dominum <lb/>  summa cordis contritione  confessi  sunt; attentam <milestone unit="PLSection" n="c"/><lb/>  divinae majestati reverentiam, etiam uterque I
+						<lb/> sexus ex aula exhibuit. Hi potius idonei, ut arbitror, <lb/> ad aemulandum
+						proponantur, quorum exempla cum <lb/> habeant de futuris salutem, habent de praesentibus
+						<lb/> auctoritatem.</p>
+					<p>Cernis ut etiam dies atque anni, et cuncta haec <lb/> ornamenta coeli, Dei verbum
+						mandatumque infatigabili <lb/>  observatione conservent, praeceptorumque ejus <lb/>
+						custodiant irremissa lege famulatum. Numquid nos, <lb/> quorum ista usibus fabricata
+						sunt, quorum luminibus <lb/>  ingesta sunt, coelestium mandatorum non nescii, <lb/> nec
+						divinae voluntatis ignari, praeceptum Dei surda <lb/> aure transibimus? Et his quidem
+						praedictis mundi <lb/> adminiculis, quid in saecula observarent, semel jussum <milestone unit="PLSection" n="D"/><lb/>  est: nobis vero tot voluminibus divinae legis <lb/>
+						iterantur imperia, ad haec saltem, quod homini ipsi <lb/> attributum est, voluntati
+						auctoris parere, praeceptisque <lb/>  ejus vacare discat: quia omne istud, cum praebet
+						<lb/>  ministerium, praestat  exemplum . Et tamen, si <lb/> qui ad auctorem suum redire
+						nolunt, num idcirco <lb/> Dominum suum vitare possint? Aut quo  suppetit , ut <lb/>
+						fugiant, qui a Deo se avertunt? Audiant, sancte <lb/> David, audiant te dicentem : Quo
+						ibo a Spiritu tuo, <lb/> et a facie tua quo fugiam ? Si ascendero in  coelum , tu <lb/>
+						illic es: si descendero in  infernum , ades : si sumpsero <lb/> pennas meas diluculo, et
+						inhabitavero in extremis maris, <lb/> etiam ibi manus tua deducet me,  ettenebit  medextera 
+						 tua <lb/> (Ps. CXXXVIII). Ergo illi velint nolint, se Domino <lb/>
+						universitatis, et si voluntate auferunt, jure non subtrahunt .<milestone unit="PLSection" n="A"/> <lb/> Illi quidem affectu absunt, sed ille dominatu <lb/>  adest: Ita quod
+						improvidum et  inconsultissimum  <lb/> mum est, errantes clausi, vivunt extra considerationem
+						<lb/>  Domini, et intra potestatem. Et si unusquisque <lb/> de fuga famulum minaci
+						indagine sectatur, eumque <lb/> declinantem se juris sui assertor insequitur; cur non
+						<lb/> de  semetipso  coelesti Domino jus suum reddit, servitutique <lb/>  quamprimum se
+						in famulatum ejus voluntaria <lb/>  oblatione dedit, aequus utique tam sibi, quam <lb/>
+						in se arbiter' Cur in praesentium rerum oblectabili <lb/> defigimur aspectu? Cur iis
+						tantumlibet  incubare , <lb/> quae cernimus? Numquid luminibus istis tantum vivimus 
+						,<lb/>  ant solos [Fort . solis]   . solis] in usum gestamus oculos?</p>
+					<p>Vivimus quoque et auribus, ut possimus inhiare <lb/> promissis. Magni nos, per hanc
+						quoque corporis partem ,<milestone unit="PLSection" n="B"/> <lb/>  affectus  trahunt.
+						Quae spondentur, quae praedicantur  ,<lb/> ferventibus votis,  instantibus  desideriis exspectemus
+						 .<lb/> Fidem promissorum fidelis ille, ille auctor <lb/>  inculcat.  Ambiamus 
+						ad optima quae pollicentur. <lb/> Quamquam si ipsi quoque oculis, bene et utiliter  uti 
+						<lb/> volumus, per istos etiam in futurum cupiditate magna <lb/>  ex parte raptamur: si
+						admirationem, quam ex <lb/> mundi contemplatione capimus, retorqueamus in <lb/> ipsum
+						tantae machinae auctorem. Aut si cogitemus, <lb/> quantus in posterum splendor lucis,
+						possit luminibus <lb/>  occurrere; cum se nunc tantus insinuet : Quam <lb/> magnifica
+						fulgebit perpetuis forma rebus, cum sit <lb/> nunc tam speciosa perituris. Non ergo
+						oportet in <lb/> deteriorem nos partem, officia sollicitare membrorum  ,<lb/> commode
+						potius in utramque temperentur vivimus ;<milestone unit="PLSection" n="c"/> <lb/> sicque
+						custodiant temporariae usum, ut aeternae <lb/> non abjiciant ministerium. Quod si nos ista
+						avocatio <lb/> atque amor juvat, et ipsum sensum oblectatio  sollicitat .  ,<lb/> est
+						plane hic amor summae voluptatis; est non <lb/> solum, quod amari effusissime possit,
+						sed et quod <lb/> maxime, debeat, jucundum, praeclarum, unicum, <lb/> aeternum bonum.</p>
+					<p>Deus, inquam, noster, cui possis tam magno quam <lb/> pio igne flagrare; si in locum
+						anteriorum cupiditatum  ,<lb/> pretiosa rursum  desideria  succedunt. Si te in <lb/>
+						aliquo capiebat tam magnificae rei dignitas, nihil illo <lb/> magnificentius. Si te
+						aliquid  velut  aptum gloriae accommodatumque <lb/>  rapiebat, nihil illo gloriosius. Si
+						ad <lb/> splendida fulgentium rerum ducebaris visu, illo nihil <milestone unit="PLSection" n="D"/><lb/> clarius. Si ad speciosa trahebaris intuitu, illo nihil
+						<lb/> pulchrius. Si in aliquo te amplecti putabas veritatem  ,<lb/> illo nihil  verius .
+						Si in quoquam suspiciendam <lb/> largitatem  credebas , illo nihil munificentius. Miraris,
+						<lb/> quod purum est atque simplex? nihil  illa bonitate sincerius    .<lb/> Sollicitaris
+						affluentium rerum copia? nihil <lb/> illa  abundantia  copiosius. Diligis aliquid tamquam
+						<lb/> fidum? nihil hujus firmius est fide. Amas aliquid ut <lb/> commodum? nihil
+						commodius est hujus ipsius amore. <lb/> Est aliquid, quod te vel severitatis vel
+						jucunditatis <lb/> specie trahat? non est magnitudine illa, dignatione <lb/> illa,
+						quidquam aut  terribilius  aut  blandius . Requiritur <lb/>  in adversis benignitas, in
+						prosperis suavitas: <lb/> unicum est ex illo, aut in laetis gaudium, aut in moestis <lb/>
+						 solamen. Itaque ratione plenissimum est, te<pb n="721"/>
+						<milestone unit="PLSection" n="A"/><lb/> illum in quo habeas omnia, amare prae omnibus.
+						Divitiae  ,<lb/> et quaecumque illa sunt, quae te nunc amoenitatibus <lb/>  suis
+						obtinent, non solum intra ipsum, sed <lb/>  etiam  ab ipso habentur. Malle hactenus amor
+						 sparsus   ,<lb/> divinis deinceps reddatur excubiis. Vaga adhuc <lb/> affectibus suis,
+						in sacros reducatur usus jam casta <lb/>  charitas  : dilectionemque opinionibus deviam,
+						cohibito <lb/>  errore, castigans dirige, atque in Deum amorem <lb/>  confer tuum:
+						quia et quidquid nunc amas, suum <lb/> est; suum, inquam, suum  est . Est enim tantus
+						ille, <lb/> ut qui non amant eum, inique quidem, sed tamen <lb/> non nisi ejus quidquam
+						amare possint.</p>
+					<p>Sed tamen consideret velim  arbiter  justus, aequumne <lb/> sit diligere opus, opifice
+						neglecto derelictoque omnium <lb/>   creatore  rerum; in rem hujus cupiditatibus
+							<milestone unit="PLSection" n="B"/><lb/> suis passim atque indifferenter incurrere :
+						cum utique <lb/>  Deum oportuisset illicere ad amorem sui, vel <lb/> per hunc ipsum
+						affectum suorum operum. Et nunc <lb/> homo adversus in indignorum tantum figmentorum
+						<lb/> desideria atque officia convertitur, animisque incongrue <lb/>  dissidentibus
+						appetitor artis, desertor artificis, <lb/> complectiturque speciem, cujus non miratur
+						auctorem  .<lb/> Et quid de illa tam magna multitudine dulcedinis <lb/>  suae diximus ?
+						Aut quid de tanta et tam ineffabilis <lb/>  boni  suavitate , sancto et profundo
+						charitatis <lb/> ejus thesauro, elocuti sumus? Aut quando in quoquam <lb/>  de illo,
+						quisquam valet rei ipsius  fando  consequi <lb/>  dignitatem ? Amare ergo eum jam non
+						voluptarium <lb/>  tantum, sed etiam necessarium esse ducamus. <milestone unit="PLSection" n="c"/><lb/> Impium quippe est hunc non diligere, cui rependere <lb/>
+						non queas etiam cum dilexeris.  Injustissimum  est <lb/> ut ei, quae possis tribuere,
+						nolis, cui  etiam  si velis, <lb/> repensare non possis. Quid enim retribuemus Domino,
+						<lb/> pro omnibus quae retribuit nobis (Ps. CXV)? Quid retribuemus  ,<lb/> vel pro hoc
+						tantum, quod per fidem homini <lb/> salutem dedit,  statuitque , ut quam facillimum factu
+						<lb/> esset, per quod spem orbi terrae ac vitam mortalibus <lb/>  propagaret.</p>
+					<p>Et ut ad ista descendam, illa aliquando externa <lb/> omnia, id est nationes et regna,
+						putasne ob aliud in <lb/> ditionem ac jus cessisse Romanum, et ob aliud magnam <lb/> 
+						partem generis humani, in unum transisse <lb/> populum; nisi ut facilius tamquam
+						medicamentum per <lb/> corpus unum, ita per unam gentem  fides  infusa penetraret ,<milestone unit="PLSection" n="D"/> <lb/> et ut  capiti  ingesta velociter se per membra
+						<lb/> diffunderet? Alioqui, non ita concurrisset  intercrebras  etdiscrepantesritibus  <lb/>
+						 linguisque gentes, nec tam longe <lb/> per novorum semper graduum
+						objecta transisset. <lb/> Denique B. Paulus, per hunc  eumdem  populum  disterminans  <lb/>
+						 fidem, scribit se ab Hierosolymis usque <lb/> ad Illyricum, Evangelio
+						Christi cuncta replesse (Rom. <lb/> XV, 10). Quando autem istud inter nationes, aut multitudine
+						<lb/>  innumeras (Cicer. pro M. Marcello), aut immanitate <lb/>  barbaras
+						exstitisset? Inde est, quod nunc <lb/> terra, a solis ortu et occasu, ab aquilone et
+						mari, <lb/> Christum resonat; quod ad vitam omnia mundi latera <lb/>  concurrunt; dum
+						fidem Thrax, fidem Libys, fidem <lb/>  Syrus, fidem receptat Hispanus. Magnum ergo
+						<lb/> ex hoc divinae pietatis argumentum est, quod sub <milestone unit="PLSection" n="A"/><lb/> Caesare Octavio, cum utique Romana possessio verticem <lb/>  tenuit, tunc se
+						Deus terris dedit. Itaque ut tua <lb/> apud te proferam, cum ab ortu regni hujus
+						centesimus <lb/>  et octogesimus quintus fere supra millesimum <lb/> vertatur annus;
+						quidquid vel sub illa dominatione <lb/> regum vetusta; vel sub illa deinde gemina
+						administratione <lb/>  consulum Romano accessit imperio, omnia <lb/> Christi adventui
+						praeparata et diffundendae  fidei  provisa <lb/>  potest, si quis idoneus est assertor,
+						ostendere.</p>
+					<p>Nos ad propositum revertemur. Nolite, inquit, <lb/> diligere mundum, neque ea quae in
+						mundo sunt (I Joan. <lb/> II ), quia omnia haec conspectui nostro insidiosis <lb/>
+						coloribus lenocinantur. Vis illa oculorum  attributa  <lb/> lumini, non applicetur errori:
+						et cum vitae usibus <lb/> pateat, non admittat  causas mortis . Carnis desideria <milestone unit="PLSection" n="B"/><lb/> ut egregie Apostolus ait, militant adversus animam <lb/>
+						(I Petr. II, 11); omnisque illis in  perniciem  nostram <lb/> clademque procinctus est,
+						pervigilem cum insurgunt <lb/> adversus nos stationem tenent, externorum plane <lb/>
+						hostium more; dum sibi tantum virium  acquirunt , <lb/> quantum nobis subtrahunt. Ita ego
+						hactenus de inextricabilibus <lb/>  saeculi insidiantis illecebris, de honoribus <lb/> 
+						opibusque sermocinatus sum, tamquam si jucundus <lb/>  blandimentis suis mundus
+						vigeret. Quidquid <lb/> est illarum rerum facies, adumbratis quondam nitoribus <lb/> 
+						expolita, jam obsolevit, omnisque fucatus <lb/> splendor intercidit. Vix jam hoc habet
+						mundus, ut <lb/> fallat. Periit imago illa rerum, ad decipiendum usque <lb/>  decora.
+						Prius nos seducere vero cogitabat fulgore ,<milestone unit="PLSection" n="c"/> <lb/>
+						non poterat, prope jam non valet et ipsa nos <lb/> falsa  ostentatione  corrumpere.
+						Solidis bonis carebat, <lb/> ecce deficit etiam caducis. Non hunc, aut ad tempus <lb/>
+						speciosa ornant, aut in posterum mansura confirmant  ;<lb/> nisi nosmetipsi decipimus,
+						pene mundus decipere <lb/>  nos non potest.</p>
+					<p>Sed quid dissimulamus ea expromere quae fortiora <lb/> sunt? Dissipatas loquimur opes
+						mundi, cum jam ipse <lb/> mundus in finem suum vergens spatiis  agatur extremis   .<lb/>
+						Quanto istud majus et gravius est, quod jam <lb/> ipse non in longum  erit ? Quid
+						commemoramus attritam <lb/>  ejus rem ac supellectilem Nec immerito in <lb/> defectum
+						viribus aevo consumptis urgetur,  adminiculisque  <lb/>  suis destituitur, cum jam in
+						senium  nutanti  <lb/> onere succumbat. Postrema mundi aetas referta est <milestone unit="PLSection" n="D"/><lb/> malis tamquam morbis senectus. Visa sunt,  videnturque  <lb/>
+						 jamdudum ista cano saeculo, fames, pestilentia  ,<lb/> vastitas, bella,
+						terrores. Hi sunt in ultimis jam <lb/> annis languores sui. Hinc saepe illa coeli
+						cernuntur <lb/> signa, motusque terrarum, permutatae temporum vices  ,<lb/> monstrosae
+						animantium fecunditates : quae omnium <lb/>  adhuc procedentis prodigia sunt temporis,
+						sed <lb/> jam deficientis. Atque hoc non infirmitatis nostrae <lb/> verbis, sed etiam
+						apostolicae auctoritatis confirmatur <lb/> eloquiis. Illic enim legitur : In nos fines
+						 saeculorum  <lb/> devenerunt (I Cor. x). Quod cum   jamdudum dictum <lb/> sit, quid
+						cunctamur, quid exspectamus Urget nos <lb/> dies ille, jam non noster tantum, sed et
+						saeculi. Omnis <lb/>  hora illud debitae resolutionis admonet tempus <lb/> instare, cum
+						ancipiti periculo finis alternus, et dis-<pb n="723"/>
+						<milestone unit="PLSection" n="A"/><lb/>  geminum   unam omnibus mortem minatur.
+						<lb/> Incumbit mihi misero jam mundi mortalitas, tamquam <lb/>  mihi non sufficiat ad
+						terrorem mea. Quid palpamus <lb/>  metus nostros? Securitati locus non est, <lb/>
+						quando terminus in nos impendet indifferenter, <lb/> singulorum hinc omnium. Quo magis
+						est in hoc, <lb/> non jam dicam saeculi exitu, sed vel in hoc rerum <lb/> ejus defectu,
+						hominum miseranda conditio; qui sibi <lb/> nec futurorum spem gaudiorum reponunt,  cum jucunditate 
+						 <lb/>  praesentium non fruantur. Voluptatem <lb/> vitae brevioris non
+						capiunt, perpetuae sperare non <lb/> possunt. Bonis temporalibus non utuntur, non, non
+						<lb/> utentur aeternis. Hic rei parum, illic spei nihil. Dolendus <lb/>  prorsus atque
+						miserandus hominis status iste <lb/> est; nisi forte faciat de acerbissima conditione
+						congruam <milestone unit="PLSection" n="B"/><lb/>  necessitatem; nisi ob hoc ipsum, ad
+						potiora <lb/> utilitatis suae remedia se corrigat, contendatque ad <lb/> illa salubrioris
+						vota consilii; praesertim, cum  ita  <lb/> dilacerata praesentis temporis res sit, ut qui
+						unius <lb/> futuri saeculi commodum perdit, utriusque perdiderit  .<lb/></p>
+					<p>Dirigenda est omnis animi intentio in spem futuri <lb/>  : quam  spem  ut plenius ac
+						manifestius consequaris  ,<lb/> aperire eam etiam sub alicujus exempli conditione <lb/>
+						 non abnuam. Si cui aliquis quinque hodie ex <lb/> aere denarios offerat,
+						quingentos vero aureos in <lb/> crastinum spondeat, optionemque offerat utrum aes <lb/>
+						ad praesens sumere, an aurum mallet in posterum : <lb/> dubiumne est, quin  praeoptet 
+						grandia illa munera, <lb/> cum parva mora? Tu quoque brevis hujus atque <milestone unit="PLSection" n="c"/><lb/> aeternae vitae conditione perspecta, non eligas capere
+						<lb/> vilia, cum sperare possis pretiosa. Non est tanti <lb/> sumpsisse parva, quanti
+						est exspectare, quae  magna  <lb/> sunt. Quod si omne hoc fragile, quod in mundo est, <lb/>
+						et videmus, et capimus  (spei  vero a sperando inditum <lb/>  nomen est), manifestum est
+						nequaquam in hoc <lb/> saeculo spem possideri, in quo his quae intuemur <lb/> fruimur.
+						Spes enim quae videtur non est spes. Nam <lb/> quis quod videt quid sperat (Rom. VIII,
+						24)? Ergo <lb/> quaecumque illa spes rebus miscetur humanis, quaerenda <lb/>  est in
+						futurum : alioquin, nec spes appellari <lb/> potest, si non speratur.</p>
+					<p>Itaque manifestiorem in futurum rem spei sequimur <lb/> mur, quam  spem rei in praesentibus
+						experi. Ecce <lb/> ea quae nobis in ipsos oculorum admoventur obtutus ,<milestone unit="PLSection" n="D"/> <lb/> non absolute quasi oppressis visibus intuemur ;
+						<lb/> multo vero certius in ea quae eminus offeruntur, <lb/> velut expeditis luminibus
+						intendimus : ita fere evenisse <lb/>  de praesentibus futurisque non est ambigendum 
+						.<lb/> Nam  praesentia  tamquam in oculos ingesta, <lb/> non recte cernuntur; futura tamquam
+						ab oculis reducta  ,<lb/> manifestissime perspiciuntur. Neque hanc <lb/> fiduciam
+						futurorum, incerto auctore praesumimus, <lb/> sed Domino  nostro  Jesu Christo, verissimo
+						sponsore <lb/> veritatis, qui  justis  interminabile regnum et ampla <lb/>
+						 beatissimae aeternitatis  praemia pollicetur; qui etiam <lb/> per ineffabile sacramentum
+						assumptae carnis, idem <lb/>  homo  et Deus, reconciliavit  hominem  Deo; ac magno <lb/> 
+						absconditoque mysterio passionis mundum crimine <milestone unit="PLSection" n="A"/><lb/>
+						 absolvit. Itaque manifestatus est in carne, <lb/> justificatus est spiritu,
+						apparuit angelis, praedicatus <lb/> est gentibus, creditus est mundo, assumptus est in
+						<lb/> gloria : propter quod Deus eum exaltavit, ut omnia <lb/> confiteantur nunc in
+						coelo, et in terra, in mari et in <lb/> abyssis, quia Dominus Jesus in gloria est, Rex
+						et <lb/> Deus ante saecula (Phil. n).</p>
+					<p>Quin tu repudiatis illis philosophorum  praeceptis quorum  <lb/>  lectioni operam ac
+						ingenium accommodas, <lb/> ad imbibenda Christiani dogmatis studia animum <lb/> adjicis.
+						Illic quoque, quo facundia tua atque ingenium <lb/>  exerceatur, invenies; brevique
+						tibi liquebit <lb/> quanto  haec [Forte , quam non  ,   haec] nostra, id est, <lb/> pietatis
+						veritatisque praecepta, illis philosophorum <lb/> praeceptis debeant. In illis namque
+						eorum praeceptis, <milestone unit="PLSection" n="B"/><lb/> vel adumbrata virtus, vel
+						 falsa  sapientia; in his vero <lb/>  consummata justitia, solida veritas continetur.
+						<lb/> Unde licet dicere philosophiae alios nomen usurpasse  ,<lb/> nos vitam. Etenim
+						qualia ab his dari possunt <lb/> praecepta vivendi? Causam nesciunt. Ignorantes <lb/>
+						enim Deum, et statim ab exordio justitiae declinantes  ,<lb/> consequenti in caetera
+						feruntur errore. Sic fit <lb/> postea ut studiorum talium finis sit vanitas. Si qui
+						<lb/> apud illos honestiora definiunt, huic jactantiae deserviunt  ,<lb/> huic laborant:
+						ita apud eos non est vacua <lb/> vitiis abstinentia vitiorum.  Hi  itaque sunt, sicut
+						<lb/> scriptum est, qui  terrena  sapiunt (Phil. III, 19).  Unde  <lb/> manifeste ostenditur
+						veram eos justitiam, veram sapientiam <lb/>  non videre. Anne aliquis ex illa Aristippi
+						<lb/> schola  veritatem  videbit, qui ingenio suo a suibus <milestone unit="PLSection" n="C"/><lb/> aut pecore nihil differt, cum beatitudinem in corporis <lb/>  voluptate
+						constituat: cui Deus venter est, et gloria <lb/> (Ibid.) in pudendis ejus? Hic honestum
+						justumque <lb/> praecipiet,  apud  quem prodigus, impudicus, adulter <lb/> philosophatur?
+						Sed alius adversus philosophos  dicendi  <lb/>  locus reservetur; ego ad haec veniam
+						propter <lb/> quae tecum loquor.</p>
+					<p>Omitte jam illas, quibus oblectaris, maxime generales <lb/>  eorum sententias,
+						breviter ex omni disputationis <lb/>  genere collectas, atque ad studia te nostrorum
+						<lb/> et scripta converte. Ibi, tu optime, pectus tuum, <lb/> multifaria instructione
+						satiabis. Ibi, ad inculcandam <lb/> fidem, non his quidem verbis, sed tamen ista  dice , , ­ tur ,,­
+						<lb/>  tibi: Verbum Dei, qui non credit, non intelligit. <lb/> Ibi, tu  admonebere  :
+						Dominum, quia Dominum vocas ,<milestone unit="PLSection" n="D"/> <lb/> metue; quia
+						patrem, dilige. Ibi, tu veras hostias <lb/>  disces, audiendo : Acceptissima Deo
+						sacrificia <lb/> sunt, justitia et misericordia.  Ibi , tibi istud insinuabitur <lb/>  :
+						Si amas te, proximum dilige; qui nihil magis <lb/> commodis  tuis  dabis, quam quod
+						contuleris alienis. <lb/> Ibi, tibi  praecipietur  , nullam esse causam tam dignam <lb/> 
+						putes, qua tibi justa fiat mors hominis.  Illic , <lb/> adversus illicita moneberis :
+						Libidini resiste, tamquam <lb/>   hosti  acerbissimo, qui insultare victis, etiam <lb/>
+						contumelia corporis, gaudeat. Illic, ne concupiscas, <lb/> istud edoceberis ; Melius est
+						nolle quae non habeas, <lb/> quam habere quae velis. Illic, ne irascaris, hoc ingenium <lb/>
+						 : Qui provocatus irascitur, tunc solum  non ! <lb/> irascitur, cum non provocatur.
+						Ibi etiam, de inimi-<pb n="725"/>
+						<milestone unit="PLSection" n="A"/><lb/> eis audies : Amato non amantem, quia amantem
+						<lb/> vix ullus non amat. Illic, saepius id tibi iterabitur : <lb/> Thesaurum is bene
+						recondit, qui indigentibus divi­ <lb/> dit. Perdere enim jam non poterit, quod largiendo
+						<lb/> collocavit. Illic etiam feliciora suadeberis, cum di­ <lb/> cetur : Fidelium
+						conjugiorum fructus est continen­ <lb/> tia. Ibi, tu discernenda cognosces, cum audies:
+						<lb/> Mala saculi bujus juslis injustisque |communia sunt. <lb/> Ibi, tibi istud
+						audiendum offeretur : Major aegritudo <lb/> est languere animam vitiis, quam corpus
+						morbis. <lb/> Ibi, tibi ad commendandam pacem istud pronuntia- <lb/> bitur :
+						Impatientibus similitudo morum, causa dis­ <lb/> cordiae. Ibi, ne sequaris malos, istud
+						audies : Pru­ <lb/> dentem et sapiens informat, et stultus; ille quid <lb/> imitandum
+						sit docet; iste quid vitandum. Illic et <milestone unit="PLSection" n="B"/><lb/> ista
+						proferuntur : Multa prosunt nescientibus; ideo <lb/> non minor est Dei in operto quam in
+						aperto beni­ <lb/> guilas. lllic admoneberis : Gratias Deo non magis <lb/> in prosperis
+						agas quam in adversis; et cum prospera <lb/> sint, te non meruisse fatearis. lllic, tibi
+						etiam remo­ <lb/> tiora patefient, cum ista praedicabuntur : Fatum non <lb/> esse,
+						interrogent gentes vel leges suas; quae utique <lb/> non puniunt, nisi factorum
+						voluntatem. Illic audies <lb/> ad custodiendam puritatem et ista praecipi : Si vis <lb/>
+						esse verax, suspicax non eris. Non enim suspicamur, <lb/> nisi quod nescimus. Ibi, de
+						sublimioribus quoque <lb/> istud audies: Deo mente defixus, a passionibus cum <lb/>
+						titillatur, a coelo in terram devolvitur. Ibi tibi et <lb/> haec memorabuntur : Cum hic
+						mali Interdum bona <lb/> capiant, boni malis afflictentur; qui futurum Dei <milestone unit="PLSection" n="c"/><lb/> judicium non credunt, iniquum (quod absit) Deutn <lb/>
+						judicant. Illic tibi suggeretur : Eliam in secretis <lb/> tuis quod velis homines
+						nescire ne feceris; quod <lb/> Deum, ne cogitaveris. Ibi tibi contra omnem frau­ <lb/>
+						dem dicetur ; Infelicius est decipere quam decipi. <lb/> Illic et adversus jactantiam
+						cousummantia tibi haec <lb/> praecipientur : Vanitatem tanto magis fuge, quanto <lb/>
+						melior elficicris. Caetera enim vitia crescimt vitiis, <lb/> vanitas virtutibus. Et ista
+						quidem pauca de studiis, <lb/> carptim acbreviter praelibata sunt.</p>
+					<p>Quod si ad fontes ipsos sacri eloqnii scrulator ac­ <lb/> cessetis, ini tu non
+						exteriora magis quam interiora <lb/> mirabere. Ita Scriptura, dum intrinsecus radiat,
+						ve­ <lb/> lut pretiosissima quaeque gemma, in profundum <lb/> fulgorem considerantium
+						demittit oculos. Hoc tu <milestone unit="PLSection" n="D"/><lb/> ealigantem mentis aciem
+						nequaquam refugus in­ <lb/> suesce; hoc interno ac salubri cibo disce animae <lb/> famem
+						pascere. Per opus miserantis Domini id fore <lb/> non diffidimus, ut nostrorum appetens,
+						et dissimu- <milestone unit="PLSection" n="A"/><lb/> lator tuorum, inania fastidias, et
+						solida concupiscas. <lb/> Imprudentissimum est, cum pro nobis fere tam <lb/> multa Deus
+						fecerit, nihil nosmetipsos fecisse pro <lb/> nobis; cumque ille in operibus suis ad
+						commoda <lb/> humana respexerit, hominem nolle sibi consulere. <lb/> Consulimus vero, si
+						nos in Dei cultum affectumque <lb/> reddimus. Vera quippe beatitudo est, saeculi beati­
+						<lb/> tudinem spernere, neglectisque terrenis in divina <lb/> flagrare. Proinde, jarn
+						nunc omnia dicta factaque <lb/> tua ad Deum vel propter Deum dirige. Obtine ut tibi
+						<lb/> comes semper sit illa, et tibi custos erit. Jam fida <lb/> est innocentia. Magnum
+						est virtutem sequi, nosque <lb/> ei aliquid pro virili portione conferre. Nec paven­
+						<lb/> dum est ne se ab his quae usu inoleverunt animus <lb/> per meliorem vitam non
+						valeat absolvere. Idem ille. <milestone unit="PLSection" n="B"/><lb/> cui sanandos nos
+						tuendosque offerimus, vires prae­ <lb/> stat affectui. Unde autem ? ut vel aestimatione
+						com­ <lb/> prehendere valeat quisquam futurorum remuneratio. <lb/> nem bonorum. Ecce
+						divina, ut cernimus, munificen­ <lb/> tia, cunctis promiscuum usum charissimae lucis
+						<lb/> indulsit. Datur pio et impio communem spectaro <lb/> solem; omnibus creatura
+						famulatum suum benignis <lb/> servat officiis, bonorum malorumque totius mundi <lb/>
+						indiscreta possessio est.</p>
+					<p>Cum hic igitur tam praeclara Deus justis pariter et <lb/> injistis tribuat, qualia sunt
+						putanda quae justis re­ <lb/> servat T Consideremus, qui tanta dedit, quanta re­ <lb/>
+						stituet; qui tam magnus est in donis, quam magnus <lb/> erit in praemiis. Si tam
+						inaestimabilis est munerantis <lb/> benignitas, quae illa remunerantis? Ineffabilia sunt
+							<milestone unit="PLSection" n="c"/><lb/> quae praeparavit Deus his qui diligunt eum,
+						recta <lb/> plane atque manifeste, quia vere immensum est, <lb/> quam magna rependet
+						bonis qui tam magna largitur <lb/> ingratis. Circumfer oculos, et de pelago negotiorum
+						<lb/> tuorum, velut in quemdam professionis nostrae por­ <lb/> tum prospice, proramque
+						converte. Unus hic portus <lb/> est, in quem nos ab omni fluctuantis sseculi jactatio­
+						<lb/> ne referamur, quem inter irruentes mundi turbines <lb/> fessi petamus; huc cunctis
+						confugiendum est, qui <lb/> frementis sxculi tempestate vexantur. Hic statio fi­ <lb/>
+						dissima, et quies certa. Hic late recessus exclusus <lb/> fluctibus silet. Hic blanda
+						tranquillitas, serenum re­ <lb/> nidet. Huc cum fueris delatus, tuto navis tua post
+						<lb/> inanes labores hic ad crucis anchoram fundata reti­ <lb/> nebitur. Sedjam
+						prolixior scriptorum pagina modum <milestone unit="PLSection" n="D"/><lb/> poscit. Vim
+						coelestium praeceptorum arcte breviter­ <lb/> que collectam in summam accipe ad Dei
+						honorem. <lb/> Haec sunt mandata omnia, ignosce, meque agnosce.</p>
+				</div>
+
+				</body></text></TEI>

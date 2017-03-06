@@ -1,0 +1,481 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><TEI xmlns="http://www.tei-c.org/ns/1.0"><teiHeader>
+    
+		<fileDesc>
+			<titleStmt>
+				<title>Patrologiae Cursus Completus. Series Latina (PL)</title>
+				<sponsor>University of Leipzig</sponsor>
+				<funder>European Social Fund Saxony</funder>
+				<principal>Gregory Crane</principal>
+				<respStmt>
+					<persName xml:id="Jouve">Jouve</persName>
+					<resp>OCR-ed, corrected and encoded the text</resp>
+				</respStmt>
+				<respStmt>
+					<persName>Greta Franzini</persName>
+					<resp>Project Manager (University of Leipzig)</resp>
+				</respStmt>
+				<respStmt>
+					<persName>Simona Stoyanova</persName>
+					<resp>Project Assistant (University of Leipzig)</resp>
+				</respStmt>
+				<respStmt>
+					<persName>Bruce Robertson</persName>
+					<resp>Technical Advisor (Mount Allison University)</resp>
+				</respStmt>
+			</titleStmt>
+
+			<publicationStmt>
+				<authority>University of Leipzig</authority>
+				<idno type="filename">PL51.xml</idno>
+				<availability>
+					<licence target="https://creativecommons.org/licenses/by-sa/4.0/">Available under a
+						Creative Commons Attribution-ShareAlike 4.0 International License</licence>
+				</availability>
+				<date>2014</date>
+				<publisher>University of Leipzig</publisher>
+				<pubPlace>Germany</pubPlace>
+			</publicationStmt>
+
+			<sourceDesc>
+				<listBibl xml:lang="la">
+					<biblStruct>
+						<monogr>
+							<editor>
+								<persName>
+									<name xml:lang="fr">Jacques Paul Migne</name>
+								</persName>
+							</editor>
+							<author>Prosperus Aquitanus</author>
+							<title>Epistola Ad Augustinum</title>
+							<title>Epistola Ad Rufinum 'De Gratia Et Libero Arbitrio'</title>
+							<title>Peri Axariston. Seu De Ingratis Carmen In Quatuor Partes Distributum</title>
+							<title>Epigrammata In Obtrectatorem Augustini</title>
+							<title>Epigrammata In Quempiam Augustini Obtrectatorem</title>
+							<title>Epitaphium Nestorianae Et Pelagianae Haereseon</title>
+							<title>Pro Augustino Responsiones Ad Capitula Gallorum</title>
+							<title>Responsiones Ad Capitula Objectionum Gallorum Calumniantium</title>
+							<title>Pro Augustino Responsiones Ad Capitula Objectionum Vincentianarum</title>
+							<title>Pro Augustino Responsiones Ad Excerpta Genuensium</title>
+							<title>Pro Defensione Augustini Contra Cassiani Presbyteri Librum</title>
+							<title>Expositio Psalmorum A Centesimo Usque Ad CL</title>
+							<title>Sententiarum Ex Operibus Augustini Delibatarum Liber Unus</title>
+							<title>Epigrammatum Ex Sententiis Sancti Augustini Liber Unus</title>
+							<title>Chronicum Integrum In Dua Partes Distributum</title>
+							<title>Chronicum Integrum In Dua Partes Distributum [Appendicula]</title>
+							<title>Confessio [Incertus]</title>
+							<title>Poema Conjugis Ad Uxorem [Incertus]</title>
+							<title>Carmen De Providentia Divina [Incertus]</title>
+							<title>Libri Duo De Vocatione Omnium Gentium [Incertus]</title>
+							<title>Liber De Promissionibus Et Praedictionibus Dei A Nonnullis [Incertus]</title>
+							<title>Chronicum Alterum Sive Pseudochronicum [Incertus]</title>
+							<imprint>
+								<publisher>Garnier</publisher>
+								<pubPlace>Paris</pubPlace>
+								<date>1846</date>
+							</imprint>
+							<biblScope unit="volume">51</biblScope>
+						</monogr>
+						<monogr>
+							<title>Concilium Arausicanum I</title>
+							<imprint>
+								<publisher>Garnier</publisher>
+								<pubPlace>Paris</pubPlace>
+								<date>1846</date>
+							</imprint>
+							<biblScope unit="volume">51</biblScope>
+						</monogr>
+						<monogr>
+							<author>Idatius Aquaeflaviensis Episcopus</author>
+							<title>Chronicum</title>
+							<title>Descriptio Consulum Ex Quo Primum Ordinati Sunt [Codex Parisiensis]</title>
+							<imprint>
+								<publisher>Garnier</publisher>
+								<pubPlace>Paris</pubPlace>
+								<date>1846</date>
+							</imprint>
+							<biblScope unit="volume">51</biblScope>
+						</monogr>
+						<monogr>
+							<author>Marcellinus Comes</author>
+							<title>Chronicum</title>
+							<imprint>
+								<publisher>Garnier</publisher>
+								<pubPlace>Paris</pubPlace>
+								<date>1846</date>
+							</imprint>
+							<biblScope unit="volume">51</biblScope>
+						</monogr>
+						<ref target="http://hdl.handle.net/2027/pst.000017928816">HathiTrust</ref>
+
+					</biblStruct>
+				</listBibl>
+			</sourceDesc>
+
+		</fileDesc>
+		<encodingDesc>
+			<p>The following text is encoded in accordance with EpiDoc standards and with the CTS/CITE
+				Architecture.</p>
+		<refsDecl>
+        <cRefPattern n="" matchPattern="(.+).(.+).(.+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@type='edition']/tei:div[@n='$1']/tei:div[@n='$2']/tei:div[@n='$3'])"/>
+        <cRefPattern n="" matchPattern="(.+).(.+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@type='edition']/tei:div[@n='$1']/tei:div[@n='$2'])"/>
+        <cRefPattern n="" matchPattern="(.+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@type='edition']/tei:div[@n='$1'])"/>
+      </refsDecl>
+    </encodingDesc>
+
+		<profileDesc>
+			<langUsage>
+				<language ident="la">Latin</language>
+			</langUsage>
+		</profileDesc>
+
+	</teiHeader>
+	<text><body><div type="edition" n="">
+					<head>
+						<title type="main">CHRONICON ALTERUM   SUB TIRONIS PROSPERI NOMINE VULGATUM, .Quod a
+							 quibusdam vocatur   PSEUDOCHRONICON.</title>
+					</head>
+					<ab>
+						<title type="sub">A morte  Valentis , imperatoris ad Captam a Genserico Urbem, longe  aliud 
+							ab eo quod hactenus B. Hieronymi Chronico subjunctum est; ex edit.  Pithoei . (C) </title>
+					</ab>
+					<p>
+						<milestone unit="PLSection" n="A"/>I  .  Igitur Valente a Gothis in Thracia  concremato  
+						,<lb/> Gratianus cum fratre Valentiniano regnat annos <lb/>  sex. Hic parvulum fratrem
+						habens,  regni  consortem  ,<lb/> probatae aetatis virum Theodosium in societatem <lb/> 
+						regni adsciscit. Hic Gratianus valde religioni <lb/> favens et Ecclesiis per omnia
+						promptus fuit.</p>
+					<p>Martinus, Turonensium episcopus, apostolicis virtutibus <lb/>  insignis habetur.</p>
+					<p>II. Theodosius in Orientis partibus lassam rempublicam <lb/>  reparavit.</p>
+					<p>III. Maximus tyrannus in Britannia a militibus imperator <lb/>   constituitur .</p>
+					<p>IV. Incursantes Pictos et Scotos Maximus strenue <lb/> superavit.</p>
+					<p>Priamus quidam regnat in Francia, . quantum altius <lb/> colligere  potuimus .</p>
+					<p>V. Ambrosius libros  contra  Arianorum  perfidiam  <lb/> luculentissimos ad Gratianum
+						Augustum scribit.</p>
+					<p>VI Maximus in  Gallias  transfretavit et conflictu <milestone unit="PLSection" n="B"/><lb/> contra Gratianum habito, .eumdem  fugitantem Lugduni   <lb/>  interfecit.</p>
+					<ab>
+						<title type="sub">Theodosius annis XI.</title>
+					</ab>
+					<p>I. Maximus timens Orientalis imperii principem <lb/> Theodosium cum Valentiniano  foedus 
+						iniit.</p>
+					<p>Apud Treveros Manichaei deprehensi, summo Maximi <lb/>  studio exterminati.</p>
+					<p>II: Justina mater Valentiniani Arianis favens, in <lb/> Ambrosium et omnem
+						Mediolanensem Ecclesiam diversa <lb/>  injuriarum genera congerit.</p>
+					<p>Reliquiae Gervasii et Prothasii <note n="b"/> martyrum, ab <lb/> Ambrosio primum  Mediolani 
+						repertae.</p>
+					<p>Hymni Ambrosii compositi, qui numquam ante in <lb/> Ecclesiis Latinis modulis  canebantur 
+						.</p>
+					<p>III. Maximus indignum ducens contra Ecclesiae <lb/> statum agi, locum irrumpendi quod
+						cum Valentiniano <lb/>  junxerat foedus, invenit. Valentinianus  veritus  <lb/> imminentem
+						jam cervicibus suis tyrannum, ad Theodosium <milestone unit="PLSection" n="c"/><lb/> 
+						confugit. <lb/> <note n="e"/> [Honorius et Arcadius XXXII, CCCC. <lb/> Theodosius et Joannes xxv et
+						XXII. <lb/> Valentinianus et Martianus III, CCCC, XXV]. <lb/> Augustinus Mediolani
+						rhetoricam apprime docens,  .<lb/>omissis scholis, ad .fidem rectam convertitur, cum
+						<lb/> ante Manichaeus fuisset.</p>
+					<p>IV Theodosius cum exercitu ad Italiam transgrediens  ,<lb/> Maximum interfecit, et
+						Valentinianum proprio <lb/> regno reddidit.</p>
+					<p>Justina, quae Ecclesias vexaverat, ne regnum cum <lb/> filio reciperet, morte praeventa
+						est. <lb/> Immane Thessalonicae gestum facinus  exstincti  <milestone unit="PLSection" n="A"/><lb/> populi, egregio poenitentiae exemplo imperator religiosus <lb/> 
+						eluit.</p>
+					<p>V. Haeresis Apollinaristarum ab Apollinare  coepta . <lb/> Ariani, qui  totum  pene Orientem
+						<note n="d"/> atque Occidentem <lb/>  commaculaverant,  edicto  gloriosi principis <lb/> Ecclesiis
+						spoliantur,  quae  catholicis deputatae sunt.</p>
+					<p>VI. Joannes  Aegyptius  monachus, qui ob vitae puritatem <lb/>  prophetiae gratiam a
+						Domino meruit, insignis <lb/>  habetur .</p>
+					<p>Post Damasum Romanae Ecclesiae regimen XXXVI, <lb/> Syricius <note n="e"/> suscipit.</p>
+					<p>VII. Apud Alexandriam,  defuncto Petro , Timotheus, <lb/> et post hunc Theophilus episcopi
+						constituuntur..</p>
+					<p>Jerosolymis post Cyrillum Joannes Ecclesiam recipit  .<lb/></p>
+					<p>Apud Antiochiam, defuncto Miletio, substituitur <lb/> Flavianus.</p>
+					<p>Ingens inter nostros contentio oborta, quod scilicet <lb/>  episcopi qui ab haereticis
+						depulsi fuerant nollent, <milestone unit="PLSection" n="B"/><lb/> his ab imperatore
+						dejectis, alios quam se substitui <lb/> sacerdotes.</p>
+					<p>Terribile in coelo signum columnae per omnia simile <lb/> apparuit.</p>
+					<p>VIII. Apud Alexandriam templa destructa, in quibus <lb/>  Serapis antiquissimum et
+						notissimum templum, <lb/> quod quasi quaedam columna ruentem sustinebat idololatriam 
+						.<lb/></p>
+					<p>IX. X. Valentinianus Viennae ab Arbogaste comite <lb/> suo extinguitur, in cujus locum
+						tyrannidem Eugenius <lb/> invadit.</p>
+					<p>XI. Ad vindicandum Valentiniani interitum. et opprimendam <lb/>  Eugenii tyrannidem,
+						Theodosius in Italiam <lb/>  transgreditur, aperto Dei favore conspirantibus <lb/> in
+						idipsum elementis.</p>
+					<p>Eugenio superato, Theodosius XI regni sui anno <lb/> diem obit.</p>
+					<ab>
+						<title type="sub">Arcadius et Honorius XXXII annis.</title>
+					</ab>
+					<p>
+						<milestone unit="PLSection" n="c"/>I. Constantinopolis eminentem iram Dei. igne super
+						<lb/> nubem terribiliter fulgente formidans, toto ad poenitentiam <lb/>  animo conversa
+						subterfugit.</p>
+					<p>Rufinus Bosphoritanus cum ad summam  militiae  <lb/> pervenisset, praeferri sibi
+						 Stiliconem  non ferens, ab <lb/> eodem interficitur,  Hunnorum : quo fulciebatur, praesidio <lb/>
+						 <note n="k"/> superato.</p>
+					<p>II. Claudianus poeta admiratione dignus habetur. <lb/> <note n="k"/> Gildo Africanus in rebellione
+						commota consueta <lb/> Romanis stipendia subtraxit.</p>
+					<p>Prudentius  lyricus  poeta noster, 1 Hispanus genere <lb/> illustri, ingenii sui robur
+						exercet. <note type="footnote"> • In mi. Joliensi, haec praefixa leguntur : Hucusque
+							<lb/> Hieronymus presbyter ordinem prcecedenttum mge,.il  .<lb/> armorum. Qua
+							.t!quuulur Prosper digessit. </note><note type="footnote"> ,b Aberat vox haec,
+							martyrum, ab edit. Pithceana. </note><note type="footnote"> a Hajc uncinii inclusa
+							putantur translata es mar-</note>
+						<milestone unit="PLSection" n="D"/><note type="footnote"> a Desunt in mi. Victor. haec
+							verba, atque .Occi­ <lb/> dentem. </note>
+						<note type="footnote"> . Uterque ms. Victor. et Jol., ,uupit.. </note><note type="footnote"> ' Ms. Victor., diern obiit. </note><note type="footnote"> g Sic
+							restituimus ex mss. Victor. et Jol. Antea <lb/> iegebatur apud Pilhaeum, superatur,
+							</note><note type="footnote"> h In Biblioth. mss. Phil. Labbei non legitur, Gildo
+							</note><note type="footnote"> A(,icanul. sed Africa.... </note>
+						<milestone unit="PLSection" n="D"/><note type="footnote"> i In ms.Jol., Hispanum genere,
+							illustre ingenii, <lb/> etc. Sic et Bibl. Labbei. </note></p><pb n="861"/>
+
+					<p>
+						<milestone unit="PLSection" n="4"/>III. Stilico magister militiae Gildonem Mauritaniae
+						<lb/> interfecit;  Africa  ad pristinum jus redacta.</p>
+					<p>- Romanae Ecclesiae cathedram XXXVII Innocentius <lb/> tenet.</p>
+					<p>IV. Toto orbe Romano antiquae superstitionis templa <lb/>  destructa.</p>
+					<p>Paulinus, Nolanus postmodum episcopus, admirabili <lb/>  exemplo, venditis omnibus,
+						cum esset dominus <lb/> innumerabilium praediorum, religionem expeditus <lb/> elegit.</p>
+					<p>V. Joannes Constantinopolites episcopus dictis <lb/> factisque clarescit.</p>
+					<p>Martinus post egregie actam vitam, corpore exuitur  .<lb/></p>
+					<p>VI.  Pelagius  vesanus doctrina exsecrabili Ecclesias <lb/> commaculare conatur.</p>
+					<p>VII. Contentio ex doctrina Origenis synodum apud. <lb/> Alexandriam movit, cujus
+						exstitit sententia, ut extra <lb/> Ecclesiam fieret, quicumque supradicti viri opera
+							<milestone unit="PLSection" n="B"/>probavisset.</p>
+					<p>VIII. Solis  facta  defectio.</p>
+					<p>Augustinus plurima libris <note n="a"/> innumeris disserit.</p>
+					<p>IX. Severus ex disciplina S. Martini ejus  vitam  <lb/> tribus explicat libris.</p>
+					<p>Saeva  Italiae  barbarici motus tempestas incubuit. <lb/> Si quidem Radagaius rex Gothorum
+						Italiae limitem <lb/> vastaturus transgreditur. Ex hoc Ariani, qui  Romano . <lb/> procul <note n="b"/>
+						fuerant orbe  fugati , barbararum nationum, <lb/> ad quas se contulere, praesidio erigi
+						coepere.</p>
+					<p>XI. Multis ante vastatis  urbibus , Radagaius occubuit <lb/> : cujus in tres partes per
+						diversos principes. divisus <lb/>  exercitus aliquam repugnandi Romanis aperuit <lb/>
+						facultatem. Insigni triumpho exercitum  tertiae partis   <lb/> hostium, circumactis Hunnorum
+						auxiliaribus, Stilico <lb/> usque ad internecionem delevit.</p>
+					<p>Archadius Orientis imperium gubernans. vitam <lb/>  explet, parvum admodum Theodosium
+						 filium  <lb/> imperii successorem relinquens.</p>
+					<p> Coelestinus  XXXVIII Romanam Ecclesiam  gubernavit  .<milestone unit="PLSection" n="c"/>
+						<lb/></p>
+					<p>XIII. Diversarum gentium rabies Gallias dilacerare <lb/> exorsa, immissu  quam  maxime
+						Stiliconis, indigne <lb/> ferentis filio suo regnum negatum.</p>
+					<p>XIV. Uticae in foro Trajani terra diebus septem <lb/> mugitum dedit.</p>
+					<p>Inter alia multum reipublicae Stiliconis morte  consultum . <lb/>  est, qui  saluti 
+						imperatoris tendebat insidias.</p>
+					<p>Nestorius Constantinopolites episcopus ad haeresim <lb/>  quae, in Christo Deum ab
+						homine separat <lb/> vertitur. <lb/> Joannes comes Africae occisus est a populo.</p>
+					<p>XV. Proculus Massiliensis episcopus clarus habetur  ,<lb/> quo annuente magna de
+						suspecto adulterio  Remedii . <lb/>  episcopi quaestio agitatur.</p>
+					<p>Hac tempestate prae <note n="c"/> valetudine Romanorum, <lb/> vires funditus attenuatae
+						Britanniae.</p>
+					<p>XVI. Saxonum incursione  devastatam  Galliarum <lb/> partem Wandali atque Alani
+						vastavere: quod reliquum <lb/>  fuerat  Constantinus  tyrannus obsidebat.</p>
+					<p>
+						<milestone unit="PLSection" n="D"/>Hispaniarum partem maximam Suevi occupavere. <lb/>
+						Ipsa denique orbis caput  Roma  depraedationi    Gothorum <lb/>   foedissime  patuit.</p>
+					<p>XVII; Constantinus tyrannus occiditur.</p>
+					<p>XVIII. Rursum alia praedatio Galliarum,  Gothis , <lb/> qui Alarico duce Romam ceperant,
+						 Alpes  transgredientibus <lb/> </p>
+					<p>
+						<milestone unit="PLSection" n="4"/>XIX. Jovinus tyrannidem post Constantinum invadit 
+						,<lb/> <note n="d"/> industria viri strenui, qui solus tyranno non <lb/> cessit, Dardani.</p>
+					<p> Atauulfus , qui post Alaricum Gothis  imperitabat , <lb/> a societate Jovini
+						avertitur.</p>
+					<p>Salustius quoque et Sebastianus occisi.</p>
+					<p>Valentia nobilissima Galliarum civitas a ,  effringitur  ,<lb/> ad quam se fugiens
+						 Jovinus  contulerat.</p>
+					<p>XX. Ingens in Galliis fames,</p>
+					<p>Aquitania Gothis tradita.</p>
+					<p>Patroclus, Arelatensis episcopus, infami mercatu <lb/> sacerdotia venditare ausus.</p>
+					<p>Heraclianus, comes Africae, qui in Romanae urbis <lb/> reparationem strenuum exhibuerat
+						ministerium, <lb/> nova quaedam molitus interimitur.</p>
+					<p>XXI. Placidia, soror imperatoris, diu captiva <lb/> postea etiam regis uxor, rege
+						fraude sublato, <note n="i"/> Constantis <lb/>  connubio copulatur.</p>
+					<p>XXII.  Gothi  cum se iterum, Atauulfo perempto, <milestone unit="PLSection" n="B"/>movissent, Constantis repelluntur occursu.</p>
+					<p>XXIII. Praedestinatorum haeresis, quae ab <note n="g"/> Augustino <lb/>  accepisse  dicitur  initium
+						his temporibus serpere <lb/>  exorsa.</p>
+					<p>XXIV. Tricesimus nonus Xistus Romanam Ecclesiam <lb/>  regit.</p>
+					<p>XXV. Solis hoc anno facta defectio.</p>
+					<p>XXVI. Faramundus regnat in Francia,</p>
+					<p>XXVII.  Signum . in coelo mirabile apparuit.</p>
+					<p>Maximus  tyrannus , Hispaniarum dominatum vi <lb/> obtinet.</p>
+					<p>XXVIII Honoratus, Minervius, Castor, Jovianus <lb/> singulorum monasteriorum Patres in
+						 Galliis  florent.</p>
+					<p>XXIX. Constantio dignitas imperii ab Honorio " <lb/> sponte delata, qua vix octo
+						mensibus usus interiit, <lb/> Valentiniano <note n="h"/> octo annorum filio derelicto. '</p>
+					<p>XXX. Maximus tyrannus de regno dejicitur ac <lb/> Ravennam perductus sublimem
+						spectaculorum pompam <lb/>  tricennalibus Honorii praebuit</p>
+					<p>XXXI. Placidia, cum insidias fratri tenderet, deprehensa <milestone unit="PLSection" n="c"/><lb/>   est , et    Romam exsilio relegata,</p>
+					<p>XXXII. Honorius  Ravennae  defunctus.</p>
+					<p>Nullo jure debitum  Joannes  ex primicerio notariorum <lb/>  regnum sumit, qui
+						vulneratum multis cladibus <lb/>  reliquit imperium.</p>
+					<ab>
+						<title type="sub">Thodosius annos XXVII.</title>
+					</ab>
+					<p>I. Placidia ad Theodosium auxilium precatum <lb/> mittit.</p>
+					<p>Sigisvultdeus ad Africam contra Bonifacium properavit  .<lb/></p>
+					<p>II. In Galliis Exuperantius praefectus a, militibus <lb/> interficitur.</p>
+					<p>Muro Carthago circumdata, quae ex tempore quo <lb/> vetus illa destructa est, sanctione
+						Romanorum, ne <lb/>  rebellioni  esset. munimento murorum non est  permissa  vallari  <lb/> 
+						'.</p>
+					<p>Joanne ab exercitu  Orientis  victo et perempto, Ravenna <lb/>  depraedatione vastata
+						est.</p>
+					<p> Aetius , Gaudentii comitis a, militibus in Galliis,  <milestone unit="PLSection" n="D"/><lb/>  filius, cum Chunnis Joanni opem  laturus . Italiam <lb/> ingreditur.</p>
+					<p> III .  Valentinianus  Romae  imperator  factus</p>
+					<p>Arelas a Gothis per Aetium  liberatur . V   .<lb/> Placidia  tandem  illata optato
+						regno.</p>
+					<p>Clodius regnat in Francia.</p>
+					<p> VI . Cassianus  compertas  in AEgypto   Pa­ <note type="footnote"> * Duo mss. Victor.
+							et Jol., innumerabilibus. </note><note type="footnote"> b in editione Pithoeana aberat
+							haec vox, faer.'. </note><note type="footnote"> c his. viribus. Forte, invaletudine.
+							</note><note type="footnote"> d In Biblioth. mss. Labbei statim a linea babe­ <lb/>
+							tar : Industria viri strenui, qui solus tyranno non cessit, <lb/> Dardani, Atauulfus,
+							qui post, etc. </note><note type="footnote"> • Consule notas Phi. Labbei ad
+							Olympiodorulu. </note><note type="footnote"> ( Bibliolh. mss. Labbdi hic et articulo
+							sequenti. <lb/> r <lb/> Cnuhifii </note><note type="footnote"> I Pro his verbis, ab
+							Augustino, Pitb... scripserat, <lb/> ab Augustini libris male intellectis : qua dq r..
+							vide ad. <lb/> monilioneln praeviam huic opusculo. </note><note type="footnote">h
+							Labb. in marg., non octo. </note><note type="footnote"> i Bibl. nov. ross Labb. , Boma
+							ia exsilium. </note><note type="footnote">i Ita ms. Victor. Editio Pithoeana vero vias
+							p* <lb/> tnm.... txpoml. - </note><pb n="863"/>
+						<milestone unit="PLSection" n="A"/><lb/> trum, doctrinasque et regulas, libris ad
+						plurimos <lb/> datis exprimit.</p>
+					<p>VII. Actius Ihutungorum gentem a delere intendit.</p>
+					<p>VIII. Viginti ferme millia mititum in Hispaniis <lb/> contra W indalos pugnantium caesa
+						: Wandali in A­ <lb/> fricam transfretantes, ingentem, lacerata omni pro­ <lb/> vincia,
+						Romanis cladem dedere.</p>
+					<p>IX. Consulatu Actius edito, b B onifacium, qui ab <lb/> Regina accitus ex Africa fuerat
+						declinans, ad muni­ <lb/> tiora ascendit.</p>
+					<p>Asperitas nimii frigoris etiam saluti plurimorum <lb/> pernictes exstitit.</p>
+					<p>Bonifacius contra Aetium certamine hubito c per­ <lb/> culsus, victor quidem, sed
+						moriturus abscedit.</p>
+					<p>X C um ad Chuonorum gentem, cui tunc Rugila <lb/> praeerat, p ost praelium se Aetius
+						contulisset, impe­ <lb/> trato auxilio ad R unanum solum d regreditur.</p>
+					<p>Goth<unclear>ad</unclear> ferundum auxilium a Romanis acciti.</p>
+					<p>Germanus episcopus Antissiodori virtutibus et <milestone unit="PLSection" n="B"/><lb/>
+						vitae districtione clarescit.</p>
+					<p>XI. Actius in gratiam receptus.</p>
+					<p>Rugila rex Chunnorum, cum quo pax firmata, mo­ <lb/> ritur, cur Bleda succedit.</p>
+					<p>XII. Galba alterior Tibatonem principem rebellionis <lb/> secu a, a Romana societate
+						discedit, a quo tracto ini­ <lb/> tio, omnia pene Galliarum servilia in Bagaudam <lb/>
+						conspiravere.</p>
+					<p>XIII. Bellum contra Burgundiorum ge tem me­ <lb/> morabile exarsit, quo universa peue
+						gens cum rege <lb/> e Peretio deleta.</p>
+					<p>XIV. Capto Tibatone, et caeteris scditionis pariim <lb/> principibus vinctis, partim
+						necatis, Bagaudarum <lb/> commotio conquiescit.</p>
+					<p>XV. Theodosianus liber, omnium legum legitimo­ <lb/> rum principum in unum collatarum,
+						huc primum <lb/> anno editus.</p>
+					<p>Silvius turbatae admodum mentis, post militiae in <lb/> palanof exacta munera, aliqua de
+						religione conscri­ <milestone unit="PLSection" n="c"/></p>
+					<p>XVI. Ecclesiae Romanae XL Leo suscepit princi­ <lb/> patum.</p>
+					<p>XVII. Pacatis motibus Galliarum, Aetius ad Italiam <lb/> regreditur.</p>
+					<p>Deserta Valentinae urbis rura Alanis, quibus Sam­ <lb/> bida praeerat, partienda
+						traduntur.</p>
+					<p>XVIII. Brit uniae usque ad hoc tempus variis cla­ <lb/> dibus. eventibusque laceratae, in
+						ditionem Saxonum <lb/> rediguntur.</p>
+					<p>XIX. Alani, quibus terrae G alliae ulterioris cum <lb/> incutias dividendae a patritio
+						Aetio traditae fuerant, <lb/> resistentes armis subigunt, et expulsis dominis ter­ <lb/>
+						rae, possessi nem VI adipiscuntur.</p>
+					<p>XX. Sabaudia Burgundionum reliquiis datur, cum <lb/> indigenis dividenda.</p>
+					<p>XXI. Carthago a Wandalis capta cuM omni simul <lb/> Afria lacrymabili clade et dammo
+						imperii Romani <lb/> po entiam dejecit. Ex hoc quippe a Wandalis pus­ <lb/> sidetur.</p>
+					<p>
+						<milestone unit="PLSection" n="D"/>XXII. Thracia Hunnorum incursine concutitur.</p>
+					<p>XXIII. Bieda Chunnorum rex Attilae fratris fraude <lb/> percutitur. Cui ipse
+						succedit.</p>
+					<p>XXIV. Nova iterum Orienti consurgit ruina, qua <lb/> septuaginta non minus civitates Ch
+						annorum de­ <lb/> praedatione vastatae, cum nulla ab Occidentalibus <lb/>
+						ferrenturauxilia.</p>
+					<p>XXV. Meroveus regnat in Francia.</p>
+					<p>
+						<milestone unit="PLSection" n="A"/>Eudoxius arte medicus, pravi sed exercitati inge­
+						<lb/> nii, in B ig auda id temporis mota delatus, ad Cbun­ <lb/> nos confugit.</p>
+					<p>XXVI. Eucherius Lugdunensis episcopus, et I Hi-<lb/> larius Arelatensis egregiam vitam
+						morte consum­ <lb/> inani.</p>
+					<p>XXVII. Haeresis nefana a quodam arhimandrita <lb/> commota, cui favorem praebens
+						Theodosius obiit, <lb/> septem super viginti annis in imperio exactis. Cui <lb/>
+						Marianus substit titur.</p>
+					<p>Placulia quoque post irreprehensibilem h conver­ <lb/> sationem hoc anno vitam
+						explevit, filio vicesimum <lb/> quintum annum i in imperio consummante.</p>
+					<ab>
+						<title type="sub">Valentinianus et Martianus.</title>
+					</ab>
+					<p>I. Hac tempestate valde miserabilis republicaesta­ <lb/> tui. apparuit, cum ne uni
+						quidem sit absque barbaro <lb/> cultoreprovincia ; et infanda Arianorum haeesis , <lb/>
+						quae se nationibus barbaris miscuit, catholicae nomen <lb/>
+						<milestone unit="PLSection" n="B"/><lb/> fidei. j toto orbe diffusa praesumat.</p>
+					<p>Attila Gallias ingressus, quasi jure debitam poscit <lb/> ui orem ; uhi gravi cladc
+						inflicta et accepta, ad pro­ <lb/> pria recedit.</p>
+					<p>II. Plurima hoc anno signa apparuerunt.</p>
+					<p>k In sperata in Galliis clade accepta. furiatus At­ <lb/> tila Itali um perit. quam
+						incolae meta solo territi prae­ <lb/> sidio mulavere.</p>
+					<p>III. Synodus Chalcedonensis, ubi Eutyche Diosco- <lb/> roque damnatis, omnes qui se ab
+						eis retraxerunt, in <lb/> communionem recepti. confirmata universaliter fide, <lb/> quae
+						de incarnatione Verti. secundum evangelicam <lb/> ct apostolicam doctrinam per sanctum
+						papam Leo­ <lb/> nem praedicabatur.</p>
+					<p>At ita in sedibus suis mortuo, magna primum in­ <lb/> ter filios ip ius certammde
+						obtinendo regno exorta, <lb/> deinde aliquot gentiu n, quae Hunuis parebant. de­ <lb/>
+						fectus secuti, causas et occasiones bellis dederunt, <lb/> quibus ferocissimi populi
+						mutuis incursibus conte­ <lb/> rentur.</p>
+					<p>
+						<milestone unit="PLSection" n="c"/>IV. Inter Valentinianum Augustum et Actium pa­ <lb/>
+						tricium, post promissae invicem fidei sacramenta, <lb/> post pac tum de conjunctione fili
+						orum, dirae inimici­ <lb/> tiae convaluerunt : et unde fuit gratia charitatis au­ <lb/>
+						genda, inde exarsit fomes odiorum ; incentore. ut <lb/> credi um est, Heraclio spadone.
+						qui ita sibi impera­ <lb/> toris animum in sincero famulatu astrinxerat, ut cum <lb/>
+						facile in quae vellet impelleret. Cum ergo Actius <lb/> placita instantius repetit, et
+						causam filii l commu­ <lb/> nis agit, imperatoris manu et circumstantiumgladiis <lb/>
+						crudeliter confectus est, Boetio profecto praetorii <lb/> simul perempto, qui ei multa
+						amicitia m copulatus <lb/> erat.</p>
+					<p>V. Mortem Aetii mors Valentiniani non longo post <lb/> tempore consecuta est, tam
+						imprudenter non decli­ <lb/> nata, ut interfecti Aetii amicos armigerosque ejus <lb/>
+						sibimet sociaret. Qui concepti facinoris opportunita­ <lb/> tem dissimulanter
+						aucupantes, egressum extra Ur­ <lb/> bem principem, et ludo gestationis intentum inopi-
+							<milestone unit="PLSection" n="D"/><lb/> natis ictibus confoderunt, Heractio simul, ut
+						erat <lb/> proximus, interempto, et nullo ex multitudine regia <lb/> ad ultionem tanti
+						sceleris accenso.</p>
+					<p>Ut autem hoc parricidiumperpetratum est, Maxi­ <lb/> mus vir gemini consulatus et
+						patriciae dignitatis <lb/> sumpsit imperium. Qui cum periclitanti reipublicae <lb/>
+						profuturus per omnia crederetur, non sero docu- <lb/> Mento quid animi haberet probavit:
+						sic quidem, ut <note type="footnote"> a MI. Victor., deleri intendit. </note><note type="footnote"> " Mss. v Ici. et Jol. hic et aliis in locis, Bani(aei".. <lb/>
+							lidemque postea, conscendit. </note><note type="footnote"> c &amp;1... Jol. et Bibl.
+							Lahb., percussus. </note><note type="footnote">a ln m-s. Vic l. et Jul. Kdiii,
+							rel'er,itur. </note><note type="footnote">® Uil.linth. ms. Labhei, per AEtilfm.
+							</note><note type="footnote"> ( is. Jol., exacuv mlUIe'ral. a c ei Labh. in Bibl.
+							<lb/> rns... </note><note type="footnote"> « Vox UJCC, ail.r;u,- desideratur in edit.
+							Pithoeana. </note>
+						<note type="footnote"> b Ms. Jol., conversionem. </note><note type="footnote">i Edit.
+							Patb., in ipso. </note><note type="footnote">i bl,, Jul., toto orbe diffu.ae. Idem
+							notatur a Labb. <lb/> in margine Bibl. mss. </note><note type="footnote">k Editio
+							Pithoeana, Insperata Galliis. </note><note type="footnote"> 1 M... Jnl.. co.nintis
+							agii. Labbeus in marg. BikrL <lb/> ms., com;,ncl, a ias, co"""oti,.s. </note><note type="footnote"> m Ms. Vict., copulalus fuerat. </note>
+						<pb n="865"/>
+						<milestone unit="PLSection" n="A"/><lb/> interfectores Valentiniani non solam a non
+						plecteret, <lb/> sed etiam in amicitiam reciperet, uxoremque ejus <lb/> Augusti
+						amissionem viri lugere prohibitam, intra <lb/> paucissimos dies in conjugium suum
+						transire coge­ <lb/> ret. Sed hac incontinentia non diu potitus est. Nam <lb/> post
+						alterum mensem, nuntiuto ex Africa Genserici <lb/> regs adventu, multisque nobilibus ac
+						popularibus <lb/> ex III bfugientibus, cum ipse quoque, data cunctis <lb/> abeundi
+							<unclear>licentia</unclear>, trepide vellet abscedere, a famulis <lb/> reginae
+						dilamatus et membratim dejectus in Tiberim, <lb/> scpultura quoque caruit.</p>
+					<p>Post hunc Maximi exitum, confestim secuta est <milestone unit="PLSection" n="A"/><lb/>
+						multis digna lacrymis h Romana captivitas, et Ur­ <lb/> bem omni praesidio vacuam
+						Gensericus obtinuit, oc­ <lb/> currente sibi extra portas sancto Leone episcopo : <lb/>
+						cujus supplicatio iia eum, Deo agente, lenivit, ut <lb/> cum omnia in potestateipsius
+						essent, tradita sibi <lb/> civitate, ab igne tamen et carle atque supaliciis abs­ <lb/>
+						lineret. Per quatuordecim igitur dies secura et li­ <lb/> bera scrutatione omnibus
+						opibus suis Roma vacuata <lb/> esi; multaque millia captivorum, c prout quoque aut <lb/>
+						aDlate, aut arte, placuerunt,cum regma et filiabus <lb/> ejus Carthaginem d abducta sunt
+						e. <note type="footnote"> • Abest ab edit. Pichoeana particula nOli, sed er­ <lb/> rore
+							mai.ife&gt;io. </note><note type="footnote">b Ms. Victor. et edit. Pitli. , Romana
+							captivitas. <lb/> Jol. ti:s., Romae captivitas. </note><note type="footnote">c lIa.c
+							verba. prout quique ant atate, aut arte pla­ <lb/> cuerUnl, non leguntur in is.
+							Viclorillo. </note><note type="footnote"> d Ms. Victor., abducti ,,,,,t. </note><note type="footnote"> • Iii ms. JOIHMISI ill nile hujus operis subjungitur, <lb/> sive ab
+							ipso auctore, sive a scriba amanuensi, rubro <lb/> cliaractere : Ilucutque Prosperi
+							Chronographia,in qua <lb/> DU'Jli'l;ctl' Incurnationis annos non aino avimus, quia
+							<lb/> in subseqtieuti (;hro"ogr" pllia, eadem pene. et eo ur". <lb/> plius. qnce a
+							Prospero, a S;gr;berlO ",onacho svb aunis <lb/> Dotnini rccitantur a CCCLXXXI
+							DominicaeIncarna­ <lb/> tionis i"raepla, quo J eronYlllu, preUyer Lhrotiicorum <lb/>
+							suorum finem fecerat. In ut roque vero manuscripto, <lb/> Joliensi ei Vicioi in...
+							sequitur Chrollicuu Sigeberti, <lb/> mouachi Geinblacensis. </note>
+					</p>
+				</div>
+				</body></text></TEI>

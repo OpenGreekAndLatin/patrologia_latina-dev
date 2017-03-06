@@ -1,0 +1,1571 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><TEI xmlns="http://www.tei-c.org/ns/1.0"><teiHeader>
+    
+		<fileDesc>
+			<titleStmt>
+				<title>Patrologiae Cursus Completus. Series Latina (PL)</title>
+				<sponsor>University of Leipzig</sponsor>
+				<funder>European Social Fund Saxony</funder>
+				<principal>Gregory Crane</principal>
+				<respStmt>
+					<persName xml:id="Jouve">Jouve</persName>
+					<resp>OCR-ed, corrected and encoded the text</resp>
+				</respStmt>
+				<respStmt>
+					<persName>Greta Franzini</persName>
+					<resp>Project Manager (University of Leipzig)</resp>
+				</respStmt>
+				<respStmt>
+					<persName>Simona Stoyanova</persName>
+					<resp>Project Assistant (University of Leipzig)</resp>
+				</respStmt>
+				<respStmt>
+					<persName>Bruce Robertson</persName>
+					<resp>Technical Advisor (Mount Allison University)</resp>
+				</respStmt>
+			</titleStmt>
+
+			<publicationStmt>
+				<authority>University of Leipzig</authority>
+				<idno type="filename">PL69.xml</idno>
+				<availability>
+					<licence target="https://creativecommons.org/licenses/by-sa/4.0/">Available under a
+						Creative Commons Attribution-ShareAlike 4.0 International License</licence>
+				</availability>
+				<date>2014</date>
+				<publisher>University of Leipzig</publisher>
+				<pubPlace>Germany</pubPlace>
+			</publicationStmt>
+
+			<sourceDesc>
+				<listBibl xml:lang="la">
+					<biblStruct>
+						<monogr>
+							<editor>
+								<persName>
+									<name xml:lang="fr">Jacques Paul Migne</name>
+								</persName>
+							</editor>
+							<author>Vigilius</author>
+							<title>Epistolae Et Decreta</title>
+							<title>Constitutum Pro Damnatione Trium Capitolorum [Definitio Fidei Sancti
+								Chalcedoniensis Concilii]</title>
+							<imprint>
+								<publisher>Garnier</publisher>
+								<pubPlace>Paris</pubPlace>
+								<date>1865</date>
+							</imprint>
+							<biblScope unit="volume">69</biblScope>
+						</monogr>
+						<monogr>
+							<author ref="http://data.perseus.org/catalog/urn:cts:latinLit:phi2806">Justinianus Imperator</author>
+							<title>Liber Adversus Origenem</title>
+							<title>Adversus Nonnullos. Impium Theodorum Atque Iniqua Ejus Dogmata</title>
+							<imprint>
+								<publisher>Garnier</publisher>
+								<pubPlace>Paris</pubPlace>
+								<date>1865</date>
+							</imprint>
+							<biblScope unit="volume">69</biblScope>
+						</monogr>
+						<monogr>
+							<author>Gildas Sapiens</author>
+							<title>Liber Adversus Origenem</title>
+							<title>De Excidio Britanniae Liber Querolus</title>
+							<imprint>
+								<publisher>Garnier</publisher>
+								<pubPlace>Paris</pubPlace>
+								<date>1865</date>
+							</imprint>
+							<biblScope unit="volume">69</biblScope>
+						</monogr>
+						<monogr>
+							<author>Pelagius I</author>
+							<title>Epistolae</title>
+							<imprint>
+								<publisher>Garnier</publisher>
+								<pubPlace>Paris</pubPlace>
+								<date>1865</date>
+							</imprint>
+							<biblScope unit="volume">69</biblScope>
+						</monogr>
+						<monogr>
+							<author>Cassiodorus Vivariensis Abbas</author>
+							<title>Variarum Libri Duodecim</title>
+							<title>Historia Ecclesiastica Vocata Tripartita</title>
+							<title>Chronicum Ad Theodorum Regem</title>
+							<title>Computus Paschalis</title>
+							<imprint>
+								<publisher>Garnier</publisher>
+								<pubPlace>Paris</pubPlace>
+								<date>1865</date>
+							</imprint>
+							<biblScope unit="volume">69</biblScope>
+						</monogr>
+						<ref target="https://archive.org/details/patrologiaecurs144unkngoog">Internet
+							Archive</ref>
+
+					</biblStruct>
+				</listBibl>
+			</sourceDesc>
+
+		</fileDesc>
+		<encodingDesc>
+			<p>The following text is encoded in accordance with EpiDoc standards and with the CTS/CITE
+				Architecture.</p>
+		<refsDecl>
+        <cRefPattern n="" matchPattern="(.+).(.+).(.+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@type='edition']/tei:div[@n='$1']/tei:div[@n='$2']/tei:div[@n='$3'])"/>
+        <cRefPattern n="" matchPattern="(.+).(.+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@type='edition']/tei:div[@n='$1']/tei:div[@n='$2'])"/>
+        <cRefPattern n="" matchPattern="(.+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@type='edition']/tei:div[@n='$1'])"/>
+      </refsDecl>
+    </encodingDesc>
+
+		<profileDesc>
+			<langUsage>
+				<language ident="la">Latin</language>
+			</langUsage>
+		</profileDesc>
+
+	</teiHeader>
+	<text><body><div type="edition" n="">
+					<head>
+						<title type="main">VIGILII PAPAE CONSTITUTUM PRO DAMNATIONE TRIUM CAPITULORUM, EDITUM
+							ANNO CHRISTI 554.</title>
+					</head>
+					<ab>
+						<title type="sub">DEFINITIO FIDEI SANCTI CHALCEDONENSIS CONCILII.</title>
+					</ab>
+					<p>
+						<milestone unit="PLSection" n="C"/>Aetius archidiaconus Constantinopolis  novae Romae   
+						<lb/>  dixit : Sancta et magna et universalis synodus <lb/> quae secundum Dei gratiam
+						et sanctionem piissimorum <lb/> Christianissimorumque imperatorum nostrorum Valentiniani <lb/>
+						 et Martiani Augustorum congregata apud <lb/> Chalcedonam metropolim Bithyniae
+						provinciae in martyrio <lb/>  sanctae et venerabilis martyris  Euphimiae definivit   <lb/> 
+						subter adnexa.</p>
+					<p>Dominus noster et Salvator Christus notitiam fidei <lb/> confirmans discipulis suis
+						ait: Pacem meam do vobis, <lb/> pacem meam relinquo vobis ; ne ullus a proximo suo <lb/>
+						dissonet in doctrina pietatis, sed aequaliter praedicationem <lb/>  veritatis ostendat.
+						Sed quoniam non quiescit <lb/> nequissimus per sua zizania insurgens sationibus pietatis
+						<lb/>  inspergere, et novi aliquid contra veritatem semper <milestone unit="PLSection" n="D"/><lb/>  inveniens, ob hoc consuete Dominus noster providens
+						<lb/> humano generi, pium hunc et fidelissimum principem <lb/> ad zelum fidei
+						suscitavit, et undique sacerdotii principes <lb/>  ad se convocavit, quatenus gratia
+						Domini omnium <lb/> nostrum, Christo operante, ab ovibus Christi omnem <lb/> pestem
+						quidem mendacii submoveret, germinibus autem <lb/> veritatis pingues efficeret. Quod
+						quidem et fecimus, <lb/> communi decreto dogmata fugantes erroris, integram <lb/> Patrum
+						renovantes fidem, trecentorum decem et octo <lb/> symbolum in omnibus praedicantes, et
+						tanquam domesticos  ,<lb/> qui  pietatis : hujus compositionem receperunt, <lb/> Patres
+						ascribentes qui postea apud magnam Constantinopolim <lb/>   convenerunt  centum
+						quinquaginta, qui et ipsi <lb/>  eamdem  fidem subsignaverunt. Definimus igitur ordinem
+						<lb/>  et  omnes  formas fidei conservantes, nos quaeque <milestone unit="PLSection" n="C"/><lb/> apud Ephesum olim facta est sancta synodus, cujus <lb/> praesides fuerunt
+						sanctae memoriae Coelestinus Romanae <lb/> urbis antistes et Cyrillus Alexandrinae  Ecclesiae ,
+						praefulgere <lb/>  quidem  rectae  et immaculatae fidei expositionem <lb/>  trecentorum
+						decem et octo sanctorum et beatissimorum <lb/>  Patrum apud  Nicaeam  sub piae
+						recordationis <lb/> Constantino principe congregatorum, obtinere autem <lb/> etiam
+						centum quinquaginta sanctorum Patrum apud <lb/>  Constantinopolim  definita ad
+						interemptionem quidem <lb/> tunc exortarum haereseon, confirmationem vero ejusdem <lb/> 
+						catholicae nostrae fidei.</p>
+					<ab>
+						<title type="sub">Symbolum apud Nicaeam trecentorum decem et octo.</title>
+					</ab>
+					<p>Credimus in unum Deum Patrem omnipotentem, factorem <milestone unit="PLSection" n="D"/><lb/>
+						 coeli et terrae, visibilium omnium et invisibilium, <lb/> et in unum Dominum Jesum
+						Christum Filium Dei <lb/>  unigenitum , qui natus est ex Patre ante omnia saecula, <lb/>
+						Deum verum de Deo vero, natum, non factum, consubstantialem <lb/>  Patri, per quem
+						omnia facta sunt, qui  propter  <lb/>  nos homines et propter salutem nostram descendit
+						 ,<lb/> et incarnatus est atque humanatus est et  passus . <lb/> est, et resurrexit
+						tertia die, et ascendit in coelos, venturus <lb/>  judicare vivos et mortuos ; et in
+						Spiritum sanctum  .<lb/> Eos autem qui dicunt: Erat aliquando quando <lb/> non erat, et
+						priusquam nasceretur non erat, et  quia  <lb/> ex non exstantibus factus est, aut ex alia
+						subsistentia <lb/> vel substantia, dicentes esse aut convertibilem aut  mutabilem  
+						.<lb/> Filium Dei, hos anathematizat catholica et <lb/> apostolica Ecclesia.</p><pb n="145"/>
+
+					<p>
+						<milestone unit="PLSection" n="A"/>
+					</p>
+					<ab>
+						<title type="sub">Item  etiam  centum quinquaginta sanctorum Patrum qui Constantinopolim
+							congregati sunt.</title>
+					</ab>
+					<p>Credimus in unum Deum Patrem omnipotentem, <lb/> factorem  coeli  et terrae, visibilium
+						omnium et invisibilium  ,<lb/> et in unum Dominum Jesum Christum Filium <lb/> Dei
+						unigenitum, natum ex Patre ante omnia saecula, <lb/> Deum verum de Deo vero, natum, non
+						factum, consubstantialem <lb/>  Patri,- per quem omnia facta sunt, qui <lb/> propter
+						nos homines et salutem nostram descendit, et <lb/> incarnatus est de Spiritu sancto et
+						Maria Virgine et <lb/> humanatus , et crucifixus est pro nobis sub Pontio <lb/> Pilato,
+						et sepultus, est, et resurrexit tertia die,  ascendit  <lb/>  in coelos, et sedit ad
+						dexteram Patris, iterum venturus <lb/>  cum gloria judicare vivos et mortuos, cujus
+						regni <lb/> non erit finis, et in Spiritum sanctum dominum et vivificantem ,<milestone unit="PLSection" n="B"/> <lb/> ex Patre procedentem,  cum  Patre et  Filio  
+						<lb/> coadorandum et glorificandum, qui locutus est per <lb/> sanctos prophetas, et in
+						unam catholicam et  apostolicam  <lb/>  Ecclesiam. Confitemur unum baptisma, et remissionem
+						<lb/>  peccatorum. Speramus resurrectionem mortuorum  ,<lb/> vitam futuri saeculi.
+						Amen.</p>
+					<p>Sufficeret quidem ad plenam cognitionem  pietatis : et <lb/> confirmationem sapiens hoc et
+						salutare divinae gratiae <lb/> symbolum. De Patre enim et Filio et sancto Spiritu <lb/>
+						perfectionem docet, et Domini humanationem  fideliter  <lb/> accipientibus repraesentat.
+						Sed  quoniam hi  qui veritatis <lb/>  reprobare praedicationem conantur per proprias <lb/>
+						haereses novas voces genuerunt, hi quidem mysterium <lb/> quod pro nobis est Domini
+						dispensationis corrumpere <lb/> praesumentes, et Dei genitricis vocem de Virgine Maria
+							<milestone unit="PLSection" n="C"/><lb/>  dicere renuentes, alii vero confusionem
+						permixtionemque <lb/>  introducentes, et unam esse naturam carnis et <lb/> deitatis
+						stulte confingentes, et passibilem unigeniti divinam <lb/>   naturam  per confusionem
+						portentose dicentes, <lb/> ob hoc illis omnem machinationem contra fidem volens <lb/>
+						claudere praesens nunc sancta et magna atque universalis <lb/>  synodus, praedicationem
+						hanc ab initio inconcussam <lb/>  docens, definivit principaliter trecentorum decem
+						<lb/> et octo sanctorum patrum fidem manere intentabilem. <lb/> Et propter illos quidem
+						qui adversum sanctum Spiritum <lb/>   pugnant  posteriori tempore a Patribus apud Constantinopolim
+						<lb/>  CL. congregatis, de substantia Spiritus <lb/> traditam doctrinam
+						corroborat, quam illi omnibus notam <lb/>  fecerunt, non quasi quod aliquid esset minus
+						in <lb/> praecedentibus inferentes; sed de Spiritu sancto intellectum <milestone unit="PLSection" n="D"/><lb/>  eorum adversus eos qui dominationem ejus <lb/>
+						<lb/> respuere tentaverunt, Scripturarum testimoniis declarantes  .<lb/> Propter illos
+						vero qui mysterium  dispensationis  <lb/>  corrumpere moliuntur, et purum hominem esse
+						qui <lb/> ex sancta Virgine Maria natus  est  impudenter delirantes  ,<lb/> epistolas
+						beati Cyrilli Alexandrinae Ecclesiae <lb/> praesulis synodicas ad Nestorium et ad alios per
+						Orientem <lb/>  congruas existentes suscepit ad convincendas <lb/> Nestorii vesanias,
+						interpretationem vero eorum qui salutaris <lb/>  symboli pio zelo nosse desiderant,
+						quibus etiam <lb/> epistolam magnam et senioris urbis praesulis beatissimi <lb/> et
+						sanctissimi archiepiscopi Leonis, quae scripta est  ad sanctae  <lb/>  memoriae
+						archiepiscopum Flavianum  ad perimendam   <lb/>  Eutychis malam intelligentiam, ut pote
+						et <lb/> magni illius Petri confessioni congruentem, et communem <milestone unit="PLSection" n="A"/><lb/>  quamdam columnam nobis adversus prava <lb/> dogmata existentem, ad
+						confirmationem rectorum dogmatum <lb/>  utique intellectum coaptavit. His namque qui
+						<lb/> in duos filios dispensationis divinae mysterium discerpere <lb/>  nituntur
+						obsistit; et illos qui passibilem deitatem <lb/> Unigeniti ausi sunt dicere, a sacro
+						coetu expellit. Et <lb/> his qui in duabus naturis Christi temperamentum aut <lb/>
+						confusionem exquirunt resistit. Et eos qui coelestem <lb/> aut alterius alicujus esse
+						substantiae dicunt quam ex <lb/> nobis assumpsit servi formam, ut dementes abigit. Et
+						<lb/> qui duas quidem ante unitionem naturas Domini fabulantur  ,<lb/> unam vero post
+						unitionem confingunt, consubstantialem  .<lb/> Sequenter igitur sanctos Patres unum eumdemque <lb/>
+						 confiteri Filium et Dominum nostrum Jesum <lb/> Christum consonantes omnes
+						docemus, eumdem perfectum <milestone unit="PLSection" n="B"/><lb/>  in  deitate , eumdem
+						perfectum in humanitate, <lb/> Deum vere et hominem vere, eumdem ex anima rationali <lb/>
+						 et corpore, consubstantialem Patri secundum deitatem  ,<lb/> consubstantialem
+						nobis eumdem secundum humanitatem  ,<lb/> per omnia nobis similem absque  peccato , <lb/>
+						ante saecula quidem de Patre genitum secundum deitatem  ,<lb/> in novissimis autem
+						diebus eumdem propter nos <lb/> et propter salutem nostram ex Maria Virgine Dei Genitrice
+						<lb/>  secundum humanitatem, unum eumdemque <lb/> Christum Filium Dominum
+						unigenitum, in duabus naturis  ,<lb/> inconfuse, immutabiliter, indivise, inseparabiliter
+						<lb/>  agnoscendum, nusquam sublata differentia naturarum <lb/>  propter unitionem,
+						magisque salva proprietate <lb/> utriusque naturae, et in unam personam atque subsistentiam
+						<lb/>  concurrentem, non in duas personas partitum <milestone unit="PLSection" n="C"/><lb/> atque divisum, sed unum et eumdem Filium unigenitum <lb/>  Deum Verbum
+						Dominum Jesum Christum, sicut <lb/> ante prophetae de eo et ipse nos Jesus Christus
+						erudivinam  ,<lb/> et Patrum nobis symbolum tradidit. His igitur <lb/> cum omni undique
+						scrupulositate et diligentia a nobis <lb/> dispositis, definivit sancta et universalis
+						synodus  alterum  <lb/>  fidem nulli licere proferre  vel  conscribere, aut <lb/>
+						componere, aut sentire, aut docere aliter. Eos autem <lb/> qui  aeusi  sunt componere fidem
+						alteram, aut proferre, <lb/> aut docere, aut tradere alterum symbolum, volentibus <lb/>
+						vel ex gentilitate ad agnitionem veritatis, vel ex Judaeis  ,<lb/> vel ex haeresi
+						quacunque converti, hos, si episcopi <lb/>  fuerint aut clerici, alienos esse episcopos
+						ab episcopi <lb/>  et clericos a clero ; si vero monachi aut laici <lb/> fuerint,
+						anathematizari.</p>
+					<p>
+						<milestone unit="PLSection" n="D"/>Dilectissimo fratri Flaviano Leo.</p>
+					<p>Lectis dilectionis tuae litteris, quas miramur fuisse <lb/> tam seras, et gestorum
+						episcopalium ordine recensito, <lb/> tandem quid apud vos scandali contra integritatem
+						<lb/> fidei exortum fuisset agnovimus, et quae prius  videbantur  <lb/>  occulta nunc
+						nobis reserata patuerunt, quibus <lb/> Eutyches, qui presbyterii nomen honorabilis
+						videbatur, <lb/> multum imprudens et nimis imperitus ostenditur; ut <lb/> jam de ipso
+						dictum sit a propheta : Noluit intelligere <lb/> ut bene ageret,  iniquitatem meditatus  
+						est in cubili <lb/> suo. Quid autem iniquius quam impia sapere et salutaris <lb/> 
+						doctoribusque non cedere ? Sed in hanc <lb/> insipientiam cadunt qui cum ad cognoscendam
+						veritatis <lb/>  aliquo impediuntur obscuro, non ad propheticas <lb/> voces, non ad
+						apostolicas litteras, nec ad evangelicas<pb n="147"/>
+						<milestone unit="PLSection" n="A"/><lb/> auctoritates, sed ad  semetipsos  recurrunt ; et
+						ideo . <lb/> magistri erroris existunt, quia veritatis discipuli non <lb/> fuerunt. Et
+						caetera quae in eadem epistola usque ad <lb/>  finem  continentur. Data idus Junias
+						Asterio et Protogene <lb/>  consulibus.</p>
+					<p>I. Posteaquam beati Chalcedonensis concilii expositionem <lb/>  vel beati Leonis
+						epistolam de sancta et orthodoxa <lb/>  fide posuimus, quae una eademque est trium
+						<lb/> praecedentium synodorum, id est, Nicaenae,  Constantinopolitanae   ,<lb/> atque
+						 Ephesinae  primae et Deo juvante <lb/> in ea nos omni sincerae mentis devotione persistere
+						<lb/> fraternitas vestra et universalis cognoscit Ecclesia, <lb/> necessarium valde
+						credimus, pro ejus servanda per <lb/> omnia reverentia, de suprascriptis trium
+						capitulorum <lb/> quaestionibus diligenter debere nos cuncta discutere <milestone unit="PLSection" n="B"/><lb/> et cauta promulgatione sententiae definire. Arbitramur
+						<lb/>  ergo esse conveniens primum, sicut proposuimus  ,<lb/> quid de epistola quae
+						ab Iba ad Marim Persam <lb/> scripta dicitur, apertissima demonstratione declarare 
+						.<lb/> Dum igitur ibas episcopus improbe a Samuelo, <lb/> Mara, aliisque suis clericis
+						impetitus, et pro gravi, <lb/> tanquam impugnatae ab eo sanctae fidei, crimine epistola <lb/>
+						 ad Marim Persam ei ab eisdem accusatoribus <lb/> fuisset opposita, nec non a
+						Photio et Eustathio epistola <lb/>  fuisset absolutus, quibus tunc a Theodosio <lb/>
+						piae recordationis principe fuerat delegata cognitio ; <lb/> ac postea pro iisdem a
+						quibus fuerat purgatus criminibus  ,<lb/> per nefaria illa gesta Ephesini secundi concilii
+						 ,<lb/> absens. falsorum responsis testium quam  maxime eamdem  <lb/>   ad Marim
+						epistolam ejus esse asserentium <milestone unit="PLSection" n="C"/><lb/>  fuisset
+						addictus, veniens ad sanctam Chalcedonensem <lb/>  synodum haec pro sua purgatione
+						legitur <lb/> allegasse. De synodo Chalcedonensi in actione de <lb/> Iba episcopo habita
+						post alia ita (Act. 9) : Ingressus <lb/> Ibas reverentissimus Edessenae civitatis
+						episcopus dixit : <lb/> Injustitiam ab Eutyche et falsa figmenta  perpessus .  ,<lb/>
+						absens a quadraginta mansionibus, et condemnatus  ,<lb/> hic adveni  impetrare 
+						clementiam, et adii sacrum <lb/> et immortalem verticem, et jussit vestra magnificentia
+						<lb/> cum sancta hac et universali synodo quae adversum me <lb/> sunt gesta perquirere.
+						Deprecor igitur vos ut cognoscatis <lb/>  quia falsam accusationem pertuli et calumniam
+						<lb/> a quibusdam clericis. Jubete ergo ea quae judicata sunt <lb/> a  Photio  et
+						Eustathio reverentissimis episcopis relegi. <lb/> Uranius enim episcopus Hemeriorum pro
+						gratia Eutyches <milestone unit="PLSection" n="D"/><lb/>  omnia agens praeparavit
+						quosdam clericos accusare <lb/>  me,  et ! judicium sibi praedictisque transmitti. Et <lb/>
+						inventus sum innocens a blasphemiis quae mihi illatae <lb/> sunt, et judicatum datum est a
+						praefatis reverentissimis <lb/>  episcopis accusationes quidem adversum me per <lb/>
+						calumniam factas arguens, testificans autem me esse <lb/> catholicum. Jubete omnia quae
+						per absentiam meam in <lb/> Epheso gesta sunt evacuari et justitiam mihi servari, <lb/>
+						qui sum in nullo culpabilis. et reddi mihi episcopatum <lb/> pariter et Ecclesiam. Nam
+						et omnes clerici Edesseni, <lb/> per quos scripserunt praefatis episcopis, testantur me
+						<lb/> esse catholicum, et alienus sum a nefariis blasphemiis <lb/> quae mihi inferuntur;
+						et caetera. Item ex ejusdem <lb/> synodi actione undecima : Ingressus Ibas praedictus
+						<lb/> reverentissimus vir dixit: Deprecor magnificentiam <milestone unit="PLSection" n="A"/><lb/> vestram et hanc universalem sanctam synodum. Eutyches <lb/>  adversum me
+						pro fide  quaedam  falsa confixit, nec <lb/> me in sancta synodo introire permisit. Et post
+						alia : <lb/> Ob hoc etenim, sicut jam edocui, adii sacrum et immortalem <lb/> 
+						verticem, et jussit  vestram  magnificentiam et <lb/> sanctam synodum audire quae adversum
+						me gesta sunt. <lb/> Et cognovistis ex decreto quia in nullo culpabilis sum <lb/>
+						repertus.</p>
+					<p>II. Claret igitur ab ipso initio quo Ibas Edessenae <lb/> civitatis episcopus sanctam
+						Chalcedonensem synodum <lb/>  monstratur ingressus, epistolam quae ad Marim <lb/>
+						Persam ab eo scripta  compingitur   confingilur], <lb/> quia sua fuerit denegasse,
+						adeo ut apertissime fateatur <lb/>  in secundi illius Ephesini concilii nefarii gestis
+						<lb/> injustitiam se ab Eutyche et falsa figmenta perpessum .<milestone unit="PLSection" n="B"/> <lb/> Constat autem in eadem secunda Ephesina <lb/> audientia adversus
+						absentem praedictum  episcopum  <lb/> hoc quam maxime flagitatum, ut responsis testium
+						<lb/> jampridem productorum accusatores ejus niterentur <lb/> ostendere Ibam episcopum
+						eam quae ad  Marim  Persam <lb/>  scripta fuerat epistolam suam fuisse confessum. <lb/>
+						Ex qua causa apparet  eum , sicut ipse  queritur , injusta <lb/>  sententia fuisse
+						damnatum. Quod quia Iba epistola <lb/>  falsis figmentis falsaque accusatione et per
+						<unclear/><lb/>  calumniam  adversum se in secundo Ephesino pravo <lb/> judicio asserit
+						concionatum, evidentissime declaratur <lb/> a saepedicto Iba episcopo memoratam ad Marim
+						<lb/> Persam scriptam epistolam quia sua fuerat  denegatam   .<lb/> Huc accedit quod
+						illius concilii nefariis gestis <lb/> ipsa a responsorum testium ab adversariis episcopi
+							<milestone unit="PLSection" n="C"/><lb/> Ibae  praelatio I Veritas , prolatio]   , prolatio], quibus
+						epistolam <lb/> ejus fuisse falso nitebantur ostendere, nihil aliud injusta <lb/>  nisi
+						quia in memoratorum Photii et Eustathii <lb/> judicio esse ejusdem  Ibae  episcopi probari
+						non potuit  .<lb/> Nam si probata illic esset, gestis potius apud <lb/> Photium et
+						Eustathium habitis in Ephesina secunda <lb/> synodo accusatores quam testibus uterentur.
+						Non <lb/> enim de manifestis, sed de incertis rebus producendorum <lb/>  testium
+						necessitas irrogatur. Unde justissime <lb/> Ibas episcopus agens apud sanctum
+						Chalcedonense <lb/> concilium, falsos eosdem testes redarguens, se absente <lb/>  in
+						secunda Ephesina per  figmenta  potius quam <lb/> per veritatem accusationem perpessum
+						esse conqueritur   ;<lb/> quippe, qui noverat se in judicio praefatorum <lb/>
+						episcoporum Photii et Eustathii nulla ab  eisdem  accusatoribus <milestone unit="PLSection" n="D"/><lb/>  obsectione convictum; contraque ad <lb/> demonstrandam plenius
+						innocentiam suam,  Photii  <lb/> atque Eustathii episcoporum judicatum relegi postulavit 
+						,<lb/> in quorum judicio  dum [ forte , dudum ]  [ ,  ] ab <lb/> accusatoribus libellus fuisset
+						oblatus ita (Act. 10) : <lb/> Nos equidem optabamus omne tempus vitae sine litigio <lb/>
+						 vivere. Quoniam autem ea quae audacter gesta <lb/> sunt adversus nostram Ecclesiam et
+						sanctissimam  Patrum  <lb/>  nostrorum fidem a venerabili episcopo nostro Iba <lb/>
+						injustitiae proxima impulerunt nos ad hanc accusationem <lb/>  descendere; et reliqua.
+						Dumque ab eisdem cognitoribus <lb/>  per interlocutionem decretum fuisset ut <lb/> a
+						generali accusatione descendentes, singillatim ex <lb/> scripto accusatores quae adversus
+						Ibam episcopum <lb/> dicerent capitula designarent, nihil aliud, quantum<pb n="149"/>
+						<milestone unit="PLSection" n="A"/><lb/> ad fidei causas pertinet, id est, quod Patrum
+						fidem, <lb/> ut accusatores dixerant, impugnare videretur, nisi <lb/> hoc tantummodo ab
+						eis accusatio scriptis oblata noscitur <lb/>  continere quia beatum Cyrillum appellat
+						haereticum  ,<lb/> et ob  hoc  Nestorianus esse monstratur. <lb/> Ita enim dicit: Quia
+						Nestorianus est, et beatum Cyrillum <lb/>  episcopum haereticum  appellat  ; quod in se
+						<lb/> maxime quae ad  Marim  Persam scripta legitur certum <lb/> est epistolam continere.
+						Quodque statim judices pro <lb/> gravi haereseos dictum pondere se suscepisse sua <lb/>
+						interlocutione testati sunt  dicentes  ita (Act. 10) : <lb/> Quando objurgatio capitulum
+						sequitur,. animae periculum <lb/>  ferens, superfluum judicamus inquisitionem fieri
+						<lb/> caeterorum. Quae igitur manifeste indicta sunt et canoscitur <lb/>  et legibus, et
+						sunt aperte odiosa Deum timentibus, <milestone unit="PLSection" n="B"/><lb/> haec eligite
+						primitus et his instate. Videtur autem nobis <lb/> haec esse integra, primo quidem rectae
+						esse fidei oportere <lb/>  qui sacerdotio fungitur, et ita esse totius luxuriae <lb/>
+						 liberum , et caetera.</p>
+					<p>III. Quis ergo dubitet ex eo judices capitulum ad <lb/> animae  periculum  pertinere
+						dixisse et ex eo censendum <lb/>  non rectae fidei sacerdotem qui beatum Cyrillum <lb/>
+						appellavit haereticum, cum nihil aliud in accusatione <lb/> ante hanc  interlocutionem 
+						propositam de causis ad <lb/> fidem pertinentibus dictum sit nisi quia Nestorianus <lb/>
+						est et beatum Cyrillum appellavit haereticum. Ex quo <lb/> satis apertum  est epistolam  
+						ad Marim Persam scri-­  ,<lb/> quae beati Cyrilli dogmata, quibus non  consentientem  <lb/>
+						 Nestorium constat esse damnatum,  definiendo  <lb/> rectae fidei esse contraria,
+						beatum Cyrillum appellaret. <milestone unit="PLSection" n="C"/><lb/> haereticum, ab
+						adversariis Ibae episcopi, quia ejusdem <lb/> Ibae fuerit, nullo modo comprobatam,
+						 nec eumdem  Ibam <lb/> quia ejus fuerit fuisse confessum. Quoniam si apud <lb/>  praefatos 
+						judices ab Iba factam doceri potuisset  epistolam   ,<lb/>  numquam  eorum sententia Ibas
+						meruisset <lb/> absolvi, cum tantae interlocutionis  suae  pondere fidei <lb/> prius causam
+						quaeri magnopere voluerunt, quam in <lb/> beatissimo Cyrillo, qui ab Iba nominatus
+						dicebatur <lb/>  haereticus , aestimaverunt fuisse. gravissima. Nam et <lb/> subsequens
+						constituti textus his convenire quae dicta <lb/> sunt per sua loca subteradnexa
+						evidenter ostenditur. <lb/> Ad petitionem namque  Ibae , Photii atque Eustathii <lb/>
+						episcoporum in memorato sancto Chalcedonensi <lb/>  concilio  relecta serie judicati, haec
+						post aliqua praedictos <lb/>  judices, dum de accusationis adversus Ibam <milestone unit="PLSection" n="D"/><lb/> episcopum institutae ordine loquerentur, in sua  claret 
+						<lb/> dixisse sententia, quae ita se habent (Act. 9) : His <lb/> ergo dantibus capitula
+						quaedam et rogantibus ut horum <lb/> fieret subtilis inquisitio, incumbentes nos
+						capitulis ; et <lb/> invenientes in his immissionem quamdam adversus <lb/> Ibam
+						reverentissimum episcopum, quasi non recte saperet  ,<lb/> sed alia praeter piam
+						doctrinam doceret % necessarie <lb/>  ex hoc prius inquisitionem cum magna diligentia
+						<lb/> facere sumus impulsi. Praecepimus, etenim accusatoribus <lb/> dici quae essent quae
+						ab episcopo  Iba  dicerentur, sicut <lb/> ipsi dicebant, pii dogmatis aliena. Dixerunt
+						eorum ipsorum <lb/>  quaedam. Et cum multa  mota  fuissent quae in actis <lb/> inserta
+						sunt. Et post pauca iidem judices ita dixerunt: <lb/> Et consiliis pietatem ubique
+						praeponentes et inquirentes <lb/>  praeparavimus  reverentissimum Ibam episcopum quod
+							<milestone unit="PLSection" n="A"/><lb/> et ipse ad satisfactionem eorum quae  j forte , de fide I  ,
+						   <lb/> levi dicta fuerant sapuit, ex scripto dare quid sentit <lb/> vel sapit
+						de pia nostra fide; quod et fecit. Ex abundantia <lb/>  autem praedictus
+						reverentissimus vir  promisit  <lb/> et in suae eloqui civitatis ecclesia et manifeste anathematizare
+						<lb/>  malignae impietatis principem Nestorium <lb/> et  eos  qui sicut ille
+						sapiunt, et qui vel libris vel codicibus <lb/>  ejus utuntur. Confessus est autem sic
+						se credere <lb/> sicut continent litterae quae venerant inter reverentissimae <lb/> et
+						sanctissimae memoriae Joannem magnae Antiochenae <lb/> civitatis episcopum  et . Cyrillum
+						maximae Alexandrinoscitur <lb/>  civitatis episcopum, quibus ministravit  beatae memoriae   <lb/>
+						 Paulus Emesinorum civitatis episcopus, ex quibus <lb/>  universalis consensus
+						efficitur. Consentire autem et <lb/> in omnibus quae nuper gesta sunt a sancta synodo quae
+							<milestone unit="PLSection" n="B"/><lb/> convenit in regia et. 
+						Constantinopoli civitate, <lb/> habere autem omnia quae  placuerum ; in Ephesino metropolitano
+						<lb/>  concilio quod a sancto Spiritu movebatur, <lb/> aequa autem huic judicare
+						qui in Nicaea sunt constituta, <lb/> et nullam differentiam arbitrari ejus ad aliam. Et
+						nimis <lb/> ejus sanctitatem laudavimus quod prone sapuerit curare <lb/> eos qui vel
+						suspicione vel alio quoquomodo  ejus  laederent <lb/>  opinionem  doctrinae , et caetera.</p>
+					<p> IV . Constituti igitur quod a viris venerabilibus <lb/> Photio et Eustathio prolatum est
+						tenore perpenso, in <lb/> quo dicitur dantibus capitula accusatoribus, quae  utique  <lb/>
+						 dari, sicut superius legitur, nisi scripto minime <lb/> potuerunt, inventam illic
+						immissionem adversus Ibam <lb/> episcopum factam, quod alia praeter piam doctrinam <lb/>
+						faceret vel doceret, nihil aliud pronuntiasse judices <milestone unit="PLSection" n="C"/><lb/> clarum est, negotio, ut ipsi memorant, subtiliter  inquisito   ,<lb/> quam per
+						immissionis figmenta calumniose <lb/> adversus Ibam episcopum accusationem esse propositam
+						 ,<lb/> non studio veritatis. Et quid est quod in  capitulis  <lb/>  scripto
+						porrectis  accusatores  contra episcopum <lb/> Ibam de  fidei  causa detulerant nisi quod
+						Nestorianus <lb/> esset, beatum Cyrillum haereticum nominando, quem <lb/> in Apollinaris
+						incidisse haeresim et haereticam conscripsisse <lb/>  epistolam, quae ad Marim Persam
+						scripta <lb/> perhibetur,  affirmat ? Unde clarum est Ibae  episcopi  <lb/> eamdem epistolam
+						non fuisse, cum ei per immissionis <lb/> falsitatem quod eadem epistola continet judices
+						testentur <lb/>  objectum, quem memorati superius constituti <lb/> locum quaestioni
+						episcopi Ibae manifestum est convenire  ,<lb/> per quam in sancto ac reverendo  Chalcedonensi -
+							<milestone unit="PLSection" n="D"/><lb/>  concilio Uranium episcopum queritur pro
+						Eutychis  .<lb/> agentem gratia quosdam clericos qui suae accusationi <lb/> 
+						insisterent praeparasse. Ex quo satis apparet <lb/> ipsam immissionem sua sententia
+						Photium et Eustathium <lb/>  judices tacito immittentis nomine lacerasse, <lb/> quam
+						Ibas episcopus palam in sancta Chalcedonensi <lb/> synodo expresso concinnatoris
+						vocabulo denotavit. <lb/> Non est igitur ambiguum hoc quod ad criminandum <lb/> beatum
+						Cyrillum ,. et pro haeresi schismate Ibae  constat  <lb/>  objectum, idque epistolam
+						continere, manifestum <lb/> est ab accusatoribus immissionis calliditate  confictum  <lb/>
+						 et accusati negatione et judicium definitione <lb/> fuisse monstratum.</p>
+					<p>V. Adjicitur quoque ejusdem pagina constituti <lb/> quod ad satisfactionem eorum quae
+						ab accusatoribus,<pb n="151"/>
+						<milestone unit="PLSection" n="A"/><lb/>  [forte , de fide] ,  fide] levi dicta fuerant sapuit Ibas
+						episcopus <lb/>  ex scripto dare quid sentit vel sapit de pia  fide . <lb/> Unde apparet
+						consequenter Ibae episcopi accusatores <lb/> notari per omnia falsitatis, qui inconsulto
+						simultatis <lb/> calore lapsi, leviter potius quam vere criminati <lb/> fuisse Ibam
+						monstrantur episcopum, adeo ut adversus <lb/> ea quae tenor epistolae ad Marim Persam
+						scriptae in <lb/> obtrectationem beati Cyrilli et duodecim capitulorum <lb/> ejus
+						asseruit, et eadem accusatorum levitate atque <lb/> falsitate objecta Ibas dixisse
+						convinci non potuit, ex <lb/> scripto insuper idem Ibas quid de pia fide sentiret <lb/>
+						ostenderet, tanquam puritati suae sufficere non judicans <lb/>  quod convinci aliquid
+						contra rectam fidem dixisse <lb/>  non potuit, nisi etiam ipsam fidem qualiter <lb/>
+						semper retinuisset animo sua sententia publicaret. <milestone unit="PLSection" n="B"/><lb/> Quod vel judicibus vel ipsi Ibae episcopo necessarium <lb/> minime fuerat, si
+						supradicta epistola et ejus esse et <lb/> orthodoxo sensu dictata potuisset ostendi.
+						Quapropter <lb/>  diligenter attendendum est quod dicitur ad <lb/> satisfactionem eorum
+						quae levi dicta fuerant prone <lb/> sapuisse Ibam episcopum ex scripto ostendere quid
+						<lb/> de pia fide sentiret. Evidenter etenim clarum est ita <lb/> epistolae ad Marim
+						textum pio dogmati inveniri contrarium  ,<lb/> ut quamvis levitate accusantium quam
+						<lb/> rerum veritate Ibae episcopo firmetur objecta, <lb/> tamen ne vel  hoc  quod false
+						ipsius dicta fuerat, <lb/> ejus catholicae fidei derogaret, prone  sapuit  contrarium <lb/> 
+						illius impietatem quid de pia fide sentiret <lb/> ostenderet. Neque enim d orthodoxae
+						fidei  sinceritate  <lb/>  quid sapiebat necessarium esset scripto depromeret ,<milestone unit="PLSection" n="C"/> <lb/> nisi in illa epistola quae ei objecta fuerat  clareret 
+						<lb/>  perfidiae macula quam vitabat. Constat igitur <lb/> et ejus non esse
+						epistolam quae levitate accusantium <lb/> objecta firmatur, et  fidei  rectae adversariam;
+						contra <lb/> cujus objectionem ex scripto recta  fides  opponitur. <lb/> Rursus
+						consequenter et evidentius ad Ibae episcopi <lb/> purgationem in eodem astruitur
+						judicatum [forte, <lb/> judicato] quod Ibas episcopus ex abundanti promisisse <lb/>   memoratur 
+						 manifeste anathematizare malignae <lb/> impietatis principem Nestorium, et eos qui
+						sicut ille sapiunt  ,<lb/> vel qui libris aut codicibus ejus utuntur; habere <lb/>
+						autem se omnia quae placuerant in Ephesino concilio <lb/>  quod  a sancto Spiritu
+						movebatur, nihilque a Nicaeno <lb/>  differre [forte , differret]  , differret] concilio. Porro autem
+						epistola <lb/> quae ad Marim Persam scripta relegitur, non solum <milestone unit="PLSection" n="D"/><lb/> non habere quae in Ephesino primo concilio gesta <lb/>
+						sunt, sed etiam gravi  exsecratione  respuisse et contrarium <lb/>  monstratur : quippe
+						cum et Nestorium judicio <lb/>  et  inquisitione  non  facta  memoret esse damnatum 
+						,<lb/> et beatum Cyrillum in  Apollinaris ;  haeresim incidisse  ,<lb/> et ei similia
+						scripsisse  pertinacia sacrilego [forte , pertinaci ac    ,<lb/>   sacrilego] errore definiat,
+						et  duodecim  <lb/>  beati Cyrilli capitula omni impietate plena et <lb/> rectae fidei
+						contraria nuncupasset. Unde evidentissime <lb/> declaratur quia ex professione Ibae
+						episcopi, per <lb/> quam ex abundanti, ut attestantur judices, universa <lb/> quae in
+						Ephesino primo concilio gesta sunt servare <lb/> et recipere profitetur, quia ejus
+						fuerit epistolam denegatam  .<lb/> Nam si ejus esse constitisset epistolam, in <lb/>
+						qua, ut dictum est, Ephesina prima synodus impugnatur ,<milestone unit="PLSection" n="A"/> <lb/> non dicerent judices Ibam episcopum ex <lb/> abundanti inter alia
+						promisisse habere omnia quae <lb/> placuerunt in Ephesino primo concilio, sed pro correctione
+						<lb/>  potius declaranda dicerent necessarie coactum <lb/>  praedictum episcopum
+						illa recipere quae ab eo <lb/> quidem per epistolam fuerant improbata. Non enim <lb/> ex
+						abundanti professus Ibas diceretur episcopus, si <lb/> ipsa rerum necessitate cogente,
+						ut appareret orthodoxus  ,<lb/> fateretur. Cui etiam dilucidae rationi consequenter <lb/>
+						 qu:e inferius continentur ejusdem judicati <lb/> verba proficiunt quibus dicitur
+						(Act. 10): Ita enim <lb/> ejus sanctitatem laudavimus quod prone sapuerit curare <lb/> 
+						eos qui vel suspicione vel quoquomodo ejus laedenegatam <lb/>  opinionem  doctrinae , et
+						caetera. Ex quibus verbis <lb/> apertissime claret ex abundanti hoc quoque Ibam  episcopum -
+							<milestone unit="PLSection" n="B"/><lb/>  fuisse professum per quod non veritas,
+						quae <lb/> de eo probata non fuerat, sed etiam suspicio, si potuisset <lb/>  accedere,
+						purgaretur. Cum autem epistola ad <lb/> Marim Persam scripta non ea quae quamdam suspicionem
+						<lb/>  facerent, sed apertissima et manifesta Ephesinae <lb/>  primae synodi et
+						duodecim capitulorum beati <lb/> Cyrilli legatur crimina continere, nemini venit in
+						<lb/> dubium quin Ibae episcopi minime probata fuisset <lb/> epistola, qui ex abundanti
+						etiam de suspicionibus <lb/> liber ostensus est. Et quomodo de veritate reprehensibilis <lb/>
+						 facti argui poterit qui de suspicione quoque <lb/> reddi voluit alienus?</p>
+					<p>VI. His igitur ita se habentibus congruenter et una <lb/> eademque suadente justitia,
+						etiam legatorum sedis <lb/> apostolicae interlocutio prolata subsequitur, qua ex
+							<milestone unit="PLSection" n="C"/><lb/> decreto proprio Photii atque Eustathii
+						venerabilium <lb/>  episcoporum, tam de his quae ex scripto accusatores <lb/> 
+						dederunt, quam de his quae inter gesta <lb/> locuti sunt, id est ab omni accusatione
+						inculpabilem <lb/>  et liberum Ibam fateretur episcopum reperiri, <lb/> et id
+						tantummodo postulat, ut utrum sententiam <lb/> suam Photius atque  Eustathius  venerabiles
+						viri <lb/> cognoscerent, sua professione signarent. Ita enim <lb/> se habet (Act. 9) :
+						Paschasinus et reliqui episcopi <lb/> per presbyterum apostolicae sedis dixerunt :
+						Sanctissimi <lb/>  episcopi qui decreto proprio et  inculpabilem  et <lb/> omni
+						accusatione liberum Ibam reverentissimum declararunt  ,<lb/> si propriam sententiam
+						recognoscunt edicant. <lb/> Photius reverentissimus episcopus Tyri dixit: Etiam <lb/>
+						nostrum est decretum. Eustathius reverentissimus episcopus <milestone unit="PLSection" n="D"/><lb/>  Beryti dixit: Mea est subscriptio; et reliqua. <lb/> Ex qua inquisitione
+						cum tantummodo de  recognoscenda  <lb/>  sententia judices monuissent, nihil de qualitate
+						<lb/>  sententiae dubitantes, imo etiam quia per eam <lb/> Ibas episcopus liber ab
+						omni accusatione inventus sit <lb/> approbantes, dilucide aperteque monstratur decreto
+						<lb/> venerabilium Photii atque  Eustathii  episcoporum <lb/> etiam legatorum apostolicae
+						sedis indubitabilem accusatores <lb/>  consensum, quia, sicut  dictum  est, ab omni <lb/>
+						accusatione liber Ibas exstitisset episcopus. Relecto <lb/> itaque  Photii  atque
+						 Eustathii  episcoporum, quod pro <lb/> se Ibas episcopus protulit, judicato et ab eisdem
+						judicio  ,<lb/> sicut supra dictum est, repetita professione <lb/> recognito, cum in
+						subsequentem diem de persona <lb/> ejusdem Ibae episcopi fuisset cognitio prolata, rursus<pb n="153"/>
+						<milestone unit="PLSection" n="A"/><lb/> ingressus Ibas episcopus haec legitur fuisse
+						conquestus <lb/>  (Act. 10) : Deprecor magnificentiam vestram et <lb/> hanc universalem
+						sanctam synodum. Eutyches adversum <lb/>  me pro fide quaedam falsa confinxit, nec me in
+						<lb/> sancta synodo introire permisit; per quadraginta mansiones <lb/>  invicem per
+						diversos ordines direxit me; viginti <lb/> et amplius carceres mutavi, tanquam non esset
+						carcer <lb/> in Antiochia, in ordine comitianorum dicentibus mihi <lb/> quia damnatus
+						es. Si videtur ergo magnificentiae <lb/> vestrae et sanctae vestrae synodo quae sine judicio
+						in absentia <lb/>  mea adversum me gesta sunt infringere, in vestra <lb/> erit
+						potestate. Ob hoc etenim, sicut jam edocui, adii <lb/> sacrum et immortalem verticem, et
+						jussit vestram magnificentiam <lb/>  et sanctam synodum audire quae adversum <lb/>  me
+						gesta sunt, et cognovistis ex decreto quia in <milestone unit="PLSection" n="B"/><lb/>
+						nullo culpabilis sum repertus.<note n="B"/></p>
+					<p>VII. His ergo in querelam deductis claret Ibam <lb/> episcopum apertissimis
+						deplorationibus  alligare ( j ' orte , allegare]  <lb/> ( , allegare] quod in secretario superiore conquestus
+						<lb/>  est ea quae in sceleratis illis gestis Ephesinae <lb/>  secundae  synodi 
+						adversus eum de fide gesta <lb/> sunt ab Eutyche fuisse  confecta [forte , conficta]  , con ficta [forte , fictam] ]; ubi,
+						<lb/> sicut jam superius dictum est, per introducta contra <lb/> absentem responsa
+						testium, maxime epistolam ad <lb/> Marim Persam ejusdem fuisse docere conati sunt. <lb/>
+						Quam epistolam in hoc loco duplici modo ab Iba <lb/> episcopo, sicut et superius
+						assertum est, denegatam <lb/> evidenter apparet. Primo quod accusatoribus ejus <lb/>
+						ipsa productio testium nisi contra negantem necessaria <lb/>  non fuisse convincitur.
+						Nemo enim contra illum <milestone unit="PLSection" n="C"/><lb/> testium responsis
+						indiget quem viderit quod ab  eo  <lb/> factum arguit confiteri. Quam negationem suam Ibas
+						<lb/> episcopus evidentius ex formidine accusatoris ostendit <lb/>  dicens : nec me in
+						synodo introire permisit lbid.). <lb/> Ita enim contra se  falsos  testes eum praeparasse
+						testatur   ;<lb/> ut cum suam adversarii studio profligatam <lb/> queratur absentiam,
+						confirmet se praesentem non <lb/> potuisse convinci. Deinde quod in sancto ac reverendo <lb/>
+						 Chalcedonensi concilio praesens Ibas episcopus, <lb/> dum ea quae adversus eum in
+						Ephesina secunda testatur   ,<lb/> testibus] aliisque modis gesta sunt fict
+						 ,<lb/> fictam] conqueritur epistolam quam ejus esse <lb/> illic responsis testium
+						dictum false fuerat  alienasse [alienam a se]  <lb/>  a se] procul dubio profitetur. Unde et competenter
+						<lb/>  sequitur quia sancti illic in Chalcedona residentes <milestone unit="PLSection" n="D"/><lb/>  judices ex decreto  Photii  atque Eustathii in <lb/> nullo eum
+						cognoverint culpabilem , apertissime profitentes <lb/>  quod ea quae de fide adversus
+						eum accusatores  ,<lb/> tam in libello apud Photium et Eustathium episcopos <lb/> 
+						oblato, in quo dixerunt eum plurima contra  fidem  <lb/>  Patrum dicere, quam in
+						 capitulis  ex scripto datis  ,<lb/> in quibus dixerunt (Ibid.), Nestorianus est, et beatum
+						<lb/>  Cyrillum appellat  haereticum , nec non et in his <lb/> sunt dicentes eum publice
+						allocutum, Non invideo <lb/> Christo facto Deo : in quantum enim factus est, et ego.
+						<lb/> Quam accusationem videlicet eorum et in quibus <lb/> eum Nestorianum esse et
+						beatum Cyrillum haereticum <lb/>  appellasse dixerunt, false adversus se ab accusatoribus <lb/>
+						 fuerint intimata, et ita quoque venerabilium <lb/> Photii atque Eustathii
+						episcoporum quia  leviter  false <milestone unit="PLSection" n="A"/><lb/> dicta sint
+						constitutum, adeo ut ex eodem decreto ab <lb/> omni accusatione liber et in nullo
+						inventus culpabilis <lb/>  diceretur. Quod cum ita sit, evidenter ostenditur <lb/>
+						epistolam ad Marim Persam scriptam, quae duodecim <lb/> beati Cyrilli capitula omni
+						impietate plena et  rectae ; <lb/> fidei dicit esse contraria, et Nestorium judicio et inquisitione
+						<lb/>  non facta damnatum, nullo modo quia Ibae <lb/> fuerit approbatum ;
+						quippe cum ipse de se apertissime <lb/>  fateatur quod ea quae de fide adversus se
+						accusatores <lb/>  dixerint, false dixissent; cum si aut ipse suam <lb/> esse epistolam
+						fateretur, aut ab accusatoribus aliqua <lb/> fuisset probatione convictus, non utique
+						Photii atque <lb/>   Eustathii  episcoporum judicio, in quorum examine <lb/>  haec
+						fuerunt  flagitate  [agitata], absolutissime <lb/> censeretur. Quod leviter ac false ac
+						per immissionem <milestone unit="PLSection" n="B"/><lb/>  quamdam ab accusatoribus suis
+						 ibas  episcopus <lb/> fuerit  impetitus  necessitate, et Nestorium anathemagnificentiam 
+						,<lb/> et omnia quae in Ephesino primo placuerunt <lb/>  concilio se habere tanquam
+						ea quae in Nicaea <lb/> acta sunt voluntaria professione testatus sit; quae <lb/> utique
+						ab epistola quae ad Marim Persam scripta dicitur <lb/>  excusatio  Nestorio  constat esse
+						rejecta. Propter <lb/> quod nulli venit in dubium quod ea quae adversus <lb/> nos false
+						dici asserimus, neque a nobis dicta, neque <lb/> a nobis facta esse omnino disfateamur,
+						et quae ex <lb/> abundanti recepisse astruimur, et  antea  tenuisse <lb/> firmemur.</p>
+					<p>VIII. Ad hujus quoque indubitabiliter ostendendae <lb/> negationis  augmentum 
+						[argumentum] commode sequentium <lb/>  gestorum ordo connectitur. Cum enim quidam
+							<milestone unit="PLSection" n="C"/><lb/>  jam in sancta Chalcedonensi synodo
+						absolutioni <lb/> Ibae episcopi vocem curassent contradictionis opponere  ,<lb/> et
+						ingredi ejus accusatores judices praecepissent  ,<lb/> ingressus Theophilus diaconus cum
+						aliis, dum <lb/> interrogaretur utrum accusaturus Ibam venisset episcopum  ,<lb/> ita
+						respondit (Act. 10) : Accusatores manifesti <lb/> sunt, et hic non sunt. Ego diaconus
+						sum, et scio violentiam <lb/> civitatis. Et si accuso, testes non adsunt, et denegat.
+						<lb/> Quae accusatoris responsio manifestat quod ita ea <lb/> quae apud Photium et
+						Eustathium episcopos objecta <lb/> sunt denegaverit Ibas episcopus ut in Chalcedonensi
+						<lb/> synodo, cum ipsa idem a se objicienda nosset, ab <lb/> Iba episcopo deneganda
+						confirmet. Unde quorumdam <lb/> valde est stupenda contentio, qui epistolam ad  Marim  <lb/>
+						 Persam scriptam, ab accusatoribus pro magno <milestone unit="PLSection" n="D"/><lb/>
+						crimine objectam, et in Chalcedonensi synodo ex <lb/> gestis apud Photium atque
+						Eustathium episcopos <lb/> habitis rursus ad convincendum, ut putabant, Ibam <lb/>
+						episcopum proferendam, eumdem Ibam episcopum <lb/> quia sua fuerit mentiuntur esse
+						confessum ; cum, (ut) <lb/> supra dictum est, accusatores ipsius  praecedentes  <lb/>
+						negationes ejus experti ea quae a se ex memoratis <lb/>  gestis  objicienda noverant,
+						certissime negaturum <lb/> esse testentur. In tantum enim in illo Photii atque <lb/>
+						Eustathii episcoporum judicio Ibam episcopum conquestus <lb/>  suae virtute  subnexum [forte , subnixum] 
+						, subnixum] sciebant <lb/>  ea quae ab  accusatoribus  proposita fuerant denegasse 
+						,<lb/> ut in sancto  Chalcedonensi  concilio etiam <lb/> ipsis Photio atque Eustathio
+						praesentibus, quorum <lb/> pridem judicio res <unclear>fuerat</unclear> agitata,
+						confirment denuo<pb n="155"/>
+						<milestone unit="PLSection" n="A"/><lb/> negaturum. Nunquam enim accusator iisdem.
+						rursus <lb/> in cognitione sedentibus Ibam episcopum diceret <lb/> negaturum, si apud
+						eos in priore judicio  sciret  jam <lb/> fuisse confessum. Posthaec cum interlocutio
+						judicum <lb/> in  Chalcedona  residentium quaereret  ab  accusatoribus <lb/>  Ibae episcopi
+						utrum scriptas probationes praebere <lb/> de re aliqua potuissent, Theophilus diaconus
+						dixit : <lb/> Habeo monumenta  quae  super haec gesta sunt in Beryto,  .<lb/>, quae in
+						Epheso, et caetera.</p>
+					<p>IX. Animadvertendum est igitur quod nihil aliud <lb/> contra Ibam episcopum adversarii
+						ejus quod in Chalcedonensi <lb/>  proferrent synodo se habere dixerunt, nisi <lb/> ea
+						quae apud Photium et Eustathium episcopos et <lb/> postea in Ephesina secunda de eo sunt
+						habita monumenta  .<lb/> Ex quo apparet non sibi eos judicasse sufficere ,<milestone unit="PLSection" n="B"/> <lb/> imo contra se futurum potius aestimasse,  si ea  <lb/>
+						tantummodo quae apud memoratos Photium et Eustathium <lb/>  episcopos adversus  Ibam episcopum 
+						 gesta sunt <lb/> legerentur, in quibus neque testibus neque sua monstrabatur <lb/>
+						 confessione convictus, nisi et ea proferre <lb/> quae nefarie in secunda
+						Ephesina synodo acta sunt <lb/> poposcissent,  in quibus  illis falsitatibus uterentur
+						<lb/> qui Ibam episcopum epistolam quae ad Marim Persam <lb/>  scripta est mendaciter
+						suam esse dixerunt confessum  .<lb/> Certum est igitur nullum adversus ibam probationis 
+						,<lb/> ut putabant, habuisse ejus adversarios documentum  ,<lb/> nisi hoc solummodo
+						quod in illa non  dicenda  <lb/>  synodo adversum se Ibas episcopus per sui <lb/>
+						absentiam astruit fuisse confictum,. quod in sancta <lb/> Chalcedonensi synodo
+						residentes judices rei veritate <milestone unit="PLSection" n="C"/><lb/>  permoti sunt,
+						interlocutionis justitia submoverunt  ,<lb/> interrogantes Thalassium atque Eusebium
+						episcopos  ,<lb/> qui tunc in secunda Ephesina cum aliis adfuerunt  ,<lb/> utrum eorum
+						 audientiam  praesens Ibas fuisset <lb/>  expertus. Qui dixerunt (Act. 10) : Non aderat.
+						<lb/> Qua responsione cognita, Orientales et Pontici episcopos <lb/>  in Chalcedonensi
+						concilio clamaverunt :  Absentem  <lb/>  nullus addicit. Quorum interlocutio ita prolata
+						<lb/> ea quae adversus Ibam episcopum in secunda Ephesina <lb/>  gesta sunt  evidenter 
+						evacuat, ad illorum, id est <lb/> Photii et Eustathii, consequenter omne remittens <lb/>
+						acta negotium, quorum jam sententia Ibam episcopum <lb/>  noverant absolutum. Quod in
+						sequentibus evidentiore <lb/>  judicium interlocutione signatur, qui gesta <lb/>
+						nefaria secundae Ephesinae synodi contra Ibam episcopum <milestone unit="PLSection" n="D"/><lb/>  pro exsecratione atque mendacio sui habita <note n="I"/> <lb/> relegi vetuerunt. Nam
+						ut apertius manifestetur intelligi <lb/>  Ibam  episcopum  universa quae ab adversariis
+						in <lb/> judicio Photii atque Eustathii episcoporum objecta <lb/> fuerant, et nunc in
+						sancto Chalcedonensi concilio ex <lb/>  gestis quae  Theophilus proferebat objicienda
+						erant, <lb/> indubitabiliter denegasse, interrogatio judicum in <lb/> Chalcedona
+						residentium, vel responsio Photii episcopos <lb/>  sine cujusquam ambiguitatis patefecit
+						obstaculo ; <lb/> quae ita se habent (Ibid.) :  Magnificentissimiet  gloriosissimijudices   <lb/>
+						 dixerunt : Ibas igitur reverentissimus <lb/> a suis accusatoribus est
+						convictus ? Photius reverentissimus <lb/>  episcopus dixit: Non, et caetera. Quid hac
+						probationis <lb/>  clarius, quid evidentius dici potest quam ut <lb/> ea quae accusator
+						propositurus negaturum Ibam confirmavit <milestone unit="PLSection" n="A"/><lb/> 
+						episcopum? Haec quoque ipse Photius judex, <lb/> apud quem pridem gestum fuerat confitens
+						quia non <lb/> convictus esset  Ibas episcopus , eum procul dubio <lb/>  quae objecta  sunt
+						negasse testetur? Quam negationem <lb/>  maxime ad epistolam quae ad Marim  Persam scripta  <lb/>
+						 legitur pertinere sequentium declarat ordo <lb/> gestorum.  Nam eum   ad
+						 documentum eorum  quae in <lb/> judicio Photii et Eustathii ex scripto dederant, id <lb/>
+						est,quia Nestorianus esset, et beatum Cyrillum appellasset <lb/>  haereticum,
+						blasphemias illas protulissent <lb/> quas se putabant testibus probaturos, id est, Non
+						invideo <lb/>  Christo Deo facto (Act. 10), et reprobatis testibus <lb/>  nihil ex his
+						ostendere potuissent, ad illa quae <lb/> pridem ex. scripto dederant redeuntes, hoc quod
+						episcopos <lb/>  ad Marim Persam scripta continet objecerunt, <milestone unit="PLSection" n="B"/><lb/> id. est, quia beatae memoriae Cyrillum et duodecim <lb/>
+						ejus capitula appellasset haeretica. Cui Patri Photius <lb/> atque Eustathius judices ,
+						sicut superius ipsi professi <lb/> sunt, diligentius incumbentes, modo ab eodem Iba
+						<lb/> episcopo perscrutantes, modo probationes ab accusatoribus <lb/>  exigentes, utrum
+						aliquid post unitatem <lb/> Ecclesiarum factam in obtrectatione beati Cyrilli a <lb/>
+						saepedicto Iba episcopo dictum sit, vehementer  et  <lb/> sagacissime quaesiverunt. Adversum
+						quae Ibas respondens <lb/>  episcopus omnibus exceptionibus suis eam <lb/> quae ad Marim
+						Persam scripta legitur impugnavit <lb/> epistolam, asserendo quia post unitatem et pacem
+						<lb/> inter beatum Cyrillum et Orientales factam in nullo <lb/> beato Cyrillo
+						derogasset.</p>
+					<p>X. Porro autem saepedicta ad Marim Persam scripta <milestone unit="PLSection" n="C"/><lb/>
+						 epistola jam post unitatem pacemque Ecclesiis <lb/> restitutam et beatum Cyrillum
+						incidisse in Apollinaris <lb/>  haeresem, eique similia  conscripsisse  confirmat, <lb/>
+						et duodecim ejus capitula asserit rectae fidei esse <lb/> contraria, Nestorium autem
+						 judicium   judicio] <lb/> et  inquisitione  non facta damnatum. Quod scriptor <lb/>
+						epistolae non per suum aut  alicujus  alterius intelligentiae <lb/>  evenisse dicit
+						errorem ut beatus Cyrillus confessum <lb/>  haeretica dogmata putaretur; sed ita in
+						 ea pravitate  <lb/>  idem confictor epistolae permanens, illa orthodoxa <lb/>  beati
+						Cyrilli dogmata  haeretica  videretur <lb/> astruere, ut ab eis potius beatum Cyrillum
+						veluti abnegantem <lb/>  quae prave  conscripserat  asserat recessisse. <lb/> Quae omnia
+						Ibae episcopi professioni quare  ab adversariorum  <lb/>  objectione tuetur esse contraria
+						quicunque <milestone unit="PLSection" n="D"/><lb/>  pio ac recto corde legit
+						intelligit. Neque <lb/> enim ipsi judices si quod vel levi  derogatione  post <lb/>
+						unitatem dictum sit, exquirentes Ibam episcopum, si <lb/> ejus esse tam aperte
+						blasphemantem epistolam  comprobassent   ,<lb/> paterentur sine  ultione  transire aut  dicenda 
+						<lb/>  non esse convictum. Quae autem beati Cyrilli <lb/> major injuria potest vel
+						exquiri vel fieri quam dogmata <lb/>  ejus, quae in Ephesina prima exposuit, haerespondens <lb/>
+						 definire, per quorum orthodoxam  praedicationem  <lb/> vivus ac mortuus omnibus
+						venerabilis et reverendus <lb/> existit; quae dogmata beati Cyrilli dum per epistolam
+						<lb/> ad Marim Persam scriptam posteaquam adunati sunt <lb/> beatae memoriae Cyrillus et
+						Joannes Antiochenae civitatis <lb/>  episcopi, constet profana voce omnimodis impugnare 
+						,<lb/> quis sana  mente  possit advertere Ibam nc-<pb n="157"/>
+						<milestone unit="PLSection" n="A"/><lb/>    quia post  unitatem  aliquid adversum
+						beatum . <lb/> Cyrillum dixerit epistolam non negasse, quae post  illam  <lb/>  unitionem
+						ejus dogmata  definit  esse haeretica. <lb/> Nisi forte aliquis  ita ab  humani sensus
+						ratione discedat  ,<lb/> ut credat Ibam nihil de beato Cyrillo  dixisse  contrarium   
+						,<lb/> si eum haeretica conscripsisse testetur, et <lb/> circa ejus personam arbitretur
+						eumdem Ibam servasse <lb/>  reverentiam ; si sanctam  doctrinam , qua reverendus <lb/> 
+						est omnibus,  accusavit .  Atque ideo si singularis <lb/>  beati Cyrilli injuria est ejus
+						damnasse doctrinam  ,<lb/> et haereseos aperta videtur professio praedicationi <lb/> 
+						derogare catholicae, si  Ibae  probaretur epistola, <lb/> in qua utraque manifestum est
+						contineri, nunquam <lb/> Ibas episcopus, utrumque negando, ex utroque meruisset <lb/> 
+						absolvi. Huc accedit quod luce clarius demonstratur <milestone unit="PLSection" n="B"/><lb/>
+						 nullum etiam tempus inveniri posse, neque <lb/>  ante adunationem, neque
+						post unitionem, beati <lb/> Cyrilli cum Orientalibus factam, quo eadem epistola <lb/> ab
+						Iba episcopo scripta doceatur. Nam ipsius tenor <lb/> epistolae  evidenter  ostendit quia
+						post unitatem pacemque <lb/>  Ecclesiis reformatam in derogatione  beati  Cyrilli <lb/>
+						ejusque  dogmatum  facta sit, Ibas vero post adunationem <lb/>  beati Cyrilli cum
+						Orientalibus factam nihil se <lb/> tale aliquid dixisse testetur. Constat neque ante adunationem
+						 ,<lb/> quia hoc in ejusdem epistolae tenore non <lb/> legitur, neque post
+						adunationem, quia hoc Ibas sua <lb/> professione denegat, ab eodem Iba memoratam epistolam
+						<lb/>  fuisse conscriptam.</p>
+					<p>XI. Et ut nulli prorsus habeatur ambiguum in eadem <lb/>  negatione qua coeperat Ibam
+						episcopum  perstitisse  ,<milestone unit="PLSection" n="C"/> <lb/> et hoc ex praesentis Ibae
+						verbis judices ita sensisse  ,<lb/> et accusatores eam tanquam negantem voluisse, <lb/>
+						nec praevaluisse convincere, ipsius necesse est interlocutionis <lb/>  judicum et
+						prosecutionis accusatorum, quae <lb/> in sancta Chalcedonensi synodo ex gestis Photii et
+						<lb/> Eustathii releguntur, verba pensemus, quae ita se <lb/> habent (Act. 10) :
+						 Reverentissimi episcopi .  id est  Photius <lb/>  et Eustathius, dixerunt: Si  post , mortem
+						beati <lb/> Cyrilli reverentissimus Ibas episcopus eum visus est <lb/> haereticum
+						nominasse, et haereticum  habuisse , monstrate  .<lb/> Maras dixit: Probamus : quod
+						procul dubio <lb/> neque judices adhuc probari quaererent, neque accusatores <lb/> 
+						repromitterent probaturos, si hoc Ibas episcopus <lb/>   non  negasset. Licet ea quae
+						superius in gestis <lb/> apud Photium et  Eustathium habitis  eorumque judicato <milestone unit="PLSection" n="D"/><lb/>  ad negationem Ibae episcopi demonstrandam <lb/>
+						multimode ex interlocutionibus  judicum et  accusatorum <lb/>  prosecutionibus ipsiusque
+						Ibae exceptionibus <lb/> claruerunt abunde sufficerent, tamenetsi minus aliquid <lb/> 
+						in  Photii  atque Eustathii episcoporum judicio <lb/> legeretur expressum, ea quae in
+						Chalcedonensi synodo <lb/>  continetur Ibae episcopi negantis epistolam satisfaceret <lb/>
+						 sola professio. Lecta enim ex gestis apud <lb/> Photium et  Eustathium  habitis
+						epistola ad Marim <lb/> Persam scripta, confestim Ibas vocem negantis opposuit <lb/> 
+						dicens : Jubeat vestra clementia relegi  litteras . <lb/> clericorum Edessenorum,
+						 ut cognoscatis quia  et ab his <lb/> quae mihi  illata sunt alienas    existo et violentiam sum
+							<milestone unit="PLSection" n="A"/><lb/> perpessus. Ubi primum diligenter est
+						attendendum <lb/> quod post lectum ad Marim Persam scriptae epistolae <lb/> textum,
+						eamdem epistolam judices in Chalcedona residentes <lb/>  suo probantur omisisse
+						silentio, quippe quam <lb/> noverant totiens jam accusati negationibus refutatam. <lb/>
+						Nam si vidissent in ea esse aliquid quod  Ibae episcopi  <lb/> absolutioni proficeret, mox
+						ejus lectione permoti decernerent <lb/>  frustra accusatores ex gestis Photii et Eustathii
+						<lb/>  episcoporum pro  crimine  haereseos illa producere  ,<lb/> quibus
+						econtrario Ibas episcopus ostendebatur <lb/> orthodoxus, postremo nec juberent suis
+						interlocutionibus <lb/>  Edessenorum epistolam recenseri, quam contra <lb/> eam quae ad
+						Marim Persam scripta dicitur Ibas epistolam <lb/>  pro se relegi postulavit, si per eam
+						quam accusator <lb/>  protulerat laudabile potius et non magis vituperabile <milestone unit="PLSection" n="B"/><lb/>  accusati  meritum  monstrabatur. Quid quod <lb/>
+						ipse Ibas episcopus, relecta eadem ad Marim Persam <lb/> epistola, non ejus assumpsit
+						defendere qualitatem, <lb/> nec suae  fidei  rectitudinem ex ejusdem epistolae professione <lb/>
+						 monstrare. Continuo etenim, si suam esse <lb/> aut recta non esse dogmata
+						contineret <note n="a"/>, contra suos <lb/> accusatores insurgeret dicens : Caeco corde me impetunt 
+						,<lb/> ut ea mihi pro haereseos crimine  objiciant  <lb/> unde possum orthodoxus
+						comprobari. Imo se ostenderunt <lb/>  haereticos, qui epistolam cujus dictatio  catholicam 
+						<lb/>  fidem astruit, haereticam criminantur. Verum <lb/> Ibas episcopus sciens nec
+						suam esse epistolam et per <lb/> omnia piis dogmatibus inimicam, adversus eam  magis  <lb/>
+						 illam Edessenorum epistolam, quae eum nihil aliquid <lb/>  contra catholicam
+						fidem dixisse attestabatur, <milestone unit="PLSection" n="C"/><lb/> opposuit, illud
+						secutus quod supra ingressus sanctum <lb/> Chalcedonense concilium allegavit dicens :
+						Nam et <lb/> omnes  Edesseni clerici ,  per  quos  memoratis episcopis <lb/>
+						scripserunt,testantur me esse catholicum (Act. 9). In <lb/> tantum jam tunc in Photii et
+						Eustathii judicio et postea <lb/>  in sancta Chalcedonensi synodo objectam sibi <lb/>
+						ad Marim Persam epistolam negans suam, orthodoxae <lb/> fidei sciit esse contrariam, ut
+						propriae fidei  documentum  <lb/>  non de istius  textu , sed de Edessenorum  clericorum  <lb/>
+						 attestatione requireret.</p>
+					<p>XII. Si igitur judices non solum nihil ex ea aestimantes <lb/>  accusati Ibae episcopi
+						juvari negotium, imo <lb/> videntes absolute contrariam aliam quam pro sui purgatione <lb/>
+						 accusatus est  petiit  [espetiit], statuerunt suis <lb/> interlocutionibus
+						relegendam, et ipse accusatus Ibas <milestone unit="PLSection" n="D"/><lb/> episcopus,
+						non illam ad Marim Persam defendendo, <lb/> imo potius ejus refutandae causa illam
+						Edessenorum <lb/> relegi postulavit, constat eam quae ad Marim Persam <lb/> scripta est
+						interlocutione judicum et professione  Ibae  <lb/> episcopi quia ejus fuerit abnegatam, et
+						quia scelesta <lb/> dogmata contineat approbatum : Ergo Ibas episcopus <lb/> innocentis
+						animi sui fervore permotus, evidentioris <lb/> negationis etiam in Chalcedonensi synodo
+						festinans <lb/> adicere documentum, relegendas Edessenorum litteras <lb/>  ex gestis
+						 idem  [ibidem] apud Photium et Eustathium <lb/>  habitis, quae adversarius ejus
+						protulerat, postea <lb/>  : quorum gestorum hanc partem, sicut in <lb/>
+						consequentibus demonstratur, ex industria accusator <note type="footnote"> " Hecte
+							Cotelerius lc0rondum admonuit : aut recta nosset dogmata eOlll;",r.:. II ao. </note><pb n="159"/>
+						<milestone unit="PLSection" n="A"/><lb/> omiserat, qua Ibam evidentius noverat adjuvari.
+						<lb/> Deinde quid ipsa verba Ibae lucide astruant intuendum  .<lb/> Prosequitur enim, ut
+						supra meminimus, ita <lb/> (Act. 10) : Jubeat vestra clementia relegi litteras clericorum
+						<lb/>  Edessenorum, ut cognoscatis quia et ab his quae <lb/> mihi illata sunt
+						alienus existo et violentiam sum perpessus  .<lb/> Quibus verbis apertissime declaratur
+						quod <lb/> quia e vestigio post lectam epistolam ad  Marim  Persam <lb/>   astruit  Ibas
+						episcopus alienum se et ab his quae <lb/> sibi inferuntur existere et  violentiam se 
+						perpessum, <lb/> atque ob hoc Edessenorum debere relegi litteras <lb/> clericorum,
+						evidenter, tanquam manu ipsam epistolae <lb/> ad Marim Persam ostenderet lectionem, a
+						 cujus  se <lb/> purgari crimine festinaret, dixit, et ab his quae mihi <lb/> inferuntur
+						alienus existo, ostendens et ab aliis quae <milestone unit="PLSection" n="B"/><lb/>
+						praecedenti loco ei objecta sunt et ab epistola ad Marim <lb/>  Persam  scripta , quae
+						statim relecta fuerat, alienum <lb/>  se per omnia demonstrari. Ubi  illud  quoque <lb/>
+						quod supra ingressus Ibas episcopus sanctam  Chalcedonensem  <lb/>  synodum gravissime
+						legitur fuisse  conquestus  <lb/>  a falsis se in secunda Ephesina accusationibus <lb/>
+						impetitum, in concilium ingredi non fuisse permissum  ,<lb/> viginti autem plus
+						carceres permutasse, nunc <lb/> post lectionem epistolae non omisit adjungere; ut  appareat .
+						<lb/>  illud quod, sicut dictum est, ingressus sanctam <lb/>  Chalcedonensem
+						synodum, de injustitia in secunda <lb/>  Ephesina sibi illata  conqueritur , ad hujus causam
+						<lb/>  epistolae pertinere; post cujus lectionem astruens <lb/> alienum se ab his quae
+						sibi inferuntur existere, violentiam <lb/>  quam ab Eutyche est perpessus adjunxit.
+							<milestone unit="PLSection" n="C"/><lb/> Lecta itaque, ut Ibas petiit, ex gestis
+						Photii atque <lb/> Eustathii judicum, ad quos utique directa fuerat <lb/> Edessenorum
+						epistola clericorum, qui eam  ut  Photius <lb/>  et Eustathius in gestis innecterent
+						petiverunt, <lb/> quae gesta ab adversariis Ibae episcopi in Chalcedonensi <lb/>  synodo
+						sunt prolata, ob quam causam ejusdem <lb/> epistolae desiderata sit lectio, ipsius verbis
+						agnoscitur  ,<lb/> quae ita se habent (Act. 10) : A multis atque  diversis  <lb/>  de
+						Phynicia  ad  nos venientibus cognovimus ea quae <lb/> ab his qui  insurrexerunt  in
+						sanctissimum et reverentissimum <lb/>  episcopum nostrum Ibam gesta sunt, perterriti <lb/>
+						 in eo quod dictum est, (Transcendunt enim et illos <lb/> qui sine Deo sunt, et
+						infideles et haeretici et Judaei et <lb/> pagani  quae  dicta sunt nobis, quia nobis
+						praesentibus <lb/> dixisset idem reverentissimus episcopus: Non invideo <milestone unit="PLSection" n="D"/><lb/> Christo Deo facto, quoniam et ego, si volo, possum <lb/>
+						fieri secundum illum :) omnes  nos , quos dicunt audisse <lb/> ea quae dicunt, manifestum
+						facimus vestrae reverentiae <lb/> coram Dei clementia quia neque ab eo neque ab ullo <lb/>
+						alio tale dictum aliquando audivimus,  neque  in aures <lb/> nostras ingressum est tale
+						aliquid aliquando, anathematizantes <lb/>  nos ipsos et terribili gehennae nosmetipsos
+						<lb/> obnoxios facientes, si novimus aliquid tale dictum ab eo <lb/> aut aliquid aliud
+						contrarium catholicae fidei. Si enim <lb/> aliquo tali dicto passi fuissemus communicare
+						ei qui <lb/> dixit aut missas cum eo tenere, ultimo supplicio fuissemus <lb/>  obnoxii,
+						tanquam communicantes tali errori <lb/>     horrore], et  caetera .</p>
+					<p>XIII. Quibus ita se habentibus evidenter ostenditur <lb/>  omnia in quibus ab
+						accusatoribus tam ex scripto <milestone unit="PLSection" n="A"/><lb/> libellis oblatis
+						quam deinceps inter gesta  loquentibus  <lb/> Ibas dixisse arguebatur episcopus, quia Ibas
+						episcopus <lb/>  non dixerit, Edessenos clericos fuisse testatos. <lb/> Nam cum dicant
+						se non nosse quod vel tale dictum, <lb/> id est, Non invideo Christo facto Deo, vel huic
+						simile  ,<lb/> hoc est, quod ex quacunque parte Nestorii videatur <lb/>  dogmatibus
+						convenire, vel aliud aliquid rectae <lb/> fidei contrarium dixerit Ibas episcopus,
+						apertissime <lb/> clarum est quod et ab his quae epistola ad Marim <lb/> Persam scripta
+						continet Ibam episcopum sua attestatione <lb/>  purgaverint. Cum enim saepedicta
+						epistola, <lb/> dicendo beatum Cyrillum in Apollinaris haeresim incidisse <lb/>  et ei
+						similia conscripsisse, ejusque duodecim <lb/> capitula omni impietate plena et rectae
+						fidei contraria  ,<lb/> Nestoriumque judicio et inquisitione non facta <milestone unit="PLSection" n="B"/><lb/> damnatum, non solum videatur aliquid contra rectam <lb/>
+						fidem dicere, verum etiam ipsam rectam fidem impugnando <lb/>  respuere, Edesseni vero
+						clerici nihil Ibam <lb/> episcopum suum rectae fidei contrarium dixisse  testentur ,  <lb/>
+						 constat ex  attestatione  Edesseni  cleri memoratam   <lb/>  quae ad Marim Persam
+						scripta legitur fuisse. <lb/> epistolam confutatam. Quid evestigio Theophilus  accusator  <lb/>
+						 fuerit prosecutus, diligentius oportet attendi <lb/>  : qui non hanc
+						Edessenorum velut superfluam aut <lb/> ad epistolae ad Marim Persam scriptae
+						subversiones, <lb/> nihil judicans profuturam, credidit omittendam, sed <lb/> magnopere
+						tota mentis intentione asserere nisus est <lb/> has Edessenorum litteras clericorum esse
+						falsatas, ex <lb/> eo scilicet valde permotus quod  nihil  contrarium catholicae <lb/> 
+						fidei Ibam dixisse testati sunt. Quo dicto videatur <milestone unit="PLSection" n="C"/><lb/>
+						 continuo illam epistolam ad Marim Persam <lb/> scriptam, quae contra rectam fidem
+						apertissime loquitur  ,<lb/> impugnatam, istam Edessenorum  epistolam  <lb/> voluit
+						arguere falsitatis, per quam videbat omnes  objectiones  <lb/>  suas fuisse convictas.
+						Cui rei  astruendae proficit  <lb/>  subsequens ordo gestorum. Dum enim Theophilus <lb/> 
+						adversarius Ibae, sicut jam supra, ita et in  hoc loco  <lb/>  quaeri ex gestis in
+						Ephesina secunda habitis quae <lb/> nitebatur astruere poposcisset ab omni episcoporum
+						<lb/> concilio in Chalcedona residentium, gesta in secunda <lb/> Ephesina habita sunt
+						prohibita recenseri. Ex  qua prohibitione  <lb/>  constat assertionem Ibae episcopi comprobatam
+						 ,<lb/> qua se per calumniam et falsis figmentis <lb/> ab Eutyche perhibuit
+						impetitum ; ubi mendacibus <lb/> productis testibus quia epistolam ad Marim Persam
+							<milestone unit="PLSection" n="D"/><lb/> scriptam sua esse Ibas [episcopus] esse
+						dixerit constat <lb/> esse confictum. In his autem Patrum interlocutionibus <lb/>  quae
+						de evacuanda  Ephesina  secunda  synodo sunt  <lb/>  prolatae nihil aliud praeter Domni
+						 depositionem  <lb/> et ordinationem Maximi certum est esse firmatum. <lb/> Domnum vero
+						pro nullo alio crimine nisi quod beati <lb/> Cyrilli duodecim capitula prohibuerat
+						praedicari  clarum  <lb/>  est fuisse damnatum. Unde manifestatione [manifesta <lb/> 
+						ratione] et evidenti veritate  constat , si epistolam <lb/>  ad Marim Persam, quae
+						duodecim capitula <lb/> beati Cyrilli esse definit haeretica, ipsumque beatum <lb/>
+						Cyrillum Apollinari similia conscripsisse, sancti Patres <lb/> in Chalcedona residentes
+						Ibae episcopi eumdem fuisse <lb/>  [forte , addenda vox sensum] ,   sensum] quoquomodo reperissent 
+						,<lb/> eum nullatenus in graviori ejusdem causae cri-<pb n="161"/>
+						<milestone unit="PLSection" n="A"/><lb/>    absolvendum esse decernerent, qui Domni
+						Antiocheni <lb/>  episcopi damnationem de sola tantummodo <lb/> eorumdem duodecim
+						capitulorum praedicatione  prohibita . <lb/>  factam convelli non passi sunt, et ordinationem
+						<lb/>  Maximi firmaverunt.  Quomodo  enim ipsi iidem <lb/> judices in uno eodemque
+						negotio Ibam et Domnum <lb/> ab Ephesina secunda synodo condemnatos sua interlocutione <lb/>
+						 Ibam absolvi decernerent, Domnum paterentur <lb/>  manere damnatum, nisi eum
+						quem absolvi <lb/> decreverunt approbassent in eodem crimine non teneri  ?<lb/> Nam cum
+						apud sanctam  Chalcedonensem  synodum <lb/>  tam exsecrabilis obtrectatio beati Cyrilli
+						et <lb/> duodecim capitulorum ejus fuerit ut pro eis etiam in <lb/> reproba  Ephesina 
+						secunda synodo addictum Domnum <lb/> paterentur manere damnatum, quanta apud  memoratam -
+							<milestone unit="PLSection" n="B"/><lb/>  sanctam Chalcedonensem synodum innocentia
+						<lb/>  Ibae episcopi claruit ut eum in ejusdem Ephesinae <lb/> secundae nefario examine
+						pro eodem adjudicatum <lb/> crimine definiret absolvi. In qua causa nunquam innocens <lb/>
+						 claruisset, si illa ad Marim Persam scelesta <lb/> epistola ejusdem Ibae episcopi
+						potuisset ostendi.</p>
+					<p>XIV. Tractatis igitur omnibus et dilucida ratione <lb/> dissertis per quae tam ex
+						gestis apud  Photium  et  Eustathium  <lb/>  episcopos habitis quam ex eorum judicato <lb/>
+						aliisque pluribus modis evidenter apparuit quod  epistolam  • <lb/>  ad Marim Persam
+						scriptam suam per omnia <lb/> negaverit Ibas episcopus, nunquamque potuerit ex <lb/>
+						ejusdem objectione convinci, restat ut veritate simili <lb/> declaremus quemadmodum a
+						sensu vel definitione <lb/> sive professionibus venerabilium Patrum in  Chalcedona 
+							<milestone unit="PLSection" n="C"/><lb/>  residentium saepedicta epistola ad Marim
+						Persam <lb/>  scripta aliena videatur existere et eorum sententiis <lb/>  obviare.
+						Quod ut omnium reddatur sensibus <lb/> manifestum, primitus inspicere nos oportet quid
+						Patres <lb/>  nostri in Chalcedonensi synodo residentes in <lb/> praedicatione
+						receptioneque beatae recordationis praedecessoris <lb/>  nostri papae Leonis epistolae vel
+						in explanatione <lb/>  sanctae  fidei  sint professi, et pia tenendum <lb/> doctrina
+						tradiderit; ut his inspectis, quantum ab <lb/> eorum definitione traditioneque epistola
+						ad Marim <lb/> Persam scripta dissonet ex his atque contraria demonstretur  ,<lb/> et
+						ob hoc appareat eam Patrum nostrorum <lb/>  sententiis  nullo  modo comprobatam. In
+						actione <lb/> quarta synodi Chalcedonensis,  dum  post lectam beatae <lb/> recordationis
+						papae Leonis epistolam Patres nostri de <milestone unit="PLSection" n="D"/><lb/>
+						confirmatione ejusdem epistolae loquerentur, ita <lb/> dixerunt (Act. 4) : Anatolius
+						reverentissimus  episcopus regiae  <lb/>  Constantinopolis dixit: Epistola sanctissimi
+						<lb/> et apostolici archiepiscopi Leonis consonat symbolo <lb/> trecentorum decem et
+						octo sanctorum Patrum qui apud <lb/> Nicaeam et centum quinquaginta qui apud Constantinopolim
+						<lb/>  postea sunt collecti, qui eamdem fidem confirmaverunt  ,<lb/> sed et his
+						quae in Ephesino sub beatissimo <lb/> et sanctissimo Cyrillo gesta sunt ab universali et
+						sancto <lb/>  concilio, quando maledictum Nestorium damnavit. <lb/> Quapropter
+						consensi, et eidem epistolae libenter subscripsi  .<lb/> Paschasinus et Lucentius viri
+						reverentissimi <lb/> episcopi et Bonifacius presbyter, vicarii sedis apostolicae <lb/> 
+						per Paschasinum dixerunt : Manifestum  est  nec <lb/> poterit  dubitari  unam fidem
+						beatissimi papae sedis <milestone unit="PLSection" n="A"/><lb/> apostolicae rectoris cum
+						trecentorum decem et  octo . <lb/> apud  Nicaeam  Patrum concordare atque ,, sed <lb/>
+						et centum quinquaginta apud Constantinopolim  congregatorum  <lb/>  sacerdotum, qui
+						eamdem fidem firmaverunt  ,<lb/> sed et  Cyrilli  sanctae recordationis viri apud <lb/>
+						Ephesinum, quando Nestorius pro suo errore damnatus <lb/>  est, statuto in nullo
+						penitus discordare; ideoque <lb/> etiam beatissimi  papae  epistola, quae illam fidem exposuisse
+						<lb/>  pro erroris Eutyches causa dignoscitur, uno sensu <lb/> unoque spiritu
+						videtur illi fidei esse conjuncta. Maximus <lb/> reverentissimus episcopus  Antiochiae 
+						Syriae dixit : Concordat <lb/>  epistola sanctissimi archiepiscopi regiae Romae <lb/>
+						Leonis expositionibus trecentorum decem et octo apud <lb/> Nicaeam sanctorum Patrum, et
+						centum quinquaginta <lb/> apud Constantinopolim novam Romam, et in Epheso a <milestone unit="PLSection" n="B"/><lb/> sanctissimo Cyrillo episcopo expositae fidei; et subscripsi
+						 .<lb/> Et post reliquos similia interloquentes episcopi <lb/> Illyriciani triginta
+						duo ex charta dictaverunt notis <lb/> per Sozontem episcopum Philippon ita (Act. 4) :
+						<lb/> Sanctorum Patrum trecentorum decem et octo fidem, <lb/> quae est salus nostra, et
+						servamus, et cum ipsa vitam <lb/> nostram complere oramus; et centum quinquaginta <lb/>
+						ante  dicta fide [forte , antedictae fidei]   ,  fidei] consonant, et <lb/> servantes perexsequimur et
+						omnia quae acta sunt et <lb/> decreta in prima Ephesina synodo, cujus praesides fuerunt <lb/>
+						 beatissimus  Coelestinus  apostolicae sedis princeps, <lb/> et beatissimus Cyrillus
+						magnae civitatis Alexandriae, et <lb/>  orthodoxorum   orthodoxum] esse sanctum Patres
+						<lb/>  nostrum archiepiscopum Leonem cognovimus.  Sed  <lb/> et reliqui episcopi
+						similia sunt professi.</p>
+					<p>
+						<milestone unit="PLSection" n="C"/>XV. His ergo se ita habentibus, nulli venit in dubium
+						<lb/>  quin Patres nostri ita a se  venerabiliter  credemonstretur <lb/>  suscipi beati
+						Leonis epistolam, si eam cum  Nicaenae  <lb/>  Constantinopolitanae synodorum, tum  etiam 
+						<lb/> beati Cyrilli in Ephesina prima expositis assererent <lb/> convenire doctrinis. Et
+						si illa  tanti  pontificis et tanta <lb/> orthodoxae fidei luce praefulgens epistola his
+						exigit <lb/> comparationibus approbari, quomodo illam ad Marim <lb/>  Persam epistolam,
+						quae specialiter Ephesinam <lb/> primam synodum respuit et beati Cyrilli exposita <lb/>
+						 dogmata  definivit haeretica, ab iisdem Patribus credatur <lb/>  orthodoxa nominari, cum
+						illa condemnet quorum <lb/>  collatione tanti pontificis, ut dictum est, meruit <lb/>
+						doctrina laudari? Nam et universalis synodi Chalcedonensis <lb/>  acclamatio  una [forte , unam] 
+						, unam] fuisse utriusque ,<milestone unit="PLSection" n="D"/> <lb/> id est beati
+						Leonis et beati Cyrilli,  fidem  atque <lb/> doctrinam evidentissime comprobavit, ita
+						dicens <lb/> (Act. 2) : Pie et vere Leo docuit. Cyrillus ita docuit. <lb/> Cyrilli
+						aeterna memoria. Leo et Cyrillus similiter docuerunt  .<lb/> Anathema qui sic non
+						credit. Unde fit ut illa <lb/> epistola ad Marim Persam non solum non suscepta, <lb/>
+						verum etiam anathematizata monstretur, dum dogmata <lb/>  Cyrilli in Ephesina prima
+						exposita appellat <lb/> haeretica ;  quae  qui non sequitur , anathematis ex <lb/> sententia
+						sanctae Chalcedonensis synodi poena damnatur  .<lb/> Huc accedit ejusdem venerandae
+						Chalcedocuerunt <lb/>  synodi etiam fidei exclamatione sententia, <lb/> quae ad  locum ,
+						ita se habet (Act. 5) : Definimus igitur <lb/>  ordinem et omnes formas fidei
+						conservantes nosque <lb/> quae apud Ephesum facta est sancta synodus, cujus<pb n="163"/>
+						<milestone unit="PLSection" n="A"/><lb/> praesides fuerunt sanctae memoriae  Coelestinus 
+						Romanae <lb/> urbis antistes et Cyrillus Alexandrinae Ecclesiae, praefulgere <lb/>  quidem
+						rectae et immaculatae fidei expositionem <lb/> trecentorum decem et octo sanctorum et
+						beatissimorum <lb/>  Patrum apud Nicaeam sub piae recordationis  Constantino principe  <lb/>
+						 congregatorum, obtinere autem etiam <lb/> centum quinquaginta sanctorum
+						Patrum apud Constantinopolim <lb/>   definita , ad interruptionem quidem exortarum <lb/>
+						 haereseon, confirmationem vero ejusdem catholicae <lb/> nostrae fidei. Symbolum apud
+						Nicaeam trecentorum decem <lb/>  et  octo . Et post alia  (Act . 5) : Propter illos vero
+						<lb/> qui mysterium dispensationis corrumpere moliuntur, et <lb/> purum hominem esse qui
+						ex sancta Virgine Maria natus <lb/>  est impudenter delirantes, beati Cyrilli
+						Alexandrinae <lb/>  Ecclesiae praesulis synodicas ad Nestorium et ad <milestone unit="PLSection" n="B"/><lb/> alios per Orientem  congruas  existentes suscipit ad convincendas
+						<lb/>  Nestorii vesanias ; et reliqua.</p>
+					<p>XVI.  Ecce omnium fidelium   sensibus patet quod <lb/> sancti Patres nostri in Chalcedona
+						 residentes , cum <lb/> jam de catholicae fidei  explanatione  senserint, ordinem <lb/>  et
+						omnes formas fidei  quae  in Ephesina prima  ,<lb/> cui beatae memoriae Coelestinus et
+						beatus  Cyrillus  <lb/>  Alexandrinus episcopus praesederunt , habitae <lb/> sunt, sicut
+						Nicaeni atque  Constantinopolitani  communi <lb/>   [forte , concilii I ,   circumspectionem se
+						servare <lb/> professi sunt  ,  illorum  definita  suam procul dubio <lb/>  fidem  esse
+						testantes. Per quod apparet omne quidquid <lb/>  ab ordine vel formis in Ephesino primo
+						concilio <lb/>  habitis discrepat, eisdemque monstratur esse <lb/> contrarium,
+						 beatorum  Chalcedonensium quoque Patrum <milestone unit="PLSection" n="C"/><lb/> 
+						 impugnare   impugnari] sententiis. Porro <lb/> autem epistola ad Marim Persam
+						scripta, dicende <lb/> beatum  Cyrillum  haereticum ejusque duodecim capitula <lb/>  impia
+						et fidei rectae contraria Nestoriumque judicio <lb/>  et inquisitione non facta
+						damnatum, omni ordini <lb/>  atque omnibus formis in Ephesina priu. synodo <lb/>
+						habitis manifestatur esse contraria. Unde  fit  ut valde <lb/> demonstretur absurdum eorum
+						decretis illam putari <lb/> epistolam esse susceptam quae apertissime ipsorum <lb/>
+						impugnat de fide judicium, ut per hoc non solum <lb/> praecedentes Patres, sed
+						semetipsos, quod vel dici <lb/> nefas est, aliqua videantur contrarietate destruere.
+						<lb/> Nam hujusmodi omnia quae in derogatione Ephesini <lb/> primi concilii dicta sunt
+						vel dicenda erant, etiam in <lb/> hac quam de fide sancti Patres Chalcedonensis synodi
+							<milestone unit="PLSection" n="D"/><lb/> protulerunt explanatione fuisse damnata ex
+						 his  quae <lb/> subsequuntur evidentissimae veritatis luce conspicitur  ,<lb/> quae ita
+						se habent (Ibid.) : His igitur cum omni <lb/> undique  scrupulositate  et diligentia a
+						nobis dispositis, <lb/> definit sancta et universalis synodus alteram fidem <lb/> nulli
+						licere proferre vel  conscribere ,  aut componere, <lb/> aut sentire, aut docere aliter.
+						Eos autem qui ausi sunt <lb/> componere fidem alteram, aut proferre, aut docere, <lb/>
+						aut tradere alterum symbolum volentibus vel ex gentilitate <lb/>   ad  agnitionem
+						veritatis, vel ex Judaeis, vel ex <lb/> haeresi quacunque converti, hos, si episcopi
+						fuerint aut <lb/> clerici, alienos esse episcopos ab episcopatu, et clericos <lb/> a
+						clero; si vero laici aut monachi fuerint, anathematizari <note type="footnote"> * Hic
+							nicndosus codex videtur. II ARD. </note>
+						.<milestone unit="PLSection" n="A"/> <lb/> Cum ergo dixerint Patres nostri ordinem
+						et omnes <lb/>  formas fidei Ephesini primi concilii se servare, <lb/> et nulli licere
+						alteram fidem proferre, conscribere, <lb/> vel sentire, seu tradere, aut aliter docere,
+						omnesque <lb/> qui  praesumunt  talia esse damnatos, epistolam vero <lb/> ad Marim Persam
+						scriptam impugnantem per omnia <lb/> beati Cyrilli expositam in Ephesina prima doctrinam
+						<lb/> non solum aliter, sed et contrarie non dubitemus :  ,<lb/> constat
+						synodali judicio ejusdem damnationis <lb/> sententiam comprehensam, ac propterea ab eis
+						a <lb/> quibus epistola ad Marim  Persam  apertissime praefulgere <lb/>  legitur, multo
+						magis clarum est non fuisse <lb/>  susceptam .</p>
+					<p>XVII. Nec quemquam debet permovere fidelium <lb/> quod quidam subripiendo nituntur
+						astruere  quaedam  <milestone unit="PLSection" n="B"/><lb/> in hac epistola ad Marim ita
+						dicta,  et  quasi his quae <lb/> bene dicunt possint convenientia demonstrari; cum <lb/>
+						haereticorum consuetudo sit venena sua fucatis  cetare sermon . bus  <lb/>  sermon. et verba
+						praemittere quae quasi ordini <lb/>  videantur professionibus consonare, et reservare <lb/>
+						 <note n="a"/> indulgentia malignos aditus per quos eorum <lb/>  pestilentia intromittatur
+						erroris , sicut de eis <lb/> propheta testatur : Mollierunt sermones suos super <lb/>
+						oleum, et ipsi sunt  jacula  (Psal. LIV, 22) ; et iterum : <lb/> Quoniam in  multis , erant
+						mecum (Psal. LIV, 19).  De  <lb/> quibus etiam et doctor gentium dicit Apostolus : <lb/>
+						 Habentes : formam pietatis, virtutem autem ejus abnegantes <lb/>  (II Tim. III, 5).  Neque 
+						enim Nestorio prodest <lb/> duas naturas et unum filium confiteri, quamvis et <lb/>
+						orthodoxis sit communis ista professio, cum idem <milestone unit="PLSection" n="C"/><lb/> Nestorius duarum naturarum unam subsistentiam, <lb/> quod est proprium
+						orthodoxorum, dicere recusans, <lb/> fraudulenter se duas naturas et unum  filium  dixisse
+						<lb/> evidenter aperiat. Unde quia antedicta epistola ad <lb/> Marim Persam per hoc tam
+						manifestum malum quod <lb/> de beato Cyrillo et de Patribus qui primo in Ephesino <lb/>
+						convenerunt asseruit, non dubitatur quid ejus scriptor <lb/> defendendo Nestorio aut
+						prava ejus recipienda  doctrina  <lb/>  senserit, qui de ejusdem Nestorii damnatoribus
+						<lb/> vel sanctis eorum dogmatibus tam impia et nefanda <lb/> conscripsit, aperta
+						veritate fit cognitum  eamdem . ad <lb/> Marim Persam epistolam Nestoriani sensus fraude
+						<lb/> atque perversitate conscriptam. Et ideo quamvis  hoc  <lb/> solum ad reverentiam
+						sanctae Chalcedonensis synodi <lb/> conservandam et ad haereticorum excludendas  insidias -
+							,<milestone unit="PLSection" n="D"/> <lb/> qui ad Marim Persam epistolam a nostris
+						approbatam <lb/>  Patribus mentiuntur,  videatur  satis superque <lb/>  sufficere quod
+						de eadem suscipienda Patres  nostros  <lb/>  nullo modo judicare potuisse multipliciter
+						 superius  <lb/>  disserta testantur, quibus ab ipso initio quo Ibas <lb/> episcopus
+						sanctam Chalcedonensem synodum  videtur  <lb/> ingressus, violentiam et falsas
+						criminationes in  secunda  <lb/>  Ephesina queritur fuisse perpessus, ex gestis <lb/>
+						Photii et Eustathii eorumque judicato Ibae claruit <lb/> epistolam non fuisse. Quod post
+						lectum  ex  gestis <lb/> Photii et Eustathii ejusdem epistolae in Chalcedonensi <lb/>
+						concilio textum manifestissime ostendit negantis quoque <lb/>  Ibae  professio  ad
+						excludendam illam ad Marim<pb n="165"/>
+						<milestone unit="PLSection" n="A"/><lb/> aliam  Edessenorum  pro se relegi postulantis.
+						Quod <lb/> Theophili inimici Ibae episcopi deserti suffragio  veritatis  <lb/>  demonstrat
+						nihilominus evidenti ratione suffragium  ,<lb/> qui non  illam  ad Marim Persam quam
+						objecerat <lb/>  praesumpsit astruere,  sed  illam potius quam pro se <lb/> Ibas
+						episcopus relegi poposcerat, et se incompetenter <lb/> tamen nisus est arguere
+						 falsitatis . Quod ipsorum Patrum <lb/>  nostrorum in  Chalcedona  residentium Domnum <lb/>
+						in eodem accusatum negotio  permittentes [forte , permitternium]  ,  <lb/> mitternium] manere damnatum
+						Ibamque absolvendum <lb/>  patefecit  absque ambiguitate sententia quod idem <lb/> ejusdem
+						venerandi Chalcedonensis synodi evidentius <lb/>  multipliciter  decretis ostenditur,
+						 dicentes    <lb/> tis] suam fidem esse quam illa ad Marim  impugnat  <lb/>
+						epistola, et hoc eam  [forte , et per hoc] corum ,   hoc]  damnatam <milestone unit="PLSection" n="B"/><lb/>  fuisse judicio quorum fingitur interlocutione <lb/> suscepta.</p>
+					<p>XVIII. Quamvis igitur et ex suprascripta luce  veritatis  <lb/>  indubitanter appareat
+						nulla nos necessitate <lb/> constringi quaerere ex cujus epistolae textu aliqui  t ' a 4rum Cbalcedona residenlium -
+						<lb/>    suis  interlocutionibus  <lb/> Ibam episcopum
+						pronuntiaverint apparuisse  catholicum   ,<lb/> quod nobis valde sufficiat evidentissime
+						demonstratum <lb/>  quod de epistola ad Marim Persam scripta <lb/> nullum tale
+						potuerint proferre   judicium. Hoc enim <lb/> nobis sufficienter contra haereticorum
+						machinas  suffragatur   ,<lb/> qui volunt hanc ad Marim Persam epistolam <lb/> a sancto
+						 Chalcedonensi  synodo videri susceptam, <lb/> quod non solum docuimus non videri
+						susceptam,  veritatis  <lb/>  etiam a Patribus nostris omnimodo refutatam <milestone unit="PLSection" n="C"/><lb/> fuisse monstravimus, quippe qui eam inter hostes <lb/>
+						 suae  rectae  fidei  evidentissime prolata sententia damnaverunt  .<lb/> Ergo quia, ut
+						diximus, co. contra  adversarios <lb/>  sanctae Chalcedonensis synodi, utrum suscepta <lb/>
+						an non suscepta vere possit ostendi, videtur nobis <lb/> fuisse negotium, et illis
+						susceptam supervacue suspicantibus  ,<lb/> nos ex ipsis etiam Patrum vocibus potius
+						<lb/> declaravimus improbatam, non est necessarium nos <lb/> cogi dicere de qua epistola
+						Patres nostri in illis suis <lb/> interlocutionibus senserint, tum nobis abunde sufficiat
+						<lb/>  quod de  ista [forte , quod licet  ,   ista] unde vertatur <lb/>  causa non
+						senserint, tamen inspectis singulorum <lb/> Patrum interlocutionibus et superiori quam
+						disseruimus <lb/>  rectitudini coaptatis, hoc quoque de qua epistola <lb/> locuti sunt
+						facile piam sectantibus intelligentiam <milestone unit="PLSection" n="D"/><lb/> poterit
+						apparere. Ubi primum omnium nobis est diligenter <lb/>  atque sagaciter  intuendum  quod
+						Patrum nostrorum <lb/>  uno sensu unaque mente de absolutione Ibae <lb/> episcopi
+						consonae fuerint, prolatae sententiae  dicentium  <lb/> quod idem Ibas episcopus ab omnibus
+						quae  ei  ab ac <lb/>  cusatoribus  objecta sunt sit  obnoxius  innoxius] approbatus  .<lb/>
+						Legatorum enim sedis apostolicae interlocutio <lb/>  in prima sui parte ita se habet :
+						Relectis  chartis   ,<lb/> agnovimus ex sententia reverentissimorum episcoporum <lb/> 
+						Ibam reverentissimum innoxium  approbari ; quam <lb/> evidenter ab Anatolio
+						Constantinopolitano episcopo <lb/> interlocutio prolata subsequitur exprimens quod ab
+						<lb/> his quae in eum accusatores intulerunt innocens fuisset <lb/>  inventus. Sic enim
+						dicit (Act. 10): Reverentissimorum <lb/>  episcoporum et judicum fides ac lectio omnium
+							<milestone unit="PLSection" n="A"/><lb/> quae sunt subsecuta demonstrant innoxium Ibam
+						re veritatis  <lb/>  ab his  quae  in eum  accusatores intulerant   . <lb/> Cui planius adhuc
+						superiorum sensum astruens Maximi <lb/>  Antiocheni sententia consequenter adjungitur
+						ita <lb/> se habens : Ex his quae modo relecta sunt manifestum <lb/> est quia ab omnibus
+						ei illatis  reverentissimus Ibas   innocens <lb/>  est repertus.</p>
+					<p>XIX. Oportet igitur intueri  quemadmodum  interlocutionem <lb/>  trium istorum primum
+						locum tenentium <lb/> judicum  adiciendam [ ad abiciendam]  [  abiciendam] et reprobandam <lb/> ad  Marim 
+						Persam epistolam sententia, etsi diverso <lb/> prolata ore, uno tamen spiritu .dictata
+						conveniat. <lb/> Quid est enim quod dicitur per Photii et Eustathii <lb/> constitutum et
+						ex relectis chartis Ibam innoxium <lb/> ab omnibus quae ei  accusatores  intulerunt  approbari -
+							,<milestone unit="PLSection" n="B"/> <lb/> nisi quia epistola illa in
+						obtrectationem doctrinae <lb/> beati Cyrilli et in defensionem Nestorii, ipsius, ut ita
+						<lb/> dicam, orthodoxae fidei nitens fundamenta subvertere  ,<lb/> ab adversariis, sicut
+						revera est, pro magno <lb/> crimine Ibae  objecta  episcopo, ab eodem aliena reperta <lb/>
+						 suprascriptorum, ut dictum est, trium Patrum <lb/> decretis evidentissime
+						reprobatur. Neque enim  ab  <lb/> omnibus qu; ab accusatoribus ei illata sunt juste <lb/>
+						pronuntiari innocens videbitur si epistolam ad Marim <lb/> Persam, quae maxima pars est
+						criminum, imo in qua <lb/> omnia ei objecta crimina continentur,  his interlocutionibus   <lb/>
+						 non probetur exclusa. Et ideo quoniam certum <lb/>  est, si ejus doceretur
+						epistola, quod innocens <lb/> pronuntiari non possit, constat, quia innocens pronuntiatus <lb/>
+						 est, ejus epistolam non fuisse. His igitur <milestone unit="PLSection" n="C"/><lb/> interlocutionibus quia maxime ad excludendam atque <lb/>  refutandam ad Marim
+						Persam epistolam con veritatis  <lb/>  sensu atque studio pro absolutione Ibae episcopi <lb/>
+						 sint  prolatae  apertissime demonstratis, consequens <lb/>  est ut caeterorum Patrum
+						idem sentientium <lb/> definitiones pari veritate debeamus inspicere, tacitis <lb/>
+						paulisper reverentissimorum Juvenalis atque Eunostrorum <lb/>  episcoporum
+						interlocutionibus; quas licet ex alia <lb/> parte, ipsi tamen sensui convenire  suo  lo
+						monstravimus  .<lb/> Itaque Thalassius Caesareae Cappadociae episcopi <lb/>  sic dicit
+						(Act. 10) . Reverentissimis episcopis <lb/> Photio et Eustathio comprobantibus Ibae
+						negotium, et <lb/> non adjudicantibus eum, horum opinione suasus et ego <lb/> volo
+						haberi eum in sacerdotio, sicut et sanctissimis <lb/>  praesulibus  visum  est , quia maxime
+						gestis suscepit ut <milestone unit="PLSection" n="D"/><lb/> anathematizaret illa quae
+						ejus accusatores adversus <lb/> eum deposuerant ex scripto. Cui fidelium et  perspicuae 
+						<lb/>  veritatis amatori non clareat omnem quam de <lb/> abnegata vel refutata ad
+						Marim Persam epistola superius <lb/>  reddidimus rationem et  praecedentium  Patrum <lb/>
+						interlocutionibus convenire monstravimus, hac quoque <lb/>  reverentissimi Thalassii
+						prolata sententia plene <lb/> ac breviter explicari. Cum enim dicit Photii et Eustathii <lb/>
+						 comprobantium Ibae negotium et non adjudiligenter <lb/>  eum sequi sententiam,
+						et consequenter adjungit <lb/>  quod ipse Ibas episcopus ad innocentiae suae <lb/>
+						cumulum quae ei sunt ab accusatoribus ex scripto <lb/> objecta damnaverit, indubitanter
+						ostendit ita  et  in <lb/> Chalcedonensis synodi examine et in illo  Photii  et <lb/>
+						Eustathii judicio ab illius epistolae ad Marim Persam<pb n="167"/>
+						<milestone unit="PLSection" n="A"/><lb/> crimine alienam Ibae dictationem atque
+						 conscientiam  <lb/> fuisse repertam, ut illic omnia, non solum adversariis <lb/>  non
+						probantibus, aut Iba episcopo denegante, <lb/> verum etiam damnante, fuerint improbata.
+						Unde <lb/> constat epistolam ad Marim Persam illa quae accusatores <lb/>  objecerant
+						crimina continentem non solum Patrum <lb/>  in Chalcedona residentum judicio, sed
+						ipsius <lb/> Ibae sententia, sicut Photii atque Eustathii constituto <lb/> edocti
+						memorati Patres affirmant, fuisse damnatam. <lb/> Eusebii quoque Ancyrae, Stephani
+						Ephesi, Diogenis <lb/> Cyzici, et Romani Myrorum Lyciae, quamvis diversis <lb/> locis,
+						uno tamen sensu prolatae sententiae superiorum <lb/>  judicum decreta confirmant. Nam
+						alii Photii et <lb/> Eustathii faciendo judicati memoriam, alii ex damnatione <lb/> 
+						Nestorii ejusque haeresis Ibae episcopi innocentiam <milestone unit="PLSection" n="B"/><lb/>
+						 comprobantes, epistolam ad Marim Persam, <lb/> quae excusat Nestorium et beatum
+						Cyrillum appellat <lb/> haereticum, ad Ibam episcopum non solum non attenuisse  ,<lb/>
+						verum etiam ab eo damnatam esse testantur. <lb/> Joannes episcopus Sebastiae, Seleucus
+						episcopus Amasiae  ,<lb/> Constantinus episcopus Melitinae, Patricius episcopus <lb/> 
+						Tyanorum, Petrus episcopus Gangrorum, et <lb/> Artanius episcopus Trapezuntis, similiter
+						consenserunt <lb/>  ita dicentes (Act. 10): Definitio reverentissimorum <lb/> 
+						episcoporum Photii et Eustathii demonstrat innoxium <lb/>  reverentissimum Ibam.
+						Similiter autem et <lb/> ejus abnegatio facit nos in eo quod receperit proniores. <lb/>
+						Qua interlocutione memoratorum sacerdotum evidenter <lb/>  apparet per haec duo Ibam
+						episcopum de his quibus <lb/>  accusatus est innoxium esse repertum, id est ex
+							<milestone unit="PLSection" n="C"/><lb/> definitione Photii atque  Eustathii 
+						episcoporum et ex <lb/> sua abnegatione. Porro definitione Photii et Eustathii <lb/> 
+						declaratur quia licet false ab accusatoribus fuerit <lb/> impetitus, tamen ad
+						satisfactionem vel false objectorum <lb/>  prone sapuerit ex scripto quid de recta fide
+						senserit <lb/>  profiteri, et ex abundanti anathematizaverit <lb/> Nestorium, et.
+						habere se dixerit omnia quae in Ephesino <lb/>  primo concilio placuerunt. Deinde quia
+						ejus <lb/> quoque abnegatio, per quam se etiam in  Chalcedonensi  <lb/>  concilio post
+						lectionem ad Marim Persam episcopus  ,<lb/> quae ejusdem Ibae episcopi apertissimae et
+						piae <lb/> confessioni contraria est, ab  his  quae sibi illata sunt <lb/> existere
+						perhibuit alienum, proniores efficeret animos <lb/>  judicantum ut crederent quia
+						spretis et refutatis <lb/> quae ab eo negata sunt, illa tantum et antea habuerit
+							<milestone unit="PLSection" n="D"/><lb/> quae se habuisse et recepisse professus est.
+						Quibus <lb/> ita monstratis, clarum est epistolam ad Marim Persam <lb/>  omnibus quae
+						se recepisse Ibas dixit contrariam <lb/> existentem, et illa potius quae anathematizavit
+						Ibas <lb/> episcopus defendentem, nullatenus ab Iba episcopo <lb/> fuisse dictatam.</p>
+					<p>XX. Nam ut omnibus fieret manifestum quod Ibas <lb/> negando ea quae ab accusatoribus
+						illata sunt, illa <lb/> quae de pia fide  confessus  est reddiderit certiora, ita <lb/>
+						interlocutio dicit : Et abnegatio ejus fecit nos in eo <lb/> quod receperit proniores.
+						Ac si diceret: Ex eo credibilius <lb/>  quae de pia est fide professus accipimus  quod 
+						<lb/> illa quae ei objecta fuerant abnegavit, ut non velut <lb/> objectorum veritate
+						convictus, tanquam ex necessitate <lb/>  corrigens, quid de pia fide sentiret
+						ostenderet, <milestone unit="PLSection" n="A"/><lb/> sed objectorum magis negatione
+						purgatus, ita et <lb/> antea sensisse quemadmodum sentire professus est <lb/>  crederetur 
+						. Sicut enim facti confessio nocentem vel <lb/> in praeteritum facere potuit, ita
+						non convicta negatio <lb/>  reddidit etiam de praeteritis innocentem. Cui negationi 
+						,<lb/> per quam Ibas episcopus epistolam ad Marim <lb/>  Persam ostenditur refutasse,
+						Eunomii atque Juvenalis <lb/>  episcoporum interlocutio competenter aptatur. <lb/> Quas
+						interlocutiones primitus consonare Deo juvante <lb/> monstrandum est, deinde docendum
+						quemadmodum <lb/> epistolam ab Iba negatam esse confirment, quae ita se <lb/> habent
+						(Act. 10) : Juvenalis reverentissimus episcopus <lb/>  Hierosolymitanus   dixit: Qui
+						convertuntur. hos scripta <lb/> divina suscipi jubent. Quapropter et ab haereticis revertentes
+						<lb/>  suscipimus. Unde et praevideo reverentissimum <milestone unit="PLSection" n="B"/><lb/>  Ibam mereri clementiam, quia et senex est, et <lb/> ut habeat
+						episcopatus gradum, esse catholicum. Eunomius <lb/>  episcopus Nicomediae dixit: Jam
+						quidem ex his <lb/> quae relecta sunt innoxius approbatus est venerabilis <lb/> Ibas. In
+						quibus etenim dicendo male culpare visus est <lb/> beatissimum Cyrillum, in postremis
+						recte confessus, <lb/> illa quae culpaverat refutavit. Unde et ego anathematizantem <lb/>
+						 eum Nestorium et Eutychen et impia eorum <lb/> dogmata, et consentientem his
+						quae a sanctissimo archiepiscopo <lb/>  Leone scripta sunt et ab hac universali <lb/>
+						synodo, dignum esse episcopatu decerno. Antea ergo <lb/> nobis inspicienda est Eunomii
+						interlocutio, quae planius <lb/>  Ibae episcopi intellectum asserens, quid ex ea <lb/> re
+						etiam episcopus Juvenalis sensit exponit. Dicens <lb/> enim ex his quae relecta sunt Ibam
+						innoxium comprobatum ,<milestone unit="PLSection" n="C"/> <lb/>  Photii  et  Eustathii 
+						sicut et superiores Patres <lb/> comprobat sine ambiguitate judicium, ut his verbis
+						<lb/> etiam negationem Ibae episcopi et pro eodem  Iba  <lb/> attestationem Edessenorum
+						epistolae clericorum comprehendere <lb/>  videatur. Pro qua re gestorum apud Photium <lb/>
+						 et Eustathium habitorum ordinem competenter <lb/> attendens, ne quis in aliquorum
+						animis adversus Ibam <lb/> episcopum ex hoc  scrupulus  remaneret quod aliquando <lb/> 
+						ante  unitionem  aliter intelligens beati Cyrilli <lb/> doctrinae fuerat oblocutus,
+						necessarie purgat quod <lb/> correcta Ibas intelligentia sua, beati Cyrilli orthodoxa
+						<lb/> dogmata suscipiens, et ea recta esse confessus, prioris <lb/>  intelligentiae,
+						quam ante unitionem Ecclesiarum <lb/> habuit, refutavit errorem, ostendens evidentissime
+						<lb/> ab Iba episcopo quod ejus  fuerit   quae ad Marim Persam <milestone unit="PLSection" n="D"/><lb/>  legitur epistola denegatum. Cum enim approbet <lb/> ab his quae ante
+						unitionem Ecclesiarum Ibas de beato <lb/> Cyrillo dixerat recedentem, post unitatem quia
+						se <lb/> recte habeant fuisse confessum, epistola autem ad <lb/> Marim Persam post
+						unitatem scripta beati Cyrilli <lb/> dicta esse haeretica mentiatur, ipsumque in Apollinaris
+						<lb/>  haeresim incidisse confingat, certum est hanc <lb/> ab Iba etiam praesentis
+						interlocutionis testimonio denegatam  .<lb/> Cui sensui Juvenalis episcopi convenit
+						sine <lb/> ambiguitate sententia; quae cum astruit Ibam orthodoxum <lb/>  exstitisse,
+						ostendit ab eo epistolam quae  ad  <lb/> Marim Persam scripta est  denegatam , quippe tanquam
+						<lb/>  rectis dogmatibus inimicam, et Photii atque <lb/> Eustathii caeterorum
+						decretis conveniens approbat <lb/> judicatum. Cum vero  conversum  dicit debere suscipi,<pb n="169"/>
+						<milestone unit="PLSection" n="A"/><lb/> Eunomii interlocutioni congruens, de  beati 
+						Cyrilli <lb/> dogmatibus, de quibus ante unionem aliter senserat, <lb/> eum jam post
+						recte sicut oportuit sentientem ad <lb/> congruae intelligentiae sensum approbat esse
+						conversum  .<lb/> Per quod, sicut multipliciter jam ostensum est, <lb/> constat illam
+						epistolam quae post unitionem contraria <lb/>  loquitur Ibae episcopi non fuisse.</p>
+					<p>XXI. Quamvis igitur idonee sufficienterque tam <lb/> ex supra memoratis omnibus
+						assertionibus quam ex <lb/> interlocutionibus Patrum in Chalcedona residentum <lb/> de
+						Ibae episcopi absolutione sibi per omnia consonantibus <lb/>  fuerit demonstratum quia
+						epistola ad Marim <lb/> Persam rectis inimica dogmatibus et ejusdem Ibae <lb/>
+						professioni contraria, ab eodem fuerit abnegata, et <lb/> Patrum multimode refutata
+						judicio, et per hoc  clareat  <milestone unit="PLSection" n="D"/><lb/>  a nullo ex eodem
+						Patrum numero potuisse suscipi  ,<lb/> quam et ipse cui objecta est negando a se <lb/>
+						repulit, et ubique eorumdem Patrum de pia fide sententia <lb/>  prolata damnavit, tamen
+						ex abundanti intelligere <lb/>  adjacet de qua epistola legatorum sedis apostolicae <lb/>
+						 vel Maximi Antiocheni sensisse interlocutio <lb/> videatur, et ut illud quod
+						fidelium decet sensibus <lb/> inhaerere, nihil in Patrum decretis inveniri contraria <lb/>
+						 demonstremus. Apertissime creditur de epistola <lb/> Edessenorum clericorum, quam
+						Ibas episcopus pro <lb/> se relegi postulavit, Patres nostros in suis fecisse <lb/>
+						interlocutionibus mentionem. Quam utique Edessenorum <lb/>  clericorum epistolam ex
+						illa parte gestorum <lb/> apud Photium et Eustathium habitorum, quam callide <lb/>  ac
+						fraudulenter adversarius ejus omiserat, relegi <milestone unit="PLSection" n="C"/><lb/>
+						festinavit, ut illam ad  Marim , quae ex ipsis  idem  <lb/> [item] gestis contra eum relecta
+						fuerat, confutaret, <lb/> per quam supradictam ad Marim Persam epistolam <lb/> quia Ibas
+						rectam  fidem  impugnaverit, et beati Cyrilli <lb/> dogmata in Ephesina prima synodo
+						tradita omni <lb/> impietate plena et rectae fidei dixerit esse contraria, <lb/>
+						adversarii ostendere nitebantur. Unde necesse fuit <lb/> illam quae dirigentibus
+						Edessenis clericis Photio et <lb/> Eustathio episcopis jam pridem tradita fuerat, et in
+						<lb/> eorum recensita judicio, ipsisque gestis inserta, ad <lb/> sui purgationem Ibas in
+						Chalcedonensi quoque synodo <lb/>  relegi precaretur, quae inter caetera ita dicit
+						<lb/> (Act. 10) : Anathematizantes nos ipsos, et terribilis <lb/> gehennae nosmetipsos
+						obnoxios facientes, si novimus <lb/> aliquid tale dictum ab eo aut aliquid aliud
+						contrarium <milestone unit="PLSection" n="D"/><lb/> catholicae fidei. Si enim aliquo tali
+						dicto passi fuissemus <lb/>  communicare ei qui dixit, aut missas cum eo tenere 
+						,<lb/> ultimo supplicio fuissemus obnoxii, tanquam communicantes <lb/>  tali errori, et
+						caetera. Ut per hoc quod <lb/> asserunt Edesseni clerici nihil eum tale vel aliquid
+						<lb/> aliud orthodoxae  fidei  dixisse contrarium, illa omnia <lb/> quae rectae fidei
+						contraria ad Marim Persam epistola <lb/> continebat, et ab adversariis ad impugnationem
+						Ibae <lb/> episcopi quia ab eo dicta fuerint fingebantur  excludere  <lb/>  
+						excluderent], et negationem suam idem <lb/>  Ibas  episcopus in qua paulo ante dixerat
+						quia et ab his <lb/> quae mihi illata sunt  alienus  existo, apertissime confirmaret 
+						.<lb/></p>
+					<p>XXII. Hanc ergo Edessenorum clericorum legati <lb/> apostolicae sedis ante oculos
+						habentes epistolam, <milestone unit="PLSection" n="A"/><lb/> dum prius ex  lectione 
+						chartarum et ex judicato <lb/>  Photii  et Eustathii episcoporum dixissent Ibam innoxium <lb/>
+						 comprobatum, secuti sunt dicentes (Act. 10): <lb/>  Relecta  enim ejus epistola
+						agnovimus eum esse catholicum  ;<lb/> ut primum ex ipso rerum (apud Photium et <lb/>
+						Eustathium) gestarum ordine de ea, id est Edessenorum  ,<lb/> quae apud eos postremo
+						loco relecta monstratur <lb/>  epistola, suis credantur interlocutionibus  censuisse  
+						.<lb/> Quod autem ejus, id est Ibae episcopi, eam <lb/>  significasse  videntur epistolam
+						signante  magis   <lb/>  hanc ipsius appellando quam pro se relegi <lb/>
+						 petiit, illam potius ad Marim Persam, quae confirmaret <lb/>  eum prolata est,
+						ostendunt ipsius non fuisse, illo <lb/> loquendi modo quo indubitanter omnes homines et
+						<lb/> de aliis et de se uti solent, ut eorum documenta, <milestone unit="PLSection" n="D"/><lb/> chartae, epistolae dicantur qui eis pro se utuntur, et <lb/> quorum
+						ostenduntur prodesse negotiis. Quam enim <lb/> illi sanctissimi cognitores potius Ibae,
+						quem absolvebant  ,<lb/> esse epistolam judicarent, illam ad Marim Persam  ,<lb/> quam
+						pro magnis criminibus quae in ea epistola <lb/> continentur ad Ibam impugnandum
+						objecerant adversarii <lb/>  ejus,  an  illam Edessenorum, quae eum ab <lb/> omnibus
+						purgat objectis; illam ad Marim epistolam, <lb/> quam objectam sibi ipse Ibas, sicut
+						multipliciter <lb/> ostensum est, abnegavit, an illam Edessenorum, <lb/> quam ad illius
+						epistolae ad Marim impugnationem et <lb/> pro suae orthodoxae  fidei  approbatione
+						relegeretur <lb/> exegit; illam ad Marim Persam, quae eum, si ipsius <lb/> probaretur,
+						rectam  fidem  impugnasse astruit, an <lb/> illam Edessenorum, quae eum contra catholicam
+						fidem <milestone unit="PLSection" n="C"/><lb/>  nihil dixisse testatur; illam ad Marim
+						Persam  ,<lb/> post cujus lectionem statis Ibas episcopus innoxium <lb/>  quia et ab
+						his quae sibi illata essent alienus <lb/>  existeret, an illam Edessenorum, per quam
+						<lb/> Theophilus adversarius ejus cognoscens se fuisse confirmaret  ,<lb/> eum falsitatis
+						crimine nitebatur infringere. <lb/> Ergo illa ad  Marim  Persam accusatoris potius, qui
+						<lb/> eam protulit nec probavit, quam ibae, qui eam negavit  ,<lb/> esse justissime ab
+						omnibus vel aestimata est vel <lb/> aestimari debet epistola. Nunc illud nihilominus est
+						<lb/> sagacius intuendum, per quam potissimum orthodoxus <lb/>  Ibas episcopus a
+						vicariis sedis apostolicae fuerit <lb/> judicatus, per illam ad Marim Persam, quae cum
+						<lb/> apertissime Ephesinae primae    synodo] et beati <lb/> Cyrilli  fidei  ibi
+						expositae, quam Chalcedonense concilium <milestone unit="PLSection" n="D"/><lb/> 
+						firmat ac sequitur, contradicit, scriptorem suum <lb/> ostendit haereticum, an per istam
+						Edessenorum, quae <lb/> nihil Ibam episcopum catholicae fidei contrarium nunquam <lb/> 
+						dixisse sub terribilis jurisjurandi et anathematis <lb/>  interpositione confirmans, ab
+						adversariorum objectione <lb/>  purgatum pronuntiari fecit orthodoxum; per <lb/> illam
+						ad Marim Persam, quam inter eos qui non crelegi <lb/>  sicut in Ephesina prima synodo
+						Cyrillus exposuit  ,<lb/> sancta Chalcedonensis synodus anathematis <lb/> poena
+						percussit, an  per  illam Edessenorum, quae eorumdem <lb/>  Patrum judicio consonans, eis
+						magni qui <lb/> aliquid contra fidem catholicam dicentibus communicant <lb/>   infligit 
+						anathema. Quae omnia etiam interlocutioni <lb/>  Maximi Antiocheni episcopi convenire
+						eadem <lb/> quae disserta est veritate perspicitur; qui rescriptum <note type="footnote"> PATROL. LXIX. </note>
+						<note type="footnote"> 6 </note><pb n="171"/>
+						<milestone unit="PLSection" n="A"/><lb/> epistolae nominando, non de illa ad Marim
+						Persam, . <lb/> sed de Edessenorum clericorum epistola sensisse <lb/> monstratur.
+						Quomodo enim de epistola ad Marim <lb/> Persam, a qua primam Ephesinam synodum et beati
+						<lb/> Cyrilli illic praedicatam certum est impugnari doctrinam  ,<lb/> aliquid
+						memoratus Maximus orthodoxum <lb/> dixisse putandus est, qui, sicut supra plene jam
+						diximus  ,<lb/> dum de recipienda beatae recordationis papae <lb/> Leonis epistola
+						censeretur, eam ob hoc recipiendam <lb/> statuit quia beati Cyrilli in Epheso expositae
+						fidei <lb/> conveniret, dicendo ita (Act. 4) : Concordat epistola <lb/> sanctissimi
+						archiepiscopi regiae Romae Leonis  expositionibus  <lb/>   trecentorum decem et octo apud
+						Nicaeam  sanctorum  <lb/>  Patrum, et centum quinquaginta apud  Constantinopolim  <lb/> 
+						novam Romam, et in Epheso a sanctissimo <milestone unit="PLSection" n="B"/><lb/> Cyrillo
+						episcopo expositae fidei; et subscripsi. Quis <lb/> igitur sic a totius humanitatis
+						ratione sepositus invenitur <lb/>  ut credat hunc sacerdotem in causa vel  definitione  <lb/>
+						 fidei ita sibi exstitisse contrarium ut qui tam <lb/> praeclari pontificis atque
+						doctoris, id est beati Leonis, <lb/> epistolam aperte pia dogmata continentem beati Cyrilli
+						<lb/>  quae in Epheso est exposita comparando doctrinae <lb/> judicavit orthodoxam,
+						illius econtrario epistolae orthodoxum <lb/>  diceret esse scriptum, quod haeretica <lb/>
+						voce ipsa beati Cyrilli dogmata molitur evertere? <lb/> Cum ergo impossibile sit videri
+						unum eumdemque <lb/> judicem in  definitione  fidei aut respuisse quod sibi <lb/> placuit
+						aut idem sibi dicere placuisse quod respuit, <lb/> necesse est ut omnibus clareat non
+						eum de illa epistola <lb/>  ad Marim Persam, sed de ista potius Edessenorum ,<milestone unit="PLSection" n="C"/> <lb/> quae posterius  lecta  est, quia sit ejus orthodoxa
+						<lb/>  declarata dictatio censuisse.</p>
+					<p>XXIII. Nec  aliquid  [aliquem] moveat illud quod in <lb/> eadem interlocutione memoratur
+						rescriptum epistolae <lb/> quod prolatum est ab eo qui ejus adversarius existit, <lb/> ut
+						ex his verbis, sicut inimici orthodoxae  fidei  ad <lb/> impugnandam primam Ephesinam
+						synodum astrui <lb/> cupiunt, quasi de illa quae ad Marim Persam legitur <lb/> epistola.
+						quam contra Ibam episcopum in Photii et <lb/> Eusthatii judicio ejus adversarii
+						protulerunt, intelligatur <lb/>  ita Maximum Antiochenum episcopum judicasse  .<lb/>
+						Quod longe ab ejusdem Maximi esse sensibus <lb/> alienum superius idonea et multiplici
+						ratione probavimus  .<lb/> Nam illud quod ab adversario ejus scriptum <lb/> prolatum
+						 nomina   nominat) de ista Edessenorum <milestone unit="PLSection" n="D"/><lb/> 
+						clericorum  dictam  esse non dubium est. Cum <lb/> enim nihil aliud Theophilus adversarius
+						Ibae episcopi <lb/> contra eum in Chalcedonensi synodo nisi gesta apud <lb/> Photium et
+						Eustathium habita protulisset, et eam <lb/> partem  gestorum , ut evidenter apparet, in
+						qua continebatur <lb/>  Edessenorum epistola clericorum malevole <lb/> supprimens,
+						illam tantum per quam gravari putabat <lb/> Ibam episcopum fuisse fecisset recitari,
+						tunc Ibas <lb/> episcopus, ut cum evidentius constaret, [aliquid <lb/> deest] ex ipsis
+						quae ab eodem adversario prolatae <lb/> fuerant chartis, illam partem ab eo fraudulenter
+						<lb/> omissam relegi petiit per quam illa epistola quae adversus <lb/>  eum lecta fuerat
+						probatur exclusa, ut per hoc <lb/> quod ipse adversarius Theophilus protulerat convinci
+						<lb/> efficacius monstraretur. Unde et Maximus episcopus <milestone unit="PLSection" n="A"/><lb/> vim idoneae probationis exprimens (Act. 10), post <lb/> relectam
+						Edessenorum epistolam clericorum ex his <lb/> chartis quas adversarius protulerat
+						ostensum Ibam <lb/> pronuntiavit  orthodoxum . Ut autem plenius contentiosi <lb/> 
+						haereticorum animi superentur, diversis modis <lb/> ostenditur hanc  Edessenorum  epistolam
+						non velut <lb/> novam in Chalcedonensi concilio ab Iba prolatam, <lb/> sed olim Photio
+						et Eustathio episcopis contraditam <lb/> et eorum gestis insertam. Primo enim ex eo quod
+						<lb/> tempore judicii ad eos data legitur, eis ad quos directa <lb/>  est tradita nullo
+						modo dubitatur; quippe cum <lb/> in eorum judicio per eam Ibas ad purgationem eorum
+						<lb/> quae objecta fuerant indiguerit adjuvari. Deinde quod <lb/> in eadem epistola
+						petiisse a memoratis  Photio  et <lb/> Eustathio impensius Edesseni clerici releguntur ut
+							<milestone unit="PLSection" n="B"/><lb/> suis eam curarent gestis inserere; quod fieri
+						nihilominus <lb/>  et ipse judicii ordo poscebat. Quae ita gesta <lb/> non solum
+						veritas praesentis ratiocinationis ostendit, <lb/> sed et ipsius Ibae testatur superius
+						et in Chalcedonensi <lb/>  synodo et in Photii atque Eustathii examine <lb/> deprompta
+						professio. Siquidem sanctum Chalcedonensi <lb/>  concilium episcopus Ibas ingressus,
+						dum se <lb/> asserit absolutum Photii et Eustathii constituto, ita <lb/> dicit (Act. 9):
+						Nam et omnes clerici Edesseni, per <lb/> quos scripserunt praefatis episcopis, testantur
+						me esse <lb/> catholicum: ostendens utique ad eos scriptum et in <lb/> illorum jam
+						judicio Edessenorum clericorum rescripto <lb/>  se ab objectis omnibus absolutum et
+						catholicum <lb/> declaratum. Deinde dum in illa parte gestorum apud <lb/> Photium et
+						 Eustathium  habitorum, quam, ut dictum <milestone unit="PLSection" n="C"/><lb/> est,
+						contra eum adversarii relegi petiverunt, tres <lb/> testes quos in Photii et Eustathii
+						judicio adversus <lb/> eum adversarii producere nitebantur, memoratus <lb/> episcopus
+						reprobaret, ita dixit (Act. 10): Est clerus <lb/> noster  plurimus   minus] nominum
+						ducentorum aut <lb/> plurimum : neque enim retineo numerum. Omnes clerici <lb/> 
+						testati sunt sive orthodoxus sim, sive haereticus, et <lb/> per confessiones scriptas,
+						quae et directae sunt sanctissimo <lb/>  episcopo Domno, et ad vestram reverentiam  scripserunt .
+						 .<lb/> Si consonat tantorum testimonium clericorum <lb/> tribus, sicut dicit
+						ipse, testibus qui cum ipsis venerunt <lb/> ad accusandum in Constantinopolim, et nunc
+						cum ipsis <lb/> existunt, vestrum est judicare. Ex quo evidenter apparet <lb/>  ita eum
+						in ipso Photii et Eustathii judicio ad <lb/>  confutandos  testes ab adversario
+						producendos clericorum <milestone unit="PLSection" n="D"/><lb/>  Edessenorum epistolae
+						fecisse memoriam ut et <lb/> eam judicibus jam traditam demonstraret, et ex  cognito   <lb/>
+						 iisdem judicibus totius Edesseni  cleri  rescripto, <lb/> paucorum clericorum
+						exigeret non debere testificationes <lb/>  admitti. Unde minime dubitatur per illam
+						partem <lb/>  gestorum fuisse ab adversariis ex studio praetermissam <lb/>  in qua
+						Edessenorum clericorum pro Iba <lb/> litterae tenebantur insertae, et Ibam necessarie
+						hanc <lb/> ipsam Edessenorum epistolam ex ea parte quae suppressa <lb/>  fuerat relegi
+						postulasse, ac propterea episcopum <lb/>  Maximum pronuntiasse ex  relecto  rescripto de
+						<lb/> gestis ab adversario prolatis ipsius rescripti epistolae; <lb/> id est,
+						Edessenorum, dictationem orthodoxam declaratam  .<lb/> Omissam vero ab adversariis
+						illam gestorum <lb/> partem qua Ibas episcopus ab objectis evidentius<pb n="173"/>
+						<milestone unit="PLSection" n="A"/><lb/> purgabatur, et aliis modis ostenditur. Nam in
+						eadem <lb/> Photii atque Eustathii sententia, qua referunt universa <lb/>  quae ab Iba
+						episcopo in suo fuerint acta judicio  ,<lb/> continetur quod prone sapuerit Ibas
+						episcopus <lb/> ex scripto dare quid de pia fide sentiret, et ex abundanti <lb/> 
+						anathematizaverit Nestorium, et ea se in suae <lb/>  promiserit  eloqui civitatis
+						Ecclesia, et alia quae <lb/> ejusdem judicati tenore monstrantur. Quae omnia <lb/> pars
+						illa gestorum pro adversariorum Ibae episcopi <lb/> voto in Chalcedonensi synodo relecta
+						non continet. <lb/> Gesta tamen in Photii atque Eustathii judicio esse <lb/> eorum
+						sententia declaratur. Per quod constat sine <lb/> dubio eas partes ab adversariis
+						malitiose suppressas <lb/> quas  scribant  Ibae episcopo amplius  profuturas . Nam <lb/> ut
+						haec apud Photium et  Eustathium  episcopos actis <milestone unit="PLSection" n="B"/><lb/>
+						inserta fuisse minime dubitetur, Thalassii episcopi <lb/> Caesareae Cappadociae in
+						Chalcedona residentis manifestat <lb/>  absque ambiguitate sententia, quae post alia ita
+						<lb/> dicit: Quia maxime gestis suscepit ut anathematizaret <lb/> illa quae ejus
+						accusatores adversus eum deposuerant ex <lb/> scripto. Quod utique quia in parte illa
+						gestorum quae <lb/> adversariis Ibae desiderantibus recensita est non legitur  ,<lb/>
+						manifestum est ex his quae Photius et Eustathius <lb/> in suo judicio gesta referunt,
+						quae actis inserta fuerint  ,<lb/> memoratum episcopum Thalassium cognovisse. <lb/> Et
+						ideo omni veritatis luce probatum est ita et illam <lb/> partem gestorum in qua
+						Edessenorum clericorum <lb/> continebatur epistola, ab adversariis fuisse suppressam 
+						,<lb/> sicut et haec pars, ne relegeretur, omissa est: <lb/> quae non ex illa parte quam
+						adversarii relegi voluerunt ,<milestone unit="PLSection" n="c"/> <lb/> sed ex Photii
+						atque Eustathii episcoporum, <lb/>  quae  apud eos acta sint, sententia declaratur.</p>
+					<p>XXIV. Igitur indubitanter apparet ex illis gestis <lb/> quae ab adversariis prolata
+						quidem sunt, sed studiose <lb/> pro parte suppressa,  Edessenorum  epistolam Ibam <lb/>
+						episcopum pro se relegi poposcisse, et de ejus epistolae <lb/>  rescripto, quod ab
+						adversario prolatum sit, <lb/> Maximum Antiochenum episcopum sua interlocutione <lb/>
+						dixisse. Cujus autem epistolae orthodoxa potuit pronuntiari <lb/>  dictatio valde est
+						superius approbatum, et <lb/> ex  hoc  manifestius apparebit quia in praecedenti pronuntiari <lb/>
+						 sua Ibas ex Edessenorum rescripto se <lb/> asseruit orthodoxum comprobari.
+						 Unde consequenter  <lb/> orthodoxa dictatio ejusdem Edessenorum epistolae <lb/> dicta est,
+						per quam et ipse se orthodoxum petiit a <milestone unit="PLSection" n="D"/><lb/>
+						judicibus aestimari, et eorum sententia est declaratus <lb/> orthodoxus. Cedat itaque
+						impudentia perversorum <lb/> tam Eutychianae  haereseos  quam Nestorianae  sequacium   ,<lb/>
+						qui haeretica fraude nituntur suadere quod <lb/> quilibet in Chalcedonensi synodo
+						residens de illa ad <lb/> Marim Persam epistola totius impietatis plena  aliquid  <lb/>
+						orthodoxum dicere vel sentire potuerit. Cum enim <lb/> Ibas episcopus in principio pro
+						sanctae Chalcedonensis <lb/>  synodi examen ingressus est, ita fuerit prosecutus 
+						,<lb/> dicendo se per clericorum Edessenorum attestationem <lb/>  aestimatum fuisse vel
+						aestimari debere catholicum  ,<lb/> idem apud Photium  et  Eustathium episcopos <lb/>  ad
+						purgationem suam astruit oportere sufficere <lb/> quod  attestati  sint Edesseni clerici
+						per confessiones <lb/>  suas , quas ad eosdem episcopos scripserunt, se esse <milestone unit="PLSection" n="A"/><lb/> catholicum. Rursus in eadem defensione permanens <lb/>
+						post illius ad Marim Persam epistolae lectionem, <lb/>    Edessenorum clericorum pro
+						se relegi, cujus <lb/> saepe mentionem fecerat, epistolam postulasset, quis <lb/> tam
+						lucidae veritatis impugnator  existat  qui non ex <lb/> istius Edessenorum epistolae  textu ,
+						per quam ipse <lb/> accusatus Ibas aestimari (forte aestimari  se]  poposcit <lb/>
+						orthodoxum, a Patribus orthodoxam dictationem, et <lb/> eumdem Ibam  catholicum pronuntiatum 
+						 fuisse cognoscat  ,<lb/> sed illius  epistolae  ad Marim Persam dictationem <lb/>
+						  putet  orthodoxam judicatam, quae ei et pro <lb/> crimine  haereseos  objecta est, et
+						si ejus probata <lb/> fuisset, haereticus potuit judicari?</p>
+					<p>XXV. Itaque anathematizamus atque damnamus <lb/> suprascriptam epistolam quam ad Marim
+						Persam <milestone unit="PLSection" n="B"/><lb/> haereticum scripsisse Ibas confingitur,
+						quae Deum de <lb/> sancta  Dei  Genitrice et semper virgine Maria incarnatum <lb/>  et
+						hominem factum esse abnegat, sed purum <lb/> hominem ex ipsa natum esse dicit, quem
+						templum <lb/> appellat, ut ex hoc alius Deus Verbum et alius Christus <lb/> 
+						intelligatur, et sanctum Cyrillum, qui rectae <lb/> fidei  doctor  et praedicator exstitit,
+						ut haereticum  et  <lb/> similia Apollinari scribentem criminatur, et culpat <lb/> primam
+						Ephesinam synodum tanquam sine examinatione <lb/>  et inquisitione Nestorium
+						condemnaverit, et <lb/> duodecim capitula sancti Cyrilli impia et contraria <lb/> recta
+						fidei vocat eadem epistola, defendit, autem <lb/> Theodorum  et  Nestorium  et  impia eorum
+						dogmata et <lb/> conscripta. Praedictam igitur epistolam ad Marim <lb/> Persam
+						anathematizamus atque damnamus, in  qua  <milestone unit="PLSection" n="C"/><lb/> nefandae
+						superius designatae blasphemiae continentur. <lb/> Et quicunque ea quoquo tempore
+						crediderit accipienda <lb/>  vel  defendenda , aut conatus fuerit aliquando <lb/>
+						praesentem  damnationem  resolvere, pari anathemate <lb/> condemnamus. Eos autem qui
+						memoratam  epistolam  <lb/> ad Marim Persam designatas superius blasphemias <lb/>
+						continentem a sancta Chalcedonensi synodo a praesenti <lb/>  tempore, innotescente sibi
+						nostri serie constituti  ,<lb/> contenderent esse susceptam, vel a quocunque <lb/>
+						eorumdem Patrum in Chalcedona residentum orthodoxam <lb/>  pronuntiatam nituntur
+						astruere, pari anathematis <lb/>  poena percellimus; quoniam non solum sancto <lb/> ac
+						reverendo Chalcedonensi concilio irrogare moliuntur <lb/>  injuriam, verum etiam
+						 incentores  ac renovatores <lb/>  se sopiti  scandali  profitentur, per quod  universalis -
+							<milestone unit="PLSection" n="D"/><lb/>  rursus  concuti  possit Ecclesia; ut
+						doctoris <lb/> gentium Apostoli juste videantur feriri sententia, <lb/> quae dicit:
+						Utinam et abscidantur qui vos conturbant <lb/> (Galat. v, i2)!</p>
+					<p>XXVI. Expletis quae de sopienda primi  capituli  <lb/> quaestione,  id est !  de epistola ad
+						Marim Persam, disserenda <lb/>  vel definienda erant, necesse nobis est quid <lb/> de
+						Theodoro Mompsuesteno ejusque dictis  ecclesiasticae  <lb/> stic; unitatis ratio vel fidei a
+						sanctis Patribus traditae <lb/>  cautela fieri exigit  expedire . Perpendimus itaque <lb/>
+						quod hujus quoque quaestionis exordium ex haereticorum <lb/>  coenoso fonte manaverit. Cum
+						enim Nestoriani <lb/>  ante plures annos non valerent impia ejus <lb/> dogmata sub
+						ipsius damnati Nestorii nomine quorumdam <lb/>  sensibus decipiendis inserere, binc
+						profe-<pb n="175"/>
+						<milestone unit="PLSection" n="A"/><lb/>  renUi [proferendi] errorissui  [proferendi]  opportunitatem
+						exquisitis <lb/>  fraudibus invenerunt ut ex Theodori Mompsuesteni <lb/>  libris, quem
+						jactant in pace Ecclesiae defecisse, <lb/> impia rursus Nestorii dogmata blasphemiis
+						 immanioribus  <lb/>  innovata introducere niterentur. Quorum <lb/> venena diuturnis
+						temporibus occulte serpentia, nunc <lb/> aperta professione manantia, nostros et
+						Christianissimi <lb/>  principis omniumque orthodoxorum animos <lb/> permoverunt
+						attendentium non esse ulterius  differenda  <lb/>  remedia ubi, per patientiam
+						dissimulatione <lb/> nutrita, tam magni mali videtur crevisse pernicies. <lb/> Hoc enim
+						memoratos Nestorianos publice et incessanter <lb/>  astruere nulli venit in dubium,
+						dicentes: <lb/> Nos patrem non tam Nestorium quam Mompsuestenum <lb/>  Theodorum
+						veneramur, ejusque libros tota nostrae <milestone unit="PLSection" n="B"/><lb/> 
+						devotione mentis amplectimur; nec erit quisquam <lb/>  qui nobis obsistere [valeat],
+						cum dogma <lb/> nostrum sic antiqui doctoris Theodori ubique vulgatis <lb/>  codicibus
+						astruatur. Quorum  Nestorianorum  vocibus <lb/>  nonnullus ineruditi vulgi numerus
+						quotidianis <lb/> diebus prava seductione decipitur. Cum ergo constet <lb/> amplius per
+						defuncti  Theodori  nomen atque conscripta <lb/>  Nestorianae haeresis errorem populis
+						intromitti <lb/>  quam vivus potuit inferre Nestorius, non tam <lb/> negligentiae quam
+						conhibentiae discrimen <note n="f"/> forte, conscripta <unclear/>
+						<lb/> diventiaecri] nos credidimus incursuros; si tamen <lb/> men necessariae (forte, si
+						tam  necessariae]  ] correctionis  ,<lb/> quam periclitantis Ecclesiae dispensatio flagitat
+						 ,<lb/> differri ulterius remedia pateremur. Neque enim, <lb/> ut quidam inaniter
+						diffamabant, Theodori ejusque <milestone unit="PLSection" n="C"/><lb/> dictorum poterit
+						excusationi proficere quod in epistola <lb/>  ad Marim Persam nomen Theodori vel
+						scripta <lb/> ejus videntur copiose laudari, cum et praecedenti <lb/>  assertione multipliciter 
+						 fuerit demonstratum eamdem <lb/> epistolam, sicut a nobis, ita et a
+						sanctis Patribus in <lb/> Chalcedona residentibus juste damnatam, et hoc <lb/> potius ad
+						malorum Theodori demonstrationem abunde <lb/> sufficiat quod illic nomen scriptaque ejus
+						laudata <lb/> sunt ubi beatus Cyrillus et Ephesina prima synodus <lb/> impugnatur. Quae
+						cum ita sint, non tamen destitimus <lb/> per  fideliores  interpretes scripta ejusdem
+						Theodori <lb/> perscrutari, quamvis nobis et ante utcunque fuerint <lb/> publicata. Ex
+						quo nunc perclaruit lucidissima  veritate praedicti  <lb/>   Theodori Mompsuesteni libro
+						contraria <lb/> recta  fidei  et sanctorum Patrum continere doctrinis. <milestone unit="PLSection" n="D"/><lb/>  Unde  et sancti Patres contra eum scribentes, suos <lb/>
+						libros ad instructionem sanctae Ecclesiae reliquerunt. <lb/> Nam inter alias blasphemias
+						evidenter eum dixisse <lb/> comperimus alium esse Deum Verbum et alium Christum <lb/> 
+						a passionibus animae et desideriis carnis  molestias patientem   ,<lb/> et a deterioribus
+						paulatim recedentem  ,<lb/> ad meliora profectu operum pervenisse, et conscripta <lb/>
+						 immaculatum factum, et tanquam purum <lb/> hominem baptizatum esse in nomine
+						Patris et <lb/> Filii et Spiritus sancti, et per baptismum gratiam <lb/> sancti Spiritus
+						accepisse, et affiliationem  meruisse , <lb/>  et ad  imperialis  imaginis  similitudinem in
+						persona <lb/> Dei Verbi Christum adorari, et post resurrectionem <lb/> immutabilem
+						cogitationibus et omnino impeccabilem <lb/> factum. Dixit etiam talem factam  osse 
+						unitionem Dei <milestone unit="PLSection" n="A"/><lb/> Verbi ad Christum qualem
+						Apostolus dixit de viro et <lb/> muliere, Erunt duo in carne una, et quod post resurrectionem
+						 ,<lb/> cum insufflasset Dominus in discipulis <lb/> et dixisset, Accipite
+						Spiritum sanctum, non dedit eis <lb/> Spiritum sanctum. Hoc quoque ausus est dicere,
+						quia <lb/> confessionem quam fecit Thomas cum palpasset <lb/> manus et latus Domini post
+						 resurrectionem , dicens, <lb/> Dominus meus et Deus meus, non esse dictam a <lb/> Thoma
+						de Christo (nec enim dicit  Theodorus  Deum <lb/> esse Christum) , sed ad miraculum
+						resurrectionis stupefactum <lb/>  Thomam glorificasse Deum et ista dixisse. <lb/> Et
+						quod pejus est, etiam in interpretatione quam in <lb/>  Actibus  apostolorum scripsit idem
+						Theodorus, similem <lb/>  fecit Christum Platoni et Manichaeo et Epicuro <lb/> et
+						Marcioni, dicens quod sicut illorum  unusquisque  <milestone unit="PLSection" n="B"/><lb/>
+						ex dogmate quod invenit suos discipulos fecit vocari <lb/>  Platonicos  et Manichaeos et
+						Epicureos et  Marcionistas   ,<lb/> simili modo et cum Christus dogma invenisset, <lb/> ex
+						ipso Christianos vocari. Quarum  blasphemiarum  <lb/> ex libris Theodori Mompsuesteni
+						perversitate reperta <lb/> evidenter apparet falsissime quosdam foventes dicta <lb/>
+						Theodori opinari quod memoratus Theodorus non <lb/> fuerit in sua vita damnatus, cum
+						perspectis praedecessoris <lb/>  nostri beatae recordationis Damasi synodalibus <lb/> 
+						constitutis, quae post Nicaenum concilium de <lb/> Spiritu sancto tractantibus et
+						convenientibus in urbe <lb/> Roma catholicis episcopis et beatae recordationis <lb/>
+						Ambrosio Mediolanensis civitatis antistite sunt edita <lb/> longe antequam Theodorus
+						 Mompsuestinae   <lb/> psuestiae] officium episcopatus assumeret, inveniremus <milestone unit="PLSection" n="C"/><lb/>  plenissime definitum eos qui duos filios affirmant,
+						<lb/> unum ante secula, et alterum post  assumptionem  <lb/> carnis ex Virgine, sicut
+						superius Theodorum asseruisse <lb/>  monstratum est, anathematis poena percussos. <lb/>
+						Ubi non solum illi qui eodem tempore ipsius erant <lb/> haeresis sectatores, verum etiam
+						illi qui succedentibus <lb/>  temporibus eumdem sequerentur errorem, ejusdem <lb/> 
+						 anathematis  vinculis reperiuntur astricti. Cui <lb/> damnationi  Theodorum quoque 
+						Mompsuestiae necesse <lb/> est fuisse subjectum, qui praedamnatae haeresis sectamen <lb/> 
+						et praedicator effectus est. Neque enim aliter eos <lb/> quos nunc in Arianam vel in
+						aliam  quamlibet haeresem  <lb/>  reperimus implicatos, jam anathematis poena <lb/>
+						damnatos accipimus nisi quia in praedamnatis quos <lb/> sectantur erroribus inveniuntur
+						ipsi quoque damnati. <milestone unit="PLSection" n="D"/><lb/> Nec illud omittendum esse
+						perspicimus, quod hi qui <lb/> in suis libris ac disputationibus duos filios credi docent
+						 ,<lb/> negent tamen se duos filios profiteri,  eum  eis <lb/> nihil prosit hoc vacuis
+						negare sermonibus quod docent <lb/>  per sua dogmata, libris etiam convincuntur <lb/>
+						astruere. Sic etenim Nestorius, ut superius jam diximus  ,<lb/> duas naturas, unum
+						Filium se simulans confiteri  ,<lb/> et alterum esse qui ex Deo Patre natus est, <lb/>
+						alterum qui ex Virgine matre progenitus, in suis <lb/> disputationibus omni fraudis
+						intentione suadere persistens  ,<lb/> non potuit debitae poenam damnationis  effugere  
+						,<lb/> nec eum liberare valuit illa unius Filii dolosa <lb/> professio, cujus aliud
+						convincebatur continere docent <lb/>  : quia perversitatis hujusmodi sectatores se
+						<lb/> ipsis puniuntur auctoribus; qui quod erubescunt<pb n="177"/>
+						<milestone unit="PLSection" n="A"/><lb/> profiteri, docere non desinunt, et quae loquenda
+						ne­ <lb/> gant, legenda non seribunt a.</p>
+					<p>XXVII. Pro his igitur omnibus Ecclesia universalis <lb/> agnoscat cujus utililati, ne
+						Christi Dei nostri plebs <lb/> amplius seducatur, nostra servit intentio. Quain uti­
+						<lb/> litatem per Theodori nomen atque scripta laedi supra <lb/> meminimus juste nos et
+						sine aliqua reprehensione ad <lb/> ea quae praesenti auctoritate statuimus descendisse.
+						<lb/> Et ideo condemnamus et anathematizamus similiter <lb/> ut
+							<unclear>alioscomnes</unclear> haereticos quos condemnatos et ana­ <lb/> thematizatos
+						constat a sanctis quatuor conciliis et <lb/> a catholica Ecclesia, et Theodorum, qui
+						quondam <lb/> Mompsuestiae episcopus fuit, et ejus impia conscripta <lb/> nihilominus,
+						et quae Theodoritus conscripsit contra <lb/> rectam fidem et contra duodecim sancti
+						Cyrilli capi- <milestone unit="PLSection" n="B"/><lb/> tua et contra primam synodum
+						Ephesinam, et quae <lb/> ad defensionem Theodori et Nestorii ab eo scripta <lb/> sunt:
+						quia pro b ecclesiasticae utilitatis causa popo­ <lb/> scit etiam memorata Theodoriti
+						scripta damnari, eo <lb/> quod saepe dicti Nestoriani sub ejus episcopi nomine, <lb/> qui
+						a beatae recordationis Leone papa et a sancta <lb/> Chalcedonensi synodo legitur fuisse
+						susceptus, eadem <lb/> scripta ad astruendi sui erroris videntur adhibere <lb/>
+						suffragium, non aspicientes quod non solum sancti <lb/> Patres in Chalcedona congregati,
+						damnato Nestorio <lb/> cum suis dogmatibus, et ista damnaverint, sed etiam <lb/> ipse
+						episcopus Theodoritus omnia dicta quae beati <lb/> Cyrilliin Ephesina prima expositis
+						videbantur con­ <lb/> traire dogniatibus, in sancta Chalcedonensi synodo <lb/> aperta
+						professione respuerit, et susceperit definitio­ <milestone unit="PLSection" n="C"/><lb/>
+						nem sancti Chalcedonensis concilii, in qua beati <lb/> Cyrilli in Ephesina prima
+						expositam manifestum est <lb/> praedicari doctrinam. Et ita, sicut omne concilium <lb/>
+						sanctae Chalcedonensis synodi interlocutum est, ab <lb/> eadem syuodo constat fuisse
+						susceptum. Propter <lb/> quod clarum est nihil nobis [novi] nos per hanc <lb/>
+						damnationem statuere, sed ea anathematizasse quae <lb/> et sancta Chalcedonensis synodus
+						respuit, et ipse <lb/> quoque Theodoritus episcopus illic sua professione <lb/>
+						damnavit.</p>
+					<p>XXVIII. Praedicta igitur tria impia capitula ana­ <lb/> thematizamus atque damnamus, id
+						est, epistolam <milestone unit="PLSection" n="A"/><lb/> quae dicitur Ibae ad Marim
+						Persam, in qua nerandae <lb/> superius designatae blasphemiae continentur, et ilu­ <lb/>
+						pium Theodorum Mompsuestenum cum nefandis ejus <lb/> conscriptis, et quae impie
+						Theodoritus conscripsit. Et <lb/> quicunque ea quoquo tempore crediderit accipienda
+						<lb/> vel deferenda, aut conatus fuerit aliquando praesen­ <lb/> tem damnationem
+						resolvere, pari anathemate con­ <lb/> demnamus. Eos autem qui conservantes rectam <lb/>
+						fidem praedictis quatuor synodis praedicatam, me­ <lb/> morata tria capitula damnaverunt
+						vel damnant, fra­ <lb/> tres et cousacerdotes habemus. Quaecunque vero <lb/> sive meo
+						nomine sive quorumlibet pro defensione <lb/> memoratorum trium capitulorum prolata
+						fuerint vel <lb/> ubicunque reperta, praesentis nostri plenissimi con­ <lb/> stituti
+						auctoritate vacuamus. Quas omnes designatas <milestone unit="PLSection" n="B"/><lb/>
+						blasphemias absit ab universali Ecclesia ut quisquam <lb/> praedictas quatuor synodos
+						vel unam ex eis asserat <lb/> suscepisse vel eos qui talia sapuerunt atque secuti <lb/>
+						sunt, cum constet a sanctis memoratis Patribus, et <lb/> maxime a sancto Chalcedonensi
+						concilio, nullum de <lb/> quo fuit suspicio fuisse susceptum nisi qui superius <lb/>
+						designatas blasphemias vel bis similia aut haeresim. <lb/> de qua suspectus fuit respuit,
+						aut blasphemias de <lb/> quibus de eo dubitatum est abnegavitatque damnavit. <lb/> Et
+						ideo eos qui memoratam epistolam ad Marim <lb/> Persam designatas superius blaspbemias
+						continenem <lb/> a sancta Chalcedonensi synodo a praesenti tempore. <lb/> innotescente
+						sibi hujus nostri serie constituti, asse­ <lb/> rere voluerint esse susceptam, vel a
+						quocunque eo­ <lb/> rumdem Patrum in Chalcedona residentumortho­ <milestone unit="PLSection" n="C"/><lb/> doxam pronuntiatam nituntur astruere, pari anathe­ <lb/>
+						matis poena percellimus; quoniam non solum sancto <lb/> ac reverendo Chalcedonensi
+						concilio irrogare mo­ <lb/> liunturinjuriam, verum etiam incentores se ac re­ <lb/>
+						novatores sopiti scandali profitentur, per quod uni­ <lb/> versalis rursus concuti
+						possit Ecclesia; ut doctoris <lb/> ApostoU c juste videantur feriri sententia, qua
+						dicit: <lb/> Utinam et abscidantur qui vos conturbant. Et post sub. <lb/>
+						scriptiones.</p>
+					<p>Data vii calendarum Martiarum, imperante do­ <lb/> mino Justiniano perpetuo Augusto
+						anno 27, et post <lb/> consulatum Basilii v. c. anno 13,Constantinopolim. <note type="footnote"> • Recte Cotelerius emendat con.cnbun'. </note><note type="footnote">
+							h Ftirf lelendum pro. HARD. ' </note><note type="footnote"> c Lege ut supra, doctori.
+							gentium ApOllol;. <lb/> HARD. </note>
+					</p>
+				</div>
+
+				</body></text></TEI>

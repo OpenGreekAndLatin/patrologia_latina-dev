@@ -1,0 +1,632 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><TEI xmlns="http://www.tei-c.org/ns/1.0"><teiHeader>
+    
+		<fileDesc>
+			<titleStmt>
+				<title>Patrologiae Cursus Completus. Series Latina (PL)</title>
+				<sponsor>University of Leipzig</sponsor>
+				<funder>European Social Fund Saxony</funder>
+				<principal>Gregory Crane</principal>
+				<respStmt>
+					<persName xml:id="Jouve">Jouve</persName>
+					<resp>OCR-ed, corrected and encoded the text</resp>
+				</respStmt>
+				<respStmt>
+					<persName>Greta Franzini</persName>
+					<resp>Project Manager (University of Leipzig)</resp>
+				</respStmt>
+				<respStmt>
+					<persName>Simona Stoyanova</persName>
+					<resp>Project Assistant (University of Leipzig)</resp>
+				</respStmt>
+				<respStmt>
+					<persName>Bruce Robertson</persName>
+					<resp>Technical Advisor (Mount Allison University)</resp>
+				</respStmt>
+			</titleStmt>
+
+			<publicationStmt>
+				<authority>University of Leipzig</authority>
+				<idno type="filename">PL50.xml</idno>
+				<availability>
+					<licence target="https://creativecommons.org/licenses/by-sa/4.0/">Available under a
+						Creative Commons Attribution-ShareAlike 4.0 International License</licence>
+				</availability>
+				<date>2014</date>
+				<publisher>University of Leipzig</publisher>
+				<pubPlace>Germany</pubPlace>
+			</publicationStmt>
+
+			<sourceDesc>
+				<listBibl xml:lang="la">
+					<biblStruct>
+						<monogr>
+							<editor>
+								<persName>
+									<name xml:lang="fr">Jacques Paul Migne</name>
+								</persName>
+							</editor>
+							<author ref="http://data.perseus.org/catalog/urn:cts:latinLit:stoa0076c">Cassianus
+								Ioannes</author>
+							<title>Paucae Quaedam Sententiae Piam Interpretationem Desiderantes</title>
+							<imprint>
+								<publisher>Garnier</publisher>
+								<pubPlace>Paris</pubPlace>
+								<date>1846</date>
+							</imprint>
+							<biblScope unit="volume">50</biblScope>
+						</monogr>
+						<monogr>
+							<author>Vigilius Diachonus</author>
+							<title>Regula Monachorum</title>
+							<imprint>
+								<publisher>Garnier</publisher>
+								<pubPlace>Paris</pubPlace>
+								<date>1846</date>
+							</imprint>
+							<biblScope unit="volume">50</biblScope>
+						</monogr>
+						<monogr>
+							<author>Fastidius Episcopus</author>
+							<title>De Vita Christiana Liber Unus</title>
+							<imprint>
+								<publisher>Garnier</publisher>
+								<pubPlace>Paris</pubPlace>
+								<date>1846</date>
+							</imprint>
+							<biblScope unit="volume">50</biblScope>
+						</monogr>
+						<monogr>
+							<author>Antoninus Honoratus Episcopus</author>
+							<title>Epistola Consolatoria Ad Arcadium</title>
+							<imprint>
+								<publisher>Garnier</publisher>
+								<pubPlace>Paris</pubPlace>
+								<date>1846</date>
+							</imprint>
+							<biblScope unit="volume">50</biblScope>
+						</monogr>
+						<monogr>
+							<author>Sixtus III</author>
+							<title>Epistolae Ed Decreta</title>
+							<imprint>
+								<publisher>Garnier</publisher>
+								<pubPlace>Paris</pubPlace>
+								<date>1846</date>
+							</imprint>
+							<biblScope unit="volume">50</biblScope>
+						</monogr>
+						<monogr>
+							<author>Vincentius Lirinensis</author>
+							<title>Commonitorium Primum</title>
+							<title>Commonitorium Secundum</title>
+							<imprint>
+								<publisher>Garnier</publisher>
+								<pubPlace>Paris</pubPlace>
+								<date>1846</date>
+							</imprint>
+							<biblScope unit="volume">50</biblScope>
+						</monogr>
+						<monogr>
+							<author ref="http://data.perseus.org/catalog/urn:cts:latinLit:stoa0117">Eucherius Lugdonensis Episcopus</author>
+							<title>Epistola Paraenetica Ad Valerianum Cognatum</title>
+							<title>Homiliae Quaedam</title>
+							<title>Exhortatio Ad Monachos</title>
+							<title>Epitomes Operum Cassiani Ad Castorem Aptensem Libri Duo</title>
+							<title>Epistola Ad Philonem Presbyterum Suum [Incertus]</title>
+							<imprint>
+								<publisher>Garnier</publisher>
+								<pubPlace>Paris</pubPlace>
+								<date>1846</date>
+							</imprint>
+							<biblScope unit="volume">50</biblScope>
+						</monogr>
+						<monogr>
+							<author ref="http://data.perseus.org/catalog/urn:cts:latinLit:phi2434">Hilarius
+								Arelatensis Episcopus</author>
+							<title>Sermo De Vita Sancti Honorati Episcopi Arelatensis</title>
+							<title>Epistola Ad Sanctum Eucherium Episcopum Lugdunensem</title>
+							<title>Sermo De Miraculo Sancti Genesii Martyris Arelatensis</title>
+							<title>Versus In Natali Machabeorum Martyrium</title>
+							<title>Metrum In Genesim Ad Leonem Papam</title>
+							<imprint>
+								<publisher>Garnier</publisher>
+								<pubPlace>Paris</pubPlace>
+								<date>1846</date>
+							</imprint>
+							<biblScope unit="volume">50</biblScope>
+						</monogr>
+						<ref target="https://archive.org/details/patrologiaecursu50hammuoft">Internet
+							Archive</ref>
+
+					</biblStruct>
+				</listBibl>
+			</sourceDesc>
+
+		</fileDesc>
+		<encodingDesc>
+			<p>The following text is encoded in accordance with EpiDoc standards and with the CTS/CITE
+				Architecture.</p>
+		<refsDecl>
+        <cRefPattern n="" matchPattern="(.+).(.+).(.+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@type='edition']/tei:div[@n='$1']/tei:div[@n='$2']/tei:div[@n='$3'])"/>
+        <cRefPattern n="" matchPattern="(.+).(.+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@type='edition']/tei:div[@n='$1']/tei:div[@n='$2'])"/>
+        <cRefPattern n="" matchPattern="(.+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@type='edition']/tei:div[@n='$1'])"/>
+      </refsDecl>
+    </encodingDesc>
+
+		<profileDesc>
+			<langUsage>
+				<language ident="la">Latin</language>
+			</langUsage>
+		</profileDesc>
+
+	</teiHeader>
+	<text><body><div type="edition" n="">
+					<pb n="361"/>
+					<head>
+						<title type="main">PAUCAE QUAEDAM CASSIANI SENTENTIAE PIAM INTERPRETATIONEM
+							DESIDERANTES.</title>
+					</head>
+					<ab>
+						<title type="sub">Col. 8, cap. 17, et Coll. 13 cap. 12.</title>
+					</ab>
+					<p><hi rend="italic">Unicuique</hi> nostrum <hi rend="italic">duo  cohaerent </hi><hi rend="italic"></hi> angeli, <hi rend="italic">id est,</hi> bonus <lb/>  <hi rend="italic">et</hi> malus, ut <hi rend="italic">liber Pastoris docet.</hi> — De hoc
+						<lb/> libro Pastoris ita scribit Hieronymus in Catalogo <lb/>  virorum  illustrium :
+						Hermas cujus apostolus Paulus <lb/> ad Romanos scribens meminit, asseritur auctor esse
+							<milestone unit="PLSection" n="B"/><lb/> libri qui appellatur Pastor, et apud quasdam
+						Graeciae <lb/> Ecclesias etiam publice legitur. Revera utilis liber, <lb/> multique de eo
+						scriptorum veterum usurpaverunt <lb/> testimonia ; sed apud Latinos ignotus est. Haec
+						Hieronymus  .<lb/> Caeterum tanto ante Tertullianus in libro <lb/> de Pudicitia, eam
+						scripturam ab omni concilio Ecclesiarum <lb/>  inter apocrypha et falsa judicatam
+						affirmat. <lb/> et  demum  Gelasius papa in cap. <hi rend="italic">Sancta</hi> Rom. distinct
+						 .<lb/> 15, ut apocrypham repulit. Itaque quod de <lb/> malo angelo liber ille
+						Pastoris affirmat, falsum est, <lb/> licet id scripserit etiam Origenes homil. 55 in Lucam
+						 ,<lb/> nisi forte figurate, mali angeli nomine, qui <lb/> nobis cohaeret, fomes ipse
+						intelligatur peccati, qui <lb/> ex mali angeli suggestione traxit originem.</p>
+					<ab>
+						<title type="sub">Coll. 9 cap. 19.</title>
+					</ab>
+					<p><hi rend="italic">Qui mentis est  purissimae </hi>, <hi rend="italic">novit testimonio
+							conscientiae</hi>
+						<lb/>  suae, <hi rend="italic">cum apparuerit Christus, mox ejus se</hi> futurum <lb/>
+						 esse <hi rend="italic">consortem.</hi> — Huc pertinet illud Pauli ad <milestone unit="PLSection" n="C"/><lb/> Romanos cap. VIII : <hi rend="italic">Ipse</hi> Spiritus
+							<hi rend="italic">testimonium reddit</hi>
+						<lb/>  spiritui  nostro. <hi rend="italic"> quod  sumus filii Dei,</hi> et illud II ad <lb/>
+						Corinth. I : <hi rend="italic">Gloria nostra  haec </hi>, <hi rend="italic">testimonium
+							 conscientiae </hi> <lb/>
+						<hi rend="italic">nostrae.</hi> Ex hoc testimonio dicit Cassianus nosse <lb/> justos fore
+						se Christi consortes, sed non affirmat eos <lb/> id certo nosse quia haec notitia certior
+						incertiorve esse <lb/> potest, prout Spiritus sanctus per clariora vel  obscuriora  <lb/> 
+						signa reddit nobis de nostra salute testimonium  ,<lb/> qualia sunt interna dulcedo,
+						mentis illustratio, <lb/> vitae puritas, et id genus alia, in quibus tamen nihil <lb/>
+						est indubitatum, nisi certissima accedat revelatio, <lb/> quasi humanae menti opus est,
+						ut in agnoscenda <lb/> Spiritus sancti praesentia non fallatur,  multo  magis <lb/> ut de
+						sua perseverantia in bono certior fiat. Quare <lb/> quod ponit Cassianus testimonium
+						conscientiae de <lb/> obtinendo Christi consortio, nec de perseverante, <lb/> nec de
+						praesente justitia potest esse certum, sed vel <lb/> de altera, vel de utraque
+						probabiliter verum.</p>
+					<ab>
+						<title type="sub">Col. 9 cap. 23 sive 24.</title>
+					</ab>
+					<p>
+						<milestone unit="PLSection" n="D"/><hi rend="italic"> In oratione   Dominica nihil caducum
+							vult a se Christus</hi>
+						 .<lb/> <hi rend="italic">nihil vile, nihil temporale</hi> aeternitatum <hi rend="italic">conditor</hi>
+						<lb/> implorari. — Non quod putet Cassianus temporalia <lb/> non esse petenda, sed non
+						esse eorum causa petitionem <lb/>  spiritalium posthabendam. Subdit enim : <lb/>
+						Magnificentiae Dei ac munificentiae maximam irrogabit <lb/>  injuriam, quisquis his
+						sempiternis petitionibus <lb/> praetermissis transitorium aliquid et caducum ab eo <lb/>
+						maluerit postulare.</p>
+					<ab>
+						<title type="sub">Coll. <note n="i"/>? cap. 45 et seq. et lib. v de Instit. Renunt. cap. 37 et
+							59.</title>
+					</ab>
+					<p><hi rend="italic">Ex quadam  aeconomia  et dispensatione licere officiose <lb/> mentiri.
+							Et hanc maculam seu nubeculam quamdam<lb/> subire potius quam veritatem  profiteri nobis aliis 
+							 noxiam, <lb/> probatur ex patriarcharum multis  prophetarumque mendaciis 
+							,<lb/> qui omnibus</hi> omnia <hi rend="italic">facti, aliquid a perfectionis</hi>
+						<lb/>  <hi rend="italic">rigose relaxavere mentiendo.</hi> — Haec sententia <lb/>
+						 tuta non est, ut fuse probat Augustinus libris <lb/> duobus contra Mendacium ad
+						Consentium eamque <lb/> damnat in  Priscillianistis haereticis . Unde Innocentius <lb/> III
+						cap. <hi rend="italic">Super eo</hi> de Usuris, decernit divini verbi <lb/> praecepto
+						tueri ne quis etiam pro alterius vita servanda <lb/>  mentiatur. Verum priusquam ea
+						veritas ab <lb/> Ecclesia definiretur, nonnulli Patres,  Platonem  lib. <lb/>  V de Rep .
+						secuti, senserunt virum prudentem posse <milestone unit="PLSection" n="B"/><lb/>
+						 officioso  mendacio non secus uti quam medicamento. <lb/> Ita Origenes lib. vi et x
+						Stromat.; Chrysostomus <lb/> in fine libri primi de Sacerdotio, et homil. 34 et 53 <lb/>
+						 in  Genesim, et epist. ad Olymp.; S. Hieronymus in <lb/> II cap. Epistolae ad Galatas :
+						quod ei per litteras objicit <lb/>  Augustinus. Horum itaque sententiam secutus <lb/>
+						est Cassianus, priusquam Ecclesia contrarium decerneret  .<lb/></p>
+					<ab>
+						<title type="sub">Collat. 20 cap. 8.</title>
+					</ab>
+					<p>Quis <hi rend="italic">est qui non possit suppliciter dicere: Peccatum</hi>
+						<lb/> meum <hi rend="italic">cognitum tibi feci, et injustitiam meam non operui  ,<lb/>
+							ut per hanc confessionem etiam illud</hi> confidenter <lb/>
+						<hi rend="italic">subjungere mereatur: Et tu remisisti</hi> impietatem <hi rend="italic">cordis<lb/> mei ? Quod si verecundia retrahente revelare coram <lb/> hominibus
+							erubescis, illi quem latere non possunt, confiteri</hi>
+						<lb/>  <hi rend="italic">ea jugi supplicatione non desinas,</hi> ac <hi rend="italic">dicere ; Iniquitatem <lb/>  meam ego</hi> cognosco, <hi rend="italic">et peccatum meum contra <lb/> me est  semper ; tibi  soli  peccavi, et malum coram te
+							<lb/> feci; qui et absque ullius  verecundiae </hi> <hi rend="italic">publicatione
+							curare</hi>
+						<milestone unit="PLSection" n="C"/><lb/>
+						<hi rend="italic">, et sine improperio peccata donare consuevit.</hi> — <lb/> Non
+						videtur negare necessitatem poenitentiae et confiteri <lb/>  secretae, sed publicae,
+						cujus ipsemet Cassianus <lb/>  meminit lib. II de Institut. renunt. cap. 45 et 16,
+						<lb/> lib. III cap. 7, lib. IV cap. 16 et 20, lib. i de Incarnat  .<lb/> cap. 4. Et
+						certe si quis attente ejus verba perfectionis  ,<lb/> animadvertet ea in publicam
+						quadrare poenitentiam <lb/>  de peccatis secretis: Si revelare, inquit, <lb/> peccata
+						tua coram hominibus erubescis, non dixit, <lb/> coram homine, vel sacerdote; et subdit :
+						 Deus  remittere <lb/>  consuevit absque ullius verecundiae publicatione, <lb/> et sine
+						improperio; nam a secreta confessione longe <lb/> absunt et publicatio et improperium :
+						de qua illum <lb/> non esse locutum, illud argumento est, quod nullus <lb/> veterum aut
+						recentiorum hunc illi errorem objecerit. <lb/> Quare secutus videtur doctorem suum
+						 Chrysostomum  <lb/> ita passim loquentem, qui tamen numquam, sicut <lb/> nec ejus
+						praedecessor Nectarius, secretam sustulit <lb/> confessionem, sed publicam, ut fuse
+						adversus Calvinum <lb/>  probat Decanus Lovaniensis art. 5 de Confessione .<milestone unit="PLSection" n="D"/> <lb/></p>
+					<ab>
+						<title type="sub">Collat. 21 cap. 4.</title>
+					</ab>
+					<p><hi rend="italic">Sic David praecepta legis</hi> cognoscimus, <hi rend="italic">qui
+							 praecipiente </hi><hi rend="italic"><lb/>  Mose ut inimicis talio redderetur, non
+							 solum hoc  <lb/> non fecit, verum etiam</hi> dilectione <hi rend="italic">complexus est
+							 persequentes ,  <lb/>  et</hi> pro <hi rend="italic">his Domino pie supplicans
+							etiam</hi> lugubriter <lb/>  <hi rend="italic">flevit, et ultus est interfectos.</hi>
+						— Praecipiente <lb/> inquit; et vere : praecipitur enim Exod. xxi, Levit. <lb/> xxiv,
+						Deuter. xix ; sed judicibus praecipitur, qui ministri <lb/>  Dei  sunt  ad  vindictam 
+						malorum, laudem vero <lb/> bonorum; privatis autem id non praecipitur, immo <lb/>
+						prohibetur, cum dicitur Deut.  XXXII  : <hi rend="italic">Mea est</hi> ultio, <lb/>
+						<hi rend="italic">et ego retribuam.</hi> Quod Paulus Apostolus in Epist. ad <lb/>  Rom .
+						cap. XII, iis verbis refert: Scriptum est: <hi rend="italic">Mihi<lb/> vindicta, et ego
+							retribuam.</hi> Tametsi neque Moses, <lb/> neque ulla lex vetuit, quin deposito odio
+						et cessante <lb/> scandalo, possent privati a judicibus exposcere ultionem <lb/> 
+						studio justitiae bonive publici, vel ad  emendationem   ,<lb/>  peccantis, ut fuse
+						declarat S. Thomas i-- <note type="footnote"> PATROL. L. </note>
+						<note type="footnote"> .12. </note><pb n="363"/>
+						<milestone unit="PLSection" n="A"/><lb/> quaest. 108 : nam quae de perferendis injuriis
+						ac remittendis <lb/>  habentur in Evangelio, non secundum operis <lb/>  exhibitionem
+						semper, sed secundum animi praeparationem <lb/>   exponit  Augustinus lib. de Serm. Domini
+						<lb/> in monte cap. 34. Hanc legis concessionem dicitur <lb/> David supergressus quod
+						nollet uti lege quae praecipiebat <lb/>  judicibus ut talionem redderent, praesertim
+						<lb/> cum id qui laesi erant postularent.</p>
+					<ab>
+						<title type="sub">Ibidem cap. 40.</title>
+					</ab>
+					<p><hi rend="italic">Factum  Theonae </hi> <hi rend="italic">qui post consummatum</hi>
+						matrimonium  ,<lb/> <hi rend="italic">relicta  conjuge , monasticam vitam</hi>  professus 
+							<hi rend="italic">est,</hi>
+						<lb/> Cassianus <hi rend="italic">narrat</hi> si <hi rend="italic">non studio
+							laudatoris, at fide narratoris  ,<lb/></hi> et <hi rend="italic">subdit :</hi> Puto
+							<hi rend="italic">tot</hi> spiritalium virorum <hi rend="italic">Deo</hi>
+						<lb/> auctore  prolatum  <hi rend="italic">non</hi> errasse <hi rend="italic">judicium;
+							quod etiam <lb/>  tanta  signorum,</hi> ut <hi rend="italic">supra jam dictum  est ,
+							admiratio<lb/> confirmabat.</hi> — Quae verba significant peculiarem aliquem <lb/> 
+						instinctum sancti Spiritus intervenisse vel  impellentis  <lb/>  ad  faciendum , vel
+						 factum  comprobantis <lb/> virtute miraculorum; idque praeter ordinem et legem ,<milestone unit="PLSection" n="B"/> <lb/> ut  haberemus  quod miraremur, non quod imitaremur 
+						.<lb/></p>
+					<ab>
+						<title type="sub">Ibidem cap. 29.</title>
+					</ab>
+					<p>Pro intelligendo cap. 29 col. 21, illud videtur praeparationem  ,<lb/> duplicem a
+						theologis  distingui  legis tam <lb/>  divinae  quam  humanae  vim ac potestatem : unam <lb/>
+						quidem quae instar regul: humanas dirigit actiones, <lb/> suique transgressores peccati
+						vinculo devincit;  alteram . <lb/>  vero quae subditos ad sui observantiam cogit, <lb/>
+						minis eos poenisque  coercendo . Et quidem constat <lb/> inter omnes catholicos quod ad vim
+						directricem pertinet <lb/>  omnes  legi  subjacere, sive injustos  sive  justos, <lb/> sive
+						imperfectos sive perfectos, ita ut qui eam violant <lb/> scientes et volentes, licet
+						antea sanctissimi fuerint, <lb/> et culpam et poenae reatum incurrant. Quod vero spectat
+						<lb/>  ad cogendi puniendique potestatem, perfectos <lb/> viros a lege Paulus
+						apostolus eximit, cum dicit: <hi rend="italic">Justo <lb/> non est lex</hi> posita; quia
+						non coacti metu poenarum <lb/>  obtemperant  legi, sed ex charitate, quae si <hi rend="italic">perfecta est,</hi>
+						<milestone unit="PLSection" n="C"/><lb/>
+						<hi rend="italic">foras  mittit  timorem.</hi> Ita sentit August. concione 10 in <lb/>
+						psal. CXVIII ; ita et Cassianus  l . iv de Inst. renunt. cap. <lb/> 39, et col. 21 cap.
+						13. His expositis facile est catholice <lb/> interpretari quod de Quadragesima scribit
+						eadem col. <lb/> cap. 29; sic enim ait : <hi rend="italic">Hac</hi> igitur <hi rend="italic"> Quadragesimae  lege </hi> <hi rend="italic"> qui <lb/> justus atque
+							perfectus est</hi> non <hi rend="italic">tenetur, nec exigui</hi> hujus <lb/>
+						<hi rend="italic"> canonis subjectione contentus est, quem profecto  illis  <lb/>  qui
+							per</hi>  totum   <hi rend="italic">anni</hi> spatium <hi rend="italic">deliciis vel
+							negotiis  s ae ­ cularibus </hi><hi rend="italic">­<lb/> </hi> implicantur Ecclesiarum <hi rend="italic">principes  statuerunt ; <lb/> ut vel hac legali quodammodo necessitate
+							constricti,</hi>
+						<lb/> his saltem <hi rend="italic">diebus vacare Domino cogerentur, ac dierum</hi>
+						<lb/>  <hi rend="italic"> vit ae su ae </hi> <hi rend="italic"></hi><hi rend="italic">, quos
+							totos quasi</hi> fructus <hi rend="italic">quosdam fuerant <lb/>  voraturi, vel
+							decimas Domino dedicarent.</hi>  Caeterum  <lb/>
+						<hi rend="italic">justi quibus lex non  est </hi> posita, <hi rend="italic">quique
+							spiritalibus non<lb/> exiguam illam, id  est , decimam partem, sed totum  vitae  suae <lb/>
+							</hi> <hi rend="italic">tempus</hi> impendunt, <hi rend="italic">quia liberi sunt a
+							decimarum <lb/> legalium functione, idcirco</hi> si <hi rend="italic"> eos  superveniens
+							honesta <lb/> et sancta necessitas</hi> coarctarit, <hi rend="italic">audent stationem
+							jejunii <lb/> absque ulla disceptatione laxare.</hi> Hoc  ipsum  probat <milestone unit="PLSection" n="D"/><lb/> Rabanus lib. II de Instit. cleric. cap. 20, et  Isidorus 
+						<lb/> lib. i de Ecclesiasticis Officiis cap. 56, et uterque <lb/>  Cassiani  testimonio id
+						 confirmat . Non desunt tamen <lb/> qui suspicentur hoc loco favere Cassianum Begardis
+						<lb/> et Beguinis, quorum haereses damnatae sunt sub Clemente <lb/>  V in concilio
+						Viennensi, relato inter  Clementinas  <lb/>   in clem. <hi rend="italic">Ad
+							nostrum,</hi> de Haereticis. De secundo <lb/> enim et tertio illorum errore ita scribit
+						concilium : <lb/> Asserunt secundo quod jejunare non oportet hominem <lb/>  nec orare
+						postquam gradum perfectionis hujus <lb/> modi fuerit assecutus; quia tunc sensualitas
+						 est  ita <lb/> perfecte spiritui et rationi subjecta, quod homo potest <lb/>  libere
+						corpori concedere quidquid placet. Tertio, <lb/> quod illi qui sunt in praedicto gradu
+						perfectionis et <lb/>  spiritu  libertatis, non sunt humanae subjecti obedientiae  ,<lb/>
+						nec ad aliqua  praecepta  Ecclesiae obligantur <lb/>  quia (ut asserunt) <hi rend="italic">Ubi Spiritus Domini, ibi  libertas  .<lb/></hi> Neutrum errorem sapit Cassianus, qui
+						col. 40 <lb/> c. 10 perfectos toto anno affirmat jejunare, orare <milestone unit="PLSection" n="A"/><lb/> vero omnibus momentis et actionibus, et praeter fremittendis
+						<lb/>  obedientiae laudes, quibus omnes suas <lb/> Institutiones et
+						Collationes aspersit, collatione etiam <lb/> 19 c. 6 inter alia commoda vitae socialis,
+						quae esse <lb/> commemorat in coenobio, illud adjicit abbas Joannes, <lb/> quod usque ad
+						finem, inquit, subjectus abbati, illum <lb/> aliquatenus videar  aemulari , de quo dicitur
+						: <hi rend="italic">Humiliavit<lb/>  semetipsum factus obediens usque ad</hi> mortem,
+						<lb/> merearque illius verbum humiliter dicere : <hi rend="italic">Quia</hi>  non  <lb/>
+						veni <hi rend="italic">facere voluntatem</hi> meam; <hi rend="italic">sed voluntatem
+							ejus qui</hi>
+						<lb/> misit <hi rend="italic">me Patris.</hi> A lege itaque Quadragesimae  non  <lb/>
+						eximit perfectos,  vel  nomine perfectionis, vel praeparationem <lb/>  vanae libertatis, quo
+						nitebantur Begardi et  Beguini   ,<lb/> dicentes : <hi rend="italic">Ubi Spiritus
+							Domini,</hi> ibi <hi rend="italic">libertas;</hi> sed <lb/> tribus de causis, quae ex
+						ejus verbis colligi possunt : <lb/> primum, quia <hi rend="italic">justo</hi> non <hi rend="italic"> est  lex</hi>  posita ,  ait  Apostolus <lb/> Tim.I ; deinde quia qui totum
+						vitae tempus spiritalibus <lb/>  officiis  impendunt, liberi sunt a decimarum legalium
+						<lb/> functione,  qualem . dicit esse Quadragesimam, per <milestone unit="PLSection" n="B"/><lb/> quam tamquam decimatio quaedam dierum anni Deo <lb/> redditur; postremo, si eos
+						superveniens honesta et <lb/> sancta necessitas  coarctarit . ' Atque  hae tres causae, <lb/>
+						si recte intelligantur, verae sunt. Quod etiam ad primam <lb/>  attinet, notissimum est
+						viros justos ac pertinet <lb/>  teneri quidem lege, et  culpae  poenaeque <lb/> obnoxios
+						esse, si eam ut recte vivendi ducem non <lb/> sequantur; liberos tamen a lege dici, qua
+						parte terroribus <lb/>  ac  poenis   homines ad sui cultum observantiamque <lb/> 
+						compellit, hoc enim severitatis metu non <lb/> indigent viri justi, quibus  Spiritus 
+						sancti gratia et <lb/> charitas dilatavit cor ad currendam viam mandatorum <lb/>  Dei.
+						 In  quem sensum seipsum explicat Cassianus <lb/>  in hac coll. c. 13 et  lib . iv Instit.
+						 Renunt . c. 39. <lb/> Altera vero causa vim habet apud eos qui sentiunt <lb/> non  teneri 
+						eos lege, praesertim humana, apud quos <lb/> finis  et  ratio legis locum  non  habet. Nam si
+						quadragenarium <lb/>  jejunium institutum fuit ut decimae quaedam <lb/>  annui temporis
+						Auctori temporum solverentur, <lb/> abunde eas solvunt qui omne vitae tempus et se totos
+							<milestone unit="PLSection" n="C"/><lb/>  Deo  tamquam holocausta quaedam exhibent, <hi rend="italic">in multa <lb/> patientia,</hi> in <hi rend="italic">tribulationibus,</hi> in <hi rend="italic">necessitatibus,</hi> in <hi rend="italic">angustiis  ,<lb/> in laboribus, in  vigiliis , in jejuniis, in castitate, etc.</hi>
+						<lb/> Certe si legis potestas  legis fine   nititur, non possunt <lb/> non probare secundum
+						Cassiani rationem, qui legis <lb/> obligationem ex ejus fine desumunt. Quorum sententia 
+						,<lb/> licet eam Ecclesia nusquam damnaverit, <lb/> quinimmo a plerisque viris
+						doctissimis defendatur, <lb/> mihi tamen non usquequaque probatur, nisi tertia <lb/>
+						Cassiani ratio accedat. hoc est, honesta et sancta <lb/> necessitas, quae si sit evidens,
+						nec ad praelatos, penes <lb/> quos jus est dispensandi in hujusmodi Ecclesiae  sanctionibus  
+						,<lb/> facilis patet accessus, potest per se ipsum <lb/> unusquisque jejunium
+						solvere, ut auctor est D. Thomas <lb/>  2-2 quaest. 147 art. 4.</p>
+					<ab>
+						<title type="sub">Coll. 21 cap. 30.</title>
+					</ab>
+					<p><hi rend="italic">Sciendum sane hanc observantiam  Quadragesimae </hi><hi rend="italic">,
+							<lb/> quamdiu  Ecclesiae  illius</hi> primitivae <hi rend="italic">perfectio
+							inviolata</hi>
+						<milestone unit="PLSection" n="D"/><lb/>  permansit , <hi rend="italic">penitus non fuisse-
+							 . Non  enim  praecepti </hi><hi rend="italic"> hujus <lb/>  necessitate, nec quasi legis
+							sanctione  constricti .</hi>
+						<lb/> arctissimis jejuniorum <hi rend="italic">terminis claudebantur, qui totum <lb/>
+							anni spatium aequali jejunio concludebant. Verum</hi> cum <lb/>
+						<hi rend="italic">ab  illa  apostolica devotione desciscens quotidie</hi> credentium <lb/>
+						<hi rend="italic"> multitudo</hi> suis <hi rend="italic">opibus incubaret, nec eas
+							usui<lb/> cunctorum secundum apostolorum</hi> instituta <hi rend="italic">divideret,<lb/> sed</hi> privatim <hi rend="italic">impendiis</hi> suis <hi rend="italic">consulens non servare  tantum </hi>­  ,<lb/> <hi rend="italic">sed etiam
+							augere contenderet,  Ananiae </hi> <hi rend="italic">et</hi> Sapphirae <lb/>
+						<hi rend="italic">exemplum non contenta sectari; id</hi> universis <hi rend="italic">tunc</hi> sacerdotibus <lb/>
+						<hi rend="italic"> placuit,</hi> ut <hi rend="italic">homines</hi> curis
+						saecularibus  illigatos . <lb/>
+						<hi rend="italic">, et pene (ut ita dixerim)  continentiae </hi> <hi rend="italic">vel
+							compunctionis <lb/> </hi> ignaros, <hi rend="italic">ad opus sanctum canonica jejuniorum
+							<lb/>  indictione revocarent,  et  velut legalium decimarum <lb/>  necessitate
+							compellerent, quae utique infirmis<lb/> prodesse posset,</hi> perfectis <hi rend="italic"> praejudicare </hi><hi rend="italic"> non posset, qui<lb/> sub gratia
+							Evangelii constituti,</hi> voluntaria <hi rend="italic">legem devotione <lb/> 
+							transcendunt.</hi> — Hic locus non pugnat usquequaque <lb/>  cum Patrum
+						constantissima sententia qui<pb n="365"/>
+						<milestone unit="PLSection" n="A"/><lb/>
+						<lb/> Quadragesimam ad apostolorum referunt traditionem  .<lb/> Licet enim  instituendi 
+						quadragesimale  jejunium  <lb/> ratio consecrata fuerit tum in Mosis, Eliae  et  (Christi <lb/>
+						 jejunio, tum in praecepto Domini de jejunando <lb/> generaliter, cum dicit Luc. v:
+							<hi rend="italic">Venient autem dies, <lb/> cum ablatus fuerit ab illis</hi> sponsus,
+							<hi rend="italic">et tunc jejunabunt  ,<lb/></hi> etc., tunc in multis commodis quae
+						ex jejunio <lb/> oriuntur; fieri tamen potuit ut cum primis illis nascentis <lb/> 
+						Ecclesiae annis fere quotidie jejunarent  universi .  ,<lb/> nullum fuerit de Quadragesima
+						praeceptum, <lb/> sed illud postmodum ad pullulantem jam quorumdam <lb/>  licentiam
+						coercendam  accesserit  de sententia <lb/> omnium sacerdotum, hoc est, apostolorum et
+						seniorum  .<lb/> Nam etiam hos adhiberi solitos in  concilium ab  <lb/> apostolis Lucas
+						Act. xv testatur. Certum itaque est <lb/> Quadragesimam  apostolorum  esse institutam,
+						 probabile  <lb/>  etiam cum ipsa  incoepisse  Ecclesia; hoc tamen <lb/> non usque adeo
+						certum, ut catholice non potuerit <lb/> opinari Cassianus post aliquot, hoc est, decem
+						vel <milestone unit="PLSection" n="B"/><lb/> duodecim  annos  institutam, et ita quidem,
+						ut ejus <lb/> institutio et perfectis non praejudicaret, ut  Cassianus  <lb/>  ait, eo
+						modo quem exposuimus superiore capite  ,<lb/> et incontinentes ad officii munus
+						revocaret, ob <lb/>  quos  praecipue instituebatur; quod non obscure significat <lb/>  S.
+						Leo serm. 4 de Quadragesima. Debebatur  ,<lb/> inquit, quidem tantis mysteriis  ita 
+						incessabilis <lb/> devotio, et continuata reverentia, ut  tales  permaneremus <lb/>  in
+						conspectu Dei, quales nos in ipso Paschali <lb/> festo dignum est  inveniri . Sed quia
+						haec fortitudo <lb/> paucorum est, et dum carnis fragilitate austerior <lb/>  observantia 
+						relaxatur, dumque per  varias  actiones <lb/> vitae hujus sollicitudo distenditur, necesse
+						est de <lb/> mundano pulvere etiam religiosa corda sordescere, <lb/> magna divinae
+						institutionis salubritate provisum est <lb/> ut ad reparandam mentium puritatem
+						quadraginta <lb/>  nobis  dierum exercitatio mederetur, in quibus aliorum <lb/>  temporum
+						culpas et pia opera redimerent, et <lb/> jejunia casta decoquerent. <milestone unit="PLSection" n="C"/></p>
+					<ab>
+						<title type="sub">Lib. v de Institut. Renunt. cap. 40.</title>
+					</ab>
+					<p><hi rend="italic">Laudat duos adolescentes, qui vitam amittere</hi> maluerunt  ,<lb/>
+							<hi rend="italic">quam circa  seniorum  mandatum vesci ficubus  ,<lb/> cum aliud non
+							haberent.</hi> — Recte quidem laudat <lb/> obedientiam et simplicitatem ob quam ipsis
+						id vitio <lb/> datum non est, tametsi ex suo genere non sapienter <lb/> id factum sit,
+						cum potuissent (nisi aetatis imperitia <lb/> obstitisset) mandatum senioris in extremo
+						necessignificat <lb/>  pro se interpretari, si id ad vitam sufficere potuisset  .<lb/></p>
+					<ab>
+						<title type="sub">Lib.  XII  de Institut. Renunt. cap. 4 et 5.</title>
+					</ab>
+					<p>Amisit <hi rend="italic">diabolus beatitudinem qua Dei munere fruebatur</hi>
+						 .<lb/> ---Beatitudinem  vitae intellige, non patriae. Illa <lb/> fide, spe, amore et
+						contemplatione absentis boni <lb/> posita est;  haec  vero in Deo videndo facie ad faciem,
+						<lb/> atque eo sicut cogniti  sumus cognoscendo  .</p>
+					<ab>
+						<title type="sub">Lib.  III  de Institut. Renunt. cap. 2.</title>
+					</ab>
+					<p><hi rend="italic">Gratius</hi> est <hi rend="italic">voluntarium</hi> munus quam
+						functiones quae <lb/>
+						<milestone unit="PLSection" n="D"/><lb/>
+						<hi rend="italic">canonica</hi>  compulsione  <hi rend="italic">redduntur.</hi> — Gratius,
+						subaudi, <lb/> nobis; nam Deo, non item, nisi ex  accidenti , cum <lb/> tristitia ex
+						 praecepto  multum demit ex  animi hilaritate , <lb/> cujusmodi  affectio  aptior est ad
+						incrementa charismatum  ,<lb/> quam tristitia ex necessitate, <hi rend="italic"> Hilarem .. enim</hi>
+						<lb/> datorem diligit <hi rend="italic">Deus.</hi>
+					</p>
+					<ab>
+						<title type="sub">Ibidem, cap. 9 et 10.</title>
+					</ab>
+					<p>Causam cur in <hi rend="italic">Urbe</hi> sabbato olim <hi rend="italic">jejunaretur,
+							putat</hi>
+						<lb/> esse <hi rend="italic">quia</hi> apostolum Petrum <hi rend="italic">eodem die
+							contra Simonem</hi>
+						<lb/>  <hi rend="italic">magum conflictaturum</hi> Romani <hi rend="italic">assererent jejunasse</hi>
+						 ,<lb/> <hi rend="italic">cum antea</hi> non jejunaretur.– At Innocentius I <lb/>
+						epist.  1  ad Eugubinum episcopum cap. 4 feria sexta <lb/> et sabbato jejunandum esse
+						tradit, quia ea biduo <lb/> moesti ob Christi  Domini  mortem jejunarunt. Si ambae <lb/> 
+						causae nequeunt esse  verae , error est Cassiani in <lb/> historia, quam, cum ipse ab Urbe
+						longe abesset, ita <lb/> retulit sicut acceperat a quibusdam Romanorum, <lb/>  quos  in ea
+						sententia fuisse refert Augustinus epist. <lb/> 86 ad Casulanum, tametsi addat a
+						plerisque Romanis <milestone unit="PLSection" n="A"/><lb/>
+						<lb/>  eam falsam  judicari .  Quod  vero adjicit Cassianus <lb/> toto Orienti jejunari
+						 ex  traditione apostolica quinis <lb/> hebdomadae diebus, sabbato vero et dominico die
+						<lb/>  jejunium  solvi, ne corpus inedia flacescat, id observari <lb/>  a  multis ,  maxime a 
+						monachis, testatur Augustinus  .<lb/> Romae etiam paucissimos clericos aut monascentis <lb/>
+						 sex  diebus  jejunare, ut solo die dominico  jejunium ; <lb/>  relaxent. Illud etiam
+						Cassiano cum Augustino <lb/> convenit, nec in Oriente, nec in multis Occidentis <lb/>
+						partibus sabbato jejunari: ex quo colligunt hoc jejunium <lb/>  ex apostolorum
+						traditione non discessisse <lb/> et  recte  . Neque Innocentius jejunium sabbati apostolorum
+						<lb/>  praecepto  institutum  tradit, sed  exemplo , <lb/> nempe quia apostoli cum
+						Christus pateretur jejunabunt  .<lb/>  Quartam  tamen et sextam ferias jejunio deputatas
+						<lb/>  ab apostolis sensit Augustinus : illa, quia tunc <lb/> consilium iniere de
+						occidendo Domino; hanc vero <lb/> quia in ea mortuus est; sabbato autem, quia quievit
+						<lb/>  in sepulcro   post opus redemptionis, ut olim  Deus . <milestone unit="PLSection" n="B"/><lb/> peracto creationis opificio. Inde, ait Augustinus, <lb/> orta varietas,
+						ut alii sint (maxime Orientis popul 1 ) <lb/> qui propter requiem significandam mallent
+						relaxare <lb/> jejunium; alii propter humilitatem mortis Domini <lb/> jejunare, sicut
+						Romana et nonnullae Occidentis Ecclesiae  ,<lb/> inter quas fuit Africana, a qua
+						Mediolanum <lb/> profecta mater Augustini, cum ibi non jejunantes <lb/> sabbato
+						reperisset, hujusmodi responsum ab Ambrosio <lb/>  accepit : Quando Romae sum, jejuno
+						sabbato, <lb/> quando hic sum, non jejuno, ut ibidem Augustinus <lb/> et  epistola  128 ad
+						Januarium narrat. Et quidem non <lb/> de sabbati, sed de  quartae  et sextae feriae per
+						annum <lb/> jejunio, tamquam per totam Ecclesiam recepto, et <lb/> ab apostolis tradito,
+						idem cum Augustino scribunt <lb/> Clemens Alexandrinus lib. VII Stromatum, Epiphanius <lb/>
+						 haeresi 75, Origenes hom. 10 in  Levit ., Damaluerunt <lb/>  lib. de Haeresibus, in
+						 Aerianis .</p>
+					<ab>
+						<title type="sub">Lib. v de Institut. Renunt. cap. 34.</title>
+					</ab>
+					<p><hi rend="italic">Abbas Theodorus monet monachum ad Scripturarum</hi>
+						<milestone unit="PLSection" n="C"/><lb/>
+						<hi rend="italic">notitiam pertingere</hi> cupientem, in <hi rend="italic">animo
+							potius</hi>  purgando . <lb/>
+						<hi rend="italic"> quam</hi> in <hi rend="italic">commentatorum libris operam
+							atque</hi>
+						<lb/> industriam <hi rend="italic">debere collocare.</hi> Non aliud certe docet <lb/>
+						quam quod universi Patres, praecipuum nempe  intelligendarum  <lb/>  Scripturarum
+						praesidium in cordis potuisset <lb/>  esse puritate, tametsi commentatorum libros, <lb/>
+						praesertim sanctorum nequaquam damnet: se ipsum <lb/> enim damnaret, qui in libro ultimo
+						de Incarnatione <lb/> Domini ad finem ex Patrum libris clarissima adversus <lb/> 
+						Nestorium testimonia depromit, nec depromere <lb/> potuisset, nisi eos diligenter
+						perlegisset.</p>
+					<ab>
+						<title type="sub">Coll. i cap. 20.</title>
+					</ab>
+					<p>Quo <hi rend="italic">genere illi quoque</hi> decepti <hi rend="italic">sunt, qui</hi>
+						post professionem <lb/>  <hi rend="italic">monachi, nitore sermonis</hi> et <hi rend="italic">quibusdam</hi> sunt  .<lb/> <hi rend="italic">philosophorum</hi>
+						dogmatibus <hi rend="italic">incitati,</hi> quae prima fronte <lb/>
+						<hi rend="italic">piis quibusdam</hi> sensibus <hi rend="italic">ac religioni</hi>
+						consonis <hi rend="italic">audientes, <lb/> velut auri</hi> fulgore, <hi rend="italic">fallentia, quos semel superficie illexerant ,<lb/> velut</hi> numismatibus  aereis <hi rend="italic"> falsisque deceptos,</hi>
+						<milestone unit="PLSection" n="D"/><lb/>
+						<hi rend="italic">perpetuo nudos ac</hi> miseros <hi rend="italic">reddiderunt, vel</hi>
+						ad <hi rend="italic"> s ae culi eoa </hi><hi rend="italic"><lb/> </hi> strepitum <hi rend="italic">revocantes, vel haereticos errores, ac</hi> praesumptiones <lb/>
+						<hi rend="italic"> tumidas pertrahentes. Quod</hi> etiam <hi rend="italic">Achar</hi>
+						<lb/> in <hi rend="italic">libro</hi> Jesu <hi rend="italic"> Nave </hi> legimus <hi rend="italic">fuisse perpessum,</hi> qui de <lb/>
+						<hi rend="italic">castris Allophylorum</hi> regulam <hi rend="italic">auream</hi>
+						concupiscens <lb/> atque furatus, <hi rend="italic">anathemate percuti atque</hi> aeterna
+						meruit <lb/>
+						<hi rend="italic">morte</hi> damnari. Non damnat Cassianus eloquentiae <lb/> vel
+						 philosophiae  studium, quo adjuti et invisibilia <lb/>
+						<hi rend="italic">Dei per ea quae facta sunt intelligimus,</hi> et divinorum <lb/>
+						dogmatum veritatem explicamus, tuemur, et  exornamus '  ;<lb/> sed incautos reprehendit,
+						qui vanis  quibusdam  <lb/>  inventis philosophorum capiuntur potius quam <lb/> ex
+						ipsorum stercore aurum excernant, et  Aegyptiorum  <lb/>  se superstitione contaminant
+						potius quam ipsis <lb/> tamquam injustis possessoribus vasa detrahant ad <lb/> veri Dei
+						cultum transferenda, quod faciendum  esse  <lb/> docet Augustinus lib.  II de  Doctrina
+						Christiana c. 4, <lb/> cum ethnicorum libris vacatur : quo delectu ac discrimine <lb/> 
+						qui usi non sunt, maiarum  sege-<pb n="367"/>
+						<milestone unit="PLSection" n="A"/><lb/> tem ac pabulum habuere philosophiam, ut
+						scribit, <lb/> Tertullianus lib. de Praescriptionibus haereticorum, <lb/> et lib.
+						adversus Hermogenem.</p>
+					<ab>
+						<title type="sub">Lib. 8 de Institut. Renunt. cap. 20.</title>
+					</ab>
+					<p><hi rend="italic">Sciendum tamen</hi> in <hi rend="italic">eo quod</hi> in quibusdam
+						exempla­ <lb/>
+						<hi rend="italic">rib us</hi> invenitur : Qui irascitur <hi rend="italic">fratri suo
+							sine</hi> causa, <lb/>
+						<hi rend="italic">reus erit judicio,</hi> superfluum <hi rend="italic">esse,</hi> sine
+							<hi rend="italic">causa, et adje­</hi>
+						<lb/> ) <hi rend="italic">ctum ab</hi> hit <hi rend="italic">qui</hi> amputandam iram
+						pro <hi rend="italic">justis causis</hi> mi­ <lb/> . <hi rend="italic">aima
+							putaverunt,</hi> cum <hi rend="italic">utique nullus quamlibet absque <lb/> ratione
+							commotus</hi> sine <hi rend="italic">causa se dicat</hi> irasci. Quam­ <lb/> obrem <hi rend="italic">apparet ab eia adjectum</hi> qui propositum non in­ <lb/>
+						<hi rend="italic">tellexerunt</hi> Scripturae <hi rend="italic">volentis fomitem</hi>
+						iracundiae <hi rend="italic">omni­</hi>
+						<lb/> modis <hi rend="italic">amputare, nullamque indignationis</hi> occasionem <lb/>
+						<hi rend="italic">penitus reservare, ne</hi> dum <hi rend="italic">jubemur</hi> irasci
+							<hi rend="italic">cum causa, <lb/> etiamsi</hi> sine causa <hi rend="italic">irascendi
+							nobis</hi> intromittatur oc­ <lb/> casio. <hi rend="italic">Finis enim patientiae non
+							in irascendo juste, <lb/> sed</hi> penitus in <hi rend="italic">non irascendo
+							consistit; licet a qui­</hi>
+						<lb/> busdam <hi rend="italic">hoc</hi> ipsum, <hi rend="italic">quod dicitur,</hi> sine
+						causa, <hi rend="italic">ita in-</hi>
+						<milestone unit="PLSection" n="B"/><lb/>
+						<hi rend="italic">terpretari scam, quod</hi> scilicet <hi rend="italic">sine MMM</hi>
+						irascatur is <lb/> cut <hi rend="italic">expetere ultionem irato nou liceat. Melius</hi>
+						tamen <lb/>
+						<hi rend="italic">est ita tenere, ut novella exemplaria multa et antiqua</hi>
+						<lb/> omnia inveniuntur <hi rend="italic">esse perscripta.</hi> — Idem ante Cas­ <lb/>
+						sianum dixerat Hicronymus super illud Matthaei v : <lb/> Qui irascitur <hi rend="italic">fratri</hi> suo. In quibusdam, inquit, codi­ <lb/> cibus additur, <hi rend="italic">sine causa;</hi> caeterum in veris definita <lb/> sententia est, et ira penitus
+						tollitur. Et contra Pe­ <lb/> lagianos : Qui irascitur <hi rend="italic">fratri</hi> suo
+						sine <hi rend="italic">causa reus erit</hi>
+						<lb/> judicio, licet in plerisque codicibus antiquis, <hi rend="italic">sine<lb/>
+							causa,</hi> additum non sit, ut scilicet, ne cum causa <lb/> quidern debeamus irasci.
+						Augustinus etiam lib i Re. <lb/> tract. c. 19. Neque tamen hos doctores credendum <lb/>
+						est commendare voluisse Stoicorum <foreign xml:lang="grc">άπάθειαν</foreign>, quam <lb/>
+						refellit August. lib. II de Civitate Dei, c. -i, ct merito. <lb/>
+						<hi rend="italic">Nam si ira non</hi> fuerit <hi rend="italic">cum causa subest,</hi> ut
+						ait Chryso­ <lb/> stom. hum. ii in Matthaeum, <hi rend="italic">nec doctrina
+							proficit,<lb/> nec judicia stant, nec</hi> crimina <hi rend="italic">competcuntur.</hi> Irae ita­ <lb/> que nomine, Hieronymus et Cassianus affectum <lb/>
+						ouemdam intellexerunt aut rationem antevertit. Hic <milestone unit="PLSection" n="c"/><lb/> enim etiamsi ex justa causa erumpat, modum ser­ <lb/> vare non potest; ideo
+						penitus non irascendum mo- <milestone unit="PLSection" n="A"/><lb/> nent. Caeteri iram
+						aliquando concedunt, quia eam <lb/> integunt, quae imperium rationis excitat ac mOde­
+						<lb/> ratur. Unde S. Greg. lib. i Moral. cap. 55 : Curan­ <lb/>
+						<hi rend="italic">dum,</hi> inquit, <hi rend="italic">summopere est, ne ira, qua</hi>
+						instrumentum <lb/> virtuti, assumitur, <hi rend="italic">menti dominetur; nec quasi
+							do­</hi>
+						<lb/> mina praeeat, <hi rend="italic">sed quasi</hi> ancilla <hi rend="italic">ad
+							obsequium parata,</hi>
+						<lb/> a <hi rend="italic">rationis tergo numquam recedat.</hi> Et licet Cassianus <lb/>
+						eodem lib. c. 6, 7 et 8, significet irae ministerium <lb/> ad hoc solum nobis esse
+						insertum, ut lascivientibus <lb/> retibus ac vitiis animi nostri irascamur, tamen <lb/>
+						eadem <unclear>de</unclear> causa nonnumquam etiam erga alios iram <lb/> proferendam
+						esse cum ratio postularit, non obscure <lb/> significat coll. 16, c. 26, cum scribit:
+							<hi rend="italic">Nec ego dixi<lb/> quod illius qui fortis eat ac robustus virtus</hi>
+						toleran­ <lb/> tiaque <hi rend="italic">vincenda sit, sed quod</hi> infirmi <hi rend="italic">pessima</hi> vale­ <lb/>
+						<hi rend="italic">tudo, illius qui sanut eat sustentatione</hi> nutrita, <hi rend="italic">atque</hi> in <lb/>
+						<hi rend="italic">deterius quotidie prolabens, generatura</hi> sit causas <hi rend="italic">ob<lb/> quat ipse ultra non debeat sustineri.</hi>
+					</p>
+					<ab>
+						<title type="sub">Coll. 11 can. 13.</title>
+					</ab>
+					<p>
+						<milestone unit="PLSection" n="B"/>Cassianus Christum vocat hominem Dominicum, <lb/>
+						quomodo et ante vocarant multi antiqui Patres, et <lb/> Augustinus lib. LXXXIII quaest.
+						36, tametsi hanc lo­ <lb/> cutionem postmodum emendarit lib. I Retract. c. <lb/> 19,
+						quia cum Christus Dominus sit, Dominicus im. <lb/> proprie diceretur : significaretur
+						enim illum homi­ <lb/> nem non esse Deum ac Dominum, sed Dominicum, <lb/> hoc est, esse
+						suppositum humanum unitum Domino, <lb/> seu supposito Domini; quare duo supposita in
+						Chri­ <lb/> sto fingerentur, quod Nestorianum est. Et quoniam <lb/> constat Cassianum
+						non solum non consensisse Ne. <lb/> storio, sed contra eum septem libros scripsisse,
+						<lb/> quibus probat non duas, sed unam esse Christi per­ <lb/> sonam ; ideo homo
+						Dominicus apud eum excusandus <lb/> est eo modo quein ponit S. Thomas III part., quaest.
+						<lb/> 16, art. 3 : Homo, inquit, Dominicus nonnulla ra­ <lb/> tione posset defendi, quia
+						scilicet posset aliquis <lb/> dicere quod dicitur homo Dominicus ratione humanae <lb/>
+						naturae quam significat hoc nomen homo. non autem <milestone unit="PLSection" n="c"/><lb/> ratione suppositi. Vide Rufinum in Apologia pro Ori- <lb/> gene, prope
+						linem.</p>
+				</div>
+				
+
+				</body></text></TEI>

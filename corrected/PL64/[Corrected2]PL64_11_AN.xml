@@ -1,0 +1,871 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><TEI xmlns="http://www.tei-c.org/ns/1.0"><teiHeader>
+    
+		<fileDesc>
+			<titleStmt>
+				<title>Patrologiae Cursus Completus. Series Latina (PL)</title>
+				<sponsor>University of Leipzig</sponsor>
+				<funder>European Social Fund Saxony</funder>
+				<principal>Gregory Crane</principal>
+				<respStmt>
+					<persName xml:id="Jouve">Jouve</persName>
+					<resp>OCR-ed, corrected and encoded the text</resp>
+				</respStmt>
+				<respStmt>
+					<persName>Greta Franzini</persName>
+					<resp>Project Manager (University of Leipzig)</resp>
+				</respStmt>
+				<respStmt>
+					<persName>Simona Stoyanova</persName>
+					<resp>Project Assistant (University of Leipzig)</resp>
+				</respStmt>
+				<respStmt>
+					<persName>Bruce Robertson</persName>
+					<resp>Technical Advisor (Mount Allison University)</resp>
+				</respStmt>
+			</titleStmt>
+
+			<publicationStmt>
+				<authority>University of Leipzig</authority>
+				<idno type="filename">PL64.xml</idno>
+				<availability>
+					<licence target="https://creativecommons.org/licenses/by-sa/4.0/">Available under a
+						Creative Commons Attribution-ShareAlike 4.0 International License</licence>
+				</availability>
+				<date>2014</date>
+				<publisher>University of Leipzig</publisher>
+				<pubPlace>Germany</pubPlace>
+			</publicationStmt>
+
+			<sourceDesc>
+				<listBibl xml:lang="la">
+					<biblStruct>
+						<monogr>
+							<editor>
+								<persName>
+									<name xml:lang="fr">Jacques Paul Migne</name>
+								</persName>
+							</editor>
+							<author ref="http://data.perseus.org/catalog/urn:cts:latinLit:stoa0058">Boethius</author>
+							<title>In Prophyrium Dialogi A Victorino Translati</title>
+							<title ref="http://data.perseus.org/catalog/urn:cts:latinLit:stoa0058.stoa007">Commentarii In Porphyrium A Se Translatum</title>
+							<title>In Categorias Aristotelis Libri Quatuor</title>
+							<title ref="http://data.perseus.org/catalog/urn:cts:latinLit:stoa0058.stoa022">In
+								Librum Aristotelis De Interpretatione Libri Duo</title>
+							<title>Priorum Analyticorum Aristotelis Libri Duo</title>
+							<title>Posteriorum Analyticorum Aristotelis Libri Duo</title>
+							<title>De Syllogismo Categorico</title>
+							<title>De Syllogismo Hypothetico Libri Duo</title>
+							<title>De Divisione</title>
+							<title>Liber De Diffinitione</title>
+							<title>Topicorum Aristotelis Libri Octo Severino Boethio Interprete</title>
+							<title>Elencorum Sophisticorum Aristotelis Libri Duo Severino Boetio
+								Interprete</title>
+							<title>In Topica Ciceronis Commentariorum Libri Sex</title>
+							<title>De Differentiis Topicis Libri Quatuor</title>
+							<title>Speculatio De Rhethoricae Cognatione</title>
+							<title>Locorum Rhethoricorum Distinctio</title>
+							<title>De Disciplina Scholarum</title>
+							<title ref="http://data.perseus.org/catalog/urn:cts:latinLit:stoa0058.stoa025">Quomodo
+								Trinitas Unus Deus Ac Non Tres Dii</title>
+							<title ref="http://data.perseus.org/catalog/urn:cts:latinLit:stoa0058.stoa028">Utrum
+								Pater Et Filus Ac Spiritus Sanctus De Divinitate Substantialiter Praedicentur
+								Liber</title>
+							<title ref="http://data.perseus.org/catalog/urn:cts:latinLit:stoa0058.stoa003">Quomodo
+								Substantiae In Eo Quod Sint Bonae Sint Cum Non Sint Substantialia Bona</title>
+							<title ref="http://data.perseus.org/catalog/urn:cts:latinLit:stoa0058.stoa006">Brevis
+								Fidei Christianae Complexio</title>
+							<title ref="http://data.perseus.org/catalog/urn:cts:latinLit:stoa0058.stoa023">Liber
+								De Persona Et Duabus Naturis Contra Eutychen Et Nestorium</title>
+							<imprint>
+								<publisher>Garnier</publisher>
+								<pubPlace>Paris</pubPlace>
+								<date>1847</date>
+							</imprint>
+							<biblScope unit="volume">64</biblScope>
+						</monogr>
+						<ref target="https://archive.org/details/patrologiaecur64mign">Internet Archive</ref>
+
+					</biblStruct>
+				</listBibl>
+			</sourceDesc>
+
+		</fileDesc>
+		<encodingDesc>
+			<p>The following text is encoded in accordance with EpiDoc standards and with the CTS/CITE
+				Architecture.</p>
+		<refsDecl>
+        <cRefPattern n="" matchPattern="(.+).(.+).(.+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@type='edition']/tei:div[@n='$1']/tei:div[@n='$2']/tei:div[@n='$3'])"/>
+        <cRefPattern n="" matchPattern="(.+).(.+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@type='edition']/tei:div[@n='$1']/tei:div[@n='$2'])"/>
+        <cRefPattern n="" matchPattern="(.+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@type='edition']/tei:div[@n='$1'])"/>
+      </refsDecl>
+    </encodingDesc>
+
+		<profileDesc>
+			<langUsage>
+				<language ident="la">Latin</language>
+			</langUsage>
+		</profileDesc>
+
+	</teiHeader>
+	<text><body><div type="edition" n="">
+					<head>
+						<title type="main">AN. MANL. SEV. BOETII</title>
+					</head>
+					<ab>
+						<title type="sub">LIBER DE DIFFINITIONE.</title>
+					</ab>
+					<p>
+						<milestone unit="PLSection" n="B"/>Dicendi ac disputandi prima semper oratio est, ]
+						<lb/> et jam dialecticis auctoribus etipsoM. Tullio saepius  <lb/> admonente  quae
+						diciturdiffinitio. Quippe cum  in certamen <lb/>  contentionemque nihil possit (quod tamen
+						in <lb/> dictione consistat) aliquando deduci, nisi de quo <lb/> futura pugna est prius
+						fuerit in diffinitione ita defixum <lb/> fixum,ut possit inter utrumque qui inituri sunt eam
+						<lb/> litem esse manifestum quid sit illud de quo in futura <lb/>  quaestione
+						tractabitur: unde non solum commoditatis <lb/>  genere perspicienda est virtus
+						definiendi, <lb/> quia per hanc orationem res semper evolvitur, et <lb/> quod illa sit
+						quae illud de quo quaeritur explicat, <lb/> verum etiam quod principalis semper adhibita
+						maximum <lb/>  lumen et manifestum parit rei quae in contrarium <lb/>  deducta
+						habetquaestionem.Etenim si verba <lb/> aut nota omnibus exstitissent,aut unam
+						significantiam <milestone unit="PLSection" n="C"/><lb/>  sui semper tenerent,et non
+						ambiguo vel  obscuro  <lb/>  dicto audientes fallerent, et loquentes  sub diversa <lb/>
+						interpretatione deciperent,omnino definitio necessaria <lb/>  minime crederetur.At cum
+						nomina rebus imposita <lb/>   vocesque   singulae per existimationem ejus qui <lb/>  ita 
+						res appellandas esse censuit ita sint institutae, et <lb/> itaartecompositae, ut nota quadam 
+						in rerum significatione <lb/> catione,nonapertadeclaratione, ducerent audientes , <lb/>
+						necessarium admodum arbitror nosse quid  sit definitio   ,<lb/> quibusque speciebus ac
+						partibus compleatur,ut <lb/> facillime  eteamrem quamdeclarat  possitosLendere   possitosLendere,et <lb/>
+						tollat cognitis modis in dicendo sua varietate fastidium <lb/> dium.Ac prius  ejusdem  
+						ipsius, ut ordinem  per  praecepta servare videamur  <lb/> ptaservarevideamur, definitionisadhibendaestdefinitio 
+						<lb/>  Definitio est(utM.Tullius in Topicis ait) oratio <milestone unit="PLSection" n="D"/><lb/> quae id quod definit explicat quid sit; hoc ita patet et <lb/> ita
+						intelligi necesseest, utetinquogeneresitdefinitio  <lb/> declarandum esse videatur,et quid
+						comprehendat, <lb/> et quemadmodum perfectae eadem definitio definita <lb/> est. Nomina
+						vel voces interdum res significant,interdum <lb/>  facta,interdum singula
+						dicta,interdum orationes <lb/> tiones,et quanquam his omnibus factis ac dictis et <lb/>
+						orationibus genus videatur esse quod dicimus, res <lb/> tamen proprio nomine et certa
+						signifi aliud <lb/> esse videtur quam factum est,aliud quam dictum, <milestone unit="PLSection" n="B"/><lb/> singulare atque unicum aliud quam oratio. Ergo defixum <lb/>
+						 facti vox est,non rei alicujus aut corporationes  ,<lb/> aut incorporalis, sed
+						est oratio. Etenim talis <lb/> dictio quae exprimit quid sit id de quo quserttur, sins 
+						<lb/> dubio appellatur oratio, ut oratio  est  exor, et <lb/> narratio,et caetera quae
+						partes orationis esse dicimus. <lb/> Ita ergo et. oratio est. Sed quoniam hoc
+						generale <lb/>  nomen est quod, uti diximus, convenit etiam <lb/> expositioni,
+						narrationi, invocationi, precationi, caeterisque <lb/>   singulis quae  utique ora
+						esse dicuntur, <lb/> ut id quod generaliter appositum est, possit ad id <lb/> deduci de
+						quo quaeritur,adjecta est species.Quaerebamus <lb/>  enim quidessetdefinitio, ad quam rem 
+						declarandam <lb/>   M . Tullius  adjecit, quae id quod definit explicat <lb/>  quid
+						sit,talis oratio non nisi definitio est.Nam <lb/> narratio oratio quidem est quae non
+						explicat quod <milestone unit="PLSection" n="C"/><lb/> definit, sed quod gestum est, et
+						item  aliae  singulae <lb/> orationes in suis  officiis  actionibusque constitutae <lb/>
+						aliud sunt quam ista oratio quae id quod definit explicat <lb/>  quid sit,ita adjecta
+						est species,ut cum genus <lb/> supra sit oratio, species sit quae id quod definit. <lb/>
+						Postremo tamen adjunctum sit quo certius id et quo <lb/> magis proprium declaret quod
+						dictum est,explicat <lb/> quid sit. Sunt enim aliae orationes quae explicant <lb/> magis
+						quale quid sit,aut quantum sit. At vero haec <lb/> nihil horum, sed tantum quid sit
+						explicat, diversa <lb/> est enim in ista partitione cognitio, quippe cum <lb/> aliud est
+						scire quale sit, et quid sit explicare, hoc <lb/> enim in percipienda rei
+						substantiacontinetur,illud <lb/> in qualitate noscenda, et haec quidem Ciceronis <lb/>
+						sit adhibita definitio. Nos tamen apertius idipsum <milestone unit="PLSection" n="D"/><lb/> quid sit definitio nostra explanatione faciamus. <lb/> Omne quod  demonstratur 
+						oratione, aut an sit, aut <lb/> quid sit,aut quale sitostenditur,quod cum adhibetur <lb/>
+						tur,oratio ad declarationem rei alicujus an sit non <lb/> est definitio. Item cum quale
+						sit aliquid oratione <lb/> monstratur,pari modo definitio non erit.Cum vero <lb/> quid
+						sit ostenditur,quod medium est inter an sit, et <lb/> quale sit,ita scilicet medium ut
+						an sit nulla jam sit <lb/> dubitatio, item quale sit, non ejus qui requirit, sed <lb/>
+						qui definit sit in scientia collocatum : medium,in-<pb n="893"/>
+						<milestone unit="PLSection" n="A"/><lb/>   hoc genus quod ostendit idipsum de quo
+						quaeritur <lb/>  quid sit, definitio nuncupatur. Omnis definitio <lb/> in quaestione
+						rem habet incertam. Omnisres,si certa <lb/> est, definitione non eget; si incerta est,
+						neque res <lb/> est,  et quaerit definitione  monstrari. Omnis enim res <lb/> si modo jam
+						res est, quemadmodum diximus,certa <lb/> est. Cum vero jam certa est, et qualitates suas
+						 habeat  <lb/>  quibus cum facile comprehenditur, facile quid <lb/> sit agnoscitur.
+						Nunquam enim quid sit intelligi potest  ,<lb/> nisi  quale sit  fuerit comprehensum. Omnis
+						diffinitio <lb/>  aut  probanda ' : ) ':) rei causa, aut,si res in quaestione <lb/> versatur,
+						augendae, aut si vel apud adversarium vel <lb/> apud auditorem quaelibet jam nota res
+						est, confirmandae <lb/>  assumitur. Nihilominus tamen diffinitio,ut <lb/> res eadem quae
+						nota est, et certa et fixa, teneatur, <milestone unit="PLSection" n="B"/><lb/>
+						adhibetur.Omnis  diffinitio , aut rhetorica est oratio, . <lb/> aut dialectica. Si est
+						rhetorica, originem ex  contentione  " <lb/>  suscipiens per rei de qua quaeritur partes
+						in <lb/> suas se dividet, necin     uniustractatuasuis   rebus tota <lb/> consistet, ut cum
+						uniuscujusque rei plena et certa <lb/> perfectio nota sit, cunctas per partes sibi
+						eamdem <lb/> distribuant dicta certantium.Sepulturae violationem <lb/> rem etiam certam
+						plenamque et perfectam retinemus <lb/> cum in eruto sepulcro est etiam animus et factum
+						<lb/> violantis, ut studio  eruendi et  profanandi manes hoc <lb/> quispiam videatur
+						aggressus.Ergo, uti diximus, violatio <lb/>  sepulturae constat et animo et facto,
+						plenaque <lb/>  ipsa  res est violati sepulcri ex his duobus, aperuit <lb/> sepulcrum
+						quidam ut auferretornamenta.Idem sepulcri <lb/>  violati reus in judicium devocatur,
+						sine dubio <lb/> diffinitivam  orationem et contentionem  exprimentem <milestone unit="PLSection" n="C"/><lb/> quid sit violatio  sepulturae   necessario causa desiderat;
+						<lb/> sed singulis partibus totius facti ac pleni utuntur <lb/> oratores, ut sepulturae
+						violationem ponat unus quod <lb/> apertum sit sepulcrum,  contra alius  sepulturae violationem
+						<lb/>  dicat in anirr. contineri ita existit diffinitivae  <lb/> orationis iste
+						 tractatus , ut cum totum quod agnoscitur <lb/>  in sepulturae violatione, per partes
+						suas fuerit <lb/> distributum, easque partes oratores singuli  tenuerint  <lb/> 
+						t, contendendi  genere diffinitione uti videntur. Sed <lb/>  non  recte dicitur hujusmodi
+						diffinitio, cum non si <lb/> certa, non plena, non integra, nisi cum totum quidquid <lb/>
+						 ipsius rei est de qua quaeritur exprimens quid <lb/> sit oratio declararit, verum
+						haec  captiosaet  falsaest  ; <lb/> non certa rhetorum diffinitio. Est alia etiam quae <lb/>
+						rhetoribus accommodata cognoscitur, quae longe a <milestone unit="PLSection" n="D"/><lb/>  virtuteditfiniendi plenissimeseparatur  plenissimeseparatur,quae  per collationem  <lb/>  non quid
+						 sit ostendit , sed haec esse a simili, <lb/> cum aliud sit, oratione concludit, ut cum
+						quaeritur <lb/> quid sit accipere utique re propria, vera, certa, nihil  aliud  <lb/>   est
+						nisi propria manu aliquid ab aliquo oblatum <lb/> sumere. Per collationem M. Tullius
+						definit pecunias <lb/> accepisse Verrem, cum comites, socii ministrique <lb/> pecunias
+						acceperint. Comites illi, inquit. tui manus <lb/> erant tuae. Item  in alio exemplo cum
+						quaeritur quid <lb/> sit iuimicus, dicimus  inimicum esse eum qui aliquid <lb/> mali
+						molitus sit ; ac Cicero collatione utens dicit : <lb/> Inimicus est qui facit contra
+						omnium rem,voluntatem <lb/> tem,honorem,dignitalem.Ex quibus colligimus hujusmodi <milestone unit="PLSection" n="A"/><lb/>  diffinitiones contentioni oratorum maxime <lb/>
+						convenire, longe tamen a virtute diffinitionis esse <lb/> discretas; sed hae
+						diffinitiones quae oratoribus aptae <lb/> sunt et poetis sui explicatione in oratione
+						certum <lb/> ordinem continent. De qua re praecepta in Rhetoricis <lb/> sunt a M. Tullio
+						constituta, ita  ut  omnis diffinitio, <lb/> hoc est oratio, quae explicat de quo
+						quaeritur quid <lb/> sit, his membris partibusque tenetur: primum uti <lb/> breviter id
+						de quo quaeritur quid sit oratio nostra <lb/> contineat, et haec appellatur diffinitio ;
+						deinde ejus <lb/> diffinitionis supponaturapprobatio, qua illud  ostendimus <lb/>  ut
+						idipsum quod  breviter in diffinitione  posuimus <lb/>  id ita esse argumentorum rationibus
+						approbemus  ;<lb/> deinde, tertio loco, inducimus deductionem <lb/>
+						ejusdem;diffinitionis in eam speciem de qua quaestio <milestone unit="PLSection" n="B"/><lb/> est, et de qua judicium est constitutum, ut cum generaliter <lb/>  rem
+						diffinierimus,et ita esse de quo quaeritur <lb/>  dixerimus, et postea per
+						approbationem constituerimus <lb/>  verum esse quod diffinimus, tertio loco <lb/>
+						ostenderimus hoc esse quod gestum est, vel id esse <lb/> de quo quaeritur, quae
+						orationis pars appellatur deductio <lb/>  generis ad speciem ;* quarto loco in oratione
+						<lb/> nostra ponemus destructionem diffinitionis adversae <lb/>  partis , hoc est, uti
+						quemadmodum adversarii diffinierint <lb/>  idipsum de quo supra diffinitionem constituerimus
+						<lb/>  proponamus,eamque adversariorum  diffinitionem  <lb/>  vitiosam esse
+						doceamus, quemadmodum <lb/> vitiosa sit postea declarabimus. Habet enim partes <lb/>
+						suas certas, integras, de quibus nunc dicere supersedemus  .<lb/> Est diffinitio
+						inimicitiarum apud M. Tullium <lb/>  brevis, ita collocata. An tu majores inimicitias
+							<milestone unit="PLSection" n="C"/><lb/> putas  esse quam  contrarias hominum
+						voluntates,et <lb/> dissimilia  studia ? haec, ut diximus, diffinitio rhetorica <lb/> 
+						est, et breviter oratio conclusa quid sint inimicitiae  .<lb/> Post quam  diffinitionem adhibetur 
+						 approbatio. <lb/> Fidem ac  religionem sanctissimam in  vita qui putat, <lb/>
+						potestne ei non inimicus esse qui fana spoliaverit <lb/> omnia? Deinceps reliqua quae
+						sequuntur, in quo quidem <lb/>  animadvertere illud licet, posse  conjungi  et approbationem  <lb/>
+						 diffinitionis, et deductionem    diffinitionis <lb/>
+						inspeciem. NainquehicMarcusTulliusinimicitiasesse contrariastudiaetdissimiles  <lb/> 
+						voluntates  approbat ita ,  <lb/> ut speciem ipsam de qua quaerebatur factam verbis <lb/>
+						includat: potuit enim  approbatio fieri , illas esse  inimicitias . <lb/>  quae contrarias
+						continent voluntates, et in <lb/> rationibus supponendis talis dictio componi,cum  fidem -
+							<milestone unit="PLSection" n="D"/><lb/>  alius servet,infidelis sit alius. Nulla
+						dubitatio <lb/> est quin tali animo prout inter  seaffectiinimiciesse  <lb/> credantur.
+						I religioso viro irreligiosus inimicus <lb/> est. Alia ergo si ex diversis studiis et
+						voluntatibus <lb/> supposita dicerentur, sola esset approbatio, non <lb/> etiam deductio
+						generis in speciem; at cum nunc ita <lb/> nectitur dictio, fidem sanctissimam in vita
+						qui putat  ,<lb/> religionem colendam esse existimatis, sine dubio <lb/>  inimicus est
+						ei  qui fana spoliavit , omnia templa <lb/> violavit, delubra polluit. Hic etiam Verris idem
+						factum <lb/>  de quo quaeritur ita specialiter continetur et <lb/> includitur,  ut simul 
+						cum approbatione et deductione <lb/> generis in speciem clausum teneatur; post adjungi-<pb n="895"/>
+						<milestone unit="PLSection" n="A"/><lb/>  ut diximus , utdiximusdestructio
+						 diffinitionis adversae partis  ,<lb/> sed per concessionem, id est similium, an si <lb/>
+						contra rem meam fecisset injuriam aliquis, jure ei <lb/> me inimicum esse
+						profiterer?Ponamus igitur  adversae  <lb/>  partis diffinitionem talem : Inimicitiae
+						sunt, <lb/>  eum  contra rem meam aut fecit aliquis, aut dixit <lb/> injuriam. Hanc
+						diffinitionem sic  destruit  M. Tullius, <lb/> ut concesso eo quod ita  est diffinitum ,
+						nihilominus <lb/> et alio modo  sint in : micitiae  in:micitiae,cum aliquis faciat contra <lb/>  omnium
+						rem,honorem et dignitatem. Talis igitur <lb/> semper circa rhetoricam diffinitionem per
+						membra <lb/> quatuor testetur oratio : ut sit diffinitio, approbatio <lb/>
+						diffinitiones, deductio   definitionis ad speciem,deinde <lb/>  postrema destructio 
+						diffinitionis partis adversae; sed <lb/> haec apta rhetoricis,  non etiam  philosophis esse
+						videtur .<milestone unit="PLSection" n="B"/> <lb/> Illa autem  quae  philosophorum
+						propria est, <lb/> etiam oratoribus convenit eamque sibi, et ad materiam <lb/>  suam,
+						et ad  propriae  ornamentum dictionis, <lb/> adjungit orator. Omnia enim recte
+						 orator exprimit  <lb/> quae sunt  dicendo philosophorum. Nam et vero <lb/> utitur
+						argumento, quod est philosophorum proprium  ,<lb/> utitur etiam necessario. At contra
+						 philosophus  <lb/>  in disputationibus propriis rhetorum cuncta <lb/> condemnat, neque
+						enim  adjungit aliquando  signum, <lb/> neque quod credibile dicitur, et omne probabile penitus
+						<lb/>  a virtute sui sermonis excludit. Ergo diffinitio <lb/> quae est philosophorum
+						propria in rebus exprimendis <lb/>  quae explicat quid sit, quale sit, quem adversae  <lb/>
+						 membris suis constare debeat, exponemus. <lb/> Diffinitiones esse principia
+						disputandi et supra diximus  ,<lb/> et M. Tullius probat, tum in dialogis omnibus
+							,<milestone unit="PLSection" n="C"/> <lb/> tum etiam in eo libro qui Topica
+						inscribitur, <lb/> in quo docet primum argumentorum locum esse <lb/> diffinitionem, hoc
+						est, a toto, cui loco qui appellatur <lb/>  a toto necessario adhibenda est diffinitio,
+						ut ita <lb/>  argumentilocusatoto  sit diffinitio. Porro, ut supra <lb/> diximus,
+						explicandi argumenti quod a toto est diximus <lb/>  diffinitio. Ergo praeceptis et
+						dialecticorum  philosophorumque  <lb/>  omnium illud tenere debemus, non <lb/> esse
+						diffinitionem, nisi solam quae in ea re quam <lb/> definire volumus, prius quam ejus rei
+						esse intelligimus  ,<lb/> declaret atque ostendat substantiam. Hoc ut <lb/> apertius
+						fiat, docebimus nullam esse diffinitionem <lb/> certam, integram, approbandam , nisi eam
+						quam  dicunt  - <lb/>  philosophi substantialem, Graece <foreign xml:lang="grc">  </foreign> appellatur  .<lb/> Quid autem  substantiale  sit, alibi  explicandum -
+							.<milestone unit="PLSection" n="D"/> <lb/> Ad cognitionem interim illud accedat,
+						<lb/> quoties de aliquo quaeritur quid sit, tunc posse esse <lb/> certam ac
+						substantialem diffinitionem, quoties ejus <lb/> rei de qua quaeritur, ut diximus, genus
+						ponimus,et <lb/> inde caetera per differentias in oratione subjungimus  .<lb/> Non
+						alienum videtur exemplum ponere, et <lb/> sic ad reliqua quae sunt obscura transire.
+						Quaeritur <lb/> homo quid sit, huic utique genus est animal. Cum <lb/> igitur in
+						diffinitione quae explicabo quid sit homo, <lb/> animal dixero, ac deinde reliqua
+						connectam, erit <lb/> substantialis diffinitio. Substantiam enim  hominis  <lb/> declaravi
+						cum dixi animal. Item cum quaero quid sit <lb/> album aut nigrum, si dixero album est
+						color, quia <milestone unit="PLSection" n="A"/><lb/> color genus est ad hoc de quo
+						quaero, album  vel nigrum  <lb/> nigrum,jam substantialis erit diffinitio quae incipit <lb/> a
+						genere, et sic caetera connectit. Haec substantialis <lb/> esse dicetur, et haec
+						propria, et haec integra. Haec  a <lb/> philosophis probata, itautaliomodo  facta diffinitio
+						<lb/> nunquam  esse dicatur  ; verum a quibusdam hoc nomen <lb/>   etiam  ad alia quae alio
+						modo diffiniuntur,saepe <lb/> transferlur.Ergo haECsubstantialisdiffinitioaM.Tullio <lb/>
+						 sic explicatur. Oportere nos posito genere ejus <lb/> rei de qua quaeritur,
+						subjungere species,ut alia quae <lb/> vicina esse possint discretis communionibus separemus
+						 ,<lb/> et tandiu interponamus differentias, quandiu <lb/>  ad proprium ejus de
+						quo  quaeritur signata  ejus <lb/>  expressione veniamus . Ipse in Topicis exempla subjecit 
+						.<lb/> Nos vero ne fiat in exemplis lectori ex jure <milestone unit="PLSection" n="B"/><lb/> confusio,  hoc  proponamus exemplum : homo est <lb/> animal rationale, mortale,
+						terrenum, bipes, risus <lb/> capax. Animal cum dictum est substantia hominis <lb/>
+						declarata est. Est enim,ut supra diximus,ad hominem <lb/>  genus animal, omne autem
+						genus speciei suae <lb/> substantialis est declaratio; sed  hic  animal quia late <lb/>
+						 patebat ,  adjecta  species est terrenum, jam exclusum <lb/> est, quod aut aereum est, aut
+						humidum. Bipes vero. <lb/> propter alia animalia positum est quae plurimis <lb/> pedibus
+						innituntur. Item rationale propter illa quae <lb/> ratione egent. Mortale autem propter
+						id quod Deus <lb/> est. Quibus omnibus animalibus  quae  convenire <lb/> poterant ad
+						superiora  in  oratione posita discretis <lb/> atque seclusis, adjectum est proprium in
+						parte postrema  ,<lb/> est enim solum hominis quod ridet. Sic <lb/> perfecta omni ex
+						parte diffinitio est ad hominem <milestone unit="PLSection" n="C"/><lb/> declarandum,
+						cum,  posito genere , exclusis omnibus <lb/> per differentias quae poterant convenire, ad
+						proprium <lb/>  ejus de quo quaerebatur pervenit oratio. <lb/> Atque hoc praeceptum
+						Tullianum est, eousque eum <lb/> qui diffiniat oratione interponere et adjicere differentias
+						<lb/>  oportere, quousque ad proprietatem quae <lb/> jam communis esse non possit
+						sermo perveniat. <lb/>  Verum Aristoteles diffinitionem  perfectam et plenam <lb/> ait
+						consistere ex genere  et  differentiis. Ex  genera  <lb/> etiam et differentiis hoc idem
+						nos supra docuimus, <lb/> cum interposita species differentia sua alia quae <lb/> possunt
+						esse consimilia separaret. Quidam tamen <lb/> cautiores plenioresque in docendo
+						diffinitionis ipsius <lb/>   qua i  quaedam  membra constituunt , dicuntque <lb/> eam
+						perfectam diffinitionem istam quam appello <milestone unit="PLSection" n="D"/><lb/>
+						substantialem ex quinque partibus, id est, genere, <lb/> specie, differentia, accidenti,
+						proprio, debere contra  .<lb/> Sed accidens in diffinitione minimum, <lb/> proprium
+						 plurimum  valet.  Et recte  quidem ac vere <lb/> ista commemorant, nec aliena, aut a
+						principe harum <lb/>  artium Aristotele, aut a M. Tullio qui de istis <lb/>
+						 praecepta tradiderunt  judicanda sunt. Constat enim <lb/> his quinque partibus veluti
+						membris suis integra <lb/> diffinitio ; verum et Aristoteles, in libris quos Topica
+						<lb/> appellavit, docuit quid genus sit, quid species, <lb/> quid differentia, quid
+						proprium, et quid accidens, <lb/> Et plurimi  praeterea  philosophi libris  suis complexi 
+						<lb/> harum vim rerum et potentiam declararunt. Nos<pb n="897"/>
+						<milestone unit="PLSection" n="A"/><lb/> quia jam uno libro et de his quinque rebus
+						 plenissime , <lb/>  disputavimusne res rei interposita  obscuritatem  <lb/>  pariat,aut
+						dicta repetamus,lectorem ad librum <lb/> qui jam scriptus est, si adest ei indigentia,
+						ire volumus  ,<lb/> nunc sibi non esse impedimento quod hic <lb/> praetermissum est,
+						animadvertat. Id enim etiam <lb/> illis omnibus cognitis ex  praeceptorum necessitate 
+						<lb/> retinebit. In  oratione ista substantiali tandiu interponere <lb/>  debemus species
+						et differentias quandiu seclusis <lb/>  omnibus  quae  hoc idem esse possunt,eo perveniatur
+						<lb/> veniatur,ut proprietas jam certa teneatur. M. Tullius <lb/>  in Topicis jus
+						civile voluit diffinire, et, ut <lb/> oportuit,  coepit  a genere : dixit enim in
+						principio, <lb/> Jus civile est aequitas,hoc juris genus est.Sed quoniam <lb/>  eadem
+						 aequitas  nunc constituta est. nunc naturalis  ,<milestone unit="PLSection" n="B"/> <lb/>
+						jus autem civile aequitas est ab hominibus <lb/> instituta, ideo adjecit, Jus civile est
+						aequitas constituta <lb/> stituta.Posito genere,adjecta specie speciem aliam <lb/> separavit,
+						scilicet naturalem. Sed quoniam etiam <lb/> jus gentium aequitas con est,et non
+						est tamen <lb/> civile,adjectum id quod  separare potuisset  jus gentium <lb/> : his,
+						inquit M. Tullius, qui ejusdem civitatis <lb/> sunt. Qua specie interposita, jus civile
+						descripsit. <lb/> Est etiamnum quod cum altero possit esse commune  ,<lb/> hoc ipsum
+						quod supra dictum est universum. <lb/> Etenim religionum juri et sacrorum omnium constituta
+						<lb/> venit.Namque jus religionum aequitas est,et constituta <lb/>  aequitas,et his
+						omnibus qui ejusdem sunt civitatis <lb/> tatis.Sed illud jus non appellamus esse civile,quod
+						<lb/> est pontificum, hoc igitur ut posset excludere, et <lb/> jus civile  usque ad 
+						proprium diffinire,adjecit:ad res <milestone unit="PLSection" n="C"/><lb/> suas
+						obtinendas.Demus aliud exemplum in orationibus <lb/>  positum,quo facilius
+						 res et manifestius  explicetur <lb/> cetur.Diffinit M. Tullius quid sit gloria,his ut opinor
+						<lb/>  verbis: Gloria, inquit, est illustris et pervagata <lb/> recte factorum et
+						praemagnorum,vel in suos cives, <lb/> vel in rempublicam, vel in omne genus hominum,
+						<lb/>  fama meritorum  . Gloria igitur substantialiter  diffinita <lb/>  est,cum dictum est
+						fama.Est  enim gloriae  genus <lb/> farna,quae quia nunc rerum malarum est, nunc bonarum <lb/>
+						narum,idcirco genus est,cui  species addita  est, illustris  <lb/> stris,quod laus est:fama enim
+						quae bo rerum <lb/> est, laus est, et illu. Hac igitur re exclusa est <lb/>
+						fama deterior: etquoniam   haecfamalaudatrix   potest <lb/> nunc pro merito,nunc ultra
+						meritum esse,frequenter <lb/>  enim aliter quam res gestaest,opinio de aliquo
+							<milestone unit="PLSection" n="D"/><lb/> emanavit, idcirco inquit fama meritorum, ea
+						sunt <lb/> enim merito quae cum praestamus mereri nos gloriam <lb/>  faciunt.Ergo
+						Cicero,qui volebat tunc gloriam <lb/> Caesari dare cum reipublicae praefuisset,idcirco
+						ista <lb/> facta vel merita generaliter posita divisit in species, <lb/> et adjunxit,cum
+						in suoscives,tum in rempublicam <lb/> vel in omne genus hominum, quae scilicet  factorum
+						<lb/> recte species subjectae  usque ad proprietatem  gloriae <lb/> convenire. Habet enim
+						nunc certam et veram proprietatem <lb/>  in partibus gloria.Nam omne quod praestamus <lb/>
+						stamus,aut quasi debitum damus,aut quasi non debitum  ,<lb/> cum recte faciamus, si
+						sola facta sunt quae <lb/> quasi debita sunt, dicitur illustris fama factorum.
+							<milestone unit="PLSection" n="A"/><lb/> Cum autem ultra quod debitum est facimus,
+						praestamus <lb/>  benevolentia et benignitate tribuendi, haec <lb/> merita nuncupantur.
+						Conclusit igitur utrumque <lb/> genus praestandi cum dixit, illustris et pervagata <lb/>
+						fama factorum etpraemagnorum,cum  in rempublicam  <lb/> cam,tum  inomnescives famameritorum 
+						famameritorum. Ex his omnibus  <lb/>  arbitror apertam esse eam diffinitionem, quae <lb/>
+						substantialis essedebet,sicesse dicendam,ut proposito <lb/>  ejus rei de qua quaeritur
+						genere, et adjunctis <lb/> speciebus cum differentia usque ad ejus proprium, <lb/>  disclusa 
+						 omnino communione,veniamus.Ac si velimus <lb/>  judicium veri philosophis
+						auctoribus sequi, <lb/> nulla di alia definitio.Etenim reliquae intellectum <lb/> 
+						potius rei tribuunt,non plenissime quid  sit ea  <lb/> res adhibita oratione declarant;
+						verumtamen quoniam <milestone unit="PLSection" n="B"/><lb/>  translata nomine etiam
+						caeterae orationes hoc <lb/> idem imaginaria dictione retinentes pari nomine <lb/>
+						nuncupatur,ut diffinitiones dicantur,  ponendas arbitror  <lb/>  reliquas species, quo
+						facilius et quod caeteri <lb/> dicant nosse possimus, et diffinitionis cognito multiplici
+						<lb/>  modo facile, uti supra dictum est, diffiniendi <lb/>  veritas reseretur.
+						M. Tullius in Topicis de <lb/> tribus locis primis  tractans a  toto, a partibus a  nota, <lb/>
+						cum a toto argumentum est, ut supra docuimus, <lb/> diffinitionem esse adhibendam
+						dicit,illic enim ponitur <lb/>  genus  quod  quid res  ipsa sit  de qua quaeritur explicetur <lb/>
+						plicetur. At a  partibus cum argumentum est,etiam <lb/> ipsa quidem dicitur
+						diffinitio,verum translato nomine <lb/>  cum e numeratis omnibus totus partibus, sic 
+						<lb/> quod totum est recognoscitur,hac pene re nihil interest <lb/> terest utrum  diffinitione 
+						quae esse a toto  cunctae  <milestone unit="PLSection" n="C"/><lb/> partes totius ex
+						diffinitione noscamus, an collectis <lb/> omnibus partibus quod totum est ex partium
+						enumeratione <lb/>  capiamus. Cicero talem diffinitionem partium <lb/>  enumerationem
+						appellat, sed eam diffinitioni <lb/> tribuens, quoniam et enumeratio partium idipsum
+						<lb/> de quo quaeritur quid sit ostendit,et hoc idem agit <lb/> supra posita
+						diffinitio,cum oratio quae quid sit ostendit <lb/>  dicitur diffinitio, unde nulli
+						dubium est quin <lb/> etiam ista diffinitio, esse dicatur : posuit igitur M. <lb/>
+						Tullius  explicans  quid sit liber, vel in contrario quid <lb/> sit non liber.Quoniam
+						libertas censu datur,daturvinterest <lb/> dicta,datur testamento,et hae partes dandae
+						liber <lb/> sunt; si neque, inquit,censu.neque vindicta,neque <lb/> testamento
+						liber est,non est igitur liber.Sic positis <lb/> partibus quibus liber
+						elficitur,sequitur negatio liber­ <milestone unit="PLSection" n="D"/><lb/> tatis,si
+						nulla harum partium in danda libertate praestamus  .<lb/> Nec vos moveat quod quid non
+						sit liber interest <lb/>  est constitutum, non quid sit. Par enim <lb/> ratio est
+						et eadem diffiniendi vis, et cum quid non <lb/> sit ostenditur,et cum quid sit adhibita
+						diffinitione <lb/> nudatur. Quanquam M. Tullius aliter in   eodem libro <lb/> Topicorum ait
+						esse duo genera diffinitionum : primum <lb/>  enim cum id quod est diffinitur, secundum
+						<lb/> cum id quod sui substantiam non habet diffinitur, <lb/> hoc est quod non est,et
+						hoc partitionis genus in his <lb/> quae supra dixi clausit et extenuavit. Sed alia esse
+						<lb/> voluit quae esse dicebat, alia quae non esse. Esse <lb/> enim dicit  ea quorum 
+						subjacet corpus,ut cum diffi-<pb n="899"/>
+						<milestone unit="PLSection" n="A"/><lb/>    quid sit aqua,quid ignis.Non autem esse
+						illa <lb/> intelligi voluit quibus nulla corporalis videtur esse <lb/> substantia, ut
+						sunt pietas, virtus, libertas.Sed nos <lb/> omnia ista vel quae sunt cum corpore, vel
+						 quae sunt  <lb/> scilicet in corpore, si in eo  accipiuntur , ut aut per se <lb/> esse, aut in
+						aliquo esse videantur,in uno  genere numeranda  <lb/>  ducimus, ut ista omnia esse
+						intelligantur <lb/> quibus omnibus sua potest esse substantia, sive <lb/> illae
+						corporales,sive,ut certissimum est et recto nomine <lb/>  appellari
+						possunt,qualitates.Verum praeter haec <lb/> diffinitio est, cum aliquid quod non sit
+						ostenditur. <lb/> Diffinitione enim opus est ut possimus docere quid <lb/> non sit. Ergo
+						si partitione, enumeratis partibus, <lb/> quid  libertas sit  dicimus, quid non sit
+						libertas eadem <lb/>  partitione monstrabimus. Fiet igitur etiam a <milestone unit="PLSection" n="B"/><lb/> partibus dirfinitio,ut si  dicam , si nec  masculus est ,
+						<lb/> nec femina, homo non est. Item si nec servus est, <lb/> nec liber,homononest.Sane
+						hic admonendum puto <lb/> partes saepe ab ipso de quo quaeritur toto accipi ad <lb/> ejus
+						diffinitionem, saepe non ab eodem ipso, sed ab <lb/> eo quod ei
+						accidit, ut accidentis enumeratio  partium <lb/> possit diffinire quod  totum  est.Namque cum
+						totum <lb/> sit homo de quo quaeritur quid sit, non ejus partes <lb/> sunt servus ac
+						liber,sed accidentia bomini.Quorum <lb/> enumeratio cum fuerit constituta, homo quid sit
+						<lb/> ostenditur.Sane etiam illud admonendum hic arbitror  ,<lb/> cum a  partibus fit 
+						diffinitio, posse  contingere  <lb/> ut modo totum ab omnibus partibus colligatur, ut
+						<lb/> supra ostendimus,modo ita partes  enumerentur in  <lb/> definitione, ut in singulis
+						totum sit, sicut illud in <milestone unit="PLSection" n="C"/><lb/> controversiis est,
+						auxilium ferre est decernere,mittendo <lb/>  proficisci,venire etiam si non
+						pugnaveris,hostes <lb/>  ne dimicent terrere. Sic M. Tullius multis in <lb/> locis, et
+						ipse pro Cornelio, ubi quaeritur quid sit <lb/> majestatem minuere,tractat,quod malam
+						legem tulit <lb/> : quod legendo codicem intercessionem sustulit, <lb/> quod seditionem
+						fecit.In quibus omnibus diffinitur <lb/> laesa majestas.Sed ita singula sunt, ut in ipsis
+						singulis <lb/>  totum,id est laesa majestas  possit ostendi . Hoc <lb/> etiam pro M.
+						 Coelio  tenet, ubi per enumerationem <lb/> malorum per quos fit dolus  malus  definitio ita
+						fit, <lb/> ut singulis speciebus dolus malus possit agnosci. <lb/> Hoc cum aperte
+						positum intelligamus,tum illud quoque <lb/>  manifestum est, notionemquamdam    inistadiffinitione 
+						  ,<lb/> non rem plenissimam, contineri, et  longe  <milestone unit="PLSection" n="D"/><lb/> illam praestare diffinitionem quam supra posuimus, <lb/>
+						cum genere collocato ad declarationem  rei quae  diffinitur <lb/>  substantiam ejus
+						indicans affertur oratio. <lb/> Sane  adjiciendumarbitrornonessequamdam  necessitatem <lb/>
+						 in ista partium enumeratione,ubi est quoque <lb/>  diffinitio, si infinitae
+						 partes  fuerint, vel <lb/>  plurimas      speciesjquarumpartitionefaciendaenumeratio   <lb/> 
+						est ;non iuquam,arbitror in ista enumeratione <lb/> universa quae infinita sunt non
+						debere concludere. <lb/> Sufficit enim vel plurimorum effici enumerationem, <lb/> cum in
+						infinitis non sit aliquid praetermittere vitiosum <lb/>  : hoc Cicero in Topicis
+						collocavit,  posse  nos jus <lb/> civileenumeratione diffinire. Quod in legibus more <lb/>
+						aequitate consistit, non autem totum jus enumeratum <milestone unit="PLSection" n="A"/><lb/>  est, quippe cum sit, et in senatusconsultis, et <lb/> plebiscitis, sit in
+						edictis, et principum jussis sit, <lb/> fortasse adhuc et in aliis. Sed cum enumeratis
+						ex <lb/> infinitis aliquibus partibus notio data fuerit juris, <lb/> quid jus civile sit
+						in similibus existimabimus.Ergo <lb/> divisione vel partitione efficitur ista de qua
+						 loquimur diffinitio  <lb/> murdiffinitio,sic enim etiam  ipsa diffinitione  eademque <lb/>  partitione,
+						enumeratis vel omnibus, si paucae <lb/> sunt,vel multis,si infinitse,aut speciebus,aut
+						partibus <lb/> bus,ad cognitionem rei de qua  quaeritur notionemque  <lb/>  deducimur.
+						Sciamus autem definitionem a genere <lb/>  esse,cum speciesenumerantur,partitionem cum
+						<lb/> parles.Quapropter animaldiffiniamus, huic cum sint  <lb/> species numero infi:1itae,ut
+						homo,bos,equus, piscis  <lb/> scis,item caetera, paucis enumeratis  speciebus  possu  mus qutdaitanimal -
+							<milestone unit="PLSection" n="B"/><lb/> 
+						qutdaitanimal.deciarare. Atsiitlasspecicstetigero  <lb/>  quae differentiae magis sunt,quae
+						 ipsae tres  esse <lb/> possunr,humidum,terrenum,coeleste,enumeratione <lb/> harum rerum
+						omnium animal diffinitum sit. Hoc <lb/> idem et in partium enumeratione servabis,ut si
+						dicamus <lb/> mus,mundus est,mare,terra, coelum, enumeratione <lb/> partium,sed non tamen
+						omnium,quid mundus sit, <lb/> explicatumest. Acsihocidem  per partes  alias infinitas  <lb/>
+						tas, voluerimus adhibita enumeratione  quid mundus <lb/> sit definire,quoniam, ut M.Tullius
+						ait,enumeratio <lb/> partium saepe est infinitior,praeceptum  nobis illud  est <lb/> ne
+						aliquod vitium in enumeratione,credamus,cum <lb/> aliquid prxeterimus,ea  duntaxat in 
+						re,ubi partes sunt <lb/> infinitae,ergo poteri dicere:Mundus est sol,luna, <lb/>
+						astra, aer, et cuncta quae in eo sunt, id est terra et <milestone unit="PLSection" n="C"/><lb/> cxtera,quae etsi non enumeratis parti enuntiata <lb/> proferimus, ex dictis
+						partium similitudine compre­ <lb/>  omnibus quid sit mundus ostendimus. Hoc <lb/>
+						igitur modo diffinitio etiam partium enumeratione <lb/> tractabitur, partes pro
+						speciebus poni rationalis <lb/> licentia est, ut totum pro genere, nunquam tamen <lb/> 
+						genus pro toto, aut pro parte species nominatur  .<lb/> Omne cujusque genus suas ad
+						species est <lb/> quasi totum, unde totum pro genere jure dicimus  .<lb/> Eodemque modo
+						partes pro specie nominabimus <lb/> mus.Nam si ad id genus et vocabulum quod dicitur <lb/>
+						totum jure sociatur,par ratio est pro speciebus partes <lb/>  quasi sub toti
+						appellatione enumerare. Illud tamen <lb/>  probe admonitum volo,cum duo genera rerum
+						<lb/> sint,corporalia et incorporalh,in utroque et genus <milestone unit="PLSection" n="D"/><lb/> et totum accipi, ac pari modo partes et species nomine  ,<lb/> sed
+						separata rationis propriae sectione, ut <lb/> cum genus qualitatis modo fuerit
+						nominatum,ei species <lb/>  supposi intelligere debea. Cum vero totum <lb/> tum,non
+						quo qualitas ejus animadvertatur quae significatur <lb/>  semper in genere, sed quasi
+						quoddam <lb/> substantiale corpus, ut id sec in partes  suas atque distributum  <lb/>  
+						quasi cujusdam quantitatis receperit <lb/>  sectionem.Sive illud corpus sit,sive (ut
+						diximus) <lb/> incorporale,animadversione utriusque cognationis, <lb/> quae aut in
+						qualitate  aut in  quantitate est.Si qualitate <lb/>  rem appellatam velimu9,genus esse
+						dicamus,et <lb/> huic species esse suppositas.Si quantitatem quamdam <lb/>  in eo quod
+						 totum  est comprehendimus, merito<pb n="901"/>
+						<milestone unit="PLSection" n="A"/><lb/> ac jure partes   in sectione esse dicimus.
+						Concesso <lb/> illo ad usum et licenter accepto,ut species partium <lb/> nomine
+						nuncupemus, genusque  ipsum  quod circa <lb/> qualitatem diximus totius appellatione sine
+						vitio <lb/> proferamus, nunquam tamen quod qualitatis est ubi <lb/> totum dicendum
+						est,genus proferamus,nec sub toto <lb/> aliquando species, sed semper partes
+						nominabimus. <lb/> Tertia diffinitio  est  quae a nota dicitur, cum vis verbi  <lb/> vel
+						oominis.quae in compositionesitaest,rem suam <lb/>  facta quadam separatione  designat.
+						Fides est, inquit <lb/> M. Tullius,  cum fit quod  dicitur. Hic itaque prospici <lb/> licet,
+						veluti simplex nomen sit fictum atque compositum  ,<lb/> ut in res suas obscura licet
+						compositione <lb/> resonet,pene enim ex iisdem syllabis rem suam dicentibus <lb/> 
+						verbum compositum ad id quod significat <milestone unit="PLSection" n="B"/><lb/> ex
+						discretione coglloscimus,sed saepe verbum  simplex  - <lb/>  et purum nulla compositione
+						connexum in diffinitione <lb/>  a nota ducetur,ubi est vis ejus quam Graeci <lb/>
+						appellant £<foreign xml:lang="grc"></foreign>, at Cicero veriloquium. Sed
+						<lb/> non potest ex discretione, quae nulla est, compositionis <lb/>  ostendi,sed
+						adhibita declaratione ac denominatione <lb/>  quodammodo quid sit id de quo quaeritur
+						<lb/> explicari,ut a bonitate bonus, et a malitia malus,et <lb/> a sapientia sapiens.
+						Etenim cum in alio nomine res <lb/> cognita est, facile hoc quod ab eo est derivatum et
+						<lb/> quodammodo  denominatum  ad cognitionem deducit, <lb/> ut quid sitostendat, ut in 
+						Pisonem Cicero consulem <lb/> a consulendo ait dictum, maximeque, inquit, quod <lb/> vis
+						ejus nominis ipsa praescribit reipublicae consulendo <lb/> lendo,et hoc diffinitionis genus
+						 esse dicendum  est. <lb/> Quanquam M. Tullius in Topicis argumenti locum <milestone unit="PLSection" n="C"/><lb/> fecerit  quem  nominavit conjugatum,qui  est finitimus 
+						<lb/> loco qui a nota est, nos tamen non aliter neque contra  ,<lb/> sed cum pari
+						praeceptione  diffinitionem  jure <lb/> dicemus, servantes praeceptum uti cum compositum
+						<lb/> nomen divisione in res suas quas sonat accepta id <lb/> quod
+						 significat intelligamus 'finitioanota. Cum  <lb/> autem simplex verbum
+						 unde sit denominatum  accipere <lb/>  coepimus, argumentum a conjugato accepimus <lb/> ut
+						M. Tullius posuit, diffinitionem tamen esse dicamus <lb/> mus,quia quid sit ostendit, quod
+						proprium est diffinitionis <lb/> nitionis. Hae  sunt tres nunc a  me positae  principales <lb/>
+						diffinitiones substantiales, quae a toto esta partium <lb/> enumeratione,et  nota ;;, ita
+						ut illa quae prior est,sola <lb/> vere  diffinitio  nuncupetur,istae autem  duae nominis 
+						<lb/> honore et honestate, quia id de quo quaeritur quid <milestone unit="PLSection" n="D"/><lb/> sit ostendunt,non vere,sed tamen diffinitiones esse <lb/> dicentur.Nunc
+						ad illam quae a toto est diffinitionem <lb/> revertamur, quia ipsa in se recipere formas
+						potest <lb/> plurimas. Sed ex his eas quas colligere potui, <lb/> partiemur (sunt
+						enim et aliae fortasse),deinde rationes <lb/>  ac differentias et exempla dicemus. Est
+						igitur <lb/> prima quae Graece <foreign xml:lang="grc">  </foreign>, Latine
+						substantialis appellari <lb/>  potest. Secunda est <foreign xml:lang="grc">  </foreign>,quae solam <lb/> notionem subjicit. Tertia 7TOI&lt, quae a
+						qualitate <lb/> nomen accipit.  Quarla l&gt ; 7toypa ' f ' lX1) ,  l&gtlX1), quae  a M . Tullio <lb/>
+						descriptio nominatur.Quinta  xxxa ἀντίλεξ tv ,  <foreign xml:lang="grc"></foreign>, Latine
+						<lb/> ad verbum possumus dicere. Sexta    , <lb/> Latini de eodem et de
+						altero nominant,  quae  differentia <milestone unit="PLSection" n="A"/><lb/>  dici
+						potest. Septimaest xaxa p . ncx&lt ; popiv ,   p.ncx&lt, id est <lb/> per translationem. Octava est  xata atpaipeutv tou evavxtou , 
+						   ,<lb/> id est per privantiam contrarii ejus.Nona <lb/>   
+							<foreign xml:lang="grc"></foreign>, id est per quamdam imaginationem. <lb/>
+						Decima est &lt, ;, Latine veluti. Undecima est <lb/>
+						<foreign xml:lang="grc"> ϰατὰ ἔνδειαν πλήρους ἐϰ του̃ auxou ysvouc ,     του̃</foreign>  , id est per
+						<lb/> indigentiam pleni ex eodem genere.  Duodecimaest xxxa euatvov ,    ,<lb/> id est per
+						laudem. Tertia decima est     ,<lb/> id est juxta rationem, quae ? proportio
+						<lb/> dicitur.Quarta  decimaest y . cxd xo itpoc " t ' ,  y.   ,hoc est per <lb/> id quod ad aliquid
+						est.Quinta decima est <foreign xml:lang="grc">  </foreign>, <lb/> causam
+						tribuens.De prima diffinitione plenus in superioribus <lb/>  sermo confectus est,cum
+						substantialis <lb/> quae sit diffinitio quibusque partibus compleatur <lb/>
+						ostendimus.Secunda dicitur <foreign xml:lang="grc">  </foreign>, quam  notionem .
+							<milestone unit="PLSection" n="B"/><lb/>  non proprio nomine sed communi
+						possumus <lb/> dicere.In omnibus enim reliquis diffinitionibus notio <lb/> rei
+						profertur,non  substantialis explicatio declaratur , <lb/> verum haec quae secunda est,hoc
+						modo semper  efficitur  <lb/> citur,cum  proposito  eo quod  diffiniendum  est,neque <lb/> dicto
+						ejus genere, verbis in rei sensum ducentibus <lb/> audientem,quid illud sit de
+						 quo quaeritur explicatur . <lb/> Estque huic pene familiare res propositas per superjecta <lb/>
+						 nomina diffinire,ut si dicam, homo est quod <lb/> rationali conceptione et
+						exercitio praeest animalibus <lb/> cunctis, hic  non quidem ipsum quod sit dixi,sed dicentibus
+						<lb/>  quid agat,quasi quodam signo in notitiam devocavi  .<lb/> Alia sunt apud M.
+						Tullium in Rhetoricis <lb/> rnulta,ut honestum causae genus est,cui statim sine <lb/>
+						oratione nostra favet auditoris animus,et item  admirabile  <lb/> mirabiJe,a quo alienatus est
+						animus eorum qui audituri <milestone unit="PLSection" n="C"/><lb/>  sunt.Sic reliquas
+						 cum in  secundo libro adhibet <lb/> diffinitiones in virtutibus declarandis.Primum cum
+						<lb/> dicit quid sit ipsa virtus,ponitqueejus diffinitionem <lb/> habitus naturae
+						 modo atque  rationi consentaneushic <lb/> quoniam genus posuit ut habitum
+						diceret,substantialis <lb/>  diffinitio est. At cum dicit, memoria est per <lb/> quam
+						animus repetit  illa  quae fuerant,et item intelligentia <lb/>  est per quam illa respicit
+						quae sunt,ac  pari  <lb/> modo providentia est per quam futurum aliquid videtur <lb/>
+						detur,satis clarum est non substantialem istam  diffinitionem   ,<lb/> sed, quemadmodum
+						diximus, ea quae <lb/> evvoY](j. Graece dicitur,cum rei notio non substantiali <lb/>
+						 ratione percepta,sed actu res cognita proferatur  .<lb/> Tertia diffi
+						species est quae    <lb/> dicitur, haec dicendo quod quale sit ostendit,et ut
+							<milestone unit="PLSection" n="D"/><lb/> supra nostrum proponemus exemplum,ut facile
+						appellari <lb/>  de eodem uno plures diffinitiones confici <lb/> posse,hominem primum
+						 substantialiter diffinivimus . <lb/> Deinde secundae diffinitionis modo notionem ejus <lb/>
+						expressimus. Nunc per tertiam diffinitionem quid <lb/> homo  sit  explicabimus.Homo est
+						ubi pietas, ubi justitia <lb/> stitiaubi aequitasubi continentiaubi rursus malitia  ,<lb/>
+						versutia, caeteraque vitia versanturqui ingenio <lb/> valet, artibus pollet, et
+						cognitione rerum aut quod <lb/> agere debeat diligitaut animadversione quod inutile
+						<lb/> sit contemnit, repudiatrejicit.His qualitatibus expressus <lb/>  est homo,non
+						enim ullum aliud animal his <lb/> motibus mentis qualitatem designantibus exigit vi-<pb n="903"/>
+						<milestone unit="PLSection" n="A"/><lb/>   sed solum hoc animal,quod est homo, qualitatibus -
+						. <lb/>  in mente positis et constitutis, quasi quidam <lb/> vel naturalis artifex
+						vel vitae gubernator, impletur. <lb/> Haec quidem tertia et  secundaillapossuntvideriquibusdam 
+						<lb/>  esse communes:nam saepe sufficit in qualibet <lb/>  harum ad diffinitionem
+						ejus rei de qua quaeritur <lb/> solum ejus proprium nominari, ut si dicam, homo <lb/> est
+						quod ridet, hoc enim proprium hominis neque <lb/> ullius animalis est;quo dicto
+						tacitisque aliis omnibus <lb/>  quibus homo possit ostendi, solo tamen sui proprio <lb/>
+						 declaratus estEt  hoc  Cicero de proprietate dixit <lb/> genus  esse diffinitionis quod 
+						notioni applicari potest, <lb/> ut quibusdam videtur,potest etiam huic diffinitioni
+						<lb/> quae qualitatis sortita est nomen.Unde quidam has <lb/> duas inter se nullo fine
+						 discretas unam  esse potius <milestone unit="PLSection" n="B"/><lb/> censent,cum satis
+						appareat illam nullis positis qualitatibus <lb/>  notionem,ut supra docuimus,posse compleri
+						 ,<lb/> hanc positis qualitatibus  quae  res sit, tacito <lb/> etiam ejus proprio
+						posse, ostendere. Quartam nos <lb/> diffinitionem <foreign xml:lang="grc">  </foreign> diximus, non numerum <lb/> quasi proprium collocantes,sed
+						instituto ordine ad <lb/> faciliorem cognitionem  vocabulumexhibitaenuncrationi  <lb/> 
+						sociantes:non enim quarta'quae est <foreign xml:lang="grc">  </foreign>, <lb/>
+						quae a nobis descriptio dicta est,quarta dicenda est. <lb/> Sed quia ordo propositionis
+						exegerat, ideo nomen <lb/> numeri collocavimus hocloco. Namque qui  quartus <lb/>
+						est,Cicero de eodem et altero diffinitionem posuit,et <lb/> sic    quintam
+						constituit;sed nus,omissa <lb/> numerositate,quid 67roYpacpty.r) sit,quae a M. Tullio descriptio
+						<lb/>  nominatur,proposita ratione docebimus, et <lb/> per exemplum ,quae oratio
+						non quid sit potius dicit, <milestone unit="PLSection" n="C"/><lb/> sed adhibita
+						circuitione dictorum factorumque id <lb/> quaeque res sit descriptione declarat.
+						Descriptiva ista <lb/> dicitur esse  diffinitio , ut cum quaeritur quid avarus <lb/>
+						sit,quid crudelis, quid luxuriosus. et universa <lb/> avari, luxuriosi, crudelis, natura
+						describitur. Quae <lb/> diffinitionis species dicitur exhortationis genere descriptio <lb/>
+						scriptio,ut luxuriosus est victus non necessarii,sed <lb/> sumptuosi et onerosi
+						appetens  in delicias affluens, <lb/> in libidinem pronus.Haec et alia diffiniunt luxuriosum
+						 ,<lb/> et descriptione diffiniunt, haec  diffinitio  apta <lb/> semper est oratori.
+						 Huic  enim laus dicendi per circuitum <lb/>  tribuitur propter honestatem,non ille
+						aptior <lb/> et determinatus sermo qui veluti familiaris est diffinitioni <lb/>  quam
+						supra substantialem esse praecepimus. <lb/> Idcirco multis in locis M.'uJJius,cum
+						diffiniendum <milestone unit="PLSection" n="D"/><lb/> aliquid dicit,non substantialiter
+						praecepit esse  diffiniendum  <lb/> niendum,sed potius describendum, et hoc nomine <lb/> utitur,ut
+						cum quaeritur,inquit, quid sit fur,et quid <lb/> sit sacrilegus, sua descriptione
+						monstrandum est. <lb/> Quinta species diffinitionis est quam   '  <lb/>
+						diximus, Latine ad verbum possumus dicere. Haec <lb/> vocem illam de cujus re quaeritur
+						alio sermonedescriptio <lb/>  uno ac singulari,et quodammodo quid illud <lb/> sit uno
+						verbo positum uno verbo alio declarat, ut <lb/> conticescere tacere est, item latus
+						haurit apertum, <lb/> id est percutit, item cum  terminum dicimus finem, <lb/> aut
+						populatas interpretamur esse vastatas, et omnino <lb/>  cum unius verbi rem verbo
+						manifestiore alio <milestone unit="PLSection" n="A"/><lb/> declaramus,haec erit quinta
+						de qua loquimur diffinitioni  .<lb/> M. Tullius hac usus est in Topicis, cum, locum <lb/>
+						 argumenti diffiniens, dixit esse sedem, ita locum <lb/>  nomine uno cujus rem
+						quaerebat alia appellatione <lb/>  ad verbum posita per diffinitionem quid esset, <lb/>
+						ostendit, sedem dicendo, hanc Graeci XCX' <foreign xml:lang="grc"></foreign>
+						<lb/> appellant,ut <foreign xml:lang="grc"> ἁνὴρ ἐστὶν ὁ av0pto7ro ? . SextaxaTa 8tCl ' fOpav ,   </foreign>.
+						8tCl  ,<lb/> species diffinitionis est,hanc nos per differentiam <lb/>  dicimus.
+						Scriptores vero artium de eodem et <lb/> altero nominant,ut cum quaeritur quid inter
+						regem <lb/> sit et tyrannum adjecta differentia,quid uterque sit <lb/> diffinitur,et
+						omnis quidem diffinitio, sicuti docuimus <lb/>  supra, non nisi appositis differentiis
+						comprehensoque <lb/>  suo proprio quid sit de quo quaeritur exprimit  ;<lb/> non tamen
+						hoc idem videbitur esse modus <milestone unit="PLSection" n="B"/><lb/> iste de
+						quonuncloquimur,siquidemsoladifferentia <lb/> cum posita fuerit inter duos, de quibus
+						quaeritur <lb/> quid sit,utrumque cognoscitur : etenim in superioribus <lb/>  sola
+						quaeque  definiuntur ,  hic  duo quasi  cognita   ,<lb/> sed quadam inter se communione
+						confusa, <lb/> adjecta differentia secernuntur, per quam quid sit <lb/> utrumque
+						cognoscitur,ut rex est modestus et temperatus <lb/> peratus,tyran nos  vero crudelis.Ex :! : ! : : : oc il1ud :
+						 est Terentii  ,<lb/> pudore ac liberalitate liberos retinere satius <lb/> esse
+						puto quam metu, hoc pater ac dominus interest <lb/> terest Item  M. Tullius pro Sexto Roscio:
+						Atque interest <lb/>  hanc vitam perpolitam humanitate et illam immanem <lb/>  nihil
+						interest quam jus atque vts. Septima  <lb/> est <foreign xml:lang="grc">  
+							</foreign>, id est per translationem, ut <lb/> Cicero in Topicis,Littus est
+						quod fluctus eluit. Item adolescentia est  <lb/> adolescentiaest flos aetatis,senectus occasus aetatis;
+							<milestone unit="PLSection" n="C"/><lb/> haec varie tractari potest. Modo enim ut
+						moneat, <lb/> modo ut designet, modo ut vituperet,aut laudet ut <lb/> moneat,nobilitas
+						est virtus majorum apud posteros <lb/> sarcina ; ut designet,caput est arx corporis ; ut
+						vituperet <lb/> tuperet,divitiae sunt brevis vitae longum viaticum; <lb/> ut
+						laudet,adolescentia est flos aetatis.His itaque et <lb/> aliis modis proferri potest
+						ista diffinitio,in quo genere <lb/>  tamen illud cavendum est, ne aut longe sit petita
+						<lb/>  translatio, aut turpis. Longe petita translatio <lb/> est,ut  turba 
+						reipublicae, chaos legum, quod Tullius <lb/>  pro Sexto Roscio temperavit.Quasi
+						sempiterna <lb/> nox esset, inquit, in quo  etiam  si sit quasi ut per <lb/> similitudinem
+						sit,diffinitio accipi potest, temperamentum <lb/>  accipiens ex particula
+						similitudinis.Turpis <lb/> translatio fit duobus modis,cum honesta turpibus <milestone unit="PLSection" n="D"/><lb/> diffinimus,aut turpia honestis, ut si quis patrationem
+						<lb/>  diffiniens, lacrymas dicat veneris fatigatae <lb/> quem sudorem
+						mellusnominaret. Aut contra aliquis  <lb/> dicat,lacrym£  sunt doloris patratio, huic  vitio 
+						nec <lb/> superior particula temperamentum tribuit. Ergo <lb/> magnopere istud vitare
+						debemus. Octava species <lb/> diffinitionis xcx'   , id est per
+						<lb/> privantiam contrarii ejus quod diffinitur, ut bonum <lb/> est quod malum non est;
+						hoc genere diffinitionis uti <lb/> debemus cum contrarium notum est.Nam haec duo <lb/>
+						cum ita intelligentur ut alterum sine altero esse non <lb/> possit, alterius cognitio
+						quomodo fiet, nisi fuerit <lb/>  utrumque comprehensum  ?Cum igitur alterum quae-<pb n="905"/>
+						<milestone unit="PLSection" n="A"/><lb/>    quid sit,utique  hac  diffinitione
+						comprehendi <lb/> non potest,cum utrumque nescitur,quod se ita  naturaliter . <lb/> 
+						ligat,  ut necessariam  cognitionem sibi unius <lb/> comprehensione connectat. Periclitatur
+						ergo talis <lb/> diffinitio,unde an contrarium ejus notum sit,scire <lb/> debemus,ut hoc
+						sublato fiat ejus cognitio quod diffinitur  .<lb/> Quare melius saepe fit si quaerentes
+						aliquid <lb/> quod  diffiniendum . sit,contrarium  ejus diffiniamus , <lb/> quo sublato illud
+						quod quaeriturdeclarabimus,ut si <lb/> bonum  est quod  prodest cum honestate,id quod tale
+						<lb/> non est malum est. Cicero in Rhetoricis : Necessarie <lb/>  demonstrantur ea quae
+						aliter ac debentur nec <lb/> fieri nec probari possunt. Ponamus enim necessarium <lb/> 
+						et non necessarium contraria, ut omnia contraria <lb/>  hic nos ponere intelligas
+						quorum sublatione <milestone unit="PLSection" n="B"/><lb/> id quod quaeritur
+						diffiniaturErgo quod non est <lb/> necessarium ita diffiniri potest,quod aliter ac
+						dicitur <lb/>  et fieri et probari potest: hoc cum tollo, necessarii  <lb/> 
+						diffinitionem constituo. Ergo recte fieri potest <lb/>  hujusmodi diffinitio,sed hoc
+						modo quemadmodum <lb/>  docui. Et hoc est quod M. 'Tullius in Partitionibus <lb/> 
+						prxecepit,saepe  excontrariis  essediffiniendum  . <lb/> Sub hanc diffinitionem  cadunt etiam 
+						notiones,cum <lb/> accidentiatolluntur,et alia omnia quae diversa sunt, <lb/> et cum
+						contrarium accidentis vel consequentis accidentis <lb/>  tollitur, ut si quis esse
+						substantiam dicat, <lb/> quod nequequalitas,nequequantitas,neque reliqua <lb/>
+						accidentia sit,cum alia quae diversa sunt tolluntur; <lb/> talis est diffinitio, ut si
+						quis hominem diffiniens <lb/> tollat omnia animalia,vel generaliter, vel specialiter 
+						.<lb/> Quo genere diffinitionis Deus diffiniri potest. <milestone unit="PLSection" n="C"/><lb/> Etenim cum quid sit Deus nullo modo scire possimus  ,<lb/> sublatione omnium
+						existentium quae Graeci <lb/> 1: appellant,cognitionem Dei, nobis circumscripta  <lb/>
+						et ablata notarum rerum cognitione, supponit.Deus <lb/> est neque corpus, neque ullum
+						elementum, neque  ,<lb/>anima, neque mens, neque sensus, neque intellectus <lb/> ctus,neque
+						aliquid quod ex his capi potest.His talibus <lb/>  sublatis, quid sit Deus poterit
+						diffiniri,magis <lb/> si addas quod etiam diffiniri non potest id Deum <lb/> esse.
+						Contrarium accidentis vel consequentis cum <lb/> tollitur talis est diffinitio:Vigilare
+						est uti sensibus, <lb/> dormire est non uti sensibus; naturaliter possunt <lb/> videri
+						hujusmodi diffinitiones  convenire illi  diffinitioni <lb/>  quam supra <foreign xml:lang="grc">  </foreign> diximus, Verum illa <lb/> ex accidentibus
+						 ejus rei  quam diffinivimus constat, <milestone unit="PLSection" n="D"/><lb/> vel
+						consequentibus ; haec  ex contrariis,itaque ex  illa   <lb/> quae <foreign xml:lang="grc">  </foreign> est ex accidentibus fit, ut docet <lb/> M. Tullius Pisonem non
+						fuisse consulem ita: An <lb/> vero reliquo tempore consulem te quisquam duxit? <lb/>
+						quisquam tibi venienti in curiam assurrexit, quisquam <lb/>  consulenti respondendum
+						putavit ? Atque <lb/> hujus  locisuperiororatio at   consequens in  hac diffinitione  <lb/> 
+						consistit, qua variis  modis explicat eum non <lb/> fuisse consulem, docens etiam  per  ea quae 
+						repugnant <lb/> consuli adicLis,factis,cogitatis;a consequentibus sic <lb/> diffinit
+						consulem animo esse oportet consilio, fide, <lb/> gravitate, vigilantia, cura, toto
+						denique munere <lb/> consulatus, hucusque  a consequentibusOmnia enim <milestone unit="PLSection" n="A"/><lb/> consequentia sunt  ex  hoc quod dixi munere contraria 
+						,<lb/> unde <foreign xml:lang="grc">  </foreign>, haec erit diffinitio ; hoc
+						<lb/> apertius ut fiat, dabo aliud exemplum. M. Tullius <lb/> in eadem : Quid est aliud
+						furere quam non cognoscere <lb/>  homines,non cognoscere leges, non senatum, <lb/> non
+						civitatem, cruentare corpus suum ? Ergo contraria <lb/>  accidentia colligere
+						diffinitionis est <foreign xml:lang="grc"> ejus vero  <lb/> </foreign>,  quod
+						diffinies contrarium tollere, <lb/> haec est illa quamoctavarasupradiximuydiffinitio.
+						<lb/> Nona species diffinitionis est    <foreign xml:lang="grc"></foreign>,
+						id est <lb/> per quamdam imaginationem, ut  Aeneas  est filius <lb/> Veneris et
+						Anchise;haec semper in individuis versatur  ,<lb/> quae Graeci  tt ' top . cx top. vocant.
+						Desideratur autem <lb/> ista diffinitio circa nomina quae omonyma sunt, <lb/> individua
+						duntaxat, ut Ajax et Oileus et Thelamonius .<milestone unit="PLSection" n="B"/> <lb/>
+						Item subvenit in eo genere dictionis, ubi <lb/> aliquem pudor aut metus est nominare:Me
+						videlicet  ,<lb/> inquit M. Tullius, sicarii illi describebant  ; de  <lb/> domo sua sic.
+						At pro Fundanio ita, descripsisti ne <lb/> ejus necessarium nostrum competitorem istum
+						ipsum   ;<lb/> ejus nunc studio, et gratia, tota accusatio <lb/> ista  mnnita  est. In
+						metu fuerat nominare, ideo <lb/> ergo descriptus est. Item pro Cornelio : Majestatis
+						<lb/> ipsa sunt,legite ut legebatis,hinc intelligetis nulla <lb/> tenuissima suspicione
+						describi aut significari Cornelium  .<lb/> Haec tantum de propriis nominibus : alia illa
+						<lb/> sit quam <foreign xml:lang="grc">  </foreign> diximus superior
+						diffinitio. <lb/> Ergo a genere, patria, corpore, factis, dictis, sive <lb/>
+						casibus  atque ab animo  unum illum quem  nolumus <lb/> diffinitionis genere
+						declaramus.Decima species est <lb/>    " hanc veluti diximus,ut si quaeratur quid
+							<milestone unit="PLSection" n="C"/><lb/> sit animal, respondeatur ut homo. Sic
+						Aristoteles <lb/> dicit  oudiaeuxt we ; ἄνθρωπος ,  ; <foreign xml:lang="grc"></foreign>, rem
+						enim quaesitam <lb/> subjunctum declarat exemplum,et hoc est proprium <lb/>
+						diffinitionis,quid sit illud quod quaeritur declarare. <lb/> Undecima species
+						diffinitionis est  xcx , , ' svSeiav Tou πλήρους ἐξ auxou " (ivoue ; , ,,'   <lb/>
+						<foreign xml:lang="grc"> </foreign>  ";, id est per indigentiam
+						pleni <lb/> ex eodem genere,ut si quaeratur quid sit quadrans, <lb/> respondeatur cui
+						dodrans deest,ut sit assis.Duodecima <lb/>  species diffinitionis est  xotr ' E , camov , ' E,camov,id
+						est per <lb/> laudem, ut  M. Tullius pro Cluentio : Lex est mens, <lb/> et animus, et
+						consilium, et scientia civitatis ; et nos  <lb/> quidem, ut diffinitionem ostenderemus, ita
+						posuimus <lb/>  exemplum. Nam  hoc  idem M. Tullius dicens <lb/> non
+						adhibitaoralionediffinitionis, simpliciter collocavit  <lb/> cavit:Mens,inquit,et animus
+						civitatis et consilium, <milestone unit="PLSection" n="D"/><lb/> et scientia posita est
+						in legibus ; et, ut nos supra <lb/> docuimus, diffinitionem nihil  aliud voluit quam orationem
+						<lb/>  esse. Ergo diverso modo M.Tullius protulit <lb/> quod a  nobis  conversim
+						oratione sua forma diffinitioni <lb/>  accepit, et hoc longe ab illo modo distat qui
+						<lb/> fit per metaphoram, non enim translatio est, cum <lb/> lex mens dicitur civitatis,
+						nec tamen genus est ut <lb/> substantialis habeatur <foreign xml:lang="grc">  </foreign> consequens enim est <lb/> ut et per vituperationem, sed sine
+						translatione potest <lb/> natur:sic videri potest a Tullio diffinitum:Servitus <lb/> est
+						postremum malorum,non modo bello,sed morte <lb/> etiam repellendum.Quanquam enim ita sit
+						exorsus, <lb/> pax est tranquilialibertas,sed inter pacem et servi. <note type="footnote">PATROL. LXIV. </note><note type="footnote"> 29 </note><pb n="907"/>
+						<milestone unit="PLSection" n="A"/><lb/>  tutem plurimuminterestjut perdifferentiam diffini. tio   
+						 . <lb/>  esse videatur; tamen quia non articulum illum <lb/> breviter quo
+						distaret ostendit, sed unamquamque <lb/> rem suo genere  diffinivit , collatione magis quo
+						distarent <lb/>  ostendit,non genere diffinitionis per differentiam <lb/> rentiam Erit igitur 
+						prior pacis diffinitio £<foreign xml:lang="grc"></foreign>
+						<lb/> a  consequentibusejus   reiquam   diffiniebat : Pax est <lb/> tranquilla libertas.Haec
+						 secunda  magis per vituperationem <lb/> : non enim aut consequens ejus est, aut aliquid  <lb/>
+						 horum quae <foreign xml:lang="grc">  </foreign> diffinitioni dedimus sed
+						<lb/> sola  vituperatio est quae  servitutem malorum omnium <lb/>   dicit  esse
+						postremum. Nec accipitur  rursus <lb/> malum quasi genus ad servitutem,nam malum qualitas <lb/>
+						 est,servitus ad aliquid ;unde cum diversae sint <lb/> res, malum genus esse non
+						potest ad servitutem. <milestone unit="PLSection" n="B"/><lb/> Jure igitur per
+						vituperationem facta dicitur servitutis <lb/>  supraposita diffinitio. Tertia decima
+						species <lb/> diffinitionis  est  <foreign xml:lang="grc"></foreign>,id est
+						 juxta rationem , <lb/> quae proportio dicitur,  cum  aliquid quod disputari <lb/> licet cum
+						altero id esse dicitur quod illud est  alterum  <lb/>  propter rationem
+						si[nititudiGtS;sed hoc contingit <lb/>  cum majoris rei nomine diffinitur inferior, et
+						<lb/> quod hoc additur quid sit inferior.Graeci sic  dilfin)unt : " Av6pa)iLO£ ; etrci μιϰρόϰοσός τις  <lb/> :Av6pa)iLO£ ;
+						 <foreign xml:lang="grc"> </foreign>,id est homo est <lb/> minor
+						rnundu;.Cicero hoc usus est sic: Qui plurimum <lb/>  tribuunLetlicto,praeter edictum
+						legem animam <lb/> dicunt esse, Quarta decima species est  diflinitionis xata irpoc ; ' Cl ,   
+						; ,<lb/> id est ad aliquid, ut Pater estcui est <lb/> filius.Cicero in Rhetoricis
+						:Sic genus est quod plures <lb/>  partesamplectii.ur.Item pars est quae subest generi
+						 .<lb/> Quinta decima species est <foreign xml:lang="grc">  </foreign>.Latini
+						secundum <milestone unit="PLSection" n="C"/><lb/>  rei rationem vocant, ut dies est sol
+						super <lb/> terras; nox, sol sub terris: ut enim aut dies aut <lb/> nox sil,causa est
+						aut supra terras sol aut sub terris <lb/> risSunt et aliae fortasse species
+						diffinitionis,verum <lb/> si quis invenerit, adjiciat ad numerum, modo illud <lb/>
+						diligenter attendat,ne forte harum alicui specierum <lb/> illud quod invenerit possit
+						adjungi.Nec nos rursus <lb/> frustra aliquis existimet  tot species  separasse,quod <lb/>
+						possunt sibi  aliquae  convenire.Consideratione enim <lb/> plenius commodata, omnes inter
+						se magno cernet <lb/> discrimine separatasteneat modo quod supra saepe <lb/> praecepi,
+						solam vero illam appellari diffinitionem, <lb/> quae a genere exordium sumens ad
+						proprium rei <lb/> quae diffinitur,separando per differentias quae comnium <lb/> 
+						poterant esse, descenditNunc jam de vitiis <milestone unit="PLSection" n="D"/><lb/>
+						diffinitionis, ut promissum est,explicemus.Diffinitio <lb/>   substantialis quam    primam
+						docuimus quamsolam  diximusdiffinitionem  <lb/>  diximusdiffinitionem, duo vitia recipit  principalia  .<lb/> Si
+						ea oratio quae diffinit, aut amplius complexa <lb/> fuerit,aut minus quam res plena sit
+						declaravit.Oportet <lb/>  enim ut oratio diffinitiva ita componat ad nomen <lb/> 
+						cujus rem definit, ut parem potentiam exprimendae <lb/>   atqueipsum vocabulumpraestet 
+						vocabulumpraestet,conversimque <lb/>  nomen et  diftinitiose    invicemcollatadeclarent  .
+						<lb/> Ut si quaeras quid homo est,recte respondeatur animal <lb/>  terrenum, rationale,
+						mortale, bipes, risus capax  .<lb/> Hoc rursus si convertas, homo sit optima declaratio <lb/>
+						claratio.Quaerenti enim quid est animal terrenum, <milestone unit="PLSection" n="A"/><lb/> rationale, mortale, bipes, risus  capax , fiat  recta responsio <lb/> sponsio,homo est. At
+						si ita diffinias, homo est  substantia animata  <lb/>  sensibilis,est  quidem declaratio hominis 
+						 ,<lb/> nam haec omnia homo est:; verum si convertas  ,<lb/> non valebit. Non enim
+						substantia animata <lb/> sensibilis,homo tantum estpeccat igitur diffinitio <lb/> per
+						abundantiam,quia amplius continet  quam quae - rebatur   -  .<lb/> Et omnino peccat diffinitio
+						 quae genus ponit ;  <lb/>  quod ultra se estdicimus enim,quod supra est <lb/> genus magis
+						declarat.Item peccat minus  continens  <lb/> quam necesse est,ut cupiditasest aliena
+						appetendi <lb/> desiderium, quod similiter conversum non manet, <lb/> quia minus
+						comprehensivum diffinitione quam res <lb/> nominis postulabat. Late enim cupiditas
+						patet,nec <lb/> sola avaritia est; ergo vitiosa est diffinitio minus <milestone unit="PLSection" n="B"/><lb/> complexa quam qucerabatur,ac si diceret,cupiditas <lb/>
+						est avaritia : quae si exemplum daret et auditorem <lb/> transmitteret in  totum quod 
+						cupiditas est similitudinis <lb/>  propositione, ut avaritiae, essetque illa diffiniendi
+						<lb/>  species quam decimam collocavimus  w ? τύπος . ? <lb/>
+						<foreign xml:lang="grc"></foreign>.Nunc non ad totum transmisit exemplum,sed <lb/>
+						quasi totum continens multa a toto praetereundo <lb/> peccavit,unde non poterat fieri ad
+						nomen ex diffinitione <lb/>  conversio. Haec duo vitia si vitentur, integra <lb/>
+						diffinitio est,neque haec sola quae substantialisest, <lb/> sed etiam reliquae species.
+						Nunc haec de vitiis. Cicero <lb/>  cum in Rhetoricis tria esse vitia docuit, mala,
+						<lb/> inquit, diffinitio fit cum aut communia describit <lb/> hoc modo : Seditiosus est
+						is qui malus est, atque <lb/> inutilis civis. Nam  hoc  non magis seditiosi, quam <lb/>
+						ambiliosi, quam  calumniato, quam alicujus hominis  <milestone unit="PLSection" n="C"/><lb/>
+						 improbi vim describit: hanc diffinitionem diximus <lb/>   abundantia esse 
+						vitiosam.Aliud vitium adjungit <lb/> git,ita ut falsum quiddam dicat hocpacto,sapientia
+						<lb/> est pecuniae quaerendae intelligentia :hoc vitium Cicero <lb/>  adjecit praeter
+						illa duo quae dixi.Tertium enim <lb/>  ipseposuitquoda  nobis secundum est constitutum.
+						<lb/> Ita enim ait ut aliquid non grave nec magnum continens <lb/>  sit: Stultitia est
+						immensae cupiditas gloriae. <lb/> Hoc ideo peccat, quia minus comprehendit quod <lb/>
+						sic exprimit M. Tullius. Est haec quidem stultitia, <lb/> sed ex parte quadam,non ex
+						omni genere diffinita.. <note n="I"/> <lb/> Praeter haec idem M.Tullius in secundo Rhetoricorum <lb/>
+						 adjecit duo vitia, si aut turpis sit aut inutilis <lb/> diffinitio,id autem (ut ipse
+						ait) ex honestatis et utilitatis <lb/>  partibus approbatur.Ac de turpi diffinitione
+							<milestone unit="PLSection" n="D"/><lb/> nos in superioribus diximus cum diffinitionem
+						per <lb/> translationemtractaremus, sed illud  vitium in verbo <lb/> est; fieri autem
+						potest ut omnis oratio inhonesta <lb/> ista contineat vel inutilia comprehendat.In
+						Philippicis <lb/>  M.Tullius in oratione prima  docebat ab  Antonio <lb/>  Caesaris
+						actasubverti, et id  denegabat.Antonius. <lb/> Attulit uterque difffnitionem,ut ostenderet
+						quid sit  actum ejus  <lb/>  qui togatus cum  potestate  in civitate  versetur  ; <lb/>
+						setur.Docui in superioribus asserendae diffinitionis <lb/> partes esse quatuorprimam
+						esse diffinitionem,secundum <lb/>  approbationem diffinitionis,tertiam  deductionem                            diffinitionis  <lb/>
+						 diffinitionis ad speciem,  quartam                                              destructionem   <lb/>  diffinitionis adversae
+						 partis . Cicero actum<pb n="909"/>
+						<milestone unit="PLSection" n="A"/><lb/> ejus qui sit in republica cum potestate
+						degentis ,dif­ <lb/> finit leges esae; Antonius, chirographa. Ergo sua <lb/> oratione
+						Cicero et diffinit,et approbat,ei deducit ad <lb/> speciem, et destruit diffinitionem
+						adversas partis. <lb/> Diffinitio Ciceronis est haec : Et quid est quod tam <lb/>
+						proprie dici possit actum ejus qui togalus in rem­ <lb/> publicam cum potestate et
+						imperio versatus sit, <lb/> quam lex ? deinde subjungitur ejus diffinitionis ap­ <lb/>
+						probatio hoc modo: Quaere acta Gracchi,legeB Sem­ <lb/> proniae proferentur. Quare
+						Sylla?, Corneliee, quid <lb/> Gh.Pompeii tertius consulatus,in quibus actis con­ <lb/>
+						sistit? nempe inlegibus; haec approbatio est.Deinde <lb/> adjungitur deductio
+						diffinitionis ad speciem. A Cae­ <lb/> sare ipso si quaeres quodnam egisset in Urbe et in
+						<lb/> toga, leges multas respondet se et praeclaras tulisse. <milestone unit="PLSection" n="B"/><lb/> Sequitur reprehenso diffinitionis adversae partis, <lb/> eaque fit
+						bipartito : aut enim ex ilIis omnibus vitiis <lb/> aliquid in ea reprehensione
+						concluditur, aut con­ <lb/> cesso eo quod adversarii dicunt per comparationem, <lb/>
+						magis hoc esse quod nos dicimus approbamus. Hic <lb/> utrumque M. Tullius facit.Nam et
+						de vitiis illa po­ <lb/> nit ut falsam diffinitionem doceat, et turpem, et <lb/>
+						inutilem. Ac deinde oor.cedensmagis suam confir­ <lb/> met diffinitionem, dicatque
+						potiorem.Falsam diffi­ <lb/> nitionem sic Cicero probat excutiendo quod conse­ <lb/>
+						quens sit; his enim probatur falsa diffinitio,si suum <lb/> proprium non habeat, si
+						magis oontrarium habeat, <lb/> si consequens suum non teneat, si aliter dicta sit <lb/>
+						atque in vulgi est opinione. Hic ergo quoniam quae­ <lb/> ritur quid sit actum togati
+						civis in rempublicam cum <milestone unit="PLSection" n="C"/><lb/> potestate degentis,
+						dictumque est nihil aliud esse <milestone unit="PLSection" n="A"/><lb/> quam leges,
+						advertendum quod Antonius dixerat <lb/> chirographa esse,consequentia diligenter
+						advertens <lb/> falsam docetdiffinitionem sic:lsqui estinpotestate, <lb/> est in
+						republica ; cum egerit aliquid,&lt;lctum mutare <lb/> non potest, hoc competit legi,ut
+						cum lata sit nun­ <lb/> quam a latore mutetur. At vero chirographa, <lb/> quia
+						domesticus actus est,hanc consequentiam ha­ <lb/> bent,et ut mutentur,et saepe non
+						proferantur. Ergo <lb/> M. Tullius ita reprehendit chirographa actum non <lb/> esse,
+						quia consequenter non habent actus, dicens : <lb/> Chirographa vero aut mutaret,aut non
+						daret; aut si <lb/> dedisset,non istas res in actis suis diceret: sed quia <lb/> per
+						ooncessionem reprehensi, sed ea ipsa concedo, <lb/> ac quibusdam etiam in rebus conniveo
+						; in maximis <lb/> vero rebus, id est in legibus, acta Caesaris dissolvi <milestone unit="PLSection" n="B"/><lb/> ferendum non puto.Adjungit post haec reprehensio­ <lb/>
+						nem similiter duplicem,unam ex vitiis ut et turpem <lb/> diffinitionem: dicat, et
+						inutilem. Deinde concedat <lb/> conclusurus ex comparationesuam pJtiorem,dicens <lb/>
+						esse turpem et inutilem in hujusmodi dicta quod est, <lb/> nisi sorte,si quid memoriae
+						causa retulitin libellum, <lb/> id numerabitur in actis.Et quamvis iniquum et inu­ <lb/>
+						tile sit,defenditur: AEquitas virtus est; virtus autem <lb/> ipsa honestum,ergo iniquitas
+						turpis est,quia turpi­ <lb/> tudo contraria est honestati. Si igitur turpem et <lb/>
+						inutilemipsisverbisreprehenditdiffinitionem.Dein­ <lb/> de adJecit postremum illud per
+						concessionem hoc <lb/> modo: quod ad populum centuriatis comitiis tulit, <lb/> id in
+						actis Caesaria non habebitur. Haec acuto quo­ <lb/> que satis esse duxi. <milestone unit="PLSection" n="C"/></p>
+				</div>
+				</body></text></TEI>

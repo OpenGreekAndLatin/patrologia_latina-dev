@@ -1,0 +1,266 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><TEI xmlns="http://www.tei-c.org/ns/1.0"><teiHeader>
+    
+		<fileDesc>
+			<titleStmt>
+				<title>Patrologiae Cursus Completus. Series Latina (PL)</title>
+				<sponsor>University of Leipzig</sponsor>
+				<funder>European Social Fund Saxony</funder>
+				<principal>Gregory Crane</principal>
+				<respStmt>
+					<persName xml:id="Jouve">Jouve</persName>
+					<resp>OCR-ed, corrected and encoded the text</resp>
+				</respStmt>
+				<respStmt>
+					<persName>Greta Franzini</persName>
+					<resp>Project Manager (University of Leipzig)</resp>
+				</respStmt>
+				<respStmt>
+					<persName>Simona Stoyanova</persName>
+					<resp>Project Assistant (University of Leipzig)</resp>
+				</respStmt>
+				<respStmt>
+					<persName>Bruce Robertson</persName>
+					<resp>Technical Advisor (Mount Allison University)</resp>
+				</respStmt>
+			</titleStmt>
+
+			<publicationStmt>
+				<authority>University of Leipzig</authority>
+				<idno type="filename">PL51.xml</idno>
+				<availability>
+					<licence target="https://creativecommons.org/licenses/by-sa/4.0/">Available under a
+						Creative Commons Attribution-ShareAlike 4.0 International License</licence>
+				</availability>
+				<date>2014</date>
+				<publisher>University of Leipzig</publisher>
+				<pubPlace>Germany</pubPlace>
+			</publicationStmt>
+
+			<sourceDesc>
+				<listBibl xml:lang="la">
+					<biblStruct>
+						<monogr>
+							<editor>
+								<persName>
+									<name xml:lang="fr">Jacques Paul Migne</name>
+								</persName>
+							</editor>
+							<author>Prosperus Aquitanus</author>
+							<title>Epistola Ad Augustinum</title>
+							<title>Epistola Ad Rufinum 'De Gratia Et Libero Arbitrio'</title>
+							<title>Peri Axariston. Seu De Ingratis Carmen In Quatuor Partes Distributum</title>
+							<title>Epigrammata In Obtrectatorem Augustini</title>
+							<title>Epigrammata In Quempiam Augustini Obtrectatorem</title>
+							<title>Epitaphium Nestorianae Et Pelagianae Haereseon</title>
+							<title>Pro Augustino Responsiones Ad Capitula Gallorum</title>
+							<title>Responsiones Ad Capitula Objectionum Gallorum Calumniantium</title>
+							<title>Pro Augustino Responsiones Ad Capitula Objectionum Vincentianarum</title>
+							<title>Pro Augustino Responsiones Ad Excerpta Genuensium</title>
+							<title>Pro Defensione Augustini Contra Cassiani Presbyteri Librum</title>
+							<title>Expositio Psalmorum A Centesimo Usque Ad CL</title>
+							<title>Sententiarum Ex Operibus Augustini Delibatarum Liber Unus</title>
+							<title>Epigrammatum Ex Sententiis Sancti Augustini Liber Unus</title>
+							<title>Chronicum Integrum In Dua Partes Distributum</title>
+							<title>Chronicum Integrum In Dua Partes Distributum [Appendicula]</title>
+							<title>Confessio [Incertus]</title>
+							<title>Poema Conjugis Ad Uxorem [Incertus]</title>
+							<title>Carmen De Providentia Divina [Incertus]</title>
+							<title>Libri Duo De Vocatione Omnium Gentium [Incertus]</title>
+							<title>Liber De Promissionibus Et Praedictionibus Dei A Nonnullis [Incertus]</title>
+							<title>Chronicum Alterum Sive Pseudochronicum [Incertus]</title>
+							<imprint>
+								<publisher>Garnier</publisher>
+								<pubPlace>Paris</pubPlace>
+								<date>1846</date>
+							</imprint>
+							<biblScope unit="volume">51</biblScope>
+						</monogr>
+						<monogr>
+							<title>Concilium Arausicanum I</title>
+							<imprint>
+								<publisher>Garnier</publisher>
+								<pubPlace>Paris</pubPlace>
+								<date>1846</date>
+							</imprint>
+							<biblScope unit="volume">51</biblScope>
+						</monogr>
+						<monogr>
+							<author>Idatius Aquaeflaviensis Episcopus</author>
+							<title>Chronicum</title>
+							<title>Descriptio Consulum Ex Quo Primum Ordinati Sunt [Codex Parisiensis]</title>
+							<imprint>
+								<publisher>Garnier</publisher>
+								<pubPlace>Paris</pubPlace>
+								<date>1846</date>
+							</imprint>
+							<biblScope unit="volume">51</biblScope>
+						</monogr>
+						<monogr>
+							<author>Marcellinus Comes</author>
+							<title>Chronicum</title>
+							<imprint>
+								<publisher>Garnier</publisher>
+								<pubPlace>Paris</pubPlace>
+								<date>1846</date>
+							</imprint>
+							<biblScope unit="volume">51</biblScope>
+						</monogr>
+						<ref target="http://hdl.handle.net/2027/pst.000017928816">HathiTrust</ref>
+
+					</biblStruct>
+				</listBibl>
+			</sourceDesc>
+
+		</fileDesc>
+		<encodingDesc>
+			<p>The following text is encoded in accordance with EpiDoc standards and with the CTS/CITE
+				Architecture.</p>
+		<refsDecl>
+        <cRefPattern n="" matchPattern="(.+).(.+).(.+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@type='edition']/tei:div[@n='$1']/tei:div[@n='$2']/tei:div[@n='$3'])"/>
+        <cRefPattern n="" matchPattern="(.+).(.+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@type='edition']/tei:div[@n='$1']/tei:div[@n='$2'])"/>
+        <cRefPattern n="" matchPattern="(.+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@type='edition']/tei:div[@n='$1'])"/>
+      </refsDecl>
+    </encodingDesc>
+
+		<profileDesc>
+			<langUsage>
+				<language ident="la">Latin</language>
+			</langUsage>
+		</profileDesc>
+
+	</teiHeader>
+	<text><body><div type="edition" n="">
+					<ab>
+						<title type="sub">ADMONITIO IN LIBRUM S. PROSPERI CONTRA COLLATOREM.</title>
+					</ab>
+					<p>Inter reprehensores dortrinæ a sancto Augustino iu libris contra Pelagiano, et præcipue
+						in postremis propu- <lb/> gnatæ, celeberrimus doctissimusque erat Joannes Cassianus ,
+						presbyter et abbas Massiliæ in Galliarum civitate <lb/> non ignobili. II, ut
+						verisimilius apparet, e minori Scythia, quæ una erat ex Thraciæ provinciis, oriundus,
+						circa <lb/> annum forte 550 aut 360, et in uno ex monasteriis quæ præsepi Bethleemitanæ
+						erant proxima educatus, et in <lb/> humanioribus litteris non mediocriter eruditus, quem
+						Prosper noster disputandi usu inter eos quibuscum degebat <lb/> Massiliæ, excelluisse
+						agnoscit; post peragratam Ægyptum , auditosque præstantes Ægypti solitudinum incolas,
+						<lb/> cum ipse quoque aliquamdiu anachoreticam vitam duxisset, Constantinopolim
+						profectus, a S.Joanne Chrysostomo <lb/> in diaconum assumptus, tum ab ipso ad presbytrii
+						honorem subtimatus , adita Roma, anno Christi 405, deinde <lb/> circa annum saltem 415
+						Massiliam se reccpit. Qua in urbe duo monasteria , virorum unum , mulierum alterum <lb/>
+						aedificans , in priori sancti Victoris nomine ex tunc ad hæc tempora insignito, monachis
+						præfuri. Quo in loco <lb/> degens, rogante Caslore episcopo Aptensis Ecclesiæ in secunda
+						Narbonensi, imtitutiones comcripsit regendis cæ­ <lb/> nobitis a Castore institutis
+						accommodatas. Has autem tum temporis scriptas patet, cum ferverent adhuc circa gra.
+						<lb/> tiam disputationes, quandoquidem jam tum Augustini doctrinæ minus omnino quam par
+						esset favere animadver­ <lb/> tatur, erroneohoc principio præventus, salutis nostræ opus
+						a nobis sumere initium, per bonæ voluntatis meritum; <lb/> quod subinde aDeo ad
+						consummationem perducatur : hoc est discerni nos a nobis ipsis, habere aliquid quod non
+						<lb/> acceperimus, et proinde posse non in Domino , sed in nobis ipsis gloriari. Sed hæc
+						ab eo ante Innocentii aut <lb/> Zosimi in Pelagianos latas sententias prolata merito
+						conjicias, post quorum damnationem, non ausus fuisset cum <lb/> hujusmodi hæreticis
+						affirmare, nihil aliud quam legem gratiæ divinæ auxilium dici posse.</p>
+					<p>Eodem auctore et oralore, etiam collationum spiritualium, quas cum Orientalibus
+						monachis habuerat, seriem <lb/> stylo committere suscepit. Harum decem primas, defuncto
+						citius Castore amico suo , Leontio episcopo Foroju­ <lb/> liensi, et Helladio nondum
+						episcopo, nuncupavit. Septem sequentes precibus sanctorum Honorati Arelatensis et <lb/>
+						Eucherii Lugdunensis postea episcoporum victus composuit, anno serius 426. Quibus in
+						Collationibus, inter mul­ <lb/> ta ædificationi Lirinensium monachorum, quorum usibus
+						destinabantur, utilissima, et iis laudibus, quibus a mul­ <lb/> tis viris doctis et
+						sanctis decoratus eat Cassianus, dignissima, plura etiam sparsim, et maxime tota fere
+						collatione <lb/> decima tertia sancti Augustini circa graciam docrinæ adversa
+						leguntur.</p>
+					<p>Qua in re Cassianus perieulosius errabat quam in cæteris, tum propter materiæ
+						dignitatem, tum propter tem­ <lb/> porum circumstantias. Pelagianorum enim errata Romæ
+						primum anno 418 damnata fuerant, tum statim a multis <lb/> Orientalium partium
+						conciliis, cum ille anno serius 426 collationem hanc decimam tertiam lutci commisit : in
+						<lb/> qua quidem idem error specialius continetur, cujus jam in tertia collatione satis
+						evidens vestigium deprehenrlebatur.. <lb/> Viro ergo tantæ auctoritatis quanta Cassianum
+						habebatur, in ipso disputationum fervore novum dogma inferente, <lb/> quod quidem,
+						observante Prospero, nec damnatæ ab Ecclesia hæresi usquequaque conforme, nec doctrinæ
+						S. Au­ <lb/> gustini, qui Pelagianorum damnationis pars maxima fuerat, omni ex parte
+						consentiens foret, fieri omnino non <lb/> peterat, quin inde turbatio non modica
+						enscerotur. Nec enim erat quod errores in collatione insertos in Chære­ <lb/> monem
+						abbatem, quem loquentem induxerat, rejiceret, quos ipse totis ulnis amplecti se ac
+						probare testabatur. Id <lb/> autem ei in votis erat cum Collationes et ulgaret, ut
+						proprios sensus suis depromeret, cum eorum quibus docendi <lb/> manus commisisse
+						simulabat doctrinam magnis præconiis extolleret. Aliis quoque ex locis satis manifeste
+						depre­ <lb/> hendebatur, probata ab eo omnia Chæremonis abbatis pronuntiata ; quod
+						quidem satis præstasse se ostendit, cum <lb/> hanc doctrinam nec improbarit, nec
+						objectione vel minima in dubium revocari posse demonstraxit.</p>
+					<p>Hinc contigit ut mulii in GallUs nostris, maxime inter servos Dei. quo nemine solent
+						designari monachi, qui <lb/> Massiliæ degebant, iti Augustini doctrinam insurgerent; nec
+						dubium istos Cassiani auctoritate in errores , cum <lb/>
+						<pb n="213"/> aliis sui sequacibus inductos. Erant autem isti Massilienses monachi viri
+						clari , et in omnium virtutum studio <lb/> egregii, quorum npud plerosque tanta erat de
+						probitatis contemplatione reverentia, ut hoc tutissimum sibi æstima­ <lb/> rent, quod
+						audirent eos, quorum auctoritatem sine judicio sequebantur, asserere. Hos inter
+						eruditissimus habeba­ <lb/> tur Cassianus, qui etiam solus cogitata sua scriptis
+						publicare non timuerat.</p>
+					<p>Hi autem in principio cautius agentes, tarditatem suam culpare maluerunt, quam non
+						intellecta in Augustini <lb/> elucubrationibus reprehendere ;quidamque eorum lucidiorem
+						super hoc atque apertiorem ejus expositionem vo­ <lb/> luerunt postulare. Patuit tamen
+						postea non minus ex superbia, cui, omnium maxime patent quorum virtutes apud <lb/>
+						homines in pretio habentur quam ex naturali ignorantia aut infirmitate natas horum
+						tenebras. Cum enim forti ito <lb/> allatus esset in Gallias liber de Correptione et
+						Gratia, quem instruendis Adrumetinis monachis anno 427 Augu­ <lb/> stinus destinaverat,
+						quo in libro omnibus Massiliensium objectionibus , quasi ex industria respondebatur ,
+						cum <lb/> ergo illi lucem hoc in libro affulgentem ad profectum suum convertere
+						debuissent, et omnium dubitationum sua­ <lb/> rum nebulas disjicere; majori in veritatem
+						quam antea exarserunt odio , hoc inter cætera objicientes, a nemine <lb/>
+						ecclesiasticorum tractatorum ante Augustinum Pauli loca ad sensum prædestinationis
+						applicata : quod nulli <lb/> magis competit quam Cassiano Græcorum libris innutrito, ex
+						quibus potior objectionis hujus nasci poterat occasio.</p>
+					<p>Qua de re Prosper et Hilarius cum ad S. Augustinum litteras dedissent circa annum 428
+						aut 429, ille respon­ <lb/> dit libris de Prædestinatione Sanctorum et de Dono
+						Perseverantiæ. Quo animo libri illi a Gallis suscepti fuerint <lb/> non patel; patet
+						tero his non statim sopitas talium dissidiorum turbas.</p>
+					<p>Supersite adhuc Augustino, Rufino epistolam scripsit S. Prosper, in qua testatur se hoc
+						de divitiis misericor­ <lb/> dico Uei sperare, quod quos tunc libero falli arbitrio suo
+						et ab humilitatis via patiebatur evagari, non usquequaque, <lb/> neque in finem esset
+						intelligentia fraudaturus , sed hunc ipsum in longinquiora progressum ideo ab eo tardius
+						<lb/> revocari, ut opus gratiæ ejus majore gloria celebraretur , cum sibi etiam
+						adversantium corda subdidisset, quibus <lb/> de virtutum studio exortum erat periculum ,
+						et de morum probitate discrimen. Quod quidem postremum, au de <lb/> Cassiano intelligi
+						non debuerit merito dubitatur, quem cæteris longius a vero aberrare, si non dogmatibus,
+						saltem <lb/> tuendorum dogmalum suorum modo, constabat.</p>
+					<p>Augustino autem inter beatos assumpto, Prosper et Hilarius Cælestinum pontificem
+						adierunt, delaturi que­ <lb/> rels suas contra quosdam presbyteros qui dissensiones
+						moverant in Galliis adversus doctrinam S. Augustini, <lb/> nec ejus etiam famæ
+						parcentes. Unde in celebri illa responsione sua, quæ supra edita legi potest, arguit
+						<lb/> Cælestinus, quod qui solo presbyteratus gradu eminebant, doctrinam Ecclesiæ pro
+						libito dijudicare non ve­ <lb/> rerentur, et id sibi auctoritatis quod solis episcopis
+						competeret arrogarent. Quibus forte verbis notabatur <lb/> speciatim Cassianus : quod eo
+						magis pronum est conjicere, quod primus inter episcopos ad quos dirigebatur <lb/> hæc
+						epistola leqatur Venerius Massiliensium episcopus ex Gennadio.</p>
+					<p>Nec tamen Cælestini litteris sedatæ turbæ, paxque reddita Ecclesiis Provincialium. Cum
+						ergo Cælestino <lb/> successor dutus fuisset Xistus seu Sixtus III, quod contigit 26
+						Aprilis 432, ex Baronio, aut paucis poli men­ <lb/> sibus, necesse fuit S. Prosperum
+						iterum stylo defensionem Augustini doctrinæ, quæ in odium adduci ca­ <lb/> lumniosis
+						scriptis non desinebat, suscipere. Et ut omnibus pateret quos in errores laberentur qui
+						tanto doctori <lb/> adversabantur, decimam tertiam Cassiani collationem evertere
+						suscepit : qui quidem omnes Augustini adversario. <lb/> doctrina superabat, nec scripta
+						a se publicata diffiteri poterat. Hunc tumen ex nomine proprio indigitare <lb/> noluit,
+						sed libro titulum fecit Contra Collatorem, id est, contra auctorem Collationum. In vivis
+						tunc super­ <lb/> stitem fuisse Cassianum constat.</p>
+					<p>Hæc vero maxime docuerat Cassianus, initium bonæ voluntatis fideique aliquando ex Deo,
+						aliquando vero <lb/> ex homine ortum habere; agnoscenda in nobis virtutum semina :
+						liberum arbitrium naturaliter posse ad bonum <lb/> inclinari; hoc quidem aliquando a
+						gratia prævenir, ab ejus autem sæpe motibus gratiæ dona antecedi. Quæ <lb/> omnia
+						sanctus Prosper Pelagianorum dogmatum consequia esse probat. Inde enim sequi gratiam
+						secundum <lb/> merita hominum dari; nec læsam peccalo Adæ hominum naturam ; tales
+						errores dudum cum Pelagianis dogma­ <lb/> tibus in variis episcoporum synodis, et
+						summorum pontificum epistolis decretisque in eos latis esse proscriptos; <lb/> a sancto
+						denique Augustino in scriptis plurimis a fundamentis evulsos et dissipatos. Unde
+						Cassiani scripta <lb/> apocryphis accensuit Gelasius papa circa annum 494, in concilio
+						episcoporum Romæ habito.</p>
+					<p>Ut ergo tanta lux concilietur tam egregio Prosperi nostri operi, quanta omnino potest;
+						utile fore lectoribus <lb/> visum est, si ipsam Cassiani collationem decimam tertiam (a)
+						Prosperi responsioni totam præire curaremus. <lb/> Sine periculo enim, immo etiam non
+						sine aliquo emolumento legetur opus se solo alias periculosum, si cum <lb/> tam invicta
+						eximii doctoris responsione conferatur. <note type="footnote"> (u) Hanc Collationem
+							Cassiani cum jam inter ipsius auctoris opera ediderimus, minime de novo re­ <lb/>
+							censendam eam puLaDlUS. Yidesis igiiur, lector, iomo nostro paulo superiori XLIX , ubi
+							habetur cum aliis <lb/> Collationibus. EDIT. </note>
+					</p>
+				</div>
+				
+				</body></text></TEI>
