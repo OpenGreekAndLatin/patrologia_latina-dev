@@ -1,0 +1,1488 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><TEI xmlns="http://www.tei-c.org/ns/1.0"><teiHeader>
+    
+		<fileDesc>
+			<titleStmt>
+				<title>Patrologiae Cursus Completus. Series Latina (PL)</title>
+				<sponsor>University of Leipzig</sponsor>
+				<funder>European Social Fund Saxony</funder>
+				<principal>Gregory Crane</principal>
+				<respStmt>
+					<persName xml:id="Jouve">Jouve</persName>
+					<resp>OCR-ed, corrected and encoded the text</resp>
+				</respStmt>
+				<respStmt>
+					<persName>Greta Franzini</persName>
+					<resp>Project Manager (University of Leipzig)</resp>
+				</respStmt>
+				<respStmt>
+					<persName>Simona Stoyanova</persName>
+					<resp>Project Assistant (University of Leipzig)</resp>
+				</respStmt>
+				<respStmt>
+					<persName>Bruce Robertson</persName>
+					<resp>Technical Advisor (Mount Allison University)</resp>
+				</respStmt>
+			</titleStmt>
+
+			<publicationStmt>
+				<authority>University of Leipzig</authority>
+				<idno type="filename">PL62.xml</idno>
+				<availability>
+					<licence target="https://creativecommons.org/licenses/by-sa/4.0/">Available under a
+						Creative Commons Attribution-ShareAlike 4.0 International License</licence>
+				</availability>
+				<date>2014</date>
+				<publisher>University of Leipzig</publisher>
+				<pubPlace>Germany</pubPlace>
+			</publicationStmt>
+
+			<sourceDesc>
+				<listBibl xml:lang="la">
+					<biblStruct>
+						<monogr>
+							<editor>
+								<persName>
+									<name xml:lang="fr">Jacques Paul Migne</name>
+								</persName>
+							</editor>
+							<author>Paschasius Diaconus</author>
+							<title>De Spiritu Sancto Libri Duo</title>
+							<title>Ad Eugipium</title>
+							<imprint>
+								<publisher>Garnier</publisher>
+								<pubPlace>Paris</pubPlace>
+								<date>1863</date>
+							</imprint>
+							<biblScope unit="volume">62</biblScope>
+						</monogr>
+						<monogr>
+							<author>Symmachus</author>
+							<title>Epistolae Et Decreta</title>
+							<imprint>
+								<publisher>Garnier</publisher>
+								<pubPlace>Paris</pubPlace>
+								<date>1863</date>
+							</imprint>
+							<biblScope unit="volume">62</biblScope>
+						</monogr>
+						<monogr>
+							<author>Petrus Diaconus</author>
+							<title>De Incarnatione Et Gratia</title>
+							<imprint>
+								<publisher>Garnier</publisher>
+								<pubPlace>Paris</pubPlace>
+								<date>1863</date>
+							</imprint>
+							<biblScope unit="volume">62</biblScope>
+						</monogr>
+						<monogr>
+							<author>Vigilius Tapsensis</author>
+							<title>Notitia ex Cave</title>
+							<title>Contra Eutychetem Libri Quinqe</title>
+							<title>Contra Arianos Dialogus</title>
+							<title>Contra Arianos Dialogus Probo Judice Interlocutoribus</title>
+							<title>De Trinitate Libri Duodecim</title>
+							<title>Contra Felicianum Et Arianum De Unitate Trinitatis Optatum Liber</title>
+							<title>Contra Marivadum Arianum Diaconum Libri Tres</title>
+							<title>Contra Palladium Arianum Libri Duo</title>
+							<imprint>
+								<publisher>Garnier</publisher>
+								<pubPlace>Paris</pubPlace>
+								<date>1863</date>
+							</imprint>
+							<biblScope unit="volume">62</biblScope>
+						</monogr>
+						<monogr>
+							<author>Rusticus Helpidius</author>
+							<title>In Historiam Testamenti Veteris Et Novi Carmina</title>
+							<imprint>
+								<publisher>Garnier</publisher>
+								<pubPlace>Paris</pubPlace>
+								<date>1863</date>
+							</imprint>
+							<biblScope unit="volume">62</biblScope>
+						</monogr>
+						<ref target="http://hdl.handle.net/2027/hvd.32044054758693">HathiTrust</ref>
+
+					</biblStruct>
+				</listBibl>
+			</sourceDesc>
+
+		</fileDesc>
+		<encodingDesc>
+			<p>The following text is encoded in accordance with EpiDoc standards and with the CTS/CITE
+				Architecture.</p>
+		<refsDecl>
+        <cRefPattern n="" matchPattern="(.+).(.+).(.+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@type='edition']/tei:div[@n='$1']/tei:div[@n='$2']/tei:div[@n='$3'])"/>
+        <cRefPattern n="" matchPattern="(.+).(.+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@type='edition']/tei:div[@n='$1']/tei:div[@n='$2'])"/>
+        <cRefPattern n="" matchPattern="(.+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@type='edition']/tei:div[@n='$1'])"/>
+      </refsDecl>
+    </encodingDesc>
+
+		<profileDesc>
+			<langUsage>
+				<language ident="la">Latin</language>
+			</langUsage>
+		</profileDesc>
+
+	</teiHeader>
+	<text><body><div type="edition" n="">
+					<head>
+						<title type="main"> ANNO DOMINI CCCCXCI-DXII . PASCHASIUS DIACONUS .   .  .</title>
+					</head>
+					<div type="textpart" subtype="chapter">
+						<ab>
+						<title type="sub">PROLEGOMENON.</title>
+					</ab>
+					<ab>
+						<title type="sub">(Ex Cave.)</title>
+					</ab>
+					<p>
+						<milestone unit="PLSection" n="A"/>Paschasius,  Ecclesiae Romanae  diaconus, claruit <lb/>
+						 ineunte  hoc saeculo, ann. 501. Flagrante Romano <lb/> schismate ann. 498, Laurentii
+						adversus Symmachum <lb/> partes strenue tutabatur ; ejusque causam ad obitum <lb/> usque
+						pertinaciter propugnavit. Obiit ann. 512. <lb/> Hac occasione lepidam plane fabulam de
+						Paschasii <lb/> anima Purgatorii flammis exusta refert nobis Gregorius  ,<lb/> seu
+						quisquis Dialogorum auctor. Exstat Paschasii <lb/>  Epistola ad Eugippium, S. Severini
+						Vitae praefixa  ,<lb/> apud Surium Jan. 8 et Baronium ad  an . 496. <lb/> Habentur etiam
+						Libri II de Spiritu sancto, contra <lb/> Macedonium, Colon., 1539, in-8°, Helmstad.,
+						1613, <lb/> et in Bibliotheca Patr. tom. VIII, pag.  806 . Hos Paschasii <lb/>  esse
+						pernegat, et Fausto Rhegiensi tribuendos <milestone unit="PLSection" n="B"/><lb/>
+						contendit Casimirus Oudin. Sane rationes ejus non <lb/> prorsus contemnendae videntur,
+						quae apud ipsum videri <milestone unit="PLSection" n="A"/><lb/>  possunt, Supplement.,
+						pag. 107. Cum tamen <lb/> lectissimi hi et luculenti libri (ut Gregorii verbis utar )
+						<lb/> Gregorii Paschasio diacono eos diserte  trihuenlis te . stimonio  . <lb/>  nitantur (et
+						certe Dialogorum maximam hac <lb/> i nihil  causa auctoritatem esse ipse agnoscit Oudi) ut
+						<lb/> de Sigeberto Gemblacensi  (Cap . 17) n  jam dicam, <lb/> Paschasio  nostro  haud
+						temere sunt abjudicandi. Nec <lb/> obstant codicum quorumdam mss. tituli, qui librariorum
+						<lb/>  incuria appositi incautos lectores haud raro <lb/> fallunt : praesertim cum
+						Faustum scripsisse librum <lb/> de Spiritu sancto tradiderit Gennadius (Cap. 85). Et
+						<lb/> ipse Trithemius, quem pro se testem laudat Oudinus <lb/> nus, hos ipsos libros,
+						quorum meminit Gregorius, <lb/> Paschasio nostro luculenter ascribit ; quamvis aliud
+							<milestone unit="PLSection" n="B"/><lb/> agens, prima hujus operis verba unico isti,
+						quem <lb/> hac de re scripsit Faustus, libro incautus affinxerit.</p>
+					</div>
+					<div type="textpart" subtype="chapter">
+						<ab>
+						<title type="sub">PASCHASII DIACONI DE SPIRITU SANCTO LIBRI DUO.</title>
+					</ab>
+					<ab>
+						<title type="sub">PRAEFATIO.</title>
+					</ab>
+					<p>Fides catholica in universum mundum per patriarchas <lb/>  et prophetas et gratiae
+						dispensatores, Spiritu <lb/> sancto insinuante diffusa est. Hanc apostolica  sollicitudo -
+							<milestone unit="PLSection" n="C"/><lb/>  atque perfectio, sicut per sanctas
+						paginas dilataverat  ,<lb/> ita per Symboli salutare mira brevitate collegit  ,<lb/>
+						et tanquam  per  diversas remediorum species <lb/> disposuit in corpus unum, ac velut ex
+						innumeris aromatibus <lb/>  pretiosum confecit unguentum, cujus odor <lb/> omnes fines
+						terrae potentia flagrantiae spiritualis implevit  ,<lb/> ut in ipso universitatis ascensu
+						virtus appareat <lb/>  veritatis. Et quia oportet ut errantibus quasi <lb/> parvulis et
+						ignaris,  primae  : Christianae traditionis elementa <lb/>  repetamus ( De his vide
+						Ambrosii lib. I de Abrahamo <lb/>  cap.  3  et Prudentii <foreign xml:lang="grc">  </foreign>), in hac symboli <lb/>  perfectione et unitas evidenter
+						aperitur, et trinitas  ,<lb/> dum ter repetita confessio Patri, et Filio, et <lb/>
+						Spiritui sancto, unum credulitatis reddit obsequium. <lb/> In quibus verbis etiam
+						trecentorum decem et octo, <milestone unit="PLSection" n="D"/><lb/> sacer numerus
+						sacerdotum, emergentes  Arii  ac  Macedonii  <lb/>  damnavit errores, dicens : Credo in
+						Deum <lb/> Patrem, Credo in Filium ejus unicum Dominum nostrum  .<lb/> Credo et in
+						Spiritum sanctum. Nam et si ex <lb/> hoc  numero  paucorum fragilitas declinavit, universalis
+						<lb/>  tamen numeri mysterium non resolvit. Et ideo <lb/>  sacer   numerus diximus,
+						quod trecenti mera supputatione <lb/>  Graeca signum crucis, decem et octo vero, Jesu
+						<lb/> adorandum nomen ostendunt. In hoc ergo  numero  <lb/> atque mysterio, in quo et
+						sanctus Abraham de innumeris <milestone unit="PLSection" n="C"/><lb/>  gentibus
+						triumphavit, seniorum pietas hostem <lb/> fidei sub una Patris et Filii et Spiritus
+						sancti praedicatione <lb/>  confundit : unde etiam intelligendum est eos <lb/> qui in
+						Spiritum sanctum sub  aeterna  damnatione <lb/> blasphemant, aut sine professione symboli
+						baptizatos, <lb/>  aut   in ipso sibi symbolo ac fonte mentitos, antequam <lb/> omnis homo
+						diabolo renuntians confitetur :  Credo et  <lb/> in Spiritum  sanctum .. Credo, inquam, et in
+						Spiritum <lb/> sanctum. Agnoscamus Verbi ipsius privilegium. Credere <lb/>  illi
+						quilibet potest hominum. Credere vero in illum, <lb/> soli debere te majestati noveris.
+						Sed et hoc ipsum aliud <lb/> est, Deum credere, aliud est credere in Deum. Esse Deum
+						<lb/> et diabolus credere dicitur secundum Apostolum : Nam <lb/> et daemones credunt et
+						 contremiscunt . In Deum vero <lb/> credere, nisi qui pie in  eum  speraverit, non
+						probatur. <milestone unit="PLSection" n="D"/><lb/> In Deum ergo credere, hoc est
+						fideliter eum quaerere, , <lb/> est tota in eum dilectione transire. Credo ergo in illum,
+						<lb/> hoc est dicere, confiteor illum, colo illum, adoro illum, <lb/> totum me in jus
+						ejus ac dominium trado atque transfundo  .<lb/> In professionis hujus reverentia,
+						universa divino <lb/>  nomini debita continentur obsequia. <note type="footnote">
+							PATROL.. LXII.. </note>
+						<note type="footnote"> 1 </note></p>
+				</div><pb n="11"/>
+
+				<div type="textpart" subtype="chapter">
+					<head>
+						<title type="main">   .</title>
+					</head>
+					<p>
+						<milestone unit="PLSection" n="A"/>
+					</p>
+					<ab>
+						<title type="sub">CAPUT PRIMUM.</title>
+					</ab>
+					<ab>
+						<title type="sub">Quod non in  Ecclesiam  sicut in Spiritum sanctum ; sed remota in
+							praepositione, Ecclesiam Catholicam  credere   debeamus.</title>
+					</ab>
+					<p>Sed opponis et dicis, non statim in hoc verbo Deum <lb/> posse monstrari, quo dicimus :
+						Credo et in Spiritum <lb/> sanctum, quia sequitur : Credo in sanctam Ecclesiam <lb/>
+						catholicam. Primo nescio quomodo Ecclesiam  catholicam  <lb/>  nominare audeat
+						Macedonius, qui extra  catholicam  <lb/>  exsul salutis exclusus est, ex illorum factus
+						<lb/> numero, de quibus  dicitur : In circuitu impii  ambulant . <lb/> Ergo dicis; Credo in
+						sanctam Ecclesiam catholicam. <lb/> Quod supponendo exiguam, id est in syllabam, ingentem
+						<lb/>  caliginem subtexere conaris? Credimus Ecclesiam <lb/>  quasi
+						 regenerationis  matrem, non in Ecclesiam <lb/>  credimus quasi in salutis auctorem. Nam
+						cum <milestone unit="PLSection" n="B"/><lb/> hoc de Spiritu sancto universa confiteatur
+						Ecclesia, <lb/> nunquid et in semetipsam credere potest ? Ergo cum <lb/> in solam
+						specialiter credi oporteat Trinitatem, etiam <lb/> memoratorum Patrum toto celebrata
+						orbe doctrina <lb/> confirmet, aut remove hanc de Ecclesiae nomine syllabam <lb/>  : aut
+						certe credere te in Ecclesiam manifesta <lb/> professione Scripturis assere, testimoniis
+						doce,  divinis  <lb/>  oraculis,  remota  verborum tuorum praesumptione, <lb/>  convince . De
+						sacris omnimodo voluminibus quae sunt <lb/> credenda sumamus, de quorum fonte symboli
+						ipsius <lb/> series derivata subsistit. Qui in Ecclesiam credit, in <lb/> hominem
+						credit. Non  enim  homo ex Ecclesia, sed <lb/> Ecclesia esse cepit ex homine. Recede
+						itaque ex hac <lb/> blasphemiae persuasione, ut in aliquam humanam te <lb/> aestimes
+						debere credere creaturam: cum omnino nec <milestone unit="PLSection" n="C"/><lb/> in
+						angelum nec in archangelum sit credendum. Haec <lb/> enim quae in symbolo post sancti
+						Spiritus nomen sequuntur  ,<lb/> ad clausulam symboli remota in praepositione <lb/> 
+						recipiuntur, ut sanctam Ecclesiam, sanctorum <lb/> communionem, remissionem peccatorum,
+						carnis resurrectionem  ,<lb/> vitam aeternam credamus. Credamus <lb/> in Deum, id est
+						ut haec a Deo deposita, et in Deo constare <lb/>  fateamur. Nam nonnullorum imperitia,
+						in praepositionem <lb/>  hanc, velut de proxima vicinaque sententia  ,<lb/> in
+						consequentem traxit ac rapuit, et ex superfluo <lb/> imprudenter apposuit. In nullis
+						autem canonicis de <lb/> quibus symboli textus pendet accepimus, quia in Ecclesiam <lb/>
+						 credere sicut in Spiritum sanctum, Filiumque <lb/> debeamus. Et  ideo cum  ab hoc
+						honore creatura omnis <lb/> sit  aliena ,  hic  in  quem  credere praecipimur, Deus est.
+							<milestone unit="PLSection" n="D"/><lb/> Quod verbum divinitatis specialiter vox
+						Domini Salvatoris <lb/>  assignat, ita dicens : Credite  in  Deum, et  in me  <lb/> credite.
+						Et  iterum  : Qui credit in me, non credit in me, <lb/> sed in eum qui me misit (Joan.
+						XIV, 10 et 12).</p>
+					<ab>
+						<title type="sub">CAPUT II.</title>
+					</ab>
+					<ab>
+						<title type="sub">Christum a Spiritu sancto  ut pote  Deo, non genitum sed creatum.</title>
+					</ab>
+					<p>Cum autem catholica confiteatur Ecclesia, conceptus <lb/>  est de Spiritu sancto,
+						interrogandi sunt hoc loco <lb/> Macedoniani utrum Spiritum sanctum creatorem an
+							<milestone unit="PLSection" n="A"/><lb/> patrem aestiment Redemptoris. Si patrem forte
+						resurrectionem  ,<lb/> cum jam in principio symboli dixerint. <lb/> Credo in Deum Patrem
+						omnipotentem, duos eum habere <lb/>  patres confusibiliter fatebuntur. Si vero creatorem
+						<lb/>  ut habet veritas asseruerint, vel necessitate nobiscum <lb/>  universitatis
+						Deum pronuntiare cogentur. Et <lb/> ideo per Isaiam prophetam, velut per tubam suam ac
+						<lb/> de templo suo loquitur, dum duas in Christo substantias <lb/>  praesignaret :
+						Rorate,  coeli , desuper,  et  nubes pluant <lb/> justum, aperiatur terra et germinet
+						Salvatorem, ego Dominus <lb/>  creavi eum (Isai. XLV). Homo namque assumptus <lb/>  ex
+						Maria, operatio Spiritus sancti fuit,  non portio   ;<lb/> nec ab eo genitus, sed creatus.
+						Conceptus est  potentia .  ,<lb/> non substantia; operatione, non participatione   ;<lb/>
+						virtute, non genere.</p>
+					<p>
+						<milestone unit="PLSection" n="B"/>
+					</p>
+					<ab>
+						<title type="sub">CAPUT III.</title>
+					</ab>
+					<ab>
+						<title type="sub">De unitate testimoniis asserenda propheticis.</title>
+					</ab>
+					<p>Catholica fides trigeminam majestatem sub unius <lb/> divinitatis confessione
+						veneratur. Accipite unam ex <lb/> sacris voluminibus divinitatem. Audi, Israel : Dominus
+						<lb/> Deus tuus, Deus unus est (Deut. VI) : et, Dominum <lb/> Deum tuum adorabis et illi
+						soli servies, in psalmis, faciens <lb/>  mirabilia, tu es Deus solus. Item : Tu solus
+						altissimus <lb/>  in omni terra. Per Isaiam  quoque   : Deus Israel <lb/> qui sedet super
+						Cherubin, tu es Deus solus omnium  regnorum  <lb/>  terrae (Isai. XLV). Item . Ego
+						Dominus, primus <lb/> et novissimus ego sum (Isai. XLI). Item : Ego Dominus, <lb/> hoc
+						est  meum ; gloriam meam alteri non dabo <lb/> (Isai. XLII). Ut vero hoc
+						 testimonium  ad Christum nobiscum <lb/>  pertinere, id est primus et novissimus, de se
+						alio <milestone unit="PLSection" n="C"/><lb/> loco dixit: Ego sum principium, qui et
+						loquor vobis <lb/> (Joan.  VIII) . Item : Ante me non fuit Deus, et post <lb/> me non
+						erit. Ego sum Dominus, et non est absque me <lb/> Salvator (Isai. XLIII). Quod
+						specialiter pertinet ad <lb/> Christum humani generis Salvatorem.  Item  : Haec <lb/>
+						dicit Dominus redemptor tuus, et formator tuus ex utero. <lb/> Ego sum Dominus faciens
+						omnia,  extendens coelos  , solus <lb/>   stabiliens  terram, et nullus mecum (Isai. XLIV) :
+						<lb/> quod ad Jesum pertinet, et factorem ac redemptorem <lb/> proprie respicit. De quo,
+						evangelista commemorat : <lb/> Omnia per. ipsum facta sunt, et sine ipso factum  est 
+						<lb/> nihil. item : Non  est  ultra Deus absque me, et Salvator <lb/>  non est praeter me
+						(Isai. XLV). Item : Ego primus, <lb/> et novissimus, manus mea fundavit terram, et
+						dextera <lb/> mea mensa est  coelos  (Isai. XLVIII). Sicut Jesus Christus <milestone unit="PLSection" n="D"/><lb/>  alio loco de se evidenter asserit dicens : Ego
+						<lb/> sum Alpha et Omega, initium et finis (Apoc. XXI). In <lb/> his testimoniis etiam
+						Spiritus sanctus continetur, in <lb/> quibus ita confitenda est omnis  substantiae 
+						unitas, ut <lb/> et in eis inesse credenda sit etiam personarum <lb/> distincta
+						proprietas, et indivisa pluralitas.</p>
+					<ab>
+						<title type="sub">CAPUT IV.</title>
+					</ab>
+					<ab>
+						<title type="sub">De Trinitate vel liberales etiam disciplinas de  tribus transisse  
+							Personis.</title>
+					</ab>
+					<p>Cum itaque Verbi unam monstravimus deitatem,<pb n="13"/>
+						<milestone unit="PLSection" n="A"/><lb/> tria nunc in una Deitate doceamus, tria nomina
+						non <lb/> tria regna; tres appellationes, sed non tres  potestates   ; <lb/> tres
+						hypostases vel subsistentias, sed non tres substantias  .<lb/> Manifestum est etiam
+						saecularem intellexisse <lb/> sapientiam, omnium multitudinem saecularium, intra <lb/>
+						trium personarum conclusam esse rationem. Quae <lb/> sunt istae tres ? Id  est : Ego, Tu,
+						Ille. Ergo, ut diximus  ,<lb/> tres tantum in rebus esse personas, etiam liberalia <lb/>
+						  studia de  spiritualibus disciplinis instructione <lb/> mutuata senserunt, eisque
+						evidenter apparuit,  nec secundam  <lb/>  personam satisfacere perfectioni nec tertiam <lb/>
+						 posse transcendi, quia dualitatem semiplenam <lb/> esse ad tertium numerum tendens
+						arguit  plenitudo , quaternitatem  <lb/>  vero respuit in tribus consummata <lb/> perfectio.
+						His ergo levi commemoratione transmissis, <milestone unit="PLSection" n="B"/><lb/> magis
+						sacris testimoniis asseramus, Trinitatem in <lb/> unitate mutatione subsistere. Sed
+						dicis : Quid mihi <lb/> profers unitatis ac Trinitatis verba, quae in canonica <lb/>
+						lectione non invenis ? Non mirum, si is qui ingredi <lb/> non meretur penetralia
+						 salutis ,  expavescit  ac  refugit  <lb/> etiam testimonium veritatis. Quid enim tam proximum
+						 ,<lb/> tam naturale, tam proprium, quam ut de uno <lb/> unitas, de tribus  Trinitas ,
+						catholicis primum diffinitionibus <lb/>  nuncupetur? Non ex se discutienda sunt <lb/>
+						verba quae de praecedentibus pendent, nec sane  consequens  <lb/>   est ut peregrina
+						indicentur, quae ex uno et <lb/> tribus, id est de manifesti exordii proprietate nascuntur
+						 .<lb/> Adverte quia non est praesumptivus uterque hic <lb/> sermo, sed derivativus.
+						Quae vocabula a tempore primitivae <lb/>  Ecclesiae antiquitas invenit, auctoritas protulit
+							,<milestone unit="PLSection" n="C"/> <lb/> aetas longa firmavit.</p>
+					<ab>
+						<title type="sub">CAPUT V.</title>
+					</ab>
+					<ab>
+						<title type="sub">Dum  facies  Patris, Filius dicitur, Patri aequaevus agnoscitur.</title>
+					</ab>
+					<p>Suscipe de sacris voluminibus Trinitatem. In principio <lb/>  fecit Deus coelum et
+						terram, et Spiritus Dei ferebatur <lb/>  super aquas (Gen. i). Pater auctor, aequaevum
+						<lb/> principium, superfusus aquis Spiritus sanctus. Super <lb/> aquas itaque dominantis
+						eminentia ferebatur ; jam <lb/> tunc, credo, baptismi munera figurans. In faciendo <lb/>
+						quoque homine, non unius, sed trium personarum <lb/> opus esse demonstrat trina
+						repetitio deitatis. Ita <lb/> enim legimus : Et dixit Deus : Faciamus hominem ad <lb/>
+						imaginem et similitudinem nostram. Adverte sententiam <milestone unit="PLSection" n="D"/><lb/>  in propositione simplicem, in responsione multiplicem  .<lb/> Et dixit
+						Deus, faciamus hominem. Quid est <lb/> aliud, nisi quia substantia unitatis loquitur, et
+						potentia<lb/>  Trinitatis operatur? Perspice quomodo trina vice <lb/> nomen Dei in
+						creatione hominis nuncupatur. Sic <lb/> enim habemus in Genesi: Et dixit Deus, faciamus
+						<lb/> hominem. Et iterum : Creavit Deus hominem. Et tertiam <lb/>  : Benedixit ei Deus.
+						Dixit Deus, fecit Deus, benedixit <lb/>  Deus. Propter tres personas, ter iteratur una
+						<lb/> divinitas. Quo loco evidenter mysterium etiam  Trinitatis  <lb/>   intellige. Ecce
+						imago Dei et similitudo unicuique <lb/>  homini a tribus datur, et tamen una esse <lb/>
+						dignoscitur. Dixit Deus, faciamus. Diligenter attende, <lb/> dum unus dicit, et non unus
+						facit, dumque iterum <milestone unit="PLSection" n="A"/><lb/> singulari plurale
+						permiscet, non dicit ad imagines et <lb/> similitudines nostras, vel certe ad imaginem
+						et similitudinem <lb/>  meam, unitatem singularitate, trinitatem <lb/> pluralitate
+						commendat. Itaque in  eo  quia dicit : Faciamus <lb/>  hominem ad imaginem nostram,
+						personarum <lb/> numerus explicatur, in eo quia singulariter ad  imaginem  <lb/>  et
+						similitudinem, in unam substantiam divinitas <lb/>  indivisa colligitur. Cum Abrahae in
+						ostio  tabernaculi  <lb/>  apparuisset Deus (Gen. XVIII), et ex  uno  tres <lb/> ejus se
+						oculis mirabiliter obtulissent, in tribus unum <lb/> conscius majestatis adoravit. In
+						psalmo quoque <lb/> absolute personis suis  unitas  designatur : Ne projicias <lb/>  me,
+						inquit, a facie  tua ,  et Spiritum sanctum tuum <lb/> ne auferas a me (Psal. L). Filius
+						sicut imago Patris, <lb/> ita et facies  Patris  accipitur. Et ideo legimus : <milestone unit="PLSection" n="B"/><lb/> Philippe, qui videt me, videt et Patrem (Joan. xiv). Et
+						<lb/> iterum : Quo ibo a Spiritu tuo, et quo a facie tua fugiam   ?<lb/> Adverte in
+						fide perfectae confessionis mysterium <lb/>  Trinitatis. Propheta ad Patrem loquitur,
+						faciem <lb/> Patris Filium Patris profitetur, necnon diffusum per <lb/> omnia Spiritum
+						sanctum profitetur. De Filio ad <lb/> Moysem  etiam  loquitur Dominus, facies mea  praecedet 
+						 <lb/> te (Exod. XXXIII). Quod nomen, id est  facies  , et ad <lb/> unitatis
+						substantiam, et ad aeternitatem pertinet  majestatis   .<lb/> Quod autem minorem putant,
+						quia natus est, <lb/> quid est Deum de Deo esse natum, nisi ex Deo naturaliter <lb/> 
+						exstitisse ? Sed dicis : Si ex illo est; junior <lb/> est. Ecce brachium ex corpore, et
+						facies de  corpore  <lb/> suo nascitur, nec tamen faciem minorem capite suo <lb/> vel
+						brachium corpore suo constat esse posterius. Si <milestone unit="PLSection" n="C"/><lb/>
+						ergo ullum caput antiquius unquam fuit, tunc  asserere  <lb/>  praesume antiquiorem esse
+						Patrem ab imagine <lb/> sua, quae in Christi perfecta similitudine et aequalitate <unclear/>
+						<lb/> consistit. Ita ergo nescit Filius vel potestate vel <lb/> tempore a Patre
+						discerni, sicut facies a capite separari  ,<lb/>  vel  capite suo nequaquam potest junior
+						<lb/> inveniri.</p>
+					<ab>
+						<title type="sub">CAPUT VI.</title>
+					</ab>
+					<ab>
+						<title type="sub">Spiritum Patris,  ipsum  esse Spiritum sanctum.</title>
+					</ab>
+					<p>Sed dicis : Ostende mihi quod in sua essentia substantias <lb/>  Spiritus sanctus.
+						Ubicunque vel quotiens lego, <lb/> aut Spiritum Patris, aut Spiritum meum, aut Spiritum
+						<lb/>  Dei : video, inquis, non ad Spiritus sancti, sed <lb/> ad Patris referendam
+						esse personam. Primum huic <lb/> blasphemiam suae impietatis accumulant, cum  alterutrum -
+							<milestone unit="PLSection" n="D"/><lb/>  dicant, Spiritum sanctum Dei aut
+						creaturam, <lb/> aut certe ipsum Patrem esse credendum. Merito qui <lb/> Spiritum
+						sanctum non confitetur, usque ad contumeliam <lb/>  Patris confusa mente devolvitur.
+						Utique si <lb/> factura, ad Patris non potest pertinere substantiam. <lb/> Si vero  eum 
+						paternam putas esse  potentiam  , quomodo <lb/>  eum usque ad facturae humiliare praesumis
+						injuriam   ?<lb/> Nos vero  Spiritum   Dei non de Patre dici, <lb/> sed proprie de Spiritu
+						sancto evidentibus testimoniis <lb/> demonstrabimus. Legimus in Isaia super Dominum
+						<lb/> Jesum descendisse Spiritum sanctum Domini, spiritum <lb/> sapientiae et
+						intellectus, spiritum  consilii  et fortitudinis, <lb/> spiritum scientiae et pietatis
+						(Isai. XI). De  hoc  itaque <lb/> spiritu Domini, qui supra  Salvatorem  sacro desce-<pb n="15"/>
+						<milestone unit="PLSection" n="A"/><lb/>    illapsu, per Isaiam Filius dicit : Spiritus
+						Domini <lb/> super me (Isai LXI). Et evangelista Matthaeus : Ecce <lb/> aperti sunt ei
+						coeli, et vidit Spiritum Dei descendentem <lb/> sicut columbam (Matt. III). Hunc autem
+						spiritum Dei, <lb/> quem in baptismo Salvator accepit, manifeste Spiritum <lb/> 
+						sanctum Lucas evangelista perdocuit esse dicens <lb/>  : Jesus plenus Spiritu sancto
+						regressus est a Jordane <lb/>  (Luc. III). Legimus in Joel propheta : In diebus <lb/>
+						illis  effundam  de spiritu meo super omnem carnem <lb/> (Joel. II). Quod dicit de spiritu
+						 meo , de Spiritu sancto <lb/> dictum esse manifestum est, quia quando  super  <lb/>
+						apostolos Spiritus sanctus sacra quinquagesimae solemnitate <lb/>  descendit, tunc istud
+						testimonium de propheta <lb/>  apostolus Petrus  asserit . Hunc Spiritum  Patris   ,<lb/>
+						ipsum esse Spiritum sanctum evangelistae diverso <milestone unit="PLSection" n="B"/><lb/>
+						 sermone, sed consona veritate docuerunt. Nam <lb/> cum Matthaeus dixerit: Non enim
+						vos estis qui loquimini  ,<lb/> sed spiritus patris  vestri  qui loquitur in vobis <lb/>
+						(Act. u), hunc spiritum Patris aperte Spiritum sanctum <lb/> esse  Marcus  exposuit
+						dicens: Quod datum vobis fuerit <lb/> id loquemini : non enim vos estis loquentes, sed
+						Spiritum <lb/>  sanctus. Et Lucas similiter hunc Spiritum Dei, <lb/> Spiritum esse
+						sanctum demonstravit dicens : Nol. Nolite  <lb/> solliciti esse qualiter aut quid dicatis.
+						Spiritus enim <lb/> sanctus docebit vos in illa hora, quae oporteat dicere. <lb/>
+						Secundum haec ergo quotiens aut Spiritum Patris, <lb/> aut Spiritum Dei legitis,
+						specialiter ad Spiritum sanctum <lb/>  esse referendum, deposito necesse est errore
+						<lb/>  fatearis . Item quoque  Isaias   Spiritum sanctum unum <lb/> in gloria Trinitatis
+						annuntiaverat quando dicit, Vidi <milestone unit="PLSection" n="C"/><lb/> Dominum
+						sedentem super solium excelsum, et  seraphim  <lb/> stabant, et clamabant alter ad alterum,
+						Sanctus, sanctum  ,<lb/> sanctus, Dominus Deus Sabaoth (Isai. VI). Et in <lb/>
+						consequenti dicit : Et audivi vocem Domini  dicentis :, <lb/> Vade et dices populo huic:
+						Auditu audietis, et non <lb/> intelligetis, et videntes videbitis et non videbitis. Hic
+						<lb/> Dominus Sabaoth, qui per assumptam speciem visus <lb/> est a propheta  vel  locutus
+						est in propheta, quis fuerit <lb/>  in Actibus apostolorum Paulus apostolus ostendit
+						<lb/> dicens : Bene Spiritus sanctus per Isaiam prophetam <lb/>  oculus  est ad patres
+						nostros: Auditu audietis, et non <lb/> intelligetis, et videntes videbitis, et non
+						videbitis (Act. <lb/> ult). Credamus saltem Paulo praeconi celeberrimo <lb/> veritatis,
+						quia Spiritus sanctus fuerit ille Deus exercituum <lb/>  quem vidit Isaias, et qui
+						locutus est per <milestone unit="PLSection" n="D"/><lb/> Isaiam. Sed quia trina
+						 repetitione  persultat Sancto, <lb/> sancto, sancto, videamus an ne hic honor respiciat,
+						<lb/> Trinitatem. Isaias cum dicit: Vidi Dominum Sabaoth, <lb/> Patrem Judaeis agnoscitur
+						praedicare. Joannes evang. <lb/> aperte Filium probatur asserere, ita dicens : Propterea
+						<lb/>  non poterant credere in Jesum, quia dixit Isaias : <lb/>  Excaecavit  oculos
+						eorum, et obduravit cor eorum (Joan. <lb/> XII; Isai. vi). Haec dixit Isaias, quando
+						vidit gratiam <lb/> Filii  Dei , et locutus est de  eo . Quod autem idem <lb/> Isaias dicit,
+						Et audivi vocem Domini  dicentis , Vade <lb/> et dic populo huic: videntes videbitis, et
+						non videbitis. <lb/> Hunc Dominum apostolus  Paulus , ut diximus, Spiritum <lb/>  sanctum
+						esse confirmat. Vides ergo quia Sanctus, <lb/>  sanctus  , sanctus, haec vox totam
+						concelebrat Trinitatem ?<milestone unit="PLSection" n="A"/> <lb/> Et sicut in his
+						tribus verbis nulla  dissimilitudo , <lb/> nulla differentia, ita in Trinita is veritate
+						nulla potest <lb/>  esse  dissensio .</p>
+					<ab>
+						<title type="sub">CAPUT VII.</title>
+					</ab>
+					<ab>
+						<title type="sub">De digito Dei.</title>
+					</ab>
+					<p>Sed dicis : Ex hoc minor esse Spiritus sanctus <lb/> agnoscitur, quia Dei digitus
+						nuncupatur. Non ita est. <lb/> Sed quando audis de Spiritu sancto dici, Si ego in <lb/>
+						Spiritu Dei, vel Dei digito ejicio daemones, non gratiae <lb/> imminutionem, sed
+						substantiae demonstrari noveris <lb/> unitatem : nec honoris discrepantiam, sed operis
+						<lb/> esse concordiam. Quid ergo? quia Spiritus sanctus <lb/> digitus interdum dicitur,
+						ideo minor Filio et Patre <milestone unit="PLSection" n="B"/><lb/> interdum  creditur  .
+						Refuge hujus persuasionis errorem  ,<lb/> vide ne aliquoties in hac designatione
+						digiti, et <lb/> Patrem comprehendat et Filium. Meminimus non de <lb/> uno digito dictum
+						esse, cum legimus : Quoniam video <lb/> coelos tuos opera digitorum tuorum. Sed dicis in
+						digitis <lb/>  de Filio hoc tantum, et de Spiritu sancto, sub <lb/> quadam dualitate
+						signari. Ne hoc de duabus personis <lb/> asserere coneris, alio loco Isaias digitorum
+						numero <lb/> loquitur; Trinitatem dicens : Quis appendit tribus <lb/> digitis molem
+						terrae (Isai. IV)? Quid evidentius de Trinitatis <lb/>  unitate, quid clarius? Nonne  hic  
+						in tribus dicens <lb/>  potentiae unius aequalitatem, sub quadam mysterii <lb/>  lance
+						libravit' Ergo ut dictum est, cum jam <lb/> instructus sis de societate operis, non
+						dubites de <lb/> parilitate virtutis, dicendo ergo, Quis appendit  tribus  <milestone unit="PLSection" n="C"/><lb/>  digitis molem terrae : Hic specialiter loqui volunt
+						<lb/> de cooperatione potentiae, et de unitate substantiae, <lb/> quae una eademque esse
+						in tribus digitis approbatur. <lb/> Sed nihilominus in Isaia personam propriam Spiritus
+						<lb/> sancti, sub distinctione Trinitatis adverte. Ubi enim <lb/> Filius asseruit de se
+						dicens : Ego primus et ego novissimus  ,<lb/> consequenter adjecit. Et nunc Dominus
+						misit <lb/> me, et Spiritus ejus (Isai. XIVIII). Alter ergo in persona <lb/>  est
+						Dominus Pater, alter Spiritus Dei Patris. <lb/> Itaque dum a Patre et Spiritu sancto
+						destinari Filius <lb/> legitur, sub trium nomine personarum Spiritus sanctum <lb/>  a
+						 semetipso  subsistere evidenter aperitur, sicut <lb/> alio loco idem propriam Trinitatis
+						distinguit essentiam  .<lb/> Ecce puer meus suscipiam eum, electus meus, <lb/>
+						complacuit sibi in illo anima mea, dedi Spiritum meum <milestone unit="PLSection" n="D"/><lb/> super eum (Isai. XLII). Pater dilectum puerum suum <lb/> vocat, super quem dedit
+						Spiritum suum, de quo Jesus <lb/> Christus propria voce testatur: Spiritus Domini  super 
+						<lb/>  me (Luc. IV). Et ut illud etiam gentibus possit <lb/> esse manifestum, Ite,
+						inquit, baptizate omnes gentes in <lb/> nomine Patris et Filii et  Spiritus . sancti
+						(Matth. ult.). <lb/> Ubi sub tribus personis, unum opus et unum nomen <lb/> indivisam
+						asserit majestatem. Habemus ut dictum <lb/> est  secundum  Lucam : Et Jesu baptizato
+						apertum est <lb/>  coelum , et descendit Spiritus sanctus corporali specie <lb/> sicut
+						columba, et vox de coelo facta est : Tu es filius <lb/> meus dilectus, in te complacui
+						(Luc. III) : Filius ergo <lb/> in  corpore , Spiritus sanctus in specie columbae, Pater
+						<lb/> declaratur in voce.  Sed  hoc loco intelligenda est ia<pb n="17"/>
+						<milestone unit="PLSection" n="A"/><lb/> columba species pertransiens, non substantia
+						perseverans .<lb/></p>
+					<ab>
+						<title type="sub">CAPUT VIII.</title>
+					</ab>
+					<ab>
+						<title type="sub">Non obesse sancti Spiritus deitati, quia nec  genitus  videatur esse nec
+							ingenitus.</title>
+					</ab>
+					<p>Sed inter haec cum Spiritus sancti personam propriam <lb/>  demonstremus, et Patrem
+						 confiteamur  ingenitum  ,<lb/> Filium vero cognoscamus unigenitum, quaeris <lb/> a me
+						utrum Spiritus sanctus  ingenitus , an genitus,  an ! <lb/> quid aliud confitendus sit.
+						 Scripturae  sanctae de potentia <lb/>  et deitate Spiritus sancti loquuntur, utrum <lb/>
+						vero genitus dici debeat an ingenitus, non loquuntur. <lb/> Vide quas sibi tenebras
+						infidelitatis facit. Non vis <lb/> scire, quia noluit ignorari; et vis  scire  quia non
+						<lb/> jussit inquiri. Non dixit genitum, ne Filium crederes <milestone unit="PLSection" n="B"/><lb/>  : non dixit ingenitum, ne Patrem putares; sed ad <lb/> essentiae
+						distinctionem, procedere eum ex Patre <lb/> testatus  est , sicut legimus : Paracletus qui
+						ex Patre <lb/> procedit. Quae cum ita sint, vel sic agnosce Spiritum <lb/> sanctum
+						propriam habere personam. Praeter duos <lb/> esse tertium probat diversitas nominis,
+						procedentem <lb/> ex Deo, non esse ordine vel gradu tertium monstrat <lb/> unitas
+						majestatis. Qui enim de interioribus Dei  progreditur   ,<lb/> non Dei creatura, sed Dei
+						probatur esse <lb/> substantia. Non scruteris qualiter Deus sit quem <lb/> Deum esse
+						manifestum est. Hic ratio latet, veritas <lb/> non latet. Cur interroges quomodo sit
+						socius et aequalis <lb/>  regis, quem  regii ! constat esse honoris et generis. <lb/>  Ex 
+						superfluo de nomine agitur  inquisitio , ubi non <lb/> est de  sublimitate  dubitare. Ergo
+						Spiritus sanctus ex <milestone unit="PLSection" n="C"/><lb/> utroque procedit, ideo
+						dicit : Qui autem Spiritum <lb/> Christi non habet, hic non est ejus. Et alio loco. Insufflavit
+						<lb/>  et dixit: Accipite Spiritum sanctum. Utrum <lb/> ingenitus sit an
+						genitus requiris. Nihil ex hoc eloquia <lb/>  sacra cecinerunt, nefas est erumpere
+						divina <lb/> silentia. Quod Deus Scripturis suis indicandum esse <lb/> non credidit,
+						indicare vel scire te superflua curiositate <lb/>  noluit. Hoc pervenire debere
+						indicavit ad conscientiam <lb/>  tuam, quod  pertinet   ad salutem tuam. Quid <lb/> vobis
+						de sancto Spiritu sit credendum, sancta  consulamus  <lb/>  eloquia. Hoc ipsum enim quod
+						ait genitum <lb/> Filium. iniquum dicere auderes, nisi coelesti ex  Scripturis  <lb/> 
+						attestatione didicisses? Aut nunquid usurpares <lb/> asserere Christum Dominum, vel ex
+						Virgine procreatum  ,<lb/> vel ex aequaevo et coaeterno Patre progenitum, <milestone unit="PLSection" n="D"/><lb/> nisi ex lectione sumpsisses, nisi de Deo divinas <lb/>
+						voces interrogasses? Et ideo quomodo consentire de <lb/> Spiritu sancto debeas, ad
+						apostolos et evangelia <lb/> oportet ut redeas, cum quibus et in quibus Deum <lb/>
+						locutum esse non dubitas. Ut ergo ad supervacaneam <lb/> propositionem tuam redeam,
+						nunquid in hac gratia <lb/> vel substantia Spiritus sancti habetur, si aut ingenitus <lb/>
+						 probetur aut genitus ? Nam nec Filio quidquam <lb/> derogat, quod ingenitus esse non
+						legitur, nec Patri <lb/> quod genitus non habetur. In hujuscemodi sermonibus <lb/> 
+						proprietas est appellationis, non diversitas potentia <lb/>  vel majestatis. Genitus
+						 et  ingenitus, personae <lb/> est differentia, non naturae. Cum ergo de genito et ingenitum
+						<lb/>  inutilia et non necessaria, et solis calumniis <milestone unit="PLSection" n="A"/><lb/> opportuna vel dixeris vel audieris, nunquid in hoc <lb/>  fine  stare
+						contentus eris? Certe adhuc utrum Deus <lb/> sit interrogabis. Cum verum Deum esse ex
+						his quae <lb/> leguntur acceperis, jam quod interroges non  habebis   ,<lb/> quia cum
+						coeperis fortia et consummata cognoscere  ,<lb/> inania et vacua non indigebis
+						inquirere. Ubi <lb/> ergo utilitatis ratio et veritatis esse intelligitur plenitudo 
+						,<lb/>  illuc  salutaris pendeat intentio.</p>
+					<ab>
+						<title type="sub">CAPUT IX.</title>
+					</ab>
+					<ab>
+						<title type="sub">Spiritum sanctum perfectorem esse charismatum et largitorem.</title>
+					</ab>
+					<p>Spiritum sanctum coelestium charismatum largitorem <lb/>  et dispensatorem
+						sanctificationum etiam ipsa <lb/> ratio nominis protestatur. Magnificentia autem  ejus 
+							<milestone unit="PLSection" n="B"/><lb/> etiam in Veteri Testamento manifesta est. Nam
+						illic <lb/> gratia ejus non nisi certis quibusque, id est patriarchis <lb/>  pariter  et 
+						prophetis, et sanctis electisque conscientiam <lb/>  est, ut per ipsam donorum perfectionem
+						donantis <lb/>  intelligas dignitatem. Quantum vero in  Scripturis  <lb/>  sanctis
+						 manifestissime  deprehenditur, alia <lb/> Pater ipse per se, alia specialiter per Filium,
+						alia per <lb/> Spiritum sanctum, licet sub privilegio potentiae  communis  <lb/> 
+						operatur. Quia sumus, ad Patrem proprie <lb/> referri videtur, in quo, sicut  Apostolus 
+						dicit : vivimus, <lb/> movemur, et sumus. Quod vero rationis et  sapientiae  <lb/> et
+						justitiae capaces sumus, illi specialiter, qui est <lb/> ratio et sapientia et justitia,
+						id est  filio  deputatur. <lb/> Quod autem vocati regeneramur, et regenerati innovamur 
+						,<lb/> innovati sanctificamur, per divina  eloquia  <milestone unit="PLSection" n="C"/><lb/> personae Spiritus sancti evidenter ascribitur. Sed <lb/> hoc ita sacrae paginae
+						sub distinctione indiscretae Trinitatis <lb/>  loquuntur, ut cuilibet appareat in
+						singulis <lb/> diversitas operis, maneat tamen in tribus unitas voluntatis  .<lb/> Ergo
+						et gentiles  et  catechumeni, de Patris <lb/> et Filii dispensatione participant, de
+						sanctificatione <lb/> vero et infusione Spiritus sancti non  facile , nisi jam <lb/>
+						 beatissimum  consecuti, purificati et spirituales effecti <lb/> et apostolici etiam, ac
+						toto spiritu ad martyrium <lb/> praeparati. Et inter haec adhuc creatura esse ab impiis
+						<lb/> judicabitur, qui apud individuam Trinitatem in ordinatione <lb/>  salutis humanae,
+						magnificentiora quaeque <lb/> munera et perfectiora sortitur? Sed forte dicas: <lb/>
+						Major est Spiritus sanctus, cujus majora et  nobiliora  <lb/> sunt opera. Non ita est. Nam
+						id moris est Trinitatis, <milestone unit="PLSection" n="D"/><lb/> ut cui personae
+						 administrandae : rei committit officium, <lb/> ei peractae ascribat effectum, ac si opus
+						sit forte <lb/> diversum, sed commune propositum, et si est in singulis <lb/>  speciale
+						factum, manet in tribus generale conscientiam  ,<lb/> ac propterea si distinctum  habent  in
+						operatione <lb/>  negotium, unum tamen tenent in  ordinatione  <lb/> consensum. Post
+						ascensionem Domini ad accumulanda <lb/>  et implenda ejus beneficia, Spiritus sanctus
+						<lb/> descendisse describitur, de quo  ipse  Salvator per <lb/> Joannis Evangelium
+						loquitur, Ille spiritus veritatis <lb/> quem mittet Pater in nomine meo (Joan. XIV) :
+						Mittet, <lb/> inquit, Pater in nomine meo, de Trinitate evidenter. <lb/>  De qua  hoc
+						unquam creatura dictum vel legimus vel <lb/> audivimus, quod in hunc mundum in Dei
+						nomine<pb n="19"/>
+						<milestone unit="PLSection" n="A"/><lb/> venerit ? Hic ergo de quo Christus Dominus Deus
+						<lb/> dicit: Nisi ego iero , paracletus non veniet ad  vos : (Joan. <lb/> XVI), Deus absque
+						dubio est, qui in locum Dei ad <lb/> confirmanda Dei munera destinatur. In his duabus
+						<lb/> sententiis sub distinctione Trinitatis, absolute persona <lb/>  etiam Spiritus
+						sancti declaratur. Non immerito <lb/> itaque, et hoc ad Divinitatis aequalitatem
+						refertur, <lb/> quod sicut Filius, ita etiam Spiritus sanctus in  Scripturis  <lb/> 
+						paracletus nuncupatur. Et unde hoc probare <lb/>  poterimus ? Utique ex  Joannis  apostoli
+						auctoritate <lb/> cum dicit : Si quis, inquit, nostrum peccaverit, paracletum <lb/> 
+						habemus apud Patrem Jesum Christum, et ipse est <lb/> propitiatio pro peccatis nostris
+						(I Joan. I).  Paracletum , <lb/> id est advocatum, quod ad personam Filii respicit, <lb/>
+						sive etiam consolatorem, quod ad sanctum Spiritum <milestone unit="PLSection" n="B"/><lb/> pertinet, una Graeci sermonis enuntiatio  utrumque  significat  -  .<lb/> In Joannis
+						Evangelio habemus: Et ego, inquit, <lb/>  rogabo  Patrem, et alium paracletum dabit vobis
+						(Joan. <lb/> XIV). Alium paracletum, id est similis potentiae, Patris <lb/>  gloriae,
+						ejusdem  naturae . Et alium paracletum. <lb/> Si unum de creaturis esse putas Spiritum
+						sanctum, <lb/> indignum est, ut descendentem eodem beneficia quae <lb/> creator contulit
+						creatura confirmet, et quasi factoris <lb/> inefficax  fueret  virtus, quamlibet
+						excellentiori, tantum <lb/> creaturae, vel consummati operis reservetur effectus. <lb/>
+						Tu ergo Spiritu sancto tanquam creaturae maledicis <lb/> opprobrio, cui se Dei Filius
+						divino testimonio et <lb/> proprio exaequavit oraculo. Et alium paracletum,  duplicem  <lb/>
+						 hic intellectum, et  personae  distinctionem <lb/>  cognosces . Ideo se Christus sub
+						paracleti videtur <milestone unit="PLSection" n="C"/><lb/> exaequasse  cognomine   Spiritui
+						sancto, qui utique <lb/> materia operis Dei atque  factura  est, quia ipse Jesus <lb/>
+						creatus esse probatur ex Maria, ob quam infidelem <lb/> vocem tam infirmum est
+						argumentum. Nam si secundum <lb/>  hominem paracleto Christum assimilatum putas 
+						,<lb/>  ne  hoc quidem convenit  caritati . Etenim paulo <lb/> minus ab angelis minoratus, et
+						unus factus est ex nobis, <lb/> bene  primae  atque coelesti excellentiori, ut asseris,
+						<lb/> creaturae non potuit comparari. Si vero hoc secundum <lb/>  formam Dei Christus
+						locutus est, factori utique <lb/>  facturam  certum est non debuisse conferri. Ac si <lb/>
+						huic excellentiori creaturae se homo exaequat, minoris <lb/>  superbia  est , si Deus
+						majoris injuria est, Quia <lb/> ergo in creaturae conditione constare sibi haec comparatio
+						<lb/>  non agnoscitur, restat ut uterque Deus esse <milestone unit="PLSection" n="D"/><lb/> credatur, ac sibi  mutuo  divinitatis aequalitas comparatio  .<lb/> Nam dum
+						Salvator loquitur per Joannem ; Et <lb/> ego rogabo Patrem, et alium paracletum  dabit 
+						vobis, <lb/> Spiritum veritatis, quem hic mundus non potest accipere <lb/>  (Ibid.),
+						qui universo mundo dari potest, manifeste <lb/>  Deus est mundi. Trinam et  hic  agnosce
+						 virtutem   .<lb/> Pater est qui indicatur rogandus, Filius qui <lb/> intelligitur
+						rogaturus, Spiritus sanctus qui promittitur <lb/>  a Patre mittendus. Adverte personam
+						Spiritus  .<lb/>, non tam cognatis ut asseris creaturis  associari   ,<lb/> sed per
+						omnia Trinitati operibus adjungi, et <lb/> virtutibus exaequari.</p>
+					<p>
+						<milestone unit="PLSection" n="A"/>
+					</p>
+					<ab>
+						<title type="sub">CAPUT X.</title>
+					</ab>
+					<ab>
+						<title type="sub">De Actibus apostolorum assertio Trinitatis iteratur, ubi et Christus
+							contra Novatianos ad dandum poenitentiam missus asseritur.</title>
+					</ab>
+					<p>In Actibus apostolorum Petrus de Domino Jesu <lb/> Christo disserens ita dicit : Dextra
+						igitur Dei exaltatus  ,<lb/> et promissione Spiritus sancti accepta a Patre, <lb/>
+						effudit hunc quem videtis et auditis (Act. n). In dextera <lb/> Filius, in Deo Patre, in
+						nominis sui proprietate Spiritus <lb/>  sanctus designatur, et in consequentibus legimus
+						 .<lb/> Tunc Petrus repletus Spiritu sancto dixit: In <lb/> nomine Jesu Christi
+						Nazaraeni, quem vos crucifixistis, <lb/> quem Deus suscitavit a mortuis, in hoc iste
+						astat coram <lb/> vobis sanus (Act. IV). Perspice et hic distinctionem <lb/>  Trinitatis 
+						expressam, Petrus in se perferens Spiritum <milestone unit="PLSection" n="B"/><lb/>
+						sanctum, Filium in carne morientem, et Patrem loquitur <lb/>  suscitantem,  apostolico 
+						nihilominus iterato. Repleti <lb/>  sunt omnes Spiritu sancto, et loquebantur verbum
+						<lb/> Dei cum fiducia (Act. II).  Adverte  etiam hoc in loco in <lb/> Trinitate Spiritum
+						sanctum contineri. In oratione <lb/> Pater rogatus, in Dei verbo Filius  agnoscitur , in
+						apostolorum <lb/>  constantia Spiritus ignis operatur. Repleti <lb/> sunt, inquit,
+						omnes Spiritu sancto. Manifestae majestatis <lb/>  est posse plurima simul subtilitate
+						incorporeae <lb/> divinitatis infundere, et sine detrimento integrum <lb/> permanere.
+						Item cum dixissent apostoli de Jesu: <lb/> Hunc Deus  principem  et salvatorem exaltavit
+						dextera <lb/> sua, ad dandam poenitentiam in Israel in remissionem <lb/> peccatorum. Nos,
+						inquiunt,  teste  horum, et Spiritus <lb/> sanctus quem dedit Deus omnibus  obedientisbus 
+						sibi <milestone unit="PLSection" n="C"/><lb/> (Act. I). Intellige hic sub ordine
+						Trinitatis non solum <lb/> ad praedicandum, sed ad dandam poenitentiam a Patris <lb/> 
+						Filium destinari, et obtemperantibus Spiritum <lb/> sanctum qui obedientiam remuneret
+						infundi. Stephanus <lb/>  sub momento passionis, Spiritu sancto impletur <lb/> et
+						reseratis justitiae portis a dextris  Patris  Filius revelatur  ,<lb/> sicut ipse Spiritu
+						sancto repletus effatur. <lb/> Ecce video  coelos  apertos, et filium hominis stantem a
+						<lb/> dextris Dei. Vide quomodo sub spectaculo Trinitatis, <lb/> edebat munera
+						passionis. Cornelium centurionem <lb/> Petrus alloquitur dicens : Jesum Nazarenum,
+						quomodo <lb/> unxit eum Deus Spiritu sancto. Unxit Deus, id est virtus <lb/>   implevit ,
+						benedictio infudit, divinitas penetravit. <lb/> Quomodo unxit eum Deus Spiritu  sancto .
+						 Tria   haec <lb/> proprietates suas evidenter demonstrant: Munus, <milestone unit="PLSection" n="D"/><lb/> munerans, muneratus. Ungens, unctus, unguentum, <lb/>
+						sicut in alio loco dicit sermo divinus : Unxit te Deus; <lb/> Deus tuus oleo laetitiae. In
+						suscepto homine Deus ungitur  ,<lb/> et Deus ungit, et sub columbae coelestis illapsu
+						<lb/> potestas Patris agnoscitur, fas non  est , ut hic Spiritus <lb/> sanctus, a quo
+						Filius  hominis  Christus jam Dei Filio <lb/> plenus impletur, aliud quam Deus esse
+						credatur. <lb/> Nam si creatura esset, quomodo penetrare posset in <lb/> corpoream
+						naturam omnia penetrantem? Capax enim <lb/> sui est Trinitas, sicut ego in Patre et
+						Pater in me (Joan. <lb/> XIV). Et iterum : Spiritus scrutatur etiam profunda <lb/> Dei
+						 (I  Cor. II). Item, Spiritus qui ex Patre procedit <lb/> (Joan. XV). Nisi hic Spiritus  ex 
+						Patre esset, et naturaliter <lb/>  in Patris aeterna infusus habitaret, procedcre<pb n="21"/>
+						<milestone unit="PLSection" n="A"/><lb/> ex Patre non posset. Sed interrogas utrum
+						semper <lb/> Spiritus ex Patre procedat: semper cum illo, semper <lb/>  ex  illo, sicut
+						calor ex igne, ita sine intermissione <lb/> profertur ut egredi sciat, separari nesciat.
+						Nam si <lb/> non esset Spiritus sancti processio sempiterna, localis <lb/>   videretur  
+						esse substantia: si non alter alterum <lb/> sine permixtione sui penetrat incorporea suae
+						claritatis <lb/>  unione, erit confusa divinitas. Permixtio enim <lb/> tollit essentiae
+						triplicis proprietatem, infusio vero <lb/> mutua distinctam ostendit essentiam, quae
+						inter substantiam <lb/>  et personas media videri potest. Ad substantiam <lb/> 
+						pertinet quod subsistit : ad personas  pertinet   ,<lb/> quod proprie sibi unaquaeque
+						subsistit. Discipulos <lb/> suos Paulus allo uitur dicens: Non subterfugio, quominus <lb/>
+						 annuntiem vobis omne consilium Dei. Attendite <milestone unit="PLSection" n="B"/><lb/> vobis et universo gregi, in quo Spiritus sanctus vos posuit <lb/> episcopos,
+						regere Ecclesiam Dei, quam acquisivit sanguine <lb/>  suo. Quam dilucide personis suis
+						tota Trinitas <lb/> designatur ! Consilium Dei Patris annuntiat ; episcopos <lb/>  a
+						Spiritu sancto  ordinatos   esse confirmat ;Deum <lb/> etiam Christum, cujus  sanguine  
+						Ecclesia sit acquisita  ,<lb/> demonstrat. Ad Romanos etiam Trinitas sub <lb/> nominum
+						proprietate digeritur. Quod si Spiritus ejus, <lb/>  qui  suscitavit Jesum, habitat in
+						vobis, qui suscitavit <lb/> Jesum a mortuis, vivificabit et mortalia corpora vestra,
+						<lb/> propter  inhabitantem Spiritum  ejus in vobis (Rom. VIII). <lb/> Pater suscitat,
+						Filius suscitatur, et propter inhabitantem <lb/>  Spiritum resuscitandis mortalium
+						corporibus <lb/> vita promittitur. Et in consequenti : Vos autem non <lb/> estis in
+						carne, sed in Spiritu, si tamen Spiritus Dei <milestone unit="PLSection" n="C"/><lb/>
+						habitat in vobis. Si quis autem Spiritum Christi non <lb/> habet, hic non est ejus. Dum
+						dicit Spiritum Dei, et in <lb/> consequente Spiritum Christi, adverte quia hic personam
+						<lb/>  Christi sub Dei appellatione designat. Aut si <lb/> hic Patrem cujus
+						Spiritus sit, sub Dei nuncupatione <lb/>  significat , ecce hic Spiritus sanctus per
+						unitatem <lb/> substantiae,et Patris, et Filii esse Spiritus declaratur, <lb/> et merito
+						procedere ex utroque dignoscitur, et  in vinculo  <lb/>   Trinitatis distinctam habere
+						personam personam  ,<lb/> et qui Spiritum sanctum non habet, nec <lb/> Christum
+						habere monstratur. Deus itaque est Spiritus <lb/> sanctus, quo negato negatur et
+						Christus qui dixit: <lb/> Nemo venit ad Patrem nisi per me. Qui Spiritu sancto <lb/>
+						vacuus est,  Christi  non est, et perdit viam, qua personam <lb/>  ad Patrem.</p>
+					<p>
+						<milestone unit="PLSection" n="D"/>
+					</p>
+					<ab>
+						<title type="sub">CAPUT XI.</title>
+					</ab>
+					<ab>
+						<title type="sub">Dei proprium esse ut sanctificet creaturam.</title>
+					</ab>
+					<p>Ad Corinthios prima Epistola. Et haec quidem fuistis, <lb/> sed abluti estis, sed
+						justificati estis in nomine Domini nostri <lb/>  Jesu  Christi , et in Spiritu Dei nostri
+						(I Cor. VI). Ecce <lb/> et hic sub Dei nostri, id est sub Patris  commemoratione  , <lb/>
+						Spiritus sanctus Corinthiorum fideles Christo cooperante <lb/> 
+						sanctificat.Sanctificare nulla creatura aliam <lb/> penitus potest. Largitio
+						sanctificationis, munificentia <lb/> solius est majestatis. Quo loco in nomine Jesu
+						Christi <lb/> et in Spiritu Dei nostri, tres agnosce personas. Ad <lb/> Corinthios
+						secunda : Gratia Domini nostri Jesu Christi, <lb/> et charitas Dei, et communicatio
+						sancti Spiritus sit semper <milestone unit="PLSection" n="A"/><lb/>  cum omnibus vobis
+						(II Cor.  ult .). Gratia Christi, <lb/> charitas Dei, communicatio sancti Spiritus, tres
+						personam <lb/>  evidenter expressit. Item ad Corinthios secundo <lb/>  : Qui autem
+						confirmat nos vobiscum in Christo, <lb/> et qui unxit nos Deus, et qui consignavit nos,
+						et dedit <lb/> nobis pignus Spiritus in cordibus nostris (II Cor. I). <lb/> Unde in
+						operibus unitatem individuae Trinitatis confirmat  ,<lb/> et signat nos proprie per
+						Christum, et daturus <lb/> seipsum, dat jam in praesenti pignus Spiritum sanguine <lb/>
+						ctum.In terrenis negotiis arrhae quantitas, contractus <lb/> illius pro quo intercesserit
+						quaedam portio est, pignoris <lb/>  vero ratio, meritum rei pro qua poni videtur, <lb/>
+						excedit. Hic vero majestati pignus suum quia nescit <lb/> praeferri, necesse est
+						exaequari.  Nequeunt  enim personam <lb/>  transcendi. Pro se  ergo  Pater Spiritus sancti
+							<milestone unit="PLSection" n="B"/><lb/> pignus indulget. Nil itaque in Spiritu sancto
+						semper <lb/> vel semiplenum super plenum, plenum putetur, quia <lb/> plenitudini
+						comparatur. Nam qui ad vicem Dei pignostri <lb/>  loco tribuitur, fas non est, ut aliud
+						quam  Deus  <lb/> esse credatur. Item ad Titum : Salvos nos fecit per <lb/> lavacrum
+						regenerationis et renovationis Spiritus sancti, <lb/> quem effudit in nos abunde per
+						Jesum Christum (Tit. <lb/> III). Ecce etiam hic sub Trinitate manifeste Pater per <lb/>
+						Filium abundantiam Spiritus sancti  effudit  . Et quod <lb/> maxime advertendum est, ipsi
+						sancto Spiritui potentiam <lb/>  regenerationis et renovationis ascribit. Petrus <lb/>
+						quoque in Epistola sua insuperabilem personis explicat <lb/>  Trinitatem dicens :
+						Secundum praescientiam Dei <lb/> Patris et sanctificationem Spiritus, in obedientiam, et
+						<lb/> aspersionem sanguinis Jesu Christi, gratia vobis et pax <milestone unit="PLSection" n="c"/><lb/> multiplicetur  (I  Petr. I). In praescientia Pater, et in
+						<lb/> sanctificatione Spiritus, in aspersione sanguinis, <lb/> Christus ostenditur.</p>
+					<ab>
+						<title type="sub">CAPUT XII.</title>
+					</ab>
+					<ab>
+						<title type="sub">Localem non esse Spiritum san.</title>
+					</ab>
+					<p>Deum Spiritum sanctum ex suis virtutibus et operibus <lb/>  demonstremus. Omnis
+						creatura sicut temporum <lb/> initiis subjacet, ita localis esse certis spatiis et
+						 finibus  <lb/> circumscripta cognoscitur. Spiritus sanctus nullis <lb/> terminis tanquam
+						factura concluditur; Deus necesse <lb/> est, pro ipsa libertate  diffusae majestatis 
+						habeatur. <lb/> Domini Salvatoris ad apostolos vox est: Dabit vobis <lb/> Pater, inquit,
+						Spiritum veritatis, qui vobiscum sit in <lb/> aeternum. Si localis est, et perpetuo in
+						illis manebat, <milestone unit="PLSection" n="D"/><lb/> utique alibi esse non poterat.
+						Videamus si ejus natura <lb/> localibus sit determinanda limitibus. Ait apostolis <lb/>
+						Dominus : Accipietis virtutem Spiritus sancti supervenientis <lb/>  in vos, et eritis
+						mihi testes in Jerusalem, et in <lb/> omni Judaea, et Samaria. et usque ad ultimum terrae
+						<lb/> (Act. I). Post cujus ascensionem venit Spiritus sanctus <lb/> super eos, et
+						apparuerunt illis dispartitae linguae tanquam <lb/>  ignis, seditque supra singulos
+						eorum.Videamus <lb/>  quare  primitus diversarum donantur linguarum  benedictiones   ,<lb/>
+						nimirum ut idonei efficerentur fidelium <lb/>  eruditione  populorum. Qui vero in singulos
+						sedisse <lb/> memoratur, id causae est ut intelligatur per plures <lb/> non fuisse
+						divisus, mansisse in singulis totus, sed sicut <lb/>  fieri  ignibus mos est, hanc enim ut
+						novimus habet<pb n="23"/>
+						<milestone unit="PLSection" n="A"/><lb/> naturam ignis accensus, ut quanti ad cum,quanti
+						ad <lb/> crinem purpurei splendoris aspexerint, tantis usum <lb/>  suae lucis  impartiat,
+						tantis ministerium sui muneris <lb/> tribuat, et nihilominus in sui integritate
+						permaneat : <lb/> Ita sancti Spiritus virtus quantumlibet effluat, quantumlibet <lb/> 
+						in plurimos gratia divinae largitatis exuberet  ,<lb/> sicut nullam  probatur  recipere
+						mensuram, ita <lb/> nullam sensit expensam. Adverte Deum ex operum <lb/> dignitate.
+						Apostoli pleni Spiritu sancto per omnem <lb/> mundum thesauros salutis erogaturi,
+						coeleste hoc <lb/> munus in se circumferunt, in alios  manibus  impositis <lb/>
+						transferunt. Accipientibus sine damno datur largientis  .<lb/> Credentibus totus
+						 traditur , et totus a tradentibus <lb/> possidetur, infusione ejus universus  orbis  
+						impletur, <lb/> sine attentione dilatatur, sine divisione dispergitur. <milestone unit="PLSection" n="B"/><lb/> In illa specialiter sacratissima regenerationis  nocte 
+						<lb/> ab Oriente in Occidentem, a solis ortu usque ad occasum  ,<lb/> ab aquilone et
+						mari, ubique idem Spiritus, unus <lb/> et plenus operatur, per omnia praesens est,
+						invocatione <lb/>  creditur, benedictione sentitur, innumerae multitudines <lb/>  uno
+						baptismo diluuntur et, ut dixit  Apostolus   ,<lb/> uno Spiritu potantur, in unum
+						 adoptantis  gremium <lb/> renascuntur. Et ideo dixit Deus : In diebus illis effundam <lb/>
+						  de Spiritu  meo super omnem carnem. Adverte quod <lb/> dixit: effundam de Spiritu meo,
+						et non dixit: effundam <lb/> Spiritum meum, id est tantum de eo quantum possit <lb/>
+						mundus accipere dispensando. Vides quod a Patre <lb/> egreditur, nec tamen a Patre
+						separatur, emittitur, <lb/> et non amittitur, effunditur et retinetur, et in eo <lb/>
+						quod effundi legitur, magnitudo  plenitudinis  declaratur .<milestone unit="PLSection" n="C"/> <lb/> Liber Geneseos sacri voluminis testatur exordio: <lb/> Spiritus autem
+						Domini ferebatur super aquas, ferebatur, <lb/> inquit, super aquas (Gen. I) ; sermo ipse
+						abundantiam <lb/> universa complentis, et eminentiam videtur assignare <lb/> dominantis.
+						Propriam quoque hanc ejus magnificentiam  ,<lb/> nullis locorum spatiis circumscriptam
+						pari attestatione <lb/>  concelebrat dicens : Quo ibo a spiritu tuo <lb/> (Psal.
+						CXXXVIII), hoc est ubi me abscondam a conspectu <lb/>  ejus, quem praesto esse per
+						omnia, id est intra <lb/> extraque non ambigo, cujus oculum abyssos penetrantem  ,<lb/>
+						intra secreta mei pectoris reformido, cujus <lb/> praesentiae universa quae condidit
+						subjacere  cognosco ? <lb/> De quo quia ignis consumens est, dictum evidenter <lb/>
+						intellige, nec est qui se abscondat a calore ejus (Psal. <lb/> XVIII). Cujus ineffabilis
+						magnitudo profunda  inferorum  ,<milestone unit="PLSection" n="D"/> <lb/> diffusa
+						fluctuum, extenta terrarum, excelsa coelorum <lb/>  intrat, implet, excedit. Mitti a
+						Patre et Filio <lb/> dicitur,et de ipsorum substantia procedere, et unum <lb/>  eum  eis
+						opus agere dignoscitur, et propterea Filius <lb/> de eo dicit: Paracletus qui a Patre
+						procedit (Joan. xv). <lb/> Non dixit qui a Patre creatus est, sed a Patre procedit,
+						<lb/> id est de paternae societate potentiae,et de proprietate <lb/> naturae. Sed ex ipso
+						sermone, cum dicatur a Patre <lb/> procedere, ostenditur cum Patre initium non habere.
+						<lb/>  Qn d eat amem    , quod ex Deo Patre nasci Filius dicitur ,<milestone unit="PLSection" n="A"/> <lb/> et Spiritus sanctus procedere significatur? Si  requiras  <lb/>
+						<lb/>  quid inter nascentem et procedentem distet, <lb/> evidenter hoc interest,
+						quia iste ex uno nascitur, ille <lb/> ex utroque progreditur. Quia ergo Spiritus sanctus
+						<lb/> a Patre procedit, tria in eo privilegia deitatis ostendit  ,<lb/> id est ut in
+						persona sua subsistere, et sine ullo <lb/> temporis spatio permanere, et omnino ex
+						substantia <lb/> Patris probetur existere. Dum ergo procedere commemoratur  ,<lb/> ipsa
+						proprietate sermonis, nullis temporum <lb/>  legibus circumscribi, sed initio et fine
+						carere <lb/>  cognoscitur  . Et quia legimus : Ego sum qui sum, et, <lb/>  qui   est misit me
+						(Exod. III). Hoc similiter indicat et <lb/> procedit. Esse enim et procedere, unius
+						sempiternitatis <lb/>  expressio. Ergo ipsa processio, nec prima nec <lb/> extrema
+						contingens, nulli vel principio intelligitur <milestone unit="PLSection" n="B"/><lb/>
+						subjacere vel termino. Non ergo ideo localem  esse   <lb/> credimus, quia mitti eum a Patre
+						ex lectione percepimus  ,<lb/> nam et de Patre et Filio legimus, quod velut <lb/>
+						quodam motu descendant ac  veniant  . Videamus ubi. <lb/> Ego (inquit) et Pater veniemus,
+						et mansionem apud <lb/> eum faciemus (Joan. XIV). Et iterum,  cum  gigantes in <lb/> coelum
+						molirentur turrim erigere, Patris persona <lb/> loquitur : Venite et confundamus linguas
+						eorum  (Gen . <lb/> XI). Hic ergo per verborum nostrorum sonos, sensibus <lb/>  nostris
+						rerum efficientia demonstratur. Caeterum <lb/> localem motum virtus divina non patitur,
+						quae nec ex <lb/> cursu agente advenit, nec recursu labente discedit. <lb/> Qui cum
+						excedit omnia, quo recedit? De Spiritu <lb/> sancto didicimus lectione : Ecclesia autem
+						pacem habebat <lb/>  per totam Judaeam ambulans in timore Domini, <milestone unit="PLSection" n="C"/><lb/> et consolatione Spiritus sancti replebatur (Act. IX). Et
+						<lb/> quomodo inter  haec   eum localem quisquam praesumit <lb/> asserere creaturam, qui
+						 infinitae multitudinis  implere <lb/> probatur Ecclesiam , ut et ad ipsum pertinere manifestum
+						<lb/>  sit quod Apostolus dicit: Pater misericordiarum <lb/> et Deus totius
+						consolationis  (I  Cor. I) ? Habemus in <lb/> psalmo : Fluminis impetus laetificat
+						civitatem Dei (Psal. <lb/> XLV). Quis est iste fluminis impetus, nisi ille nimirum <lb/>
+						de quo dicit Dominus per Joannem : Qui credit in me, <lb/> flumina de ventre ejus fluent
+						aquae vivae? Hoc dixit Dominus <lb/>  Jesus de Spiritu quem accepturi erant credentes
+						<lb/> in eum (Joan. I). Vide magnificentiam majestatis. <lb/> Sic in terris tribuitur
+						Ecclesiae Dei, ut tamen in coelorum <lb/>  laetificet civitatem Dei, id est regnorum
+						coelestium <lb/> cives, supernae militiae populos, principatus, potestates <milestone unit="PLSection" n="D"/><lb/>  ac dominationes, ineffabilibus gaudiis pro conspectu
+						<lb/>  aeternae beatitudinis irrigat, et ubertate laetitiae <lb/>  exundantius
+						inebriat, concentum coeli in exsultatione <lb/>  torrente suae sanctificationis
+						exsuscitat. Si <lb/> haec tanta per aliquam creaturam donari opineris, <lb/> divinae
+						 potentiae proprium  nihil relinquis. Si haec <lb/> (inquam) per aliquam existimas creaturam,
+						in angelorum <lb/>  et archangelorum tendis injuriam , quibus <lb/> tanta et talia
+						tribui per conservi aestimas largitionem  .<lb/></p>
+				</div><pb n="25"/>
+
+				<div type="textpart" subtype="chapter">
+					<head>
+						<title type="main">   .</title>
+					</head>
+					<p>
+						<milestone unit="PLSection" n="A"/>
+					</p>
+					<ab>
+						<title type="sub">CAPUT PRIMUM.</title>
+					</ab>
+					<ab>
+						<title type="sub">Quia nulla creatura  rationalis cognatae  ' creaturae possit
+							infundi.</title>
+					</ab>
+					<p>Legimus de proflua effusione Spiritus sancti : Jesus <lb/>  autem plenus Spiritu
+						sancto  regressus  est a Jordane  .<lb/> Quis ergo nisi qui ejusdem esset plenitudinis,
+						<lb/> implentem omnia possit implere. De apostolis refert <lb/> sermo divinus : Et
+						repleti sunt omnes Spiritu sancto. <lb/> Et loquebantur verbum Dei cum fiducia. Et paulo
+						<lb/> post: Quoniam et in nationes integras implere prohibetur  ,<lb/> et inexhaustus
+						atque in se plenus permanere <lb/>  dignoscitur  . Si creatus est Spiritus, de quo unquam
+						<lb/> angelo vel archangelo lectum est, quod se cuiquam <lb/>  animae  intrinsecus
+						susceptus infuderit?  Dic  mihi, si <lb/> unquam ex creaturis ullam legeris potestatem
+						atque <milestone unit="PLSection" n="B"/><lb/> virtutem, quae multa simul impleat atque
+						possideat, <lb/> et quod magis est, indiminuta atque divisa permaneat  .<lb/>
+						Impossibile est, ut spiritualis ac rationabilis <lb/> creatura, cognatae sibi naturae
+						unquam valeat  infundi   .<lb/> Itaque res materialis materialem nescit penetrare <lb/> 
+						substantiam. Solus Deus in quo intelligitur et <lb/> Spiritus sanctus, simplex,
+						subtilis, purus, in facturam <lb/>  vel angelicam, vel  humanam  virtute incorporeae <lb/>
+						divinitatis illabitur, quae sola  sui  operis penetratrix, <lb/>  occulta  humani cordis
+						ingreditur. Quaelibet autem <lb/> creatura coelestis, in tantum infundere vel implere
+						<lb/> hominem non potest, ut abdita cogitationis humanae <lb/> scire possit. Et ideo de
+						solo Deo legimus : Qui solus <lb/> nosti corda hominum (Prov. VI). Et iterum :  Ipse  enim
+						<lb/> novit occulta cognoscere, et hoc si divinitatis est <milestone unit="PLSection" n="C"/><lb/> proprium, quanto magis scrutari profunda Dei <lb/> summi in persona
+						Spiritus sancti, majestatis insigne <lb/> est: Auctori tantum debetur hoc privilegium,
+						ut conscientiam <lb/>   possit   intrare secretam. Anima vero animae  ,<lb/> aut angelus
+						angelo conjungi potest, infundi non <lb/> potest, quia hujusmodi creaturarum, genera
+						tantum <lb/> Spiritus sancti, id est solius Dei capacia sunt, quia <lb/>  figuli  sui vasa
+						sunt, ab illo solo impleri possunt, a <lb/> quo de nihilo facta sunt, et sine quo vacua
+						esse sentiuntur  .<lb/> Itaque substantia animae utpote corporalis <lb/> materia alii
+						rationali creaturae penitus nescit infundi. <lb/> Crassitudini enim exterioris hominis
+						comparata <lb/>  anima incorporea   dici potest, ad auctorem vero relata  ,<lb/> cui
+						comprehensibilis est materia sua, et factura <lb/> sua palpabilis : a quo intra corpus
+						 includi   et colligari ,<milestone unit="PLSection" n="D"/> <lb/> atque igni perpetuo
+						mancipari potest sicut legimus  ,<lb/> ut eant in ignem aeternum ; qui paratus est diabolo
+						<lb/>  et angelis  ejus . Huic indubitanter auctori, perfectoris <lb/>  in re
+						corporea est. Sed forsitan dicis : Manimae <lb/>  est quod se etiam daemonum
+						importuna <lb/> violentia, in homines quos tentandos acceperat  frequenter  <lb/> 
+						infundat. Non ita est : nam corporis latebras <lb/>  intrare possunt, animae vero
+						interiora adire non <lb/> possunt. Sciendum ergo est quod spiritualium  nequitiarum  <lb/>
+						 dolosa subtilitas, illa membrorum loca suo <milestone unit="PLSection" n="A"/><lb/> turbat incursu, quae interdum vino nimio vel  febritio . <lb/>  fatigantur
+						accensu. In animae itaque sensus inimica <lb/>  tentatio per malitiam scit irrepere,  in animae 
+						 <lb/> vero recessus per naturam nescit influere. Et ideo <lb/> hujusmodi spiritus
+						immundos humanae mentes ac pectora <lb/>  non naturarum infusione capiunt, sed voluntatum
+						<lb/>  pravitate concipiunt. Manifestum itaque est quod <lb/> penetrare animarum
+						substantias nequeunt, quarum <lb/> conscientias scire non possunt. Quod si aliquando
+						<lb/> daemonibus nosse contigerit, de perditione est conscientiam  ,<lb/> non de
+						potestate naturae. Sola ergo se divina <lb/>  potentia, quae  et  in Spiritu sancto est
+						 rationabilibus  <lb/>  creaturis infusa et circumfusa permiscet, sicut <lb/>
+						peculiariter in illo dominici hominis corpore, ex Maria <lb/>  matre suscepto, gratia
+						exuberante requievit, sicut <milestone unit="PLSection" n="B"/><lb/> de seipso Filius
+						dicit : Spiritus Domini super me (Luc. <lb/> IV). Si ergo Spiritus sanctus  factura  
+						subjectae esset <lb/> conditionis ut dicunt, tam impossibile quam indivina <lb/>  Deo
+						erat, ut creatura ulla animam vel corpus <lb/>  impleret , in quo jam Filius Dei, id est
+						Deus, inerat, <lb/> in quo jam sitis, ait Apostolus, corporaliter plenitudo <lb/>
+						 divinitatis  inhabitabat (Coloss. II). Si creatura est Spiritus <lb/>  sanctus, quomodo
+						potest corruptio  incorruptelam   ,<lb/> ac majestatis capacem fragilis conditio possidere
+						 ?<lb/> Si Spiritus sanctus unus est creaturae ex plebe <lb/> facturae, quomodo
+						creatura cum creatore, id est cum <lb/> Filio Dei velut exaequari, servus cum Domino
+						unum <lb/> in anima Salvatoris praesumitur hospitium, et quasi <lb/> in eo praesentia
+						sibi non sufficeret auctoris, famulus <lb/> accedit ad cumulum sanctitatis? Non ita est.
+						Sed re <milestone unit="PLSection" n="C"/><lb/>  cognoscit  socium sibi templum coeleste
+						collegium. <lb/> Nec mirum, si in illa illustri et beati corporis anima <lb/> Filius et
+						Spiritus sanctus unum sortiuntur habitaculum  ,<lb/> quibus commune constat esse et
+						coelum.</p>
+					<ab>
+						<title type="sub">CAPUT II.</title>
+					</ab>
+					<ab>
+						<title type="sub"> Utrum  juxta opinionem imperitorum, Spiritus sanctus sicut Filius sit
+							incarnatus, quod et ipse in Mariam supervenit. An tantum Filius de Virgine procreatus
+							 sit.</title>
+					</ab>
+					<p>Sed dicitur: Si Spiritus sanctus in corpore et <lb/> anima redemptorum habitavit, ergo
+						et ipse Spiritus <lb/> incarnationem  videbitur  suscepisse. Non ita est. <lb/> Nam ante
+						creationis initia a Spiritu sancto Mariae <lb/> corpus impletur, et inter initia
+						creationis Filius Virginis <lb/>  Spiritu sancto cooperante concipitur, sed ad
+							<milestone unit="PLSection" n="D"/><lb/> personam Filii specialiter novem mensibus
+						possidendus  ,<lb/> et cum eodem in lucem progressus infunditur, <lb/> cujus utique
+						temporis societatem intra secretum <lb/> uteri virginalis Spiritus sancti persona non
+						recipit, <lb/> hominem ergo quem Filius Dei inter ipsa suscipit <lb/> exordia, Spiritus
+						sanctus non susceptor sed  sanctificator  <lb/>  intravit. Ille  enim  nascitur, hic
+						infunditur. De <lb/> Filio Virginis anima vel caro Filii Dei personaliter et <lb/>
+						specialiter dici potest, Spiritus sanctus vero anima <lb/> vel caro nullo modo dici
+						potest. In quo Filis Dei<pb n="27"/>
+						<milestone unit="PLSection" n="A"/><lb/> ideo Deus gloriae dicitur crucifixus,
+						pertulisse in eo <lb/> nullo modo dici potest Spiritus sanctus. Ergo  diversitas  <lb/> 
+						est operum, non diversitas substantiarum. <lb/> Nam sicut dicere non possumus, quod vel
+						Pater  descenderit . <lb/>  in specie columbae, vel in Patris voce Filius <lb/>  sit
+						locutus, quando dixit : Hic est Filius meus <lb/> (Matth. III), ita Spiritum sanctum
+						asserere non potes  ,<lb/> vel natum ex Virgine, vel in carne redemptoris <lb/>
+						specialiter conversatum, vel in ipsius passione crucifixum  ,<lb/> vel resurrectione in
+						corpus redditum, vel <lb/> ascensione ad coelestia sublimatum. Operi et personae <lb/> 
+						filii assignari ista necessario convenit, ascribi <lb/> vero Spiritui sancto salva licet
+						voluntatis unitate <lb/> non convenit. Inter haec asserit Macedonius, creaturam <lb/> 
+						esse Spiritum sanctum. Unde videtur incipiat, <milestone unit="PLSection" n="B"/><lb/>
+						modo nihil verbis suis agere praesumat, nec a sanctis <lb/>  paginis disputatione
+						transcendat, sed auctoritatem <lb/>  per omnia de testimoniis si valet, proferat, quae
+						<lb/> contra  totius  mundi fidem, et numero, et virtute <lb/> praevaleant. Magnis sine
+						dubio allegationibus et copiosis <lb/>  et valde evidentibus opus est documentis, ut
+						<lb/> quisque illum ex numero creaturarum unum esse <lb/> convincat, quem cum Patre et
+						Filio ejusdem honoris <lb/> et gloriae universa terrarum regna concelebrant ; <lb/> quem
+						catholica Ecclesia creatorem suum in eodem <lb/> regenerata cognoscit. Et recte quem
+						reparatorem <lb/> perspicit, credere non cunctatur auctorem.</p>
+					<ab>
+						<title type="sub">CAPUT III.</title>
+					</ab>
+					<ab>
+						<title type="sub">Objectio Macedonii, qua impie Spiritum sanctum excellentiorem 
+							asserit creaturam. ,</title>
+					</ab>
+					<p>
+						<milestone unit="PLSection" n="C"/>Creaturam, inquit, dico, sed excellentiorem omnibus <lb/>
+						 creaturis. Praelocuti sumus, ut actionem nostram <lb/>  non persuasionibus
+						propriis, sed catholicis deponamus <lb/>  oraculis. De Deo igitur tractantibus nobis,
+						<lb/> propheta,  apostolus , evangelista respondeat. Creaturam <lb/>  dicis
+						excellentiorem omnibus creaturis. Ostende <lb/> in quibus libris de Spiritu sancto verba
+						legeris. Non <lb/>  opinor  in veteribus, non in novis docebis? Cum ergo <lb/> proferre
+						non valeas, dum tua non explicas, nostra <lb/> confirmamus. Dum creaturam non approbas,
+						etiam <lb/> nobis tacentibus creatorem esse demonstras. Itaque <lb/> cum hoc assertio
+						tua ad catholicum sensum, cum <lb/> omnino ad  Christianum  non pertineat institutum,
+						<lb/> diaboli agnosce commentum, qui animae donum, ubi <milestone unit="PLSection" n="D"/><lb/> Spiritu sancto vacuam viderit, quasi contrariis hospitibus <lb/>  nequitiae
+						septiformis invidit. Qui enim  illum  <lb/> excludit, hunc recipit. In illo fuit ista
+						excellentior <lb/> creatura, qui in coelesti claritate praefulgens, numeris <lb/> 
+						conscius, auctoris ignarus, habere se vidit, accepisse <lb/>  nescivit, et ideo gloriam
+						quam beatus non intellexit  ,<lb/> elatus amisit, ita dicens : Ascendam supra <lb/>
+						astra nubium, ponam super thronum solium meum, et <lb/> ero similis Altissimo, hic ergo
+						nullum in creaturis superiorem <lb/>  se ut reor habuit, nullum medium inter  se  <lb/>
+						et Deum vidit, in cujus aemulatione superbiae stimulo <lb/> concitatus assurgeret, et ideo
+						nullum ante se stare <lb/> in ordine militiae  coelestis  aspiciens, ipsi rerum  Domino  <lb/>
+						 se aequare praesumpsit. Quod si ullum  excellentiorem se  <milestone unit="PLSection" n="A"/><lb/>
+						  majoris impatiens in coelesti gaudio deponamus  ,<lb/> illi se magis
+						conferre vel praeferre <lb/> tentasset. Duo sunt in coelestibus, qui regit, et qui <lb/>
+						reguntur, nullo in medio horum tertium exstitit genus  ,<lb/> quod secundis  majus , et
+						summis esset inferius. <lb/> Excellentior creatura de archangelis forsitan dicere <lb/>
+						potes, licet caeteris ordine magis praeemineant, quam <lb/> natura. Sed Spiritui sancto
+						et archangeli serviunt, <lb/> ex quibus unus quasi minister adventum ejus beatae <lb/>
+						Mariae nuntiavit. Sed dicis : Ecce ubi Spiritum sanctis <lb/>  Amos propheta creaturam
+						evidenter assignat <lb/> ita  dicens  : Ecce ego firmans tonitruum, et creans <lb/>
+						spiritum (Amos IV). Primum est quod interdum spiritus <lb/>  nomen nequaquam ad
+						personam  sanctificantis  <lb/> spiritus referri potest, nisi adjeceris aut  spiritum 
+							<milestone unit="PLSection" n="B"/><lb/> Dei, aut Spiritum sanctum, aut spiritus ubi
+						vult spiritus  ,<lb/> id est nisi adjeceris aut operis aut proprii nominis <lb/> 
+						dignitatem. Deinde si ad ordinem respicias lectionis  ,<lb/> istam excellentiorem ut
+						asseris creaturam, <lb/>  nimis   despectam esse monstravit. Nam eam post tonitrui <lb/> 
+						creaturam esse descripsit. Unde inconsequens <lb/> fuit, ut juxta sensum tuum principale
+						hoc opus Dei <lb/> irrationabili postponeret, aut sociaret elemento. De <lb/> persona
+						non dicam angeli,  sed  cujuslibet justi indignum <lb/>  hoc credi. Magis ergo hoc
+						proximum et amicum <lb/>  esse arbitremur rationi, si post tonitrua flabra <lb/>
+						intelligamus significata ventorum, ut illud in psalmis <lb/>  : Spiritus procellarum
+						qui faciunt verbum ejus <lb/> (Psal. CXLVIII), vel illud : Sulphur Spiritus procellarum
+						<lb/>  (Psal. x), vel : Spiritu vehementi conteres naves <milestone unit="PLSection" n="C"/><lb/> Tharsis (Psal. XLVII). Diversis modis spiritus  intelligitur .  ,<lb/>
+						quando non cum privilegiis suis specialiter  designatur .  .<lb/> Sed omissis his
+						interroga translationis Hebraicae <lb/>  veritatem, et ibi  confusibilem  persuasionis
+						<lb/> tuae deprehendes errorem. Ita enim illic dictum esse <lb/> reperies, quia ecce ego
+						formans montes, et creans ventum  .<lb/> Vide quam nudis, contra  Deum  verbis, et quam
+						<lb/> inanibus credidisti. Vide quam magno te argumento <lb/> contra potentiam
+						majestatis armasti,  et  post illa non <lb/> metuis circa tam infirmum haerere  ramusculum ,
+						qui <lb/> in tam horrendum pendes abruptum.</p>
+					<ab>
+						<title type="sub">CAPUT IV.</title>
+					</ab>
+					<ab>
+						<title type="sub">Macedonius dualitatem asserens, Spiritum sanctum negat propriam habere
+							personam.</title>
+					</ab>
+					<p>
+						<milestone unit="PLSection" n="D"/>Deinde dualitatem  intromittis , et dicis Spiritum <lb/>
+						sanctum propriam non habere personam, nec amicum <lb/>  te sentis regenerationis
+						gratiam, qui in regenerationis <lb/>  tendis offensam, quem sibi in commune majestatis <lb/>
+						 et virtutis unitum divina veritas protestatur. <lb/> ita dicens : Ite, inquit,
+						baptizate omnes gentes in nostram <lb/>  Patris et Filii et Spiritus sancti. In nomine,
+						intellexit  ,<lb/> Patris et Filii et Spiritus sancti  (Matth . ult.) <lb/> Nominis
+						singularitas unitatem loquitur, appellationum <lb/>  diversitas Trinitatem. In nomine
+						ergo  unus , <lb/> sed in personarum distinctione, non unus. Quid est <lb/> in tribus
+						unius nominis praerogativa, nisi deitatis intellexit <lb/>  concordia : fac gradum si
+						potes, ubi praeter <lb/> unum Deo hoc ipsum attestante nihil  invenis , Tres<pb n="29"/>
+						<milestone unit="PLSection" n="A"/><lb/> audis, ne  unitatem Sabelliana   permisceat et
+						confundat <lb/>  impietas. Unum audis, ne Trinitatem dividat <lb/> Ariana perversitas.
+						Spiritum sanctum audis, ut Macedonium <lb/>  confodiat distincti nominis expressa
+						proprietas  .<lb/> Itaque non  creaturae  , sed creatoris incommutabile <lb/> opus agitur,
+						ubi peccatorum abolitio et immunitas <lb/> erogatur. In hoc tamen indissecabili
+						majestatis amplexu  ,<lb/> in proprietate personae alter est Pater, alter <lb/> est
+						Filius, alter est Spiritus sanctus, sed in unitate <lb/> non aliud. Qui utique si Deus
+						non esset, juxta  Patrem  <lb/>  et Filium personam propriam habere non posset   ;<lb/>
+						denique quando Verbum transit in carnem , et <lb/> hominis habitum Deus induit, et  si  in
+						circuitu  ejus  tabernaculum <lb/>  ejus, et splendorem suum tenebris nostrae <lb/>
+						fragilitatis involvit, et ponit tenebras latibulum suum, <milestone unit="PLSection" n="B"/><lb/> Dei quidem et hominis duplex substantia  est , sed tabernaculum <lb/>  una
+						persona. Quam ob rem ? Quia dum formam <lb/>  servi  accipiens, famulo Deus jungitur,
+						minoris humilitas <lb/>  intra reverentiam majoris  absconditur , et superioris <lb/> 
+						 lumine  exinaniti consumitur, ac sic proprietabernaculum <lb/>  personae humanitas divinitate
+						obumbrante vel <lb/> eminente non obtinet. Ibi ergo potest esse personarum <lb/> 
+						parilitas, ubi meritorum ac dignitatum consistit <lb/> aequalitas. Et ideo  Spiritum  
+						sanctum cum Patre et <lb/> Filio, unum majestatis noveris  possidere  privilegium, <lb/>
+						quem personae vides obtinere jus proprium. Quod si <lb/> aliquis opponat et dicat : Si in
+						Christo Deo pariter <lb/> et homine duas substantias dicimus, quare non duas <lb/>
+						simili ratione credamus personas? Non ita est. Nam <lb/> qui duas personas in Christo
+						facit,  impietatem quaternitatis   <milestone unit="PLSection" n="C"/><lb/>  introducit,
+						quam penitus rerum natura  non  <lb/> recipit. De duabus rationalibus  diversisque  substantiis
+						 ,<lb/> praesertim de Dei et hominis, de creatoris et <lb/> creaturae una fieri non
+						potest, de duabus vero personis  ,<lb/> una fieri potest, sicut legimus caput et
+						corpus, <lb/> Christum et Ecclesiam unam tenere personam. Erunt <lb/> enim, inquit. duo
+						in carne una. Et sicut apud  nos ; <lb/> homines Filius Patris familias juxta Patrem vel
+						servus <lb/>  juxta Dominum, personae propriae locum non habet  ,<lb/> ita in Deo et
+						homine, gemina quidem substantia, <lb/> sed non gemina persona est, quia persona
+						personam <lb/> consumere potest, substantia vero substantiam consumere <lb/>  non
+						potest. Si quidem persona res juris est, <lb/> substantia res naturae. Hoc loco
+						necessarium videtur, <milestone unit="PLSection" n="D"/><lb/>  ut  in Christo Domino
+						pariter et hominis unam personis  ,<lb/> et duas substantias testimoniis asseramus. Da
+						<lb/> unam redemptoris Dei hominisque personam. Apostolus <lb/>  dicit : Si enim
+						cognovissent sapientiam Dei, <lb/> nunquam Dominum gloriae crucifixissent. Si requiris
+						<lb/> quomodo inviolabilis potuerit pati, et incomprehensibilis <lb/>  crucifigi,
+						personae  unitas  facit, ut quod homo <lb/> pertulit, Deus pertulisse credatur. Item cum
+						evangelista <lb/>  commemorat: Nemo ascendit nisi qui descendit <lb/> de  coelo , filius
+						 hominis , qui est in coelo : quomodo hic <lb/> filium hominis ante passionis vel
+						resurrectionis sive <lb/> ascensionis diem dicit, et de coelo asserit descendisse, <lb/>
+						et in  coelestibus  permanere, nisi hoc per unitatem <lb/> personae ratio veritatis absolvat
+						? Sicut alio loco, <lb/> capitis  et  corporis sociatur persona, cum legitur : <milestone unit="PLSection" n="A"/><lb/> Esurivi enim, et dedistis mihi manducare. Sitivi, et dedistis
+						<lb/>   mihi  bibere. Quid ait personae unitas ? Homo <lb/> pascitur et Deus
+						reficitur. Pes componitur et caput <lb/> fomentum se sentire testatur. Dicit ergo :
+						Nunquam <lb/> Dominum gloriae crucifixissent. Et e diverso: Nemo <lb/> ascendit in
+						 coelum , nisi qui descendit de coelo, filius hominis <lb/>  qui est in coelo. Vide quomodo
+						per unitatem <lb/> personae humana divinis, et humanis divina misceantur  .<lb/>  Deus 
+						crucifigitur, et homo de coelo descendere, <lb/>  et  in coelo permanere memoratur. Quae
+						cum ita sint, <lb/> perspiciamus de sacris voluminibus geminae substantiis <lb/> 
+						distinctionem, Ait itaque beatus Moyses : Caput <lb/> cum pedibus comedetis, et
+						intestina ejus devorabitis <lb/> (Exod. XII). In pedibus  humanitatem , et in  capite  <lb/>
+						credamus majestatem. Ita fit ut dum haec intra  litteram  <milestone unit="PLSection" n="B"/><lb/>  latentia, fide perscrutante cognoscimus, i; ignis  intestina  ,<lb/> id est
+						mysteriorum occulta sumamus. Scrutandi <lb/> tand enim studium, aviditas intelligitur
+						 devorandi . <lb/> Sicut  et  alio loco duplicis substantiae absolutionem, <lb/> idem
+						sacramentorum  revelator '  insinuat, dicens : <lb/> Vulpes foveas habent,  et  volucres
+						coeli nidos, filius autem <lb/>   hominis  non habet ubi caput suum reclinet (Matth.
+						<lb/> VIII, Luc, IX), Hoc est dolosae haereses et tenebrosae  vel  <lb/> aereae potestates
+						sedem sibi in pectoribus humanis <lb/> profunda  damnatione posuerunt  , me vero in
+						fidelium <lb/> corda qui hominem in carne conspiciunt, Deum intra <lb/> hominem latere
+						non credunt; foveas enim et nidos <lb/> non transitoria et momentanea designat
+						habitacula . <lb/> sed diuturna et secura possessione fundata, quae  serpentina  <lb/> 
+						vitiorum multiplicent nutrimenta. Apostolus <milestone unit="PLSection" n="C"/><lb/>
+						 enim  duas substantias  evidenter  remota sacramenti <lb/> obscuritate adjecit, ita dicens:
+						Patres nostri ex nubibus <lb/> Christus secundum  carnem , qui est super omnia Deus <lb/>
+						benedictus in saecula. Sed dicis: Apostolus duas tantum <lb/>  personas in operum suorum
+						volumine  confitetur   ,<lb/> sicut ad Corinthios loquitur : Paulus vocatus <lb/>
+						Apostolus Jesu  Christi  per voluntatem Dei. Et ad Galatas <lb/>  Paulus apostolus, non
+						ab  hominibus  neque per <lb/> hominem, sed per Jesum Christum et Deum  Patrem  , <lb/> qui
+						suscitavit eum a mortuis. Et iterum, unus Deus <lb/> Pater ex quo omnia et nos in ipso,
+						et unus Dominus <lb/> Jesus Christus, per quem omnia et nos per ipsum. Secundum <lb/> 
+						haec dicis nullam de Spiritu sancto fieri mentionem <lb/>  Ut breviter dicamus, oblitus
+						es quod Apostolus <milestone unit="PLSection" n="D"/><lb/>  Spiritu sancto plenus , haec
+						apostolis ipso  inspirante ?  ,<lb/> de Patre Filioque praedicabat. Loquenti, <lb/> igitur
+						de Patris ac Filii operatione et ille non deerat, <lb/> qui loquenda dictabat, secundum
+						illud : Nemo dicit <lb/> Dominus Jesus, nisi in Spiritu sancto. Qui ergo crediturus <lb/>
+						 vel confessurus vel praedicaturus est Christum, <lb/> vides quod ante in se
+						 habiturus  est Spiritum sanctum  ,<lb/> Non ergo honores fidem tuam, quod interdum <lb/>
+						sine commemoratione Spiritus sancti, Patris mentio <lb/> habetur ac Filii. Nam saepe
+						suppresso Patris nomine, <lb/> Filii et Spiritus sancti operatio praedicatur. Ait S.
+						Ananias <lb/>  ad Paulum : Saule frater, Dominus misit me Jesus  ,<lb/> qui apparuit
+						tibi in via qua veniebas ut videas et <lb/> replearis Spiritu sancto.  Aperte  hic duarum
+						est consumere <lb/>   personarum . Ecce Paulus a Christo caecatus<pb n="31"/>
+						<milestone unit="PLSection" n="A"/><lb/> arguitur, Spiritu sancto illuminatus impletur,
+						et nulla <lb/> hic Patris mentio inseritur. Item cum Paulus quosdam <lb/>  ex discipulis  
+						interrogaret, in quo baptizati estis, <lb/> quos post ascensionem Domini in baptismate
+						Joannis <lb/> baptizatos esse constabat, post  praedicatum  Baptisma. <lb/> Trinitas, cum
+						e. illud mysterium quo Joannes <lb/> baptizar etiam  consueverat, id est in eum qui
+						venturus <lb/> est, in eorum baptismo probaretur omissum,  dicente  <lb/> Paulo apostolo;
+						Joannes quidem baptizavit, sed in <lb/> eum qui venturus est (Act. XIX), hoc est dicere;
+						non ita <lb/> baptizati estis. Hos cum interrogaret Paulus : Si Spiritum <lb/>  sanctum
+						accepistis credentes, qui utique post <lb/>  baptismum  Salvatoris per impositionem manuum
+						rite <lb/> baptizati fuerant, confitentur. At illi responderunt: <lb/> Neque si spiritus
+						est audivimus. His  auditis  baptizati <milestone unit="PLSection" n="B"/><lb/> sunt in
+						nomine Domini Jesu. Et cum imposuisset illis <lb/> manus Paulus, venit super eos
+						Spiritus sanctus, et loquebantur <lb/>  linguis, et prophetabant. Adverte qui cum <lb/>
+						baptizantur in nomine Domini Jesu, postea accipiunt <lb/> Spiritum sanctum , et
+						propheticam ex Paracleti invocatione <lb/>  virtutem. Vere Deus est qui post Dei donum
+							<figure type="illustration">
+							<graphic url="PL62_fig1.jpg"/></figure>
+						<lb/> non legitur, sed tantum, ut credi oportet, cum Filio <figure type="illustration">
+							<graphic url="PL62_fig2.jpg"/></figure>
+						<lb/>  nisset  Spiritus sanctus super eos, tunc loquebantur linvocatione <lb/>  et
+						prophetabant. Vide quanta potentia sit Spiritus <lb/> sancti. In baptismo peccatorum
+						abremissa donantur, <lb/> in adventu Spiritus sancti virtutum munera  conferuntur -
+							,<milestone unit="PLSection" n="C"/> <lb/> et a confirmatis, signorum miracula
+						celebrantur. <lb/> Solent enim veritatis alieni, etiam de syllabis calumniari  .<lb/>
+						Nam cum de Trinitate dictum absolute noverimus  ,<lb/> quoniam ex ipso et per ipsum ,
+						et in ipso sunt <lb/> omnia (Rom. VIII), plus esse ex ipso quam per ipsum, <lb/> et item
+						praepositionem hanc, id est per, majoris praerogativae <lb/>  esse asserunt quam in
+						ipso. Sed si in ipso <lb/> de Spiritu sancto cum diminutione potestatis dictum <lb/>
+						arbitrantur, audiant  praepositionis  hujus magnificentiam  ,<lb/> et accipiant quia etiam
+						secundum ipsorum assertionem <lb/>  de Spiritu sancto intelligendum est. In ipso, <lb/>
+						inquit, vivimus, movemur, et sumus (Act. XVII). Et <lb/> merito in ipso vivimus, movemur
+						et sumus, in quo <lb/> reparati et regenerati sumus. Sed et per ipsum etiam <lb/> ad
+						Spiritum sanctum referendum esse agnoscimus <milestone unit="PLSection" n="D"/><lb/>
+						sicut habes. Alii quidem per spiritum datur sermo sapientiae  ,<lb/> alii sermo scientiae
+						 (I  Cor. XII). Item ad Hebraeos <lb/>  : Qui per Spiritum sanctum semetipsum obtulit
+						<lb/> immaculatum Deo: Et iterum: Charitas Dei diffusa est <lb/> in cordibus nostris per
+						ipsum sanctum qui datus est <lb/> nobis. Nam si et de Patre intelligamus, ex ipso et ex
+						<lb/> Spiritu sancto dictum similiter invenimus. Sicut in <lb/> Joannis Evangelio
+						habemus: Quod natum est ex carne, <lb/> caro est ; et quod natum est ex Spiritu,  Spiritus est 
+						  <lb/> (Joan. III). Et in conclusione capituli: Sic est omnis <lb/> qui natus est
+						ex Spiritu. Sic ergo non praejudicat Spiritum <lb/>  sancto, cum suppresso ejus  nomine 
+						Patris ac <lb/> Filii opera commemorantur, sicut Pater et Filius non <lb/>  negantur ,
+						quando specialiter Spiritus sanctus opus <milestone unit="PLSection" n="A"/><lb/> ac
+						virtus  asseritur , sicut legimus in Actibus apostolorum <lb/> : Vos baptizabimini Spiritu
+						sancto non post multos <lb/>  hos  dies  (Act. I). Sicut et in Evangelio de singulari
+						<lb/> persona Spiritus sancti continetur : Nisi quis renatus <lb/> fuerit ex aqua et
+						Spiritu sancto, non potest intrare in <lb/> regnum Dei (Joan. III). Nunquid hoc loco
+						Pater et <lb/>  Filius , quia minime nominantur, tanto ac tam  divino  <lb/> muneri  defuisse 
+						credentur? Non ita est. Nam  absque  <lb/> dubio dum sancto Spiritui cum quo  eis  una
+						substantia <lb/>  est, mysteriis beneficiisque junguntur, etsi non <lb/>
+						commemoratione, unitate tamen pietatis atque operis <lb/> praesentantur.</p>
+					<ab>
+						<title type="sub">CAPUT V.</title>
+					</ab>
+					<ab>
+						<title type="sub">Objectio quod sermo ille quem legimus : Nisi quis renatus  fuerit ex
+							aqua et Spiritu sancto, aquam pariter et Spiritum sanctum creaturam esse
+							testatur.</title>
+					</ab>
+					<p>
+						<milestone unit="PLSection" n="B"/>Sed dicis: In tantum creatura est Spiritus sanctus,
+						<lb/> ut aquae elemento, quae hic primo loco atque ordine <lb/> ponitur, videatur
+						adjunctus secundum evangelicam, <lb/>  quae   superius commemorata est, sententiam : Nisi
+						<lb/>  quis  renatus fuerit ex aqua et Spiritu sancto, non potest <lb/>  intrare in
+						regnum Dei (Ibid.). Manifestum est <lb/> enim, qui haec loquitur non solum divinam in
+						Spiritu <lb/> sancto potestatem, sed ipsam baptismi nescire  ratioChristo  <figure type="illegible">
+							<graphic url="PL62_fig3.jpg"/></figure>
+						<lb/>  (Rom. VI)Quomodo  possimus cum <lb/> Christo mori vel resurgere, si
+						 requiras   adverte. Omnes <lb/>  quicunque sacro fonte submergimur, mortem et <lb/>
+						sepulturam Redemptoris imitamur,  sicut  idem  Apostolus . <milestone unit="PLSection" n="C"/><lb/>  ait:    An  ignoras quia quicunque in Christo baptizati <lb/> sumus, in morte
+						ipsius baptizati sumus? Consepulti <lb/> enim sumus cum illo per baptismum in mortem
+						(Rom. <lb/> IX). Sicut enim ille triduana morte sepulcro conditus <lb/> fuit, ita et nos
+						intra aquae, id est inter cognatae creaturae <lb/>  substantiam trina  submersione 
+						depositi, dum <lb/> descendimus sepelimur, dum emergimus suscitamur. <lb/> Per aquam
+						itaque celebratur imitatio sepulturae, per <lb/> Spiritum sanctum confertur veritas vitae
+						et spes sapientiae <lb/>  aeternae. Denique removeatur Spiritus sancti <lb/> invocatio, et
+						videamus si quidquam aquae illius sola <lb/> prodesse possit infusio. Creatura itaque est
+						quae sepeliendi <lb/>  praestat officium,  Deus  est qui beneficium <lb/> tribuit
+						renascendi. Quem ergo perspicis reparationis <lb/> parentem, ipsum esse agnosce et
+						 resurrectionis  auctorem .<milestone unit="PLSection" n="D"/> <lb/> De quo  vaticinatur ,
+						et ad Patrem propheta sic <lb/> loquitur : Emitte Spiritum et creabuntur, et renovabis
+						<lb/> faciem terrae (Psal. CIII). Quid distat inter aquae et <lb/> Spiritus  sancti 
+						operationem ?  Per  aquam deduci videmur <lb/>  in tumulum : per Spiritum sanctum
+						praeparari <lb/> videmur ad  regnum .</p>
+					<ab>
+						<title type="sub">CAPUT VI.</title>
+					</ab>
+					<ab>
+						<title type="sub">Ubi quaeritur utrum Spiritus sancti appellatio cognomen putetur an
+							nomen.</title>
+					</ab>
+					<p>Sed inter haec requirendum credis, utrum appellatio <lb/>  Spiritus sancti, quem Deum
+						necesse est nuncupari  ,<lb/> nomen an fortasse cognomen sit. Sed  cognosce quia  <lb/>  
+						id quod apud homines nomini solemus adjungere  ,<lb/> Dei non condecet majestati, in
+						ejus nomine<pb n="33"/>
+						<milestone unit="PLSection" n="A"/><lb/> quidquid est nequaquam adjectivum, sed sine
+						dubio <lb/> naturaliter sempiternum est. Etiam in doctrina grammatica <lb/>  alia
+						nomina communia, id est appellativa vocat  ,<lb/> alia specialia, id est propria
+						nuncupat. Videamus <lb/>  si in nostris hoc loco aliquid simile invenire <lb/>
+						possimus. Da in Deo nomen speciale vel proprium, <lb/> id est Pater et Filius  et 
+						Spiritus sanctus. In tantum <lb/> haec propria sunt, ut nec de Filio Pater dici possit,
+						<lb/>  nec  de Patre facile legitur Spiritus sanctus. Item da <lb/> proprium, ingenitus,
+						ex utroque procedens. Rursum <lb/> da nomen generale atque commune. Majestas, immensitas 
+						,<lb/> plenitudo, unus, solus, Deus. Sed cum <lb/> audis unus, non hic numerus
+						inchoatur, sed perfectio <lb/>  infinita colligitur. Quid est unus, nisi nomen <lb/>
+						incommunicabile, quod nec posteriorem recipit nec <milestone unit="PLSection" n="B"/><lb/> priorem ? Quid est unus? nisi simplex, incomposita et <lb/> indivisa substantia
+						? Quid est unus , nisi incommunicabilis <lb/>  et inaequalis, ac semper idem, qui
+						nunquam <lb/> a se possit esse diversus? Ac sic communis appellatio <lb/> unitatem. Cum
+						ergo dixer. Pater, Filius. et Spiritus <lb/> sanctus, singulorum personas pariter
+						explicasti. Cum <lb/> dixeris, unus Deus, communem Trinit tis substantiam  ,<lb/>
+						communem gloriam demonstrasti. Hic ergo <lb/> sibi imperitia noctem erroris obtexit, dum
+						suppresso <lb/> vocabulo majestatis Spiritum sanctum in  eo  tantum <lb/> aestimat nomine,
+						quod ei, ut diximus, proprium est, <lb/> magis quam quod ei cum Patre Filioque commune
+						<lb/> est.</p>
+					<ab>
+						<title type="sub">CAPUT VII.</title>
+					</ab>
+					<ab>
+						<title type="sub">Quod Spiritus sanctus prophetas specialiter implere, et Deus pariter
+							credi et vocari, evidentibus.  approbatur.</title>
+					</ab>
+					<p>
+						<milestone unit="PLSection" n="C"/>Cum per Moysem ac David et Isaiam, vel alios <lb/>
+						prophetas specialiter Spiritus sanctus locutus esse <lb/> referatur, Deum locutum divina
+						profitentur eloquia , <lb/> sicut in Pentateuchon volumine frequentatur; locutus <lb/>
+						est, inquit, Dominus ad Moysem, dicens : Sollicitius <lb/> requiramus si specialiter
+						Spiritus sanctus in prophetis <lb/>  loquatur: habemus ut praefati sumus, in Actibus
+						<lb/> apostolorum, Paulo  arguente  Judaeos : Bene, inquit, <lb/> Spiritus sanctus per
+						Isaiam locutus  est  ad patres nostros   .<lb/>  Auditu  audietis, et non intelligetis
+						(Act. ult.) Et <lb/> in  eadem  lectione : Viri fratres, oportet impleri  scripturam  <lb/> 
+						 quam praedixit Spiritus sanctus per os David <lb/> (Act. i). Et in epistola Petri
+						legimus: Non enim voluntate <milestone unit="PLSection" n="D"/><lb/>  humana allata est
+						aliquando prophetia, sed <lb/> Spiritu sancto locuti sunt sancti Dei homines (II Petr,
+						i. <lb/> Agnoscamus  propheticam  gratiam evidenter ad potentiam <lb/>  sancti Spiritus
+						pertinere. Et de psalmo David <lb/> ita ad Hebraeos legimus. Quapropter sicut dicit
+						Spiritus <lb/>  sanctus : Hodie si vocem ejus audieritis (Psal. <lb/> XCIV). Et hic
+						apertissime per David Spiritum sanctum <lb/> locutum esse testatur. Videamus autem utrum
+						Deus <lb/> sit  iste , per quem omnis prophetia inspirata  memoratur   .<lb/>  Lucas  Dominum
+						Deum asserit, qui locutus est <lb/> per prophetas,  ita  dicens : Benedictus Dominus Deus
+						<lb/> Israel, quia visitavit et fecit redemptionem plebis suae. <lb/> Et adjecit : Sicut
+						locutus est per  os sanctorum , qui a saeculo <lb/>  sunt prophetarum ejus. Absolute
+						Spiritum sanctum <milestone unit="PLSection" n="A"/><lb/>  qui prophetas inspiraverat,
+						Dominum et Deum <lb/> Israel esse, evangelico celebratur oraculo. Et in  subsequentibus  <lb/>
+						 Simeon Spiritu sancto plenus :  Responsum .  ,<lb/> inquit, accepit a Spiritu
+						sancto, non visurum se <lb/> mortem, nisi prius  videret   Christum  Domini  (Luc, II). <lb/>
+						Quo viso, et in amplexum manibus assumpto, Deum <lb/> benedixit, id est a quo responsum
+						accepisse videbatur. <lb/> Benedixit Deum,et dixit : Nunc dimittis, Domine, servum <lb/>
+						 tuum, secundum verbum tuum in pace. Et absolute <lb/> Dominum Deum vocat Spiritum
+						sanctum cujus  verbo   <lb/> atque responso, quod Christum visurus esset acceperat 
+						.<lb/> Vides specialiter de Spiritu sancto intelligendum <lb/> esse, cum dicitur in
+						prophetis : Deus Deorum Dominus <lb/>  locutus est: Exaudiam quid loquatur in me Dominus
+						<lb/>  Deus (Psal. XLIX). Hic nomen istud, id est,  Domini  ,<milestone unit="PLSection" n="B"/> <lb/> cujus verbo atque responso quod Christum  v ! ­ surus !­ <lb/>  esset
+						acceperat, vides specialiter  de Spiritu   <lb/> sancto intelligendum esse, cum  dicitur  in
+						prophetis : <lb/> Deus Deorum Dominus locutus est. Et, Audiam quid <lb/> loquatur in me
+						Dominus Deus. Hic nomen istud, id <lb/> est Dominus Deus ad Spiritus sancti qui locutus
+						est <lb/> in David noveris referendum esse personam, aut certe <lb/> in uno Deo trium
+						voluntatem, trium potentiam, trium <lb/> agnosce substantiam , quia cum dixeris, pater
+						una <lb/> persona intelligitur, cum dixeris, Deus tota Trinitas <lb/> designatur;
+						accipimus et in Actibus apostolorum, <lb/> quod indubitanter Deus sit, qui passiones
+						 Christi   <lb/> praenuntiavit per prophetas cum dicit : Deus autem <lb/> qui pronuntiavit
+						per os omnium prophetarum, pati <lb/> Christum suum, implevit sic Christum suum (Act.
+						III); <milestone unit="PLSection" n="C"/><lb/> id est charismate suae unctionis infusum.
+						Et iterum : <lb/> Qui locutus est Deus per os sanctorum suorum (Luc. I). <lb/> Ideo
+						sanctorum suorum, quia sanctificatio proprie ad <lb/> Spiritum sanctum pertinet. Legimus
+						in Jeremia : <lb/> Nonne coelum et terram ego impleo, dicit Dominus <lb/> (Jer. XXVI)?
+						Quis est iste Dominus qui per Jeremiam <lb/> coelum et terram implere se dicit, nisi
+						Spiritus sanctus   ,<lb/> qui et ipsum  Jeremiam  virtute prophetica et <lb/> spiritu
+						veritatis infudit? Si ergo per propheticam <lb/>  dispensationem , ita etiam secundae
+						gratiam nativitatis <lb/> Spiritui sancto vel maxime voluntas Trinitatis assignat 
+						,<lb/> sicut dicit in Joanne : Quod natum est e carne, <lb/>  caro  est, et quod natum est
+						ex Spiritu, Spiritus est. Et <lb/> in alio loco potestas renovandi  hominis   penes Spiritus
+						<lb/>  sanctum esse perscribitur. Vos autem baptizabimini <milestone unit="PLSection" n="D"/><lb/>   Spiritu   sancto non post multos hos dies (Joan. III). <lb/> Et sicut
+						superius dictum est : Nisi quis renatus fuerit <lb/> ex aqua et Spiritu sancto. Et ad
+						Titum : Salvos, inquit  ,<lb/> nos fecit per lavacrum  regenerationis  et renovationis <lb/>
+						 Spiritus sancti. Videamus quis est iste cujus <lb/> filii per gratiam adoptionis
+						efficimur. Dedit  eis :, inquit  ,<lb/> potestatem filios Dei fieri. Et iterum : Qui non
+						<lb/> ex sanguinibus, neque  ex  voluntate carnis, sed ex Deo <lb/> nati sunt. Vides
+						apertissime quod iste Spiritus sanctus <lb/>  in quo renascimur, Deus est, cujus
+						paternitate <lb/> donamur. Ipse hoc alio loco luce clarius assignat: <lb/> Ero, inquit,
+						eis in patrem, et ipsi  erant  mihi in filios <lb/> et filias, dicit Dominus omnipotens
+						(Tit. I). Merito <lb/> omnipotens, qui peccati chirographum delet, qui vin-<pb n="35"/>
+						<milestone unit="PLSection" n="A"/><lb/>  conscientiarum   relaxat, et hominem in se
+						credentem <lb/>  corruptae naturae foeditate dispoliat. et indumento <lb/>  innocentiae.
+						decore justitiae, stola immortalitatis <lb/>  exornat, et  filios  suos in angelicum
+						statum pia <lb/> paternitate conscribit. Nemo Spiritum sanctum creaturis <lb/> 
+						existimet sociandum. Extra servitutis est conditionem <lb/>  qui aeternam potest
+						tribuere libertatem. <lb/> Non enim, inquit Apostolus, accepistis spiritum servitutis <lb/>
+						 iterum in timore, sed  accepistis . Spiritum adoptionis <lb/>  filiorum, et ipse
+						Spiritus testimonium reddit <lb/> spiritui nostro, quod . filii Dei (Rom. VI). Indubitanter
+						<lb/>  Deus est qui per remissionem peccatorum <lb/> filios Dei facit. Universam
+						creaturam etiam  angelorum  <lb/>  atque archangelorum, peccato constat fuisse <lb/>
+						obnoxiam, quorum tamen in Deum obedientiam, <milestone unit="PLSection" n="B"/><lb/>
+						sollicitudinem , charitatem , transgressorum ruina <lb/> fundavit; humilitas
+						subjectionis, stabilitatis facta est <lb/> confirmatio, fragilitatis agnitio, Spiritus
+						sanctus. Nisi <lb/> prae omnibus liber esset, de servis liberos facere non <lb/> posset.
+						Nam si creatura esset, quamlibet in eo conditionem <lb/>  gratiam sanctitatis,
+						remansisset tamen conditionem <lb/>  debitoris. Et ideo dicit: Nemo potest donare <lb/>
+						peccata nisi solus Deus (Marc. II; Luc. v). Quicunque <lb/> ' ille est, eligat utrum
+						velit, aut  Spiritum  sanctum <lb/> peccata donantem confiteatur per omnia Deum , aut <lb/>
+						si per eum donari posse non credit veniam peccatorum  ,<lb/> evacuavit in se
+						regenerationis beneficium et <lb/> baptismi sacramentum : Dei ergo solius est absolvere
+						<lb/> innexa, redintegrare corrupta, expiare maculata. Et <lb/> ideo ad eum conscii
+						nostrae infirmitatis et suae majestatis ,<milestone unit="PLSection" n="c"/> <lb/> cum  gemitu 
+						 proclamamus : Tibi soli peccavi <lb/> (Psal. L),  Domine , qui solus non teneris
+						lege peccati, <lb/> qui solus ab ea non actualiter, sed naturaliter alienus <lb/> es, et
+						ideo  solus  absolvere debitores potes, qui a <lb/> debitis solus immunis es , qui quod
+						habes non  aliunde  <lb/> mutuatus es, sed de tuo plenus es. Non enim prior <lb/> quisquam
+						dedit tibi, nec aliunde derivatis virtutibus <lb/> irrigaris, nec ex alio aliquo in te
+						facta transfusio est; <lb/> sed ipse fons es fluminis tui, et  gloria  tua , tua natura <lb/>
+						  est , sicut nuntium nescit, sic nihil a priore <lb/> suscepit (Joan. XIV;  Rom .
+						VIII; Luc. XVII).</p>
+					<ab>
+						<title type="sub">CAPUT VIII.</title>
+					</ab>
+					<ab>
+						<title type="sub">Ubi templum Dei templum esse sancti Spiritus demonstratur .</title>
+					</ab>
+					<p>
+						<milestone unit="PLSection" n="D"/>Habitatorem cordis humani sacra eloquia proprie <lb/>
+						 Spiritum  esse definiunt : Dabit, inquit, vobis pater <lb/> alium Paracletum, ut maneat
+						vobiscum in  aeternum  <lb/> (I Cor. III; I Cor. VI). Et ad Romanos: Vivificabit et <lb/>
+						mortalia corpora vestra propter inhabitantem Spiritum <lb/> ejus in vobis. Et ideo de
+						Spiritu sancto conscriptum <lb/> recte intelligimus : Regnum Dei intra vos  est . Dei  utique 
+						<lb/>  regnum  sunt , qui ei parere merentur in templum <lb/> Dei utique, non creaturae.
+						Audi per Apostolum habitatoris <lb/>  nostri vocem: Vos  estis ,  inquit , templum Dei, et
+						<lb/> Spiritus Dei habitat in vobis. Et in alio loco, sicut dicit <lb/> Deus :
+						Inhabitabo in illis, et inambulabo, et ero illorum <lb/> Deus. Ecce ipse qui templum
+						humani cordis inhabitatoris  ,<lb/>  Deum  se esse pronuntiat. Ananias inter eos qui
+							<milestone unit="PLSection" n="A"/><lb/> honorantes Deum, de suis justis laboribus
+						vendebant <lb/> substantias suas, et ponebant ante  pedes  apostolorum. <lb/> Deo votum
+						promisisse agnoscitur, Spiritui sancto <lb/>  mentitus  arguitur, sicut Petrus apostolus
+						ait:  Anania , <lb/> cur tentavit Satanas cor tuum, mentiri te Spiritui sancto <lb/> 
+						(Act. III)? Et subsecutus adjecit : Non es mentitus <lb/> hominibus, sed Deo. Quid  est 
+						hoc ? In Creatorem <lb/> peccat, et ita Scriptura peccatum ejus attenuat, ut <lb/> eum
+						juxta impietatis sensum, creaturae  reum  esse <lb/> constituat,  et  minori debitorem  de 
+						contumelia majoris <lb/>  addicat ? Non ita est. Manifesto  praeditus  est  divi a  <lb/> 
+						potentia, ad quem sacrilegii refertur offensa, de <lb/> quo alio loco dicit : Qui autem
+						blasphemaverit in Spiritum <lb/>  sanctum, non habebit remissionem, neque in  hoc saeculo  
+						,<lb/> neque in futuro (Matth,. XI). Cum ergo  transgressione  <milestone unit="PLSection" n="B"/><lb/>  tentaverit Deum , fefellisse dicitur Spiritum <lb/> sanctum.
+						Quapropter Spiritus sanctus et Dei unam <lb/> causam, unam gloriam, unam cognosce
+						reverentiam. <lb/> Et ideo evidentissime de Spiritu sancto sequenti <lb/>  sermone 
+						concludit : Non  es , inquit, mentitus hominibus  ,<lb/> sed Deo. Loquente Petro ad
+						Cornelium, . <lb/>  obstupuerunt  ex circumcisione  fideles  qui venerant cum Petro. <lb/>
+						quia et in nationes gratia  Spiritus sancti  effusa est (Act.x). <lb/> Vides Spiritum
+						sanctum non de alieno, sed de proprio <lb/>   contulisse  . Si requiras quis sit iste qui
+						gratiam <lb/> dedit illis, Deus. Hunc gratiae largitorem superius <lb/> Spiritum sanctum,
+						hic Deum specialiter declaravit, <lb/>  Illic  proprio,  hic  communi nomine probatur iterata
+						<lb/>  confessio . Cum autem gratia, dicit, et in nationes Spiritum <lb/>  sancti effusa
+						est, ipse naturae Deus est, qui auctor <milestone unit="PLSection" n="C"/><lb/> est
+						gratiae. Soli Deo competit de suo charismatum <lb/> dona largiri, ut et de eo Apostolus
+						dixisse videatur, <lb/>  Abundantius  illis omnibus  laboravi . Non ego autem, sed <lb/>
+						gratia Dei mecum (I Cor. xv). Merito Deus  pronuntiatur   ,<lb/> qui  dispensator  est
+						gratiae et salutis humanae. Et <lb/> addidit Petrus : Quis ego eram qui possem prohibere
+						<lb/> Deum (Act. XI)? Illum utique Deum qui est in  nationes .  ,<lb/> vel Cornelium
+						impetum gratiae inundantis effudit  .<lb/></p>
+					<ab>
+						<title type="sub">CAPUT IX.</title>
+					</ab>
+					<ab>
+						<title type="sub">Ubi contra Novatianos Deus. gentibus poenitentiam ad vitam dedit, qui
+							utique Deus Spiritus sanctus esse per ordinem ipsum  lectionis  ostenditur : .</title>
+					</ab>
+					<p>Adverte quomodo in persona sancti Spiritus, qui <lb/> subito Cornelium et socios ejus
+						implevit, Dei nomen <milestone unit="PLSection" n="D"/><lb/> multiplici attestatione
+						concelebratur. His auditis, inquit  ,<lb/> tacuerunt, et  glorificaverunt  Deum dicentes:
+						Ergo <lb/> et gentibus Deus poenitentiam ad vitam dedit (Act. XI)? <lb/> Quo loco contra
+						Novatianos advertendum est quod <lb/> poenitentiam dare dicitur, quam utique non aliter
+						 nisi   <lb/> servorum suorum administratione largitur : dum ergo <lb/> dicit : Quis ego
+						eram qui possem prohibere Deum; et <lb/> iterum : Ergo Deus gentibus.  ad
+						vitam <lb/> dedit, quae in manifestis rebus manifestanda est inquit  ,<lb/> cui
+						vel ignaro non satisfaciat, vel  incredulo  <lb/>  in sancti Spiritus adventu, totiens
+						divini nominis <lb/>  repetita confess .</p><pb n="37"/>
+
+					<p>
+						<milestone unit="PLSection" n="A"/>
+					</p>
+					<ab>
+						<title type="sub"> CAPUT X . Ubi ad Corinthios prima , Spiritus sanctus esse virtutum distributionibus Deus declaratur .  .</title>
+					</ab>
+					<ab>
+						<title type="sub">   ,    
+							  .</title>
+					</ab>
+					<p>Accipe ad Corinthios : quod solum possit pro asserenda <lb/>  Spiritus sancti
+						divinitate sufficere. Dicit per <lb/> Epistolam ad Hebraeos : Contestante Deo signis et
+						 portentis  <lb/>  et variis virtutibus, et Spiritus sancti distributionibus <lb/> 
+						secundum suam voluntatem (Hebr. II). Interrogemus <lb/>  ipsum apostolum, utrum unus ex
+						creaturis sit <lb/> iste charismatum distributor. Habemus ad Corinthios <lb/> prima :
+						Notum vobis facio, quod nemo in Spiritu Dei <lb/> loquens, dicit anathema Jesu. Et nemo
+						potest dicere <lb/> Dominus Jesus, nisi in Spiritu sancto (I Cor. XII). Adverte <lb/> 
+						quomodo hic Spiritum Dei Spiritum sanctum <lb/> esse, absolutissime designavit, Spiritu
+						sancto, quem <milestone unit="PLSection" n="B"/><lb/> de superiori sententia, Spiritum
+						Dei loqui proposuit <lb/> Perspicue sequuntur, quam manifeste illum Deum et <lb/>
+						Dominum esse testantur. Divisiones, inquit, gratiarum <lb/>  sunt , idem autem Spiritus :
+						et divisiones ministrationum <lb/> sunt, idem autem Dominus : et divisiones operationum
+						<lb/> sunt, idem autem Deus. Tanquam si beatus apostolus <lb/> de Spiritus sancti
+						divinitate fuisset consultus, evidenter <lb/>  de quo dixerat, idem. Spiritus , de eo
+						addit: <lb/>  Idem  Deus, qui operatur omnia in omnibus. Operari <lb/> omnia non posset,
+						si esset unus ex omnibus , hic <lb/> Spiritum sanctum tam in suo nomine quam Domino
+						<lb/> et Deo, aut certe evidenter expressum , aut certe <lb/> Trinitati agnosce
+						sociatum. Sed hic in donorum divisionibus  ,<lb/> magis sermo divinus Spiritum sanctum
+						<lb/> intelligitur designasse, quia superius accipimus  distributionum  <milestone unit="PLSection" n="C"/><lb/>  gratiam Spiritui sancto speciali dispensatione<lb/>
+						 competere. Quod vero dixit : Idem Dominus, <lb/> idem autem Deus, in sequenti
+						capitulo ad Spiritum <lb/> sanctum ostendit esse referendum dicens : Alii quidem <lb/> 
+						per Spiritum datur sermo sapientiae, alii sermo <lb/>  scientiae  in eumdem Spiritum, alteri
+						fides in eodem <lb/> Spiritu, alteri gratia sanitatum in uno Spiritu, alii operatio <lb/>
+						 virtutum, alii  prophetia , alii discretio Spirituum, alii <lb/> genera linguarum,
+						alii interpretatio sermonum,  haec autem   <lb/> omnia operatur unus atque idem Spiritus
+						dividens singulis <lb/>  prout vult. Nulli subditur, sed coelestis est Dominus  ,<lb/>
+						qui dona coelestia propria voluntate , et de <lb/>  potentiae  suae jure largitur.</p>
+					<ab>
+						<title type="sub">CAPUT XI.</title>
+					</ab>
+					<p>
+						<milestone unit="PLSection" n="D"/>
+					</p>
+					<ab>
+						<title type="sub">Advertendum quod sicut unum Deum, ita unum dicit Spiritum sanctum,
+							quod de plebeia creatura, vel quod dividat singulis prout vult, dici nullo modo
+							possit.</title>
+					</ab>
+					<p>vides quod sicut unus Pater. et unus Filius, ita et <lb/>  unus  Spiritus sanctus, sicut
+						consequenter assignat: <lb/> Etenim in uno Spiritu potati sumus. Hic si de plebe <lb/>
+						vel de multitudine creaturae esset, unus omnino dici <lb/> non posset. Et cum hic habeas
+						alteri, inquit, datur <lb/> fides in eodem Spiritu  (Rom . XII), quis hanc fidem <lb/>
+						tribuat; idem ad Corinthios Apostolus declaravit, <lb/> dicens : Et unicuique  sicut  Deus
+						divisit mensuram  fidei  <lb/> (Hebr.). Vides quod  indubitanter  hunc fidei divisorem <lb/>
+						Deum esse pronuntiat. Licet in tam multiplici  tantorum  <lb/>  munerum largitate, ipsa
+						per se magnificentia <milestone unit="PLSection" n="A"/><lb/> operis potentiam loquatur
+						auctoris, tamen de eo ita <lb/> conclusit :  Haec  autem omnia  operatur unus  atque idem
+						<lb/> Spiritus dividens singulis prout vult. Sicut et alio loco: <lb/> Spiritus ubi vult
+						spirat. Et iterum : Et Spiritus  sancti  <lb/> distributionibus secundum suam voluntatem
+						(I Cor. XII). <lb/> Non hic ergo est subjectae ministeriorum servitutis, <lb/> sed
+						liberae arbitrium potestatis , atque in coelestium <lb/> bonorum distributionibus summae
+						largitatis est exhausta <lb/>  pietas. Quomodo dicit et Spiritus sancti  distributionum  . <lb/>
+						 est iste  distributor , id est divisor, utrum <lb/> Deus sit ad  Corinthios  docuit
+						dicens : Et divisiones <lb/> operationum sunt, idem autem Deus. Legimus in Actibus <lb/>
+						 apostolorum: Attendite, inquit, vobis et universo <lb/> gregi, in quo vos Spiritus
+						sanctus posuit episcopos regere <lb/>  Ecclesiam Dei (Act. XX). Hunc qui posuit  episcopos -
+							<milestone unit="PLSection" n="B"/><lb/>  in Ecclesiam. ad Corinthios Vas
+						electionis Deum <lb/> esse declarat, ita dicens : Quosdam quidem posuit <lb/> Deus in
+						 Ecclesiam . Quid sunt nisi Spiritus sanctus, <lb/> cujus personae ostendit officium
+						distributio gratiarum, <lb/> sicut continenti sermone subsequitur? Posuit,  inquit ,  <lb/>
+						Deus in Ecclesiam primum apostolos, secundo prophetas  ,<lb/> tertio doctores, deinde
+						virtutes,  exinde  gratias curationum  ,<lb/> opitulationes. gubernationes, genera linguarum
+						 .<lb/> Quosdam, inquit, Deus posuit in Ecclesiam. Quod <lb/> hic Deum de Spiritu
+						sancto dixerit, ipsa quae ad <lb/> Spiritum sanctum pertinet dispensatio sanctificationum
+						<lb/>  virtutumque manifestat. Ipse enim prophetarum <lb/> ora  locupletat , curationum
+						remedia dispensat, charismatum <lb/>  ornamenta multiplicat, quo in apostolis influente 
+						,<lb/> Deum illum universitatis esse, signorum  miracula  <milestone unit="PLSection" n="C"/><lb/>  et linguarum diversa genera cecinerunt.</p>
+					<ab>
+						<title type="sub">CAPUT XII.</title>
+					</ab>
+					<ab>
+						<title type="sub">Ubi eos qui Spiritus sancti templum effecti sunt; ita dicit proficere
+							debere, ut Deum portare in corpore mereantur.</title>
+					</ab>
+					<p>Ait itaque Apostolus ad Corinthios : Nescitis quia <lb/> corpora vestra templum sunt
+						Spiritus ? Templum Spiritus <lb/>  sancti, templum esse Dei praecedentia ejusdem <lb/>
+						Epistolae evidenter insinuant, cum dicitur : An nescitis  ,<lb/> quia templum Dei estis
+						? et Spiritus sanctus habitat <lb/> in vobis, et Spiritus, inquit, Dei habitat in vobis.
+						Quis <lb/> illos dubitet ejus Dei esse templum, cujus esse  probantur  <lb/> 
+						habitaculum? Et cum dixisset : Nescitis quia <lb/> corpora vestra templum sunt Spiritus
+						sancti, ita capitulum <milestone unit="PLSection" n="D"/><lb/>  luculenta veritate
+						conclusit : Glorificate, inquit, <lb/> et portate Deum in corpore vestro. Ergo qui
+						 Spiritui  <lb/> sancto studiose puritatis templum praeparat in corde, <lb/> per castitatem
+						et mortificationem  carnis  Deum portat <lb/> in corpore. Eum necesse est corporaliter
+						portare a <lb/> quo spiritualiter possidemur. Quapropter quem templo <lb/>  perspicis
+						dignum, divinis honoribus  noveris adorandum    ,<lb/> celebrandum votis, sacrificiis
+						excolendum. <lb/> Ad universalem ergo loquitur magister gentium Ecclesiam <lb/>  :
+						Nescitis quia templum Dei estis, et Spiritus <lb/> sanctus habitat in vobis. Nulli hoc
+						possibile  creaturae est   ,<lb/> sed divinae majestatis insigne est, ut singulatim <lb/>
+						per unumquemque populos impleat, et tamen in plenitudinis <lb/>  suae immensitate
+						 permancat ,  divinae , inquiT.<pb n="39"/>
+						<milestone unit="PLSection" n="A"/><lb/> singiularepropriumque naturae est, locis omnibus
+						<lb/> praesto esse ; in omnia inlrare, et omnia continere. <lb/> Dei, inquit, peculiare
+						est, filios perditionis naturae <milestone unit="PLSection" n="A"/><lb/> debitis exuere
+						, purgatis conscientiis innovare Dei <lb/> filios facere, et in coelestisregni gloria
+						sublimare.</p>
+					</div>
+					</div>
+				
+				</body></text></TEI>

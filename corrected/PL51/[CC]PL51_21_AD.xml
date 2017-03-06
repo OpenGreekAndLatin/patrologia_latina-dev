@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><TEI xmlns="http://www.tei-c.org/ns/1.0"><teiHeader>
+    
+		<fileDesc>
+			<titleStmt>
+				<title>Patrologiae Cursus Completus. Series Latina (PL)</title>
+				<sponsor>University of Leipzig</sponsor>
+				<funder>European Social Fund Saxony</funder>
+				<principal>Gregory Crane</principal>
+				<respStmt>
+					<persName xml:id="Jouve">Jouve</persName>
+					<resp>OCR-ed, corrected and encoded the text</resp>
+				</respStmt>
+				<respStmt>
+					<persName>Greta Franzini</persName>
+					<resp>Project Manager (University of Leipzig)</resp>
+				</respStmt>
+				<respStmt>
+					<persName>Simona Stoyanova</persName>
+					<resp>Project Assistant (University of Leipzig)</resp>
+				</respStmt>
+				<respStmt>
+					<persName>Bruce Robertson</persName>
+					<resp>Technical Advisor (Mount Allison University)</resp>
+				</respStmt>
+			</titleStmt>
+
+			<publicationStmt>
+				<authority>University of Leipzig</authority>
+				<idno type="filename">PL51.xml</idno>
+				<availability>
+					<licence target="https://creativecommons.org/licenses/by-sa/4.0/">Available under a
+						Creative Commons Attribution-ShareAlike 4.0 International License</licence>
+				</availability>
+				<date>2014</date>
+				<publisher>University of Leipzig</publisher>
+				<pubPlace>Germany</pubPlace>
+			</publicationStmt>
+
+			<sourceDesc>
+				<listBibl xml:lang="la">
+					<biblStruct>
+						<monogr>
+							<editor>
+								<persName>
+									<name xml:lang="fr">Jacques Paul Migne</name>
+								</persName>
+							</editor>
+							<author>Prosperus Aquitanus</author>
+							<title>Epistola Ad Augustinum</title>
+							<title>Epistola Ad Rufinum 'De Gratia Et Libero Arbitrio'</title>
+							<title>Peri Axariston. Seu De Ingratis Carmen In Quatuor Partes Distributum</title>
+							<title>Epigrammata In Obtrectatorem Augustini</title>
+							<title>Epigrammata In Quempiam Augustini Obtrectatorem</title>
+							<title>Epitaphium Nestorianae Et Pelagianae Haereseon</title>
+							<title>Pro Augustino Responsiones Ad Capitula Gallorum</title>
+							<title>Responsiones Ad Capitula Objectionum Gallorum Calumniantium</title>
+							<title>Pro Augustino Responsiones Ad Capitula Objectionum Vincentianarum</title>
+							<title>Pro Augustino Responsiones Ad Excerpta Genuensium</title>
+							<title>Pro Defensione Augustini Contra Cassiani Presbyteri Librum</title>
+							<title>Expositio Psalmorum A Centesimo Usque Ad CL</title>
+							<title>Sententiarum Ex Operibus Augustini Delibatarum Liber Unus</title>
+							<title>Epigrammatum Ex Sententiis Sancti Augustini Liber Unus</title>
+							<title>Chronicum Integrum In Dua Partes Distributum</title>
+							<title>Chronicum Integrum In Dua Partes Distributum [Appendicula]</title>
+							<title>Confessio [Incertus]</title>
+							<title>Poema Conjugis Ad Uxorem [Incertus]</title>
+							<title>Carmen De Providentia Divina [Incertus]</title>
+							<title>Libri Duo De Vocatione Omnium Gentium [Incertus]</title>
+							<title>Liber De Promissionibus Et Praedictionibus Dei A Nonnullis [Incertus]</title>
+							<title>Chronicum Alterum Sive Pseudochronicum [Incertus]</title>
+							<imprint>
+								<publisher>Garnier</publisher>
+								<pubPlace>Paris</pubPlace>
+								<date>1846</date>
+							</imprint>
+							<biblScope unit="volume">51</biblScope>
+						</monogr>
+						<monogr>
+							<title>Concilium Arausicanum I</title>
+							<imprint>
+								<publisher>Garnier</publisher>
+								<pubPlace>Paris</pubPlace>
+								<date>1846</date>
+							</imprint>
+							<biblScope unit="volume">51</biblScope>
+						</monogr>
+						<monogr>
+							<author>Idatius Aquaeflaviensis Episcopus</author>
+							<title>Chronicum</title>
+							<title>Descriptio Consulum Ex Quo Primum Ordinati Sunt [Codex Parisiensis]</title>
+							<imprint>
+								<publisher>Garnier</publisher>
+								<pubPlace>Paris</pubPlace>
+								<date>1846</date>
+							</imprint>
+							<biblScope unit="volume">51</biblScope>
+						</monogr>
+						<monogr>
+							<author>Marcellinus Comes</author>
+							<title>Chronicum</title>
+							<imprint>
+								<publisher>Garnier</publisher>
+								<pubPlace>Paris</pubPlace>
+								<date>1846</date>
+							</imprint>
+							<biblScope unit="volume">51</biblScope>
+						</monogr>
+						<ref target="http://hdl.handle.net/2027/pst.000017928816">HathiTrust</ref>
+
+					</biblStruct>
+				</listBibl>
+			</sourceDesc>
+
+		</fileDesc>
+		<encodingDesc>
+			<p>The following text is encoded in accordance with EpiDoc standards and with the CTS/CITE
+				Architecture.</p>
+		<refsDecl>
+        <cRefPattern n="" matchPattern="(.+).(.+).(.+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@type='edition']/tei:div[@n='$1']/tei:div[@n='$2']/tei:div[@n='$3'])"/>
+        <cRefPattern n="" matchPattern="(.+).(.+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@type='edition']/tei:div[@n='$1']/tei:div[@n='$2'])"/>
+        <cRefPattern n="" matchPattern="(.+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@type='edition']/tei:div[@n='$1'])"/>
+      </refsDecl>
+    </encodingDesc>
+
+		<profileDesc>
+			<langUsage>
+				<language ident="la">Latin</language>
+			</langUsage>
+		</profileDesc>
+
+	</teiHeader>
+	<text><body><div type="edition" n="">
+				<ab>
+						<title type="sub">ADMONITIO DE POEMATE CONJUGIS AD UXOREM.</title>
+					</ab>
+					<p>Carmen Anacreonticon ad uxorem, quo ipsius auctor uxorem suam hortatur ut se totam Deo
+						dedicet, non qui­ <lb/> dem inter subdititia falsoque titulo ascripta Prospero , sed nec
+						inter certa et indubitata ejus opera censeri posse <lb/> jam ab aliis est animadversum.
+						Unde dubiis accenseri debere judicavimus. Est certe vere dubitanti locus an <lb/> sit
+						Prosperi. Nam RosweyduM, vir eruditionis non vulgarit, Prospero, sub cujus nomine
+						legebatur alias , opus <lb/> istud abjudicavit, et S. Paulino Nolano, in ejus Operum
+						recensione, ascripsit, cognita utique causa, ut videtur. <lb/> Sed refragatur omnino
+						doctus juxta atque accuratus ejusdem Paulini Operum novissimus editor et scholia­ <lb/>
+						stes tom. II, Dissert. 6, ubi etsi fateatur hoc carmen ad stylum Paulini Nolani et
+						sermonem in pluribus poema - <lb/> tum locis satis accedere, lectore in ju dicem
+						assumpto , tamen asserere non dubitat poema istud , licet egregium <lb/> et
+						jucundissimum , aliis tamen Paulini carminibus suavius el liberius fluere. Tu n hæc
+						subjungit : « At quol <lb/> istud carmen Paulino potest abjudicare, illud nempe est,
+						quod universum orbem in ea generali eversione rerum <lb/> et perturbatione describit
+						quam expertum est anno 407 Occidentis imperium. Verum Paulino tunc temporis non <lb/>
+						necesse fuit ut se et uxorem ad Christianam vitam hortaretur, et designaret quomodo
+						facultatibus suis uterentur. <lb/> Arbogastus maximas in Occidente turbas fecit, cum
+						anno 392, 15 Maii die, iuniorem Vatentinianum strangulari <lb/> jussit, et diadema
+						Eugenio imposuit. At illud carmen hoc non adumbrat.» Hactenus Paulini illustrator, qui
+						qui­ <lb/> dem apposite observat quibus temporibus imperium Romanum tantis
+						infestationibus premebutur et agitabatur; <lb/> necesse non fuisse Paulino Therasiam
+						sanctissimam conjugem ad similia adhortari, cum illa dudum ut sponsi imita <lb/> trix
+						Christianæ perfectionis iter fuisset ingressa, nisi forte et currentem quandoque monere
+						non inutile quis dixerit.</p>
+					<p>Hinc etiam prohiberi se testatur idem auctor ne carmen illud Paulino assignet, quod,
+						inquit, in quatuor mss. <lb/> codicibus Prospero tribuatur, in nullis Paulino, cujus
+						historiæ prorsus non respondet. Quod certe tam grare <lb/> est, ut Paulini fetum
+						agnoscere in illo non audeat. Quo postremo quatuor mss. non a se visorum testimonio A .
+						<lb/> telmius in Dissertat. 9 in Opera Leonis et Prosperi quintum adjungit quem præ
+						manibus habuit optimæ notæ <lb/> ante annos 800, ut judicabat, exaratum, quem ex
+						Massiliensi civitate, ubi clarior et charior Prosperi memoria. <lb/> in Aquensem, quo
+						tum degebat, transmissum et in amplissimi senatoris Thomassini bibliotheca asservatum,
+						sibi <lb/> illuc advenienti manere non potuisse incognitum testatur : verum ab hujus
+						copiosæ bibliothecæ possessore cum <lb/> multis et prce multis, inter plura adiumenta,
+						dicit a se susceptum. Porro talis codex nonnisi Prosperi epigram­ <lb/> mata continebat,
+						quibus sententiæ ab eo excerptæ præponuntur, In hoc post epigramma 97 de Cohibenda ira,
+						<lb/> etc., hoc versu desinens, <lb/> Crescere non cupiens perdit adepta tepens, <lb/>
+						immedtate subjungitur, metrum Anacreonticon, ab his verbis Age jam precor mearum, ad
+						hæc, Quibus occu­ <lb/> pare ani masfuit voluptas. Atque hic expliciunt versus. simulque
+						cum pagina et codex totus cum his verbis, <lb/> Finit liber. Desiderantur itaque in hoc
+						codice quæ ab aliis exhibentur hexametra pentametris intermixta, jam- <lb/> bis istis
+						cohærenti conceptuum serie ingeniose illigata. Quæ consuetu io non extranea est
+						Prospero, qui carmen <lb/> de Ingratis omnium celeberrimum duplici versuum serie
+						variasse agnoscitur; aliter enim in prologo quam in poc- <lb/> mate cecinit</p>
+					<pb n="611"/>
+
+					<p>Quæ porro Paulinihistoriæ prorsus non respondere videntur viro docto, rerum temporumque
+						circunstatiæ <lb/> carmine de quo hic agitur descripte , Prosperi personæ congruentius
+						forsan aptarentur : quippe quem sub exi­ <lb/> tum quarti sæculi et consequentis initium
+						Christianæ pietatis studia magis afficere primum potuerunt, suam ut <lb/> conjugem (si
+						tamen cnnjugatus vixit aliquando) ad pares ausus tam suavium consiliorum incitamentis
+						stimularit</p>
+					<p>Ad id etiam facit Bedæ in fine libri de Ante metrican testificatio, qui carmen istnæ
+						Tironi Prospero diserte <lb/> ascribit. « Metrum Anacreonticum, inquit, quo usus est
+						Prosper Tiro in principio exhortationis ad conjugem, <lb/> ita dicens : Age jam precor,
+						etc. »</p>
+					<p>Sed ( si præfato critico doctissimo creditur) nec omnino carent Prosperianis
+						lineamentis hæc carmina; et <lb/> castissimis Prosperi sensibus plena sunt, ejusque
+						veros affectus sIncere reddunt, et locationes non raro en dem <lb/> exhibent. Nec tamen
+						ille, quantmnvis aveat quæcumque potest cum aliquo fundamento Prospero vindicare <lb/>
+						Opera, quid cecti de tali carmine audet statuere, post quasi cohibitum repressumque
+						circa illu i aliorum judi­ <lb/> cium, animique etiamnum pedere se fatetur : nam etsi
+						hinc paulo comptius et elegantius agnoscatur quam <lb/> rel qua poetice scripta Pr
+						osperi, inde retinet æta iscircums antia qua elucubrari debuit. Cum enim conversionis
+						<lb/> initio digestum esse pateal, et minus tunc erat cœlestibus assuefactus atque
+						distentus Aquitanus no ter, ita <lb/> magis juventilis ejus animus arti et concian tati
+						studens hanc elegantiam affectare potuit, quam maturior <lb/> sanctiorque factus pnstea
+						respuerit vel neglexerit. Quibus perpensis, dum meliora ab aliis otiosius rem totam
+						<lb/> librantibus opperitur, judicio suspensus manet et indeterminatus. Post hanc
+						eruditbrum fluctuationem quid <lb/> securius nobis et ab omni temeritatis nota magis
+						alienum erit, quam si hoc opus nex inter veros, nec inter <lb/> .purius suppositosque
+						Prosperi fetus, sed inter dubios exhibeamus.</p>
+					</div>
+				</body></text></TEI>

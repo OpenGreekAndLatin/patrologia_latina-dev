@@ -1,0 +1,332 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><TEI xmlns="http://www.tei-c.org/ns/1.0"><teiHeader>
+    
+    <fileDesc>
+      <titleStmt>
+        <title>Patrologiae Cursus Completus. Series Latina (PL)</title> 
+        <sponsor>University of Leipzig</sponsor>
+        <funder>European Social Fund Saxony</funder>
+        <principal>Gregory Crane</principal>
+        <respStmt>
+          <persName xml:id="Jouve">Jouve</persName>
+          <resp>OCR-ed, corrected and encoded the text</resp>
+        </respStmt>
+        <respStmt>
+          <persName>Greta Franzini</persName>
+          <resp>Project Manager (University of Leipzig)</resp>
+        </respStmt>
+        <respStmt>
+          <persName>Simona Stoyanova</persName>
+          <resp>Project Assistant (University of Leipzig)</resp>
+        </respStmt>
+        <respStmt>
+          <persName>Bruce Robertson</persName>
+          <resp>Technical Advisor (Mount Allison University)</resp>
+        </respStmt>
+      </titleStmt>
+      
+      <publicationStmt>
+        <authority>University of Leipzig</authority>
+        <idno type="filename">PL83.xml</idno>
+        <availability>
+          <licence target="https://creativecommons.org/licenses/by-sa/4.0/">Available under a Creative Commons Attribution-ShareAlike 4.0 International License</licence>
+        </availability>
+        <date>2014</date>
+        <publisher>University of Leipzig</publisher>
+        <pubPlace>Germany</pubPlace>
+      </publicationStmt>
+      
+      <sourceDesc>
+        <listBibl xml:lang="la">
+          <biblStruct>
+            <monogr>
+              <editor>
+                <persName>
+                  <name xml:lang="fr">Jacques Paul Migne</name>
+                </persName>
+              </editor> 
+              <author ref="urn:cite:perseus:author.771">Isidorus Hispalensis</author>
+              <title>Differentiarum Sive De Proprietate Sermonum Libri Duo</title>
+              <title>Allegoriae Quaedam Sacrae Scripturae</title>
+              <title>De Ortu Et Obitu Patrum Qui In Scriptura Laudibus Efferuntur</title>
+              <title>In Libros Veteris Ac Novi Testamenti Proemia</title>
+              <title>Liber Numerorum Qui In Sanctis Scripturis Occurrunt</title>
+              <title>De Veteri Et Novo Testamento Quaestiones</title>
+              <title>Mysticorum Expositiones Sacramentorum Seu Quaestiones In Vetus Testamentum</title>
+              <title>Appendix Ad Libros Regum</title>
+              <title>De Fide Catholica Ex Veteri Et Novo Testamento Contra Judeos</title>
+              <title>Sententiarum Libri Tres</title>
+              <title>De Ecclesiasticis Officiis</title>
+              <title>Synonyma De Lamentatione Animae Peccatricis</title>
+              <title>Regula Monachorum</title>
+              <title>Epistolae</title>
+              <title>De Ordine Creaturarum Liber</title>
+              <title>De Natura Rerum Ad Sisebestum Regem Liber</title>
+              <title>Chronicon</title>
+              <title>Historia De Regibus Gothorum. Wandalorum Et Suevorum</title>
+              <title>De Viris Illustribus Liber</title>
+              <title>Carmina [Ascripta]</title>
+              <title>Chronica Regum Visigothorum (Incertus)</title>
+              <title>Expositio In Canticum Canticorum Salomonis [Incertus]</title>
+              <title>De Conflictu Vitiorum Et Virtutum (Incertus)</title>
+              <title>Expositio In Missa (Incertus)</title>
+              <title>Sententiarum Liber Quartus (Incertus)</title>
+              <title>Exhortatio Humilitatis (Incertus)</title>
+              <title>Testimonia Divinae Scripturae Et Patrum (Incertus)</title>
+              <title>Sermones (Incertus)</title>
+              <title>De Ecclesiasticis Dogmatibus (Incertus)</title>
+              <title>Sentantiae Differentiarum De Activa Vita Atque Contemplativa [Incertus]</title>
+              <title>Exhortatio Poenitendi Cum Consolatione Et Misericordia Dei [Incertus]</title>
+              <title>Lamentum Poenitantiae (Incertus)</title>
+              <title>Oratio Contra Insidias Diaboli (Incertus)</title>
+              <title>Liber De Ortu Et Obitu Patrum Incertus</title>
+              <title>Liber De Numeris (Incertus)</title>
+              <title>Glossae in Sacram Scripturam</title>
+              <title>Differentiarum, sive de Proprietate Sermonum, Liber</title>
+              <title>Liber Glossarum</title>
+              <imprint>
+                <publisher>Garnier</publisher>
+                <pubPlace>Paris</pubPlace>
+                <date>1850</date>
+              </imprint>
+              <biblScope unit="volume">83</biblScope>
+            </monogr>
+            <monogr>
+              <author>Auctor Incertus</author>
+              <title>Archiepiscopi Toletani Veteres</title>
+              <title>Chronologia Gothicorum Regum (Ex Codice Regio Vaticano)</title>
+              <imprint>
+                <publisher>Garnier</publisher>
+                <pubPlace>Paris</pubPlace>
+                <date>1850</date>
+              </imprint>
+              <biblScope unit="volume">83</biblScope>
+            </monogr>
+            <ref target="http://hdl.handle.net/2027/pst.000020950231">HathiTrust</ref>
+            
+          </biblStruct>
+        </listBibl>
+      </sourceDesc>
+      
+    </fileDesc>
+    <encodingDesc>
+      <p>The following text is encoded in accordance with EpiDoc standards and with the
+        CTS/CITE Architecture.</p>
+    <refsDecl>
+        <cRefPattern n="" matchPattern="(.+).(.+).(.+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@type='edition']/tei:div[@n='$1']/tei:div[@n='$2']/tei:div[@n='$3'])"/>
+        <cRefPattern n="" matchPattern="(.+).(.+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@type='edition']/tei:div[@n='$1']/tei:div[@n='$2'])"/>
+        <cRefPattern n="" matchPattern="(.+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@type='edition']/tei:div[@n='$1'])"/>
+      </refsDecl>
+    </encodingDesc>
+    
+    <profileDesc>
+      <langUsage>
+        <language ident="la">Latin</language>
+      </langUsage>
+    </profileDesc>
+    
+</teiHeader>
+
+  <text><body><div type="edition" n="">
+          <ab>
+            <title type="sub">APPENDIX V.</title>
+          </ab>
+          <ab>
+            <title type="sub">Chronologia,et series Gothicorum regum ex Codice Reliovaticano 667.</title>
+          </ab>
+          <p>188 1.Primum in Gothis regnavit Athanaricus <lb/>
+            annis XIII. Isle primus per Valentem imperatorem hæ­ <lb/>
+            resim Arjanam cum omni Golhorum gente intravit.
+            <milestone unit="PLSection" n="D"/><lb/>
+            Sub isto legem Coli, ac litteras habere cœperunt; ct <lb/>
+            cum eodem rege ab Hunnis de terra propria expulsi <lb/>
+            sunt. Rex quoque Constantinopoli vitam finivit sub <lb/>
+            imperatore Theodosio (Vide Isidoriana, c. 79, n. 11).</p>
+          <p>2. Alaricus regnavit annis XIV. Iste ob vindictam <lb/>
+            Cothorum , quosRomani interfecerunt, exercitum <lb/>
+            movit,et Romam cepit, ibique Placidiam Theodosii <lb/>
+            imperatoris filiam cum opibus multis deprædavit. <lb/>
+            in Italia obiit sub imperatoribus Honorio ct <lb/>
+            Arcadio.</p>
+          <p>3. Ataulfus regnavit annis VI. Iste supradictam <lb/>
+            Placidiam conjugem accepit, et regni anno 5 de italia <lb/>
+            Callias adiit. Et dum hispanias petere voluisset, a <lb/>
+            suis interfectus est in Barcilona sub imperatoribus <lb/>
+            Honorio et Arcadio.</p>
+          <p>4. Sigericus regnavit ann. I. Ite, dum pacem cum <lb/>
+            Romanis habere voluisset, mox a suis est interfectus <lb/>
+            sub imperio prædicto.</p>
+          <p>a Wallia regnavit ann. III. Belligerator fuit; cum <lb/>
+            inperatore Honorio pacem habuit, et sororem ejus <lb/>
+             <lb/>
+            Placidiam ci reddidit. Iste Hispanias ingressus, <lb/>
+            Vandalos et Sillingos (Al., Vandalos Selinguos] in <lb/>
+            Bætica bello exstinxit, et Alanos ad nihilum redegit.
+            <milestone unit="PLSection" n="D"/><lb/>
+            Ad Afri cam classc transire disposuit; sed Gaditanum <lb/>
+            mare eum non dimisit. In Gallias rediit, ibique vitat <lb/>
+            finivit sub imperio Honorii.</p>
+          <p>6. Teuderedus regnavit ann. XXXIII. Iste Litorium <lb/>
+            ducem Romanum, et cum co multa millia Romano­ <lb/>
+            rum exstinxit; ex Hunnis ducenta millia interfacit, <lb/>
+            ibique præliando occiditur sub Imperio Theodosii <lb/>
+            Minoris.</p>
+          <p>7. Turismundus filius ejus regnavit ann. I, qui dum <lb/>
+            feratis et noxius esset, a Theuderico, et Frigdario, <lb/>
+            et fratribus, interfectus sub imperatore Marciano.</p>
+          <p>8. Theuderius regnavit ann. XIII. Iste dum Go­ <lb/>
+            this Avito imperatori sumere auxilium dedi. i et ob <lb/>
+            huc inde cum licentia idem Aviti imperatoris cum in­ <lb/>
+            genti exercitu Hispanias intravit, et milliaro 12, au <lb/>
+            Asturica apud Urbicum fluvium Recchiatum Suevo­ <lb/>
+            rum regem prælio superavit, eumque persequens, <lb/>
+            in Portucale cepit atque occidit. Bractam [Forte. <lb/>
+            Bracharam cepit; sicque inde per Lusitaniam in <pb n="1117"/>
+            
+            <milestone unit="PLSection" n="A"/><lb/>
+            Gallias reddit; ibique ab Eorfco ejus fratre occisus <lb/>
+            suh imperatore Leone.</p>
+          <p>9. Euriens regnavit ann. XXVI. Iste Lusitaniam de­ <lb/>
+            prædavit, Pampilonam, et Caesaraugustam cupit, ct <lb/>
+            Gothis legem dedit. Arelate obii. sub imperatore <lb/>
+            Zenone.</p>
+          <p>- 10. Alaricus, filius ejus, regnavit ann. XXIII, quem <lb/>
+            Clodovæus rex Francorum apud Pictavium bello in­ <lb/>
+            terfecit. Ob cujus vindictam Theodericus 189 socer <lb/>
+            ejus Italiæ rex Francos perterruit, et regnum Gothis <lb/>
+            integrum restituit sub imperatore Anastasio.</p>
+          <p>11. Gesuleicus, Alarici filius, regnavit ann. IV. Iste <lb/>
+            a Gundebaldo Burgundionum rege in Narbona supe­ <lb/>
+            ratus, ad Barcilonam fugit. Inde ad Africam ad Van. <lb/>
+            tfalos pro auxilio perrexil, et non impetravit. Inde <lb/>
+            reversus, apol Barcilonam a duce Theuderici Italiæ <lb/>
+            regis interfectus sub imperatore Anastasio</p>
+          <p>12. Theudericus supradictus, occiso Gisaleico, <lb/>
+            regnum Gothorum tenuit ann. xv; et superstiti ne-
+            <milestone unit="PLSection" n="B"/><lb/>
+            poti suo Amalarico reliquit. Ipse Italiam rediit, et <lb/>
+            ibi vitam finivit sub imperatore Justiniano.</p>
+          <p>- 13. Amalaricus regnavit ann. v. Iste a Childeberto <lb/>
+            Francorum rege superatus, Narbone interiit sub im­ <lb/>
+            peratore Justiniano.</p>
+          <p>• 44. Theudis regnavit an. XVII. Iste, quamvis hære­ <lb/>
+            ticus, pacem concessit Ecclesiæ, et episcopis licen­ <lb/>
+            tiam dedit in Toletana urbe concilia peragere. Fran­ <lb/>
+            corum reges infra Hispanias usque Minium superavit; <lb/>
+            eumque in palatio quidam insaniam simulando inter­ <lb/>
+            fecit sub Imperatore Justiniano.</p>
+          <p>15. Theudisclus regnavit ann. I ; qui dum toros <lb/>
+            multorum macularet, et obiter multis necem excogi­ <lb/>
+            taret, mox inter epulas gladio Hispali jugulatur sub <lb/>
+            eodem Justiniano.</p>
+          <p>- 16. Agila regnavit an. v. Iste dum nd Cordubam <lb/>
+            urbem pugnaret, et in contemptu Christi sepulcrum <lb/>
+            sancti martyris Aciscli quodam hOrrore pollueret, <lb/>
+            filium ibi cum multa copia interfoctum, et omnem <lb/>
+            thesaurum regunt amisit, et Emeritam fugit; ibique
+            <milestone unit="PLSection" n="c"/><lb/>
+            sui eum interfecerunt sub imperatore Justiniano.</p>
+          <p>17. Athanagildus regnavit ann. XIV. Iste contra <lb/>
+            milites Justiniani imperatoris, quos ipse contra Agi­ <lb/>
+            lanem petierat, diu conflixit, atque eos exstinxit. <lb/>
+            Toleto morte propria decessit snb imperatore Justi­ <lb/>
+            niano.</p>
+          <p>18. Livua regnavit ann. III, in Narbona. Iste fratri <lb/>
+            Leovigildo Hispaniæ administrationem dedit; ipse <lb/>
+            Galliis praefuit.</p>
+          <p>19. Leovigildus, adepta Gallia, et Hispania, regna­ <lb/>
+            vit ann. xiv. Iste valde hæresi Arianæ deditus, per­ <lb/>
+            secutionem Cattholicis intulit, et ecclesiarum privi­ <lb/>
+            legia tulit. Massonam Emeritensium episcopum exsilio <lb/>
+            relegavit. Suis perniciosus fuit, potentes percupidi­ <lb/>
+            tatem damnavit. Suevos superavit, et Gallæciae re­ <lb/>
+            gnum Gothis admiscuit. Primus regali veste opertus <lb/>
+            solio resedit. Urbem in Celtiberia fecii, et Recopo­ <lb/>
+            lim nominavit. Gothorum leges ante correxit, et <lb/>
+            'Toleto propria morte decessit sub Mauricio impera-
+            <milestone unit="PLSection" n="D"/><lb/>
+            ore.</p>
+          <p>20. Recaredus, filius ejus, regnavit ann. XV. Iste, <lb/>
+            in exordio regni sui catholicam fidem adeptus, oni­ <lb/>
+            nem Gothorum gentem ad cultum Dei, rectæque fidei <lb/>
+            revocavit, et per synodum episcoporum Galliæ et <lb/>
+            Hispaniæ fidem catholicam confirmavit, Francorum <lb/>
+            hoste LX millia in Hispania bello prostravit, ct tem­ <lb/>
+            pora regni sui omni bonitate honoravit. Fine pacilico <lb/>
+            Toleto decessit, imperatore Mauricio.</p>
+          <p>21. Livua, filius ejus, regnavit ann. II. Istum præ-
+            <milestone unit="PLSection" n="A"/><lb/>
+            cisa dextra innocuum Wictericus occidit, et regnum <lb/>
+            sibi suscepit sub imperatore Mauricio.</p>
+          <p>190 22. Wictericus regnavil ann. VII, vir quidem <lb/>
+            strenuus in armorum arte, sed exspers victoriae; quod <lb/>
+            fecit recepit. Inter epulas enim prandii a suis inter­ <lb/>
+            fectus est sub imperatore Phoca.</p>
+          <p>23. Gundemarus regnavit annis II. Vaccones una <lb/>
+            expeditione vastavit, et morte propria Toleto deces­ <lb/>
+            sit sub imperio Heraclii.</p>
+          <p>24. Sisebutus regnavit ann. VIII. Iste potestate Ju­ <lb/>
+            dæos ad fidem Christi perduxit, et ecclesiam sanctæ <lb/>
+            LeocadiaE Toleto opere miro fundavit. Astures et <lb/>
+            Vascones in montibus rebellantes humiliavit, et suis <lb/>
+            per omnia benevolus fuit. Hunc quidam proprio <lb/>
+            morbo , alii potionis haustu immoderato asserunt <lb/>
+            occisum sub imperio Heraclii. Tunc nefandus Ma- <lb/>
+            homat in Africa nequitiam legis stultis populis præ­ <lb/>
+            dicavit</p>
+          <p>25. Suintila regnavit ann. x. Victoria et consilio
+            <milestone unit="PLSection" n="B"/><lb/>
+            magnus fuit. Vascones devicit, duos patricios Roma­ <lb/>
+            nos cepit; omnes Hispanim et Galliam strenue re­ <lb/>
+             <lb/>
+            XII, et ob mentum pater pauperum vocatus est ; et <lb/>
+            fine proprio Tolcto decessit sub imperio Heraclii.</p>
+          <p>26. Sisenandus regnavit ann. rv. Iste synodos epi­ <lb/>
+            scoporum egit; patiens fuit, ct regulis catholicis or­ <lb/>
+            thodoxus exstiitit Toleto vitam finivit sub imperio <lb/>
+            Heraclii</p>
+          <p>27. Chintila regnavit ann. III. Synodos plurimas <lb/>
+            Toleto cum episcopis egit, et subditum regnum fide <lb/>
+            firmavit. Toleto decessit sub imperio Heraclii.</p>
+          <p>28. Tulga regnavit ann. III. Blandus in omnia <lb/>
+            fuit.</p>
+          <p>29. Chindasuinthus regnavit solus ann. V!, et cunt <lb/>
+            filio suo Reccesuintho ann. IV. Hujus tempore quie­ <lb/>
+            vit Hispania, ct per synodos erudivit Ecclesiam. To- <lb/>
+            Icto obiit sub imperio Constantini Novi.</p>
+          <p>50. Wamba regnavit ann. IX. Primo regni sui anno
+            <milestone unit="PLSection" n="c"/><lb/>
+            rebellante sibi Paulo duce cum quadam parte Hispa­ <lb/>
+            niæ, prius feroces Vascones in finibus Cantabriæ <lb/>
+            perdomuit; deinde cunctis civitatibus Gothiæ et <lb/>
+            Galliæ captis, ipsum postremo Paulum iu Nemau­ <lb/>
+            sense urbe victum celebri triumpho sibi subjecit. <lb/>
+            Postea ab Ervigio regno privatur sub imperio Con­ <lb/>
+            stantini Novi.</p>
+          <p>31. Ervigius regnavit ann. vi. Iste synodos mul­ <lb/>
+            tas Toleto cum episcopis egit; filiam suam conjugem <lb/>
+            dedit Egicani. Toleto obiit sub imperio Justiniani.</p>
+          <p>32. Egica regnavit ann. xv. Iste dum regnum ac­ <lb/>
+            cepit, filiam Ervigii cum juratione Wambæ subjecit. <lb/>
+            Filium suam Witizanem principem secu n regno <lb/>
+            præfecit. Toleto decessit sub imperio Leonis.</p>
+          <p>33. Witiza rgnavit ann. x. Toleto vitam finivit <lb/>
+            sub imperio Tiberii.</p>
+          <p>34. Rudericus regnavit ann. III. Istius tempore era <lb/>
+            752, Farmalio terræ Saraceni evocati Hispanias oc­ <lb/>
+            cupaverunt, regnumque Gothorum ceperunt; quod
+            <milestone unit="PLSection" n="D"/><lb/>
+            adhuc usque ex parte pertinaciter possident; et cum <lb/>
+            Christianis die noctuque bella incunt, et quotidie <lb/>
+            conlfigunt, dum prædestinatio usque divina dehinc <lb/>
+            eos expelli crudeliter jubeat. Reges G othorum defe­ <lb/>
+            cerunt. Sunt (sic) sub uno ann. 314; Alarico re­ <lb/>
+            gnane ab era 301, ingressi sunt Gothi in Italiam. <lb/>
+            Post hujus annos reges Coiti Galliam ingressi sunt. <lb/>
+            191 Post septem annos Gothi Hispaniam migrave­ <lb/>
+            runt. In era D. IX; LXV. (forte, 835) regnavit Carolus <lb/>
+            Francorum rex, et patricius Romæ.</p><pb n="-"/>
+            
+        </div>
+        
+        </body></text></TEI>

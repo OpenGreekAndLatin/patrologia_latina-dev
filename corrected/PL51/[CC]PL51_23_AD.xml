@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><TEI xmlns="http://www.tei-c.org/ns/1.0"><teiHeader>
+    
+		<fileDesc>
+			<titleStmt>
+				<title>Patrologiae Cursus Completus. Series Latina (PL)</title>
+				<sponsor>University of Leipzig</sponsor>
+				<funder>European Social Fund Saxony</funder>
+				<principal>Gregory Crane</principal>
+				<respStmt>
+					<persName xml:id="Jouve">Jouve</persName>
+					<resp>OCR-ed, corrected and encoded the text</resp>
+				</respStmt>
+				<respStmt>
+					<persName>Greta Franzini</persName>
+					<resp>Project Manager (University of Leipzig)</resp>
+				</respStmt>
+				<respStmt>
+					<persName>Simona Stoyanova</persName>
+					<resp>Project Assistant (University of Leipzig)</resp>
+				</respStmt>
+				<respStmt>
+					<persName>Bruce Robertson</persName>
+					<resp>Technical Advisor (Mount Allison University)</resp>
+				</respStmt>
+			</titleStmt>
+
+			<publicationStmt>
+				<authority>University of Leipzig</authority>
+				<idno type="filename">PL51.xml</idno>
+				<availability>
+					<licence target="https://creativecommons.org/licenses/by-sa/4.0/">Available under a
+						Creative Commons Attribution-ShareAlike 4.0 International License</licence>
+				</availability>
+				<date>2014</date>
+				<publisher>University of Leipzig</publisher>
+				<pubPlace>Germany</pubPlace>
+			</publicationStmt>
+
+			<sourceDesc>
+				<listBibl xml:lang="la">
+					<biblStruct>
+						<monogr>
+							<editor>
+								<persName>
+									<name xml:lang="fr">Jacques Paul Migne</name>
+								</persName>
+							</editor>
+							<author>Prosperus Aquitanus</author>
+							<title>Epistola Ad Augustinum</title>
+							<title>Epistola Ad Rufinum 'De Gratia Et Libero Arbitrio'</title>
+							<title>Peri Axariston. Seu De Ingratis Carmen In Quatuor Partes Distributum</title>
+							<title>Epigrammata In Obtrectatorem Augustini</title>
+							<title>Epigrammata In Quempiam Augustini Obtrectatorem</title>
+							<title>Epitaphium Nestorianae Et Pelagianae Haereseon</title>
+							<title>Pro Augustino Responsiones Ad Capitula Gallorum</title>
+							<title>Responsiones Ad Capitula Objectionum Gallorum Calumniantium</title>
+							<title>Pro Augustino Responsiones Ad Capitula Objectionum Vincentianarum</title>
+							<title>Pro Augustino Responsiones Ad Excerpta Genuensium</title>
+							<title>Pro Defensione Augustini Contra Cassiani Presbyteri Librum</title>
+							<title>Expositio Psalmorum A Centesimo Usque Ad CL</title>
+							<title>Sententiarum Ex Operibus Augustini Delibatarum Liber Unus</title>
+							<title>Epigrammatum Ex Sententiis Sancti Augustini Liber Unus</title>
+							<title>Chronicum Integrum In Dua Partes Distributum</title>
+							<title>Chronicum Integrum In Dua Partes Distributum [Appendicula]</title>
+							<title>Confessio [Incertus]</title>
+							<title>Poema Conjugis Ad Uxorem [Incertus]</title>
+							<title>Carmen De Providentia Divina [Incertus]</title>
+							<title>Libri Duo De Vocatione Omnium Gentium [Incertus]</title>
+							<title>Liber De Promissionibus Et Praedictionibus Dei A Nonnullis [Incertus]</title>
+							<title>Chronicum Alterum Sive Pseudochronicum [Incertus]</title>
+							<imprint>
+								<publisher>Garnier</publisher>
+								<pubPlace>Paris</pubPlace>
+								<date>1846</date>
+							</imprint>
+							<biblScope unit="volume">51</biblScope>
+						</monogr>
+						<monogr>
+							<title>Concilium Arausicanum I</title>
+							<imprint>
+								<publisher>Garnier</publisher>
+								<pubPlace>Paris</pubPlace>
+								<date>1846</date>
+							</imprint>
+							<biblScope unit="volume">51</biblScope>
+						</monogr>
+						<monogr>
+							<author>Idatius Aquaeflaviensis Episcopus</author>
+							<title>Chronicum</title>
+							<title>Descriptio Consulum Ex Quo Primum Ordinati Sunt [Codex Parisiensis]</title>
+							<imprint>
+								<publisher>Garnier</publisher>
+								<pubPlace>Paris</pubPlace>
+								<date>1846</date>
+							</imprint>
+							<biblScope unit="volume">51</biblScope>
+						</monogr>
+						<monogr>
+							<author>Marcellinus Comes</author>
+							<title>Chronicum</title>
+							<imprint>
+								<publisher>Garnier</publisher>
+								<pubPlace>Paris</pubPlace>
+								<date>1846</date>
+							</imprint>
+							<biblScope unit="volume">51</biblScope>
+						</monogr>
+						<ref target="http://hdl.handle.net/2027/pst.000017928816">HathiTrust</ref>
+
+					</biblStruct>
+				</listBibl>
+			</sourceDesc>
+
+		</fileDesc>
+		<encodingDesc>
+			<p>The following text is encoded in accordance with EpiDoc standards and with the CTS/CITE
+				Architecture.</p>
+		<refsDecl>
+        <cRefPattern n="" matchPattern="(.+).(.+).(.+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@type='edition']/tei:div[@n='$1']/tei:div[@n='$2']/tei:div[@n='$3'])"/>
+        <cRefPattern n="" matchPattern="(.+).(.+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@type='edition']/tei:div[@n='$1']/tei:div[@n='$2'])"/>
+        <cRefPattern n="" matchPattern="(.+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@type='edition']/tei:div[@n='$1'])"/>
+      </refsDecl>
+    </encodingDesc>
+
+		<profileDesc>
+			<langUsage>
+				<language ident="la">Latin</language>
+			</langUsage>
+		</profileDesc>
+
+	</teiHeader>
+	<text><body><div type="edition" n="">
+					<ab>
+						<title type="sub">ADMONITIO IN CARMEN DE PROVIDENTIA DIVINA.</title>
+					</ab>
+					<p>Ut carmen de Providentia divina genuinis Operibus sancti Prosperi Aquitani sine
+						scrupulo non accenseatur, <lb/> nec tamen stotim inter supposita numeretur, suadent
+						diversa eruditorum de eo judicia. EI,; enim primo sub sancti <lb/> Prosperi Aquit mi
+						Nomine prodierit in editione Lugdunensi anno 1539, diu est tamen cum ab alii Operum
+						sancti <lb/> Prosperi editoribus cum hac cautione editum est, ut sedulo observaretur
+						Prosperi non videri carmen hoc, sed cu­ <lb/> juspiam haud integre gratiam Christi
+						explica tis. Id enimvero notatum legimus in editionibus antiquis, Lovaniensi <lb/> anno
+						1565 studio Joannis Sotelli collegii minoris theologorum Lovaniensium alumni procurata;
+						tum in Dua. <lb/> censi anno 1576, curis Joannis Olivarii perfecta, quam Coloniensis
+						anni 1630 et aliæ subsequentes de verbo ad <lb/> verbum sunt imitatæ. In illa autem
+						Duacensi editione doctissimus editor, in epistola ad lectorem, cum catalogum <lb/>
+						contexit Operum a se emendatorum et in lucem emittendorum, ac de singulis judicium suum
+						paucis profert, de <lb/> hoc quem in manibus habemus sic pronunti it: &lt; Carmen
+						(inquit) de Providentia Dei a D. Prosperi Operibus re­ <lb/> moven dum duximus, quia
+						Pelagianæ doctrinæ est, cui Prosper infestissimus fuit. Docet enim optimum quemque <lb/>
+						non plus grat æ accipere quam pessimum; sanctos patres ex lege naturæ bonos fuisse; a
+						voluntate nostra præve- <lb/> niti auxilium DIi, et alia multa errore Pelngii consona,
+						quæ divo Prospero nu nquam placuerunt. Nec novum <lb/> est (subdit ille) magnorum
+						virorum scriptis opera quædam hæreticorum inseri: cum inter libro Hieronymo ascri­ <lb/>
+						ptos reperiamus et epistolam Pelagii ad Demetriadem. et Commentarios breves in omnes
+						Epistolas Pauli, excepta <lb/> ea quæ est ad Hebræos; similiter epistolam Cælestti ad
+						parentem de scientia divinæ legis: item epistolam de duo­ <lb/> bus filiis frugi v!
+						luxurioso, non illam quæ est ad Damasum. sed quæ incipit, Omnium quidem de Scripturis.
+						elc., <lb/> et alia multa, quæ non sunt hoc loco recensenda Ad quem modum etiam inter
+						Augustini Opera irrepsit liber <lb/> Quæstionum veteris et novi Testamenti. qui inter
+						caetera asserit Melchisedech esse Spiritnm sanctum, sacerdotem­ <lb/> que summum: quam
+						ob rem merito est a divo Hieronymo in epistola ad Evagrium rejectus. Eodem errore
+						(pergit <lb/> ille) inscribitur liber Gennadii de Eecclesiasticis Dogmatibus Augustino;
+						cui, quoniam non satis catholicus est, <lb/> studiosus quispiam ex epistola prima
+						Cœlestini et concilio Arausicano secundo aliquot capitula subjecit, nempe <lb/> 22, 29
+						et sequentia. Quæ licet ejusdem libri esse videantur, tamen in nonnullis exemplaribus
+						tam impressis quam <lb/> scriptis omissa invemuntur, sicque cupiti vigesimo primo libri
+						ejusdem ex professo repugnant, ut aliquantulum <lb/> consideranti satis statim eluceat,
+						non nisi ad ejus redargutionem esse annexa. Quo consilio (concludit ille) et car­ <lb/>
+						men de Providentia adjunctum videtur carmini de Ingratis, ne cum esset pernidosum, suo
+						careret antidoto, si <lb/> sejunctim legeretur. » Hæc ille.</p>
+					<p>Utriasque ju icio assentitur Bellarminus in libro de Ecclesiasticis Scriptoribus, in
+						quo eminentissimus et eru­ <lb/> ditissimus auctor hoc ipsum opus semipelagiano potius
+						quam sancto Proapero tribuendum esse judicavit. Auctor <lb/> quoque novæ Bibliothecæ
+						Scriptorum Ecclesiasticorum. parte II tomi tertii, eadem fere quæ supra in poematis
+						<lb/> parente arguens, hæc praecise esse notat quæ Prosper impugnavit, tam in suo contra
+						Ingratos poemate, quam in <lb/> aliis suis operibus. Nec si supponatur cum auctore
+						Dissertationis in Opera sancti Prospri hunc quædam sancti <lb/> Augustini doctrinæ
+						emotimenta quæsisse. ullatenus verosimile esse contendit. eo usque tantum virum declina­
+						<lb/> turum fuisse, ut quod alias totis viribus impugnarit, scriptorum priorum velut
+						oblitus, hic imprudenter propu­ <lb/> gnaret.</p>
+					<p>. Atque ut lectores non lateat qua potissimum loca eo in opere supra dictis
+						displicuerint, id observatum ab edi­ <lb/> tione Lovaniensi et deinceps, ut duplici
+						virgula in margine apposita signarentur quæ reprehensionem mererentur; <lb/> quod et nos
+						pariter observandum duximus. Et licet, ex benigniori quorumdam sementia in hnnc librum,
+						hæcet <lb/> alia istiusmodi per opus de Providentia Dei respersa, ex parte saltem ad
+						catholici sensus normam aptari queant; <lb/> vix tamen omnia ( ex Antelmii judicio
+						(Dissert. 9 de Ver. Oper. SS. PP. Leonis et Prosperi ad Prosperianos <lb/> conceptus
+						congruenter reducentur. Qnia de arbitrii naturali possibilitate, et de virtutum residuo
+						post peccatum <lb/> semine, aliter interdum mentem suam aperire studuit sanctus
+						Aquitanus noster.</p>
+					<p>Hinc factum est ., alius a Prospero auctor huic operi a nonnullis quaTeretur. Quos
+						inter Henricus Norisius <lb/> lib. II Historice Pelagianæ cap. 13, Hilarium Arelatensem
+						hujus carminis auctorem esse suspicutus est, cum illud <lb/> semipelagianum esse pateat.
+						Quod si tam aperte prateret quam putat vir doctus, magis hœc illi suspicio ableganda
+						<lb/> foret, cum Hilarius e contra nullo ex probato testimonio ad semipelagianorum
+						partes transisse convincatur, ut <lb/> demonstravit alias Antelmius in Lirinensium
+						secretis.</p>
+					<p>Ad investigandum porro carminis hujus auctorem quod attinet, nihil ultra ex Gennadio
+						scriptorum sui tempo­ <lb/> ris recensiture pro Hilario suspicari datur. Quippe qui
+						postquam de eodem in Cataloqo rap. 69 ait. Absque per­ <lb/> sonarum acceptationibus
+						ommbus castigati onem ingessit, ut prrefert ms. codex Biblio A. Benedictinœ Sancti <lb/>
+						Germani Pratensis ante annos mille in membrana exaratus; cum alii tam editi quam mss.
+						habeant, Sine perso­ <lb/> narum zxceptione et acceptione omnibus castigatum opus
+						prædicationis ingessit; quæ sensum adeo clarum <lb/> non reddunt, et minus
+						consequentibus cohærent; post ista, inquam, relata, non nisi aliqua et parva tantum
+						Hila­ <lb/> rium edidisse refert Massilienss presbyter, ex quibus, quæ illi præcipua
+						est, sancti Honorati Arelatensis Vita <lb/> dumtaxat recensetur. Quod vero alter
+						Honoratus, Massiliensis scilicel, in Hilarii Vita, præter multa præclara <lb/>
+						copioseque relicia ingenii moni nenta, co posuisse testatur etiam vorsus f ontis
+						ardentis, hoc præconium illis de <lb/> Providentia versibus congruenter aptari posse
+						censet supradictus Antelmius; et si forsan ( subdit ille) divinare <lb/> tam obvium non
+						esset cur Gennadius illorum mentionem non fecisset, si tam eorum sensi quam auctorem
+						senti­ <lb/> pelagianum aperte cognovisset. Idem tamen doctissimus censor monet, hæc
+						carmina in nonnullis caute esse le­ <lb/> gendu, viro tamen pio ac erudito, et Hilario
+						haud impari non esse indigna; cum, his paucis demptis, sentiat us <lb/> Prosper anonymus
+						iste, in quo sensus et verba Prospero familiaria, elocutionesque Prosperianis similes
+						observal, <lb/>
+						<pb n="617"/> Quo factum est ut Labbeus libro de Scriptoribus Ecclesiaticis, licet a
+						Joan. Hessels et Joan. Olivario. quos ips, <lb/> non improbat, idcirco annexum fuerit,
+						ut jam observatum est, opusculo huic poema de Ingratis, non quod istud <lb/> initio
+						Prosperi existimatum sit, sed ut remedium præsens veneno pararetur; ille tamen in hoc
+						propendent ut credat <lb/> ex Prosperianis lineumentis quæ in hoc opere agnovisse se
+						existiimat, primum deceptos librarios hoc opus indabi. <lb/> tanter Aquitano nostro
+						affinxisse ; ea pene indiligentia, qua tractatus alios istius stylo magis repugnantes
+						eidem <lb/> ascribere non dubitarunt ; etsi illud ipsum ab Hincmaro ut Prosperianum
+						recognitum esse legatur, quod quidem 9 <lb/> sententiam antiquiorem probat. Huic autem
+						opinioni occasio nasci potuit quod scriptor ille ævo Prosperi floruit. <lb/> carptimque
+						suo in carmine Vandalorzum Getarumque seu Gothorum in solum nostrum irruptiones
+						attigerit, quo­ <lb/> rum sanc us Prosper et testis et narrator fuit in Chronicis.</p>
+					<p>Qua omnia attentius considerans supradictus Censor, nec ultum hac tempestate in
+						Galliis, ubi hæc praecipue <lb/> contigerunt, scriptorem alicujus nominis huic
+						elucubrando carmini idoneum animadvertens, facile tribueret hoc <lb/> opus Prospero
+						noxtro, nisi aliunde dissimulare sibi nequiret quantum differat carmen istud a
+						castigatissimis sen­ <lb/> sibus sancti Prosperi. Unde quousque ex dortiorum criticorum
+						examine et judicio lux major affulgeat, a judicio <lb/> hac in re ferendo abstinendum
+						sibi putavit. Cui nos quoque hac in parte subscribimus.</p>
+					<p>Cum autem per decem annos integros hic descriptis calamitatibus oppressæ ingemuerint
+						Galliæ nostræ, in quas <lb/> sub anni 406 finem irruperant Barbari; quo tempore Auctor
+						anlea scribendis carminibus venam exercere assuetus, <lb/> publicarum miseriarum, partem
+						non modicam ferens, a scribendo retardatus fuerat; tandem anno, ut videtur, <lb/> 416,
+						iterum se ad opus tamdiu intermissum accinxit. Unde operis ætatem facile agnoscas.</p>
+					</div>
+				</body></text></TEI>

@@ -1,0 +1,1344 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><TEI xmlns="http://www.tei-c.org/ns/1.0"><teiHeader>
+    
+		<fileDesc>
+			<titleStmt>
+				<title>Patrologiae Cursus Completus. Series Latina (PL)</title>
+				<sponsor>University of Leipzig</sponsor>
+				<funder>European Social Fund Saxony</funder>
+				<principal>Gregory Crane</principal>
+				<respStmt>
+					<persName xml:id="Jouve">Jouve</persName>
+					<resp>OCR-ed, corrected and encoded the text</resp>
+				</respStmt>
+				<respStmt>
+					<persName>Greta Franzini</persName>
+					<resp>Project Manager (University of Leipzig)</resp>
+				</respStmt>
+				<respStmt>
+					<persName>Simona Stoyanova</persName>
+					<resp>Project Assistant (University of Leipzig)</resp>
+				</respStmt>
+				<respStmt>
+					<persName>Bruce Robertson</persName>
+					<resp>Technical Advisor (Mount Allison University)</resp>
+				</respStmt>
+			</titleStmt>
+
+			<publicationStmt>
+				<authority>University of Leipzig</authority>
+				<idno type="filename">PL51.xml</idno>
+				<availability>
+					<licence target="https://creativecommons.org/licenses/by-sa/4.0/">Available under a
+						Creative Commons Attribution-ShareAlike 4.0 International License</licence>
+				</availability>
+				<date>2014</date>
+				<publisher>University of Leipzig</publisher>
+				<pubPlace>Germany</pubPlace>
+			</publicationStmt>
+
+			<sourceDesc>
+				<listBibl xml:lang="la">
+					<biblStruct>
+						<monogr>
+							<editor>
+								<persName>
+									<name xml:lang="fr">Jacques Paul Migne</name>
+								</persName>
+							</editor>
+							<author>Prosperus Aquitanus</author>
+							<title>Epistola Ad Augustinum</title>
+							<title>Epistola Ad Rufinum 'De Gratia Et Libero Arbitrio'</title>
+							<title>Peri Axariston. Seu De Ingratis Carmen In Quatuor Partes Distributum</title>
+							<title>Epigrammata In Obtrectatorem Augustini</title>
+							<title>Epigrammata In Quempiam Augustini Obtrectatorem</title>
+							<title>Epitaphium Nestorianae Et Pelagianae Haereseon</title>
+							<title>Pro Augustino Responsiones Ad Capitula Gallorum</title>
+							<title>Responsiones Ad Capitula Objectionum Gallorum Calumniantium</title>
+							<title>Pro Augustino Responsiones Ad Capitula Objectionum Vincentianarum</title>
+							<title>Pro Augustino Responsiones Ad Excerpta Genuensium</title>
+							<title>Pro Defensione Augustini Contra Cassiani Presbyteri Librum</title>
+							<title>Expositio Psalmorum A Centesimo Usque Ad CL</title>
+							<title>Sententiarum Ex Operibus Augustini Delibatarum Liber Unus</title>
+							<title>Epigrammatum Ex Sententiis Sancti Augustini Liber Unus</title>
+							<title>Chronicum Integrum In Dua Partes Distributum</title>
+							<title>Chronicum Integrum In Dua Partes Distributum [Appendicula]</title>
+							<title>Confessio [Incertus]</title>
+							<title>Poema Conjugis Ad Uxorem [Incertus]</title>
+							<title>Carmen De Providentia Divina [Incertus]</title>
+							<title>Libri Duo De Vocatione Omnium Gentium [Incertus]</title>
+							<title>Liber De Promissionibus Et Praedictionibus Dei A Nonnullis [Incertus]</title>
+							<title>Chronicum Alterum Sive Pseudochronicum [Incertus]</title>
+							<imprint>
+								<publisher>Garnier</publisher>
+								<pubPlace>Paris</pubPlace>
+								<date>1846</date>
+							</imprint>
+							<biblScope unit="volume">51</biblScope>
+						</monogr>
+						<monogr>
+							<title>Concilium Arausicanum I</title>
+							<imprint>
+								<publisher>Garnier</publisher>
+								<pubPlace>Paris</pubPlace>
+								<date>1846</date>
+							</imprint>
+							<biblScope unit="volume">51</biblScope>
+						</monogr>
+						<monogr>
+							<author>Idatius Aquaeflaviensis Episcopus</author>
+							<title>Chronicum</title>
+							<title>Descriptio Consulum Ex Quo Primum Ordinati Sunt [Codex Parisiensis]</title>
+							<imprint>
+								<publisher>Garnier</publisher>
+								<pubPlace>Paris</pubPlace>
+								<date>1846</date>
+							</imprint>
+							<biblScope unit="volume">51</biblScope>
+						</monogr>
+						<monogr>
+							<author>Marcellinus Comes</author>
+							<title>Chronicum</title>
+							<imprint>
+								<publisher>Garnier</publisher>
+								<pubPlace>Paris</pubPlace>
+								<date>1846</date>
+							</imprint>
+							<biblScope unit="volume">51</biblScope>
+						</monogr>
+						<ref target="http://hdl.handle.net/2027/pst.000017928816">HathiTrust</ref>
+
+					</biblStruct>
+				</listBibl>
+			</sourceDesc>
+
+		</fileDesc>
+		<encodingDesc>
+			<p>The following text is encoded in accordance with EpiDoc standards and with the CTS/CITE
+				Architecture.</p>
+		<refsDecl>
+        <cRefPattern n="" matchPattern="(.+).(.+).(.+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@type='edition']/tei:div[@n='$1']/tei:div[@n='$2']/tei:div[@n='$3'])"/>
+        <cRefPattern n="" matchPattern="(.+).(.+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@type='edition']/tei:div[@n='$1']/tei:div[@n='$2'])"/>
+        <cRefPattern n="" matchPattern="(.+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@type='edition']/tei:div[@n='$1'])"/>
+      </refsDecl>
+    </encodingDesc>
+
+		<profileDesc>
+			<langUsage>
+				<language ident="la">Latin</language>
+			</langUsage>
+		</profileDesc>
+
+	</teiHeader>
+	<text><body><div type="edition" n="">
+					<head>
+						<title type="main">IDATII EPISCOPI DESCRIPTIO CONSULUM EX QUO PRIMUM ORDINATI SUNT. Ex
+							Codice ms, biblothecae collegii Parisiensis soc. Jesu. Annos ab Urbe condita
+							 Varronianos  ad oram addidit Labbeus.</title>
+					</head>
+					<p>
+						<milestone unit="PLSection" n="A"/>245 <note n="a"/> Bruto et Collatino.</p>
+					<p>246 Publicola et Lucretio</p>
+					<p>247 Publicola II et Publilio   . ],</p>
+					<p>248 Omissi Lartius et Exquilinus.</p>
+					<p>249 Omissi Valerius et  Tubertus .</p>
+					<p>250 Publicola III et Lucretio II.</p>
+					<p>251 Menenio Agrippa et Postumio.</p>
+					<p>252 Tricosto et  Vitellino [Al , Viscellino]  , Viscellino].</p>
+					<p>253 Aurunco et  Flavo .</p>
+					<p>254 Camerino et Longo (Cic. in Bruto  n . 62).</p>
+					<p>255 Helva et  Gemino .</p>
+					<p>256 Flavo et  Sifulo [AI . Siculo]  . Siculo].</p>
+					<p>257  Atratino  et Augurino.</p>
+					<p>258 Albo et Coelimontano.</p>
+					<p>259 Sabino et Prisco.</p>
+					<p>
+						<milestone unit="PLSection" n="I"/>260 Coelimontano II et Vitellino III  [Al . Gemino II] . 
+						II].</p>
+					<p>261 Aurunco II et Vitellino.</p>
+					<p>362    . Macerino] et  Augurino .</p>
+					<p>263 Augurino II et  Atratino .</p>
+					<p>264 Camerino et Flabio  [Al . FlaveJ . . .</p>
+					<p>265    . ] et Ruffo. <lb/> His  conss . Romani proceres dicti sunt.</p>
+					<p>266 Nautio et Rufo  [AI . Fuso vel Furio] .   Furio].</p>
+					<p>267  Tusco  et  Sabino .</p>
+					<p>268  Rutilio   Rutilo] et Viscellino.</p>
+					<p>260 Fabio et Maluginense.</p>
+					<p>270 Mamerco et Fabio.</p>
+					<p>271 Fabio et  Velesio [Al . Valerio]  . Valerio].</p>
+					<p>272 Tertullo   . Julo et Fabio II.</p>
+					<p>273 Sabino et Fuso.</p>
+					<p>274 Cincinnato et Fabio III.</p>
+					<p>
+						<milestone unit="PLSection" n="C"/>275  Rutilio  et Fabio IV.</p>
+					<p>276  Aemilio  II et  AEsculino [Al . Esquilino]  . Esquilino].</p>
+					<p>277 Laenate et Publilio [Al.  Lanato  et Pulville].</p>
+					<p>278 Omissi Tricostus et Structus.</p>
+					<p>279 Nautio et Publicola.</p>
+					<p>280    . Manlio] et Furio.</p>
+					<p>281  Aemilio  et Julio.</p>
+					<p>282 Pinario et  Fusco [Al . Fuso]  . Fuso].</p>
+					<p>283 Sabino et Capitolino.</p>
+					<p>284  Aemilio  et Valerio.</p>
+					<p>285 Coelimontano et Prisco II.</p>
+					<p>286  Capitolino et   Prisco.</p>
+					<p>287  Aemilio  II et Vibulano.</p>
+					<p>
+						<milestone unit="PLSection" n="A"/>288 Regilliano et Fusco   . Prisco].</p>
+					<p>289 Omissi Capitolinus III et Fabius II.</p>
+					<p>290 Prisco   . Fuso] et Albo.</p>
+					<p>291 Omissi Priscus et Elva.</p>
+					<p>292  Tricipitino  et Veturio.</p>
+					<p>295 Gallo et Camerino.</p>
+					<p>294 Publicola II et Sabino.</p>
+					<p>295 Vibulano et Maluginense.</p>
+					<p>296 Nautio et Atratino.</p>
+					<p>297 Publilio et Hilario  [Al . Pulvillo et Augurino] . Pulvillo  Augurino].</p>
+					<p>298 Maximo et Virginio.</p>
+					<p>299    . Romilio] et Veturio.</p>
+					<p>500 Capitolino et Varo  [Al . AEternio vel Aterio] .   Aterio].</p>
+					<p>301 Festo et  Quintillo [AI . Quintilio]  . Quintilio].</p>
+					<p>502 Laenate et Capitolino. <milestone unit="PLSection" n="I"/><lb/> His  Conss . [Forte Sine . 
+						 conss.] decemviri <lb/> creati priores et posteriores annis II.</p>
+					<p>505 Barbato et Potito.</p>
+					<p>506 Herminio et Tricosto.</p>
+					<p>307  Macerino  et  Julio .</p>
+					<p>508 Furio et Capitolino.</p>
+					<p>309 Genutio et Curtio. <lb/> His  conss . tribuni plebis facti tres anno I.</p>
+					<p>310 Omissi Mugillanus et Atratinus.</p>
+					<p>311  Macerino  et Capitolino.</p>
+					<p>312 Vibulano et Helva.</p>
+					<p>313    . Pacilo] et Crasso.</p>
+					<p>314 Omissi Macerinus et Lanatus.</p>
+					<p>315  Maltio [AI . Menenio]  . Menenio] et Capitolino. <lb/> His  conss . [ Forte Sine . [   conss.] item
+						tribuni <lb/> plebis tres ann. II.</p>
+					<p>
+						<milestone unit="PLSection" n="c"/>317 Macerino et Fidenate.</p>
+					<p>318  Maluginense  et Crasso.</p>
+					<p>319  Julio  et Virginio.</p>
+					<p>320 Capitolino et Camerino. <lb/> His  conss . [Forte Sine . Forte  conss.  item tribuni  ! <lb/>
+						plebis  tres  ann. II.</p>
+					<p>323 Penno et Mentone.</p>
+					<p>324 Crasso et Julio,</p>
+					<p>525 Tricipitino et Fidenate II.</p>
+					<p>326  Cosso  et Poeno   . Penno].</p>
+					<p>327 Achilla   . Ahala] et Mugillano. <lb/> His  conss . [Forte Sine .   conss.] item tribuni
+						<lb/> plebis tres annis III . <note type="footnote"> • Hanc partem, usque ad annuau
+							Christi 270, non edidit Sirmondus. Vide ipsius praefationem. </note><pb n="893"/>
+						<milestone unit="PLSection" n="A"/><lb/> 331 Atratino et  Vibulano .</p>
+					<p>332 Capitolino et Vibulano. <lb/> His  conss . [Forte Sine .   conss.] item tribuni <lb/>
+						plebis quatuor annis VIII.</p>
+					<p>341 Omissi Cossus et Medullinus.</p>
+					<p>342 Omissi Ambustus et Pacilus.</p>
+					<p>343 Mugillano et  Rutilio [Al . Rutilo]  . Rutilo].</p>
+					<p>344  Aemilio  et Rustico  [Al . C . Valerio] . . Valerio].</p>
+					<p>345  Cosso  et Medullino. <lb/> His  conss . [Forte Sine .   conss. item tribuni <lb/> plebis
+						IV, et II, et VI, annis xv,</p>
+					<p>361 Flavo et Camerino.</p>
+					<p> 362  Potito et Capitolino. <lb/> His  conss . [Forte Sine .   conss.] item tribuni <lb/> plebis
+						creati sunt annis XVIII, postea annis IV ; <milestone unit="PLSection" n="B"/><lb/> nemo
+						curulis magistratus fuit. Item tribuni  plebis . <lb/>  VI.</p>
+					<p>  .   ,  Mamertino  Mamercino] et <lb/> Laterano.</p>
+					<p>389 Genucio et Curtio,</p>
+					<p>390 Petico et Galva   . Calvo].</p>
+					<p>391  Mamertino II   et Silla   . Genucio].</p>
+					<p>392 Ahala et Genucio.</p>
+					<p>393 Stolone et  Petino   Fetico].</p>
+					<p>394 Omissi Balbus et Ambustus.</p>
+					<p>395 Libone  [Al . Manlio . Vide Sigon . . .  . et Laenate.</p>
+					<p>396 Ambusto et Proculo.</p>
+					<p>397 Rustico et  Gapitolino [Al . Rutilo]  . Rutilo].</p>
+					<p>398  Ambusto II   et Laenate.</p>
+					<p>399  Polito [AI . Petico]  . ] et Publicola.</p>
+					<p>
+						<milestone unit="PLSection" n="C"/>400 Omissi Ambustus III et Capitolinus.</p>
+					<p>401 Desunt Peticus IV et Poplicola  II .</p>
+					<p>402  Desunt  P. Publicola et Rutilus II.</p>
+					<p>403 Roetico et Poeno  [Al . Petico et Penno] . Petico  Penno].</p>
+					<p>404 Scipione et Laenate II.</p>
+					<p>405 Camillo et Crasso.</p>
+					<p>406 Corvino et Laenate III.</p>
+					<p>407 Veneco   . ] et Torquato.</p>
+					<p>408 Corvino II et Libone.</p>
+					<p>409    . Dorsone] et Camerino.</p>
+					<p>410 Rutilo et Torquato II.</p>
+					<p>411 Corvino III et Cosso.</p>
+					<p>412 Ahala et Rutilo II.</p>
+					<p>413 Venoce   . Vennone] II  et Mamertino .</p>
+					<p>414 Torquato III et Musone   . .</p>
+					<p>
+						<milestone unit="PLSection" n="D"/>415 Mamertino et Seleno   . Philone].</p>
+					<p>416 Camillo et Moenio.</p>
+					<p>417 Festo   . Paeto] et Longo.</p>
+					<p>418 Crasso et  Dulillo [Al . DuillioJ  . .</p>
+					<p>419 Regulo et Corvino.</p>
+					<p>420 Albino et  Galbino [Al . Calvino]  . Calvino]. Vide Sigon,</p>
+					<p>421 Ann. iste coss. nullos habuit.</p>
+					<p>422 Galbino et Cosso.</p>
+					<p>423  Potito  et Marcello.</p>
+					<p>424 Crasso et Venoce   . Vennone]</p>
+					<p>425 Mamertino II et Deciano.</p>
+					<p>426 Venoce II et Scipione.</p>
+					<p>427 Lentulo et  Sitone [Al . Philone] .  . Philone]. *</p>
+					<p>428 Libonio   . Libone] et Cursore. <milestone unit="PLSection" n="A"/><lb/> 429
+						Camillo et Bruto.</p>
+					<p>His  conss . [Forte sine .   conss.] tum dictator <lb/> creatus Papyrius Cursor, et magister
+						equitum <lb/> Drusus.</p>
+					<p>431 Longo et Cerretano.</p>
+					<p>432 Cursore et Rullo [Al. Max, Rulliano et Fulvio <lb/> Curvo],</p>
+					<p>433 Calvino et Albino.</p>
+					<p>434 Cursore II et Philone.</p>
+					<p>435 Papirio et Cerretano.</p>
+					<p>436 Venoce  et Flaccino [Al . Vennone   . Vennone et Flacco].</p>
+					<p>437 Barbula et Bubulco.</p>
+					<p>438 Rutilio et Laenate.</p>
+					<p>439 Cursore III et Laenate   . Philone] II.</p>
+					<p>440 Samnite   . Poetelio] et Longo.</p>
+					<p>
+						<milestone unit="PLSection" n="B"/>441 Cursore IV et Bubulco II.</p>
+					<p>442 Maximo et Musone   . Mure].</p>
+					<p>443 Bubulco III et Barbula.</p>
+					<p>444 Rullo et Rutilio. <lb/> His  conss . [Forte Sine .   conss.] tum dictator <lb/> Cursor,
+						et magister equitum Bubulcus.</p>
+					<p>446 Musone   . Mure] II et Rullo II.</p>
+					<p>447 Appio Caeco et Violente   . ].</p>
+					<p>448 Tremulo et Albino  [Al . ArvinaJ . . .</p>
+					<p>449    .  Metello ] et Minutio. <lb/> 450 Sempronio et Faberio  [Al . Saverrione vel Averrione] . 
+						  <lb/> rione].</p>
+					<p>451 Lentulo et Abentesi   . Aventinensi].</p>
+					<p>452 Dentone   . Dentre] et  Aemilio .  .<lb/>  His   conss.<note n="l"/> Corvinus  dictator -
+							,<milestone unit="PLSection" n="C"/> <lb/> et  Aemilius  magister equitum mensibus  VI 
+						<lb/> deinde fuerunt.</p>
+					<p>454    . Corvo] et Pansa.</p>
+					<p>455    .  Paetico   Paeto] et Torquato.</p>
+					<p>456 Scipione et Maximo.</p>
+					<p>457 Rullo III et Musone III [Al. Q. Fabio IV et P. <lb/> Decio III].</p>
+					<p>458 Claudio et Violente  [Al . Volumnio II] . Volumnio II]. <lb/> Rullo IV et Musone IV. <lb/> Claudio
+						II et Violente II. <note n="f"/> (Hi male inserti <lb/> videntur.)</p>
+					<p>459 Rullo v et Musone v  [Al . IV] . . IV].</p>
+					<p>460    .  II] et Regulo.</p>
+					<p>461 Cursore et Maximo   . Carvilio].</p>
+					<p>462 Maximo Gurgite et Braccho  [Al . Bruto] . . Bruto].</p>
+					<p>
+						<milestone unit="PLSection" n="D"/>1 463 Metello II et Vulbo  [Al . Megello III et Bubulco] . Megello  
+						Bubulco].</p>
+					<p>464 Omissi Rufinus et Dentatus.</p>
+					<p>465 Maximo   .  et Noctua.</p>
+					<p>466 Tremulo et Albino   . Arvina].</p>
+					<p>467 Marcello et Rutilo.</p>
+					<p>468  Potito  et Petito   . Paeto].</p>
+					<p>469 Lepido et Caecina   . Canina].</p>
+					<p>470 Dacio et Dentone  [AI . Tucca et Dentre] .   Dentre].</p>
+					<p>471 Dolabella et Maximo  [AI . Domino] . . Domino].</p>
+					<p>472    . Luscino] et Papo.</p>
+					<p>473 Barbula  et  Philippo.</p>
+					<p>474 Laevino et Coruncano.</p>
+					<p>475 Caverione et Musone  [Al . Saverrione et MureJ .   .</p>
+					<p>476 Lucinio   , Luscine] et Papo.</p><pb n="895"/>
+
+					<p>
+						<milestone unit="PLSection" n="A"/>477 Rufino et Bubulco.</p>
+					<p>478 Gurgite et Clepyno   . ].</p>
+					<p>479 Dentato et Lentulo.</p>
+					<p>480  Dentato  II   . III] et Merenda.</p>
+					<p>481 Licinio et Cambia   . Caniua].</p>
+					<p>482 Cursore et Maximo   . Carvilio].</p>
+					<p>483 Claudio et  Clepsinate [Al . Clepsina  . Clepsina.</p>
+					<p>484 Omissi Clepsina II et Blasio.</p>
+					<p>485 Gallo Sabino et Pisone   . Pictore],</p>
+					<p>486 Sempronio Sapiente et Rufo.</p>
+					<p>487 Regulo et Libone.</p>
+					<p>488 Fabio Pictore et Poeta   . Pera].</p>
+					<p>489 Maximo et Vitulo   . Mure].</p>
+					<p>590 Theudace   . Caudice] et Flacco.</p>
+					<p>
+						<milestone unit="PLSection" n="B"/>491 Maximo et Crasso.</p>
+					<p>492 Albino  [Al . L . Postumio Megello . .   et Vitulo.</p>
+					<p>493 Flacco II et Crasso.</p>
+					<p>494 Scipione Asina et Duillio.</p>
+					<p>495 Scipione et Floro.</p>
+					<p>496 Catacoeno   . Calatino] et Paterculo.</p>
+					<p>497 Regulo et Blaeso   . Blasione].</p>
+					<p>498 Vulsone et Decio   . Caedicio], cui suffectus <lb/> Regulus.</p>
+					<p>499 Paetino   . Fulvio] et Paulo.</p>
+					<p>500 Scipione et  Calatino .</p>
+					<p>501    . Caepione] et Blaeso.</p>
+					<p>502  Cotta  et Gemino.</p>
+					<p>503 Metello et Papo   . Pacilo].</p>
+					<p>504 Regulo II et <unclear> Vulsone </unclear>.</p>
+					<p>
+						<milestone unit="PLSection" n="C"/>505 Pulchro et Pullo.</p>
+					<p>506 Cotta II et Gemino  II .</p>
+					<p>507  Metello  et Buteone.</p>
+					<p>508 Crasso et Licinio.</p>
+					<p>509 Buteone II et Bullo   . Balbo].</p>
+					<p>510 Torquato et Blaeso.</p>
+					<p>511 Fundulo et Gallo Longo.</p>
+					<p>512 Catulo et Albino.</p>
+					<p>513 Torquato et Catone   . Cercone].</p>
+					<p>514 Centone et Tuditano (Cic. in Bruto, 7i).</p>
+					<p>515 Tuncino et Falcone (Al. Turrino et Faltone].</p>
+					<p>516 Graccho et Faltone.</p>
+					<p>517 Omissi Lentulus et Flaccus.</p>
+					<p>   . <note n="p"/>.  Claudio . Lentulo Caudino] <lb/> et Varo.</p>
+					<p>
+						<milestone unit="PLSection" n="D"/>519 Torquato et Volbo   . Bulbo].</p>
+					<p>520 Albino et Rogo   . Carvilio].</p>
+					<p>521 Maximo et Mathone.</p>
+					<p>522 Lepido et Balbulo   . Malleolo].</p>
+					<p>523 Mathone et Masone.</p>
+					<p>524 Barbula II et Pera.</p>
+					<p>525 Albino et Centumalo.</p>
+					<p>526 Burga et Maximo  Vero [Al  . Q. Fab. Max. et <lb/> Carvilio].</p>
+					<p>527  Flacco  et Rogulo (Cic. de Senectute, 11).</p>
+					<p>528 Maximo  Messala [AI . Val .  . . Messala] et Apustio.</p>
+					<p>529 Papo   . Flacco] et Regulo.</p>
+					<p>530 Torquato et Papo  [Al . Flacco] . . Flacco].</p>
+					<p>53! Flaminio et  Philone [Al . Philo]  . Philo].</p>
+					<p>532 Scipione et Marcello.</p>
+					<p>
+						<milestone unit="PLSection" n="A"/>533 Scipione Nasica   . Asina] et Rufo.</p>
+					<p>534 Catulo et Philone.</p>
+					<p>535 Paulo et Salinatore.</p>
+					<p>536 Scipione et Longo.</p>
+					<p>557 Gemino et Flaminio, cui suffectus est Regulus.</p>
+					<p>538 Paulo II et Varone.</p>
+					<p>539 Fabio Maximo et Graccho.</p>
+					<p>540 Fabio Maximo  II  et Marcello.</p>
+					<p>541 Maximo et  Graccho .</p>
+					<p>542 Pulchro et Flacco.</p>
+					<p>543 Galba et Centumalo.</p>
+					<p>544 Lebyino   . Lacvino] et Marcello.</p>
+					<p>545 Fabio et Flacco.</p>
+					<p>546 Marcello et Crispino.</p>
+					<p>
+						<milestone unit="PLSection" n="B"/>547  Nerone  et Salinatore.</p>
+					<p>548 Metello et Philone (Cic. ibid., 57).</p>
+					<p>549 Scipione et Crasso divite (Cic. ibid., 77).</p>
+					<p>550 Cethego et Tuditano (Cic. ibid., 58 et $0).</p>
+					<p>551 Caepione et Servilio.</p>
+					<p>552 Nerone et Servilio.</p>
+					<p>553 Lentulo et Paeto.</p>
+					<p>554 Galba II et Cotta.</p>
+					<p>555 Lentulo et Tappulo.</p>
+					<p>556 Flaminio et Paeto.</p>
+					<p>557 Cethego et Rufo (Cic. ibid., 73).</p>
+					<p>558 Porphyrio   . Purpureone] et Marcello.</p>
+					<p>559 Festo   . Catone] et Flacco.</p>
+					<p>560 Scipione Africano et Longo.</p>
+					<p>561 Merula et Thermo.</p>
+					<p>
+						<milestone unit="PLSection" n="C"/>562 Flaminio et Ahenobarbo.</p>
+					<p>563 Glabrione et Nasica.</p>
+					<p>564 Scipione et Laelio.</p>
+					<p>565 Vulsone et Nobiliore.</p>
+					<p>566 Salinatore et Messala.</p>
+					<p>567 Lepido et Flaminio.</p>
+					<p>568 Albino et Philippo.</p>
+					<p>569 Pulchro et Tuditano (Cic. in Bruto, 60).</p>
+					<p>570 Pulchro II et Licinio.</p>
+					<p>571 Labeone et Marcello.</p>
+					<p>572 Pamfilio   . Tamphylo] et Paulo.</p>
+					<p>573 Cethego et Pamfilio   . Tamphylo].</p>
+					<p>574 Albino et  Pisone .</p>
+					<p>575    . Acidino] et Flacco.</p>
+					<p>576 Bruto et Vulsone.</p>
+					<p>
+						<milestone unit="PLSection" n="D"/>577 Pulchro et Graccho.</p>
+					<p>578 Scipione et Petilio.</p>
+					<p>579 Lepido II et Scaevola.</p>
+					<p>580 Omissi Albinus et Scaevola.</p>
+					<p>581 Albino et  Laenate .</p>
+					<p>582 Laenate et  Aelio .</p>
+					<p>583 Crasso et  Longo [Al . Longino] .  . Longino].</p>
+					<p>584    . Mancino] et Serrano.</p>
+					<p>585 Philippo et Caepione (Cic. in Bruto, 78).</p>
+					<p>586 Paulo et Crasso.</p>
+					<p>587 Paeto et Penno (Cic. ibid., 109).</p>
+					<p>588 Gallo et Claudio.</p>
+					<p>589 Torquato et Octavio (Ibid. de Fin. l. I, 24).</p>
+					<p>590 Torquato  II  et Longino.</p>
+					<p>591 Graccho et Thalna.</p><pb n="897"/>
+
+					<p>
+						<milestone unit="PLSection" n="A"/>592 Scipione Nasica et Figulo. <lb/> In horum locum,
+						quia  vitio  creati erant, <lb/> sufficiuntur Lentulus et Domitius,</p>
+					<p>593 Messala et  Carbone [Al . Strabone]  . Strabone].</p>
+					<p>594 Gallo et Cethego.</p>
+					<p>595 Dolabella et Fulvio Nobiliore.</p>
+					<p>596 Lepido et Laenate II.</p>
+					<p>597 Caesare et Oreste.</p>
+					<p>598 Lentulo et Figulo (Cic. in Bruto, 79).</p>
+					<p>599 Nasica et Marcello.</p>
+					<p>600 Opimio et Albino.</p>
+					<p>601 Nobiliore et Lusco (Cic. ibid.).</p>
+					<p>602 Marcello II et Flacco.</p>
+					<p>603 Lucullo et Albino (Cic. ibid., 81).</p>
+					<p>604 Flaminio et Balbo.</p>
+					<p>
+						<milestone unit="PLSection" n="B"/>605 Censorino et Manilio (Cic. in Bruto, 61).</p>
+					<p>606 Albino et Pisone.</p>
+					<p>607 Scipione  AEmilii [Al . AEmiliano]  . AEmiliano] et Druso.</p>
+					<p>608 Lentulo et Numicio   . Mummio].</p>
+					<p>609 Maximo  AEmilii [Al . AEmiliano]  . AEmiliano] et Mancino.</p>
+					<p>610 Galba et  Cotta  (Cic. de  Amicit ,. 96).</p>
+					<p>611 Claudio et Metello.</p>
+					<p>612 Metello  II  et Maximo (Cic. in Bruto, 161).</p>
+					<p>613 Omissi Caepio et Rufus.</p>
+					<p>614 Caepione et Laelio (Cic. ibid., 85).</p>
+					<p>615 Laenate et Pisone (Cic. ibid., 106).</p>
+					<p>616 Nasica Scipione et Bruto.</p>
+					<p>617 Lepido Porcina et Mancino.</p>
+					<p>618 Philo et Servilio  [AI . Sex . Atilioj . . .</p>
+					<p>619 Flacco et Pisone.</p>
+					<p>
+						<milestone unit="PLSection" n="C"/>620 Scipione Africano et Flacco.</p>
+					<p>621 Scaevola et Calpurnio.</p>
+					<p>622 Laenate et  Rutilio [Al . Rupilio]  . Rupilio].</p>
+					<p>623 Crasso et Flacco (Cic. de Amicitia, 37).</p>
+					<p>624 Lentulo  [Al . App . Claudio] . . Claudio] et Perpenna.</p>
+					<p>625 Tuditano et Anulio [ Cic. de Nat. deorum 14 <lb/> Aquilio].</p>
+					<p>626 Octavio et Rufo  jAI . T . Annio] . . Annio].</p>
+					<p>627 Longino et Cinna (Cic. ibid., 109).</p>
+					<p>628 Lepido et Oreste.</p>
+					<p>629 Hypsaeo et Flacco.</p>
+					<p>630 Longino et Calvino.</p>
+					<p>631 Metello et Flaminino (Cic. pro Domo, 136).</p>
+					<p>632  Ahenobarbo  et Fannio (Cic. in Bruto, 99).</p>
+					<p>633 Opimio et Maximo  AEmilii [Al . AEmiliano] .    Al. AEmiliano].</p>
+					<p>
+						<milestone unit="PLSection" n="D"/>634    . Manlio] et Carbone.</p>
+					<p>635 Metello et Cotta.</p>
+					<p>656 Catone et Marcio rege.</p>
+					<p>637 Metello Diademato    Dalmatico] et Mutio <lb/> Scaevola.</p>
+					<p>638 Geta et Maximo Serviliano.'</p>
+					<p>639 Scauro et Metello.</p>
+					<p>640 Balbo et Catone.</p>
+					<p>641 Metello et Carbone.</p>
+					<p>642 Druso et Pisone. <lb/> His conss. initium belli Jugurthini.</p>
+					<p>643 Nasica Scipione et Bestia Calpurnio (Cic. in <lb/> Bruto, 128).</p>
+					<p>644 Rufo et Albino.</p>
+					<p>
+						<milestone unit="PLSection" n="A"/>645 Metello Numidico et Silano (Cic. ibid., 135).</p>
+					<p>646 Sulpitio et Scauro.</p>
+					<p>647 Longino et Mario (Cic. ibid., 161).</p>
+					<p>648 Serrano et  Caepione . <lb/> His conss. natus est Cicero die VIII kalendas <lb/>
+						Maias  [III Non . Jan . ad Att . VII , 5]  . .  . , 5].</p>
+					<p>649 Rufo et Mallio   . Manilio].</p>
+					<p>650 Mario II et Fimbria.</p>
+					<p>651 Mario III et Oreste.</p>
+					<p>652 Mario IV et Catulo.</p>
+					<p>653 Mario v et Aquillio.</p>
+					<p>654 Mario vi et Flacco (Cic. pro Rabir., 20).</p>
+					<p>655 Antonio et  Albino  (Cic. post redit., ad Quir., 11).</p>
+					<p>656 Metello Nepote et Tito Didio.</p>
+					<p>657 Lentulo et Crasso.</p>
+					<p>
+						<milestone unit="PLSection" n="B"/>658 Ahenobarbo et Longino.</p>
+					<p>659 Crasso et  Scaevola  (Cic. in Bruto, 229).</p>
+					<p>660 Galva . Caldo] et Ahenobarbo.</p>
+					<p>661 Flacco et Herennio.</p>
+					<p>662 Pulchro et Perperna.</p>
+					<p>663 Philippo et Caesare   . . . .].</p>
+					<p>664 Caesare  [Al . Sex . Jul . Caes . ] . . . . I] et Lupo.</p>
+					<p>665 Strabone et Catone (Cic. Divin., 4).</p>
+					<p>666 Sylla et Rufo (Cic.  2  in Rull., 38).</p>
+					<p>667 Octavio et Cinna  (Cic . Tuscul., 55).</p>
+					<p>668 Mario  VII  et Cinna II. <lb/> His conss. natus est Sallustius die kalendas <lb/>
+						Octobr.</p>
+					<p>669 Cinna III et Carbone.</p>
+					<p>670 Carbone II et Scribonio  [Al . L . Jul . Caes . I] .  IV].</p>
+					<p>
+						<milestone unit="PLSection" n="C"/>671 Scipione et Norbano (Cic. pro Quintio, 24).</p>
+					<p>672 Carbone III et  Mario  (Cic. 3 in Rull., 7).</p>
+					<p>673 Decula et Dolabella (Cic. 2 in Rull., 35).</p>
+					<p>674 Sylla et Metello Pio (Cic. pro Plancio, 69).</p>
+					<p>675  Vatia  et Pulchro.</p>
+					<p>676 Lepido et Catulo (Cic. pro Balbo, 34).</p>
+					<p>677 Bruto et Mamerco (Cic. in Bruto, 175).</p>
+					<p>678 Octavio et Curione (Cic. ibid., 217).</p>
+					<p>679  Octavio et  Cotta (Cic.  1  Verr., 130).</p>
+					<p>680 Lucullo et Cotta.</p>
+					<p>681 Marco Lucullo et Cassio Longino (Cicero pro <lb/> Cluent., 137).</p>
+					<p>682 Cn. Lentullo et Gellio (Cic. 4 Verr., 95).</p>
+					<p>683 P. Lentulo et Oreste.</p>
+					<p>684 Pompeio et Crasso (Cic. 5 Verr., 123).</p>
+					<p>
+						<milestone unit="PLSection" n="D"/>685 Hortensio et Metello (Cic. pro Cluent ). <lb/>
+						His conss. natus est Virgilius die id, Octobr.</p>
+					<p>686 Marcio Rege et Metello (Cic. in Pis., 8).</p>
+					<p>687 Pisone et Glabrione (Cic. 2 Philipp.)</p>
+					<p>688 Volcatio et Tullo. (Duos ex uno fecit. Volcatio <lb/> Tullo collega fuit  Aemilius 
+						Lepidus (Cic. 1 <lb/> Catil. 15).</p>
+					<p>689 Cotta et Torquato (Cic. 3 Catil., 19).</p>
+					<p>690 L. Caesare et Figulo (Cic. pro Sylla, 56).</p>
+					<p>691 Cicerone et Antonio. <lb/> His conss. bellum Catilinae gestum est.</p>
+					<p>692 Silano et Murena (Cic. pro Flacco, 30).</p>
+					<p>693 Pisone Frugi et Messala Nigro.</p>
+					<p>694 Afranio et  Metello  Celere (Cic. ad Att. I, 15)</p><pb n="899"/>
+
+					<p>
+						<milestone unit="PLSection" n="A"/>695 C. Caesare et Bibulo (Cic. in Pison., 3).</p>
+					<p>696 Pisone et Gabinio.</p>
+					<p>697 Lentulo et Metello Nepote  (Cic . post red. in <lb/> Sen. 5).</p>
+					<p>698 Marcellino et Philippo (Cic. ad Fam. I. 9).</p>
+					<p>609 Pompeio II et Crasso II.</p>
+					<p>700 Ahenobarbo et Pulchro.</p>
+					<p>701 Calvino et Messala.</p>
+					<p>702 Pompeio III et Metello  Scipione .</p>
+					<p>703 Rufo et Marcello.</p>
+					<p>704 Marcello et Paulo.</p>
+					<p>705 Lentulo et Marcello.</p>
+					<p>706 Caesare et Servilio  Isaurico  (Cic. in Bruto, 229).</p>
+					<p>707 Caleno et Vatinio (Cic. 2 Philipp., 51).</p>
+					<p>708 Caesare III et Lepido.</p>
+					<p>
+						<milestone unit="PLSection" n="B"/>709 Caesare iv solo.</p>
+					<p>710 Caesare v et Antonio.</p>
+					<p>711 Pansa et Hirtio. <lb/> His conss. obiit Cicero die IV kalend. Maias. <lb/>  (Obiit 
+						VII idus Decembres. Ita testimonio Tironis <lb/> prodidit auctor Dialogi de
+						Oratoribus.)</p>
+					<p>712 Lepido et Planco.</p>
+					<p>713 Antonio Pietate et Isaurico. <lb/> His conss. bellum Isauricum gestum est, et <lb/>
+						Julius Caesar ex Senatus consilio deceptus in <lb/> Curia occiditur a Cassio et Bruto.
+						<lb/> Post hunc Octavianus Caesar Augustus appellatur  .<lb/> (Ista loco non suo
+						apposita hic esse satis <lb/> liquet. Caesar occisus est an. 710, idibus Martiis. <lb/>
+						Augusti autem nomen Octaviano tributum anno <milestone unit="PLSection" n="C"/><lb/>
+						727, testibus Dione et Censorino.)</p>
+					<p>714 Calvino  II  et Pollione.</p>
+					<p>715  (Aerae  Hisp. 1) Rufo Censorino [Al. L. Martio <lb/> Censorino] et Sabino.</p>
+					<p>716 Pulchro et Flacco. <lb/> His conss. obiit Sallustius die III idus Maias.</p>
+					<p>717 Agrippa et Gallo.</p>
+					<p>718 Publicola et Nerva Cocceio.</p>
+					<p>719 Cornificio et Pompeio Magno  [Al . Sex . Pompeio] . . Pompeio]. <lb/> His conss. bellum Fugitivorum
+						gestum est.</p>
+					<p>720 Antonio II et Libone. <lb/> His conss. obiit Cicero interfectus die iv kal. <lb/>
+						Maias. (Expungenda haec esse nemo non videt.)</p>
+					<p>721 Octaviano Augusto II et Paulo   . Tullo]. <lb/> His conss.  Aera  prima cursus lunae
+						inventus <milestone unit="PLSection" n="D"/><lb/> est. (Referendum id fuit ad annum
+						716.)</p>
+					<p>722 Ahenobarbo et Sosio.  (Hi  perperam positi infra <lb/> erant in ms.)</p>
+					<p>723 Octaviano Aug. III et Corbilio   . Corvino].</p>
+					<p>724 Octaviano IV et Crasso.</p>
+					<p>725  (Aer . Hisp. 10) Octaviano v et Pulchro [Al. <lb/> Apuleio].</p>
+					<p>726 Octaviano VI et Agrippa II. <lb/> His conss. Carthago libertatem a populo Romano <lb/>
+						 recepit.</p>
+					<p>727 Octaviano  VII  et Agrippa III.</p>
+					<p>728 Octaviano VIII et Tauro.</p>
+					<p>729 Octaviano IX et Silano.</p>
+					<p>730 Octaviano X et Flacco.</p>
+					<p>
+						<milestone unit="PLSection" n="A"/>731 Octaviano XI et Pisone.</p>
+					<p>732  Aesernino  et Aruntio. <lb/> Celso et Hiburo. (Isti  male  hic inserti).</p>
+					<p>733 Lollio et Lepido.</p>
+					<p>734 Apuleio et Nerva.</p>
+					<p>735  (Aer . Hisp. 20)  Saturnino  et Lucretio Cinna.</p>
+					<p>736 Duobus Lentulis. <lb/> His conss. obiit Virgilius die XI kal. Octobr. <lb/> (Obiit
+						anno superiore proximo, Saturnino et Lucretio <lb/>  conss. idibus Oct.) <lb/> Lentulo
+						et Cornelio. (Hi sunt duo Lentuli <lb/> modo appellati, nec est alius consulatus.)</p>
+					<p>737 Fornicio   . Furnio] et Silano.</p>
+					<p>738 Scipione et Domitio Ahenobarbo.</p>
+					<p>739 Libone et Pisone.</p>
+					<p>
+						<milestone unit="PLSection" n="B"/>740 Crasso et  Lentulo .</p>
+					<p>741 Nerone et Varo.</p>
+					<p>742 Messala et Quirino. <lb/> Rubellio et Saturnino. ( Temere inserti.</p>
+					<p>743 Maximo et Tuberone.</p>
+					<p>744 Africano  [AI . Fab . M . Afric . et I Antonio . . . .    et <lb/> Maximo.</p>
+					<p>745 (AEr. Hisp. 30) Druso et Crispino.</p>
+					<p>746  Censorino et  Gallo.</p>
+					<p>747 Nerone II et Pisone II.</p>
+					<p>748 Balbo et Vetere.</p>
+					<p>749 Octaviano XII et Sylla.</p>
+					<p>750 Sabino et Rufino   . Rufo].</p>
+					<p>751 Lentulo et Messalino.</p>
+					<p>752 Octaviano XIII et  Silano [Al . Silvano]  . Silvano]. <milestone unit="PLSection" n="C"/>His
+						conss. natus est Christus die  VIII  kal. Jan.</p>
+					<p>753 Lentulo et Pisone. <lb/>  (Aerae  Christianae annos deinceps inscribemus <lb/> margini
+						quibus perpetua methodo additi anni 753 <lb/> Urbis conditae annos exhibebunt.)</p>
+					<p>1 C. Caesare et Lucio Paulo.</p>
+					<p>2  (Aer . Hisp.  )    . Viuicio] et Varo.</p>
+					<p>3 Lamia et Servilio <unclear/> niano  [Sic ms . ]  .].</p>
+					<p>4 Omissi  Aelius  Catus et Saturninus.</p>
+					<p>5 Magno Pompeio  [Al . Cinna Magno] tt .  Magno]  Valerio.</p>
+					<p>6 Lepido et Aruntio.</p>
+					<p>7 Cretico et Nerva.</p>
+					<p>8  Camillo  et Quintiliano.</p>
+					<p>9 Camerino  et Sabino .</p>
+					<p>10 Dolabella et Sabino   . Silane].</p>
+					<p>
+						<milestone unit="PLSection" n="D"/>   Lepido et Tauro.</p>
+					<p>12  (Aer . Hisp. 50) Omissi Germanicus Caesar et C. <lb/> Fonteius Capito.</p>
+					<p>13 Flacco et  Silano [Al . Planco et Silio]  .   Silio].</p>
+					<p>14 Duobus Sextis Pompeio Magno et Apuleio.</p>
+					<p>15 Bruto   . Druso] et Flacco.</p>
+					<p>16 Tauro et Libone.</p>
+					<p>47 Crasso   . Fiacco] et Rufo.</p>
+					<p>18 Tiberio Caesare II et Druso Germanico [Al. German  .<lb/> Caes.] II.</p>
+					<p>19 Silano et Balbo.</p>
+					<p>20 Messala et Grato   . Cotta].</p>
+					<p>21 Tiberio Caesare III et Druso Germanico III (Al. <lb/> Drus.  Tib . fil  . II].</p><pb n="901"/>
+
+					<p>
+						<milestone unit="PLSection" n="A"/>22 (AEr. Hisp. 60) Agrippa et Galba.</p>
+					<p>23Poltione ei Vetere.</p>
+					<p>24Cethego et Varo [A/. Varrone].</p>
+					<p>25 Agrippa It et Lentuto Galva [Sic. ms.].</p>
+					<p>26 Getulico et Sabino.</p>
+					<p>27 Crasso et Pisone.</p>
+					<p>28 Silano et Nerva.</p>
+					<p>29 Rufo [AI. Fusio, vel Fufio et Rubellio] et Ru­ <lb/> bellione. <lb/> His conss.
+						passus est Christus die decimoka­ <lb/> lendas Aprilis, et resurrexit VIII kalendas eas­
+						<lb/> dem. <lb/> [Hic in margine ms. haec legantur : Cum Joan­ <lb/> nis Evangelium
+						doceat Salvatorem et Dominum <lb/> nostrum tribus annis post baptiamum docuisse,
+							<milestone unit="PLSection" n="B"/><lb/> ad quod venit tricesimo aetatis suae anno,
+						sicut <lb/> in imperio Tiberii Caesaris habetur ascriptum. <lb/> In hoc loco per
+						consules error annorum est, <lb/> nisi si de Rufo et Rubellione in tertium ordinem <lb/>
+						consulum supputatio pertendat.]</p>
+					<p>30 Viuicio et Longino Cassio.</p>
+					<p>31 Tiberio Caesare iv solo [AI. et AElio Sejano].</p>
+					<p>32 (AEr. Hi.,. 70) Aruntio [AI. A. Vitellio] et <lb/> Ahenobarbo.</p>
+					<p>33 Galba libolo [Al. Sulp. Galba] et Sylla.</p>
+					<p>34 Persico et Vitellio Puto [Al. L. Vitellio]. (In ms. <lb/> assignatur anno 32.)</p>
+					<p>35 Gallo et Noniano.</p>
+					<p>36 .Emiliano [Al. Galieno, vel Allieno] et Plautio.</p>
+					<p>37 Proculo et Nigrino.</p>
+					<p>
+						<milestone unit="PLSection" n="c"/>38 Juliano et Asprenate.</p>
+					<p>59 Caesare [Al. Caio Caes.] II et Caesiano.</p>
+					<p>40 Caesare III solo.</p>
+					<p>41 Caesare IV et Antonino [Al. Saturnino].</p>
+					<p>42 (AEr. Hisp. 80) Claudio II et Largo.</p>
+					<p>43 Claudio III et Vitellio II.</p>
+					<p>44 Crispo [ Al. Crispino] II et Tauro.</p>
+					<p>45 Vinitio et Corvino.</p>
+					<p>46 Asiatico et Silano.</p>
+					<p>47 Claudio iv et Vitellio [Al. L. Vitellio] m.</p>
+					<p>48 Vitellio iv (Non IV : nam hic est A. Vitellis) et <lb/> Publicola.</p>
+					<p>49 Verranio et Gallo.</p>
+					<p>50 Vetere et Nerviliano.</p>
+					<p>51 Claudio [Al. Claudio v] et Orfito.</p>
+					<p>
+						<milestone unit="PLSection" n="D"/>52 (AEr. Hisp. 90) Sylla et Catone [Al. Othone].</p>
+					<p>53 Silano et Antonino.</p>
+					<p>54 Marcello et A viola.</p>
+					<p>55 Nerone et Vetere.</p>
+					<p>56 Saturnino et Scipione.</p>
+					<p>57 Nerone II et Pisone.</p>
+					<p>58 Nerone III et Messala Corvino. <lb/> His conss. Petrus et Paulus passi sunt die III
+						<lb/> kal. JuHas.</p>
+					<p>59 Aproniano et Capitone.</p>
+					<p>60 Nerone IV et Lentulo.</p>
+					<p>61 Lucio [AI. Paeto] et Turpiliano.</p>
+					<p>62 ( Er. Hisp. 100) Mario et Gallo. <lb/> His Conss. Jodaeu capta est.</p>
+					<p>
+						<milestone unit="PLSection" n="A"/>63 Rufo et Regulo.</p>
+					<p>64 Crasso et Basso.'</p>
+					<p>65 Helva [Al. Nerva] et Vestino.</p>
+					<p>66 Tellesino et Paulino.</p>
+					<p>67 Capitone et Rufo.</p>
+					<p>68 Italico et Trachalo. <lb/> His conss. Nero non comparuit.</p>
+					<p>69 Galba II et Tito Rufino.</p>
+					<p>70 Vespasiano II solo [Al. et Tito Caesare I].</p>
+					<p>71 Vespasiano III et Nerva.</p>
+					<p>72 (AEr. Hisp. 110) Vespasiano IV et tito II.</p>
+					<p>73 Domitiano It et Messalino.</p>
+					<p>74 Vespasiano v et Tito III.</p>
+					<p>75 Vespasiano vi et Tito tv.</p>
+					<p>76 Vespasiano vii et Tito v.</p>
+					<p>
+						<milestone unit="PLSection" n="B"/>77 Vespasiano VIII et Domitiano III [Al. tUo VI, eui
+						<lb/> Domitianus suffectus]. <lb/> His conss. Judaei pervicti sunt.</p>
+					<p>78 Commodus el Priscus omissi.</p>
+					<p>79 Vespasiano ix et Tito VI [Al. Tito VII].</p>
+					<p>80 TUo VII et Domitiano IV [Al. Tito VIII et Dom. <lb/> VII].</p>
+					<p>81 Galba [Al. Silvano] et Pollione.</p>
+					<p>82 (AEr. Bisp. 120) Domitiano v et Flavio Sabino.</p>
+					<p>83 Domitiano VI et Rufo.</p>
+					<p>84 Domitiano VII et Appio Sabino II.</p>
+					<p>85 Domitiano vm et Fulvio.</p>
+					<p>86 Domitiano ix et Dolabella.</p>
+					<p>87 Domitiano x et Siturnino.</p>
+					<p>88 Domitiano XI et Rufo.</p>
+					<p>
+						<milestone unit="PLSection" n="c"/>89 Fulvio et Atratino.</p>
+					<p>90 Domitiano XII et Nerva II.</p>
+					<p>91 Glabrione et Trajano.</p>
+					<p>92 (AEr. Hisp. 130) Domitiano XIII et Saturnino.</p>
+					<p>93 Pompeiano et Prisciano [Al. Pompeio et Prisco].</p>
+					<p>94 Asprenate et Laterano [Al, Arretino Clemente].</p>
+					<p>95 Domitiano xiv et Clemente [Al. T. Fl. Clemen­ <lb/> tej.</p>
+					<p>96 Valente et Vetere. <lb/> His conss. excessit Domitianus in palatio Ro­ <lb/> mae.</p>
+					<p>97 Nerva III et Rufo III.</p>
+					<p>98 Nerva iv et Trajano II.</p>
+					<p>99 Palma et Senecione [Al. add. n].</p>
+					<p>100 Trajano III et Pontino [Al. Frontone.</p>
+					<p>
+						<milestone unit="PLSection" n="D"/>101 Trajano IV et Paeto.</p>
+					<p>102 (AEr. Hisp. 140) Severiano et Syrio AI. Sene­ <lb/> cione III et Sura].</p>
+					<p>103 Trajano v et Maximo.</p>
+					<p>104 Suburano [AI. Surano II et Marcello</p>
+					<p>105 Candido II et Quadrato.</p>
+					<p>106 Commodo et Cereali.</p>
+					<p>107 Syra III | Al. Sura IV | et Senecione II.</p>
+					<p>108 Gallo et Bradua.</p>
+					<p>109 Palma II et Tullo.</p>
+					<p>110 Orfito et Prisciano [Al. Crispino].</p>
+					<p>111 Pisone et Juliano [Al. Bolano .</p>
+					<p>112 (AEr. Hisp. 150) Trajano vi et AfriCano. <lb/> His conss. p ersecuto
+						Christianorum.</p>
+					<pb n="903"/>
+
+					<p>
+						<milestone unit="PLSection" n="A"/>113 Celso II et  Prisciano [ A . . Crispino]  [ .. Crispino] II.</p>
+					<p>114 Hasta et Voluso . Vopisco].</p>
+					<p>115 Messala et Pedone.</p>
+					<p>116  Aeliano  et Vetere.</p>
+					<p>417 Aproniano et Nigro.</p>
+					<p>118 Hadriano   . . u] et Salinatore.</p>
+					<p>119 Hadriano iv   . III] et Rustico.</p>
+					<p>120 Severo II et Fulvo.</p>
+					<p>121 Vero II et Augure.</p>
+					<p>122  (Aer . Hisp. 160) Aviola et Pansa</p>
+					<p>123 Aproniano et Paupino   . Paetino].</p>
+					<p>124 Glabrione et Torquato.</p>
+					<p>125 Asiatico  [Al . add . u] . . II) et Aquilino.</p>
+					<p>126 Vero III et Ambibulo.</p>
+					<p>127 Titiano et Gallicano.</p>
+					<p>
+						<milestone unit="PLSection" n="B"/>128 Torquato et Libone.</p>
+					<p>129 Marcello  [AI . Q . Jul . Balbo] . . . Balbo] et Celso.</p>
+					<p>130 Catullino et Libone  [Al . add . II) . Apro].</p>
+					<p>131 Pontiano et Rufo   . Rufino].</p>
+					<p>132  (Aer . Hisp. 170) Augurino et Sergiano  Al . Severiano  .<lb/></p>
+					<p>133 Hibero et Sisenna.</p>
+					<p>134 Severo   . ,  Serviano] III et Varo.</p>
+					<p>435 Pontiano et Aquilino Rufo   . Aciliano].</p>
+					<p>136 Commodo et Pompeiano.</p>
+					<p>137 Caesare  [Al . Servilio , vel Serviano] .  Cxs  et Balbino.</p>
+					<p>138 Camerino et Nigro.</p>
+					<p>139 Antonino II et Praesente.</p>
+					<p>140 Antonino III et Aurelio.</p>
+					<p>141 Severo et Silvano  fAI . M . Paeduceo Priscino] . 142 [AEr . Hisp . .  Priscino].</p>
+					<p>
+						..<milestone unit="PLSection" n="C"/>   180] Rufino et Quadrato.</p>
+					<p>143 Torquato  et Herode .</p>
+					<p>144  Avito   et Maximo.</p>
+					<p>145 Antonino IV et Aurelio II.</p>
+					<p>146 Claro  [Al . AElio Cxs . J n . . n] et Severo.</p>
+					<p>147 Largo et Messalino.</p>
+					<p>148 Torquato  [AI . add . II] . . II] et Juliano.</p>
+					<p>149 Orfito et Prisco.</p>
+					<p>150 Glabrione  [Al . add . n] . Gaillicano] et Vetere.</p>
+					<p>151 Conpiano   . Gordiano] et Maximo.</p>
+					<p>152  (Aer . Hisp. 190 ) Glabrione II et Humilio   . <lb/> Omullo Veriano].</p>
+					<p>153 Praesente et Rufino.</p>
+					<p>154 Commodo et  Laterano .</p>
+					<p>155 Severo et Sabiniano.</p>
+					<p>
+						<milestone unit="PLSection" n="D"/>156 Silvano et Augurino.</p>
+					<p>157  Barbaro   Barbato] et Regulo.</p>
+					<p>158    . Tertullo] et Sacerdote.</p>
+					<p>159 Quintillo et Prisco.</p>
+					<p>160 Bradua et Vero [Al. Baro].</p>
+					<p>161 Antonino v et Aurelio Caes. duobus Augustis. <lb/> His conssorta persecutione passi
+						Polycarpus <lb/> et Pionius.</p>
+					<p>162  (Aer . Hisp.200) Rufino   . Rustico] et Aquilino.</p>
+					<p>163 L.  Aeliano  et Pastore.</p>
+					<p>164 Macrino et Celso.</p>
+					<p>165  Orfito  et Pudente.</p>
+					<p>166 Pudente et  Pollione .</p>
+					<p>167 Vero III et Quadrato.</p>
+					<p>
+						<milestone unit="PLSection" n="A"/>In Chronico  his  conss. passos legis (Tantum <lb/> haec
+						in ms.).</p>
+					<p>168 Aproniano   . Montano] et Paulo.</p>
+					<p>169 Prisco et Apollinare.</p>
+					<p>170 Cethego et Claro.</p>
+					<p>171 Severo et Herenniano.</p>
+					<p>172  (Aer . Hisp. 210) Orfito et Maximo.</p>
+					<p>173 Severo II et Pompeiano.</p>
+					<p>174 Gallo et Flacco.</p>
+					<p>175 Pisone et Juliano.</p>
+					<p>176 Pollione et Apro.</p>
+					<p>177 Commodo et Quintillo.</p>
+					<p>178 Orfito et Rufo.</p>
+					<p>179 Commodo  II et  Vero.</p>
+					<p>180 Praesente   . . II]  Condiano.</p>
+					<p>
+						<milestone unit="PLSection" n="B"/>181 Commodo III et Byrro    Burrho].</p>
+					<p>182  (Aer . Hisp. 220) Mamertino et Rufo.</p>
+					<p>183 Commodo IV et Victorino.</p>
+					<p>184 Marullo et  Aeliano .</p>
+					<p>185 Materno et Bradua.</p>
+					<p>186 Commodo v et Glabrione.</p>
+					<p>187 Crispino et  Aeliano .</p>
+					<p>188 Fusciano et Silano.</p>
+					<p>189 Duobus Silanis.</p>
+					<p>190 Commodo VI et Septimiano.</p>
+					<p>191 Aproniano et Bradua.</p>
+					<p>192  (Aer . Hisp. 230) Commodo VII  et  Pertinace.</p>
+					<p>193     [Al . add . II] el . Falcone] et Claro.</p>
+					<p>194 Severo II et Albino.</p>
+					<p>195 Tertullo et Clemente.</p>
+					<p>
+						<milestone unit="PLSection" n="C"/>196 Dextro et Prisco.</p>
+					<p>197 Laterano et Rufino.</p>
+					<p>198 Saturnino et Gallo.</p>
+					<p>199 Anulino et  Frontone .</p>
+					<p>200 Severo I<note n="I"/>    n] et Victorino.</p>
+					<p>201 Muciano et Fabiano.</p>
+					<p>202  (Aer . Hisp. 240) Severo III et Antonino.</p>
+					<p>203 Plautiano II et Geta.</p>
+					<p>204 Cilone et Libone.</p>
+					<p>205 Antonino II et Geta II.</p>
+					<p>206 Albino et  Aemiliano .</p>
+					<p>207 Apro et Maximo.</p>
+					<p>208 Antonino III et Geta III.</p>
+					<p>209 Pompeiano et Avito.</p>
+					<p>210 Faustino et Rufino.</p>
+					<p>
+						<milestone unit="PLSection" n="D"/>I 211 Gentiano et Basso.</p>
+					<p>212  (Aer . Hisp. 250) Duobus  Aspris .</p>
+					<p>213 Antonino iv et Balbino.</p>
+					<p>214 Messala et Sabino.</p>
+					<p>215 Laeto et Cereale.</p>
+					<p>216 Sabino et Anulino..</p>
+					<p>217 Praesente et Extricato.</p>
+					<p>218    . Antonino Macrino] et Advento. <lb/> His conss. instrumenta debitorum
+						fisco in <lb/> foro Romano arserunt per dies XXX.</p>
+					<p>219 Antonino II [ Al.  Elagabalo] et  Sacerdote .  .<lb/></p>
+					<p>210 Antonino III et Comazonte.</p>
+					<p>221 Grato et Selcuco.</p><pb n="905"/>
+
+					<p>
+						<milestone unit="PLSection" n="A"/> 222 (Aer  . Hisp. 260.) Antonino iv et Alexandro.</p>
+					<p>223 Maximo II et  Aeliano .</p>
+					<p>224 Fabiano   . Juliano] et Crispino.</p>
+					<p>225 Fusciano  [Al . Fusco , vel Rufo] . ,  Rufo] et Dextro.</p>
+					<p>226 Alexandro II et Marcello.</p>
+					<p>  . ,   .  Albino ] et Maximo.</p>
+					<p>228 Modesto et Probo.</p>
+					<p>229 Alexandro III et Dione.</p>
+					<p>230 Agricola et  Clemente [AI . Clementino]  . Clementino].</p>
+					<p>231 Pompeiano et Peligniano.</p>
+					<p>232  (Aer . Hisp. 270.) Lupo et Maximo.</p>
+					<p>233 Maximo et Paterno.</p>
+					<p>234 Maximo II et Urbano.</p>
+					<p>235 Severo et Quintiano.</p>
+					<p>236 Maximo III   . Maximino] et Africano.</p>
+					<p>
+						<milestone unit="PLSection" n="B"/>237 Perpetuo et Corneliano.</p>
+					<p>238 Pio et Pontiano.</p>
+					<p>239 Gordiano et Aviola.</p>
+					<p>240    . Sabino II] et Venusto.</p>
+					<p>241 Gordiano II et Pompeiano.</p>
+					<p>242  (Aer . Hisp. 280.) Attico et Praetextato.</p>
+					<p>243 Arriano et Papo.</p>
+					<p>244 Peregrino et  Aemiliano .</p>
+					<p>245 Philippo et Titiano.</p>
+					<p>246 Praesente et Albino.</p>
+					<p>247 Philippo II et Philippo.</p>
+					<p>248 Omissi Philippus III et Philippus II.</p>
+					<p>249  Aemiliano  et Aquilino.</p>
+					<p>250 Decio II et Grato.</p>
+					<p>251 Decio III et Decio Caesare. <milestone unit="PLSection" n="C"/><lb/> His conss.
+						persecutio Christianorum.</p>
+					<p>252  (Aer . Hisp. 290.) Gallo II et Volusiano.</p>
+					<p>253  Volusiano  II et Maximo.</p>
+					<p>254 Valeriano II et Gallieno.</p>
+					<p>255  Valeriano  III et Gallieno II.</p>
+					<p>256 Maximo et Glabrione.</p>
+					<p>257 Valeriano iv et Gallieno III.</p>
+					<p>258 Tusco et Basso. <lb/> His conss. passus est Cyprianus die  XVIII  <lb/> kal.
+						Octobris.</p>
+					<p>259  Aemiliano  et Basso.</p>
+					<p>260 Saeculare et Donato.</p>
+					<p>261 Gallieno iv et  Volusiano . <lb/> Hic conss. hostes multi irruerunt in Romania 
+						.<lb/></p>
+					<p>
+						<milestone unit="PLSection" n="D"/>262  (Aer . Hisp, 300.) Gallieno v et  Faustiniano [Al . Faustino]  
+						.<lb/> Faustino].</p>
+					<p>263 Albino et Dextro.</p>
+					<p>264 Gallieno VI et Saturnino.</p>
+					<p>265  Valeriano  v   . n] et Lucillo.</p>
+					<p>266 Gallieno VII et Sabillino. <lb/> His conss. captus Valerianus in Persida.</p>
+					<p>267 Paterno et Arcesilao.</p>
+					<p>268 Paterno II et Mariniano.</p>
+					<p>269 Claudio et Paterno. <lb/> His conss. victi Gothi a Claudio.</p>
+					<p>270 <note n="a"/> Antiochiano et Orfito.</p>
+					<p>
+						<milestone unit="PLSection" n="A"/>His conss. levatus Aurelianus imperator.</p>
+					<p>271 Aureliano et Basso. <lb/> His conss. muri Urbis coepti  fieri .</p>
+					<p>272 (  (Aer . Hisp. 310. ) Quieto et  Valdumiano [Al  . <lb/>  Voldumiano] .</p>
+					<p>273 Tacito et Placidiano.</p>
+					<p>274 Aureliano II et Capitolino.</p>
+					<p>275 Aureliano III et Marcellino. <lb/> His conss. occisus est Aurelianus imper. <lb/>
+						Caenofrurio, et levatus est post dies [Numerus <lb/> dierum deest in ms.] Tacitus
+						Romae.</p>
+					<p>276 Tacito II et  Aemiliano .</p>
+					<p>277 Probo et Paulino. <lb/> His conss. occisus est Tacitus Tyana.</p>
+					<p>278 Probo II et Lupo.</p>
+					<p>
+						<milestone unit="PLSection" n="B"/>279 Probo III et Paterno.</p>
+					<p>280 Messala et Grato.</p>
+					<p>281 Probo iv et  Tiberiano .</p>
+					<p>282 ( (Aer . Hisp. 320.) Probo v et Victorino.</p>
+					<p>283 Caro et Carino. <lb/> His conss. occisus est Probus Sirmio.</p>
+					<p>284 Caro   . Carino] II et Numeriano. <lb/> His conss. magna fames fuit.</p>
+					<p>285 Diocletiano II et Aristobulo. <lb/> His conss. occisus est Carinus Margo, qui <lb/>
+						ipso anno cum Aristobulo consul processerat.</p>
+					<p>286 Maximo II et Aquilino. <lb/> His conss. levatus est Maximianus  imperator  <lb/> 
+						senior die kal. April.</p>
+					<p>287 Diocletiano III et Maximiano.</p>
+					<p>
+						<milestone unit="PLSection" n="C"/>288 Maximiano II et  Anuarino [Al . Januario]  . Januario].</p>
+					<p>289 Basso et Quintiano.</p>
+					<p>290 Diocletiano iv et Maximiano III.</p>
+					<p>291 Tiberiano et Dione. <lb/> His conss. tenebrae fuerunt inter diem; et <lb/> eo anno
+						levati sunt Constantius et Maximianus <lb/> Caesares, die kal. Mart.</p>
+					<p>292  (Aer . Hisp. 330.) Annibaliano et Asclepiodoto.</p>
+					<p>293  Diocletiano  v et Maximiano iv.</p>
+					<p>294    . Constantio] et Maximiano. <lb/> His conss. castra facta in
+						Sarmatia contra <lb/> Acinco et  Bonomia .</p>
+					<p>295 Tusco et Anulino. <lb/> His conss. Carporum gens universa in Romania <lb/>  se
+						tradidit.</p>
+					<p>
+						<milestone unit="PLSection" n="D"/>296 Diocletiano VI et Constantio II.</p>
+					<p>297 Maximiano v et Maximiano II. <lb/> His  conss . victi Persae.</p>
+					<p>298 Fausto II et Gallo.</p>
+					<p>299 Diocletiano VII et Maximiano v   . VI]. <lb/> His conss. victi Marcomanni.</p>
+					<p>300 Constantio III et Maximiano III.</p>
+					<p>301 Titiano II et Nepotiano.</p>
+					<p>302 ( AEr. Hisp. 340.) Constantio IV et Maximiano <lb/>  iv. <lb/> His conss. vilitatem
+						jusserunt  imperatores . <lb/> esse. <note type="footnote"> • A Sirmundo edita sunt quae
+							sequuntur ad obitum usque Honorii. </note>
+						<note type="footnote"> PATBOL. LI. </note>
+						<note type="footnote"> 29 </note><pb n="907"/>
+					</p>
+					<p>
+						<milestone unit="PLSection" n="A"/>305 Diocletiano VIII et Maximiano VII. <lb/> His
+						conss. persecutio Christianorum.</p>
+					<p>304  Diocletiano  IX et Maximiano VIII. <lb/>  His  conss.  deposnerunt  purpuram privati
+						<lb/> effecti Diocletianus et Maximianus, et vestierunt <lb/> Severum et  Maximianum [Al . Maximinum]  .
+						Maximi]. <lb/> Nam  Constantius  et Maximianus, qui Caesares <lb/> fuerunt, eadem hora
+						Augusti nuncupati sunt <lb/> die kal. April.</p>
+					<p>305 Constantio v et Maximiano  VI [Al . v]  . v].</p>
+					<p>306 Omissi Constantius VI et Maximianus VI. <lb/>  Hi c n ss    . diem functus Constantius,
+						et postea <lb/>  levatus est Constantinus VIII kal. Aug.</p>
+					<p>307 Novies et Constantino. <lb/> His conss. quod est post sextum consulatum, <milestone unit="PLSection" n="B"/><lb/> occisus Severus Romae.</p>
+					<p>308 Item Decies et Maximiano VII  [Al . Maximiano IX] .  IX]. <lb/> His conss. quod est Maxentio
+						et Romulo, <lb/> levatus Licinius  Carnunto  III id. Nov.</p>
+					<p>309 Post conss. x et VII [Al. x Max. Herculii et <lb/> VII Galerii Max.]. <lb/> His
+						conss. quod est Maxentio  II  et Romulo <lb/>  II.</p>
+					<p>310 Anno II post conss. x et VII. <lb/> His conss. quod est Maxentio  III  solo, diem
+						<lb/> functus Maximianus senior.</p>
+					<p>311 Maximiano VIII consule. <lb/> His conss. quod est Rufino et Volusiano, <lb/> diem
+						functus Maximianus junior.</p>
+					<p>312  (Aer . Hisp. 350.) Constantino II et Licinio II. <milestone unit="PLSection" n="c"/><lb/> His conss. quod est Maxentio iv solo, victus <lb/> et occisus Maxentius Romae ad
+						Pontem Mulvium  .<lb/></p>
+					<p>313 Constantino III et Licinio III.</p>
+					<p>314 Volusiano II et Anniano. <lb/> His conss. bellum Cibalense fuit die VIII <lb/> idus
+						Octobr.</p>
+					<p>315 Constantino IV et Licinio iv.</p>
+					<p>316 Sabino et Rufino. <lb/> His conss. diem functus Diocletianus Sola    .<lb/>
+						Salona] die  III non . Decemb.</p>
+					<p>317 Gallicano et Basso. <lb/> His conss.  levati  tres Caesares, Crispus, Licinius <lb/>
+						 et Constantinus die kal. Mart.</p>
+					<p>318 Licinio v et Crispo Caesare. <milestone unit="PLSection" n="D"/><lb/> His conss.
+						tenebrae  fuerunt  inter diem <lb/> hora IX.</p>
+					<p>319 Constantino v et Licinio Caesare.</p>
+					<p>320 Constantino VI et Constantino Caesare.</p>
+					<p>321 Crispo II et Constantino II.</p>
+					<p>322  (Aer . Hisp. 560.) Probiano et Juliano.</p>
+					<p>323 Severo et Rufino.</p>
+					<p>324 Crispo III et Constantino III. <lb/> His conss. bellum Hadrianopolitanum die v
+						<lb/> non. Julias, et bellum Chalcedonense xiv kal. <lb/> Octob., et levatus est
+						 Constantinus [Al . Constantius]  .  <lb/> stantius] Caesar VI idus Novemb.</p>
+					<p>325 Paulino et Juliano. <lb/> His conss. occisus Licinius.</p>
+					<p>
+						<milestone unit="PLSection" n="A"/>326 Constantino VII et  Constantino [Al . Constantio]  . Constantio]
+						<lb/> Caesare. <lb/> His conss. occisus est Crispus, et edidit <lb/> vicennalia
+						Constantinus Augustus  Romae .</p>
+					<p>327 Constantino et Maximo.</p>
+					<p>328    . Januario] et Justo.</p>
+					<p>329 Constantino VIII et Constantino IV.</p>
+					<p>530 Gallicano et Symmacho. <lb/> His conss. dedicata est Constantinopolis  die  <lb/> v
+						idus Maias.</p>
+					<p>331 Basso et Ablabio.</p>
+					<p>532  (Aer . Hisp. 370.) Pacatiano et Hilariano. <lb/> His conss. victi Gothi ab exercitu
+						Romano <lb/> in terris Sarmatarum die xii kal. Maii.</p>
+					<p>355 Dalmatio et Zenophilo. <milestone unit="PLSection" n="B"/><lb/> His conss. levatus
+						est Constans die VIII kal. <lb/> Januar.</p>
+					<p>334 Optato et Paulino. <lb/> His conss. Sarmatae servi universa gens dominos <lb/> 
+						suos in Romaniam expulerunt.</p>
+					<p>335    . Constantio] et Albino, <lb/> His conss. tricennalia edidit
+						Constantinus <lb/> Aug. die VIII kal. Aug., et levatus est Dalmatius <lb/> Caesar xiv
+						kal. Octob.</p>
+					<p>336 Nepotiano et Facundo.</p>
+					<p>557 Feliciano et Titiano. <lb/> His  conss . Constantinus Aug. ad coelestia <lb/> regna
+						ablatus est die  XI  kal.  Junias , et ipso anno <lb/>  nuncupati sunt tres Augusti,
+						Constantinus, <lb/> et Constantius, et Constans v idus Septemb.</p>
+					<p>
+						<milestone unit="PLSection" n="c"/>338 Urso et Polemio.</p>
+					<p>339 Constantio II, et Constante.</p>
+					<p>340 Acyndino et Proculo. <lb/> His conss. occisus est Constantius  Al .  <lb/>
+						stantinus] junior.</p>
+					<p>341 Marcellino et Probino. <lb/> His conss. pugna facta est cum gente Franno <lb/> 
+						a Constante Aug. in Galliis, et ipso anno <lb/>  terraemotus fuit ad Orientem per totum
+						anno <lb/>  praeter Antiochiam.</p>
+					<p>342  (Aer . Hisp. 580.) Constantio III et Constante  II . <lb/> His conss. victi Franci a
+						Constante Aug. seu <lb/> pacati : tractus Hermogenes.</p>
+					<p>343 Placido et Romulo.</p>
+					<p>344 Leontio et Sallustio.</p>
+					<p>
+						<milestone unit="PLSection" n="D"/>345    . Amantio] et Albino.</p>
+					<p>346 Constantino iv et Constante  III .</p>
+					<p>347 Rufino et Eusebio.</p>
+					<p>348 Philippo et Salia. <lb/> His conss. bellum Persicum fuit nocturnum <lb/> num.</p>
+					<p>349 Limenio et Catullino.</p>
+					<p>350 Sergio et Nigriniano. <lb/> His conss. Constans occisus est in Galliis a <lb/>
+						Magnentio, et levatus est Magnentius  die  XV <lb/> kal. Febr., et Vetranio apud Sirmium
+						kal. Martiis <lb/>  eo anno, et Nepotianus Romae III non. Junias, <lb/> et pugna magna
+						fuit cum Romanis et Magnantianis <lb/> </p><pb n="909"/>
+
+					<p>
+						<milestone unit="PLSection" n="A"/>351 Post conss.  Sergii  et Nigriniani. <lb/> His
+						conss. bellum Magnentii fuit Morsa die <lb/> IV kal. Octob., et eo anno depositus
+						Vetranio <lb/> VIII kal. Januar., et levatus est  Constantius  Caesar <lb/>   idus Martias [Chr . Alex . idibus Martiis]  
+						. .  Martiis] : et <lb/> apparuit in  Criente  signum  Salvatoris  die III
+						<lb/> kal. Febr. luna XXVIII.</p>
+					<p>352  (Aer . Hisp. 390.) Constantio v et Constantio <lb/> Caes.</p>
+					<p>353 Constantio VI et Constantio II. <lb/> His conss. Magnentius se interfecit in
+						Galliis <lb/> apud Lugdunum die III id. Aug., et Decentius <lb/> frater Magnentii laqueo
+						se suspendit XV kal. <lb/> Septemb.</p>
+					<p>354 Constantio VII et Constantino [Al. Constantio <milestone unit="PLSection" n="B"/><lb/> Gallo] III. <lb/> His conss. occisus est  Constantius  Caesar in <lb/> insula
+						Flanona.</p>
+					<p>355 Arbetione et Lolliano. <lb/> His conss.  levatus  est Julianus Caesar die VIII <lb/>
+						idus Novembres.</p>
+					<p>356 Constantio VIII et Juliano Caes. <lb/> His conss. introierunt Constantinopolim reliquiae
+						<lb/>  apostoli Timothei die  kal . Jun.</p>
+					<p>357 Constantio IX et Juliano  Caes . II. <lb/> His conss. introierunt Constantinopolim
+						reliquiae <lb/>  sanctorum apostolorum Andreae et  Lucae , <lb/> die v non. Mart., et
+						introivit Constantius Aug. <lb/> Romae VI kal. Maias, et edidit XXXV.</p>
+					<p>358 Datiano et Cereale. <milestone unit="PLSection" n="c"/><lb/> His conss. introierunt
+						Constantinopolim  legati Persarum  <lb/>   die VIII kal. Mart. Ipso anno terraemotus <lb/>
+						 factus, ita ut  civitas  Nicomedensium <lb/> funditus versaretur die ix kal.
+						Septemb.; aliae <lb/> vero CL  civitates  partibus vexatae sunt.</p>
+					<p>359 Eusebio et Hypatio. <lb/> His conss. natus est Gratianus filius  Augusti  <lb/>
+						Valentiniani die xiv kal. Maias : et ipso anno <lb/> primum processit Constantinopolim
+						praefectus <lb/> Urbis, nomine Honoratus, die III idus  Decemb .</p>
+					<p>360 Constantino x et Juliano III. <lb/> His conss. dedicatum est Constantinopoli Dominicum
+						<lb/>  die xv kal. Martias.</p>
+					<p>361 Tauro et Florentio. <lb/> His conss. diem functus Constantius Aug. <milestone unit="PLSection" n="D"/><lb/> Mopsucrenas in fines Ciliciae Phoeniciae provinciae <lb/> 
+						III non. Novemb.,  et introivit  Julianus Aug. <lb/> Constantinopolim die III idus
+						Decembres.</p>
+					<p>362  (Aer . Hisp. 400.) Mamertino et Nevitta.</p>
+					<p>363 Juliano Aug IV et Sallustio. <lb/> His  conss . occisus est Julianus Aug. in bello
+						<lb/> Persico die VI kal.  Julias  ; et quia apostata a <lb/> Deo factus est,
+						Christianorum etiam persecutor, <lb/> occisus est, et levatus est Christianissimus Jovianus
+						<lb/>  Aug. v kalend. Julias.</p>
+					<p>364 Joviano Aug. et Varro   . Varro] <lb/> His conss. recessit Jovianus Aug.
+						Dadastena <lb/> die  XI  kal. Mart. et levatus est Valentinianus <lb/> Aug. apud Nicaeam
+						die v kal.  Mart . Ipso anno <milestone unit="PLSection" n="A"/><lb/> levatus est Valens
+						Aug. Constantinopolim, in <lb/> milliario VII,  in  tribunali a fratre suo Valentiniano <lb/>
+						nia die IV kal. April.</p>
+					<p>365 Valentiniano et Valente Augg. <lb/> His conss. mare ultra terminos suos  egressum .
+						<lb/>  est die  XII  kalend. Aug., et ipso anno latro <lb/>  nocturnus hostisque
+						publicus  intra  urbem <lb/> Constantinopolim apparuit die IV kal. Octob.</p>
+					<p>366 Gratiano Nob. .    puero] et Dagalaifo  .<lb/> <lb/> His conss. natus
+						est Valentinianus  junior  filius <lb/>  Augusti Valentis die xv kalend. Febr., <lb/> et
+						ipso anno idem hostis  publicus  et praedo <lb/>  intra Phrygiam Salutarem , et  in 
+						Nacoliensium <lb/>       <milestone unit="PLSection" n="B"/><lb/> campos ab
+						Augusto valente oppressus <lb/> atque exstinctus est die VI kal. Junias. Ipso anno <lb/>
+						 Augustus Valentinianus gentem  Alamannicam  <lb/>  pervicit.</p>
+					<p>367 Lupicino et Jovino. <lb/> His conss. in civitate Constantinopoli, Deus <lb/>
+						grandinem pluit in modum petrarum die IV nonas <lb/>  Julias ;  et  ipso anno levatus est
+						Gratianus <lb/> Aug. in Galliis apud Ambianos in tribunali a <lb/> patre suo Augusto
+						Valentiniano die IX kal. Sept.</p>
+					<p>368 Valentiniano II et Valente II. <lb/> His conss. terraemotus factus ita ut civitas
+						<lb/> Nicaenorum terrae funditus prosterneretur die v <lb/> idus Octobr.</p>
+					<p>369 Valentiniano Nob. et Victore. <lb/>
+						<milestone unit="PLSection" n="c"/><lb/> His conss. opus magnificum cisternae Constanno
+						<lb/>  completum est a Domitio Modesto <lb/> v. c. iterum praefecto urbis,
+						quod in prima inchoaverat <lb/>  praefectura. Agon post  annos , XVII <lb/> restitutus est
+						 ab  Augusto Valente.</p>
+					<p>370 Valentiniano III et Valente III. <lb/> His conss. magna fames  fuit  in partibus
+						<lb/> Phrygiae : et dedicata est sancta ecclesia ubi <lb/> beati apostoli positi sunt,
+						die v idus April.</p>
+					<p>371 Gratiano Aug. II et  Probo .</p>
+					<p>372  (Aer . Hisp. 410.) Modesto et Arintheo.</p>
+					<p>373 Valentiniano IV et Valente IV.</p>
+					<p>374 Gratiano III et  AEquitio [Al . Equitio]  . Equitio].</p>
+					<p>375 Post conss. Gratiani III et  Aequitii . <lb/> His conss. thermae  Carosianae  dedicatae  sunt 
+						<lb/> agente praefecto v. c. Vindalonio Magno.Et <milestone unit="PLSection" n="D"/><lb/>
+						<lb/> ipso anno diem functus  Valentinianus  senior <lb/> xv kal. Decemb. in castello
+						Virgitione : et levatus <lb/>  est Valentinianus junior Aug. filius <lb/> Aug.
+						Valentiniani ab exercitu in tribunali <lb/> die x kal.Decemb. in civitate Acinco.</p>
+					<p>376 Valente Aug. v et Valentiniano juniore Augusto  .<lb/> <lb/> His conss. victi et
+						expulsi sunt Gothi a gente <lb/> Hunorum , et suscepti sunt in Romania pro misericordia <lb/>
+						 jussione Aug. Valentis. Et ipso anno <lb/> no introivit corpus Augusti
+						Valentiniani  Constantinopolim .  ,<lb/> die v kal. Jan.</p>
+					<p>377 Gratiano iv et Merobaude. <unclear/><lb/> His  conss . gens  Gothorum qui
+						promisericordit<pb n="911"/>
+						<milestone unit="PLSection" n="A"/><lb/> suscepti sunt, rebellaverunt adversus Romanos
+						<lb/> : ad quos expugnandos missi sunt comites <lb/> cum militibus, et pugnaverunt
+						cum Gothis.</p>
+					<p> 378  Valente VI et Valentiniano II. <lb/> His conss. ingressus est Valens Aug. ab <lb/>
+						<lb/> oriente Constantinopolim die III kal. Jun. Et <lb/> ipso anno profectus est Valens
+						Aug. ex urbe ad <lb/> fossatum die III idus Junias : et pugna magna <lb/> fuit cum
+						Romanis et Gothis a milliaro XII ab <lb/> Hadrianopoli, die v idus Augusti. Ex ea die
+						Valens <lb/>  Augustus nusquam apparuit ; et toto anno <lb/> per dioecesim Thraciarum,
+						et Scythiae, et Moesiae  ,<lb/> Gothi habitaverunt simul, et eas praedaverunt  ;<lb/>
+						deinde usque ad portas urbis Constantinopolitanae <lb/>  venerunt. <milestone unit="PLSection" n="B"/></p>
+					<p>379 Ausonio et Olybrio. <lb/> His conss. levatus est Theodosius Aug. ab <lb/> Augusto
+						Gratiano die XIV kal. Februar. in civitate <lb/>  Sirmio. Ipso anno multa bella Romani
+						<lb/> cum  Gothis  commiserunt. Deinde victoriae nuntiatae <lb/>  sunt adversus Gothos,
+						Alanos atque Hunos <lb/>  die xv kal. Decemb. <lb/>  [Adoram   codicis nostri ms. haec
+						habentur ascripta  ,<lb/> quae Sirmondus  omisit  : His consulibus Theophilus <lb/> 
+						 Alexandriae  episcopus subjectum Laterculum <lb/>  infra de Paschae observatione
+						conscribit.]</p>
+					<p>380 Gratiano Aug. v et Theodosio Aug. <lb/> His conss. victoriae  nuntiatae  sunt amborum
+						<lb/> Augustorum. Et ipso anno ingressus est Theophilus <lb/>   A . . . .... Constantinopolim
+						die XVIII kal. Decemb .<milestone unit="PLSection" n="C"/> <lb/></p>
+					<p>381 Syagrio et  Eucherio . <lb/> His conss. ingressus est Athanaricus rex Gothorum <lb/>
+						 Constantinopolim die III idus Jan. <lb/> Eodem mense diem functus idem
+						Athanaricus <lb/> VIII kal. Febr.</p>
+					<p>382  (Aer . Hisp. 420.) Antonio et Syagrio. <lb/>  His  conss. Theodosius Aug. corpus
+						Augusti <lb/> Valentiniani in sarcophago deposuit die ix kal. <lb/> Mart. Ipso anno
+						universa gens Gothorum cum rege <lb/> suo in Romaniam se tradiderunt die V non.
+						Octob.</p>
+					<p>333 Merobaude  II  et Saturnino. <lb/> His consulibus levatus est Arcadius Aug. Constantinopoli 
+						,<lb/> in milliario VII, in tribunali a  Theodosio  <lb/>  Aug. patre suo die XVII
+						kal. Febr. Et ipso <milestone unit="PLSection" n="D"/><lb/> anno ingressum est
+						Constantinopolim corpus <lb/> Constantiae filiae Augusti Constantini die  II  idus <lb/>
+						Septemb.</p>
+					<p>384 Ricomere et Clearcho. <lb/> His conss. introierunt Constantinopolim legati <lb/>
+						Persarum. Ipso anno natus est Honorius nob. in <lb/> purpuris die v idus Septemb.</p>
+					<p>385 Arcadio Aug. et  Bautone .</p>
+					<p>386 Honorio nob. et Evodio. <lb/> His conss. victi atque expugnati, et in Romania <lb/>
+						 captivi adducti gens Greothyngorum a <lb/> nostris Theodosio et Arcadio : deinde
+						cum victoria <lb/>  et triumpho ingressi sunt Constantinopolim <lb/>  die  IV  idus
+						Octob.</p>
+					<p>
+						<milestone unit="PLSection" n="A"/>387 Valerio   . Valentiniano] III et Eutropio. <lb/>
+						His conss. Quinquennalia Arcadius Aug. propria <lb/>  cum Theodosio Aug. patre suo
+						editionibus <lb/> ludisque celebravit die decimo septimo kalend. <lb/> Februar.</p>
+					<p>388 Theodosio Aug. II et Cynegio. <lb/> His conss. defunctus est Cynegius praefectus
+						<lb/> Orientis in consulatu suo Constantinopoli. Hic <lb/> universas provincias longi
+						temporis tabe deceptas <lb/>  in statum pristinum revocavit, et usque ad <lb/>  Aegyptum 
+						penetravit, et simulacra gentium <lb/> evertit. Unde cum magno  fletu  totius populi civitatis
+						<lb/>  deductum est corpus ejus ad Apostolos <lb/> die xxv kal. April. Et post
+						annum transtulit eum <lb/> matrona ejus  Achantia  ad Hispanias  pedestre . <lb/> Et ipso
+						anno occiditur hostis  publicus Maximus   <lb/>  <lb/>
+						<lb/> tyrannus a Theodosio Aug. in  milliario  III de <lb/>  Aquileia  die v kal. Aug. Sed et
+						filius ejus Victor <lb/>  occiditur  post paucos dies in Galliis a comite <lb/> Theodosii
+						Augusti.</p>
+					<p>389 Timasio et Promoto. <lb/> His conss. introivit Theodosius Aug. in urbem <lb/> Romam
+						cum Honorio filio suo die iduum Juniarum  ,<lb/> et dedit congiarium Romanis.</p>
+					<p>390 Valentiniano IV et  Neuterio [Al . Neoterio]  . Neoterio].</p>
+					<p>391 Tatiano et Symmacho.</p>
+					<p> . . .] Arcadio Aug. II et Rufino. <lb/> his conss. Valentinianus junior
+						apud Viennam <lb/> est interfectus, et levavit se Eugenius tyrannus. <lb/> Postmodum
+						Theodosius Aug. occidit Eugenium.</p>
+					<p>
+						<milestone unit="PLSection" n=""/><note n="c"/> <lb/> 593 Theodosio Aug. III et</p>
+					<p>594 Arcadio Aug. III et Honorio Aug. II.</p>
+					<p>395 Olybrio et Probino. <lb/> His conss. recessit apud Mediolanum Theodosius <lb/> 
+						Aug.</p>
+					<p>596 Arcadio Aug. iv et Honorio Aug.  III .</p>
+					<p>391  Attico  et Caesario.</p>
+					<p>598 Honorio Aug. IV et Eutychiano. <lb/> His conss. Gildo occisus.</p>
+					<p>599 Manilio et Theodoro  V .    Theodoro]  c. <lb/> His conss. templa gentilium
+						demolita sunt, <lb/> Joviniano et  Gaudentio comitibus . <lb/>
+					</p>
+					<p>400 Stilicone v. c. consule.</p>
+					<p>401 Vincentio et Fravito.</p>
+					<p>402  (Aer . Hisp. 440.) Arcadio v et Honorio v. <milestone unit="PLSection" n="D"/><lb/>
+						His conss. solis facta defectio IIIid.Novemb.</p>
+					<p>403 Theodosio et Rumorido.</p>
+					<p>404 Honorio VI et Aristone   . Aristaeneto]. <lb/> His conss. bellum civile fuit ex III
+						kalend. <lb/> Septembres.</p>
+					<p>405 Stilicone II et Anthemio.</p>
+					<p>His conss. inter catholicos et Donatistas unitas<lb/>  facta</p>
+					<p>406 Arcadio VI et Probo.</p>
+					<p>407 Honorio  VII  et Theodosio Aug. II.</p>
+					<p>408 Basso et Philippo.</p>
+					<p>409  Honorio  VIII et Theodosio III. <lb/> His conss. barbari Hispanias ingressi.</p>
+					<p>410 Honorio IX  et  Varari, quod fuit Tertullo.</p><pb n="913"/>
+
+					<p>
+						<milestone unit="PLSection" n="A"/>411 Theodosio A ug. IV. <lb/> His conss. Constantini
+						lyranni in conto caput <lb/> allatum est XIV kal. Octob.</p>
+					<p>412 Honorio ix et Theodosio v.</p>
+					<p>413 Post consulalum Honorii IX et Theodosii v, <lb/> Lucio cons. <lb/> His conss.
+						occisi sunt Jovianus, Sebastianus, <lb/> Sallustius; et Heraclianus abolitus est.</p>
+					<p>414 Constantio v. c.</p>
+					<p>415 Honorio x et Theodosio VI. <lb/> His conss. S. Stephanus primus martyr reve­ <lb/>
+						latur sancto presbytero Luciano die VI, feria <lb/> quae fuit tunc III non. Dec., in
+						Hierosolymis <lb/> sancto Joanne episcopo praesidente : et exstant <lb/> ex his gestis
+						epistolae supra dicti presbyteri et <milestone unit="PLSection" n="B"/><lb/> sancti
+						Aviti presbyteri Bracarensis, qui tunc in <lb/> Hierosolymis degebant.</p>
+					<p>416 Theodosio vu et Palladio.</p>
+					<p>417 Honorio xi et Constantino II.</p>
+					<p>418 Honorio XII et Theodosio VIII.</p>
+					<p>419 Monaxio et Plenta. <lb/> His conss. sanctus Joannes Hierosolymorum <lb/> episcopus
+						qui supra, epistolam dirigit per Eccle­ <lb/> sias orbis terrarum, quae habetur de signis
+						ter­ <lb/> roribusque divinitus perpetratis.</p>
+					<p>420 Theodosio IX et Constantio III.</p>
+					<p>421 Agricola et Eustathio.</p>
+					<p>422 [AEr. Hisp. 460.] Honorio XIII et Theodosio x.</p>
+					<p>423 Mariniano et Asclepiodoto. <lb/> His conss. Honorius Aug. recessit Ravenna.
+							<milestone unit="PLSection" n="C"/><lb/> (Hactenus Sirmondi editio; caetera ex codem
+						<lb/> na. codice).</p>
+					<p>424 Castino et Victore.</p>
+					<p>425 Theodosio XI et Valentiniano Caes.</p>
+					<p>426 Theod. XII ct Valentin. Aug. II.</p>
+					<p>427 Pierio et Artabu [Al. Hierio et Ardabure].</p>
+					<p>428 Felice et Tauro.</p>
+					<p>429 Florentio et Dionysio.</p>
+					<p>430 Theodosio XIII et Yalentin. III.</p>
+					<p>431 Basso et Antiocho.</p>
+					<p>432 (AEr. Hisp. 470.) Aetio et Valerio.</p>
+					<p>433 Theodosio xiv et Maximo.</p>
+					<p>
+						<milestone unit="PLSection" n="A"/>431 Aspare et Ariovindo.</p>
+					<p>435 Theodosio xv et Valentiniano iv.</p>
+					<p>436 Isidoro et Senatore.</p>
+					<p>437 Aetio 11 et Segisvuldo.</p>
+					<p>438 Theodosio xvi et Fausto.</p>
+					<p>439 Theodosio xvn et Festo.</p>
+					<p>440 Yalentiniano v et Anatolio.</p>
+					<p>441 Cyro v. c.</p>
+					<p>442 (AEr. Hisp. 480.) Dioscoro. (Omisit Eudoxium.)</p>
+					<p>443 Maximo n et Paterio [Al. Paterno].</p>
+					<p>444 Theodosio XVIII et Albino.</p>
+					<p>445 Valentiniano vi et Aetio III. (Hic confunduntur <lb/> anni duo, quorum priore
+						conss. fuere Valentinia­ <lb/> nus VI et Nonius; altero autem,</p>
+					<p>446 Aetius III et Symmachus.</p>
+					<p>
+						<milestone unit="PLSection" n="B"/>447 Callepio et Ardabure.</p>
+					<p>448 Postumiano et Zenone.</p>
+					<p>449 Asturio et Protegene.</p>
+					<p>450 Yalentiniano VII et Avieno.</p>
+					<p>451 Adelpbio et Marciano. y</p>
+					<p>452 (AEr. Hisp. 490.) Herculano et Parracio [Al <lb/> ' <lb/> Sporalio].</p>
+					<p>453 Opilione. [Omisit Vincomalum.]</p>
+					<p>454 Aetio IV et Studio.</p>
+					<p>455 Yalentiniano VII et Anthemio.</p>
+					<p>456 A vito Augusto cons. [Al. Joanne et Varane].</p>
+					<p>457 Omissi Constantinus et Rufus.</p>
+					<p>458 Recimere et [Patricio] qui de Oriente. (Hi per <lb/> tinent ad annum 459.)</p>
+					<p>459 Majoriano Aug. et Ariovindo [Al. Leone Aug.] <milestone unit="PLSection" n="C"/><lb/> (Hi ad annum 458.)</p>
+					<p>460 Magno et Apollonio.</p>
+					<p>461 Sevcriano et [Dagalaipho] qui de Oriente. <lb/> His conss. Majorianus occiditur ,
+						et Severus <lb/> efficitur imperater.</p>
+					<p>462 (AEr. Hisp. 500.) Severo et Leone Augustis.</p>
+					<p>463 Basilio et Gadaipho [Al. Viviano].</p>
+					<p>464 Dn. Olybrio [Al. et RusticoJ. <lb/> Severus Augustus obiit. Anthemius Romae <lb/>
+						imperator factus est. Adversum Wandalos gran. <lb/> dia exercitus cum Marcellino duce
+						dirigitur.</p>
+					<p>468 Augusto Anthemio II consule.</p>
+				</div>
+
+				</body></text></TEI>

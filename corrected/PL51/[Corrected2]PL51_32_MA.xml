@@ -1,0 +1,1811 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><TEI xmlns="http://www.tei-c.org/ns/1.0"><teiHeader>
+    
+		<fileDesc>
+			<titleStmt>
+				<title>Patrologiae Cursus Completus. Series Latina (PL)</title>
+				<sponsor>University of Leipzig</sponsor>
+				<funder>European Social Fund Saxony</funder>
+				<principal>Gregory Crane</principal>
+				<respStmt>
+					<persName xml:id="Jouve">Jouve</persName>
+					<resp>OCR-ed, corrected and encoded the text</resp>
+				</respStmt>
+				<respStmt>
+					<persName>Greta Franzini</persName>
+					<resp>Project Manager (University of Leipzig)</resp>
+				</respStmt>
+				<respStmt>
+					<persName>Simona Stoyanova</persName>
+					<resp>Project Assistant (University of Leipzig)</resp>
+				</respStmt>
+				<respStmt>
+					<persName>Bruce Robertson</persName>
+					<resp>Technical Advisor (Mount Allison University)</resp>
+				</respStmt>
+			</titleStmt>
+
+			<publicationStmt>
+				<authority>University of Leipzig</authority>
+				<idno type="filename">PL51.xml</idno>
+				<availability>
+					<licence target="https://creativecommons.org/licenses/by-sa/4.0/">Available under a
+						Creative Commons Attribution-ShareAlike 4.0 International License</licence>
+				</availability>
+				<date>2014</date>
+				<publisher>University of Leipzig</publisher>
+				<pubPlace>Germany</pubPlace>
+			</publicationStmt>
+
+			<sourceDesc>
+				<listBibl xml:lang="la">
+					<biblStruct>
+						<monogr>
+							<editor>
+								<persName>
+									<name xml:lang="fr">Jacques Paul Migne</name>
+								</persName>
+							</editor>
+							<author>Prosperus Aquitanus</author>
+							<title>Epistola Ad Augustinum</title>
+							<title>Epistola Ad Rufinum 'De Gratia Et Libero Arbitrio'</title>
+							<title>Peri Axariston. Seu De Ingratis Carmen In Quatuor Partes Distributum</title>
+							<title>Epigrammata In Obtrectatorem Augustini</title>
+							<title>Epigrammata In Quempiam Augustini Obtrectatorem</title>
+							<title>Epitaphium Nestorianae Et Pelagianae Haereseon</title>
+							<title>Pro Augustino Responsiones Ad Capitula Gallorum</title>
+							<title>Responsiones Ad Capitula Objectionum Gallorum Calumniantium</title>
+							<title>Pro Augustino Responsiones Ad Capitula Objectionum Vincentianarum</title>
+							<title>Pro Augustino Responsiones Ad Excerpta Genuensium</title>
+							<title>Pro Defensione Augustini Contra Cassiani Presbyteri Librum</title>
+							<title>Expositio Psalmorum A Centesimo Usque Ad CL</title>
+							<title>Sententiarum Ex Operibus Augustini Delibatarum Liber Unus</title>
+							<title>Epigrammatum Ex Sententiis Sancti Augustini Liber Unus</title>
+							<title>Chronicum Integrum In Dua Partes Distributum</title>
+							<title>Chronicum Integrum In Dua Partes Distributum [Appendicula]</title>
+							<title>Confessio [Incertus]</title>
+							<title>Poema Conjugis Ad Uxorem [Incertus]</title>
+							<title>Carmen De Providentia Divina [Incertus]</title>
+							<title>Libri Duo De Vocatione Omnium Gentium [Incertus]</title>
+							<title>Liber De Promissionibus Et Praedictionibus Dei A Nonnullis [Incertus]</title>
+							<title>Chronicum Alterum Sive Pseudochronicum [Incertus]</title>
+							<imprint>
+								<publisher>Garnier</publisher>
+								<pubPlace>Paris</pubPlace>
+								<date>1846</date>
+							</imprint>
+							<biblScope unit="volume">51</biblScope>
+						</monogr>
+						<monogr>
+							<title>Concilium Arausicanum I</title>
+							<imprint>
+								<publisher>Garnier</publisher>
+								<pubPlace>Paris</pubPlace>
+								<date>1846</date>
+							</imprint>
+							<biblScope unit="volume">51</biblScope>
+						</monogr>
+						<monogr>
+							<author>Idatius Aquaeflaviensis Episcopus</author>
+							<title>Chronicum</title>
+							<title>Descriptio Consulum Ex Quo Primum Ordinati Sunt [Codex Parisiensis]</title>
+							<imprint>
+								<publisher>Garnier</publisher>
+								<pubPlace>Paris</pubPlace>
+								<date>1846</date>
+							</imprint>
+							<biblScope unit="volume">51</biblScope>
+						</monogr>
+						<monogr>
+							<author>Marcellinus Comes</author>
+							<title>Chronicum</title>
+							<imprint>
+								<publisher>Garnier</publisher>
+								<pubPlace>Paris</pubPlace>
+								<date>1846</date>
+							</imprint>
+							<biblScope unit="volume">51</biblScope>
+						</monogr>
+						<ref target="http://hdl.handle.net/2027/pst.000017928816">HathiTrust</ref>
+
+					</biblStruct>
+				</listBibl>
+			</sourceDesc>
+
+		</fileDesc>
+		<encodingDesc>
+			<p>The following text is encoded in accordance with EpiDoc standards and with the CTS/CITE
+				Architecture.</p>
+		<refsDecl>
+        <cRefPattern n="" matchPattern="(.+).(.+).(.+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@type='edition']/tei:div[@n='$1']/tei:div[@n='$2']/tei:div[@n='$3'])"/>
+        <cRefPattern n="" matchPattern="(.+).(.+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@type='edition']/tei:div[@n='$1']/tei:div[@n='$2'])"/>
+        <cRefPattern n="" matchPattern="(.+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@type='edition']/tei:div[@n='$1'])"/>
+      </refsDecl>
+    </encodingDesc>
+
+		<profileDesc>
+			<langUsage>
+				<language ident="la">Latin</language>
+			</langUsage>
+		</profileDesc>
+
+	</teiHeader>
+	<text><body><div type="edition" n="">
+					<head>
+						<title type="main">MARCELLINI COMITIS V. C. CHRONICON.</title>
+					</head>
+					<ab>
+						<title type="sub">Praefatio.</title>
+					</ab>
+					<p>
+						<milestone unit="PLSection" n="B"/>Post mirandum opus quod a mundi fabrica usque <lb/>
+						 in  Constantinum principem Eusebius Caesariensis, <lb/> hujus saeculi originem, tempora,
+						annos, regna, virtutesque <lb/>  mortalium, et variarum artium repertores, <lb/>
+						omniumque pene provinciarum monumenta comme*  ,<lb/> Graeco edidit stylo, noster
+						Hieronymus <lb/> cuncta transtulit in Latinum, et usque in Valentem <lb/>  Caesarem  Romano
+						adjecit eloquio. Igitur uterque hujus <lb/> operis auctor  MMMMM  et DLXXIX annorum  hunc 
+						mundum <lb/>  tunc fore miro computavit ingenio. Ego vero, <lb/>  simplici  dumtaxat
+						computatione Orientale tantum <milestone unit="PLSection" n="B"/><lb/> secutus imperium,
+						per indictiones perque consules <lb/> infra scriptos, centum et XL annos, a septima
+						videlicet <lb/>  indictione et a consulatu Ausonii et  Olybrii  <lb/> (quibus etiam
+						consulibus Theodosius  Magnus  creatus <lb/> est imperator) enumerans, et usque in
+						consulatum <lb/> Magni indictionis undecimae colligens, eorumdem <lb/> auctorum operi
+						subrogavi: itemque alios xvi annos, <lb/> a consulatu Justini Augusti primo usque in
+						consulatum <lb/>  Justiniani Augusti IV suffeci: id sunt simul <lb/> anni CLVI, et meum
+						rusticum opus supposui.</p>
+					<ab>
+						<title type="sub">INCIPIT CHRONICON.</title>
+					</ab>
+					<ab>
+						<title type="sub">(A. C. 579.) Indictione VII, Ausonio et Olybrio coss.</title>
+					</ab>
+					<p> Theodosius  Hispanus Italicae divi Trajani civitatis, <lb/> a  Gratiano  Augusto apud
+						 Sirmium  XXXIX post Valentis <lb/>  interitum imperator creatus est, XIV kalendas
+							<milestone unit="PLSection" n="C"/><lb/> Februarias, Orientalem  dumtaxat rempublicam
+						recturus  ,<lb/> vir admodum religiosus et catholicae Ecclesiae <lb/> propagator,
+						omnibusque Orientalibus principibus <lb/> praeponendus, nisi quod Marcianum, tertium post
+						se <lb/> principem, imitatorem habuerit. Alanos, Hunos, Gothos  ,<lb/> gentes Scythicas
+						magnis multisque praeliis vicit.</p>
+					<ab>
+						<title type="sub">(A. C. $80.) Ind. VIII, Gratiano Aug. v et Theodosio Aug.
+							coss.</title>
+					</ab>
+					<p>Gregorius  Nazianzenus  facundissimus Christi sacerdos  ,<lb/> et Hieronymi nostri
+						praeceptor, ecclesia <lb/> nostra apud Byzantium capta ab Arianis, plebem catholicam <lb/>
+						 in beatae Anastasiae oratorio catholica quotidie <lb/>  allocutione continuit.
+						Saepe namque pravorum <lb/> conviciis insectatus est: sed gratia  Christi  praeditus, <lb/>
+						usque ad id tempus quo eadem ecclesia sui praesentia <milestone unit="PLSection" n="Dt"/><lb/> nostris est reddita, perfidis obstitit Arianis. Nam his <lb/>  coss . Theodosius
+						Magnus postquam de  Scythicis  gentibus <lb/>  triumphavit, expulsis continuo ab
+						orthodoxorum <lb/>  ecclesia Arianis, qui eam per XL ferme annos <lb/> sub Arianis
+						imperatoribus tenuerant, nostris catholicis <lb/>  orthodoxus restituit imperator mense
+						Decembri.</p>
+					<ab>
+						<title type="sub">(A. C. 381.) Ind. IX, Eucherio et Evagrio [Forte Syagrio]
+							coss.</title>
+					</ab>
+					<p>
+						<milestone unit="PLSection" n="C"/>Sanctis CL Patribus urbe Augusta congregatis adversus
+						<lb/>  Macedonium in Spiritum sanctum naufragantem  ,<lb/> ab iisdem episcopis
+						sancta synodus confirmata <lb/> est: Damaso videlicet sedem beati Petri tenente, <lb/>
+						 Constantinopoli  vero per Timotheum Alexandrinum, <lb/> perque Meletium Antiochenum et
+						Cyrillum Hierosolymitanum <lb/>  episcopos, Nectario ex pagano protinus <lb/>
+						baptizato, et in praefata synodo pontifice ordinato. <lb/> Athanaricus rex Gothorum cum
+						quo Theodosius <lb/> imp. foedus pepigerat, Constantinopolim mense Januario <lb/> 
+						venit, eodemque mense morbo periit.</p>
+					<ab>
+						<title type="sub">(A. C. 382.) Ind. x, Antonio et Syagrio coss.</title>
+					</ab>
+					<p>Divi Valentiniani magni  cadaver [AI . cadavere]  . cadavere] <lb/> Theodosius princeps ab Italia
+						 reportatum [Al . reportato]  .  <milestone unit="PLSection" n="D"/><lb/> tato], apud Comitatum
+						regio in  sepulcro  recondidit. <lb/> Eodem anno universa gens Gothorum, Athanarico <lb/>
+						rege suo defuncto, Romano sese imperio  dedit menso   <lb/> Octobrio. Damasus Romanae
+						Ecclesiae, exceptis Li-<pb n="919"/>
+						<milestone unit="PLSection" n="A"/><lb/>    et Felice, XXXV episcopus, anno
+						pontificatus <lb/> sui XVIII, in Domino requievit.</p>
+					<ab>
+						<title type="sub">(A. C. 383.) Ind. XI, Merobaude II et Saturnino coss.</title>
+					</ab>
+					<p>Romanae Ecclesiae Siricius XXXVI antistes factus, <lb/> vixit annos xv. Archadius patri
+						suo Theodosio Aug. <lb/> consors imperii septimo ab Urbe milliario coronatus <lb/> est.
+						Gratianus imp. Maximi tyranni dolo apud Lugdunum <lb/>  occisus est VIII kal.
+						Septembris.</p>
+					<ab>
+						<title type="sub">(A. C. 384.) Ind. XII, Richomere et Clearcho coss.</title>
+					</ab>
+					<p>' Legati  Persarum Constantinopolim  advenerunt , pacem <lb/>  a  Theodosio principe [ Al . Theodosii principis ]   [ .
+						  ] <lb/> postulantes. Eodem tempore Honorius alter Theodosio <lb/> 
+						natus est filius mense Septembri.</p>
+					<ab>
+						<title type="sub">(A. C. 385.)  Ind . XIII, Archadio et Bautone coss.</title>
+					</ab>
+					<p>
+						<milestone unit="PLSection" n="B"/>Theodosius  imp . aliquantas Eoas Al. saevas] nationes
+						<lb/>  per legatos suos suo  utpote   imperio subdidit. <lb/> (A. C. 386.) Ind. XIV,
+						Honorio Caesare et Evodio coss.</p>
+					<p>Invasam princeps Theodosius ab hostibus Thraciam <lb/>  vindicavit, victorque cum
+						Archadio  filio  suo <lb/> Urbem ingressus est. Galla Theodosii regis altera <lb/> uxor his
+						consulibus Constantinopolim venit.</p>
+					<ab>
+						<title type="sub">(A. C. 387.) Ind. XV, Valentiniano III et Eutropio coss.</title>
+					</ab>
+					<p>Archadius Caesar cum patre suo Theodosio sua <lb/> quinquennalia celebravit. Theodosius
+						Magnus  Italiam  <lb/> contra  Maximum  tyrannum pugnaturus accessit.</p>
+					<ab>
+						<title type="sub">(A. C. 388.) Ind. i, Theodosio Aug. II et  Cynegio  coss.</title>
+					</ab>
+					<p>Valentinianus Gratiani frater et Theodosius imp. <lb/> Maximum tyrannum et  Victorem 
+						filium ejus apud <milestone unit="PLSection" n="C"/><lb/> Aquileiam rebellantem
+						vicerunt. Andragathius comes <lb/>  morte Maximi cognita praecipitem  sese  e navi in
+						<lb/> undas dedit ac suffocatus est.</p>
+					<ab>
+						<title type="sub">(A. C. 389.) Ind. II, Timasio et Promoto coss.</title>
+					</ab>
+					<p>Theodosius  imp . cum Honorio filio suo Romam <lb/> mense Junio introivit, congiarium
+						Romano populo <lb/> tribuit, Urbeque egressus  est  kal. Septembris. Per <lb/> idem tempus
+						grando crepitans per biduum continuum <lb/> pro pluvia cecidit, pecorum arborumque
+						pernicies. <lb/> Stella a septentrione gallicinio surgens, et in modum <lb/>  Luciferi
+						ardens  potius quam  splendens apparuit, <lb/> vicesimo tertio  die [Al . vicesimo    .  die] esse
+						desiit <lb/> Templum Serapidis apud Alexandriam Theodosii <lb/> Imp. edicto solutum
+						est.</p>
+					<p>
+						<milestone unit="PLSection" n="D"/>
+					</p>
+					<ab>
+						<title type="sub">(A. C. 390.) Ind.  III , Valentiniano Aug. IV et Neoterio coss.</title>
+					</ab>
+					<p>Signum in  coelo  quasi columna pendens ardensque <lb/> per dies xxx apparuit. Galla
+						Theodosii uxor ab Archadio <lb/>   privigno   suo ejecta est. Obeliscus in circo <lb/>
+						positus est: columna haud longe ab ecclesia constituta <lb/>  est, quae argenteam
+						Theodosii Magni statuam <lb/> ferens hactenus contemplatur.</p>
+					<ab>
+						<title type="sub">(A. C. 391.) Ind. iv, Tatiano et Symmacho coss.</title>
+					</ab>
+					<p>Theodosius imp. Italia decedens Constantinopolim <lb/> remeavit. Valentinianus imp.
+						apud Viennam dolo <lb/> Arbogastis strangulatus interiit idib. Martiis. Eugenius <lb/> 
+						Arbogastis favore confisus imperium sibimet <lb/>  usurpavit .</p>
+					<p>
+						<milestone unit="PLSection" n="A"/>
+					</p>
+					<ab>
+						<title type="sub">(A. C. 392.) Ind. v, Archadio  II  et Rufino coss.</title>
+					</ab>
+					<p>- Arbogastes Valentiniano imp. exstincto, et Eugenius <lb/>  Caesare facto, innumeras
+						invictasque copias undique <lb/>  in Gallias contraxit. Occidentale sibi imperium <lb/>
+						utpote vindicaturus, vir barbarus, animo, consilio, <lb/> manu, audacia, potentiaque
+						nimius. Contraxit autem <lb/>  undique innumeras  copias, vel Romanorum praesidiis, <lb/>
+						vel Barbarorum auxiliis, alibi potestate, alibi cognationes <lb/>  subnixus. Usque hunc
+						xix Theodosii imperii <lb/> annum, beatus Hieronymus post ascensionem D. N. <lb/> Jesu
+						Christi, a Petro apostolo incipiens, et in semetipsum <lb/>  desinens, CXXXV virorum
+						illustrium ecclesiastica <lb/>  volumina descripsit, apud Bethleem oppidum <lb/>
+						degens; ubi et monasterium sibi condidit, et alia <lb/> multa ecclesiastica litteris
+						quoque Hebraicis edoctus <milestone unit="PLSection" n="B"/><lb/> scripsit, finemque
+						vitae suae admodum senex fecit, <lb/> ibique sepultus est; catholicis quidem inexpugnationes
+						<lb/>  ecclesiae turris, haereticis autem omnibus infatigabilis <lb/>  hostis, tam
+						proposito vitae suae, quam librorum <lb/>  a se editorum assertionibus depugnans.</p>
+					<ab>
+						<title type="sub">(A. C. 393.) Ind. vi, Theodosio III et Abundantio coss.</title>
+					</ab>
+					<p>Honorium pater suus Theodosius in eodem loco <lb/> quo fratrem ejus Archadium, Caesarem
+						fecit, id est <lb/> septimo ab urbe regia milliario: Tunc quippe hora <lb/> diei  tertia 
+						tenebrae factae sunt.</p>
+					<ab>
+						<title type="sub">(A. C. 394.) Ind. VII, Archadio III et Honorio  II  coss.</title>
+					</ab>
+					<p>Theodosius Augustus assumpto Honorio Caesare, <lb/> eodemque filio, contra Arbogastem
+						qui Eugenium <lb/> tyrannum imperatorem facere ausus  est , iterum  properavit  <milestone unit="PLSection" n="C"/><lb/>  : bello commisso Eugenius victus atque captus <lb/>
+						 interfectus est; Arbogastes sua se manu perculit  .<lb/> Terraemotu a mense
+						Septembrio in Novembrium <lb/> continuo imminente, aliquantae Europae regiones <lb/>
+						quassatae sunt. Thermae Archadianae  ex  conditoris <lb/> sui nomine nomen acceperunt.</p>
+					<ab>
+						<title type="sub">(A. C. 395.) Ind. VIII, Olybrio et Probino coss.</title>
+					</ab>
+					<p> Theodosius  Magnus apud Mediolanum vita decessit  .<lb/> Imperavit annos XVII. Corpus
+						ejus eodem anno <lb/> Constantinopolim allatum, atque sepultum. Archadius <lb/>  et
+						Honorius germani, utrumque imperium divisis <lb/>  tantum sedibus tenere coeperunt.
+						Rufinus patricius<lb/>  Archadio principi insidias tendens, Alaricum <lb/>  Gothorum 
+						regem, missis ei clam pecuniis, infestum <milestone unit="PLSection" n="D"/><lb/>
+						reipublicae fecit, et in Graeciam misit. Porro detecto <lb/> dolo suo Rufinus ab Italicis
+						militibus, olim . deest <lb/> olim] cum Gaina comite Archadio missis, ante portas
+						<lb/> urbis merito trucidatus est. Caput ejus manusque <lb/> dextra per totam
+						Constantinopolim demonstrata.</p>
+					<ab>
+						<title type="sub">(A. C. 396.) Ind. IX,  Arcadio  IV et Honorio III coss.</title>
+					</ab>
+					<p>Rufini uxor et filia exsulant. Eutropius sacri pacem <lb/>  cubicularius omnes opes
+						abripuit, avaritiamque <lb/> transgressus est. Terraemotus per dies plurimos <lb/> fuit,
+						coelumque ardere visum est.</p>
+					<ab>
+						<title type="sub">(A. C. 397.) Ind. x,  Caesario  et Attico coss.</title>
+					</ab>
+					<p>His consulibus Flaccilla Archadio nata  est  filia.</p>
+					<ab>
+						<title type="sub">(A. C. 398.) Ind. xi, Honorio IV et Eutychiano coss.</title>
+					</ab>
+					<p>Romanae Ecclesiae Anastasius XXXVII episcopus<pb n="921"/>
+						<milestone unit="PLSection" n="A"/><lb/> ordinatus vixit annos quatuor. Ambrosius
+						 Mediolanensis .  .<lb/> virtutum episcopus, arx fidei, orator  catholicus .  ,<lb/> ad
+						Christum Dominum commigravit. Joannes <lb/>  Antiochiae  natus,  ibique  a Meletio ejusdem
+						civitatis <lb/> episcopo, eodemque confessore, lector ecclesiae  ordinatus   ,<lb/> per
+						singulos officii gradus ascendit. Ubi per <lb/> quinquennium continuum diaconus multos
+						divinosque <lb/> edidit libros; presbyter quoque factus per  XII  annos <lb/> plures
+						confecit. Tanta dehinc opinione ubique merito <lb/>  propagatus, Constantinopoli in
+						locum Nectarii <lb/> pontifex suffectus est: ubi plurima dulciaque divinarum <lb/> 
+						Scripturarum volumina suo operi catholico [Al. <lb/> catholicis] addidit, hosque
+						episcopos habuit  inimicos   ,<lb/> Theophilum Alexandrinum, Epiphanium Cyprium  ,<lb/>
+						Acacium Beroensem, Antiochum Ptolomensem ,<milestone unit="PLSection" n="B"/> <lb/>
+						Severianum Gabalensem et Severum Chalcedonensem  .<lb/>  Gildo  comes, idemque paganus,
+						qui mortuo <lb/> Theodosio principe Africae praeerat, dum Archadio <lb/> et Honorio adhuc
+						pueris regnantibus invidet, Africamque <lb/>  nititur obtinere, frater ejus Mascezel,
+						cognita <lb/> ejus vesania, relictisque duobus apud Africam filiis, <lb/> in Italiam
+						remeat: Gildo utrumque fratris  filium  <lb/> dolo trucidat. Mascezel, fratris scelere
+						cognito, cum <lb/> quinque millibus suorum contra  Gildonem  cum LXX <lb/> millibus
+						armatorum sibimet obviantem infestus  accedit   ,<lb/>  Gildonemque  parricidam jejuniis et
+						orationibus <lb/>  suis [Al . deest  .  suis], immo beati Ambrosii in somnis <lb/> admonitu
+						auxiliantibus, fugavit. Gildo fugiens propria <lb/>  se manu strangulavit; sicque
+						 Mascezel  sine <lb/> bello victoriam meruit, ac sine caede vindictam.</p>
+					<p>
+						<milestone unit="PLSection" n="C"/>
+					</p>
+					<ab>
+						<title type="sub">( A. C. 599.) Ind.  XII , Theodoro et Eutropio eunucho coss.</title>
+					</ab>
+					<p>Hic  Eutropius  omnium spadonum primus atque <lb/> ultimus consul fuit, de quo Claudianus
+						poeta ; <lb/> Omnia cesserunt Eunucho consule monstra. <lb/> Pulcheria Arcadio altera
+						filia nata est. Gaina comes <lb/>  apud Constantinopolim ad  praeparandum  civile <lb/>
+						bellum barbaros suos occulte admonet; ipse valetudinem <lb/>  simulans urbe digreditur
+						:  coepto  adversus <lb/> Byzantios praelio plurimi hostium cadunt, caeteri fugientes <lb/>
+						 ecclesiae nostrae succedunt, ibique  retecto  <lb/>  detecto] ecclesiae culmine
+						jactisque desuper lapidibus <lb/>  obruuntur.</p>
+					<ab>
+						<title type="sub">(A. C. 400.) Ind. XIII.  Stilicone et  Aureliano coss.</title>
+					</ab>
+					<p>
+						<milestone unit="PLSection" n="D"/>Bellum navale  contra Gainam  tyrannum  inter Chersonesum  <lb/>
+						 et Hellespontum gestum est : multa millia <lb/> Gothorum caesa, vel demersa sunt.
+						Gaina comes de <lb/> hoc bello fugiens evasit: ipso tamen anno occisus est <lb/> mense
+						Februario    Decemb].</p>
+					<ab>
+						<title type="sub">( A. C. 401.) Ind. XIV, Vincentio et Fravita  [Chiffl . Fravito]
+							coss.</title>
+					</ab>
+					<p>Caput Gainae hastili praefixum Constantinopolim <lb/> allatum est. Maris Pontici
+						superficies ita gelu frenata <lb/> est, ut per triginta dies soluta tandem glacies
+						instar <lb/> montium per Propontidem superne portata decurreret  .<lb/> Theodosius
+						junior patre Archadio natus est III    .<lb/>  idus Apriles.</p>
+					<p>
+						<milestone unit="PLSection" n="A"/>
+					</p>
+					<ab>
+						<title type="sub">(A. C. 402.) Ind. xv, Archadio v et Honorio v coss.</title>
+					</ab>
+					<p>Romanae Ecclesiae Innocentius XXXVIII creatus <lb/> antistes, vixit annos xv. Theodosius
+						junior in loco <lb/> quo pater patruusque  suus , Caesar creatus est. Constantinopoli <lb/>
+						 ingens terraemotus fuit.</p>
+					<ab>
+						<title type="sub">( A, C. 405.)  Ind . I, Theodosio juniore et Rumorido coss.</title>
+					</ab>
+					<p>Marina patre Archadio nata III idus Febr. Eudoxiae <lb/> Archadii uxoris super
+						porphyreticam columnam argentea <lb/>  statua juxta ecclesiam posita hactenus sistit.
+						<lb/> Joannem Constantinopolitanae civitatis episcopum, <lb/> cui supra dicti sex
+						antistites incassum aemuli fuere, <lb/> aliosque triginta sibimet episcopos conscivere,
+						nolente <lb/>  Archadio principe, in Cucusum Armeniae  oppidum . <lb/>  exsulem miserunt,
+						eumque post annum unum <milestone unit="PLSection" n="B"/><lb/> <note n="I"/> in villam quae Comana
+						in regione Pontica dicitur, <lb/> de exsilio in exsilium relegarunt. Hunc ibidem m ordinatus 
+						<lb/>   religiosa  orthodoxorum plebs in atrio Basilisci <lb/> episcopi sancti,
+						idemque martyris, ab eodem margentea <lb/>  in somnis admonita, in novum moxque repertum
+						<lb/>  sepulcrum  recondidit.</p>
+					<ab>
+						<title type="sub">(A. C. 404.) Ind. II, Honorio vi et Aristaeneto coss.</title>
+					</ab>
+					<p>Ecclesiam Constantinopolitanam flamma ignis quae <lb/> de beati Joannis throno quondam
+						episcopi nata fuit, <lb/> subito conflagravit, vicinamque ecclesiae urbis faciem <lb/>
+						serpens nihilominus exussit. Eudoxia  uxor Archadii  <lb/> diem obiit.</p>
+					<ab>
+						<title type="sub">(A. C. 405.) Ind. III, Stilicone II et Anthemio  coss .</title>
+					</ab>
+					<p>
+						<milestone unit="PLSection" n="c"/>Isauri per montem Tauri discursantes ingens dispendium
+						<lb/>  reipublicae importarunt, quibus  Narbazaicus  <lb/>  legatus majus continuo
+						rependit incommodum.</p>
+					<ab>
+						<title type="sub">(A. C. 406.) Ind. IV, Archadio VI et Probo coss.</title>
+					</ab>
+					<p>Theodosius junior quinquennalia dedit. Radagaisus <lb/> paganus et  Scytha  cum ducentis
+						millibus suorum <lb/> totam Italiam inundavit. Huldin et Sarus  [Chiffl . <lb/> Saurus]
+						Hunnorum Gothorumque reges Radagaisum <lb/> continuo devicerunt, ipsius capite amputato,
+						captivos <lb/>  ejus singulis aureis distrahentes.</p>
+					<ab>
+						<title type="sub">(A. C. 407.) Ind. v, Honorio  VII  et Theodosio juniore II coss.</title>
+					</ab>
+					<p>Cisterna maxima juxta porphyreticam Constantini <lb/>  imperatoris columnam in foro
+						ejus sub plateae <lb/> transitum constructa est.</p>
+					<p>
+						<milestone unit="PLSection" n="D"/>
+					</p>
+					<ab>
+						<title type="sub">(A. C. 408.) Ind,  VI !, Basso et Philippo coss.</title>
+					</ab>
+					<p>Stilicho comes, cujus duae filiae Maria et Thermantia <lb/>  singulae uxores Honorii
+						principis fuere, utraque <lb/>  tamen virgo defuncta, spreto Honorio, regnumque <lb/> 
+						ejus inhians, Alanorum, Suevorum, . <lb/>  Wandalorumque  gentes donis pecuniisque
+						illectas contra <lb/> regnum Honorii excitavit,  Eucherium  filium suum <lb/> paganum et
+						adversum Christianos insidias molientem <lb/> cupiens Caesarem ordinare. Qui cum eodem
+						 Eucherio . <lb/> rio dolo suo detecto occisus est. Romae in foro pacis <lb/> per dies septem
+						terra mugitum dedit. Archadius <lb/> imp. vitae finem fecit: regnavit post obitum patris
+						<lb/>  sui  Theodosii annos XIII.</p><pb n="923"/>
+
+					<p>
+						<milestone unit="PLSection" n="A"/>
+					</p>
+					<ab>
+						<title type="sub"> (A . C . 409 . ) Ind . VII , Honorio vinet Theodosio juniore III coss . . C.) . ,     
+							.</title>
+					</ab>
+					<p>Apud Constantinopolim magna exarsit populi seditio  ,<lb/> panis scilicet penuria
+						sibimet ingruente.</p>
+					<ab>
+						<title type="sub">(A. . 410.) Ind. VIII, Varane solo cos.</title>
+					</ab>
+					<p>Alaricus trepidam urbem Romam invasit, partemque <lb/>  ejus cremavit incendio,
+						sextoque die quam ingressus <lb/>  fuerat, depraedata urbe egressus est, Placidia <lb/>
+						Honorii principis sorore abducta, quam postea Ataulfo <lb/> propinquo suo tradidit
+						uxorem.</p>
+					<ab>
+						<title type="sub">(A. C. 411.) Ind. IX. Honorio IX et Theodosio IV coss. . .
+							   solo].</title>
+					</ab>
+					<p>Theodosius junior decennalia, Honorius Romae <lb/> vicennalia dedit. Constantinus apud
+						Gallias invasit <milestone unit="PLSection" n="B"/><lb/> imperium, filiumque suum ex
+						monacho Caesarem <lb/> fecit : ipse apud Arelatum civitatem occiditur : Constans <lb/> 
+						filius apud Viennam capite plectitur.</p>
+					<ab>
+						<title type="sub">(A. C. 412.) Ind. x, Theodosio imp. v solo cos. .  Honorio ii et Theodosio v]   
+							 v].</title>
+					</ab>
+					<p>Jovinus ac Sebastianus in Galliis tyrannidem molientes <lb/>  occisi sunt. Attalus in
+						mari captus, atque Honorio <lb/>  exhibitus, truncata manu vitae relictus est.</p>
+					<ab>
+						<title type="sub">(A. C. 413.) Ind.  XI , Lucio solo coss.</title>
+					</ab>
+					<p> [ . Heracliu] Africae comes cum <lb/> septingentis navibus et tribus
+						militum millibus ad <lb/> urbem tendens, mox ad urbem Romam egressus <lb/> est: occursu
+						Marini comitis territus et in  fugam versus    ,<lb/> arrepta nave solus Carthaginem
+						rediit, ibique <milestone unit="PLSection" n="C"/><lb/> illico interfectus est.</p>
+					<ab>
+						<title type="sub">(A. C. 414.) Ind. XII, Constantino et Constante  coss ...</title>
+					</ab>
+					<p>Pulcheria  Theodosii  soror Augusta appellata est. <lb/> Valia rex Gothorum, facta cum
+						Honorio principe pace, <lb/> Placidiam sororem ejus eidem viduam reddidit.</p>
+					<ab>
+						<title type="sub">(A. C. 415.) Ind. XIII, Honorio x et Theodosio VI coss.</title>
+					</ab>
+					<p>Ecclesia Constantinopolitana dudum igni cremata, <lb/>  iis  s coss.  restaurata  dedicataque
+						est, Attico episcopo <lb/>  eamdem  regente ecclesiam. Lucianus presbyter vir <lb/>
+						 sanctus , cui revelavit, Deus his consulibus, locum seditio <lb/>  et reliquiarum
+						corporis  sancti Stephani   primi <lb/> martyris, scripsit ipsam revelationem in Graeco
+						 sermone  <lb/>  ad omnium Ecclesiarum personas.</p>
+					<p>
+						<milestone unit="PLSection" n="D"/>
+					</p>
+					<ab>
+						<title type="sub">(A. C. 416.) Ind. xiv, Theodosio VII et Palladio coss.</title>
+					</ab>
+					<p>Orosius presbyter Hispanici generis septem libros <lb/> Historiarum descripsit. Missus
+						ab Augustino episcopo <lb/> idem Orosius pro discenda animae ratione ad Hieronymum <lb/>
+						 presbyterum, reliquias beati Stephani tunc <lb/> nuper inventas rediens primus
+						intulit Occidenti. Atticus <lb/>  Constantinopolitanus episcopus scripsit ad reginas 
+						,<lb/> Archadii imp. filias, de Fide et Virginitate  librum  <lb/>  valde egregium, in
+						quo praeveniens Nestorianum <lb/>  dogma impugnat.</p>
+					<ab>
+						<title type="sub">(A. C. 417.) Ind. xv, Honorio XI et Constantio II coss.</title>
+					</ab>
+					<p>Tenebrae in die factae sunt. Cybera Asiae civitas, <lb/> aliquantaque praedia terraemotu
+						demersa. Romanae <milestone unit="PLSection" n="A"/><lb/> Ecclesiae Zosimus XXXIX
+						 episcopus ordinatus   vixit <lb/> annis III.</p>
+					<ab>
+						<title type="sub">(A. C. 418.) Ind. I, Honorio XII et Theodosio VIII coss.</title>
+					</ab>
+					<p>Plinta comes, idemque rebellium apud Palaestinam <lb/> provinciam auctor deletus est.
+						Solis defectio  facta  <lb/> est. Stella ab Oriente per septem menses surgens <lb/>
+						ardensque apparuit.</p>
+					<ab>
+						<title type="sub">(A. C. 419.) Ind. II, Monaxio et Plinta coss.</title>
+					</ab>
+					<p>Valentinianus junior apud Ravennam patre  Constantio . <lb/>  et Placidia matre, v nonas
+						Julias natus est. <lb/> Multae Palaestinae civitates villaeque terraemotu collapsae  .<lb/>
+						Dominus noster Jesus Christus semper ubique <lb/> praesens Al. totus], et super montem
+						Oliveti Hierosolymae <milestone unit="PLSection" n="B"/><lb/>  vicinum sese de nube
+						manifestavit. Multae <lb/> tunc utriusque sexus vicinarum gentium nationes, <lb/> tam
+						visu quam auditu perterritae atque credulae, sacro <lb/>  Christi fonte ablutae sunt,
+						omniumque baptizatorum <lb/>  in tunicis crux Christi salvatoris, divinitatis <lb/>
+						nutu, extemplo impressa refulsit.</p>
+					<ab>
+						<title type="sub">( A.. C. 420.) Ind. III, Theodosio IX et Constantio III coss.</title>
+					</ab>
+					<p>Romanae Ecclesiae Bonifacius XL episcopus ordinatus  ,<lb/>  vixit annis  tribus. In
+						Oriente tumultum milites <lb/>  excitarunt, ductoremque suum  Maximinum  nomine <lb/> 
+						exstinxerunt. In Perside in Christianos perseditio <lb/>  desaevit.</p>
+					<ab>
+						<title type="sub">(A. C. 421.) Ind. IV. Eustathio et Agricola  coss .</title>
+					</ab>
+					<p>
+						<milestone unit="PLSection" n="C"/>Theodosius  imp . Eudoxiam Achivam duxit uxorem. <lb/>
+						Archadio patri suo in foro ejus, super immanem <lb/> columnam, ingentem statuam idem
+						Theodosius dedicavit  .<lb/> Cisterna Aetii constructa  est . Romani cum <lb/> Persis
+						conflixere.</p>
+					<ab>
+						<title type="sub">(A. C. 422.) Ind. v, Honorio XIII et Theodosio x coss.</title>
+					</ab>
+					<p>Theodosius imp. Eudoxiam filiam genuit, In tricennalia <lb/>  Honorii, Maximus
+						tyrannus et Jovinus ferro <lb/> victi, adducti de Hispaniis atque interfecti sunt. <lb/>
+						Hunni Thraciam vastaverunt. Persae cum Romanis <lb/> pacem  pepigere .</p>
+					<ab>
+						<title type="sub">(A. C. 423.) Ind. VI, Asclepiodoto et Mariniano coss.</title>
+					</ab>
+					<p>Coelestinus Romanae Ecclesiae XLI  antistes  creatus <milestone unit="PLSection" n="D"/><lb/> <note n="I"/> est: vixit annos IX.  Evagrius  scripsit Altercationem <lb/> Judaei Simonis et
+						Theophili Christiani, quae pene <lb/> omnibus nota est. Terraemotus multis in locis fuit,
+						<lb/> et frugum inedia subsecuta. Philippus et Sallustius <lb/> philosophi morbo
+						perierunt. Stella saepe  ardente crinita  <lb/>  Honorius imp. fatale munus implevit.</p>
+					<ab>
+						<title type="sub">( A. C. 424.) Ind. VII, Victore et Castino coss.</title>
+					</ab>
+					<p>Placidia mater Valentiniani Augusta nuncupata <lb/> est. Valentinianus Caesar creatus
+						Theodosii imp. <lb/> Eudoxiam filiam sibimet desponsavit. Joannes  regnum . <lb/> 
+						Occidentale Honorio defuncto invasit.</p>
+					<ab>
+						<title type="sub">(A. C. 425.) Ind. VIII, Theodosio XI et Valentiniane Caesare
+							coss.</title>
+					</ab>
+					<p>Supra fatus  Joannes  dolo potius Ardaburis et Aspa-<pb n="925"/>
+						<milestone unit="PLSection" n="A"/><lb/>    quam virtute occiditur. Valentinianus
+						junior <lb/> apud Ravennam factus est imperator.</p>
+					<ab>
+						<title type="sub">(A. C. 426.) Ind. IX, Theodosio XII et Valentiniano II coss.</title>
+					</ab>
+					<p>Sisinnius vir sanctae simplicitatis et simplicis sanctitatis  ,<lb/>
+						Constantinopolitanus episcopus factus est.</p>
+					<ab>
+						<title type="sub">(A. C. 427.)  Ind . x , Hierio et Ardabure coss.</title>
+					</ab>
+					<p>Pannoniae, quae per quinquaginta [ . sexaginta] <lb/> annos ab Hunnis retinebantur,
+						a Romanis receptae <lb/> sunt. Thermae Theodosianae dedicatae.</p>
+					<ab>
+						<title type="sub">(A. C. 428.) Ind. XI, Felice et Tauro coss.</title>
+					</ab>
+					<p>Nestorius Antiochia natus, vir satis quidem eloquentiae  ,<lb/> sapientiae vero parum
+						habens, Constantinopolitanis <lb/>  admodum adnitentibus , ex presbytero <lb/>
+						episcopus ordinatus  est . Beatissimi Joannis episcopi, <milestone unit="PLSection" n="B"/><lb/> dudum malorum episcoporum invidia exsulati, apud <lb/> comitatum coepit memoria
+						celebrari mense Septembrio <lb/>  die  XXVI [Chiffl . xxv] .   [ Chiffl . sexaginta] Chiffl. xxv].</p>
+					<ab>
+						<title type="sub">( A. C. 429.) Ind XII, Florentino et Dionysio  coss .</title>
+					</ab>
+					<p>Orthodoxi nostri Macedonianorum ecclesiam extra <lb/> muros urbis positam abstulerunt,
+						quoniam iidem <lb/> Macedoniani Antoninum Germis catholicum episcopum <lb/> 
+						interfecerunt. Beatissimus Augustinus Hipponensis <lb/>  Ecclesiae elegantissimus
+						Christi sacerdos, doctorque <lb/>  praecipuus, morte  placida  quievit.</p>
+					<ab>
+						<title type="sub">(A. C. 430.) Ind. XIII, Theodosio XIII et Valentiniano III
+							coss.</title>
+					</ab>
+					<p>Theodosius imp. tricennalia gessit. Felix apud <lb/> Ravennam occiditur. Coelestinus
+						 Romanae  arcis pontifex ,<milestone unit="PLSection" n="c"/> <lb/> Nestorio pravitatis
+						episcopo per epistolam suam, <lb/> datis eidem x dierum induciis, vel poenitenti veniam,
+						<lb/> vel dissentienti damnationem denuntiat. Idem Nestorius <lb/>  Ecclesiae
+						Constantinopolitanae perfidus antistes, <lb/> a quo et Nestoriana perfidia pullulavit,
+						apud Ephesum <lb/>  ducentorum sanctorum Patrum sententia in synodo <lb/>  condemnatus
+						est, Coelestino Cyrillum Alexandrinae <lb/>  civitatis episcopum pro tempore vicarium denuntiante
+						<lb/>  : in locum Nestorii Maximianus episcopus <lb/> est subrogatus.</p>
+					<ab>
+						<title type="sub">(A. C. 431.) Ind. XIV, Antiocho et Basso coss.</title>
+					</ab>
+					<p> Flacilla Theodosii   Augusti filia extremum spiritum <lb/> fudit. Barbari urbe augusta
+						enutriti ad ecclesiam  nostram . <lb/>  hostili ritu confluunt; ignem in ecclesiam ad
+						<lb/> comburendum altare dum  infesti  jaciunt , invicem <milestone unit="PLSection" n="D"/><lb/> sese, resistente Deo, trucidant. Hoc tempore dum ad <lb/> horrea
+						 publica Theodosius  processum celebrat, tritici <lb/> in plebe ingruente penuria,
+						 imperator  ab esuriente <lb/> populo lapidibus impetitur.</p>
+					<ab>
+						<title type="sub">( A. C. 432.)  Ind . xv, Valerio et Aetio coss</title>
+					</ab>
+					<p>Romanae Ecclesiae Xystus XLII episcopus ordinatus  ,<lb/> vixit annis VIII. Placidiae
+						matris Valentiniani <lb/> imp. instinctu, ingens bellum inter Bonifacium et <lb/> Aetium
+						patricios gestum est. Aetius longiore  Bonifacii  <lb/>  telo pridie sibimet praeparato,
+						Bonifacium congredientem <lb/>  vulneravit illaesus; tertioque mense Bonifacius <lb/> 
+						vulnere quo sauciatus fuerat  emoritur , Pelagiam <lb/>  uxorem suam valde locupletem,
+						nulli alteri  nisi Aetio  <lb/>  ut  nuberet  exhortans.</p>
+					<p>
+						<milestone unit="PLSection" n="A"/>
+					</p>
+					<ab>
+						<title type="sub">(A. C. 435.) Ind.  I ,  Theodosio xiv et Maximo coss.</title>
+					</ab>
+					<p>Maxima urbis regiae pars septentrionalis per tres <lb/> dies continuos incensa,
+						collapsaque est mense Augusto  .<lb/></p>
+					<ab>
+						<title type="sub">(A. C. 434.) Ind. II, Ariobindo et  Aspare  coss.</title>
+					</ab>
+					<p>Honoria Valentiniani imp. soror ab Eugenio procuratore <lb/>  suo stuprata concepit,
+						 palatioque  expulsa, <lb/> Theodosio principi de Italia transmissa, Attilanem <lb/>
+						contra occidentalem  rempublicam  concitabat [Aliqui <lb/> codd. transmissa, male enim
+						contra occ. remp. cogitabat] <lb/> tabat].</p>
+					<ab>
+						<title type="sub">(A. C. 435.) Ind. III, Theodosio xv et  Valentiniano  iv coss.</title>
+					</ab>
+					<p>Forum Theodosii imp. in loco qui Helianae dicitur <lb/> aedificatum est. Sebastianus
+						Bonifacii quondam patricii <milestone unit="PLSection" n="B"/><lb/>  gener urbe Augusta
+						fugit, atque in Africa interemptus <lb/>  est.</p>
+					<ab>
+						<title type="sub">(A. C. 436.) Ind. iv, Isidoro et Senatore  coss .</title>
+					</ab>
+					<p>Theodosius imp. Cyzicum civitatem navibus petit, <lb/> multaque eidem civitati
+						munificentia praestita, urbem <lb/> Augustam renavigavit.</p>
+					<ab>
+						<title type="sub">(A. C. 437.) Ind. v,  Aetio  II et Sigisvuldo  coss .</title>
+					</ab>
+					<p>Valentinianus imp. Roma digressus, ad copulandam <lb/>  sibi in matrimonium Eudoxiam
+						Theodosii printeremptus <lb/>  filiam quam dudum desponsaverat, Constantinopolitanis <lb/> 
+						advenit, eaque sibi nupta, apud  Thessalonicam  <lb/>  Italiam repetens hiemavit.</p>
+					<ab>
+						<title type="sub">(A. C. 438.) Ind. vi, Theodosio xvi et Fausto coss.</title>
+					</ab>
+					<p>
+						.<milestone unit="PLSection" n="c"/>  Contradis] praedo cum piratis suisque
+						<lb/>  comitibus captus interfectusque est. Reliquiae <lb/> beatissimi Joannis,
+						Augustae urbis quondam episcopum  ,<lb/> eidem  redditae  civitati ibique sepultae, mense
+						Januario <lb/>  die  XXVIII . Valentinianus imp. cum Eudoxia <lb/> uxore Ravennam
+						ingressus est.</p>
+					<ab>
+						<title type="sub">(A. C. 439.) Ind.  VII , Theodosio XVII et Festo coss.</title>
+					</ab>
+					<p>Theodosius imp. octava quinquennalia  edidit . Eudoxia <lb/>  uxor Theodosii principis
+						ab Hierosolymis urbem <lb/>  regiam remeavit, beatissimi Stephani primi <lb/> martyris
+						reliquias quae in basilica sancti Laurentii <lb/> positae venerantur, secum deferens.
+						Hoc tempore <lb/> Gensericus rex Wandalorum Africae civitates, Carthaginemque <lb/> 
+						metropolim cum suis satellitibus  occupavit . <lb/>  x kalend. Novembris.</p>
+					<p>
+						<milestone unit="PLSection" n="D"/>
+					</p>
+					<ab>
+						<title type="sub">(A. C. 440.) Ind.  VIII , Valentiniano v et  Anatolio  coss.</title>
+					</ab>
+					<p>Paulinus magister officiorum in Caesarea Cappa <lb/> dociae, jubente Theodosio principe,
+						interemptus est <lb/> Romanae Ecclesiae Leo XLIII papa creatus, vixit annos <lb/> 
+						XXI.</p>
+					<ab>
+						<title type="sub">(A. C. 441.) Ind. IX, Cyro solo cos.</title>
+					</ab>
+					<p>Persae, Sarraceni.  . Tzanni], Isauri, <lb/> Hunni, finibus suis egressi,
+						Romanorum sola vastarunt  .<lb/> Missi sunt contra hos Anatolius et Aspar magistri <lb/>
+						 militiae, pacemque cum eis unius anni fecerunt  .<lb/> Joannes natione Wandalus,
+						magisterque militiae  ,  .<lb/>  Arnitiscli . Corb . Argenisti] . . Argenisti] fraude <lb/> in
+						 Thracia  interemptus est. Hunnorum reges nume-<pb n="927"/>
+						<milestone unit="PLSection" n="A"/><lb/>    suorum cum millibus in Illyricum
+						irruerunt : <lb/> Naisum, Singidinum, aliasque civitates, oppidaque <lb/> illyrici
+						plurima exciderunt.</p>
+					<ab>
+						<title type="sub">(A. C. 442.) Ind. x, Eudoxio et Dioscoro coss.</title>
+					</ab>
+					<p>Stella quae crinita dicitur, per plurimum tempus <lb/> ardens apparuit. Bleda et  Attila ,
+						fratres, multarumque <lb/>  gentium reges,  Illyricum  Thraciamque depopulati <lb/> 
+						sunt.</p>
+					<ab>
+						<title type="sub">(A. C. 443.) Ind. XI Maximo II et  Paterio    no]
+							coss.</title>
+					</ab>
+					<p>His consulibus tanta nix cecidit, ut per sex menses <lb/> vix  liquescere  potuerit :
+						multa hominum et animalium <lb/>  millia frigoris rigore confecta perierunt. Theodosius
+						<lb/>  imp. ex Asiana  expeditione  in urbem redit. <lb/> Thermarum quae  Achilleae :
+						dicuntur, encaeniae factae.</p>
+					<p>
+						<milestone unit="PLSection" n="B"/>
+					</p>
+					<ab>
+						<title type="sub">(A. C. 444.) Ind. XII, Theodosio XVIII et Alberto coss.</title>
+					</ab>
+					<p>Theodosius princeps nona quinquennalia dedit. <lb/> Archadia soror Theodosii vivendi
+						finem fecit. Aliquanta <lb/>  Bithyniae oppida atque praedia continuarum <lb/> vi longa
+						pluviarum, et fluviorum inundatione crescentium  ,<lb/> sublapsa dissolutaque
+						perierunt. Severum <lb/> presbyterum et Joannem diaconum Eudoxiae reginae <lb/> apud
+						 Aeliam  urbem  ministrantes , missus ab imp. <lb/> Theodosio Saturninus comes domesticorum
+						occidit. <lb/> Eudoxia nescio quo excita dolore  Saturninum  protinus <lb/>  obtruncavit :
+						 statimque  mariti imp. nutu, regiis <lb/> spoliata ministris apud  Aeliam  civitatem
+						moritura <lb/> remansit.</p>
+					<ab>
+						<title type="sub">(A. C. 445.)  Ind . XIII, Valentiniano VI et Nomo [Vel</title>
+					</ab>
+					<p>
+						<milestone unit="PLSection" n="c"/>
+					</p>
+					<ab>
+						<title type="sub">Nonio] coss.</title>
+					</ab>
+					<p>Bleda rex Hunnorum Attilae fratris sui insidiis interimitur  .<lb/> Apud Byzantium
+						populari orta in circo <lb/> seditione multi sese invicem occiderunt, multaque <lb/>
+						 intrinsecus [Chiffl . extrinsecus]  . extrinsecus] hominum pecudumque <lb/>  morbo corpora
+						perierunt.</p>
+					<ab>
+						<title type="sub">(A. C. 446.) Ind. XIV, Aetio III et Symmacho [Al. Valentiniano  VII  et
+							Aetio III] coss.</title>
+					</ab>
+					<p>His consulibus magna fames Constantinopolim interimitur  ,<lb/> pestisque illico
+						subsecuta. Templum regiae civitatis <lb/>  igne crematum.</p>
+					<ab>
+						<title type="sub">(A. C. 447.)  Ind . xv, Ardabure et  Callepio [Al . Calipio]  .  lipio]
+							coss.</title>
+					</ab>
+					<p>Ingenti terraemotu per loca varia imminente plurimi <lb/>  urbis augustae muri recenti
+						adhuc  reaedificatione  <milestone unit="PLSection" n="D"/><lb/>  constructi, cum LVII
+						turribus corruerunt. Saxa <lb/> quoque ingentia in foro Tauri dudum super sese in <lb/>
+						aedificio posita, statuaeque plurimae sine ullius videlicet <lb/>  laesione collapsae
+						sunt, plurimis nihilominus civitatis <lb/>  collapsis : fames et aerum pestifer odor
+						<lb/> multa millia hominum jumentorumque delevit. Ingens <lb/>  bellum et priore majus
+						per Attilam regem nostris <lb/>  inflictum, pene totam Europam, excisis invasisque <lb/>
+						 civitatibus atque castellis, conrasit. Eodem anno, <lb/> urbis augustae muri olim
+						terraemotu collapsi, intra <lb/> tres menses, Constantino praefecto praetorio operam <lb/>
+						dante. reaedificati sunt. Attila rex usque ad Thermopolim <lb/>   infestus  advenit.
+						 .  Arnegisclus  <lb/> lus] magister militiae in ripense Dacia, juxta  Utum 
+							<milestone unit="PLSection" n="A"/><lb/> amnem, ab  Attila  rege, viriliter pugnans,
+						plurimis <lb/> hostium interemptis, occisus est.</p>
+					<ab>
+						<title type="sub">(A. C. 448.) Ind. I, Zenone et Postumiano coss.</title>
+					</ab>
+					<p>Provincia India Theodosio principi pro munere tigrim <lb/>  domitam misit. Utramque
+						porticum Troadensem  ,<lb/> turresque portarum utrasque ignis subitus exussit <lb/>  :
+						quarum ruina continuo repurgata, Antiochus <lb/> praefectus praetorio in pristinam erexit
+						speciem, legatis <lb/>  Attilae a Theodosio  despectas [AI . depactas]  . depac] <lb/> olim pecunias
+						 flagitantibus .</p>
+					<ab>
+						<title type="sub">(A. C. 449.) Ind. II, Protogene et Asturio coss.</title>
+					</ab>
+					<p>Marina Theodosii regis soror fati munus implevit. <lb/> Flavianus episcopus in  secunda 
+						apud Ephesum synodo  ,<lb/> vi Dioscori Alexandrini episcopi et Saturnini <milestone unit="PLSection" n="B"/><lb/> spadonis in  Epipam [Chiffl . etiam]  . etiam] exsulatus est. <lb/>
+						Areobinda et Taurus patricii communi vita defuncti <lb/> sunt.</p>
+					<ab>
+						<title type="sub">(A. C. ;0.) Ind. III, Valentiniano VII et Abieno coss.</title>
+					</ab>
+					<p>Theodosius imp. vivendi  finem  fecit : regnavit <lb/> post mortem Archadii patris sui
+						annos XLII. Loco    .<lb/> Locum] ejus Marcianus imperium   . imperator] <lb/> adeptus
+						est. Crysaphius eunuchus, Pulcheriae Theodosius <lb/>  sororis nutu, sua cum avaritia
+						interemptus est.</p>
+					<ab>
+						<title type="sub">(A. C. 451.) Ind. IV, Marciano Aug. et Adelfio coss.</title>
+					</ab>
+					<p>Leone pontifice sedem beati Petri regente, DCXXX <lb/> Patrum sancta et universalis
+						synodus contra Eutychetem <lb/>  nefandissimorum praesulem monachorum , <lb/> apud
+						Chalcedonam in basilica sanctae Euphemiae firmata <milestone unit="PLSection" n="C"/><lb/>
+						 est : solus Dioscorus Alexandrinae Ecclesiae <lb/> episcopus dissensit, statimque ab
+						iisdem catholicis <lb/> Patribus sacerdotio abdicatus est.</p>
+					<ab>
+						<title type="sub">(A. C. 452.) Ind. v, Sporacio et Herculano coss.</title>
+					</ab>
+					<p>Marcianus Aug. suis statuit decretis ut hi qui consules <lb/>  fieri cupiebant, nihil
+						aeris in populum spargerent  ,<lb/> sed statutam pecuniam ad reparandum Urbis <lb/>
+						aquae ductum dependerent. Hoc tempore tres magni <lb/> lapides e  coelo  in Thracia
+						ceciderunt. Aquileia  civitas . <lb/> tas ab Attila  Hunnorum  rege excisa est.</p>
+					<ab>
+						<title type="sub">(A. C. 453.) Ind. VI, Vincomalo et Opilione coss.</title>
+					</ab>
+					<p>Joannes praecursor Domini et baptista, caput suum <lb/> quod olim Herodias impia
+						nefandaque postulatione <lb/> ab humeris amputatum et in disco positum accepit,
+							<milestone unit="PLSection" n="D"/><lb/> proculque a  truncato  ejus corpore sepelivit,
+						duobus <lb/> Orientalibus monachis ob adorandam apud Hierosolymam <lb/>  Christi Domini
+						resurrectionem introeuntibus <lb/> revelavit, ut ad Herodis quondam regis habitaculum
+						<lb/> accedentes admoniti  requirerent ,  fideliterque  humo <lb/> extollerent. Hoc ergo
+						caput  fide [Chiffl . fidei]  . fidei] repertum  ,<lb/> suaque hispida in mantica conditum, dum ad
+						<lb/> propria remeantes habitacula pervehunt, quidam <lb/> Emisenae figulus civitatis,
+						diutinam imminentemque <lb/> sibi fugiens paupertatem, sese his exhibuit comitem : <lb/>
+						quique dum nescius peram sibi creditam cum sacro <lb/> capite portat, ab eo cujus caput
+						vehebat, noctu admonitus  ,<lb/> utrumque comitem fugiens dereliquit, . <lb/>  statimque 
+						Emisenam urbem cum sancto leviQue onero<pb n="929"/>
+						<milestone unit="PLSection" n="A"/><lb/> introgressus est. Ibique dum advixit,
+						praecursoris <lb/> Christi veneratus est caput, moriensque  sorori  suae <lb/> rerum nesciae
+						signatum in vasculo tradidit  recolendum [Fort . colendum]    .<lb/> colendum]. Illa vero successori
+						suo <lb/> repositum,  signatumque  ut erat dereliquit. Porro <lb/> Eustochius, quidam
+						occultus Arianae perfidiae  presbyter .  ,<lb/> talem tantumque thesaurum indignus obtinuit,
+						<lb/> gratiamque quam  Christus  Dominus per Joannem <lb/> baptistam infirmo populo
+						tribuebat, is eam, ac si <lb/> suam dumtaxat, in vulgo disseminabat. Hinc pravitate <lb/>
+						 sua detecta, Emisena civitate expulsus est. Hoc <lb/> deinde antrum in quo
+						beatissimi Joannis caput in <lb/> urnam missum, sub terraque reconditum erat, quidam <lb/>
+						 monachi pro habitaculo habere  coeperunt . Marcellus <lb/>  demum presbyter,
+						totiusque monasterii  praesul  ,<milestone unit="PLSection" n="B"/> <lb/> dum in eodem
+						specu vita irreprehensibili habitat  ,<lb/> idem B. Joannes Christique praecursor sese
+						 eidem  <lb/>  suumque ostendit caput, ibidemque sepultum <lb/> multis praefulgens
+						virtutibus patefecit. Hoc igitur <lb/> venerabile caput sub Uranio memoratae episcopo  eidem 
+						 ,<lb/> per praefatum Marcellum presbyterum constat <lb/>  inventum Vincomalo et
+						Opilione  coss . mense <lb/> Februario, die XXIV, media jejuniorum paschalium <lb/>
+						septimana, imperatoribus vero Valentiniano et  Marciano  <lb/>  regnantibus. Pulcheria
+						Augusta, Marciani <lb/> principis  uxor , beati Laurentii atrium inimitabili <lb/> opere
+						consummavit, beatumque vivendi finem fecit.</p>
+					<ab>
+						<title type="sub">(A. C. 454.) Ind. VII.  Aetio  et Studio coss.</title>
+					</ab>
+					<p>Attila rex Hunnorum Europae orbator provinciae <milestone unit="PLSection" n="c"/><lb/>
+						noctu mulieris manu cultroque confoditur. Quidam <lb/> vero sanguinis rejectione necatum
+						perhibent.  Aetius  <lb/> patricius, magna  Occidentalis  reipublicae salus, et <lb/> regis
+						Attilae terror, a Valentiniano imp. cum Boetio <lb/> amico in palatio trucidatur : atque
+						cum ipso Hesperium <lb/>  cecidit regnum, nec hactenus valuit relevari.</p>
+					<ab>
+						<title type="sub">(A. C. 455.) Ind. VIII, Valentiniano VIII et Anthemio  coss .</title>
+					</ab>
+					<p>Valentinianus princeps, dolo Maximi patricii, cujus <lb/>  etiam fraude Aetius
+						perierat, in campo Martio <lb/> per  Optilam [Chiffl . Ostilam]  . Ostilam] et Traustilam Aetii satellites
+						 ,<lb/> jam percusso Heraclio spadone, truncatus <lb/> est. Idem Maximus invasit
+						 imperium , tertioque tyrannidis <lb/>  suae mense membratim Romae a Romanis <lb/>
+						tractus  discerptusque est [Al . discerptus estl   .  . Gensericus <milestone unit="PLSection" n="D"/><lb/>  rex Wandalorum, ab Eudoxia Valentiniani <lb/> uxore epistolis invitatus,
+						ex Africa Romam ingressus <lb/> est, eaque urbe rebus omnibus spoliata, eamdem <lb/>
+						 Eudoxiam  cum duabus filiabus secum rediens abduxit  .<lb/></p>
+					<ab>
+						<title type="sub">(A. C. 456. Ind.  IX , Varane et Joanne coss.</title>
+					</ab>
+					<p>His consulibus innumera locustarum agmina fructum <lb/>  Phrygiae vastaverunt.
+						Eucherius Lugdunensis <lb/> Ecclesiae pontifex multa scripsit, tam ecclesiasticis <lb/>
+						quam monasticis studiis necessaria.</p>
+					<ab>
+						<title type="sub">(A. C. 457.) Ind. x, Constantino et Rufo coss.</title>
+					</ab>
+					<p>Marcianus imp. bonis principibus comparandus <lb/> vitae spiritum amisit: imperavit
+						annos VI, menses vi. <milestone unit="PLSection" n="A"/><lb/> Leo eidem defuncto
+						successit, cujus voluntate Majorianus <lb/>  apud Ravennam Caesar est ordinatus.</p>
+					<ab>
+						<title type="sub">(A. C. 458.) Ind. xi, Leone Aug. et Majoriano [Al. add. Aug ]
+							coss.</title>
+					</ab>
+					<p>Leo imp. pro tomo Chalcedonense per universum <lb/> orbem singulis orthodoxorum
+						episcopis,  singulas : <lb/> consonantesque misit epistolas, quo sibi quid de <lb/> eodem
+						tomo sentirent cuncti suis rescriptionibus indicarent  .<lb/> Horum omnium episcoporum
+						ita conspirantes <lb/>  suscepit epistolas, ut eas putares uno tempore <lb/> unius viri
+						eloquio fuisse dictatas.</p>
+					<ab>
+						<title type="sub">(A. C. 459.) Ind.  XII , Patricio et Ricimere coss.</title>
+					</ab>
+					<p>Isaac Antiochenae Ecclesiae presbyter scripsit Syro <lb/> sermone multa, praecipueque
+						adversus Nestorianos <milestone unit="PLSection" n="B"/><lb/> <note n="I"/> et Eutychianos. Ruinam
+						enim Antiochiae elego carmine <lb/>  planxit, quemadmodum  Ephrem  diaconus  Nicomediae . <lb/>
+						 lapsum.</p>
+					<ab>
+						<title type="sub">(A. C. 460.) Ind.  XIII , Apollonio et Magno coss.</title>
+					</ab>
+					<p>Cyzicus civitas terraemotu concussa, murorumque <lb/>  suorum  ambitu  interrupto, sese
+						suosque diu deplanxit  .<lb/></p>
+					<ab>
+						<title type="sub">(A. C. 461.) Ind. XIV, Dagalaifo et Severino coss.</title>
+					</ab>
+					<p>Romanae Ecclesiae Hilarus XLIV pontifex factus, <lb/> vixit annos VI. Majorianus Caesar
+						 apud  Dertonam, <lb/> juxta fluvium qui Hyra dicitur, interemptus est. Locum <lb/>  ejus
+						Severus invasit.</p>
+					<ab>
+						<title type="sub">(A. C. 462.) Ind. xv, Leone Aug. II solo [Cassiod. et Severo Aug.]
+							cos.</title>
+					</ab>
+					<p>
+						<milestone unit="PLSection" n="c"/>Jacobus natione Achivus, religione paganus, medicinae <lb/>
+						 artis peritia, tam ingenio quam litteratura <lb/>  perclaruit . Hic ob medendum
+						Leonem Aug. febre <lb/> defatigatum, sacrum palatii cubiculum vocatus indicarent  ,<lb/>
+						statimque in sella juxta torum imperialem <lb/> posita, sine ullo Augusti nutu consedit,
+						sicque medicinae <lb/>  adhibuit manus. Porro meridie ad eumdem <lb/> sacrum pulvinar
+						reversus, sublatum sui propter solium <lb/>  in quo matutinus resederat protinus
+						intellexit, <lb/> spondamque tori regiam intrepidus supersedit, veterumque <lb/> 
+						studii sui repertorum  praeceptionibus  monitum <lb/>  id sese gessisse, non temere
+						praesumpsisse, <lb/> aegrotantem docuit principem.</p>
+					<ab>
+						<title type="sub">(A. C. 463.) Ind. I, Viviano et Felice coss.</title>
+					</ab>
+					<p>Prosper homo Aquitanicae regionis, sermone scholasticus <milestone unit="PLSection" n="D"/><lb/>  et assertionibus nervosus, multa composuisse <lb/> dicitur. Epistolae
+						quoque papae Leonis adversus  Eutychem . <lb/>  de vera Christi Incarnatione datae, ab
+						isto <lb/> dictatae creduntur.</p>
+					<ab>
+						<title type="sub">(A. C. 464.) Ind. II, Rusticio et Olybrio coss.</title>
+					</ab>
+					<p>Beorgor rex Alanorum a Ricimere rege occiditur.</p>
+					<ab>
+						<title type="sub">(A. C. 465.) Ind. III,  Basilisco  et Herminerico coss.</title>
+					</ab>
+					<p>Constantinopolis magno invasa incendio, facieque <lb/> foedata deplanxit. Severus, qui
+						Occidentis arripuit <lb/> principatum, Romae interiit.</p>
+					<ab>
+						<title type="sub">(A. C. 466.) Ind. IV, Leone Aug. III solo cos.</title>
+					</ab>
+					<p>Theodoritus episcopus Cyri civitatis scripsit de <lb/> Incarnatione Domini adversus
+						Eutycbem presbyte1 <lb/><pb n="931"/>
+						<milestone unit="PLSection" n="A"/><lb/>    et Dioscorum  Alexandrinae  Ecclesiae episcopum
+						 ,<lb/> qui humanam in Christo carnem fuisse  denegant .  .<lb/></p>
+					<ab>
+						<title type="sub">(A. C. 467.) Ind. v, Puseo et Joanne coss.</title>
+					</ab>
+					<p>Leo imp.  Anthemium  patricium Romam misit,  imperatoremque  <lb/>  constituit. Romanae
+						Ecclesiae Simplicius <lb/>  XLV pontifex creatus, vixit annos xv. Ravennam <lb/> 
+						civitatem  terraemotus   deterruit.</p>
+					<ab>
+						<title type="sub">(A. C. 468.) Ind. VI, Anthemio Aug. II solo cos.</title>
+					</ab>
+					<p>Marcellinus Occidentis patricius, idemque paganus  ,<lb/> dum Romanis contra Wandalos
+						apud Carthaginem <lb/>  pugnantibus opem auxiliumque fert, ab iisdem <lb/>   dolo 
+						confoditur pro quibus palam venerat pugnaturus  .<lb/></p>
+					<p>
+						<milestone unit="PLSection" n="B"/>
+					</p>
+					<ab>
+						<title type="sub">(A. C. 469.) Ind. VII, Zenone et Marciano coss.</title>
+					</ab>
+					<p>His coss. caput Denzicis Hunnorum regis Attilae <lb/> filii Constantinopolim allatum
+						est.</p>
+					<ab>
+						<title type="sub">(A. C. 470.) Ind. VIII, Jordane et Severo coss.</title>
+					</ab>
+					<p>Gennadius Constantinopolitanae Ecclesiae pontifex <lb/> Danielem  prophetam  ex integro ad
+						verbum commentatus <lb/>  est, et homilias multas composuit,  et  Pauli Epistolas <lb/> 
+						omnes exposuit.</p>
+					<ab>
+						<title type="sub">(A. C. 471.) Ind. IX, Leone Aug. IV et  Probiano  coss.</title>
+					</ab>
+					<p>Aspar primus patriciorum cum Ardabure et Patriciolo <lb/>  filiis, illo quidem olim
+						patricio, hoc autem <lb/> Caesare  generoque  Leonis principis  appellato , Arianus <lb/> 
+						cum Ariana prole, spadonum ensibus in palatio <lb/> vulneratus interiit.</p>
+					<p>
+						<milestone unit="PLSection" n="c"/>
+					</p>
+					<ab>
+						<title type="sub">( a. C. 472.) Ind. x, Marciano et Festo coss.</title>
+					</ab>
+					<p>Vesuvius mons Campaniae torridus intestinis ignibus <lb/>  aestuans exusta evomuit
+						viscera, nocturnisque <lb/> in die tenebris incumbentibus, omnem Europae faciem <lb/> 
+						minuto contexit pulvere. Hujus metuendi memoriam <lb/>  cineris Byzantii annue
+						celebrant VIII idus <lb/> Novemb. Anthemius imp. Romae a Ricimere genero <lb/> suo
+						occiditur. Loco ejus Olybrius substitutus, septimo <lb/>  mense imperii sui vita
+						defunctus est. In Asia <lb/> aliquantae civitates vel oppida terraemotu collapsa <lb/>
+						sunt.</p>
+					<ab>
+						<title type="sub">(A. C. 475.) Ind. XI, Leone Aug. v solo cos.</title>
+					</ab>
+					<p>Glycerius apud Ravennam plus praesumptione <lb/> quam electione Caesar factus  est .
+						Constantinopoli <milestone unit="PLSection" n="D"/><lb/> seditione in circo orta, multi
+						Isaurorum a populo <lb/> interempti sunt.</p>
+					<ab>
+						<title type="sub">(A. C. 474.) Ind.  XII , Leone juniore solo cos.</title>
+					</ab>
+					<p>Leo senior imp., Leone juniore a se jam Caesare <lb/> constituto, morbo periit, tam sui
+						imperii annis quam <lb/> hujus Leonis regni mensibus computatis, anno XVII, <lb/> mense
+						vi. Zenonem Leo junior, idemque filius  imperator . <lb/>  principem regni constituit.
+						Glycerius Caesar <lb/> Romae imperium tenens, a Nepote, Marcellini quondam <lb/> 
+						patricii sororis filio, imperio expulsus, in portu <lb/> urbis Romae ex Caesare episcopus
+						ordinatus est, et <lb/>  obiit  .</p>
+					<ab>
+						<title type="sub">(A. C. 475.) Ind. XIII, Zenone Aug. II  cos.</title>
+					</ab>
+					<p>Zeno imp. Verinae socrus suae et Basilisci fratris ejus <milestone unit="PLSection" n="A"/><lb/> insidiis circumventus, cum Ariadne uxore sua profugus <lb/>  in Isauriam
+						tendit. Regnum Zenoni Basiliscus <lb/> tyrannus invasit. Nepos, qui Glycerium regno
+						pepugnaturus  ,<lb/> Romae elevatus est imperator. Nepote Orestes <lb/> protinus effugato,
+						Augustulum filium suum in imperium <lb/>  collocavit.</p>
+					<ab>
+						<title type="sub">(A. C. 476.) Ind. xiv, Basilisco et Armato coss.</title>
+					</ab>
+					<p>Basiliscus tyrannus Marco filio suo Caesare facto, <lb/> dum contra fidem catholicam
+						Nestoriana [Potius <lb/> Eutychiana] perfidia intumescens conatur  assurgere ,  <lb/>  ante
+						inflatus  crepuit  quam poenitens stare potuerit  .<lb/> Basiliscus cum  filio  et Zenonida
+						uxore sua, <lb/> jam Zenone pristinum ad imperium remeante, in <lb/> exsilium missus
+						est, atque in oppidulum quod  Leminis . <milestone unit="PLSection" n="a"/><lb/>  in
+						provincia Cappadociae dicitur, trusus famo <lb/> extabuit. Odoacer rex Gothorum Romam
+						obtinuit; <lb/> Orestem Odoacer illico trucidavit; Augustulum filium <lb/> Orestis
+						Odoacer in Lucullano Campaniae castello <lb/> exsilii poena damnavit. Hesperium Romanae
+						gentis <lb/> imperium, quod septingentesimo nono [Chiffl. septimo  .<lb/> octavo] Urbis
+						conditae anno  primus Augustorum  <lb/> Octavianus Augustus tenere coepit, cum hoc  Augustulo periit -
+						  ,<lb/> anno decessorum regni  imperatorum  <lb/> DXXII,  Gothorum  dehinc
+						regibus Romam tenentibus  .<lb/></p>
+					<ab>
+						<title type="sub">(A. C. 477.) Ind. xv, sine consulibus.</title>
+					</ab>
+					<p>Bracilam comitem Odoacer rex apud Ravennam <lb/> occidit.</p>
+					<ab>
+						<title type="sub">(A. C. 478.) Ind.  I , Illo solo cos.</title>
+					</ab>
+					<p>
+						<milestone unit="PLSection" n="c"/>Theodulus presbyter in Coelesyria multa conscripsit
+						 ,<lb/> clarusque habetur.</p>
+					<ab>
+						<title type="sub">(A. C. 479.) Ind. II, Zenone Aug. III cos.</title>
+					</ab>
+					<p>Sabinianus magnus Illyricianae utriusque  militiae  <lb/> ductor creatus, curiam fragilem,
+						conlapsumque justum <lb/>  reipublicae censum, vel praepaventem fovit, <lb/> vel
+						dependentem tutatus est. Disciplinae praeterea <lb/> militaris ita optimus institutor
+						coercitorque fuit, <lb/> ut priscis Romanorum ductoribus comparetur. <lb/> Theodoricum
+						idem  Sabinianus  regem apud  Graeciam  <lb/>  debacchantem ingenio magis quam virtute deterruit
+						 .<lb/></p>
+					<ab>
+						<title type="sub">(A. C. 480.) Ind. III, Basilio   .  solo cos.</title>
+					</ab>
+					<p>
+						<milestone unit="PLSection" n="D"/>Urbs regia per XL continuos dies assiduo terraemotu <lb/>
+						 quassata magnopere sese afflicta deplanxit. <lb/> Ambae Troadenses porticus
+						corruerunt: aliquantae <lb/> ecclesiae vel scissae sunt vel collapsae. Statua Theodosii <lb/>
+						 Magni in foro Tauri super cochlidem  olumnam  <lb/>  posita corruit, duobus
+						fornicibus ejusdem  collapsis .  .<lb/> Hunc formidolosum diem Byzantii celebrant <lb/> 
+						VIII kalend. Octobris. His coss., Nepos, quem <lb/> dudum Orestes imperio abdicaverat,
+						Viatoris et <lb/>  Ovidae [Chiffl . Ovilae]  . Ovilae] comitum suorum insidiis, haud <lb/> longe a
+						Salonis, sua in villa occisus est.</p>
+					<ab>
+						<title type="sub">(A. C. 481.) Ind. IV, Placido solo cos.</title>
+					</ab>
+					<p>Theodoricus Triarii filius rex Gothorum, ascitis <lb/> suis usque ad Anaplum, quarto
+						Urbis milliario arma-<pb n="933"/>
+						<milestone unit="PLSection" n="A"/><lb/>    advenit :  nulli  tamen Romanorum noxius
+						continuo <lb/>  reversus est. Porro in Illyricum properans, dum <lb/> inter suorum
+						moventia plaustra progreditur, jacentis <lb/> super carpentum teli acumine, et
+						pavescentis equi <lb/>  sui  impulsione, fixus transverberatusque interiit. Sabinianum <lb/>
+						 Magnum mors quae huic peccanti mundo <lb/> merito imminet, ante eum ademit quam
+						integrum <lb/>  defatigatae  reipublicae subsidium foret.</p>
+					<ab>
+						<title type="sub">(A.. C. 482.) Ind. v, Trocondo et Severino [Scil. juniore]
+							coss.</title>
+					</ab>
+					<p>Romanae Ecclesiae Felix XLVI episcopus ordinatus  ,<lb/> vixit annis XII. Theodoricus
+						cognomento Valamer <lb/>  utramque Macedoniam Thessaliamque depopulatus <lb/>  est,
+						Larissam  quoque  metropolim depraedatus  .<lb/></p>
+					<p>
+						<milestone unit="PLSection" n="B"/>
+					</p>
+					<ab>
+						<title type="sub">( A. C. 483.)  Ind .  VI !, Fausto solo cos.</title>
+					</ab>
+					<p>Idem Theodoricus  rex  Gothorum Zenonis Aug. <lb/> munificentiis pene pacatus,
+						magisterque praesentis <lb/> militiae factus, consul quoque designatus, creditam <lb/>
+						sibi ripensis Daciae partem Moesiaeque inferioris, cum <lb/> suis satellitibus pro tempore
+						tenuit.</p>
+					<ab>
+						<title type="sub">(A. C. 484.)  Ind . VII, Theodorico et Venantio  coss .</title>
+					</ab>
+					<p>Illus natione Isaurus, dignitate magister officiorum  ,<lb/> amputata apud comitatum
+						auricula, Orientem <lb/> Zenoni infestus invasit. Porro cum Leontio tyrannidem <lb/> 
+						arripuit. Totam namque per Africam crudelis <lb/> Hunerici Wandalorum regis in nostros
+						catholicos <lb/> persecutio importata est. Nam exsulatis diffugatisque <lb/> plus quam
+						CCCXXXIIII   . CCCXXX XII ] orthodoxorum <milestone unit="PLSection" n="C"/><lb/>
+						episcopis, ecclesiisque eorum clausis, plebs fidelium <lb/> variis subacta suppliciis,
+						beatum consummavit agonem  .<lb/> Nempe tunc idem rex Hunericus, unius catholici <lb/>
+						 adolescentis vitam a nativitate sua sine ullo  sermone  <lb/>  ducentis, linguam
+						praecepit excidi, idemque <lb/> mutus quod sine humano auditu Christo credens <lb/> fide
+						didicerat, mox praecisa sibi lingua locutus est, <lb/> gloriamque Deo in primo vocis suae
+						exordio dedit. <lb/> Denique ex hoc fidelium contubernio aliquantos ego <lb/>
+						religiosissimos viros praecisis linguis, manibus truncatis  ,<lb/> apud Byzantium
+						integra voce conspexi loquentes  .<lb/> Haec Arianorum crudelitas in religiosos <lb/>
+						Christi cultores supra scriptis coss. mense Februario <lb/> coepit infligi.</p>
+					<ab>
+						<title type="sub">(A. C. 485.) Ind. VIII, Symmacho solo cos.</title>
+					</ab>
+					<p>
+						<milestone unit="PLSection" n="D"/>Longinus Zenonis frater Augusti, post decennalem
+						<lb/> custodiam quam eidem Illus apud Isauriam inflixerat, <lb/> ad germanum suum
+						Constantinopolim advenit.</p>
+					<ab>
+						<title type="sub">(A. C. 486.) Ind. ix, Longino solo cos. [Al. et Decio coss.]</title>
+					</ab>
+					<p>Joannes  Antiochenae  paroeciae ex grammatico presbyter  ,<lb/> scripsit adversum eos qui
+						in una tantum substantia <lb/>  adorandum asserunt Christum, nec acquiescunt <lb/> 
+						duas in Christo confitendas esse naturas.</p>
+					<ab>
+						<title type="sub">(A. C. 487.) Ind. x, Boetio solo cos.</title>
+					</ab>
+					<p>Theodoricus rex Gothorum Zenonis Augusti numquam  ,<lb/> beneficiis satiatus magna
+						suorum manu usque <lb/> ad regiam civitatem et Melentiadam oppidum infestus <milestone unit="PLSection" n="A"/><lb/> accessit, plurimisque locis igne crematis, ad Novensem <lb/>
+						 Moesiae civitatem, unde advenerat, remeavit.</p>
+					<ab>
+						<title type="sub">(A. C. 488.) Ind. XI, Dinamio et Sifidio coss.</title>
+					</ab>
+					<p>Leontius interea rex  et  Illus tyrannus, in Papyrio <lb/> Isauriae castello capti,
+						decollatique sunt. Capita eorum <lb/>  Constantinopolim allata praefixa hastilibus tabuere
+						 .<lb/> Eodem  anno  Theodoricus rex omnium suorum <lb/>  multitudine assumpta
+						Gothorum  in Italiam   <lb/> tendit.</p>
+					<ab>
+						<title type="sub">(A. C. 489.) Ind. III, Eusebio et Probino coss.</title>
+					</ab>
+					<p>Idem Theodoricus rex Gothorum optatam occupavit <lb/>  Italiam. Odoacer itidem rex
+						Gothorum metu Theorum <lb/>  perterritus, Ravennam ingressus est: porro <lb/> ab
+						eodem Theodorico perjuriis illectus, interfectusque <milestone unit="PLSection" n="B"/><lb/>  est.</p>
+					<ab>
+						<title type="sub">(A. C. 490.) Ind. XIII, Longino  II  et Fausto coss.</title>
+					</ab>
+					<p>Zeno imp. Pelagii gulam in insula quae Panormum <lb/> dicitur, laqueo frangi
+						praecepit.</p>
+					<ab>
+						<title type="sub">(A. C. 491.) Ind. xiv, Olybrio solo cos.</title>
+					</ab>
+					<p>Zeno Augustus vita decessit, tam sui imperii annis <lb/> quam Basilisci tyrannidis
+						mensibus computatis, <lb/> annos XVII, menses VI. Anastasius ex silentiario imperator <lb/>
+						 creatus est. Bellum plebeium  inter  Byzantios <lb/> ortum, parsque urbis plurima
+						atque circi igne  COni . . busta ..  .<lb/></p>
+					<ab>
+						<title type="sub">(A. C. 492.) Ind. xv, Anastasio Aug. et Rufo coss.</title>
+					</ab>
+					<p>Dum bellum paratur Isauricum, dumque isauri <lb/> imperium sibi vindicare nituntur, in
+						Phrygia juxta <milestone unit="PLSection" n="C"/><lb/> Cotiaeum  civitatem  undique
+						confluunt; ibique  Lilingis   ,<lb/> segnis  quidem  pedes, sed eques in bello acerrimus
+						 ,<lb/> a Romanis primus in praelio trucidatur, omnesque <lb/>  simul Isauri fugae
+						dediti, per montana asperaque <lb/>  loca Isauriam repetunt. Hoc bellum  Isauricum  <lb/>
+						per sex annos tractum est.</p>
+					<ab>
+						<title type="sub">(A. C. 493.) Ind. i, Eusebio II et Albino coss.</title>
+					</ab>
+					<p>Bella civilia adversus Anastasii regnum apud Constantinopolim <lb/>  gesta sunt:
+						statuae regis reginaeque <lb/> funibus ligatae, atque per urbem tractae. Julianus <lb/>
+						magister militiae nocturno praelio pugnans, Scythico <lb/> ferro in Thracia confossus
+						interiit.</p>
+					<ab>
+						<title type="sub">(A. C. 494.) Ind. II, Asterio et Praesidio coss.</title>
+					</ab>
+					<p>
+						<milestone unit="PLSection" n="D"/>Anastasius imp. contra orthodoxorum fidei majestatem <lb/>
+						 intestina coepit praelia commovere : piaculi <lb/> sui perfidiam prius in
+						Eufemium urbis episcopum, <lb/> sibi pro  orthodoxorum  fide viriliter resultantem, <lb/>
+						profano  manifestavit   ingenio. Laodicea, Hierapolis <lb/>  et Tripolis , atque Agathicum uno
+						tempore unoque <lb/> terraemotu collapsae sunt. Romanae Ecclesiae XLVII <lb/> Gelasius
+						episcopus ordinatus vixit annos IV [Chiffl. <lb/> III].</p>
+					<ab>
+						<title type="sub">(A. C. 495.) Ind. III, Viatore solo cos.</title>
+					</ab>
+					<p>Eufemius Augustae civitatis antistes de quo superius <lb/>  fecimus mentionem, falso
+						ab Anastasio principe <lb/> accusatus atque damnatus, in exsilium ductus est. <lb/>
+						Locum  Eufemii  Macedonius tenuit.</p><pb n="935"/>
+
+					<p>
+						<milestone unit="PLSection" n="A"/>
+					</p>
+					<ab>
+						<title type="sub"> (A . C . 496 . ) Ind , IV , Paulo solo cos . . . .) , ,   .</title>
+					</ab>
+					<p>Augustatico suo dudum Anastasius militibus praestito  ,<lb/> donativum quoque hoc
+						fratre consule tribuit. <lb/> India Anastasio principi elephantem, quem Plautus <lb/>
+						poeta noster  Lucabum [Id est Lucam bovem]     bovem] nomine <lb/> dicit, duasque camelopardalas pro
+						munere misit.</p>
+					<ab>
+						<title type="sub">(A. C. 497.) Ind. v, Anastasio Aug. . II] solo cos.</title>
+					</ab>
+					<p>Solis defectus apparuit: bellumque Isauricum hoc <lb/> sexto anno sedatum. Athenodorus
+						Isaurorum primus <lb/> in Isauria captus decollatusque est. Caput ejus Tarsum <lb/> 
+						civitatem allatum pro portis hastili fixum extabuit  .<lb/></p>
+					<ab>
+						<title type="sub">(A.  C . 498.) Ind. VI, Joanne Scytha et Paulino coss.</title>
+					</ab>
+					<p>Romanae Ecclesiae XLVIII Anastasius pontifex ordinatus ,<milestone unit="PLSection" n="B"/> <lb/> vixit annos  XI . Longinus Isaurus cognomento <lb/> Selinunteus, apud
+						Antiochiam Isauriae civitatem a <lb/> Prisco comite captus, Constantinopolim missus  est ,
+						<lb/> catenatusque per agentem circumductus Anastasio <lb/> principi, et populo ingens
+						spectaculum fuit: variisque <lb/>  deinde cruciatibus apud Nicaeam Bithyniae civitatem <lb/>
+						 expensus est. Nummis quos Romani  Tercntianos [Forte Teruntios aut Teruntianos]  <lb/>    
+						Teruntianos] vocant, <lb/> Graeci follares, Anastasius princeps suo nomine figuratis 
+						,  .<lb/> placabilem] plebi commutationem <lb/>  distraxit.</p>
+					<ab>
+						<title type="sub">(A. C. 499.) Ind. VII, Joanne Gibbo solo cos,</title>
+					</ab>
+					<p>Aristus Illyricianae ductor  militae  cum xv millibus <lb/> armatorum, et cum DXX
+						plaustris armis ad praeliandum <lb/>  necessariis oneratis, contra Bulgares Thraciam
+							<milestone unit="PLSection" n="c"/><lb/> devastantes profectus est. Bellum juxta
+						Zurtam fluvium <lb/>  consertum, ubi  plus quam  iv millia nostrorum, <lb/> aut in  fuga ,
+						aut in praecipitio ripae fluminis interempta <lb/>  sunt. Ibique Illyriciana virtus
+						militum periit, <lb/> Nicostrato, Innocentio et Aquilino comitibus interempta  .<lb/>
+						Hoc anno ingens terraemotus Ponticam concussit <lb/>  provinciam.</p>
+					<ab>
+						<title type="sub">(A. C. 500.) Ind. VIII, Patricio et  Hypatio  coss.</title>
+					</ab>
+					<p>Romanae Ecclesiae XLIX Symmachus episcopus factus  ,<lb/> vixit annos xv. Anastasius
+						imp.  donativum  <lb/> Illyricianis militibus per Paulum tribunum notariorum <lb/> 
+						erogandum misit.</p>
+					<ab>
+						<title type="sub">(A. C. 501.) Ind. IX, Pompeio et Avieno coss.</title>
+					</ab>
+					<p> Constantio praefecto urbis   ludos theatrales meridiano <milestone unit="PLSection" n="D"/><lb/>  tempore spectante, pars in eodem spectaculo <lb/>  Cerealis parti diversae [Sirm . prave ,   
+						. , cerealis parti  diversae  <lb/> verso] caeruleae  occultas   praeparavit insidias. Nam
+						enses <lb/>  saxaque in vasis inclusa fictilibus,  eademque  arma <lb/>  diversis pomis
+						desuper  cumulata , sub theatri porticu <lb/>  ritu vendentium statuit. Dum residente
+						 Constantio . <lb/>  ex more civium concrepant voces, ante visa quam <lb/> audita arma
+						excutiuntur, saxaque in incautos et cives <lb/>  instar imbrium jaciuntur, ensesque
+						vibrantes in <lb/> amicorum inque vicinorum sanguine obliti, suis cum <lb/>
+						percussoribus debacchantur : nutat et congemiscit <lb/> theatri cavea, et refugientium
+						huc atque illuc suorum <lb/> pedibus conculcata, occisorumque foedata cruore deplangit 
+						.<lb/> Plus enim quam tria millia civium  saxis , <milestone unit="PLSection" n="A"/><lb/> gladiisque, compressionibus et aquis proscenis amissos <lb/>  urbs Augusta
+						deflevit.</p>
+					<ab>
+						<title type="sub">(A. C. 502.) Ind. x, Probo et Avieno coss.</title>
+					</ab>
+					<p>Consueta gens Bulgarorum depraedatam saepe Thraciam  ,<lb/> nullo Romanorum milite
+						resistente, iterum <lb/> devastavit. Amidam opulentissimam  civitatem , monachorum <lb/> 
+						ejus astu proditam,  Choadis rex  Persarum, <lb/> quinto mense quam  expugnare  eam coeperat,
+						irrupit, <lb/> proditoresque ejus monachos obtruncavit.</p>
+					<ab>
+						<title type="sub">(A. C. 503.) Ind. II, Dexicrate et Volusiano coss.</title>
+					</ab>
+					<p>Tres Romanorum ductores, Patricius, Hypatius et <lb/> Areobinda, qui cum xv millibus
+						armatorum olim in <lb/> Persas missi fuerant pugnaturi, juxta Syficum castellum <lb/> 
+						cum iisdem Persis sine audacia conflixerunt, <milestone unit="PLSection" n="B"/><lb/>
+						multis tunc militum ductoribus de praelio fugientibus <lb/>  caesis. Immenso dehinc auri
+						pondere  hostibus  <lb/> dato, captam rebusque vacuam Amidam civitatem, <lb/> iidem nostri
+						 redemere  ductores, jam Celere magistro <lb/>   officiorum  sibi cum duobus millibus
+						bellatorum <lb/> in subsidium destinato.</p>
+					<ab>
+						<title type="sub">(A. C. 504.) Ind. XII, Cethego solo cos.</title>
+					</ab>
+					<p>Interea Celer magister officiorum per Callinicum <lb/> Mesopotamiae civitatem armatum
+						ducens militem, ad <lb/> devastanda Persarum rura discurrit, plurimos agrestes <lb/> 
+						rusticis intentos laboribus more pecudum trucidat  ,<lb/> pastores diversorum pecorum
+						cum numerosis <lb/> jumentis abducit, castella latere lutoque constructa <lb/> invadit,
+						usque ad Pontem Ferreum sic nomine  diversae   ,<lb/> cuncta vastando progreditur, omnique
+						praeda <milestone unit="PLSection" n="C"/><lb/> potitus ad communia castra ditato milite
+						remeat, aliquanta <lb/>  dehinc ob percutiendum foedus cum Persis deplangit  ,<lb/>
+						misso ad se pro pepigendo foedere Armonio <lb/> a secretis.</p>
+					<ab>
+						<title type="sub">(A. C. 505.) Ind. XIII, Sabiniano et Theodoro coss.</title>
+					</ab>
+					<p> Idem  Sabinianus Sabiniani Magni filius,  ductorque militiae   ,<lb/> delegatus contra
+						Mundonem Getam arma <lb/> construxit, x millia armatorum sibimet ascitorum <lb/>
+						plaustraque armis  atque  commeatibus onerata secum <lb/>  trahens, pugnaturus accessit :
+						commissoque ad <lb/> Horreo Margo  [Fort . Horrea Margi] .  Margi] praelio, multis <lb/> suorum
+						militibus in hoc conflictu perditis, et in Marma <lb/>  flumine enecatis, amissis
+						praeterea plaustris, in <lb/> castellum quod Nato dicitur cum paucis fugit: tanta
+							<milestone unit="PLSection" n="D"/><lb/> in hoc lamentabili bello spes militum
+						cecidit, ut <lb/> quantum apud mortales nequaquam potuerit reparari.</p>
+					<ab>
+						<title type="sub">(A. C. 506.) Ind. XIV, Areobinda et Messala coss.</title>
+					</ab>
+					<p>His coss. Anastasii principis statua, in eodem loco <lb/>  quo dudum Theodosii Magni
+						steterat, super immanem <lb/>  columnam in foro Tauri statuta est.</p>
+					<ab>
+						<title type="sub">(A. C. 507.) Ind. xv, Anastasio Aug. III [Cassiod. et Venantio]
+							cos.</title>
+					</ab>
+					<p>Seditio popularis in circo facta est ; miles et arma <lb/>  obstitit. Gradus circi
+						septentrionalis sua cum <lb/> forma incensi collapsique sunt, Anastasio Caesare in <lb/>
+						processibus commorante.</p>
+					<ab>
+						<title type="sub">(A. C. 508.) Ind. I, Celere et Venantio coss.</title>
+					</ab>
+					<p>Romanus comes domesticorum et Rusticus come<pb n="937"/>
+						<milestone unit="PLSection" n="A"/><lb/> scholariorum, cum centum armatis navibus, totidemque
+						<lb/>  dromonibus, octo millia militum armatorum <lb/> secum ferentibus, ad
+						devastanda Italiae littora processerunt  ,<lb/> et usque ad Tarentum antiquissimam civitatem
+						<lb/>  aggressi sunt, remensoque mari inhonestam <lb/> victoriam quam piratico
+						ausu Romani ex Romanis <lb/> rapuerunt, Anastasio Caesari reportarunt.</p>
+					<ab>
+						<title type="sub">(A. C. 509.) Ind.  II ,  Opportuno   Importuno] solo cos.</title>
+					</ab>
+					<p>Orto augusta urbe incendio utramque porticum a <lb/> foro Constantini usque ad Perdiccae
+						tenuissimam <lb/> statuam ignis in pulverem redegit.  Portus Juliani , undis <lb/>  suis
+						rotalibus  machinis  prius exhaustus, coenoque <lb/> effosso, purgatus est.</p>
+					<ab>
+						<title type="sub">(A. C. 510.) Ind. III, Boetio solo cos.</title>
+					</ab>
+					<p>
+						<milestone unit="PLSection" n="B"/>Simulacrum aeneum in foro Strategii super  fornicem  <lb/>
+						 residens, et cornu copiae fortunae retinens incendio <lb/>   proflammatum  est,
+						combustumque amisit <lb/> brachium, quod tamen statuarii continuo solidarunt. <lb/>
+						Appius patricius exsulatus est. Constantinus olim <lb/> magister militiae episcopus
+						Laodiceae ordinatus.</p>
+					<ab>
+						<title type="sub">(A. C. 511.) Ind. IV, Secundino et Felice  coss .</title>
+					</ab>
+					<p>Macedonius Augustae urbis episcopus, licet olim <lb/> Anastasii  imperatoris  dolis
+						fallaciisque circumventus  ,<lb/> pravorumque testimoniis  eidem  Caesari accusatus 
+						,<lb/> quoniam tomum sanctorum Patrum apud Calchedonam <lb/>  sancta dudum subscriptione
+						roboratum <lb/>  eidem  principi dare distulit, ab eodem Euchaita in <lb/> exsilium
+						deputatus est. Locum Macedonii Timotheus <milestone unit="PLSection" n="C"/><lb/>
+						meridiano tempore ab Anastasio  Caesare  episcopus <lb/> ordinatus invasit.</p>
+					<ab>
+						<title type="sub">(A. C. 512.) Ind. v,  Paulo  et Musciano coss.</title>
+					</ab>
+					<p>Saepe coelum a septemtrionali plaga ardere visum <lb/> est. Die dominico, dum jubente
+						Anastasio Caesare <lb/> per Marinum perque Platonem in ecclesiae pulpito <lb/>
+						consistentes, in hymnum Trinitatis Deipassianorum <lb/> quaternitas additur, multi
+						orthodoxorum pristina <lb/> voce psallentes, perfidosque praecones clamoribus <lb/>
+						objurgantes, in ejusdem ecclesiae gremio  caesi  sunt, <lb/> ductique in carceres perierunt
+						: altera nihilominus <lb/> die in atrio sancti  Theodori [Chiffl . Theodosii] majnri  . Theodosii]  <lb/>
+						 caede catholici pro fide  unica  perculsi sunt. Quapropter <lb/>  commota
+						orthodoxorum agmina die sequenti  ,<lb/> id  est , VIII idus Novemb. (in  quo  die memoria
+							<milestone unit="PLSection" n="D"/><lb/> cineris dudum totam Europam tegentis apud
+						Byzantios <lb/>  celebratur) in forum Constantini undique confluunt <lb/>  : quorum
+						alii quidem, caeteris die noctuque <lb/> hymnum Trinitatis Christo Deo psallentibus,
+						 totam  <lb/> peragrant civitatem, et Anastasii Caesaris monastico <lb/>  habitu 
+						assentatores ferro flammisque interimunt : <lb/> alii claves portarum omniaque signa
+						militaria, ad <lb/> forum quo religionis castra metati fuerant, deferunt: <lb/> ibique
+						Anastasio Caesare in processibus degente, <lb/> Areobindam sibi imperatorem fieri
+						clamitant. I <lb/>  deinde statuisque Anastasii in terram  dejectis   ,<lb/>
+						Celerem et Patricium senatores. ad se  supplicandi . <lb/>  sibi vel satisfaciendi gratia
+						missos, jactis  pluviae  <lb/>  instar lapidibus repulerunt. Domibus Marini et <milestone unit="PLSection" n="A"/><lb/> Pompeii succensis, in circum ad Anastasium venientes 
+						,<lb/> et ante suum solium consistentes, hymnum Trinitatis <lb/>  juxta morem
+						catholicorum <unclear>concinentes</unclear>, coruscansque <lb/>  evangelium crucemque
+						Christi ferentes, <lb/> e foro plurimi convenerunt, Marinum Platonemque <lb/> pravitatis
+						ejus auctores feris subjici conclamantes. <lb/> Hos cives idem Anastasius Caesar solitis
+						perjuriis <lb/> simulatisque vocibus, sese facturum cuncta promittens  ,<lb/> tertio
+						die quam in  forum advenerant  , sine ullo <lb/> rerum effectu ad sua fecit habitacula
+						repedare. Porro <lb/> redintegrata  Anastasius  pravitate, infamem et  irridendam  <lb/> 
+						synodum apud Sidonem civitatem, cujus de <lb/> nomine in ridiculis nomina praeponuntur,
+						LXXX ferme <lb/>  perfidorum episcopis congregatis, adversum <lb/>  othodoxorum episcopum [Al . episcopos] 
+						 . episcopos], fieri imperavit .<milestone unit="PLSection" n="B"/> <lb/>
+						Flavianus Antiochiae catholicus patriarcha , et <lb/> Joannes Paltensium oppidi pontifex
+						, quoniam hunc <lb/> coetum sacrilegum refellerant, in castellum quod <lb/> Petra
+						dicitur, exsules missi sunt. Ibi Flavianus confluunt <lb/>  Christi in Domino requievit
+						: Joannem Justinus <lb/> Aug. mox imperator factus,  revocavit . Iisdem ferme <lb/>
+						temporibus solis defectus contigit. Gens Erulorum <lb/> in terras atque civitates
+						Romanorum jussu Anastasii <lb/> Caesaris introducta.</p>
+					<ab>
+						<title type="sub">(A. C. 513.)  Ind . VI, Clementino et Probo coss.</title>
+					</ab>
+					<p>Severus Eutychetis perfidiae cultor, Anastasio Caesare <lb/>  volente, sedem Flaviani
+						antistitis ex monacho <lb/> factus episcopus occupavit. Dorotheus Ancyrae civitatis <lb/>
+						 venerandus antistes, Anastasio principi propter <lb/>
+						<milestone unit="PLSection" n="C"/><lb/> unicam orthodoxorum fidem jugiter adversarius,
+						<lb/> finem vivendi quem sibimet misso contra se a <lb/> Caesare magistriano ipse
+						praedixerat, in dicto tempore <lb/>  fecit.</p>
+					<ab>
+						<title type="sub">(A. C. 514.) Ind. VII, Senatore solo cos.</title>
+					</ab>
+					<p>Vitalianus Scytha, assumptis Romanorum equitum <lb/> peditumque plusquam LX millibus
+						armatorum in triduo <lb/>  congregatorum, in locum qui Septimius dicitur, <lb/>
+						advenit, ibique castra metatus est; dispositisque a <lb/> mari in mare suorum ordinibus,
+						ipse ad usque portam <lb/>  quae Aurea dicitur, sine ullius accessit dispendio; <lb/>
+						scilicet pro orthodoxorum se fide, proque Macedonio <lb/> urbis episcopo, incassum ab
+						Anastasio principe exsulato  ,<lb/>  Constantinopolim  accessisse asserens. Porro <lb/>
+						Anastasii simulationibus atque perjuriis per Theodorum <milestone unit="PLSection" n="D"/><lb/>  internuntium illectus atque  illusus , octavo die <lb/> quam urbem
+						accesserat, remeavit. Hinc Odyssum <lb/> Moesiae civitatem Vitalianus pernoctans astu
+						ingressus <lb/>  est. Cyrillum lenocinantem magis quam strenuum <lb/>  militiae
+						ductorem , inter duas pellices Vitalianus <lb/>  reperit dormientem ,  eumque  abstractum
+						mox <lb/> cultro Getico  jugulavit , hostemque se Anastasio Caesare <lb/>  palam aperteque
+						 exhibuit .</p>
+					<ab>
+						<title type="sub">(A. C. 515.) Ind. VIII, Anthemio et Florentio coss.</title>
+					</ab>
+					<p>Romanae  Ecclesiae L Hormisda   episcopus ordinatus, <lb/> vixit annos IX. Idem Vitalianus
+						eidem Anastasio <lb/> imp. immanior factus est inimicus : praemissis quippe <lb/> 
+						suorum  equitibus , armatisque naviculis sinistro <lb/> sibi  littore  decurrentibus, ipse
+						peditum armis stipa- <note type="footnote"> PATROL. LL </note>
+						<note type="footnote"> 30 </note><pb n="939"/>
+						<milestone unit="PLSection" n="A"/><lb/>    Systhenense praedium ingressus est,
+						totiusque <lb/> loci palatium habuit mansionem. Missi sunt ad Vitalianum  ,<lb/> a
+						Caesare senatores , qui pacis  cum  eo leges <lb/>  componerent  : nonaginta auri pondo,
+						exceptis regalibus <lb/>  muneribus, pro pretio tunc accepit  Hypatii , jam <lb/> mille
+						centum auri libris cum Uranio captivo  sibi   a <lb/> suis in Sozopoli oblatis.
+						 Magister militum  Vitalianus <lb/> per Thraciam factus, Hypatium quem captivum  catenatumque . <lb/>
+						 apud Acres  castellum  tenebat, reversus <lb/> suo remisit avunculo. Ea
+						tempestate  Hunni , Armenia <lb/> transmissa, totam Cappadociam devastantes, usque <lb/>
+						Lycaoniam perrexerunt : Ariadne Augusta  LX  annis <lb/> in  palatio  exactis vita
+						decessit.</p>
+					<ab>
+						<title type="sub">( A. C. 516.) Ind. IX , Petro solo  cos .</title>
+					</ab>
+					<p>
+						<milestone unit="PLSection" n="8"/>Mutata fide Anastasius imp. Vitaliano succedit, <lb/>
+						eidemque Rufinum destinat successorem. Helias <lb/> Hierosolymitanae urbis episcopus in
+						villa quae Haila <lb/> dicitur, ab eodem principe relegatus emoritur. Laurentium <lb/> 
+						praeterea Lychnidensem , Domnionem Serdicensem  ,<lb/> Alcissum  Nicopolitanum  ,  Gaianum Naisitanum 
+						 <lb/>  et Evangelum Pautaliensem, catholicos <lb/>  Illyrici  sacerdotes, suis
+						Anastasius praesentari jussit <lb/> obtutibus. Alcissus et Gaianus episcopi apud Byzantium
+						<lb/>   vita  defuncti sunt, unoque sepulcro reconditi. <lb/> Domnione et Evangelo ad
+						sedes proprias, ob metum <lb/>   Illyriciani  catholici militis, extemplo remissis, <lb/>
+						solus Laurentius Anastasium imp.  in  palatio pro fide <lb/> catholica saepe convincens,
+						apud comitatum. ac si <lb/> in  exsilio  relegatus, retentus est, mobiliorque  deinde -
+							<milestone unit="PLSection" n="C"/><lb/>  corpore, quam Constantinopolim
+						advenerat, <note n="I"/> <lb/> effectus. Nam septimo infirmitatis suae anno idem <lb/> Laurentius
+						fide sua , sed [ .     ,<lb/> in atrio Cosmae et Damiani sanatus
+						est, pedibusque <lb/>  sistere propriis gressibusque meruit confirmari  ,<lb/> suaeque
+						dein patriae incolumis reddi, ubi <lb/> major  octogenario  requiescit.</p>
+					<ab>
+						<title type="sub">(A. C. 517.) Ind. x, Anastasio et Agapito coss.</title>
+					</ab>
+					<p>Olla  illa  quae in Jeremia  vate  ab aquilone adversum <lb/>  nos nostraque delicta saepe
+						succenditur, tela <lb/> ignita fabricavit, maximamque partem Illyrici iisdem <lb/> 
+						jaculis vulneravit. Duae tunc  Macedoniae ,  Thessaliaque  <lb/>  vastata est, et usque
+						Thermopylas veteremque <lb/>  Epirum  Getae  equites depraedati  sunt . Mille tunc <lb/>
+						librarum auri denarios  per  Paulum Anastasius imperator <milestone unit="PLSection" n="D"/><lb/>  pro redimendis Romanorum captivis, Joanni <lb/> praefecto illyrici misit
+						: deficiente pretio, vel inclusi <lb/> suis cum domunculis captivi Romani tenti sunt,
+						vel <lb/> pro muris clausarum urbium trucidati.</p>
+					<ab>
+						<title type="sub">( A. C. 518.) Ind. xi,  Magno  solo  [ Onuphr . et j Christigratia Al. et Florentio.  Al . et Agapeto
+							I , ] cos.</title>
+					</ab>
+					<p>In provincia Dardania assiduo terrae motu XXIV <lb/> castella uno momento collapsa sunt.
+						Quorum duo <lb/> suis cum habitatoribus  demersa  , quatuor dimidia <lb/> aedificiorum
+						suorum hominumque amissa parte destructa  ,<lb/> undecim tertia domorum totidemque populi
+						<lb/>  clade dejecta. septem quarta tectorum suorum, <lb/> tantaque  plebis parte  
+						depressa, vicina vero  metu [Onuphr . vicinarum   .<lb/>  metu] ruinarum despecta sunt.
+							<milestone unit="PLSection" n="A"/><lb/> Scupus  namque metropolis  . licet sine civium
+						suorum <lb/> hostem fugientium clade,  funditus  tamen corruit. <lb/> Uno in castello
+						regionis Canisae quod Sarnunto dicitur  ,<lb/>  ruptis  tunc terra venis, et ad instar
+						torridae <lb/> fornacis exaestuans,  diutinum  altrinsecus ferventemque <lb/>  imbrem
+						evomuit. Plurimi totius provinciae  montes  <lb/>  hoc terraemotu scissi sunt, saxaque suis
+						evulsa <lb/> compagibus I devolutaque arborum crepido per XXX <lb/> passuum millia
+						patens, et in XII  pednm lati udinem debiscens     ,<lb/> profundam aliquantis voraginem
+						civibus, <lb/> castellorum saxorumque  ruinas , vel adhuc hostium <lb/> incursiones
+						fugientibus, jussa  paravit . Anastasius <lb/> imp. subita morte praeventus major
+						octogenario <lb/> periit : regnavit annos  XXVII  menses 11 dies XXIX.</p>
+					<ab>
+						<title type="sub">(A. C. 519.) Ind. XII, Justino  Aug  :  et Eutharico  coss.</title>
+					</ab>
+					<p>
+						<milestone unit="PLSection" n="8"/>Justinus a senatu electus imperator continuo ordinatus
+						<lb/>  est. Amantius palatii  praepositus , Andreas, <lb/> Misael et Ardabur
+						 cubicularii , Manichaeorum fautores  ,<lb/> et Justini Augusti deprehensi sunt
+						proditores. <lb/> Quorum duo, Amantius et Andreas , ferro <unclear>trucidati</unclear>
+						<lb/>  sunt  : Misael et Ardabur Serdicam in exsilium missi. <lb/> Theocritus Amantii
+						satelles,quem idem Amantius <lb/> praepositus ad regnandum clam praeparaverat, comprehensus 
+						,<lb/> et in carcere saxis contusus ingentibus <lb/> periit, salsoque in gurgite
+						jacuit, sepultura quoque <lb/> cum imperio cui inhiarat caruit. Vitalianus  Scytha  <lb/>
+						Justini principis pietate ad rempublicam revocatus, <lb/> Constantinopolim ingressus
+						est, septimoque receptionis <lb/>   suae  die magister  militiae  ordinatus.</p>
+					<p>
+						<milestone unit="PLSection" n="c"/>
+					</p>
+					<ab>
+						<title type="sub">(A. C. 520). Ind. XIII, Vitaliano et Rustico coss.</title>
+					</ab>
+					<p>Vitalianus consul VII, mense consulatus sui, XVI, <lb/> vulneribus confossus, in
+						palatio cum Celeriano et <lb/> Paulo satellitibus suis interemptus est.</p>
+					<ab>
+						<title type="sub">(A. C. 521.) Ind. XIV. Justiniano et Valerio coss.</title>
+					</ab>
+					<p>Famosissimum hunc consulatum Justinianus consul <lb/>  omnium Orientalium consulatu
+						profecto munificentior <lb/>  his liberalitatibus  edidit . Nam CCLXXXVIII <lb/> millia
+						solidorum in populum, inque spectacula sive <lb/> in spectaculorum machinam distributa ,
+						xx leones , <lb/> xxx pardos, exceptis aliis feris, in  amphitheatro   simul <lb/> 
+						exhibuit. Numerosos praeterea phaleratosque in <lb/> circo caballos jam donatis quoque
+						impertivit aurigis, <lb/> una dumtaxat ultimaque mappa insanienti populo <milestone unit="PLSection" n="D"/><lb/> denegata.</p>
+					<p>( A. C. 522.) Ind. xv, Symmacho et Boetio  coss . <lb/> ( A. C. 523.) Ind. I, Maximo solo
+						cos.</p>
+					<p>Plerique lapidatorum percussorum, urbisque destructa  ,<lb/> sua ob scelera
+						deprehensi, ferro, <lb/> igni, suspendioque expensi sunt, gratum bonis civibus <lb/> 
+						spectaculum  exhibentes  .</p>
+					<ab>
+						<title type="sub">(A. C. 524.) Ind. II, Justino Aug. II et Opilione  coss .</title>
+					</ab>
+					<p> His  consulibus inopia olei magnam penuriam in <lb/> populum importavit.</p>
+					<ab>
+						<title type="sub">(A. C. 525.) Ind. III ,  Filoxeno  et Probo coss.</title>
+					</ab>
+					<p>Joannes Romanae Ecclesiae papa LI anno a Petro <lb/> apostolorum pontificumque praesule
+						CCCCLXXV ses-<pb n="941"/>
+						<milestone unit="PLSection" n="A"/><lb/>  ejus  , Theodorico rege pro Arianorum
+						suorum <lb/> caeremoniis reparandis laborante, solus dumtaxat Romanorum <lb/>  sibimet
+						decessorum, urbe digressus Constantinopolim <lb/>  venit, miro honore susceptus  est .
+						<lb/> Dexter dextrum ecclesiae insedit solium, diemque <lb/> Domini nostri resurrectionis
+						plena voce Romanis <lb/> precibus celebravit.</p>
+					<ab>
+						<title type="sub">( A. C. 526.) Ind. IV,  Olybrio  solo  cos .</title>
+					</ab>
+					<p>Totam quidem Antiochiam Syriae civitatem repens <lb/> inter prandendum  terrae  motus
+						invasit : alioquin <lb/> occiduam urbis magnam  ejus  partem, sinistris mox <lb/> ventis
+						 undique  flantibus, flammasque coquinarum <lb/> pro tempore aestuantes ruentia  in  aedificia
+						miscentibus  ,<lb/> duplex torridumque exitium importavit. Eufrasium <lb/>  quoque
+						totius  urbis [Onuph . loci hujus  .   urbis] <milestone unit="PLSection" n="B"/><lb/>
+						episcopum, adempto ejus  capite  , combusto simul <lb/> obruit sepulcro , obelisco circi
+						inverso et humi defosso  .<lb/></p>
+					<ab>
+						<title type="sub">(A. C. 527.) Ind. v,  Mabortio   Mavortio] solo  cos .</title>
+					</ab>
+					<p>Anno regiae Urbis conditae CXCVII, Justinus imperator <lb/>  Justinianum ex sorore sua
+						nepotem,  jamdudum  <lb/>  a se nobilissimum designatum, participem <lb/> quoque regni
+						sui successoremque creavit kal. Aprilis  .<lb/> Ipse vero quarto ab hoc mense  vita 
+						decessit, <lb/> anno imperii ix, mense II.</p>
+					<ab>
+						<title type="sub">(A. C. 528.) Ind. vi, Justiniano Aug. solo  cos :.</title>
+					</ab>
+					<p>Anno regiae Urbis conditae CXCVIII, regium vestibulum  ,<lb/> priscumque in  eo  solium ,
+						ob aspicienda <lb/> probandaque in circo certamina structum, victor <milestone unit="PLSection" n="c"/><lb/>
+						<lb/> Justinianus princeps, eminentius clariusque quam <lb/> fuerat, et utramque
+						senatorum ex more spectantium <lb/> porticum solita magnanimitate redintegravit, bonis
+						<lb/> quidem agitatoribus praemium, ignavis autem severitatem <lb/>  innuens.</p>
+					<ab>
+						<title type="sub">(A. C. 529.) Ind. VII, Decio solo cos.</title>
+					</ab>
+					<p>Parthis bella moventibus arma Romanus paravit <lb/> exercitus, finesque suos rebellans
+						tutatus est. Haec <lb/> expeditio nostrorum pene per quinquennium tenuit, <lb/>
+						digressaque Oriente Africam petit, contra Wandalos <lb/>  feliciter dimicatura.</p>
+					<ab>
+						<title type="sub">(A. C. 530.) Ind. VIII, Lampadio et Oreste coss.</title>
+					</ab>
+					<p>Mundo Illyricianae utriusque militiae ductor, . <lb/>  dudum  Getis Illyricum
+						discursantibus primus omnium <milestone unit="PLSection" n="D"/><lb/> Romanorum ducum
+						incubuit, eosque haud paucis <lb/>  ipsorum  interemptis fugavit. His  autem  deinde coss.
+						<lb/> idem dux audaciae suae  secundus  in Thraciam quoque <lb/>  advolans, praedantes eam
+						Bulgares  felciore pu . gna  . <lb/>  cecidit, quingentis eorum in praelio trucidatis</p>
+					<ab>
+						<title type="sub">(A. C. 531.) Ind. IX, post consulatum Lampadii et Orestis.</title>
+					</ab>
+					<p>His coss. codex  Justinianus [ Chiffl . Justiniani 1 orbis promolgatus  [ .   <lb/>   est.</p>
+					<ab>
+						<title type="sub">(A. C. 532.) Ind. x , item post  consulatum  Lampadii et
+							Orestis.</title>
+					</ab>
+					<p>Hypatius,  Pompeius  et Probus genere consobrini, <lb/> divique Anastasii nepotes,
+						imperium quod sibi singuli <milestone unit="PLSection" n="A"/><lb/>  indigna ambitione
+						exoptabant,  idibus  Januariis, <lb/> jam plerisque nobilium conjuratis, omnique  seditiosorum -
+						<lb/>  turba armis donisque ministratis illecta, dolis <lb/> invadere tentaverunt,
+						atque per quinque continuos <lb/> dies urbem regiam rapinis, ferro igneque per sceleratos
+						<lb/>  cives, sine certo  interrege   discursantes, hostili <lb/>  impietate, ipsi se
+						fideles reipublicae in palatio <lb/> dissimulantes, depopulati sunt. Quinta vero hujus
+						<lb/> infandi sceleris die, dum de  foro  Hypatius sceleratorum <lb/>  comitum manibus
+						torque redimitus aureo, et <lb/> Pompeius comes ejus  sua  sub veste loricatus, ad invadendum
+						<lb/>  conscendunt palatium; uterque eorum <lb/> ante fores palatii captus est,
+						statimque piissimi <lb/> principis nostri nutu catenatus trucidatusque poenas <lb/> 
+						luit, et ante imperium perdidit, quam haberet, <milestone unit="PLSection" n="B"/><lb/>
+						<lb/> innumeris, passim in circo populis trucidatis , et tyrannorum <lb/>  sociis
+						continuo proscriptis. Ecclesia tunc <lb/> incensa mox coepit ab eodem Augusto
+						renovari.</p>
+					<ab>
+						<title type="sub">(A. C. 533 ) Ind.  XI !, Justiniano Aug.  III  coss.</title>
+					</ab>
+					<p>Post diuturnum immanemque  laborcontra II . dos   . <lb/>  Romanis gestum sudoribus, tandem
+						per Ruffinum <lb/>  patricium, perque Hermogenem magistrum <lb/> officiorum , utrumque
+						legatum a principe nostro missum  ,<lb/> pax cum Parthis depacta est. Sponsionem <lb/>
+						percussi foederis ab utroque imperatore invicem sibi <lb/> munera  in  concordiam missa
+						 secuta  sunt.</p>
+					<ab>
+						<title type="sub">(A. C. 534.) Ind. XII, Justiniano Aug. IV  et  Paulino coss.</title>
+					</ab>
+					<p>Provincia Africa quae in divisione orbis terrarum <milestone unit="PLSection" n="c"/><lb/> a plerisque in parte tertia posita est, volente Deo <lb/> vindicata est.
+						Carthago quoque civitas ejus anno excidionis <lb/>  suae XCVI, pulsis devictisque
+						Wandalis, <lb/>  Galimero  rege eorum capto, et Constantinopolim <lb/> misso, quarto
+						Justiniani principis consulatu  ipsius  <lb/> moderatione recepta est, sua  cum  patria
+						 firmius  <lb/> quam dudum fuerat, redintegrata. Quo tempore <lb/> Theodahadus rex Gothorum
+						Amalasuentham reginam <lb/> creatricem suam de regno pulsam in insula laci Bulsiniensis <lb/>
+						 occidit. Cujus mortem imperator Justinianus <lb/>  ut doluit,    [
+						. sic  est  ultus    ]. <lb/> Huc usque Marcellinus comes.)</p>
+					<ab>
+						<title type="sub">(A. C. 535.) Ind. XIII, Belisario solo cos.</title>
+					</ab>
+					<p>Postquam Carthago  Libyaque  suo cum rege Selimero <lb/>  per Belisarium est subjugata,
+						de Roma Italiaque <milestone unit="PLSection" n="D"/><lb/>  deliberat imperator :
+						iterumque expeditio, iterumque <lb/>  classis paratur,  idemque ductor   qui consul <lb/>
+						eligitur, rectoque navigio Siciliam properat, Catanam <lb/>  et Syracusas sine mora ,
+						immo omnem pervadit <lb/>  Trinacriam. Ibique comperiens quod  in  Africa <lb/> civile
+						bellum  exoritur , et miles in proprium ducem <lb/> insurgit, cum paucis ad Africam
+						tendit, Solomoni <lb/> qui praeerat subvenit :  exercitum  vero partim blandiendo  ,<lb/>
+						partim ulciscendo, inimicum tyrannum  offugando   ,<lb/> reipublicae consulit utilitati,
+						remensoque <lb/> navigio Trinacriam  redit . Agapitus Romanae urbis <lb/> episcopus a
+						Theodato rege Gothorum in legationem <lb/> directus Constantinopolim venit. Tzitta
+						patricius in <lb/> Mysia cum hoste Bulgarum  congrediens  ad fatrum<pb n="943"/>
+						<milestone unit="PLSection" n="A"/><lb/> superior invenitur. Epiphanius episcopus regiae
+						urbis <lb/>  ante adventum Romani praesulis moritur : cujus <lb/> episcopatum contra
+						canones  Anthimus  Trapezuntena <lb/>  Ecclesia relicta  invadit . </p>
+					<ab>
+						<title type="sub">(A. C. 536.) Ind. XIV, post consulatum Belisarii.</title>
+					</ab>
+					<p>Ebremud  Theodati  genere relicto exercitu regio <lb/> in Brutiis, ad Belisarium in
+						Siciliam convolavit. In <lb/> Africa vero, Solomone itidem cum exercitu dissidente 
+						,<lb/> Germanus succedit  Solomonem  remittens ad <lb/> principem. Belisarius Campaniam
+						transiens  NeapoIi . . ,   .<lb/>., vastat. Gothorum exercitus Theodahadum regem <lb/> habens
+						suspectum, Vitigem in regnum asciscit : qui <lb/> mox in campo barbarico regnum
+						pervasit. Expeditione <lb/>  soluta Romam ingreditur, ubi jam Agapito <lb/>
+						Constantinopoli defuncto, Theodahadus rex  Silverium  <milestone unit="PLSection" n="B"/><lb/>  episcopatui subrogarat, ibique residens dirigit <lb/> Ravennam, Theodatum
+						occidit, in loco qui dicitur <lb/> Quintus, juxta fluvium Santernum : et ipse subsequitur
+						<lb/>  per Tusciam , omnes opes Theodati diripiens, <lb/> quas in Insula , vel in
+						Urbevetus congregaverat. Ravennamque <lb/>  ingressus  Matesuentham  neptem Theodorici <lb/>
+						 sibi sociam in regno plus vi copulat, quam <lb/> amore. Belisarius favente Domino
+						ingreditur. Germanus <lb/>  in Africa feliciter administrat. Agapitus Constantinopolim 
+						,<lb/> ut diximus, episcopus de Roma adveniens  ,<lb/> Anthimum mox Ecclesia
+						pellit, dicens eum <lb/> juxta ecclesiasticam regulam adulterum, qui sua <lb/> Ecclesia
+						dimissa ambierat alienam : in cujus locum <lb/> Mennam  presbyterum  episcopum ordinavit :
+						et ipse <milestone unit="PLSection" n="C"/><lb/> extremum diem obiit  in  Domino : in
+						nullo tamen, <lb/> sicut ei a principe objiciebatur, sentiens contra fidem. <lb/> Ipso
+						namque anno ob nimiam siccitatem pastura in <lb/> Perside denegata, circiter quindecim
+						millia Saracenorum <lb/>  ab Alamundaro cum  Chabo  et Hezido phylarchis <lb/>  limites
+						Euphratesiae ingressa sunt. Ubi Batzas <lb/>   dux  eos partim blanditiis, partim
+						 distractione [ Vel districtione]  <lb/> [  districtione] pacifica fovit, et inhiantes bellare <lb/>
+						repressit.</p>
+					<ab>
+						<title type="sub">(A. C. 537.) Ind. xv, iterum post  consulatum  Belisarii .</title>
+					</ab>
+					<p>Vitiges tyrannus exercitu aggregato Romam  obsidet  <lb/> s., cui tunc faventem papam
+						Silverium Belisarius <lb/> riu ab episcopatu submovit, et loco ejus Vigilium <lb/>
+						diaconum ordinavit. Temporeque longo Romam <milestone unit="PLSection" n="D"/><lb/>
+						obsidente Vitige, Belisa intus inedia vigiliisque <lb/> laborans, auxilium ab
+						 imperatore  deposcit. Cui directi <lb/>  sunt Martinus et Valerianus, uterque magister
+						<lb/> militiae : nec sic tamen Vitiges obsidionem reliquit. <lb/> In Africa Germanus
+						rebelliones milites cum Stotza <lb/> tyranno inter  Maurorum  deserta bellando effugat.
+						<lb/> In Oriente quoque  Joannes   Cottistis arripiens tyrannidem  ,<lb/> ante quam
+						adversi aliquid tentaret, Daras <lb/> exstinctus est. Ecclesia major Constantinopoli ab
+						<lb/> imperatore Justiniano singulariter in mundo constructa <lb/>  dedicatur die vi
+						kal. Januarias.</p>
+					<ab>
+						<title type="sub">(A. C. 558.) Ind. I, Joanne solo Vel Volusiano et Joanne]
+							cos.</title>
+					</ab>
+					<p>Adhuc Vitige in obsidione Romae morante, Joannes <milestone unit="PLSection" n="A"/><lb/>
+						 magister militum cum Batza, Conone, Paulo <lb/> Remaque illustribus, magnoque
+						exercitu apparato, <lb/> ad italiam properant, castraque ad portum Romanum <lb/>
+						collocant, laboranti Romae  subveniunt . Quorum <lb/> adventum Vitiges cernens, trium
+						mensium temporis <lb/> cum  Belisario  pacta confirmat, suosque legatos ad <lb/>
+						imperatorem transmittit. In qua pace  Belisarius  <lb/> Campaniam redit, annonae copiam
+						Romae illaturus : <lb/> reversusque Campania contrarium sibi de medio <lb/> aufert
+						Constantinum patricium. Joannes vero in <lb/> portu quae posuerat castra deserens,
+						Samnitum regionem <lb/>  ingressus est, Aternoque oppido expugnato, <lb/> Tremonem
+						Gothorum ducem cum suis prosternit. <lb/> Ortonam quoque similiter invadit : Picenum
+						depraedans  ,<lb/> Ariminum occupat. Quo audito  Vitiges  ab <milestone unit="PLSection" n="B"/><lb/> obsidione Urbis in qua adhuc post turbatam pacem <lb/> consistebat,
+						relicta Roma, per Clodiae aggerem et <lb/>  annonariam  Tusciam transit Apenninum, et in
+						Rubiconis <lb/>  fluminis ripa castra metatus,  Ariminum  <lb/> obsidet. Unde proturbatus
+						a Narsete de Constantinopoli  ,<lb/> et a  Belisario de  Roma venientibus, fugit <lb/>
+						Ravennam. Cujus nepos Oraio Mediolanum longa <lb/> inedia  deterit , Mundilam Paulumque
+						duces ibi positos <lb/>  cum suo milite obsidens. Narsete vero Arimino <lb/> residente,
+						Belisarius accedens Romam ad exhiemandum  ,<lb/> deditione suscipit Urbinum, et
+						Urbemvetus, <lb/> et insulam laci Bulsinensis.</p>
+					<ab>
+						<title type="sub">(A. C. 539.) Ind. II, Appione solo cos.</title>
+					</ab>
+					<p>Narses revertitur Constantinopolim. Belisarius <milestone unit="PLSection" n="C"/><lb/>
+						obsidens Auximum septimo mense ingreditur, similiterque <lb/>  et Fesulam. Gothi
+						Mediolanum ingressi <lb/> muros diruunt, praedamque potiti, omnes Romanos <lb/>
+						interficiunt. Mundilam  Paulumque  duces abducunt <lb/> Ravennam. Theudibertus Francorum
+						rex cum  magno  <lb/>  exercitu adveniens, Liguriam totamque depraedans <lb/>   Aemiliam .
+						Genuam oppidum in littore Tyrreni <lb/> maris situm evertit ac praedat. Exercitu dehinc
+						suo <lb/> morbo laborante, ut subveniat paciscens cum Belisario  ,<lb/> ad Gallias
+						revertitur. Germanus de Africa <lb/> Constantinopolim evocatur. Solomon ibi rursus <lb/>
+						dirigitur. Calluc magister militum cum Gepidis primum <lb/>  feliciter  dimicans ,
+						secundo infeliciter ruit.</p>
+					<ab>
+						<title type="sub">(A. C. 540 ) Ind. III, Justino jun. solo cos.</title>
+					</ab>
+					<p>Parthi in Syriam ingressi multas urbes subvertunt <milestone unit="PLSection" n="D"/><lb/>
+						 : contra quos Germanus arma arripiens, Justinum <lb/>  filium, eumdemque consulem,
+						in ipsis fascibus <lb/> secum ducit. Antiochia magna depraedata demolitur <lb/> a Persis.
+						Belisarius Ravennam ingreditur, regem <lb/> Vitigem et reginam, cunctasque opes
+						Gothosque <lb/> nobiliores tollens secum, ad imperatorem revertitur, <lb/>  evocante  se
+						Marcello comite. Solomon in Africa <lb/> feliciter dimicans rebelliones proturbat. Gothi
+						trans <lb/> Padum residentes, Oraio Vitigis nepote et Heldebado <lb/> ductantibus,
+						Vitigem regem cum regina opibusque <lb/> palatii, nec non et Gothos  audientes  sedibus
+						propriis <lb/> pulsos, Orientemque per Belisarium abductos, regionem <lb/>  disponunt,
+						regem sibi statuentes Heldebadum <lb/>  : contra quem debellaturus Bessa patriclus<pb n="945"/>
+						<milestone unit="PLSection" n="A"/><lb/>  Placentium  a Ravenna conscendit, Constantino
+						Ravennam <lb/>  de Dalmatiis, ut  praeesset  exercitui, ab <lb/> imperatore directo.</p>
+					<ab>
+						<title type="sub">(A. C. 541.) Ind. IV, Basilio solo cos.</title>
+					</ab>
+					<p>Parthis persistentibus inimicis, Belisarius Orientis <lb/> suscepit expeditionem,
+						Germano regresso ad urbem <lb/> regiam. Gothi Heldibado occiso Erarium sibi ordinant <lb/>
+						 regem. Solomon in Africa interficitur : Sergius <lb/> loco ejus dux successit
+						belli, moderatorque provinciae  .<lb/></p>
+					<ab>
+						<title type="sub">(A. C. 542.) Ind. v, post consulatum Basilii.</title>
+					</ab>
+					<p>Milites clam Veronam ingressi, dum avaritia inhiante <lb/>  de praeda concertant, a
+						Gothis  egredientibus  <lb/> de latebris cum suo  dedecore  civitate pelluntur. <lb/> Gothi
+						Erario rege occiso Totilam in regnum manciparunt .<milestone unit="PLSection" n="B"/>
+						<lb/> Qui malo Italiae mox Padum transit, et ad <lb/> Faventiam  Aemiliae  civitatem
+						Romanorum exercitum <lb/> superat, duces effugat, Caesenam et Urbinum, Montemferetris <lb/>
+						 et Petrapertusa occupat, huc illucque <lb/> discurrens devastat Italiam.
+						Rursus in annonaria <lb/> Tuscia ad Mucellos per Ruderit, et Viliarid,  Bledamque   <lb/> 
+						duces suos Romanum exercitum superat. Quo <lb/> praelio Bessa patricius vulneratus evadit
+						: caeteri <lb/> vero fugientes per quaqua salvati sunt.</p>
+					<ab>
+						<title type="sub">(A. C. 543.) Ind. VI, post consulatum Basilii anno II.</title>
+					</ab>
+					<p>Totila devastat Campaniam, urbesque muratas <lb/> evertens, per suos Tiburim obsidet.
+						Mortalitas magna <lb/>  Italiae solum devastat, Oriente jam et Illyrico <lb/> peraeque
+						:. In Oriente Persis adhuc tenentibus <milestone unit="PLSection" n="c"/><lb/>
+						conflictum cum  nostris , Sergius in Africa inquietatur <lb/> a rebellionibus cum Stotza
+						et Mauris.</p>
+					<ab>
+						<title type="sub">(A. C. 544.) Ind. VII, post consulatum  Basilii  anno  III .</title>
+					</ab>
+					<p>Totila obsidet Firmum et Asculum, invasamque <lb/> Neapolim desolat et Tibur. Roma vero
+						obsidetur a <lb/> longe, in qua  praeerat  Joannes magister militum. In <lb/> Oriente
+						Belisario constituto, exsulatur Joannes ex <lb/> consule ordinario patricius atque
+						praefectus praetorio, <lb/> et domus ejus datur Belisario.</p>
+					<ab>
+						<title type="sub">(A. C 545.) Ind. VIII, post consulatum Basilii anno IV.</title>
+					</ab>
+					<p>Totila Firmum et Asculum sub juramento inhiante <lb/>  est: milite Romano cum rebus
+						suis dimisso, <lb/> crudelitatem suam in Romanos exercuit, eosque <lb/> omnes nudat et
+						 necat . In Africa Joannes irruens <milestone unit="PLSection" n="D"/><lb/> super tyrannum
+						Stotzam, interimit eum, et ipse ab <lb/> ejus occiditur armigero. In qua tyrannide
+						Joannes <lb/> quidam electus Stotzas junior vocitatur. Belisarius <lb/> de Oriente
+						 evocatus , in offensam periculumque inhiante <lb/>  grave, et invidiae subjacens, rursus
+						 remittitur  <lb/>  ad Italiam. Qui veniens, Romam dirigit Bessam, <lb/> Joannem mittit
+						ad imperatorem. Totila vastato <lb/> Piceno, pugnansque ad Auximum vincit. Indeque <lb/>
+						discurrens per Tusciam, Spoletium destruit, et Asisium <lb/>  Clusiumque oppida tenuit,
+						et obsidet Perusiam.</p>
+					<ab>
+						<title type="sub">(A. C. 546.) Ind. ix, post consulatum Basilii anno v.</title>
+					</ab>
+					<p>Vigilius papa  LIX   LX] ab apostolo Petro, <lb/> evocatus ab imperatore Roma
+						egreditur, et in Siciliam <lb/>  venit. Totila occupata Lucania et Brutiis  Neapolim  <lb/>
+						 subvertit. Romam obsidet.  De  Africa Sergius <milestone unit="PLSection" n="A"/><lb/> evocatur, et  Areobindas , nepte imperatoris accepta, <lb/> ibi judex dirigitur.
+						In Oriente cum Parthis foedus <lb/> initur per Constantianum magistrum militiae, et <lb/>
+						exercitus revertitur Constantinopolim.</p>
+					<ab>
+						<title type="sub">( A. C. 547.) Ind. x, post consulatum Basilii VI.</title>
+					</ab>
+					<p>Gothi legationem mittunt ad imperatorem per <lb/> episcopum civitatis Asisinatium,
+						nomine Aventium. <lb/>  Joannes  magister militum ad Italiam properat. Belisarius <lb/> 
+						a Ravenna egressus venit Dyrrachium : inhiante <lb/>  directo Joanne Calabria, ipse per
+						Siciliam <lb/> Romam perrexit. Papa Vigilius ingressus est Constantinopolim <lb/>  VIII
+						kal. Febr. Totila  dolo  Isaurorum <lb/> ingreditur Romam die xvi kal. Januarias, ac
+						evertit <lb/> muros, domos aliquantas igni comburens, ac omnes <lb/> Romanorum res in
+						praedam accepit; hos  ip os Romunos iii    <milestone unit="PLSection" n="B"/><lb/>  
+						Campaniam  captivos  abduxit. Post quam <lb/> devastationem, XL aut amplius dies Roma fuit
+						ita <lb/> desolata, ut nemo ibi hominum nisi bestiae morarentur  .<lb/>  Hinc  veniens
+						Belisarius murorum partem restaurat  ,<lb/> venienteque Totila ad pugnam  resistit . Eodemque
+						<lb/>  anno de Africa neptis imperatoris revertitur <lb/> vidua, occiso Areobinda
+						a Gunthario tyranno, qui <lb/> cum Stotza juniore tractans  eum  occiderat. Sed Artabanes <lb/>
+						  utrosque  comprehensos Guntharium occidit  ,<lb/> Joannem idem Stotzam juniorem
+						vinctum  transmittit . <lb/>  ad  principem . Post aliquantos  dies : mittitur <lb/> in Africam
+						Joannes, et Artabanes evocatus praesentale <lb/>  accepit magisterium.</p>
+					<ab>
+						<title type="sub">(A. C. 548.) Ind. XI, post consulatum Basilii VII.</title>
+					</ab>
+					<p>
+						<milestone unit="PLSection" n="c"/>Joannes magister militum in Campania praedans <lb/>
+						Gothos, nonnullos liberat senatores : qui postea <lb/> patitur nocturnum Totilae
+						superventum Bulgarum <lb/> suorum proditione......</p>
+					<ab>
+						<title type="sub">(A. C. 549.) Ind. XII, post consulatum Basilii VIII.</title>
+					</ab>
+					<ab>
+						<title type="sub">(A. C. 550.)  Ind . XIII, post consulatum Basilii IX.</title>
+					</ab>
+					<ab>
+						<title type="sub">(A. C. 551.) Ind. xiv, post consulatum Basilii x.</title>
+					</ab>
+					<p>His temporibus in Africa Mauri per Joannem patricium <lb/>  domiti sunt.</p>
+					<ab>
+						<title type="sub">(A. C. 552.) Ind. xv, post consulatum Basilii XI.</title>
+					</ab>
+					<p>Hoc tempore Justinianus Augustus Narsem eunuchum <lb/>  chartularium et cubicularium
+						suum principem <lb/> militiae fecit, et in Italiam misit. Qui commissa <lb/> pugna Dei
+						gratia victor Totilam occidit, et gentem <milestone unit="PLSection" n="D"/><lb/>
+						Gothorum, auxiliantibus etiam Longobardis, in <lb/> Italia exterminavit. Per haec
+						tempora, cum Buccelinus <lb/>  comes cum sociis a Theodeberto rege Francorum <lb/> 
+						dudum missus, per annos aliquot Italiam <lb/> Siciliamque infestaret, et Romanum saepe
+						exercitum <lb/> superaret, tandem exercitus ejus profluvio ventris <lb/> attritus, a
+						Narse pugna victus et  profligatus , ipse <lb/> dux occisus est. Nec multo post socius
+						ejus Omnirugus <lb/>  dux cum reliquis Gothorum quibus se junxit, <lb/> peremptus
+						est.</p>
+					<ab>
+						<title type="sub">(A. C. 553.) Ind. i, post consulatum Basilii v. c. XII.</title>
+					</ab>
+					<p> Theodebaldus  Francorum rex moritur, et regnum <lb/> ejus uxoremque Vanderadam Hlotarius
+						rex, patris <lb/> ejus Theodeberti patruus, accepit, qui jam XLIV
+							<unclear>annis</unclear>
+						<lb/> regnabat. Quo ipso anno Illotarius ipse Saxones<pb n="947"/>
+						<milestone unit="PLSection" n="A"/><lb/> rebellantes juxta Wiseram fluvium magna caede
+						<lb/> domuit, et <unclear>Thuringiam</unclear> pervasam devastavit.</p>
+					<ab>
+						<title type="sub">(A. C. 554) Ind. II, post consulatum Basilii v. c. XIII.</title>
+					</ab>
+					<p>Vigilius papa, tandem ab imperatoribus Romanis <lb/> et a Narse de exsilio relaxatus,
+						cum Romam redire <lb/> coepisset, in Sicilia morbo calculi tactus decessit : <lb/> moxque
+						Romam perlatus, apud S. Marcellum in via <lb/> Salaria sepultus est. Pro quo ordinatus
+						Pelagius <lb/> papa LXII [Forte LXI] sedit annis XI, mensibus x. Qui <lb/> a populo
+						Romano factionis contra Vigilium incusa­ <lb/> tus, celehratis una cum Narse litaniis,
+						apud S. Pe­ <lb/> trum <unclear>ambone</unclear> ascenso, evangelioque super Caput <lb/>
+						suum posito, juramento se crimine purgavit.</p>
+					<ab>
+						<title type="sub">(A. C. 555.) Ind. III, post consulatum Basilii v. c, XIV.</title>
+					</ab>
+					<p>Hoc tempore Saxones iterum Illotario rebellan- <milestone unit="PLSection" n="B"/><lb/>
+						tes, cum ab eo peteremur hostiliter, eique pro <lb/> satisfactione dimidium rerum suarum
+						offerrent, M- <lb/> que exercitus Francorum refutans eo invito pugnas­ <lb/> set, magna
+						ab eis caede protritus , fugae presidium <lb/> petiit.</p>
+					<ab>
+						<title type="sub">(A. C. 556.) Ind. iv, post consulatum Basilii v. c. xv.</title>
+					</ab>
+					<p>His diebus IIramnus patri suo Hlo'ario, annnente <lb/> patruo Hildeberto rehellans,
+						regnum Francorum <lb/> seditione perturbat. Saxones factione Hildeberti in <milestone unit="PLSection" n="A"/><lb/> Francia praedas egerunt. Hildebertus Remensem <lb/>
+						Campaniam populatur.</p>
+					<ab>
+						<title type="sub">(A. I;. 557.) Ind. v, post consulatum Basilii v. c. XVI.</title>
+					</ab>
+					<p>In Britannia Bridus rcx Pictorum <unclear>efficitur</unclear>. lill­ <lb/> debertus rex
+						Francorum circa haec tempora mori­ <lb/> tur, et Parisius In Basilica S. Vincentii a se
+						con­ <lb/> structa sepelitur, regnumque ejus frater Illotarius <lb/> assumens, totam
+						paterni regni monarchiam obtinuit.</p>
+					<ab>
+						<title type="sub">(A. C. 558.) Ind. vi, post consulatum Basilii v. c. XVII</title>
+					</ab>
+					<p>Hramnus patrem Illotarium quem multis malis <lb/> offenderat, hoc tempore in Britanniam
+						fugiens, in. <lb/> sequente eo ibidem cum Conoboro rege pugna vi­ <lb/> ctus et captus,
+						cum usuro et filiabus vivus incensus <lb/> est. Quo etiam tempore Turonis basilica S.
+						Martini, <lb/> rebellibus ad eam fugientibus, igne crematur.</p>
+					<p>
+						<milestone unit="PLSection" n="B"/>(A.C. 559 ) Ind. VII, post consulatum Basilii v. 4.
+						XVIII.</p>
+					<p>(A. C. 560.) Ind. VIII, post consulatum Basilii v. c, xn.</p>
+					<p>(A. C. 561.) Ind. ix, post consulatum Basilii v. c. <unclear>XX</unclear>.</p>
+					<p>(A. G. 562) Ind. x, post consulatum BasiM v. c. XXI.</p>
+					<p>(A. C. 565.) Ind. xi, post consulatum Basilii v. I. XXII.</p>
+					<p>( A. C. 564.) Ind. XII, post consulatum Basilii v. c. <lb/> XXIII.</p>
+					<p>(A. C. 565.) Ind. XIII, post consulatum Basilii v. c. <lb/> XXIV</p>
+					<p>(A. C. 566.) Ind. XIV, post consulatum Basilii v. c. XXV</p>
+				</div>
+
+			</body></text></TEI>

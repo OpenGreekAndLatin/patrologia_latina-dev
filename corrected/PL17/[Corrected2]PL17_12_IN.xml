@@ -1,0 +1,754 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><TEI xmlns="http://www.tei-c.org/ns/1.0"><teiHeader>
+    
+		<fileDesc>
+			<titleStmt>
+				<title>Patrologiae Cursus Completus. Series Latina (PL)</title>
+				<sponsor>University of Leipzig</sponsor>
+				<funder>European Social Fund Saxony</funder>
+				<principal>Gregory Crane</principal>
+				<respStmt>
+					<persName xml:id="Jouve">Jouve</persName>
+					<resp>OCR-ed, corrected and encoded the text</resp>
+				</respStmt>
+				<respStmt>
+					<persName>Greta Franzini</persName>
+					<resp>Project Manager (University of Leipzig)</resp>
+				</respStmt>
+				<respStmt>
+					<persName>Simona Stoyanova</persName>
+					<resp>Project Assistant (University of Leipzig)</resp>
+				</respStmt>
+				<respStmt>
+					<persName>Bruce Robertson</persName>
+					<resp>Technical Advisor (Mount Allison University)</resp>
+				</respStmt>
+			</titleStmt>
+
+			<publicationStmt>
+				<authority>University of Leipzig</authority>
+				<idno type="filename">PL17.xml</idno>
+				<availability>
+					<licence target="https://creativecommons.org/licenses/by-sa/4.0/">Available under a
+						Creative Commons Attribution-ShareAlike 4.0 International License</licence>
+				</availability>
+				<date>2014</date>
+				<publisher>University of Leipzig</publisher>
+				<pubPlace>Germany</pubPlace>
+			</publicationStmt>
+
+			<sourceDesc>
+				<listBibl xml:lang="la">
+					<biblStruct>
+						<monogr>
+							<editor>
+								<persName>
+									<name xml:lang="fr">Jacques Paul Migne</name>
+								</persName>
+							</editor>
+							<author ref="http://data.perseus.org/catalog/urn:cts:latinLit:stoa0022">Ambrosius</author>
+							<title>De XLII Mansionibus Filiorum Israel Tractatus</title>
+							<title>In Epistolam Beati Pauli Ad Romanos</title>
+							<title>In Epistolam Beati Pauli Ad Corinthios Primam</title>
+							<title>In Epistolam Beati Pauli Ad Corinthios Secundam</title>
+							<title>In Epistolam Beati Pauli Ad Galatas</title>
+							<title>In Epistolam Beati Pauli Ad Ephesios</title>
+							<title>In Epistolam Beati Pauli Ad Philippenses</title>
+							<title>In Epistolam Beati Pauli Ad Colossenses</title>
+							<title>In Epistolam Beati Pauli Ad Thessalonicenses Primam</title>
+							<title>In Epistolam Beati Pauli Ad Thessalonicenses Secundam</title>
+							<title>In Epistolam Beati Pauli Ad Timotheum Primam</title>
+							<title>In Epistolam Beati Pauli Ad Timotheum Secundam</title>
+							<title>In Epistolam Beati Pauli Ad Titum</title>
+							<title>In Epistolam Beati Pauli Ad Philemonem</title>
+							<title>De Trinitate. Alias In Symbolum Apostolorum Tractatus</title>
+							<title>De Fide Orthodoxa Contra Arianos</title>
+							<title>De Dignitate Sacerdotali</title>
+							<title>Ad Virginem Devotam</title>
+							<title>Sermones Sancto Ambrosio Hactenus Ascripti</title>
+							<title>Epistolae Ex Ambrosianarum Numero Segregatae</title>
+							<title>Precationes Duae Hactenius Ambrosio Attributae</title>
+							<title>Expositio Super Septem Visiones Libri Apocalypsis</title>
+							<title>De Poenitentia Liber Unus</title>
+							<title>De Spiritu Sancto Libellus Unus</title>
+							<title>De Concordia Matthaei Et Lucae In Genealogia Christi</title>
+							<title>De Dignitatate Conditionis Humanae Libellus</title>
+							<title>Exorcismus</title>
+							<title>Acta Sancti Sebastiani Martyris [Incertus]</title>
+							<title>Liber De Vitiorum Virtutumque Conflictu [Incertus]</title>
+							<title>Libri Duo de Vocatione Gentium [Incertus]</title>
+							<title>De Moribus Brachmanorum [Incertus]</title>
+							<title>Philosophorum Aliquot Epistolae [Incertus]</title>
+							<title>Epistolae Duae De Monacho Energumeno [Incertus]</title>
+							<title>Epistola De Fide Ad Beatum Hieronymum [Incertus]</title>
+							<title>Hymni Sancti Abrosio Attributi [Incertus]</title>
+							<imprint>
+								<publisher>Garnier</publisher>
+								<pubPlace>Paris</pubPlace>
+								<date>1879</date>
+							</imprint>
+							<biblScope unit="volume">17</biblScope>
+						</monogr>
+						<ref target="https://archive.org/details/patrologiaecurs131migngoog">Internet
+							Archive</ref>
+
+					</biblStruct>
+				</listBibl>
+			</sourceDesc>
+
+		</fileDesc>
+		<encodingDesc>
+			<p>The following text is encoded in accordance with EpiDoc standards and with the CTS/CITE
+				Architecture.</p>
+		<refsDecl>
+        <cRefPattern n="" matchPattern="(.+).(.+).(.+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@type='edition']/tei:div[@n='$1']/tei:div[@n='$2']/tei:div[@n='$3'])"/>
+        <cRefPattern n="" matchPattern="(.+).(.+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@type='edition']/tei:div[@n='$1']/tei:div[@n='$2'])"/>
+        <cRefPattern n="" matchPattern="(.+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@type='edition']/tei:div[@n='$1'])"/>
+      </refsDecl>
+    </encodingDesc>
+
+		<profileDesc>
+			<langUsage>
+				<language ident="la">Latin</language>
+			</langUsage>
+		</profileDesc>
+
+	</teiHeader>
+	<text><body><div type="edition" n="">
+					<head>
+						<title type="main">IN EPISTOLAM B. PAULI AD TIMOTHEUM SECUNDAM.</title>
+					</head>
+					<ab>
+						<title type="sub"> PROLOGUS  .</title>
+					</ab>
+					<p>Aliam  epistolam  scribit ad Timotheum, ut jam <lb/>  eruditum  ecclesiastica disciplina,
+						et quae spes sit <lb/> promissionis, suo  exemplo  ad martyrium provocet : <note type="footnote">a Rom. edit., <hi rend="italic">scribil nunc Apostolus a</hi>d
+							Timotheum.... <hi rend="italic">ostendit</hi> quae <hi rend="italic">spes</hi> sit
+							promissionis, et <hi rend="italic">ut suo<lb/> exemplo....commenta, praedicit.</hi>
+						</note><pb n="485"/>
+						<milestone unit="PLSection" n="A"/><lb/> et quia futurum est, ut quidam a sana doctrina,
+						eo <lb/> quod dura illis videatur, ad fabulas convertantur, id <lb/> est, ad humana
+						commenta.</p>
+					<ab>
+						<title type="sub">CAPUT PRIMUM.</title>
+					</ab>
+					<p>(Vers. 1, !.) Paulus apostolus <hi rend="italic">Jesu Christi per</hi> voluntatem <lb/>
+						 <hi rend="italic">Dei secundum</hi> promissionem <hi rend="italic">vitae,
+							quae</hi> est <hi rend="italic">in<lb/> Christo Jesu, Timotheo dilecto filio.</hi>
+						Hujus rei gratia <lb/> apostolum se Christi Jesu, Dei voluntate appellatum <lb/>
+						significat; ut quae et quanta promissio in futuro <note n="a"/> in <lb/> fide Christi sit, edoceret;
+						ut praedicatione ejus incrementum <lb/>  faciat in salvandis disciplina Dominica. <lb/>
+						Idonei enim servi sunt, qui instantia sua et fide  negotia  <lb/>  dominorum suorum
+						exaggerant.  Quod  ideo <lb/> huic quasi charissimo  filio  scribit, ut  hujus  rei  imitator -
+							<milestone unit="PLSection" n="B"/><lb/>  exsistat, eadem caeteris tradens; ut per
+						traducem <lb/>  successionum indeficiens  sit  idoneus doctor, <lb/> per quem asserta
+						veritas multos acquirat ad vitam <lb/> promissam. Gratia, <hi rend="italic">misericordia, et pax a Deo</hi> Patre, <lb/> et Christo Jesu <hi rend="italic">Domino</hi>  nostro . Gratiam huic Patris <lb/> in miseratione exoptat, ut adsit ei: et
+						Christi Jesu <lb/> Domini nostri, quia  Deus gratiam   suam per  Christum  <lb/>  largitur;
+						ut una gratia sit utriusque.</p>
+					<p>(Vers. 3, 4, 5.) <hi rend="italic">Gratias ago Deo meo,</hi> cui servio a <lb/>  proavis 
+						in <hi rend="italic">conscientia pura, quod indeficientem  habeam tui </hi>
+						<lb/>   memoriam in <hi rend="italic">precibus</hi> meis, <hi rend="italic">nocte dieque <lb/> multum desiderans te</hi> videre, <hi rend="italic">memor
+							lacrymarum tuarum</hi>
+						 ;<lb/> <hi rend="italic">ut ego gaudio replear, recordationem</hi>  accipiens ejus  
+						,<lb/> quae <hi rend="italic"> est in </hi>  <hi rend="italic">te</hi> sincerae <hi rend="italic">fidei, quae</hi> habitavit primum <lb/> 305 in <hi rend="italic">avia</hi> tua Loide, <hi rend="italic">et matre tua</hi> Eunice : <hi rend="italic">certum</hi>
+						<milestone unit="PLSection" n="c"/><lb/> autem <hi rend="italic">habeo quod et</hi>  in 
+							<hi rend="italic">te.</hi> Quoniam dignum est meminisse <lb/>  bonorum, idcirco Deo
+						gratias agit, quia meminisse <lb/>  erat Timothei viri mirabilis, ut etiam hoc ipsum <lb/>
+						 Dei donum sit; non enim sine merito est, qui <lb/> cogitat de bonis viris. Et quia
+						idem Deus christianorum <lb/>   est , qui  erat  Judaeorum,  ei  se Deo gratias referre <lb/>
+						 testatur, cui a proavis famulatus est. Quando <lb/> enim hoc sperabant
+						progenitores ejus, quod hic <lb/>  coeperat  praedicare, una eorum fides est. Et quia in
+						<lb/> parentum successit servitia., et quia in his erat <lb/> adhuc, cum  illi  Deo
+						servirent,  recte  ait:  Cui  a <lb/>
+						<hi rend="italic">proavis servio.</hi> Quomodo? <hi rend="italic">In conscientia
+							pura,</hi>  inquit ; <lb/>  sic  enim aliquando persecutus est Ecclesiam, ut <lb/> Dei
+						amore hoc ageret, non malevolentia. Nam simili <lb/> modo et in epistola ad Hebraeos
+						scriptum  est  quia <milestone unit="PLSection" n="D"/><lb/> Levi, qui decimas accepit,
+						decimas dedit Melchisedech  ;<lb/> quia in Abrahae. inquit, lumbis erat Levi, <lb/>
+						quando decimas  obtulit  Melchisedech <hi rend="italic">(Hebr.</hi> VII, 9, <lb/> 10) :
+						ita et  hic  a proavis Deo se dicit servisse, quia <lb/> et Levi in proavo decimas dicitur
+						obtulisse. Est <lb/> enim Levi pater Jacob, avus Isaac, proavus Abraham  .<lb/> Multum
+						 ergo  se memorem Timothei profitetur  ,<lb/> et avide  illum  desiderare propter
+						lacrymarum <lb/>  ejus  recordationem, quas amore fuderat Apostoli, <lb/> sicut
+						intelligitur, recedentis a se. Non immerito ergo <lb/>  amantem se desiderat, ut gaudio
+						impleatur ex <lb/> communi laetitia, causa fidei <unclear> sincerae </unclear>, quam et in
+							<milestone unit="PLSection" n="A"/><lb/> avia ejus, et  in  matre fuisse significat,
+						certissime et <lb/> in eo.  Omnis  itaque hic affectus propter fidem est, <lb/> quae  erat 
+						in eis inviolata.</p>
+					<p>(Vers, 6, 7.) Qua de causa <hi rend="italic">admoneo</hi> te, <hi rend="italic">ut</hi>
+						<unclear/><hi rend="italic">recrees <lb/> donum Dei, quod</hi> est in <hi rend="italic">te</hi> per impositionem manuum <lb/>  mearum  ; non enim <hi rend="italic">dedit</hi>
+						nobis <hi rend="italic">Deus</hi> spiritum timoris, <lb/>
+						<hi rend="italic">sed virtutis,</hi> et dilectionis, et sobrietatis. Propterea se <lb/>
+						parentum ejus sinceritatem fidei significat memorasse  ,<lb/> ut fortiorem hunc
+						faceret, Quis enim laudem illorum <lb/>  audiens, quorum in eo ipso particeps est, non
+						<lb/> crescat, addens animum hujusmodi viribus. Sic  ergo  <lb/> recreat in se donum
+						gratiae Dei  acceptum  per ordinationem <lb/>   presbyterii , dum animum suum confovet <lb/>
+						mentis alacritate, gaudens  in  semet ipso, sicut in novitate <lb/>  ordinationis
+						gaudetur. Denique subjecit :  Nec  <milestone unit="PLSection" n="B"/><lb/> enim, inquit,
+							<hi rend="italic">dedit</hi> nobis Deus, spiritum timoris, <hi rend="italic">sed <lb/>
+							virtutis.</hi> Innovatus enim homo exit de timore, accipiens <lb/>  spiritum laetitiae
+						propter justificationem ; quia <lb/> omnis injustus in timore est, non fortis, sed
+						infirmus : <lb/>  non  in dilectione, sed  in  odio : nec in mentis  sobrietate   ,<lb/>
+						sed errore saucius. Si autem his caruerit, per <lb/> fidem et fortis, et dilectus, et
+						sobrius  erit .</p>
+					<p>(Vers. 8.) Noli <hi rend="italic">itaque erubescere</hi> testimonium Domini <lb/> 
+						nostri, <hi rend="italic">neque</hi> me <hi rend="italic">vinctum ejus.</hi> Constantiam
+						habendam <lb/>  docet, nec trepidari debere in professione. <lb/> Non est enim unde
+						erubescatur in ea ; quia  si homo <lb/> visus est Christus, gestis tamen apparuit Deus :
+						<lb/> etsi crucifixus est, resurrexit tamen a mortuis, et <lb/> multis videntibus,
+						 suscipiente  eum nube,  in  coelum <lb/> ascendit (Act.  I . 9). Non est ergo infirmitatis
+						causa, <milestone unit="PLSection" n="c"/><lb/> sed potestatis  ;  quia ubi putatur
+						imbecillitas, ibi apparet <lb/>  potentia. Itaque stulte infirmatus  dicitur , qui <lb/>
+						vicisse probatur. Hoc modo nec in Apostolo est, quod <lb/> ad ruborem pertineat ; quia
+						si pressuris et caedibus <lb/> humiliatus dicitur, ex  illa  parte confundit obtrectatores
+						<lb/>  suos, quia in signis ac prodigiis nutu mirabilis <lb/> pervidetur; ut
+						intelligatur non infirmitate humiliari, <lb/> sed voluntate ad quemdam meritorum
+						profectum. <lb/> Idcirco  enim  Deus servos suos ab iniquis humiliari <lb/> permittit, ne
+						illis injuste praemia dare videatur.</p>
+					<p>(Vers. 9.) <hi rend="italic">Sed  collabora </hi> in <hi rend="italic">Evangelio</hi>
+						secundum <lb/> virtutem <hi rend="italic">Dei,</hi> <note n="b"/> qui nos salvos <hi rend="italic">fecit.</hi> Quoniam virtute <lb/> Dei victa  est  mors, ut nos salvi esse possimus;
+						juxta <lb/> hoc convenit vicem  nos  ex aliqua parte reddere <lb/> Redemptori. Quia enim
+						ad omnia ejus beneficia <milestone unit="PLSection" n="D"/><lb/> respondere non
+						possumus. vel legationem ejus  fideliter  <lb/>  et instanter agamus. <hi rend="italic">Et vocavit vocatione</hi> sua sancta  .<lb/> Vocatio sancta est, cum electi sunt ad
+						gubernandum <lb/>  populum sanctum Dei : ad sanctum autem senior <lb/>  vocatur, qui
+						dux eligitur  sanctitatis . Non secundum <lb/>
+						<hi rend="italic"> merita</hi> nostra. Verum est; quia si ad liquidum <lb/> quaeras,
+						nullus  hominum  dignus potest videri  vicarius  <lb/>  esse Christi; omnes enim quos
+						elegit, prius fuerant <lb/>  peccatores. Quantum ergo ad comparationem <lb/> caeterorum
+						pertinet, hi digni inventi sunt : quantum <lb/> vero ad  rem  ipsam, omnes indigni sunt.
+							<hi rend="italic">Sed secundum</hi>
+						<lb/>  propositum suum, <hi rend="italic">et</hi> gratiam quae  data  est
+							<unclear>notis</unclear>
+						<note type="footnote"> a Eadem Rom. edit., <hi rend="italic">'ju,. J pet fidem</hi>
+							Christi <hi rend="italic">sit, edoceret,</hi>
+							<lb/> quo praedicatione ejus., etc. </note>
+						<note type="footnote"> b Rom. edit., qui non <hi rend="italic">liberanit.</hi>
+						</note><pb n="487"/>
+						<milestone unit="PLSection" n="A"/><lb/> in <hi rend="italic"> Christo </hi> Jesu ante <hi rend="italic">tempora saecularia.</hi> Quoniam  dignatione sua  <lb/>  Deus olim 306
+						decrevit peccatores <lb/> salvos facere (praescius enim fuit Deus quid futurum <lb/>
+						esset in homine, antequam faceret eum, et peccaret). <lb/> quomodo redintegraretur
+						praedestinavit, quo tempore  ,<lb/> et per quos, et qua ratione salvari possint; ut
+						<lb/> neque merito suo qui salvantur, neque horum per <lb/> quos vocantur, sed Dei
+						gratia istud  donum  praestari <lb/> videatur per fidem Christi.</p>
+					<p>(Vers. &lt;0.) <hi rend="italic">Nunc vero declarata per illuminationem <lb/>
+							adventus</hi> Salvatoris <hi rend="italic">nostri Jesu Christi.</hi> Donum Dei quod
+						<lb/> ante tempora saecularia latebat in mysterio,  incarnatione  <lb/>  et adventu
+						Christi declaratum testatur, quando <lb/>  coeperunt  homines remissam peccatorum
+						accipere.</p>
+					<p>(Vers. 11.) <hi rend="italic">Qui destruxit quidem mortem,</hi>  <hi rend="italic">;-</hi>
+						<milestone unit="PLSection" n="B"/><lb/>  illuminavit  autem vitam <hi rend="italic">aeternitate
+							per Evangelium,</hi> in quo <lb/>
+						<lb/>
+						<hi rend="italic">positus</hi> sum <hi rend="italic">ego praedicator, et apostolus, et
+							magister <lb/> gentium.</hi> Qua ratione salvum fecit populum suum <lb/> Christus,
+						ostendit dicens quia mortem destruxit, <lb/> quae  erat  hominis inimica, ne ab inferis
+						posset resurgere <lb/> : tum demum vitam  illuminavit  aeternitate ; <lb/> ut resurgens a
+						mortuis, jam mori non possit. Obscura <lb/>  enim  vita  est, quae tempore definitur. dum
+						soporatur  ,<lb/> dum ignorat, dum male versatur.  Et  quomodo illuminetur <lb/>  vita,
+						ostendit; quia per Evangelium credentibus <lb/>  datur aeternitas. magistro gentium
+						praedicante.</p>
+					<p>(Vers. 12.).  <hi rend="italic">causam et haec</hi> patior.  Praedicans  <lb/>  Dei
+						donum, diabolum patitur inimicum; ut <lb/> pressuras ei exsuscitet, quia populum de
+						faucibus <lb/> ejus eruit. <hi rend="italic">Sed non confundor.</hi> In  hoc  securus,
+						quia <milestone unit="PLSection" n="C"/><lb/> pro tribulationibus  magna  promissa merces
+						est,  non  <lb/> confunditur, sed gloriatur  in  pressuris, Scio <hi rend="italic">enim
+							cui<lb/> credidi, et certus  sum </hi> quia potens<hi rend="italic">est depositum
+							meum<lb/> custodire</hi> in   <hi rend="italic">illa die.</hi> Hoc est quod dicit, qua
+						spe et <lb/> fiducia  magnificentiae  Salvatoris securus est;  quia  <lb/> quod commendat
+						illi,  in tuto   est. Quid autem illi commendat  ,<lb/> nisi salutem suam? Ut hic pro
+						 illo  patiens, <lb/>  salutem inveniat penes   illum, cum  coeperit  judicare ; <lb/> ut
+						puniens infideles, istum dignum aeterna vita pronuntiet  .<lb/></p>
+					<p>(Vers. 13,   .)  )  <hi rend="italic">Formam</hi> habens <hi rend="italic">sanorum
+							verborum ,<lb/></hi> quae a <hi rend="italic">me audisti</hi><hi rend="italic">in fide
+							et dilectione,</hi> quae <hi rend="italic">est</hi> in <lb/>
+						<hi rend="italic">Christo Jesu, bonum commendatum custodire per  Spiritum  <lb/>
+							</hi>sanctum,<hi rend="italic">qui  habitat </hi> in nobis. Praecepta sua <lb/> cum
+						gestis formam appellat salutaris doctrinae, quam <milestone unit="PLSection" n="D"/><lb/>
+						istum sequi mandat; ut custodiat ea, Spiritu sancto <lb/> favente.</p>
+					<p>(Vers. 15,  16 .) <hi rend="italic"> Scis </hi> enim <hi rend="italic">hoc, quod
+							aversati</hi> sunt a <lb/>
+						<hi rend="italic">me omnes,</hi>qui in  Asia  <hi rend="italic">sunt, ex</hi> quibus <hi rend="italic"> est  Phygelus et <lb/>  Hermogenes "</hi> Hi quos  memorat , fallacia pleni
+						erant ; <lb/>  simulabant  enim amicitias Apostoli. ut adhaerentes <lb/> ei addiscerent,
+						unde illi calumniam facerent, aut per <lb/> alios  immitterent . Qui posteaquam viderunt
+						manifestatos <lb/>  se, recesserunt ab eo. <hi rend="italic">Det misericordiam</hi>
+						<lb/> Dominus <hi rend="italic">Onesiphori domui; quia saepe me refrigeravit<lb/> et
+							super catenam meam</hi> non <hi rend="italic">erubuit.</hi> Duplici genere <milestone unit="PLSection" n="A"/>refrigerium hoc intelligendum est; quia et in necessitate <lb/>
+						 custodiae solatio suo refrigeravit eum : et si <lb/> qua illi, sive indigentibus
+						opus erant, ministravit. <lb/> Spe enim eorum, quae promissa sunt,  non  puduit illum <lb/>
+						 accedere, et requirere hominem positum in custodia   ;<lb/> illi enim quos supra
+						memorat, quia  erubescebant  <lb/>  de cruce Christi, in necessitate deseruerunt <lb/>
+						Apostolum.</p>
+					<p>(Vers. 17, 18.) <note n="a"/> <hi rend="italic">Sed</hi> cum <hi rend="italic">essem</hi> Romae, <hi rend="italic">sollicite <lb/> me quaesivit et invenit.</hi> Det <hi rend="italic">illi
+							Dominus invenire misericordiam<lb/> </hi><hi rend="italic">apud</hi> Dominum<hi rend="italic"> in  illa die.</hi>  Romam veniens  <lb/> Apostolus. cum appellasset
+						Caesarem,a  militibus  custodiebatur   ;<lb/> tunc enim eum Onesiphorus charitatis <lb/>
+						causa et  magisterii  magna diligentia requisitum invenit .<milestone unit="PLSection" n="B"/> <lb/> Cujus visitatio tam acceptabilis fuit Apostolo, <lb/> ut eum sic Domino
+						commendet, ut inveniat  misericordiam  <lb/>  apud Dominum in die judicii ; ut sicut Apostolum
+						<lb/>  requirens invenit, ita et misericordiam quaerens  ,<lb/> inveniat apud
+						judicem.  Hoc  enim orat, ut praestet <lb/>  ei Dominus Pater  coeli  et terrae invenire
+						gratiam <lb/> apud  Dominum humani generis  . Filium scilicet. Tale <lb/> est hoc, quale et
+						illud in Genesi : <hi rend="italic">Et pluit,</hi> inquit, <lb/>
+						<hi rend="italic">Dominus sulphur et ignem super</hi> Sodomam <hi rend="italic">et
+							Gomorrham <lb/>  a Deo de coelo (Gen.</hi> XIX, 24).</p>
+					<p><hi rend="italic">Quanta autem Ephesi</hi> ministraverit <hi rend="italic"> mihi ,
+							 melius . tu <lb/> nosti.</hi> Quoniam solent quidam personis magis quam <lb/> causis
+						servire, volentes gratificari majoribus ; ideo <lb/>  Apostolus  Onesiphori bonum
+						generale ostendit,  ne  <lb/> videretur forte personae  se commendasse , dum Apostolo <milestone unit="PLSection" n="C"/><lb/>   ministravit  ; cum constaret illum magnanimum <lb/>
+						omnibus fuisse.</p>
+					<ab>
+						<title type="sub">307 CAPUT II.</title>
+					</ab>
+					<p>(Vers. 1. 2.) Tu <hi rend="italic">ergo,</hi>  fili mi , <hi rend="italic"> confortare </hi>
+						in <hi rend="italic">gratia,  quae est  <lb/> </hi> in <hi rend="italic">Christo</hi> Jesu ,
+							<hi rend="italic">et in</hi> iis quae <hi rend="italic">audivisti a me per <lb/> multos
+							testes : haec commenda fidelibus</hi><hi rend="italic">hominibus, qui <lb/> idonei
+							erunt et</hi> alios <hi rend="italic">docere.</hi> Constantem  hunc et  robustum <lb/> 
+						es, praecipit  in  docendo  gratiam  Dei , quae <lb/> data est in Christo Jesu : et  non 
+						solum in gratia , sed <lb/>  etiam  in mysteriis, quae sunt de  Christo . Arcana fidelibus <lb/>
+						 et dignis tradi vult , qui alios possint docere, <lb/> non passim vulgaribus ac
+						negligentibus; magna enim <lb/> cura eligendus est doctor.</p>
+					<p>(Vers. 3, 4.) <hi rend="italic">Labora</hi> ut bonus <hi rend="italic">mil esse </hi>
+						 Christi ; Jesu ; <lb/>
+						<hi rend="italic">nemo</hi> enim <hi rend="italic">militans Deo, obligat se negotiis
+							saecularibus</hi>
+						<milestone unit="PLSection" n="D"/><lb/>
+						<hi rend="italic">; ut placeat ei, cui</hi>  se  probavit. Manifestum est  quod  <lb/>
+						dicit; quia <hi rend="italic">nemo potest duobus</hi> dominis <hi rend="italic">servire
+							(Matth.</hi>
+						<lb/> VI, 24); negotia enim saecularia avaritiae serviant necesse <lb/>  est: et nisi
+						mentiti  fuerint , transegisse non <lb/> possunt. Est ergo, sed leve peccatum.
+						Ecclesiasticus <lb/>  autem idcirco  Deo se probat, ut huic devotus,  officium  <lb/> 
+						impleat  quod spopondit  , in  Deirebus   sollicitus, <lb/> a saeculari  negotio  alienus ;
+						 non  enim convenit unum <lb/> duplicem professionem habere.</p>
+					<p>(Vers. 5.) <note n="f"/> Etsi <hi rend="italic">certet</hi>  quis , <hi rend="italic">non
+							coronatur,</hi> nisi le-$_NOTE0001_$_NOTE0002_$_NOTE0003_$_NOTE0004_$_NOTE0005_$_NOTE0006_<pb n="489"/>
+						<milestone unit="PLSection" n="A"/><lb/>
+						<hi rend="italic">   certaverit.</hi> Dei militem tam exercitatum vult <lb/> esse in
+						Dei operibus, vel officio deputato, ut possit <lb/> ad gloriae meritum pervenire : tota
+						mente vigilantem <lb/> divinis obsequiis, praesentia spernentem, coelestia  diligentem  
+						;<lb/> ad hoc enim se probavit, ut hic laborans <lb/> remuneretur in coelis.</p>
+					<p> (Vers . 6, 7.) <hi rend="italic">Laborantem agricolam oportet</hi> primum <lb/>
+						<hi rend="italic">de fructibus percipere. Intellige quae dico; dabit</hi> enim <lb/> tibi
+						Dominus <hi rend="italic">in omnibus intellectum.</hi> Tantae abstinentiae <lb/> 
+						sanctus fuit Timotheus, ut etiam a licitis se  temperaret   ;<lb/>  hoc  enim vult
+						intelligi, quia a participatione <lb/>  gazophylacii se abstinebat, cum  hoc  Dominus
+						<lb/> decreverit, ut qui Evangelium annuntiant, de Evangelio <lb/>  vivant  (I  Cor. IX,
+						14). Ideo apostolus prius <lb/> hunc sumere praecipit, qui primus est, et sic caeteris
+							<milestone unit="PLSection" n="B"/><lb/> distribuere.</p>
+					<p>(Vers. 8, 9.) <hi rend="italic">Memor  esto  Christum</hi> Jesum resurrexisse <lb/> <hi rend="italic">a mortuis</hi><hi rend="italic">ex semine</hi><hi rend="italic"> David 
+							secundum</hi><hi rend="italic"> Evangelium </hi>
+						<lb/>  meum, in quo <hi rend="italic">laboro</hi> usque ad <hi rend="italic">vincula, quasi  latro <lb/> &lt;,  sed  verbum Dei</hi> non <hi rend="italic">est
+							alligatum.</hi> Quoniam multi <lb/> futuri erant filii diaboli, qui Filium Dei
+						incarnatum <lb/> negarent; idcirco hoc memorat, quoniam fallaciter <lb/> sub nomine
+						apostolorum  hoc  asseverare nituntur. <lb/> Subjecit, secundum Evangelium <hi rend="italic">meum,</hi> ut excluderet <lb/> malae mentis falsa colloquia; non enim
+						plus haereticis <lb/>  credendum est de Apostolis, quam his ipsis de <lb/> praedicatione
+						sua testantibus, quam praedicationem <lb/> cum labore se agere queritur. Pressuris enim
+						tribulabatur <lb/>  et carceribus, eo quod tam Judaeos quam <lb/> gentiles offenderet,
+						sicut illis videbatur,  incredibilia  <milestone unit="PLSection" n="c"/><lb/> 
+						praedicando; iratos enim  habebat  Judaeos propter <lb/> Legem, quam cessare docebat :
+						gentiles autem inimicos <lb/>  sibi faciebat; quia unum Deum praedicabat in <lb/>
+						Christo. Unde quasi latronem hunc tractabant, alligantes  ,<lb/> claudentes si posset
+						tacere, nescientes quia <lb/> verbum Dei alligari non poterat.  Denique  saepe  clausus . <lb/>
+						 non dispendium  fecit , sed lucrum ; neque enim <lb/> defuit, cui praedicaret in
+						carcere, ut quos libere invitare <lb/>  ad fidem non posset, in vinculis positus pasceret
+						<lb/>  Dei verbo.</p>
+					<p>(Vers. 10.) <hi rend="italic">Ideo omnia suffero propter electos; ut</hi>
+						<lb/>  et ipsi  salutem <hi rend="italic">consequantur,</hi> quae est <hi rend="italic">in
+							Christo Jesu</hi>
+						<lb/> cum <hi rend="italic">gloria  coelesti .</hi> Ut praedicatione sua salvaret  homines  <lb/>
+						 praedestinatos ad vitam, exitiis erat subjectus, <lb/> sciens profectum se
+						habiturum quaesitae salutis illorum .<milestone unit="PLSection" n="D"/> <lb/>.</p>
+					<p>(Vers.  11 , 12.) <hi rend="italic">Fidelis sermo</hi> ; si enim <hi rend="italic">commortui</hi>
+						<lb/> sumus, et convivemus:si  sustinemus , <hi rend="italic">et</hi> conregnabimus.
+						<lb/> Sic posse ad immortalitatem et gloriam Christi perveniri <lb/>  significat, si in
+						 forma  baptismatis  manserimus , <lb/> ubi omnia delicta moriuntur; ut innovati omnia vitia
+						<lb/>  vetera et crimina fugiamus, ut auctoris secuti  vestigia   ,<lb/> peccatis
+						mortui videamur. Si vero additum <lb/> fuerit ad causam, ut et tribulationes ac
+						pressuras <lb/> non aegre pro nomine Domini patiamur, sustinentes <lb/> haec, simul cum
+						illo regnabimus ; dignum est enim <lb/>  ut  qui pro illo opprobria  patitur et  exitia, in
+						regno <milestone unit="PLSection" n="A"/><lb/> ejus gloriosus appareat. Si <hi rend="italic">negamus, et ille  negabit </hi>
+						<lb/> nos. Verum est, quia si minime confessi illum fuerimus <lb/>  coram hominibus,
+						tunc dicet et ipse nobis in <lb/> illa necessitate futuri judicii : <hi rend="italic">Nescio</hi> vos <hi rend="italic">(Matth.</hi>
+						<lb/> xxv, 12). Haec est punitionis significatio.</p>
+					<p>(Vers. 13.) Si non <hi rend="italic"> credimus , ille fidelis</hi><hi rend="italic">permanet, <lb/> negare</hi> semetipsum<hi rend="italic">non potest.</hi> Nemo potest
+						Domino <lb/> auferre, quod habet. Quis enim illo fortior est, per <lb/> quem omnia
+						exstiterunt ?  Nec  308 addi potest perfecto   ;<lb/> quia non illi aliquid praestat, qui
+						credit illum : <lb/> quomodo nihil aufert ei, qui non credit in illum. <lb/> Quidquid
+						ergo agitur, ad profectum nostrum perveniri  ,<lb/> ne in ignorantia maneamus. Nec enim a
+						nobis <lb/>  firmatur, cum ipse ex se et apud  se firmus  sit.</p>
+					<p>(Vers. 14.) <hi rend="italic">Haec admone, contestans</hi>coram <hi rend="italic">Domino.</hi>
+						<milestone unit="PLSection" n="B"/><lb/>
+						<hi rend="italic">Noli verbis pugnare ; ad nihil enim utile</hi> est, nisi <hi rend="italic">ad<lb/> subversionem</hi> audientium. Contentiones vitandas  monet  
+						,<lb/> praecepta autem danda sub Dei timore et terrore   ;<lb/> quia contentio potest
+						adhuc minus stabilitis <lb/> generare scrupulum. Solent enim in contentione talia <lb/>
+						opponi elimato malevolentiae ferro, ut moveant  animos  <lb/>  incipientium fratrum.</p>
+					<p>(Vers.  15 .) <hi rend="italic">Sollicite cura temetipsum, ut probabilem <lb/>  te
+							exhibeas</hi> Deo , <hi rend="italic">operarium  non  impudoratum , <lb/> recte
+							tractantem verbum</hi> veritatis. Quoniam  sunt aliqui , <lb/> qui dicant contentionem
+						audientibus prodesse :  Apostolus autem  <lb/>  sciens magis obesse, hoc mandat, ut unusquisque
+						<lb/>  hoc curet, <note n="a"/> ut spreta altercatione , semetipsum <lb/>  probabilem
+						faciat, impudoratos appellans eos, <lb/> qui contentionibus nituntur.  Necesse  est enim
+						ut <milestone unit="PLSection" n="C"/><lb/> contentio extorqueat aliquid, immo multa
+						quae dicuntur <lb/>  contra conscientiam; ut intus in animo perfecto  ,<lb/> foris
+						victor abscedat. Nemo enim patitur se <lb/> vinci, licet sciat vera , quae audit: recte
+						autem  tractat   ,<lb/> et bona conscientia , qui volentibus loquitur et <lb/>  pacificis .
+						Collatio ergo inter Dei servos esse debet , <lb/> non altercatio.</p>
+					<p>(Vers. 16, 17.) <hi rend="italic"> Profanas </hi><hi rend="italic">autem</hi> vocum <hi rend="italic">novitates</hi>
+						<lb/> devita; <hi rend="italic">plurimum</hi>enim <note n="b"/> <hi rend="italic">proficiunt ad
+							inanitatem  ,<lb/><lb/> et sermo eorum sicut cancer</hi> serpit. Hoc idem adhuc <lb/>
+						prosequitur, ut contentiones vitentur ; nec enim congruit <lb/>  unius fidei viros
+						habere contentionem, sed in <lb/> tractatu patiantur se invicem , et consentiant bonis
+						<lb/> dictis: si quid autem improbabile videtur, cum pace <lb/> dissimuletur. Adversarii
+						enim et dissidentes solent se <milestone unit="PLSection" n="D"/><lb/> invicem provocare
+						, ex quibus unus catholicus est,  et  <lb/> alter profanus. Hic ergo catholicus est, cui
+						Apostolus <lb/>  mandat, ut spernat et declinet a fabulis inanibus : <lb/> quietus
+						debet esse; ut semper de conscientia verba <lb/> emittat, nec patiatur se coram  impia 
+						verba depromi. <lb/> Dant enim quibusdam occasionem, ut in pejus  proficiant   ;<lb/> non
+						enim desunt,  quia  audientes profana, concipiant <lb/>  cogitatum malum: ideoque obest
+						contentio.</p>
+					<p>(Vers. 18.) Ex <hi rend="italic"> quibus  est .  Hymenaeus et Philetus,  qui  <lb/>
+							deerraverunt a veritate, dicentes resurrectionem jam  factam esse </hi>
+						<lb/>  <hi rend="italic">, et fidem quorumdam</hi> subverterunt. Nunc ipsorum <lb/>
+						 quorum causa vitandas contentiones monet, <note type="footnote"> a Codex Laud., ut
+							spiritali <hi rend="italic">altercatione.</hi>
+						</note>
+						<note type="footnote"> b Rom. edit., proficiunt ad <hi rend="italic">impietatem.</hi>
+						</note>
+						<note type="footnote"> P.ATR.OL. XVII. </note>
+						<note type="footnote"> 16 </note><pb n="491"/>
+						<milestone unit="PLSection" n="A"/><lb/> prodidit nomina, quos et profanos et impios
+						 designavit   ,<lb/> errantes a  veritate  ; hoc enim negabant, * quod <lb/> palmare est
+						christianorum, ut credant se in futurum <lb/> a mortuis resurgere. Hi autem , sicut ex
+						 alia  Scriptura <lb/>  docemur, in filiis fieri resurrectionem dicebant, <lb/> quibus
+						non deerat, qui assensum praestaret  perversum contra  <lb/>   fidem, quam in primordio
+						fuerat consecutus  .<lb/></p>
+					<p>(Vers.  19 .) Firmum autem fundamentum Dei stat, <lb/> habens signaculum hoc; cognovit
+						enim Dominus, qui <lb/> sunt ipsius: et discedat ab iniquitate omnis,  qui nominat nomen   <lb/>
+						 <hi rend="italic"></hi> Domini. Fundamentum Dei fides est , quae <lb/> continet
+						qu. promisit Deus, quae fides non poterit infringi <lb/>  perfidorum et haereticorum
+						commentis; quamvis <lb/>  enim hi negent futura quae credimus ; Deus tamen <milestone unit="PLSection" n="B"/><lb/> dabit quae  credimus  daturum illum, teste promissione
+						<lb/> ejus. Signaculum itaque promissionis Dei, fides <lb/> nostra est, quae firmat Dei
+						verba, in die judicii cognoscet <lb/>  Deus.  qui  habent signum ejus  ,  dissentientes
+						<lb/> a perfidorum et haereticorum iniquitate, quae Dei promissionem <lb/>  infirmare  se 
+						putat; nihil enim tam iniquum  ,<lb/> quam Dei fidei contraire. Et  sic 
+							<unclear>Dathan</unclear>, et <lb/> Abiron , et Core dictum est a Moyse,  cum  contra
+						<lb/> Dei praeceptum offerre sacrificia praesumerent (Num. <lb/> XVI. 55 ) : Cognovit,
+						inquit , Dominus, qui sunt ejus. <lb/> Quo dicto ostendit quae pernicies  maneret eos  , qui
+						<lb/> Dei verba inverterent.</p>
+					<p> (Vers . 20.) In magna autem domo non solum sunt <lb/> vasa  aurea  <hi rend="italic">et</hi> argentea, verum et <hi rend="italic">lignea et</hi> fictilia: <hi rend="italic">et</hi>
+						<lb/> quaedam quidem in honorem , quaedam <hi rend="italic">vero</hi> in contumeliam <milestone unit="PLSection" n="C"/>. Hoc dicto significavit in  Ecclesia  diversos <lb/>  esse 
+						homines: quosdam bonos et summos viros, <lb/>  quos in   auro intelligi vult: quosdam bonos
+						tantum, <lb/> quos in  argento  designat: alios vero non bonos <lb/> quos  vasa  lignea et
+						fictilia appellat. Quod nulli ambiguum <lb/>  puto; nam in Corinthiorum  hoc  Ecclesia
+						 probat  <lb/>  frequens sermo  objurgantis Apostoli . Nunc autem <lb/> in  Ecclesia  nostra
+						309 <unclear>palam</unclear> est, et in  templo  <lb/> Hierosolymis,  in  quo typus erat
+						Ecclesiae, manifestis <lb/> lectionibus approbatur. Erant enim ibi Sadducaei, <lb/>  ex 
+						quorum radice erant Hymenaeus et Philetus: <lb/> de quorum  prava  sententia  cum  Apostolus
+						esset  locutus   ,<lb/> statim hoc subjecit, esse mirabile in <lb/> Ecclesia videri
+						homines dissentientes. Nam et in <lb/> Corinthiorum Ecclesia, de qua dixi, quidam erant
+							<milestone unit="PLSection" n="D"/><lb/> qui dissentientes, resurrectionem negabant.
+						Insanus <lb/> tamen <note n="b"/> Novatianus ut errori suo <unclear> blandiatur </unclear>, aliter
+						<lb/> hoc  intelligendum  tradit;  ut  domus magna totus <lb/> mundus significari credatur,
+						qui habet hominum diversitatem  ;<lb/> cum constet Apostolum exemplo usum <lb/> domus
+						divitis et opulenti, quae quamvis copiosa  sit , <lb/> habeat tamen vasa lignea et fictilia
+						 :  hoc modo  et Ecclesia   ,<lb/> quamquam sancta dicatur, habet tamen et <lb/> vitiosos et
+						prava sentientes, sicut superius <unclear> memoravi </unclear>- .<milestone unit="PLSection" n="A"/> <lb/> Quos contumelia dignos ostendit, non tamen <lb/> perituros, sed
+						purgandos per ignem; quia domui ex <lb/> aliqua parte necessarii sunt. Novatianus autem
+						elatus <lb/>  superbia , ut Ecclesiae suae veritatem et  sanctitatem generalem  <lb/>  
+						defenderet, hoc n. intelligendum <lb/> esse decrevit, quasi Ecclesia  penes  ipsum sit,
+						et <lb/> cunctos habeat purificatos, propter  illas  causas <lb/> quibus <note n="e"/> nos innocentes
+						accusat. Sed quid  opus  erat <lb/> hoc  loco  de mundo aliquid dicere, aut ut quid  affirmaret -
+						<lb/>  mundum domum magnam significare? Nam <lb/> dicit Dominus apostolis: <hi rend="italic">No modo </hi> estis <hi rend="italic">de</hi> mundo, ego <lb/> autem elegi
+							<hi rend="italic"> vos </hi> de mundo (Joan. xv, 19), Quomodo <lb/>  igitur  intra mundum
+						concludendi sunt,qui negantur <lb/> de mundo esse? Et idem Apostolus: Quo, inquit, <lb/>
+						mihi <hi rend="italic">de</hi> iis, <hi rend="italic"> qui </hi> foris sunt, <hi rend="italic">judicare</hi> { I Cor. V, 12). <milestone unit="PLSection" n="B"/><lb/>
+						Nam  in  una domo omnes sub uno sunt nomine; uno <lb/> enim Domini sui nomine censentur
+						omnes: mundus <lb/> autem diversae professionis continet homines; ita <lb/> ut dispares
+						profiteantur se habere et deos et dominos  .<lb/> Non ergo domum magnam mundum dicit  , 
+						sed <lb/> Ecclesiam, in  qua  omnes sub unius Domini sunt <lb/>  nomine .</p>
+					<p>(Vers. 21.) Si quis <hi rend="italic">ergo</hi> purgaverit seipsum ab <lb/> istis, erit
+						vas in honorem sanctificatum, utile Domino, <lb/>
+						<hi rend="italic">ad</hi> omne opus bonum praeparatum. Nunc alia haeresis <lb/> fraude sua
+						convincitur, quae asserit animas quasdam <lb/> natura esse malas  , quae  ad bonum cogi non
+						 possint ; <lb/>  cum hic   dicat posse malos  immutari  in bonum, et <lb/> sordidos
+						purificari. Potuerant enim Hymenaeus et <lb/> Philetus mundare sensum suum, si
+						voluissent; ut <milestone unit="PLSection" n="C"/><lb/>  fierent  vas sanctificatum,
+						praeparatum in honorem.</p>
+					<p>( Vers. 22.)  Juvenilia  autem desideria  fuge . Juvenilia <lb/>  desideria adversa sunt;
+						sunt enim voluptates <lb/> mundanae, quae omnibus illecebris mancipatae sunt; <lb/> ac per
+						hoc a Dei servo fugiendae sunt. Sectare <hi rend="italic"> vero </hi>
+						<lb/> justitiam, fidem, charitatem, <hi rend="italic">pacem,</hi> cum iis <hi rend="italic">qui invocant<lb/> </hi> Dominum <hi rend="italic">de puro corde.</hi>
+						Haec sectanda  jubet , <lb/> quae juvenili aetati devia videntur  et  aspera. Qui <lb/> enim
+						justitiam eligit, ei nihil  facit  contrarium; et <lb/> qui fidem diligit, servat
+						mandata:qui autem charitatem <lb/>   sequitur , omnibus humilis est; pacis vero <lb/>
+						custos nullum lacessit ad jurgium.</p>
+					<p>(Vers. 23. ) Stultas autem <hi rend="italic">et</hi> ineruditas quaestiones <lb/>
+						<hi rend="italic">devita,</hi> sciens quia generant lites.  Insensatae quaestiones   <lb/> 
+						partim  infidelium , partim haereticorum  sunt  : <milestone unit="PLSection" n="D"/><lb/> ex
+						parte  infidelium , quae  modestos  homines cogunt <lb/> ad litem;<note n="d"/> immutantur enim nimia
+						contradictione <lb/> impietatis eorum,  et  irati dicunt aliquid contra  pra ; - positum ;- <lb/>
+						 suum. Nam solent quidam haereticorum patientiam <lb/>  fingere ( quamvis a
+						catholico non possint <lb/>  audire  aliquid asperum ) ut commendent prava sua <lb/>
+						 colloquia ; idcirco dissimulandum ab his est.</p>
+					<p>( Vers. 24, 25, 96. ) Servum autem Domini non <lb/> oportet litigare, <hi rend="italic">sed</hi> mitem <hi rend="italic">esse ad</hi> omnes, docibitem, <note type="footnote"> a Omnes edit., <hi rend="italic">quod</hi> palam <hi rend="italic">est</hi>
+							christianorum; mss<lb/>
+							<lb/> vero partim, quod palmare est, partim, quod palma-<lb/>
+							<lb/> rium cos; utrumque commode : <hi rend="italic">unus etiam,</hi> quod<lb/>
+							<lb/> speciale est christianorum. </note><note type="footnote">b in Rom. <hi rend="italic">edit., hic et infra non Novatianus scri-</hi><lb/> bitur, sed Novatus. </note>
+						<note type="footnote">c Rom. edit., non ut nocentes accusat. </note><note type="footnote">d Codex Vall., invitantur enim nimia contradictionis<lb/> impietate
+								<hi rend="italic">eorum... contra propositum suum. .</hi>
+						</note><pb n="493"/>
+						<milestone unit="PLSection" n="A"/><unclear/><lb/>
+						<hi rend="italic">patientem, , modestum, corrigentem eos,  qui  diversa</hi>
+						<lb/> sentiunt : si <hi rend="italic">quando det illis Deus  poenitentiam ad agnitionem </hi>  <lb/>
+						<hi rend="italic"></hi> veritatis, et <hi rend="italic">resipiscant</hi> a <hi rend="italic">diaboli laqueis, a quo</hi>
+						<lb/> tenentur capti  ab  eo  ad  ipsius <hi rend="italic">voluntatem.</hi> Haec nulla <lb/>
+						indigent interpretatione; sunt enim manifesta  . Quantum  <lb/>  tamen prosit modestia,
+						 declaravit ; si enim hoc <lb/> in quibusdam haereticis placitum  est , quia humiles <lb/>
+						videantur: quanto magis laudabile et  fructuosum  <lb/> erit in catholico.  si  fuerit
+						mitis, in quo et sensus <lb/> utilis, et gravitas imitanda perspicitur !</p>
+					<ab>
+						<title type="sub">CAPUT III.</title>
+					</ab>
+					<p>( Vers. 1-5. )  Hoc  autem scito, quia in novissimis <lb/>
+						<hi rend="italic">diebus</hi> instabunt tempora periculosa ;  erunt  enim <lb/> homines
+						 sui  tantum amatores avari, <hi rend="italic">insolentes,</hi> superbi<lb/>
+						<hi rend="italic">,  blasphemi ,</hi> parentibus non <hi rend="italic"> obsequentes ,</hi> ingrati, <milestone unit="PLSection" n="B"/><lb/> impii,  sine  fide,
+						 sine  dilectione, <hi rend="italic">criminatores, incontinentes</hi>
+						  ,<lb/> immites, bonorum inimici, proditores, protervi <lb/>
+						<hi rend="italic">, tumidi,</hi>  amatores . <hi rend="italic">voluptatum</hi> magis
+						quam <hi rend="italic">Dei,</hi>
+						<lb/> habentes 310 formam  pietatis , virtutem autem <hi rend="italic">ejus</hi>
+						<lb/>  abnegantes ; et hos  devita . Prophetia est haec  sancti  <lb/> Apostoli, in qua
+						 praevidit  quanta mala futura essent <lb/> haereticorum et Judaeorum; in  his  enim omnia
+						ista, <lb/> quae inimica  fidei  sunt, denotantur. Ipse enim Apostolus <lb/>  dixit: Quo
+						enim mihi <hi rend="italic">de</hi> iis, qui <hi rend="italic">foris,</hi> sunt, <lb/>
+						judicare ( I Cor. V    12) ) ? Qui enim male de Deo <lb/> sentiunt, et non  timent , quod
+						ad injuriam ejus pertinet  ,<lb/> profiteri; quomodo in  conversatione  humana <lb/>
+						possunt esse benevoli  ? Ideo   enim dixit: <hi rend="italic">Habentes</hi>
+						<lb/> formam <hi rend="italic">pietatis,</hi> virtutem autem ejus <hi rend="italic">abnegantes;</hi> quia <lb/> profitentur quidem  semetipsos  christianos , cum
+							<milestone unit="PLSection" n="C"/><lb/> sint et nequissimi operis, et  sensu  perversi.
+						Non <lb/> enim in professione magis,  quam  in gestis laus Dei <lb/> et virtus  est .</p>
+					<p>( Vers. 6, 7. ) Ex his enim <hi rend="italic">sunt,  qui </hi> irrepunt in <lb/>  domos , 
+						et  captivas  ducunt mulierculas oneratas peccatis  ,<lb/> quae ducuntur a variis <hi rend="italic">desideriis, semper  discentes </hi>
+						 ,<lb/> et numquam ad <hi rend="italic"> scientiam </hi> veritatis <hi rend="italic">pervenientes.</hi>
+						<lb/>  Quamvis omnibus   haereticis hoc conveniat, ut subintrantes <lb/>  domos,  mulieres 
+						subdolis et versutis  verbis  <lb/>  capiant,  ut  per eas viros decipiant more patris
+						<lb/> sui diaboli, qui per Evam Adam  circumvenit ;  Manichaeis  <lb/>  tamen prae caeteris
+						congruit. Nulli enim tam <lb/> importuni, tam fallaces, tam captiosi sunt, quam <lb/>
+						 ipsi  quos constat aliud colere, et  aliud  profiteri; <lb/> aliud intus gerere, et foris
+						aliud vindicare. Nam <milestone unit="PLSection" n="D"/><lb/>  sanctimonium  defendunt, et lege
+						 sua  favente, turpiter <lb/>   vivunt :  misericordiam laudant, cum inter se
+						<unclear/><lb/>  injusti  deprehendantur: mundum spernendum asserunt  ,<lb/> et
+						 semper accurati  procedunt; jejuniis insistere <lb/>  se  jactanter  praedicant, cum omnes
+						saginati <lb/> videsatur;tantum  quod  arte quadam pallidi  cernuntur   ,<lb/> ut
+						 fallant . Haec ergo Apostolus maxime de <lb/>  his prophetavit  , quos constat  apostolorum 
+						tempore <lb/> non fuisse, sicut nec Arianos; quippe  cum Diocletianus imperator   <unclear/><lb/> 
+						 constitutione sua designet, dicens:   .<lb/>. hanc et impuram haeresim, quae
+						nuper, <lb/> inquit, egressa  est  de Perside ( <hi rend="italic">Vide  Collect . Leg. <lb/>
+							Mosaic. et</hi> Roman.).  Hi  inveniunt mulieres prae vanitate <lb/>  novum  aliquid 
+						desiderantes audire, et per ea <milestone unit="PLSection" n="A"/><lb/> quae placita
+						 sunt , suadent illis  foeda  et illicita; cupidae <lb/>  enim sunt discendi, cum judicium
+						non habeant <lb/> probandi: hoc est semper discere, et veritatis  scientiam  <lb/>  non
+						habere.</p>
+					<p>(  (Vers .  8, 9. ) <hi rend="italic"> Quemadmodum </hi> autem Jannes et <lb/>
+						<hi rend="italic">Mambres restiterunt Moysi; ita</hi> et hi resistunt <hi rend="italic">veritati, <lb/> homines corrupti mente,</hi> reprobi <hi rend="italic">circa</hi>
+						fidem. Sed <hi rend="italic">non <lb/> proficient amplius;</hi> ignorantia <hi rend="italic">enim  eorum  evidens erit</hi>
+						<lb/> omnibus, <hi rend="italic">sicut et illorum fuit.</hi> Exemplum hoc de <lb/>
+						apocryphis est <hi rend="italic">(Exod.</hi> VII, 1et seq.) Jannes enim et <lb/> Mambres
+						fratres  erant  magi vel venefici  Aegyptiorum , <lb/> qui arte magiae suae virtutibus Dei, ,
+						quae Moysen <lb/> agebantur aemulatione commentitia resistere se <lb/> putabant. Sed cum
+						Moysis virtus in operibus  cresceret   ,<lb/> humiles facti, confessi sunt cum dolore
+						vulnerum <milestone unit="PLSection" n="B"/><lb/>   Deumin Moyseoperatum  . Unde similiter
+						et <lb/> hos non amplius proficere in impietate assertionis <lb/> suae dicit; quia
+						imperitia  eorum  palam  fiet  et seductio <lb/>  : et licet inviti, confitebuntur tamen suam
+						<lb/> imperitiam in ultimo.</p>
+					<p>  Vers. 10  11.) Tu <hi rend="italic">vero</hi> assecutus es doctrinam meam, <lb/>
+						institutionem, propositum , <hi rend="italic">fidem,</hi> longanimitatem <lb/>
+						<hi rend="italic">dilectionem, patientiam,</hi> persecutiones, passiones. <lb/>  Eorum 
+						vult esse aemulum, quae enumerat; haec enim <lb/> in ultimo non ad poenitentiam sed ad
+						laetitiam <lb/> proficient.</p>
+					<p>( Vers. 12, 13. ) <hi rend="italic">Qualia mihi facta sunt Antiochiae,<lb/> Iconio,
+							et</hi> Lystris, <hi rend="italic">quales persecutiones</hi> sustinui : <hi rend="italic">et</hi>
+						<lb/> ex omnibus <hi rend="italic"> liberavit </hi> me <hi rend="italic">Dominus. Sed</hi>
+						omnes qui <milestone unit="PLSection" n="C"/><lb/>  volunt  <hi rend="italic">pie vivere
+							in Christo Jesu, persecutionem patientur</hi>
+						 .<lb/> Nequam  autem  <hi rend="italic">homines et deceptores  proficient in </hi>
+						<lb/>   <hi rend="italic">pejus</hi> : ipsi <hi rend="italic">errantes atque
+							alios erroribus</hi>  involventes  <lb/>
+						<hi rend="italic">.</hi>  Ideo  quae et quanta passus sit, memorat; <lb/> ut
+						auxilia  Dei  ostendat, quibus defendit et  tutos  <lb/> praestat  servos  suos ab impudentia
+						Satanae : ut seductio <lb/>   faciat, et erigat, ne timeant quae irrogari <lb/>
+						possunt a perfidis: sed in persecutione alacres sint, <lb/> certi quia omnes qui in
+						Christo recte conversantur, <lb/> odio habentur etiam a corporis sui membris. Mali <lb/>
+						autem in deterius  proficiunt , dum vident multos sibi <lb/>  dare  assensum, ita ut
+						caeteros in errorem mittant. <lb/>  Dum  enim sciuntur esse mali et deceptores, et  nihilominus -
+						<lb/>  florere et  prosperari  in mundo, attrahunt <lb/> quosdam, ut imitatores
+						eorum efficiantur, non <milestone unit="PLSection" n="D"/><lb/> solum in propriis
+						erroribus puniendi;  verum  etiam <lb/> in horum, quos  exemplo  suo  deperdunt .</p>
+					<p>(  (Vers .  14, 15.) <hi rend="italic">Tu vero persevera</hi> in his, <hi rend="italic">quae <lb/> didicisti, et</hi> quae <hi rend="italic">tibi</hi> credita sunt, <hi rend="italic"> sciens . a quibus didiceris</hi>
+						 ,<lb/> <hi rend="italic">et quia</hi> ab infantia <hi rend="italic">sacras
+							litteras</hi> 311 nosti, <hi rend="italic">quae <lb/> possunt te erudire ad
+							salutem.</hi> Multum prodesse significat <lb/>  veteris Testamenti  habere  notitiam ;
+						ipsas <lb/> enim sacras litteras dicit, quae Christi personam <lb/> insinuant, et
+						incarnationem ejus ad salutem hominum <lb/>  redimendam declarant. Hortatur autem  eum ,
+						<lb/> ut in  his  proficiat; antiquitas enim haec robur est <lb/> novitatis, sciens quia a
+						 quo didicit , firma est  aucto . r ! tas . <lb/> r!; signa  enim  et prodigia vidit facta pe eum,
+						<lb/> quibus  omnis  sermo succumbit,<pb n="495"/>
+					</p>
+					<p>
+						<milestone unit="PLSection" n="A"/>(Vers. 16, 17.) Omnis <hi rend="italic">Scriptura</hi> divinitus inspirata <lb/>  utilis est  <hi rend="italic"> ad doctrinam,
+							ad correptionem, ad redintegrationem  ,<lb/> ad redargutionem, ad eruditionem,</hi>
+						quae <hi rend="italic"> est </hi>
+						<lb/> in ipsa justitia, ut paratus  sit  homo <hi rend="italic">Dei,</hi> <note n="a"/> <hi rend="italic">ad omne<lb/> opus bonum</hi>  comsummatus .  Manifestum  est quia  omnis .
+						<lb/>  scriptura, cujus Deus auctor ostenditur, utilis <lb/> est; ad hoc enim data
+						est, ut proficiat imperitis, et <lb/> instauret deformes, attrahens iniquos ad
+						justitiam, <lb/> ut homo Dei in omni opere bono perfectus sit; in <lb/> novo enim homine
+						gradatim proficiens, constituit  i ! - tum !- <lb/>  hominem Dei.</p>
+					<ab>
+						<title type="sub">CAPUT IV.</title>
+					</ab>
+					<p>(Vers.  1 , 2.) <hi rend="italic">Testor coram Deo et</hi> Christo <hi rend="italic">Jesu, qui</hi>
+						<lb/> judicaturus est vivos <hi rend="italic">et mortuos,</hi> per <hi rend="italic">adventum</hi> ipsius, <lb/>
+						<hi rend="italic">et regnum ejus;</hi> praedica verbum, insta <hi rend="italic">opportune, importune</hi>
+						<milestone unit="PLSection" n="B"/><lb/>  : <hi rend="italic">argue, hortare,
+							increpa</hi> in <hi rend="italic">omni</hi> magnanimitate <lb/>
+						<hi rend="italic"> et doctrina.</hi> Tam sollicite mandat inviolate praedicandum <lb/>
+						 Dei donum, ut cum testatione Dei Patris <lb/> et Christi Filii  ejus  hoc moneat
+						curandum, instandumque <lb/>  in eo; ut assidua  praedicatione  et crebra <lb/>
+						objurgatione cum opportunitate  provocet  ad  meliorem  <lb/>  profectum : et ut facilius
+						arguenti assentiant, <lb/> sine amaritudine hoc agendum  hortatur .</p>
+					<p>(Vers. 3, 4.) Erit  enim  <hi rend="italic">tempus,</hi> cum sanam <hi rend="italic"> doctrinam </hi>
+						<lb/>  <hi rend="italic">non</hi> sustinebunt; <hi rend="italic">sed ad  sua 
+							desideria</hi> <note n="b"/> magistros <lb/> sibi <hi rend="italic"> aggerent , prurientes
+							 auribus </hi> : et <hi rend="italic">a veritate quidem<lb/> auditum avertent, ad</hi>
+						 fabulas  vero <hi rend="italic">convertentur.</hi> Et haec <lb/> simili modo prophetia est
+						sancti Apostoli, qui praescius <lb/>  futurorum, instandum in doctrina sollicite praedicandum
+						 ;<lb/> ut formati in fide et  bonis  operibus, eruditi in <milestone unit="PLSection" n="C"/><lb/> disciplina sana, robusti maneant, ut postremo tempore <lb/>
+						 cum quidam a veritate ad errorem converti <lb/> coeperint, immobiles perseverent
+						Tales enim futuros <lb/>  dicit, qui pro desideriis suis doceri se velint; <lb/> ut a
+						magistris constantibus atque veracibus ad hos <lb/> convertantur, qui haec illos
+						doceant, quae libenter <lb/> audiant; quia veritas illis aspera videbitur, ut relicta <lb/>
+						 sua doctrina, fabulis vacent. Nolunt enim argui <lb/>  maligna opera sua : quare
+						tales volunt magistros  ,<lb/> qui serviant moribus  eorum  ; pruriunt enim <lb/> aures
+						eorum, ut audiant fabulas vanitatum compositas <lb/>  sub nomine doctrinae, quibus
+						delectentur. Quod <lb/> nullis  tam  proprium est, quam Manichaeis,  qui nescio   <lb/>  quae
+						habent diversa commenta  inflatis  nominibus <lb/> nuncupata; cum sint res frivolae et
+						quaedam deliramenta .<milestone unit="PLSection" n="D"/> <lb/></p>
+					<p>(Vers. 5, 6.) <note n="c"/> <hi rend="italic">Tu vero sobrius  esto ,</hi>  in omnibus  <hi rend="italic">, patiens</hi>
+						  ,<lb/> opus <hi rend="italic"> fac </hi> evangelistae , ministerium tuum exple;
+						<lb/> ego enim jam <hi rend="italic">delibor, et tempus solutionis meae instat.</hi>
+						<lb/> Admonet et hortatur ut vigilet in disciplina  ecclesiastica   ,<lb/> viriliter
+						agat, Scripturas explanet, ut prudentes <lb/>   et  eruditi inanes fabulas vitent.
+						Apostolus <lb/> enim sciens passionem suam  imminere , exemplum <lb/> piae conversationis
+						et sanae doctrinae in sancto  Timotheo . <lb/>  vult relinquere ; ut per traducem  numquam 
+						<lb/> deessent doctores  idonei  : passionem tamen suam <milestone unit="PLSection" n="A"/><lb/> delibationem appellat ; Deo enim  immolatur , qui pro <lb/> ejus justitia
+						patitur.</p>
+					<p>(Vers. 6, 7.) <hi rend="italic">Certamen</hi> bonum <hi rend="italic">decertavi,
+							cursum</hi>
+						<lb/> consummavi, <hi rend="italic">fidem servavi. Quod reliquum</hi> est, <hi rend="italic">reposita <lb/>   est </hi> mihi <hi rend="italic">corona</hi>  justitiae !,
+							<hi rend="italic">quam reddet</hi> mihi <hi rend="italic">Dominus</hi>
+						<lb/>  in <hi rend="italic">illa die,</hi> justus <hi rend="italic">judex; non
+							solum</hi> autem <hi rend="italic">mihi, <lb/> sed</hi> et  iis  <hi rend="italic">qui
+							diligunt</hi>  adventum  ejus. Omnia quae sibi <lb/> et caeteris utilia essent et
+						prospera, servasse se memorat   ;<lb/> non solum enim in verbis, sed et in operibus <lb/>
+						 formam se praebuit audientibus; ut et auctori <lb/> suo veritate praedicationis
+						fidelis dispensator existeret  ,<lb/> et contra mundi principes et potestates omni
+						<lb/> sollicitudine et peritia colluctatus, exemplum quomodo <lb/>  vincerentur,
+						relinqueret ; ut inviolata doctrina   ,<lb/> et agonis legitimum certamen dignos illos
+						faceret <milestone unit="PLSection" n="B"/><lb/>  coronari ; quia Deus justus judex
+						dabit amplissima <lb/>  praemia diligentibus se , et exspectantibus <lb/> Filium ejus
+						de coelis.</p>
+					<p>(Vers. 912.) <hi rend="italic"> Sollicitus , esto venire ad me</hi> quamprimum   ;<lb/>
+							<hi rend="italic">Demas enim me dereliquit , diligens hoc</hi>  saeculum   .<lb/> <hi rend="italic">et abiit</hi> Thessalonicam, <hi rend="italic"> Crescens . in</hi> Galatiam
+						, <lb/>
+						<hi rend="italic">Titus</hi>  in  Dalmatiam, <hi rend="italic">Lucas est mecum</hi>
+						solus. <hi rend="italic">Marcum</hi>
+						<lb/> assume , <hi rend="italic">et adduc</hi> tecum ; <hi rend="italic"> est  enim</hi>
+						mihi  utilis  in ministerio <lb/> : <hi rend="italic">Tychicum vero</hi> misi <hi rend="italic">Ephesum.</hi> Cum constet <lb/> 312 <note n="d"/> omnem instructionem viri
+						ecclesiastici in <lb/> epistola contineri, propter multam tamen  charitatem  <lb/>
+						praesentiam ejus desiderat : Marco autem idcirco <lb/> testimonium perhibet, quia memor
+						est praeteritorum <lb/>   ejus laborum  .</p>
+					<p>(Vers. 13.) <hi rend="italic">Penulam quam reliqui Troade apud Carpum</hi>
+						.<milestone unit="PLSection" n="C"/> <lb/> veniens <hi rend="italic">affer  tecum , et
+							libros, maxime</hi> autem <lb/>
+						<hi rend="italic"> membranas .</hi> Apostolus natura Judaeus  fuit  , nec quidquam <lb/> 
+						habuit alienum. Unde ergo  illi  penula? Sed <lb/> quia erat a Tharso, quos constat in
+						societatem  Romanorum . <lb/>  receptos, ut de caetero appellarentur cives <lb/> Romani;
+						idcirco necesse est eos et curiam  habere , <lb/> in quam more  Romanorum  penulati
+						conveniant. <lb/> Quicumque enim illo tempore cum muneribus obviam <lb/>  exissent
+						Romanis, immunitate perpetua  donati !, <lb/> cives Romani et fratres eorum nuncupabantur,
+						teste <lb/> eodem Apostolo. Potest ergo fieri, ut si non suam, <lb/> quia totum se Legi
+						dederat , patris sui haberet penulam  .<lb/></p>
+					<p>(Vers. 14,  15 .) <hi rend="italic">Alexander aerarius</hi> multa <hi rend="italic">mala</hi> mihi <lb/> ostendit : <hi rend="italic">reddet</hi> illi Dominus <hi rend="italic">secundum opera</hi> sua. <milestone unit="PLSection" n="D"/><lb/>
+						<hi rend="italic">Quem</hi> et tu devita; <hi rend="italic">valde enim restitit verbis
+							nostris.</hi>
+						<lb/> Alexander iste et Demas supradictus collegae fuerunt  .<lb/>  Hi  prius cum
+						Apostolo erant , simulantes illi <lb/> amicitiam : et quia fallaces tempore probantur,
+						ambo <lb/> ab eo recesserunt. Hic autem aerarius, qui audacior <lb/> erat in malis; sic
+						ab eo recessit, ut et contradictor <lb/> verborum ejus exsisteret. Qui ergo Apostolo
+						 ausus  <lb/> erat contradicere, non immerito  evitandum hunc   <lb/> admonet , Dei judicio
+						 istum  dimittens.</p>
+					<p>(Vers.  16 .) In <hi rend="italic">prima mea defensione nemo</hi> mihi  adfuit  <lb/>
+						<hi rend="italic">; sed omnes me dereliquerunt, non illis</hi> imputetur. <note type="footnote"> a Mss. nonnulli , <hi rend="italic">ad</hi> omne <hi rend="italic">bonum instructus.</hi>
+						</note><note type="footnote">h Rom. edit., <hi rend="italic">magistros</hi> sibi <hi rend="italic">aggregabunt</hi>
+						</note><note type="footnote"> c Eadem Rom. edit., Tu vero vigila, in omnibus <hi rend="italic"><lb/>
+								<lb/> viriliter age.</hi>
+						</note><note type="footnote">d Mss. aliquot, <hi rend="italic">omnem instructionem juris
+								eccle-<lb/> siastici.</hi>
+						</note><pb n="497"/>
+						<milestone unit="PLSection" n="A"/><lb/> Pre-suras et tribulationes sibi illatas
+						defensionem <lb/> suam nuncupat; passio enim christianis vita est, et <lb/> persecutio
+						defensio : pressura enim illata pro justitia <lb/> defendit ilium ill die judicii, reos
+						constituens perti- <lb/> dos. Inter ipsa ergo initia illatae pressurae derelictum <lb/> se
+						conqueritur : et quia scit hanc esse consuetudi­ <lb/> nem, non illis vult imputari;
+						quia et Dominum a <lb/> Juda:is :Ipprehensum discipuli rcliquerunt; quippe <lb/> Cum
+						scriptum sit in propheta : Percutiam <hi rend="italic">pastorem , <lb/> et disper gentur
+							oves gregis</hi> (Zach. XIII, 7).</p>
+					<p>(Yers. 17.) <hi rend="italic">Dominus</hi> autem mihi astitit, <hi rend="italic">et
+							conforta-<lb/> bit me;</hi> ut <hi rend="italic">per me</hi> praedicatio <hi rend="italic">impleretur, et</hi> attdirent <lb/>
+						<hi rend="italic">omnes gentes.</hi> Propter quod Domini nostri auxiliis <lb/> munitum
+						se dicit, et auctum virtute, ut praedicatio­ <lb/> nem impleret in omnihus gentibus:
+						idcirco ignosci <milestone unit="PLSection" n="B"/><lb/> petit eis, a quibus derelictus
+						est in necessitate; ut <lb/> Lene acceptus a Deo, vindictam non quaerat. Hac <lb/> enim
+						causa amplius adjutum se credit a Deo, quia <lb/> derelictus est ab hominibus.</p>
+					<p>(Vers. ł8.) Et liberatus <hi rend="italic">sum de ore leoni.. Liberabit<lb/> me
+							Dominus</hi> ab omni opere <hi rend="italic">malo. et salvum faciet</hi> in <lb/>
+						reguum suum caeleste: <hi rend="italic">cui gloria</hi> ill <hi rend="italic">aeternum,
+							amen.</hi>
+						<lb/> Similiter dicit et Petrus coapostolus ejus : Quia ad- <lb/> versarius noster <hi rend="italic">diabolus</hi> circuit , <hi rend="italic">(remen.</hi> sicut leo , <lb/>
+						quaerens <hi rend="italic">quem devoret</hi> (1 Petr. v, 8). Sed quia in Apos­ <lb/> tolo
+						occasionem non inveniebat, qua ilium decipe- <lb/> ret, per filios suos pressuram illi
+						excitabat et poe- <lb/> nas ; ut si non quasi peccnor, vel quasi justus de <lb/> hac
+						tamen tolleretur vita, ne multos hortaretur ad <lb/> fidem. Quod cum prope impleret, Dei
+						providentia <milestone unit="PLSection" n="c"/><lb/> liberatus Apostolus, insultat illi
+						, infirmum illum <milestone unit="PLSection" n="A"/><lb/> testificans, quia de ore ejus
+						ereptos est; quia quod <lb/> cupivit, implere nou potuit. Igitur Dei auxiliis <lb/>
+						morti se ereptum gratulatur, et d" providentia Dei <lb/> tam securus est, ut de futuris
+						tentationibus liberari <lb/> se credat : et non solum liberari ad praesens, verum <lb/>
+						etiam salvum se futurum in die judicii, ct regna­ <lb/> turum cum Domino Christo in
+						aeterna saecula.</p>
+					<p>(Vers, i9, 20, 21.) Saluta Priscillam, <hi rend="italic">et Aquilam ,<lb/> et
+							Onesiphori domum. Erastus remansit Corinthi ; Tro- <lb/> phimum autem reliqui</hi>
+						infirmum <hi rend="italic">Ilileli.</hi> Sollicitus <hi rend="italic">esto<lb/> aute
+							hyemem venire.</hi> Aquila et Priscilla hi sunt, apud <lb/> quos hospitatus operabatur
+						manibus (Act. XVIII, 5). <lb/> Onesiphorus autem hic est, cui testis est in secunda
+						<lb/> epistola (II Tim. i, 16). Quid est tamen, ut praesente <lb/> Apostolo, qui mortuos
+						excitabat, Trophimus iufir- <milestone unit="PLSection" n="B"/><lb/> marelur? Sed signa
+						propter incrcdulos facta sunt : <lb/> et quia ex diversis causis meritum collocatur apud
+						<lb/> Deum ; ut sive in tribulatione, sive in aegritudine , <lb/> qui Deo gratias agit,
+						nec ab adversa parte suffra­ <lb/> gium quaerit , ut proficiat meritis apud Deum. Prop­
+						<lb/> ter imbres autem et frigora commontlit, ut autumno <lb/> ad se veniret. Salutat
+							<hi rend="italic">le Eubolus et</hi> Pudens, Linus <lb/>
+						<hi rend="italic">et Claudia, et</hi> omnes <hi rend="italic">fratres.</hi> More
+						consueto completa <lb/> est epistola salutatione fratrum.</p>
+					<p><hi rend="italic">Dominus</hi> Jesua Christus a cum spiritu tuo. <lb/> Haec subscriptio
+						Apostoli eSI, qnod signum esse dicit <lb/> in omni epistola. Et quia Filius Dei idem
+						filius Iro- <lb/> minis est, et Jesus dicitur et Christus : ut et homo <lb/>
+						significetur et Deus, duobus nominibus nuncupalnr. <lb/> Utroque tamcn nomine dignitas
+						designatur, qua ra- <milestone unit="PLSection" n="C"/><lb/> tione sunt posila nomina.
+							<note type="footnote"> 4 Rom. edit., <hi rend="italic">cum spiritu tuo. Gratia</hi>
+							vobiscum, <hi rend="italic">amen.</hi>
+						</note>
+					</p>
+				</div>
+				</body></text></TEI>

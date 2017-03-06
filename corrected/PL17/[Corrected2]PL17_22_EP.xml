@@ -1,0 +1,855 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><TEI xmlns="http://www.tei-c.org/ns/1.0"><teiHeader>
+    
+		<fileDesc>
+			<titleStmt>
+				<title>Patrologiae Cursus Completus. Series Latina (PL)</title>
+				<sponsor>University of Leipzig</sponsor>
+				<funder>European Social Fund Saxony</funder>
+				<principal>Gregory Crane</principal>
+				<respStmt>
+					<persName xml:id="Jouve">Jouve</persName>
+					<resp>OCR-ed, corrected and encoded the text</resp>
+				</respStmt>
+				<respStmt>
+					<persName>Greta Franzini</persName>
+					<resp>Project Manager (University of Leipzig)</resp>
+				</respStmt>
+				<respStmt>
+					<persName>Simona Stoyanova</persName>
+					<resp>Project Assistant (University of Leipzig)</resp>
+				</respStmt>
+				<respStmt>
+					<persName>Bruce Robertson</persName>
+					<resp>Technical Advisor (Mount Allison University)</resp>
+				</respStmt>
+			</titleStmt>
+
+			<publicationStmt>
+				<authority>University of Leipzig</authority>
+				<idno type="filename">PL17.xml</idno>
+				<availability>
+					<licence target="https://creativecommons.org/licenses/by-sa/4.0/">Available under a
+						Creative Commons Attribution-ShareAlike 4.0 International License</licence>
+				</availability>
+				<date>2014</date>
+				<publisher>University of Leipzig</publisher>
+				<pubPlace>Germany</pubPlace>
+			</publicationStmt>
+
+			<sourceDesc>
+				<listBibl xml:lang="la">
+					<biblStruct>
+						<monogr>
+							<editor>
+								<persName>
+									<name xml:lang="fr">Jacques Paul Migne</name>
+								</persName>
+							</editor>
+							<author ref="http://data.perseus.org/catalog/urn:cts:latinLit:stoa0022">Ambrosius</author>
+							<title>De XLII Mansionibus Filiorum Israel Tractatus</title>
+							<title>In Epistolam Beati Pauli Ad Romanos</title>
+							<title>In Epistolam Beati Pauli Ad Corinthios Primam</title>
+							<title>In Epistolam Beati Pauli Ad Corinthios Secundam</title>
+							<title>In Epistolam Beati Pauli Ad Galatas</title>
+							<title>In Epistolam Beati Pauli Ad Ephesios</title>
+							<title>In Epistolam Beati Pauli Ad Philippenses</title>
+							<title>In Epistolam Beati Pauli Ad Colossenses</title>
+							<title>In Epistolam Beati Pauli Ad Thessalonicenses Primam</title>
+							<title>In Epistolam Beati Pauli Ad Thessalonicenses Secundam</title>
+							<title>In Epistolam Beati Pauli Ad Timotheum Primam</title>
+							<title>In Epistolam Beati Pauli Ad Timotheum Secundam</title>
+							<title>In Epistolam Beati Pauli Ad Titum</title>
+							<title>In Epistolam Beati Pauli Ad Philemonem</title>
+							<title>De Trinitate. Alias In Symbolum Apostolorum Tractatus</title>
+							<title>De Fide Orthodoxa Contra Arianos</title>
+							<title>De Dignitate Sacerdotali</title>
+							<title>Ad Virginem Devotam</title>
+							<title>Sermones Sancto Ambrosio Hactenus Ascripti</title>
+							<title>Epistolae Ex Ambrosianarum Numero Segregatae</title>
+							<title>Precationes Duae Hactenius Ambrosio Attributae</title>
+							<title>Expositio Super Septem Visiones Libri Apocalypsis</title>
+							<title>De Poenitentia Liber Unus</title>
+							<title>De Spiritu Sancto Libellus Unus</title>
+							<title>De Concordia Matthaei Et Lucae In Genealogia Christi</title>
+							<title>De Dignitatate Conditionis Humanae Libellus</title>
+							<title>Exorcismus</title>
+							<title>Acta Sancti Sebastiani Martyris [Incertus]</title>
+							<title>Liber De Vitiorum Virtutumque Conflictu [Incertus]</title>
+							<title>Libri Duo de Vocatione Gentium [Incertus]</title>
+							<title>De Moribus Brachmanorum [Incertus]</title>
+							<title>Philosophorum Aliquot Epistolae [Incertus]</title>
+							<title>Epistolae Duae De Monacho Energumeno [Incertus]</title>
+							<title>Epistola De Fide Ad Beatum Hieronymum [Incertus]</title>
+							<title>Hymni Sancti Abrosio Attributi [Incertus]</title>
+							<imprint>
+								<publisher>Garnier</publisher>
+								<pubPlace>Paris</pubPlace>
+								<date>1879</date>
+							</imprint>
+							<biblScope unit="volume">17</biblScope>
+						</monogr>
+						<ref target="https://archive.org/details/patrologiaecurs131migngoog">Internet
+							Archive</ref>
+
+					</biblStruct>
+				</listBibl>
+			</sourceDesc>
+
+		</fileDesc>
+		<encodingDesc>
+			<p>The following text is encoded in accordance with EpiDoc standards and with the CTS/CITE
+				Architecture.</p>
+		<refsDecl>
+        <cRefPattern n="" matchPattern="(.+).(.+).(.+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@type='edition']/tei:div[@n='$1']/tei:div[@n='$2']/tei:div[@n='$3'])"/>
+        <cRefPattern n="" matchPattern="(.+).(.+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@type='edition']/tei:div[@n='$1']/tei:div[@n='$2'])"/>
+        <cRefPattern n="" matchPattern="(.+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@type='edition']/tei:div[@n='$1'])"/>
+      </refsDecl>
+    </encodingDesc>
+
+		<profileDesc>
+			<langUsage>
+				<language ident="la">Latin</language>
+			</langUsage>
+		</profileDesc>
+
+	</teiHeader>
+	<text><body><div type="edition" n="">
+					<ab>
+						<title type="sub">EPISTOLAE EX AMBROSIANARUM NUMERO SEGREGATAE.</title>
+					</ab>
+					<p>
+						<milestone unit="PLSection" n="A"/>
+					</p>
+					<ab>
+						<title type="sub">479 EPISTOLA I.</title>
+					</ab>
+					<p>Antequam Agnae virginis martyrium <hi rend="italic">describatur,</hi> amor <lb/> in eam
+						filii <hi rend="italic">praefecti, ejusque repulsa memoratur. <lb/> Hine adjicitur
+							virginis condemnatio ad lupanar, et<lb/> inter miracula divinitus propter eamdem
+							puellam</hi> per- <lb/>
+						<hi rend="italic">petrata adolescentia in</hi> eam <hi rend="italic">depereunli.
+							interitus, al­<lb/> que ad vitam</hi> revocatio. <hi rend="italic">Tum sequitur</hi>
+						virginis <hi rend="italic">ob eth- <lb/> nicorum seditionem condemnatio ad rogum,
+							ejusque</hi>
+						<lb/> in <hi rend="italic">mediis ignibu, illaesae permanentis cruenta caede.. <lb/> Mox
+							paganorum</hi> in <hi rend="italic">chriatianox ad Martyris tumulum<lb/> orationi
+							instantes furore declarato, nex Emerentianae, <lb/> et Constantiae</hi> Augustae sanitas
+						restituta, <hi rend="italic">nec non ab<lb/> eadeM principe temptum liberatrici</hi> suae
+						aedificatum, <lb/> et ipsius <hi rend="italic">cum alii, pluribus virginitatis propositum
+							<lb/> enarratur.</hi>
+					</p>
+					<p>
+						<milestone unit="PLSection" n="B"/>
+					</p>
+					<ab>
+						<title type="sub">AMBROSIUS episcopus servus Christi virginibus sacris.</title>
+					</ab>
+					<p>ł. Diem festum sacratissimae virginis celebremus: <lb/> hine psalmi resonent. inde
+						concrepent lectiones : hinc <lb/> populorum turbae laetentur, inde subleventur paupe­
+						<lb/> res Christi. Omnes ergo gratulemur in Domino, ct ad <lb/> aedificationem virginum
+						qualiter passa sit Agnes <lb/> beatissima, ad memoriam revocemus. " Tempore illo <lb/>
+						erat quaedam virgo Romae nobilibus orta natatibus, <lb/> nomine Agnes, quae certans
+						contra principes et po­ <lb/> testates tenebrarum , tertiodecimo aetatis suae anno <lb/>
+						mortem perdidit, et vitam invenit; quia solum vitae <lb/> dilexit Auctorem. Infantia
+						quidem computabatur in <lb/> annis, b sed erat senectus mentis in moribus : cor­ <lb/>
+						pore quidem juvencula, sed animo cana. Pulchra fa­ <lb/> cie, sed pulchrior fide, et
+						elegantior castitate.</p>
+					<p>
+						<milestone unit="PLSection" n="c"/>2. Quae dum a scholis reverteretur, a praefecti Ur­
+						<lb/> bis filio adamatur. c Cujns parentes cum reqnisis- <lb/> sent, et invenissent,
+						caeperunt pulchra offerre , et <lb/> pulchriora promiuere. Denique detulerant secum
+						<lb/> pretiosissima ornamenta, quae a beata Agne veluti <lb/> quaedam stercora sunt
+						recusata. Unde factum est ut <lb/> juvenis majori perurgeretur amoris slimulo, et pu-
+						<lb/> tans eam juvenis meliora velle accipere ornamenta, <lb/> d omnem lapidem pretiosum
+						secum defert, et glo­ <lb/> riam : et per se ipsum, et per amicos, et per notos,
+							<milestone unit="PLSection" n="A"/><lb/> et affines, coepit aures virginis appellare,
+						divitias,do­ <lb/> mos, possessiones, familias, atque omnes hujus <lb/> mundi delicias
+						repromittere, si consensum suum ejus <lb/> conjugio non negasset.</p>
+					<p>3. Ad haec beata Agnes tale fertur juveni dedisse <lb/> responsum : Discede a me, fomes
+						peccati, nutrrimen- <lb/> tum facinoris, pabulum morti, : discede a me; quia <lb/> jam
+						ab alio amatore praeventa sum , qui mihi satis <lb/> meliora obtulit ornamenta, et annulo
+						fidei suae sub- <lb/> arrhavit me, longe te nobilior et genere et dignitate. <lb/>
+						Ornavit inaestimabili dextrocherio dexteram meam , <lb/> et collum meum cinxit lapidibus
+						pretiosis. Tradidit <lb/> auribus meis inaestimabiles margaritas , et circum­ <lb/> dedit
+						me vernantibus atque coruscantibus gemmis. <lb/> Posuit signum in faciem meam, ut nullum
+						praeter <lb/> ipsum amatorem admittam. Induit me cyclade auro <milestone unit="PLSection" n="B"/><lb/> texta, et immensis monilibus ornavit me. Ostendit <lb/>
+						mihi thesauros incomparabiles , quos mihi se datu- <lb/> rum repromisit, si in ejus
+						perseveravero amore. Non <lb/> ergo potero ad contumeliam prioris amatoris vel as­ <lb/>
+						picere alium et illum relinquere, cum quo sum cha. <lb/> ritate devincta ; cujus est
+						generositas celsior, possi- <lb/> bilit3s fortior, aspectus pulchrior, amor suavior, et
+						<lb/> omni gratia elegantior. A quo mihi jam thalamus <lb/> collocatus est, cujus mihi
+						organa modulatis vocibus <lb/> resonant, cujus mibi virgines justissimis vocibus can­
+						<lb/> tant. Jam mel et lac ex ore ejus suscepi, jam ample- <lb/> xibus ejus castis
+						astricta 480 sum, jam corpus ejus <lb/> corpori meo sociatum est, et sanguis ejus
+						ornavit <lb/> genas meas. Cujus mater virgo est, cujus pater femi­ <lb/> nam nescit; cui
+						angeli servium, cujns pulchritudinem <milestone unit="PLSection" n="c"/><lb/> sol et
+						luna mirantur, cujus odore reviviscunt mortui, <lb/> cujus tactu confortantur infirmi,
+						cujus opes num­ <lb/> quam deficiunt, cujusque divitiae numquam decre- <lb/> Munt. Ipsi
+						soli servo fidem meam , ipsi me tota de­ <lb/> votione commiuo. Quem cum amavero, casta
+						sum : <lb/> cum tetigero, munda sum : cum accepero. virgo sum. <lb/> Nec deerunt post
+						nuptias filii, ubi partus sine dolore <lb/> succedit, et fecunditas quotidiana
+						cumulatur.</p>
+					<p>3. Audiens insanissimus juvenis, amore carpitur <lb/> caeco, et inter angustias animi et
+						corporis anhelo cru- <note type="footnote">
+							<hi rend="italic">* ilto erat.... et tenebrarum,</hi> e <lb/> 'Yoalliano <hi rend="italic">Tempore</hi> cod. <hi rend="italic">poll.tate.</hi> restituuntur.
+							</note><note type="footnote">b Omne. edit. <hi rend="italic">aed</hi> mentis <hi rend="italic">senectus erat</hi> immen.a; <lb/> , <lb/> helius vero cod. Noall. ut
+							in contextn. </note><note type="footnote"> &lt;' Ita cod. lVoall; ; omnes autem cdit.,
+							cujus parentes <lb/> dum <hi rend="italic">fequi.illel, et invenisset, caepil offerre
+								plurima, et <lb/> plura</hi>
+						</note><note type="footnote">d Omnes <hi rend="italic">promittere.</hi>edit., omnium <hi rend="italic">lapidum</hi> pretiosorum <hi rend="italic">tecum detutit gloriam.</hi>
+						</note>
+						<pb n="737"/>
+						<milestone unit="PLSection" n="A"/><lb/>  spiritu  . Inter haec lecto prosternitur,
+						et  per alta  <lb/>  suspiria amor a medicis aperitur. Fiunt nota <lb/> patri, quae fuerant
+						inventa a medicis, et eadem paterna <lb/>  voce, quae fuerant jam dicta a filio, ad
+						petitionem <lb/>  virginis revolvuntur. Abnegat Agnes beatissima  ,<lb/> et se nullo
+						pacto prioris asserit sponsi foedera <lb/> violare. Cumque pater diceret <note n="a"/> in fascibus se
+						constitutum <lb/>  praeturam agere, et idcirco quemvis etiam <lb/> illustrem virum
+						minime sibi debere  praeferri  ;  coepit  <lb/> tamen vehementissime inquirere quis esset
+						sponsus, <lb/> sancta cujus Agnes potestate gloriaretur. Tunc exstitit <lb/>  quidam ex
+						parasitis ejus, qui diceret hanc  christianam  <lb/>  esse ab infantia, et magicis
+						artibus ita occupatam   ,<lb/> ut dicat Christum sponsum suum esse.</p>
+					<p>4. Audiens haec Symphronius praefectus laetus  efficitur  <milestone unit="PLSection" n="B"/>, et missa apparitione cum grandi strepitu, suis <lb/> eam tribunalibus praecepit
+						sisti. Et primo quidem <lb/> blandis eam sermonibus secretius provocat, deinde <lb/>
+						terroribus pulsat. Sed virgo Christi nec blandimento <lb/> seducitur, nec terrore
+						concutitur : sed eodem vultu, <lb/>  eodem  animo perseverans, et terrentem similiter sicut
+						<lb/>  blandientem  animo  deridebat. Videns itaque <lb/> Symphronius praefectus tantam
+						in puella constantiam, <lb/> parentes ejus alloquitur : et quia erant nobiles, et <lb/>
+						vim  eis  inferre non poterat, titulum eis christianitatis <lb/>  opposuit. Sequente
+						autem die Agnem sibi praesentari <lb/>  jubet : et iterum iterumque repetens,  replicare -
+						<lb/>  coepit de juvenis amore sermonem.</p>
+					<p>5.  Cumque  omnes sermones ejus casso labore deficerent  .<lb/> sisti eam suis
+						tribunalibus jussi), cui et <milestone unit="PLSection" n="c"/><lb/> dixit: Superstitio
+						christianorum, de quorum te  magicis artibus  <lb/>   jactas, nisi a  te  fuerit segregata,
+						non <lb/> poteris insaniam  abjicere  pectoris, neque aequissimis <lb/> consiliis praebere
+						consensum. Unde te ad venerabilem <lb/> deam Vestam properare necesse est, et si
+						perseverantia <lb/>  virginitatis placet,  ejus  die nocteque sacrificiis <lb/>
+						reverendis insistas. Ad haec beata Agnes respondit : <lb/> Si  filium tuum  , quamvis iniquo
+						amore vexatum, tamen <lb/>  viventem hominem recusavi : hominem utique <lb/> qui est
+						rationis  capax , qui et audire, et videre, et <lb/> palpare,  et  ambulare potest, <note n="b"/> et
+						fulgore lucis hujus <lb/> cum bonis perfrui : si ergo hunc causa amoris Christi <lb/> 
+						nulla possum ratione respicere; quomodo possum <lb/> idola muta et surda, et sine sensu
+						et sine anima  colere   ,<lb/> et ad injuriam summi Dei cervicem meam vanis <milestone unit="PLSection" n="D"/><lb/> lapidibus inclinare?</p>
+					<p>6. Audiens haec praefectus Symphronius dixit : <lb/> <note n="c"/> Cupio praebere consultum infantiae
+						tuae, et adhuc te <lb/> deos blasphemantem idcirco differo,  quia  annos tuos <lb/> infra
+						sensum aspicio. Noli ergo temetipsam ita deficerent  ,<lb/> ut motus deorum incurras.
+						Beata Agnes <lb/> respondit : Noli infantiam corporalem ita in me <lb/> despicere, ut
+						putes me te velle habere propitium. <lb/> Fides enim  non  in annis, sed in sensibus
+						geritur : et <lb/> Deus omnipotens mentes magis comprobat, quam <milestone unit="PLSection" n="A"/><lb/> aetates. Deos autem tuos, quorum motus me incurrere <lb/>
+						481 non vis; ipsis irasci permitte, ipsis  loqui jube : ipsi <lb/> hoc mihi praecipiant,
+						ipsi jubeant se coli, ipsi jubeant <lb/> adorari. Verum quoniam ad hoc video te tendere,
+						<lb/> quod impetrare non poteris, quidquid tibi videtur, <lb/> exerce.</p>
+					<p>7. Symphronius praefectus dixit: Unum tibi e duobus <lb/>  elige, aut cum virginibus
+						deae  Vestae  sacrifica, <lb/> aut cum meretricibus scortaberis in contubernio <lb/>
+						lupanari. Et longe erunt a te christiani, qui te ita <lb/> magicis artibus  imbuerunt , ut
+						hanc calamitatem  intrepido  <lb/>  animo te posse perferre confidas. Unde, ut <lb/>
+						dixi, aut sacrifica deae Vestae ad laudem generis tui: <lb/> aut ad ignominiam natalium
+						tuorum eris publicae <lb/> abjectionis scortum. Tunc beata Agnes cum ingenti <milestone unit="PLSection" n="B"/>constantia dixit: Si scires quis est Deus meus, non <lb/> ista
+						ex ore tuo proferres. Unde ego, quia novi virtutem <lb/>  Domini mei Jesu Christi,
+						secura contemno <lb/> minas tuas, credens  quod  neque sacrificem idolis <lb/> tuis, neque
+						polluar sordibus alienis; mecum enim <lb/> habeo custodem corporis mei angelum Domini.
+						Nam <lb/> unigenitus Dei Filius, quem ignoras, murus est mihi <lb/> inexpugnabilis, et
+						custos mihi est numquam dormiens  ,<lb/> et defensor mihi est numquam deficiens : dii
+						<lb/> autem tui aut aerei sunt, ex quibus cacabi melius <lb/> fiunt ad usus hominum :
+						aut lapidei, <note n="d"/> ex quibus <lb/> plateae melius sternuntur ad evadendum lutum. Divinitas <lb/>
+						 autem non in lapidibus vanis habitat, sed in <lb/>  coelis  : non in aere aut
+						aliquo metallo, sed in regno <lb/> superno consistit. Tu  autem  et similes tui, nisi ab
+							<milestone unit="PLSection" n="c"/><lb/> istorum cultura recesseritis,  similis  vos poena
+						concludet   ;<lb/> sicut enim illi igne conflati sunt, ut funderentur   ;<lb/> sic
+						colentes eos perpetuo incendio conflabuntur <lb/>  : non ut fundantur, sed ut
+						confundantur in <lb/> aeternum, et pereant.</p>
+					<p>8. Ad haec insanus judex jussit eam exspoliari , et <lb/> nudam ad lupanar duci, sub
+						voce praeconis dicens <lb/> Agnem sacrilegam virginem, deos blasphemantem, <lb/> scortum
+						lupanaribus datam. Statim autem ut spoliata <lb/>  et crine soluLa.est, tantam
+						densitatem capillis <lb/> ejus divina gratia concessit, ut melius videretur  fimbriis  <lb/>
+						 eorum, quam vestibus  tecta . Ingressa autem <lb/> turpitudinis locum, angelum
+						Domini illic ita paratum <lb/> invenit, ut circumdaret eam immenso lumine, ita ut <lb/>
+						nullus posset eam prae splendore respicere, nec concludet ,<milestone unit="PLSection" n="D"/> <lb/> nec videre. Fulgebat enim tota cella illa, <lb/> quasi radians sol in
+						virtute sua ; et quanto quis  curiosior . <lb/>  esse voluisset, tanto sui visus aciem
+						obtundebat  .<lb/> Cumque se in orationem Domino prostravisset  ,<lb/> apparuit ante
+						oculos ejus stola candidissima, et <lb/> apprehendens eam induit se, et dixit: Gratias
+						tibi <lb/> ago, Domine Jesu Christe, qui me in numero ancillarum <lb/>  tuarum
+						computans, vestem hanc mihi largiri <lb/> praecepisti. Ita namque ad mensuram corpusculi
+						ejus <lb/> aptum erat indumentum, et ita nimio candore concludet <note type="footnote"> a Ita
+							eod. Noall.; edit. vero, in fascibus <hi rend="italic">praefecturae</hi>
+							<lb/> b <hi rend="italic">ae agere.</hi></note><note type="footnote">Omnes cui I., <hi rend="italic">et flore lucia</hi> NoaU., <hi rend="italic">et julgore,</hi>
+							etc.hujus <hi rend="italic">cum bon;'</hi> frui; eod. </note>
+						<note type="footnote"> c Ita cod. Noall., at edit. : <hi rend="italic">quibus</hi> Cupio
+							platece; <hi rend="italic">con,ultum t</hi> etc. </note><note type="footnote"> a Omnes
+							edit., ex sternuntur alia e <lb/> memoratu cod. addita sunt. </note><pb n="739"/>
+						,<milestone unit="PLSection" n="A"/>   <lb/> ut nullus dubitaret hoc angelicis
+						manibus <lb/> praeparatum. Interea lupanar efficitur locus orationis  ,<lb/> in
+							quo<unclear>omnes</unclear> qui fuissent ingressi, adorarent <lb/> et venerarentur,
+						dantes  honorem  Deo pro immenso <lb/> splendore, et mundiores egrederentur foras, quam
+						<lb/> fuerant  intus  ingressi.</p>
+					<p>9. Cumque haec agerentur, praefecti filius qui auctor <lb/>   erat  hujus sceleris, venit
+						ad locum  cum  sodalibus <lb/>  suis juvenculis, quasi insultaturus puellae, cum <lb/>
+						 quibus  libidinis  suae  se posse  credebat  ludibrium <lb/> exercere : <note n="b"/> sed ingressus ut
+						misit ante se pueros <lb/> ferventes et turpiter saevientes, cum nimia autem <lb/>
+						veneratione et  ingenti  admiratione egressos coepit <lb/> impotentes arguere,  atque  vanos
+						et molles ac miseros <lb/>  judicare. Et irridens eos, locum  in  quo virgo <milestone unit="PLSection" n="B"/>adorabat, audacter ingressus est: et videns tantum <lb/> lumen
+						circa eam, non dedit honorem Deo : sed irruens <lb/>  in ipsum lumen, priusquam vel
+						 manu  eam <lb/>  contingeret , cecidit in faciem suam, et praefocatus a <lb/>  diabolo 
+						exspiravit. Videntes autem socii ejus, quod <lb/>  moras intus   innecteret, putabant
+						obscoenis eum operibus <lb/>  occupatum. Et ingrediens  unus  ex juvenibus, <lb/> qui ei
+						familiarior erat, ut quasi congratularetur  insultationi . <lb/>  ejus, et mortuum eum
+						inveniens, . <lb/>  exclamavit  voce  magna , dicens : Piissimi  Romani , succurrite <lb/>  :
+						magicis artibus ista meretrix praefecti <lb/> filium  interfecit .  Fit  repente concursus
+						populorum <lb/> ad  theatrum , et varia  furentis . populi acclamatio. <lb/> Alii dicebant
+						magam, alii innocentem, alii  sacrilegam  <lb/>  conclamabant.</p>
+					<p>
+						<milestone unit="PLSection" n="C"/>10. Praefectus autem audiens  filium suum   interiisse 
+						,<lb/> cum 482 ingenti tumultu ac luctu venit ad <lb/> theatrum ;et ingressus locum,
+						 in  quo corpus filii <lb/> ejus jacebat exanime,  cum  magno clamore dicebat <lb/>
+						 beatissimae  virgini : Crudelissima omnium feminarum  ,<lb/> ad filium meum voluisti
+						apodixin tuae artis <lb/> magicae demonstrare;et  cum  talia atque alia hujuscemodi <lb/> 
+						innecteret, et causam mortis ejus ab ea <lb/> vehementer  inquireret , ait ad  eum 
+						beatissima Agnes : <lb/>  Ille  cujus voluntatem volebat perficere, ipse in  eum  <lb/>
+						potestatem accepit. Quare autem omnes qui ad me <lb/>  ingressi  sunt,  sani  egressi
+						sunt:quia omnes dederunt <lb/>  honorem Deo, qui misit angelum suum, et  induit . <lb/> 
+						me hoc indumento misericordiae suae, et custodivit <lb/>  corpus  meum ,  quod  ab ipsis
+						cunabulis Christo <milestone unit="PLSection" n="D"/><lb/> consecratum est et oblatum,
+						Videntes autem splendorem <lb/>  angelicum, adorabant omnes, et  abscedebant , <lb/>
+						illaesi :  hic  autem impudens statim ut ingressus est, <lb/> saevire coepit et fremere ;
+						cumque manum suam ad <lb/> me contingendam aptaret, dedit  eunt augelus Do . . mini   .. <lb/> 
+						in reprobam, quam  conspicis , mortem.</p>
+					<p> 11 . Dicit ei praefectus : in  hoc  apparebit quia non <lb/> magicis artibus ista gessisti,
+						si deprecata fueris <milestone unit="PLSection" n="A"/><lb/> ipsum angelum, ut restituat
+						mihi filium meum sanum  .<lb/> Cui beata Agnes respondit : Licet  fides  vestra <lb/> hoc
+						impetrare non mereatur a  Domino  ; tamen quia <lb/> tempus est ut virtus Domini mei Jesu
+						Christi  mini . . festetur ..  ,<lb/> egredimini omnes foras, ut solitam ei  orationem  <lb/> 
+						offeram. Cumque universi foras fuissent <lb/> egressi, <note n="G"/> prosternens se  in  faciem
+						pavimenti, rogare <lb/>  coepit Dominum, ut juvenem suscitaret. Orante <lb/> autem illa,
+						apparuit ei angelus Domini, et levavit <lb/> eam flentem, et confortans animum ejus,
+						juvenem <lb/> suscitavit. Qui egressus  foras  coepit  voce  publica <lb/> clamare et dicere
+						: Unus est Deus  in  coelo  et  in terra <lb/> et  in  mari,  qui  est Deus christianorum ; nam
+						omnia <lb/>  templa  vana sunt : dii qui coluntur, omnes vani sunt, <lb/>  et  penitus nec
+						sibi  possunt , nec aliis aliquod auxilium <milestone unit="PLSection" n="B"/>
+						exhibere.</p>
+					<p>12 Ad hanc vocem omnes  haruspices , et templorum <lb/>  pontifices conturbabantur, et
+						fit per eos  vehementior . <lb/>  quam fuerat,  seditio populorum  , atque <lb/> omnes una
+						voce clamabant :  Tolle  magam. tolle <lb/> maleficam, quae  et mentes  mutat,  et animos  
+						alienat. <lb/> Praefectus autem videns tanta mirabilia, obstupuit : <lb/> sed veritus
+						proscriptionem,  si  contra templorum pontifices <lb/>  ageret, et Agnem contra suas
+						sententias defensaret  ,<lb/> vicarium suum ad seditionem populi  judi . cern dercliquit .  
+						,<lb/>  ipse  autem tristis abscessit,  quod  <lb/> eam non potuit post resurrectionem
+						filii sui  liberare .  .<lb/>  Tunc  vicarius Aspasius  nomine , <note n="d"/> populi <lb/> seditionem non
+						ferens jussit in conspectu omnium <lb/>  ignem copiosum  accendi , et in medium eam
+							<milestone unit="PLSection" n="c"/><lb/> praecepit jactari  flammarum . Quod  cum  fuisset
+						impletum  ,<lb/> statim in duas partes divisae sunt flammae, <lb/> et  hinc  atque  illinc 
+						seditiosos populos  exurebant  : <lb/> ipsam autem penitus in nullo  contingebat , incendium
+						 .<lb/> Et magis  non  hoc virtutibus divinis, sed maleficiis <lb/>  reputantes,
+						dabant fremitus inter se populi, <lb/>  et infinitos  ; clamores ad  coelum .</p>
+					<p>13. Tunc beata Agnes extendens manus suas  in  <lb/> medio  ignis ,  his  verbis orationem
+						fudit ad Dominum <lb/>  : Omnipotens, adorande, colende, tremende <lb/> Pater Domini
+						mei Jesu  Christi , benedico te, quia  per  <lb/> Filium tuum evasi minas hominum impiorum,
+						et <lb/> spurcitias diaboli impolluto calle transivi, ! Ecce <lb/> nunc sancti Spiritus
+						 rore  coelesti perfusa, resolutus <lb/> est  juxta me ignis   , flamma dividitur, et ardor
+						incendii <milestone unit="PLSection" n="D"/><lb/>  hujus ad  eos  a  quibus ministratur  ,
+						effunditur.  Benedico te    ,<lb/>  Pater  praedicande, qui etiam inter  flammas  <lb/> 
+						intrepidam me ad te venire permittis. <unclear>Ecce</unclear> jam <lb/>  quod  credidi,
+						video : quod speravi, jam teneo : quod <lb/> concupivi, complector. Te confiteor labiis
+						et corde, <lb/> et totis visceribus concupisco. Ecce ad te  Venio vi . vum  . <lb/>  et verum
+						Deum, qui  cum  Domino  Jesu Christo   <lb/>  Filio tuo , et cum Spiritu sancto  vivis  et
+						re- <note type="footnote"> a Sic Noall. codex : edit. autem, omnis <hi rend="italic">qui
+								fuisset</hi><lb/>
+							<lb/> ingressus, adoraret..... <hi rend="italic">dans honorem immenso lumini,<lb/>
+								<lb/> et mundior, etc.</hi>
+						</note><note type="footnote"> b Omnes edit., <hi rend="italic">et</hi> ingressas ante se
+							furetes pueros,<lb/>
+							<lb/>
+							<hi rend="italic">et turpiter</hi> saevientes cum omni veneratione; etc. Noali.<lb/>
+							<lb/> cod. ut in textu. </note><note type="footnote"> e Eaedem edit., <hi rend="italic">prosternens se in faciem</hi> planam :<lb/>
+							<lb/> codex Noall... <hi rend="italic">in faciem pavimenti.</hi> . </note><note type="footnote">d <hi rend="italic">Populi</hi> seditionem non ferens additur e cod.<lb/>
+							<lb/> Noall. </note><note type="footnote">c Omnes edit., <hi rend="italic">Ecce</hi>
+							et nune rore <hi rend="italic">coelesti</hi> porfusus<lb/>
+							<lb/>
+							<hi rend="italic">per Spiritum</hi> sanctun: <hi rend="italic">focus</hi> juxta <hi rend="italic">me moritur; codex</hi><lb/>
+							<lb/> Noall. ut in corpore. </note><pb n="741"/>
+						<milestone unit="PLSection" n="A"/><lb/>  modo   et  semper infinita  
+							<unclear></unclear> saecula saeculorum, <lb/> amen.</p>
+					<p>14. Cumque complesset orationem, ita  omnis  ignis <lb/> exstinctus est, ut nec  tepor 
+						quidem  incendii  remansisset  .<lb/>  Tunc  Aspasius urbis Romae vicarius,  populi  <lb/>
+						seditionem  non  ferens, in guttur ejus gladium mergi <lb/> praecepit :  atque hoc  exitu,
+						roseo sui sanguinis  rubore  <lb/>  perfusam Christus sibi sponsam et martyrem <lb/>
+						dedicavit.Parentes vero ejus nullam 483 penitus tristitiam <lb/>  habentes, cum omni
+						gaudio abstulerunt corpus <lb/> ejus, et  posuerunt  illud in praedio suo  non  longe ab
+						<lb/> Urbe, via quae dicitur Numentana. Ubi cum  omnis  <lb/> turba christianorum
+						concurreret,  insidias  a paganis <lb/> perpessi sunt : et videntes populum infidelium supervenientem
+						<lb/>  armatum , omnes fugerunt; aliquanti <milestone unit="PLSection" n="B"/><lb/>  vero  lapidum ictibus laesi evaserunt.</p>
+					<p>15  .  Dum  orat  inter tanta agmina collactanea ejus <lb/> virgo sanctissima Emerentiana,
+						constans stabat immobilis  ,<lb/> et his verbis exprobrabat eis dicens :  Superflui  
+						,<lb/> miseri, caduci, atque <unclear>atrocissimi</unclear>, Deum  omnipotentem . <lb/> 
+						colentes occiditis, et pro defensione lapidum <lb/>  homines innocentes jugulatis.Haec
+						et his similia <lb/>  dum turbis furentibus diceret, lapidata  est ab   eis, <lb/> et
+						orans juxta  sepulcrum  beatissimae  Agnae  virginis, <lb/> emisit  spiritum .  Non  dubium  est 
+						quod in suo  sanguine sit baptizata     ,<lb/> quae pro defensione justitiae, <lb/>  dum 
+						confiteretur  Dominum , mortem constanter  excepit   .<lb/> Eadem denique hora fit terrae
+						motus <unclear> vehementissimus </unclear>-  ;<lb/> et  cum  nimia esset coeli serenitas,
+						<lb/> tantae  coruscationes , tantaque fulgura  et  tonitrua  excepit  <milestone unit="PLSection" n="C"/>, ut pars maxima  insani  populi  exspiraret . <lb/> Unde factum  est  ut
+						nullus penitus ex eo advenientibus <lb/>  ad  sepulcra  sanctorum aliquas molestias
+						excitaret  .<lb/> Venientes autem parentes  beatae  Agnae virginis <lb/>  cum  sacerdotibus
+						nocte, abstulerunt corpus <note n="b"/> Emerentianae  ,<lb/> et sepelierunt illud in  confinio  agelli
+						 beatissimae  <lb/>  virginis  Agnae .</p>
+					<p>16.Igitur dum parentes sanctae  Agnae  assiduis  pernoctationibus  <lb/>  vigilarent ad
+						sepulcrum  ejus , vident in <lb/>  medio noctis  silentio exercitum virginum, quae  omnes auro  <lb/>
+						  intextis  cycladis  indutae cum ingenti lumine <unclear/>
+						<lb/> praeteribant :  inter quas   etiam vident beatissimam <lb/> Agnem  similiter  fulgentem
+						, et ad <unclear> dexteram </unclear> ejus <lb/> Agnum stantem.  Haec  dum viderent parentes
+						 ejus , <lb/> et qui simul erant, quasi stupore mentis detenti sunt. <milestone unit="PLSection" n="D"/><lb/> Sed <unclear> beata Agnes rogat </unclear>  sanctas virgines
+						parumper <lb/> gradum figere, et stans parentibus suis dixit :Videte <lb/> ne  me  mortuam
+						lugeatis, sed <unclear>congaudete</unclear> mihi et <lb/> congratulamini ; quia cum his
+						virginibus  lucidas sedes accepi    ,<lb/> et illi sum juncta in coelis, quem in  terris  <lb/>
+						 posita <note n="a"/> tota devotione dilexi. Et  his dictis  .  pernoctationibus   .<lb/></p>
+					<p>
+						<milestone unit="PLSection" n="A"/>17. Haec visio  publice  ab omnibus, qui viderant, <lb/>
+						divulgata  est . Unde factum est ut post aliquantos annos <lb/>  ad Constantiam Augusti
+						filiam hoc factum ab <lb/> his qui viderant, narraretur. Erat enim ipsa  Constantia  <lb/>
+						 virgo prudentissima, sed <unclear> ita </unclear> obsessa vulneribus, <lb/> ut a
+						capite usque ad pedes nulla membrorum pars <lb/> libera remaneret. Accepta autem  spe 
+						recuperandae <lb/> salutis, venit ad sepulcrum martyris nocte ; et licet <lb/> pagana,
+						tamen credula  animi intentione  preces fideliter <lb/>  fundebat. Quod cum faceret
+						repente <unclear> somni </unclear> suavitate <lb/>  corripitur, et videt per visum
+						beatissimam <lb/> Agnem talia sibi monita praeferentem : Constanter <lb/> age.
+						Constantia, et crede Dominum Jesum Christum <lb/> filium Dei esse Salvatorem  tuum ,  per 
+						quem modo <lb/> consequeris omnium vulnerum, quae in corpore tuo <milestone unit="PLSection" n="B"/><lb/>  pateris . sanitatem. Ad hanc  vocem  Constantia  evigilat sana  
+						 ,<lb/> et  sic sana  <unclear></unclear>, ut  nec  signum in suis membris <lb/> 
+						 alicujus  <unclear>vulneris</unclear>  remaneret . Reversa igitur ad <lb/> palatium
+						sanissima, facit gaudium et patri suo  A . - gusto .-  ,<lb/> et fratribus suis imperatoribus.
+						Coronatur  civitas tota    ,<lb/> <note n="d"/> fit laetitia  militibus  et .  primatibus suis, <lb/> atque
+						 universis  audientibus haec , infidelitas  gentium confundebatur    ,<lb/> et fides Dominica
+						laetabatur.</p>
+					<p>18.  Interca  patrem et fratres Augustos  rogat , ut <lb/> basilicam
+							<unclear>beatae</unclear> Agnae construerent, <note n="c"/> et sibi  illic  <lb/> mansionem collocari
+						praecepit.  Cucurrit  autem haec <lb/> opinio ad omnes, et quotquot credentes ad ejus sepulcrum
+						<lb/>  advenissent, salvabantur, quacumque infirmitate <lb/>  detenti essent.
+						Quod facere Christum nullus <lb/> dubitat usque  in  hodiernum diem. Perseveravit autem
+							<milestone unit="PLSection" n="C"/><lb/>  ipsa  Constantia Augusti filia in virginitate.
+						per quam <lb/> multae virgines et mediocres, et nobiles, et illustres <lb/> sacra
+						velamina susceperunt. Et quia fides mortis <lb/> damna  non  patitur, usque in bodiernuu)
+						diem multae <lb/> virgines Romae Agnem beatissimam quasi in corpore <lb/> manentem
+						aspiciunt, et ejus  exemplum agentes  viriliter  ,<lb/> et integre perseverant, credentes
+						sine dubio <lb/> quod perseverantes perpetuae victoriae  palmam  acquirant  .<lb/></p>
+					<p> 19 . Haec ego Ambrosius servus  Christi , dum in voluminibus <lb/>  484 abditis
+						invenissem descripta,  non  <lb/> sum passus  infructuosa silentio   tegi. Ad honorem <lb/>
+						igitur tantae  martyris  sicut gesta ejus agnovi,  conscripsi   ;<lb/> et ad aedificationem
+						vestram, 0  o virgines Christi   ,<lb/> textum passionis ejus credidi destinandum,
+							<milestone unit="PLSection" n="D"/><lb/> <note n="f"/>, obsecrans virtutem  Spiritus . sancti, ut
+						labor noster <lb/>  ad vestram imitationem fructum in conspectu <lb/> Dei valeat
+						invenire, cui honor  et gloria   in saecula, <lb/> amen.</p>
+					<ab>
+						<title type="sub">EPISTOLA II (Alias. LIII).</title>
+					</ab>
+					<p>Cum <hi rend="italic">beneficia Dei  tegenda non </hi>  sint, visionem narrat, <lb/> qua
+						sibi <hi rend="italic">per</hi> quadragesimam Gervasius ac Protasius <note type="footnote"> a Ita codex Noall., omnes autem edit., Emeren <lb/> tiana autem, <hi rend="italic">quae fuerat collactanea ejua, virgo,</hi> sanctis-<lb/> sima. licet
+							cathecumena, constanter stabat, intrepida <lb/> et <hi rend="italic">immobilis.</hi>
+						</note><note type="footnote"> b Edit., sanctos emerentiamae virginiis </note><note type="footnote">c Eudem edit., tata enimi intentione dilexi. .</note><note type="footnote">
+							<lb/>
+							<lb/>
+							<hi rend="italic">d</hi> Ita codex Noall.; edit. vero, <hi rend="italic">millitantibus</hi> atque <lb/> privutis. De quo loco videsis notas Casauboni in
+							<lb/> Lampridium pag. 174. </note><note type="footnote"> e Edit., Et sibi illic
+							mansoleum <lb/> Acta Liberli in Conciliis PHil. La collocari. Consule. </note><note type="footnote"> f Eaedem edit., <hi rend="italic">obsecrans charitatem Spiritus
+								sancti,</hi> .<lb/> ut <hi rend="italic">labor</hi> noster in vestra <hi rend="italic">imitatione fructum in concspectu</hi>
+							<lb/> Domini <hi rend="italic">veleat</hi> invenire, amen : codex vero Noall. ut <lb/>
+							nos in textu. </note><pb n="743"/>
+						<milestone unit="PLSection" n="A"/><lb/>
+						<hi rend="italic">semel et iterum, tertia autem</hi>  vice  <hi rend="italic">etiam</hi>
+						Paulus <hi rend="italic">apparuerat ,<lb/> ut  eis </hi> post <hi rend="italic">exhumatas</hi> ipsorum <hi rend="italic">reliquias <lb/> Ecclesia construeretur,
+							imperans. Addit  cOlwocali , coepilcopi . , .<lb/> inventa  esse  sanctorum corpora,
+							quorum<lb/>  conversionem , necem</hi> ac <hi rend="italic">sepulturam ex schedula
+							illic<lb/> detecta refert.</hi> Quibus <hi rend="italic"> Vitalis  ac Valeriae</hi>
+						martyrium <lb/>
+						<hi rend="italic">etiam inseritur.</hi>
+					</p>
+					<ab>
+						<title type="sub">AMBROSIUS servus Christi fratribus per omnem Italiam  in Domino
+							aeternam salutem.</title>
+					</ab>
+					<p> 1 . In divinis voluminibus reus subscribitur, qui <lb/> non studuerit dare gratis, quod
+						ipse gratis accepit; <lb/> quidquid enim Ecclesiae Domini profuturum erat, <lb/>
+						subtraxisse arguitur, cum noluerit tradere omnibus, <lb/> quod ipse non celandum
+						acceperit. Unde  Psalmographus  <milestone unit="PLSection" n="ii"/><lb/>  vates canit :
+						Justitiam tuam <hi rend="italic">non abscondi in <lb/> corde meo</hi> : veritatem tuam
+						et <hi rend="italic">salutare</hi>  tuum  <hi rend="italic">dixi. Non <lb/> celavi
+							misericordiam</hi> tuam in <hi rend="italic">concilio multorum  (Ps .</hi>
+						<lb/> XXXIX, 11). Et pro hoc opere quasi vicissitudinem a <lb/> Deo postulans adjecit :
+							<hi rend="italic">Tu autem,  Domine , ne elonges</hi>
+						<lb/> misericordiam <hi rend="italic">tuam a me (Ibid.,</hi> 12). Quasi diceret <lb/>
+						Deo : sicut ego feci alios misericordiam invenire, ita <lb/> et ipse non patiaris longe
+						fieri misericordias tuas a <lb/> me. Aperiamus ergo cur ista praemisimus, et vestros
+						<lb/> animos qui pie de Domino sentitis et creditis, de inventione <lb/>  sanctorum
+						corporum ad laetitiam invitemus  .<lb/></p>
+					<p>3. In diebus itaque transactae nuper quadragesimae  ,<lb/>  cum  Dominus donasset mihi,
+						ut jejunantium <lb/> <note n="d"/> et orantium me faceret esse participem, in oratione <milestone unit="PLSection" n="c"/><lb/>  positum ita me somnus oppressit, ut nec  vigilans -
+						<lb/>  aperte, nec dormiens integre, viderem apertis <lb/> oculis mecum duos juvenes
+						ephebos vestibus candidissimis  ,<lb/> id est, colobio et pallio indutos, caligulis
+						<lb/> calceatos, manibus extensis orantes. Nullam quidem <lb/> gravedinem patiens, loqui
+						cum eis non poteram : <lb/> sed quia, ut dixi, pars in me somni incumbebat, quae <lb/>
+						me ad eorum interrogationem verbum proferre non <lb/> sineret. Plene autem evigilanti
+						visio eorum ab oculis <lb/> meis elapsa  est .</p>
+					<p>5. Factum est proinde ut rogarem Domini misericordiam  ,<lb/> ut si ludificatio
+						daemonum esset, abscederet <lb/>  : si vero esset veritas, plenius appareret. Ad  impetrandum .
+						<lb/>  vero quae poscebam a Domino augmentavi <lb/> jejunium : similique modo,
+						canente gallo, orantes <milestone unit="PLSection" n="D"/><lb/> mecum iidem juvenes
+						apparuerunt.</p>
+					<p>4. In tertia vero nocte, defecto jejuniis corpore, <lb/> non dormienti, sed stupenti,
+						cum quadam mihi tertia <lb/>  apparuere persona, quae similis erat beato Paulo <lb/>
+						apostolo, cujus me vultum pictura docuerat, in tantum <lb/>  ut ipse mecum, illis
+						tacentibus, loqueretur dicens <lb/>  : Isti sunt qui monita mea secuti, praedia et dicens
+						<lb/>  respuentes, secuti sunt Domini nostri  Jesu  <lb/> Christi vestigia, nihil
+						terrenum,  nihilque  carnale <lb/> concupiscentes, in media hac  Mediolanensi  urbe per
+							<milestone unit="PLSection" n="A"/><lb/> decem annos in Dei servitio perdurantes, ad
+						hoc <lb/> pertingere meruerunt, ut Christi martyres efficerentur  .<lb/> Quorum corpora
+						in eodem loco invenies, in <lb/> quo stas et oras. Duodecim pedum altitudine terra <lb/>
+						coopertam arcam invenies, quam arcam superius <lb/> exaltabis, et in nomine eorum
+						Ecclesiam fabricabis. <lb/> Cumque ab eo  eorum  nomina requirerem, dixit <lb/> mihi : Ad
+						caput eorum libellum scriptum invenies, <lb/> in quo et ortus eorum,  et  finis scriptus
+						est.</p>
+					<p>5. Convocans itaque omnes per circuitum fratres <lb/> et episcopos urbium vicinarum,
+						referens universa <lb/> quae videram, quaeque audieram, ipsis coram positis, <lb/> primus
+						ego terrae fossor accessi : caeteri vero episcopi <lb/>  prosecuti, fodientes pervenimus
+						ad arcam, <lb/> quam sanctus promiserat Paulus :quam aperientes, <milestone unit="PLSection" n="B"/><lb/> invenimus quasi in ipsa  hora  positos 485 sanctos, <lb/>
+						miro odore flagrantes. Ad eorum caput  libellum  inventione  ,<lb/> in quo erant haec per
+						ordinem universa <lb/> conscripta:</p>
+					<p>6. Ego servus Christi Philippus intra domum <lb/> meam sanctorum corpora, quae cum
+						filio meo rapui  ,<lb/> sepelivi. Quorum mater Valeria et pater  Vitalis  <lb/> sunt
+						dicti : quos uno ortu geminos genuere, et unum <lb/> Protasium, alterum Gervasium
+						vocaverunt <note n="b"/>.</p>
+					<p>7. Quorum pater  Vitalis  miles consularis, cum <lb/> fuisset cum Paulino judice suo
+						Ravennam ingressus, <lb/> et coepisset Paulinus christianos ad sacrificandum <lb/>
+						requirere, oblatus est ei quidam christianus nomine <lb/> Ursicinus, arte medicus,
+						natione Ligur. Tunc jussit <milestone unit="PLSection" n="c"/><lb/> eum Paulinus in
+						conspectu suo torqueri, dicens : <lb/> Sacrifica, Ursicine, diis immortalibus. Ille
+						autem <lb/> respondens, dixit ad eum : Non sacrificabo surdis <lb/> et mutis, sed
+						sacrificabo Domino meo Jesu Christo. <lb/> Et cum vidisset, quod eum mutare non posset a
+						<lb/> constantia sua, post nimia tormenta, jussit eum capitalem <lb/>  subire
+						sententiam. Locus autem ille, ubi decollabantur <lb/>  christiani , hoc habebat
+						vocabulum, <lb/> ut diceretur, ad Palmam. Arbor  enim  antiqua Palmae <lb/>  illic
+						erat.</p>
+					<p>8. Igitur cum, ut diximus, post nimia tormenta <lb/> decollandus venisset sanctus
+						Ursicinus ad Palmam, <lb/> expavit : et dum vellet male evadere, exclamavit S. <lb/>
+						Vitalis dicens : Noli, noli, Ursicine medice, qui alios <lb/> curare consuevisti, te
+						ipsum  aeternae  mortis jaculo <lb/> vulnerare; et qui per passiones nimias venisti ad
+							<milestone unit="PLSection" n="D"/><lb/> palmam, coronam noli perdere a Domino
+						 praeparatam .  .<lb/> Audiens haec sanctus Ursicinus.  genu  posuit, <lb/> et spiculatorem,
+						ut feriret, hortatus; agens  poenitentiam  <lb/>  quod expavisset. Quem spiculator feriens,
+						<lb/> Christi martyrem fecit. Statimque sanctus  Vitalis  <lb/> corpus martyris rapiens,
+						intra Ravennensium urbem <lb/> sepelivit cum omni honestate martyri debita. et ad <lb/>
+						judicem ultra sanctus  Vitalis  venire contempsit. <lb/> Quem  Paulinus  consularis ideo
+						maxime teneri mandavit   ;<lb/> non tantum quia contempsit ad eum redire, <note type="footnote"> a Deest in Rom. edit., et <hi rend="italic">orantium.</hi>
+						</note><note type="footnote"> b Rom. edit.vocaverunt, cumque ab intestato<lb/> Gervasius
+							et <hi rend="italic">Protasius, hoc est, patre</hi> sancto Vitale <lb/> martyre, <hi rend="italic">et mare sanctae memoriae Valeria</hi> defunctis,<lb/>
+							<lb/>
+							<hi rend="italic">utrique patrimonio successissent domum propriam</hi> etc.<lb/>
+							<lb/>
+							<lb/> SS. Vitalis ac Valeriae huic epistolae inserunt, secuti<lb/>
+							<lb/> sumus. </note><pb n="745"/>
+						<milestone unit="PLSection" n="A"/><lb/> verum quantum ob hoc quod christianus esset  detectus -
+						 .<lb/></p>
+					<p>9. Tunc ministri ejus rapientes eum in conspectu <lb/> ejus adduxerunt. Et videns  eum 
+						Paulinus, ait ad <lb/> eum : Quomodo maleficiis deceptus es, Vitalis, ut <lb/> non
+						sacrifices diis?  Cui  ille respondit : Non sacrifico <lb/>  surdis et mutis, sed
+						sacrifico Deo meo, qui fecit <lb/> coelum et terram, mare et omnia quae in eis sunt,
+						<lb/> et  Jesu  Christo filio ejus, qui cum eo et Spiritu sancto <lb/>  vivit et regnat.
+						Tunc Paulinus jussit  eum  levari <lb/> in equuleo, ut per tormenta, ejus consensum ad sacrificandum
+						<lb/>  compelleret. Sed sanctus Vitalis studuit  .<lb/> ut Deo redderet
+						gemmam pretiosam, quam rapere <lb/>  diabolus studebat. Et respondens, ait ei : Infinita
+						<lb/>  tibi dominatur stultitia : aut putas memetipsum <milestone unit="PLSection" n="B"/><lb/> posse decipere,  qui  alios a periculo mortis, vel deceptionis <lb/> 
+						liberare studui ?</p>
+					<p>10. Tunc Paulinus consularis dixit  ad  Officiarium <lb/>  : Ducite eum ad palmam, et
+						nolite decollare, <lb/> si sacrificare contempserit : sed facite foveam in <lb/> terra,
+						tamdiu quo usque perveniatis ad aquam, et <lb/> ibi eum supinum deponite, et terra atque
+						lapidibus <lb/> obrutum, ibi dimittite. Quod cum fuisset impletum, <lb/>  Deus  sibi
+						sanctum Vitalem ita martyrem consecrapere  ,<lb/> ut sacerdos Apollinis qui hoc
+						consilium Paulino <lb/> judici dederat, diabolo repletus, per septem dies <lb/>
+						energumenus clamaret ibi, ubi obrutus est  sanctus  <lb/> Vitalis, dicens : Incendis me,
+						martyr; crucias me, <lb/> sancte. Post septem vero dies praecipitatus a diabolo <lb/> in
+						 flumine , exspiravit. Sanctus autem  Vitalis  gloriosus <milestone unit="PLSection" n="c"/><lb/>  martyr Christi, juxta civitatem Ravennensium <lb/> praestat orationibus vel
+						 intercessionibus  suis beneficia <lb/>  omnibus credentibus Jesum Christum usque in
+						<lb/> hodiernum diem.</p>
+					<p> 11 . Valeria autem conjux ejus, dum vellet corpus <lb/> sancti Vitalis  auferre , a
+						christianis prohibita est, <lb/> et in visionibus saepe admonita , ne sanctum <lb/>
+						corpus a malo homine bene positum violaret. <lb/> Sed illa in intentione perdurante,
+						evidentius ei <lb/> apparuit sanctus  Vitalis , dicens ad eam : Noli <lb/> mihi molesta
+						esse, mulier; quia numquam mihi <lb/> tam gloriosum poteris parare sepulcrum , quale
+						<lb/> mihi Dominus Jesus Christus fieri jussit.</p>
+					<p>12. Ipsa autem dum reverteretur ad urbem  Mediolanensium   ,<lb/> incurrit homines
+						idololatras Silvano <milestone unit="PLSection" n="D"/><lb/> sacrificantes in itinere ;
+						quam  cum  vidissent, deponentes <lb/>   eam  de vehiculo, 486 hortabantur secum <lb/>
+						epulari. Cumque illa resistens, diceret : Christiana <lb/> sum, non licet mihi de
+						Silvani vestri sacrificiis  manducare   ,<lb/>  statim  illi haec audientes, tanta eam caede
+						<lb/> mactaverunt, ut vix eam seminecem sui homines ad <lb/> Mediolanensium urbem
+						perducerent, ita ut intra triduum <lb/>  migraret ad Christum.</p>
+					<p>13. Et posteaquam pater eorum beatus Vitalis <lb/> martyrio est coronatus, atque
+						beatissima mater  Valeria  <lb/>  migravit ad Christum, ab intestato jure Gervasius <lb/>
+						 et Protasius parentibus successissent; domum <milestone unit="PLSection" n="A"/><lb/> propriam in qua nati fuerant, et res universas parentum  ,<lb/> et casellulas
+						 venumdantes , dederunt omne <lb/> pretium pauperibus, et familiolam suam ingenuam <lb/>
+						fecerunt: ipsique se in uno coenaculo concluserunt, <lb/> et per decem annos lectioni et
+						orationi vacantes, <lb/> hoc ordine in anno conversionis suae undecimo ad <lb/> palmam
+						martyrii <note n="n"/> pervenerunt.</p>
+					<p>14.  Superveniente  comite Astasio, qui  proficiscebatur  <lb/>  ad bellum,  quod  a
+						Marcomanis fuerat excitatum  ,<lb/> <note n="b"/> occurrerunt ei templorum cultores cum sacrificandum <lb/>
+						 suis, dicentes : Si vis laetus ad Augustos <lb/> nostros reverti et victor,
+						Gervasium et Protasium <lb/> diis nostris sacrificare compelle ; vehementer  enim  <lb/>
+						dii nostri de eorum contemptu commoti, responsum <lb/> nobis dare contemnunt.</p>
+					<p>
+						<milestone unit="PLSection" n="B"/>15. Audiens haec Astasius comes jussit  eos  teneri,
+						<lb/> et ad se adduci. Quibus dixit : Hortor vos ut deorum <lb/>  nostrorum injurias
+						 temperantes , ad  immolandum  <lb/>  eis devoti studeatis insistere; ut expeditio mea
+						<lb/> gnaviter celebretur. Beatus Gervasius dixit: Victoriam <lb/>  de  coelo  debes ab
+						omnipotente Deo requirere, <lb/> non de simulacris immundis et vanis , quae oculos <lb/>
+						habent sine lumine, aures sine auditu, nares  sine  <lb/> odoratu, os sine sermone, manus
+						sine tactu, pedes <lb/> sine gressu, et ventrem absque interioribus probantur <lb/> 
+						habere,  et  sine flatu esse noscuntur. Indignatus <lb/>  comes Astasius jussit eum
+						tamdiu plumbatis <lb/> tundi. quamdiu exhalaret spiritum.</p>
+					<p>16. Quo amoto, jussit sibi  astare  Protasium, cui <lb/> dixit : Miser, vel tu vivere
+						stude , et noli <foreign xml:lang="grc">  </foreign>
+						<milestone unit="PLSection" n="c"/><lb/> fieri, sicut et frater tuus. Cui Protasius
+						respondens <lb/> ait: Quis est miser, ego qui non timeo, an tu qui <lb/> me timere
+						probaris? Comes dixit : Ego te, quomodo <lb/> timeo? Protasius respondit :  In  eo quod
+						te times laedi  ,<lb/> si non sacrificavero; si enim non timeres te laedi <lb/> a me, me
+						ad sacrificium non compelleres. Ego  autem . <lb/>  te non timens contemno minas tuas, et
+						omnia <lb/> idola tua, quasi stercora computans, Deum solum <lb/> qui regnat in coelis,
+						adoro.</p>
+					<p>47. Audiens haec Astasius, jussit eum fustibus <lb/> caedi. Postea vero erecto dixit. :
+						Miser, ut quid tam <lb/> superbus et tam rebellis existis? vis perire, sicut <lb/> tuum
+						probasti  perire  germanum ? Protasius dixit : <lb/> Non tibi irascor, nec ego, nec ipsa
+						justitia ; quoniam <lb/> caecos tui cordis oculos attendo : incredulitas enim ,
+							<milestone unit="PLSection" n="D"/><lb/> quae  in tuis sensibus   regnat, non te permittit
+						videre <lb/> quod Dei est. Nam et  Dominus  meus Jesus Christus, <lb/> crucifigentes se non
+						maledixit : sed potius ut eis indulgeretur  ,<lb/> oravit, addens et hoc, quia
+						nescirent <lb/> quid facerent. Unde et ego tui , misereor; quia nescis <lb/>  quid
+						facias. Age ergo quod coepisti, ut mihi possit <lb/>  cum meo fratre Gervasio  hodie 
+						benignitas  Salvatoris  <lb/>  nostri occurrere.</p>
+					<p> 18 . Tunc comes Astasius jussit eum capite  caedi . <lb/> Quod cum factum esset, ego
+						 Philippus  abstuli cum <lb/> filio meo furtim nocte sanctorum istorum corpora, <lb/> et
+						in domo mea, Deo solo teste, in ista arca saxea <note type="footnote"> a Rom. edit.idola
+								<hi rend="italic">reapuentea, sub</hi> Astasio <hi rend="italic">comile<lb/>
+								<lb/>
+								<lb/> in Mediolanensi</hi> civitate <hi rend="italic">die</hi> kalendarum juniarum
+								<hi rend="italic">feli-<lb/> citer, pevenerunt. Nam eo tempore superveniente,</hi>
+							etc. </note><note type="footnote"> b Eadem edit., <hi rend="italic">occurrerunt ei
+								cultores idolarum.</hi>
+						</note>
+						<note type="footnote"> PATROL. XVII. </note>
+						<note type="footnote"> 24 </note><pb n="747"/>
+						<milestone unit="PLSection" n="A"/><lb/> sapelivi, credens me orationibus eorum consequi
+						<lb/> misericordiam Domini nostri Jesu Christi, qui cum <lb/> Patre et Spiritu sancto
+						vivit et regnat in saecula sae- <lb/> cuiorum, amen.</p>
+					<ab>
+						<title type="sub">487 EPISTOLA ItI (Alias LV).</title>
+					</ab>
+					<p>Martyrum Vitalis <hi rend="italic">et</hi> Agricolae, qui Bononiae <hi rend="italic">inter</hi> tumu- <lb/> los Judaeorum <hi rend="italic">sepulti erant,</hi> factam cum
+							<hi rend="italic">plausu</hi> chris­ <lb/> tianorum, <hi rend="italic">Judaeorum</hi>
+						admiratione, ac <hi rend="italic">miraculis non <lb/> paucis</hi> inventionem <hi rend="italic">refert. Eoadem et a</hi> nomine <hi rend="italic">et a <lb/> constantia
+							in suppliciis laudat</hi> : aliaque nonnulla <lb/> subjicit ad <hi rend="italic">eamdem rem pertinantia.</hi>
+					</p>
+					<p>AMBROSIUS servus Jesu Christi, vocatus episcopus, <lb/> dilectissimis fratribus, a et
+						universis plebibus per <lb/> Italiam aeternam in Domino salutem.</p>
+					<p>1 Magna atque praecelsa martyrum testimonia, <milestone unit="PLSection" n="B"/>de
+						quibus vobis scripturus sum, noster potius atte- <lb/> nuat, quam explicat sermo. Verum
+						quod sermo at- <lb/> tenuat, virtus adauget; idcirco quod in me minus <lb/> est, in
+						martyribus luculenter resplendet.</p>
+					<p>1. invitamus itaque a plebe Bononiensi negare <lb/> praesentiam meam, Domino
+						suggerente, nullatenus <lb/> potui; quomam tempus aderat, ut sua quae Chri­ <lb/> stus
+						solet mirabilia, suis fidelibus ostenderet. Nam <lb/> Diocletiani et Maximiani
+						imperatorum temporibus <lb/> duo viri, Vitalis nempe et Agricola, pro Christo in <lb/>
+						civitate Bononiae martyrium passi sunt, quorum <lb/> corpora, ne a fidelibus
+						reperirentur, inter Judaeorum <lb/> sepulcra recondita Cucrant. Christum igitur couli-
+						<lb/> tentes, et pro ejus gloria morientes, inter eus qui <lb/> eum oegaveruut, indecore
+						sepulti sunt. Locum aU- <milestone unit="PLSection" n="c"/><lb/> tem, qui omnes latebat,
+						Christus Dominus noster <lb/> mihi revelare dignatus es1. Ubi jejuniis ct orationi­
+						<lb/> bus plures habentes excubias, inventibus tandem <lb/> pignora martyrum, prout mihi
+						Dominus revclavc- <lb/> rat, tamquam iuter spinas rosam legentes, et omni­ <lb/> bus
+						palam manifestata sunt.</p>
+					<p>3. Aderat populus christianus cum plausu et lae- <lb/> tiLia. Judaei ludentes dicebant :
+							<hi rend="italic">Flores</hi> visi Bunt in <lb/>
+						<hi rend="italic">terra</hi> nostra (Canl. II, 12). Respondebant christani : <lb/>
+						<hi rend="italic">Tempus</hi> incisioni. <hi rend="italic">advenit (Ibid.).</hi> Alii
+						dicebant : Alii <lb/> seminaverunt, et nos in eorum) labores introimus, <lb/> et
+						martyrum fructus recipimus ; ut quod scriptum <lb/> est impleatur, quod qui seminat, et
+						qui metit. mer­ <lb/> cedem accipit (Joan. IV, 58). Judaei audientes voces <lb/>
+						plaudentis Ecclesiae, ridentes dicebam : <hi rend="italic">Vox tirtu-</hi>
+						<milestone unit="PLSection" n="D"/><lb/> ris <hi rend="italic">audita</hi> est in <hi rend="italic">terra nostra</hi> (Callt. II, 12) : chrisLia. <lb/> ni dicebant : <hi rend="italic">Vincae florentes dederunt odorem</hi> suum <lb/>
+						<hi rend="italic">(Ibid.,</hi> 13). Unde bene per prophetam dicitur : <lb/>
+						<hi rend="italic">Dies diei eructat verbum, et uox nocti indicat scien-</hi>
+						<lb/> tiam <hi rend="italic">(Psal.</hi> XVIII, 3). Quasi dicat : <hi rend="italic">Diu
+							did,</hi> huc est, <milestone unit="PLSection" n="A"/><lb/> christianus christiano,
+							<hi rend="italic">et</hi> nox nocti, hoc est, Judaeus <lb/> Judaeo.</p>
+					<p>ł. Certe et ipsi daemones confitebantur, et ab ho­ <lb/> minum corporibus illico
+						egrediebantur. Et multi <lb/> qui variis vexabantur aegritudinibus, sanctorum <lb/>
+						tangentes sudaria, continuo sallabanlur, et plura <lb/> per sanctos suos mirabilia in
+						populi praesentia, dum <lb/> sacra veherentur pignora, operatus est Dominus.</p>
+					<p>5. Colligant ergo alii aurum atque argentum. et <lb/> de latentibus eruant vellis,
+						legant pretiosa moni- <lb/> lium serta : temporalis iste thesaurus est, et habell- <lb/>
+						tibus non infrequenter peruiciosus. Nos legimus <lb/> martyrum clavos; et plures quidem,
+						quia plura in <lb/> eis vulnera, quam membra fuerunt. Colligimus san­ <lb/> guinem
+						triumphalem, et crucis lignum. Namque sic- <milestone unit="PLSection" n="B"/><lb/> ut
+						qui ad convivium magnam invitantur, apapho- <lb/> reta secum referre consuerunt, ita nos
+						ex convivio <lb/> Вononiensi apophoreta gratiae et sanctitatis plena <lb/> nobis
+						reservare curavimus.</p>
+					<p>6. Sanctorum igitur martyrum uni nomen est Vi­ <lb/> talis, Agricola nomen alteri:
+						utrique nomen ap­ <lb/> tum; ut martyrio jam designati ipsis cuam voca­ <lb/> bulis
+						noscerentur. Nam ille Vitalis dictus est, <lb/> quasi per istius vitae contemptum, vitam
+						aliam quae <lb/> aeterna est, sibi compararet : iste vero Agricola, qui <lb/> bonos
+						spiritalis gratiae fructus sereret, al sui san­ <lb/> guinis effusione meritorum et
+						virtutum suarum <lb/> plantaria rigaret.</p>
+					<p>7. Sanctus V italis, cum apersccutoribus, ut <lb/> Christum negaret, imperartlur, ct
+						ille constantius <milestone unit="PLSection" n="c "/>b confiteretur; adeo omni
+						tormentorum genere cru­ <lb/> ciatus est, ut nullus ill ejus corpore sine vulnere es­
+						<lb/> set locus. Quare banc ad Dominum 488 orationem <lb/> effudit, dicens : Domine Jcsu
+						Christe Salvator meus <lb/> et Deus meus, jube soscipi spiritum meum; quia <lb/> jam
+						desidero accipere corOllam, quam sanctus an­ <lb/> gelus tuus mihi ostendit. Et completa
+						oratione, emi­ <lb/> sit spiritum.</p>
+					<p>8. Sanctus vero Agricola mitioribus ita praeditus <lb/> erat moribus, ut ab omnibus
+						impense diligeretur; <lb/> ideoque ejus passionem differebant. Verum perse- <lb/>
+						cutorum haec indulgentia, quapiam etiam immani- <lb/> tate martyri videbatur acerbior;
+						nec enim eurum <lb/> blandiliae sedulitatis, sed fraudis erant : differebant <lb/> quippe
+						coronam. Hinc namque tormenta supplicia- <milestone unit="PLSection" n="D"/><lb/> que
+						plura in sancto exercuere Vitale, ul sanctum <lb/> terrerent Agricolam : aed Domious
+						ilia in majorem <lb/> ejus constantiam vertit. Denique videntes nihil pro- <lb/> (icere,
+						eum tandem cruci affixerunt; sicque Deo <lb/> spiritum reddidit. <note type="footnote">
+							a Codex Reg., <hi rend="italic">et universae plebi aeternam</hi> in <hi rend="italic">Do-<lb/>
+							</hi>mino salutem. <hi rend="italic">Magna</hi> atque <hi rend="italic">praecelsa</hi>
+							martyrum <hi rend="italic">testi-</hi><lb/>
+							<lb/> monia,quae attenuat noster potius quam explicat ser-<lb/> mo.Igitur invitatus a
+							plebe <hi rend="italic">Bononiensi, negare prae­</hi><lb/>
+							<lb/> sentiam meam nullatenus potui; quoniam tempus ade-<lb/> rat, ut sua Dominus
+							miraebilia, quae solet, ostenderet.<lb/> Apophareta quidem plena sanctitatis et gratiae mecum<lb/>
+							<lb/>
+							<lb/>
+							<hi rend="italic">detuli : apophoreta autem solent habere triumphos<lb/> principum. Et
+								haec</hi> apophoreta <hi rend="italic">triumphi</hi> sunt;<lb/>
+							<hi rend="italic">Christi enim nostri principis</hi> triuphi sunt <hi rend="italic">matyrum</hi><lb/> palmae. Ergo quia in <hi rend="italic">me minus est,</hi> quam
+							praesume <hi rend="italic"><lb/> batur, in</hi> martyribus plus reperitur.Sancti martyris<lb/>
+							<lb/>
+							<lb/>
+							<lb/>
+							<hi rend="italic">nomen Agricola</hi> est.<hi rend="italic">Caetera</hi> vero eadem
+							serie, ac iis<lb/> dem verbis, excepata una aut altera sententia <hi rend="italic">ha-<lb/> bentur</hi> in Exhortat. Virgin. <hi rend="italic">a cap</hi> 1, num. 2,
+							usque<lb/> ad cap <hi rend="italic">2, num.</hi> 10. Sed post verba: hodie
+							dedica-<lb/> mus subjungitur illa invocatio quam in lib. cit.<hi rend="italic">cap.<lb/> 14, num.</hi>94, legere est: postquam additur clausu-<lb/> la : Passi
+							sunt, etc., ut infra. </note><note type="footnote">b Reg. codex, profiteretur Dominum
+							Jesum Chri-<lb/> stum, illis omnium tormentorum in eo genera exercen-<lb/> tibus, ita
+							ut non esset, etc. <lb/>
+						</note><lb/>
+						<lb/>
+					</p>
+					<pb n="740"/>
+
+					<p>
+						<milestone unit="PLSection" n="A"/>4. Sanctus Vitalis sancti Agricolae servus fuerat, .
+						<lb/> mox  ejus  in passione socius, nunc gloriae consors <lb/> factus est. Merito autem
+						sanctus Vitalis primo passus <lb/>  est, et ut servus praecessit ; quia domino  parabat -
+						<lb/>  locum : secutus est dominus, ut servi prudentis <lb/>  fidem probaret  . Passio
+						servi  disciplina  est Domini : <lb/> hic instituit, ille implevit; nihil illi servitute
+						 decerpitur   .<lb/> Quomodo  autem  minui potest, quod Christus <lb/> donavit egregie  ? 
+						Ille quidem homini  serviendo  didicit <lb/>  quomodo placeret Christo : hic geminam acquisivit
+						<lb/>  laudem in  illo  magisterii, in se martyrii. <lb/> Beneficiis mutuo
+						certaverunt ,  postquam  aequales <lb/> esse meruerunt ; hic illum ad martyrium praemisit,
+						<lb/> ille istum accersivit. Nihil ergo ad meritum hominis <lb/>  conditio detraxit,
+						nihil dignitas auxit: sed <milestone unit="PLSection" n="B"/><lb/> utrumque fides
+						consummavit. Nam scriptum est : <lb/> Sive <hi rend="italic">liber,</hi>  sive  <hi rend="italic">servus ,  omnes .</hi> in Christo unum sumus   ;<lb/> et : Unusquisque <hi rend="italic">quod fecerit</hi> bonum , <hi rend="italic">hoc recipiet <lb/>  a
+							Domino  (Ephes .</hi> VI, 8). Apud Dominum enim <lb/> servitus et libertas aequa lance
+						penduntur: cum <lb/> nulla sit major dignitas, quam servire Christo, qui <lb/>  tanti  nos
+						aestimavit, ut animam suam pro nobis traderet  .<lb/></p>
+					<p>10. Haec vobis pauca et compendiario,  dilectissimi  <lb/>  fratres, de corporum sanctorum
+						martyrum inventione <lb/>   significare  curavimus; ut ipsorum memoriam <lb/>  in
+						Ecclesiis facere valeatis. Passi sunt autem <lb/> sancti martyres sub Diocletiano et
+						Maximiano  imperatoribus    ,<lb/> in civitate Bononiensi provinciae Italiae  ,<lb/>
+						pridie nonas Novembris, regnante Jesu Christo <milestone unit="PLSection" n="C"/><lb/>
+						Domino nostro, cui est omnis honor et  gloria  in saecula <lb/>  saeculorum, amen.</p>
+					<ab>
+						<title type="sub"> EPISTOLA  IV <hi rend="italic">(Alias</hi>  XXIX) X).</title>
+					</ab>
+					<ab>
+						<title type="sub"><hi rend="italic">Florianum ad</hi> maturam <hi rend="italic">et
+								continuam</hi>  poenitentiam  <hi rend="italic">excitans , quid</hi>  ipsi sive in  <hi rend="italic"></hi>  <hi rend="italic">dictis</hi>  sive  in <hi rend="italic"> factis  sequendum  fugiendumve  sit , praescribit.</hi>
+						</title>
+					</ab>
+					<ab>
+						<title type="sub">AMBROSIUS episcopus  FLORIANO .</title>
+					</ab>
+					<p> 1 . Dilecte fili, dilige lacrymas,  noli  differre eas. <lb/> Tantum promptus esto ad
+						lamenta, quantum fuisti <lb/> promptus et pronus ad culpam. Nulla res de peccato <lb/>
+						te securum faciat (Eccl. v, 5).</p>
+					<p>9.  Non  potes iram vitare, saltem tempera. Magna <lb/>  gloria est, si cui potuisti
+						nocere , parcas; peccanti <lb/>  in te non retribuas secundum  culpam , sciens <milestone unit="PLSection" n="D"/><lb/> in te venturum esse judicium. Nam non habebis inventione 
+						,<lb/> nisi alteri donaveris; odium enim hominem <lb/>  separat a regno, a  coelo 
+						subtrahit, a paradiso <lb/> dejicit (Jacob.  II , ł3).</p>
+					<p>3.  In  omnibus actibus tuis imitare bonos, aemulare <lb/>  sanctos, habeto ante  oculos 
+						exempla sanctorum <lb/>  :  socios  tibi bonos conjunge; quia si socius fueris <lb/> 
+						conversationis, eris et virtutis <hi rend="italic"> (Psal .</hi> XVII, 26). <lb/>
+						Periculosum est  cum  his qui male vivunt, conversari  .<lb/> Melius est ergo habere
+						malorum  odium , quam <lb/> consortium.</p>
+					<p>
+						<milestone unit="PLSection" n="A"/>,. Vanus sermo cito polluit mentem : et  facile  <lb/>
+						agitur, quod libenter auditur. Hoc proferatur ex  labiis   ,<lb/> quod aures non polluat
+						audientis. <note n="a"/> Mores hominem <lb/>   lingua  pandit; et qualis sermo ostenditur,  labiis  <lb/>
+						 animus comprobatur : Ex <hi rend="italic">abundantia</hi> enim cordis <lb/> os
+						loquitur, ut scriptum est <hi rend="italic">(Matth.</hi> XII, 34). Retine <lb/> verbum
+						quod non aedificat audientes; quia qui otiosum <lb/>  verbum non reprimit, cito <note n="D"/> ad
+						noxia transit. <lb/> 489 3. De alieno malo os tuum non coinquines : <lb/> numquam
+						detrahas peccanti, sed condole :  quod  in <lb/> aliis detrahis,  in  te potius pertimesce.
+						Numquam <lb/> profecto detrahes, si te ipsum  bene  perspexeris. <lb/> Tantum cura
+						corrigere vitam tuam, quantum prospicis <lb/>  alienam. Per nullam fallaciam vitam
+						alicujus <lb/> defendas.</p>
+					<p>
+						<milestone unit="PLSection" n="B"/>6. Nec plaga, nec  mors  te terrebit, si bene et pie
+						<lb/> vixeris. Curiositas  periculosa  praesumptio est. Plus <lb/> dilige  audire ,  quam 
+						dicere :  plus auscultare  , quam <lb/> loqui.  Qui  obtemperat in malo, similis est ei, qui
+						<lb/> facit malum. Facientem et obsequentem <note n="c"/> par  poenitentia  <lb/>  constringit.
+						Quidquid boni cum discretione <lb/>  feceris , virtus est : virtus vero  indiscreta  pro
+						vitio <lb/> deputatur.</p>
+					<p>7. Testimonium tuum nulli noceat : sermo tuus <lb/> non sit reprehensibilis, sed ab
+						omnibus sit acceptus <lb/> atque laudabilis. Nullius personae affectu a recto <lb/>
+						judicio  deflectaris , an dives, an pauper sit; causam <lb/> respice, non personam.
+						Justitiam pro sola aeterna <lb/> retributione  distribue  ; qui enim praesentia dona <lb/>
+						affectat,  futuram  gloriam  non  quaerit,  vel  sperat. In <milestone unit="PLSection" n="c"/><lb/> judicio numquam misericordiam deseras : <note n="d"/> impia <lb/> justitia est humanae
+						fragilitati non ignoscere. Nullum <lb/> ante judicium  condemnes  :  nullum judices 
+						suspicionis <lb/> arbitrio.</p>
+					<p>8.  Cave  honores, quos tenere sine culpa non <lb/> potes. <note n="c"/> Sublimitas honorum sine
+						onere peccati vix <lb/> tenetur; ideo dicit Apostolus : <hi rend="italic">Nec
+							quaerentes</hi> ab <lb/> hominibus <hi rend="italic">gloriam</hi> (I <hi rend="italic"> Thess .</hi> II, 6); in majori enim <lb/> gradu 490 major  sine  dubio culpa est : qui
+						minor <lb/> est, veniae proximus est.</p>
+					<p>9. Nullus <note n="t"/> sine peccati  periculo  terrenas res <lb/> administrat : valde rarum est, ut
+						qui  divitias   possidet, <lb/> ad requiem tendat. Unde scriptum est : <hi rend="italic">Amen</hi> dico <lb/> vobis <hi rend="italic">quod</hi> dives  difficile  intrabit in
+						 regnum coelorum   <milestone unit="PLSection" n="D"/><lb/> ( <hi rend="italic">Matth.</hi>
+						XIX, 23 ). Qui curis terrenis se implicat, 8 a <lb/>  Domino  se separat. Nemo potest
+						amplecti Dei gratiam <lb/>  simul  et saeculi. Difficile est  coelestibus  et terrenis <lb/>
+						 curis  simul insistere. Difficile est Deum simul et <lb/> mundum diligere. Toto animo odi
+						et damna quod <lb/> diligit  mundus . Tamquam mortuus, a labe et affectu <lb/> istius
+						mundi te separa : sicut sepultus, nullam habeas <lb/> curam de hoc saeculo : tamquam
+						defunctus, ab omni <lb/> terreno te priva negotio. Contemne vivens, quae post <lb/>
+						mortem habere non poteris.</p>
+					<p>10. <note n="L"/> Omnibus tribue : non  elisas ,  cui                                                                                 miserearis   ; <note type="footnote"> a Rom. edit.
+								<hi rend="italic">Mentem</hi> hominia, etc. </note>
+						 ,<lb/> <note type="footnote"> b Eadem edit., <hi rend="italic">ad</hi> noxiam trahit.
+							</note><note type="footnote">c Reg. Codex, perpetua paena contstingit. </note><note type="footnote">d. Codex Reg., impia mens est, etc. </note><note type="footnote"> e
+							Idem cod. Sublimatus honorem <hi rend="italic">agnitudo est scele.</hi>
+							<lb/> rum : iit majori codex, line <hi rend="italic">gradu</hi> etc. </note><note type="footnote">f Regius edit. <hi rend="italic">ab 'Pftu;ato lerrella. rei</hi> etc
+							</note><note type="footnote"> g Rom. <hi rend="italic">eo te separa. tribue..</hi>
+							Minus commode. </note><note type="footnote"> h Eadem edit. Omnibus te <hi rend="italic">tribus ne forte</hi> praeferas <lb/> illum, etc. </note><pb n="751"/>
+						<milestone unit="PLSection" n="A"/><lb/> ne forte praetereas ilium, qui meretur accipere
+						: <lb/> incertum est enim pro quo placens magis Dco. Non <lb/> auferas uni unde tribuas
+						atteri; ne alieno spolio <lb/> misericordem te ostendas : condemnat miseratio ista,
+						<lb/> non proficit.</p>
+					<p>11. Bonum quod facis, misericordiae, non jactantiae <lb/> causa facias; si enim hic laus
+						quaeritur, in caelo <milestone unit="PLSection" n="A"/><lb/> remuneratio amiuilur. a Dc
+						his dicitur : AmeM <hi rend="italic">dico <lb/> vobis, receperunt mercedem</hi> suam (
+							<hi rend="italic">Matth.</hi> VI, 5).Justis <lb/> in coelo, non in terra merces
+						promiLlilur.</p>
+					<p>12. Lege qnod scripserim; Vate, et vide ne quod legendo <lb/> miraris, vivendo
+						contemnas. et nos dilige; <lb/> quia te ut filium nos diligimus. <note type="footnote">
+							a <hi rend="italic">De his dicitur</hi> haec verba cum subjecto MalLhaei <lb/> loco in
+							Reg. <hi rend="italic">promiltitu,.</hi> epistola in hunc modum cod. desiderantur : in
+							desinit quo etiam post <lb/> verbum : <lb/>
+							<hi rend="italic">Vide</hi> qrl;.qu;s <hi rend="italic">hoc coratemrras.</hi> LaMa <hi rend="italic">Amen.</hi><hi rend="italic">legia, Deo. ne quod legendo reapicis,</hi>
+							vi- <lb/>
+							<hi rend="italic">nendo</hi>
+						</note>
+					</p>
+				</div>
+
+				</body></text></TEI>

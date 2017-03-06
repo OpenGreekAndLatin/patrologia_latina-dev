@@ -1,0 +1,500 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><TEI xmlns="http://www.tei-c.org/ns/1.0"><teiHeader>
+    
+		<fileDesc>
+			<titleStmt>
+				<title>Patrologiae Cursus Completus. Series Latina (PL)</title>
+				<sponsor>University of Leipzig</sponsor>
+				<funder>European Social Fund Saxony</funder>
+				<principal>Gregory Crane</principal>
+				<respStmt>
+					<persName xml:id="Jouve">Jouve</persName>
+					<resp>OCR-ed, corrected and encoded the text</resp>
+				</respStmt>
+				<respStmt>
+					<persName>Greta Franzini</persName>
+					<resp>Project Manager (University of Leipzig)</resp>
+				</respStmt>
+				<respStmt>
+					<persName>Simona Stoyanova</persName>
+					<resp>Project Assistant (University of Leipzig)</resp>
+				</respStmt>
+				<respStmt>
+					<persName>Bruce Robertson</persName>
+					<resp>Technical Advisor (Mount Allison University)</resp>
+				</respStmt>
+			</titleStmt>
+
+			<publicationStmt>
+				<authority>University of Leipzig</authority>
+				<idno type="filename">PL51.xml</idno>
+				<availability>
+					<licence target="https://creativecommons.org/licenses/by-sa/4.0/">Available under a
+						Creative Commons Attribution-ShareAlike 4.0 International License</licence>
+				</availability>
+				<date>2014</date>
+				<publisher>University of Leipzig</publisher>
+				<pubPlace>Germany</pubPlace>
+			</publicationStmt>
+
+			<sourceDesc>
+				<listBibl xml:lang="la">
+					<biblStruct>
+						<monogr>
+							<editor>
+								<persName>
+									<name xml:lang="fr">Jacques Paul Migne</name>
+								</persName>
+							</editor>
+							<author>Prosperus Aquitanus</author>
+							<title>Epistola Ad Augustinum</title>
+							<title>Epistola Ad Rufinum 'De Gratia Et Libero Arbitrio'</title>
+							<title>Peri Axariston. Seu De Ingratis Carmen In Quatuor Partes Distributum</title>
+							<title>Epigrammata In Obtrectatorem Augustini</title>
+							<title>Epigrammata In Quempiam Augustini Obtrectatorem</title>
+							<title>Epitaphium Nestorianae Et Pelagianae Haereseon</title>
+							<title>Pro Augustino Responsiones Ad Capitula Gallorum</title>
+							<title>Responsiones Ad Capitula Objectionum Gallorum Calumniantium</title>
+							<title>Pro Augustino Responsiones Ad Capitula Objectionum Vincentianarum</title>
+							<title>Pro Augustino Responsiones Ad Excerpta Genuensium</title>
+							<title>Pro Defensione Augustini Contra Cassiani Presbyteri Librum</title>
+							<title>Expositio Psalmorum A Centesimo Usque Ad CL</title>
+							<title>Sententiarum Ex Operibus Augustini Delibatarum Liber Unus</title>
+							<title>Epigrammatum Ex Sententiis Sancti Augustini Liber Unus</title>
+							<title>Chronicum Integrum In Dua Partes Distributum</title>
+							<title>Chronicum Integrum In Dua Partes Distributum [Appendicula]</title>
+							<title>Confessio [Incertus]</title>
+							<title>Poema Conjugis Ad Uxorem [Incertus]</title>
+							<title>Carmen De Providentia Divina [Incertus]</title>
+							<title>Libri Duo De Vocatione Omnium Gentium [Incertus]</title>
+							<title>Liber De Promissionibus Et Praedictionibus Dei A Nonnullis [Incertus]</title>
+							<title>Chronicum Alterum Sive Pseudochronicum [Incertus]</title>
+							<imprint>
+								<publisher>Garnier</publisher>
+								<pubPlace>Paris</pubPlace>
+								<date>1846</date>
+							</imprint>
+							<biblScope unit="volume">51</biblScope>
+						</monogr>
+						<monogr>
+							<title>Concilium Arausicanum I</title>
+							<imprint>
+								<publisher>Garnier</publisher>
+								<pubPlace>Paris</pubPlace>
+								<date>1846</date>
+							</imprint>
+							<biblScope unit="volume">51</biblScope>
+						</monogr>
+						<monogr>
+							<author>Idatius Aquaeflaviensis Episcopus</author>
+							<title>Chronicum</title>
+							<title>Descriptio Consulum Ex Quo Primum Ordinati Sunt [Codex Parisiensis]</title>
+							<imprint>
+								<publisher>Garnier</publisher>
+								<pubPlace>Paris</pubPlace>
+								<date>1846</date>
+							</imprint>
+							<biblScope unit="volume">51</biblScope>
+						</monogr>
+						<monogr>
+							<author>Marcellinus Comes</author>
+							<title>Chronicum</title>
+							<imprint>
+								<publisher>Garnier</publisher>
+								<pubPlace>Paris</pubPlace>
+								<date>1846</date>
+							</imprint>
+							<biblScope unit="volume">51</biblScope>
+						</monogr>
+						<ref target="http://hdl.handle.net/2027/pst.000017928816">HathiTrust</ref>
+
+					</biblStruct>
+				</listBibl>
+			</sourceDesc>
+
+		</fileDesc>
+		<encodingDesc>
+			<p>The following text is encoded in accordance with EpiDoc standards and with the CTS/CITE
+				Architecture.</p>
+		<refsDecl>
+        <cRefPattern n="" matchPattern="(.+).(.+).(.+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@type='edition']/tei:div[@n='$1']/tei:div[@n='$2']/tei:div[@n='$3'])"/>
+        <cRefPattern n="" matchPattern="(.+).(.+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@type='edition']/tei:div[@n='$1']/tei:div[@n='$2'])"/>
+        <cRefPattern n="" matchPattern="(.+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@type='edition']/tei:div[@n='$1'])"/>
+      </refsDecl>
+    </encodingDesc>
+
+		<profileDesc>
+			<langUsage>
+				<language ident="la">Latin</language>
+			</langUsage>
+		</profileDesc>
+
+	</teiHeader>
+	<text><body><div type="edition" n="">
+					<head>
+						<title type="main">S. PROSPERI AQUITANI <note n="a"/> EPISTOLA AD AUGUSTINUM,</title>
+					</head>
+					<p>De reliquiis Pelagianae haereseos in Gallia subolescentibus, deque hujusmodi hominum
+						querelis <lb/> adversus praedestinationis et gratiae doctrinam, Augustini opusculis,
+						praesertim libro de Correptione <lb/>  et Gratia, explicatam.</p>
+					<p>
+						<milestone unit="PLSection" n="A"/>Domino beatissimo papae, ineffabiliter mirabili,  incomparabiliter  .
+						<lb/>  honorando, praestantissimo patrono, <lb/> AUGUSTINO  PROSPER .</p>
+					<p> 1  1. Ignotus quidem tibi facie, sed jam aliquatenus, <lb/> si reminiscaris, : animo  ac
+						sermone compertus; nam <lb/> per sanctum fratrem meum Leontium diaconum <lb/> misi <note n="b"/>
+						epistolas et recepi; nunc quoque beatitudini <lb/> tuae scribere audeo, non solum
+						salutationis, ut tunc, <lb/> studio; sed etiam fidei qua Ecclesia vivit affectu. <lb/>
+						Excubante enim pro universis membris  corporis  <lb/> Christi vigilantissima industria tua
+						, et adversus <lb/> haereticarum doctrinarum insidias  veritatis  virtute <lb/> pugnante,
+						nullo modo mihi  verendum  putavi ne onerosus <lb/>  tibi aut importunus essem in eo quod
+						ad multorum <lb/>  salutem, ac perinde ad pietatem tuam, pertinet <milestone unit="PLSection" n="B"/><lb/>  : cum potius reum futurum esse me crederem, <lb/>
+						si ea quae valde perniciosa esse intelligo ad specialem <lb/>  patronum fidei non
+						referrem.</p>
+					<p>2. Multi ergo servorum  Christi   qui in  Massiliensi  <milestone unit="PLSection" n="A"/><lb/>
+						 urbe consistunt, in sanctitatis tuae scriptis <lb/> quae adversus Pelagianos
+						haereticos condidisti, contrarium <lb/>  putant Patrum opinioni et ecclesiastico <lb/>
+						sensui quidquid in eis de vocatione  electorum  secundum <lb/>  Dei  propositum  
+						disputasti. Et cum  aliquamdiu   <lb/>  tarditatem suam  2  culpare maluerint quam non <lb/>
+						 in ellecta reprehender e    , quidamque eorum  lucidiorem . <lb/>  super hoc atque apertiorem
+						beatitudinis tuae <lb/> expositionem voluerint postulare : evenit, ex dispositione <lb/>
+						 misericordiae Dei, ut. cum <note n="d"/> quosdam intra <lb/> Africam similia movissent, <note n="e"/>
+						librum de Correptione <lb/> et Gratia, plenum divinae auctoritatis, emitteres. <lb/> Quo
+						in notitiam nostram insperata  opportunitate  <lb/> delato,  putavimus   omnes querelas
+						 resistentium  sopiendas   ,<lb/> quia universis quaestionibus de quibus <milestone unit="PLSection" n="B"/><lb/> consulenda erat sanctitas tua tam plene illic absopiendas
+						<lb/>  responsum est, quasi hoc specialiter studueris <lb/>  ut quae apud nos
+						erant turbata componeres. <lb/> Recensito autem hoc beatitudinis tuae libro, sicut <note type="footnote"> • Rcrit":' cst anno 4!8 aUt 429. </note><note type="footnote"> k
+							Quniior loss., epUioltm. Ha;c non exstat. </note><note type="footnote"> • Savorum
+							Christi, id .'st, monachorum, (Iuornm <lb/> nominatissimus Joanuci Cassianu*
+							CoJationuai edi­ <lb/> tor, ipsius Protperi contra CollaLoreln libro postea <lb/>
+							CUllruta; us. </note><note type="footnote">d hi esl, Adrumelinns monachos.
+							</note><note type="footnote"> « liabetur inlra Appeall. p iri. II, i&gt;ag. 221«' </note><pb n="69"/>
+						<milestone unit="PLSection" n="A"/><lb/> qui sanctam atque apostolicam doctrinae tuae auctoritatem
+						<lb/>  antea sequebantur, intelligentiores multo <lb/> instructioresque  sunt 
+						facti; ita qui persuasionis suae <lb/> impediebantur obscuro, aversiores quam fuerant
+						<lb/> recesserunt. Quorum tam abrupta dissensio primum <lb/> propter ipsos metuenda est,
+						ne tam claris  tamque egregiis  <lb/>  in omnium virtutum studio viris spiritus <lb/>
+						Pelagianae impietatis illudat : <note n="a"/> deinde ne simpliciores <lb/>  quique, apud quos horum
+						magna est de probitatis <lb/>  contemplatione 3 reverentia, hoc tutissimum <lb/> sibi
+						aestiment, quod audiunt eos quorum auctoritatem <lb/>  sine judicio sequuntur
+						asserere.</p>
+					<p>5. Haec enim ipsorum definitio ac professio est : <lb/> Omnem quidem hominem Adam
+						peccante peccasse; <lb/> et neminem per opera sua, sed per Dei gratiam regeneratione <milestone unit="PLSection" n="a"/><lb/>  salvari; universis tamen hominibus propitiationem
+						<lb/>  quae est in sacramento sanguinis Christi <lb/> sine exceptione esse
+						propositam ; ut quicumque ad <lb/> fidem et ad baptismum accedere voluerint, salvi <lb/>
+						esse  possint . Qui autem credituri sunt, quive in ea <lb/> fide, quae deinceps per Dei
+						gratiam sit  juvanda , <lb/> mansuri sunt, praescisse ante mundi constitutionem <lb/> Deum,
+						et eos praedestinasse in  regnum  suum, quos <lb/> gratis vocatos, dignos futuros
+						electione, et de hac <lb/> vita  bono  fine excessuros esse praeviderit. Ideoque <lb/>
+						omnem hominem ad credendum et ad sperandum <lb/> divinis institutionibus admoneri, ut de
+						apprehendenda <lb/>  vita aeterna nemo desperet, cum voluntariae <lb/> devotioni
+						remuneratio sit parata. Hoc autem propositum <lb/>  vocationis Dei, quo vel ante mundi
+						initium, <milestone unit="PLSection" n="C"/><lb/>  vel ! in ipsa conditione generis humani,
+						eligendorum   ; <lb/> et rejiciendorum dicitur facta discretio, ut, secundum <lb/> 
+						quod placuit Creatori, alii vasa honoris,  alii  <lb/> vasa contumeliae sint creati, et
+						lapsis curam resurgendi <lb/>  adimere, et sanctis occasionem teporis  afferre  <lb/>  :
+						eo quod in utraque parte superfluus labor <lb/> sit, si neque rejectus ulla industria
+						possit intrare, <lb/> neque electus ulla negligentia possit excidere. Quoquo <lb/> 
+						enim modo se egerint, non posse aliud erga eos <lb/> quam Deus definivit, accidere : et
+						sub incerta spe <lb/> cursum non posse esse constantem ; cum si aliud <lb/> habeat
+						praedestinantis electio, cassa sit annitentis <lb/> intentio. Removeri itaque omnem
+						industriam, !­ <lb/>  tollique  virtutes, si Dei constitutio humanas praeveniat <lb/> 
+						voluntates : et sub hoc praedestinationis nomine ,<milestone unit="PLSection" n="D"/>
+						<lb/> fatalem quamdam induci necessitatem ;  aut  <lb/> diversarum naturarum dici Dominum
+						conditorem, <lb/> si nemo aliud possit esse quam <note n="b"/> factus est. <note n="c"/> Utque <lb/> brevius ac
+						plenius quod opinantur exponam, quidquid <lb/>  in libro hoc ex contradicentium sensu
+						sanctitas <lb/>  tua  sibi opposuit  , quidquid  etiam  in libris contra <lb/> Julianum ab
+						ipso sub hac quaestione objectum potentissime <lb/>  debellasti, hoc totum ab istis
+						sanctis <lb/> intentiosissime conclamatur.  Et  cum contra  eos  <lb/> scripta  beatitudinis 
+						tuae validissimis et innumeris <milestone unit="PLSection" n="A"/><lb/> <note n="i"/> testimoniis
+						divinarum Scripturarum instructa propitiationem  ,<lb/> ac, secundum formam disputationum
+						tuarum  ,<lb/> <note n="d"/> aliquid etiam ipsi quo concludantur astruimus   ;<lb/> obstinationem
+						suam  vetustate   defendunt. et <lb/> ea quae de Epistola apostoli Pauli Romanis scribentis
+						<lb/>  ad manifestationem divinae gratiae praevenientis <lb/> electorum merita
+						 proferuntur , a nullo  un quam ecclesias icorum   <lb/>   ita esse intellecta ut nunc sentiuntur
+						<lb/>  4 affirmant. Cumque ut ipsi ea exponant secundum <lb/>  quorum velint sensa
+						deposcimus, nihil se propitiationem <lb/>  invenis e quod  placeat , et de his  taceri  <lb/>
+						exigunt quorum altitudinem nullus  attigerit . Eo <lb/> postremo pervicacia tota
+						descendit, ut fidem nostram <lb/>   aedificationi  audientium contrariam esse definiant 
+						;<lb/> ac sic  etiam  si vera sit, non promendam : <milestone unit="PLSection" n="a"/><lb/> quia et perniciose non recipienda tradantur, et <lb/> nullo periculo qu: 
+						 nequeant conticeantur.</p>
+					<p>4. Quidam vero horum in tantum a Pelagianis <lb/> semitis non declinant, ut cum ad
+						confitendam  eam  <lb/> Christi gratiam quae omnia praeveniat  merita  humana <lb/> cogantur, ne
+						si meritis redditur, frustra  gratia  nominetur   ;<lb/> ad conditionem hanc  velint uniuscujusque 
+						 hominis <lb/>  pertinere, in  qua  eum nihil prius merentem, <lb/> quia  nec 
+						existentem, liberi arbitrii et  rationalem  <lb/> gratia Creatoris instituat, ut per
+						discretionem boni <lb/> ac mali, et ad cognitionem Dei, et ad obedientiam <lb/>
+						mandatorum ejus possit suam dirigere voluntatem, <lb/> atque ad hanc gratiam qua in
+						Christo renascimur <lb/> pervenire, per naturalem scilicet facultatem, petendo  ,<lb/>
+						quaerendo,  pulsando  : ut ideo accipiat, ideo <milestone unit="PLSection" n="C"/><lb/>
+						inveniat, ideo  introeat , quia bono  naturae  bene <lb/> usus, ad istam salvantem gratiam
+						initialis gratiae <lb/> ope meruerit pervenire. Propositum autem vocantis <lb/>  gratiae
+						in hoc omnino definiunt, quod Deus constituerit <lb/>  nullum in regnum suum  nisi  per
+						sacramentum <lb/>  regenerationis assumere, et ad hoc  salutis   <lb/> donum omnes
+						homines universaliter, sive per naturalem  ,<lb/> sive per scriptam legem, sive per
+						evangelicam <lb/>  praedicationem vocari : ut et qui voluerint <lb/> fiant filii  Dei , et
+						inexcusabiles sint qui fideles esse <lb/> noluerint: quia justitia Dei in eo sit, ut qui
+						non <lb/> crediderint pereant; bonitas in eo appareat, si  neminem  <lb/>  repellat a
+						 vita , sed indifferenter universos <lb/> velit salvos fieri, et in agnitionem veritatis
+						venire. <lb/> Jam hic proferunt testimonia quibus divinarum <milestone unit="PLSection" n="D"/><lb/> Scripturarum cohortatio ad obediendum incitat hominis <lb/>  voluntates,
+						qui ex libero arbitrio, aut faciant <lb/>  qui jubentur, aut negligant : et consequens
+						<lb/> putant ut quia praevaricator ideo dicitur non  obedisse   ,<lb/> quia noluit,
+						 fidelis  quoque non dubitetur ob <lb/> hoc devotus fuisse , quia voluit; et quantum quisque
+						<lb/>  ad malum,  tantum   habeat facultatis ad bonum ; <lb/> parique momento animum se
+						vel ad vitia  vel  ad virtutes <lb/>  movere, quem bona appetentem gratia Dei <lb/>
+						foveat, mala sectantem damnatio justa susc . <note type="footnote"> • Abest vox haec
+							deinde a mss. HeB. doobus et <lb/> Colb.. sed sanc ex lapsu amanuensium, ut patebit
+							<lb/> CLLUlocum. </note><note type="footnote"> * Ala. Reg, uouS) factus sit. ,
+							</note><note type="footnote">c Sic mss. duo Rr.g. ei Co'b. un ,g, irem edit. <lb/>
+							liujus ppi..lnl;,! tomo A Ojx um S. Aug. nor. edit.; <lb/> alias. Ai&lt;ine ut.
+							</note><note type="footnote">d Ms. Hcg. uuus, aliud It;.... </note><pb n="71"/>
+					</p>
+					<p>
+						<milestone unit="PLSection" n="A"/> 5 . Cumque inter haec innumerabilium illis multitudo<lb/>
+						 objicitur  parvulorum  qui utique, excepto originali <lb/>  peccato,  sub  quo omnes
+						homines similiter in <lb/> primi hominis damnatione nascuntur, nullas adhuc <lb/>
+						habentes voluntates, nullas proprias actiones, non <lb/>  sine  Dei judicio secernuntur,
+						ut ante discretionem <lb/> boni ac 5 mali de usu vitae istius auferendi, alii <lb/> per
+						regenerationem inter coelestis regni assumantur <lb/> haeredes, alii sine baptismo inter
+						mortis perpetuae <lb/>  transeant  debitores : tales aiunt perdi, talesque  salvari   ,<lb/>
+						quales futuros illos in annis majoribus, si <lb/> ad activam servarentur  aetatem  .
+						scientia divina praeviderit  .<lb/> Nec considerant se gratiam Dei. quam comitem 
+						,<lb/> non praeviam humanorum volunt esse meritorum  ,<lb/> etiam illis voluntatibus
+						subdere, quas ab <lb/> ea secundum suam phantasiam, non  negant esse   <milestone unit="PLSection" n="B"/><lb/> praeventas. Sed in tantum  quibuscumque  commentitiis <lb/>
+						  merit s electi ' nem   '  Dei subjiciunt, ut quia praeviderit <lb/>  quae non exstant,
+						futura quae non sint futura <lb/> confingant;  novoque  apud illos absurditatis genere,
+						<lb/> et non agenda praescita sint, et praescita non acta <lb/> sint. Hanc  sane  de humanis
+						meritis praescientiam <lb/> Dei, secundum quam gratia vocantis operetur, <lb/> multo sibi
+						rationabilius videntur astruere, cum ad <lb/> earum nationum contemplationem venitur,
+						quae vel <lb/> in praeteritis saeculis dimissae sunt ingredi vias suas <lb/> (Act. xiv, 15),
+						vel nunc quoque adhuc in  veteris  <lb/> ignorantiae impietate depereunt,nec ulla  eis  aut
+						Legis <lb/>  aut Evangelii illuminatio coruscavit, cum tamen  ,<lb/> in quantum
+						praedicatoribus ostium  apertum  <lb/> est et via facta est, gentium populus qui sedebat
+							<milestone unit="PLSection" n="C"/><lb/> in tenebris et in umbra mortis, lucem viderit
+						magnam <lb/>  (Isa. ix, 2; Matth. IV. 16); et qui quondam <lb/> non populus, non autem
+						populus Dei sit;  et  quorum <lb/> aliquando non misertus est, nunc autem  misereatur 
+						<lb/> (Oseae II, 24, et Rom. ix, 25) : praevisos inquiunt a <lb/> Domino credituros, et ad
+						 unamquamque  gentem <lb/> ita dispensata tempora ac ministeria magistrorum, <lb/> ut
+						exortura  erat  bonarum credulitas voluntatum. <lb/> Nec vacillare illud, quod Deus omnes
+						homines  velit  <lb/> salvos fieri, et in agnitionem veritatis venire (I Tim. <lb/> II, 4)
+						: quandoquidem inexcusabiles sint, qui et ad <lb/> unius veri Dei cultum potuerint
+						instrui  intelligentia   <lb/> naturali, et Evangelium ideo non audierint, quia <lb/> nec
+						fuerint recepturi.</p>
+					<p>
+						<milestone unit="PLSection" n="D"/>6. Pro universo autem humano genere mortuum <lb/>
+						esse Dominum nostrum Jesum Christum, et neminem <lb/>  prorsus a redemptione sanguinis
+						ejus exceptum, <lb/> etiamsi omnem hanc vitam alienissima ab  eo  mente <lb/> pertranseat,
+						quia ad omnes homines pertineat divinae <lb/>   misericordiae   sacramentum : quo ideo
+						plurimi <lb/> non renoventur, quia quod nec renovari velle habeant <lb/>  praenoscantur.
+						Itaque quantum ad Deum  pertinet   ,<lb/> omnibus paratam vitam aeternam; quantum <lb/>
+						autem ad arbitrii libertatem, ab his  eam  apprehendi, <lb/> qui Deo sponte crediderint,
+						et auxilium gratiae merito <milestone unit="PLSection" n="A"/><lb/>  credulitatis
+						acceperint.  In  istam vero talis gratiae <lb/>  praedicationem hi quorum contradictione
+						offendimur  ,<lb/> cum prius meliora  sentirent , ideo se vel <lb/> maxime contulerunt;
+						quia si profiterentur ab ea <lb/> omnia bona merita praeveniri, et ab ipsa ut  possint 
+						<lb/> esse donari; 6 necessitate concederent, Deum, secundum <lb/>  propositum et
+						consilium voluntatis  suae , <lb/> occulto judicio, et opere manifesto, aliud vas condere
+						<lb/>  in honorem, aliud in contumeliam (Rom. IX, <lb/> 21) : quia nemo nisi per
+						gratiam justificetur, et nemo <lb/> nisi in praevaricatione nascatur. Sed refugiunt istud
+						<lb/> fateri, divinoque ascribere operi  sanctorum  merita <lb/> formidant: nec acquiescunt
+						praedestinatum electorum <lb/>  numerum nec augeri posse,  nec minui  , ne locum <lb/> 
+						apud infideles ac negligentes cohortantium incitamenta <lb/>  non habeant, ac superflua
+						sit industriae ac <milestone unit="PLSection" n="a"/><lb/> laboris indictio, cujus
+						studium cessante electione <lb/> frustrandum sit. Ita demum enim  posse   unumquemque <lb/>
+						 ad correctionem aut ad profectum vocari, si se <lb/> sciat sua diligentia bonum esse
+						posse, et libertatem <lb/> suam ob hoc Dei auxilio juvandam, si quod Deus <lb/> mandat
+						elegerit. Ac sic cum in his qui tempus acceperunt <lb/>  liberae voluntatis, duo sint
+						quae humanam <lb/> operentur salutem, Dei scilicet gratia et hominis <lb/> obedientia,
+						priorem volunt obedientiam esse  quam . <lb/> gratiam, ut initium salutis ex eo qui
+						salvatur, non <lb/> ex eo credendum sit stare qui salvat; et voluntas <lb/> hominis
+						divinae gratiae sibi pariat opem, non gratia <lb/> sibi humanam subjiciat voluntatem.</p>
+					<p>7. Quod cum perversissimum esse revelante Dei <lb/> misericordia, et instruente nos tua
+						beatitudine, noverimus <milestone unit="PLSection" n="C"/><lb/>  possumus quidem ad non
+						credendum esse <lb/> constantes, sed ad auctoritatem talia sentientium <lb/> non sumus
+						pares : quia multum nos et vitae meritis <lb/> antecellunt, et aliqui eorum adepto nuper
+						<note n="a"/> summo <lb/> sacerdotii honore supereminent; nec facile quisquam  ,<lb/> praeter
+						paucos perfectae gratiae intrepidos <lb/> amatores, tanto superiorum disputationibus ausus
+						<lb/> est contraire. Ex quo non solum his qui eos audiunt, <lb/> verum etiam ipsis qui
+						audiuntur. cum dignitatibus <lb/> crevit periculum, dum et multos reverentia  eorum  <lb/>
+						aut inutili cohibet silentio, aut incurioso ducit assensu  ;<lb/> et saluberrimum ipsis
+						videtur, quod pene <lb/> nullius contradictione reprehenditur. Unde <note n="b"/> quia in <lb/>
+						istis Pelagianae pravitatis reliquiis non mediocris <milestone unit="PLSection" n="D"/><lb/> virulentiae libra nutritur, si principium salutis male <lb/> in homine collatur ;
+						si divinae voluntati  impie  voluntas <lb/>  humana praefertur, ut ideo quis adjuvetur
+						quia <lb/> voluit, non ideo quia adjuvatur velit; si originaliter <lb/> malus <note n="c"/>
+						receptionem boni non a summo bono, sed <lb/> a semetipso inchoare male creditur; si
+						aliunde Deo <lb/> placetur, nisi ex eo quod ipse donaverit : tribue nobis <lb/>  in hac
+						causa, papa beatissime, pater optime, <lb/> quantum juvante Domino potes, diligentiam
+						pietatis <lb/> tuae, ut quae in istis quaestionibus obscuriora  a ,  et  ad <note type="footnote"> • Fo mss. ,u'Jlmi. </note><note type="footnote"> • lI"s. Ilg. &lt;luo
+							et Colb., ti in istis. </note><note type="footnote"> I Ms. Reg. Unus, correptionem
+							boni* </note><note type="footnote">d Editiones a. rrosperi. kic addunt, ob.tcro. Abcsi
+							<lb/> a IUM.  .<lb/>:  ,<lb/> </note><pb n="73"/>
+						<milestone unit="PLSection" n="1"/><lb/> percipiendum difficiliora sunt, quam
+						lucidissimis <note n="j"/> <lb/> expositionibus digneris aperire.</p>
+					<p>7 8. Ac primum, quia plerique non putant Christianam <lb/>  fidem hac dissensione
+						violari, quantum periculi <lb/>  sit in eorum persuasione patefacias; deinde <lb/>
+						quomodo per  istam  praeoperantem et cooperantem <lb/> gratiam liberum non impediatur
+						arbitrium; tum <lb/> utrum praescientia Dei ita secundum propositum <lb/> maneat, ut ea
+						ipsa quae sunt proposita, sint accipienda <lb/>  praescita : an per genera causarum et
+						species <lb/> personarum ista varientur; ut quia diversae sunt <lb/> vocationes, in his
+						qui nihil operaturi salvantur, <lb/> quasi solum Dei propositum videatur existere; in
+						<lb/> his autem qui aliquid boni acturi sunt, per praescientiam <lb/>  possit stare
+						propositum : an vero uniformiter ,<milestone unit="PLSection" n="B"/> <lb/> licet
+						dividi praescientia a proposito temporali <lb/> distinctione non possit, praescientia
+						tamen quodam <lb/> ordine sit <note n="a"/> subnixa proposito; et sicut nihil sit quorumcumque <lb/>
+						 negotiorum quod non scientia divina <lb/> praevenerit, ita nihil sit boni,
+						quod in nostram participationem <lb/>  non Deo auctore defluxerit. Postremo <lb/>
+						quemadmodum per hanc praedicationem propositi <lb/> Dei, quo fideles fiunt qui
+						praeordinati sunt ad vitam <lb/> aeternam, nemo eorum qui cohortandi sunt impediatur 
+						,<lb/> nec occasionem negligentiae habeant, si se praescientiam <lb/>  esse desperent.
+						Illud etiam qualiter diluatur  ,<lb/> quaesumus  patienter  insipientiam nostram <lb/>
+						ferendo demonstres, quod retractatis priorum de hac <lb/> re opinionibus, pene omnium
+						par invenitur et una <lb/> sententia, qua propositum et praedestinationem Dei <milestone unit="PLSection" n="C"/><lb/> secundum praescientiam receperunt; ut ob hoc Deus <lb/>
+						alios vasa honoris, alios contumeliae fecerit, quia finem <milestone unit="PLSection" n="A"/><lb/>  uniuscujusque praeviderit, et sub ipso gratiae <lb/> 8 adjutorio in
+						qua futurus esset voluntate et actione <lb/> praescierit.</p>
+					<p>9. Quibus omnibus enodatis, et multis insuper, <lb/> quae altiore intuitu ad causam
+						hanc pertinentia magis <lb/> potes videre, decussis, credimus et  speramus  non <lb/>
+						solum tenuitatem nostram disputationum tuarum <lb/> praesidio roborandam, sed etiam
+						ipsos, quos meritis <lb/> atque honoribus claros caligo istius opinionis obscurat 
+						,<lb/> defaecatissimum lumen gratiae recepturos : <lb/> nam unum eorum praecipuae
+						auctoritatis et spiritalium <lb/>  studiorum virum, sanctum  Hilarium   Arelatensem <lb/>
+						 episcopum, sciat beatitudo tua admiratorem <lb/> sectatoremque in aliis omnibus
+						tuae esse doctrinae, <lb/> et de hoc quod in querelam trahit, jam pridem apud <milestone unit="PLSection" n="B"/><lb/> sanctitatem tuam sensum suum per litteras velle <lb/>
+						conferre. Sed quia utrum hoc facturus, aut quo fine <lb/> sit facturus, incertum est, et
+						omnium nostrum fatigatio  ,<lb/> providente hoc  praesenti  saeculo Dei gratia, <lb/> in
+						tuae charitatis et scientiae vigore <note n="c"/> respirat: adde <lb/> eruditionem humilibus, adde
+						increpationem superbis  .<lb/> Necessarium et utile est etiam quae scripta sunt <lb/>
+						scribere, ne leve existimetur, quod non frequenter <lb/> arguitur. Sanum enim putant
+						esse quod non <note n="d"/> dolet; <lb/> nec vulnus superducta cute sentiunt; sed intelligant <lb/>
+						perventurum ad sectionem, quod habuerit perseverantem <lb/>  tumorem. Gratia Dei et pax
+						Domini nostri <lb/> Jesu Christi coronet te in omni tempore, et ambulantem <lb/>  de
+						virtute in virtutem glorificet in aeternum, <lb/> domine papa beatissime, ineffabiliter
+						mirabilis, incomparabiliter <milestone unit="PLSection" n="C"/><lb/>   honorande ,
+						praestantissime patrone. <note type="footnote"> a Ms. Regius unus, obnixa. </note><note type="footnote"> b Pro Hilario putabant eruditi legendum esse No- <lb/> Morarum : sed
+							inspecti mss. Hilarium omnes ferunt. <lb/> Hilarius porro iste ex Lirinensi monacho
+							creatus <lb/> fnit Arelatensis episcopus post lIonoralum, anno <lb/> tiS aut ki9
+							ineunte denatum : quippe Honoratus <lb/> suffectus Patroclo, qui anno 426 juxta
+							Prosperi Chro­ <lb/> nicum iuterrectos est, cathedram Arelatensem, teste <lb/>
+							Honorato Massiliensi in Vita Hilarii Arelatensis, per <lb/> biennium occupavit. ;
+							</note><note type="footnote"> c In ediLis, 'perat; in uno ros., spirat. </note><note type="footnote"> J In mss., quod non dolent, nec vulnus superdu­ <lb/> ctum cute
+							sentiunt. </note>
+					</p>
+					<p>      ,  ,   
+						      ,  
+						,<lb/>  :       , 
+						    . ,      
+						          .<lb/><lb/>),    
+						. .</p>
+					<ab>
+						<title type="sub">ADMONITIO IN EPISTOLAM S. PROSPERI AQUITANI AD RUFINUM</title>
+					</ab>
+					<p>De epistola ad Rufinum tria investigari possunt: 1° Quis iste Rufinus, ad quem data
+						ista epistola; 2° quo <lb/> tempore scripta fuerit; qua occasione et necessitate ad id
+						S. Prosperum compellente.</p>
+					<p>De Rufino quidem quis ille  fuerit , inter multos hujusce nominis circa haec tempora
+						notos, non facile est <lb/> decernere, nec ab ullo hactenus pro certo definitum
+						reperimus.  Erat  certe hic S. Prospero nostro amicus, et ex <lb/> his quos amicitia
+						charitati spiritali innixa, pro amicorum salute sollicitos reddit. Unde cum ille de
+						motis contra <lb/> doctrinam S. Augustini contentionibus confusos rumores audiisset ,
+						Prosperumque sibi amicissimum male apud <lb/> plerosque audire cognovisset, veritus ne
+						animae sibi charissimae salus periclitaretur , nec  etiam  inauditum <lb/> praecipiti judicio
+						damnare ausus, satius duxit ipsum litteris convenire, cum forte ab eo longo locorum
+						intervallo <lb/> dissitus, id verbis praestare non posset, quas quidem communi amico
+						deferendas commendavit. Nisi forte malueris <lb/>  proficiscenti  amico in mandatis datum
+						ut piam quam gerebat pro amico sollicitudinem coram ipse sine scripto <lb/> exponeret.
+						Neutrum enim pro certo elici videtur, sed alterutrum certe contigisse  judicatur  ex
+						primis  epistolae  <lb/> sancti Prosperi verbis : Accepi, inquit ille, per communem amicum
+						fraternae erga me sollicitudinis tuae signa, <lb/> et curam sincerissimae charitatis
+						gratulanter agnovi. Ac ne quid maligni rumores, in quantum se auribus <lb/> tuis
+						subtrahere nequeunt. formidinis tibi aut anxietatis inferrent, absolvere te ab omni
+						scrupulo, quantum <note type="footnote"> PATROL. LI. </note>
+						<note type="footnote"> 3 </note>
+						<lb/><pb n="75"/> epistolari licuit sermone, curavi ; in tantum studens omnia plenissima
+						veritate tibi pandere, ut quia non <lb/> potuisti in totum quae ab  adversantibus  
+						disseminantur audire, per me ipsum queas,  quidquid  de nobis ad <lb/> inanem invidiam
+						fertur referturque cognoscere.</p>
+					<p>De tempore vero scriptionis hujus, hoc pro  indubitato  asseri fas est eam, vivente adhuc
+						Augustino, sed ultimis <lb/> tanti magistri annis exaratam. Quod certe indubitatum
+						reddunt haec epistolae  istius  verba, Beatissimus quoque <lb/> Augustinus, praecipua utique
+						in hoc tempore portio Domini sacerdotum; et in fine epistolae : Ut praedicatio <lb/> summi
+						hoc tempore in  Ecclesia   viri, etc. Ultimos vero sancti doctoris vitae annos clare
+						demonstrant insimulati <lb/> Galli operum S. Augustini obtrectatores infamatoresque,
+						quos maxime offendit lectio libri de Correptione et <lb/> Gratia pro monachorum
+						Adrumetinorum institutione et emendatione, circa annum Christi 426 aut 427 scripti.
+						<lb/> Hos autem ipsos depingit S. Prosper, cum subdit : Huic, id est, beatissimo
+						Augustino, inter tot certaminum <lb/> palmas, inter tot triumphorum coronas, ad
+						illuminationem Ecclesiae et ad gloriam Christi, qua ipse illustratus <lb/>  est
+						praefulgenti, quidam nostrorum (quod de ipsis multum dolendum est)  occultis , sed non
+						incognitis <lb/> susurrationibus obloquuntur. Et prout sibi obnoxias aliquorum aures
+						opportunasque repererint, scripta <lb/> ejus, quibus error Pelagianorum impugnatur
+						infamant : dicentes  eum  liberum arbitrium penitus submovere, <lb/> et sub gratiae nomine
+						necessitatem fatalem praedicare; adjicientes etiam duas illum humani generis massas,
+						<lb/> et duas credi velle naturas ; ut scilicet tantae pietatis viro paganorum et
+						Manichaeorum  ascribatur  impietas. <lb/> Deinde vero Cassiani collationem decimam tertiam,
+						quae est de protectione  Dei , indigitare videtur cum ait; <lb/> Volentes  enim  in sua
+						justitia magis quam in Dei gratia gloriari, moleste ferunt quod his quae adversum <lb/>
+						excellentissimae auctoritatis virum inter multas collationes asseruere, resistimus. Haec
+						autem collatio  cum  <lb/> Honorato Massiliensi  cum  aliis sex dicata legatur, ante annum
+						426, quo in episcopum Massiliensem assumptus <lb/> est scripta esse convincitur.</p>
+					<p>Haec autem occasio (ut  jam insinuatum   est)  nata  est S. Prospero scribendae hujus
+						epistolae, cum Rufinus <lb/> rumoribus ab inimicis doctrinae sancti Augustini contra
+						ipsius Prosperi Augustini discipuli non occulti famam <lb/> disseminatis,  motum  se
+						significasset, seque ab hoc scrupulo absolvi optaret. Sanctus Prosper justis amici
+						postulatis <lb/>  obtemperare satagens, plenius exponit, qui rumores ab inimicis
+						doctrinae sancti Augustini spargerentur, et <lb/> sub quo praetextu tanto doctori obloqui
+						non  vererentar . Inter praecipuos autem Pelagianorum errores esse, Gratiam <lb/> Dei
+						secundum merita hominum dari;  quo  incolumi sibi principio, caetera dogmata sua facile
+						resuscitabant. <lb/> Primum quidem ipsos docuisse tantam humanae naturae esse sanitatem,
+						ut per solum liberum  arbitrium  posset <lb/> bonum  implere . Quod cum sanae doctrinae
+						adversum omnino pateret, ab omnibusque explosum esset catholicis <lb/> dogma, gratiam
+						quidem ad incipiendum, proficiendum et perseverandum in bono necessariam professos esse;
+						sed <lb/> intellectum, hoc tantummodo eos de gratia Dei confiteri, quod haec velut quaedam
+						libero arbitrio sit magistra, <lb/> seque per cohortationes, per legem, per doctrinam,
+						per creaturarum contemplationem, per miracula, perque <lb/> terrores extrinsecus judicio
+						ejus ostendat, quo unusquisque secundum voluntatis suae motum, si quaesierit <lb/>
+						inveniat, si petierit recipiat, si pulsaverit introeat. Unde sequatur gratiam secundum
+						merita hominum dari, et <lb/> proinde gratiam jam non esse gratiam.  Hanc  vero filiorum
+						tenebrarum versutiam et Orientalium episcoporum <lb/> judicio, et sedis apostolicae
+						auctoritate, et Africanorum praesulum vigilantia fuisse manifestatam. S. Augustinum,
+						<lb/> quem dicit S. Prosper tunc fuisse praecipuam portionem Domini sacerdotum, hanc
+						scriptis libris polemicis destruxisse  ,<lb/> talemque haeresim omni ex parte debellasse
+						; quosdam tamen inter catholicos in Galliis inveniri, qui <lb/> doctrinam ejus  librosque 
+						malignis rumoribus infamarent,  dicentes  eum liberum arbitrium penitus submovere, et
+						<lb/> sub nomine gratiae necessitatem praedicare  fatatem , duas etiam ab ipso  credi velle 
+						uno in homine naturas. Quae <lb/> si ita se haberent, palam obsisterent, et noxios
+						errores scriptis libris  refellerent , non vero occultis susurris nocere <lb/> tentarent
+						viro illi, cujus doctrina Romanae Ecclesiae et Africanorum, immo et omnium toto orbe
+						catholicorum <lb/> doctrinae congrueret. Ad hos ausus impelli hujusmodi homines, quod
+						aegre ferrent iis resisti quae in suis Collationibus <lb/>  Augustinianae doctrinae adversa
+						attulerant, nec ignotum ipsis, quod si  talia  in qualibet frequentia sacerdotum <lb/> 
+						moverent, centenis sibi beatissimi Augustini voluminibus obviaretur ; quibus abunde
+						probatum esset, in <lb/> nullo alio gloriandum, cum boni aliquid  operati  sumus. quam in
+						gratia Christi Domini, non vero in viribus liberi <lb/> arbitrii. Sperare tamen se de
+						misericordiae Dei divitiis (Ibid., n. 5), quod quos tunc libero falli arbitrio et ab
+						<lb/> humilitatis via evagari patiebatur, non usquequaque, neque in finem, esset
+						intelligentia fraudaturus.</p>
+					<p>In hoc autem errabant illi (Ibid, et num. seqq.), quod virtutum bonorumque operum
+						principia in naturali <lb/> possibilitate statuerent; aut si haec a gratia fluere
+						dicerent, hanc a bono aliquo opere aut ab aliqua bona voluntate <lb/>  fuisse
+						praeventam, et talium merito concessam. Hujusmodi errorem S. Prosper sedulo evertit, ex
+						Scripturarum <lb/>  testimoniis probans, homini post lapsum nullas ad bonum superesse
+						vires, nec ad merendum quidem, sine <lb/> praevenientis gratiae auxilio : et a perditione
+						quam Adae peccato incurrerunt homines solius Dei  miserantis  gratia <lb/> gratuita erui
+						posse. Quod efficit adducto infantium sine baptismo decedentium  exemplo , et earum
+						gentium ad <lb/> quas hactenus salutis Evangelium nondum noscitur pervenisse. Gratia
+						vero non negari liberum arbitrium, sed <lb/> statui et reformari. Quod sibi relictum ad
+						malum et ad lapsum <unclear> dumtaxat </unclear> homini sufficit, gratia vero sanandum
+						<lb/> est, qua aliter cogitare et agere ipsi inspiratur, sanitatemque suam, non sibi,
+						sed medico suo acceptam  referre ;  <lb/> docetur (Num. 19). Tandem sanctus Prosper
+						obductam Augustini doctrinae calumniarum nubem dissipat, qua <lb/> fatum aut duplicem
+						naturam inducere fingebatur. Nihil  talibus  erroribus  proximum  ab eo umquam scriptum
+						<lb/>  contendit . Augustino aut discipulis ejus nihil quidquam fato contingere, sed  omnia 
+						divinae providentiae ordinatione <lb/>  dirigi, docet. Nec duas ab illis statui naturas,
+						unam bonam, malam alteram, sed unam omnino ; quae <lb/>  cum  creata esset recta, a
+						rectitudine primi hominis peccato decidit, mortique aeternae facta est obnoxia : sed nova
+						<lb/> in Christo creatione reparandam, qui libertatem hominis reparando et continuis
+						auxiliis praeveniendo salvat. <lb/> Operi finem imponit (Num. 20), Rufinum amicum
+						exhortando ut Augustini disputationibus cognoscendis <lb/> curam impendat, si vere de
+						sana circa Dei gratiam doctrina instrui desideret sicut eum desiderare conveniebat 
+						.<lb/></p><pb n="77"/>
+
+				</div>
+				</body></text></TEI>

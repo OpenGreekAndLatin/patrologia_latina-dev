@@ -1,0 +1,896 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><TEI xmlns="http://www.tei-c.org/ns/1.0"><teiHeader>
+    
+		<fileDesc>
+			<titleStmt>
+				<title>Patrologiae Cursus Completus. Series Latina (PL)</title>
+				<sponsor>University of Leipzig</sponsor>
+				<funder>European Social Fund Saxony</funder>
+				<principal>Gregory Crane</principal>
+				<respStmt>
+					<persName xml:id="Jouve">Jouve</persName>
+					<resp>OCR-ed, corrected and encoded the text</resp>
+				</respStmt>
+				<respStmt>
+					<persName>Greta Franzini</persName>
+					<resp>Project Manager (University of Leipzig)</resp>
+				</respStmt>
+				<respStmt>
+					<persName>Simona Stoyanova</persName>
+					<resp>Project Assistant (University of Leipzig)</resp>
+				</respStmt>
+				<respStmt>
+					<persName>Bruce Robertson</persName>
+					<resp>Technical Advisor (Mount Allison University)</resp>
+				</respStmt>
+			</titleStmt>
+
+			<publicationStmt>
+				<authority>University of Leipzig</authority>
+				<idno type="filename">PL51.xml</idno>
+				<availability>
+					<licence target="https://creativecommons.org/licenses/by-sa/4.0/">Available under a
+						Creative Commons Attribution-ShareAlike 4.0 International License</licence>
+				</availability>
+				<date>2014</date>
+				<publisher>University of Leipzig</publisher>
+				<pubPlace>Germany</pubPlace>
+			</publicationStmt>
+
+			<sourceDesc>
+				<listBibl xml:lang="la">
+					<biblStruct>
+						<monogr>
+							<editor>
+								<persName>
+									<name xml:lang="fr">Jacques Paul Migne</name>
+								</persName>
+							</editor>
+							<author>Prosperus Aquitanus</author>
+							<title>Epistola Ad Augustinum</title>
+							<title>Epistola Ad Rufinum 'De Gratia Et Libero Arbitrio'</title>
+							<title>Peri Axariston. Seu De Ingratis Carmen In Quatuor Partes Distributum</title>
+							<title>Epigrammata In Obtrectatorem Augustini</title>
+							<title>Epigrammata In Quempiam Augustini Obtrectatorem</title>
+							<title>Epitaphium Nestorianae Et Pelagianae Haereseon</title>
+							<title>Pro Augustino Responsiones Ad Capitula Gallorum</title>
+							<title>Responsiones Ad Capitula Objectionum Gallorum Calumniantium</title>
+							<title>Pro Augustino Responsiones Ad Capitula Objectionum Vincentianarum</title>
+							<title>Pro Augustino Responsiones Ad Excerpta Genuensium</title>
+							<title>Pro Defensione Augustini Contra Cassiani Presbyteri Librum</title>
+							<title>Expositio Psalmorum A Centesimo Usque Ad CL</title>
+							<title>Sententiarum Ex Operibus Augustini Delibatarum Liber Unus</title>
+							<title>Epigrammatum Ex Sententiis Sancti Augustini Liber Unus</title>
+							<title>Chronicum Integrum In Dua Partes Distributum</title>
+							<title>Chronicum Integrum In Dua Partes Distributum [Appendicula]</title>
+							<title>Confessio [Incertus]</title>
+							<title>Poema Conjugis Ad Uxorem [Incertus]</title>
+							<title>Carmen De Providentia Divina [Incertus]</title>
+							<title>Libri Duo De Vocatione Omnium Gentium [Incertus]</title>
+							<title>Liber De Promissionibus Et Praedictionibus Dei A Nonnullis [Incertus]</title>
+							<title>Chronicum Alterum Sive Pseudochronicum [Incertus]</title>
+							<imprint>
+								<publisher>Garnier</publisher>
+								<pubPlace>Paris</pubPlace>
+								<date>1846</date>
+							</imprint>
+							<biblScope unit="volume">51</biblScope>
+						</monogr>
+						<monogr>
+							<title>Concilium Arausicanum I</title>
+							<imprint>
+								<publisher>Garnier</publisher>
+								<pubPlace>Paris</pubPlace>
+								<date>1846</date>
+							</imprint>
+							<biblScope unit="volume">51</biblScope>
+						</monogr>
+						<monogr>
+							<author>Idatius Aquaeflaviensis Episcopus</author>
+							<title>Chronicum</title>
+							<title>Descriptio Consulum Ex Quo Primum Ordinati Sunt [Codex Parisiensis]</title>
+							<imprint>
+								<publisher>Garnier</publisher>
+								<pubPlace>Paris</pubPlace>
+								<date>1846</date>
+							</imprint>
+							<biblScope unit="volume">51</biblScope>
+						</monogr>
+						<monogr>
+							<author>Marcellinus Comes</author>
+							<title>Chronicum</title>
+							<imprint>
+								<publisher>Garnier</publisher>
+								<pubPlace>Paris</pubPlace>
+								<date>1846</date>
+							</imprint>
+							<biblScope unit="volume">51</biblScope>
+						</monogr>
+						<ref target="http://hdl.handle.net/2027/pst.000017928816">HathiTrust</ref>
+
+					</biblStruct>
+				</listBibl>
+			</sourceDesc>
+
+		</fileDesc>
+		<encodingDesc>
+			<p>The following text is encoded in accordance with EpiDoc standards and with the CTS/CITE
+				Architecture.</p>
+		<refsDecl>
+        <cRefPattern n="" matchPattern="(.+).(.+).(.+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@type='edition']/tei:div[@n='$1']/tei:div[@n='$2']/tei:div[@n='$3'])"/>
+        <cRefPattern n="" matchPattern="(.+).(.+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@type='edition']/tei:div[@n='$1']/tei:div[@n='$2'])"/>
+        <cRefPattern n="" matchPattern="(.+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@type='edition']/tei:div[@n='$1'])"/>
+      </refsDecl>
+    </encodingDesc>
+
+		<profileDesc>
+			<langUsage>
+				<language ident="la">Latin</language>
+			</langUsage>
+		</profileDesc>
+
+	</teiHeader>
+	<text><body><div type="edition" n="">
+					<head>
+						<title type="main">IDATII EPISCOPI CHRONICON.</title>
+					</head>
+					<ab>
+						<title type="sub">praefatio.</title>
+					</ab>
+					<ab>
+						<title type="sub">Idatius servus Domini nostri Jesu Christi universis fidelibus in
+							Domino Jesu Christo, et servientibus  ei in veritate salutem.</title>
+					</ab>
+					<p>
+						<milestone unit="PLSection" n="A"/>Probatissimorum in omnibus virorum studia, quos <lb/>
+						praecipue in fide  catholica  et conversatione perfecta <lb/> testes veritatis divini
+						cultus docet assertio, ut ornantur <lb/>  decore dictorum, ita et commendantur honore
+						<lb/>  meritorum, ut miram in omni opere suo obtineant <lb/>  firmitatem. Verum
+						Idatius provinciae Gallaeciae <lb/>  natus in Lemica civitate, mage divino munere, <lb/>
+						quam proprio merito, summi praesul creatus officii, <lb/> ut extremus plagae, ita
+						extremus et vitae, perexiguum <lb/>  informatus studio saeculari, multo minus docilis <lb/>
+						 sanctae lectionis volumine salutari; sanctorum <lb/> eruditissimorum Patrum in
+						praecedenti opere suo, <lb/> pro capacitate proprii sensus aut verbi, ostensum ab <lb/>
+						his secutus exemplar. Quorum primus Eusebius Caesariensis <lb/>  episcopus,qui
+						ecclesiasticas sui numeri libris <milestone unit="PLSection" n="B"/><lb/> scripsit
+						historias, ab initio Nini regnantis Assyriis, <lb/> et sancti Abrahae patriarchae
+						Hebraeis, et reliquorum <lb/> contemporales his annos regum, in vicesimum Constantini <lb/>
+						 augusti quo imperabat annum, Graeci servientibus <lb/>  chronographiae concludit
+						historia. Post hunc <lb/> successor syngrapheus perfectus universis factorum <lb/>
+						dictorumque monimentis, Hieronymus presbyter, <lb/> idem Eusebius cognomento, de Graeco
+						in Latinum <lb/> scripturae hujus interpres, a vicesimo anno supra <lb/> dicti
+						imperatoris in quartum decimum Valentis augusti <lb/>  annum subditam texit historiam.
+						Esto ut in <lb/> sanctis quibus deguit Hierosolymorum locis, a memorato <lb/>  Valentis
+						anno in tempus quo in praesenti <lb/> vita duravit, forte quamplurima de his quae sunt
+						<lb/> insecuta subjecerit : quia haud umquam, dum valuit ,<milestone unit="PLSection" n="C"/> <lb/> a diverso styli opere cessavit. Quem quodam <lb/> tempore propriae
+						peregrinationis in supra dictis regionibus <lb/>  adhuc infantulus vidisse me certus
+						sum. <lb/> Qui post aliquot annos beato ut erat mansit in <milestone unit="PLSection" n="A"/><lb/> corpore. Si tunc proprio operi quod subdidit aliqua <lb/> subjunxerit,
+						apud  eos  ad quos scriptorum ejus omne <lb/> opus vel summa pervenit, certa et plena
+						cognitio <lb/> est. Sed quoniam in cujusdam studii sui scriptura <lb/> dixisse eum
+						constat, debacchantibus jam in Romano <lb/> solo barbaris, omnia haberi permixta atque
+						confusa, <lb/> opinamur ex hujus indicio sermonis, in hoc per se <lb/> annorum volumine
+						subdito de successione temporum <lb/>  ab ipso nihil adjectum. Tamen quia ad nostri
+						<lb/> temporis cursum, ut superior lectio docet, descriptio <lb/>  defluxit annorum,
+						cum membrana hujus historiae <lb/> curam  contigisset  expertis, mentem monuit imperiti,
+						<lb/> ut de cognitis, etsi in omnibus impari gressu, vel vestigiis <lb/>  se
+						substerneret praecessorum. Quae fideli suscipiens <lb/>  cordis intuitu, partim ex studio
+						scriptorum, partim <milestone unit="PLSection" n="B"/><lb/>  ex certo aliquantorum
+						relatu, partim ex cognitione <lb/> quam jam lacrymabile propriae vitae tempus ostendit,
+						<lb/> quae subsequuntur adjecimus. Quorum continentiam <lb/> gestorum et temporum, qui
+						legis ita discernes. Ab anno <lb/> primo Theodosii augusti in annum tertium Valentiniani
+						<lb/>  augusti,  Placidiae  reginae filii, ex supra dicto a <lb/> nobis conscripta
+						sunt studio, vel ex scriptorum stylo, <lb/> vel ex relationibus indicantum.  Exin  
+						immerito allectus <lb/> ad episcopatus officium, non ignarus omnium miserabilis <lb/> 
+						temporis aerumnarum,  et  conclusi in angustias <lb/> imperii Romani metas subdidimus
+						ruituras, et quod <lb/> est luctuosius, intra extremam universi orbis Gallaeciae <lb/> 
+						deformem ecclesiastici ordinis statum, creationibus <lb/>  indiscretis honestae
+						 libertatis  interitum, et <lb/> universae propemodum in divina disciplina  religionis -
+							<milestone unit="PLSection" n="C"/><lb/>  occasum ex furentium dominantem
+						permixta <lb/> iniquarum perturbatione nationum. Haec jam quidem <lb/> inserta : sed
+						posteris in temporibus quibus offenderint  ,<lb/> reliquimus consummanda.</p>
+					<ab>
+						<title type="sub">CHRONICON.</title>
+					</ab>
+					<p>Romanorum XXXIX, THEODOSIUS per Gratianum <lb/> in consortium regni assumptus, cum
+						ipso, et Valentiniano <lb/>  juniore regnat annis XVII.</p>
+					<p>I. Theodosius natione Hispanus, de provincia Gallaecia  ,<lb/> civitate Cauca, a
+						Gratiano augustus appellatur  .<lb/></p>
+					<p>Inter Romanos et Gothos multa certamina conseruntur  .<lb/></p>
+					<p>II. Theodosius Constantinopolim ingreditur in <lb/> primo consulatu suo, quem cum
+						Gratiano agebat augusti  .<lb/></p>
+					<p>Alexandriae XXI habetur episcopus Theophilus vir <lb/> eruditissimus, insignis qui a
+						primo consulatu Theodosii <lb/>  augusti Laterculum per centum annos  digestum . <lb/> 
+						de paschae observatione conscripsit.</p>
+					<p>III. ( Olymp. CCXC.) Athanaricus, rex Gothorum, <lb/> apud Constantinopolim decimo
+						quinto die ex quo a <lb/> Theodosio fuerat susceptus, interiit. <note type="footnote">
+							PAT"OL. (J. </note>
+						<note type="footnote"> 28 </note><pb n="875"/>
+					</p>
+					<p>
+						<milestone unit="PLSection" n="A"/>IV.  (Aer . Hisp. CDXC.) Gothi infida Romanis pace <lb/>
+						se tradunt.</p>
+					<p>Ambrosius in Italia Mediolani episcopus, Martinus <lb/>  in Galliis Turonis episcopus,
+						et vitae meritis <lb/>  et patratis miraculis virtutum habentur  insignes . V </p>
+					<p>. Theodosius Arcadium filium suum augustum <lb/> appellans,  regni  facit sibi esse
+						consortem.</p>
+					<p> VI . (Eus. MMCD.) Honorius nascitur filius  Theodosii .  .<lb/></p>
+					<p>Legati Persarum ad Theodosium Constantinopolim <lb/>  veniunt.</p>
+					<p>VII. <unclear/> (Olymp .  CCXCI.) Greothingorum gens a Theodosio <lb/>  superatur.</p>
+					<p>Priscillianus declinans in haeresim Gnosticorum, <lb/> per episcopos quos sibi in eadem
+						pravitate collegerat ,<milestone unit="PLSection" n="B"/> <lb/> Abulae episcopus
+						ordinatur : qui aliquot <lb/> episcoporum conciliis auditus, Italiam petit et  Romam  
+						.<lb/> Ubi ne ad conspectum quidem sanctorum episcoporum <lb/>  Damasi et Ambrosii
+						receptus, cum his <lb/> cum quibus iverat, redit ad Gallias. Inibi similiter a <lb/>
+						sancto Martino episcopo, et ab aliis episcopis  haereticus  <lb/>  judicatus, appellat ad
+						Caesarem quia in Galliis <lb/>  his [Ms . hisdem]  . hisdem] diebus potestatem tyrannus Maximus <lb/>
+						 obtinebat imperii.</p>
+					<p>VIII. Arcadii quinquennalia celebrantur.</p>
+					<p>Romanae Ecclesiae XXXVI habetur episcopus SIRICIUS  .<lb/></p>
+					<p>IX. Priscillianus propter supra dictam haeresem <lb/> ab episcopatu depulsus, et cum
+						ipso Latronianus <lb/> laicus, aliquantique sectatores ejus apud Trevirim <milestone unit="PLSection" n="c"/><lb/> sub tyranno Maximo caeduntur. Exin in Gallaeciam   ;
+						<lb/> Priscillianistarum haeresis invasit.</p>
+					<p>X. Maximus tyrannus occiditur per Theodosium <lb/> tertio lapide ab Aquileia quinto
+						kalendas Augustas : <lb/> et eodem tempore vel ipso anno in Galliis per  Arbogastem [ Ms . Arvagastem ]  <lb/>
+						 [ .  ] comitem filius Maximi <lb/> nomine Victor exstinctus est.</p>
+					<p>Cynegius Theodosii praefectus habetur illustris, <lb/> qui factis insignibus praeditus
+						et usque ad  Aegyptum  <lb/> penetrans gentium simulacra subvertit.</p>
+					<p>XI. (Olymp. CCXCII.) Theodosius cum Honorio filio <lb/>  suo  Romam ingressus est.</p>
+					<p>XII.</p>
+					<p>XIII.</p>
+					<p>XIV.  Valentianus  junior apud Viennam scelere <milestone unit="PLSection" n="D"/><lb/>
+						comitis  Arbogasti [Ms . Arvagasti]  Ms. Arvagasti] occiditur, et Eugenius <lb/>  tyrannus efficitur.</p>
+					<p>XV. (Olymp. CCXCIII.  Aer . Hisp. CDXXX.)</p>
+					<p>XVI. (Eus. MMCDX.) Eugenius a Theodosio augusto <lb/>  superatus occiditur.</p>
+					<p>XVII. Theodosius invaletudine hydropis apud Mediolanum <lb/>  defunctus est anno regni
+						sui XVII. Et iste <lb/> annus, qui Theodosii XVII ipse Arcadii et Honorii in <lb/>
+						initio regni eorum primus est : quod ideo indicatur <lb/> ne olympiadem quinque annorum
+						turbet adjectio, in <lb/> hoc loco tantum propter regnantum inserta <note n="a"/> principium 
+						.<lb/></p>
+					<p>
+						<milestone unit="PLSection" n="A"/>Romanorum XL, ARCADIUS et HONORIUS Theodosii <lb/>
+						filii  defuncto  patre regnant annis xxx.</p>
+					<p>i.</p>
+					<p>II. (Olymp. CCXCIV.)</p>
+					<p>III.       .<lb/>]</p>
+					<p>IV.</p>
+					<p>V. In provincia  Carthaginiensi  in civitate Toleto <lb/> synodus episcoporum
+						contrahitur, in qua quod <lb/> gestis continetur, Symphosius et Dictinius, et alii <lb/>
+						cum his Gallaeciae provinciae episcopi, Priscilliani <lb/> sectatores haeresem ejus
+						 blasphemissimam  cum assertore <lb/>  eodem professionis suae subscriptione condemnant 
+						.<lb/> Statuuntur quaedam etiam observanda de <lb/> Ecclesiae disciplina, communicante
+						in eodem concilio <milestone unit="PLSection" n="B"/><lb/>  Ortigio episcopo qui
+						Caelenis fuerat ordinatus, <lb/> sed agentibus Priscillianistis pro fide catholica pulsus
+						<lb/>  factionibus exsulabat.</p>
+					<p>VI. (Olymp. CCXCV.)</p>
+					<p>VII.</p>
+					<p>VIII. Solis facta defectio  tertio  idus Novembris <lb/>  feria  secunda.</p>
+					<p>Romanae Ecclesiae XXXVIII . XXXVII] habetur <lb/>  episcopus INNOCENTIUS.</p>
+					<p>IX. (Eus. MMCCCCXX.) Theodosius Arcadii filius <lb/> nascitur.</p>
+					<p>X. (Olymp. CCXCVI.) Constantinopoli Joannes  episcopus . <lb/>  praedicatur insignis, qui
+						ob fidem catholicam <lb/> Eudoxiam Arcadii uxorem infestissimam patitur <lb/>
+						Arianam.</p>
+					<p>
+						<milestone unit="PLSection" n="C"/>XI.</p>
+					<p>XII. Hierosolymis Joannes, Caesarea Eulogius, <lb/> Cypro Epiphanius, Alexandria
+						Theophilus qui supra, <lb/> episcopi habentur insignes. <lb/>  Hieronymus  presbyterio
+						praeditus, in Bethleem <lb/>  Judae vicina  consistens, praecipuus habetur in cunctis.</p>
+					<p>XIII. Post supra scriptos sane Arianos, qui  Hierosolymis  <lb/>  ante Joannem episcopi
+						fuerint,  Idatius  <lb/> qui haec scribit, scire non potuit. Hunc vero sanctum <lb/>  cum
+						sanctis Eulogio, Theophilo et Hieronymo <lb/> vidit, et infantulus et pupillus.</p>
+					<p>XIV. (Olymp.  CCXCVII .)</p>
+					<p>XV. Alani, et Wandali, et Suevi Hispanias ingressi <lb/> aera CCCCXLVII, alii quarto
+						kalendas, alii tertio idus <lb/> Octobris memorant die,  tertia  feria, Honorio VIII et
+							<milestone unit="PLSection" n="D"/><lb/> Theodosio Arcadii filio III consulibus.</p>
+					<p>Alaricus , rex Gothorum, Romam ingressus, cum <lb/> intra et extra urbem caedes
+						agerentur, omnibus indultum <lb/>  est qui ad sanctorum limina confugerunt.</p>
+					<p>Placidia Theodosii filia, Honorii imperatoris soror  ,<lb/> a Gothis in urbe
+						capta.</p>
+					<p>Alaricus moritur, cui Ataulfus succedit in regno.</p>
+					<p>Barbari qui in Hispanias ingressi fuerant, caede <lb/> depraedantur hostili.
+						Pestilentia suas partes non segnius <lb/>  operatur.</p>
+					<p>XVI. Debacchantibus per Hispanias barbaris, et <lb/> saeviente nihilominus pestilentiae
+						malo, opes et condemnant <note type="footnote"> * Principium. Cang.iu8 in praJfadoue ad
+							Chronicon <lb/> paschale piS- i9. 27, legii iteui principiumex cod. <lb/> ms., non
+							principum, ut est in edit.. </note><pb n="877"/>
+						<milestone unit="PLSection" n="A"/><lb/>    in urbibus  substantiam  tyrannicus exactor
+						<lb/>  diripit , et miles exhaurit   . milites] : fames dira <unclear/><lb/>  grassatur , adeo
+						ut humanae carnes ab humano  genere  <unclear/>
+						<lb/>  vi famis fuerint devoratae : matres quoque  necatis  <lb/>  vel coctis per se
+						natorum suorum sint pastae <lb/>  corporibus . Bestiae occisorum gladio, fame, pestilentia
+						 ,<lb/> cadaveribus assuetae, quosque hominum fortiores <lb/>  interimunt, eorumque
+						carnibus pastae passim in <lb/> humani generis efferantur interitum. Et ita  quatuor  <lb/>
+						plagis ferri, famis, pestilentiae, bestiarum, ubique <lb/> in toto orbe saevientibus,
+						praedictae a Domino per <lb/> prophetas suos annuntiationes implentur.</p>
+					<p>XVII. Subversis memorata plagarum grassatione <lb/> Hispaniae  provinciis , barbari ad
+						pacem ineundam, <lb/> Domino miserante  conversi , sorte ad inhabitandum <milestone unit="PLSection" n="B"/><lb/> sibi provinciarum dividunt regiones. Gallaeciam <lb/>
+						Wandali occupant et Suevi, sitam in extremitate <lb/> Oceani maris occidua. Alani
+						Lusitaniam et Carthaginiensem <lb/>  provincias, et Wandali cognomine Silingi <lb/>
+						Baeticam sortiuntur. Hispani per civitates et castella <lb/> residui a plagis, barbarorum
+						per provincias dominantium <lb/>  se subjiciunt servituti.</p>
+					<p>Constantinus post triennium invasae tyrannidis ab <lb/> Honorio duce Constantio intra
+						Gallias occiditur.</p>
+					<p>XVIII. (Olymp. CCXC III.) Jovinus et Sebastianus <lb/> fratres intra Galliam, et in
+						Africa Heraclianus pari <lb/> tyrannidis inflantur insania.</p>
+					<p>Augustinus  Hipponeregiensis  episcopus habetur <lb/> insignis, inter cujus studia
+						magnifica, Donatistas ab <lb/> eo Dei adjutorio superatos, probata fides  demonstrat -
+							<milestone unit="PLSection" n="C"/><lb/>  auctorum.</p>
+					<p>XIX. (Eus. MMCCCCXXX.) Jovinus et  Sebastianus  <lb/> oppressi ab Honorii ducibus Narbona
+						interfecti sunt.</p>
+					<p>Gothi  Narbonam   ingressi vindemiae tempore.</p>
+					<p>Heraclianus movens exercitum de Africa adversus <lb/> Honorium, Utriculo in Italia in
+						conflictu superatus <lb/> effugit in Africam, caesis in loco supra dicto L millibus <lb/>
+						  armatorum . Ipse post Carthagine in aede Memoriae <lb/>  per Honorium percussoribus
+						missis occiditur.</p>
+					<p>XX. Ataulfus apud Narbonam Placidiam duxit uxorem  ,<lb/> in  quo prophetia   Danielis
+						putatur impleta, qui <lb/> ait filiam regis Austri sociandam  regi  Aquilonis, <lb/> nullo
+						tamen ejus ex ea semine subsistente.</p>
+					<p>XXI. Hierosolymis  Joanne  quo supra episcopo <lb/> praesidente, sanctus et  primus  [Ms.,
+						praesidente  sancto . <milestone unit="PLSection" n="D"/><lb/>  et primus] post Christum
+						Dominum martyr Stephanus <lb/>  revelatur.</p>
+					<p>Hieronymus, qui supra praecipuus in omnibus, elementorum <lb/>   quoque  peritissimus
+						Hebraeorum, in lege <lb/> Domini, quod scriptum est, diurna  nocturnaque  meditatione <lb/>
+						 continuus, studia operis sui reliquit innumera  .<lb/> Ad ultimum
+						 Pelagianorum [Ms . , Pelagiani]  ., Pelagiani] <lb/> sectam  eum  ejusdem auctore adamantino veritatis
+						<lb/> malleo contrivit. Adversum hos et adversum alios <lb/>   haereticos exstant ejus
+						probatissima monimenta.</p>
+					<p>XXII. (Olymp.  CCXCIX .) Ataulfus a patricio Constantio <lb/>  pulsatus, ut relicta
+						Narbona Hispanias peteret, <lb/> per quemdam Gothum apud  Barcinonam [Ms . Barcelonam]  .  <lb/>
+						lonam] inter familiares fabulas jugulatur. Cui  succedens Wallia  <milestone unit="PLSection" n="A"/><lb/>  in regno, cum patricio Constantio <lb/> pace mox facta, Alanis et
+						Wandalis Silingis, in Lusitania <lb/>  et Baetica sedentibus adversatur.</p>
+					<p>Alexandrinae Ecclesiae post Theophilum quis praesederit  ,<lb/> ignoravi haec
+						scribens.</p>
+					<p>Constantius Placidiam accepit uxorem.</p>
+					<p>(Fredibalum, regem gentis Wandalorum, ., ullo <lb/> certamine ingeniose captum ad
+						 imperatorem  Honorium <lb/> destinat.)</p>
+					<p>XXIII. Wallia, rex Gothorum, Romani nominis <lb/> causa intra Hispanias caedes magnas
+						efficit  barbarorum   .<lb/></p>
+					<p>XXIV. Solis facta defectio die decimo quarto kal. <lb/> Augusti, qui fuit quinta
+						feria.</p>
+					<p>Romanae Ecclesiae XXXIX praesidet episcopus <milestone unit="PLSection" n="B"/><lb/>
+						ZOSIMUS  [Ms . , Eulalius] ., Eulalius].</p>
+					<p>Durante episcopo  quo supra , gravissimo terraemotu <lb/> sancta in Hierosolymis loca
+						quassantur et caetera, de <lb/> quibus in gestis ejusdem  episcopi  scripta declarant.</p>
+					<p>Wandali Silingi in Baetica per Walliam regem <lb/> omnes exstincti.</p>
+					<p>Alani qui Wandalis et  Suevis  potentabantur, adeo <lb/> caesi  sunt a  Gothis, ut exstincto
+						Atace [Addace] rege <lb/> ipsorum, pauci qui superfuerant, abolito regni nomine  ,<lb/>
+						Gunderici, regis Wandalorum, qui in Gallaecia <lb/> resederat, se patrocinio
+						subjugarent.</p>
+					<p>Gothi intermisso certamine quod agebant, per <lb/> Constantium ad Gallias revocati,
+						sedes in Aquitanica <lb/>  a Tolosa usque ad Oceanum acceperunt.</p>
+					<p>Wallia eorum rege defuncto. Theodoricus succedit <milestone unit="PLSection" n="C"/><lb/>
+						 in regno.</p>
+					<p>XXV. Inter Gundericum Vandalorum, et Hermericum <lb/>  Suevorum  reges  certamine orto,
+						Suevi in \   .<lb/>, Nerbasis] montibus obsidentur a Wandalis .<lb/></p>
+					<p>Valentinianus Constantii et Placidiae filius nascitur  . ,<lb/></p>
+					<p>In Gallicana regione, in civitate <unclear> Biterris </unclear>, multa signa <lb/>  effecta
+						terrifica, Paulini episcopi ejusdem civitatis <lb/>  epistola enarrat ubique
+						directa.</p>
+					<p>XXVI. (Olymp. ccc.) Wandali Suevorum obsidione <lb/> dimissa, instante Asterio
+						Hispaniarum comite, sub <lb/> vicario Maurocello, aliquantis Bracarae in exitu suo <lb/>
+						occisis, relicta Gallaecia ad Baeticam transierunt.</p>
+					<p>     . .<milestone unit="PLSection" n="D"/>
+						<lb/>]</p>
+					<p>Honorius apud Ravennam Constantium consortem <lb/> sibi facit in regno.</p>
+					<p>XXVII. Constantius, imperator Ravennae, moritur <lb/> in suo tertio consulatu.</p>
+					<p>XXVIII. Castinus magister  militum  cum magna <lb/> manu et auxiliis Gothorum, bellum in
+						 Baetica  Wandalis <lb/>   infert : quos cum ad inopiam vi obsidionis  arctaret   ,<lb/> adeo
+						ut se tradere jam pararent, inconsulte <lb/> publico certamine confligens, auxiliorum
+						fraude deceptus <lb/>  ad  Tarraconam I Ms . , Terraconam]   ., Terraconam] victus <unclear/>
+						<lb/> effugit.</p>
+					<p>Bonifacius palatium deserens Africam invadit.</p>
+					<p>XXIX. (Eus. MMCCCCXI.,)</p><pb n="879"/>
+
+					<p>
+						<milestone unit="PLSection" n="A"/>XXX. (Olymp. CCCI.) Honorius actis tricennalibus ,
+						<lb/> suis Ravennae obiit.</p>
+					<p>Paulinus nobilissimus et eloquentissimus, dudum <lb/> conversione ad Deum nobilior
+						factus, vir apostolicus  ,<lb/> Nola Campaniae episcopus habetur insignis : cui <lb/>
+						 Therasia  de conjuge facta soror, testimonio vitae <lb/> beatae aequatur et merito.
+						Exstant operis ipsius egregii <lb/>  studia praedicanda.</p>
+					<p>Romanorum XLI, THEODOSIUS Arcadii filius, ante <lb/> aliquot annos regnans in partibus
+						Orientis defuncto <lb/> patre, post obitum Honorii patrui,  monarchiam  tenet <lb/> 
+						imperii, cum esset annorum viginti sex.</p>
+					<p>Joannes arripit tyrannidem.</p>
+					<p>I. Theodosius  Valentinianum , amitae suae Placidiae <lb/> filium, Constantinopoli Caesarem
+						facit, et contra <milestone unit="PLSection" n="B"/><lb/> Joannem mittit: sub quo a
+						ducibus qui cum eo per <lb/> Theodosium missi fuerant, apud Ravennam primo <lb/> anno
+						invasae tyrannidis occiditur, et Felix patricius <lb/> ordinatur ex  magistro militum [Ms . , et magister  
+						.,   militum] <lb/> li].</p>
+					<p>Valentinianus qui erat Caesar, Romae Augustus appellatur  .<lb/></p>
+					<p>Wandali Balearicas insulas depraedantur: deinde <lb/> Carthagine Spartaria, et Hispali
+						eversa et Hispaniis <lb/> depraedatis, Mauritaniam invadunt.</p>
+					<p>II. Romanae Ecclesiae XLI   . XL] praesidet episcopus <lb/>  COELESTINUS.</p>
+					<p>III.</p>
+					<p>IV. (Olymp. CCCII.) Gundericus, rex Wandalorum, <lb/> <note n="I"/> capta Hispali, cum impie elatus
+						manus in ecclesiam <milestone unit="PLSection" n="C"/><lb/> civitatis ipsius
+						extendisset, mox Dei judicio daemone <lb/> correptus interiit. Cui Gaisericus frater
+						succedit in <lb/> regno. Qui ut aliquorum relatio habet, effectus apostata <lb/>  de
+						fide catholica in Arianam dictus est transisse <lb/>  perfidiam.</p>
+					<p>V. Gaisericus, rex de Baeticae provinciae littore, cum <lb/> Wandalis omnibus, eorumque
+						familiis, mense Maio <lb/>
+						<lb/> ad Mauritaniam, et Africam relictis transit Hispaniis. <lb/> Qui prius quam
+						pertransiret, admonitus Hermigarium <lb/>  Suevum vicinas in transitu suo provincias
+						depraedari  ,<lb/> recursu cum aliquantis suis facto,  praedantem  <lb/>  in Lusitania
+						consequitur. Qui haud procul de <lb/> Emerita, quam cum sanctae martyris Eulaliae
+						injuria <lb/> spreverat multis per Gaisericum caesis, ex his quos <lb/> secum habebat,
+						arrepto, ut putavit, Euro velocius <milestone unit="PLSection" n="D"/><lb/> fugae
+						subsidio, in flumine Ana divino brachio praecipitatus <lb/>  interiit. Quo ita
+						exstincto, mox quo coeperat <lb/> Gaisericus enavigavit.</p>
+					<p>IV. Suevi sub Hermerico rege medias  partes  Gallaeciae <lb/>  depraedantes, per plebem
+						quae castella tutiora <lb/> retinebat, acta suorum partim caede, partim captivitate 
+						,<lb/> pacem quam ruperant, familiarum quae tenebantur  ,<lb/> redhibitione
+						restaurant.</p>
+					<p>Per Aetium comitem haud procul de Arelate quaedam <lb/>  Gothorum manus exstinguitur,
+						Anaolfo optimate <lb/> eorum capto. Juthungi per eum similiter debellantur <lb/>  et
+						 Nori .</p>
+					<p>Felix qui dicebatur Patricius Ravennae tumultu <lb/> occiditur militari.</p>
+					<p>
+						<milestone unit="PLSection" n="A"/>VII. Aetius, dux utriusque militiae, Noros
+							<unclear> edomat </unclear>
+						<lb/> rebellantes. Rursum Suevi initam cum Gallaecis - <lb/>  libata sibi occasione
+						conturbant. Ob quorum  depraedationem , <lb/>  Idatius episcopus ad Aetium  ducem  <lb/> qui
+						expeditionem agebat in Galliis, suscipit  legationem   .<lb/>  Vetto , qui de Gothis dolose
+						ad Gallaeciam venerat  ,<lb/> sine aliquo effectu redit ad Gothos.</p>
+					<p>VIII. (Olymp. CCCIII.) Superatis per Aetium in certamine <lb/>  Francis et in pace
+						susceptis, Censorius comes <lb/>  legatus mittitur ad Suevos, supra dicto secum <lb/>
+						Idatio redeunte.</p>
+					<p>Bonifacius in aemulationem Aetii de Africa per <lb/> Placidiam evocatus in Italiam ad
+						palatium redit. <lb/> Qui depulso Aetio in locum ejus succedens, paucis <lb/> post
+						mensibus, inito adversum Aetium conflictu, de <milestone unit="PLSection" n="B"/><lb/>
+						vulnere quo fuerat percussus interiit. Cui Sebastianus <lb/>  gener substitutus per
+						Aetium de palatio superatus <lb/>  expellitur,</p>
+					<p>IX. (Eus. MMCCCCL.) Regresso Censorio ad palatium  ,<lb/> Hermericus pacem cum
+						Gallaecis quos praedabatur <lb/>  assidue, sub interventu episcopali datis sibi reformat
+						<lb/>  obsidibus.</p>
+					<p>Symphosius episcopus per eum ad comitatum legatus <lb/>  missus, rebus in cassum
+						frustratur arreptis.</p>
+					<p>In conventu Lucensi contra voluntatem Agrestii, <lb/> Lucensis episcopi, Pastor et
+						Syagrius episcopi ordinantur  .<lb/></p>
+					<p>Aetius, dux utriusque militiae, Patricius appellatur.</p>
+					<p>X. Sebastianus exsul et profugus effectus, navigat <lb/>  ad palatium Orientis.</p>
+					<p>
+						<milestone unit="PLSection" n="C"/>Romanae Ecclesiae  XLU [Ms . XLI]  . XLI] habetur episcomes <lb/>
+						 XYSTUS.</p>
+					<p>XI. Hierosolymis Juvenalem episcopum praesidepraedari  ,<lb/> Germani presbyteri Arabicae
+						regionis exinde ad <lb/> Gallaeciam venientis, et aliorum Graecorum relatione <lb/>
+						comperimus, adjicientibus Constantinopolim eum <lb/> cum aliis, et Palaestinae provinciae
+						et Orientis episcomes <lb/>  evocatum  sub praesentia Theodosii augusti, contracto <lb/>
+						 episcoporum interfuisse concilio ad destruendam <lb/>  Hebionitarum haeresim,
+						quam Nestorius [Ms., <lb/> Atticus] ejusdem urbis episcopus pravo  stultissimae  <lb/>
+						sectae resuscitabat ingenio.</p>
+					<p>Quo vero tempore sancti Joannes, Hieronymus et <lb/> alii quos supra diximus, obierint,
+						vel quis Joanni <lb/> ante Juvenalem successerit, sicut et fecisse cognitum <milestone unit="PLSection" n="D"/><lb/> tum est in brevi seniorem quemdam, referentum <lb/>
+						sermo non edidit.</p>
+					<p>XII. (Olymp. CCCIV.) Narbona obsideri coepta per <lb/> Gothos.</p>
+					<p>Burgundiones qui rebellaverant, a Romanis duce <lb/>  Aetio  debellantur.</p>
+					<p>Uno eodemque tempore Alexandriae Cyrillum episcopus <lb/>  praesidere, et
+						Constantinopoli Nestorium <lb/> haereticum Hebionaeum, Cyrilli ipsius ad eumdem <lb/>
+						epistola, et haeresim destruentis et regulam fidei exponentis <lb/>  ostendit. Haec cum
+						aliis habentur allata.</p>
+					<p>XIII. Narbona obsidione liberatur Aetio duce et <lb/> magistro militum. Burgundionum
+						caesa viginti mil.  .<lb/></p><pb n="881"/>
+
+					<p>
+						<milestone unit="PLSection" n="A"/>Rursus Censorius et Fretimundus legati mittuntur
+						<lb/> ad Suevos.</p>
+					<p>XIV. Gothorum caesa octo millia sub Aetio duce.</p>
+					<p>Suevi cum parte plebis Gallaeciae cui adversabantur  ,<lb/> pacis jura confirmant.</p>
+					<p>Hermericus rex morbo oppressus Rechilam filium <lb/> suum substituit in regnum: qui
+						Andevotum cum <lb/> sua quam habebat manu ad Singillionem Baeticae <lb/> fluvium aperto
+						marte prostravit, magnis ejus auri et <lb/> argenti opibus occupatis.</p>
+					<p>XV. Carthagine fraude decepta die decimo quarto <lb/> kalen. Novembris omnem Africam
+						rex Gaisericus <lb/> invadit.</p>
+					<p>Bello Gothico sub Theodorico rege apud Tolosam, <lb/> Litorius Romanus dux inconsultius
+						cum auxiliari Hunorum <milestone unit="PLSection" n="B"/><lb/>  manu irruens, caesis
+						 his , ipse vulneratus capitur  ,<lb/> et post dies paucos occiditur.</p>
+					<p>Inter Romanos et Gothos pax efficitur.</p>
+					<p>Gaisericus elatus impie, episcopum clerumque <lb/> Carthaginis depellit ex  ea ,  et juxta
+						prophetiam Danielis  ,<lb/> demutatis ministeriis sanctorum, ecclesias capitur 
+						  .<lb/>, tradidit] Arianis.</p>
+					<p>Rechila, rex Suevorum, Emeritam ingreditur.</p>
+					<p>XVI. (Olymp. CCCV.) Gaisericus, Siciliam depraedatus  ,<lb/> Panormum diu obsedit: qui
+						 damnati a  catholicis <lb/> episcopis Maximini, apud Siciliam Arianorum ducis  ,<lb/>
+						adversum catholicos praecipitatur instinctu, ut <lb/> eos quoquo pacto in impietatem
+						cogeret Arianam: <lb/> nonnullis declinantibus, aliquanti durantes in catholica <lb/> 
+						fide consummavere martyrium.</p>
+					<p>
+						<milestone unit="PLSection" n="C"/>Censorius comes qui legatus missus fuerat ad  Suevos  
+						 ,<lb/> residens  Mirtyli  [Martyli], obsessus a Rechila in <lb/> pace se tradidit.</p>
+					<p>XVII. Rex Suevorum, diuturno per annos septem <lb/> morbo afflictus, moritur
+						Hermericus.</p>
+					<p>Rex Rechila Hispali obtenta, Baeticam et Carthaginiensem <lb/>  provincias in suam
+						redigit potestatem.</p>
+					<p>     .]</p>
+					<p>Sabino episcopo de Hispali factione depulso, in <lb/> locum ejus Epiphanius ordinatur
+						fraude, non jure.</p>
+					<p>Asturius, dux utriusque militiae,  ad Hispanias missus    ,<lb/> Tarraconensium caedit
+						multitudinem Bacaudarum  .<lb/></p>
+					<p>XVIII. Cometae sidus apparere incipit mense Decembri  ;<lb/> quod per menses aliquot
+						visum, subsequentis <milestone unit="PLSection" n="D"/><lb/>  in pestilentia plagae
+						quae fere in toto orbe diffusa <lb/> est, praemisit ostentum.</p>
+					<p>Constantinopolitanae ecclesiae depulso Nestorio <lb/> praesidet episcopus Flavianus.</p>
+					<p>XIX. (Eus. MMCCCCLX.) Asturio magistro utriusque <lb/> militiae,gener ipsius successor
+						ipsi  mittitur Merobaudis   ,<lb/> natu nobilis et eloquentiae merito, vel maxime <lb/>
+						in poematis studio veteribus comparandus, testimonio <lb/>  etiam provehitur statuarum.
+						Brevi tempore potestatis <lb/>  suae Aracellitanorum frangit insolentiam Bacaudarum 
+						.<lb/> Mox nonnullorum invidia perurgente, ad <lb/> urbem Romam sacra praeceptione
+						revocatur.</p>
+					<p>XX. (Olymp. CCCVI.) Sebastianus illic quo confugerat  ,<lb/> deprehensus sibi adversa
+						moliri, e  Constantinopoli . <milestone unit="PLSection" n="A"/><lb/>  fugit admonitus, et
+						ad Theodorem regem <lb/> Gothorum veniens,  conquaesitam  sibi, qua potuit, <lb/>
+						Barcinonam hostis factus ingreditur.</p>
+					<p>XXI. In Asturicensi urbe  Gallaeciae , quidam ante <lb/> aliquot annos latentes Manichaei
+						gestis episcopalibus <lb/> deteguntur; quae ab Idatio et Turibio  episcopis  qui <lb/> eos
+						audierant ; ad Antoninum Emeritensem episcopum <lb/>  directa sunt.</p>
+					<p>Wandali navibus Turonio in littore Gallaeciae repente <lb/>  advecti, familias capiunt
+						plurimorum.</p>
+					<p>Sebastianus de Barcilone fugatus migrat ad Wandalos  .<lb/></p>
+					<p>Per episcopum Romae tunc praesidentem gesta de <lb/> Manichaeis per provincias
+						diriguntur.</p>
+					<p>XXII. Vitus magister utriusque militiae factus, ad <milestone unit="PLSection" n="B"/><lb/> Hispanias missus, non exiguae manus fultus auxilio, <lb/> cum Carthaginienses
+						vexaret et Baeticos, succedentibus <lb/>  cum rege suo illic Suevis, superatis etiam in
+						<lb/> congressione qui ei ad depraedandum in adjutorium <lb/> venerant, Gothis, territus
+						miserabili timore diffugit. <lb/> Suevi exin illas provincias magna depraedatione subvertunt
+						 .<lb/></p>
+					<p>XXIII. Romanae Ecclesiae XLIII   . XLII] praesidet <lb/>  episcopus Leo : hujus
+						scripta per episcopi Turibii <lb/>  diaconem Pervincum contra Priscillianistas ad <lb/>
+						<lb/> Hispanienses episcopos deferuntur. Inter quae ad <lb/> episcopum Turibium de
+						observatione catholicae fidei <lb/> et de haeresum blasphemiis disputatio plena dirigitur
+						 ,<lb/> quae ab aliquibus Gallaecis subdolo probatur <lb/> arbitrio.</p>
+					<p>
+						<milestone unit="PLSection" n="C"/>Solis facta defectio die nono kal. Januarias, qui fui
+						<lb/> tertia feria.</p>
+					<p>XXIV. (Olymp. CCCVII.) Rechila, rex Suevorum , <lb/> Emeritae gentilis moritur mense
+						Augusto : cui mox <lb/> filius suus catholicus Rechiarius succedit in regnum, <lb/>
+						nonnullis quidem sibi de gente sua aemulis, sed latenter <lb/> : obtento tamen regno,
+						sine mora ulteriores regiones <lb/>  invadit ad praedam.</p>
+					<p>Pascentium quemdam urbis Romae qui de  Asturica  <lb/> diffugerat, Manichaeum  Antoninus 
+						episcopus Emeritae <lb/>  comprehendit, auditumque etiam de provincia <lb/> Lusitania
+						facit expelli.</p>
+					<p>Per Agiulfum Hispali Censorius jugulatur.</p>
+					<p>XXV. Rechiarius accepta in conjugium  Theodoris  <lb/> regis filia, auspicatus initium
+						regni, Vasconias depraedatur <milestone unit="PLSection" n="D"/><lb/>  mense
+						Februario.</p>
+					<p>Basilius ob testimonium egregii ausus sui  congregatis . <lb/>  Bacaudis in ecclesia
+						Tyriassone foederatos  occidit  <lb/> : ubi et Leo ejusdem ecclesiae episcopus,  ab  <lb/>
+						eisdem qui cum Basilio aderant, in eo loco obiit vulneratus  .<lb/></p>
+					<p>Rechiarius mense Julio ad  Theodorem  socerum <lb/> profectus, Caesaraugustanam regionem
+						cum Basilio <lb/> in reditu depraedatur. Irrupta per  dolum Ilerdensi   <lb/> urbe, acta est
+						non parva captivitas.</p>
+					<p>XXVI. Asturius vir illustris ad honorem provehitur <lb/>  consulatus.</p>
+					<p>Sebastianus exsul factus ad perniciosam sibi,  sicut ' <lb/> post exitus docuit, Gaiserici
+						confugit potestatem :<pb n="883"/>
+						<milestone unit="PLSection" n="A"/><lb/> parvo post tempore quam venerat per eum jubetur
+						<lb/> occidi.</p>
+					<p>De Galliis epistolae  deferuntur  Flaviani episcopi ad <lb/> Leonem episcopum missae, cum
+						scriptis Cyrilli episcopi <lb/>   Alexandrini  ad Nestorium Constantinopolitanum <lb/> 
+						de Eutychete Hebionita haeretico, et Leonis episcopi <lb/>  ad eumdem responsa, quae
+						cum aliorum episcoporum <lb/>  et gestis et scriptis per ecclesias diriguntur 
+						.<lb/></p>
+					<p>XXVII. Theodosius imperator moritur Constantinopoli <lb/>  anno aetatis suae
+						quadragesimo octavo.</p>
+					<p>Post quem XLIII statim apud Constantinopolim <lb/> MARCIANUS a militibus et ab
+						exercitu, instante sorore <lb/> Theodosii Pulcheria regina, efficitur imperator. Qua
+						<lb/> sibi in conjugium assumpta, regnat  in partibus  Orientis .<milestone unit="PLSection" n="B"/> <lb/></p>
+					<p> XXVIII . (Olymp. CCCVIII.) Valentiniani imperatoris <lb/> mater Placidia moritur apud
+						Romam.</p>
+					<p>In Gallaecia terraemotus assidui, signa in coelo <lb/> plurima ostenduntur. Nam pridie
+						nonas Aprilis  tertia  <lb/>  feria, post solis occasum, ab Aquilonis plaga coelum <lb/>
+						 rubens sicut ignis aut sanguis efficitur, intermixtis <lb/>  per igneum ruborem
+						lineis clarioribus in <lb/> speciem hastarum rutilantium deformatis : a die <lb/> clauso
+						usque in horam noctis fere tertiam signi durat <lb/> ostensio, quae mox ingenti exitu
+						perdocetur.</p>
+					<p>Gens Hunnorum pace rupta depraedatur provincias <lb/> Galliarum : plurimae civitates
+						effractae, in campis <lb/> Catalaunicis, haud longe de civitate quam  effregerant   ,<lb/>
+						Mertis,  Aetio  duci et regi Theodori, quibus <milestone unit="PLSection" n="C"/><lb/>
+						erat in pace societas, aperto marte confligens, divino <lb/> caesa superatur auxilio :
+						bellum nox intempesta diremit  .<lb/> Rex illic Theodores prostratus occubuit: <lb/>
+						ccc ferme millia hominum in eo certamine cecidisse <lb/> memorantur.</p>
+					<p>Multa anno signa procedunt. Quinto kal. Octobris <lb/> a parte Orientis luna fuscatur.
+						In diebus sequentis <lb/> paschae visa quaedam in coelo regionibus Galliarum, <lb/>
+						epistola de his Eufronii  Augustodunensis  episcopi ad <lb/> Agrippinum comitem facta
+						evidenter ostendit. Stella <lb/> cometes a decimo quarto kal. Julias apparere incipit
+						 ,<lb/> quae III kal. diluculo ab Oriente visa, post occasum <lb/>  solis ab occidua
+						parte mox cernitur. Kalendis <lb/> Augusti a parte occidentis apparet.</p>
+					<p>Occiso Theodore Thorismo filius ejus succedit in <milestone unit="PLSection" n="D"/><lb/> regno.</p>
+					<p>Hunni cum rege suo Attila, relictis Galliis post <lb/>  certamen , Italiam petunt.</p>
+					<p>XXIX. (Eus. MMCCCCLXI.) Secundo regni anno principis <lb/>  Marciani, Hunni qui
+						Italiam praedabantur, aliquantis <lb/>  etiam civitatibus irruptis, divinitus partim
+						<lb/> fame, partim morbo quodam plagis coelestibus feriuntur <lb/>  : missis etiam per
+						Marcianum principem  Aetio  <lb/> duce caeduntur auxiliis; pariterque in sedibus suis et
+						<lb/> coelestibus plagis, et per Marciani subiguntur  exercitum  <lb/>  : et ita subacti,
+						pace facta cum Romanis proprias <lb/>  universi repetunt sedes, ad quas rex eorum <lb/>
+						Attila mox reversus interiit.</p>
+					<p>Ad Suevos Mansuetus comes Hispaniarum, et <milestone unit="PLSection" n="A"/><lb/>
+						Fronto similiter comes, legati pro pace mittuntur et <lb/> obtinent conditiones
+						injunctas.</p>
+					<p>Thorismo, rex Gothorum, spirans hostilia a Theudorico <lb/>  et Frederico fratribus
+						jugulatur : cui  Theodericus  <lb/>  succedit in regno.</p>
+					<p>XXX. Tertio regni anno principis Marciani regina <lb/> moritur Pulcheria mense
+						Julio.</p>
+					<p>Per Fredericum Theudorici regis fratrem  Bacaudae  <lb/>  Tarraconenses caeduntur ex
+						auctoritate Romana  .<lb/></p>
+					<p>In Gallaecia terraemotus, et in sole signum in  ortu , <lb/> quasi altero secum concertante
+						monstratur.</p>
+					<p> Aetius  dux et patricius fraudulenter singularis  accitus  <lb/>  intra palatium manu
+						ipsius Valentiniani imperatoris <lb/>  occiditur. Et cum ipso per spatarium ejus
+							<milestone unit="PLSection" n="B"/><lb/> aliqui singulariter intromissi jugulantur
+						honorati.</p>
+					<p>His gestis legatos Valentinianus mittit ad gentes, <lb/> ex quibus ad Suevos venit
+						Justinianus.</p>
+					<p>XXXI. Quarto regni anno principis Marciani per <lb/> duos barbaros Aetii familiares
+						Valentinianus Romae <lb/> imperator occiditur in campo, exercitu circumstante  ,<lb/>
+						anno aetatis suae XXXVI, et regni xxxi. Post quem <lb/> mox Maximus  ex  consulibus XLIII
+						Romae Augustus <lb/> appellatur : qui cum imperator factus relictam Valentiniani <lb/> 
+						sibi duxisset uxorem, et filio suo ex priore <lb/> conjuge Palladio  quem  Caesarem
+						fecerat, Valentiniani <lb/>  filiam in conjugium tradidisset, magnorum  motuum  <lb/> 
+						quos verebatur, perturbatione distortus, et <lb/> quia in occisorum per Valentinianum,
+						et in  ipsius  <lb/> interitum Valentiniani, ambitu regni consilia scelesta <milestone unit="PLSection" n="C"/><lb/>  patrata contulerat, cum imperium deserere <lb/>
+						vellet et Romam, vix quatuor regni sui mensibus <lb/> expletis, in ipsa urbe tumultu
+						populi et seditione occiditur <lb/>  militari.</p>
+					<p>Ipso anno in Galliis Avitus Gallus civis ab exercitu <lb/> Gallicano et ab honoratis,
+						primum Tolosae, dehinc <lb/> apud Arelatum Augustus appellatus, Romam pergit <lb/> et
+						suscipitur.</p>
+					<p>Usque ad Valentinianum Theodosii generatio tenuit <lb/> principatum.</p>
+					<p>Romanorum XLIII, MARCIANUS quarto jam regni <lb/> sui anno obtinet monarchiam.</p>
+					<p>I. (Olymp. CCCIX.) Per Avitum, qui a Romanis et <lb/> evocatus et susceptus fuerat
+						imperator, legati ad <lb/> Marcianum pro unanimitate mittuntur imperii. <milestone unit="PLSection" n="D"/></p>
+					<p> Gaisericus  sollicitatus a relicta Valentiniani, ut <lb/> malum fama dispergit, prius
+						quam  Avitus  augustus <lb/> fieret, Romam ingreditur,  direptisque  opibus Romanorum <lb/> 
+						Carthaginem redit, relictam Valentiniani et <lb/>  filias  duas, et  Aetii  filium
+						Gaudentium nomine, secum <lb/> ducens.</p>
+					<p>Suevi Carthaginienses regiones quas Romanis reddiderant  ,<lb/> depraedantur.</p>
+					<p>Marcianus et Avitus concordes principatu Romani <lb/> utuntur imperii.</p>
+					<p>Per augustum Avitum Fronto comes legatus mittitur <lb/>  ad Suevos. Similiter et a
+						rege  Gothorum  Theudorico  ;<lb/> quia fidus  Romano  esset imperio, legati ad <lb/>
+						eosdem mittuntur, ut tam secum quam cum Romano<pb n="885"/>
+						<milestone unit="PLSection" n="A"/><lb/>  imperio , quia uno essent pacis foedere copulati,
+						jurati <lb/>  foederis promissa servarent. Remissis legatis <lb/> utriusque partis
+						atque omni juris ratione violata, <lb/> Suevi Tarraconensem provinciam quae Romano imperio
+						<lb/>  deserviebat, invadunt.</p>
+					<p>De Erulorum gente septem navibus in Lucensi littore <lb/>  aliquanti advecti, viri
+						ferme CCCC expediti, superventu <lb/>  multitudinis congregatae duobus tantum ex <lb/>
+						 suo  numero effugantur occisis, qui ad sedes proprias <lb/> redeuntes, Cantabriarum et
+						Vardulliarum loca  maritima  <lb/>  crudelissime depraedati sunt,</p>
+					<p>Legati Gothorum rursum veniunt ad Suevos: post <lb/> quorum adventum rex Suevorum
+						Rechiarius cum <lb/> magna suorum multitudine regiones provinciae Tarraconensis <lb/> 
+						invadit, acta illic depraedatione, et grandi <milestone unit="PLSection" n="B"/><lb/> ad
+						Gallaeciam captivitate deducta.</p>
+					<p>Mox Hispanias rex Gothorum Theudoricus cum <lb/> ingenti exercitu suo, et cum voluntate
+						et ordinatione <lb/> Aviti imperatoris ingreditur. Cui cum multitudine <lb/> Suevorum
+						rex Rechiarius occurrens duodecimo de <lb/> Asturicensi urbe milliario, ad fluvium
+						nomine Urbicum  ,<lb/> tertio nonas Octobris die, sexta feria inito mox <lb/> certamine
+						superatur : caesis suorum agminibus, aliquantis <lb/>  captis, plurimisque fugatis,
+						ipse ad extremas <lb/>  sedes Gallaeciae plagatus vix evadit ac profugus.</p>
+					<p> Theudorico  rege cum exercitu ad Bracaram extremas <lb/>  civitatem Gallaeciae
+						pertendente, quinto kal. <lb/> Novemb. die dominico, etsi incruenta, fit tamen satis
+						<lb/> moesta et lacrymabilis ejusdem direptio civitatis. <lb/> Romanorum magna agitur
+						captivitas captivorum, <milestone unit="PLSection" n="c"/><lb/> sanctorum basilicae
+						 effractae , altaria sublata atque <lb/> confracta, virgines Dei exin quidem adductae, sed
+						<lb/> integritate servata, clerus usque ad nuditatem pudoris <lb/>  exutus, promiscui
+						sexus cum parvulis, de locis <lb/> refugii sanctis populus omnis abstractus, jumentorum
+						 ,<lb/> pecorum, camelorumque  horrore  locus sacer <lb/> impletus, scripta super
+						Jerusalem ex parte coelestis <lb/> irae revocavit exempla.</p>
+					<p>II. Rechiarius ad locum qui Portucale appellatur, <lb/> profugus regi Theudorico
+						captivus adducitur : quo <lb/> in custodiam redacto, caeteris qui de priore certamine <lb/>
+						 superfuerant, tradentibus se Suevis, aliquantis <lb/> nihilominus interfectis,
+						regnum destructum et finitum <lb/>  est Suevorum.</p>
+					<p>Hisdem diebus  Rechimeris  comitis circumventione <milestone unit="PLSection" n="D."/> ,<lb/> magna multitudo Wandalorum, quae se de Carthagine <lb/>  cum LX navibus ad
+						Gallias vel ad Italiam <lb/> moverat, regi Theudorico nuntiatur occisa per Avitum 
+						.<lb/></p>
+					<p>Hesychius tribunus legatus ad Theudoricum cum <lb/> sacris muneribus missus ad
+						Gallaeciam venit, nuntians <lb/>  ei id quod supra, in Corsica caesam multitudinem <lb/>
+						 Wandalorum, et Avitum de Italia ad Gallias <lb/> Arelate successisse. Orientalium
+						naves Hispalim venientes <lb/>  per Marciani exercitum caesas nuntiat.</p>
+					<p>Occiso Rechiario mense Decembri, rex Theudoricus <lb/>  de Gallaecia ad Lusitaniam
+						succedit.</p>
+					<p>In conventus parte Bracarensis latrocinantum depraedatio <lb/>  perpetratur.</p>
+					<p>
+						<milestone unit="PLSection" n="A"/> Aiulfus  deserens Gothos in Gallaecia residet.</p>
+					<p>Suevi qui remanserant in extrema parte Gallaeciae  ,<lb/> Massiliae filium nomine
+						Maldram sibi regem <lb/> constituunt.</p>
+					<p> Theudoricus  Emeritam depraedari volens, beatae <lb/> Eulaliae martyris terretur
+						ostentis</p>
+					<p>III. Avitus tertio anno postea quam a Gallis et a <lb/> Gothis factus fuerat imperator,
+						caret imperio, Gothorum <lb/>  promisso destitutus auxilio, caret et vita.</p>
+					<p>In Orientis partibus septimo anno imperii sui moritur <lb/>  Marcianus.</p>
+					<p>Romanorum XLIV, MAJORIANUS in Italia, et Constantinopoli <lb/>  LEO augusti
+						appellantur.</p>
+					<p>I. Theudoricus adversis sibi nuntiis territus, mox <lb/> post dies paschae, quod fuit
+						quinto kal. Aprilis, de <milestone unit="PLSection" n="B"/><lb/> Emerita egreditur, et
+						Gallias repetens partem ex ea <lb/> quam habebat multitudine variae nationis, cum ducibus
+						<lb/>  suis ad campos Gallaeciae dirigit: qui dolis et <lb/> perjuriis instructi,
+						sicut eis fuerat imperatum, Asturicam <lb/>  quam jam praedones ipsius sub specie Romanae
+						<lb/>  ordinationis intraverant, mentientes ad Suevos <lb/> qui remanserant, jussam
+						sibi expeditionem, ingrediuntur <lb/>  pace fucata solitae arte perfidiae. Nec mora
+						<lb/> promiscui generis reperta illic caeditur multitudo, <lb/> sanctae effringuntur
+						ecclesiae, altaribus direptis et <lb/> demolitis, sacer omnibus ornatus et usus
+						aufertur. <lb/> Duo illic episcopi inventi cum omni clero abducuntur <lb/>  in
+						captivitatem : invalidior promiscui sexus agitur <lb/>  miseranda captivitas; residuis
+						et vacuis civitatis <lb/> domibus datis incendio, camporum loca vastantur. <milestone unit="PLSection" n="c"/><lb/> Palentina civitas simili quo Asturica, per Gothos <lb/>
+						perit exitio. Unum Coviacense castrum tricesimo de <lb/> Asturica milliario a Gothis
+						diutino certamine fatigatum  ,<lb/> auxilio Dei, hostibus et obsistit et praevalet;
+						<lb/> quam plurimis ex eorum manu interfectis, reliqui <lb/> revertuntur ad Gallias.</p>
+					<p>Aiulfus dum regnum Suevorum spirat, Portucale <lb/> moritur mense Junio.</p>
+					<p>Suevi in partes divisi pacem ambiunt Gallaeciarum <lb/>  : e quibus pars Frantanem,
+						pars Meldram regem <lb/>  appellat. Solito more perfidiae Lusitaniam depraedatio <lb/>
+						 pars Suevorum Maldram sequens : acta <lb/> illic Romanorum  caede , praedisque
+						contractis, civitas <lb/> Ulyxippona sub specie pacis intratur.</p>
+					<p>Frantanes moritur per Pascha et Pentecosten.  Jubente  <milestone unit="PLSection" n="D."/><lb/>  Maldra Suevi in solitam perfidiam versi, regem <lb/>  Gallaeciae
+						adhaerentem flumini Durio depraedantur  .<lb/> Quinto idus Junias die, quarta feria, ab
+						<lb/> hora quarta in  horam  sextam, ad speciem lunae <lb/> quintae vel sextae, sol de
+						lumine orbis sui minoratus <lb/> apparuit.</p>
+					<p>II. (Olymp. CCCX.) Gothicus exercitus  duce  suo  Cyrila . <lb/>  a Theudorico rege ad
+						Hispanias missus mense <lb/> Julio succedit ad Baeticam. Legati Gothorum et <lb/>
+						Wandalorum pariter ad Suevos veniunt, et revertuntur  .<lb/></p>
+					<p>III. Theudoricus cum duce suo Sunierico exercitus <lb/> sui aliquantam ad Baeticam
+						dirigit manum : Cyrila <lb/> revocatur ad Gallias. Suevi nihilominus Lusitaniae<pb n="887"/>
+						<milestone unit="PLSection" n="A"/><lb/> partes cum Maldra, alii cum Rechimundo
+						Gallaeciam , <lb/> depraedantur.</p>
+					<p> Eruli  maritima conventus Lucensis loca nonnulla <lb/> crudelissime invadunt ad Baeticam
+						pertendentes.</p>
+					<p>Maldras germanum suum fratrem  interficit , et Portucale <lb/>  castrum idem hostis
+						invadit.</p>
+					<p>Inter Suevos et Gallaecos interfectis aliquantis honestis <lb/>  natu, malum hostile
+						miscetur.</p>
+					<p>Legati a Nepotiano magistro militiae, et a Sunierico <lb/>  comite missi veniunt ad
+						Gallaecios, nuntiantes <lb/> Majorianum augustum et Theudoricum regem firmissima <lb/> 
+						inter se pacis jura sanxisse, Gothis in quodam <lb/> certamine superatis.</p>
+					<p>IV. (Eus. MMCCCCLXXX.) Maldras in fine mensis <lb/> Februarii jugulatus merito perit
+						interitu.</p>
+					<p>
+						<milestone unit="PLSection" n="B"/>Per Suevos Luco habitantes, in diebus paschae, <lb/>
+						Romani aliquanti cum rectore suo honesto natu  repentino . <lb/>  securi de reverentia
+						dierum occiduntur incursu  .<lb/></p>
+					<p>Mense Maio Majorianus Hispanias ingreditur imperator <lb/>  : quo Carthaginiensem
+						provinciam pertendente  ,<lb/> aliquantas naves quas sibi ad transitum adversum <lb/> 
+						Wandalos praeparabat, de littore Carthaginiensi <lb/>  commoniti Wandali per  proditores 
+						abripiunt. <lb/> Majorianus ita sua ordinatione frustratus ad Italiam <lb/>
+						revertitur.</p>
+					<p>Pars Gothici exercitus a Sunierico et Nepotiano <lb/> comitibus ad Gallaeciam directa,
+						Suevos apud Lucum <lb/>  depraedantur : quae Dictinio [Ms. Suevos apud <lb/> Lucum
+						depraedatur habitantes, qu: Dictinio], Spinione <milestone unit="PLSection" n="c"/><lb/>
+						 et Ascanio delatoribus, spargentibusque ad <lb/> terrorem propriae venena
+						perfidiae, indicata recurrit <lb/> ad suos : ac mox iisdem delatoribus quibus supra,
+						<lb/> Frumarius cum manu Suevorum quam habebat imperator  ,<lb/> capto Idatio episcopo
+						septimo kalend. Augusti <lb/>  in Aquaeflaviensi ecclesia, eumdem conventum <lb/> grandi
+						evertit excidio.</p>
+					<p>Rechimundus vicina sibi  pariter  Auregensium loca, <lb/> et Lucensis conventus maritima
+						populatur.</p>
+					<p>Inter Frumarium et Rechimundum oritur de regni <lb/> potestate dissensio.</p>
+					<p>Gallaeciorum et Suevorum pacis quaedam umbra <lb/>  conseritur .</p>
+					<p>A Theudorico legati ad Suevos veniunt et recurrunt  .<lb/></p>
+					<p>
+						<milestone unit="PLSection" n="D"/>Suniericus Scallabim cui adversabatur, obtinet <lb/>
+						civitatem.</p>
+					<p>Idatius qui supra, tribus mensibus captivitatis imperator  ,<lb/> mense Novembri,
+						miserantis Dei gratia, contra <lb/> votum et ordinationem supra dictorum delatorum <lb/>
+						redit ad Flavias.</p>
+					<p>De rege Theudorico legati gentis perfidae revertuntur  .<lb/></p>
+					<p>Gaisericus rex a Majoriano  imperatore  per legatos <lb/> postulat pacem.</p>
+					<p>V. Majorianum de Galliis Romam redeuntem, et <lb/> Romano imperio vel nomini res
+						necessarias ordinantem  ,<lb/> Rechimer livore percitus et invidorum consilio <lb/> 
+						fultus, fraude interficit circumventum.</p>
+					<p>
+						<milestone unit="PLSection" n="A"/>Romanorum XLV, SEVERUS a senatu Romae augustus <lb/>
+						 appellatur anno imperii Leonis quinto.</p>
+					<p> VI !. I. (Olymp. CCCXI.) Suniericus redit ad  Gallias . <lb/> Nepotianus Theudorico
+						ordinante Arborium accipit <lb/> successorem.</p>
+					<p>In provincia Gallaecia prodigiorum videntur signa <lb/> diversa.  Aera  D, VI nonas
+						Martias pullorum cantu, <lb/> ab occasu solis luna in sanguinem plena convertitur. <lb/>
+						Idem dies sexta feria fuit.</p>
+					<p>Antiochia major Isauriae  [Forte , majoris Syriae] ,  Syriae] <lb/> inobediens monitis salutaribus,
+						terra dehiscente  demergitur .  ,<lb/> tantum ipsius civitatis aliquantis qui eum <lb/>
+						obaudientes timori Domini sunt secuti, de interitu <lb/> liberatis, turrium etiam solis
+						cacuminibus exstantibus <lb/>  super terram.</p>
+					<p>
+						<milestone unit="PLSection" n="B"/>Gaisericus Valentiniani relictam Constantinopolim
+						<lb/> remittit.  Filiae  ipsius, una  Gentoni  Gaiserici filio, <lb/> alia Olybrio senatori
+						urbis Romae jure matrimonii <lb/> copulantur.</p>
+					<p>Agrippinus Gallus et comes et civis,  Aegidio  comiti <lb/>  viro insigni inimicus, ut
+						 Gothorum  mereretur <lb/> auxilia, Narbonam tradidit Theudorico.</p>
+					<p>Adversus  Aegidium  comitem utriusque militiae, <lb/> virum, ut fama commendat, Deo bonis
+						operibus <lb/> complacentem, in Armoricana provincia Fretiricus <lb/> frater Theuderici
+						regis insurgens, cum his cum quibus <lb/>  fuerat, superatus occiditur.</p>
+					<p>Cum Palegorio viro nobili Gallaeciae, qui ad supra <lb/> dictum fuerat regem Cyrila
+						legatus, ad Gallaeciam <lb/> veniens, euntes ad eumdem regem legatos obviat <milestone unit="PLSection" n="c"/><lb/> Rechimundi : qui regressi in celeri, revertentem <lb/>
+						Cyrilam in Lucensi urbe suscipiunt. Post cujus mox <lb/> egressum de Gallaecia, Suevi
+						promissionum suarum <lb/> ut semper fallaces et perfidi, diversa loca infelicis <lb/>
+						Gallaeciae solito depraedantur.</p>
+					<p>Per Theudoricum ad Suevos Remismundus et Cyrila <lb/>  cum aliquantis Gothis qui prius
+						venerant, . <lb/>  remittuntur . Cyrila in Gallaecia remanente, Remismundo <lb/> mox
+						 recurrente  ad regem, inter Gallaecos et Suevos <lb/> indisciplinata perturbatio
+						dominatur.</p>
+					<p>Romanae Ecclesiae XLIV   . XLIII] praesidet  episcopus . <lb/>  HILARUS.</p>
+					<p>VII. I. Nepotianus recedit e corpore.</p>
+					<p>Frumario mortuo, Rechimundus omnibus Suevis <lb/> in suam ditionem regali jure
+						revocatis, pacem  reformat  <milestone unit="PLSection" n="D"/><lb/> I  elapsam.</p>
+					<p>Mense Maio supra dicti viri  Aegidii  legati per <lb/> Oceanum ad Vandalos transeunt, qui
+						eodem cursu <lb/> Septembri mense revertuntur ad suos.</p>
+					<p>Decimo tertio kalend. Augusti die, secunda feria, <lb/> in speciem lunae quintae sol de
+						lumine suo ab hora <lb/> tertia in horam sextam cernitur minoratus.</p>
+					<p>Legatos Remismundus mittit ad Theudoricum; qui <lb/> similiter suos ad Remismundum
+						remittit, cum armorum <lb/>  adjectione vel munerum, directa et conjuge <lb/> quam
+						haberet.</p>
+					<p>Vandali per Marcellinum in Sicilia caesi effugantur <lb/> ex ea.</p>
+					<p> Aegidius  moritur,  alii  dicunt insidiis, alii veneno<pb n="889"/>
+						<milestone unit="PLSection" n="A"/><lb/> deceptus. Quo desistente,  mox  Gothi regiones
+						invadunt <lb/>  quas Romano nomini tuebatur.</p>
+					<p>Suevi Conimbricam dolose ingressi, familiam  nobilem . <lb/>  Cantabri spoliant, et
+						captivam abducunt <lb/> matrem cum filiis.</p>
+					<p>Legati eodem anno duabus vicibus a rege Suevorum <lb/>  mittuntur ad regem
+						Theudoricum, ad quem et <lb/> Arborius proficiscitur evocatus.</p>
+					<p>. .] Reversi legati Suevorum obiisse nuntiant <lb/>  Severum imperii sui anno
+						quarto, qui supra <lb/> remittuntur ad Conimbricam.</p>
+					<p>Ajax natione  Galata , effectus apostata et senior <lb/> Arianus, inter Suevos regis sui
+						auxilio hostis catholicae <lb/>  fidei et divinae  Trinitatis  emergit. Ad Gallicanam <lb/>
+						 Gothorum habitationem hoc pestiferum inimici <milestone unit="PLSection" n="B"/><lb/>
+						 hominis virus advectum.</p>
+					<p>Suevi adversum Aunonensem saeviunt plebem: <lb/> qua de causa legati a Theuderico ad
+						Remismundum <lb/> mittuntur incassum,  spretique  ab eo mox redeunt.</p>
+					<p>De Constantinopoli a Leone augusto Anthemius <lb/> frater Procopii cum Marcellino,
+						aliisque comitibus <lb/> viris electis, et cum ingenti multitudine exercitus <lb/>
+						copiosi, ad Italiam Deo ordinante directus ascendit  .<lb/></p>
+					<p>Romanorum XLVI, ANTHEMIUS octavo milliario de <lb/> Roma Augustus appellatur, anno
+						Leonis imperii octavo  ,<lb/> mense Augusto.</p>
+					<p>IX. I. Expeditio ad Africam adversus Wandalos <lb/> ordinata metabularum commutatione
+						et navigationis <lb/> inopportunitate revocatur.</p>
+					<p>
+						<milestone unit="PLSection" n="c"/>Per Theudericum Salla legatus  mittitur  ad Remismundum <lb/>
+						 regem Suevorum, qui reversus ad Gallias <lb/>  eum a fratre suo Eurico  [In ms . Euvericu] 
+						. Euvericu] reperit <lb/>  interfectum.</p>
+					<p>Euricus pari scelere quo frater, succedit in reperit <lb/>  : qui honore provectus et
+						crimine, legatos ad <lb/> regem dirigit Suevorum, quibus sine mora a Remismundo <lb/> 
+						remissis, ejusdem  regis  legati  ad imperatorem, <lb/> alii ad Wandalos, alii diriguntur ad
+						Gothos.</p>
+					<p>De Aunonensi plebe cui Suevorum adversabatur <lb/> hostilitas, Opilio cum viris secum a
+						rege profectis, <lb/>  et  cum aliquantis qui cum ipso missi fuerant, reperit 
+						.<lb/></p>
+					<p>Gothi qui ad Wandalos missi fuerant, supra dictae <milestone unit="PLSection" n="D"/><lb/> expeditionis rumore perterriti revertuntur in celeri : <lb/> pariter et Suevi,
+						qui post legatos, more solito per <lb/> diversa loca in praedam dispersi fuerant,
+						revocantur: <lb/> sed paucis post mensibus ipse rex Suevorum ad Lusitaniam <lb/> 
+						transit.</p>
+					<p>II. (Olymp. CCCXII.) Conimbrica in pace  decepta  diripitur <lb/> : domus destruuntur
+						cum aliqua parte murorum ,<milestone unit="PLSection" n="A"/> <lb/>  habitatoribusque 
+						captis atque dispersis, et <lb/> regio desolatur et civitas.</p>
+					<p>Legati de Gothico reversi portenta, in Galliis visa <lb/> aliquanta, in conspectu.....
+						similem ipsi de continuo <lb/>  paruisse solem alium visum ...solis occasu. <lb/>
+						Congregatis etiam quodam die concilii sui Gothis, <lb/> tela quae habebant in manibus a
+						parte ferri vel acie, <lb/> alia viridi, alia roseo, alia croceo, alia nigro colore
+						<lb/> naturalem ferri speciem aliquamdiu non habuisse <lb/> mutata. Medio Tolosae
+						civitatis hisdem diebus e terra <lb/> sanguinem  erupisse , totoque diei fluxisse
+						curriculo.</p>
+					<p>III. Legatorum Suevorum reditum aliquanta Gothorum <lb/>  manus  insequens  Emeritam
+						petit.</p>
+					<p>Ulyxippona a Suevis occupatur, cive suo qui illic <lb/> praeerat, tradente Lusidio. Hac
+						re cognita Gothi qui <milestone unit="PLSection" n="B"/><lb/> venerant, invadunt et
+						Suevos depraedantur, pariter <lb/> et Romanos ipsis in Lusitaniae regionibus
+						servientes.</p>
+					<p>Legati qui ad imperatorem missi fuerant, redeunt, <lb/> nuntiantes sub praesentia sui
+						magnum valde exercitum <lb/>  cum tribus ducibus lectis adversum Wandalos <lb/> a Leone
+						imperatore descendisse, directo Marcellino <lb/> pariter cum manu magna eidem per
+						imperatorem <lb/> Anthemium sociata.  Rechimerum  generum Anthemii <lb/> imperatoris, et
+						patricium factum : Asparem degradatum <lb/>  ad privatam vitam, filium ejus occisum,
+						adversum <lb/>  Romanum imperium, sicut detectique sunt, <lb/> Wandalis
+						consulentes.</p>
+					<p> Hilario  defuncto sex sacerdotii sui annis expletis, <lb/> XLV Romanae Ecclesiae
+						SIMPLICIUS episcopus ordiripitur  .<lb/></p>
+					<p>
+						<milestone unit="PLSection" n="c"/>Aunonenses pacem cum rege faciunt Suevorum, <lb/> qui
+						et Lusitaniae et conventus Asturicensis quaedam <lb/> loca praedantes invadunt.</p>
+					<p>Gothi circa eumdem conventum pari hostilitate desaeviunt  ,<lb/> partes etiam
+						Lusitaniae depraedantur.</p>
+					<p>Lusidius per Remismundum cum suis hominibus <lb/> Suevis ad imperatorem in legatione
+						dirigitur.</p>
+					<p>Durissimus extra solitum hoc eodem tempore annus <lb/>   hiberni , veris, aestatis,
+						autumni in aeris, et omnium <lb/>  fructuum permutatione diffunditur.</p>
+					<p>Signa etiam aliquanta et prodigia in locis Gallaeciae <lb/> pervidentur. In flumine
+						Minio, de municipio Lais <lb/> milliaro ferme quinto, capiuntur pisces quatuor novi
+						<lb/> visu et specie, sicut retulere qui coeperant Christiani <milestone unit="PLSection" n="D"/><lb/> et religiosi, Hebraeis et Graecis  litteris , Latinis autem <lb/> aerarum
+						numeris insigniti, ita CCCLXV anni circulum <lb/> continentes, pari mensium intervallo.
+						Haud procul <lb/> de supra dicto municipio in speciem lenticulae viridissimorum <lb/> 
+						ut herba quaedam forma granorum plena <lb/> amaritudine defluxit e coelo, et multa alia
+						ostenta <lb/> quae memorare prolixum est.</p><pb n="891"/>
+
+				</div>
+				</body></text></TEI>

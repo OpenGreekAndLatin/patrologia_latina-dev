@@ -1,0 +1,951 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><TEI xmlns="http://www.tei-c.org/ns/1.0"><teiHeader>
+    
+		<fileDesc>
+			<titleStmt>
+				<title>Patrologiae Cursus Completus. Series Latina (PL)</title>
+				<sponsor>University of Leipzig</sponsor>
+				<funder>European Social Fund Saxony</funder>
+				<principal>Gregory Crane</principal>
+				<respStmt>
+					<persName xml:id="Jouve">Jouve</persName>
+					<resp>OCR-ed, corrected and encoded the text</resp>
+				</respStmt>
+				<respStmt>
+					<persName>Greta Franzini</persName>
+					<resp>Project Manager (University of Leipzig)</resp>
+				</respStmt>
+				<respStmt>
+					<persName>Simona Stoyanova</persName>
+					<resp>Project Assistant (University of Leipzig)</resp>
+				</respStmt>
+				<respStmt>
+					<persName>Bruce Robertson</persName>
+					<resp>Technical Advisor (Mount Allison University)</resp>
+				</respStmt>
+			</titleStmt>
+
+			<publicationStmt>
+				<authority>University of Leipzig</authority>
+				<idno type="filename">PL62.xml</idno>
+				<availability>
+					<licence target="https://creativecommons.org/licenses/by-sa/4.0/">Available under a
+						Creative Commons Attribution-ShareAlike 4.0 International License</licence>
+				</availability>
+				<date>2014</date>
+				<publisher>University of Leipzig</publisher>
+				<pubPlace>Germany</pubPlace>
+			</publicationStmt>
+
+			<sourceDesc>
+				<listBibl xml:lang="la">
+					<biblStruct>
+						<monogr>
+							<editor>
+								<persName>
+									<name xml:lang="fr">Jacques Paul Migne</name>
+								</persName>
+							</editor>
+							<author>Paschasius Diaconus</author>
+							<title>De Spiritu Sancto Libri Duo</title>
+							<title>Ad Eugipium</title>
+							<imprint>
+								<publisher>Garnier</publisher>
+								<pubPlace>Paris</pubPlace>
+								<date>1863</date>
+							</imprint>
+							<biblScope unit="volume">62</biblScope>
+						</monogr>
+						<monogr>
+							<author>Symmachus</author>
+							<title>Epistolae Et Decreta</title>
+							<imprint>
+								<publisher>Garnier</publisher>
+								<pubPlace>Paris</pubPlace>
+								<date>1863</date>
+							</imprint>
+							<biblScope unit="volume">62</biblScope>
+						</monogr>
+						<monogr>
+							<author>Petrus Diaconus</author>
+							<title>De Incarnatione Et Gratia</title>
+							<imprint>
+								<publisher>Garnier</publisher>
+								<pubPlace>Paris</pubPlace>
+								<date>1863</date>
+							</imprint>
+							<biblScope unit="volume">62</biblScope>
+						</monogr>
+						<monogr>
+							<author>Vigilius Tapsensis</author>
+							<title>Notitia ex Cave</title>
+							<title>Contra Eutychetem Libri Quinqe</title>
+							<title>Contra Arianos Dialogus</title>
+							<title>Contra Arianos Dialogus Probo Judice Interlocutoribus</title>
+							<title>De Trinitate Libri Duodecim</title>
+							<title>Contra Felicianum Et Arianum De Unitate Trinitatis Optatum Liber</title>
+							<title>Contra Marivadum Arianum Diaconum Libri Tres</title>
+							<title>Contra Palladium Arianum Libri Duo</title>
+							<imprint>
+								<publisher>Garnier</publisher>
+								<pubPlace>Paris</pubPlace>
+								<date>1863</date>
+							</imprint>
+							<biblScope unit="volume">62</biblScope>
+						</monogr>
+						<monogr>
+							<author>Rusticus Helpidius</author>
+							<title>In Historiam Testamenti Veteris Et Novi Carmina</title>
+							<imprint>
+								<publisher>Garnier</publisher>
+								<pubPlace>Paris</pubPlace>
+								<date>1863</date>
+							</imprint>
+							<biblScope unit="volume">62</biblScope>
+						</monogr>
+						<ref target="http://hdl.handle.net/2027/hvd.32044054758693">HathiTrust</ref>
+
+					</biblStruct>
+				</listBibl>
+			</sourceDesc>
+
+		</fileDesc>
+		<encodingDesc>
+			<p>The following text is encoded in accordance with EpiDoc standards and with the CTS/CITE
+				Architecture.</p>
+		<refsDecl>
+        <cRefPattern n="" matchPattern="(.+).(.+).(.+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@type='edition']/tei:div[@n='$1']/tei:div[@n='$2']/tei:div[@n='$3'])"/>
+        <cRefPattern n="" matchPattern="(.+).(.+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@type='edition']/tei:div[@n='$1']/tei:div[@n='$2'])"/>
+        <cRefPattern n="" matchPattern="(.+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@type='edition']/tei:div[@n='$1'])"/>
+      </refsDecl>
+    </encodingDesc>
+
+		<profileDesc>
+			<langUsage>
+				<language ident="la">Latin</language>
+			</langUsage>
+		</profileDesc>
+
+	</teiHeader>
+	<text><body><div type="edition" n="">
+					<head>
+						<title type="main"> VIGILII TAPSENSIS CONTRA FELICIANUM ET ARIANUM DE UNITATE TRINITATIS AD OPTATUM LIBER .        
+							</title>
+					</head>
+					<ab>
+						<title type="sub">  .</title>
+					</ab>
+					<ab>
+						<title type="sub">CAPUT PRIMUM.</title>
+					</ab>
+					<p>331 Extorsisti mihi, dilectissime fili, ut de unitate <milestone unit="PLSection" n="B"/><lb/>   Trinitatis , quae perfectus Deus semper ac summus <lb/>  est, officii non
+						immemor sacerdotalis , aliquid <lb/> scriberem : idque a me, cum proprie  infirmitatis 
+						conscius <lb/>  saepius excusarem, multis modis exegisti ; asserens <lb/>  communis
+						fidei rationem, et religiosos accipere, <lb/>  et  sacerdotes debere fidelibus non negare
+						: ne aut illi <lb/> dum non accipiunt, incipiant ab infidelibus facile decipi  ,<lb/>
+						aut ab his cum desiderata non tribuunt, coelestis <lb/>  thesaurus  Christi  membris non
+						expendi, sed in <lb/> terra quodammodo sterilis peritiae  videantur abscondi . <lb/> Itaque
+						victum me fateor probabilibus causis, ne <lb/>  inermes tradere   videar obsistentibus
+						malis, dum adversus <lb/>  infideles non instruuntur munimine veritatis. <lb/> Verum
+						quia in ejusmodi quaestionibus quaedam obscuritas <lb/>  continua oratione frequenter
+						incurritur, idcirco <milestone unit="PLSection" n="C"/><lb/>  id mihi visum est, ut  eum 
+						sermonem qui inter <lb/>  me  et  Felicianum  nuper est habitus, praenotatis propter <lb/> 
+						personarum discretionem principalibus nominum <lb/>  litteris , praesentis libelli
+						 brevitate complecterer    .<lb/></p>
+					<ab>
+						<title type="sub">CAPUT II.</title>
+					</ab>
+					<p>Nam cum ante hos dies pariter sederemus, tum <lb/> ille : Inter alia, inquit, quae me in
+						vestris disputationibus <lb/>  frequenter offendunt, nihil deterius puto quam <lb/>
+						quod sic praecepta fidei rudibus traditis, ut non de <lb/>  intelligendarum  rerum ratione,
+						332 sed potius de <lb/> quadam testimoniorum ostentatione colloquentibus <lb/>
+						praescribatis. Quod ut non dicam vafrum, interim <lb/> quam rusticum sit, nullus
+						ignorat. Primum quod si <lb/> is qui edocetur libris jam credidit, obtemperat iste,
+							<milestone unit="PLSection" n="D"/><lb/> non repugnat : alioquin non magis tibi quam
+						iisdem <lb/> testimoniis quae pro affirmato ingeruntur, necesse <lb/> est contradicat. Et
+						ideo melior mihi ad docendum <lb/> videtur haec via, qua primum fidei ratio sine testimoniis
+						<lb/>  redditur : post ratione convicto, iter illud <lb/> Scripturis
+						respondentibus expolitur. Et non immerito  .<lb/> Si enim testimonia  haec  eo probantur,
+						quod ratione <lb/>  non careant, potest per se illa sufficere, quae <lb/> etiam haec non
+						nisi per se ipsam videtur astruere. <lb/> Sin contra : quis potest irrationalibus
+						testimoniis, <lb/> licet illa divina  fingantur , rationabilis fidei colla submittere 
+						?<lb/> Et illam quidem disputandi viam, fateor, in <lb/> aliis tolerarem, quos
+						imperitiae necessitas, quia per <lb/> se stare non queunt, cogit ad aliena confugere : In
+						<lb/> te vero idcirco nullo prorsus modo ista perpetior, <lb/> quia eloquentiam pariter
+						cum scientia fidei tibi video <lb/> non deesse.</p>
+					<p>
+						<milestone unit="PLSection" n="B"/>Tum ego, Num usque adeo, inquam, duci me putas <lb/>
+						 laudibus meis, ut injuriam faciam praecedentibus <lb/> sanctis, nec praesumam unquam
+						in sapientia verbi, ne <lb/> evacuetur crux Christi (I Cor. I, 17); sed Scripturatione <lb/>
+						 auctoritate contentus, simplicitati obedire potius <lb/>  studeo quam tumori. Sed
+						melius, inquis, ratione <lb/>  quis quam testimoniis edocetur. Quid ergo  ?  <lb/> quam
+						rationem afferre potes, si partum praedicas  virginis   ,<lb/> si redditos oculos non
+						negas caecis, si sepultos <lb/> redisse ostendis a mortuis? Si ergo horum et incomprehensibilis
+						<lb/>  ratio et veritas prompta est, facilius in <lb/> negotiis  fidei !
+						testimoniis creditur, quam ratio investigatur  .<lb/> Verum quia non nimis
+						inconsequenter duo <lb/> ista discernis, cum ratione praemissa, etiam testimonia <lb/> 
+						non omittis: idcirco in hac disputatione id me <milestone unit="PLSection" n="C"/><lb/>
+						fateor secuturum, quod ipse probaveris.</p>
+					<ab>
+						<title type="sub">CAPUT III.</title>
+					</ab>
+					<p>Fel. dixit. Ergo, inquit, quoniam otiosi sumus, ad <lb/> homousii vestri quaestionem,
+						de quo non inter nos <lb/> tantum, sed etiam inter majores nostros plerumque <lb/>
+						tractatum est, veniamus. 333 Et ne longius  evagetur  <lb/>  oratio, ipse jam, ut soles,
+						personam  proponentis  <lb/> assume, et a nobis rationem nostrae fidei quaerentibus  ,<lb/>
+						vicissim redditurus inquire.</p>
+					<p>Tum ego,  Dic  mihi, inquam, verumne sit, quod te <lb/> audio dicere, Patri homousion non
+						esse  penitus  Filium <lb/> </p>
+					<p>Fel. dixit. Verum est, nec persuaderi mihi potest <lb/>  id  ingenitum esse quod genitum,
+						ne eumdem Patrem <milestone unit="PLSection" n="D"/><lb/> videar praedicare quem
+						Filium.</p>
+					<p>Aug. dixit. Non est ita : nam ne mihi quidem istud <lb/> in animo est,  eumdem  ingenitum
+						esse quem genitum, <lb/> sed id potius ingenitum esse quod genitum.</p>
+					<p> Fel . dixit. Et quomodo non  eumdem  ingenitum <lb/> dicis esse quem genitum, si utrumque
+						unum putas <lb/> esse, non alterum?</p>
+					<p>Aug. dixit. Animadverto vim te penitus non  attendisse  <lb/>  verborum : nam dum
+						utrumque unum dico, <lb/> substantiam veri Patris ac veri Filii ex toto non separo 
+						.<lb/> Et dum non eumdem Patrem quem Filium <lb/> praedico, utriusque personam  servata  uniuscujusque 
+						  <lb/> proprietate discerno. Itaque si substantiam quaeris, <lb/> ipsa
+						Trinitas unus  est  Deus : si personam, alter est <lb/> Filius.</p><pb n="335"/>
+
+					<p>
+						<milestone unit="PLSection" n="A"/>Fel. Et quomodo et idem esse dicis, et alterum <lb/>
+						Filium?</p>
+					<p>Aug. Idem, inquam, communione substantiae, alterum <lb/>  proprietate  personae .</p>
+					<p>Fel. Nescio quo pacto una creditur esse substantia  ,<lb/> cum non  una .' dicatur esse
+						persona.</p>
+					<p>Aug. Non est, inquam,  una persona  , quia una genuisse  ,<lb/> et altera dicitur  genita 
+						: et est tamen nati et <lb/> gignentis non diversa substantia, quia non dissimilis <lb/>
+						generanti docetur exorta.</p>
+					<p>Fel. Velim, quaeso, exemplo mihi faciliore dicta dilucides  .<lb/></p>
+					<p>Aug. In rebus quidem incomprehensibilibus exempla <lb/>  non suppetunt disputanti;
+						tamen in quantum <lb/> fieri potest, etiam in hac parte non deero. Ecce igitur <milestone unit="PLSection" n="B"/><lb/>  homo pater habet hominem filium. Est commune <lb/>
+						utriusque quod homo est, uni tamen quod filius  a ! ­ teri !­ <lb/>  proprium  videtur  esse quod
+						pater est. Nam in <lb/> utroque sic persona  discernitur   , ut communis humanitas <lb/> 
+						non negetur; dum unus gignit, alius gignitur : <lb/> aeque autem homo et qui genuit
+						dicitur, et ille qui <lb/> gignitur.</p>
+					<ab>
+						<title type="sub">CAPUT IV.</title>
+					</ab>
+					<p>Fel. Illud certe dicas velim, genitus ab ingenito <lb/> utrum 334 initio separetur, an
+						non ?</p>
+					<p>Aug. Ne id quidem spiritalis intelligentiae veritate <lb/> recipitur, ut Pater a Filio
+						interventu, non dico temporis  ,<lb/> quod diebus constat ac noctibus, sed cujuslibet
+						<lb/> aevi vel . spatio separetur.</p>
+					<p>Fel. Hoc si ita  est , duo fateris ingenita. Et quomodo <milestone unit="PLSection" n="C"/><lb/>  altera Patris, altera Filii putatur esse persona, <lb/> cum per
+						significationem communis ingeniti utraque <lb/> videatur esse confusa ?</p>
+					<p>Aug. In hoc quidem a majoribus vestris non mediocris <lb/>  calumniae sophisma
+						contexitur, tamen per <lb/> auxilium ipsius Trinitatis catholica necesse est simplicitate <lb/>
+						  salvatur . Patrem namque ingenitum, Filium <lb/> genitum dico, nec ideo tamen
+						genitum ingenito coaeternum <lb/>  esse non praedico; eo tantum docens  ingenitum  <lb/> 
+						Patrem, quia non processit ex altero ; eo genitum <lb/>  Filium, quia non exstitit a
+						seipso. Non enim est, <lb/> commune utrique  nasci  , non est commune non gigni <lb/>  :
+						et commune tamen est alterum ab altero interventu <lb/>  medii temporis non divelli.
+						Itaque si proprium <lb/> Patris quaerimus,  sufficit  quia solus non habet Patrem ;<milestone unit="PLSection" n="D"/>  <lb/> si Filii,  satis  est quod non habet prolem ; unam
+						<lb/> autem et coaeternam Patris et Filii dicimus deitatem.</p>
+					<p>Fel. Quantum ad me attinet, non video quid ista <lb/> nunc colligas. Nam quamvis
+						Aristotelica mecum subtilitate <lb/>  contendas, fieri tamen non potest ut eum <lb/>
+						 qui  genitus est, ab eo qui genuit, nulla  aevi  intercedentis <lb/>  antiquitate
+						discernas.</p>
+					<p>Aug. Scio equidem, ut ille ait, quam in difficili loco <lb/> versetur oratio : tamen
+						verendum nobis nihil est, qui <lb/> per adjutorium sancti Spiritus testimonium dicimus
+						<lb/> Deo. Quid ergo dicemus? Estne aliquid in Patre quod <lb/> negetur ingenitum, an
+						non? Si est, non in toto, sed <lb/> in parte potius dicatur ingenitus; alioquin non ex
+							<milestone unit="PLSection" n="A"/><lb/> tempore coepit esse Filius. Nam si paternitas
+						non <lb/> coepit Patris, initium inveniri non potest prolis. Si <lb/> initium datur
+						prolis, non aeterna paternitas docebitur <lb/> Patris. Et quomodo stabit, quia totum in
+						Patre  docetis  <lb/>  ingenitum, qui ipsius paternitatis nomen habere <lb/>  putatis 
+						initium, cum coepisse ex tempore dicitis Filium  ,<lb/> quem nondum exstante Patre dici
+						non potest <lb/> vocitatum?</p>
+					<p>Fel. Non sum tam stultus ut tempus praeferam <lb/> Filio, sed initium dari 335 certum
+						est genito.</p>
+					<p>Aug. Quid ergo? inter Patrem et Filium dicis mediocris <lb/>  nihil  fuisse ?</p>
+					<p>Fel. Ita prorsus.</p>
+					<ab>
+						<title type="sub">CAPUT V.</title>
+					</ab>
+					<p>Aug. Quomodo igitur negas Filium Patri coaeternum ,<milestone unit="PLSection" n="B"/>
+						<lb/> qui inter Patrem et Filium fateris esse nihil <lb/> medium, ne idipsum non medium
+						tantum constet <lb/> esse quam tertium?</p>
+					<p>Fel. Quoniam me disputandi arte concludis, id <lb/> quod a majoribus nostris dictum
+						est, breviter explicabo  .<lb/> Aiunt enim, quoties de initio Filii et Patris <lb/>
+						aeternitate tractatur : Erat quando non erat, et antequam <lb/>   nasceretur  non
+						erat.</p>
+					<p>Aug. Quantum adverto, manente malae credulitatis <lb/> errore, sola verba mutata sunt.
+						Dixisti namque, Erat <lb/> quando non erat. Erat istud ad aevum pertinere  vultis   ,<lb/>
+						an ad Filium ? Si ad aevum, id est velut ad quoddam <lb/>  ante Filii nativitatem
+						aeternitatis spatium, ecce <lb/> ad superiorem blasphemiam necessitate dilaberis, <lb/>
+						cum inter Patrem et Filium, tertium quiddam tempus <milestone unit="PLSection" n="C"/><lb/> immittis; dicisque quia erat ante Filium  Deus  Pater <lb/> et tempus. Post haec
+						duo Filius. Post tria ista quartus <lb/>  Spiritus. Quod si admittimus, ut sine tempore
+						gigni <lb/> non potuerit Filius :  vide quam  late pateant ista quae <lb/> dicimus. Nam si
+						 non  sine tempore est Filius, certe nec <lb/> nisi in loco dicendus est genitus. Hoc
+						admisso, ante <lb/> Filium et Spiritum, coaevum quodammodo Patri temporis <lb/>  docetur
+						et locus. Quod si ita est, ut sine loco et <lb/> tempore nasci non potuerit Filius, in
+						quo loco, aut <lb/> in quo tempore factum locum dicis et tempus? Si in <lb/> nullo, ecce
+						sine tempore et loco fieri potuit tempus <lb/> et locus. Si in aliquo, id ipsum tempus
+						videtur et locus  ,<lb/> in cujus origine similiter et locus requiritur et <lb/>
+						tempus. Quod si usque adeo sine  tempore  et loco fieri <lb/> aliquid potuit, ut nec in
+						loco locum, nec in tempore <milestone unit="PLSection" n="D"/><lb/> factum doceas tempus
+						: nescio qua temeritate contendas  ,<lb/> quod sine his nasci non potuerit Filius, qui
+						<lb/> quantum ad sanam  fidem  pertinet, et locum fecisse <lb/> docetur et tempus. Sed de
+						hoc satis. Nunc quod a <lb/> majoribus vestris dictum praedicas, reputamus. Erat, <lb/>
+						inquis, quando non erat. Si erat istud ad tempus referas  ,<lb/> ecce ante  Filium 
+						tempus ; si ad Filium, nunquam <lb/>  non erat Filius : erat enim jam Filius quando
+						<lb/> non erat tempus, a quo 336 factum dicitur tempus. <lb/> Sed antequam  nasceretur ,
+						inquis, non fuit. Quis, <lb/> quaeso, non fuit antequam nasceretur? Si Filius; <lb/> ecce
+						ipso intellectu ante Filium fuisse  dicitur   temporis  .<lb/> Si autem antequam nasceretur
+						Filius, non erat<pb n="337"/>
+						<milestone unit="PLSection" n="A"/><lb/> tempus, sequitur ut  dicatur  Patri Filius
+						 coaeternus , <lb/> inter quem et Patrem nullum fuisse dicitur tempus : <lb/> maxime cum
+						inter caetera evangelistis attestantibus, <lb/> etiam tempus fecisse dicatur Filius. Sed
+						forte de  Patre  <lb/>  dictum aliquis putet : Erat, quando non erat Filius  .<lb/> Cui
+						sententiae sequentia non concinunt, quibus <lb/> dicitur : Et antequam nasceretur non
+						fuit. Nam per <lb/>  se  Pater semper existens, etiam a vobis dici non potest <lb/> 
+						natus ; qui non ab initio docetur exortus, et in <lb/> Patrem cadere non potest : Erat,
+						quando non erat <lb/> genitus.</p>
+					<ab>
+						<title type="sub">CAPUT VI.</title>
+					</ab>
+					<p>Fel. Quoniam me verbis, ut mea fert opinio, inopinata <lb/>  subtilitate certantibus
+						non mediocriter defatigas  ,<lb/> id irco quaeso ut, si fieri potest, exemplo  cujuslibet -
+							<milestone unit="PLSection" n="B"/><lb/>  rei,  possibile  id esse quod docere
+						conaris, <lb/> ostendas. Neque enim aliter credere possum, licet <lb/> vi orationis
+						oppressus, coaeternum esse genitum Patri  ,<lb/> nisi aut utrumque genitum, aut utrumque
+						Patrem <lb/> dixeris sibi.</p>
+					<p>Aug. Quoniam me ad incomparabilium rerum <lb/>  exempla  compellis, idcirco quae sit
+						ignis potentia videamus  ,<lb/> ex quo semper est splendor, semper est vapor  .<lb/>
+						Utrumque de eo nascitur, nec ideo tamen ignis <lb/> sine horum quolibet aliquatenus
+						invenitur. Haec tria <lb/>  non  se invicem gignunt, quia non de splendore ignis <lb/> et
+						vapor, aut de vapore ignis  et  splendor, sed de <lb/> igne splendor et vapor semper est
+						genitus. Quae cum <lb/> ita sint, videsne etiam in creaturis posse aliquid  nasci  
+						,<lb/>  nec  ostendi tamen tempus quod id de quo natum <milestone unit="PLSection" n="C"/><lb/> est sine genito potuerit inveniri? Si ergo visibilibus <note n="I"/> <lb/> exemplis ista
+						perspicimus, cur non de Patre et  Filio  , <lb/> vel sancto Spiritu, quantum ad communem
+						duntaxat <lb/> atque indifferentem aeternitatem, similia praedicemus   ?<lb/> Neque enim
+						ideo necesse est Patrem et Filium <lb/> et Spiritum sanctum aeque dicamus ingenitum, quia
+						<lb/> nullum ab  altero aevo   interveniente dicimus separatum <lb/>  : cum etiam 337 ex
+						aliis rebus quaedam  genita   ,<lb/> nec ideo tamen aut aeque gignentia, aut sine invicem <lb/>
+						 docentur exstantia. Sed quid prodest horum <lb/> multa colligere, cum paucorum
+						testimoniis etiam caetera <lb/>  liceat aestimare.</p>
+					<p>Fel. Quoniam sententiam meam, praecedentium <lb/> Patrum auctoritate fundatam, nova
+						disputandi arte <lb/> conturbas : idcirco velim mihi dicas de natura Filii <milestone unit="PLSection" n="D"/><lb/> Dei, id est substantia ipsa quid sentias. Si enim, ut
+						<lb/> dicere vos soletis, homousion est Patri, ipse  quodammodo  <lb/>  Pater est sibi;
+						alioquin consubstantialis <lb/> non potest esse  genitori . Nam quidam nostrum  Homousii  <lb/>
+						'  opinionem ridere sic solebat, dicens : Si non <lb/> extrinsecus, sed ex eodem
+						ipso prolatus est Filius, <lb/> in duos  quodammodo   divisus est unus, quandoquidem <lb/>
+						  non  aliud gignens dicitur esse quam genitus.</p>
+					<ab>
+						<title type="sub">CAPUT VII.</title>
+					</ab>
+					<p>Aug. Dum nos dicis Aristotelica arte contendere, <lb/> ipse ad dialecticorum laqueos
+						videris confugisse. Sed <lb/> nos fidei veritate confisos nequaquam possunt ista
+							<milestone unit="PLSection" n="A"/><lb/> terrere. Quid igitur dicis? ex substantia
+						credo Patris <lb/> nasci Filium nequivisse; ne ingenitum Patrem, Filii <lb/> videamur
+						generatione dividere. Quod si ita est, male <lb/> creditur Filius qui non ex Patre, id
+						est non ex eodem <lb/>  ipso genitus, sed extrinsecus factus inter alia <lb/>
+						praedicatur. Quod ut sit intellectu facilius, id ipsum <lb/> pro posse explicabo.
+						Filiorum namque adoptivi  alii , <lb/> naturales alii sunt. Ii qui geniti, ab initio
+						filii semper <lb/> ac proprii : illi primo alieni, post filii, cum per adoptionem <lb/>
+						 in familiam videntur ascisci. Quibus ergo <lb/> comparandus est Filius Dei? Si
+						adoptivis, erit apud <lb/> Patrem similis nobis. Si propriis, ex substantia substitisse <lb/>
+						 dicendus est genitoris. Sed in duo, inquis, <lb/> substantia paterna dividitur,
+						si ex solo Patre substantialiter <lb/>  Filius generatur. Hoc quam stultum sit,
+							<milestone unit="PLSection" n="B"/><lb/> etiam visibilia ipsa nos docent. Quis enim
+						unquam <lb/> vel carnalium patrum gignendo divisus. est? Quod si <lb/> nec in
+						conditionem corporis cadit ipsa divisio, et <lb/> nemo sic genuit filium ut se perderet
+						medium; salva <lb/> integritate Patris non potuisse nasci dicitis Filium  ?  <lb/> Sed
+						quid plura? Nativitatem Filii Dei, ortumque rimantibus  ,<lb/> haec, ni fallor,
+						occurrunt; id est, ut aut ex <lb/> Patre sit, aut ex  nihilo , aut ex altero, aut ex
+						seipso. <lb/> Horum quaeso consequentiam videamus. 338 Si ex <lb/> seipso; non recte
+						Filius dicitur, qui non natus, sed <lb/> ingenitus praedicatur.  Si ex .  nihilo; creatura
+						cum <lb/> caeteris non creaturae auctor ostenditur. Si ex altero; <lb/> non ejus cui
+						credimus, sed nescio cujus incogniti <lb/> patris filius praedicatur. Quod si praeter
+						quatuor haec, <lb/> inveniri non potest quintum; nec de his propter evideamus <milestone unit="PLSection" n="C"/><lb/>  blasphemiam tria praedicari penitus possunt:
+						<lb/> restat ut  substantialiter  de Patre sit genitus : quia, <lb/> ut diximus,  nec 
+						inveniri quintus, nec praeter primum <lb/> de his doceri potest aliquis modus : ut  pote 
+						cum nec <lb/> creatura, nec alterius patris filius, nec ut Pater dicatur <lb/> 
+						ingenitus.</p>
+					<ab>
+						<title type="sub">CAPUT VIII.</title>
+					</ab>
+					<p>Fel.  Qussi  vero ego aut praeter haec quintum, aut <lb/> de  his  tribus aliquid
+						praedicarim : qui sic non ex <lb/> substantia Patris exstitisse dico filium, ut tamen ex
+						<lb/> ejus voluntate non negem genitum.</p>
+					<p>Aug. In unum de supradictis consequentia ipsa detruderis  .<lb/> Cum enim de Filii
+						substantia requirimus, <lb/> quem tu ex Patre substantialiter genitum non fateris.
+							<milestone unit="PLSection" n="D"/><lb/> sine dubio inter alia ex nihilo factum esse
+						contendis <lb/>  : quandoquidem nec corruptibiles quidem  creaturas . <lb/>  dicimus
+						aliter substitisse, nisi ut has  Deum et   <lb/> voluisse per ineffabilem dispensationem,
+						et potuisse <lb/>  per  singularem potentiam dicamus efficere, dum  et  <lb/> voluntatem
+						fuisse novimus, qua placuit Deo, et potest  ,<lb/> qua  posse  subjacet    Domino.</p>
+					<p>Fel. Ergo ad exstantiam Filii potestas paterna non <lb/> sufficit ?</p>
+					<p>Aug. Quasi ego de potestate Patris, et non de  ipsa , <lb/> paternitatis veritate
+						contendam. An ei se dici  maluit  <lb/> Patrem, quem non sibi, sed creaturis voluit  esse  consimilem 
+						  ?<lb/> Et ideo fatendum tibi est, ex substantia<pb n="339"/>
+						<milestone unit="PLSection" n="A"/><lb/> Patris exstitisse Filium, si et natus  et Deus   
+						est: aut <lb/> Filium pariter et Deum negare, si non ex paterna <lb/> substantia, sed ex
+						nulla, operante tantum, sicut etiam <lb/> in aliis creaturis, Patris voluntate et
+						potestate creatus <lb/>  est.</p>
+					<p>Fel. Quoniam me ad ejusmodi confessionem necessitate <lb/>  compellis, id quod a
+						majoribus nostris dici <lb/> assolet, non tacebo. Aiunt enim, creaturam esse Filium 
+						,<lb/> sed perfectam, et quae dominari possit omnibus <lb/> creaturis.</p>
+					<p>Aug. Gaudeo quidem quod irreligiosae praedicationis <lb/>  intimum virus manifesta
+						confessione  prodideris  : <lb/> nihil tamen quod credulitate 339 dignum videatur, <lb/>
+						opponis. Creatura namque est, ex eo quod aut adhuc <milestone unit="PLSection" n="B"/><lb/> non est, aut aliquando non fuit, rei cujuslibet corruptibilis  ,<lb/> quantum
+						in  se  est, per  omnipotentis  Dei <lb/> voluntatem facta substantia. Haec definitio utrum
+						in <lb/> Dei cadat Filium videamus. Nam Filius in eo quod <lb/> est, indifferentis
+						naturae veritate prolatus est : quia <lb/> ex eo qui est, id est ex gignente, non
+						dissimilis natus <lb/>  est : et ideo inter Filium et creaturam primum, <lb/> nisi
+						fallor, ista discretio est, quia ille  ex  Patre substantialiter <lb/>  gignitur;
+						creatura non ex substantia facientis  ,<lb/> sed ex sola voluntate ac potestate
+						perficitur. <lb/> Ista corruptibilis per naturam, nisi fuerit servata per <lb/> gratiam.
+						Ille incorruptibilis , qui nascendo incorruptibilem <lb/>  ex incorruptibili Patre
+						videtur habere substantialiter  .<lb/> Filius per omnia similis Patri, dissimilis <lb/>
+						creatura factori. Ille non ex  eo  quod non est, in id <milestone unit="PLSection" n="C"/><lb/> quod est, et propterea nunquam in id quod non <lb/> est, ex  eo  quod est. Illa ex
+						eo quod non  est , in id <lb/> quod est : et propterea quantum ad se attinet ex eo <lb/>
+						quod est, in id quod non est, sui ortus conditione revertitur  .<lb/></p>
+					<ab>
+						<title type="sub">CAPUT IX.</title>
+					</ab>
+					<p>Fel. Non video quid in  arcano   hujus obscuritatis <lb/> involveris : et ideo recte
+						facies, si id quod a te, ut <lb/> mea fert opinio, incomprehensibiliter dictum est <lb/>
+						intelligibilius explicaveris.</p>
+					<p>Aug. Dixi inquam de Filio,  cum  eum a creaturae <lb/> definitione discernerem : quoniam
+						 si  non ex eo quod <lb/> non est, in id quod est : quod  tale  est ac si dicerem, <lb/> non
+						ex  nib  lo factus est. Et propterea nunquam in id <milestone unit="PLSection" n="D"/><lb/> quod non  est , ex eo quod est ; id est nunquam in <lb/> nihilum ex eo ipso quod
+						est, naturae suae proprietate <lb/> solvendus est. Creatura vero, ex eo quod non  est ,
+						<lb/> in id quod est. Quo ostenditur, quia ex nihilo prolata <lb/>   est . Et  propterea 
+						quantum ad se attinet, ex eo <lb/> quod est, in id quod non est, id est in nihilum, nisi
+						<lb/> perpetua gratia fecerit, naturae suae qualitate vertenda <lb/>  est. Ergo nunquam
+						non erit Filius, qui substantialiter <lb/>  docetur esse  perpetuu  ; et hoc ut pote
+						<lb/> proprio, a conditione omnium creaturarum quae per <lb/>  ipsum   factae sunt. non
+						injuria noscitur  separandus .</p>
+					<p>Fel.  Licet  intelligentiam meam nova rerum subtilitate <lb/>  perstringas, nescio tamen
+						quo pacto dicas , <lb/> quod coaeternus Patri sit Filius : cum  et  communi <milestone unit="PLSection" n="A"/><lb/> 340  loquendi  modo, et  naturae  lege, prior gignens <lb/>
+						videatur esse quam genitus.</p>
+					<ab>
+						<title type="sub">CAPUT X.</title>
+					</ab>
+					<p>Aug. Si naturae auctorem creaturarum  legibus  <lb/> aestimamus, dum anteriorem esse Patrem
+						Filio praedicamus   ;<lb/> cur non eadem naturae lege, fortiorem  Patre  <lb/>  Filium
+						per accessum temporis dicimus: dum nec <lb/>  huic  desunt incrementa nascenti, et
+						imbecillitatis <lb/> injuriam senectus ingerit Patri? Quod si hoc ratio <lb/> ipsa non
+						recipit, omittamus in Deo corporalis intelligentiae <lb/>  legem. ne operibus suis
+						similem dicamus esse <lb/> factorem ; maxime cum ex eo quod apud nos  evidens  <lb/> est,
+						etiam id quod in occulto est possimus ostendere. <lb/> Sicut enim sine exemplo mater
+						genuit auctorem <lb/> suum : sic ineffabiliter Pater genuisse credendus est <milestone unit="PLSection" n="B"/><lb/> Filium coaeternum. De  matre  natus est qui ante jam <lb/>
+						fuit : de Patre qui aliquando non defuit. Hoc fides <lb/> credat, intelligentia non
+						requirat: ne aut non  inventum  <lb/> tu&lt; putet incredibile, aut repertum non credat
+						 singulare   .<lb/> Ecce enim de matre natus est Christus, nec <lb/> ideo tamen per
+						contactum viri matris pudor est imminutus  .<lb/> Virgo peperit, quia virgo concepit :
+						et non <lb/> servato rerum ordine, ex integro matris corpore integrum <lb/>  corpus
+						 Christus  assumpsit. Si ergo novo more  ,<lb/> nullo exemplo, secundum carnem natus
+						docetur <lb/> ex corpore : quid mirum si non secundum consuetudinem <lb/>  humani
+						partus processit ex Patre? Non minuit <lb/> substantiam matris, ex sola genitus filius,
+						et sine <lb/> damno corporis parientis, natum  filii   novimus corruptibilis <lb/> : et minuisse
+						incorporalem Patris substantiam <note type="footnote"> C </note>
+						<lb/>  creditur , cum ex eodem ipso substantialiter atque <lb/> incorporaliter prolatus,
+						dicitur genitus? Ergo si natus <lb/>   rerum  intelligentia duce perpendimus ; demus
+						<lb/> initium, si non negamus occasum. Alioquin ideo Filium <lb/>  non habere dicamus
+						 initium  , quia non per gratiam  ,<lb/> sed per naturam fatemur esse perpetuum. Ad <lb/>
+						summam, major et minor, tribus modis dici potest : <lb/> id est, , , .
+						 aetate   ; <lb/> forma     ; potentia fortior imbecillo. <lb/>
+						Videamus utrum aliquid horum  acc dat  Filio. Nam <lb/> nec  aetate  minor est, quem de
+						principio Patre constat <lb/>  exstitisse principium : nec 341 forma, quem <lb/> non
+						aliud fas est praedicare quam Deum, nec  potentia   ,<lb/> a quo totum novimus esse
+						perfectum.</p>
+					<ab>
+						<title type="sub">CAPUT XI.</title>
+					</ab>
+					<p>
+						<milestone unit="PLSection" n="D"/>Fel.  Scire cupio   quo pacto ad Filium transit dignitas <lb/>
+						 Patris, et ad Patrem non recurrit humilitas <lb/> prolis.</p>
+					<p>Aug. Non secundum naturam ista nunc dici, quotidiana <lb/>  rerum exempla nos docent.
+						Ecce enim putemus <lb/>  aliquem regem ac regis filium depositis regiae <lb/> majestatis
+						insignibus, subjecti militis indumenta suscipere  ,<lb/> et propter certam patris
+						dispensationem ac <lb/> sociorum salutem, rebellium contumelias sustinere : <lb/>
+						nunquid quia ad hunc participium regiae potestatis <lb/> certum est nativitate decurrere,
+						idcirco ad eum qui <lb/> genuit, injuriam filii non compatiendi affectu, sed <lb/> ipsa
+						passionis proprietate certum est pervenire? Non <lb/> ita est, quia non ex filio patrem,
+						sed ex patre filium<pb n="341"/>
+						<milestone unit="PLSection" n="A"/><lb/> certum. est natum esse. Et propterea totum
+						inter hos <lb/> simile dicimus quod pertinet ad communionem naturae  ;<lb/> illud
+						proprium quod per accidens uni noscitur <lb/> evenisse personae. Habet ergo nascendo
+						totum Filius <lb/> cum Patre quod Pater est, sed non  de  Filio Pater. <lb/> Quidquid
+						specialiter ipse perpessus  est , utrisque commune <lb/>  non est. Quod ex homine natus
+						est homo, accidens <lb/>  speciale est. Quod plerumque sine praejudicio <lb/> communis
+						naturae neuter habere docetur in altero. <lb/> Una est Patris substantia, una persona.
+						Haec cum genuit  ,<lb/>  ex  hac  sine  dubio non diversa  noscitur  exstitisse  ,<lb/> sed
+						altera; quae non aliud docetur esse quam <lb/> prima, dum et communis docetur et propria.
+						Communis  ,<lb/> inquam, unitate substantiae, propria discretione <lb/>  personae. Cum
+						ergo in se exstet illa quae nata <milestone unit="PLSection" n="B"/><lb/> est, non
+						quidquid huic acciderit, ad gignentem necessario <lb/>  transit; sicut ad nascentem
+						quidquid proprium <lb/> ac substantiale gignentis constat  esse  , pervenit. Non <lb/> enim
+						sicut Filio ipsa generatione collata est divinitas <lb/> Patris, sic ad Patrem refertur
+						 aegritudo , paupertas, <lb/> mors, humilitas prolis. Quod ideo non fit, quia quamvis <lb/>
+						 de una, id est patris substantia fuerit similis  genita  <lb/>  : tamen quia jam in
+						seipsa exstat, quaecunque <lb/> huic intrinsecus ingeruntur, non communia dicuntur <lb/>
+						esse, sed propria. Si ergo humani generis ista conditio <lb/>  est, cum 342 non usque
+						adeo filii ab eo qui <lb/> genuit in aliud unquam mutata substantia est, ut non <lb/>
+						eadem possit esse, sed altera ; dum extrinsecus filio <lb/> accidentibus multis, manet
+						nihilominus natura commune   ;<lb/> quid nos de Deo atque ejus Filio dignum est
+							<milestone unit="PLSection" n="C"/><lb/> credere, quid decet praedicare? Quorum
+						quamvis secundum <lb/>  indivisae majestatis simplicem gloriam non <lb/>  sit  natura
+						dissimilis,  specialiter  a Filio corpus assumptum <lb/>  est, ut humiliaretur in
+						infirmitate carnis nostrae, <lb/> qui pati nihil poterat in communis divinitate substantiae
+						 .<lb/> Non assumpsit homo hominis filius alteram <lb/> naturam. Et cum in eadem
+						quae cum Patre communis <lb/> est patiatur, ad Patrem tamen non transmittit  injuriam  <lb/>
+						 : nec humiliatus in Filio Deus Pater passibiliter <lb/> creditur, cum non in eadem
+						ipsa quae utrisque commune <lb/>  est, sed in nostra potius quam solus ipse suscepit 
+						,<lb/>  Judaeorum  creditur pertulisse perfidiam. Ad <lb/> summam, quid precor est quod
+						pendebat in cruce ? <lb/> Quid est quod lancea dicitur vulnerasse? Caro  possibilis   ,<milestone unit="PLSection" n="D"/> <lb/> an substantia deitatis? Si majestatem profanus
+						<lb/> incorporei praedicator assumpseris,  corruptibilem  <lb/> Deum videris credere. Si
+						passibilem carnem, non est <lb/> communis ista cum Patre , ut per hanc eum possit <lb/>
+						crux illa contingere.</p>
+					<ab>
+						<title type="sub">CAPUT XII.</title>
+					</ab>
+					<p>Fel. Dum torrentis modo omnia quae a nobis sunt, <lb/> dicta praecipitas, duos admodum
+						Christos, non unum <lb/> praedicas. Et non immerito; nam si in eo nihil penitus <lb/> 
+						divinitas pertulit, secundum hominem Christus <lb/> alius fuit; alioquin per affectum
+						communis deitatis, <lb/> etiam ad Patrem passio ipsa pervenit.</p>
+					<p>Aug. Non ita est. Ego enim Salvatorem nostrum <lb/> non confundo, non divido. Non
+						confundo, ne aut incorpoream  ,<lb/> et imaginariam carnem ; aut carnalem et <milestone unit="PLSection" n="A"/><lb/> mortalem praedicem  dietatem . Non separo, ne Dei <lb/>
+						Patris unam secundum carnem,  et  alteram secundum <lb/> majestatem introducere videar
+						prolem : quia idem <lb/> Dei Filius et sine initio processit ex Patre, et secundum <lb/>
+						 tempus nasci est dignatus ex Virgine. Impassibilis <lb/>  in suo, passus in nostro
+						, dum incomprehensibilem <lb/>  majestatem    ' velut  quodam indumento carnis <lb/> 
+						vestire dignatus est. Ex utroque una mediatoris <lb/> persona, non una substantia. Una
+						inquam persona, <lb/> ne sit  non unus   Christus; non una  substantia , ne <lb/> mediatoris
+						dispensatione submota, aut Dei tantum dicatur  ,<lb/> aut hominis Filius. Non ergo in
+						Christo susceptam <lb/>  carnem perpetuitate divinae generationis extendo <lb/>  : nec
+						immensam  dietatem  corporei ortus aetate <lb/> concludo; quia idem in divinitate auctor
+						est rerum, <milestone unit="PLSection" n="B"/><lb/> qui in carne Redemptor est hominum :
+						idem impassibilis <lb/>  in se, qui passus in corpore ; dum sic utriusque <lb/> naturae
+						proprietatem vere ex utraque gignenti similis <lb/> natus expressit, ut et veram carnem
+						suscepisse eum <lb/> constet ex matre, et indifferentem deitatem  habere  <lb/> constet ex
+						Patre. Quibus in unam personam incommune <lb/>  mediatoris dispensatione
+						conjunctis,  servavit  <lb/>  singulis propria, sed conjunxit propriis  aliena  . <lb/>
+						Servavit propria, dum non amisit immensitatem divinitatis  ,<lb/>  et  infirmitatem non
+						respuit carnis. Conjunxit <lb/> propriis  aliena  , dum idem atque inseparabilis Christus
+						 ,<lb/> et proprio carnis occiditur,  et  proprio deitatis <lb/> apud inferos non
+						tenetur. Proprio carnis gustavit  vita   <lb/> mortem : et proprio deitatis, perpetuam
+						reddidit carnis  .<lb/> Non ergo recte dicitur in Filio Pater esse passus ,<milestone unit="PLSection" n="C"/> <lb/> quoniam in carne quae ei non est cum Patre <lb/>
+						communis, passus est Filius. Itaque glorificata est <lb/> caro majestate, dum majestas
+						humiliata docetur in <lb/> carne. Sed utrumque non de duobus  Christis  , sicut <lb/>
+						putas, sed de uno atque eodem ipso, quem post partum <lb/>   Virginis   Deum  et  hominem
+						novimus, nos certum <lb/> est  praedicare  .</p>
+					<ab>
+						<title type="sub">CAPUT XIII.</title>
+					</ab>
+					<p>Fel. Si ergo ex Virgine natus est Christus, quomodo <lb/>  Deo Patri dicitur
+						coaeternus?</p>
+					<p>Aug. De hoc quidem nobis etiam adversus alios <lb/> diversa contentio est: et ideo ne
+						difficilior sit explanatio <lb/>  veritatis, causam primum  proponamus erroris  . <lb/>
+						Nam ab uno malae credulitatis orsi principio, in duo <milestone unit="PLSection" n="D"/><lb/> quodammodo intelligentiae dissimilis deliramenta <lb/> funduntur. Est namque
+						utrisque commune, unam <lb/> Christi nativitatem, non duas praedicare. Sed alii <lb/>
+						illam principalem qua  ante  omnia ex Deo natus est <lb/> Deus, alii hanc  tantum  qua ex
+						Virgine processit hic <lb/> 344 Dominus, proprii dogmatis  definitione recipiunt ; <lb/>
+						qui per consequentiam male jacti seminis, in similis <lb/> blasphemiae barathrum
+						 ceciderunt . Ecce enim qui ex <lb/> Virgine non credunt natum, omnem Evangeliorum <lb/>
+						fidem, omnem baptismatis utilitatem, omnem apostolorum <lb/>  praedicationem, et ad
+						summam, omnem <lb/> Novi Testamenti auctoritatem, velut quadam Judaicae <lb/>
+						incredulitatis caecitate subvertunt. Et ideo ne ipsam <lb/> majestatem quidem in Dei
+						Filio cognovisse  putandi  <lb/> sunt, quia sacramentum  mediatoris  , quo cum inno-<pb n="343"/>
+						<milestone unit="PLSection" n="A"/><lb/>    Pater gentibus voluit, abjecerunt. At
+						vero hi <lb/> qui non ex Patre ante omne initium, sed ex tempore <lb/> Virginis partu
+						natum esse contendunt; non eum creatorem <lb/>  omnium, non Dominum omnipotentia Patri
+						ac <lb/> majestate consimilem didicerunt. Quomodo enim  fecisse  <lb/>   putabitur cuncta,
+						ante cujus ortum fuisse certum <lb/>  est universa ? Aut quomodo ejus divinitas est
+						<lb/> profitenda, quo necdum nato facta sunt singula ? <lb/> Vel quomodo ejus divinitas
+						creditur esse perpetua  ,<lb/> cum non semper ut Patris, sed ex tempore praedicatur <lb/>
+						 effecta? Negant igitur etiam hi quodammodo <lb/>  mediatoris consequentium
+						rerum necessitate <lb/> mysterium;  quia  non Deum et hominem; non ex <lb/> aeternitate,
+						sed ex tempore ; non ex virtute, sed ex <lb/> infirmitate ; non ex Patre ante omnia
+						Patri similem <milestone unit="PLSection" n="B"/><lb/> Filium, sed ex matre inter omnia,
+						non verum, sed <lb/>  imaginarum  hominis filium, in manifesto, non per <lb/> veri
+						 similitudines  natum praedicant Christum. Quo <lb/> fit, ut ne in carne quidem  nosse  
+						putandi sint Deum, <lb/> quem ante assumptionem carnis de Patre non putant <lb/>
+						genitum.</p>
+					<ab>
+						<title type="sub">CAPUT XIV.</title>
+					</ab>
+					<p>Vides  igitur   quo pacto inter hos, licet discrepantibus <lb/>  mediis, idem tamen
+						initium, idem exitus docetur <lb/>  erroris? Nos contra sic nativitatem utramque <lb/>
+						defendimus, ut neutram alterius affirmatione  totallamus   .<lb/> Nam nec temporalem primae
+						 illilus  perpetuitate <lb/> damnamus, nec aeternam hujus temporalis brevitate <lb/>
+						concludimus : scientes veri Dei inseparabilem prolem  ,<lb/> et hujus verae prolis
+						postea verissimam carnem. <milestone unit="PLSection" n="C"/><lb/> Non tunc fatentes
+						Christi divinitatem coepisse cum <lb/> Virgo  concepit  ; nec tunc coepisse carnem cum ineffabili
+						<lb/>  quodam partu monas 345 illa, sine intercapedine <lb/>  medii  tempori , in
+						nullo differentem monadem  ,<lb/> nisi quod monas docetur, genuit. Non infirmitatem <lb/>
+						 voluntariam Christi omnipotens ejus majestas <lb/> exhorruit, non omnipotentiam
+						infirmitas corporalis <lb/> exstinxit. Scio ad inferos divinitatem Fi. Dei descendisse <lb/>
+						 proprietate carnis, scio ad coelum ascendisse <lb/>  carnem merito deitatis.
+						Non est Dei proprium <lb/> quod famem sensit: sed Dei proprium est quod paucis <lb/>
+						panibus tot millia hominum satiavit. Non est prolem <lb/>  carnis quod super
+						frementes undas siccis  pedibus  <lb/>  ambulavit, sed  est  carnis proprium quod sputa,
+						<lb/> palmas, flagella sustinuit. Unus tamen  atquem  idem <milestone unit="PLSection" n="D"/><lb/> Christus est, qui et injurias toties pertulit, et artus in <lb/> profundo
+						non mersit. Et hoc pacto in mediatore Dei <lb/> et hominum injuria sui corporis affectam
+						fateor deitatem  ,<lb/> sicut majestate deitatis glorificatam novimus <lb/> carnem.
+						Ergo Christus mortuus est, qui et resurrexit <lb/> : nec ideo tamen utrumque ex uno,
+						sed ex  singulis   <lb/>  singula. In utroque tamen perfectus ipse complevit  ,<lb/> dum
+						unus atque inseparabilis tam diversa <lb/> complevit : uno mortem gustavit, altero
+						mortuos <lb/> suscitavit. Sicque se Deum et hominem utriusque <lb/> verus mediator, nec
+						geminata persona, nec  subs . : nlia .:  <lb/>  confusa monstravit. Ingressus est Virginis
+						uterum <lb/> Dei Filius, ut iterum nasceretur ante jam genitus : et <lb/> suscepit totum
+						 homine , qui jam habebat a Patre <milestone unit="PLSection" n="A"/><lb/> plenissimam
+						deitatem. Non dissimilis genitori cum <lb/> nasceretur ex  aeterno   perpetuus : non
+						dissimilis  homini   ,<lb/> cum ex matre  nascitur  moriturus. Idem tamen <lb/> et  aeternus 
+						in suo, et moriturus in nostro, dum utrumque <lb/>  continet ex  seipso , et neutrum
+						perdit ex altero. <lb/> Sicque ex Deo et homine non  imperfectus  , sed in <lb/> diversa
+						proprietate plenissimus natus est Christus; <lb/> sicut ex anima et corpore unusquisque
+						hominum docetur <lb/>  esse perfectus. Non alius homo corpus, alius <lb/> animus,
+						quamvis aliud animus, aliud corpus; unus <lb/> tamen atque idem homo, et corpus docetur
+						et animus. <lb/> Rursum non unum atque idipsum  corpur et   animus, <lb/> quia ex utroque
+						homo factus est unus. Non enim haec <lb/> aut substantiam confundunt in  veritate personae  ,
+						aut <lb/> personam geminant diversitate 346 substantiae; <milestone unit="PLSection" n="B"/><lb/> quandoquidem unus ex his homo noscitur exstitisse. <lb/>  Non  perdunt
+						propria , sed quia in unum atque inseparabile <lb/>  convenerunt, ex propriis videntur
+						facta complevit  .<lb/> Afficitur in corpore mens doloribus corporis, <lb/> fatigatur
+						corpus  cogitationbius  mentis; et unum tamen <lb/>  horum proprium est corporis, alterum
+						mentis. <lb/> Quod dum uni homini acciderit, et corporis commune <lb/> videtur, et
+						mentis. Sic post partum Virginis non alius <lb/> Dei, et alius hominis, sed idem
+						Christus Dei et  homini  <lb/>  Filius fuit. Et sicut in uno homine aliud animus 
+						,<lb/> aliud corpus : sic in mediatore Dei et hominum, <lb/> aliud Dei Filius, aliud
+						hominis fuit, unus  tamen  ex <lb/> utroque Christus Dominus fuit. Aliud, inquam, pro
+						<lb/> discretione substantiae, non alius pro unitate personae.</p>
+					<ab>
+						<title type="sub">CAPUT XV.</title>
+					</ab>
+					<p>
+						<milestone unit="PLSection" n="C"/>Fel. In superioribus quidem me ? credendam <lb/>
+						 Christi  ex matre nativitatem salva perpetuitate complevit <lb/>  : sed quia  contra 
+						rationem vi  operationis exortanon   <lb/>  in nobis possunt esse  continua  : idcirco cum ad
+						<lb/> propositionem meam sollicita intentione  espicio , necdum <lb/>  mihi videor in
+						his quae a te dicta sunt invenisse <lb/> quod quaero. Nescio enim  quomodo   natum doceatis
+						<lb/> ex tempore, quem coaeternum Patri dicitis jam fuisse. <lb/> Nasci  enim  est velut
+						quidam motus rei non  exstantis   <lb/> antequam nascatur, id agens beneficio nativitatis,
+						ut <lb/> sit. Quo colligitur Christum qui erat nasci non prolem  ;<lb/> si nasci
+						potuit, non fuisse.</p>
+					<p> Aug . Ad inquisitionem nos incomprehensibilium <lb/> rerum, nova interrogandi
+						curiositate  compellis  : et <lb/> ideo non nisi quibusdam exemplorum lineamentis
+							<milestone unit="PLSection" n="D"/><lb/> poterit explicari quod quaeris. Patere igitur
+						me pro <lb/> affirmato afferre rem alterius quaestionis : quia cum <lb/> eam non pro
+						fide sui, sed pro alterius ostensione <lb/> nunc  profero , non in ea me conjicias
+						explicare quod <lb/>  credo ; ; sed  eta  me credere ad praesens puta, ut intelligere <lb/>
+						 facilius possis ista quae dixero.  Figamus  ergo, <lb/> sicut plerique volunt, esse
+						in mundo animam  generalem    ,<lb/> quae sic ineffabili motu semina cuncta vivificet 
+						,<lb/> ut non sit concreta  gum  genitis, sed vitam pr. <lb/>  ipsa gignendis. Nempe
+						cum haec in uterum, passibilem <lb/>  materiam ad usus suos formatura pervenerit, <lb/>
+						347 " unam  facit secum esse personam ejus rei, quam <lb/>  non   eamdem constat habere
+						substantiam : et fit operante <lb/>  anima et patiente materia, ex duabus substantiis<pb n="345"/>
+						<milestone unit="PLSection" n="A"/><lb/>  unus  homo : cum aliud anima doceatur, aliud
+						caro : <lb/> sicque animam nasci fatemur ex utero, quam ad uterum <lb/>  venientem
+						vitam dicimus contulisse concepto. <lb/> Nasci, inquam, ex matre dicitur, quia ex hac
+						sibi <lb/> corpus <unclear> aptavit </unclear>, in quo nasci posset : non quia antequam <lb/>
+						 nasceretur, quantum ad se attinet, ipsa penitus <lb/>  non fuisset. Et hic si
+						verborum vim, quotidiani <lb/> sermonis contemplator attendas, contraria proponimus 
+						,<lb/> oppugnantia praedicamus; et in his tamen verum <lb/> constat esse quod dicimus. Ex
+						matris utero cum corpore <lb/>  scimus animam nasci, sed etiam matre priorem <lb/>
+						videmus animam praedicari. In filio mater animum <lb/>  gignit  , sed tamen etiam in ipsa
+						matre non nisi animus <lb/>  vivit, sine qua  nec  ipsa quidem potest esse quae <lb/>
+						genuit. Itaque si originem animantis potentiae requiramus ,<milestone unit="PLSection" n="B"/> <lb/> prior est matre, et ex hac rursus nata videtur <lb/> esse cum sobole.
+						Prior, inquam, anima, per quam <lb/> mater est an. : prior mater per quam in filio
+						nata <lb/> videtur et anima. Sed non mater in carnem animam <lb/> vertit, nec carnem in
+						animam commutavit, sed animus <lb/>  carnem de utero matris, idem carnis et <lb/>
+						animae, et totius hominis creator exhibuit, qui per  dispensationem   <lb/>  analogiae
+						diversa jungentis, in uno atque <lb/> eodem homine, et utrumque insolubili unitate conjunxit
+						 ,<lb/> et neutrum ex alterius participatione confudit.</p>
+					<ab>
+						<title type="sub">CAPUT XVI.</title>
+					</ab>
+					<p>Sic ergo, imo multo incomprehensibilius atque <lb/> sublimius natus est susceptione
+						perfecti hominis de <lb/> matre Filius Dei, qui est  per   omnipotentiam singularem <lb/> 
+						genitis omnibus non facultas tantum , sed et <milestone unit="PLSection" n="C"/><lb/>
+						causa nascendi. Secundum hominem , inquam, de <lb/> Virgine natus est Deus, eo pacto quo
+						cum corpore <lb/>  nasci  docetur et animus: non quia utriusque una <lb/> substantia est,
+						sed quia ex utraque fit una persona. <lb/> Non alius homo corpus, et alius animus, sed
+						unus <lb/> homo corpus et animus. Sic post partum Virginis, <lb/> non alius Dei Filius
+						et alius hominis, sed idem Christus <lb/>  Dei et hominis Filius. Et sicut 348 in uno
+						<lb/> homine aliud corpus et aliud animus; sic in uno <lb/> mediatore aliud Dei, aliud
+						hominis Filius : sed idem <lb/> tamen et non alius Dei quam hominis Filius : quamvis <lb/>
+						 propter aliud Dei, et propter aliud hominis Filius. <lb/> Non ab initio carnis
+						coepisse dicimus Filium Dei,  ne  <lb/> temporalem credat aliquis deitatem. Non ab aeterno
+						<lb/> Filii Dei novimus carnem, ne non veritatem humani <milestone unit="PLSection" n="D"/><lb/> corporis, sed quamdam  eum  suscepisse putemus <lb/> imaginem. Neque enim
+						consumit majestatem Filii Dei <lb/> veritas carnis; aut veritatem carnis, immensitas
+						deitatis   ;<lb/> dum unum radiat  virtutibus  suis, aliud  docetur  infirmitatibus <lb/> 
+						nostris. Unus autem atque inseparabilis <lb/> Christus et humiliatur assumptis, et
+						 glorificatur  in <lb/> propriis; cum affici non  dedignatur  injuriis, et aequalitatem <lb/>
+						 custodit genitoris. Genuit ergo Maria et non genuit <lb/>  Filium Dei. Genuit,
+						quando ex ipsa secundum <lb/> carnem  natus  est Christus : non genuit, quando de Patre
+						<lb/> sine  initio exstitit  Filius. Genuit, quando  ex  hac Verbum <lb/> caro processit ut
+						habitaret in nobis : non genuit quando <lb/> in principio erat Deus Verbum, quod
+						originem praestitit <lb/>  universis. Noli ergo partu Virginis determinare <milestone unit="PLSection" n="A"/><lb/> originem Dei Verbi. Noli de Virgine genitum corpus <lb/>
+						coaeternum dicere deitati; quia mediator Dei et hominum <lb/>  homo Christus Jesus (I
+						Tim.  II , 5) prima nativitate <lb/>  coaeternus est Patri, secunda particeps temporis <lb/>
+						 nostri: in illa auctor temporis, in ista particeps <lb/> est aetatis.</p>
+					<ab>
+						<title type="sub">CAPUT XVII.</title>
+					</ab>
+					<p>Fel. Quoniam de mysterio mediatoris perspicua <lb/> ratione,et ad credendum cuivis
+						sufficienter tractasti: <lb/> idcirco quaeso ut mihi quid etiam de anima Christi <lb/>
+						sentiendum sit jubeas explicari. Ita enim a majoribus <lb/> nostris semper est traditum,
+						quod Christi corpus ad <lb/> vicem animae communis, ipsius Filii Dei habitus animus <lb/>
+						: nec accessione vitalis spiritus indigens fuerit, <lb/> cui inhabitans fons vitae
+						potuit conferre quod vixit. <milestone unit="PLSection" n="B"/><lb/> Aug. Possemus
+						quidem id quod in hac quaestione <lb/> catholicae auctoritatis definitione praescribitur,
+						divinorum <lb/>  voluminum testimoniis edocere : sed quia <lb/> nunc non librorum
+						indicio, sed sola ratione placuit <lb/> cuncta discutere : idcirco in aliud tempus
+						Scripturarum <lb/>  monumenta reservantes, sicut superius factum <lb/> est, 349 sic
+						etiam de animae inquisitione tractabimus  .<lb/> Quod ut fieri facilius possit, quae
+						Salvatori nostro <lb/>  suscipiendi hominis causa fuerit, una tantum <lb/> Apostoli
+						lectione subjecta breviter inquiramus : qua <lb/> inventa, sine aliqua difficultate
+						etiam ad haec quae <lb/> hujus praecedentis sunt consecuta transibimus. Ab <lb/> initio
+						igitur ex corpore et anima  Deus  hominem fecit; <lb/> qui legis praecepta transgressus,
+						post usurpationem <lb/> interdictae arboris, sententiam quodammodo poenae <milestone unit="PLSection" n="C"/><lb/>  capitalis  excepit. Hic ad eum statum a quo lapsus <lb/>
+						est, non nisi auctoris sui gratia reformatus, postliminii <lb/>  quodammodo jure potuit
+						remeare : sicut qui se <lb/> de excelso in praeceps voluntate demiserit, in sua <lb/>
+						quidem habuit potestate quod fecit, sed jam suo arbitrio <lb/>  certum est non
+						subjacere quod cadit. Surgit <lb/> itaque beneficio alieno, qui cecidit proprio. Nec
+						ideo <lb/> non suo dicendus est cecidisse : quia alieno noscitur <lb/> surgere; nec
+						propterea suo surrexisse, quia non <lb/> alieno certum est cecidisse. Sed de hoc alias,
+						nunc ' <lb/> ad  propositum   redeamus.</p>
+					<ab>
+						<title type="sub">CAPUT XVIII.</title>
+					</ab>
+					<p>Dicit ergo venerabilis Paulus, quoniam idcirco secundum <lb/>  carnem natus est
+						Christus : Ut sicut per <lb/> unum hominem peccatum in hunc mundum intravit, et
+							<milestone unit="PLSection" n="D"/><lb/> per peccatum mors : et ita in omnes homines
+						pertransiit  ,<lb/> in quo omnes peccaverunt (Rom. v, 12). Et paulo <lb/> post : Sed
+						non sicut delictum, ita et gratia. Si enim <lb/> unius delicto multi  mortui  sunt, multo
+						magis gratia Dei <lb/> et donum, in gratia unius hominis Jesu Christi in plures <lb/> 
+						abundavit. Et non sicut per unum peccatum, ita et <lb/> donatio : nam judicium ex uno in
+						condemnationem, <lb/> gratia autem ex multis delictis, in justificationem. Si <lb/> enim
+						unius delicto  mors  regnavit per unum, multo magis. <lb/> abundantiam gratiae, et donum
+						justitiae  accipientes  , in. <lb/> vitam regnabimus per unum Jesum Christum. Igitur <lb/>
+						sicut per unius delictum, in omnes homines in  condem nationem   ;<lb/> sic et per unius
+						justitiam, in omnes homines <lb/>  in justificationem vitae. Sicut enim per
+							<unclear>inobedi</unclear>-<pb n="347"/>
+						<milestone unit="PLSection" n="A"/><lb/>    unius hominis peccatores constituti sunt
+						multi ; <lb/> ita et per unius obauditionem justi constituuntur multi.</p>
+					<p>Venit ergo Christus salvum facere quod  perierat  <lb/> (Luc. XIX, 10). Prius ergo
+						videamus quid illud est <lb/> quod protoplasti transgressione 350 perierit, et hoc <lb/>
+						facile scire poterimus, quid Dominus veniendo salvare <lb/>  potuerit. Requirendum
+						igitur nobis est quisnam <lb/>  legem Creatoris acceperit. Ille enim sine dubio <lb/>
+						peccavit, quia praecepta contempsit : ille praecepta <lb/> contempsit, qui quod
+						prohibebatur admisit. Dicit <lb/> autem Scriptura : Praecepit Dominus  Adae  dicens: Ex
+						<lb/> omni ligno quod est in paradiso manducabitis, de ligno <lb/> autem  scientiae  boni
+						et mali non manducabitis de eo. <lb/> Qua autem die manducaveritis, morte moriemini
+						(Gen. <lb/> ii, 16). Quaeramus ergo nunc utrum hanc legem totus <milestone unit="PLSection" n="B"/><lb/> homo acceperit ? Si enim ut in libro Geneseos continetur
+						 ,<lb/> ex corpore et anima jam perfectus accepit, <lb/> totus homo transgrediendo
+						peccavit : et si totus <lb/> transgrediendo peccavit, totus peccati sui vitio tunc <lb/>
+						periit. Si autem totus periit, totus beneficio Salvatoris <lb/>  indiguit.  Et si  totus
+						beneficio Salvatoris indiguit, <lb/> totum Christus veniendo salvavit : et si totum veniendo
+						<lb/>  salvavit, non corpus absque anima, sed corpus <lb/>  et animam qua
+						constare  totus  homo, et peccasse <lb/> antea videtur assumpsit. Nam si toto homine peccante
+						 ,<lb/> solam ejus carnem Christus assumpsit, anima <lb/> poenae primae illius
+						transgressionis sine aliqua spe <lb/> etiam nunc  addicta   permansit. Quod si ita est,
+						nescio <lb/> quid nobis mediatoris persona contulerit, quae melius <lb/>  nostrum ex
+						toto non redimens, brutam per se <milestone unit="PLSection" n="C"/><lb/> carnem, et
+						quae sine anima ne beneficium quidem <lb/> ejus posset sentire, suscepit.</p>
+					<ab>
+						<title type="sub">CAPUT XIX.</title>
+					</ab>
+					<p>Vellem tamen ab hujusmodi praedicatoribus quaerere <lb/>  cur accepta carne animam
+						dispensatio mediatoris <lb/>  omiserit. Nisi forte aut innoxiam sciens, medicinae <lb/>
+						 indigentem esse non crediderit, aut a se alienam <lb/> putans,  redemptionis 
+						beneficio non donarit; aut ex <lb/> toto insanabilem judicans, curare nequiverit; aut
+						<lb/> vilem et quae nullis usibus apta videretur, abjecerit. <lb/> Horum duo in ipsum
+						totius hominis  creatorem  blasphemi <lb/>  spiritus incredulitate desipiunt. Nam primo
+						<lb/> impossibilem, secundo non omnium Deum crediderunt  .<lb/> Quomodo enim docetur
+						omnipotens, si curare <lb/> non potuit desperatam ? Aut quomodo omnium Deus, <milestone unit="PLSection" n="D"/><lb/> si non ipse fecit animam nostram? Duobus vero <lb/>
+						aliis, uno animae causa nescitur, altero meritum non <lb/> 351 videtur. An intelligere
+						causam putandus est <lb/> animae, qui  eam  ad accipiendam legem, habitu insitae <lb/>
+						rationis instructam, a peccato voluntariae transgressionis <lb/>  nititur  separare ? Aut
+						quomodo ejus  generositatem  <lb/>  novit, qui ignobilitatis vitio dicit esse despectam
+						<lb/> : praelata carne quam non flatu Dei sicut animam  ,<lb/> sed de limo terrae
+						constat esse plasmatam ? Si <lb/> autem nihil horum de anima recte sentitur, credamus
+						<lb/>  quia suscepit Redemptor noster hominem totum  ;<lb/> ne intercidere
+						quodammodo animae nostrae videamur <lb/>  beneficium sempiternum. Proh dolor! Carnem 
+						,<lb/> inquit, solam Christus assumpsit, animam non <milestone unit="PLSection" n="A"/><lb/> quaesivit. Hic si  originem  utriusque  gnarus  rerum <lb/> contemplator attendas,
+						pretiosior est animae substan* <lb/>  : si transgressionis culpam, propter intelligentiam
+						 ,<lb/> pejor est causa. Ego autem Christum et perfectum <lb/>  sapientia scio,  et 
+						piissimum esse non dubito: <lb/> quorum primo meliorem et prudentiae capacem non <lb/>
+						despexit; secundo eam quae magis fuerat vulnerata <lb/> suscepit. Neque enim aut
+						sapientiae convenit, de <lb/> duobus aeque suis, insipientissimam plus amare; aut <lb/>
+						perfectae pietati, magis indigentem non juvisse.</p>
+					<ab>
+						<title type="sub">CAPUT XX.</title>
+					</ab>
+					<p>Fel. Omnia quidem quae a te non rationabiliter <lb/> tantum, sed etiam  veraciter  dicta
+						sunt, et intellexisse <lb/>  me in praecedentibus fateor, et probasse non <lb/> nego:
+						Christi autem divinitati quo pacto mortem <milestone unit="PLSection" n="B"/><lb/>
+						sensisse dicatur, ignoro. De quo utrum tu obscure <lb/> aliquid dixeris, an ego
+						 sufficienter  dicta ingenii  tarditate  <lb/>  assequi non potuerim, nescio. Neque enim
+						<lb/> credere ausim, quod fons ille vitae, a quo habent universa <lb/>  quod vivunt, per
+						triduum quod in sepulcro <lb/> corpus jacuit, usque eo a naturae suae proprietate <lb/>
+						deciderit, ut si dici fas est, sepultis sensibus omnem <lb/> substantiae vitalis  motum 
+						amitteret; et propter redemptionem <lb/>  humani generis, non Patrem tantum, <lb/> sed
+						et omnia  spiritalis   gloriae ornamenta desereret.</p>
+					<p>Aug. Absit, absit a fidelibus ista suspicio, ut sic <lb/> Christus senserit mortem
+						nostram, ut quantum in se <lb/> est vita, perderet vitam. Nam si hoc ita esset, quomodo
+						<lb/>  illo triduo potuisse dicimus aliquid vivere, si <lb/> vitae fontem credimus
+						aruisse ? Sensit 352 igitur <milestone unit="PLSection" n="C"/><lb/> mortem divinitas
+						Christi,  participatione  humani affectus <lb/>  quem sponte sua susceperat, non naturae
+						suae <lb/> potentiam perdidit per quam cuncta vivificat. Sic in <lb/> sepulcro carnem
+						suam commoriendo non deseruit, <lb/> sicut in utero Virginis connascendo formavit. Et
+						sic <lb/> in utroque et nasci et mori, non coactus ab altero, <lb/> sed sponte Dominus
+						voluit,  ut  hoc eum constet pertulisse <lb/>  quod fecit: nec ideo non patientem, quia
+						ipse <lb/> faciebat; nec ideo non facientem, quia non alius <lb/> tolerabat. Nam si
+						dominicae incarnationis mysterium <lb/> salva individuae Trinitatis cooperatione
+						consideres, <lb/> idem sibi in hac humilitate auctor et opus est: idem <lb/> auctor,
+						quia sponte nascitur, sponte patitur : idem <lb/> opus, quia utrumque licet non alio
+						cogente, solus <lb/> tamen ipse perpetitur. Fecit carnem in utero matris, <milestone unit="PLSection" n="D"/><lb/> habes auctorem operis: ipse in hac nasci dignatus est,
+						<lb/> habes opus auctoris : una tamen persona est, salva <lb/> utriusque  proprictatc subs : antiae 
+						subs:, et auctoris et  operis .  <lb/>  Sic ergo mortuus est non discedente vita,
+						sicut <lb/> passus est non pereunte potentia. Nemo aufert animam <lb/>  ejus ab eo,
+						quia potestatem habet ponendi et <lb/> potestatem assumendi eam (Joan. x, 18). Habes hic
+						<lb/> auctorem operis. Ponit animam pro amicis suis: <lb/> habes opus auctoris. Quod ut
+						generali definitione <lb/> concludam, quoties in carne Christus aliquid patitur, <lb/>
+						opus auctoris est. Sed quia idipsum sua potestate, <lb/> non alio cogente perpetitur,
+						ipse auctor est operis.</p>
+					<ab>
+						<title type="sub">CAPUT XXI.</title>
+					</ab>
+					<p>Non ergo ad Mariam locali motu divinitas venit,<pb n="349"/>
+						<milestone unit="PLSection" n="A"/><lb/> sed  ineffabili  potentiae suae manifestatione, et
+						uterum <lb/> gignendus, implevit,  et  totum quod est substantiae <lb/>  suae  plenitudine non
+						privavit. Non dimisit Patrem <lb/> cum venit ad Virginem. Ubique totus, ubique  perfectus 
+						  ;<lb/> quia nec divisionem  incorporea  simplicitas <lb/> recipit, et partes
+						plenitudo non novit. Erat ergo uno <lb/>  atque eodem   tempore totus etiam in inferno,
+						totus in <lb/> coelo. Illic patiens injuriam carnis, hic non relinquens <lb/> gloriam
+						deitatis. Erat apud inferos  resurrectio  mortuorum  ,<lb/>  erat  super coelos vita
+						viventium. Vere mortuorum  ,<lb/> vere vivus; in quo et mortem  susceptio  mortalitatis <lb/>
+						 excepit, et vitam divinitas servata 353 non <lb/> perdidit. Quotiescunque ergo
+						haec quae a Christo humiliter <lb/>  sunt tolerata, consideras, ipsum auctorem <lb/>
+						voluntariae passionis agnoscas. Ita fiet ut, dum humilitas <milestone unit="PLSection" n="B"/><lb/>  patienti, facienti virtus ascribitur, idem Christus <lb/>  uno atque
+						eodem tempore cum patitur, infirmus, <lb/> cum facit, omnipotens doceatur. Sed ne adhuc
+						in <lb/> morte Filii Dei aliquam insensibilitatem nos credatis <lb/> accipere,
+						importunum non est quae de morte sensa <lb/> sint vestigare : in qua sine dubio
+						destituit corpus <lb/> vita nostra, non perit; ; dum discedens anima non vim <lb/> suam
+						perdit, sed quod  vivificaverat  hoc dimittit: et <lb/> quantum in se  est , alterius mortem
+						facit ipsa, non <lb/> recipit. Facit, inquam, non vivificando quod deserit: <lb/> non
+						amittendo quod vivit. Itaque hominis mors nihil <lb/> aliud quam carnis occasus est: a
+						qua cum vis  potentiae  <lb/>  vivificantis   abscesserit, in terram de qua <lb/> sumpta
+						est, amissis quos non per seipsam habuit <lb/> sensibus, redit.</p>
+					<p>
+						<milestone unit="PLSection" n="c"/>
+					</p>
+					<ab>
+						<title type="sub">CAPUT XXII.</title>
+					</ab>
+					<p>Atqui contraria, inquis, vitae mors est. Fateor; sed <lb/> non ex eo genere
+						contrariorum, quae existentis substantiae <lb/>  oppositione se perimunt; sed ex eorum
+						 potentiae  <lb/>  quae dum cuilibet accidunt, simul quidem esse <lb/> non possunt, sed unius
+						tantum substantiae habitu ac <lb/> privatione gignuntur. Sicut verbi gratia noctem docemus
+						<lb/>  et diem. Nam et haec ejusdem generis  docentur  <lb/>  esse contraria, cum non
+						utriusque, sed unius tantum <lb/>  videatur esse substantia.  Ecce  enim dicimus <lb/>
+						 diem esse  cum sol est super terram : solem autem <lb/> constat esse substantiam. Hic cum
+						peracto diurni <lb/> temporis cursu ab humani visus contemplatione discesserit  ,<lb/>
+						noctem discedendo mox facit. Facit, inquam  ,<lb/> subtrahendo copiam luminis, non in
+						 se  recipiendo <milestone unit="PLSection" n="D"/><lb/>  substantiam noctis.  Itaque  una
+						lucis subatantum <lb/>  noctem facere videtur et diem ; sed non uno modo. <lb/> Nam
+						diem cum venit, noctem efficit cum  recedit !. Unde <lb/> et Manichaeorum non irreligiosam
+						tantum, verum <lb/> etiam stultam divisionem, qua bona a malis aeque <lb/> exstantibus
+						nituntur separare substantiis, plerumque <lb/> confundimus:  ostendentes eis  luminare
+						majus, quo fieri <lb/>  novimus  diem; et cogentes ut et ipsi similiter nos <lb/>
+						 docerent , quod esset, si dictu fas  est , tenebrale  majus   ,<lb/> 354 quo substantialiter
+						fieri crederemus et noctem  .<lb/> Sed de his alias, qui per stultitiam blasphemi <lb/>
+						dogmatis, aut pro exstantibus non exstantia, aut pro <lb/> principilibus consecuta, aut
+						pro contrariis videntur <lb/> affirmare communia. Quae si quis fidei oculis non
+							<milestone unit="PLSection" n="A"/><lb/> privatus excusserit, omnes eorum machinas
+						facili ratione <lb/>  confundit. Ergo, ut dicere coeperamus, anima <lb/> non aliter
+						quam sol vitam tribuit carni cum venerit, <lb/> mortem efficit cum recedit. Quam ne quis
+						putet  corporis  <lb/>  morte consumi, audiat quid de hoc Dominus in <lb/> Evangeliis
+						generali auctoritate definiat : Nolite, inquam  ,<lb/> timere eos qui corpus occidunt,
+						animam autem <lb/> non possunt occidere : sed timete eum potius qui animam <lb/>  et
+						corpus potest occidere in gehennam ignis (Matth. <lb/> x, 28). Ergo superstite anima
+						corpus constat occidi; <lb/> et propterea consequens ac necessarium non est, animam 
+						,<lb/> corporum internecione consumi. Hoc si ita est, <lb/> etiam post mortem corporis
+						nihilominus mentibus <lb/> vivitur. Quod si id de unoquoque nostrum recte sentitur 
+						,<lb/> quomodo fons vitae propter participationem humilitas <milestone unit="PLSection" n="B"/><lb/>  mentis, vivificandi potentiam perdidisse jactatur   ?<lb/> Sed potest,
+						inquis, anima et corpus occidi <lb/> in gehennam ignis. Quod adversum nos primum idcirco
+						<lb/>  non facit, quia mors ista non conditionis videtur <lb/> esse, sed criminis.
+						Nam remota culpa jubemur homines <lb/>  non timere, qui cum possint corpus, animam tamen
+						<lb/>  negantur occidere. Dehinc, quoniam hoc Deo <lb/> tantum dicitur esse
+						possibile, de quo Filium suum <lb/> unigenitum et communione naturae, et aequalitate  potentiae 
+						<lb/>  non hoc credimus meruisse. Suscepit ergo <lb/> Salvator conditionem mortis
+						nostrae, sed non ita ut deteriorem <lb/>  faceret, cum praeter consuetudinem  dominati 
+						<lb/> eam  permittebat animae , sed potius ut nihil hanc obesse <lb/> animae pariter
+						justorum omnium probasset et vitae.</p>
+					<ab>
+						<title type="sub">CAPUT XXIII.</title>
+					</ab>
+					<p>
+						<milestone unit="PLSection" n="C"/>Sed fingamus, licet Evangeliis reclamantibus, animam
+						<lb/>  interire. Nonne in Salvatore nostro, licet in <lb/> his mortem non repellente
+						, tertium tamen atque speciale <lb/>  majestas est, quam non potuit mors humana <lb/>
+						contingere' Ad summam videamus, in cruce positus <lb/> quid promisit? Hodie, inquit,
+						mecum eris in paradiso <lb/>  (Luc . XXIII, 43). 355 Hodie, inquit, non post triduum.
+						<lb/> cum carnem meam de sepulcri requie suscitavero, non <lb/> cum in me primitias
+						futurae resurrectionis ostendero. <lb/> Cujus putamus haec vox est? majestatis, mentis, an
+						<lb/> corporis? Corpus autem in spelaeo fuisse nullus ignoctem  .<lb/> Restat ut
+						divinitati, vel menti vox ista conveniat. <lb/> Sed dicit  aliquis  : Divinitatis hanc,
+						non animae  Christi  - <lb/>  credimus vocem. Et quid in eo cui promittebatur <lb/>
+						accipimus? Hodie, inquit latroni, mecum eris in paradiso <milestone unit="PLSection" n="D"/><lb/>  : cujus corpus usque ad futuram resurrectionem <lb/>  mors communis
+						inclusit. Anima igitur est cui <lb/> Dominus hoc promisit et praestitit. Si igitur
+						mortuo <lb/> corpore, ad paradisum anima mox vocatur, quemquamne <lb/>  adhuc tam
+						impium credimus, qui dicere au*  ,<lb/> quoniam anima Salvatoris nostri triduo illo
+						<lb/> corporeae mortis, apud inferos custodiae mancipatur ? <lb/> Et quis, inquis, est
+						alius qui instante passione Christus <lb/>  ingemuit, dicens : Tristis est anima mea
+						usque ad <lb/> mortem (Matth. XXVI, 38)  ?  Tristis usque ad mortem, <lb/> propter
+						affectum susceptae carnis, non post mortem, <lb/> cum beatitudinem spondet societas
+						deitatis. Non initium <lb/>  moeroris mors ista, sed  finis  est. Nec incipiunt <lb/> post
+						hanc justorum flagella, sed  desinunt , cum ct im-<pb n="351"/>
+						<milestone unit="PLSection" n="A"/><lb/> pedimenta materiae fluctuantis exponunt, et
+						auctorem <lb/> suum plenioris intelligentiae contemplatione jam <lb/> capiunt.</p>
+					<ab>
+						<title type="sub">CAPUT XXIV.</title>
+					</ab>
+					<p>Ergo, inquis, mortem Dei Filius et in anima non <lb/> pertulit, et in majestate non
+						sensit ? Quid ergo dice- <lb/> Las esse quod pertulit ? Sensit prorsus et pertulit, sed
+						<lb/> participitione morbi alieni, non proprietate vulneris <lb/> sui. Sensit sicut
+						omnes sentiunt, qui morienle carne <lb/> mentibus vivunt : non sicut impii, qui in
+						utraque <lb/> parte, sicut idem ait, geheunae ignibus occiduntur. <lb/> Quidam sane
+						communem mortem etiam hoc pacto <lb/> definiunt; dicentes nihil aliud hanc esse quam cnm
+						<lb/> diversarum rerum consensu vitam facientium, velut <lb/> per diss dium quoddam ab
+						invicem fuerit facta disces- <milestone unit="PLSection" n="B"/><lb/> sio. Haec si
+						hominis mors est quae non consumit jun­ <lb/> cta, sed dividit, dum origini suae utrumque
+						restituit, <lb/> quid de Salvatoris nunc anima dicemus, quae ut non <lb/> dicam propter
+						inhabitantem divinitatem, 356 et <lb/> propter juslitiam singularem, certe propter
+						commu­ <lb/> nem moriendi sortem, corpus illo triduo sic potuit <lb/> deserere, ut ipsa
+						non posset penitus interire ?</p>
+					<p>Nou ergo, inquis, apud inferos Christi anima, <lb/> non divinitas
+							<unclear>fut</unclear> ? Fuit, inquam. Neque enim aliter <lb/> eum video potuisse
+						resuscitare carnem suam, si apud <lb/> inferos pra dicem velut absentis Dei non fuisse
+						po­ <lb/> tentiam. Nec tamen ideo localem nos Dei credat ali­ <lb/> quis praedicare
+						praesentiam; de quo ista propter ma­ <milestone unit="PLSection" n="C"/><lb/>
+						nifestationem cer i operis dicimus, quia alicubi fuit si- <milestone unit="PLSection" n="A"/><lb/> cut qui ubique non defuit. Jacebat quantum ad car­ <lb/> nem mortuus in
+						sepulcro, mortuos resuscitans in <lb/> inferno, vitam tribuens universis in coelo : non
+						mun­ <lb/> dum dimittens ad coelum ascendit, nec coelum de?c- <lb/> r ns ad terram venit;
+						sed uno atque eodem tempore <lb/> totum totus implevit, qui alicubi manifestatione ope­
+						<lb/> rum plus parens, agnitionem praesentiae suae indignis <lb/> negavit , non immensae
+						deitatis absentiam procu­ <lb/> ravit.</p>
+					<ab>
+						<title type="sub">CAPUT XXV.</title>
+					</ab>
+					<p>Vis nosse de hac mediatoris morte quid sentiam ? <lb/> Omnium quae a me in superioribus
+						incidentium quae­ <lb/> stionum necessitate dispersi sunt, prorsus ista sen­ <lb/> tentia
+						est: qua credo morluum esse Filium Dei, non <lb/> secundum poenam injustitiae quam ex toto
+						non ha­ <lb/> buit, sed seeundu n legem naturne quam pro homani <milestone unit="PLSection" n="B"/><lb/> generis redemptione suscepit : illa morte de qua di­
+						<lb/> citur : Quis est homo qui vivet, et non videbit mortem <lb/> (Psal. LXXXVIII, 49)
+						? non illa de qua Isaias dicit ; <lb/> Mortui autem vitam non videbunt (Isai. XXVI, 14).
+						<lb/> Illa quae secundum naturam generalis est cunctis, <lb/> non iila qnae specialis
+						est malis. Putemus ergo hanc <lb/> esse quodammodo vim ac potentiam seminis, qua et
+						<lb/> anima animas reparet : et carne omnium nostrum <lb/> carnem judicio imminente
+						resuscitet, dum per opera­ <lb/> tionem proprae deitatis cuncta vivificans, ex uno sus­
+						<lb/> cepti hominis grano, inuumerabilem Patri redditu­ <lb/> rus est messem. Tunc
+						separaturus est a zizaniis se­ <lb/> getem (Matth. XIII, 30), cum justis cceperit
+						retribuere <milestone unit="PLSection" n="C"/><lb/> mercedem.</p>
+				</div>
+				</body></text></TEI>
