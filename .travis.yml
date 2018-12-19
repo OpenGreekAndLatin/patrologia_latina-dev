@@ -4,31 +4,6 @@ python:
   - '3.5'
 
 install:
-  - pip3 install HookTest==1.0.2
+  - pip3 install HookTest>=1.0.2
 
-script: hooktest ./ --scheme epidoc --workers 3 --verbose 10 --manifest --console table --allowfailure --hookUI "http://ci.perseids.org/api/hook/v2.0/user/repositories/OpenGreekAndLatin/patrologia_latina-dev"
-
-before_deploy:
-  - hooktest-build --travis ./
-  - results=$(cat manifest.txt)
-  - DATE=`date +%Y-%m-%d`
-  - git config --global user.email "builds@travis-ci.com"
-  - git config --global user.name "Travis CI"
-  - export GIT_TAG=$major_version.$minor_version.$TRAVIS_BUILD_NUMBER
-  - git tag $GIT_TAG -a -m "$DATE" -m "PASSING FILES" -m "$results"
-  - git push -q https://$GITPERM@github.com/OpenGreekAndLatin/patrologia_latina-dev --tags
-  - ls -R
-
-deploy:
-  provider: releases
-  api_key: $GITPERM
-  file: release.tar.gz
-  skip_cleanup: true
-  on:
-    repo: OpenGreekAndLatin/patrologia_latina-dev
-    branch: master
-
-env:
-  global:
-    major_version: 0
-    minor_version: 0
+script: hooktest ./ --scheme epidoc --workers 3 --verbose 10 --manifest --console table --allowfailure
