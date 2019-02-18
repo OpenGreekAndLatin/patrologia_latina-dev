@@ -72,7 +72,18 @@
 			<p>The following text is encoded in accordance with EpiDoc standards and with the CTS/CITE
 				Architecture.</p>
 		  <refsDecl n="CTS">
-        <cRefPattern n="no citable units founds" matchPattern="(.+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div/tei:div[@n='$1'])"/>
+		  	<cRefPattern 
+		  		n="chapter"
+		  		matchPattern="(\w+).(\w+)"
+		  		replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div/tei:div[@n='$1']/tei:div[@n='$2'])">
+		  		<p>This pointer pattern extracts sermons and chapters</p>
+		  	</cRefPattern>
+		  	<cRefPattern 
+		  		n="sermon"
+		  		matchPattern="(\w+)"
+		  		replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div/tei:div[@n='$1'])">
+		  		<p>This pointer pattern extracts sermons</p>
+		  	</cRefPattern>
       </refsDecl>
     </encodingDesc>
 		<profileDesc>
