@@ -76,15 +76,20 @@
 				CTS/CITE Architecture.</p>
 			<refsDecl n="CTS">
 				<cRefPattern n="chapter" matchPattern="(\w+).(\w+)"
-					replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div/tei:div[@n='$1']/tei:div[@n='$2'])">
-					<p>This pointer pattern extracts sermon and chapter</p>
+					replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div/tei:div[@n='$1']/tei:div[@n='$2']//tei:div[@n='$3'])">
+					<p>This pointer pattern extracts chapter within sermons</p>
 				</cRefPattern>
 				<cRefPattern n="sermon" matchPattern="(\w+)"
+					replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div/tei:div[@n='$1']/tei:div[@n='$2'])">
+					<p>This pointer pattern extracts sermons within collection</p>
+				</cRefPattern>
+				<cRefPattern n="collection" matchPattern="(\w+).(\w+)"
 					replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div/tei:div[@n='$1'])">
-					<p>This pointer pattern extracts sermon</p>
+					<p>This pointer pattern extracts a collection of sermons</p>
 				</cRefPattern>
 			</refsDecl>
 			<refsDecl>
+				<refState unit="collection"/>
 				<refState unit="sermon"/>
 				<refState unit="chapter"/>
 			</refsDecl>
@@ -104,183 +109,198 @@
 	<text>
 		<body>
 			<div type="edition" n="urn:cts:latinLit:stoa0040.stoa013h.opp-lat1" xml:lang="lat">
-				<head>
-					<title type="main">S. AURELII AUGUSTINI SERMONUM QUORUMDAM QUI ADHOC
-						DESIDERANTUR FRAGMENTA REPERTA IN COLLECTANEIS EUGIPII, BEDAE, FLORI AC
-						JOANNIS ROMANE ECCLESIAE DIACONI.</title>
-				</head>
-				<div type="textpart" subtype="sermon" n="1">
-					<ab>
-						<title type="sub"><hi rend="italic">Ex Sermone contra Pelagianos,</hi> in
-							Eugypii <hi rend="italic">tomo</hi> 2, <hi rend="italic">cap.</hi> 287
-								<hi rend="italic">aut</hi> 288 <hi rend="italic">(a).</hi>
-						</title>
-					</ab>
-					<div type="textpart" subtype="chapter" n="1">
-						<p>1. <hi rend="italic">Urbanus episcopus. Pelagianorum error, liberi<lb/>
-								arbitrii viribus vinci posse tenlationes, nec de peccato­</hi>
-							<lb/>rum <hi rend="italic">tentationibus agi in</hi> oratione <hi
-								rend="italic">dominica.</hi> Illa duo,<lb/>
-							<hi rend="italic">Dimitte</hi> nobis <hi rend="italic">debita
-								nostra,</hi> sicut <hi rend="italic">et noa</hi> dimittimus<lb/>
-							<hi rend="italic">debitoribus</hi> nostris; et, <hi rend="italic"
-								>Ne</hi> no. <hi rend="italic">inferas</hi> in tentationem,<lb/>
-							<hi rend="italic">(Matth.</hi> VI, 12 <hi rend="italic">et</hi> 13),
-							quando Pelagianis objiciuntur,<lb/>quid eos putatis respondere? Horrui,
-							fratres mei,<lb/>quando audivi. Ego quidem non audivi auribus
-							meis,<lb/>sed sanctus frater et coepiscopus meus Urbanus no<note
-								type="footnote"> (a) citat Florus ad II Cor. xm,et I Tim. v.</note>
-							<lb/>ster, qui hic presbyter fuit, et modo est Siccensis<lb/> cpisoopus,
-							cum remeasset ab urbe Roma, et ibi<lb/>cum quodam talia sentiente
-							confligeret, vel se confli<lb/>xisse referret, cum urgeretur pondere
-							orationis domi<lb/>nicae : urgebat enim eum, et dicebat, Si in
-							nostra<lb/>potestate est non peccare, et in nostra potestate est<lb/>
-							omnes peecatorum tentationes solis voluntatis nostrae<lb/>viribus
-							superare, quare Deo dicimus, <hi rend="italic">Ne nos in feras in<lb/>
-								tentationem</hi> ? quid eum putatis respondisse? Rogamus,<lb/>
-							inquit, Deum, ne nos inferat in tentationem, ne ali<lb/>quid mali
-							patiamur, quod non habemus in potestate :<lb/>ne ruam de equo, et ne
-							frangam pedem, ne latro me<lb/>
-							<pb n="1721"/> interficiat, et quid hujusmodi. Haec enim, inquit, non
-							<lb/>habeo in potestate : nam vincere tentationes peccato<lb/>rum
-							meorum, si volo, et possum, nec Dei adjutorio<lb/>possum.</p>
-					</div>
-					<div type="textpart" subtype="chapter" n="2">
-						<p>2. <hi rend="italic">Confutatur maligna haeresis ex oratione a
-								Christo</hi>
-							<lb/>commendata <hi rend="italic">et pro Petro adhibita.</hi> Videtis,
-							fratres, quam<lb/>maligna haeresis; videtis quemadmodum omnes
-							horre<lb/>tis : cavete ne capiamini. Novi enim calliditates et ter<lb/>
-							giversationes bominum impiorum aversorum a veritate,<lb/>et quia jam in
-							suas sententias ceciderunt vinci nolcn<lb/>tium; videte, obsecrovos.
-							Ecce enim invenit quod dice<lb/>ret, ideo nos dicere, <hi rend="italic"
-								>Ne nos inferas in tentationem,</hi> ne<lb/>aliquid nobis contingat,
-							quod non habemus in potestate<lb/>secundum corporis tentationem. Inde
-							ergo dicebat Do<lb/>minus, <hi rend="italic">Vigilate et orate, ne
-								intretis</hi> in <hi rend="italic">tentationem<lb/> (Matth.</hi>
-							xxvi, 41)? hoc dicebat, <hi rend="italic">Vigilate et orate,</hi>
-							ne<lb/>pedem frangatis, aut ne caput doleatis, aut ne in<lb/>damnum
-							incurratis i Non hoc dicebat : sed quid dice<lb/>bat? Quod Petro dixit,
-								<hi rend="italic">Rogavi pro tet ne deficiat fides<lb/>tua
-								(Luc.</hi> XXII, 32). Rogavi, inquit, pro <hi rend="italic">te,</hi>
-							dicit Deus<lb/>homini, dominus servo, magister discipulo,
-							medicus<lb/>aegroto : <hi rend="italic">Rogavi pro te :</hi> quid? <hi
-								rend="italic">Ne deficiat:</hi> quid? ma<lb/> nus tua? pes tuus?
-							oculus tuus? lingua tua, aliqua<lb/>paralysi, id est, dissolutione
-							membrorum? Non; sed,<lb/>
-							<hi rend="italic">ne deficiat fides tua.</hi> Secundum istos in
-							potestate Ira<lb/>bemus, ne deficiat fides nostra.</p>
-					</div>
-					<div type="textpart" subtype="chapter" n="3">
-						<p>3. <hi rend="italic">Orationes Ecclesiae, auxilium gratiae</hi> ut <hi
-								rend="italic">non</hi> pecce<lb/>mus <hi rend="italic">necessarium
-								esse probant.</hi> Quare pro nobis rogatur<lb/>Deus, ut concedat
-							nobis, quod isti dicunt, nos non<lb/>debere rogare a sempiterna
-							majestate, sed habere in<lb/>potestate. Benedictiones, fratres mei,
-							benedictiones<lb/>nostras, quas super vos facimus, evacuant,
-							exinaniunt,<lb/>elidunt. Aoditis me, credo, fratres mei, quando dico,
-							<lb/>Conversi ad Dominum benedicamus nomen ejus,<lb/>det nobis
-							perseverare in mandatis suis, ambulare in<lb/>via recta eruditionis
-							suae, placere illi iD omni opere<lb/>bono, et caetera talia. Prorsus,
-							inquiunt, hoc totum in<lb/>potestate nostra est constitutum. Ergo nos
-							inaniter<lb/>talia vobis optamus. Defendamus et nos, et vos; ne<lb/> et
-							nos sine causa benedicamus, et vos sine causa<lb/>Amen subscribatis.
-							Fratres mei, Amen vestrum, sub<lb/>scriptio vestra est, consensio vestra
-							est, adstipulatio<lb/>vestra est. Ne ferte aliqui ipsorum et nos
-							condemnent<lb/>et vos, defendamus nos de apostolo Paulo :
-							videamus<lb/>si talia optavit plebi suae, qualia oramus super vos.
-							<lb/>Audite quid dixerit quodam loco. Rem brevem dico.<lb/>Quid dicis, o
-							nove haeretice, quicumque me audis, si<lb/>praesens es? quid dicis? Quia
-							non peccare in potestate<lb/>sic habemus, ut hoc sine adjutorio divinae
-							gratiae im<lb/>plere possimus; boc dicis? Hoc, inquit. Ergo in
-							po.<lb/>testate habemus non peccare sine adjutorio Dei?<lb/>Plane,
-							inquit, liberum arbitrium nostrum ad hoc no<lb/>bis sufficit. Quid est
-							ergo quod ait Apostolus, scri<lb/>bens ad Corinthios, <hi rend="italic"
-								>Oramus ad Deum, ne quid faciatis</hi>
-							<lb/>maii (II Cor. XIII, 7)? Allendistis, audistis, accepistis;<lb/> et
-							quia manifestissimum est, sine dubio intellexistis<lb/>quid oravit
-							Apostolus. Oramus, inquit, <hi rend="italic">ad Deum, ne<lb/>quid
-								faciatis</hi> mali. Poterat dicere : Monemus VOl, ne<lb/>quid
-							faciatis mali; docemus vos, ne quid faciatis<lb/>mali; jubemus vobis,
-							praecipimus vobis. Quod quidem<lb/>si diceret, eertum diceret, quia et
-							voluntas notra<lb/>agit aliquid : non enim voluntas nostra nihil agit,
-							sed<lb/>sola noa sufficit. Maluit tamen dicere, Oramus, ut<lb/>ipsam
-							gratiam commendaret : nt intelligerent illi,<lb/>quando non faciunt
-							aliquid mali, non sola sua volun<lb/>tate se vitare malam, sed adjutorio
-							Dei implere quod<lb/>jussum est.</p>
-					</div>
-					<div type="textpart" subtype="chapter" n="4">
-						<p>4. <hi rend="italic">Praecepto liberum arbitrium, oratione auxilium<lb/>
-								gratiae necessarium ostenditur.</hi> Ergo, fratres, quandc<lb/>
-							praecipitur, agnoscite voluntatis arbitrium : quando<lb/>oratur quod
-							praecipitur, agnoscite gratiae beneficium.<lb/>Utrumque enim in
-							Scripturis habes : et praecipitur,<lb/>et oratur; quod praecipitur, hoc
-							oratur. Videte quod<lb/>dico. Praecipitur ut intelligamus. Quomodo
-							praecipi<lb/>tur utintelligamus? <hi rend="italic">Nolite esse sicut
-								equus et mulus,<lb/>non habentes</hi> intellectum <hi rend="italic"
-								>(Psal.</hi> xxxi, 9). Audisti quia<lb/>jussum est; pete, ut possis
-							implere quod jussum est.<lb/>Quomodo, inquis, peto? Audi Scripturam.
-							Quid tibi<lb/>jussum est ? <hi rend="italic">Nolite esse sicut equus et
-								mulus, non ha<lb/>bentes intellectum.</hi> Quia jussum est,
-							agnovisti volunta<lb/>tem : audi quia oratur, ut agnoscas gratiam. <hi
-								rend="italic">Da</hi> mihi<lb/>
-							<hi rend="italic">intellectum, ut discam mandata tua (Psal.</hi> CXVIII,
-							73).<lb/>Jussum est ut habeamus sapientiam : quia jussum est<lb/> lego.
-							Ubi legis, inquit? Audite : <hi rend="italic">Qui insipientes
-								estis<lb/>in populo et stulti, aliquando sapite (Psal.</hi> XCIII,
-							8).<lb/>Jam ille quid dicit? Vides quomodo nobis praecepit<lb/>Deus ut
-							sapiamus. Ergo sapientia in nostra est pote<lb/>state?Jam dixi,
-							praeceptum audivi, voluntatem co<lb/>gnovi : audi orationem, ut gratiam
-							tu possis agno<lb/>scere. De sapientia igitur, quae jussa est nobis,
-							audia<lb/>mus quid dicat apostolus Jacobus : Si <hi rend="italic">quia
-								autem<lb/>vestrum indiget sapientia, postulet a Deo, qui dat</hi> omni<lb/>
-							<hi rend="italic">bus affluenter (Jacobi</hi> i, 5). Jubetur nobis
-							continentia<lb/>Ubi jubetur? Apostolus ad Timotheum, <hi rend="italic"
-								>Contine te</hi>
-							<lb/>ipsum (I Tim. v, 22). Jussio est, praeceptio est;<lb/>audiendum
-							est, faciendum est: sed nisi Deus adjuvet,<lb/>remanemus. Conamur quidem
-							facere voluntate, et<lb/>nititur aliquid voluntas : non praesumat
-							potestas, nisi<lb/>adjuvetur infirmitas. Certe enim jussum est: <hi
-								rend="italic">Contine<lb/>te</hi> ipsum. Audi alium locum Scripturae
-							: <hi rend="italic">Et cum</hi> sci<lb/>
-							<hi rend="italic">rem,</hi> inquit, <hi rend="italic">quia nenio esse
-								potest continens, nisi Deus<lb/>det; et hoc ipsum erat</hi>
-							sapientiae, <hi rend="italic">scire cujus esset hoc<lb/>donum.</hi> Et
-							quid, inquit, fcci ? <hi rend="italic">Adii Dominum, et de<lb/> precatus
-								sum (Sap.</hi> VIII, 21). Quid opus est mulla<lb/> percurrere,
-							fratres mei? Quidquid nobis jubetur1,<lb/>orandum est ut impleatur : sed
-							non sic, ut dimitta<lb/>mus nos, et quomodo aegri jaceamus supini, et
-							dica<lb/>mus, Pluat Deus escas super facies nostras; ut<lb/>prorsus nos
-							nihil agere velimus; etcum esca complu<lb/>ta fuerit super os nostrum,
-							dicamus etiam, Deus glu<lb/> tiat de nobis. Aliquid et nos agere
-							debemus, studere<lb/>debemus, conari debemus; et in eo gratias agere,
-							in<lb/>quo potuerimus; in eo quod non potuerimus, orare.<lb/>Quando
-							gratias agis, caves ne damneris ingratus :<lb/>quando autem quod nondum
-							habes petis, caves ne re. <note type="footnote"> I Germanensis Ms.: <hi
-									rend="italic">Quid opus est multa percurrere, fra<lb/>tres mei ?
-									in eo quod non potuerimus, quidquid nobis jube<lb/>tur,</hi>
-								etc. </note>
-							<lb/>
-							<pb n="1723"/> maneas Xeniis, quia impediris.</p>
-					</div>
-					<div type="textpart" subtype="chapter" n="5">
-						<p>5.Objectio <hi rend="italic">Pelagianorum. Pelagius quomodo
-								absolutus.</hi>
-							<lb/>Cogitate ergo ista, fratres mei, quisquis ad vos acces<lb/>serit,
-							et dixerit vobis : Quid ergo nos facimus, si nihil<lb/>habemus in
-							potestate nisi Deus det omnia ? Ergo non<lb/>nos coronabit Deus, sed se
-							coronabit. Jam videtis quia<lb/>de illa vena venit : vena est, sed
-							venenum habet;<lb/>percussa est enim a serpente, sana non est. Hoc
-							enim<lb/>agit hodie satanas, quomodo per venena haereticorum<lb/>
-							ejiciat de Ecclesia, sicut tunc per venena serpentis<lb/>ejecit de
-							paradiso. Illum nemo dicat absolutum esse<lb/>ab episcopis : absoluta
-							est, scd confessio, quasi cor<lb/>rectio ipsa est absoluta. Quia ea quae
-							dixit ante episco<lb/>pos, catholica videbantur : quae autem scripsit in
-							Ii..<lb/>bris suis, episcopi qui absolverunt, nescicrunt;
-							et<lb/>forsitan correctus est. Desperare enim de homine non<lb/>
-							debemus, qui forte fidci catholicae adjungi se maluit,<lb/>ct ad ejus
-							gratiam auxiliumque confugit; forte hoc<lb/>factum sit : tamen non
-							haeresis est absoluta, scd ho<lb/>Ino haeresim ncgans, clc.</p>
+				<div type="textpart" subtype="collection" n="1">
+					<head>
+						<title type="main">S. AURELII AUGUSTINI SERMONUM QUORUMDAM QUI ADHOC
+							DESIDERANTUR FRAGMENTA REPERTA IN COLLECTANEIS EUGIPII, BEDAE, FLORI AC
+							JOANNIS ROMANE ECCLESIAE DIACONI.</title>
+					</head>
+					<div type="textpart" subtype="sermon" n="1">
+						<ab>
+							<title type="sub"><hi rend="italic">Ex Sermone contra Pelagianos,</hi>
+								in Eugypii <hi rend="italic">tomo</hi> 2, <hi rend="italic"
+									>cap.</hi> 287 <hi rend="italic">aut</hi> 288 <hi rend="italic"
+									>(a).</hi>
+							</title>
+						</ab>
+						<div type="textpart" subtype="chapter" n="1">
+							<p>1. <hi rend="italic">Urbanus episcopus. Pelagianorum error,
+									liberi<lb/> arbitrii viribus vinci posse tenlationes, nec de
+									peccato­</hi>
+								<lb/>rum <hi rend="italic">tentationibus agi in</hi> oratione <hi
+									rend="italic">dominica.</hi> Illa duo,<lb/>
+								<hi rend="italic">Dimitte</hi> nobis <hi rend="italic">debita
+									nostra,</hi> sicut <hi rend="italic">et noa</hi> dimittimus<lb/>
+								<hi rend="italic">debitoribus</hi> nostris; et, <hi rend="italic"
+									>Ne</hi> no. <hi rend="italic">inferas</hi> in tentationem,<lb/>
+								<hi rend="italic">(Matth.</hi> VI, 12 <hi rend="italic">et</hi> 13),
+								quando Pelagianis objiciuntur,<lb/>quid eos putatis respondere?
+								Horrui, fratres mei,<lb/>quando audivi. Ego quidem non audivi
+								auribus meis,<lb/>sed sanctus frater et coepiscopus meus Urbanus
+									no<note type="footnote"> (a) citat Florus ad II Cor. xm,et I
+									Tim. v.</note>
+								<lb/>ster, qui hic presbyter fuit, et modo est Siccensis<lb/>
+								cpisoopus, cum remeasset ab urbe Roma, et ibi<lb/>cum quodam talia
+								sentiente confligeret, vel se confli<lb/>xisse referret, cum
+								urgeretur pondere orationis domi<lb/>nicae : urgebat enim eum, et
+								dicebat, Si in nostra<lb/>potestate est non peccare, et in nostra
+								potestate est<lb/> omnes peecatorum tentationes solis voluntatis
+								nostrae<lb/>viribus superare, quare Deo dicimus, <hi rend="italic"
+									>Ne nos in feras in<lb/> tentationem</hi> ? quid eum putatis
+								respondisse? Rogamus,<lb/> inquit, Deum, ne nos inferat in
+								tentationem, ne ali<lb/>quid mali patiamur, quod non habemus in
+								potestate :<lb/>ne ruam de equo, et ne frangam pedem, ne latro me<lb/>
+								<pb n="1721"/> interficiat, et quid hujusmodi. Haec enim, inquit,
+								non <lb/>habeo in potestate : nam vincere tentationes
+								peccato<lb/>rum meorum, si volo, et possum, nec Dei
+								adjutorio<lb/>possum.</p>
+						</div>
+						<div type="textpart" subtype="chapter" n="2">
+							<p>2. <hi rend="italic">Confutatur maligna haeresis ex oratione a
+									Christo</hi>
+								<lb/>commendata <hi rend="italic">et pro Petro adhibita.</hi>
+								Videtis, fratres, quam<lb/>maligna haeresis; videtis quemadmodum
+								omnes horre<lb/>tis : cavete ne capiamini. Novi enim calliditates et
+								ter<lb/> giversationes bominum impiorum aversorum a veritate,<lb/>et
+								quia jam in suas sententias ceciderunt vinci nolcn<lb/>tium; videte,
+								obsecrovos. Ecce enim invenit quod dice<lb/>ret, ideo nos dicere,
+									<hi rend="italic">Ne nos inferas in tentationem,</hi>
+								ne<lb/>aliquid nobis contingat, quod non habemus in
+								potestate<lb/>secundum corporis tentationem. Inde ergo dicebat
+								Do<lb/>minus, <hi rend="italic">Vigilate et orate, ne intretis</hi>
+								in <hi rend="italic">tentationem<lb/> (Matth.</hi> xxvi, 41)? hoc
+								dicebat, <hi rend="italic">Vigilate et orate,</hi> ne<lb/>pedem
+								frangatis, aut ne caput doleatis, aut ne in<lb/>damnum incurratis i
+								Non hoc dicebat : sed quid dice<lb/>bat? Quod Petro dixit, <hi
+									rend="italic">Rogavi pro tet ne deficiat fides<lb/>tua
+									(Luc.</hi> XXII, 32). Rogavi, inquit, pro <hi rend="italic"
+									>te,</hi> dicit Deus<lb/>homini, dominus servo, magister
+								discipulo, medicus<lb/>aegroto : <hi rend="italic">Rogavi pro te
+									:</hi> quid? <hi rend="italic">Ne deficiat:</hi> quid? ma<lb/>
+								nus tua? pes tuus? oculus tuus? lingua tua, aliqua<lb/>paralysi, id
+								est, dissolutione membrorum? Non; sed,<lb/>
+								<hi rend="italic">ne deficiat fides tua.</hi> Secundum istos in
+								potestate Ira<lb/>bemus, ne deficiat fides nostra.</p>
+						</div>
+						<div type="textpart" subtype="chapter" n="3">
+							<p>3. <hi rend="italic">Orationes Ecclesiae, auxilium gratiae</hi> ut
+									<hi rend="italic">non</hi> pecce<lb/>mus <hi rend="italic"
+									>necessarium esse probant.</hi> Quare pro nobis
+								rogatur<lb/>Deus, ut concedat nobis, quod isti dicunt, nos
+								non<lb/>debere rogare a sempiterna majestate, sed habere
+								in<lb/>potestate. Benedictiones, fratres mei,
+								benedictiones<lb/>nostras, quas super vos facimus, evacuant,
+								exinaniunt,<lb/>elidunt. Aoditis me, credo, fratres mei, quando
+								dico, <lb/>Conversi ad Dominum benedicamus nomen ejus,<lb/>det nobis
+								perseverare in mandatis suis, ambulare in<lb/>via recta eruditionis
+								suae, placere illi iD omni opere<lb/>bono, et caetera talia.
+								Prorsus, inquiunt, hoc totum in<lb/>potestate nostra est
+								constitutum. Ergo nos inaniter<lb/>talia vobis optamus. Defendamus
+								et nos, et vos; ne<lb/> et nos sine causa benedicamus, et vos sine
+								causa<lb/>Amen subscribatis. Fratres mei, Amen vestrum,
+								sub<lb/>scriptio vestra est, consensio vestra est,
+								adstipulatio<lb/>vestra est. Ne ferte aliqui ipsorum et nos
+								condemnent<lb/>et vos, defendamus nos de apostolo Paulo :
+								videamus<lb/>si talia optavit plebi suae, qualia oramus super vos.
+								<lb/>Audite quid dixerit quodam loco. Rem brevem dico.<lb/>Quid
+								dicis, o nove haeretice, quicumque me audis, si<lb/>praesens es?
+								quid dicis? Quia non peccare in potestate<lb/>sic habemus, ut hoc
+								sine adjutorio divinae gratiae im<lb/>plere possimus; boc dicis?
+								Hoc, inquit. Ergo in po.<lb/>testate habemus non peccare sine
+								adjutorio Dei?<lb/>Plane, inquit, liberum arbitrium nostrum ad hoc
+								no<lb/>bis sufficit. Quid est ergo quod ait Apostolus, scri<lb/>bens
+								ad Corinthios, <hi rend="italic">Oramus ad Deum, ne quid
+									faciatis</hi>
+								<lb/>maii (II Cor. XIII, 7)? Allendistis, audistis, accepistis;<lb/>
+								et quia manifestissimum est, sine dubio intellexistis<lb/>quid
+								oravit Apostolus. Oramus, inquit, <hi rend="italic">ad Deum,
+									ne<lb/>quid faciatis</hi> mali. Poterat dicere : Monemus VOl,
+								ne<lb/>quid faciatis mali; docemus vos, ne quid faciatis<lb/>mali;
+								jubemus vobis, praecipimus vobis. Quod quidem<lb/>si diceret, eertum
+								diceret, quia et voluntas notra<lb/>agit aliquid : non enim voluntas
+								nostra nihil agit, sed<lb/>sola noa sufficit. Maluit tamen dicere,
+								Oramus, ut<lb/>ipsam gratiam commendaret : nt intelligerent
+								illi,<lb/>quando non faciunt aliquid mali, non sola sua
+								volun<lb/>tate se vitare malam, sed adjutorio Dei implere
+								quod<lb/>jussum est.</p>
+						</div>
+						<div type="textpart" subtype="chapter" n="4">
+							<p>4. <hi rend="italic">Praecepto liberum arbitrium, oratione
+									auxilium<lb/> gratiae necessarium ostenditur.</hi> Ergo,
+								fratres, quandc<lb/> praecipitur, agnoscite voluntatis arbitrium :
+								quando<lb/>oratur quod praecipitur, agnoscite gratiae
+								beneficium.<lb/>Utrumque enim in Scripturis habes : et
+								praecipitur,<lb/>et oratur; quod praecipitur, hoc oratur. Videte
+								quod<lb/>dico. Praecipitur ut intelligamus. Quomodo praecipi<lb/>tur
+								utintelligamus? <hi rend="italic">Nolite esse sicut equus et
+									mulus,<lb/>non habentes</hi> intellectum <hi rend="italic"
+									>(Psal.</hi> xxxi, 9). Audisti quia<lb/>jussum est; pete, ut
+								possis implere quod jussum est.<lb/>Quomodo, inquis, peto? Audi
+								Scripturam. Quid tibi<lb/>jussum est ? <hi rend="italic">Nolite esse
+									sicut equus et mulus, non ha<lb/>bentes intellectum.</hi> Quia
+								jussum est, agnovisti volunta<lb/>tem : audi quia oratur, ut
+								agnoscas gratiam. <hi rend="italic">Da</hi> mihi<lb/>
+								<hi rend="italic">intellectum, ut discam mandata tua (Psal.</hi>
+								CXVIII, 73).<lb/>Jussum est ut habeamus sapientiam : quia jussum
+								est<lb/> lego. Ubi legis, inquit? Audite : <hi rend="italic">Qui
+									insipientes estis<lb/>in populo et stulti, aliquando sapite
+									(Psal.</hi> XCIII, 8).<lb/>Jam ille quid dicit? Vides quomodo
+								nobis praecepit<lb/>Deus ut sapiamus. Ergo sapientia in nostra est
+								pote<lb/>state?Jam dixi, praeceptum audivi, voluntatem co<lb/>gnovi
+								: audi orationem, ut gratiam tu possis agno<lb/>scere. De sapientia
+								igitur, quae jussa est nobis, audia<lb/>mus quid dicat apostolus
+								Jacobus : Si <hi rend="italic">quia autem<lb/>vestrum indiget
+									sapientia, postulet a Deo, qui dat</hi> omni<lb/>
+								<hi rend="italic">bus affluenter (Jacobi</hi> i, 5). Jubetur nobis
+								continentia<lb/>Ubi jubetur? Apostolus ad Timotheum, <hi
+									rend="italic">Contine te</hi>
+								<lb/>ipsum (I Tim. v, 22). Jussio est, praeceptio est;<lb/>audiendum
+								est, faciendum est: sed nisi Deus adjuvet,<lb/>remanemus. Conamur
+								quidem facere voluntate, et<lb/>nititur aliquid voluntas : non
+								praesumat potestas, nisi<lb/>adjuvetur infirmitas. Certe enim jussum
+								est: <hi rend="italic">Contine<lb/>te</hi> ipsum. Audi alium locum
+								Scripturae : <hi rend="italic">Et cum</hi> sci<lb/>
+								<hi rend="italic">rem,</hi> inquit, <hi rend="italic">quia nenio
+									esse potest continens, nisi Deus<lb/>det; et hoc ipsum erat</hi>
+								sapientiae, <hi rend="italic">scire cujus esset hoc<lb/>donum.</hi>
+								Et quid, inquit, fcci ? <hi rend="italic">Adii Dominum, et de<lb/>
+									precatus sum (Sap.</hi> VIII, 21). Quid opus est mulla<lb/>
+								percurrere, fratres mei? Quidquid nobis jubetur1,<lb/>orandum est ut
+								impleatur : sed non sic, ut dimitta<lb/>mus nos, et quomodo aegri
+								jaceamus supini, et dica<lb/>mus, Pluat Deus escas super facies
+								nostras; ut<lb/>prorsus nos nihil agere velimus; etcum esca
+								complu<lb/>ta fuerit super os nostrum, dicamus etiam, Deus glu<lb/>
+								tiat de nobis. Aliquid et nos agere debemus, studere<lb/>debemus,
+								conari debemus; et in eo gratias agere, in<lb/>quo potuerimus; in eo
+								quod non potuerimus, orare.<lb/>Quando gratias agis, caves ne
+								damneris ingratus :<lb/>quando autem quod nondum habes petis, caves
+								ne re. <note type="footnote"> I Germanensis Ms.: <hi rend="italic"
+										>Quid opus est multa percurrere, fra<lb/>tres mei ? in eo
+										quod non potuerimus, quidquid nobis jube<lb/>tur,</hi> etc. </note>
+								<lb/>
+								<pb n="1723"/> maneas Xeniis, quia impediris.</p>
+						</div>
+						<div type="textpart" subtype="chapter" n="5">
+							<p>5.Objectio <hi rend="italic">Pelagianorum. Pelagius quomodo
+									absolutus.</hi>
+								<lb/>Cogitate ergo ista, fratres mei, quisquis ad vos
+								acces<lb/>serit, et dixerit vobis : Quid ergo nos facimus, si
+								nihil<lb/>habemus in potestate nisi Deus det omnia ? Ergo
+								non<lb/>nos coronabit Deus, sed se coronabit. Jam videtis
+								quia<lb/>de illa vena venit : vena est, sed venenum
+								habet;<lb/>percussa est enim a serpente, sana non est. Hoc
+								enim<lb/>agit hodie satanas, quomodo per venena haereticorum<lb/>
+								ejiciat de Ecclesia, sicut tunc per venena serpentis<lb/>ejecit de
+								paradiso. Illum nemo dicat absolutum esse<lb/>ab episcopis :
+								absoluta est, scd confessio, quasi cor<lb/>rectio ipsa est absoluta.
+								Quia ea quae dixit ante episco<lb/>pos, catholica videbantur : quae
+								autem scripsit in Ii..<lb/>bris suis, episcopi qui absolverunt,
+								nescicrunt; et<lb/>forsitan correctus est. Desperare enim de homine
+								non<lb/> debemus, qui forte fidci catholicae adjungi se
+								maluit,<lb/>ct ad ejus gratiam auxiliumque confugit; forte
+								hoc<lb/>factum sit : tamen non haeresis est absoluta, scd ho<lb/>Ino
+								haeresim ncgans, clc.</p>
+						</div>
 					</div>
 					<div type="textpart" subtype="sermon" n="2">
 						<ab>
@@ -703,117 +723,125 @@
 								animam vivam?<lb/>Invenis continentiam. Quaeris in homine hominem
 								?<lb/>Invenis imaginem et similitudinem Dei.</p>
 						</div>
-					</div>
-					<div type="textpart" subtype="chapter" n="5">
-						<ab>
-							<title type="sub"><hi rend="italic">Ex Sermone de Quinquagesima
-									resurrectionis, Florus ad</hi> I <hi rend="italic">Cor. i.</hi>
-							</title>
-						</ab>
-						<p>Humiliatus est Dominus Christus, ut esse humiles<lb/>nosceremus :
-							conceptus est continens omnia, natus<lb/>est gignens omnia, mortuus est
-							vivificans omnia : sed<lb/>post triduum resurrexit, et ascendit in
-							coelum , et<lb/> humanam quam susceperat carnem, ad Patris dexte<lb/>ram
-							collocavit. Mirabile est, fratres, et hoc est quod<lb/>credere impii
-							nolunt; mirabile est hominem resur<lb/>rexisse in carne, et in coelum
-							ascendisse cum carne: <lb/>sed multo est mirabilius, totum mundum rem
-							tam<lb/>incredibilem credidisse. Quid est incredibilius Deum<lb/>talia
-							fecisse, an mundum credere potuisse? Quid, si<lb/>et ipse modus
-							consideretur a nobis, quo credidit<lb/>mundus ? etiam ipse vere divinus
-							advertitur, et valde<lb/> mirabilis invenitur. Ineruditos liberalibus
-							disciplinis,<lb/>et omnino quantum ad saeculi doctrinas pertinet
-							im<lb/>politos, non peritos grammatica, non armatos diale<lb/>ctica,
-							piscatores Christus cum retibus fidei ad mare<lb/>saeculi paucissimos
-							misit. Quid dico paucissimos ?<lb/> Duodecim misit; et tamen per eos sic
-							omni genere<lb/>piscium implevit Ecclesias, ut plurimi etiam ex
-							ipsis<lb/>sapientibus saeculi, quibus videbatur ignominiosa
-							crux<lb/>Christi, ea in fronte signentur; et de qua erubescen<lb/>dum
-							putabant, nobisque insultabant, eam in pudoris<lb/>arce constituant.</p>
-					</div>
-					<div type="textpart" subtype="chapter" n="6">
-						<ab>
-							<title type="sub"><hi rend="italic">Ex Sermone de Apostolo</hi> Paulo,
-								in conversione <hi rend="italic">cujus­ dam Fausti pagani, Florus ad
-									Rom.</hi> XIV.</title>
-						</ab>
-						<p>Cor hominis nec videre possumus, nec ostendere.<lb/>Deus dicit, Quae <hi
-								rend="italic">palam</hi> sunt, <hi rend="italic">vobis ; qua
-								occulUi</hi> sunt,<lb/>mihi. Paulus dicit Apostolus, &lt; Fratres,
-							nolite ante<lb/>&lt; tempus judicare quidquam, donec veniat
-							Dominus,<lb/> &lt; et illuminet abscondita tenebrarum, et
-							manifestabit<lb/>« cogitationes cordium; el tunc laus erit unicuique
-							à<lb/>* Deo &gt; ( I Cor. iv, 5). Non potes inspicere cor
-							novi<lb/>cbristiani. Quid, cor veteris christiani potes?
-							Dicturi<lb/>estis, Sed ex necessitate credidit. Posset et de
-							illo<lb/>dici, de quo paulo ante loquebamur, Qui prius fuit<lb/>
-							<hi rend="italic">blasphemus, et persecutor, et injuriosus</hi> (I <hi
-								rend="italic">Tim.</hi> i, 13).<lb/>Et ipsi enim quaedam necessitas
-							impacta est: caelesti<lb/>voce prostratus est; ut lumen haberet, lumen
-							perdi<lb/>dit. Minare quod volueris, et quantum volueris da<lb/>cuilibet
-							homini : quid dulcius ista luce ? Quam tamen<lb/>Paulus nisi
-							perdidisset, aeternam non accepisset. De<lb/>necessitate credidit. Quid
-							timuit? Dicatur mihi quid<lb/>timuit. Clamantes oves? Oves clamare
-							possunt, mor<lb/>dere non possunt. Potuit et in ipso clamore ovium
-							Dei<lb/>advertere gloriam Dei, et timere judicium Dei. Exci<lb/>tatus
-							est a somno quodam modo, ut consideraret im<lb/>pleri de Christo quae
-							sunt predicta de Cbristo, tantum <lb/>posse nomen Christi, tantum
-							praevalere gloriam Dei.<lb/>Itaque breviter dico Charitati vestrae ;
-							Ecclesiam Dei<lb/>alloquor, populum Dei alloquor : Si, credidit, tu
-							inve<lb/>nisti; si timuit, tu vicisti. Interim, fratres, ad
-							quod<lb/>possunt homines, ultra nobis non usurpemus quod<lb/> concessum
-							non est. Apostolus dicit : <hi rend="italic">Infirmum autem<lb/> in
-								fide</hi> recipite, <hi rend="italic">non in dijudicationibus
-								cogitationum<lb/>(Rom.</hi> xiv, 4). Non nobis usurpemus dijudicare
-							cogi<lb/>tationes aliorum : sed Deo praebeamus cogitationes
-							no<lb/>stras, etiam pro illis de quibus forte aliquid
-							dubitamus.<lb/>Forte dubitat aliquid novitas ipsius. Amate
-							abundantius<lb/>dubitantem : amore vestro curate de corde infirmi
-							du<lb/>bitationem. Interiorem faciem videte, de qua gaudeatis;<lb/>cor
-							Deo committite, pro quo oretis. Sciatis eum deseri <lb/>amalis,
-							suscipiatura vobis. Plus amate hominem,quam<lb/>prius oderatiserrorem.
-							Sic venit Christus aegros sa<lb/>nare,de quo Evangelium audivimus: &lt;
-							Quia non est opus<lb/>«sanis medicus,sedmale habentibus » <hi
-								rend="italic">(Matth.</hi> IX, 12).<lb/>« Et quis est homo qui cum
-							perdiderit unam ovem,<lb/>«nonne relinquit nonaginta novem in montibus,
-							et <lb/>«it quaerere unam quae perierat, et cum invenerit<lb/>«gaudet de
-							illa? Sic gaudet Pater meus de uno poe<lb/>&lt; nitente, quam de
-							nonaginta novem justis, quibus<lb/>&lt; non est opus poenitentia i <hi
-								rend="italic">(ld.</hi> XVIII, 12-14, <hi rend="italic">et Luc.</hi>
-							<lb/>xv, 4-7). Sic prorsus venit Christus aegros sanare, sic<lb/>se
-							novit de inimicis suis misericors vindicare. Quibus<lb/>forte animus
-							dolet consortibus ejus erroris, ad horam<lb/>irascuntur, postea
-							fortassis imitabuntur. Itaque, fra<lb/>tres, commendamus eum et
-							orationibus vestris, et<lb/>dilectioni vestrae, et amicitiae
-							fidelissimae, et susce<lb/> ptioni infirmitatis ejus. Quomodo prjeitis,
-							sic sequi<lb/>tur : bonam viam docete, bonam in vobis inveniat.<lb/>Jam
-							faclus christianus, discernat quid intersit inter id<lb/>quod dimisit et
-							id quod invenit. Vitam ipsius et stu<lb/>dium circa fidem Christi
-							posteriora lempora compro<lb/>babunt : nunc autem, fratres mei, non fuit
-							necesse,<lb/>non fuit consilii pastorum repellere pulsantem, diC-
-							^<lb/>ferre quaerentem. De occultis cordis velle judicare,<lb/>et vocem
-							manifestam non acceptare, nec consilii<lb/>fuit, nec propositi nostri.
-							Novimus enim quemadmo<lb/>dum minetur misericors illa Dei avaritia
-							undique<lb/>lucra quaerentis de pecunia sua, et dicentis pigro<lb/>servo
-							judicare volenti quod non videbat, et circa lucra<lb/> colligenda Domini
-							torpescenti: &lt; Serve nequam , ex<lb/>&lt; ore tuo te condemno. Tu me
-							dixisti hominem aio<lb/>
-							<pb n="1731"/> t lestum, metere ubi non sominavi, colligere ubi
-							non<lb/>c sparsi: i noveras ergo avaritiam Icam. &lt; Tu dares<lb/>&lt;
-							pecuniam meam nuiumulariis, ego veniens cum<lb/>c usuris exigerem <hi
-								rend="italic">» (Luc.</hi> xix , 22, 23). Nus ergo non<lb/>potuimus
-							nisi erogare pecuniam dominicam. Exactor<lb/>ille erit, non lanium
-							ipsius, sed et omnium nostrum.<lb/>Impleamus ergo officium
-							praerogatoris, non usurpe­ <lb/>mus locum exactoris. ltaquc, fratres
-							mci, opus Dci<lb/>in animo habete : aliud quaerebatis, aliud
-							disponeba<lb/>lis, aliud invenistis. Opus Domini commendamus,<lb/>semi
-							conservis. Plus in eo diligamus quod Dominus <lb/>noster fecit, quam id
-							quod facere volebamus. Meliora<lb/>enim sunt opera ipsius. Et magnam et
-							dcvotam vocem ,<lb/>cjus audivimus : Majoratum nolo, christianus
-							esse<lb/>volo. Laetamini, exsultate, amplius quam oderalis<lb/>amalc.
-							Opus suum Christo orationibus commendate :<lb/> animum fidelem , pium,
-							amicum rudimentis senis ex<lb/>hibete. Quid interest enim quia videtis
-							jam provectam<lb/>aetatem? Hora Dona venit ad vineam,
-							mercedem<lb/>aequalem accepturus, etc.</p>
+						<div type="textpart" subtype="chapter" n="5">
+							<ab>
+								<title type="sub"><hi rend="italic">Ex Sermone de Quinquagesima
+										resurrectionis, Florus ad</hi> I <hi rend="italic">Cor.
+										i.</hi>
+								</title>
+							</ab>
+							<p>Humiliatus est Dominus Christus, ut esse humiles<lb/>nosceremus :
+								conceptus est continens omnia, natus<lb/>est gignens omnia, mortuus
+								est vivificans omnia : sed<lb/>post triduum resurrexit, et ascendit
+								in coelum , et<lb/> humanam quam susceperat carnem, ad Patris
+								dexte<lb/>ram collocavit. Mirabile est, fratres, et hoc est
+								quod<lb/>credere impii nolunt; mirabile est hominem
+								resur<lb/>rexisse in carne, et in coelum ascendisse cum carne:
+								<lb/>sed multo est mirabilius, totum mundum rem tam<lb/>incredibilem
+								credidisse. Quid est incredibilius Deum<lb/>talia fecisse, an mundum
+								credere potuisse? Quid, si<lb/>et ipse modus consideretur a nobis,
+								quo credidit<lb/>mundus ? etiam ipse vere divinus advertitur, et
+								valde<lb/> mirabilis invenitur. Ineruditos liberalibus
+								disciplinis,<lb/>et omnino quantum ad saeculi doctrinas pertinet
+								im<lb/>politos, non peritos grammatica, non armatos diale<lb/>ctica,
+								piscatores Christus cum retibus fidei ad mare<lb/>saeculi
+								paucissimos misit. Quid dico paucissimos ?<lb/> Duodecim misit; et
+								tamen per eos sic omni genere<lb/>piscium implevit Ecclesias, ut
+								plurimi etiam ex ipsis<lb/>sapientibus saeculi, quibus videbatur
+								ignominiosa crux<lb/>Christi, ea in fronte signentur; et de qua
+								erubescen<lb/>dum putabant, nobisque insultabant, eam in
+								pudoris<lb/>arce constituant.</p>
+						</div>
+						<div type="textpart" subtype="chapter" n="6">
+							<ab>
+								<title type="sub"><hi rend="italic">Ex Sermone de Apostolo</hi>
+									Paulo, in conversione <hi rend="italic">cujus­ dam Fausti
+										pagani, Florus ad Rom.</hi> XIV.</title>
+							</ab>
+							<p>Cor hominis nec videre possumus, nec ostendere.<lb/>Deus dicit, Quae
+									<hi rend="italic">palam</hi> sunt, <hi rend="italic">vobis ; qua
+									occulUi</hi> sunt,<lb/>mihi. Paulus dicit Apostolus, &lt;
+								Fratres, nolite ante<lb/>&lt; tempus judicare quidquam, donec veniat
+								Dominus,<lb/> &lt; et illuminet abscondita tenebrarum, et
+								manifestabit<lb/>« cogitationes cordium; el tunc laus erit unicuique
+								à<lb/>* Deo &gt; ( I Cor. iv, 5). Non potes inspicere cor
+								novi<lb/>cbristiani. Quid, cor veteris christiani potes?
+								Dicturi<lb/>estis, Sed ex necessitate credidit. Posset et de
+								illo<lb/>dici, de quo paulo ante loquebamur, Qui prius fuit<lb/>
+								<hi rend="italic">blasphemus, et persecutor, et injuriosus</hi> (I
+									<hi rend="italic">Tim.</hi> i, 13).<lb/>Et ipsi enim quaedam
+								necessitas impacta est: caelesti<lb/>voce prostratus est; ut lumen
+								haberet, lumen perdi<lb/>dit. Minare quod volueris, et quantum
+								volueris da<lb/>cuilibet homini : quid dulcius ista luce ? Quam
+								tamen<lb/>Paulus nisi perdidisset, aeternam non accepisset.
+								De<lb/>necessitate credidit. Quid timuit? Dicatur mihi
+								quid<lb/>timuit. Clamantes oves? Oves clamare possunt, mor<lb/>dere
+								non possunt. Potuit et in ipso clamore ovium Dei<lb/>advertere
+								gloriam Dei, et timere judicium Dei. Exci<lb/>tatus est a somno
+								quodam modo, ut consideraret im<lb/>pleri de Christo quae sunt
+								predicta de Cbristo, tantum <lb/>posse nomen Christi, tantum
+								praevalere gloriam Dei.<lb/>Itaque breviter dico Charitati vestrae ;
+								Ecclesiam Dei<lb/>alloquor, populum Dei alloquor : Si, credidit, tu
+								inve<lb/>nisti; si timuit, tu vicisti. Interim, fratres, ad
+								quod<lb/>possunt homines, ultra nobis non usurpemus quod<lb/>
+								concessum non est. Apostolus dicit : <hi rend="italic">Infirmum
+									autem<lb/> in fide</hi> recipite, <hi rend="italic">non in
+									dijudicationibus cogitationum<lb/>(Rom.</hi> xiv, 4). Non nobis
+								usurpemus dijudicare cogi<lb/>tationes aliorum : sed Deo praebeamus
+								cogitationes no<lb/>stras, etiam pro illis de quibus forte aliquid
+								dubitamus.<lb/>Forte dubitat aliquid novitas ipsius. Amate
+								abundantius<lb/>dubitantem : amore vestro curate de corde infirmi
+								du<lb/>bitationem. Interiorem faciem videte, de qua
+								gaudeatis;<lb/>cor Deo committite, pro quo oretis. Sciatis eum
+								deseri <lb/>amalis, suscipiatura vobis. Plus amate
+								hominem,quam<lb/>prius oderatiserrorem. Sic venit Christus aegros
+								sa<lb/>nare,de quo Evangelium audivimus: &lt; Quia non est
+								opus<lb/>«sanis medicus,sedmale habentibus » <hi rend="italic"
+									>(Matth.</hi> IX, 12).<lb/>« Et quis est homo qui cum perdiderit
+								unam ovem,<lb/>«nonne relinquit nonaginta novem in montibus, et
+								<lb/>«it quaerere unam quae perierat, et cum invenerit<lb/>«gaudet
+								de illa? Sic gaudet Pater meus de uno poe<lb/>&lt; nitente, quam de
+								nonaginta novem justis, quibus<lb/>&lt; non est opus poenitentia i
+									<hi rend="italic">(ld.</hi> XVIII, 12-14, <hi rend="italic">et
+									Luc.</hi>
+								<lb/>xv, 4-7). Sic prorsus venit Christus aegros sanare, sic<lb/>se
+								novit de inimicis suis misericors vindicare. Quibus<lb/>forte animus
+								dolet consortibus ejus erroris, ad horam<lb/>irascuntur, postea
+								fortassis imitabuntur. Itaque, fra<lb/>tres, commendamus eum et
+								orationibus vestris, et<lb/>dilectioni vestrae, et amicitiae
+								fidelissimae, et susce<lb/> ptioni infirmitatis ejus. Quomodo
+								prjeitis, sic sequi<lb/>tur : bonam viam docete, bonam in vobis
+								inveniat.<lb/>Jam faclus christianus, discernat quid intersit inter
+								id<lb/>quod dimisit et id quod invenit. Vitam ipsius et stu<lb/>dium
+								circa fidem Christi posteriora lempora compro<lb/>babunt : nunc
+								autem, fratres mei, non fuit necesse,<lb/>non fuit consilii pastorum
+								repellere pulsantem, diC- ^<lb/>ferre quaerentem. De occultis cordis
+								velle judicare,<lb/>et vocem manifestam non acceptare, nec
+								consilii<lb/>fuit, nec propositi nostri. Novimus enim
+								quemadmo<lb/>dum minetur misericors illa Dei avaritia
+								undique<lb/>lucra quaerentis de pecunia sua, et dicentis
+								pigro<lb/>servo judicare volenti quod non videbat, et circa
+								lucra<lb/> colligenda Domini torpescenti: &lt; Serve nequam ,
+								ex<lb/>&lt; ore tuo te condemno. Tu me dixisti hominem aio<lb/>
+								<pb n="1731"/> t lestum, metere ubi non sominavi, colligere ubi
+								non<lb/>c sparsi: i noveras ergo avaritiam Icam. &lt; Tu
+								dares<lb/>&lt; pecuniam meam nuiumulariis, ego veniens cum<lb/>c
+								usuris exigerem <hi rend="italic">» (Luc.</hi> xix , 22, 23). Nus
+								ergo non<lb/>potuimus nisi erogare pecuniam dominicam.
+								Exactor<lb/>ille erit, non lanium ipsius, sed et omnium
+								nostrum.<lb/>Impleamus ergo officium praerogatoris, non usurpe­
+								<lb/>mus locum exactoris. ltaquc, fratres mci, opus Dci<lb/>in animo
+								habete : aliud quaerebatis, aliud disponeba<lb/>lis, aliud
+								invenistis. Opus Domini commendamus,<lb/>semi conservis. Plus in eo
+								diligamus quod Dominus <lb/>noster fecit, quam id quod facere
+								volebamus. Meliora<lb/>enim sunt opera ipsius. Et magnam et dcvotam
+								vocem ,<lb/>cjus audivimus : Majoratum nolo, christianus
+								esse<lb/>volo. Laetamini, exsultate, amplius quam
+								oderalis<lb/>amalc. Opus suum Christo orationibus commendate :<lb/>
+								animum fidelem , pium, amicum rudimentis senis ex<lb/>hibete. Quid
+								interest enim quia videtis jam provectam<lb/>aetatem? Hora Dona
+								venit ad vineam, mercedem<lb/>aequalem accepturus, etc.</p>
+						</div>
 					</div>
 					<div type="textpart" subtype="sermon" n="9">
 						<ab>
