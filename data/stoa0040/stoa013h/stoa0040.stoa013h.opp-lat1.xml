@@ -75,15 +75,15 @@
 			<p>The following text is encoded in accordance with EpiDoc standards and with the
 				CTS/CITE Architecture.</p>
 			<refsDecl n="CTS">
-				<cRefPattern n="chapter" matchPattern="(\w+).(\w+)"
+				<cRefPattern n="chapter" matchPattern="(\w+).(\w+).(\w+)"
 					replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div/tei:div[@n='$1']/tei:div[@n='$2']//tei:div[@n='$3'])">
 					<p>This pointer pattern extracts chapter within sermons</p>
 				</cRefPattern>
-				<cRefPattern n="sermon" matchPattern="(\w+)"
+				<cRefPattern n="sermon" matchPattern="(\w+).(\w+)"
 					replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div/tei:div[@n='$1']/tei:div[@n='$2'])">
 					<p>This pointer pattern extracts sermons within collection</p>
 				</cRefPattern>
-				<cRefPattern n="collection" matchPattern="(\w+).(\w+)"
+				<cRefPattern n="collection" matchPattern="(\w+)"
 					replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div/tei:div[@n='$1'])">
 					<p>This pointer pattern extracts a collection of sermons</p>
 				</cRefPattern>
