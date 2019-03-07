@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" schematypens="http://relaxng.org/ns/strueture/1.0"?>
+<?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
 	<teiHeader>
 		<fileDesc>
@@ -10,7 +10,7 @@
 				<principal>Gregory Crane</principal>
 				<respStmt>
 					<persName xml:id="Jouve">Jouve</persName>
-					<resp>OCR-ed, correeted and encoded the text</resp>
+					<resp>OCR-ed, corrected and encoded the text</resp>
 				</respStmt>
 				<respStmt>
 					<persName>Greta Franzini</persName>
@@ -45,16 +45,16 @@
 						<monogr>
 							<editor>
 								<persName>
-									<name xml:lang="fr">Jacques Paul Migne</name>
+									<name xml:lang="fra">Jacques Paul Migne</name>
 								</persName>
 							</editor>
-							<author ref="http://data.perseus.org/catalog/urn:ets:latinLit:stoa0040"
+							<author ref="http://data.perseus.org/catalog/urn:cts:latinLit:stoa0040"
 								>Augustinus</author>
 							<title>De Haeresibus</title>
-							<title>Traetatus Adversus Judaeos</title>
+							<title>Tractatus Adversus Judaeos</title>
 							<title>Contra Adversarium Legis Et Prophetarum</title>
 							<title>Contra Priscillianistas Et Origenistas Ad Orosium</title>
-							<title>Contra Sermonem Arianorum</title>
+							<title>Contra sous-chapitreem Arianorum</title>
 							<title>Collatio Cum Maximino Arianorum Episcopum</title>
 							<title>Contra Maximinum Haereticum Arianorum Episcopum</title>
 							<title>De Trinitate</title>
@@ -62,8 +62,8 @@
 							<title>Contra Judaeos. Paganos Et Arianos Sermo De Symbolo</title>
 							<title>De Altercatione Ecclesiae Et Synagogae Dialogus</title>
 							<title>Commonitorium Quomodo Sit Agendum Cum Manichaeis Qui Convertuntur
-								[Auetore Incerto]</title>
-							<title>Contra Felicianum Arianum De Unitate Trinitatis [Auetore Vigilio
+								[Auctore Incerto]</title>
+							<title>Contra Felicianum Arianum De Unitate Trinitatis [Auctore Vigilio
 								Tapsense]</title>
 							<title>De incarnatione verbi ad Januarium; ex Origenis opere Peri
 								Archon</title>
@@ -81,7 +81,7 @@
 						</monogr>
 						<monogr>
 							<author>Quodvultdeus</author>
-							<title>De Haeresibus sancti Augustini Epistolae Quatuor</title>
+							<title>De Haeresibus Sancti Augustini Epistolae Quatuor</title>
 							<imprint>
 								<publisher>Garnier</publisher>
 								<pubPlace>Paris</pubPlace>
@@ -91,7 +91,7 @@
 						</monogr>
 						<monogr>
 							<author>Orosius</author>
-							<title>Consultatio Sive Commonitorium Ad Sanetum Augustinum</title>
+							<title>Consultatio Sive Commonitorium Ad Sanctum Augustinum</title>
 							<imprint>
 								<publisher>Garnier</publisher>
 								<pubPlace>Paris</pubPlace>
@@ -100,7 +100,7 @@
 							<biblScope unit="volume">42</biblScope>
 						</monogr>
 						<monogr>
-							<author>Auetor Incertus</author>
+							<author>Auctor Incertus</author>
 							<title>Sermo Arianorum</title>
 							<imprint>
 								<publisher>Garnier</publisher>
@@ -110,7 +110,7 @@
 							<biblScope unit="volume">42</biblScope>
 						</monogr>
 						<monogr>
-							<author ref="http://data.perseus.org/catalog/urn:ets:latinLit:stoa0020"
+							<author ref="http://data.perseus.org/catalog/urn:cts:latinLit:stoa0040"
 								>Alcuinus</author>
 							<title>Quaestiones De Trinitate Et De Genesi</title>
 							<imprint>
@@ -131,19 +131,17 @@
 			<p>The following text is encoded in accordance with EpiDoc standards and with the
 				CTS/CITE Architecture.</p>
 			<refsDecl n="CTS">
-				<cRefPattern n="sermon" matchPattern="(\w+).(\w+)"
-					replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div/tei:div[@n='$1']/tei:div[@n='$2'])"
-				>
-				<p>Ce pointeur permet d'extraire les sermons du texte</p>
+				<cRefPattern n="sous-chapitre" matchPattern="(\w+).(\w+)"
+					replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div/tei:div[@n='$1']/tei:div[@n='$2'])">
+				<p>Ce pointeur permet d'extraire les sous-chapitres du texte</p>
 				</cRefPattern>
-				<cRefPattern n="chapitre" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div/tei:div[@n='$1'])
-					">
+				<cRefPattern n="chapitre" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div/tei:div[@n='$1'])">
 					<p>Ce pointeur permet d'extraire les chapitres du texte</p>
 				</cRefPattern>
 			</refsDecl>
 			<refsDecl>
+				<refState unit="sous-chapitre"/>
 				<refState unit="chapitre"/>
-				<refState unit="sermon"/>
 			</refsDecl>
 			<projectDesc>
 			<p>This document is compatible with <ref target="http://capitains.github.io">CapiTainS Guidelines</ref></p>
@@ -165,13 +163,13 @@
 	</teiHeader>
 	<text>
 		<body>
-			<div type="edition" n="urn:ets:latinLit:stoa0040.stoa030a.opp-lat1">
+			<div type="edition" n="urn:cts:latinLit:stoa0040.stoa030a.opp-lat1" xml:lang="lat">
 				<head>
 					<title type="main">S. AURELII AUGUSTINI . HIPPONENSIS EPISCOPI CONTRA SERMONEM
 						ARIANORUM LIBER UNUS (a). —</title>
 				</head>
 				<div type="textpart" subtype="chapitre" n="1">
-					<div type="textpart" subtype="sermon" n="1">
+					<div type="textpart" subtype="sous-chapitre" n="01">
 				<p><lb/> CAPUT. PRIMUM - 1. Eorum praecedenti disputa<lb/>tioni hac disputatione
 					respondeo, qui cum Dominum <lb/> nostrum Jesum Christum fatentur quidem Deum,sed
 					<lb/> Deum verum et cum Patre unum Deum nolunt fateri, <lb/> duos nobis inducunt
@@ -190,7 +188,7 @@
 					unum verum Deum. Quia et de Christo <lb/> dietum est a Joanne apostolo, <hi
 						rend="italic">Ipse est verus Deus et<lb/> vita aeterna</hi> ( I <hi
 						rend="italic">Joan.</hi> v, 20).</p></div>
-					<div type="textpart" subtype="sermon" n="2">
+					<div type="textpart" subtype="sous-chapitre" n="02">
 				<p>2. Item cum dicunt Christum voluntate <hi rend="italic">Dei et Pa</hi>
 					<lb/>tris sui <hi rend="italic">ante</hi> omnia saecula <hi rend="italic"
 						>constitutum,</hi> coguntur conf<lb/>teri Filium Patri esse coaeternum.
@@ -226,7 +224,7 @@
 					inferenda est <lb/> vanitas sua, qua dici potest prior illo esse voluntas <lb/>
 					ejus : quo quid dicitur stultius?</p></div></div>
 				<div type="textpart" subtype="chapitre" n="2">
-					<div type="textpart" subtype="sermon" n="3">
+					<div type="textpart" subtype="sous-chapitre" n="03">
 				<p>CAPUT. II - 3. Deinde dicunt eum <hi rend="italic">voluntate et<lb/> praecepto
 						Patris, coelestia et terrestria, visibilia et invisibi<lb/>lia, corpora
 						et spiritus, ex nullis exstantibus, ut essent, <lb/> sua virtute
@@ -246,7 +244,7 @@
 					Patre factum est, cum per Filium, hoc <lb/> est, per ejus Verbum facta sint
 					omnia ?</p></div></div>
 				<div type="textpart" subtype="chapitre" n="3">
-					<div type="textpart" subtype="sermon" n="4">
+					<div type="textpart" subtype="sous-chapitre" n="04">
 				<p>CAPUT. III - 4. <hi rend="italic">Et antequam faceret,</hi> inquiunt, <lb/>
 					universa, omnium futurorum <hi rend="italic">Deus et Dominus, rex et<lb/>
 						creator erat constitutus, et</hi> omnium <hi rend="italic">futurorum in
@@ -312,8 +310,8 @@
 					sive splendorem, sive <lb/> fervorem. Quamvis haec longe sint dissimilia; nec
 					<lb/> inveniatur aliquid vel in spiritualibus vel in corpora<lb/>libus
 					creaturis, quod ei Trinitati, quae Deus est, me<lb/>rito conferatur.</p></div></div>
-				<div type="textpart" subtype="chapiter" n="5">
-					<div type="textpart" subtype="sermon" n="5">
+				<div type="textpart" subtype="chapitre" n="5">
+					<div type="textpart" subtype="sous-chapitre" n="05">
 				<p>CAPUT. V - 5. Dicunt etiam : <hi rend="italic">Et quia de</hi> omni<lb/>bus
 					spiritualibus <hi rend="italic">et rationalibus gradibus , propter</hi> qua<lb/>
 					<hi rend="italic">litatem et fragilatatem corporis paulo minus ab Angelis <lb/>
@@ -344,7 +342,7 @@
 					illud potius quod in forma servi propter infirmitatem, <lb/> in qua pati et
 					mori potuit, minor etiam Angelis factus <lb/> est.</p></div></div>
 				<div type="textpart" subtype="chapitre" n="6">
-					<div type="textpart" subtype="sermon" n="6">
+					<div type="textpart" subtype="sous-chapitre" n="06">
 				<p>CAPUT. VI - 6. Item dicunt : " Cum, " inquit, <lb/> « <hi rend="italic">venit
 						plenitudo temporis, misit Deus Filium suum</hi> natum <lb/>
 					<hi rend="italic">ex muliere</hi> » <hi rend="italic">(Galat.</hi> IV , <hi
@@ -494,7 +492,7 @@
 						vivificat,</hi> sic <lb/> et <hi rend="italic">Filius quos vult vivificat
 						(Id.</hi> v, 21).</p></div></div>
 				<div type="textpart" subtype="chapitre" n="9">
-					<div type="textpart" subtype="sermon" n="7">
+					<div type="textpart" subtype="sous-chapitre" n="07">
 				<p>CAPUT. IX - 7 .Item sequuntur et dicunt : Is et in cruce <lb/> pendens, <hi
 						rend="italic">voluntate et</hi> praecepto <hi rend="italic">Patris, carnem
 						humanam <lb/> quam de</hi> sancta <hi rend="italic">virgine Maria
@@ -522,7 +520,7 @@
 					<lb/> meum, divinitatem ipsam volunt eum intelligi com<lb/>mendasse Patri,
 					non humanum spiritum, quod est ani<note type="footnote">I Juxta Fr. Lugd.
 						ven. Lov., <hi rend="italic">factat.</hi> M. </note><note type="footnote"> '
-						Editi hoc et proximo loco, necnon supra in Sermone <lb/> Arianorum,
+						Editi hoc et proximo loco, necnon supra in sous-chapitree <lb/> Arianorum,
 						ferebant, <hi rend="italic">deitatis,</hi> ubi veteres MSS. constanter
 						<lb/> habeut, <hi rend="italic">dealitatis.</hi>
 					</note>
@@ -573,7 +571,7 @@
 					est Deus corde <lb/>
 					<hi rend="italic">nostro</hi> (I <hi rend="italic">Joan.</hi> III , 20).</p></div></div>
 				<div type="textpart" subtype="chapitre" n="10">
-					<div type="textpart" subtype="sermon" n="8">
+					<div type="textpart" subtype="sous-chapitre" n="08">
 				<p>CAPUT. X - 8. Item dicunt : Is <hi rend="italic">qui voluntate<lb/> et</hi>
 					praecepto <hi rend="italic">Patris totam dispensationem adimplevit, <lb/>
 						voluntate et</hi> praecepto Patris <hi rend="italic">corpus</hi> suum a
@@ -587,7 +585,7 @@
 					<lb/> reportavit, quid est ovis ista nisi terra sine sensu, <lb/> quae nec agere
 					gratias potest ? Quia sine anima caru <lb/> quid potest? .</p></div></div>
 				<div type="textpart" subtype="chapitre" n="11">
-					<div type="textpart" subtype="sermon" n="9">
+					<div type="textpart" subtype="sous-chapitre" n="09">
 				<p>CAPUT. XI - 9. Item sequuntur et dicunt: Is qui <lb/>
 					<hi rend="italic">voluntate Patris descendit et ascendit, voluntate et prae</hi>
 					<lb/>
@@ -595,7 +593,7 @@
 					<lb/>
 					<hi rend="italic">cepto Patris sedit ad</hi> dexteram ejus, audiens <hi
 						rend="italic">Patrem <lb/> sibi dicentem : « Sede ad dexteram meam, donec
-						ponam <lb/> inimicos tuos scabellum pedum</hi> tuorum &gt; <hi rend="italic"
+						ponam <lb/> inimicos tuos scabellum pedum</hi>tuorum &gt; <hi rend="italic"
 						>(Psal.</hi> CIX, 4). <lb/>
 					<hi rend="italic">Is qui voluntate et praecepto Patris sedit ad dexteram <lb/>
 						ejus,</hi> is <hi rend="italic">voluntate et praecepto Patris</hi> in
@@ -868,7 +866,7 @@
 					imaginem sic reformamur. Omne igitur <lb/> opus nostrum ab his tribus fil :
 					nihil enim agimus, <lb/> quod non haec tria simul agant. Deinde cum de singulis
 					<lb/> loquimur , etiam quod ad singula pertinet ab omni<lb/>bus agitur. Neque
-					enim sermonem quem de sola me<lb/>moria facimus, memoria sola facit: sed
+					enim sous-chapitreem quem de sola me<lb/>moria facimus, memoria sola facit: sed
 					intelligentia. <lb/> voluntasque cooperantur eum, quamvis ad sohnn <lb/>
 					memoriam pertinentem. H ic vi de duobus caeteris <lb/> viderc facillimum est. Nam
 					quidquid de se ipsa in<lb/>telligentia loquitur , sine memoria et voluntate
@@ -1028,13 +1026,13 @@
 					cum ejus templum membra sint Chri<lb/>sti : quemadmodum ipsum Filium
 					imperialibus legi<lb/>bus Dei, cum ipse sit Verbum Dei, nec ullo modo impe<lb/> ratoris verbum legibus subjaceat, sed leges faciat (a).</p></div></div>
 				<div type="textpart" subtype="chapitre" n="21">
-					<div type="textpart" subtype="sermon" n="10">
+					<div type="textpart" subtype="sous-chapitre" n="10">
 				<p>CAPUT XXI. — 10. Isti sane, quorum disputatio<lb/>nem accepi, cui respondeo,
 					non audent idem dicere fa<lb/>ctum esse quod genitum; et duo ista discernunt,
 					ita <lb/> ut a Patre Filium genitum dicant, factum vero a Filio <lb/> Spiritum
 					sanctum. Quod in Scripturis sanctis nusquam <lb/> legunt, cum Filius ipse dicat
 					, quod Spiritus sanctus <lb/> a Patre procedat.</p></div>
-					<div type="textpart" subtype="sermon" n="11">
+					<div type="textpart" subtype="sous-chapitre" n="11">
 				<p>11. <hi rend="italic">Filius,</hi> inquiunt, <hi rend="italic">Patrem praedicat :
 						Spiritus<lb/> sanctus</hi> Filium annuntiat. Quasi non
 						<unclear>annuntiaveri</unclear>
@@ -1042,7 +1040,7 @@
 					Filium, dicendo : <hi rend="italic">Hic est</hi> Filius <lb/>
 					<hi rend="italic">meus dilectus</hi> in <hi rend="italic">quo bene complacui
 						;</hi> ipsum <hi rend="italic">auditi <lb/> (Matth.</hi> XVII, 5).</p></div>
-					<div type="textpart" subtype="sermon" n="12">
+					<div type="textpart" subtype="sous-chapitre" n="12">
 				<p>12. Ac per hoc non solum Patris <hi rend="italic">gloriam</hi> Filius, <note
 						type="footnote"> I Am. Fr. et MSS., <hi rend="italic">templum in ,vobis
 							est</hi> Spiritus <hi rend="italic"> sancti,</hi>
@@ -1054,17 +1052,17 @@
 						rend="italic">manifestat</hi> Spi<lb/>ritus sancti <hi rend="italic"
 						>dignitatem.</hi>
 				</p></div>
-					<div type="textpart" subtype="sermon" n="13">
+					<div type="textpart" subtype="sous-chapitre" n="13">
 				<p>13. Et ideo sicut <hi rend="italic">Filius, Patri,</hi> ita et Pater Filio : et
 					<lb/> sicut Spiritus <hi rend="italic">sanctus Filio,</hi> ita et Filius
 					Spiritui san<lb/>cto <hi rend="italic">perhibet testimonium.</hi>
 				</p></div>
-					<div type="textpart" subtype="sermon" n="14">
+					<div type="textpart" subtype="sous-chapitre" n="14">
 				<p>14. A Patre autem et <hi rend="italic">Filionissus est</hi> Spiritus san<lb/>ctus : et <hi rend="italic">a Patre</hi> et Spiritu <hi rend="italic">missus est
 						Filius.</hi>
 				</p></div></div>
 				<div type="textpart" subtype="chapitre" n="22">
-					<div type="textpart" subtype="sermon" n="15">
+					<div type="textpart" subtype="sous-chapitre" n="15">
 				<p>CAPUT XXII. - 15. <hi rend="italic">Filius,</hi> inquiunt, <hi rend="italic"
 						>minister est <lb/> Patris</hi> : Spiritus <hi rend="italic">sanctus minister
 						est Filii.</hi> Nec atten<lb/>dunt quod isto modo meliores faciunt
@@ -1074,12 +1072,12 @@
 					Filii, et <lb/> Spiritus sancti. Ac per hoc secundum istorum vanilo<lb/>quia,
 					meliores erunt Trinitatis ministri; si propterea <lb/> minor est Spiritus
 					sanctus , quia solius minister est <lb/> Filii.</p></div>
-				<div type="textpart" subtype="sermon" n="16">				
+				<div type="textpart" subtype="sous-chapitre" n="16">				
 				<p>16. <hi rend="italic">Filius, inquiunt, jubetur a Patre : Spiritus san<lb/>ctus
 						jubetur a Filio.</hi> Nusquam hoc in Scripturis sanctis <lb/> legunt :
 					quamvis obedientem Filium legamus secun<lb/>dum formam servi, qua major est
 					pater; non secun<lb/>dum formam Dei, in qua unum sunt ipse et Pater.</p></div>
-					<div type="textpart" subtype="sermon" n="17">
+					<div type="textpart" subtype="sous-chapitre" n="17">
 				<p>17. Legitur itaque in Scripturis sanctis Filius sub<lb/>
 					<hi rend="italic">ditus Patri.</hi> Ibi est enim forma servi, in qua et paren
 					<lb/>tibus hominibus subditus erat ; sicut Evangelium <lb/> loquitur : <hi
@@ -1088,7 +1086,7 @@
 					dicit <hi rend="italic">Spiritum</hi> sanctum <hi rend="italic">subditum
 						Fi<lb/>lio.</hi>
 				</p></div>
-					<div type="textpart" subtype="sermon" n="18">
+					<div type="textpart" subtype="sous-chapitre" n="18">
 				<p>18. Proinde et <hi rend="italic">quae jubet Pater, operatur</hi> Filius <lb/>
 					propter formam servi : et quae Pater operatur, ope<lb/>ratur et Filius propter
 					formam Dei. Non enim ait, <lb/> Quaecumque Pater jubet, haec Filius facit: sed
@@ -1107,7 +1105,7 @@
 					Domini habebat, quo <lb/> repletus erat ? Nam et hoc de illo scriptum est, quod
 					<lb/> repletus sit Spiritu sancto <hi rend="italic">(Id.</hi> IV, 1).</p></div></div>
 				<div type="textpart" subtype="chapitre" n="23">
-					<div type="textpart" subtype="sermon" n="19">
+					<div type="textpart" subtype="sous-chapitre" n="19">
 				<p>CAPUT XXIII. — 19. <hi rend="italic">Filius,</hi> inquiunt, <hi rend="italic"
 						>adorat et<lb/> honorat Patrem: Spiritus sanctus adorat et honorat<lb/>
 						Filium.</hi> Hic non opus est scrupulose velle discernere, <lb/> inter
@@ -1134,7 +1132,7 @@
 					intelligi volens quod de Patre accipiat. Sed <lb/> ideo de ipsius, quia omnia
 					quae habet Pater, ipsius <lb/> sunt. Haec autem non est diversitatis naturae, sed
 					<lb/> unius principii commendatio.</p></div>
-					<div type="textpart" subtype="sermon" n="20">
+					<div type="textpart" subtype="sous-chapitre" n="20">
 				<p>20. Secundum hoc, ita <hi rend="italic">Spiritus sanctus non a se <lb/> ipso
 						loquitur,</hi> quia non est a se ipso qui de Patre pro<lb/>cedit: sicut
 					nec <hi rend="italic">Filius potest a se facere quidquam,</hi>
@@ -1164,7 +1162,7 @@
 					Deus et est, et fuit, et erit ; et <lb/> tamen initium vel finem temporis, nec
 					habet, nec ha<lb/>buit, nec habebit.</p></div></div>
 				<div type="textpart" subtype="chapitre" n="25">
-					<div type="textpart" subtype="sermon" n="21">
+					<div type="textpart" subtype="sous-chapitre" n="21">
 				<p>CAPUT XXV. — 21 Filius , inquiunt, pro <hi rend="italic">nobil <lb/> interpellat
 						Patrem; et Spiritus pro nobis postulat Filium.</hi>
 					<lb/> Sicut legunt, quod Filius interpellat Patrem, secun<lb/>dum ea quae
@@ -1217,7 +1215,7 @@
 						interpellat gemitibus;</hi> de spiritu ho<lb/>minis intelligendum
 					arbitrentur.</p></div></div>
 				<div type="textpart" subtype="chapitre" n="26">
-					<div type="textpart" subtype="sermon" n="22">
+					<div type="textpart" subtype="sous-chapitre" n="22">
 				<p>CAPUT XXVI. — 22. Totius bonitatis et sapientiae <lb/> et virtutis Patris, vivam
 					et veram, propriam et con<lb/>dignam imaginem dicunt Filium. At apostolus
 					Paulus, <lb/> non virtutis Dei et sapientia; imaginem; sed Deum <lb/> ipsum esse
@@ -1232,7 +1230,7 @@
 					, <lb/> nec genitum, sed factum ab illo esse dixerunt Quod <lb/> de Scripturis
 					sanctis omnino non legunt 1.</p></div></div>
 				<div type="textpart" subtype="chapitre" n="27">
-					<div type="textpart" subtype="sermon" n="23">
+					<div type="textpart" subtype="sous-chapitre" n="23">
 				<p>CAPUT XXVII.— 23. Quis autem catholicus dixe<lb/>rit, partem Patris esse
 					Filium, aut, partem Filii <note type="footnote"> ' Sic Mss. Editi vero, non <hi
 							rend="italic">intelligunt.</hi>
@@ -1263,7 +1261,7 @@
 					Trinitate nullam <lb/> personam, praeter quod Filius manens Deus, homo <lb/>
 					faetus est, omnino esse creaturam, aut aliquid a Deo<lb/>faetum: sed totum
 					quidquid illud est, summum, ve<lb/>rum,immutabilem Deum.</p></div>
-				<div type="textpart" subtype="sermon" n="24">
+				<div type="textpart" subtype="sous-chapitre" n="24">
 				<p>24. Absit enim ut, quemadmodum sapiunt, Pater <lb/> major sit Filio suo, secundum
 					id quod unigenitum <lb/> Verbum ejus est: sed secundum id quod <hi rend="italic"
 						>Verbum caro<lb/> factum est.</hi> Sed quid mirum, quando in eadem carne
@@ -1271,7 +1269,7 @@
 					incomparabiliter major et me<lb/>lior sit Filius Spiritu sancto : et quod
 					insanissimum <lb/> est credere, templum minoris sint membra majoris.</p></div></div>
 				<div type="textpart" subtype="chapitre" n="28">
-					<div type="textpart" subtype="sermon" n="25">
+					<div type="textpart" subtype="sous-chapitre" n="25">
 				<p>CAPUT XXVIII. — 25. Pater quidem, <hi rend="italic">Deus et Do<lb/>minus est
 						Filio suo :</hi> quia inest in eo forma servilis <lb/> quae prophetabatur,
 					cum diceretur , <hi rend="italic">Dominus dixit <lb/> ad me , Filius meus es tu
@@ -1282,7 +1280,7 @@
 					omnia saecula coaeternum genuit, Pater <lb/> ejus est. Ubi autem vel in somnis
 					audierunt Scriptu<lb/>ram sanctam dixisse Filium Deum et Dominum esse <lb/>
 					Spiritus sancti ?</p></div>
-				<div type="textpart" subtype="sermon" n="26">
+				<div type="textpart" subtype="sous-chapitre" n="26">
 				<p>26. <hi rend="italic">Pater,</hi> inquiunt, <hi rend="italic">immobiliter et
 						impassibiliter<lb/> volens Filium genuit:</hi> Filius <hi rend="italic">sine
 						labore et fatigatione<lb/> sola virtute sua Spiritum</hi> fecit. 0 praecipuam
@@ -1306,7 +1304,7 @@
 						facit similiter ?</hi> Si haec cogitare <lb/> concutur , procul dubio
 					turbabuntur eis omnia, quae <lb/> sibi carnali cogitatione componunt.<lb/></p></div></div>
 					<div type="textpart" subtype="chapitre" n="29">
-						<div type="textpart" subtype="sermon" n="27">
+						<div type="textpart" subtype="sous-chapitre" n="27">
 						<p>CAPUT XXIX. — 27. Verum est autem quod <lb/> Pater <hi rend="italic">omnibus quae sunt,
 						dedit ut essent; et</hi> ipse <hi rend="italic">quod</hi>
 					<lb/> est, a nemine <hi rend="italic">accepit :</hi> sed aequalitatem suam nulli
@@ -1348,7 +1346,7 @@
 					<lb/> Trinitas , cui uni et soli talem servitutem pietatis <lb/> jure
 					debemus.</p></div></div>
 				<div type="textpart" subtype="chapitre" n="30">
-					<div type="textpart" subtype="sermon" n="28">
+					<div type="textpart" subtype="sous-chapitre" n="28">
 				<p>CAPUT XXX. — 28. Sicuti <hi rend="italic">nemo potest,</hi> inquiunt, <lb/>
 					<hi rend="italic">sine Filio ad Patrem transire ; ita et nemo potest sine<lb/>
 						Spiritu</hi> sancto <hi rend="italic">Filium in veritate adorare :</hi>
@@ -1382,7 +1380,7 @@
 					sancto, etiam nos dicimus : adorari autem Filium ab <lb/> Spiritu sancto,
 					legant, si possunt.</p></div></div>
 				<div type="textpart" subtype="chapitre" n="31">
-					<div type="textpart" subtype="sermon" n="29">
+					<div type="textpart" subtype="sous-chapitre" n="29">
 				<p>CAPUT XXXI. — 29. Nam <hi rend="italic">per</hi> Filium glorificari <lb/>
 					<hi rend="italic">Patrem,</hi> quis negat? Sed et Filium glorificari per Pa
 					<lb/>trem, negare quis audeat: cui dicit ipse Filius, Glo<lb/>rifica <hi
@@ -1393,7 +1391,7 @@
 					quod graece dicitur <foreign xml:lang="grc">δοξάζειν</foreign> : interpretum
 					<lb/> autem varietate , aliter atque aliter positum est in <lb/> latino.</p></div></div>
 				<div type="textpart" subtype="chapitre" n="32">
-					<div type="textpart" subtype="sermon" n="30">
+					<div type="textpart" subtype="sous-chapitre" n="30">
 				<p>CAPUT <hi rend="italic">XXXII.- 30. Spiritus sancti opus et diligentia<lb/>
 						est,</hi> inquiunt, <hi rend="italic">sanctificare, et sanctos custodire ;
 						et</hi> non <lb/>
@@ -1446,7 +1444,7 @@
 					omnia ; ipsi glo<lb/>ria in saecuta saeculorum. Amen <hi rend="italic"
 						>(Rom.</hi> XI, 36).</p></div></div>
 				<div type="textpart" subtype="chapitre" n="33">
-					<div type="textpart" subtype="sermon" n="31">
+					<div type="textpart" subtype="sous-chapitre" n="31">
 				<p>CAPUT XXXIII. — 31. Cum itaque fateamur fieri <lb/> ab Spiritu Sancto, quae ab
 					illo fieri commemoraverunt, <lb/> non est ex eo consequens quod adiungunt : <hi
 						rend="italic">Alium esse<lb/> a Filio</hi> Spiritum <hi rend="italic"
@@ -1460,7 +1458,7 @@
 					operantur? <lb/> Quod enim dicunt eos operatione diversos, hoc omnino <lb/>
 					falsum esse convicimus.</p></div></div>
 				<div type="textpart" subtype="chapitre" n="34">
-					<div type="textpart" subtype="sermon" n="32">
+					<div type="textpart" subtype="sous-chapitre" n="32">
 				<p>CAPUT XXXIV. — 32. Quod autem in isto ser<lb/>mone subnectunt, <hi
 						rend="italic">Impossibile esse ut unus idemque<lb/> sit Pater et Filius,
 						generans et nascens; cui</hi> testimo<lb/>nium <hi rend="italic"
@@ -1532,7 +1530,7 @@
 					superioribus hujus disputationis partibus satis <lb/> abundeque tractatum
 					est.</p></div></div>
 				<div type="textpart" subtype="chapitre" n="35">
-					<div type="textpart" subtype="sermon" n="33">
+					<div type="textpart" subtype="sous-chapitre" n="33">
 				<p>CAPUT XXXV. — 33. Nunquam sane, ut impie<lb/>
 					<pb n="707"/>tas ista delirat, <hi rend="italic">Pater praescius erat se
 						unigeniti Dei <lb/> Patrem futurum</hi> : quia nunquam non Pater erat, ha
@@ -1551,7 +1549,7 @@
 					<lb/> soli, sicut praecipit lex ejus, illa quae latria dicitur <lb/> servitute
 					servimus.</p></div></div>
 				<div type="textpart" subtype="chapitre" n="36">
-					<div type="textpart" subtype="sermon" n="34">
+					<div type="textpart" subtype="sous-chapitre" n="34">
 				<p>CAPUT XXXVI. — 34. Absit autem ut dicamus, <lb/> humilitatis, non veritatis
 					gratia Filium aliquando sic <lb/> loqui, ut se Patri subiciat eumque majorem
 					esse te<lb/>stetur. Novimus quippe in Filio formam servi, non <lb/> fictam
@@ -1606,7 +1604,7 @@
 					iussus, quod fecit missus ? Iterum ergo ad illa <lb/> redeant, quae superius
 					disputata sunt, et quaerant <lb/> atque inveniant, si possunt, Pater unico Verbo
 					quo <lb/> alio iusserit verbo; et utrum dignum fuerit ut tem<lb/>porali
-					iubentis verbo Verbum subderetur aeternum : <lb/> atque hinc intelligant quia non					eum Patris jussio, <lb/> tanquam suae non fuerit potestatis, <hi rend="italic"
+					iubentis verbo Verbum subderetur aeternum : <lb/> atque hinc intelligant quia non	eum Patris jussio, <lb/> tanquam suae non fuerit potestatis, <hi rend="italic"
 						>sed semetipsum<lb/> exinanivit, formam servi accipiens.</hi> Quod autem <hi
 						rend="italic">hu<lb/>miliavit semetipsum, factus obediens usque ad
 						mortem<lb/> (Philipp.</hi> i!, 7, 8), iam utique acceperat carnem.</p></div>
