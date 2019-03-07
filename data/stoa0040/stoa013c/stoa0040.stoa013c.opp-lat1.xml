@@ -61,13 +61,33 @@
 				</listBibl>
 			</sourceDesc>
 		</fileDesc>
-		<encodingDesc>
-			<p>The following text is encoded in accordance with EpiDoc standards and with the CTS/CITE
-				Architecture.</p>
-		  <refsDecl n="CTS">
-        <cRefPattern n="no citable units founds" matchPattern="(.+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div/tei:div[@n='$1'])"/>
-      </refsDecl>
-    </encodingDesc>
+					<encodingDesc>
+				<p>The following text is encoded in accordance with EpiDoc standards and with the CTS/CITE
+					Architecture.</p>
+				<refsDecl n="CTS">
+					<cRefPattern n="no citable units founds" matchPattern="(.+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div/tei:div[@n='$1'])"/>
+				</refsDecl>
+			<p>The following text is encoded in accordance with EpiDoc standards and with the
+				CTS/CITE Architecture.</p>
+			<refsDecl n="CTS">
+				<cRefPattern 
+					n="chapter"
+					matchPattern="(\w+).(\w+)"
+					replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div/tei:div[@n='$1']/tei:div[@n='$2'])">
+					<p>This pointer pattern extracts sermon and chapter</p>
+				</cRefPattern>
+				<cRefPattern 
+					n="sermon"
+					matchPattern="(\w+)"
+					replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div/tei:div[@n='$1'])">
+					<p>This pointer pattern extracts sermon</p>
+				</cRefPattern>
+			</refsDecl>
+			<refsDecl>
+				<refState unit="sermon"/>
+				<refState unit="chapter"/>
+			</refsDecl>
+		</encodingDesc>
 		<profileDesc>
 			<langUsage>
 				<language ident="la">Latin</language>
